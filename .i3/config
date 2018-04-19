@@ -1,0 +1,385 @@
+# i3 config file (v4)
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+
+#############################################################################
+
+# RELOAD CONFIG
+bindsym $mod+Shift+c reload
+
+# RESTART i3
+bindsym $mod+Shift+r restart
+
+#############################################################################
+### MAIN FONT
+
+font pango:CMU Bright Bold 10
+
+#############################################################################
+### DEFINE VARIABLES
+
+# SET $MOD
+set $mod Mod1
+
+# SET TERM(S)
+set $term urxvt
+set $term2 gnome-terminal
+
+# COLORS
+set_from_resource $black	color0
+set_from_resource $red		color1
+set_from_resource $green	color2
+set_from_resource $yellow	color3
+set_from_resource $blue		color4
+set_from_resource $magenta	color5
+set_from_resource $cyan		color6
+set_from_resource $white	color15
+
+# HOME DIR
+set $home /home/grome
+
+# WORKSPACE NAMES
+set $ws1 1:Terms
+set $ws2 2:Files
+set $ws3 3:Web
+set $ws4 4:Media
+set $ws5 5:LaTeX
+set $ws6 6:Codin'
+set $ws7 7:Writer
+set $ws8 8:Calc
+set $ws9 9:Impres
+set $ws10 10:ARandR
+
+# BROWSERS
+set $browser qutebrowser
+set $browser2 chromium
+
+#############################################################################
+### BORDERS
+
+# BORDER STYLE <normal|1pixel|pixel xx|none|pixel>
+new_window pixel 0
+new_float normal
+
+# HIDE BORDERS
+hide_edge_borders none
+
+# COLORS
+# class                   border  backgr. text    indic.   child_border
+client.focused          $cyan $cyan $black $cyan $cyan
+client.focused_inactive $black $black $white $black $black
+client.unfocused        $black $black $white $black $black
+client.urgent           $red $red $black $red $black
+client.placeholder      $black $black $white $black $black
+# client.background	$black
+
+#############################################################################
+### FOR i3 GAPS
+
+gaps inner 40
+gaps outer 0
+
+bindsym $mod+Ctrl+u gaps inner current minus 5
+bindsym $mod+Ctrl+i gaps inner current plus 5
+
+workspace $ws3 gaps inner 0
+workspace $ws5 gaps inner 0
+workspace $ws6 gaps inner 0
+
+#############################################################################
+### WORKSPACE/CONTAINER OPERATIONS
+
+# KILL FOCUSSED
+bindsym $mod+Shift+q kill
+
+# CHANGE FOCUS
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# MOVE FOCUSSED
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# RESIZE WINDOWS
+bindsym $mod+y resize shrink width 10 px or 10 ppt
+bindsym $mod+u resize grow height 10 px or 10 ppt
+bindsym $mod+i resize shrink height 10 px or 10 ppt
+bindsym $mod+o resize grow width 10 px or 10 ppt
+
+# WORKSPACE BACK & FORTH
+workspace_auto_back_and_forth yes
+
+# SPLIT ORIENTATION
+bindsym $mod+g split h
+bindsym $mod+v split v
+
+# FULLSCREEN TOGGLE
+bindsym $mod+F4 fullscreen toggle
+
+# CHANGE CONTAINER LAYOUT
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# CLICK & DRAG FLOATERS
+floating_modifier $mod
+
+# TOGGLE TILING/FLOATING
+bindsym $mod+Shift+space floating toggle
+
+# CHANGE FOCUS TILING/FLOATING
+bindsym $mod+space focus mode_toggle
+
+# TOGGLE STICKY
+bindsym $mod+Shift+s sticky toggle
+
+# FOCUS PARENT CONTAINER
+bindsym $mod+a focus parent
+
+# MOVE SCRATCHPAD
+bindsym $mod+Shift+minus move scratchpad
+
+# SCRATCHPAD
+bindsym $mod+minus scratchpad show
+
+# WORKSPACE NEXT/PREVIOUS
+bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Ctrl+Left workspace prev
+
+# MOVE TO URGENT
+for_window [urgent=latest] focus
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# Move to workspace with focused container
+bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
+
+assign [class="Nautilus"]			$ws2
+assign [title="New Tab - Chromium"]		$ws3
+assign [class="libreoffice-writer"]		$ws7
+assign [class="libreoffice-calc"]		$ws8
+assign [class="libreoffice-impress"]		$ws9
+
+#############################################################################
+### FLOATING WINDOWS
+
+# PRESET
+for_window [title="alsamixer"] floating enable border pixel 1
+for_window [class="Calamares"] floating enable border normal
+for_window [class="Clipgrab"] floating enable
+for_window [title="File Transfer*"] floating enable
+for_window [class="Galculator"] floating enable border pixel 1
+for_window [class="GParted"] floating enable border normal
+for_window [title="i3_help"] floating enable sticky enable border normal
+for_window [class="Lightdm-gtk-greeter-settings"] floating enable
+for_window [class="Lxappearance"] floating enable sticky enable border normal
+for_window [class="Manjaro-hello"] floating enable
+for_window [class="Manjaro Settings Manager"] floating enable border normal
+for_window [title="MuseScore: Play Panel"] floating enable
+for_window [class="Nitrogen"] floating enable sticky enable border normal
+for_window [class="Oblogout"] fullscreen enable
+for_window [class="octopi"] floating enable
+for_window [title="About Pale Moon"] floating enable
+for_window [class="Pamac-manager"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="qt5ct"] floating enable sticky enable border normal
+for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
+for_window [class="Simple-scan"] floating enable border normal
+for_window [class="(?i)System-config-printer.py"] floating enable border normal
+for_window [class="Skype"] floating enable border normal
+for_window [class="Thus"] floating enable border normal
+for_window [class="Timeset-gui"] floating enable border normal
+for_window [class="(?i)virtualbox"] floating enable border normal
+for_window [class="Xfburn"] floating enable
+
+# OWN
+for_window [title="Netflix"] floating enable,sticky enable,resize set 704 396
+for_window [title="Netflix"] border pixel 2
+for_window [title="Amazon.co.uk: Prime Video"] \
+	floating enable,sticky enable,resize set 704 396
+for_window [title="Amazon.co.uk: Prime Video"] border pixel 2
+for_window [class="MPlayer"] floating enable,sticky enable
+for_window [class="MPlayer"] border pixel 2
+for_window [class="Pavucontrol"] border pixel 2
+for_window [class="Pavucontrol"] floating enable,resize set 525 300
+for_window [class="Pavucontrol"] move right 680,move down 405
+for_window [title="Google Play Movies & TV"] \
+	floating enable,sticky enable,resize set 480 270
+for_window [title="Google Play Movies & TV"] border pixel 2
+for_window [title="Calculator"] floating enable,resize set 480 480
+for_window [title="Calculator"] border pixel 2
+for_window [class="matplotlib"] floating enable
+for_window [class="Cam"] floating enable
+for_window [title="Log in with PayPal - Chromium"] floating enable
+for_window [class="Blueman-manager"] floating enable
+for_window [class="Blueman-manager"] border pixel 2,resize set 525 300
+
+#############################################################################
+### SHUTDOWN MODE
+
+bindsym $mod+Escape mode "SHUTDOWN"
+mode "SHUTDOWN" {
+    bindsym l exec --no-startup-id i3exit lock, mode "default"
+    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
+    bindsym e exec --no-startup-id i3exit logout, mode "default"
+    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+    bindsym x exec --no-startup-id i3exit shutdown, mode "default"
+
+    # exit system mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+#############################################################################
+### MAIN
+
+# LOCK SCREEN
+bindsym Mod4+l exec bash lock.sh
+
+# START TERMINAL
+bindsym $mod+Return exec $term
+
+# APPLICATION LAUNCHER
+bindsym $mod+Ctrl+b exec $term -e 'bmenu'
+bindsym $mod+d exec rofi -show drun
+bindsym $mod+z exec --no-startup-id morc_menu
+
+# BRIGHTNESS CONTROLS
+bindsym $mod+F7 exec xbacklight -inc 10
+bindsym $mod+F6 exec xbacklight -dec 10
+
+# VOLUME CONTROLS
+bindsym $mod+F10 exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym $mod+F9 exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym $mod+F8 exec --no-startup-id pactl set-sink-mute 0 toggle
+
+# FILE MANAGERS
+bindsym $mod+f exec nautilus
+bindsym $mod+Shift+Return exec $term -e ranger
+
+bindsym $mod+Shift+F3 exec gksu pcmanfm
+#bindsym $mod+F5 exec $term -e 'mocp'
+bindsym $mod+t exec --no-startup-id pkill compton
+bindsym $mod+Ctrl+t exec --no-startup-id compton -b
+bindsym $mod+Shift+d --release exec "killall dunst; polybar-msg cmd restart;\
+	 exec notify-send 'Dunst & Polybar have been restarted.'"
+bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+
+#############################################################################
+### OWN BINDINGS
+
+# SPOTIFY
+bindsym $mod+s exec spotify
+
+# MUSIC PLAYER CONTROLS
+bindsym $mod+p exec playerctl play-pause
+bindsym $mod+bracketright exec playerctl next
+bindsym $mod+bracketleft exec playerctl previous
+
+# VISUALISER
+bindsym $mod+Shift+v exec $term -e vis
+
+# PRIME VIDEO
+bindsym $mod+Shift+n exec chromium --new-window \
+	--app=https://www.amazon.co.uk/Amazon-Video/b/?node=3010085031&ref=atv_surl_aiv
+
+# NETFLIX
+bindsym $mod+n exec chromium --new-window \
+	--app=https://www.netflix.com/
+
+# GOOGLE PLAY MOVIES
+bindsym $mod+Shift+m exec chromium --new-window \
+	--app=https://play.google.com/movies/
+
+# GOOGLE PLAY MUSIC
+bindsym $mod+m exec chromium --new-window \
+	--app=https://play.google.com/music/listen#/recents/
+
+# YOUTUBE
+bindsym $mod+Shift+y exec chromium --new-window \
+	--app=https://www.youtube.com/
+
+# ALSAMIXER
+bindsym $mod+Ctrl+a exec $term -e 'alsamixer'
+
+# BROWSERS
+bindsym $mod+c exec $browser
+bindsym $mod+Shift+f exec $browser2
+
+# QALC
+bindsym $mod+q exec $term2 --title="Calculator" -e R
+
+# EMAIL
+bindsym $mod+Shift+u exec $browser2 --new-window \
+	--app=https://outlook.office365.com/owa/?realm=soton.ac.uk
+
+# NIGHT MODE
+bindsym $mod+semicolon exec redshift -O 3700
+bindsym $mod+apostrophe exec redshift -O 6500
+
+# MULTI-MONITOR SETTINGS
+bindsym $mod+Ctrl+v move workspace to output VGA1
+bindsym $mod+Ctrl+e move workspace to output eDP1
+bindsym $mod+Ctrl+m xrandr --output eDP1 --primary
+
+# SCROT
+bindsym $mod+Shift+p exec scrot $home/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`_`xdpyinfo  | grep -oP 'dimensions:\s+\K\S+'`.png
+
+# OPEN ~/.i3/CONFIG
+bindsym $mod+F5 exec --no-startup-id $term -e vim ~/.i3/config
+
+# RESTART POLYBAR
+bindsym $mod+Ctrl+p --release exec "polybar top"
+
+#############################################################################
+### STARTUP PROGRAMS
+
+exec_always feh --bg-scale ~/.config/wall.png
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id nm-applet
+exec --no-startup-id xfce4-power-manager
+exec --no-startup-id pamac-tray
+exec --no-startup-id clipit
+exec_always xrdb -load ~/.Xresources
+exec --no-startup-id blueman-applet
+exec_always --no-startup-id ff-theme-util
+exec_always --no-startup-id fix_xcursor
+exec_always --no-startup-id synclient VertEdgeScroll=1 HorizEdgeScroll=1 \
+	HorizTwoFingerScroll=1 PalmDetect=1 TapButton1=1 TapButton2=3 TapButton3=2
+exec --no-startup-id touchegg &
+exec compton -b -c -f
+exec polybar top
+exec polybar bottom
+exec onedrive-d start
