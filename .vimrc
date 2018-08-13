@@ -129,8 +129,9 @@ autocmd FileType m setlocal textwidth=78
 
 	let g:Tex_DefaultTargetFormat = 'pdf'
 	let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode -shell-escape $*'
-	let g:Tex_ViewRule_pdf = '/usr/bin/evince'
-	let g:Tex_MultipleCompileFormats='dvi,pdf,bibtex,pdf'
+	"let g:Tex_ViewRule_pdf = '/usr/bin/evince'
+	let g:Tex_ViewRule_pdf = '/usr/bin/zathura'
+	let g:Tex_MultipleCompileFormats='pdf,dvi'
 	let g:Tex_BibtexFlavor = 'biber'
 
 	"let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
@@ -156,12 +157,20 @@ autocmd FileType m setlocal textwidth=78
 " all the figure labels. Very useful!
 	set iskeyword+=:
 
+" PDFLATEX
+autocmd Filetype tex map \cp :!pdflatex<space>-interaction=nonstopmode<space>-shell-escape<space><C-r>%<Enter><Enter>
+
+" BIBER
+autocmd Filetype tex map \cb :!biber<space><C-r>%<BS><BS><BS>bcf<Enter><Enter>
+
 " MAKEINDEX
 autocmd Filetype tex map \mi :!makeindex<space><C-r>%<BS><BS><BS><BS>
 	\.nlo<space>-s<space>nomencl.ist<space>-o<space><C-r>%<BS><BS><BS><BS>
 	\.nls<Enter><Enter>
 
 " Luke Smith's Fantastic Vim macros
+autocmd FileType tex inoremap .ph <++><Space>
+
 autocmd FileType tex inoremap .bf \textbf{}<++><Esc>T{i
 autocmd FileType tex inoremap .it \textit{}<++><Esc>T{i
 autocmd FileType tex inoremap .tt \texttt{}<++><Esc>T{i
@@ -201,18 +210,18 @@ autocmd FileType tex map \ob :sp<space><C-r>%<BS><BS><BS>bib<Enter>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ PDF wordcount
 
-	autocmd Filetype tex map \ps :!pdftops<space><C-r>%<BS><BS><BS>
-		\pdf<Enter><Enter>
-	autocmd Filetype tex map \wc :!ps2ascii<space><C-r>%<BS><BS><BS>
-		\ps<bar>wc<space>-w<Enter>
-	autocmd Filetype markdown map \ps :!pdftops<space><C-r>%<BS><BS>
-		\pdf<Enter><Enter>
-	autocmd Filetype markdown map \wc :!ps2ascii<space><C-r>%<BS><BS>
-		\ps<bar>wc<space>-w<Enter>
-	autocmd Filetype rmd map \ps :!pdftops<space><C-r>%<BS><BS><BS>
-		\pdf<Enter><Enter>
-	autocmd Filetype rmd map \wc :!ps2ascii<space><C-r>%<BS><BS><BS>
-		\ps<bar>wc<space>-w<Enter>
+autocmd Filetype tex map \ps :!pdftops<space><C-r>%<BS><BS><BS>
+	\pdf<Enter><Enter>
+autocmd Filetype tex map \wc :!ps2ascii<space><C-r>%<BS><BS><BS>
+	\ps<bar>wc<space>-w<Enter>
+autocmd Filetype markdown map \ps :!pdftops<space><C-r>%<BS><BS>
+	\pdf<Enter><Enter>
+autocmd Filetype markdown map \wc :!ps2ascii<space><C-r>%<BS><BS>
+	\ps<bar>wc<space>-w<Enter>
+autocmd Filetype rmd map \ps :!pdftops<space><C-r>%<BS><BS><BS>
+	\pdf<Enter><Enter>
+autocmd Filetype rmd map \wc :!ps2ascii<space><C-r>%<BS><BS><BS>
+	\ps<bar>wc<space>-w<Enter>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ MARKDOWN FILES

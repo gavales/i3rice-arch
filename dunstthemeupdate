@@ -1,0 +1,35 @@
+#!/bin/bash
+
+dunstDir="$HOME/.config/dunst"
+
+blackd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+green=$(xrdb -query | grep '*color2' | awk '{print $NF}')
+yellow=$(xrdb -query | grep '*color3' | awk '{print $NF}')
+red=$(xrdb -query | grep '*color9' | awk '{print $NF}')
+white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+
+(
+  cd "$dunstDir" || exit 1
+
+  echo "[frame]" > dunst-theme
+  echo "width = 5" >> dunst-theme
+  echo -e "color = \"$white\"\n" >> dunst-theme
+
+  echo "[urgency_low]" >> dunst-theme
+  echo "background = \"$blackd\"" >> dunst-theme
+  echo "foreground = \"$green\"" >> dunst-theme
+  echo -e "timeout = 3\n" >> dunst-theme
+
+  echo "[urgency_normal]" >> dunst-theme
+  echo "background = \"$blackd\"" >> dunst-theme
+  echo "foreground = \"$yellow\"" >> dunst-theme
+  echo -e "timeout = 3\n" >> dunst-theme
+
+  echo "[urgency_critical]" >> dunst-theme
+  echo "background = \"$blackd\"" >> dunst-theme
+  echo "foreground = \"$red\"" >> dunst-theme
+  echo -e "timeout = 3\n" >> dunst-theme
+
+  cat dunst-theme dunst-settings > dunstrc
+)

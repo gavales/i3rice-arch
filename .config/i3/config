@@ -24,6 +24,10 @@ set $mod Mod1
 set $term urxvt
 set $term2 gnome-terminal
 
+# BROWSER(S)
+set $browser qutebrowser
+set $browser2 chromium
+
 # COLORS
 set_from_resource $black	color0
 set_from_resource $red		color1
@@ -35,23 +39,19 @@ set_from_resource $cyan		color6
 set_from_resource $white	color15
 
 # HOME DIR
-set $home /home/grome
+set $home /home/gavarch
 
 # WORKSPACE NAMES
 set $ws1 1:Terms
 set $ws2 2:Files
 set $ws3 3:Web
 set $ws4 4:Media
-set $ws5 5:LaTeX
-set $ws6 6:Codin'
+set $ws5 5:Work
+set $ws6 6:Work2
 set $ws7 7:Writer
 set $ws8 8:Calc
 set $ws9 9:Impres
 set $ws10 10:ARandR
-
-# BROWSERS
-set $browser qutebrowser
-set $browser2 chromium
 
 #############################################################################
 ### BORDERS
@@ -65,25 +65,55 @@ hide_edge_borders none
 
 # COLORS
 # class                   border  backgr. text    indic.   child_border
-client.focused          $cyan $cyan $black $cyan $cyan
+client.focused          $blue $blue $black $blue $blue
 client.focused_inactive $black $black $white $black $black
 client.unfocused        $black $black $white $black $black
 client.urgent           $red $red $black $red $black
 client.placeholder      $black $black $white $black $black
 # client.background	$black
 
+# BAR
+#bar {
+#	i3bar_command i3bar -t
+#	status_command i3status
+#	position bottom
+#	height 20
+#
+#	bindsym button4 nop
+#	bindsym button5 nop
+#	font pango:Ubuntu Mono 9
+#
+#	colors {
+#	background $black
+#
+##			   border  backgr. text
+#	focused_workspace  $blue $blue $black
+#	active_workspace   $blue $blue $black
+#	inactive_workspace $black $black $white
+#	binding_mode       $yellow $yellow $black
+#	urgent_workspace   $red $red $black
+#	}
+#}
+
+# hide/unhide i3status bar
+bindsym $mod+b bar mode toggle
+
+
 #############################################################################
 ### FOR i3 GAPS
 
-gaps inner 40
-gaps outer 0
+gaps inner 10
+gaps outer 20
 
 bindsym $mod+Ctrl+u gaps inner current minus 5
 bindsym $mod+Ctrl+i gaps inner current plus 5
 
 workspace $ws3 gaps inner 0
+workspace $ws3 gaps outer 30
 workspace $ws5 gaps inner 0
+workspace $ws5 gaps outer 30
 workspace $ws6 gaps inner 0
+workspace $ws6 gaps outer 30
 
 #############################################################################
 ### WORKSPACE/CONTAINER OPERATIONS
@@ -125,7 +155,7 @@ bindsym $mod+g split h
 bindsym $mod+v split v
 
 # FULLSCREEN TOGGLE
-bindsym $mod+F4 fullscreen toggle
+bindsym $mod+F11 fullscreen toggle
 
 # CHANGE CONTAINER LAYOUT
 bindsym $mod+w layout tabbed
@@ -141,7 +171,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # TOGGLE STICKY
-bindsym $mod+Shift+s sticky toggle
+bindsym $mod+Ctrl+s sticky toggle
 
 # FOCUS PARENT CONTAINER
 bindsym $mod+a focus parent
@@ -184,6 +214,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 
 assign [class="Nautilus"]			$ws2
+assign [class="qutebrowser"]			$ws3
 assign [title="New Tab - Chromium"]		$ws3
 assign [class="libreoffice-writer"]		$ws7
 assign [class="libreoffice-calc"]		$ws8
@@ -222,26 +253,20 @@ for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 
 # OWN
-for_window [title="Netflix"] floating enable,sticky enable,resize set 704 396
-for_window [title="Netflix"] border pixel 2
+for_window [title="Netflix"] floating enable,sticky enable,resize set 554 313
 for_window [title="Amazon.co.uk: Prime Video"] \
-	floating enable,sticky enable,resize set 704 396
-for_window [title="Amazon.co.uk: Prime Video"] border pixel 2
+	floating enable,sticky enable,resize set 554 313
 for_window [class="MPlayer"] floating enable,sticky enable
-for_window [class="MPlayer"] border pixel 2
-for_window [class="Pavucontrol"] border pixel 2
 for_window [class="Pavucontrol"] floating enable,resize set 525 300
 for_window [class="Pavucontrol"] move right 680,move down 405
 for_window [title="Google Play Movies & TV"] \
 	floating enable,sticky enable,resize set 480 270
-for_window [title="Google Play Movies & TV"] border pixel 2
 for_window [title="Calculator"] floating enable,resize set 480 480
-for_window [title="Calculator"] border pixel 2
 for_window [class="matplotlib"] floating enable
 for_window [class="Cam"] floating enable
 for_window [title="Log in with PayPal - Chromium"] floating enable
 for_window [class="Blueman-manager"] floating enable
-for_window [class="Blueman-manager"] border pixel 2,resize set 525 300
+for_window [class="Blueman-manager"] resize set 525 300
 
 #############################################################################
 ### SHUTDOWN MODE
@@ -264,9 +289,6 @@ mode "SHUTDOWN" {
 #############################################################################
 ### MAIN
 
-# LOCK SCREEN
-bindsym Mod4+l exec bash lock.sh
-
 # START TERMINAL
 bindsym $mod+Return exec $term
 
@@ -276,16 +298,16 @@ bindsym $mod+d exec rofi -show drun
 bindsym $mod+z exec --no-startup-id morc_menu
 
 # BRIGHTNESS CONTROLS
-bindsym $mod+F7 exec xbacklight -inc 10
-bindsym $mod+F6 exec xbacklight -dec 10
+bindsym $mod+Home exec xbacklight -inc 10
+bindsym $mod+End exec xbacklight -dec 10
 
 # VOLUME CONTROLS
-bindsym $mod+F10 exec --no-startup-id pactl set-sink-volume 0 +5%
-bindsym $mod+F9 exec --no-startup-id pactl set-sink-volume 0 -5%
-bindsym $mod+F8 exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +2%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -2%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 # FILE MANAGERS
-bindsym $mod+f exec nautilus
+bindsym $mod+F12 exec nautilus
 bindsym $mod+Shift+Return exec $term -e ranger
 
 bindsym $mod+Shift+F3 exec gksu pcmanfm
@@ -293,6 +315,7 @@ bindsym $mod+Shift+F3 exec gksu pcmanfm
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; polybar-msg cmd restart;\
+	 bash dunstthemeupdate;\
 	 exec notify-send 'Dunst & Polybar have been restarted.'"
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
@@ -301,53 +324,57 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 ### OWN BINDINGS
 
 # SPOTIFY
-bindsym $mod+s exec spotify
+bindsym $mod+Shift+s exec spotify
+bindsym $mod+s exec $term -e ncmpcpp
 
 # MUSIC PLAYER CONTROLS
 bindsym $mod+p exec playerctl play-pause
+bindsym $mod+Shift+p exec mpc toggle
 bindsym $mod+bracketright exec playerctl next
+bindsym $mod+Shift+bracketright exec mpc next
 bindsym $mod+bracketleft exec playerctl previous
+bindsym $mod+Shift+bracketleft exec mpc prev
 
 # VISUALISER
 bindsym $mod+Shift+v exec $term -e vis
 
 # PRIME VIDEO
-bindsym $mod+Shift+n exec chromium --new-window \
-	--app=https://www.amazon.co.uk/Amazon-Video/b/?node=3010085031&ref=atv_surl_aiv
+bindsym $mod+Shift+n exec $browser2 --new-window\
+ --app=https://www.amazon.co.uk/Amazon-Video/b/?node=3010085031&ref=atv_surl_aiv
 
 # NETFLIX
-bindsym $mod+n exec chromium --new-window \
-	--app=https://www.netflix.com/
+bindsym $mod+n exec $browser2 --new-window\
+ --app=https://www.netflix.com/
 
 # GOOGLE PLAY MOVIES
-bindsym $mod+Shift+m exec chromium --new-window \
-	--app=https://play.google.com/movies/
+bindsym $mod+Shift+m exec $browser2 --new-window\
+ --app=https://play.google.com/movies/
 
 # GOOGLE PLAY MUSIC
-bindsym $mod+m exec chromium --new-window \
-	--app=https://play.google.com/music/listen#/recents/
+bindsym $mod+m exec $browser2 --new-window\
+ --app=https://play.google.com/music/listen#/recents/
 
 # YOUTUBE
-bindsym $mod+Shift+y exec chromium --new-window \
-	--app=https://www.youtube.com/
+bindsym $mod+Shift+y exec $browser2 --new-window\
+ --app=https://www.youtube.com/
 
 # ALSAMIXER
 bindsym $mod+Ctrl+a exec $term -e 'alsamixer'
 
 # BROWSERS
 bindsym $mod+c exec $browser
-bindsym $mod+Shift+f exec $browser2
+bindsym $mod+f exec $browser2
 
 # QALC
 bindsym $mod+q exec $term2 --title="Calculator" -e R
 
 # EMAIL
-bindsym $mod+Shift+u exec $browser2 --new-window \
-	--app=https://outlook.office365.com/owa/?realm=soton.ac.uk
+bindsym $mod+Shift+u exec $browser2 --new-window\
+ --app=https://outlook.office365.com/owa/?realm=soton.ac.uk
 
 # NIGHT MODE
-bindsym $mod+semicolon exec redshift -O 3700
-bindsym $mod+apostrophe exec redshift -O 6500
+bindsym $mod+semicolon exec redshift -P -O 3700
+bindsym $mod+apostrophe exec redshift -x
 
 # MULTI-MONITOR SETTINGS
 bindsym $mod+Ctrl+v move workspace to output VGA1
@@ -355,18 +382,22 @@ bindsym $mod+Ctrl+e move workspace to output eDP1
 bindsym $mod+Ctrl+m xrandr --output eDP1 --primary
 
 # SCROT
-bindsym $mod+Shift+p exec scrot $home/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`_`xdpyinfo  | grep -oP 'dimensions:\s+\K\S+'`.png
-
-# OPEN ~/.i3/CONFIG
-bindsym $mod+F5 exec --no-startup-id $term -e vim ~/.i3/config
+bindsym Print exec "scrot $home/Pictures/ScreenShots/`date +%Y-%m-%d_%H:%M:%S`_`xdpyinfo  | grep -oP 'dimensions:\s+\K\S+'`.png ;exec notify-send 'Screenshot saved to ~/Pictures/ScreenShots.'"
 
 # RESTART POLYBAR
-bindsym $mod+Ctrl+p --release exec "polybar top"
+bindsym $mod+Ctrl+p --release exec polybar top
+
+# OPEN CONFIGS
+bindsym $mod+Ctrl+1 exec --no-startup-id $term -e vim ~/.config/i3/config
+bindsym $mod+Ctrl+2 exec --no-startup-id $term -e vim ~/.Xresources
+bindsym $mod+Ctrl+3 exec --no-startup-id $term -e vim ~/.vimrc
+bindsym $mod+Ctrl+4 exec --no-startup-id $term -e vim ~/.config/ranger/rc.conf
+bindsym $mod+Ctrl+5 exec --no-startup-id $term -e vim ~/.config/polybar/config
+bindsym $mod+Ctrl+6 exec --no-startup-id $term -e vim ~/.config/qutebrowser/config.py
 
 #############################################################################
-### STARTUP PROGRAMS
+### STARTUP DAEMONS
 
-exec_always feh --bg-scale ~/.config/wall.png
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
@@ -378,8 +409,32 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id synclient VertEdgeScroll=1 HorizEdgeScroll=1 \
 	HorizTwoFingerScroll=1 PalmDetect=1 TapButton1=1 TapButton2=3 TapButton3=2
-exec --no-startup-id touchegg &
 exec compton -b -c -f
 exec polybar top
-exec polybar bottom
-exec onedrive-d start
+exec feh --bg-scale ~/.config/wall.png
+exec --no-startup-id mpd
+exec setxkbmap gb
+
+#############################################################################
+### STARTUP PROGRAMS
+
+exec --no-startup-id $term -name MAIN
+assign [instance="MAIN"]	$ws1
+
+exec --no-startup-id $term -name RSS -e newsboat
+assign [instance="RSS"]		$ws1
+
+exec --no-startup-id $term -name MUSIC -e ncmpcpp
+assign [instance="MUSIC"]	$ws4
+
+exec --no-startup-id $term -name VIS -e vis
+assign [instance="VIS"]		$ws4
+
+exec --no-startup-id $term -name FILES -e ranger
+assign [instance="FILES"]	$ws2
+
+exec --no-startup-id $term -name WORK -e ranger
+assign [instance="WORK"]	$ws5
+
+exec --no-startup-id $browser
+

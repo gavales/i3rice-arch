@@ -408,7 +408,7 @@ c.colors.tabs.selected.odd.fg = blackd
 ## Background color for webpages if unset (or empty to use the theme's
 ## color).
 ## Type: QtColor
-c.colors.webpage.bg = whited
+c.colors.webpage.bg = 'white'
 
 ## Number of commands to save in the command history. 0: no history / -1:
 ## unlimited
@@ -522,7 +522,7 @@ c.content.default_encoding = 'iso-8859-1'
 ## menu. For QtWebEngine, see `--enable-webengine-inspector` in
 ## `qutebrowser --help` instead.
 ## Type: Bool
-c.content.developer_extras = False
+#c.content.developer_extras = False
 
 ## Try to pre-fetch DNS entries to speed up browsing.
 ## Type: Bool
@@ -777,39 +777,39 @@ c.editor.encoding = 'utf-8'
 
 ## Font used in the completion categories.
 ## Type: Font
-c.fonts.completion.category = 'bold 12pt monospace'
+c.fonts.completion.category = 'bold 10pt monospace'
 
 ## Font used in the completion widget.
 ## Type: Font
-c.fonts.completion.entry = '12pt monospace'
+c.fonts.completion.entry = '10pt monospace'
 
 ## Font used for the debugging console.
 ## Type: QtFont
-c.fonts.debug_console = '12pt monospace'
+c.fonts.debug_console = '10pt monospace'
 
 ## Font used for the downloadbar.
 ## Type: Font
-c.fonts.downloads = '12pt monospace'
+c.fonts.downloads = '10pt monospace'
 
 ## Font used for the hints.
 ## Type: Font
-c.fonts.hints = 'bold 12pt monospace'
+c.fonts.hints = 'bold 10pt monospace'
 
 ## Font used in the keyhint widget.
 ## Type: Font
-c.fonts.keyhint = '12pt monospace'
+c.fonts.keyhint = '10pt monospace'
 
 ## Font used for error messages.
 ## Type: Font
-c.fonts.messages.error = '12pt monospace'
+c.fonts.messages.error = '10pt monospace'
 
 ## Font used for info messages.
 ## Type: Font
-c.fonts.messages.info = '12pt monospace'
+c.fonts.messages.info = '10pt monospace'
 
 ## Font used for warning messages.
 ## Type: Font
-c.fonts.messages.warning = '12pt monospace'
+c.fonts.messages.warning = '10pt monospace'
 
 ## Default monospace fonts. Whenever "monospace" is used in a font
 ## setting, it's replaced with the fonts listed here.
@@ -818,15 +818,15 @@ c.fonts.monospace = '"xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", M
 
 ## Font used for prompts.
 ## Type: Font
-c.fonts.prompts = '12pt sans-serif'
+c.fonts.prompts = '10pt sans-serif'
 
 ## Font used in the statusbar.
 ## Type: Font
-c.fonts.statusbar = '12pt monospace'
+c.fonts.statusbar = '10pt monospace'
 
 ## Font used in the tab bar.
 ## Type: QtFont
-c.fonts.tabs = '12pt monospace'
+c.fonts.tabs = '10pt monospace'
 
 ## Font family for cursive fonts.
 ## Type: FontFamily
@@ -838,19 +838,19 @@ c.fonts.web.family.fantasy = ''
 
 ## Font family for fixed fonts.
 ## Type: FontFamily
-c.fonts.web.family.fixed = 'Palatino'
+c.fonts.web.family.fixed = ''
 
 ## Font family for sans-serif fonts.
 ## Type: FontFamily
-c.fonts.web.family.sans_serif = 'CMU Bright Bold'
+c.fonts.web.family.sans_serif = ''
 
 ## Font family for serif fonts.
 ## Type: FontFamily
-c.fonts.web.family.serif = 'Palatino'
+c.fonts.web.family.serif = ''
 
 ## Font family for standard fonts.
 ## Type: FontFamily
-c.fonts.web.family.standard = 'Palatino'
+c.fonts.web.family.standard = ''
 
 ## Default font size (in pixels) for regular text.
 ## Type: Int
@@ -1058,14 +1058,14 @@ c.qt.force_platform = None
 ## Force software rendering for QtWebEngine. This is needed for
 ## QtWebEngine to work with Nouveau drivers.
 ## Type: Bool
-c.qt.force_software_rendering = False
+c.qt.force_software_rendering = 'chromium'
 
 ## Turn on Qt HighDPI scaling. This is equivalent to setting
 ## QT_AUTO_SCREEN_SCALE_FACTOR=1 in the environment. It's off by default
 ## as it can cause issues with some bitmap fonts. As an alternative to
 ## this, it's possible to set font sizes and the `zoom.default` setting.
 ## Type: Bool
-c.qt.highdpi = True
+c.qt.highdpi = False
 
 ## Show a scrollbar.
 ## Type: Bool
@@ -1203,7 +1203,7 @@ c.tabs.favicons.scale = 1.0
 
 ## Show favicons in the tab bar.
 ## Type: Bool
-c.tabs.favicons.show = True
+c.tabs.favicons.show = 'always'
 
 ## Padding (in pixels) for tab indicators.
 ## Type: Padding
@@ -1378,7 +1378,7 @@ c.url.yank_ignored_parameters = ['ref', 'utm_source', 'utm_medium', 'utm_campaig
 
 ## Hide the window decoration when using wayland.
 ## Type: Bool
-c.window.hide_wayland_decoration = False
+c.window.hide_decoration = False
 
 ## Format to use for the window title. The same placeholders like for
 ## `tabs.title.format` are defined.
@@ -1387,7 +1387,7 @@ c.window.title_format = '{perc}{title}{title_sep}qutebrowser'
 
 ## Default zoom level.
 ## Type: Perc
-c.zoom.default = '50%'
+c.zoom.default = '125%'
 
 ## Available zoom levels.
 ## Type: List of Perc

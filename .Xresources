@@ -1,76 +1,40 @@
 !!colors
 
-!Ivory and Navy
-#define blackd		#032c36
-#define blackl		#065f73
-#define redd		#c2454e
-#define redl		#ef5847
-#define greend		#7cbf9e
-#define greenl		#a2d9b1
-#define yellowd		#8a7a63
-#define yellowl		#beb090
-#define blued		#555d71
-#define bluel		#61778d
-#define magentad	#ff5879
-#define magental	#ff99a1
-#define cyand		#44b5b1
-#define cyanl		#9ed9d8
-#define whited		#f2f1b9
-#define whitel		#f6f6c9
+!pywal
+#define blackd		#02020d
+#define blackl		#6d8b8f
+#define redl		#70847c
+#define redd		#a45b55
+#define greenl		#cda16e
+#define greend		#70847c
+#define yellowl		#306b8b
+#define yellowd 	#cda16e
+#define bluel		#435c8c
+#define blued		#306b8b
+#define magental	#4c9fa5
+#define magentad	#435c8c
+#define cyanl		#4c9fa5
+#define cyand		#4c9fa5
+#define whitel		#9cc7cd
+#define whited		#9cc7cd
 
-!!MaterialDark
-!#define blackd		#000000
-!#define blackl		#363636
-!#define redd		#d40000
-!#define redl		#ff2222
-!#define greend		#007900
-!#define greenl		#00aa00
-!#define yellowd		#cf4216
-!#define yellowl		#ff4500
-!#define blued		#005f87
-!#define bluel		#00aad4
-!#define magentad	#8b09b1
-!#define magental	#aa00d4
-!#define cyand		#20786d
-!#define cyanl		#2ea596
-!#define whited		#30536f
-!#define whitel		#ffffff
-
-!!BreezeDark
-!#define blackd		#2a2e32
-!#define blackl		#31363b
-!#define redd		#c0392b
-!#define redl		#f44f4f
-!#define greend		#218058
-!#define greenl		#27ae60
-!#define yellowd		#fdbc4b
-!#define yellowl		#fdbc4b
-!#define blued		#2980b9
-!#define bluel		#0099ff
-!#define magentad	#8e44ad
-!#define magental	#af81ff
-!#define cyand		#27aeae
-!#define cyanl		#31dddd
-!#define whited		#acada1
-!#define whitel		#cfd0c2
-
-!!oxide
-!#define blackd		#212121
-!#define blackl		#343D46
-!#define redd		#4F5B66
-!#define redl		#65737E
-!#define greend		#A7ADBA
-!#define greenl		#C0C5CE
-!#define yellowd		#CDD3DE
-!#define yellowl		#F3F4F5
-!#define blued		#E57373
-!#define bluel		#F99157
-!#define magentad	#FAC863
-!#define magental	#A6BC69
-!#define cyand		#5FB3B3
-!#define cyanl		#6699CC
-!#define whited		#C594C5
-!#define whitel		#AB7967
+!!Pywal
+!#define blackd		#060608
+!#define blackl		#79828e
+!#define redd		#BA614A
+!#define redl		#BA614A
+!#define greend		#D6864E
+!#define greenl		#D6864E
+!#define yellowd		#EF9466
+!#define yellowl		#EF9466
+!#define blued		#0C4C91
+!#define bluel		#0C4C91
+!#define magentad	#29498A
+!#define magental	#29498A
+!#define cyand		#A26E89
+!#define cyanl		#A26E89
+!#define whited		#adbbcc
+!#define whitel		#adbbcc
 
 !!Solarized
 !#define blackd		#073642
@@ -89,24 +53,6 @@
 !#define cyanl		#93a1a1
 !#define whited		#eee8d5
 !#define whitel		#fdf6e3
-
-!!McHearty
-!#define blackd		#272822
-!#define blackl		#75715e
-!#define redd		#f92672
-!#define redl		#f92672
-!#define greend		#a6e22e
-!#define greenl		#a6e22e
-!#define yellowd		#f4bf75
-!#define yellowl		#f4bf75
-!#define blued		#66d9ef
-!#define bluel		#66d9ef
-!#define magentad	#ae81ff
-!#define magental	#ae81ff
-!#define cyand		#a1efe4
-!#define cyanl		#a1efe4
-!#define whited		#f8f8f2
-!#define whitel		#f9f8f5
 
 *background:			blackd
 *foreground:			whitel
@@ -180,11 +126,19 @@ Xcursor.theme:			xcursor-breeze
 Xcursor.size:			0
 
 !!urxvt
-URxvt*font:			xft:Ubuntu Mono:size=17:antialias=true:hinting=true
-URxvt*imFont:			xft:Ubuntu Mono:size=17:antialias=true:hinting=true
-URxvt*boldFont:			xft:Ubuntu Mono:bold:size=17:antialias=true:hinting=true
-URxvt*italicFont:		xft:Ubuntu Mono:italic:size=17:antialias=true:hinting=true
-URxvt*boldItalicFont:		xft:Ubuntu Mono:bold:italic:size=17:antialias=true:hinting=true
+!URxvt*font:			xft:Ubuntu Mono:size=12:antialias=true:hinting=true
+!URxvt*imFont:			xft:Ubuntu Mono:size=12:antialias=true:hinting=true
+!URxvt*boldFont:			xft:Ubuntu Mono:bold:size=12:antialias=true:hinting=true
+!URxvt*italicFont:		xft:Ubuntu Mono:italic:size=12:antialias=true:hinting=true
+!URxvt*boldItalicFont:		xft:Ubuntu Mono:bold:italic:size=12:antialias=true:hinting=true
+
+!URxvt*font:			xft:Inconsolata:size=12:hinting=true
+!URxvt*imFont:			xft:Inconsolata:size=12:hinting=true
+!URxvt*boldFont:			xft:Inconsolata:bold:size=12:hinting=true
+!URxvt*italicFont:		xft:Inconsolata:italic:size=12:hinting=true
+!URxvt*boldItalicFont:		xft:Inconsolata:bold:italic:size=12:hinting=true
+
+URxvt.font:                     xft:TerminessTTFNerdFontMono:size=10
 
 URxvt*depth:			32
 URxvt*scrollBar:		false
@@ -194,6 +148,7 @@ URxvt*background:		rgba:0000/0000/0000/cc90
 URxvt*foreground:		whitel
 URxvt*saveLines:		5000
 URxvt*useColor:			true
+URxvt*internalBorder:		25
 
 ! for 'fake' transparency (without Compton) uncomment the following three lines
 ! URxvt*inheritPixmap:            true

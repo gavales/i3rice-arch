@@ -1,5 +1,9 @@
+[shortcuts]
+    close = ctrl+space
+    close_all = ctrl+shift+space
+
 [global]
-    font = Hack 10
+    font = Ubuntu Mono 12
     
     allow_markup = yes
     
@@ -20,9 +24,9 @@
     show_age_threshold = 60
     word_wrap = yes
     ignore_newline = no
-    geometry = "300x5-30+50"
+    geometry = "600x5-1+35"
     shrink = no
-    transparency = 0
+    transparency = 20
     idle_threshold = 120
     monitor = 0
     follow = mouse
@@ -31,34 +35,12 @@
     show_indicators = yes
     line_height = 0
     separator_height = 5
-    padding = 20
-    horizontal_padding = 20
+    padding = 10
+    horizontal_padding = 10
     separator_color = frame
     startup_notification = false
     # dmenu = /usr/bin/dmenu -p dunst:
-    browser = /usr/bin/google-chrome-beta
-    icon_position = off
+    browser = /usr/bin/chromium
+    icon_position = on
     icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
-[frame]
-    width = 5
-    color = "#cc241d"
-
-[shortcuts]
-    close = ctrl+space
-    close_all = ctrl+shift+space
-
-[urgency_low]
-    background = "#282828"
-    foreground = "#ebdbb2"
-    timeout = 3
-
-[urgency_normal]
-    background = "#282828"
-    foreground = "#ebdbb2"
-    timeout = 3
-
-[urgency_critical]
-    background = "#282828"
-    foreground = "#ebdbb2"
-    timeout = 3
