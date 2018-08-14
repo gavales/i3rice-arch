@@ -1387,7 +1387,7 @@ c.window.title_format = '{perc}{title}{title_sep}qutebrowser'
 
 ## Default zoom level.
 ## Type: Perc
-c.zoom.default = '125%'
+c.zoom.default = '100%'
 
 ## Available zoom levels.
 ## Type: List of Perc

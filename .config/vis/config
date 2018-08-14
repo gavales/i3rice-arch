@@ -1,5 +1,5 @@
 ##Refresh rate of the visualizers. A really high refresh rate may cause screen tearing. Default is 20.
-visualizer.fps=40
+#visualizer.fps=20
 
 ##Sets the audio sources to use. Currently available ones are "mpd" and "alsa"Sets the audio sources to use.
 ##Currently available ones are "mpd", "pulse" and "alsa". Defaults to "mpd".
@@ -8,7 +8,7 @@ audio.sources=pulse
 ##vis tries to find the correct pulseaudio sink, however this will not work on all systems.
 ##If pulse audio is not working with vis try switching the audio source. A list can be found by running the
 ##command pacmd list-sinks  | grep -e 'name:'  -e 'index'
-#audio.pulse.source=0
+audio.pulse.source=0
 
 ##Defaults to "/tmp/mpd.fifo"
 #mpd.fifo.path=/tmp/mpd.fifo
@@ -27,7 +27,7 @@ audio.sources=pulse
 
 ##Applies scaling factor to both lorenz and ellipse visualizers. This is useful when the system audio is set
 #to a low volume.
-visualizer.scaling.multiplier=2.0
+#visualizer.scaling.multiplier=1.0
 
 ##Configures the visualizers and the order they are in. Available visualizers are spectrum,lorenz,ellipse.
 ##Defaults to spectrum,ellipse,lorenz
@@ -36,14 +36,14 @@ visualizer.scaling.multiplier=2.0
 
 ##Configures what character the spectrum visualizer will use. Specifying a space (e.g " ") means the
 ##background will be colored instead of the character. Defaults to " ".
-visualizer.spectrum.character=|
+#visualizer.spectrum.character=#
 
 ##Spectrum bar width. Defaults to 2.
-visualizer.spectrum.bar.width=1
+#visualizer.spectrum.bar.width=2
 
 ##The amount of space between each bar in the spectrum visualizer. Defaults to 1. It's possible to set this to
 ##zero to have no space between bars
-visualizer.spectrum.bar.spacing=1
+#visualizer.spectrum.bar.spacing=1
 
 ##Available smoothing options are monstercat, sgs, none.
 #visualizer.spectrum.smoothing.mode=sgs
@@ -73,19 +73,19 @@ visualizer.spectrum.bar.spacing=1
 
 ##Configures what character the ellipse visualizer will use. Specifying a space (e.g " ") means the
 ##background will be colored instead of the character. Defaults to "█".
-visualizer.ellipse.character=*
+#visualizer.ellipse.character=#
 
 ##The radius of each color ring in the ellipse visualizer. Defaults to 2.
-visualizer.ellipse.radius=1
+#visualizer.ellipse.radius=2
 
 
 ##Configures what character the lorenz visualizer will use. Specifying a space (e.g " ") means the
 ##background will be colored instead of the character. Defaults to "█".
-visualizer.lorenz.character=*
+#visualizer.lorenz.character=#
 
 
 ##Turns off overriding the user's terminal colors. This is true by default.
 #colors.override.terminal=false
 
 ##Specifies the color scheme. The color scheme must be in ~/.config/vis/colors/ directory. The default scheme is "colors".
-colors.scheme=rainbow
+#colors.scheme=rainbow

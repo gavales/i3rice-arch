@@ -105,6 +105,8 @@ bindsym $mod+b bar mode toggle
 gaps inner 10
 gaps outer 20
 
+bindsym $mod+Ctrl+y gaps outer current minus 5
+bindsym $mod+Ctrl+o gaps outer current plus 5
 bindsym $mod+Ctrl+u gaps inner current minus 5
 bindsym $mod+Ctrl+i gaps inner current plus 5
 
@@ -253,20 +255,20 @@ for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 
 # OWN
-for_window [title="Netflix"] floating enable,sticky enable,resize set 554 313
+for_window [title="Netflix"] floating enable,sticky enable,resize set 370 209
 for_window [title="Amazon.co.uk: Prime Video"] \
-	floating enable,sticky enable,resize set 554 313
+	floating enable,sticky enable,resize set 370 209
 for_window [class="MPlayer"] floating enable,sticky enable
 for_window [class="Pavucontrol"] floating enable,resize set 525 300
 for_window [class="Pavucontrol"] move right 680,move down 405
 for_window [title="Google Play Movies & TV"] \
 	floating enable,sticky enable,resize set 480 270
-for_window [title="Calculator"] floating enable,resize set 480 480
 for_window [class="matplotlib"] floating enable
 for_window [class="Cam"] floating enable
 for_window [title="Log in with PayPal - Chromium"] floating enable
 for_window [class="Blueman-manager"] floating enable
-for_window [class="Blueman-manager"] resize set 525 300
+for_window [instance="CALC"] floating enable,resize set 480 480
+for_window [instance="BASHMOUNT"] floating enable,sticky enable,resize set 400 400
 
 #############################################################################
 ### SHUTDOWN MODE
@@ -366,7 +368,7 @@ bindsym $mod+c exec $browser
 bindsym $mod+f exec $browser2
 
 # QALC
-bindsym $mod+q exec $term2 --title="Calculator" -e R
+bindsym $mod+q exec $term -name CALC -e R
 
 # EMAIL
 bindsym $mod+Shift+u exec $browser2 --new-window\
@@ -387,6 +389,11 @@ bindsym Print exec "scrot $home/Pictures/ScreenShots/`date +%Y-%m-%d_%H:%M:%S`_`
 # RESTART POLYBAR
 bindsym $mod+Ctrl+p --release exec polybar top
 
+# BASHMOUNT
+bindsym $mod+Shift+b exec $term -name BASHMOUNT -e bashmount
+
+# NEWSBOAT
+bindsym $mod+r exec --no-startup-id $term -e newsboat
 # OPEN CONFIGS
 bindsym $mod+Ctrl+1 exec --no-startup-id $term -e vim ~/.config/i3/config
 bindsym $mod+Ctrl+2 exec --no-startup-id $term -e vim ~/.Xresources

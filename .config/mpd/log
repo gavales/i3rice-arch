@@ -2074,3 +2074,96 @@ Aug 13 23:17 : client: [16] opened from 127.0.0.1:44578
 Aug 13 23:19 : player: played "Protoje/00 Dread.mp3"
 Aug 13 23:22 : player: played "Protoje/00 JA.mp3"
 Aug 13 23:27 : player: played "Protoje/00 Kingston Be Wise.mp3"
+Aug 13 23:30 : player: played "Protoje/00 No Lipstick.mp3"
+Aug 13 23:34 : player: played "Protoje/00 Rasta Love (feat_ Ky-Mani Marl.mp3"
+Aug 13 23:38 : player: played "Protoje/00 Who Dem A Program.mp3"
+Aug 13 23:43 : player: played "Protoje/8 Year Affair/00 8 Year Affair.mp3"
+Aug 13 23:46 : player: played "Protoje/8 Year Affair/00 Black Cinderella.mp3"
+Aug 13 23:51 : player: played "Protoje/8 Year Affair/00 Come My Way.mp3"
+Aug 13 23:51 : client: [16] closed
+Aug 13 23:51 : client: [17] opened from 127.0.0.1:45000
+Aug 13 23:55 : player: played "Protoje/8 Year Affair/00 Hold You Now.mp3"
+Aug 13 23:59 : player: played "Protoje/8 Year Affair/00 Shot By Love (Feat_ Toi).mp3"
+Aug 14 00:03 : player: played "Protoje/8 Year Affair/00 Someone Like You (Feat_ Tessan.mp3"
+Aug 14 00:07 : player: played "Protoje/Seven Year Itch/00 After I'm Gone (feat_ Jah9).mp3"
+Aug 14 00:07 : client: [18] opened from [::1]:49024
+Aug 14 00:10 : player: played "Protoje/Seven Year Itch/00 Growing Up (feat_ Gentleman).mp3"
+Aug 14 00:10 : client: [18] closed
+Aug 14 00:11 : client: [19] opened from [::1]:49060
+Aug 14 00:11 : client: [19] closed
+Aug 14 00:11 : client: [20] opened from [::1]:49062
+Aug 14 00:11 : client: [20] closed
+Aug 14 00:11 : client: [21] opened from [::1]:49064
+Aug 14 00:11 : client: [21] closed
+Aug 14 00:11 : client: [1] closed
+Aug 14 00:13 : player: played "Protoje/Seven Year Itch/00 In The Streets (Interlude).mp3"
+Aug 14 11:44 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 14 11:44 : client: [0] opened from 127.0.0.1:44696
+Aug 14 11:44 : client: [1] opened from [::1]:55112
+Aug 14 12:12 : client: [2] opened from [::1]:55840
+ALSA lib pcm_dmix.c:1099:(snd_pcm_dmix_open) unable to open slave
+Aug 14 12:12 : exception: Failed to open "mpd alsamixer-output" [alsa]
+Aug 14 12:12 : exception: nested: Failed to open ALSA device "default": Device or resource busy
+Aug 14 12:12 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 14 12:12 : client: [2] closed
+Aug 14 12:12 : client: [3] opened from [::1]:55842
+Aug 14 12:12 : client: [3] closed
+Aug 14 12:13 : client: [1] closed
+Aug 14 12:32 : client: [0] closed
+Aug 14 12:32 : client: [4] opened from 127.0.0.1:45938
+Aug 14 12:36 : player: played "Protoje/Seven Year Itch/00 In The Streets (Interlude).mp3"
+Aug 14 12:37 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 14 12:37 : client: [0] opened from [::1]:47250
+Aug 14 12:37 : client: [1] opened from 127.0.0.1:58896
+Aug 14 12:39 : client: [2] opened from [::1]:47316
+ALSA lib pcm_dmix.c:1099:(snd_pcm_dmix_open) unable to open slave
+Aug 14 12:39 : exception: Failed to open "mpd alsamixer-output" [alsa]
+Aug 14 12:39 : exception: nested: Failed to open ALSA device "default": Device or resource busy
+Aug 14 12:39 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 14 12:39 : client: [2] closed
+Aug 14 12:39 : client: [3] opened from [::1]:47318
+Aug 14 12:39 : client: [3] closed
+Aug 14 12:39 : client: [4] opened from [::1]:47320
+ALSA lib pcm_dmix.c:1099:(snd_pcm_dmix_open) unable to open slave
+Aug 14 12:39 : exception: Failed to open "mpd alsamixer-output" [alsa]
+Aug 14 12:39 : exception: nested: Failed to open ALSA device "default": Device or resource busy
+Aug 14 12:39 : client: [4] closed
+Aug 14 12:39 : player: played "Protoje/Seven Year Itch/00 In The Streets (Interlude).mp3"
+ALSA lib pcm_dmix.c:1099:(snd_pcm_dmix_open) unable to open slave
+Aug 14 12:39 : exception: Failed to open "mpd alsamixer-output" [alsa]
+Aug 14 12:39 : exception: nested: Failed to open ALSA device "default": Device or resource busy
+Aug 14 12:42 : player: played "Protoje/Seven Year Itch/00 On the Road.mp3"
+ALSA lib pcm_dmix.c:1099:(snd_pcm_dmix_open) unable to open slave
+Aug 14 12:42 : exception: Failed to open "mpd alsamixer-output" [alsa]
+Aug 14 12:42 : exception: nested: Failed to open ALSA device "default": Device or resource busy
+Aug 14 12:46 : client: [1] closed
+Aug 14 12:46 : client: [5] opened from 127.0.0.1:59038
+Aug 14 12:46 : player: played "Protoje/Seven Year Itch/00 Overtime.mp3"
+ALSA lib pcm_dmix.c:1099:(snd_pcm_dmix_open) unable to open slave
+Aug 14 12:46 : exception: Failed to open "mpd alsamixer-output" [alsa]
+Aug 14 12:46 : exception: nested: Failed to open ALSA device "default": Device or resource busy
+Aug 14 12:50 : player: played "Protoje/Seven Year Itch/00 Take Control (The Message Ridd.mp3"
+ALSA lib pcm_dmix.c:1099:(snd_pcm_dmix_open) unable to open slave
+Aug 14 12:50 : exception: Failed to open "mpd alsamixer-output" [alsa]
+Aug 14 12:50 : exception: nested: Failed to open ALSA device "default": Device or resource busy
+Aug 14 12:54 : player: played "Protoje/Seven Year Itch/00 The Seven Year Itch.mp3"
+ALSA lib pcm_dmix.c:1099:(snd_pcm_dmix_open) unable to open slave
+Aug 14 12:54 : exception: Failed to open "mpd alsamixer-output" [alsa]
+Aug 14 12:54 : exception: nested: Failed to open ALSA device "default": Device or resource busy
+Aug 14 12:57 : player: played "Protoje/Seven Year Itch/06 Roll.mp3"
+ALSA lib pcm_dmix.c:1099:(snd_pcm_dmix_open) unable to open slave
+Aug 14 12:57 : exception: Failed to open "mpd alsamixer-output" [alsa]
+Aug 14 12:57 : exception: nested: Failed to open ALSA device "default": Device or resource busy
+Aug 14 13:02 : player: played "Protoje/The Seven Year Itch/10 Wrong Side of the Law.mp3"
+ALSA lib pcm_dmix.c:1099:(snd_pcm_dmix_open) unable to open slave
+Aug 14 13:02 : exception: Failed to open "mpd alsamixer-output" [alsa]
+Aug 14 13:02 : exception: nested: Failed to open ALSA device "default": Device or resource busy
+Aug 14 13:06 : player: played "Protoje/The 8 Year Affair/02 I&I.mp3"
+ALSA lib pcm_dmix.c:1099:(snd_pcm_dmix_open) unable to open slave
+Aug 14 13:06 : exception: Failed to open "mpd alsamixer-output" [alsa]
+Aug 14 13:06 : exception: nested: Failed to open ALSA device "default": Device or resource busy
+Aug 14 13:09 : player: played "Protoje/The 8 Year Affair/06 Around The World.mp3"
+ALSA lib pcm_dmix.c:1099:(snd_pcm_dmix_open) unable to open slave
+Aug 14 13:09 : exception: Failed to open "mpd alsamixer-output" [alsa]
+Aug 14 13:09 : exception: nested: Failed to open ALSA device "default": Device or resource busy
+Aug 14 13:14 : player: played "Protoje/The 8 Year Affair/14 Music From My Heart.mp3"
