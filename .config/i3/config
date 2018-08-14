@@ -443,5 +443,5 @@ assign [instance="FILES"]	$ws2
 exec --no-startup-id $term -name WORK -e ranger
 assign [instance="WORK"]	$ws5
 
-exec --no-startup-id $browser
+exec --no-startup-id $browser2
 
