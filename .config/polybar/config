@@ -33,7 +33,7 @@ enable-ipc = true
 background = [00]#000000
 foreground = ${colors.white}
 
-line-size = 3
+line-size = 1
 line-color = ${colors.red}
 
 border-size = 0
@@ -42,10 +42,10 @@ border-color = ${colors.black}
 padding-left = 0
 padding-right = 0
 
-module-margin-left = 1
+module-margin-left = 0
 module-margin-right = 1
 
-font-0 = ubuntumono:size=9;1
+font-0 = ubuntumono:size=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;1
 font-2 = Wuncon Siji:pixelsize=10;1
 
