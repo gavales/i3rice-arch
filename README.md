@@ -1,7 +1,3 @@
-# i3rice-vaseky
-
-i3 rice for muh Manjaro-i3 chromebook Installation
-
 # Scrots
 
 ![Workspace 1](ws1.png "Workspace 1")
