@@ -10,7 +10,68 @@
 
 ![Workspace 5](ws5.png "Workspace 5")
 
-# First
+# Main Install
+
+First check UEFI:
+
+```
+ls /sys/firmware/efi/efivars
+```
+
+Connect to internet via ethernet or ```wifi-menu```.
+
+Run ```timedatectl set-ntp true```.
+
+Partition drive using fdisk or gdisk.
+
++ For GPT: BOOT, ROOT, SWAP, HOME
++ For MBR: BOOT, SWAP, ROOT, HOME
+
+Make filesystems:
+
++ ```mkfs.ext4 /dev/sd**``` for BOOT, ROOT & HOME
++ ```mkswap /dev/sd**``` for SWAP, then ```swapon /dev/sd**```
+
+Mount filesystems:
+
++ ```mount /dev/sdROOT /mnt```
++ ```mkdir boot```
++ ```mkdir home```
++ ```mount /dev/sdBOOT /mnt/boot```
++ ```mount /dev/sdHOME /mnt/home```
+
+Install Arch:
+
++ ```pacstrap /mnt base base-devel vim```
+
+Make ```/etc/fstab```:
+
+```
+genfstab -U /mnt >> /mnt/etc/fstab
+```
+
+Install GRUB:
+
++ First ```arch-chroot /mnt```
++ ```pacman -S grub```
++ ```grub-install --target=i386-pc /dev/sdDRIVE```
++ ```grub-mkconfig -o /boot/grub/grub.cfg```
+
+Generate locale:
+
++ ```vim /etc/locale.gen```
++ Uncomment your locale
++ Run ```locale-gen```
++ ```echo LANG=en_GB.UTF-8 >> /etc/locale.conf```
++ ```ln -sf /usr/share/zoneinfo/GMT /etc/localtime```
+
+Hostname & Password
+
++ ```echo HOSTNAME /etc/hostname```
++ passwd
+
+
+
 
 Install these packages...
 
@@ -62,7 +123,3 @@ Make a Matlab desktop icon:
 sudo wget  https://apprecs.org/gp/images/app-icons/300/c4/in.pxlcraft.matlabexpo.jpg -O /usr/share/icons/matlab.png
 sudo wget 'https://help.ubuntu.com/community/MATLAB?action=AttachFile&do=get&target=matlab-r2012a.desktop' -O /usr/share/applications/matlab.desktop
 ```
-
-# Sixth
-
-Just copy-paste the rest of the configs from this repo!
