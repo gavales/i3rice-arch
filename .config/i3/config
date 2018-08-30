@@ -311,6 +311,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 # FILE MANAGERS
 bindsym $mod+F12 exec nautilus
 bindsym $mod+Shift+Return exec $term -e ranger
+bindsym $mod+Ctrl+Return exec $term -e sudo ranger
 
 bindsym $mod+Shift+F3 exec gksu pcmanfm
 #bindsym $mod+F5 exec $term -e 'mocp'
@@ -434,8 +435,8 @@ assign [instance="RSS"]		$ws1
 exec --no-startup-id $term -name MUSIC -e ncmpcpp
 assign [instance="MUSIC"]	$ws4
 
-exec --no-startup-id $term -name VIS -e vis
-assign [instance="VIS"]		$ws4
+#exec --no-startup-id $term -name VIS -e vis
+#assign [instance="VIS"]		$ws4
 
 exec --no-startup-id $term -name FILES -e ranger
 assign [instance="FILES"]	$ws2

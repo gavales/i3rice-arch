@@ -42,7 +42,7 @@ Mount filesystems:
 
 Install Arch:
 
-+ ```pacstrap /mnt base base-devel vim```
++ ```pacstrap /mnt base base-devel git wget vim```
 
 Make ```/etc/fstab```:
 
@@ -68,10 +68,12 @@ Generate locale:
 Hostname & Password
 
 + ```echo HOSTNAME /etc/hostname```
-+ passwd
++ ```passwd```
 
+Add User & User Password:
 
-
++ ```useradd -m -g wheel gavarch```
++ ```passwd gavarch```
 
 Install these packages...
 
