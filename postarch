@@ -45,3 +45,7 @@ git clone https://github.com/dpayne/cli-visualizer.git
 cd cli-visualiser
 ./install.sh
 cd $home
+mkdir Drive
+echo '>>>>>>>>>> MAKE MATLAB ICON <<<<<<<<<<'
+wget  https://apprecs.org/gp/images/app-icons/300/c4/in.pxlcraft.matlabexpo.jpg -O /usr/share/icons/matlab.png
+wget 'https://help.ubuntu.com/community/MATLAB?                            action=AttachFile&do=get&target=matlab-r2012a.desktop' -O /usr/share/applications/matlab.desktop
