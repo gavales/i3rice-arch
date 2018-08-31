@@ -7,7 +7,7 @@ cd $home
 
 echo '>>>>>>>>>> INSTALLING YOUR PROGRAMS <<<<<<<<<<'
 
-pacman -S xorg-server xorg-xinit i3 i3status rofi dmenu ranger qutebrowser nautilus evince mupdf pinta redshift mplayer r mpd mpc ncmpcpp newsboat transmission-cli opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-citeproc python-pygments python2-pygments biber rxvt-unicode libmpdclient yajl dialog wpa_supplicant wireless_tools networkmanager network-manager-applet texlive-most
+pacman -S xorg-server xorg-xinit i3 i3status feh dunst rofi dmenu ranger w3m qutebrowser nautilus evince mupdf pinta redshift mplayer r mpd mpc ncmpcpp newsboat transmission-cli opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-citeproc python-pygments python2-pygments biber rxvt-unicode libmpdclient yajl dialog wpa_supplicant wireless_tools networkmanager network-manager-applet texlive-most
 
 echo '>>>>>>>>>> NETWORK MANAGER STUFF <<<<<<<<<<'
 
@@ -66,3 +66,11 @@ yaourt -S chromium-widevine && echo '> CHROMIUM <'
 yaourt -S spotify && echo '> SPOTIFY <'
 
 yaourt -S grive && echo '> GRIVE <'
+
+yaourt -S clipit && echo '> CLIPIT <'
+
+yaourt -S pulseaudio-ctl && echo '> PACTL <'
+
+yaourt -S zathura-pdf-mupdf && echo '> ZATHURA-MUPDF <'
+
+yaourt -S xorg-xbacklight && echo '> XBACKLIGHT <'
