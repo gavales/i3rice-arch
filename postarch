@@ -4,73 +4,44 @@ home = /home/$1
 username = $1
 
 cd $home
-
 echo '>>>>>>>>>> INSTALLING YOUR PROGRAMS <<<<<<<<<<'
-
-pacman -S xorg-server xorg-xinit i3 i3status feh dunst rofi dmenu ranger w3m qutebrowser nautilus evince mupdf pinta redshift mplayer r mpd mpc ncmpcpp newsboat transmission-cli opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-citeproc python-pygments python2-pygments biber rxvt-unicode libmpdclient yajl dialog wpa_supplicant wireless_tools networkmanager network-manager-applet texlive-most
-
+pacman -S xorg-server xorg-xinit i3 i3status feh dunst rofi dmenu ranger w3m lxappearance ncurses fftw qutebrowser nautilus evince mupdf pinta redshift mplayer r tk gcc-fortran mpd mpc ncmpcpp newsboat transmission-cli opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-citeproc python-pygments python2-pygments biber rxvt-unicode libmpdclient yajl dialog wpa_supplicant wireless_tools networkmanager network-manager-applet texlive-most
 echo '>>>>>>>>>> NETWORK MANAGER STUFF <<<<<<<<<<'
-
 systemctl enable NetworkManager.service
-
 systemctl disable dhcpcd.service
-
 systemctl stop dhcpcd.service
-
 systemctl disable dhcpcd@.service
-
 systemctl stop dhcpcd@.service
-
 systemctl enable wpa_supplicant.service
-
 gpasswd -a $username network
-
 echo '>>>>>>>>>> INSTALLING YAOURT <<<<<<<<<<'
-
 git clone https://aur.archlinux.org/package-query.git
-
 cd package-query/
-
 makepkg -si
-
 cd $home
-
 git clone https://aur.archlinux.org/yaourt.git
-
 cd yaourt/
-
 makepkg -si
-
 cd $home
-
 echo '>>>>>>>>>> COPY/PASTE CONFIGS FROM GITHUB <<<<<<<<<<'
-
 git clone https://github.com/StillANixRookie/i3rice-arch.git
-
 cp -a /~/i3rice-arch/. /~/
-
 cp i3exit /usr/bin/
-
 chmod +x /usr/bin/i3exit
-
 cp sudoers /etc/
-
 echo '>>>>>>>>>> INSTALL YAOURT APPS <<<<<<<<<<'
-
 yaourt -S polybar-git && echo '> POLYBAR <'
-
 yaourt -S i3-lock-color && echo '> i3LOCK-COLOR <'
-
 yaourt -S chromium-widevine && echo '> CHROMIUM <'
-
 yaourt -S spotify && echo '> SPOTIFY <'
-
 yaourt -S grive && echo '> GRIVE <'
-
 yaourt -S clipit && echo '> CLIPIT <'
-
 yaourt -S pulseaudio-ctl && echo '> PACTL <'
-
 yaourt -S zathura-pdf-mupdf && echo '> ZATHURA-MUPDF <'
-
 yaourt -S xorg-xbacklight && echo '> XBACKLIGHT <'
+echo '>>>>>>>>>> CLI-VISUALISER <<<<<<<<<<'
+cd $home
+git clone https://github.com/dpayne/cli-visualizer.git
+cd cli-visualiser
+./install.sh
+cd $home

@@ -75,49 +75,19 @@ Add User & User Password:
 + ```useradd -m -g wheel gavarch```
 + ```passwd gavarch```
 
-Install these packages...
+Then...
 
-```
-sudo pacman -S rofi qutebrowser ttf-font-awesome nitrogen xorg-xbacklight nautilus evince mupdf pinta redshift playerctl pulseaudio-ctl mplayer R opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice
-```
+```cd /etc```
+```rm sudoers```
+```wget https://raw.githubusercontent.com/StillANixRookie/i3rice-arch/master/sudoers```
 
-These for R...
+For installing apps and configs:
 
-```
-install.packages{"rmarkdown"}
-install.packages{"reticulate"}
-```
+```cd /home/gavarch```
+```wget https://raw.githubusercontent.com/StillANixRookie/i3rice-arch/master/postarch```
+```sudo bash postarch```
 
-These for markdown to pdf...
-
-```
-sudo pacman -S pandoc pandoc-citeproc
-```
-
-And these for LaTex...
-
-```
-sudo pacman -S python-pygments python2-pygments biber texlive-most
-```
-
-# Second
-
-Install these from the AUR using the software manager:
-
-```
-i3blocks-gaps-git rxvt-unicode-pixbuf chromium-widevine i3lock-color-git polybar touchegg-git spotify grive mpris-ctl
-
-```
-
-# Third
-
-Install cli-visualizer from [here](https://github.com/dpayne/cli-visualizer)
-
-# Fourth
-
-Copy-paste `i3exit` to `/usr/bin`
-
-# Fifth
+Install cli-visualizer from [here](https://github.com/dpayne/cli-visualizer).
 
 Make a Matlab desktop icon:
 
