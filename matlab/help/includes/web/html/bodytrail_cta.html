@@ -1,0 +1,385 @@
+<#assign determine_directory = request.URI?split("/")/>
+<#if (determine_directory[2] == "matlab")><#assign docprodcode = "ML" />
+<#elseif (determine_directory[2] == "simulink")><#assign docprodcode = "SL" />
+<#elseif (determine_directory[2] == "aeroblks")><#assign docprodcode = "AE" />
+<#elseif (determine_directory[2] == "aerotbx")><#assign docprodcode = "AT" />
+<#elseif (determine_directory[2] == "antenna")><#assign docprodcode = "AA" />
+<#elseif (determine_directory[2] == "bioinfo")><#assign docprodcode = "BI" />
+<#elseif (determine_directory[2] == "bugfinder")><#assign docprodcode = "BF" />
+<#elseif (determine_directory[2] == "certkitiec")><#assign docprodcode = "IE" />
+<#elseif (determine_directory[2] == "coder")><#assign docprodcode = "ME" />
+<#elseif (determine_directory[2] == "codeprover")><#assign docprodcode = "PB" />
+<#elseif (determine_directory[2] == "comm")><#assign docprodcode = "CM" />
+<#elseif (determine_directory[2] == "compiler")><#assign docprodcode = "CO" />
+<#elseif (determine_directory[2] == "control")><#assign docprodcode = "CT" />
+<#elseif (determine_directory[2] == "curvefit")><#assign docprodcode = "CF" />
+<#elseif (determine_directory[2] == "daq")><#assign docprodcode = "DA" />
+<#elseif (determine_directory[2] == "database")><#assign docprodcode = "DB" />
+<#elseif (determine_directory[2] == "datafeed")><#assign docprodcode = "DF" />
+<#elseif (determine_directory[2] == "distcomp")><#assign docprodcode = "DM" />
+<#elseif (determine_directory[2] == "dotnetbuilder")><#assign docprodcode = "MN" />
+<#elseif (determine_directory[2] == "dsp")><#assign docprodcode = "DS" />
+<#elseif (determine_directory[2] == "ecoder")><#assign docprodcode = "EC" />
+<#elseif (determine_directory[2] == "ecoder_mc")><#assign docprodcode = "EC" />
+<#elseif (determine_directory[2] == "ecoder_sc")><#assign docprodcode = "EC,SL" />
+<#elseif (determine_directory[2] == "econ")><#assign docprodcode = "ET" />
+<#elseif (determine_directory[2] == "edalink")><#assign docprodcode = "ES" />
+<#elseif (determine_directory?size gte 4) && (determine_directory[3] == "elec")><#assign docprodcode = "SN" />
+<#elseif (determine_directory[2] == "exlink")><#assign docprodcode = "EL" />
+<#elseif (determine_directory[2] == "finance")><#assign docprodcode = "FI" />
+<#elseif (determine_directory[2] == "finderiv")><#assign docprodcode = "DE" />
+<#elseif (determine_directory[2] == "finfixed")><#assign docprodcode = "FX" />
+<#elseif (determine_directory[2] == "fininst")><#assign docprodcode = "IT" />
+<#elseif (determine_directory[2] == "fixedpoint")><#assign docprodcode = "PO" />
+<#elseif (determine_directory[2] == "fixpoint")><#assign docprodcode = "FP" />
+<#elseif (determine_directory[2] == "fuzzy")><#assign docprodcode = "FL" />
+<#elseif (determine_directory[2] == "gads")><#assign docprodcode = "GD" />
+<#elseif (determine_directory[2] == "gauges")><#assign docprodcode = "DG" />
+<#elseif (determine_directory[2] == "gpucoder")><#assign docprodcode = "GC" />
+<#elseif (determine_directory[2] == "hdlcoder")><#assign docprodcode = "HD" />
+<#elseif (determine_directory[2] == "hdlfilter")><#assign docprodcode = "FH" />
+<#elseif (determine_directory[2] == "hdlverifier")><#assign docprodcode = "ES" />
+<#elseif (determine_directory?size gte 4) && (determine_directory[3] == "hydro")><#assign docprodcode = "SH" />
+<#elseif (determine_directory[2] == "ident")><#assign docprodcode = "ID" />
+<#elseif (determine_directory[2] == "images")><#assign docprodcode = "IP" />
+<#elseif (determine_directory[2] == "imaq")><#assign docprodcode = "IA" />
+<#elseif (determine_directory[2] == "install")><#assign docprodcode = "" />
+<#elseif (determine_directory[2] == "instrument")><#assign docprodcode = "IC" />
+<#elseif (determine_directory[2] == "compiler_sdk")><#assign docprodcode = "MJ" />
+<#elseif (determine_directory[2] == "lte")><#assign docprodcode = "LS" />
+<#elseif (determine_directory[2] == "ltehdl")><#assign docprodcode = "LH" /> 
+<#elseif (determine_directory[2] == "map")><#assign docprodcode = "MG" />
+<#elseif (determine_directory[2] == "mbc")><#assign docprodcode = "MB" />
+<#elseif (determine_directory[2] == "mdce")><#assign docprodcode = "DW" />
+<#elseif (determine_directory[2] == "mpc")><#assign docprodcode = "MP" />
+<#elseif (determine_directory[2] == "mts")><#assign docprodcode = "PR" />
+<#elseif (determine_directory[2] == "nnet")><#assign docprodcode = "NN" />
+<#elseif (determine_directory[2] == "opc")><#assign docprodcode = "OT" />
+<#elseif (determine_directory[2] == "optim")><#assign docprodcode = "OP" />
+<#elseif (determine_directory[2] == "pde")><#assign docprodcode = "PD" />
+<#elseif (determine_directory[2] == "phased")><#assign docprodcode = "AR" />
+<#elseif (determine_directory[2] == "plccoder")><#assign docprodcode = "PL" />
+<#elseif (determine_directory[2] == "polyspace_ada")><#assign docprodcode = "PA" />
+<#elseif (determine_directory[2] == "polyspace_c")><#assign docprodcode = "PC" />
+<#elseif (determine_directory[2] == "polyspace_modellink")><#assign docprodcode = "PG" />
+<#elseif (determine_directory[2] == "polyspace_umllink")><#assign docprodcode = "PI" />
+<#elseif (determine_directory?size gte 4) && (determine_directory[3] == "powersys")><#assign docprodcode = "PS" />
+<#elseif (determine_directory[2] == "qualkitdo")><#assign docprodcode = "DO" />
+<#elseif (determine_directory[2] == "rf")><#assign docprodcode = "RF" />
+<#elseif (determine_directory[2] == "risk")><#assign docprodcode = "RK" />
+<#elseif (determine_directory[2] == "robotics")><#assign docprodcode = "RO" />
+<#elseif (determine_directory[2] == "robust")><#assign docprodcode = "RC" />
+<#elseif (determine_directory[2] == "rptgen")><#assign docprodcode = "MR" />
+<#elseif (determine_directory[2] == "rptgenext")><#assign docprodcode = "SR" />
+<#elseif (determine_directory[2] == "rtw")><#assign docprodcode = "RT" />
+<#elseif (determine_directory[2] == "rtwin")><#assign docprodcode = "WT" />
+<#elseif (determine_directory?size gte 4) && (determine_directory[3] == "sdl")><#assign docprodcode = "LD" />
+<#elseif (determine_directory[2] == "signal")><#assign docprodcode = "SG" />
+<#elseif (determine_directory[2] == "simbio")><#assign docprodcode = "SB" />
+<#elseif (determine_directory[2] == "simevents")><#assign docprodcode = "SE" />
+<#elseif (determine_directory[2] == "simrf")><#assign docprodcode = "RB" />
+<#elseif (determine_directory[2] == "sltest")><#assign docprodcode = "SZ" />
+<#elseif (determine_directory?size gte 4) && (determine_directory[3] == "simscape")><#assign docprodcode = "SS" />
+<#elseif (determine_directory[2] == "sl3d")><#assign docprodcode = "VR" />
+<#elseif (determine_directory[2] == "slci")><#assign docprodcode = "CI" />
+<#elseif (determine_directory[2] == "slcontrol")><#assign docprodcode = "SD" />
+<#elseif (determine_directory[2] == "slcoverage")><#assign docprodcode = "CV" /> 
+<#elseif (determine_directory[2] == "sldo")><#assign docprodcode = "SO" />
+<#elseif (determine_directory[2] == "sldv")><#assign docprodcode = "DV" />
+<#elseif (determine_directory[2] == "slcheck")><#assign docprodcode = "VV" />
+<#elseif (determine_directory[2] == "slrequirements")><#assign docprodcode = "RQ" />
+<#elseif (determine_directory?size gte 4) && (determine_directory[3] == "sm")><#assign docprodcode = "MS" />
+<#elseif (determine_directory?size gte 4) && (determine_directory[3] == "smlink")><#assign docprodcode = "MS" />
+<#elseif (determine_directory[2] == "stateflow")><#assign docprodcode = "SF" />
+<#elseif (determine_directory[2] == "stats")><#assign docprodcode = "ST" />
+<#elseif (determine_directory[2] == "symbolic")><#assign docprodcode = "SM" />
+<#elseif (determine_directory[2] == "systemtest")><#assign docprodcode = "SY" />
+<#elseif (determine_directory[2] == "textanalytics")><#assign docprodcode = "TA" />
+<#elseif (determine_directory[2] == "trading")><#assign docprodcode = "TR" />
+<#elseif (determine_directory[2] == "vision")><#assign docprodcode = "VP" />
+<#elseif (determine_directory[2] == "visionhdl")><#assign docprodcode = "VT" />
+<#elseif (determine_directory[2] == "vnt")><#assign docprodcode = "VN" />
+<#elseif (determine_directory[2] == "wavelet")><#assign docprodcode = "WA" />
+<#elseif (determine_directory[2] == "xpc")><#assign docprodcode = "XP" />
+<#else><#assign docprodcode = "ML" />
+</#if>
+
+
+<@include_file fileLocation="/includes_content/nextgen/macros/products/callout_macros.html" />
+<#assign prodCode = "${docprodcode}" />
+<#assign trackingCode = "doc_trial_" + "${docprodcode}" + "_footer" />
+
+
+<#if (determine_directory[2] == "matlab")>
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/big-data-for-managers.html?s_iid=doc_wp_ML_footer"><img class="fluid_image" alt="The Manager's Guide to Solving the Big Data Conundrum" src="https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/images/responsive/supporting/campaigns/products/big-data-whitepaper-thumbnail.jpg"></a> </div>
+      <h4><a href="https://www.mathworks.com/campaigns/products/offer/big-data-for-managers.html?s_iid=doc_wp_ML_footer">The Manager's Guide to Solving the Big Data Conundrum</a></h4>
+      <a class="icon-download" href="https://www.mathworks.com/campaigns/products/offer/big-data-for-managers.html?s_iid=doc_wp_ML_footer">Download white paper</a> </div>
+  </div>
+<#elseif (determine_directory[2] == "simulink")>
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/managing-model-based-design.html?s_iid=doc_eb_SL_footer"><img class="fluid_image" alt="Model-Based Design eBook" src="/images/responsive/thumbnails/campaigns/ebook-modelbaseddesign.jpg"></a> </div>
+      <h4><a href="https://www.mathworks.com/campaigns/products/offer/managing-model-based-design.html?s_iid=doc_eb_SL_footer">Free eBook: Managing Model-Based Design</a></h4>
+      <a class="icon-download" href="https://www.mathworks.com/campaigns/products/offer/managing-model-based-design.html?s_iid=doc_eb_SL_footer">Download now</a> </div>
+  </div>
+<#elseif (determine_directory[2] == "antenna")>
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/hybrid-beamforming-white-paper.html?s_iid=doc_wp_AA_footer"><img class="fluid_image" alt="Hybrid Beamforming for Massive MIMO Phased Array Systems" src="/images/responsive/supporting/campaigns/products/hybrid_beamforming_whitepaper_thumbnail.jpg"></a> </div>
+      <h4><a href="https://www.mathworks.com/campaigns/products/offer/hybrid-beamforming-white-paper.html?s_iid=doc_wp_AA_footer">Hybrid Beamforming for Massive MIMO Phased Array Systems</a></h4>
+      <a class="icon-download" href="https://www.mathworks.com/campaigns/products/offer/hybrid-beamforming-white-paper.html?s_iid=doc_wp_AA_footer">Download the white paper</a> </div>
+  </div>
+<#elseif (determine_directory[2] == "comm")>
+  <#if request.locale.language == "ja">
+    <div class="panel panel_color_transparent panel_color_fill">
+      <div class="panel-body">
+        <div class="thumbnail add_margin_5"> <a href="https://jp.mathworks.com/campaigns/products/offer/wireless-design-ebook.html?s_iid=doc_eb_CM_footer"><img class="fluid_image" alt="無料eBook: MATLABで次世代の無線設計が変わる" src="/images/responsive/supporting/campaigns/products/jp-wireless-design-ebook-thumbnail-640x360.jpg"></a> </div>
+        <h4><a href="https://jp.mathworks.com/campaigns/products/offer/wireless-design-ebook.html?s_iid=doc_eb_CM_footer">無料eBook: MATLABで次世代の無線設計が変わる</a></h4>
+        <a class="icon-download" href="https://jp.mathworks.com/campaigns/products/offer/wireless-design-ebook.html?s_iid=doc_eb_CM_footer">今すぐダウンロード</a> </div>
+    </div>
+  <#else>
+    <div class="panel panel_color_transparent panel_color_fill">
+      <div class="panel-body">
+        <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/5g-technology-ebook.html?s_iid=doc_eb_CM_footer"><img class="fluid_image" alt="5G Development with MATLAB" src="https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/images/responsive/supporting/campaigns/products/5g-technology-ebook-offer.jpg"></a> </div>
+        <h4><a href="https://www.mathworks.com/campaigns/products/offer/5g-technology-ebook.html?s_iid=doc_eb_CM_footer">5G Development with MATLAB</a></h4>
+        <a class="icon-download" href="https://www.mathworks.com/campaigns/products/offer/5g-technology-ebook.html?s_iid=doc_eb_CM_footer">Download ebook</a> </div>
+    </div>
+  </#if>
+  <#elseif (determine_directory[2] == "control")>
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="/campaigns/products/offer/pid-tuning-code-examples.html?s_iid=doc_ec_CT_footer"><img class="fluid_image" alt="PID Tuning Examples" src="/images/responsive/thumbnails/campaigns/examples-pidtuning.jpg"></a> </div>
+      <h4><a href="/campaigns/products/offer/pid-tuning-code-examples.html?s_iid=doc_ec_CT_footer">Learn how to automatically tune PID controller gains</a></h4>
+      <a class="icon-download" href="/campaigns/products/offer/pid-tuning-code-examples.html?s_iid=doc_ec_CT_footer">Download code examples</a> </div>
+  </div>
+<#elseif (determine_directory[2] == "curvefit")>
+  <#if request.locale.language == "ja">
+    <div class="panel panel_color_transparent panel_color_fill">
+      <div class="panel-body">
+        <div class="thumbnail add_margin_5"> <a href="https://jp.mathworks.com/campaigns/products/offer/common-machine-learning-challenges.html?s_iid=doc_wp_CF_footer"><img alt="機械学習の課題：最適な分類モデルの選択と過適合の回避" src="https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/images/responsive/supporting/campaigns/products/jp_machine_learning_whitepaper_thumbnail.jpg"></a> </div>
+        <h4><a href="https://jp.mathworks.com/campaigns/products/offer/common-machine-learning-challenges.html?s_iid=doc_wp_CF_footer">機械学習の課題：最適な分類モデルの選択と過適合の回避</a></h4>
+        <a class="icon-download" href="https://jp.mathworks.com/campaigns/products/offer/common-machine-learning-challenges.html?s_iid=doc_wp_CF_footer">ホワイトペーパーをダウンロード</a> </div>
+    </div>  
+  <#else>
+    <div class="panel panel_color_transparent panel_color_fill">
+      <div class="panel-body">
+        <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/common-machine-learning-challenges.html?s_iid=doc_wp_CF_footer"><img alt="Machine Learning Challenges: Choosing the Best Classification Model and Avoiding Overfitting" src="https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/images/responsive/thumbnails/thumbnail-whitepaper-machinelearning.jpg"></a> </div>
+        <h4><a href="https://www.mathworks.com/campaigns/products/offer/common-machine-learning-challenges.html?s_iid=doc_wp_CF_footer">Machine Learning Challenges: Choosing the Best Classification Model and Avoiding Overfitting</a></h4>
+        <a class="icon-download" href="https://www.mathworks.com/campaigns/products/offer/common-machine-learning-challenges.html?s_iid=doc_wp_CF_footer">Download white paper</a> </div>
+    </div>
+  </#if>
+<#elseif (determine_directory[2] == "datafeed")>
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/modeling-financial-risk-with-matlab.html?s_iid_doc_eb_DF_footer"><img alt="A Practical Guide to Modeling Financial Risk with MATLAB" src="https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/images/responsive/supporting/campaigns/products/modeling-finacial-risk-with-matlab-offer.jpg"></a> </div>
+      <h4><a href="https://www.mathworks.com/campaigns/products/offer/modeling-financial-risk-with-matlab.html?s_iid_doc_eb_DF_footer">A Practical Guide to Modeling Financial Risk with MATLAB</a></h4>
+      <a class="icon-download" href="https://www.mathworks.com/campaigns/products/offer/modeling-financial-risk-with-matlab.html?s_iid_doc_eb_DF_footer">Download ebook</a> </div>
+  </div>
+<#elseif (determine_directory[2] == "distcomp")>
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="http://www.mathworks.com/videos/cluster-computing-with-matlab-for-parallel-computing-toolbox-users-81922.html?s_iid=doc_rw_DM_footer"><img alt="Cluster Computing for MATLAB Users" src="https://www.mathworks.com/content/dam/mathworks/videos/c/3638158002001/_jcr_content/renditions/Thumbnail.11.210.118.jpg"></a> </div>
+      <h4><a href="http://www.mathworks.com/videos/cluster-computing-with-matlab-for-parallel-computing-toolbox-users-81922.html?s_iid=doc_rw_DM_footer">Cluster Computing for MATLAB Users</a></h4>
+      <a class="icon-video" href="http://www.mathworks.com/videos/cluster-computing-with-matlab-for-parallel-computing-toolbox-users-81922.html?s_iid=doc_rw_DM_footer">Watch now</a> </div>
+  </div>
+<#elseif (determine_directory[2] == "dsp")>
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="http://www.mathworks.com/videos/multirate-systems-and-sample-rate-conversion-with-matlab-98602.html?s_iid=doc_rw_DS_footer"><img alt="Efficient Multirate Signal Processing in MATLAB" src="https://www.mathworks.com/content/dam/mathworks/videos/e/3932335818001/_jcr_content/renditions/Thumbnail.11.210.118.jpg"></a> </div>
+      <h4><a href="http://www.mathworks.com/videos/multirate-systems-and-sample-rate-conversion-with-matlab-98602.html?s_iid=doc_rw_DS_footer">Efficient Multirate Signal Processing in MATLAB</a></h4>
+      <a class="icon-video" href="http://www.mathworks.com/videos/multirate-systems-and-sample-rate-conversion-with-matlab-98602.html?s_iid=doc_rw_DS_footer">Watch now</a> </div>
+  </div>
+<#elseif (determine_directory[2] == "econ")>
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/modeling-financial-risk-with-matlab.html?s_iid=doc_eb_ET_footer"><img alt="A Practical Guide to Modeling Financial Risk with MATLAB" src="https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/images/responsive/supporting/campaigns/products/modeling-finacial-risk-with-matlab-offer.jpg"></a> </div>
+      <h4><a href="https://www.mathworks.com/campaigns/products/offer/modeling-financial-risk-with-matlab.html?s_iid=doc_eb_ET_footer">A Practical Guide to Modeling Financial Risk with MATLAB</a></h4>
+      <a class="icon-download" href="https://www.mathworks.com/campaigns/products/offer/modeling-financial-risk-with-matlab.html?s_iid=doc_eb_ET_footer">Download ebook</a> </div>
+  </div>
+<#elseif (determine_directory[2] == "finance")> 
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/modeling-financial-risk-with-matlab.html?s_iid=doc_eb_FI_footer"><img alt="A Practical Guide to Modeling Financial Risk with MATLAB" src="https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/images/responsive/supporting/campaigns/products/modeling-finacial-risk-with-matlab-offer.jpg"></a> </div>
+      <h4><a href="https://www.mathworks.com/campaigns/products/offer/modeling-financial-risk-with-matlab.html?s_iid=doc_eb_FI_footer">A Practical Guide to Modeling Financial Risk with MATLAB</a></h4>
+      <a class="icon-download" href="https://www.mathworks.com/campaigns/products/offer/modeling-financial-risk-with-matlab.html?s_iid=doc_eb_FI_footer">Download ebook</a> </div>
+  </div>
+<#elseif (determine_directory[2] == "fininst")> 
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/modeling-financial-risk-with-matlab.html?s_iid=doc_eb_IT_footer"><img alt="A Practical Guide to Modeling Financial Risk with MATLAB" src="https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/images/responsive/supporting/campaigns/products/modeling-finacial-risk-with-matlab-offer.jpg"></a> </div>
+      <h4><a href="https://www.mathworks.com/campaigns/products/offer/modeling-financial-risk-with-matlab.html?s_iid=doc_eb_IT_footer">A Practical Guide to Modeling Financial Risk with MATLAB</a></h4>
+      <a class="icon-download" href="https://www.mathworks.com/campaigns/products/offer/modeling-financial-risk-with-matlab.html?s_iid=doc_eb_IT_footer">Download ebook</a> </div>
+  </div>
+<#elseif (determine_directory[2] == "fuzzy")>
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/managing-model-based-design.html?s_iid_doc_eb_FL_footer"><img alt="Free eBook: Managing Model-Based Design" src="/images/responsive/thumbnails/campaigns/ebook-modelbaseddesign.jpg"></a> </div>
+      <h4><a href="https://www.mathworks.com/campaigns/products/offer/managing-model-based-design.html?s_iid_doc_eb_FL_footer">Free eBook: Managing Model-Based Design</a></h4>
+      <a class="icon-download" href="https://www.mathworks.com/campaigns/products/offer/managing-model-based-design.html?s_iid_doc_eb_FL_footer">Download now</a> </div>
+  </div> 
+<#elseif (determine_directory[2] == "gads")>
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/videos/tips-and-tricks-getting-started-using-optimization-with-matlab-81594.html?s_iid_doc_rw_GD_footer"><img alt="Tips and Tricks- Getting Started Using Optimization with MATLAB" src="https://www.mathworks.com/content/dam/mathworks/videos/t/2374852601001/jcr:content/renditions/Thumbnail.11.210.118.jpg"></a> </div>
+      <h4><a href="https://www.mathworks.com/videos/tips-and-tricks-getting-started-using-optimization-with-matlab-81594.html?s_iid_doc_rw_GD_footer">Tips and Tricks- Getting Started Using Optimization with MATLAB</a></h4>
+      <a class="icon-video" href="https://www.mathworks.com/videos/tips-and-tricks-getting-started-using-optimization-with-matlab-81594.html?s_iid_doc_rw_GD_footer">Watch now</a> </div>
+  </div>    
+<#elseif (determine_directory[2] == "images")>
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/image-segmentation.html?s_iid=doc_ec_IP_footer"><img class="fluid_image" alt="Image Segmentation and Thresholding Code Examples" src="/images/responsive/supporting/campaigns/products/image_segmentation_thresholding_offer_image.jpg"></a> </div>
+      <h4><a href="https://www.mathworks.com/campaigns/products/offer/image-segmentation.html?s_iid=doc_ec_IP_footer">Image Segmentation and Thresholding Code Examples</a></h4>
+      <a class="icon-chevron" href="https://www.mathworks.com/campaigns/products/offer/image-segmentation.html?s_iid=doc_ec_IP_footer">Download now</a> </div>
+  </div>
+<#elseif (determine_directory[2] == "lte")>
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/5g-technology-ebook.html?s_iid=doc_eb_LS_footer"><img class="fluid_image" alt="5G Development with MATLAB" src="https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/images/responsive/supporting/campaigns/products/5g-technology-ebook-offer.jpg"></a> </div>
+      <h4><a href="https://www.mathworks.com/campaigns/products/offer/5g-technology-ebook.html?s_iid=doc_eb_LS_footer">5G Development with MATLAB</a></h4>
+      <a class="icon-download" href="https://www.mathworks.com/campaigns/products/offer/5g-technology-ebook.html?s_iid=doc_eb_LS_footer">Download ebook</a> </div>
+  </div>
+<#elseif (determine_directory[2] == "nnet")>
+  <#if request.locale.language == "ja">
+    <div class="panel panel_color_transparent panel_color_fill">
+      <div class="panel-body">
+        <div class="thumbnail add_margin_5"> <a href="https://jp.mathworks.com/campaigns/products/offer/deep-learning-with-matlab.html?s_iid=doc_eb_NN_footer"><img class="fluid_image" alt="MATLABで始めるディープラーニング" src="https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/images/responsive/supporting/campaigns/products/jp_deep_learning_ebook_thumbnail.jpg"></a> </div>
+        <h4><a href="https://jp.mathworks.com/campaigns/products/offer/deep-learning-with-matlab.html?s_iid=doc_eb_NN_footer">MATLABで始めるディープラーニング</a></h4>
+        <a class="icon-download" href="https://jp.mathworks.com/campaigns/products/offer/deep-learning-with-matlab.html?s_iid=doc_eb_NN_footer">eBookをダウンロードする</a> </div>
+    </div>
+  <#else>
+    <div class="panel panel_color_transparent panel_color_fill">
+      <div class="panel-body">
+        <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/deep-learning-with-matlab.html?s_iid=doc_eb_NN_footer"><img class="fluid_image" alt="Introducing Deep Learning with MATLAB" src="https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/images/responsive/supporting/campaigns/products/deep-learning-with-matlab-offer.jpg"></a> </div>
+        <h4><a href="https://www.mathworks.com/campaigns/products/offer/deep-learning-with-matlab.html?s_iid=doc_eb_NN_footer">Introducing Deep Learning with MATLAB</a></h4>
+        <a class="icon-download" href="https://www.mathworks.com/campaigns/products/offer/deep-learning-with-matlab.html?s_iid=doc_eb_NN_footer">Download ebook</a> </div>
+    </div>
+  </#if>
+<#elseif (determine_directory[2] == "optim")>
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="http://www.mathworks.com/videos/optimization-in-matlab-an-introduction-to-quadratic-programming-81868.html?s_iid=doc_rw_OP_footer"><img alt="Optimization in MATLAB: An Introduction to Quadratic Programming" src="https://www.mathworks.com/content/dam/mathworks/videos/o/2270203677001/_jcr_content/renditions/Thumbnail.11.210.118.jpg"></a> </div>
+      <h4><a href="http://www.mathworks.com/videos/optimization-in-matlab-an-introduction-to-quadratic-programming-81868.html?s_iid=doc_rw_OP_footer">Optimization in MATLAB: An Introduction to Quadratic Programming</a></h4>
+      <a class="icon-video" href="http://www.mathworks.com/videos/optimization-in-matlab-an-introduction-to-quadratic-programming-81868.html?s_iid=doc_rw_OP_footer">Watch now</a> </div>
+  </div>
+<#elseif (determine_directory[2] == "phased")>
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/hybrid-beamforming-white-paper.html?s_iid=doc_wp_AR_footer"><img alt="Hybrid Beamforming for Massive MIMO Phased Array Systems" src="/images/responsive/supporting/campaigns/products/hybrid_beamforming_whitepaper_thumbnail.jpg"></a> </div>
+      <h4><a href="https://www.mathworks.com/campaigns/products/offer/hybrid-beamforming-white-paper.html?s_iid=doc_wp_AR_footer">Hybrid Beamforming for Massive MIMO Phased Array Systems</a></h4>
+      <a class="icon-download" href="https://www.mathworks.com/campaigns/products/offer/hybrid-beamforming-white-paper.html?s_iid=doc_wp_AR_footer">Download the white paper</a> </div>
+  </div>
+<#elseif (determine_directory[2] == "rf")>
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/rf-systems-white-paper.html?s_iid=doc_wp_RF_footer"><img alt="Four Steps to Building Smarter RF Systems with MATLAB" src="/images/responsive/supporting/campaigns/products/four_steps_rf_whitepaper_thumbnail-640x360.jpg"></a> </div>
+      <h4><a href="https://www.mathworks.com/campaigns/products/offer/rf-systems-white-paper.html?s_iid=doc_wp_RF_footer">Four Steps to Building Smarter RF Systems with MATLAB</a></h4>
+      <a class="icon-download" href="https://www.mathworks.com/campaigns/products/offer/rf-systems-white-paper.html?s_iid=doc_wp_RF_footer">Download the whitepaper</a> </div>
+  </div>
+<#elseif (determine_directory[2] == "risk")> 
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/modeling-financial-risk-with-matlab.html?s_iid=doc_eb_RK_footer"><img alt="A Practical Guide to Modeling Financial Risk with MATLAB" src="https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/images/responsive/supporting/campaigns/products/modeling-finacial-risk-with-matlab-offer.jpg"></a> </div>
+      <h4><a href="https://www.mathworks.com/campaigns/products/offer/modeling-financial-risk-with-matlab.html?s_iid=doc_eb_RK_footer">A Practical Guide to Modeling Financial Risk with MATLAB</a></h4>
+      <a class="icon-download" href="https://www.mathworks.com/campaigns/products/offer/modeling-financial-risk-with-matlab.html?s_iid=doc_eb_RK_footer">Download ebook</a> </div>
+  </div>
+<#elseif (determine_directory[2] == "signal")>
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/5g-technology-ebook.html?s_iid=doc_eb_sg_footer"><img alt="5G Development with MATLAB" src="https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/images/responsive/supporting/campaigns/products/5g-technology-ebook-offer.jpg"></a> </div>
+      <h4><a href="https://www.mathworks.com/campaigns/products/offer/5g-technology-ebook.html?s_iid=doc_eb_sg_footer">5G Development with MATLAB</a></h4>
+      <a class="icon-download" href="https://www.mathworks.com/campaigns/products/offer/5g-technology-ebook.html?s_iid=doc_eb_sg_footer">Download ebook</a> </div>
+  </div>
+<#elseif (determine_directory[2] == "simrf")>
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/rf-systems-white-paper.html?s_iid=doc_wp_RB_footer"><img alt="Four Steps to Building Smarter RF Systems with MATLAB" src="/images/responsive/supporting/campaigns/products/four_steps_rf_whitepaper_thumbnail-640x360.jpg"></a> </div>
+      <h4><a href="https://www.mathworks.com/campaigns/products/offer/rf-systems-white-paper.html?s_iid=doc_wp_RB_footer">Four Steps to Building Smarter RF Systems with MATLAB</a></h4>
+      <a class="icon-download" href="https://www.mathworks.com/campaigns/products/offer/rf-systems-white-paper.html?s_iid=doc_wp_RB_footer">Download the whitepaper</a> </div>
+  </div>
+<#elseif (determine_directory[3] == "simscape")>
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/videos/physical-modeling-with-simscape-81950.html?s_iid=doc_rw_SS_footer"><img alt="Physical Modeling with Simscape" src="https://www.mathworks.com/content/dam/mathworks/videos/p/2270461043001/jcr:content/renditions/Thumbnail.11.640.360.jpg"></a> </div>
+      <h4><a href="https://www.mathworks.com/videos/physical-modeling-with-simscape-81950.html?s_iid=doc_rw_SS_footer">Physical Modeling with Simscape</a></h4>
+      <a class="icon-chevron" href="https://www.mathworks.com/videos/physical-modeling-with-simscape-81950.html?s_iid=doc_rw_SS_footer">Watch now</a> </div>
+  </div>  
+<#elseif (determine_directory[2] == "stats")>
+  <#if request.locale.language == "ja">
+    <div class="panel panel_color_transparent panel_color_fill">
+      <div class="panel-body">
+        <div class="thumbnail add_margin_5"> <a href="https://jp.mathworks.com/campaigns/products/offer/machine-learning-with-matlab.html?s_iid=doc_eb_ST_footer"><img alt="無料eBook: MATLABによる機械学習" src="/images/responsive/supporting/campaigns/products/machine-learning-jp.jpg"></a> </div>
+        <h4><a href="https://jp.mathworks.com/campaigns/products/offer/machine-learning-with-matlab.html?s_iid=doc_eb_ST_footer">無料eBook: MATLABによる機械学習</a></h4>
+        <a class="icon-download" href="https://jp.mathworks.com/campaigns/products/offer/machine-learning-with-matlab.html?s_iid=doc_eb_ST_footer">今すぐダウンロード</a> </div>
+    </div>
+  <#else>
+    <div class="panel panel_color_transparent panel_color_fill">
+      <div class="panel-body">
+        <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/machine-learning-with-matlab.html?s_iid=doc_eb_ST_footer"><img alt="Free eBook: Machine Learning with MATLAB" src="/images/responsive/supporting/campaigns/products/machine-learning-with-matlab-ebooks.jpg"></a> </div>
+        <h4><a href="https://www.mathworks.com/campaigns/products/offer/machine-learning-with-matlab.html?s_iid=doc_eb_ST_footer">Free eBook: Machine Learning with MATLAB</a></h4>
+        <a class="icon-download" href="https://www.mathworks.com/campaigns/products/offer/machine-learning-with-matlab.html?s_iid=doc_eb_ST_footer">Download now</a> </div>
+    </div>
+  </#if>
+<#elseif (determine_directory[2] == "symbolic")>
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/symbolic-resources.html?s_iid=doc_col_sm_footer"><img alt="Mathematical Modeling with Symbolic Math Toolbox" src="https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/images/responsive/supporting/campaigns/products/symbolic-resources-thumbnail.jpg"></a> </div>
+      <h4><a href="https://www.mathworks.com/campaigns/products/offer/symbolic-resources.html?s_iid=doc_col_sm_footer">Mathematical Modeling with Symbolic Math Toolbox</a></h4>
+      <a class="icon-video" href="https://www.mathworks.com/campaigns/products/offer/symbolic-resources.html?s_iid=doc_col_sm_footer">Get examples and videos</a> </div>
+  </div>
+<#elseif (determine_directory[2] == "trading")>
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/modeling-financial-risk-with-matlab.html?s_iid_doc_eb_TR_footer"><img alt="A Practical Guide to Modeling Financial Risk with MATLAB" src="https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/images/responsive/supporting/campaigns/products/modeling-finacial-risk-with-matlab-offer.jpg"></a> </div>
+      <h4><a href="https://www.mathworks.com/campaigns/products/offer/modeling-financial-risk-with-matlab.html?s_iid_doc_eb_TR_footer">A Practical Guide to Modeling Financial Risk with MATLAB</a></h4>
+      <a class="icon-download" href="https://www.mathworks.com/campaigns/products/offer/modeling-financial-risk-with-matlab.html?s_iid_doc_eb_TR_footer">Download ebook</a> </div>
+  </div>  
+<#elseif (determine_directory[2] == "vision")>
+  <div class="panel panel_color_transparent panel_color_fill">
+    <div class="panel-body">
+      <div class="thumbnail add_margin_5"> <a href="https://www.mathworks.com/campaigns/products/offer/object-detection-and-recognition.html?s_iid=doc_ec_VP_footer"><img alt="Object Detection and Recognition Code Examples" src="/images/responsive/supporting/campaigns/products/object_detection_recognition_offer_image.jpg"></a> </div>
+      <h4><a href="https://www.mathworks.com/campaigns/products/offer/object-detection-and-recognition.html?s_iid=doc_ec_VP_footer">Object Detection and Recognition Code Examples</a></h4>
+      <a class="icon-download" href="https://www.mathworks.com/campaigns/products/offer/object-detection-and-recognition.html?s_iid=doc_ec_VP_footer">Download now</a> </div>
+  </div>
+<#else>  
+
+  <#if request.locale.language == "zh">
+  
+    <div class="panel panel_color_transparent panel_color_fill">
+      <div class="panel-body"> <img src="/images/nextgen/callouts/bg-trial-arrow_02.png" class="add_margin_5">
+        <h4>试用 MATLAB、Simulink 以及其他产品</h4>
+        <@designComponents.actionlink action="/programs/trials/trial_request.html?prodcode=${prodCode?if_exists}&amp;s_iid=${trackingCode?if_exists}">立即获取试用版</@designComponents.actionlink>
+      </div>
+    </div>
+  
+  <#elseif request.locale.language == "ja">
+  
+    <div class="panel panel_color_transparent panel_color_fill">
+      <div class="panel-body"> <img src="/images/nextgen/callouts/bg-trial-arrow_02.png" class="add_margin_5">
+        <h4>MATLAB、Simulink、その他の製品をお試しください </h4>
+        <@designComponents.actionlink action="/programs/trials/trial_request.html?prodcode=${prodCode?if_exists}&amp;s_iid=${trackingCode?if_exists}">無料評価版のダウンロード </@designComponents.actionlink>
+      </div>
+    </div>
+  
+  <#elseif request.locale.language == "ko">
+  
+    <div class="panel panel_color_transparent panel_color_fill">
+      <div class="panel-body"> <img src="/images/nextgen/callouts/bg-trial-arrow_02.png" class="add_margin_5">
+        <h4>MATLAB, Simulink, 기타 제품 사용해 보기 </h4>
+        <@designComponents.actionlink action="/programs/trials/trial_request.html?prodcode=${prodCode?if_exists}&amp;s_iid=${trackingCode?if_exists}">평가판 신청</@designComponents.actionlink>
+      </div>
+    </div>
+  
+  <#else>
+  
+    <div class="panel panel_color_transparent panel_color_fill">
+      <div class="panel-body"> <img src="/images/nextgen/callouts/bg-trial-arrow_02.png" class="add_margin_5">
+        <h4>Try MATLAB, Simulink, and Other Products</h4>
+        <@designComponents.actionlink action="/programs/trials/trial_request.html?prodcode=${prodCode?if_exists}&amp;s_iid=${trackingCode?if_exists}">Get trial now</@designComponents.actionlink>
+      </div>
+    </div>
+  
+  </#if>
+  
+</#if>

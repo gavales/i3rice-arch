@@ -1,0 +1,241 @@
+#language synonyms
+online, web, browser
+chart, plot
+buy, purchase
+
+#acronyms
+radio frequency, rf
+partial differential equation, pde
+long term evolution, lte
+ecg, ekg, electrocardiogram
+particle swarm optimization, pso 
+pulse width modulation, pwm
+eeg, electroencephalogram
+maximum power point tracker, mppt
+multiple-input-multiple-output, mimo
+personal license password, plp
+false discovery rate, fdr
+simulation data inspector, sdi
+mfile, m-file, .m-file, m file, .m file => matlab-file
+
+#function names
+diagonal, diag
+derivatives, diff
+histogram, imhist
+transfer function, tf
+threshold, greythresh
+MIMO OFDM, MIMO Systems
+
+#semantic
+apple, mac, iphone
+beaglebone, beagleboard
+quadcopter, drone
+
+#British and US
+amphitheatre, amphitheater
+calibre, caliber
+centimetre, centimeter
+centre, center
+fibre, fiber
+goitre, goiter
+kilometre, kilometer
+litre, liter
+lacklustre, lackluster
+lustre, luster
+manoeuvre,maneuver
+meagre, meager
+metre, meter
+millimetre, millimeter
+sabre, saber
+sceptre, scepter
+sombre, somber
+spectre, specter
+theatre, theater
+arbour, arbor
+ardour, ardor
+armour, armor
+armoury, armory
+behaviour, behavior 
+belabour, belabor
+candour, candor
+clamour, clamor
+colour, color
+demeanour, demeanor
+endeavour, endeavor
+favourite, favorite 
+flavour, flavor
+glamour, glamor
+harbour, harbor
+honour, honor
+humour, humor
+labour, labor
+neighbour, neighbor
+odour, odor
+rancour, rancor
+rigour, rigor
+rumour, rumor
+saviour, savior
+savour, savor
+savoury, savory
+splendour, splendor
+valour, valor
+vapour, vapor
+vigour, vigor
+appetiser, appetizer
+amortise, amortize
+analyse, analyze
+apologize, apologize
+authorise, authorize
+baptise, baptize
+breathalyse, breathalyze
+bowdlerise, bowdlerize
+brutalise, brutalize
+carbonise, carbonize
+canonise, canonize
+capitalise, capitalize
+catalyse, catalyze
+categorise, categorize
+cauterise, cauterize
+characterise, characterize
+civilise, civilize
+colonise, colonize
+criticise, criticize
+dramatise, dramatize
+emphasise, emphasize
+equalise, equalize
+factorise, factorize
+familiarise, familiarize
+fertilize, fertilize
+globalise, globalize
+hospitalise, hospitalize
+hypnotise, hypnotize
+initialise, initialize
+ionise, ionize
+italicise, italicize
+itemise, itemize
+jeopardise, jeopardize
+magnetise, magnetize
+marginalise, marginalize
+materialise, materialize
+minimise, minimize
+maximise, minimize
+mobilise, mobilize
+naturalise, naturalize
+organize, organize
+popularise, popularize
+paralyse, paralyze
+realise, realize
+recognize, recognize
+satirise, satirize
+standardise, standardize
+symbolise, symbolize
+utilise, utilize
+vaporise, vaporize
+victimise, victimize
+visualise, visualize
+vocalise, vocalize
+vulcanise, vulcanize
+westernise, westernize
+cancelled, canceled
+canceling, cancelling
+counsellor, counselor
+equalled, equaled
+fuelled, fueled
+fuelling, fueling
+grovelling, groveling
+jeweller, jeweler
+jewellery, jewelry
+levelled, leveled
+libelled, libeled
+marvellous, marvelous
+modelling, modeling
+panelled, paneled
+quarrelling, quarreling
+revelled, reveled
+travelling, traveling
+traveller, traveler
+woollen, woolen
+appal, appall
+distil, distill
+enrol, enroll
+enthral, enthrall
+fulfil, fulfill
+instil, instill
+instalment, installment
+skilful, skillfull
+willful, willfull
+anaemia, anemia
+anaesthesia, anesthesia 
+caesarean, cesarean  
+diarrhoea, diarrhea
+encyclopaedia, encyclopedia
+foetus, fetus
+gynaecology, gynecology
+haemorrhage, hemorrhage
+leukaemia, leukemia
+manoeuvre, maneuver
+mementoes, mementos
+oestrogen, estrogen
+orthopaedic, orthopedic
+paediatric, pediatric
+palaeontology, paleontology
+defence,defense
+licence,license
+offence,offense
+practice, practise
+pretence,pretense
+analogue,analog 
+catalogue,catalog 
+dialogue,dialog 
+epilogue, epilog
+monologue, monolog
+prologue, prolog
+travelogue, travelog
+acknowledgement, acknowledgment
+adapter, adaptor
+aeon, eon
+aeroplane, airplane
+aesthetic, esthetic
+ageing, aging
+aluminium, aluminum
+annexe, annex
+arguement, argument
+artefact, artifact
+axe, ax
+bannister, banister
+baulk, balk
+behove, behoove
+biassed, biased
+carat, karat
+calliper, caliper
+chilli, chili
+cosy, cozy
+disc, disk
+draught, draft
+flautist, flutist
+fillet, filet
+furore, furor
+gaol, jail
+grey, gray
+gauge, gage
+homoeopathy, homeopathy
+inflexion, inflection
+judgement, judgment
+kerb, curb
+liquorice, licorice
+milligramme, milligram
+misspelt, misspelled
+moustache, mustache
+mould, mold
+nought, naught
+omelette, omelet
+phial, vial
+plough, plow
+programme, program
+pyjamas, pajamas
+sceptic, skeptic
+smoulder, smolder
+sulphur, sulfur
+tyre, tire
+whisky, whiskey
+yoghurt, yogurt
