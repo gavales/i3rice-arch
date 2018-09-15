@@ -1,22 +1,40 @@
 !!colors
 
-!pywal
-#define blackd		#02020d
-#define blackl		#6d8b8f
-#define redl		#70847c
-#define redd		#a45b55
-#define greenl		#cda16e
-#define greend		#70847c
-#define yellowl		#306b8b
-#define yellowd 	#cda16e
-#define bluel		#435c8c
-#define blued		#306b8b
-#define magental	#4c9fa5
-#define magentad	#435c8c
-#define cyanl		#4c9fa5
-#define cyand		#4c9fa5
-#define whitel		#9cc7cd
-#define whited		#9cc7cd
+!pywal forest
+#define blackd		#080A05
+#define blackl		#6b9a95
+#define redl		#27952B
+#define redd		#27952B
+#define greenl		#1E9566
+#define greend		#1E9566
+#define yellowl		#51B247
+#define yellowd		#51B247
+#define bluel		#AFAA4F
+#define blued		#AFAA4F
+#define magental	#1FA698
+#define magentad	#1FA698
+#define cyanl		#2ACBAC
+#define cyand		#2ACBAC
+#define whitel		#99dcd6
+#define whited		#99dcd6
+
+!!pywal
+!#define blackd		#02020d
+!#define blackl		#6d8b8f
+!#define redl		#70847c
+!#define redd		#a45b55
+!#define greenl		#cda16e
+!#define greend		#70847c
+!#define yellowl		#306b8b
+!#define yellowd 	#cda16e
+!#define bluel		#435c8c
+!#define blued		#306b8b
+!#define magental	#4c9fa5
+!#define magentad	#435c8c
+!#define cyanl		#4c9fa5
+!#define cyand		#4c9fa5
+!#define whitel		#9cc7cd
+!#define whited		#9cc7cd
 
 !!Pywal
 !#define blackd		#060608
@@ -138,7 +156,7 @@ Xcursor.size:			0
 !URxvt*italicFont:		xft:Inconsolata:italic:size=12:hinting=true
 !URxvt*boldItalicFont:		xft:Inconsolata:bold:italic:size=12:hinting=true
 
-URxvt.font:                     xft:TerminessTTFNerdFontMono:size=10
+URxvt.font:                     xft:TerminessTTFNerdFontMono:size=11
 
 URxvt*depth:			32
 URxvt*scrollBar:		false
