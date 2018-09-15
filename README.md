@@ -77,21 +77,12 @@ Add User & User Password:
 
 Then...
 
-```cd /etc```
-```rm sudoers```
-```wget https://raw.githubusercontent.com/StillANixRookie/i3rice-arch/master/sudoers```
++ ```cd /etc```
++ ```rm sudoers```
++ ```wget https://raw.githubusercontent.com/StillANixRookie/i3rice-arch/master/sudoers```
 
-For installing apps and configs:
+Now you should just have to exit the chroot, ```umount -R``` your arch drive, and then reboot and login with your username. For installing apps and configs, do the following, and then reboot and login again, and everything should be fine ```:)```.
 
-```cd /home/gavarch```
-```wget https://raw.githubusercontent.com/StillANixRookie/i3rice-arch/master/postarch```
-```sudo bash postarch```
-
-Install cli-visualizer from [here](https://github.com/dpayne/cli-visualizer).
-
-Make a Matlab desktop icon:
-
-```
-sudo wget  https://apprecs.org/gp/images/app-icons/300/c4/in.pxlcraft.matlabexpo.jpg -O /usr/share/icons/matlab.png
-sudo wget 'https://help.ubuntu.com/community/MATLAB?action=AttachFile&do=get&target=matlab-r2012a.desktop' -O /usr/share/applications/matlab.desktop
-```
++ ```cd /home/gavarch```
++ ```wget https://raw.githubusercontent.com/StillANixRookie/i3rice-arch/master/postarch```
++ ```bash postarch```
