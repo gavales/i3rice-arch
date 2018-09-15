@@ -300,8 +300,12 @@ bindsym $mod+d exec rofi -show drun
 bindsym $mod+z exec --no-startup-id morc_menu
 
 # BRIGHTNESS CONTROLS
-bindsym $mod+Home exec xbacklight -inc 10
-bindsym $mod+End exec xbacklight -dec 10
+
+#bindsym $mod+Home exec xbacklight -inc 10
+#bindsym $mod+End exec xbacklight -dec 10
+
+bindsym $mod+Home exec light -A 10
+bindsym $mod+End exec light -U 10
 
 # VOLUME CONTROLS
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +2%
