@@ -51,19 +51,8 @@ git clone https://github.com/StillANixRookie/i3rice-arch.git
 cp -R /~/i3rice-arch/. /~
 sudo cp i3exit /usr/bin/
 cd
-mkdir Downloads
-mkdir Drive
-mkdir Music
-mkdir Pictures
-mkdir Videos
-rm .git
-rm UNUSEDSTUFF
-rm README.md
-rm ws1.png
-rm ws2.png
-rm ws3.png
-rm ws4.png
-rm ws5.png
+mkdir Downloads Drive Music Pictures Videos
+rm -rf .git UNUSEDSTUFF README.md ws1.png ws2.png ws3.png ws4.png ws5.png
 chmod +x /usr/bin/i3exit
 sudo cp sudoers /etc/
 echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
