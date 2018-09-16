@@ -1,6 +1,0 @@
-2018/08/29-12:11:46.267 1196 Reusing MANIFEST /home/gavarch/.config/chromium/Default/IndexedDB/https_www.netflix.com_0.indexeddb.leveldb/MANIFEST-000001
-2018/08/29-12:11:46.267 1196 Recovering log #7
-2018/08/29-12:11:46.327 1196 Reusing old log /home/gavarch/.config/chromium/Default/IndexedDB/https_www.netflix.com_0.indexeddb.leveldb/000007.log 
-2018/08/29-12:13:51.948 1517 Level-0 table #11: started
-2018/08/29-12:13:51.982 1517 Level-0 table #11: 1599283 bytes OK
-2018/08/29-12:13:51.987 1517 Delete type=0 #7
