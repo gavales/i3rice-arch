@@ -1,0 +1,554 @@
+{
+   "APIERRMSG_ABORTED": {
+      "description": "Error message that is shown if the operation is aborted",
+      "message": "Radnja je prekinuta."
+   },
+   "APIERRMSG_DEVICE_LIST_ERROR": {
+      "description": "Error message that is shown if there was an error trying to detect removable USB drive and SD cards",
+      "message": "USB pogon ili SD karticu nije moguće pronaći."
+   },
+   "APIERRMSG_DEVICE_LIST_ERROR_ON_HUB": {
+      "description": "Error message that is shown if there was an error trying to detect removable USB drives",
+      "message": "Nije moguće pronaći USB pogon."
+   },
+   "APIERRMSG_DOWNLOAD_CANCELLED": {
+      "description": "Error message that is shown if the user cancels the write operation during download",
+      "message": "Preuzimanje je otkazano."
+   },
+   "APIERRMSG_DOWNLOAD_HASH_MISMATCH": {
+      "description": "Error message that is shown if the downloaded file doesn't hash to the expected value",
+      "message": "Datoteka nije važeća."
+   },
+   "APIERRMSG_DOWNLOAD_INTERRUPTED": {
+      "description": "Error message that is shown if the downloaded was interrupted for any reason",
+      "message": "Preuzimanje je prekinuto."
+   },
+   "APIERRMSG_FILE_INVALID": {
+      "description": "Error message that is shown if the file to write is not valid",
+      "message": "Datoteka nije važeća."
+   },
+   "APIERRMSG_OPERATION_ALREADY_IN_PROGRESS": {
+      "description": "Error message that is shown if user tries to start a new write operation and there is already one in progress",
+      "message": "Radnja je već pokrenuta."
+   },
+   "APIERRMSG_UNKNOWN": {
+      "description": "Error message that is shown if no matching error message can be found",
+      "message": "Nepoznata pogreška: $errorCode$.",
+      "placeholders": {
+         "errorCode": {
+            "content": "$1",
+            "example": "Error code"
+         }
+      }
+   },
+   "APIERRMSG_UNSUPPORTED_OPERATION": {
+      "description": "Error message that is shown if the user triggers an unsupported operation",
+      "message": "Radnja nije podržana."
+   },
+   "APIERRMSG_UNZIP_ERROR": {
+      "description": "Error message that is shown if the file cannot be unzipped for any reason",
+      "message": "Nije moguće raspakirati datoteku."
+   },
+   "APIERRMSG_UNZIP_INVALID_ARCHIVE": {
+      "description": "Error message that is shown if the file is not a valid ZIP file",
+      "message": "Pogrešna ZIP datoteka."
+   },
+   "APIERRMSG_URL_INVALID": {
+      "description": "Error message that is shown if no file is found at the URL to download",
+      "message": "Datoteka nije pronađena."
+   },
+   "APIERRMSG_VERIFICATION_FAILED": {
+      "description": "Error message that is shown if the image was not written properly",
+      "message": "Potvrđivanje slike nije uspjelo."
+   },
+   "APP_DESCRIPTION": {
+      "description": "High-level description of the application",
+      "message": "Izrada medija za oporavak za vaš Chromebook."
+   },
+   "APP_DESCRIPTION_ON_HUB": {
+      "description": "High-level description of the application",
+      "message": "Izrada USB pogona za oporavak za vaš OnHub."
+   },
+   "APP_NAME": {
+      "description": "Name of the application. Cannot exceed 45 characters.",
+      "message": "Uslužni program za oporavak Chromebooka"
+   },
+   "APP_NAME_ON_HUB": {
+      "description": "Name of the application. Cannot exceed 45 characters.",
+      "message": "OnHub Recovery Utility"
+   },
+   "APP_SHORT_NAME": {
+      "description": "A short name for the app shown when space is limited. Fewer than 12 characters preferred.",
+      "message": "Oporavak"
+   },
+   "CANCEL_BUTTON_TEXT": {
+      "description": "Text for the cancel button",
+      "message": "Odustani"
+   },
+   "COMPLETED": {
+      "description": "Shown as part of the text 'x% completed'",
+      "message": "dovršeno"
+   },
+   "COMPLETE_BULLET1": {
+      "description": "Shown on the completed screen",
+      "message": "Da biste oporavili svoj Chromebook, priključite u njega medij za oporavak."
+   },
+   "COMPLETE_BULLET1_ON_HUB": {
+      "description": "Shown on the completed screen",
+      "message": "Isključite kabel za napajanje iz OnHuba i umetnite USB pogon na stražnjem dijelu uređaja. Pritisnite gumb za vraćanje na zadano i uključite napajanje. Nastavite držati gumb za vraćanje na zadano otprilike 15 sekundi ili dok lampica aktivnosti na USB pogonu ne počne treperiti."
+   },
+   "COMPLETE_BULLET2": {
+      "description": "Shown on the completed screen",
+      "message": "Nakon oporavka možete izbrisati medij za oporavak pomoću ovog uslužnog programa."
+   },
+   "COMPLETE_BULLET2_ON_HUB": {
+      "description": "Shown on the completed screen",
+      "message": "OnHub će proći postupak oporavka koji može potrajati nekoliko minuta. Kada oporavak završi, OnHub će se ponovo pokrenuti. Nakon toga upotrijebite aplikaciju Google On da biste postavili OnHub."
+   },
+   "COMPLETE_MESSAGE": {
+      "description": "Shown on the completed screen",
+      "message": "Sada možete ukloniti medij za oporavak."
+   },
+   "COMPLETE_MESSAGE_ON_HUB": {
+      "description": "Shown on the completed screen",
+      "message": "Sada možete ukloniti USB pogon za oporavak."
+   },
+   "COMPLETE_TITLE": {
+      "description": "Title of the completed screen",
+      "message": "Uspjeli ste! Medij za oporavak spreman je."
+   },
+   "COMPLETE_TITLE_ON_HUB": {
+      "description": "Title of the completed screen",
+      "message": "Uspjeli ste! USB pogon za oporavak spreman je."
+   },
+   "CONFIRM_CANCELLED_MESSAGE_HTML": {
+      "description": "Indicates that the operation has been cancelled",
+      "message": "Otkazano. Kliknite &rdquo;Izradi odmah&rdquo; kako biste pokušali ponovo.\u003Cbr>\u003Cbr>Da biste izbrisali medij za oporavak, kliknite ikonu zupčanika u gornjem desnom kutu."
+   },
+   "CONFIRM_CANCELLED_MESSAGE_HTML_ON_HUB": {
+      "description": "Indicates that the operation has been cancelled",
+      "message": "Otkazano. Kliknite &rdquo;Izradi odmah&rdquo; kako biste pokušali ponovo.\u003Cbr>\u003Cbr>Da biste izbrisali USB pogon za oporavak, kliknite ikonu zupčanika u gornjem desnom kutu."
+   },
+   "CONFIRM_MESSAGE_HTML": {
+      "description": "Important message, indicates what the application is going to do",
+      "message": "\u003Cb>Važno:\u003C/b> izbrisat će se svi podaci i particije na mediju za oporavak."
+   },
+   "CONFIRM_MESSAGE_HTML_ON_HUB": {
+      "description": "Important message, indicates what the application is going to do",
+      "message": "\u003Cb>Važno:\u003C/b> izbrisat će se svi podaci i particije na USB pogonu za oporavak."
+   },
+   "CONFIRM_TITLE": {
+      "description": "Title for the confirmation screen",
+      "message": "Izrada slike za oporavak sustava"
+   },
+   "CONTINUE_BUTTON_TEXT": {
+      "description": "Text for the continue button at the bottom of the screen",
+      "message": "Nastavi"
+   },
+   "CREATE_ANOTHER_BUTTON_TEXT": {
+      "description": "Text for the button to go back to the start of the application after the recovery disk has been created",
+      "message": "Izradi još jedan"
+   },
+   "CREATE_NOW_BUTTON_TEXT": {
+      "description": "Text for the button to start the recovery disk creation",
+      "message": "Izradi odmah"
+   },
+   "DEV_APP_DESCRIPTION": {
+      "description": "High-level description of the Chromebook Dev application",
+      "message": "Razvojna verzija Uslužnog programa za oporavak Chromebooka."
+   },
+   "DEV_APP_DESCRIPTION_ON_HUB": {
+      "description": "High-level description of the OnHub Dev application",
+      "message": "Razvojna verzija programa OnHub Recovery Utility."
+   },
+   "DEV_APP_NAME": {
+      "description": "Name of the dev application. Cannot exceed 45 characters.",
+      "message": "Uslužni program za oporavak Chromebooka Dev"
+   },
+   "DEV_APP_NAME_ON_HUB": {
+      "description": "Name of the dev application. Cannot exceed 45 characters.",
+      "message": "OnHub Recovery Utility Dev"
+   },
+   "DONE_BUTTON_TEXT": {
+      "description": "Text for the button to close the application after the recovery disk has been created / Text for the button to go back to the start of the application after the recovery disk has been erased",
+      "message": "Gotovo"
+   },
+   "ERASE_COMPLETE_BULLET1": {
+      "description": "Shown on the erase completed screen",
+      "message": "USB pogon ili SD kartica spremni su za formatiranje."
+   },
+   "ERASE_COMPLETE_BULLET1_ON_HUB": {
+      "description": "Shown on the erase completed screen",
+      "message": "USB pogon spreman je za formatiranje."
+   },
+   "ERASE_COMPLETE_BULLET2": {
+      "description": "Shown on the erase completed screen",
+      "message": "Formatiranje će se izvršiti alatom za formatiranje koji je ponuđen u sklopu vašeg operativnog sustava."
+   },
+   "ERASE_COMPLETE_TITLE": {
+      "description": "Title for erase completed screen",
+      "message": "Medij za oporavak izbrisan je."
+   },
+   "ERASE_COMPLETE_TITLE_ON_HUB": {
+      "description": "Title for erase completed screen",
+      "message": "USB pogon za oporavak izbrisan je."
+   },
+   "ERASE_CONFIRM_MESSAGE": {
+      "description": "Important message, indicates what the application is going to do",
+      "message": "Izbrisat će se slika za oporavak i sve particije na mediju za oporavak."
+   },
+   "ERASE_CONFIRM_MESSAGE_ON_HUB": {
+      "description": "Important message, indicates what the application is going to do",
+      "message": "Izbrisat će se slika za oporavak i sve particije na USB pogonu za oporavak."
+   },
+   "ERASE_NOW_BUTTON_TEXT": {
+      "description": "Text for the button to start the recovery disk erasure",
+      "message": "Izbriši odmah"
+   },
+   "ERASE_PROGRESS_TEXT": {
+      "description": "Shown when the drive is being erased",
+      "message": "Ne uklanjajte medij za oporavak."
+   },
+   "ERASE_PROGRESS_TEXT_ON_HUB": {
+      "description": "Shown when the drive is being erased",
+      "message": "Ne uklanjajte USB pogon za oporavak."
+   },
+   "ERASE_PROGRESS_TITLE": {
+      "description": "Title for the screen where the drive is being erased",
+      "message": "Brisanje medija za oporavak"
+   },
+   "ERASE_PROGRESS_TITLE_ON_HUB": {
+      "description": "Title for the screen where the drive is being erased",
+      "message": "Brisanje USB pogona za oporavak"
+   },
+   "ERASE_SELECT_TARGET_DETECTING": {
+      "description": "Indicates that the app is currently detecting the list of USB devices",
+      "message": "Otkrivanje"
+   },
+   "ERASE_SELECT_TARGET_HIGH_CAPACITY_WARNING_HTML": {
+      "description": "Warning that is shown if the user selects a drive with a high capacity",
+      "message": "\u003Cb>Upozorenje:\u003C/b> je li to ispravan pogon?"
+   },
+   "ERASE_SELECT_TARGET_NO_DEVICES_FOUND": {
+      "description": "Indicates that no USB devices were found",
+      "message": "USB pogon ili SD kartica nisu pronađeni"
+   },
+   "ERASE_SELECT_TARGET_NO_DEVICES_FOUND_ON_HUB": {
+      "description": "Indicates that no USB devices were found",
+      "message": "USB pogon nije pronađen"
+   },
+   "ERASE_SELECT_TARGET_SELECT_DEVICE": {
+      "description": "Prompts the user to select a drive",
+      "message": "Odaberite medij za oporavak koji želite izbrisati."
+   },
+   "ERASE_SELECT_TARGET_SELECT_DEVICE_ON_HUB": {
+      "description": "Prompts the user to select a drive",
+      "message": "Odaberite USB pogon za oporavak koji želite izbrisati."
+   },
+   "ERASE_SELECT_TARGET_SELECT_DEVICE_PLACEHOLDER": {
+      "description": "Prompts the user to select a drive (text is shown inside the dropdown)",
+      "message": "Odaberite"
+   },
+   "ERASE_TITLE": {
+      "description": "Title for the screens related to erasing",
+      "message": "Brisanje medija za oporavak"
+   },
+   "ERASE_TITLE_ON_HUB": {
+      "description": "Title for the screens related to erasing",
+      "message": "Brisanje USB pogona za oporavak"
+   },
+   "ERRMSG_PLEASE_TRY_AGAIN": {
+      "description": "Error text that is shown after the error message",
+      "message": "Pokušajte ponovo."
+   },
+   "ERRMSG_RECOVERY_CONFIG_DOWNLOAD_FAILURE": {
+      "description": "Error message that is shown if the app's configuration file cannot be downloaded. In this case, the app will only be able to support offline features.",
+      "message": "Konfiguracijska datoteka nije preuzeta. Dostupne će biti samo offline značajke."
+   },
+   "GET_STARTED_BUTTON_TEXT": {
+      "description": "Text for the 'get started' button at the bottom of the screen",
+      "message": "Započni"
+   },
+   "GIGABYTE_ABBREVIATION": {
+      "description": "The abbreviation for gigabyte",
+      "message": "GB"
+   },
+   "GO_BACK_BUTTON_TEXT": {
+      "description": "Text for the back button at the bottom of the screen",
+      "message": "Natrag"
+   },
+   "HOURS_REMAINING": {
+      "description": "A message that indicates the time remaining for an operation.",
+      "message": "Još $hours$ h.",
+      "placeholders": {
+         "hours": {
+            "content": "$1",
+            "example": "The number of hours remaining."
+         }
+      }
+   },
+   "HWID_INVALID_MODEL": {
+      "description": "Message shown to user when it's clear that what they have entered doesn't match any valid model number.",
+      "message": "Nevažeći broj modela. Provjerite broj koji ste unijeli."
+   },
+   "HWID_KEEP_TYPING": {
+      "description": "Message shown to user when they have no yet entered enough info to determine a specific device.",
+      "message": "Još nije pronađen nijedan model. Nastavite upisivati."
+   },
+   "HWID_MATCH_FOUND": {
+      "description": "Message shown to user when they have entered enough info to determine a specific device.",
+      "message": "Pronađen je podudarni uređaj"
+   },
+   "HWID_MATCH_FOUND_AND_CHECKSUM_VERIFIED": {
+      "description": "Message shown to user when they have entered a full model number and the checksum is verified.",
+      "message": "Pronađen je podudarni uređaj s točnim nazivom modela"
+   },
+   "LEARN_MORE_LINK_TEXT": {
+      "description": "Text for the 'learn more' link at the bottom left of the screen",
+      "message": "Saznajte više"
+   },
+   "LEARN_MORE_LINK_URL": {
+      "description": "URL for the 'learn more' link at the bottom left of the screen",
+      "message": "http://www.google.com/chromeos/recovery"
+   },
+   "LEARN_MORE_LINK_URL_ON_HUB": {
+      "description": "URL for the 'learn more' link at the bottom left of the screen",
+      "message": "https://support.google.com/onhub/answer/6274977"
+   },
+   "LOADING_CONFIG_TEXT": {
+      "description": "Message to user indicating that the app is downloading latest information about recovery for different devices. It is preparing itself to be used.",
+      "message": "Priprema... "
+   },
+   "MENU_ITEM_ERASE_RECOVERY_MEDIA": {
+      "description": "Text for the menu item to erase recovery media",
+      "message": "Izbriši medij za oporavak"
+   },
+   "MENU_ITEM_ERASE_RECOVERY_MEDIA_ON_HUB": {
+      "description": "Text for the menu item to erase recovery USB drive",
+      "message": "Izbriši USB pogon za oporavak"
+   },
+   "MENU_ITEM_SEND_FEEDBACK": {
+      "description": "Text for the menu item to send feedback",
+      "message": "Pošalji povratne informacije"
+   },
+   "MENU_ITEM_USE_LOCAL_IMAGE": {
+      "description": "Text for the menu item to use a local file as the source image for the recovery disk",
+      "message": "Upotrijebi lokalnu sliku sustava"
+   },
+   "MINUTES_REMAINING": {
+      "description": "A message that indicates the time remaining for an operation.",
+      "message": "Još $minutes$ min.",
+      "placeholders": {
+         "minutes": {
+            "content": "$1",
+            "example": "The number of minutes remaining."
+         }
+      }
+   },
+   "OF": {
+      "description": "Shown as part of the text 'step %x of %x'",
+      "message": "od"
+   },
+   "SECONDS_REMAINING": {
+      "description": "A message that indicates the time remaining for an operation.",
+      "message": "Još $seconds$ s.",
+      "placeholders": {
+         "seconds": {
+            "content": "$1",
+            "example": "The number of seconds remaining."
+         }
+      }
+   },
+   "SELECT_IMAGE_SELECT_BY_HWID_LINK_TEXT": {
+      "description": "Text for the 'select by model number' link",
+      "message": "Izravno unesite broj modela"
+   },
+   "SELECT_IMAGE_SELECT_FROM_LIST_LINK_TEXT": {
+      "description": "Text for 'select by model' link",
+      "message": "Odaberite model s popisa"
+   },
+   "SELECT_IMAGE_SELECT_MANUFACTURER_PLACEHOLDER": {
+      "description": "Prompts the user to select a manufacturer (text is shown inside the dropdown)",
+      "message": "Odaberite proizvođača"
+   },
+   "SELECT_IMAGE_SELECT_PRODUCT_PLACEHOLDER": {
+      "description": "Prompts the user to select a product (text is shown inside the dropdown)",
+      "message": "Odaberite proizvod"
+   },
+   "SELECT_IMAGE_SELECT_PRODUCT_PLACEHOLDER_ON_HUB": {
+      "description": "Prompts the user to select a product (text is shown inside the dropdown)",
+      "message": "Odaberite model"
+   },
+   "SELECT_IMAGE_TEXT": {
+      "description": "Prompts the user to enter a model number. Refers to the recovery screen.",
+      "message": "Unesite broj modela Chromebooka za oporavak. Nalazi se na zaslonu za oporavak."
+   },
+   "SELECT_IMAGE_TEXT_ON_HUB": {
+      "description": "Prompts the user to enter a model number. Refers to the recovery screen.",
+      "message": "Unesite broj modela svojeg OnHuba."
+   },
+   "SELECT_IMAGE_THIS_CHROMEBOOKS_MODEL_NUMBER": {
+      "description": "Label that precedes a HWID string (e.g.: LINK D25-E5M-K75) that is the model number for the Chromebook the user is using. The HWID string is hyperlinked and clicking on it will populate the value into the model number input field. In English, this would for example read 'For this Chromebook, enter _LINK D25-E5M-K75_'",
+      "message": "Za ovaj Chromebook unesite"
+   },
+   "SELECT_IMAGE_THIS_CHROMEBOOKS_MODEL_NUMBER_ON_HUB": {
+      "description": "Label that precedes a HWID string (e.g.: ARKHAM D25-E5M-K75) that is the model number for the OnHub the user is using. The HWID string is hyperlinked and clicking on it will populate the value into the model number input field. In English, this would for example read 'For this OnHub, enter _LINK D25-E5M-K75_'",
+      "message": "Za ovaj OnHub unesite"
+   },
+   "SELECT_IMAGE_TITLE": {
+      "description": "Title for the image selection screen",
+      "message": "Prepoznavanje Chromebooka"
+   },
+   "SELECT_IMAGE_TITLE_ON_HUB": {
+      "description": "Title for the image selection screen",
+      "message": "Prepoznavanje OnHuba"
+   },
+   "SELECT_TARGET_DETECTING": {
+      "description": "Indicates that the app is currently detecting the list of USB devices",
+      "message": "Otkrivanje"
+   },
+   "SELECT_TARGET_HIGH_CAPACITY_WARNING_HTML": {
+      "description": "Warning that is shown if the user selects a drive with a high capacity",
+      "message": "\u003Cb>Upozorenje:\u003C/b> je li to ispravan medij?"
+   },
+   "SELECT_TARGET_HIGH_CAPACITY_WARNING_HTML_ON_HUB": {
+      "description": "Warning that is shown if the user selects a drive with a high capacity",
+      "message": "\u003Cb>Upozorenje:\u003C/b> je li to ispravan USB pogon?"
+   },
+   "SELECT_TARGET_LOW_CAPACITY_ERROR": {
+      "description": "Error that is shown if the user selects a drive with not enough capacity",
+      "message": "Medij mora imati najmanje 4 GB."
+   },
+   "SELECT_TARGET_LOW_CAPACITY_ERROR_ON_HUB": {
+      "description": "Error that is shown if the user selects a drive with not enough capacity",
+      "message": "USB pogon mora imati najmanje 4 GB."
+   },
+   "SELECT_TARGET_NO_DEVICES_FOUND": {
+      "description": "Indicates that no USB devices were found",
+      "message": "USB pogon ili SD kartica nisu pronađeni"
+   },
+   "SELECT_TARGET_NO_DEVICES_FOUND_ON_HUB": {
+      "description": "Indicates that no USB devices were found",
+      "message": "USB pogon nije pronađen"
+   },
+   "SELECT_TARGET_SELECT_DEVICE": {
+      "description": "Prompts the user to select a drive",
+      "message": "Odaberite medij koji želite upotrijebiti."
+   },
+   "SELECT_TARGET_SELECT_DEVICE_ON_HUB": {
+      "description": "Prompts the user to select a drive",
+      "message": "Odaberite USB pogon koji želite upotrijebiti."
+   },
+   "SELECT_TARGET_SELECT_DEVICE_PLACEHOLDER": {
+      "description": "Prompts the user to select a drive (text is shown inside the dropdown)",
+      "message": "Odaberite"
+   },
+   "SELECT_TARGET_TITLE": {
+      "description": "Title for the screen where the user selects the target USB device",
+      "message": "Umetnite USB izbrisivi memorijski pogon ili SD karticu"
+   },
+   "SELECT_TARGET_TITLE_ON_HUB": {
+      "description": "Title for the screen where the user selects the target USB device",
+      "message": "Umetnite USB izbrisivi memorijski pogon"
+   },
+   "STAGE_COMPLETE": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "Dovršeno"
+   },
+   "STAGE_DOWNLOAD": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "Preuzimanje"
+   },
+   "STAGE_DOWNLOADVERIFY": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "Potvrđivanje preuzimanja"
+   },
+   "STAGE_UNPACK": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "Raspakiravanje"
+   },
+   "STAGE_UNZIP": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "Raspakiravanje"
+   },
+   "STAGE_VERIFY": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "Potvrđivanje"
+   },
+   "STAGE_VERIFYDOWNLOAD": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "Potvrđivanje preuzimanja"
+   },
+   "STAGE_VERIFYWRITE": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "Potvrđivanje"
+   },
+   "STAGE_WRITE": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "Zapisivanje"
+   },
+   "STEP": {
+      "description": "Shown as part of the text 'step %x of %x'",
+      "message": "Korak"
+   },
+   "UNSUPPORTED_TEXT": {
+      "description": "Text displayed when the user's platform is not supported.",
+      "message": "Nažalost, vaša platforma trenutačno nije podržana. Više informacija možete pronaći u \u003Ca href=\"http://www.google.com/chromeos/recovery\" target=\"_blank\">Chromebookovu centru za pomoć\u003C/a>."
+   },
+   "UNSUPPORTED_TEXT_MAC": {
+      "description": "Text displayed when the user's platform is not supported.",
+      "message": "Nažalost, Mac je podržan samo u verziji M37 ili novijoj. Ažurirajte Chrome na verziju M37. Možda ćete zbog toga morati \u003Ca href=\"https://support.google.com/chromebook/answer/1086915\" target=\"_blank\">prijeći na Beta kanal\u003C/a>."
+   },
+   "UNSUPPORTED_TEXT_ON_HUB": {
+      "description": "Text displayed when the user's platform is not supported.",
+      "message": "Nažalost, vaša platforma trenutačno nije podržana. Više informacija možete pronaći u \u003Ca href=\"https://support.google.com/onhub/answer/6274977\" target=\"_blank\">OnHubovu centru za pomoć\u003C/a>."
+   },
+   "UNSUPPORTED_TITLE": {
+      "description": "Title displayed when the user's platform is not supported.",
+      "message": "Vaša platforma trenutačno nije podržana"
+   },
+   "UNSUPPORTED_TITLE_LINUX": {
+      "description": "Title displayed when the user's platform is not supported.",
+      "message": "Linux trenutačno nije podržan"
+   },
+   "UNSUPPORTED_TITLE_MAC": {
+      "description": "Title displayed when the user's platform is not supported.",
+      "message": "Mac trenutačno nije podržan"
+   },
+   "UNSUPPORTED_TITLE_WIN": {
+      "description": "Title displayed when the user's platform is not supported.",
+      "message": "Windows trenutačno nije podržan"
+   },
+   "WARNING_OFFLINE": {
+      "description": "Warning message that is shown to the user when his device is offline.",
+      "message": "Uređaj nije povezan s mrežom. Dostupne će biti samo offline značajke."
+   },
+   "WELCOME_TEXT": {
+      "description": "Text on the welcome screen",
+      "message": "Trebat će vam USB izbrisivi memorijski pogon ili SD kartica od najmanje 4 GB koje možete izbrisati."
+   },
+   "WELCOME_TEXT_ON_HUB": {
+      "description": "Text on the welcome screen",
+      "message": "Trebat će vam USB izbrisivi memorijski pogon od najmanje 4 GB koji možete izbrisati."
+   },
+   "WELCOME_TITLE": {
+      "description": "Title for the welcome screen",
+      "message": "Izrada medija za oporavak za vaš Chromebook"
+   },
+   "WELCOME_TITLE_ON_HUB": {
+      "description": "Title for the welcome screen",
+      "message": "Izrada USB pogona za oporavak za vaš OnHub"
+   },
+   "WRITE_MESSAGE": {
+      "description": "Shown on the screen where the drive is being created",
+      "message": "Ne uklanjajte medij za oporavak."
+   },
+   "WRITE_MESSAGE_ON_HUB": {
+      "description": "Shown on the screen where the drive is being created",
+      "message": "Ne uklanjajte USB pogon za oporavak."
+   },
+   "WRITE_TITLE": {
+      "description": "Title of the screen where the drive is being created",
+      "message": "Izrada slike za oporavak sustava"
+   }
+}

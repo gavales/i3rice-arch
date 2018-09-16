@@ -1,0 +1,554 @@
+{
+   "APIERRMSG_ABORTED": {
+      "description": "Error message that is shown if the operation is aborted",
+      "message": "عملیات قطع شد."
+   },
+   "APIERRMSG_DEVICE_LIST_ERROR": {
+      "description": "Error message that is shown if there was an error trying to detect removable USB drive and SD cards",
+      "message": "کارت SD یا درایو USB پیدا نشد."
+   },
+   "APIERRMSG_DEVICE_LIST_ERROR_ON_HUB": {
+      "description": "Error message that is shown if there was an error trying to detect removable USB drives",
+      "message": "درایو USB پیدا نشد."
+   },
+   "APIERRMSG_DOWNLOAD_CANCELLED": {
+      "description": "Error message that is shown if the user cancels the write operation during download",
+      "message": "دانلود لغو شد."
+   },
+   "APIERRMSG_DOWNLOAD_HASH_MISMATCH": {
+      "description": "Error message that is shown if the downloaded file doesn't hash to the expected value",
+      "message": "این فایل معتبر نیست."
+   },
+   "APIERRMSG_DOWNLOAD_INTERRUPTED": {
+      "description": "Error message that is shown if the downloaded was interrupted for any reason",
+      "message": "دانلود قطع شد."
+   },
+   "APIERRMSG_FILE_INVALID": {
+      "description": "Error message that is shown if the file to write is not valid",
+      "message": "فایل معتبر نیست."
+   },
+   "APIERRMSG_OPERATION_ALREADY_IN_PROGRESS": {
+      "description": "Error message that is shown if user tries to start a new write operation and there is already one in progress",
+      "message": "عملیاتی در حال انجام است."
+   },
+   "APIERRMSG_UNKNOWN": {
+      "description": "Error message that is shown if no matching error message can be found",
+      "message": "خطای ناشناخته: $errorCode$.",
+      "placeholders": {
+         "errorCode": {
+            "content": "$1",
+            "example": "Error code"
+         }
+      }
+   },
+   "APIERRMSG_UNSUPPORTED_OPERATION": {
+      "description": "Error message that is shown if the user triggers an unsupported operation",
+      "message": "عملیات پشتیبانی نمی‌شود."
+   },
+   "APIERRMSG_UNZIP_ERROR": {
+      "description": "Error message that is shown if the file cannot be unzipped for any reason",
+      "message": "فایل از حالت فشرده خارج نشد."
+   },
+   "APIERRMSG_UNZIP_INVALID_ARCHIVE": {
+      "description": "Error message that is shown if the file is not a valid ZIP file",
+      "message": "فایل فشرده نامعتبر است."
+   },
+   "APIERRMSG_URL_INVALID": {
+      "description": "Error message that is shown if no file is found at the URL to download",
+      "message": "فایل یافت نشد."
+   },
+   "APIERRMSG_VERIFICATION_FAILED": {
+      "description": "Error message that is shown if the image was not written properly",
+      "message": "تصویر تأیید نشد."
+   },
+   "APP_DESCRIPTION": {
+      "description": "High-level description of the application",
+      "message": "رسانه بازیابی برای Chromebook خود ایجاد کنید."
+   },
+   "APP_DESCRIPTION_ON_HUB": {
+      "description": "High-level description of the application",
+      "message": "درایو بازیابی USB برای OnHub خود ایجاد کنید."
+   },
+   "APP_NAME": {
+      "description": "Name of the application. Cannot exceed 45 characters.",
+      "message": "ابزار بازیابی Chromebook"
+   },
+   "APP_NAME_ON_HUB": {
+      "description": "Name of the application. Cannot exceed 45 characters.",
+      "message": "ابزار بازیابی OnHub"
+   },
+   "APP_SHORT_NAME": {
+      "description": "A short name for the app shown when space is limited. Fewer than 12 characters preferred.",
+      "message": "بازیابی"
+   },
+   "CANCEL_BUTTON_TEXT": {
+      "description": "Text for the cancel button",
+      "message": "لغو"
+   },
+   "COMPLETED": {
+      "description": "Shown as part of the text 'x% completed'",
+      "message": "کامل شد"
+   },
+   "COMPLETE_BULLET1": {
+      "description": "Shown on the completed screen",
+      "message": "برای بازیابی Chromebook خودتان، رسانه بازیابی را به Chromebook خودتان وصل کنید."
+   },
+   "COMPLETE_BULLET1_ON_HUB": {
+      "description": "Shown on the completed screen",
+      "message": "کابل برق را از OnHub جدا کنید و درایو USB را در پشت دستگاه قرار دهید. دکمه بازنشانی را پایین نگه‌دارید و برق را وصل کنید. تقریباً ۱۵ ثانیه یا تا وقتی چراغ فعالیت در درایو USB شروع به چشمک زدن می‌کند، دکمه بازنشانی را پایین نگه‌دارید."
+   },
+   "COMPLETE_BULLET2": {
+      "description": "Shown on the completed screen",
+      "message": "پس از بازیابی می‌توانید با استفاده از این ابزار، رسانه بازیابی‌تان را پاک کنید."
+   },
+   "COMPLETE_BULLET2_ON_HUB": {
+      "description": "Shown on the completed screen",
+      "message": "فرآیند بازیابی در OnHub شما شروع می‌شود که می‌تواند چند دقیقه طول بکشد. بعد از اتمام بازیابی، OnHub راه‌اندازی مجدد می‌شود. سپس از برنامه Google On برای راه‌اندازی OnHub استفاده کنید."
+   },
+   "COMPLETE_MESSAGE": {
+      "description": "Shown on the completed screen",
+      "message": "اکنون می‌توانید رسانه بازیابی‌تان را خارج کنید."
+   },
+   "COMPLETE_MESSAGE_ON_HUB": {
+      "description": "Shown on the completed screen",
+      "message": "اکنون می‌توانید درایو بازیابی USB را خارج کنید."
+   },
+   "COMPLETE_TITLE": {
+      "description": "Title of the completed screen",
+      "message": "با موفقیت انجام شد! رسانه بازیابی‌تان آماده است"
+   },
+   "COMPLETE_TITLE_ON_HUB": {
+      "description": "Title of the completed screen",
+      "message": "با موفقیت انجام شد! درایو بازیابی USB شما آماده است"
+   },
+   "CONFIRM_CANCELLED_MESSAGE_HTML": {
+      "description": "Indicates that the operation has been cancelled",
+      "message": "لغو شد. روی &rdquo;اکنون ایجاد شود&rdquo; کلیک کنید تا دوباره امتحان کنید.\u003Cbr>\u003Cbr>برای پاک کردن رسانه بازیابی، روی نماد چرخ دنده در بالا گوشه چپ کلیک کنید."
+   },
+   "CONFIRM_CANCELLED_MESSAGE_HTML_ON_HUB": {
+      "description": "Indicates that the operation has been cancelled",
+      "message": "لغو شد. برای امتحان مجدد، روی &rdquo;اکنون ایجاد شود&rdquo; کلیک کنید.\u003Cbr>\u003Cbr>برای پاک کردن درایو بازیابی USB روی نماد چر‌خ‌دنده در گوشه چپ بالا کلیک کنید."
+   },
+   "CONFIRM_MESSAGE_HTML": {
+      "description": "Important message, indicates what the application is going to do",
+      "message": "\u003Cb>مهم:\u003C/b> همه اطلاعات و پارتیشن‌های روی رسانه بازیابی‌تان حذف می‌شوند."
+   },
+   "CONFIRM_MESSAGE_HTML_ON_HUB": {
+      "description": "Important message, indicates what the application is going to do",
+      "message": "\u003Cb>مهم:\u003C/b>همه داده‌ها و پارتیشن‌های درایو بازیابی USB شما حذف می‌شود."
+   },
+   "CONFIRM_TITLE": {
+      "description": "Title for the confirmation screen",
+      "message": "ایجاد تصویر بازیابی"
+   },
+   "CONTINUE_BUTTON_TEXT": {
+      "description": "Text for the continue button at the bottom of the screen",
+      "message": "ادامه"
+   },
+   "CREATE_ANOTHER_BUTTON_TEXT": {
+      "description": "Text for the button to go back to the start of the application after the recovery disk has been created",
+      "message": "ایجاد مورد دیگر"
+   },
+   "CREATE_NOW_BUTTON_TEXT": {
+      "description": "Text for the button to start the recovery disk creation",
+      "message": "اکنون ایجاد شود"
+   },
+   "DEV_APP_DESCRIPTION": {
+      "description": "High-level description of the Chromebook Dev application",
+      "message": "نسخه برنامه‌نویس ابزار بازیابی Chromebook."
+   },
+   "DEV_APP_DESCRIPTION_ON_HUB": {
+      "description": "High-level description of the OnHub Dev application",
+      "message": "نسخه برنامه‌نویس ابزار بازیابی OnHub."
+   },
+   "DEV_APP_NAME": {
+      "description": "Name of the dev application. Cannot exceed 45 characters.",
+      "message": "ابزار بازیابی Chromebook (برنامه‌نویس)"
+   },
+   "DEV_APP_NAME_ON_HUB": {
+      "description": "Name of the dev application. Cannot exceed 45 characters.",
+      "message": "ابزار بازیابی OnHub (برنامه‌نویس)"
+   },
+   "DONE_BUTTON_TEXT": {
+      "description": "Text for the button to close the application after the recovery disk has been created / Text for the button to go back to the start of the application after the recovery disk has been erased",
+      "message": "انجام شد"
+   },
+   "ERASE_COMPLETE_BULLET1": {
+      "description": "Shown on the erase completed screen",
+      "message": "کارت SD یا درایو USB برای قالب‌بندی آماده است."
+   },
+   "ERASE_COMPLETE_BULLET1_ON_HUB": {
+      "description": "Shown on the erase completed screen",
+      "message": "درایو USB شما برای قالب‌بندی آماده است."
+   },
+   "ERASE_COMPLETE_BULLET2": {
+      "description": "Shown on the erase completed screen",
+      "message": "با استفاده از ابزار قالب‌بندی ارائه شده توسط سیستم عامل‌تان، قالب‌بندی کنید."
+   },
+   "ERASE_COMPLETE_TITLE": {
+      "description": "Title for erase completed screen",
+      "message": "رسانه بازیابی‌تان پاک شده است."
+   },
+   "ERASE_COMPLETE_TITLE_ON_HUB": {
+      "description": "Title for erase completed screen",
+      "message": "درایو بازیابی USB پاک شد."
+   },
+   "ERASE_CONFIRM_MESSAGE": {
+      "description": "Important message, indicates what the application is going to do",
+      "message": "تصویر بازیابی و همه پارتیشن‌های روی رسانه بازیابی‌تان پاک خواهند شد."
+   },
+   "ERASE_CONFIRM_MESSAGE_ON_HUB": {
+      "description": "Important message, indicates what the application is going to do",
+      "message": "تصویر بازیابی و همه پارتیشن‌های درایو بازیابی USB پاک می‌شود."
+   },
+   "ERASE_NOW_BUTTON_TEXT": {
+      "description": "Text for the button to start the recovery disk erasure",
+      "message": "اکنون پاک شود"
+   },
+   "ERASE_PROGRESS_TEXT": {
+      "description": "Shown when the drive is being erased",
+      "message": "رسانه بازیابی‌تان را خارج نکنید."
+   },
+   "ERASE_PROGRESS_TEXT_ON_HUB": {
+      "description": "Shown when the drive is being erased",
+      "message": "درایو بازیابی USB را خارج نکنید."
+   },
+   "ERASE_PROGRESS_TITLE": {
+      "description": "Title for the screen where the drive is being erased",
+      "message": "درحال پاک کردن رسانه بازیابی‌تان"
+   },
+   "ERASE_PROGRESS_TITLE_ON_HUB": {
+      "description": "Title for the screen where the drive is being erased",
+      "message": "پاک کردن درایو بازیابی USB"
+   },
+   "ERASE_SELECT_TARGET_DETECTING": {
+      "description": "Indicates that the app is currently detecting the list of USB devices",
+      "message": "درحال شناسایی"
+   },
+   "ERASE_SELECT_TARGET_HIGH_CAPACITY_WARNING_HTML": {
+      "description": "Warning that is shown if the user selects a drive with a high capacity",
+      "message": "\u003Cb>اخطار:\u003C/b> آیا این درایو درست است؟"
+   },
+   "ERASE_SELECT_TARGET_NO_DEVICES_FOUND": {
+      "description": "Indicates that no USB devices were found",
+      "message": "هیچ کارت SD یا درایو USB یافت نشد"
+   },
+   "ERASE_SELECT_TARGET_NO_DEVICES_FOUND_ON_HUB": {
+      "description": "Indicates that no USB devices were found",
+      "message": "درایو USB پیدا نشد"
+   },
+   "ERASE_SELECT_TARGET_SELECT_DEVICE": {
+      "description": "Prompts the user to select a drive",
+      "message": "رسانه بازیابی موردنظر را برای پاک کردن انتخاب کنید."
+   },
+   "ERASE_SELECT_TARGET_SELECT_DEVICE_ON_HUB": {
+      "description": "Prompts the user to select a drive",
+      "message": "درایو بازیابی USB را که می‌خواهید پاک کنید، انتخاب کنید."
+   },
+   "ERASE_SELECT_TARGET_SELECT_DEVICE_PLACEHOLDER": {
+      "description": "Prompts the user to select a drive (text is shown inside the dropdown)",
+      "message": "انتخاب"
+   },
+   "ERASE_TITLE": {
+      "description": "Title for the screens related to erasing",
+      "message": "پاک کردن رسانه بازیابی"
+   },
+   "ERASE_TITLE_ON_HUB": {
+      "description": "Title for the screens related to erasing",
+      "message": "پاک کردن درایو بازیابی USB"
+   },
+   "ERRMSG_PLEASE_TRY_AGAIN": {
+      "description": "Error text that is shown after the error message",
+      "message": "لطفاً دوباره امتحان کنید."
+   },
+   "ERRMSG_RECOVERY_CONFIG_DOWNLOAD_FAILURE": {
+      "description": "Error message that is shown if the app's configuration file cannot be downloaded. In this case, the app will only be able to support offline features.",
+      "message": "فایل پیکربندی دانلود نشد. فقط قابلیت‌های آفلاین در دسترس خواهند بود."
+   },
+   "GET_STARTED_BUTTON_TEXT": {
+      "description": "Text for the 'get started' button at the bottom of the screen",
+      "message": "راهنمای آغاز به کار"
+   },
+   "GIGABYTE_ABBREVIATION": {
+      "description": "The abbreviation for gigabyte",
+      "message": "گیگابایت"
+   },
+   "GO_BACK_BUTTON_TEXT": {
+      "description": "Text for the back button at the bottom of the screen",
+      "message": "برگشت"
+   },
+   "HOURS_REMAINING": {
+      "description": "A message that indicates the time remaining for an operation.",
+      "message": "$hours$ ساعت باقی مانده است.",
+      "placeholders": {
+         "hours": {
+            "content": "$1",
+            "example": "The number of hours remaining."
+         }
+      }
+   },
+   "HWID_INVALID_MODEL": {
+      "description": "Message shown to user when it's clear that what they have entered doesn't match any valid model number.",
+      "message": "شماره مدل نامعتبر است. لطفاً ورودی‌تان را بررسی کنید."
+   },
+   "HWID_KEEP_TYPING": {
+      "description": "Message shown to user when they have no yet entered enough info to determine a specific device.",
+      "message": "هنوز هیچ مدلی یافت نشده است. به تایپ کردن ادامه دهید."
+   },
+   "HWID_MATCH_FOUND": {
+      "description": "Message shown to user when they have entered enough info to determine a specific device.",
+      "message": "مورد منطبقی یافت شد"
+   },
+   "HWID_MATCH_FOUND_AND_CHECKSUM_VERIFIED": {
+      "description": "Message shown to user when they have entered a full model number and the checksum is verified.",
+      "message": "مورد منطبقی با نام مدل کاملاً یکسان یافت شد"
+   },
+   "LEARN_MORE_LINK_TEXT": {
+      "description": "Text for the 'learn more' link at the bottom left of the screen",
+      "message": "بیشتر بدانید"
+   },
+   "LEARN_MORE_LINK_URL": {
+      "description": "URL for the 'learn more' link at the bottom left of the screen",
+      "message": "http://www.google.com/chromeos/recovery"
+   },
+   "LEARN_MORE_LINK_URL_ON_HUB": {
+      "description": "URL for the 'learn more' link at the bottom left of the screen",
+      "message": "https://support.google.com/onhub/answer/6274977"
+   },
+   "LOADING_CONFIG_TEXT": {
+      "description": "Message to user indicating that the app is downloading latest information about recovery for different devices. It is preparing itself to be used.",
+      "message": "در حال آماده‌سازی ... "
+   },
+   "MENU_ITEM_ERASE_RECOVERY_MEDIA": {
+      "description": "Text for the menu item to erase recovery media",
+      "message": "پاک کردن رسانه بازیابی"
+   },
+   "MENU_ITEM_ERASE_RECOVERY_MEDIA_ON_HUB": {
+      "description": "Text for the menu item to erase recovery USB drive",
+      "message": "پاک کردن درایو بازیابی USB"
+   },
+   "MENU_ITEM_SEND_FEEDBACK": {
+      "description": "Text for the menu item to send feedback",
+      "message": "ارسال بازخورد"
+   },
+   "MENU_ITEM_USE_LOCAL_IMAGE": {
+      "description": "Text for the menu item to use a local file as the source image for the recovery disk",
+      "message": "استفاده از تصویر محلی"
+   },
+   "MINUTES_REMAINING": {
+      "description": "A message that indicates the time remaining for an operation.",
+      "message": "$minutes$ دقیقه باقی مانده است.",
+      "placeholders": {
+         "minutes": {
+            "content": "$1",
+            "example": "The number of minutes remaining."
+         }
+      }
+   },
+   "OF": {
+      "description": "Shown as part of the text 'step %x of %x'",
+      "message": "از"
+   },
+   "SECONDS_REMAINING": {
+      "description": "A message that indicates the time remaining for an operation.",
+      "message": "$seconds$ ثانیه باقی مانده است.",
+      "placeholders": {
+         "seconds": {
+            "content": "$1",
+            "example": "The number of seconds remaining."
+         }
+      }
+   },
+   "SELECT_IMAGE_SELECT_BY_HWID_LINK_TEXT": {
+      "description": "Text for the 'select by model number' link",
+      "message": "شماره مدلی را مستقیماً وارد کنید"
+   },
+   "SELECT_IMAGE_SELECT_FROM_LIST_LINK_TEXT": {
+      "description": "Text for 'select by model' link",
+      "message": "مدلی را از فهرست انتخاب کنید"
+   },
+   "SELECT_IMAGE_SELECT_MANUFACTURER_PLACEHOLDER": {
+      "description": "Prompts the user to select a manufacturer (text is shown inside the dropdown)",
+      "message": "سازنده را انتخاب کنید"
+   },
+   "SELECT_IMAGE_SELECT_PRODUCT_PLACEHOLDER": {
+      "description": "Prompts the user to select a product (text is shown inside the dropdown)",
+      "message": "محصول را انتخاب کنید"
+   },
+   "SELECT_IMAGE_SELECT_PRODUCT_PLACEHOLDER_ON_HUB": {
+      "description": "Prompts the user to select a product (text is shown inside the dropdown)",
+      "message": "انتخاب مدل"
+   },
+   "SELECT_IMAGE_TEXT": {
+      "description": "Prompts the user to enter a model number. Refers to the recovery screen.",
+      "message": "شماره مدل Chromebook موردنظر برای بازیابی را وارد کنید. می‌توانید آن را در صفحه بازیابی پیدا کنید."
+   },
+   "SELECT_IMAGE_TEXT_ON_HUB": {
+      "description": "Prompts the user to enter a model number. Refers to the recovery screen.",
+      "message": "شماره مدل OnHub خود را وارد کنید."
+   },
+   "SELECT_IMAGE_THIS_CHROMEBOOKS_MODEL_NUMBER": {
+      "description": "Label that precedes a HWID string (e.g.: LINK D25-E5M-K75) that is the model number for the Chromebook the user is using. The HWID string is hyperlinked and clicking on it will populate the value into the model number input field. In English, this would for example read 'For this Chromebook, enter _LINK D25-E5M-K75_'",
+      "message": "برای این Chromebook، این شماره را وارد کنید"
+   },
+   "SELECT_IMAGE_THIS_CHROMEBOOKS_MODEL_NUMBER_ON_HUB": {
+      "description": "Label that precedes a HWID string (e.g.: ARKHAM D25-E5M-K75) that is the model number for the OnHub the user is using. The HWID string is hyperlinked and clicking on it will populate the value into the model number input field. In English, this would for example read 'For this OnHub, enter _LINK D25-E5M-K75_'",
+      "message": "برای این OnHub این عبارت را وارد کنید"
+   },
+   "SELECT_IMAGE_TITLE": {
+      "description": "Title for the image selection screen",
+      "message": "شناسایی Chromebook شما"
+   },
+   "SELECT_IMAGE_TITLE_ON_HUB": {
+      "description": "Title for the image selection screen",
+      "message": "OnHub خود را شناسایی کنید"
+   },
+   "SELECT_TARGET_DETECTING": {
+      "description": "Indicates that the app is currently detecting the list of USB devices",
+      "message": "درحال شناسایی"
+   },
+   "SELECT_TARGET_HIGH_CAPACITY_WARNING_HTML": {
+      "description": "Warning that is shown if the user selects a drive with a high capacity",
+      "message": "\u003Cb>اخطار:\u003C/b> آیا این رسانه موردنظرتان است؟"
+   },
+   "SELECT_TARGET_HIGH_CAPACITY_WARNING_HTML_ON_HUB": {
+      "description": "Warning that is shown if the user selects a drive with a high capacity",
+      "message": "\u003Cb>هشدار:\u003C/b> آیا این درایو USB موردنظرتان است؟"
+   },
+   "SELECT_TARGET_LOW_CAPACITY_ERROR": {
+      "description": "Error that is shown if the user selects a drive with not enough capacity",
+      "message": "رسانه شما باید حداقل ۴ گیگابایت فضای آزاد داشته باشد."
+   },
+   "SELECT_TARGET_LOW_CAPACITY_ERROR_ON_HUB": {
+      "description": "Error that is shown if the user selects a drive with not enough capacity",
+      "message": "درایو USB باید حداقل ۴ گیگابایت باشد."
+   },
+   "SELECT_TARGET_NO_DEVICES_FOUND": {
+      "description": "Indicates that no USB devices were found",
+      "message": "هیچ کارت SD یا درایو USB یافت نشد"
+   },
+   "SELECT_TARGET_NO_DEVICES_FOUND_ON_HUB": {
+      "description": "Indicates that no USB devices were found",
+      "message": "درایو USB پیدا نشد"
+   },
+   "SELECT_TARGET_SELECT_DEVICE": {
+      "description": "Prompts the user to select a drive",
+      "message": "رسانه موردنظر را برای استفاده انتخاب کنید."
+   },
+   "SELECT_TARGET_SELECT_DEVICE_ON_HUB": {
+      "description": "Prompts the user to select a drive",
+      "message": "درایو USB را که می‌خواهید استفاده کنید، انتخاب کنید."
+   },
+   "SELECT_TARGET_SELECT_DEVICE_PLACEHOLDER": {
+      "description": "Prompts the user to select a drive (text is shown inside the dropdown)",
+      "message": "انتخاب"
+   },
+   "SELECT_TARGET_TITLE": {
+      "description": "Title for the screen where the user selects the target USB device",
+      "message": "کارت SD یا درایو فلش USB خودتان را وارد کنید"
+   },
+   "SELECT_TARGET_TITLE_ON_HUB": {
+      "description": "Title for the screen where the user selects the target USB device",
+      "message": "درایو فلش USB را وارد کنید"
+   },
+   "STAGE_COMPLETE": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "کامل شد"
+   },
+   "STAGE_DOWNLOAD": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "درحال دانلود"
+   },
+   "STAGE_DOWNLOADVERIFY": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "در حال تأیید دانلود"
+   },
+   "STAGE_UNPACK": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "در حال باز کردن بسته"
+   },
+   "STAGE_UNZIP": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "در حال باز کردن بسته"
+   },
+   "STAGE_VERIFY": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "درحال تأیید"
+   },
+   "STAGE_VERIFYDOWNLOAD": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "در حال تأیید دانلود"
+   },
+   "STAGE_VERIFYWRITE": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "درحال تأیید"
+   },
+   "STAGE_WRITE": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "در حال نوشتن"
+   },
+   "STEP": {
+      "description": "Shown as part of the text 'step %x of %x'",
+      "message": "مرحله"
+   },
+   "UNSUPPORTED_TEXT": {
+      "description": "Text displayed when the user's platform is not supported.",
+      "message": "متأسفانه، در حال حاضر پلتفورم شما پشتیبانی نمی‌شود.  لطفاً برای اطلاعات بیشتر به \u003Ca href=\"http://www.google.com/chromeos/recovery\" target=\"_blank\">مرکز راهنمای Chromebook‏\u003C/a> مراجعه کنید."
+   },
+   "UNSUPPORTED_TEXT_MAC": {
+      "description": "Text displayed when the user's platform is not supported.",
+      "message": "متأسفانه، Mac فقط در M37 یا بالاتر پشتیبانی می‌شود. لطفاً Chrome خود را به نسخه M37 ارتقا دهید. ممکن است انجام این کار به \u003Ca href=\"https://support.google.com/chromebook/answer/1086915\" target=\"_blank\">جابه‌جایی به کانال بتا\u003C/a> نیاز داشته باشد."
+   },
+   "UNSUPPORTED_TEXT_ON_HUB": {
+      "description": "Text displayed when the user's platform is not supported.",
+      "message": "متأسفانه، پلتفورم شما در‌حال‌حاضر پشتیبانی نمی‌شود.  برای اطلاعات بیشتر، لطفاً به \u003Ca href=\"https://support.google.com/onhub/answer/6274977\" target=\"_blank\">مرکز راهنمایی OnHub\u003C/a> مراجعه کنید."
+   },
+   "UNSUPPORTED_TITLE": {
+      "description": "Title displayed when the user's platform is not supported.",
+      "message": "در حال حاضر از پلتفرم شما پشتیبانی نمی‌شود"
+   },
+   "UNSUPPORTED_TITLE_LINUX": {
+      "description": "Title displayed when the user's platform is not supported.",
+      "message": "در حال حاضر Linux پشتیبانی نمی‌شود"
+   },
+   "UNSUPPORTED_TITLE_MAC": {
+      "description": "Title displayed when the user's platform is not supported.",
+      "message": "در حال حاضر Mac پشتیبانی نمی‌شود"
+   },
+   "UNSUPPORTED_TITLE_WIN": {
+      "description": "Title displayed when the user's platform is not supported.",
+      "message": "در حال حاضر Windows پشتیبانی نمی‌شود"
+   },
+   "WARNING_OFFLINE": {
+      "description": "Warning message that is shown to the user when his device is offline.",
+      "message": "دستگاه در حالت آفلاین است. فقط قابلیت‌های آفلاین در دسترس خواهند بود."
+   },
+   "WELCOME_TEXT": {
+      "description": "Text on the welcome screen",
+      "message": "شما به کارت SD یا درایو فلش USB با ظرفیت ۴ گیگابایت یا بیشتر نیاز دارید که پاک شدن محتوای آن برایتان مهم نباشد."
+   },
+   "WELCOME_TEXT_ON_HUB": {
+      "description": "Text on the welcome screen",
+      "message": "به یک درایو فلش USB با ظرفیت ۴ گیگابایت با بیشتر نیاز دارید که پاک شدن محتوای آن برایتان مهم نباشد."
+   },
+   "WELCOME_TITLE": {
+      "description": "Title for the welcome screen",
+      "message": "رسانه بازیابی برای Chromebook خود ایجاد کنید"
+   },
+   "WELCOME_TITLE_ON_HUB": {
+      "description": "Title for the welcome screen",
+      "message": "درایو بازیابی USB برای OnHub خود ایجاد کنید"
+   },
+   "WRITE_MESSAGE": {
+      "description": "Shown on the screen where the drive is being created",
+      "message": "رسانه بازیابی‌تان را خارج نکنید."
+   },
+   "WRITE_MESSAGE_ON_HUB": {
+      "description": "Shown on the screen where the drive is being created",
+      "message": "درایو بازیابی USB را خارج نکنید."
+   },
+   "WRITE_TITLE": {
+      "description": "Title of the screen where the drive is being created",
+      "message": "درحال ایجاد تصویر بازیابی"
+   }
+}

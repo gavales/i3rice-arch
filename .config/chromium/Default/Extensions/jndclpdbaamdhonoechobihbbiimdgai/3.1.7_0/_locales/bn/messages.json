@@ -1,0 +1,554 @@
+{
+   "APIERRMSG_ABORTED": {
+      "description": "Error message that is shown if the operation is aborted",
+      "message": "ক্রিয়াকলাপ বিঘ্নিত হয়েছে৷"
+   },
+   "APIERRMSG_DEVICE_LIST_ERROR": {
+      "description": "Error message that is shown if there was an error trying to detect removable USB drive and SD cards",
+      "message": "কোনো USB ড্রাইভ বা SD কার্ড পাওয়া যায়নি৷"
+   },
+   "APIERRMSG_DEVICE_LIST_ERROR_ON_HUB": {
+      "description": "Error message that is shown if there was an error trying to detect removable USB drives",
+      "message": "একটি USB ড্রাইভ খুঁজে পাওয়া যায়নি।"
+   },
+   "APIERRMSG_DOWNLOAD_CANCELLED": {
+      "description": "Error message that is shown if the user cancels the write operation during download",
+      "message": "ডাউনলোড বাতিল করা হয়েছে৷"
+   },
+   "APIERRMSG_DOWNLOAD_HASH_MISMATCH": {
+      "description": "Error message that is shown if the downloaded file doesn't hash to the expected value",
+      "message": "ফাইলটি অবৈধ৷"
+   },
+   "APIERRMSG_DOWNLOAD_INTERRUPTED": {
+      "description": "Error message that is shown if the downloaded was interrupted for any reason",
+      "message": "ডাউনলোড বাধা প্রাপ্ত হয়েছে৷"
+   },
+   "APIERRMSG_FILE_INVALID": {
+      "description": "Error message that is shown if the file to write is not valid",
+      "message": "ফাইলটি অবৈধ৷"
+   },
+   "APIERRMSG_OPERATION_ALREADY_IN_PROGRESS": {
+      "description": "Error message that is shown if user tries to start a new write operation and there is already one in progress",
+      "message": "একটি ক্রিয়াকলাপ ইতিমধ্যেই প্রগতিতে রয়েছে৷"
+   },
+   "APIERRMSG_UNKNOWN": {
+      "description": "Error message that is shown if no matching error message can be found",
+      "message": "অজানা ত্রুটি: $errorCode$৷",
+      "placeholders": {
+         "errorCode": {
+            "content": "$1",
+            "example": "Error code"
+         }
+      }
+   },
+   "APIERRMSG_UNSUPPORTED_OPERATION": {
+      "description": "Error message that is shown if the user triggers an unsupported operation",
+      "message": "অসমর্থিত ক্রিয়াকলাপ৷"
+   },
+   "APIERRMSG_UNZIP_ERROR": {
+      "description": "Error message that is shown if the file cannot be unzipped for any reason",
+      "message": "ফাইল আনজিপ করা যায়নি৷"
+   },
+   "APIERRMSG_UNZIP_INVALID_ARCHIVE": {
+      "description": "Error message that is shown if the file is not a valid ZIP file",
+      "message": "অবৈধ জিপ ফাইল৷"
+   },
+   "APIERRMSG_URL_INVALID": {
+      "description": "Error message that is shown if no file is found at the URL to download",
+      "message": "ফাইল খুঁজে পাওয়া যায়নি৷"
+   },
+   "APIERRMSG_VERIFICATION_FAILED": {
+      "description": "Error message that is shown if the image was not written properly",
+      "message": "চিত্র যাচাইকরণ ব্যর্থ হয়েছে৷"
+   },
+   "APP_DESCRIPTION": {
+      "description": "High-level description of the application",
+      "message": "আপনার Chromebook এর জন্য পুনরুদ্ধারের মিডিয়া তৈরি করুন।"
+   },
+   "APP_DESCRIPTION_ON_HUB": {
+      "description": "High-level description of the application",
+      "message": "আপনার OnHub এর জন্য একটি পুনরুদ্ধারের USB ড্রাইভ তৈরি করুন।"
+   },
+   "APP_NAME": {
+      "description": "Name of the application. Cannot exceed 45 characters.",
+      "message": "Chromebook রিকভারি ইউটিলিটি"
+   },
+   "APP_NAME_ON_HUB": {
+      "description": "Name of the application. Cannot exceed 45 characters.",
+      "message": "OnHub রিকভারি ইউটিলিটি"
+   },
+   "APP_SHORT_NAME": {
+      "description": "A short name for the app shown when space is limited. Fewer than 12 characters preferred.",
+      "message": "রিকভারি"
+   },
+   "CANCEL_BUTTON_TEXT": {
+      "description": "Text for the cancel button",
+      "message": "বাতিল করুন"
+   },
+   "COMPLETED": {
+      "description": "Shown as part of the text 'x% completed'",
+      "message": "সম্পন্ন হয়েছে"
+   },
+   "COMPLETE_BULLET1": {
+      "description": "Shown on the completed screen",
+      "message": "আপনার Chromebook পুনরুদ্ধার করতে, আপনার Chromebook এর সাথে পুনরুদ্ধারের মিডিয়া সংযুক্ত করুন৷"
+   },
+   "COMPLETE_BULLET1_ON_HUB": {
+      "description": "Shown on the completed screen",
+      "message": "আপনার OnHub থেকে বৈদ্যুতিক তার আনপ্লাগ করুন এবং ডিভাইসের পিছনে USB ড্রাইভ ঢোকান। রিসেট বোতাম চেপে ধরুন এবং বৈদ্যুতিক তারে সংযোগ দিন। প্রায় ১৫ সেকেন্ড বা USB ড্রাইভের কার্যকলাপ আলো নাচা শুরু না হওয়া পর্যন্ত রিসেট বোতাম চেপে ধরে থাকুন।"
+   },
+   "COMPLETE_BULLET2": {
+      "description": "Shown on the completed screen",
+      "message": "পুনরুদ্ধারের পরে, আপনি আপনার পুনরুদ্ধারের মিডিয়াটিকে মুছে দিতে পারেন৷"
+   },
+   "COMPLETE_BULLET2_ON_HUB": {
+      "description": "Shown on the completed screen",
+      "message": "আপনার OnHub পুনরুদ্ধারের প্রক্রিয়ার মধ্যে দিয়ে যাবে যা কয়েক মিনিট সময় নিতে পারে। আপনার OnHub পুনরুদ্ধার করা হলে, এটি পুনরায় চালু হবে। তারপর আপনার OnHub সেট আপ করার জন্য Google On অ্যাপ্লিকেশান ব্যবহার করুন।"
+   },
+   "COMPLETE_MESSAGE": {
+      "description": "Shown on the completed screen",
+      "message": "আপনি এখন আপনার পুনরুদ্ধারের মিডিয়া সরাতে পারেন৷"
+   },
+   "COMPLETE_MESSAGE_ON_HUB": {
+      "description": "Shown on the completed screen",
+      "message": "আপনি এখন আপনার পুনরুদ্ধারের USB ড্রাইভ সরাতে পারেন।"
+   },
+   "COMPLETE_TITLE": {
+      "description": "Title of the completed screen",
+      "message": "সফল হয়েছে! আপনার পুনরুদ্ধারের মিডিয়া প্রস্তুত"
+   },
+   "COMPLETE_TITLE_ON_HUB": {
+      "description": "Title of the completed screen",
+      "message": "সফল হয়েছে! আপনার পুনরুদ্ধারের USB ড্রাইভ প্রস্তুত"
+   },
+   "CONFIRM_CANCELLED_MESSAGE_HTML": {
+      "description": "Indicates that the operation has been cancelled",
+      "message": "বাতিল করা হয়েছে। আবার চেষ্টা করতে ”এখন তৈরি করুন” এ ক্লিক করুন।\u003Cbr>\u003Cbr>আপনার পুনরুদ্ধারের মিডিয়া মোছার জন্য, উপরের ডান দিকের কোণায় অবস্থিত গিয়ার আইকনে ক্লিক করুন।"
+   },
+   "CONFIRM_CANCELLED_MESSAGE_HTML_ON_HUB": {
+      "description": "Indicates that the operation has been cancelled",
+      "message": "বাতিল করা হয়েছে। আবার চেষ্টা করতে ”এখন তৈরি করুন” এ ক্লিক করুন।\u003Cbr>\u003Cbr>আপনার পুনরুদ্ধারের USB ড্রাইভ মোছার জন্য, উপরের ডান দিকের কোণায় অবস্থিত গিয়ার আইকনে ক্লিক করুন।"
+   },
+   "CONFIRM_MESSAGE_HTML": {
+      "description": "Important message, indicates what the application is going to do",
+      "message": "\u003Cb>গুরুত্বপূর্ণ:\u003C/b> আপনার পুনরুদ্ধারের মিডিয়ায় অবস্থিত সকল ডেটা এবং পার্টিশন মুছে ফেলা হবে।"
+   },
+   "CONFIRM_MESSAGE_HTML_ON_HUB": {
+      "description": "Important message, indicates what the application is going to do",
+      "message": "\u003Cb>গুরুত্বপূর্ণ:\u003C/b> আপনার পুনরুদ্ধারের USB ড্রাইভে অবস্থিত সকল ডেটা এবং পার্টিশন মুছে ফেলা হবে।"
+   },
+   "CONFIRM_TITLE": {
+      "description": "Title for the confirmation screen",
+      "message": "একটি পুনরুদ্ধারের চিত্র তৈরি করুন"
+   },
+   "CONTINUE_BUTTON_TEXT": {
+      "description": "Text for the continue button at the bottom of the screen",
+      "message": "অবিরত থাকুন"
+   },
+   "CREATE_ANOTHER_BUTTON_TEXT": {
+      "description": "Text for the button to go back to the start of the application after the recovery disk has been created",
+      "message": "অন্য একটি তৈরি করুন"
+   },
+   "CREATE_NOW_BUTTON_TEXT": {
+      "description": "Text for the button to start the recovery disk creation",
+      "message": "এখনই তৈরি করুন"
+   },
+   "DEV_APP_DESCRIPTION": {
+      "description": "High-level description of the Chromebook Dev application",
+      "message": "Chromebook রিকভারি ইউটিলিটির বিকাশ সংস্করণ।"
+   },
+   "DEV_APP_DESCRIPTION_ON_HUB": {
+      "description": "High-level description of the OnHub Dev application",
+      "message": "OnHub রিকভারি ইউটিলিটির বিকাশ সংস্করণ।"
+   },
+   "DEV_APP_NAME": {
+      "description": "Name of the dev application. Cannot exceed 45 characters.",
+      "message": "Chromebook রিকভারি ইউটিলিটি বিকাশ"
+   },
+   "DEV_APP_NAME_ON_HUB": {
+      "description": "Name of the dev application. Cannot exceed 45 characters.",
+      "message": "OnHub রিকভারি ইউটিলিটি বিকাশ"
+   },
+   "DONE_BUTTON_TEXT": {
+      "description": "Text for the button to close the application after the recovery disk has been created / Text for the button to go back to the start of the application after the recovery disk has been erased",
+      "message": "সম্পন্ন হয়েছে"
+   },
+   "ERASE_COMPLETE_BULLET1": {
+      "description": "Shown on the erase completed screen",
+      "message": "আপনার USB ড্রাইভ বা SD কার্ড ফর্ম্যাট করার জন্য প্রস্তুত করা হয়েছে৷"
+   },
+   "ERASE_COMPLETE_BULLET1_ON_HUB": {
+      "description": "Shown on the erase completed screen",
+      "message": "আপনার USB ড্রাইভ ফর্ম্যাট করার জন্য প্রস্তুত।"
+   },
+   "ERASE_COMPLETE_BULLET2": {
+      "description": "Shown on the erase completed screen",
+      "message": "আপনার অপারেটিং সিস্টেমের দ্বারা প্রদত্ত ফর্ম্যাট করার সরঞ্জামের সাহায্যে ফর্ম্যাট করুন৷"
+   },
+   "ERASE_COMPLETE_TITLE": {
+      "description": "Title for erase completed screen",
+      "message": "আপনার পুনরুদ্ধারের মিডিয়াটিকে মোছা হয়েছে৷"
+   },
+   "ERASE_COMPLETE_TITLE_ON_HUB": {
+      "description": "Title for erase completed screen",
+      "message": "আপনার পুনরুদ্ধারের USB ড্রাইভ মোছা হয়েছে।"
+   },
+   "ERASE_CONFIRM_MESSAGE": {
+      "description": "Important message, indicates what the application is going to do",
+      "message": "আপনার পুনরুদ্ধার মিডিয়াতে উপস্থিত পুনরুদ্ধারের চিত্র ও সমস্ত পার্টিশন মোছা হবে৷"
+   },
+   "ERASE_CONFIRM_MESSAGE_ON_HUB": {
+      "description": "Important message, indicates what the application is going to do",
+      "message": "আপনার পুনরুদ্ধারের USB ড্রাইভের সমস্ত পুনরুদ্ধারের চিত্র এবং সমস্ত পার্টিশন মোছা হবে।"
+   },
+   "ERASE_NOW_BUTTON_TEXT": {
+      "description": "Text for the button to start the recovery disk erasure",
+      "message": "এখনই মুছুন"
+   },
+   "ERASE_PROGRESS_TEXT": {
+      "description": "Shown when the drive is being erased",
+      "message": "আপনার পুনরুদ্ধার মিডিয়াটি সরাবেন না৷"
+   },
+   "ERASE_PROGRESS_TEXT_ON_HUB": {
+      "description": "Shown when the drive is being erased",
+      "message": "আপনার পুনরুদ্ধারের USB ড্রাইভ সরাবেন না।"
+   },
+   "ERASE_PROGRESS_TITLE": {
+      "description": "Title for the screen where the drive is being erased",
+      "message": "আপনার পুনরুদ্ধারের মিডিয়াটি মোছা হচ্ছে"
+   },
+   "ERASE_PROGRESS_TITLE_ON_HUB": {
+      "description": "Title for the screen where the drive is being erased",
+      "message": "আপনার পুনরুদ্ধারের USB ড্রাইভ মোছা হচ্ছে"
+   },
+   "ERASE_SELECT_TARGET_DETECTING": {
+      "description": "Indicates that the app is currently detecting the list of USB devices",
+      "message": "সনাক্ত করা হচ্ছে"
+   },
+   "ERASE_SELECT_TARGET_HIGH_CAPACITY_WARNING_HTML": {
+      "description": "Warning that is shown if the user selects a drive with a high capacity",
+      "message": "\u003Cb>সতর্কতা:\u003C/b> এটিই কি সঠিক ড্রাইভ?"
+   },
+   "ERASE_SELECT_TARGET_NO_DEVICES_FOUND": {
+      "description": "Indicates that no USB devices were found",
+      "message": "কোনো USB ড্রাইভ বা SD কার্ড পাওয়া যায়নি"
+   },
+   "ERASE_SELECT_TARGET_NO_DEVICES_FOUND_ON_HUB": {
+      "description": "Indicates that no USB devices were found",
+      "message": "কোনো USB ড্রাইভ পাওয়া যায়নি"
+   },
+   "ERASE_SELECT_TARGET_SELECT_DEVICE": {
+      "description": "Prompts the user to select a drive",
+      "message": "আপনি যে পুনরুদ্ধারের মিডিয়াটিকে মুছতে চান সেটি নির্বাচন করুন৷"
+   },
+   "ERASE_SELECT_TARGET_SELECT_DEVICE_ON_HUB": {
+      "description": "Prompts the user to select a drive",
+      "message": "আপনি যে পুনরুদ্ধারের USB ড্রাইভটি মুছতে চান তা  নির্বাচন করুন।"
+   },
+   "ERASE_SELECT_TARGET_SELECT_DEVICE_PLACEHOLDER": {
+      "description": "Prompts the user to select a drive (text is shown inside the dropdown)",
+      "message": "নির্বাচন করুন"
+   },
+   "ERASE_TITLE": {
+      "description": "Title for the screens related to erasing",
+      "message": "পুনরুদ্ধারের মিডিয়া মুছুন"
+   },
+   "ERASE_TITLE_ON_HUB": {
+      "description": "Title for the screens related to erasing",
+      "message": "পুনরুদ্ধারের USB ড্রাইভ মুছুন"
+   },
+   "ERRMSG_PLEASE_TRY_AGAIN": {
+      "description": "Error text that is shown after the error message",
+      "message": "দয়া করে আবার চেষ্টা করুন।"
+   },
+   "ERRMSG_RECOVERY_CONFIG_DOWNLOAD_FAILURE": {
+      "description": "Error message that is shown if the app's configuration file cannot be downloaded. In this case, the app will only be able to support offline features.",
+      "message": "কনফিগারেশন ফাইল ডাউনলোড করতে ব্যর্থ হয়েছে৷ কেবলমাত্র অফলাইন বৈশিষ্ট্যগুলি উপলব্ধ হবে৷"
+   },
+   "GET_STARTED_BUTTON_TEXT": {
+      "description": "Text for the 'get started' button at the bottom of the screen",
+      "message": "শুরু করা যাক"
+   },
+   "GIGABYTE_ABBREVIATION": {
+      "description": "The abbreviation for gigabyte",
+      "message": "GB"
+   },
+   "GO_BACK_BUTTON_TEXT": {
+      "description": "Text for the back button at the bottom of the screen",
+      "message": "পিছনে ফিরে যান"
+   },
+   "HOURS_REMAINING": {
+      "description": "A message that indicates the time remaining for an operation.",
+      "message": "$hours$ ঘন্টা বাকি আছে৷",
+      "placeholders": {
+         "hours": {
+            "content": "$1",
+            "example": "The number of hours remaining."
+         }
+      }
+   },
+   "HWID_INVALID_MODEL": {
+      "description": "Message shown to user when it's clear that what they have entered doesn't match any valid model number.",
+      "message": "অবৈধ মডেল নম্বর৷ দয়া করে আপনার এন্ট্রি পরীক্ষা করুন৷"
+   },
+   "HWID_KEEP_TYPING": {
+      "description": "Message shown to user when they have no yet entered enough info to determine a specific device.",
+      "message": "এখনও কোনো মডেল খুঁজে পাওয়া যায়নি৷ চেষ্টা চালিয়ে যান৷"
+   },
+   "HWID_MATCH_FOUND": {
+      "description": "Message shown to user when they have entered enough info to determine a specific device.",
+      "message": "একটি মিল খুঁজে পাওয়া গেছে"
+   },
+   "HWID_MATCH_FOUND_AND_CHECKSUM_VERIFIED": {
+      "description": "Message shown to user when they have entered a full model number and the checksum is verified.",
+      "message": "সঠিক মডেল নামের সঙ্গে একটি মিল খুঁজে পাওয়া গেছে"
+   },
+   "LEARN_MORE_LINK_TEXT": {
+      "description": "Text for the 'learn more' link at the bottom left of the screen",
+      "message": "আরো জানুন"
+   },
+   "LEARN_MORE_LINK_URL": {
+      "description": "URL for the 'learn more' link at the bottom left of the screen",
+      "message": "http://www.google.com/chromeos/recovery"
+   },
+   "LEARN_MORE_LINK_URL_ON_HUB": {
+      "description": "URL for the 'learn more' link at the bottom left of the screen",
+      "message": "https://support.google.com/onhub/answer/6274977"
+   },
+   "LOADING_CONFIG_TEXT": {
+      "description": "Message to user indicating that the app is downloading latest information about recovery for different devices. It is preparing itself to be used.",
+      "message": "প্রস্তুত হচ্ছে.... "
+   },
+   "MENU_ITEM_ERASE_RECOVERY_MEDIA": {
+      "description": "Text for the menu item to erase recovery media",
+      "message": "পুনরুদ্ধারের মিডিয়া মুছুন"
+   },
+   "MENU_ITEM_ERASE_RECOVERY_MEDIA_ON_HUB": {
+      "description": "Text for the menu item to erase recovery USB drive",
+      "message": "পুনরুদ্ধারের USB ড্রাইভ মুছুন"
+   },
+   "MENU_ITEM_SEND_FEEDBACK": {
+      "description": "Text for the menu item to send feedback",
+      "message": "প্রতিক্রিয়া পাঠান"
+   },
+   "MENU_ITEM_USE_LOCAL_IMAGE": {
+      "description": "Text for the menu item to use a local file as the source image for the recovery disk",
+      "message": "স্থানীয় চিত্র ব্যবহার করুন"
+   },
+   "MINUTES_REMAINING": {
+      "description": "A message that indicates the time remaining for an operation.",
+      "message": "$minutes$ মিনিট বাকি আছে৷",
+      "placeholders": {
+         "minutes": {
+            "content": "$1",
+            "example": "The number of minutes remaining."
+         }
+      }
+   },
+   "OF": {
+      "description": "Shown as part of the text 'step %x of %x'",
+      "message": "এর"
+   },
+   "SECONDS_REMAINING": {
+      "description": "A message that indicates the time remaining for an operation.",
+      "message": "$seconds$ সেকেন্ড বাকি আছে৷",
+      "placeholders": {
+         "seconds": {
+            "content": "$1",
+            "example": "The number of seconds remaining."
+         }
+      }
+   },
+   "SELECT_IMAGE_SELECT_BY_HWID_LINK_TEXT": {
+      "description": "Text for the 'select by model number' link",
+      "message": "সরাসরি একটি মডেল নম্বর লিখুন"
+   },
+   "SELECT_IMAGE_SELECT_FROM_LIST_LINK_TEXT": {
+      "description": "Text for 'select by model' link",
+      "message": "একটি তালিকা থেকে একটি মডেল নির্বাচন করুন"
+   },
+   "SELECT_IMAGE_SELECT_MANUFACTURER_PLACEHOLDER": {
+      "description": "Prompts the user to select a manufacturer (text is shown inside the dropdown)",
+      "message": "একটি প্রস্তুতকারক নির্বাচন করুন"
+   },
+   "SELECT_IMAGE_SELECT_PRODUCT_PLACEHOLDER": {
+      "description": "Prompts the user to select a product (text is shown inside the dropdown)",
+      "message": "একটি পণ্য নির্বাচন করুন"
+   },
+   "SELECT_IMAGE_SELECT_PRODUCT_PLACEHOLDER_ON_HUB": {
+      "description": "Prompts the user to select a product (text is shown inside the dropdown)",
+      "message": "একটি মডেল নির্বাচন করুন"
+   },
+   "SELECT_IMAGE_TEXT": {
+      "description": "Prompts the user to enter a model number. Refers to the recovery screen.",
+      "message": "পুনরুদ্ধার করতে আপনার Chromebook এর মডেল নম্বরটি লিখুন৷ এটিকে পুনরুদ্ধার স্ক্রীনে পাওয়া যেতে পারে৷"
+   },
+   "SELECT_IMAGE_TEXT_ON_HUB": {
+      "description": "Prompts the user to enter a model number. Refers to the recovery screen.",
+      "message": "আপনার OnHub এর মডেল নম্বর লিখুন।"
+   },
+   "SELECT_IMAGE_THIS_CHROMEBOOKS_MODEL_NUMBER": {
+      "description": "Label that precedes a HWID string (e.g.: LINK D25-E5M-K75) that is the model number for the Chromebook the user is using. The HWID string is hyperlinked and clicking on it will populate the value into the model number input field. In English, this would for example read 'For this Chromebook, enter _LINK D25-E5M-K75_'",
+      "message": "এই Chromebook এর জন্য, লিখুন"
+   },
+   "SELECT_IMAGE_THIS_CHROMEBOOKS_MODEL_NUMBER_ON_HUB": {
+      "description": "Label that precedes a HWID string (e.g.: ARKHAM D25-E5M-K75) that is the model number for the OnHub the user is using. The HWID string is hyperlinked and clicking on it will populate the value into the model number input field. In English, this would for example read 'For this OnHub, enter _LINK D25-E5M-K75_'",
+      "message": "এই OnHub এর জন্য, লিখুন"
+   },
+   "SELECT_IMAGE_TITLE": {
+      "description": "Title for the image selection screen",
+      "message": "আপনার Chromebook সনাক্ত করুন"
+   },
+   "SELECT_IMAGE_TITLE_ON_HUB": {
+      "description": "Title for the image selection screen",
+      "message": "আপনার OnHub সনাক্ত করুন"
+   },
+   "SELECT_TARGET_DETECTING": {
+      "description": "Indicates that the app is currently detecting the list of USB devices",
+      "message": "সনাক্ত করা হচ্ছে"
+   },
+   "SELECT_TARGET_HIGH_CAPACITY_WARNING_HTML": {
+      "description": "Warning that is shown if the user selects a drive with a high capacity",
+      "message": "\u003Cb>সতর্কতা:\u003C/b> এটিই কি সঠিক মিডিয়া?"
+   },
+   "SELECT_TARGET_HIGH_CAPACITY_WARNING_HTML_ON_HUB": {
+      "description": "Warning that is shown if the user selects a drive with a high capacity",
+      "message": "\u003Cb>সতর্কতা:\u003C/b> এটিই কি সঠিক USB ড্রাইভ?"
+   },
+   "SELECT_TARGET_LOW_CAPACITY_ERROR": {
+      "description": "Error that is shown if the user selects a drive with not enough capacity",
+      "message": "আপনার মিডিয়াকে কমপক্ষে 4GB হতে হবে৷"
+   },
+   "SELECT_TARGET_LOW_CAPACITY_ERROR_ON_HUB": {
+      "description": "Error that is shown if the user selects a drive with not enough capacity",
+      "message": "আপনার USB ড্রাইভটি কমপক্ষে 4GB হতে হবে।"
+   },
+   "SELECT_TARGET_NO_DEVICES_FOUND": {
+      "description": "Indicates that no USB devices were found",
+      "message": "কোনো USB ড্রাইভ বা SD কার্ড পাওয়া যায়নি"
+   },
+   "SELECT_TARGET_NO_DEVICES_FOUND_ON_HUB": {
+      "description": "Indicates that no USB devices were found",
+      "message": "কোনো USB ড্রাইভ পাওয়া যায়নি"
+   },
+   "SELECT_TARGET_SELECT_DEVICE": {
+      "description": "Prompts the user to select a drive",
+      "message": "আপনি যে মিডিয়াটি ব্যবহার করতে চান সেটি নির্বাচন করুন৷"
+   },
+   "SELECT_TARGET_SELECT_DEVICE_ON_HUB": {
+      "description": "Prompts the user to select a drive",
+      "message": "আপনি যে USB ড্রাইভটি ব্যবহার করতে চান তা নির্বাচন করুন।"
+   },
+   "SELECT_TARGET_SELECT_DEVICE_PLACEHOLDER": {
+      "description": "Prompts the user to select a drive (text is shown inside the dropdown)",
+      "message": "নির্বাচন করুন"
+   },
+   "SELECT_TARGET_TITLE": {
+      "description": "Title for the screen where the user selects the target USB device",
+      "message": "আপনার USB ফ্ল্যাশ ড্রাইভ বা SD কার্ড ঢোকান"
+   },
+   "SELECT_TARGET_TITLE_ON_HUB": {
+      "description": "Title for the screen where the user selects the target USB device",
+      "message": "আপনার USB ফ্ল্যাশ ড্রাইভ ঢোকান"
+   },
+   "STAGE_COMPLETE": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "সম্পন্ন হয়েছে"
+   },
+   "STAGE_DOWNLOAD": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "ডাউনলোড হচ্ছে"
+   },
+   "STAGE_DOWNLOADVERIFY": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "ডাউনলোডের যাচাই করা হচ্ছে"
+   },
+   "STAGE_UNPACK": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "আনপ্যাক করা হচ্ছে"
+   },
+   "STAGE_UNZIP": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "আনপ্যাক করা হচ্ছে"
+   },
+   "STAGE_VERIFY": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "যাচাই করা হচ্ছে"
+   },
+   "STAGE_VERIFYDOWNLOAD": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "ডাউনলোডের যাচাই করা হচ্ছে"
+   },
+   "STAGE_VERIFYWRITE": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "যাচাই করা হচ্ছে"
+   },
+   "STAGE_WRITE": {
+      "description": "Status text that is shown when the drive is being created",
+      "message": "লেখা হচ্ছে"
+   },
+   "STEP": {
+      "description": "Shown as part of the text 'step %x of %x'",
+      "message": "পদক্ষেপ"
+   },
+   "UNSUPPORTED_TEXT": {
+      "description": "Text displayed when the user's platform is not supported.",
+      "message": "দুর্ভাগ্যবশত, আপনার প্ল্যাটফর্মটি বর্তমানে সমর্থিত নয়৷ দয়া করে আরো তথ্যের জন্য \u003Ca href=\"http://www.google.com/chromeos/recovery\" target=\"_blank\">Chromebook সহায়তা কেন্দ্রে\u003C/a> যান৷"
+   },
+   "UNSUPPORTED_TEXT_MAC": {
+      "description": "Text displayed when the user's platform is not supported.",
+      "message": "দুর্ভাগ্যবশত, Mac কেবলমাত্র M37 বা এর থেকে উন্নত সংস্করণেই সমর্থিত৷ দয়া করে আপনার Chrome কে M37 এ আপগ্রেড করুন৷ এর জন্য \u003Ca href=\"https://support.google.com/chromebook/answer/1086915\" target=\"_blank\">বিটা চ্যানেলে স্যুইচ করার\u003C/a> প্রয়োজন হতে পারে৷"
+   },
+   "UNSUPPORTED_TEXT_ON_HUB": {
+      "description": "Text displayed when the user's platform is not supported.",
+      "message": "দুর্ভাগ্যবশত, আপনার প্ল্যাটফর্মটি এই মুহূর্তে সমর্থিত নয়। আরো তথ্যের জন্য দয়া করে \u003Ca href=\"https://support.google.com/onhub/answer/6274977\" target=\"_blank\">OnHub সহায়তা কেন্দ্র\u003C/a> ঘুরে দেখুন।"
+   },
+   "UNSUPPORTED_TITLE": {
+      "description": "Title displayed when the user's platform is not supported.",
+      "message": "আপনার প্ল্যাটফর্মটি বর্তমানে অসমর্থিত"
+   },
+   "UNSUPPORTED_TITLE_LINUX": {
+      "description": "Title displayed when the user's platform is not supported.",
+      "message": "Linux বর্তমানে অসমর্থিত"
+   },
+   "UNSUPPORTED_TITLE_MAC": {
+      "description": "Title displayed when the user's platform is not supported.",
+      "message": "Mac বর্তমানে অসমর্থিত"
+   },
+   "UNSUPPORTED_TITLE_WIN": {
+      "description": "Title displayed when the user's platform is not supported.",
+      "message": "Windows বর্তমানে অসমর্থিত"
+   },
+   "WARNING_OFFLINE": {
+      "description": "Warning message that is shown to the user when his device is offline.",
+      "message": "ডিভাইসটি অফলাইনে রয়েছে৷ কেবলমাত্র অফলাইন বৈশিষ্ট্যগুলি উপলব্ধ হবে৷"
+   },
+   "WELCOME_TEXT": {
+      "description": "Text on the welcome screen",
+      "message": "আপনার কাছে ৪ GB বা এর থেকে বেশি জায়গা সম্পন্ন একটি USB ফ্ল্যাশ ড্রাইভ বা SD কার্ড থাকা আবশ্যক যা মোছা হলেও আপনার কোনো সমস্যা হবে না৷"
+   },
+   "WELCOME_TEXT_ON_HUB": {
+      "description": "Text on the welcome screen",
+      "message": "আপনার কাছে ৪ GB বা এর থেকে বেশি জায়গা সম্পন্ন একটি USB ফ্ল্যাশ ড্রাইভ বা SD কার্ড থাকা আবশ্যক যা মোছা হলেও আপনার কোনো সমস্যা হবে না৷"
+   },
+   "WELCOME_TITLE": {
+      "description": "Title for the welcome screen",
+      "message": "আপনার Chromebook এর জন্য একটি পুনরুদ্ধারের মিডিয়া তৈরি করুন"
+   },
+   "WELCOME_TITLE_ON_HUB": {
+      "description": "Title for the welcome screen",
+      "message": "আপনার OnHub জন্য একটি পুনরুদ্ধারের USB ড্রাইভ তৈরি করুন"
+   },
+   "WRITE_MESSAGE": {
+      "description": "Shown on the screen where the drive is being created",
+      "message": "আপনার পুনরুদ্ধার মিডিয়াটি সরাবেন না৷"
+   },
+   "WRITE_MESSAGE_ON_HUB": {
+      "description": "Shown on the screen where the drive is being created",
+      "message": "আপনার পুনরুদ্ধারের USB ড্রাইভ সরাবেন না।"
+   },
+   "WRITE_TITLE": {
+      "description": "Title of the screen where the drive is being created",
+      "message": "একটি পুনরুদ্ধারের চিত্র তৈরি করা হচ্ছে"
+   }
+}

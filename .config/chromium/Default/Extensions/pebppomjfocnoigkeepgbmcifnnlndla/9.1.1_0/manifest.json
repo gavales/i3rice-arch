@@ -1,0 +1,27 @@
+{
+   "app": {
+      "background": {
+         "scripts": [ "main.js" ]
+      }
+   },
+   "description": "Draw.io is a completely free diagram editor.",
+   "file_handlers": {
+      "handler_name": {
+         "extensions": [ "xml", "html", "svg", "png" ]
+      }
+   },
+   "icons": {
+      "128": "drawlogo128.png",
+      "16": "drawlogo16.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyjWrS4WGu1VVlnOmBKXKh4y3c5uGJ3nga1wsA3tKnn/UmEPpXJdHgjhqNkbTIiZ7PW9MyNyhxV0ztmomvJYYtgrmKIpESvfJ9fnuF9N08usl5WIdj4g4jwJ0bro1tBoaF52g2ocyMadNIKdv6CIe1nqxBTBUmqjB+k5mv8Wm60kJUfYTcoTbTEixdR5vV93P5moL5QVbpK1IV6c6ERUr1TmgCaulsl5drLchZnf5hh0wvayJUUKp3NlkHDFGwA+uBhl/Gm46feScxZYkrzrkaPzeaXs0J+DspQSM3g/0BOwyGBsYVry5ziIeqm40mj+v/JbB3nDUK7Cqy27IlLqdmwIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "23",
+   "name": "draw.io Desktop",
+   "offline_enabled": true,
+   "permissions": [ {
+      "fileSystem": [ "write", "retainEntries" ]
+   }, "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "9.1.1"
+}

@@ -1,0 +1,30 @@
+{
+   "app": {
+      "background": {
+         "scripts": [ "background.js" ]
+      }
+   },
+   "description": "A simple and clean Material Design markdown editor with side by side preview",
+   "file_handlers": {
+      "text": {
+         "extensions": [ "md", "txt", "readme" ],
+         "types": [ "text/*" ]
+      }
+   },
+   "icons": {
+      "128": "assets/icon_128.png",
+      "16": "assets/icon_16.png",
+      "256": "assets/icon_256.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy+pCZYudriJvdGW09NN1Sr2dv1c8mCb7of4pvbnlPh63lkLetYyGYqKsStzZTjLDke5CbILA5qcfuSJmkrc9+Acpeu8GQ/YozMH+x0YuwdSpg679VTWcDhijqz9TIPgI5U5Nu283er/eQzLF6oDJykqN+tHdu9fxfmUDEpY7iQY2tU5rLwehVKSm4S3s3FnVabXdi+FhkB1+G9JLHuAHhOPySpaSMcUelTw09v8caMtRJmHDimv09JbDQhskmJoATyLgaKhVD0xW6O4RZg2wokFdKQrxqZC3blVkBy5OuNitS3DDQvIbfabrdNDtBYIZUQMhF5YyWJsdJw52+dGLRwIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "41",
+   "name": "Material Markdown",
+   "offline_enabled": true,
+   "permissions": [ "storage", "clipboardWrite", "contextMenus", "webview", "system.network", {
+      "fileSystem": [ "write", "retainEntries", "directory" ]
+   }, "\u003Call_urls>" ],
+   "short_name": "Material Markdown",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.4.0"
+}

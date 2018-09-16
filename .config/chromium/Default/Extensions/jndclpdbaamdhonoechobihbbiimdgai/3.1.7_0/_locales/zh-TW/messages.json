@@ -1,0 +1,554 @@
+{
+  "APP_NAME": {
+    "message": "Chromebook 還原公用程式",
+    "description": "Name of the application. Cannot exceed 45 characters."
+  },
+  "APP_NAME_ON_HUB": {
+    "message": "OnHub 還原公用程式",
+    "description": "Name of the application. Cannot exceed 45 characters."
+  },
+  "APP_SHORT_NAME": {
+    "message": "還原",
+    "description": "A short name for the app shown when space is limited. Fewer than 12 characters preferred."
+  },
+  "APP_DESCRIPTION": {
+    "message": "為 Chromebook 建立還原媒體。",
+    "description": "High-level description of the application"
+  },
+  "DEV_APP_NAME": {
+    "message": "Chromebook 還原公用程式開發人員版",
+    "description": "Name of the dev application. Cannot exceed 45 characters."
+  },
+  "DEV_APP_DESCRIPTION": {
+    "message": "Chromebook 還原公用程式開發人員版。",
+    "description": "High-level description of the Chromebook Dev application"
+  },
+  "DEV_APP_NAME_ON_HUB": {
+    "message": "OnHub 還原公用程式開發人員版",
+    "description": "Name of the dev application. Cannot exceed 45 characters."
+  },
+  "DEV_APP_DESCRIPTION_ON_HUB": {
+    "message": "OnHub 還原公用程式開發人員版。",
+    "description": "High-level description of the OnHub Dev application"
+  },
+  "APP_DESCRIPTION_ON_HUB": {
+    "message": "為您的 OnHub 建立 USB 還原隨身碟。",
+    "description": "High-level description of the application"
+  },
+  "STEP": {
+    "message": "步驟",
+    "description": "Shown as part of the text 'step %x of %x'"
+  },
+  "OF": {
+    "message": "/",
+    "description": "Shown as part of the text 'step %x of %x'"
+  },
+  "MENU_ITEM_ERASE_RECOVERY_MEDIA": {
+    "message": "清除還原媒體",
+    "description": "Text for the menu item to erase recovery media"
+  },
+  "MENU_ITEM_ERASE_RECOVERY_MEDIA_ON_HUB": {
+    "message": "清除 USB 還原隨身碟",
+    "description": "Text for the menu item to erase recovery USB drive"
+  },
+  "MENU_ITEM_USE_LOCAL_IMAGE": {
+    "message": "使用本機映像檔",
+    "description": "Text for the menu item to use a local file as the source image for the recovery disk"
+  },
+  "MENU_ITEM_SEND_FEEDBACK": {
+    "message": "提供意見",
+    "description": "Text for the menu item to send feedback"
+  },
+  "GET_STARTED_BUTTON_TEXT": {
+    "message": "開始使用",
+    "description": "Text for the 'get started' button at the bottom of the screen"
+  },
+  "CONTINUE_BUTTON_TEXT": {
+    "message": "繼續",
+    "description": "Text for the continue button at the bottom of the screen"
+  },
+  "GO_BACK_BUTTON_TEXT": {
+    "message": "返回",
+    "description": "Text for the back button at the bottom of the screen"
+  },
+  "LEARN_MORE_LINK_URL": {
+    "message": "http://www.google.com/chromeos/recovery",
+    "description": "URL for the 'learn more' link at the bottom left of the screen"
+  },
+  "LEARN_MORE_LINK_URL_ON_HUB": {
+    "message": "https://support.google.com/onhub/answer/6274977",
+    "description": "URL for the 'learn more' link at the bottom left of the screen"
+  },
+  "LEARN_MORE_LINK_TEXT": {
+    "message": "瞭解詳情",
+    "description": "Text for the 'learn more' link at the bottom left of the screen"
+  },
+  "CREATE_NOW_BUTTON_TEXT": {
+    "message": "立即建立",
+    "description": "Text for the button to start the recovery disk creation"
+  },
+  "ERASE_NOW_BUTTON_TEXT": {
+    "message": "立即清除",
+    "description": "Text for the button to start the recovery disk erasure"
+  },
+  "CANCEL_BUTTON_TEXT": {
+    "message": "取消",
+    "description": "Text for the cancel button"
+  },
+  "DONE_BUTTON_TEXT": {
+    "message": "完成",
+    "description": "Text for the button to close the application after the recovery disk has been created / Text for the button to go back to the start of the application after the recovery disk has been erased"
+  },
+  "CREATE_ANOTHER_BUTTON_TEXT": {
+    "message": "建立另一個",
+    "description": "Text for the button to go back to the start of the application after the recovery disk has been created"
+  },
+  "GIGABYTE_ABBREVIATION": {
+    "message": "GB",
+    "description": "The abbreviation for gigabyte"
+  },
+  "COMPLETED": {
+    "message": "已完成",
+    "description": "Shown as part of the text 'x% completed'"
+  },
+  "SECONDS_REMAINING": {
+    "message": "還剩 $seconds$ 秒。",
+    "description": "A message that indicates the time remaining for an operation.",
+    "placeholders": {
+      "seconds": {
+        "content": "$1",
+        "example": "The number of seconds remaining."
+      }
+    }
+  },
+  "MINUTES_REMAINING": {
+    "message": "還剩 $minutes$ 分鐘。",
+    "description": "A message that indicates the time remaining for an operation.",
+    "placeholders": {
+      "minutes": {
+        "content": "$1",
+        "example": "The number of minutes remaining."
+      }
+    }
+  },
+  "HOURS_REMAINING": {
+    "message": "還剩 $hours$ 小時。",
+    "description": "A message that indicates the time remaining for an operation.",
+    "placeholders": {
+      "hours": {
+        "content": "$1",
+        "example": "The number of hours remaining."
+      }
+    }
+  },
+  "WELCOME_TITLE": {
+    "message": "為您的 Chromebook 建立還原媒體",
+    "description": "Title for the welcome screen"
+  },
+  "WELCOME_TITLE_ON_HUB": {
+    "message": "為您的 OnHub 建立 USB 還原隨身碟",
+    "description": "Title for the welcome screen"
+  },
+  "WELCOME_TEXT": {
+    "message": "請備妥一個 4GB 以上的 USB 隨身碟或 SD 卡 (其中的資料可完全清除)。",
+    "description": "Text on the welcome screen"
+  },
+  "WELCOME_TEXT_ON_HUB": {
+    "message": "請備妥一個 4 GB 以上的 USB 隨身碟 (其中的資料可完全清除)。",
+    "description": "Text on the welcome screen"
+  },
+  "LOADING_CONFIG_TEXT": {
+    "message": "準備中...",
+    "description": "Message to user indicating that the app is downloading latest information about recovery for different devices. It is preparing itself to be used."
+  },
+  "UNSUPPORTED_TITLE": {
+    "message": "目前不支援您的平台",
+    "description": "Title displayed when the user's platform is not supported."
+  },
+  "UNSUPPORTED_TITLE_WIN": {
+    "message": "目前不支援 Windows",
+    "description": "Title displayed when the user's platform is not supported."
+  },
+  "UNSUPPORTED_TITLE_LINUX": {
+    "message": "目前不支援 Linux",
+    "description": "Title displayed when the user's platform is not supported."
+  },
+  "UNSUPPORTED_TITLE_MAC": {
+    "message": "目前不支援 Mac",
+    "description": "Title displayed when the user's platform is not supported."
+  },
+  "UNSUPPORTED_TEXT": {
+    "message": "很抱歉，我們目前不支援您的平台。如需詳細資訊，請造訪 <a href=\"http://www.google.com/chromeos/recovery\" target=\"_blank\">Chromebook 說明中心</a>。",
+    "description": "Text displayed when the user's platform is not supported."
+  },
+  "UNSUPPORTED_TEXT_ON_HUB": {
+    "message": "很抱歉，我們目前不支援您的平台。如需詳細資訊，請造訪 <a href=\"https://support.google.com/onhub/answer/6274977\" target=\"_blank\">OnHub 說明中心</a>。",
+    "description": "Text displayed when the user's platform is not supported."
+  },
+  "UNSUPPORTED_TEXT_MAC": {
+    "message": "很抱歉，我們在 Mac 上僅支援 M37 以上版本。請將您的 Chrome 更新至 M37 (可能需要<a href=\"https://support.google.com/chromebook/answer/1086915\" target=\"_blank\">切換至測試頻道</a>)。",
+    "description": "Text displayed when the user's platform is not supported."
+  },
+  "SELECT_IMAGE_TITLE": {
+    "message": "識別您的 Chromebook",
+    "description": "Title for the image selection screen"
+  },
+  "SELECT_IMAGE_TITLE_ON_HUB": {
+    "message": "識別您的 OnHub",
+    "description": "Title for the image selection screen"
+  },
+  "SELECT_IMAGE_TEXT": {
+    "message": "請輸入您要還原的 Chromebook 型號。您可以在還原畫面上找到型號資訊。",
+    "description": "Prompts the user to enter a model number. Refers to the recovery screen."
+  },
+  "SELECT_IMAGE_TEXT_ON_HUB": {
+    "message": "輸入您的 OnHub 型號。",
+    "description": "Prompts the user to enter a model number. Refers to the recovery screen."
+  },
+  "SELECT_IMAGE_THIS_CHROMEBOOKS_MODEL_NUMBER": {
+    "message": "這台 Chromebook 的型號是",
+    "description": "Label that precedes a HWID string (e.g.: LINK D25-E5M-K75) that is the model number for the Chromebook the user is using. The HWID string is hyperlinked and clicking on it will populate the value into the model number input field. In English, this would for example read 'For this Chromebook, enter _LINK D25-E5M-K75_'"
+  },
+  "SELECT_IMAGE_THIS_CHROMEBOOKS_MODEL_NUMBER_ON_HUB": {
+    "message": "這台 OnHub 的型號是",
+    "description": "Label that precedes a HWID string (e.g.: ARKHAM D25-E5M-K75) that is the model number for the OnHub the user is using. The HWID string is hyperlinked and clicking on it will populate the value into the model number input field. In English, this would for example read 'For this OnHub, enter _LINK D25-E5M-K75_'"
+  },
+  "SELECT_IMAGE_SELECT_FROM_LIST_LINK_TEXT": {
+    "message": "從清單中選取型號",
+    "description": "Text for 'select by model' link"
+  },
+  "SELECT_IMAGE_SELECT_MANUFACTURER_PLACEHOLDER": {
+    "message": "選取製造商",
+    "description": "Prompts the user to select a manufacturer (text is shown inside the dropdown)"
+  },
+  "SELECT_IMAGE_SELECT_PRODUCT_PLACEHOLDER": {
+    "message": "選取產品",
+    "description": "Prompts the user to select a product (text is shown inside the dropdown)"
+  },
+  "SELECT_IMAGE_SELECT_PRODUCT_PLACEHOLDER_ON_HUB": {
+    "message": "選取機型",
+    "description": "Prompts the user to select a product (text is shown inside the dropdown)"
+  },
+  "SELECT_IMAGE_SELECT_BY_HWID_LINK_TEXT": {
+    "message": "直接輸入型號",
+    "description": "Text for the 'select by model number' link"
+  },
+  "SELECT_TARGET_TITLE": {
+    "message": "插入您的 USB 隨身碟或 SD 卡",
+    "description": "Title for the screen where the user selects the target USB device"
+  },
+  "SELECT_TARGET_TITLE_ON_HUB": {
+    "message": "插入您的 USB 隨身碟",
+    "description": "Title for the screen where the user selects the target USB device"
+  },
+  "SELECT_TARGET_DETECTING": {
+    "message": "偵測中",
+    "description": "Indicates that the app is currently detecting the list of USB devices"
+  },
+  "SELECT_TARGET_NO_DEVICES_FOUND": {
+    "message": "找不到 USB 隨身碟或 SD 卡",
+    "description": "Indicates that no USB devices were found"
+  },
+  "SELECT_TARGET_NO_DEVICES_FOUND_ON_HUB": {
+    "message": "找不到 USB 隨身碟",
+    "description": "Indicates that no USB devices were found"
+  },
+  "SELECT_TARGET_SELECT_DEVICE": {
+    "message": "選取您要使用的媒體。",
+    "description": "Prompts the user to select a drive"
+  },
+  "SELECT_TARGET_SELECT_DEVICE_ON_HUB": {
+    "message": "選取您要使用的 USB 隨身碟。",
+    "description": "Prompts the user to select a drive"
+  },
+  "SELECT_TARGET_SELECT_DEVICE_PLACEHOLDER": {
+    "message": "選取",
+    "description": "Prompts the user to select a drive (text is shown inside the dropdown)"
+  },
+  "SELECT_TARGET_HIGH_CAPACITY_WARNING_HTML": {
+    "message": "<b>警告：</b>這是正確的媒體嗎？",
+    "description": "Warning that is shown if the user selects a drive with a high capacity"
+  },
+  "SELECT_TARGET_HIGH_CAPACITY_WARNING_HTML_ON_HUB": {
+    "message": "<b>警告：</b>這是正確的 USB 隨身碟嗎？",
+    "description": "Warning that is shown if the user selects a drive with a high capacity"
+  },
+  "SELECT_TARGET_LOW_CAPACITY_ERROR": {
+    "message": "您的媒體容量不可低於 4GB。",
+    "description": "Error that is shown if the user selects a drive with not enough capacity"
+  },
+  "SELECT_TARGET_LOW_CAPACITY_ERROR_ON_HUB": {
+    "message": "您的 USB 隨身碟容量不可低於 4GB。",
+    "description": "Error that is shown if the user selects a drive with not enough capacity"
+  },
+  "CONFIRM_TITLE": {
+    "message": "建立還原映像檔",
+    "description": "Title for the confirmation screen"
+  },
+  "CONFIRM_MESSAGE_HTML": {
+    "message": "<b>重要：</b>還原媒體中的所有資料和分割區都會遭到刪除。",
+    "description": "Important message, indicates what the application is going to do"
+  },
+  "CONFIRM_MESSAGE_HTML_ON_HUB": {
+    "message": "<b>重要：</b>USB 還原隨身碟中的所有資料和分割區都會遭到刪除。",
+    "description": "Important message, indicates what the application is going to do"
+  },
+  "CONFIRM_CANCELLED_MESSAGE_HTML": {
+    "message": "作業取消。如要再試一次，請按一下 [立即建立]。<br><br>如要清除還原媒體，請按一下右上角的齒輪圖示。",
+    "description": "Indicates that the operation has been cancelled"
+  },
+  "CONFIRM_CANCELLED_MESSAGE_HTML_ON_HUB": {
+    "message": "作業取消。如要再試一次，請按一下 [立即建立]。<br><br>如要清除 USB 還原隨身碟，請按一下右上角的齒輪圖示。",
+    "description": "Indicates that the operation has been cancelled"
+  },
+  "WRITE_TITLE": {
+    "message": "正在建立還原映像檔",
+    "description": "Title of the screen where the drive is being created"
+  },
+  "WRITE_MESSAGE": {
+    "message": "請勿移除還原媒體。",
+    "description": "Shown on the screen where the drive is being created"
+  },
+  "WRITE_MESSAGE_ON_HUB": {
+    "message": "請勿移除 USB 還原隨身碟。",
+    "description": "Shown on the screen where the drive is being created"
+  },
+  "STAGE_DOWNLOAD": {
+    "message": "下載中",
+    "description": "Status text that is shown when the drive is being created"
+  },
+  "STAGE_DOWNLOADVERIFY": {
+    "message": "正在驗證下載",
+    "description": "Status text that is shown when the drive is being created"
+  },
+  "STAGE_VERIFYDOWNLOAD": {
+    "message": "正在驗證下載",
+    "description": "Status text that is shown when the drive is being created"
+  },
+  "STAGE_UNPACK": {
+    "message": "正在解壓縮",
+    "description": "Status text that is shown when the drive is being created"
+  },
+  "STAGE_UNZIP": {
+    "message": "正在解壓縮",
+    "description": "Status text that is shown when the drive is being created"
+  },
+  "STAGE_WRITE": {
+    "message": "寫入中",
+    "description": "Status text that is shown when the drive is being created"
+  },
+  "STAGE_VERIFY": {
+    "message": "驗證中",
+    "description": "Status text that is shown when the drive is being created"
+  },
+  "STAGE_VERIFYWRITE": {
+    "message": "驗證中",
+    "description": "Status text that is shown when the drive is being created"
+  },
+  "STAGE_COMPLETE": {
+    "message": "已完成",
+    "description": "Status text that is shown when the drive is being created"
+  },
+  "COMPLETE_TITLE": {
+    "message": "成功！您的還原媒體已準備就緒",
+    "description": "Title of the completed screen"
+  },
+  "COMPLETE_TITLE_ON_HUB": {
+    "message": "成功！您的 USB 還原隨身碟已準備就緒",
+    "description": "Title of the completed screen"
+  },
+  "COMPLETE_MESSAGE": {
+    "message": "您現在可以移除還原媒體了。",
+    "description": "Shown on the completed screen"
+  },
+  "COMPLETE_MESSAGE_ON_HUB": {
+    "message": "您現在可以移除 USB 還原隨身碟了。",
+    "description": "Shown on the completed screen"
+  },
+  "COMPLETE_BULLET1": {
+    "message": "如要還原您的 Chromebook，請將還原媒體插入 Chromebook。",
+    "description": "Shown on the completed screen"
+  },
+  "COMPLETE_BULLET1_ON_HUB": {
+    "message": "拔除 OnHub 的電源線並將 USB 隨身碟插上裝置背部。按住重設按鈕並接上電源。持續按住重設按鈕約 15 秒，若看到 USB 隨身碟的指示燈開始閃爍即可鬆手。",
+    "description": "Shown on the completed screen"
+  },
+  "COMPLETE_BULLET2": {
+    "message": "還原後，您可以使用這項公用程式清除還原媒體。",
+    "description": "Shown on the completed screen"
+  },
+  "COMPLETE_BULLET2_ON_HUB": {
+    "message": "您的 OnHub 隨即會展開還原程序，這可能需要花費數分鐘。當您的 OnHub 還原後會隨即重新啟動。之後，請透過 Google On 應用程式重設您的 OnHub。",
+    "description": "Shown on the completed screen"
+  },
+  "ERASE_TITLE": {
+    "message": "清除還原媒體",
+    "description": "Title for the screens related to erasing"
+  },
+  "ERASE_TITLE_ON_HUB": {
+    "message": "清除 USB 還原隨身碟",
+    "description": "Title for the screens related to erasing"
+  },
+  "ERASE_SELECT_TARGET_DETECTING": {
+    "message": "偵測中",
+    "description": "Indicates that the app is currently detecting the list of USB devices"
+  },
+  "ERASE_SELECT_TARGET_NO_DEVICES_FOUND": {
+    "message": "找不到 USB 隨身碟或 SD 卡",
+    "description": "Indicates that no USB devices were found"
+  },
+  "ERASE_SELECT_TARGET_NO_DEVICES_FOUND_ON_HUB": {
+    "message": "找不到 USB 隨身碟",
+    "description": "Indicates that no USB devices were found"
+  },
+  "ERASE_SELECT_TARGET_SELECT_DEVICE": {
+    "message": "選取您要清除的還原媒體。",
+    "description": "Prompts the user to select a drive"
+  },
+  "ERASE_SELECT_TARGET_SELECT_DEVICE_ON_HUB": {
+    "message": "選取您要清除的 USB 還原隨身碟。",
+    "description": "Prompts the user to select a drive"
+  },
+  "ERASE_SELECT_TARGET_SELECT_DEVICE_PLACEHOLDER": {
+    "message": "選取",
+    "description": "Prompts the user to select a drive (text is shown inside the dropdown)"
+  },
+  "ERASE_SELECT_TARGET_HIGH_CAPACITY_WARNING_HTML": {
+    "message": "<b>警告：</b>這是正確的磁碟嗎？",
+    "description": "Warning that is shown if the user selects a drive with a high capacity"
+  },
+  "ERASE_CONFIRM_MESSAGE": {
+    "message": "還原媒體中的還原映像檔和所有分割區都會遭到清除。",
+    "description": "Important message, indicates what the application is going to do"
+  },
+  "ERASE_CONFIRM_MESSAGE_ON_HUB": {
+    "message": "USB 還原隨身碟中的還原映像檔和所有分割區都會遭到清除。",
+    "description": "Important message, indicates what the application is going to do"
+  },
+  "ERASE_PROGRESS_TITLE": {
+    "message": "正在清除您的還原媒體",
+    "description": "Title for the screen where the drive is being erased"
+  },
+  "ERASE_PROGRESS_TITLE_ON_HUB": {
+    "message": "清除 USB 還原隨身碟",
+    "description": "Title for the screen where the drive is being erased"
+  },
+  "ERASE_PROGRESS_TEXT": {
+    "message": "請勿移除還原媒體。",
+    "description": "Shown when the drive is being erased"
+  },
+  "ERASE_PROGRESS_TEXT_ON_HUB": {
+    "message": "請勿移除 USB 還原隨身碟。",
+    "description": "Shown when the drive is being erased"
+  },
+  "ERASE_COMPLETE_TITLE": {
+    "message": "您的還原媒體已清除完畢。",
+    "description": "Title for erase completed screen"
+  },
+  "ERASE_COMPLETE_TITLE_ON_HUB": {
+    "message": "您的 USB 還原隨身碟已清除完畢。",
+    "description": "Title for erase completed screen"
+  },
+  "ERASE_COMPLETE_BULLET1": {
+    "message": "您現在可以將 USB 隨身碟或 SD 卡格式化。",
+    "description": "Shown on the erase completed screen"
+  },
+  "ERASE_COMPLETE_BULLET1_ON_HUB": {
+    "message": "您現在可以將 USB 隨身碟格式化。",
+    "description": "Shown on the erase completed screen"
+  },
+  "ERASE_COMPLETE_BULLET2": {
+    "message": "使用您的作業系統提供的格式化工具來執行格式化程序。",
+    "description": "Shown on the erase completed screen"
+  },
+  "ERRMSG_PLEASE_TRY_AGAIN": {
+    "message": "請再試一次。",
+    "description": "Error text that is shown after the error message"
+  },
+  "APIERRMSG_UNKNOWN": {
+    "message": "不明錯誤：$errorCode$。",
+    "description": "Error message that is shown if no matching error message can be found",
+    "placeholders": {
+      "errorCode": {
+        "content": "$1",
+        "example": "Error code"
+      }
+    }
+  },
+  "APIERRMSG_ABORTED": {
+    "message": "作業中斷。",
+    "description": "Error message that is shown if the operation is aborted"
+  },
+  "APIERRMSG_OPERATION_ALREADY_IN_PROGRESS": {
+    "message": "作業已在進行中。",
+    "description": "Error message that is shown if user tries to start a new write operation and there is already one in progress"
+  },
+  "APIERRMSG_UNSUPPORTED_OPERATION": {
+    "message": "系統不支援這項作業。",
+    "description": "Error message that is shown if the user triggers an unsupported operation"
+  },
+  "APIERRMSG_DEVICE_LIST_ERROR": {
+    "message": "找不到 USB 隨身碟或 SD 卡。",
+    "description": "Error message that is shown if there was an error trying to detect removable USB drive and SD cards"
+  },
+  "APIERRMSG_DEVICE_LIST_ERROR_ON_HUB": {
+    "message": "找不到 USB 隨身碟。",
+    "description": "Error message that is shown if there was an error trying to detect removable USB drives"
+  },
+  "APIERRMSG_FILE_INVALID": {
+    "message": "檔案無效。",
+    "description": "Error message that is shown if the file to write is not valid"
+  },
+  "APIERRMSG_DOWNLOAD_CANCELLED": {
+    "message": "已取消下載。",
+    "description": "Error message that is shown if the user cancels the write operation during download"
+  },
+  "APIERRMSG_DOWNLOAD_HASH_MISMATCH": {
+    "message": "檔案無效。",
+    "description": "Error message that is shown if the downloaded file doesn't hash to the expected value"
+  },
+  "APIERRMSG_DOWNLOAD_INTERRUPTED": {
+    "message": "下載中斷。",
+    "description": "Error message that is shown if the downloaded was interrupted for any reason"
+  },
+  "APIERRMSG_URL_INVALID": {
+    "message": "找不到檔案。",
+    "description": "Error message that is shown if no file is found at the URL to download"
+  },
+  "APIERRMSG_UNZIP_ERROR": {
+    "message": "無法解壓縮檔案。",
+    "description": "Error message that is shown if the file cannot be unzipped for any reason"
+  },
+  "APIERRMSG_UNZIP_INVALID_ARCHIVE": {
+    "message": "無效的壓縮檔。",
+    "description": "Error message that is shown if the file is not a valid ZIP file"
+  },
+  "APIERRMSG_VERIFICATION_FAILED": {
+    "message": "映像檔驗證失敗。",
+    "description": "Error message that is shown if the image was not written properly"
+  },
+  "ERRMSG_RECOVERY_CONFIG_DOWNLOAD_FAILURE": {
+    "message": "無法下載設定檔，目前只能使用離線功能。",
+    "description": "Error message that is shown if the app's configuration file cannot be downloaded. In this case, the app will only be able to support offline features."
+  },
+  "WARNING_OFFLINE": {
+    "message": "裝置處於離線狀態，目前只能使用離線功能。",
+    "description": "Warning message that is shown to the user when his device is offline."
+  },
+  "HWID_KEEP_TYPING": {
+    "message": "目前還找不到相符的型號，請輸入更多資訊。",
+    "description": "Message shown to user when they have no yet entered enough info to determine a specific device."
+  },
+  "HWID_MATCH_FOUND": {
+    "message": "找到相符項目",
+    "description": "Message shown to user when they have entered enough info to determine a specific device."
+  },
+  "HWID_MATCH_FOUND_AND_CHECKSUM_VERIFIED": {
+    "message": "找到完全相符的型號名稱",
+    "description": "Message shown to user when they have entered a full model number and the checksum is verified."
+  },
+  "HWID_INVALID_MODEL": {
+    "message": "型號無效，請檢查您輸入的資訊是否正確。",
+    "description": "Message shown to user when it's clear that what they have entered doesn't match any valid model number."
+  }
+}

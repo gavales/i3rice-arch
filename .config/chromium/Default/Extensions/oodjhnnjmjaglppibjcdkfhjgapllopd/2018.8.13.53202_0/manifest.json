@@ -1,0 +1,20 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "chrome-extension://nkoccljplnhpfnfiajclkommnmllphnl/html/crosh.html"
+      },
+      "linked_icons": [  ]
+   },
+   "description": "",
+   "icons": {
+      "128": "icons/128.png",
+      "256": "icons/256.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "64": "icons/64.png",
+      "96": "icons/96.png"
+   },
+   "key": "gGD9/aIYlDJ/3pWsAAs4hGz3eXNsNpsQC95wvi/d/iI=",
+   "name": "crosh",
+   "version": "2018.8.13.53202"
+}

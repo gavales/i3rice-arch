@@ -1,0 +1,32 @@
+
+
+-------session starts-------
+
+[9-16 0:48:28.859] INFO: MediaGallery: name=/home/gavarch/Music, galleryId=1, isMediaDevice=false, deviceId=undefined
+[9-16 0:48:28.862] INFO: MediaGallery: name=/home/gavarch/Pictures, galleryId=2, isMediaDevice=false, deviceId=undefined
+[9-16 0:48:28.863] INFO: MediaGallery: name=/home/gavarch/Videos, galleryId=3, isMediaDevice=false, deviceId=undefined
+[9-16 0:48:28.865] INFO: Starts a quick scan on /home/gavarch/Music
+[9-16 0:48:28.867] INFO: Iterating over dir / from source /home/gavarch/Music
+[9-16 0:48:28.868] INFO: Starts a quick scan on /home/gavarch/Pictures
+[9-16 0:48:28.868] INFO: Iterating over dir / from source /home/gavarch/Pictures
+[9-16 0:48:28.869] INFO: Starts a quick scan on /home/gavarch/Videos
+[9-16 0:48:28.869] INFO: Iterating over dir / from source /home/gavarch/Videos
+[9-16 0:48:28.915] INFO: Got the drag_and_drop directory
+[9-16 0:48:28.931] INFO: /home/gavarch/Music contains music file
+[9-16 0:48:28.937] INFO: Iterating over dir /ScreenShots from source /home/gavarch/Pictures
+[9-16 0:48:28.937] INFO: Iterating over dir /Documentaries from source /home/gavarch/Videos
+[9-16 0:48:28.973] INFO: Iterating over dir /Wallpapers from source /home/gavarch/Pictures
+[9-16 0:48:28.974] INFO: Iterating over dir /Music Videos from source /home/gavarch/Videos
+[9-16 0:48:29.65] INFO: Iterating over dir /Wallpapers/Space from source /home/gavarch/Pictures
+[9-16 0:48:29.65] INFO: /home/gavarch/Videos does not contain music file
+[9-16 0:48:29.68] INFO: Iterating over dir /Wallpapers/BingSpotlight from source /home/gavarch/Pictures
+[9-16 0:48:29.81] INFO: Iterating over dir /drak from source /home/gavarch/Pictures
+[9-16 0:48:29.91] INFO: /home/gavarch/Pictures does not contain music file
+[9-16 0:48:29.95] INFO: lsUserAddedMusicSourceIds=null
+[9-16 0:48:29.95] INFO: lsLastTrackFailureLoggingTime=null
+[9-16 0:48:29.95] INFO: lsUserSelectedDownloadDirId=null
+[9-16 0:48:29.101] INFO: lsDefaultDownloadLocationId=null
+[9-16 0:48:29.101] INFO: Setting is already: lsAlwaysUseDefaultDownloadLocation = false
+[9-16 0:48:29.102] INFO: Setting is already: lsDefaultDownloadLocationId = null
+[9-16 0:48:29.315] INFO: Fetched user settings from server.
+[9-16 0:48:29.332] INFO: chromeapp:E ready

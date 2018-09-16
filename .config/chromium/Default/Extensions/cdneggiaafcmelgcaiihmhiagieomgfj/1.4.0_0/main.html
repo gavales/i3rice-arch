@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Material Markdown</title>
+
+    <style>
+      @font-face {
+        font-family: 'Roboto';
+        src: url(/fonts/Roboto-Regular.ttf);
+      }
+      
+      @font-face {
+        font-family: 'Material Icons';
+        src: url(/fonts/MaterialIcons-Regular.ttf);
+      }
+      @font-face {
+        font-family: 'FontAwesome';
+        src: url(/fonts/fontawesome-webfont.ttf);
+      }
+    </style>
+
+    <link rel="stylesheet" href="/css/material.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/simplemde.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+            
+    <!--Main content div-->
+    <div class="demo-content">
+      <textarea id="my-content"></textarea>
+      
+      <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
+        <li class="mdl-menu__item" id="open_file">Open File <i class="material-icons">file_download</i></li>
+        <li class="mdl-menu__item" id="save">Save <i class="material-icons">save</i></li>
+        <li class="mdl-menu__item" id="save_as">Save As <i class="material-icons">fiber_new</i></li>
+        <li class="mdl-menu__item" id="get_html">Get HTML <i class="material-icons">code</i></li>
+        <hr>
+        <li class="mdl-menu__item" id="spellcheck">Spellcheck <i class="material-icons">check</i></li>
+        <li class="mdl-menu__item" id="load_sample">Load Sample Page</li>
+        <li class="mdl-menu__item" id="restore">Restore <i class="material-icons">backup</i></li>
+      </ul>
+      
+      <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+        <div class="mdl-snackbar__text"></div>
+        <button class="mdl-snackbar__action" type="button"></button>
+      </div>
+      
+      <dialog class="mdl-dialog">
+        <h4 class="mdl-dialog__title">Image URL</h4>
+        <div class="mdl-dialog__content">
+          <input type="text" class="mdl-textfield__input" placeholder="http://" id="online-image-url" />
+        </div>
+        <div class="mdl-dialog__actions">
+          <button type="button" class="button-submit mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Submit</button>
+          <button type="button" class="mdl-button close">Cancel</button>
+        </div>
+      </dialog>
+      
+    </div>
+    
+    <!--Javascript Calls-->
+    <script src="/js/cash.min.js"></script>
+    <script src="/js/simplemde2.js"></script>
+    <script src="/js/material.min.js"></script>
+    <script src="/main.min.js"></script>
+  </body>
+</html>

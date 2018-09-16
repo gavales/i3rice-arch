@@ -1,0 +1,47 @@
+{
+   "app": {
+      "icon_color": "#FED8A2",
+      "launch": {
+         "web_url": "https://www.amazon.co.uk/Prime-Video/b/?node=3280626031&ref=atv_surl_piv"
+      },
+      "linked_icons": [ {
+         "size": 16,
+         "url": "https://www.amazon.co.uk/favicon.ico"
+      }, {
+         "size": 24,
+         "url": "https://www.amazon.co.uk/favicon.ico"
+      }, {
+         "size": 32,
+         "url": "https://www.amazon.co.uk/favicon.ico"
+      }, {
+         "size": 48,
+         "url": "https://www.amazon.co.uk/favicon.ico"
+      }, {
+         "size": 64,
+         "url": "https://www.amazon.co.uk/favicon.ico"
+      }, {
+         "size": 96,
+         "url": "https://www.amazon.co.uk/favicon.ico"
+      }, {
+         "size": 128,
+         "url": "https://www.amazon.co.uk/favicon.ico"
+      }, {
+         "size": 256,
+         "url": "https://www.amazon.co.uk/favicon.ico"
+      } ]
+   },
+   "description": "Enjoy unlimited instant streaming of movies and TV shows. Anywhere, anytime. Start your 30-day free trial.",
+   "icons": {
+      "128": "icons/128.png",
+      "16": "icons/16.png",
+      "24": "icons/24.png",
+      "256": "icons/256.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "64": "icons/64.png",
+      "96": "icons/96.png"
+   },
+   "key": "GuTOqDjtmFmhMCjd9qgAbNQsYCl9UM1JelXPgAfcQ0U=",
+   "name": "Prime Video",
+   "version": "2018.8.13.53203"
+}

@@ -1,0 +1,554 @@
+{
+  "APP_NAME": {
+    "message": "Utilitaire de récupération pour Chromebook",
+    "description": "Name of the application. Cannot exceed 45 characters."
+  },
+  "APP_NAME_ON_HUB": {
+    "message": "Utilitaire de récupération pour OnHub",
+    "description": "Name of the application. Cannot exceed 45 characters."
+  },
+  "APP_SHORT_NAME": {
+    "message": "Récupération",
+    "description": "A short name for the app shown when space is limited. Fewer than 12 characters preferred."
+  },
+  "APP_DESCRIPTION": {
+    "message": "Créez un support de récupération pour votre Chromebook.",
+    "description": "High-level description of the application"
+  },
+  "DEV_APP_NAME": {
+    "message": "Utilitaire de récupération pour Chromebook (pour développeurs)",
+    "description": "Name of the dev application. Cannot exceed 45 characters."
+  },
+  "DEV_APP_DESCRIPTION": {
+    "message": "Version de développement de l'utilitaire de récupération pour Chromebook.",
+    "description": "High-level description of the Chromebook Dev application"
+  },
+  "DEV_APP_NAME_ON_HUB": {
+    "message": "Utilitaire de récupération pour OnHub (pour développeurs)",
+    "description": "Name of the dev application. Cannot exceed 45 characters."
+  },
+  "DEV_APP_DESCRIPTION_ON_HUB": {
+    "message": "Version de développement de l'utilitaire de récupération pour OnHub.",
+    "description": "High-level description of the OnHub Dev application"
+  },
+  "APP_DESCRIPTION_ON_HUB": {
+    "message": "Créez une clé USB de récupération pour votre OnHub.",
+    "description": "High-level description of the application"
+  },
+  "STEP": {
+    "message": "Étape",
+    "description": "Shown as part of the text 'step %x of %x'"
+  },
+  "OF": {
+    "message": "sur",
+    "description": "Shown as part of the text 'step %x of %x'"
+  },
+  "MENU_ITEM_ERASE_RECOVERY_MEDIA": {
+    "message": "Effacer le support de récupération",
+    "description": "Text for the menu item to erase recovery media"
+  },
+  "MENU_ITEM_ERASE_RECOVERY_MEDIA_ON_HUB": {
+    "message": "Effacer la clé USB de récupération",
+    "description": "Text for the menu item to erase recovery USB drive"
+  },
+  "MENU_ITEM_USE_LOCAL_IMAGE": {
+    "message": "Utiliser une image locale",
+    "description": "Text for the menu item to use a local file as the source image for the recovery disk"
+  },
+  "MENU_ITEM_SEND_FEEDBACK": {
+    "message": "Envoyer des commentaires",
+    "description": "Text for the menu item to send feedback"
+  },
+  "GET_STARTED_BUTTON_TEXT": {
+    "message": "Premiers pas",
+    "description": "Text for the 'get started' button at the bottom of the screen"
+  },
+  "CONTINUE_BUTTON_TEXT": {
+    "message": "Continuer",
+    "description": "Text for the continue button at the bottom of the screen"
+  },
+  "GO_BACK_BUTTON_TEXT": {
+    "message": "Retour",
+    "description": "Text for the back button at the bottom of the screen"
+  },
+  "LEARN_MORE_LINK_URL": {
+    "message": "http://www.google.com/chromeos/recovery",
+    "description": "URL for the 'learn more' link at the bottom left of the screen"
+  },
+  "LEARN_MORE_LINK_URL_ON_HUB": {
+    "message": "https://support.google.com/onhub/answer/6274977",
+    "description": "URL for the 'learn more' link at the bottom left of the screen"
+  },
+  "LEARN_MORE_LINK_TEXT": {
+    "message": "En savoir plus",
+    "description": "Text for the 'learn more' link at the bottom left of the screen"
+  },
+  "CREATE_NOW_BUTTON_TEXT": {
+    "message": "Créer maintenant",
+    "description": "Text for the button to start the recovery disk creation"
+  },
+  "ERASE_NOW_BUTTON_TEXT": {
+    "message": "Effacer maintenant",
+    "description": "Text for the button to start the recovery disk erasure"
+  },
+  "CANCEL_BUTTON_TEXT": {
+    "message": "Annuler",
+    "description": "Text for the cancel button"
+  },
+  "DONE_BUTTON_TEXT": {
+    "message": "Terminé",
+    "description": "Text for the button to close the application after the recovery disk has been created / Text for the button to go back to the start of the application after the recovery disk has been erased"
+  },
+  "CREATE_ANOTHER_BUTTON_TEXT": {
+    "message": "Créer un autre",
+    "description": "Text for the button to go back to the start of the application after the recovery disk has been created"
+  },
+  "GIGABYTE_ABBREVIATION": {
+    "message": "Go",
+    "description": "The abbreviation for gigabyte"
+  },
+  "COMPLETED": {
+    "message": "terminé",
+    "description": "Shown as part of the text 'x% completed'"
+  },
+  "SECONDS_REMAINING": {
+    "message": "$seconds$ seconde(s) restante(s).",
+    "description": "A message that indicates the time remaining for an operation.",
+    "placeholders": {
+      "seconds": {
+        "content": "$1",
+        "example": "The number of seconds remaining."
+      }
+    }
+  },
+  "MINUTES_REMAINING": {
+    "message": "$minutes$ minute(s) restante(s).",
+    "description": "A message that indicates the time remaining for an operation.",
+    "placeholders": {
+      "minutes": {
+        "content": "$1",
+        "example": "The number of minutes remaining."
+      }
+    }
+  },
+  "HOURS_REMAINING": {
+    "message": "$hours$ heure(s) restante(s).",
+    "description": "A message that indicates the time remaining for an operation.",
+    "placeholders": {
+      "hours": {
+        "content": "$1",
+        "example": "The number of hours remaining."
+      }
+    }
+  },
+  "WELCOME_TITLE": {
+    "message": "Créez un support de récupération pour votre Chromebook",
+    "description": "Title for the welcome screen"
+  },
+  "WELCOME_TITLE_ON_HUB": {
+    "message": "Créez une clé USB de récupération pour votre OnHub",
+    "description": "Title for the welcome screen"
+  },
+  "WELCOME_TEXT": {
+    "message": "Vous aurez besoin d'une clé USB ou d'une carte SD de 4 Go ou plus que vous êtes prêt à effacer.",
+    "description": "Text on the welcome screen"
+  },
+  "WELCOME_TEXT_ON_HUB": {
+    "message": "Vous aurez besoin d'une clé USB de 4 Go ou plus que vous êtes prêt à effacer.",
+    "description": "Text on the welcome screen"
+  },
+  "LOADING_CONFIG_TEXT": {
+    "message": "Préparation en cours... ",
+    "description": "Message to user indicating that the app is downloading latest information about recovery for different devices. It is preparing itself to be used."
+  },
+  "UNSUPPORTED_TITLE": {
+    "message": "Votre plateforme n'est pas compatible pour le moment",
+    "description": "Title displayed when the user's platform is not supported."
+  },
+  "UNSUPPORTED_TITLE_WIN": {
+    "message": "Windows n'est pas compatible pour le moment",
+    "description": "Title displayed when the user's platform is not supported."
+  },
+  "UNSUPPORTED_TITLE_LINUX": {
+    "message": "Linux n'est pas compatible pour le moment",
+    "description": "Title displayed when the user's platform is not supported."
+  },
+  "UNSUPPORTED_TITLE_MAC": {
+    "message": "Mac n'est pas compatible pour le moment",
+    "description": "Title displayed when the user's platform is not supported."
+  },
+  "UNSUPPORTED_TEXT": {
+    "message": "Malheureusement, votre plateforme n'est pas compatible pour le moment. Pour en savoir plus, visitez le <a href=\"http://www.google.com/chromeos/recovery\" target=\"_blank\">Centre d'aide des Chromebook</a>.",
+    "description": "Text displayed when the user's platform is not supported."
+  },
+  "UNSUPPORTED_TEXT_ON_HUB": {
+    "message": "Malheureusement, votre plateforme n'est pas compatible pour le moment. Pour en savoir plus, visitez le <a href=\"https://support.google.com/onhub/answer/6274977\" target=\"_blank\">Centre d'aide de l'OnHub</a>.",
+    "description": "Text displayed when the user's platform is not supported."
+  },
+  "UNSUPPORTED_TEXT_MAC": {
+    "message": "Malheureusement, la plateforme Mac n'est compatible qu'avec M37 ou une version ultérieure. Veuillez mettre à jour votre version de Chrome vers M37. Pour ce faire, il se peut que vous deviez utiliser une <a href=\"https://support.google.com/chromebook/answer/1086915\" target=\"_blank\">chaîne bêta</a>.",
+    "description": "Text displayed when the user's platform is not supported."
+  },
+  "SELECT_IMAGE_TITLE": {
+    "message": "Identifiez votre Chromebook",
+    "description": "Title for the image selection screen"
+  },
+  "SELECT_IMAGE_TITLE_ON_HUB": {
+    "message": "Identifiez votre OnHub",
+    "description": "Title for the image selection screen"
+  },
+  "SELECT_IMAGE_TEXT": {
+    "message": "Entrez le numéro de modèle du Chromebook à récupérer. Il se trouve sur l'écran de récupération.",
+    "description": "Prompts the user to enter a model number. Refers to the recovery screen."
+  },
+  "SELECT_IMAGE_TEXT_ON_HUB": {
+    "message": "Entrez le numéro de modèle de votre OnHub.",
+    "description": "Prompts the user to enter a model number. Refers to the recovery screen."
+  },
+  "SELECT_IMAGE_THIS_CHROMEBOOKS_MODEL_NUMBER": {
+    "message": "Pour ce Chromebook, entrez",
+    "description": "Label that precedes a HWID string (e.g.: LINK D25-E5M-K75) that is the model number for the Chromebook the user is using. The HWID string is hyperlinked and clicking on it will populate the value into the model number input field. In English, this would for example read 'For this Chromebook, enter _LINK D25-E5M-K75_'"
+  },
+  "SELECT_IMAGE_THIS_CHROMEBOOKS_MODEL_NUMBER_ON_HUB": {
+    "message": "Pour cet OnHub, entrez",
+    "description": "Label that precedes a HWID string (e.g.: ARKHAM D25-E5M-K75) that is the model number for the OnHub the user is using. The HWID string is hyperlinked and clicking on it will populate the value into the model number input field. In English, this would for example read 'For this OnHub, enter _LINK D25-E5M-K75_'"
+  },
+  "SELECT_IMAGE_SELECT_FROM_LIST_LINK_TEXT": {
+    "message": "Sélectionnez un modèle dans la liste",
+    "description": "Text for 'select by model' link"
+  },
+  "SELECT_IMAGE_SELECT_MANUFACTURER_PLACEHOLDER": {
+    "message": "Sélectionnez un fabricant",
+    "description": "Prompts the user to select a manufacturer (text is shown inside the dropdown)"
+  },
+  "SELECT_IMAGE_SELECT_PRODUCT_PLACEHOLDER": {
+    "message": "Sélectionnez un produit",
+    "description": "Prompts the user to select a product (text is shown inside the dropdown)"
+  },
+  "SELECT_IMAGE_SELECT_PRODUCT_PLACEHOLDER_ON_HUB": {
+    "message": "Sélectionnez un modèle",
+    "description": "Prompts the user to select a product (text is shown inside the dropdown)"
+  },
+  "SELECT_IMAGE_SELECT_BY_HWID_LINK_TEXT": {
+    "message": "Entrez un numéro de modèle directement",
+    "description": "Text for the 'select by model number' link"
+  },
+  "SELECT_TARGET_TITLE": {
+    "message": "Insérez votre clé USB ou carte SD",
+    "description": "Title for the screen where the user selects the target USB device"
+  },
+  "SELECT_TARGET_TITLE_ON_HUB": {
+    "message": "Insérez votre clé USB",
+    "description": "Title for the screen where the user selects the target USB device"
+  },
+  "SELECT_TARGET_DETECTING": {
+    "message": "Détection en cours...",
+    "description": "Indicates that the app is currently detecting the list of USB devices"
+  },
+  "SELECT_TARGET_NO_DEVICES_FOUND": {
+    "message": "Aucune clé USB ou carte SD n'a été trouvée",
+    "description": "Indicates that no USB devices were found"
+  },
+  "SELECT_TARGET_NO_DEVICES_FOUND_ON_HUB": {
+    "message": "Aucune clé USB n'a été trouvée",
+    "description": "Indicates that no USB devices were found"
+  },
+  "SELECT_TARGET_SELECT_DEVICE": {
+    "message": "Sélectionnez le support que vous souhaitez utiliser.",
+    "description": "Prompts the user to select a drive"
+  },
+  "SELECT_TARGET_SELECT_DEVICE_ON_HUB": {
+    "message": "Sélectionnez le lecteur USB que vous souhaitez utiliser.",
+    "description": "Prompts the user to select a drive"
+  },
+  "SELECT_TARGET_SELECT_DEVICE_PLACEHOLDER": {
+    "message": "Sélectionner",
+    "description": "Prompts the user to select a drive (text is shown inside the dropdown)"
+  },
+  "SELECT_TARGET_HIGH_CAPACITY_WARNING_HTML": {
+    "message": "<b>Attention :</b> Est-ce le bon support?",
+    "description": "Warning that is shown if the user selects a drive with a high capacity"
+  },
+  "SELECT_TARGET_HIGH_CAPACITY_WARNING_HTML_ON_HUB": {
+    "message": "<b>Attention :</b> Est-ce la bonne clé USB?",
+    "description": "Warning that is shown if the user selects a drive with a high capacity"
+  },
+  "SELECT_TARGET_LOW_CAPACITY_ERROR": {
+    "message": "Votre média doit être d'au moins 4 Go.",
+    "description": "Error that is shown if the user selects a drive with not enough capacity"
+  },
+  "SELECT_TARGET_LOW_CAPACITY_ERROR_ON_HUB": {
+    "message": "Votre clé USB doit être d'au moins 4 Go.",
+    "description": "Error that is shown if the user selects a drive with not enough capacity"
+  },
+  "CONFIRM_TITLE": {
+    "message": "Créer une image de récupération",
+    "description": "Title for the confirmation screen"
+  },
+  "CONFIRM_MESSAGE_HTML": {
+    "message": "<b>Important :</b> Toutes les données et les partitions sur votre support de récupération seront supprimées.",
+    "description": "Important message, indicates what the application is going to do"
+  },
+  "CONFIRM_MESSAGE_HTML_ON_HUB": {
+    "message": "<b>Important :</b> Toutes les données et les partitions sur votre clé USB de récupération seront supprimées.",
+    "description": "Important message, indicates what the application is going to do"
+  },
+  "CONFIRM_CANCELLED_MESSAGE_HTML": {
+    "message": "Opération annulée. Cliquez sur « Créer maintenant » pour réessayer.<br><br>Pour effacer votre support de récupération, cliquez sur l'icône d'engrenage dans le coin supérieur droit.",
+    "description": "Indicates that the operation has been cancelled"
+  },
+  "CONFIRM_CANCELLED_MESSAGE_HTML_ON_HUB": {
+    "message": "Opération annulée. Cliquez sur « Créer maintenant » pour réessayer.<br><br>Pour effacer votre clé USB de récupération, cliquez sur l'icône d'engrenage dans le coin supérieur droit.",
+    "description": "Indicates that the operation has been cancelled"
+  },
+  "WRITE_TITLE": {
+    "message": "Création d'une image de récupération en cours...",
+    "description": "Title of the screen where the drive is being created"
+  },
+  "WRITE_MESSAGE": {
+    "message": "Ne retirez pas votre support de récupération.",
+    "description": "Shown on the screen where the drive is being created"
+  },
+  "WRITE_MESSAGE_ON_HUB": {
+    "message": "Ne retirez pas votre clé USB de récupération.",
+    "description": "Shown on the screen where the drive is being created"
+  },
+  "STAGE_DOWNLOAD": {
+    "message": "Téléchargement en cours…",
+    "description": "Status text that is shown when the drive is being created"
+  },
+  "STAGE_DOWNLOADVERIFY": {
+    "message": "Vérification du téléchargement en cours...",
+    "description": "Status text that is shown when the drive is being created"
+  },
+  "STAGE_VERIFYDOWNLOAD": {
+    "message": "Vérification du téléchargement en cours...",
+    "description": "Status text that is shown when the drive is being created"
+  },
+  "STAGE_UNPACK": {
+    "message": "Décompression des fichiers en cours...",
+    "description": "Status text that is shown when the drive is being created"
+  },
+  "STAGE_UNZIP": {
+    "message": "Décompression des fichiers en cours...",
+    "description": "Status text that is shown when the drive is being created"
+  },
+  "STAGE_WRITE": {
+    "message": "Écriture des fichiers en cours...",
+    "description": "Status text that is shown when the drive is being created"
+  },
+  "STAGE_VERIFY": {
+    "message": "Validation en cours...",
+    "description": "Status text that is shown when the drive is being created"
+  },
+  "STAGE_VERIFYWRITE": {
+    "message": "Validation en cours...",
+    "description": "Status text that is shown when the drive is being created"
+  },
+  "STAGE_COMPLETE": {
+    "message": "Terminé",
+    "description": "Status text that is shown when the drive is being created"
+  },
+  "COMPLETE_TITLE": {
+    "message": "Votre support de récupération est prêt!",
+    "description": "Title of the completed screen"
+  },
+  "COMPLETE_TITLE_ON_HUB": {
+    "message": "Votre clé USB de récupération est prête!",
+    "description": "Title of the completed screen"
+  },
+  "COMPLETE_MESSAGE": {
+    "message": "Vous pouvez maintenant retirer votre support de récupération.",
+    "description": "Shown on the completed screen"
+  },
+  "COMPLETE_MESSAGE_ON_HUB": {
+    "message": "Vous pouvez maintenant retirer votre clé USB de récupération.",
+    "description": "Shown on the completed screen"
+  },
+  "COMPLETE_BULLET1": {
+    "message": "Pour récupérer votre Chromebook, branchez-y le support de récupération.",
+    "description": "Shown on the completed screen"
+  },
+  "COMPLETE_BULLET1_ON_HUB": {
+    "message": "Débranchez le câble d'alimentation de votre OnHub et insérez la clé USB à l'arrière de l'appareil. Maintenez le bouton de réinitialisation enfoncé et branchez le câble d'alimentation. Continuez à maintenir le bouton de réinitialisation enfoncé pendant environ 15 secondes ou jusqu'à ce que le voyant d'activité sur la clé USB commence à clignoter.",
+    "description": "Shown on the completed screen"
+  },
+  "COMPLETE_BULLET2": {
+    "message": "Après la récupération, vous pourrez effacer votre support de récupération à l'aide de cet utilitaire.",
+    "description": "Shown on the completed screen"
+  },
+  "COMPLETE_BULLET2_ON_HUB": {
+    "message": "Votre OnHub effectuera le processus de récupération, ce qui peut prendre plusieurs minutes. Une fois votre OnHub récupéré, il va redémarrer. Ensuite, utilisez l'application Google On pour configurer votre OnHub.",
+    "description": "Shown on the completed screen"
+  },
+  "ERASE_TITLE": {
+    "message": "Effacer le support de récupération",
+    "description": "Title for the screens related to erasing"
+  },
+  "ERASE_TITLE_ON_HUB": {
+    "message": "Effacer la clé USB de récupération",
+    "description": "Title for the screens related to erasing"
+  },
+  "ERASE_SELECT_TARGET_DETECTING": {
+    "message": "Détection en cours...",
+    "description": "Indicates that the app is currently detecting the list of USB devices"
+  },
+  "ERASE_SELECT_TARGET_NO_DEVICES_FOUND": {
+    "message": "Aucune clé USB ou carte SD n'a été trouvée",
+    "description": "Indicates that no USB devices were found"
+  },
+  "ERASE_SELECT_TARGET_NO_DEVICES_FOUND_ON_HUB": {
+    "message": "Aucune clé USB n'a été trouvée",
+    "description": "Indicates that no USB devices were found"
+  },
+  "ERASE_SELECT_TARGET_SELECT_DEVICE": {
+    "message": "Sélectionnez le support de récupération que vous souhaitez effacer.",
+    "description": "Prompts the user to select a drive"
+  },
+  "ERASE_SELECT_TARGET_SELECT_DEVICE_ON_HUB": {
+    "message": "Sélectionnez la clé USB de récupération que vous souhaitez effacer.",
+    "description": "Prompts the user to select a drive"
+  },
+  "ERASE_SELECT_TARGET_SELECT_DEVICE_PLACEHOLDER": {
+    "message": "Sélectionner",
+    "description": "Prompts the user to select a drive (text is shown inside the dropdown)"
+  },
+  "ERASE_SELECT_TARGET_HIGH_CAPACITY_WARNING_HTML": {
+    "message": "<b>Attention :</b> Est-ce la bonne clé USB?",
+    "description": "Warning that is shown if the user selects a drive with a high capacity"
+  },
+  "ERASE_CONFIRM_MESSAGE": {
+    "message": "L'image de récupération et toutes les partitions sur votre support de récupération seront supprimées.",
+    "description": "Important message, indicates what the application is going to do"
+  },
+  "ERASE_CONFIRM_MESSAGE_ON_HUB": {
+    "message": "L'image de récupération et toutes les partitions sur votre clé USB de récupération seront supprimées.",
+    "description": "Important message, indicates what the application is going to do"
+  },
+  "ERASE_PROGRESS_TITLE": {
+    "message": "Effacement du support de récupération en cours...",
+    "description": "Title for the screen where the drive is being erased"
+  },
+  "ERASE_PROGRESS_TITLE_ON_HUB": {
+    "message": "Effacement de la clé USB de récupération en cours...",
+    "description": "Title for the screen where the drive is being erased"
+  },
+  "ERASE_PROGRESS_TEXT": {
+    "message": "Ne retirez pas votre support de récupération.",
+    "description": "Shown when the drive is being erased"
+  },
+  "ERASE_PROGRESS_TEXT_ON_HUB": {
+    "message": "Ne retirez pas votre clé USB de récupération.",
+    "description": "Shown when the drive is being erased"
+  },
+  "ERASE_COMPLETE_TITLE": {
+    "message": "Votre support de récupération a été effacé.",
+    "description": "Title for erase completed screen"
+  },
+  "ERASE_COMPLETE_TITLE_ON_HUB": {
+    "message": "Votre clé USB de récupération a été effacée.",
+    "description": "Title for erase completed screen"
+  },
+  "ERASE_COMPLETE_BULLET1": {
+    "message": "Votre clé USB ou carte SD est prête pour le formatage.",
+    "description": "Shown on the erase completed screen"
+  },
+  "ERASE_COMPLETE_BULLET1_ON_HUB": {
+    "message": "Votre clé USB est prête pour le formatage.",
+    "description": "Shown on the erase completed screen"
+  },
+  "ERASE_COMPLETE_BULLET2": {
+    "message": "Formatez le support à l'aide de l'utilitaire compris avec votre système d'exploitation.",
+    "description": "Shown on the erase completed screen"
+  },
+  "ERRMSG_PLEASE_TRY_AGAIN": {
+    "message": "Veuillez réessayer.",
+    "description": "Error text that is shown after the error message"
+  },
+  "APIERRMSG_UNKNOWN": {
+    "message": "Erreur inconnue : $errorCode$.",
+    "description": "Error message that is shown if no matching error message can be found",
+    "placeholders": {
+      "errorCode": {
+        "content": "$1",
+        "example": "Error code"
+      }
+    }
+  },
+  "APIERRMSG_ABORTED": {
+    "message": "Opération interrompue.",
+    "description": "Error message that is shown if the operation is aborted"
+  },
+  "APIERRMSG_OPERATION_ALREADY_IN_PROGRESS": {
+    "message": "Une opération est déjà en cours.",
+    "description": "Error message that is shown if user tries to start a new write operation and there is already one in progress"
+  },
+  "APIERRMSG_UNSUPPORTED_OPERATION": {
+    "message": "Opération non prise en charge.",
+    "description": "Error message that is shown if the user triggers an unsupported operation"
+  },
+  "APIERRMSG_DEVICE_LIST_ERROR": {
+    "message": "Impossible de trouver une clé USB ou une carte SD.",
+    "description": "Error message that is shown if there was an error trying to detect removable USB drive and SD cards"
+  },
+  "APIERRMSG_DEVICE_LIST_ERROR_ON_HUB": {
+    "message": "Impossible de trouver une clé USB.",
+    "description": "Error message that is shown if there was an error trying to detect removable USB drives"
+  },
+  "APIERRMSG_FILE_INVALID": {
+    "message": "Le fichier n'est pas valide.",
+    "description": "Error message that is shown if the file to write is not valid"
+  },
+  "APIERRMSG_DOWNLOAD_CANCELLED": {
+    "message": "Téléchargement annulé.",
+    "description": "Error message that is shown if the user cancels the write operation during download"
+  },
+  "APIERRMSG_DOWNLOAD_HASH_MISMATCH": {
+    "message": "Le fichier n'est pas valide.",
+    "description": "Error message that is shown if the downloaded file doesn't hash to the expected value"
+  },
+  "APIERRMSG_DOWNLOAD_INTERRUPTED": {
+    "message": "Téléchargement interrompu.",
+    "description": "Error message that is shown if the downloaded was interrupted for any reason"
+  },
+  "APIERRMSG_URL_INVALID": {
+    "message": "Fichier introuvable.",
+    "description": "Error message that is shown if no file is found at the URL to download"
+  },
+  "APIERRMSG_UNZIP_ERROR": {
+    "message": "Impossible de décompresser le fichier.",
+    "description": "Error message that is shown if the file cannot be unzipped for any reason"
+  },
+  "APIERRMSG_UNZIP_INVALID_ARCHIVE": {
+    "message": "Fichier zip non valide.",
+    "description": "Error message that is shown if the file is not a valid ZIP file"
+  },
+  "APIERRMSG_VERIFICATION_FAILED": {
+    "message": "La vérification de l'image a échoué.",
+    "description": "Error message that is shown if the image was not written properly"
+  },
+  "ERRMSG_RECOVERY_CONFIG_DOWNLOAD_FAILURE": {
+    "message": "Le téléchargement du fichier de configuration a échoué. Seules les fonctions hors ligne seront accessibles.",
+    "description": "Error message that is shown if the app's configuration file cannot be downloaded. In this case, the app will only be able to support offline features."
+  },
+  "WARNING_OFFLINE": {
+    "message": "L'appareil est hors ligne. Seules les fonctions hors ligne seront accessibles.",
+    "description": "Warning message that is shown to the user when his device is offline."
+  },
+  "HWID_KEEP_TYPING": {
+    "message": "Aucun modèle trouvé. Continuez à écrire.",
+    "description": "Message shown to user when they have no yet entered enough info to determine a specific device."
+  },
+  "HWID_MATCH_FOUND": {
+    "message": "Un appareil a été trouvé",
+    "description": "Message shown to user when they have entered enough info to determine a specific device."
+  },
+  "HWID_MATCH_FOUND_AND_CHECKSUM_VERIFIED": {
+    "message": "Un modèle du même nom a été trouvé",
+    "description": "Message shown to user when they have entered a full model number and the checksum is verified."
+  },
+  "HWID_INVALID_MODEL": {
+    "message": "Numéro de modèle non valide. Veuillez le vérifier.",
+    "description": "Message shown to user when it's clear that what they have entered doesn't match any valid model number."
+  }
+}

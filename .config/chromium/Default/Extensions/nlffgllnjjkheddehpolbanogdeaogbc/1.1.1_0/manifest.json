@@ -1,0 +1,23 @@
+{
+   "author": "Razvan Caliman",
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "contentscript.js" ],
+      "match_about_blank": true,
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Restores browser behavior of navigating to previous page when pressing the Backspace key.",
+   "icons": {
+      "128": "icon128.png",
+      "256": "icon256.png",
+      "48": "icon48.png",
+      "64": "icon64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv3SLcJvQ+w8p8OXyfWg+Gltphjr2LU0lqjIhkLXQahIG7ykuy8V0nNnPGj/V0zJep5hP8W9+Co5C9ZSBoJj2NuZb7ICuXOdUjViPCGEbAvkPQApIakKzWgAiYYXB+cw/GE74S/x1qxSAjja9jTt8TkT4bBj+b5C61LE9P6ZK9eaDFynEO4p/eci8efSxMyF5Yxg/50mrAKw5owDINq9DBKT9EV5XPIa2EVPskUt70fpSeSrkWvhGVQ5UxPbYWfrHcJuWRgHQFjYDTgRoMTQSI+VJZFw2IN8XxUym4XUM9L5d9vThId0WmmSDXyOfDDZ1KA0sr6/HYjfzTy8M9TIzawIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "52",
+   "name": "Backspace to go Back",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1.1"
+}
