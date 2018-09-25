@@ -35,7 +35,7 @@ sudo systemctl enable wpa_supplicant.service
 sudo gpasswd -a $username network
 echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
 echo -e '${green}               >>>>>>>>>> INSTALLING YAOURT <<<<<<<<<<'
-echo -e ':${green}:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
+echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
 git clone https://aur.archlinux.org/package-query.git
 cd package-query/
 makepkg -si
