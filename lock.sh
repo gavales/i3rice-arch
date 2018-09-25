@@ -1,11 +1,20 @@
 #!/bin/sh
 
-B='#002b3699'  # blank
-C='#eee8d599'  # clear ish
-D='#268bd299'  # default
-T='#eee8d599'  # text
-W='#dc322f99'  # wrong
-V='#2aa19899'  # verifying
+black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+green=$(xrdb -query | grep '*color2' | awk '{print $NF}')
+yellow=$(xrdb -query | grep '*color3' | awk '{print $NF}')
+red=$(xrdb -query | grep '*color9' | awk '{print $NF}')
+white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+
+t="99"
+
+B="$black$t"  # blank
+C="$white$t"  # clear ish
+D="$blue$t"  # default
+T="$white$t"  # text
+W="$red$t"  # wrong
+V="$green$t"  # verifying
 
 i3lock \
 --insidevercolor=$B	\

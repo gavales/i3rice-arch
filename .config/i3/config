@@ -268,7 +268,7 @@ for_window [class="Cam"] floating enable
 for_window [title="Log in with PayPal - Chromium"] floating enable
 for_window [class="Blueman-manager"] floating enable
 for_window [instance="CALC"] floating enable,resize set 480 480
-for_window [instance="BASHMOUNT"] floating enable,sticky enable,resize set 400 400
+for_window [instance="BASHMOUNT"] floating enable,sticky enable,resize set 425 400
 
 #############################################################################
 ### SHUTDOWN MODE
