@@ -17,6 +17,7 @@ W="$red$t"  # wrong
 V="$green$t"  # verifying
 
 i3lock \
+--image=/home/gavarch/.config/wall.png \
 --insidevercolor=$B	\
 --ringvercolor=$V	\
 \
