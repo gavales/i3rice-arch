@@ -157,8 +157,9 @@ autocmd FileType m setlocal textwidth=78
 " all the figure labels. Very useful!
 	set iskeyword+=:
 
-" PDFLATEX
+" COMPILE PDF
 autocmd Filetype tex map \cp :!pdflatex<space>-interaction=nonstopmode<space>-shell-escape<space><C-r>%<Enter><Enter>
+autocmd Filetype tex map \cx :!xelatex<space>-interaction=nonstopmode<space>-shell-escape<space><C-r>%<Enter><Enter>
 
 " BIBER
 autocmd Filetype tex map \cb :!biber<space><C-r>%<BS><BS><BS>bcf<Enter><Enter>
