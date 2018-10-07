@@ -1,12 +1,120 @@
 \documentclass{article}
+
+% PAGE STUFF
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage[top=2cm,bottom=2cm,left=3.8cm,right=1.9cm]{geometry}
+\setlength{\parindent}{2em}
+%\setlength{\parskip}{1em}
+\renewcommand{\baselinestretch}{1.5}
+\pagenumbering{roman}
+
+
+% FONT STUFF
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{minted}
 \usepackage{fontspec,lipsum}
 \defaultfontfeatures{Ligatures=TeX}
-\usepackage[small,sf,bf]{titlesec}
+\setromanfont{Cambria}
+\setsansfont{Cambria}
+\usepackage{titlesec}
 
-\setromanfont{Calibri}
-\setsansfont{Calibri}
+\titleformat{\section}
+{\LARGE\bfseries\color{NavyBlue}}
+{\Huge \thesection}
+{0.3em}
+{}
+
+\titleformat{\subsection}
+{\large\bfseries\color{RoyalBlue}}
+{\thesubsection}
+{1em}
+{}
+
+\titleformat{\subsubsection}
+{\it\bfseries\color{CornflowerBlue}}
+{\thesubsubsection}
+{1em}
+{}
+
+\titlespacing{\section}
+{1em}{1em}{1em}
+
+\titlespacing{\subsection}
+{0em}{1em}{0.125em}
+
+\titlespacing{\subsubsection}
+{0em}{1em}{0.125em}
+
+
+% GRAPHICS
+\usepackage[xetex]{graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage[font={it,sf}]{caption}
+\usepackage{subcaption}
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+
+
+% TABLES
+%\usepackage[none]{hyphenat} % stops breaking up words in table
+\usepackage{array}
+
+
+% HEADER & FOOTER
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO,LE]{\small\thepage}
+\fancyhead[RE]{\small \textit{FEEG3003: Individual Project} -- Gavin Vales}
+\fancyhead[LO]{\small Gavin Vales -- \emph{\rightmark}}
+\fancyfoot[L,R,C]{}
+\renewcommand{\headrulewidth}{0.25pt}
+\renewcommand{\footrulewidth}{0.25pt}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+
+
+% BIBLIOGRAPHY
+\usepackage[backend=biber,style=authoryear,natbib=true,maxcitenames=1]{biblatex}
+\addbibresource{FinalReport.bib}
+
+
+% NOMENCLATURE
+%\usepackage{nomencl}
+%\makenomenclature
+%\xpatchcmd{\thenomenclature}{%
+%        \section*{\nomname}% Look for `\section*... etc.
+%}{% Replace it by 'nothing'
+%}{\typeout{Success}}{\typeout{Failure}}
+%% This code creates the groups
+%\usepackage{etoolbox}
+%\renewcommand\nomgroup[1]{%
+%        \item[\bfseries
+%        \ifstrequal{#1}{S}{\large \color{RoyalBlue} Symbols}{%
+%        \ifstrequal{#1}{A}{\large \color{RoyalBlue} Abbreviations}{}}%
+%]}
+
+\usepackage{nomencl}
+\makenomenclature
+
+\RequirePackage{ifthen}
+\renewcommand{\nomgroup}[1]{%
+\ifthenelse{\equal{#1}{r}}{\item[\textbf{Variables}]}{%
+\ifthenelse{\equal{#1}{g}}{\item[\textbf{Constants}]}{}}}
+
+
+% CLICKABLE REFERENCES
+\usepackage[hidelinks]{hyperref}
+
 
 \begin{document}
+
+\nomenclature[ga ]{$\alpha$}{Constant}
+\nomenclature[rx ]{$x$}{Variable}
+\printnomenclature
+
 \section{Introduction}
 
 \lipsum[1]
