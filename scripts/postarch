@@ -1,89 +1,67 @@
 #!/bin/bash
 
-black = '\033[1;30m'
-darkgray = '\033[1;30m'
-red = '\033[1;31m'
-lightred = '\033[1;31m'
-green = '\033[1;32m'
-lightgreen = '\033[1;32m'
-brownorange = '\033[1;33m'
-yellow = '\033[1;33m'
-blue = '\033[1;34m'
-lightblue = '\033[1;34m'
-purple = '\033[1;35m'
-lightpurple = '\033[1;35m'
-cyan = '\033[1;36m'
-lightcyan = '\033[1;36m'
-lightgray = '\033[1;37m'
-white = '\033[1;37m'
-normal = '\033[0m'
+username = $1
 
-username = gavarch
+cd /~
 
-cd
-echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
-echo -e '${green}           >>>>>>>>>> INSTALLING YOUR PROGRAMS <<<<<<<<<<'
-echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
-sudo pacman -S xorg-server xorg-xinit i3 i3status feh dunst rofi dmenu ranger w3m sxiv lxappearance ncurses fftw qutebrowser nautilus neomutt evince mupdf pinta redshift mplayer r tk gcc-fortran mpd mpc ncmpcpp newsboat transmission-cli opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-citeproc python-pygments python2-pygments biber rxvt-unicode libmpdclient yajl dialog wpa_supplicant wireless_tools networkmanager network-manager-applet texlive-most papirus-icon-theme paper-icon-theme-git ntfs-3g lm_sensors sysstat polkit-gnome gnome-keyring
-echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
-echo -e '${green}             >>>>>>>>>> NETWORK MANAGER STUFF <<<<<<<<<<'
-echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
-sudo systemctl enable NetworkManager.service
-sudo systemctl disable dhcpcd.service
-sudo systemctl disable dhcpcd@.service
-sudo systemctl enable wpa_supplicant.service
-sudo gpasswd -a $username network
-echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
-echo -e '${green}               >>>>>>>>>> INSTALLING YAOURT <<<<<<<<<<'
-echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
+echo '>>>>>>>>>> INSTALLING YOUR PROGRAMS <<<<<<<<<<'
+
+pacman -S xorg-server xorg-xinit i3 i3status rofi dmenu ranger qutebrowser nautilus evince mupdf pinta redshift mplayer r mpd mpc ncmpcpp newsboat transmission-cli opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-citeproc python-pygments python2-pygments biber rxvt-unicode libmpdclient yajl dialog wpa_supplicant wireless_tools networkmanager network-manager-applet texlive-most
+
+echo '>>>>>>>>>> NETWORK MANAGER STUFF <<<<<<<<<<'
+
+systemctl enable NetworkManager.service
+
+systemctl disable dhcpcd.service
+
+systemctl stop dhcpcd.service
+
+systemctl disable dhcpcd@.service
+
+systemctl stop dhcpcd@.service
+
+systemctl enable wpa_supplicant.service
+
+gpasswd -a $username network
+
+echo '>>>>>>>>>> INSTALLING YAOURT <<<<<<<<<<'
+
 git clone https://aur.archlinux.org/package-query.git
-cd package-query/
-makepkg -si
-cd
-git clone https://aur.archlinux.org/yaourt.git
-cd yaourt/
-makepkg -si
-cd
-echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
-echo -e '${green}         >>>>>>>>>> COPY/PASTE CONFIGS FROM GITHUB <<<<<<<<<<'
-echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
-git clone https://github.com/StillANixRookie/i3rice-arch.git
-cp -R /~/i3rice-arch/. /~
-sudo cp ~/scripts/i3exit /usr/bin/
-cd
-mkdir Downloads Drive Music Pictures Videos
-rm -rf .git UNUSEDSTUFF README.md ws1.png ws2.png ws3.png ws4.png ws5.png
-chmod +x /usr/bin/i3exit
-sudo cp sudoers /etc/
-echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
-echo -e '${green}              >>>>>>>>>> INSTALL YAOURT APPS <<<<<<<<<<'
-echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
-echo -e '${purple} > POLYBAR <' && yaourt -S polybar-git
-echo -e '${purple} > i3LOCK-COLOR <' && yaourt -S i3-lock-color
-echo -e '${purple} > CHROMIUM <' && yaourt -S chromium-widevine
-echo -e '${purple} > SPOTIFY <' && yaourt -S spotify
-echo -e '${purple} > GRIVE <' && yaourt -S grive
-echo -e '${purple} > CLIPIT <' && yaourt -S clipit
-echo -e '${purple} > PACTL <' && yaourt -S pulseaudio-ctl
-echo -e '${purple} > ZATHURA <' && yaourt -S zathura-pdf-mupdf
-echo -e '${purple} > XBACKLIGHT <' && yaourt -S xorg-xbacklight
-echo -e '${purple} > LIGHT <' && yaourt -S light
-echo -e '${purple} > BASHMOUNT <' && yaourt -S bashmount
-echo -e '${purple} > i3BLOCKS <' && yaourt -S i3blocks-gaps-git
-echo -e '${purple} > PAMAC <' && yaourt -S pamac-aur
-echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
-echo -e '${green}                 >>>>>>>>>> CLI-VISUALISER <<<<<<<<<<'
-echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
-cd
-git clone https://github.com/dpayne/cli-visualizer.git
-cd cli-visualiser
-./install.sh
-cd
-mkdir Drive
-echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
-echo -e '${green}                >>>>>>>>>> MAKE MATLAB ICON <<<<<<<<<<'
-echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
-sudo wget 'https://apprecs.org/gp/images/app-icons/300/c4/in.pxlcraft.matlabexpo.jpg' -O /usr/share/icons/matlab.png
-sudo wget 'https://help.ubuntu.com/community/MATLAB?action=AttachFile&do=get&target=matlab-r2012a.desktop' -O /usr/share/applications/matlab.desktop
 
-echo -e 'NOW I THINK ALL YOU HAVE TO DO IS REBOOT AND LOGIN AGAIN AND THEN STARTX?'
+cd package-query/
+
+makepkg -si
+
+cd /~
+
+git clone https://aur.archlinux.org/yaourt.git
+
+cd yaourt/
+
+makepkg -si
+
+cd /~
+
+echo '>>>>>>>>>> COPY/PASTE CONFIGS FROM GITHUB <<<<<<<<<<'
+
+git clone https://github.com/StillANixRookie/i3rice-arch.git
+
+cp -a /~/i3rice-arch/. /~/
+
+cp i3exit /usr/bin/
+
+chmod +x /usr/bin/i3exit
+
+cp sudoers /etc/
+
+echo '>>>>>>>>>> INSTALL YAOURT APPS <<<<<<<<<<'
+
+echo '> POLYBAR <'yaourt -S polybar-git
+
+echo '> i3LOCK-COLOR <' && yaourt -S i3lock-color && 
+
+echo '> CHROMIUM <' && yaourt -S chromium-widevine && 
+
+echo '> SPOTIFY <' && yaourt -S spotify && 
+
+ && yaourt -S grive && echo '> GRIVE <'

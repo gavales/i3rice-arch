@@ -42,9 +42,9 @@ set_from_resource $white	color15
 set $home /home/gavarch
 
 # WORKSPACE NAMES
-set $ws1 1:Terms
-set $ws2 2:Files
-set $ws3 3:Web
+set $ws1 1:Web
+set $ws2 2:Terms
+set $ws3 3:Files
 set $ws4 4:Media
 set $ws5 5:Work
 set $ws6 6:Work2
@@ -52,6 +52,9 @@ set $ws7 7:Writer
 set $ws8 8:Calc
 set $ws9 9:Impres
 set $ws10 10:ARandR
+
+# TRANSPARENCY
+set $t 99
 
 #############################################################################
 ### BORDERS
@@ -73,27 +76,27 @@ client.placeholder      $black $black $white $black $black
 # client.background	$black
 
 # BAR
-#bar {
-#	i3bar_command i3bar -t
-#	status_command i3status
-#	position bottom
-#	height 20
-#
-#	bindsym button4 nop
-#	bindsym button5 nop
-#	font pango:Ubuntu Mono 9
-#
-#	colors {
-#	background $black
-#
-##			   border  backgr. text
-#	focused_workspace  $blue $blue $black
-#	active_workspace   $blue $blue $black
-#	inactive_workspace $black $black $white
-#	binding_mode       $yellow $yellow $black
-#	urgent_workspace   $red $red $black
-#	}
-#}
+bar {
+	i3bar_command i3bar -t
+	status_command i3blocks -c ~/scripts/i3blocks.conf
+	position bottom
+	height 20
+
+	bindsym button4 nop
+	bindsym button5 nop
+	font pango:Ubuntu Mono,FontAwesome 9
+
+	colors {
+	background $black$t
+
+#			   border  backgr. text
+	focused_workspace  $blue $blue $black
+	active_workspace   $blue $blue $black
+	inactive_workspace $black$t $black$t $white
+	binding_mode       $yellow $yellow $black
+	urgent_workspace   $red $red $black
+	}
+}
 
 # hide/unhide i3status bar
 bindsym $mod+b bar mode toggle
@@ -255,9 +258,9 @@ for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 
 # OWN
-for_window [title="Netflix"] floating enable,sticky enable,resize set 370 209
+for_window [title="Netflix"] floating enable,sticky enable,resize set 460 259
 for_window [title="Amazon.co.uk: Prime Video"] \
-	floating enable,sticky enable,resize set 370 209
+	floating enable,sticky enable,resize set 460 259
 for_window [class="MPlayer"] floating enable,sticky enable
 for_window [class="Pavucontrol"] floating enable,resize set 525 300
 for_window [class="Pavucontrol"] move right 680,move down 405
@@ -322,7 +325,7 @@ bindsym $mod+Shift+F3 exec gksu pcmanfm
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; polybar-msg cmd restart;\
-	 bash dunstthemeupdate;\
+	 bash ~/scripts/dunstthemeupdate;\
 	 exec notify-send 'Dunst & Polybar have been restarted.'"
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
@@ -423,7 +426,6 @@ exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id synclient VertEdgeScroll=1 HorizEdgeScroll=1 \
 	HorizTwoFingerScroll=1 PalmDetect=1 TapButton1=1 TapButton2=3 TapButton3=2
 exec compton -b -c -f
-exec polybar top
 exec feh --bg-scale ~/.config/wall.png
 exec --no-startup-id mpd
 exec setxkbmap gb
