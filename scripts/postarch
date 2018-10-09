@@ -70,6 +70,7 @@ echo -e '${purple} > XBACKLIGHT <' && yaourt -S xorg-xbacklight
 echo -e '${purple} > LIGHT <' && yaourt -S light
 echo -e '${purple} > BASHMOUNT <' && yaourt -S bashmount
 echo -e '${purple} > i3BLOCKS <' && yaourt -S i3blocks-gaps-git
+echo -e '${purple} > PAMAC <' && yaourt -S pamac-aur
 echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
 echo -e '${green}                 >>>>>>>>>> CLI-VISUALISER <<<<<<<<<<'
 echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
