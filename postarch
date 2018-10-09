@@ -24,7 +24,7 @@ cd
 echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
 echo -e '${green}           >>>>>>>>>> INSTALLING YOUR PROGRAMS <<<<<<<<<<'
 echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
-sudo pacman -S xorg-server xorg-xinit i3 i3status feh dunst rofi dmenu ranger w3m sxiv lxappearance ncurses fftw qutebrowser nautilus neomutt evince mupdf pinta redshift mplayer r tk gcc-fortran mpd mpc ncmpcpp newsboat transmission-cli opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-citeproc python-pygments python2-pygments biber rxvt-unicode libmpdclient yajl dialog wpa_supplicant wireless_tools networkmanager network-manager-applet texlive-most papirus-icon-theme paper-icon-theme-git ntfs-3g
+sudo pacman -S xorg-server xorg-xinit i3 i3status feh dunst rofi dmenu ranger w3m sxiv lxappearance ncurses fftw qutebrowser nautilus neomutt evince mupdf pinta redshift mplayer r tk gcc-fortran mpd mpc ncmpcpp newsboat transmission-cli opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-citeproc python-pygments python2-pygments biber rxvt-unicode libmpdclient yajl dialog wpa_supplicant wireless_tools networkmanager network-manager-applet texlive-most papirus-icon-theme paper-icon-theme-git ntfs-3g lm_sensors sysstat
 echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
 echo -e '${green}             >>>>>>>>>> NETWORK MANAGER STUFF <<<<<<<<<<'
 echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
@@ -69,6 +69,7 @@ echo -e '${purple} > ZATHURA <' && yaourt -S zathura-pdf-mupdf
 echo -e '${purple} > XBACKLIGHT <' && yaourt -S xorg-xbacklight
 echo -e '${purple} > LIGHT <' && yaourt -S light
 echo -e '${purple} > BASHMOUNT <' && yaourt -S bashmount
+echo -e '${purple} > i3BLOCKS <' && yaourt -S i3blocks-gaps-git
 echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
 echo -e '${green}                 >>>>>>>>>> CLI-VISUALISER <<<<<<<<<<'
 echo -e '${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
