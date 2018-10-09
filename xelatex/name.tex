@@ -15,8 +15,8 @@
 \usepackage{minted}
 \usepackage{fontspec,lipsum}
 \defaultfontfeatures{Ligatures=TeX}
-\setromanfont{Cambria}
-\setsansfont{Cambria}
+\setromanfont{Calibri}
+\setsansfont{Calibri}
 \usepackage{titlesec}
 
 \titleformat{\section}
@@ -78,24 +78,10 @@
 
 % BIBLIOGRAPHY
 \usepackage[backend=biber,style=authoryear,natbib=true,maxcitenames=1]{biblatex}
-\addbibresource{FinalReport.bib}
+\addbibresource{name.bib}
 
 
 % NOMENCLATURE
-%\usepackage{nomencl}
-%\makenomenclature
-%\xpatchcmd{\thenomenclature}{%
-%        \section*{\nomname}% Look for `\section*... etc.
-%}{% Replace it by 'nothing'
-%}{\typeout{Success}}{\typeout{Failure}}
-%% This code creates the groups
-%\usepackage{etoolbox}
-%\renewcommand\nomgroup[1]{%
-%        \item[\bfseries
-%        \ifstrequal{#1}{S}{\large \color{RoyalBlue} Symbols}{%
-%        \ifstrequal{#1}{A}{\large \color{RoyalBlue} Abbreviations}{}}%
-%]}
-
 \usepackage{nomencl}
 \makenomenclature
 
@@ -117,7 +103,9 @@
 
 \section{Introduction}
 
-\lipsum[1]
+\lipsum[1]\\
+
+\cite{muscutt2017four}
 
 \section{Nonsense}
 
