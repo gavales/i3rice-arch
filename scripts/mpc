@@ -6,5 +6,5 @@ if [ -z "$playing" ]
 then
 	echo " "
 else
-	echo "${playing:0:50}"
+	echo "${playing}"
 fi
