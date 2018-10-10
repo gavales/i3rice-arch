@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+################################
+# Shows current brightness
+#
+# dependencies:
+# - xbacklight
+#
+# @return {Number}: Current brightness
+################################
+
+case $BLOCK_BUTTON in
+	# right click
+	# set to `20
+	#3) light -set 20 ;;
+
+	# scroll up
+	# raise brightness
+	4) light -A 10 ;;
+
+	# scroll down
+	# lower brightness
+	5) light -U 10 ;;
+esac
+
+blr=$(light -G)
+
+bl=$(printf "%.0f" $blr)
+
+echo "${bl}%"

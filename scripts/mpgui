@@ -16,9 +16,11 @@ bitrate=$(mpris-ctl info "%bitrate")
 comment=$(mpris-ctl info "%comment")
 full=$(mpris-ctl info "%full")
 
-if [ $playstatus == 'Paused' ]
+playing="$playername: $trackname - $artistname"
+
+if [ -z $playstatus ]
 then
-	echo "|| $trackname - $artistname"
+	echo ""
 else
-	echo ">> $trackname - $artistname"
+	echo "${playing:0:50}"
 fi

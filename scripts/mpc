@@ -1,27 +1,10 @@
 #!/bin/bash
 
 playing=$(mpc current)
-status=$(mpc status | awk 'NR==1 {print $1}')
-command=sensors coretemp-isa-0000 | grep '^Core 0' | awk '{ print $3 }'
-playername=$(mpris-ctl info "%player_name")
-trackname=$(mpris-ctl info "%track_name")
-tracknumber=$(mpris-ctl info "%track_number")
-tracklength=$(mpris-ctl info "%track_length")
-artistname=$(mpris-ctl info "%artist_name")
-albumname=$(mpris-ctl info "%album_name")
-albumartist=$(mpris-ctl info "%album_artist")
-playstatus=$(mpris-ctl info "%play_status")
-shuffle=$(mpris-ctl info "%shuffle")
-volume=$(mpris-ctl info "%volume")
-loopstatus=$(mpris-ctl info "%loop_status")
-position=$(mpris-ctl info "%position")
-bitrate=$(mpris-ctl info "%bitrate")
-comment=$(mpris-ctl info "%comment")
-full=$(mpris-ctl info "%full")
 
-if [ $status == 'Paused' ]
+if [ -z "$playing" ]
 then
-	echo "|| $trackname - $artistname"
+	echo " "
 else
-	echo ">> $trackname - $artistname"
+	echo "${playing:0:50}"
 fi
