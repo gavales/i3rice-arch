@@ -12,7 +12,7 @@ bindsym $mod+Shift+r restart
 #############################################################################
 ### MAIN FONT
 
-font pango:CMU Bright Bold 10
+font pango:Ubuntu Mono 12
 
 #############################################################################
 ### DEFINE VARIABLES
@@ -39,19 +39,19 @@ set_from_resource $cyan		color6
 set_from_resource $white	color15
 
 # HOME DIR
-set $home /home/gavarch
+set $home /home/gavaro
 
 # WORKSPACE NAMES
-set $ws1 1:Web
-set $ws2 2:Terms
-set $ws3 3:Files
-set $ws4 4:Media
-set $ws5 5:Work
-set $ws6 6:Work2
-set $ws7 7:Writer
-set $ws8 8:Calc
-set $ws9 9:Impres
-set $ws10 10:ARandR
+set $ws1 " 1 "
+set $ws2 " 2 "
+set $ws3 " 3 "
+set $ws4 " 4 "
+set $ws5 " 5 "
+set $ws6 " 6 "
+set $ws7 " 7 "
+set $ws8 " 8 "
+set $ws9 " 9 "
+set $ws10 " 10 "
 
 # TRANSPARENCY
 set $t 99
@@ -68,7 +68,7 @@ hide_edge_borders none
 
 # COLORS
 # class                   border  backgr. text    indic.   child_border
-client.focused          $blue $blue $black $blue $blue
+client.focused          $cyan $cyan $black $cyan $cyan
 client.focused_inactive $black $black $white $black $black
 client.unfocused        $black $black $white $black $black
 client.urgent           $red $red $black $red $black
@@ -77,7 +77,7 @@ client.placeholder      $black $black $white $black $black
 
 # BAR
 bar {
-	i3bar_command i3bar -t
+	i3bar_command i3bar
 	status_command i3blocks -c ~/scripts/i3blocks.conf
 	position bottom
 	height 25
@@ -87,12 +87,12 @@ bar {
 	font pango:Ubuntu Mono,FontAwesome 12
 
 	colors {
-	background $black$t
+	background $black
 
 #			   border  backgr. text
-	focused_workspace  $blue $blue $black
-	active_workspace   $blue $blue $black
-	inactive_workspace $black$t $black$t $white
+	focused_workspace  $cyan $cyan $black
+	active_workspace   $cyan $cyan $black
+	inactive_workspace $black $black $white
 	binding_mode       $yellow $yellow $black
 	urgent_workspace   $red $red $black
 	}
@@ -304,16 +304,20 @@ bindsym $mod+z exec --no-startup-id morc_menu
 
 # BRIGHTNESS CONTROLS
 
-bindsym $mod+F6 exec xbacklight -inc 10
-bindsym $mod+F5 exec xbacklight -dec 10
+#bindsym $mod+F6 exec xbacklight -inc 10
+#bindsym $mod+F5 exec xbacklight -dec 10
 
-#bindsym $mod+Home exec light -A 10
-#bindsym $mod+End exec light -U 10
+bindsym $mod+Home exec light -A 10
+bindsym $mod+End exec light -U 10
 
 # VOLUME CONTROLS
-bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume 0 +2%
-bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume 0 -2%
-bindsym $mod+F1 --no-startup-id pactl set-sink-mute 0 toggle
+#bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume 0 +2%
+#bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume 0 -2%
+#bindsym $mod+F1 exec --no-startup-id pactl set-sink-mute 0 toggle
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +2%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -2%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 # FILE MANAGERS
 bindsym $mod+F12 exec nautilus
@@ -324,9 +328,12 @@ bindsym $mod+Shift+F3 exec gksu pcmanfm
 #bindsym $mod+F5 exec $term -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
-bindsym $mod+Shift+d --release exec "killall dunst; polybar-msg cmd restart;\
+#bindsym $mod+Shift+d --release exec "killall dunst; polybar-msg cmd restart;\
+#	 bash ~/scripts/dunstthemeupdate;\
+#	 exec notify-send 'Dunst & Polybar have been restarted.'"
+bindsym $mod+Shift+d --release exec "killall dunst; xrdb -load ~/.Xresources;\
 	 bash ~/scripts/dunstthemeupdate;\
-	 exec notify-send 'Dunst & Polybar have been restarted.'"
+	 exec notify-send 'Dunst & .Xresources have been reloaded.'"
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
@@ -407,6 +414,7 @@ bindsym $mod+r exec --no-startup-id $term -name RSS -e newsboat
 
 # OPEN CONFIGS
 bindsym $mod+Ctrl+1 exec --no-startup-id $term -e vim ~/.i3/config
+#bindsym $mod+Ctrl+1 exec --no-startup-id $term -e vim ~/.config/i3/config
 bindsym $mod+Ctrl+2 exec --no-startup-id $term -e vim ~/.Xresources
 bindsym $mod+Ctrl+3 exec --no-startup-id $term -e vim ~/.vimrc
 bindsym $mod+Ctrl+4 exec --no-startup-id $term -e vim ~/.config/ranger/rc.conf
@@ -427,7 +435,7 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id synclient VertEdgeScroll=1 HorizEdgeScroll=1 \
 	HorizTwoFingerScroll=1 PalmDetect=1 TapButton1=1 TapButton2=3 TapButton3=2
-exec compton -b -c -f
+exec_always compton --config ~/.config/compton.conf
 exec feh --bg-scale ~/.config/wall.png
 exec --no-startup-id mpd
 exec setxkbmap gb
