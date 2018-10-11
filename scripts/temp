@@ -1,0 +1,17 @@
+#!/bin/bash
+
+temp1=$(sensors coretemp-isa-0000 | grep '^Core 0' | awk '{ print $3 }')
+temp=${temp1:1}
+rawtemp=${temp1:1:-4}
+
+yellow=$(xrdb -query | grep '*color3' | awk '{print $NF}')
+red=$(xrdb -query | grep '*color9' | awk '{print $NF}')
+black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+
+if [[ $rawtemp -ge 65 ]]; then
+    echo "<span foreground=\"$yellow\">TEMP $temp</span>"
+elif [[ $rawtemp -ge 85 ]]; then
+    echo "<span background=\"$red\" foreground=\"$black\">TEMP $temp</span>"
+else
+    echo "TEMP $temp"
+fi
