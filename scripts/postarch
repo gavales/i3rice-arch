@@ -50,6 +50,10 @@ echo -e "${green}:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 git clone https://github.com/StillANixRookie/i3rice-arch.git
 cp -R /~/i3rice-arch/. /~
 sudo cp ~/scripts/i3exit /usr/bin/
+cd winfonts/TTF
+sudo cp *.ttf /usr/share/fonts/TTF/
+sudo cp *.ttc /usr/share/fonts/TTF/
+sudo cp *.TTF /usr/share/fonts/TTF/
 cd
 mkdir Downloads Drive Music Pictures Videos
 rm -rf .git UNUSEDSTUFF README.md ws1.png ws2.png ws3.png ws4.png ws5.png
