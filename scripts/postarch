@@ -66,7 +66,6 @@ echo -e "${purple} > POLYBAR <" && yaourt -S polybar-git
 echo -e "${purple} > i3LOCK-COLOR <" && yaourt -S i3-lock-color
 echo -e "${purple} > CHROMIUM <" && yaourt -S chromium-widevine
 echo -e "${purple} > SPOTIFY <" && yaourt -S spotify
-echo -e "${purple} > GRIVE <" && yaourt -S grive
 echo -e "${purple} > CLIPIT <" && yaourt -S clipit
 echo -e "${purple} > PACTL <" && yaourt -S pulseaudio-ctl
 echo -e "${purple} > ZATHURA <" && yaourt -S zathura-pdf-mupdf
@@ -97,6 +96,6 @@ cd
 sudo pip2.7 install --upgrade google-api-python-client
 sudo pip2.7 install --upgrade oauth2client
 sudo pacman -U overgrive-3.2.x-0-any.pkg.tar.xz
-sudo glib-compile-schemas /usr/share/glib-2.0/schemas
+sudo glib-compile-schemas /usr/share/glib-2.0/schema
 
 echo -e "NOW I THINK ALL YOU HAVE TO DO IS REBOOT AND LOGIN AGAIN AND THEN STARTX?"
