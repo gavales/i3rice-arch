@@ -24,7 +24,7 @@ cd
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo -e "${green}           >>>>>>>>>> INSTALLING YOUR PROGRAMS <<<<<<<<<<"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-sudo pacman -S xorg-server xorg-xinit i3 i3status feh dunst rofi dmenu ranger w3m sxiv lxappearance ncurses fftw qutebrowser nautilus neomutt evince mupdf pinta redshift mplayer r tk gcc-fortran mpd mpc ncmpcpp newsboat transmission-cli opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-citeproc python-pygments python2-pygments biber rxvt-unicode libmpdclient yajl dialog wpa_supplicant wireless_tools networkmanager network-manager-applet texlive-most papirus-icon-theme paper-icon-theme-git ntfs-3g lm_sensors sysstat polkit-gnome gnome-keyring acpi pcmanfm python2-pip python2-pyinotify python2-gobject python-pip python-pyinotify python-gobject
+sudo pacman -S xorg-server xorg-xinit i3 i3status feh dunst rofi dmenu ranger w3m sxiv lxappearance ncurses fftw qutebrowser nautilus neomutt evince mupdf pinta redshift mplayer r tk gcc-fortran mpd mpc ncmpcpp newsboat transmission-cli opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-citeproc python-pygments python2-pygments biber rxvt-unicode libmpdclient yajl dialog wpa_supplicant wireless_tools networkmanager network-manager-applet texlive-most papirus-icon-theme paper-icon-theme-git ntfs-3g lm_sensors sysstat polkit-gnome gnome-keyring acpi
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo -e "${green}             >>>>>>>>>> NETWORK MANAGER STUFF <<<<<<<<<<"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
@@ -50,10 +50,6 @@ echo -e "${green}:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 git clone https://github.com/StillANixRookie/i3rice-arch.git
 cp -R /~/i3rice-arch/. /~
 sudo cp ~/scripts/i3exit /usr/bin/
-cd winfonts/TTF
-sudo cp *.ttf /usr/share/fonts/TTF/
-sudo cp *.ttc /usr/share/fonts/TTF/
-sudo cp *.TTF /usr/share/fonts/TTF/
 cd
 mkdir Downloads Drive Music Pictures Videos
 rm -rf .git UNUSEDSTUFF README.md ws1.png ws2.png ws3.png ws4.png ws5.png
@@ -66,6 +62,7 @@ echo -e "${purple} > POLYBAR <" && yaourt -S polybar-git
 echo -e "${purple} > i3LOCK-COLOR <" && yaourt -S i3-lock-color
 echo -e "${purple} > CHROMIUM <" && yaourt -S chromium-widevine
 echo -e "${purple} > SPOTIFY <" && yaourt -S spotify
+echo -e "${purple} > GRIVE <" && yaourt -S grive
 echo -e "${purple} > CLIPIT <" && yaourt -S clipit
 echo -e "${purple} > PACTL <" && yaourt -S pulseaudio-ctl
 echo -e "${purple} > ZATHURA <" && yaourt -S zathura-pdf-mupdf
@@ -74,7 +71,6 @@ echo -e "${purple} > LIGHT <" && yaourt -S light
 echo -e "${purple} > BASHMOUNT <" && yaourt -S bashmount
 echo -e "${purple} > i3BLOCKS <" && yaourt -S i3blocks-gaps-git
 echo -e "${purple} > PAMAC <" && yaourt -S pamac-aur
-echo -e "${purple} > libappindicator-gtk3 <" && yaourt -S libappindicator-gtk3
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo -e "${green}                 >>>>>>>>>> CLI-VISUALISER <<<<<<<<<<"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
@@ -89,13 +85,5 @@ echo -e "${green}                >>>>>>>>>> MAKE MATLAB ICON <<<<<<<<<<"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 sudo wget "https://apprecs.org/gp/images/app-icons/300/c4/in.pxlcraft.matlabexpo.jpg" -O /usr/share/icons/matlab.png
 sudo wget "https://help.ubuntu.com/community/MATLAB?action=AttachFile&do=get&target=matlab-r2012a.desktop" -O /usr/share/applications/matlab.desktop
-echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-echo -e "${green}                >>>>>>>>>> overGrive Install <<<<<<<<<<"
-echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-cd
-sudo pip2.7 install --upgrade google-api-python-client
-sudo pip2.7 install --upgrade oauth2client
-sudo pacman -U overgrive-3.2.x-0-any.pkg.tar.xz
-sudo glib-compile-schemas /usr/share/glib-2.0/schema
 
 echo -e "NOW I THINK ALL YOU HAVE TO DO IS REBOOT AND LOGIN AGAIN AND THEN STARTX?"

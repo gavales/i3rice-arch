@@ -38,7 +38,7 @@ echo -e "# i3blocks config file" > i3blocks.conf
 echo "# Global properties" >> i3blocks.conf
 echo "command=~/scripts2/\$BLOCK_NAME" >> i3blocks.conf
 echo "#command=/usr/lib/i3blocks/\$BLOCK_NAME" >> i3blocks.conf
-echo "color=$blackl" >> i3blocks.conf
+echo "color=$whited" >> i3blocks.conf
 echo "separator_block_width=15" >> i3blocks.conf
 echo -e "markup=pango\n" >> i3blocks.conf
 
@@ -137,6 +137,6 @@ echo -e "separator=false\n" >> i3blocks.conf
 echo "[time]" >> i3blocks.conf
 echo "label=TD" >> i3blocks.conf
 echo "command=date '+%d-%m, %H:%M:%S'" >> i3blocks.conf
-echo "color=$whited" >> i3blocks.conf
+echo "color=#ffffff" >> i3blocks.conf
 echo "interval=1" >> i3blocks.conf
 )
