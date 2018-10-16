@@ -1,7 +1,13 @@
 #!/bin/bash
 
+repo="i3rice-arch"
+
+cd ~/$repo
+notify-send "Updating your $repo git repo..."
 git add .
 git commit -m "$(date +"%c")"
 git fetch
 git merge origin/master
 git push -u origin master
+cd
+notify-send "... $repo repo updated."
