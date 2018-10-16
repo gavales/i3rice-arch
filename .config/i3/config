@@ -304,11 +304,11 @@ bindsym $mod+z exec --no-startup-id morc_menu
 
 # BRIGHTNESS CONTROLS
 
-#bindsym $mod+F6 exec xbacklight -inc 10
-#bindsym $mod+F5 exec xbacklight -dec 10
+bindsym $mod+F6 exec xbacklight -inc 10
+bindsym $mod+F5 exec xbacklight -dec 10
 
-bindsym $mod+Home exec light -A 10
-bindsym $mod+End exec light -U 10
+#bindsym $mod+Home exec light -A 10
+#bindsym $mod+End exec light -U 10
 
 # VOLUME CONTROLS
 #bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume 0 +2%
@@ -320,7 +320,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -2%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 # FILE MANAGERS
-bindsym $mod+F12 exec nautilus
+bindsym $mod+F12 exec pcmanfm
+bindsym $mod+Shift+F12 exec nautilus
 bindsym $mod+Shift+Return exec $term -e ranger
 bindsym $mod+Ctrl+Return exec $term -e sudo ranger
 
@@ -333,7 +334,8 @@ bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 #	 exec notify-send 'Dunst & Polybar have been restarted.'"
 bindsym $mod+Shift+d --release exec "killall dunst; xrdb -load ~/.Xresources;\
 	 bash ~/scripts/dunstthemeupdate;\
-	 exec notify-send 'Dunst & .Xresources have been reloaded.'"
+	 bash ~/scripts/mkblocksconf;\
+	 exec notify-send 'Dunst & .Xresources have been reloaded, and i3blocks.conf has been updated.'"
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
@@ -412,9 +414,11 @@ bindsym $mod+Shift+b exec $term -name BASHMOUNT -e bashmount
 # NEWSBOAT
 bindsym $mod+r exec --no-startup-id $term -name RSS -e newsboat
 
+# GRIVE SYNC
+bindsym $mod+Shift+g exec bash ~/scripts/grive
+
 # OPEN CONFIGS
-bindsym $mod+Ctrl+1 exec --no-startup-id $term -e vim ~/.i3/config
-#bindsym $mod+Ctrl+1 exec --no-startup-id $term -e vim ~/.config/i3/config
+bindsym $mod+Ctrl+1 exec --no-startup-id $term -e vim ~/.config/i3/config
 bindsym $mod+Ctrl+2 exec --no-startup-id $term -e vim ~/.Xresources
 bindsym $mod+Ctrl+3 exec --no-startup-id $term -e vim ~/.vimrc
 bindsym $mod+Ctrl+4 exec --no-startup-id $term -e vim ~/.config/ranger/rc.conf
@@ -438,7 +442,7 @@ exec_always --no-startup-id synclient VertEdgeScroll=1 HorizEdgeScroll=1 \
 exec_always compton --config ~/.config/compton.conf
 exec feh --bg-scale ~/.config/wall.png
 exec --no-startup-id mpd
-exec setxkbmap gb
+exec setxkbmap us
 
 #############################################################################
 ### STARTUP PROGRAMS
