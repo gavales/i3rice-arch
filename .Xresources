@@ -1,22 +1,40 @@
 !!colors
 
-!pywal forest
-#define blackd		#1e1e15
-#define blackl		#56564f
-#define redl		#aa5c3c
-#define redd		#aa5c3c
-#define greenl		#3aab35
-#define greend		#3aab35
-#define yellowl		#9c9e57
-#define yellowd		#9c9e57
-#define bluel		#57ab7b
-#define blued		#57ab7b
-#define magental	#1bab73
-#define magentad	#1bab73
-#define cyanl		#2bb5a8
-#define cyand		#2bb5a8
-#define whitel		#c6c6c4
-#define whited		#c6c6c4
+!pywal lake
+#define blackd		#253327
+#define blackl		#a49c93
+#define redl		#637288
+#define redd		#637288
+#define greenl		#997789
+#define greend		#997789
+#define yellowl		#108DA5
+#define yellowd		#108DA5
+#define bluel		#43A1B1
+#define blued		#43A1B1
+#define magental	#A89692
+#define magentad	#A89692
+#define cyanl		#D3A895
+#define cyand		#D3A895
+#define whitel		#ebe0d3
+#define whited		#ebe0d3
+
+!!pywal forest
+!#define blackd		#1e1e15
+!#define blackl		#56564f
+!#define redl		#aa5c3c
+!#define redd		#aa5c3c
+!#define greenl		#3aab35
+!#define greend		#3aab35
+!#define yellowl		#9c9e57
+!#define yellowd		#9c9e57
+!#define bluel		#57ab7b
+!#define blued		#57ab7b
+!#define magental	#1bab73
+!#define magentad	#1bab73
+!#define cyanl		#2bb5a8
+!#define cyand		#2bb5a8
+!#define whitel		#c6c6c4
+!#define whited		#c6c6c4
 
 !!pywal
 !#define blackd		#02020d
@@ -140,7 +158,7 @@ XTerm*reverseVideo:	on
 XTerm*faceName:		Terminus:size=11:antialias=true
 XTerm*selectToClipboard:true
 
-Xcursor.theme:			xcursor-breeze
+Xcursor.theme: capitaine-cursors
 Xcursor.size:			0
 
 !!urxvt
@@ -156,7 +174,7 @@ Xcursor.size:			0
 !URxvt*italicFont:		xft:Inconsolata:italic:size=12:hinting=true
 !URxvt*boldItalicFont:		xft:Inconsolata:bold:italic:size=12:hinting=true
 
-URxvt.font:                     xft:TerminessTTFNerdFontMono:size=11
+URxvt.font:                     xft:TerminessTTFNerdFontMono:size=13
 
 URxvt*depth:			32
 URxvt*scrollBar:		false
@@ -166,7 +184,7 @@ URxvt*background:		rgba:0000/0000/0000/cc90
 URxvt*foreground:		whitel
 URxvt*saveLines:		5000
 URxvt*useColor:			true
-URxvt*internalBorder:		25
+URxvt*internalBorder:		1
 
 ! for 'fake' transparency (without Compton) uncomment the following three lines
 ! URxvt*inheritPixmap:            true
