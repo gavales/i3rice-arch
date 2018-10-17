@@ -1,10 +1,12 @@
 #!/bin/bash
 
 playing=$(mpc current)
+magenta=$(xrdb -query | grep '*color5' | awk '{print $NF}')
+black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
 
 if [ -z "$playing" ]
 then
-	echo " "
+	:
 else
-	echo "${playing}"
+	echo "<span background=\"$magenta\" foreground=\"$black\"> MPD ${playing} </span>"
 fi

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+blackd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+
+echo "<span background=\"#ffffff\" foreground=\"$blackd\"> TD $(date '+%d/%m/%Y, %H:%M:%S') </span>"
