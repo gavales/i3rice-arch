@@ -46,12 +46,13 @@ echo "border_left=0" >> i3blocks.conf
 echo "border_right=0" >> i3blocks.conf
 echo -e "markup=pango\n" >> i3blocks.conf
 
-#echo "#[mpgui]" >> i3blocks.conf
-#echo "#command=bash ~/scripts/mpgui" >> i3blocks.conf
-#echo "#interval=1" >> i3blocks.conf
-#echo -e "full_text=\n" >> i3blocks.conf
-#
-#echo -e "[separator]\n" >> i3blocks.conf
+echo "[mpgui]" >> i3blocks.conf
+echo "command=bash ~/scripts/mpgui" >> i3blocks.conf
+echo "interval=1" >> i3blocks.conf
+echo "border=$green" >> i3blocks.conf
+echo -e "full_text=\n" >> i3blocks.conf
+
+echo -e "[separator]\n" >> i3blocks.conf
 
 echo "[mpc]" >> i3blocks.conf
 echo "command=bash ~/scripts/mpc" >> i3blocks.conf
@@ -147,12 +148,6 @@ echo -e "separator=false\n" >> i3blocks.conf
 
 echo "[caps]" >> i3blocks.conf
 echo "command=bash ~/scripts/caps" >> i3blocks.conf
-echo "border=$red" >> i3blocks.conf
-echo "interval=1" >> i3blocks.conf
-echo -e "separator=false\n" >> i3blocks.conf
-
-echo "[num]" >> i3blocks.conf
-echo "command=bash ~/scripts/num" >> i3blocks.conf
 echo "border=$red" >> i3blocks.conf
 echo "interval=1" >> i3blocks.conf
 echo -e "separator=false\n" >> i3blocks.conf
