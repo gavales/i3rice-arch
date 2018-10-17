@@ -16,11 +16,20 @@ bitrate=$(mpris-ctl info "%bitrate")
 comment=$(mpris-ctl info "%comment")
 full=$(mpris-ctl info "%full")
 
+green=$(xrdb -query | grep '*color2' | awk '{print $NF}')
+black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+
 playing="$playername: $trackname - $artistname"
 
 if [ -z $playstatus ]
 then
-	echo ""
+	:
 else
-	echo "${playing:0:50}"
+	echo "<span background=\"$green\" foreground=\"$black\"> ${playing:0:50} </span>"
 fi
+
+case $BLOCK_BUTTON in
+  3) playerctl previous ;;  # next song
+  2) playerctl play-pause ;;  # next song
+  1) playerctl next ;;  # next song
+esac
