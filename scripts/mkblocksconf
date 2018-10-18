@@ -39,7 +39,7 @@ echo "# Global properties" >> i3blocks.conf
 echo "command=~/scripts2/\$BLOCK_NAME" >> i3blocks.conf
 echo "#command=/usr/lib/i3blocks/\$BLOCK_NAME" >> i3blocks.conf
 echo "color=$whited" >> i3blocks.conf
-echo "separator_block_width=15" >> i3blocks.conf
+echo "separator_block_width=10" >> i3blocks.conf
 echo "border_top=0" >> i3blocks.conf
 echo "border_bottom=1" >> i3blocks.conf
 echo "border_left=0" >> i3blocks.conf
@@ -84,12 +84,6 @@ echo -e "separator=false\n" >> i3blocks.conf
 
 echo "[memory]" >> i3blocks.conf
 echo "command=bash ~/scripts/ram" >> i3blocks.conf
-echo "interval=1" >> i3blocks.conf
-echo "border=$whited" >> i3blocks.conf
-echo -e "separator=false\n" >> i3blocks.conf
-
-echo "[swap]" >> i3blocks.conf
-echo "command=bash ~/scripts/swap" >> i3blocks.conf
 echo "interval=1" >> i3blocks.conf
 echo "border=$whited" >> i3blocks.conf
 echo -e "separator=false\n" >> i3blocks.conf

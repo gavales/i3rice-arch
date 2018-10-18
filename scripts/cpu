@@ -1,7 +1,5 @@
 #!/bin/bash
 
-yellow=$(xrdb -query | grep '*color3' | awk '{print $NF}')
-red=$(xrdb -query | grep '*color9' | awk '{print $NF}')
 black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
 white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
 
@@ -9,9 +7,9 @@ idle=$(sar 1 1|grep 'Average'|awk '{print $NF}')
 let " cpu = 100 - ${idle:0:-3} "
 
 if [[ $cpu -ge 80 ]]; then
-    echo "<span background=\"$red\" foreground=\"$black\"> CPU $cpu% </span>"
+    echo "<span background=\"#dc322f\" foreground=\"$black\"> CPU $cpu% </span>"
 elif [[ $cpu -ge 50 ]]; then
-    echo "<span background=\"$yellow\" foreground=\"$black\"> CPU $cpu% </span>"
+    echo "<span background=\"#b58900\" foreground=\"$black\"> CPU $cpu% </span>"
 else
     echo "<span background=\"$white\" foreground=\"$black\"> CPU $cpu% </span>"
 fi

@@ -10,9 +10,9 @@ black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
 white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
 
 if [[ $rawtemp -ge 65 ]]; then
-    echo "<span background=\"$yellow\" foreground=\"$black\"> TEMP $temp </span>"
+    echo "<span background=\"#b58900\" foreground=\"$black\"> TEMP $temp </span>"
 elif [[ $rawtemp -ge 85 ]]; then
-    echo "<span background=\"$red\" foreground=\"$black\"> TEMP $temp </span>"
+    echo "<span background=\"#dc322f\" foreground=\"$black\"> TEMP $temp </span>"
 else
     echo "<span background=\"$white\" foreground=\"$black\"> TEMP $temp </span>"
 fi
