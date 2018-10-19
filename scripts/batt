@@ -11,10 +11,6 @@ fi
 statu=$(acpi | awk '{ print $3 }')
 tim=$(acpi | awk '{ print $5 }')
 
-black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
-blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
-
 if [[ -z "$tim" ]]; then
     tim2=
 else
@@ -30,11 +26,13 @@ else
 fi
 
 if [[ $rawbat -le 50 ]]; then
-    echo "<span background=\"#b58900\" foreground=\"$black\"> BAT $rawbat% $stat $tim2 </span>"
+    echo "<span background=\"#b58900\" foreground=\"$(bash ~/scripts/getxcolors black)\"> BAT $rawbat% $stat $tim2 </span>"
 elif [[ $rawbat -le 25 ]]; then
-    echo "<span background=\"#dc322f\" foreground=\"$black\"> BAT $rawbat% $stat $tim2 </span>"
+    echo "<span background=\"#dc322f\" foreground=\"$(bash ~/scripts/getxcolors black)\"> BAT $rawbat% $stat $tim2 </span>"
 elif [[ $rawbat -le 75 ]]; then
-    echo "<span background=\"$white\" foreground=\"$black\"> BAT $rawbat% $stat $tim2 </span>"
+    echo "<span background=\"$(bash ~/scripts/getxcolors white)\" foreground=\"$(bash ~/scripts/getxcolors black)\"> BAT $rawbat% $stat $tim2 </span>"
+elif [[ $stat == "FULL" ]]; then
+    echo "<span background=\"$(bash ~/scripts/getxcolors blue)\" foreground=\"$(bash ~/scripts/getxcolors black)\"> BAT $rawbat% $stat $tim2</span>"
 else
-    echo "<span background=\"$blue\" foreground=\"$black\"> BAT $rawbat% $stat $tim2 </span>"
+    echo "<span background=\"$(bash ~/scripts/getxcolors blue)\" foreground=\"$(bash ~/scripts/getxcolors black)\"> BAT $rawbat% $stat $tim2 </span>"
 fi

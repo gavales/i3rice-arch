@@ -16,16 +16,13 @@ bitrate=$(mpris-ctl info "%bitrate")
 comment=$(mpris-ctl info "%comment")
 full=$(mpris-ctl info "%full")
 
-green=$(xrdb -query | grep '*color2' | awk '{print $NF}')
-black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-
 playing="$playername: $trackname - $artistname"
 
 if [ -z $playstatus ]
 then
 	:
 else
-	echo "<span background=\"$green\" foreground=\"$black\"> ${playing:0:50} </span>"
+	echo "<span background=\"$(bash ~/scripts/getxcolors magenta)\" foreground=\"$(bash ~/scripts/getxcolors black)\"> ${playing:0:50} </span>"
 fi
 
 case $BLOCK_BUTTON in

@@ -4,13 +4,10 @@ temp1=$(sensors coretemp-isa-0000 | grep '^Core 0' | awk '{ print $3 }')
 temp=${temp1:1}
 rawtemp=${temp1:1:-4}
 
-black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
-
 if [[ $rawtemp -ge 65 ]]; then
-    echo "<span background=\"#b58900\" foreground=\"$black\"> TEMP $temp </span>"
+    echo "<span background=\"#b58900\" foreground=\"$(bash ~/scripts/getxcolors black)\"> TEMP $temp </span>"
 elif [[ $rawtemp -ge 85 ]]; then
-    echo "<span background=\"#dc322f\" foreground=\"$black\"> TEMP $temp </span>"
+    echo "<span background=\"#dc322f\" foreground=\"$(bash ~/scripts/getxcolors black)\"> TEMP $temp </span>"
 else
-    echo "<span background=\"$white\" foreground=\"$black\"> TEMP $temp </span>"
+    echo "<span background=\"$(bash ~/scripts/getxcolors red)\" foreground=\"$(bash ~/scripts/getxcolors black)\"> TEMP $temp </span>"
 fi

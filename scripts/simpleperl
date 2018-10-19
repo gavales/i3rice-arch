@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+
+my $blue = `blue=\$\(xrdb -query|grep '*color4'|awk '{print \$NF}'\) && echo \$blue`;
+
+print "$blue\n"

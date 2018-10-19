@@ -1,12 +1,9 @@
 #!/bin/bash
 
-red=$(xrdb -query | grep '*color9' | awk '{print $NF}')
-blackd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-
 stat=$(xset -q | grep 'Caps Lock:' | awk '{print $4}')
 
 if [[ $stat == "on" ]]; then
-    echo "<span background=\"$red\" foreground=\"$blackd\"> CAPS LOCK </span>"
+    echo "<span background=\"$(bash ~/scripts/getxcolors magenta)\" foreground=\"$(bash ~/scripts/getxcolors black)\"> CAPS LOCK </span>"
 else
     :
 fi

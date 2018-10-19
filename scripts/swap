@@ -1,17 +1,14 @@
 #!/bin/bash
 
-black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
-
 tot=$(free|grep 'Swap'|awk '{print $2}')
 used=$(free|grep 'Swap'|awk '{print $3}')
 
 c=$(awk -v t=${tot} -v u=${used} 'BEGIN{ print int(u/t*100) }')
 
 if [[ $c -ge 80 ]]; then
-    echo "<span background=\"#dc322f\" foreground=\"$black\"> SWAP $c% </span>"
+    echo "<span background=\"#dc322f\" foreground=\"$(bash ~/scripts/getxcolors black)\"> SWAP $c% </span>"
 elif [[ $c -ge 50 ]]; then
-    echo "<span background=\"#b58900\" foreground=\"$black\"> SWAP $c% </span>"
+    echo "<span background=\"#b58900\" foreground=\"$(bash ~/scripts/getxcolors black)\"> SWAP $c% </span>"
 else
-    echo "<span background=\"$white\" foreground=\"$black\"> SWAP $c% </span>"
+    echo "<span background=\"$(bash ~/scripts/getxcolors green)\" foreground=\"$(bash ~/scripts/getxcolors black)\"> SWAP $c% </span>"
 fi

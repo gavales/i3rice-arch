@@ -27,7 +27,4 @@ blr=$(light -G)
 
 bl=$(printf "%.0f" $blr)
 
-black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-cyan=$(xrdb -query | grep '*color6' | awk '{print $NF}')
-
-echo "<span background=\"$cyan\" foreground=\"$black\"> BL ${bl}% </span>"
+echo "<span background=\"$(bash ~/scripts/getxcolors cyan)\" foreground=\"$(bash ~/scripts/getxcolors black)\"> BL ${bl}% </span>"
