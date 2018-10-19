@@ -42,8 +42,8 @@ echo "color=$whited" >> i3blocks.conf
 echo "separator_block_width=10" >> i3blocks.conf
 echo "border_top=2" >> i3blocks.conf
 echo "border_bottom=2" >> i3blocks.conf
-echo "border_left=0" >> i3blocks.conf
-echo "border_right=0" >> i3blocks.conf
+echo "border_left=2" >> i3blocks.conf
+echo "border_right=2" >> i3blocks.conf
 echo -e "markup=pango\n" >> i3blocks.conf
 
 echo "[mpgui]" >> i3blocks.conf

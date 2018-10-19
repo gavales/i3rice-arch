@@ -36,7 +36,7 @@ visualizer.scaling.multiplier=1.5
 
 ##Configures what character the spectrum visualizer will use. Specifying a space (e.g " ") means the
 ##background will be colored instead of the character. Defaults to " ".
-visualizer.spectrum.character=|
+visualizer.spectrum.character=I
 
 ##Spectrum bar width. Defaults to 2.
 visualizer.spectrum.bar.width=1
@@ -67,7 +67,7 @@ visualizer.spectrum.smoothing.mode=monstercat
 
 ##This configures the sgs smoothing effect on the spectrum visualizer. More points spreads out the smoothing
 ##effect and increasing passes runs the smoother multiple times on reach run. Defaults are points=3 and passes=1
-visualizer.sgs.smoothing.points=3
+visualizer.sgs.smoothing.points=5
 visualizer.sgs.smoothing.passes=1
 
 
@@ -88,4 +88,4 @@ visualizer.lorenz.character=*
 colors.override.terminal=false
 
 ##Specifies the color scheme. The color scheme must be in ~/.config/vis/colors/ directory. The default scheme is "colors".
-colors.scheme=solarized_rainbow
+colors.scheme=term

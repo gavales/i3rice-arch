@@ -12,7 +12,7 @@ bindsym $mod+Shift+r restart
 #############################################################################
 ### MAIN FONT
 
-font pango:Ubuntu Mono 8
+font pango:Ubuntu Mono 12
 
 #############################################################################
 ### DEFINE VARIABLES
@@ -39,7 +39,8 @@ set_from_resource $cyan		color6
 set_from_resource $white	color15
 
 # HOME DIR
-set $home /home/gavarch
+set $home /home/gavaro
+#set $home /home/gavarch
 
 # WORKSPACE NAMES
 set $ws1 " 1 "
@@ -77,22 +78,22 @@ client.placeholder      $black $black $white $black $black
 
 # BAR
 bar {
-	i3bar_command i3bar
+	i3bar_command i3bar -t
 	status_command i3blocks -c ~/scripts/i3blocks.conf
 	position bottom
-	height 25
+#	height 30
 
 	bindsym button4 nop
 	bindsym button5 nop
-	font pango:Ubuntu Mono,FontAwesome 8
+	font pango:Ubuntu Mono,FontAwesome 11
 
 	colors {
-	background $black
+	background $black$t
 
 #			   border  backgr. text
 	focused_workspace  $cyan $cyan $black
 	active_workspace   $cyan $cyan $black
-	inactive_workspace $black $black $white
+	inactive_workspace $black$t $black$t $white
 	binding_mode       $yellow $yellow $black
 	urgent_workspace   $red $red $black
 	}
@@ -108,10 +109,10 @@ bindsym $mod+b bar mode toggle
 gaps inner 10
 gaps outer 20
 
-bindsym $mod+Ctrl+y gaps outer current minus 5
-bindsym $mod+Ctrl+o gaps outer current plus 5
-bindsym $mod+Ctrl+u gaps inner current minus 5
-bindsym $mod+Ctrl+i gaps inner current plus 5
+bindsym $mod+Ctrl+y gaps inner current set 0; gaps outer current set 0
+bindsym $mod+Ctrl+o gaps inner current set 10; gaps outer current set 20
+bindsym $mod+Ctrl+u gaps inner current minus 5; gaps outer current minus 10
+bindsym $mod+Ctrl+i gaps inner current plus 5; gaps outer current minus 10
 
 workspace $ws1 gaps inner 0
 workspace $ws1 gaps outer 0
@@ -218,7 +219,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 
-assign [class="Nautilus"]			$ws3
+assign [class="Pcmanfm"]			$ws3
 assign [class="qutebrowser"]			$ws1
 assign [title="New Tab - Chromium"]		$ws1
 assign [class="libreoffice-writer"]		$ws7
@@ -304,20 +305,20 @@ bindsym $mod+z exec --no-startup-id morc_menu
 
 # BRIGHTNESS CONTROLS
 
-#bindsym $mod+F6 exec xbacklight -inc 10
-#bindsym $mod+F5 exec xbacklight -dec 10
+bindsym $mod+F6 exec xbacklight -inc 10
+bindsym $mod+F5 exec xbacklight -dec 10
 
-bindsym $mod+Home exec light -A 10
-bindsym $mod+End exec light -U 10
+#bindsym $mod+Home exec light -A 10
+#bindsym $mod+End exec light -U 10
 
 # VOLUME CONTROLS
-#bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume 0 +2%
-#bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume 0 -2%
-#bindsym $mod+F1 exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume 0 +2%
+bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume 0 -2%
+bindsym $mod+F1 exec --no-startup-id pactl set-sink-mute 0 toggle
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +2%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -2%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +2%
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -2%
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 # FILE MANAGERS
 bindsym $mod+F12 exec pcmanfm
@@ -335,7 +336,8 @@ bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; xrdb -load ~/.Xresources;\
 	 bash ~/scripts/dunstthemeupdate;\
 	 bash ~/scripts/mkblocksconf;\
-	 exec notify-send 'Dunst & .Xresources have been reloaded, and i3blocks.conf has been updated.'"
+	 bash ~/scripts/mkvistheme;\
+	 exec notify-send 'Dunst & .Xresources have been reloaded, and i3blocks.conf & vis config have been updated.'"
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
@@ -416,6 +418,15 @@ bindsym $mod+r exec --no-startup-id $term -name RSS -e newsboat
 
 # GRIVE SYNC
 bindsym $mod+Shift+g exec bash ~/scripts/grive
+
+# GOOGLE DOCs
+bindsym $mod+Ctrl+q exec $browser2 --new-window\
+ --app=https://docs.google.com/document/u/0/
+bindsym $mod+Ctrl+w exec $browser2 --new-window\
+ --app=https://docs.google.com/spreadsheets/u/0/
+bindsym $mod+Ctrl+r exec $browser2 --new-window\
+ --app=https://docs.google.com/presentation/u/0/
+
 
 # OPEN CONFIGS
 bindsym $mod+Ctrl+1 exec --no-startup-id $term -e vim ~/.config/i3/config

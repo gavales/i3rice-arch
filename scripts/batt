@@ -28,11 +28,11 @@ else
 fi
 
 if [[ $rawbat -le 50 ]]; then
-    echo "<span background=\"#b58900\" foreground=\"$black\"> BAT $rawbat% $stat ($tim2) </span>"
+    echo "<span background=\"#b58900\" foreground=\"$black\"> BAT $rawbat% ($stat $tim2) </span>"
 elif [[ $rawbat -le 25 ]]; then
-    echo "<span background=\"#dc322f\" foreground=\"$black\"> BAT $rawbat% $stat ($tim2) </span>"
+    echo "<span background=\"#dc322f\" foreground=\"$black\"> BAT $rawbat% ($stat $tim2) </span>"
 elif [[ $rawbat -le 75 ]]; then
-    echo "<span background=\"$white\" foreground=\"$black\"> BAT $rawbat% $stat ($tim2) </span>"
+    echo "<span background=\"$white\" foreground=\"$black\"> BAT $rawbat% ($stat $tim2) </span>"
 else
-    echo "<span background=\"$blue\" foreground=\"$black\"> BAT $rawbat% $stat ($tim2) </span>"
+    echo "<span background=\"$blue\" foreground=\"$black\"> BAT $rawbat% ($stat $tim2) </span>"
 fi
