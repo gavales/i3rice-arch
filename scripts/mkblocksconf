@@ -40,8 +40,8 @@ echo "command=~/scripts2/\$BLOCK_NAME" >> i3blocks.conf
 echo "#command=/usr/lib/i3blocks/\$BLOCK_NAME" >> i3blocks.conf
 echo "color=$whited" >> i3blocks.conf
 echo "separator_block_width=10" >> i3blocks.conf
-echo "border_top=0" >> i3blocks.conf
-echo "border_bottom=0" >> i3blocks.conf
+echo "border_top=2" >> i3blocks.conf
+echo "border_bottom=2" >> i3blocks.conf
 echo "border_left=0" >> i3blocks.conf
 echo "border_right=0" >> i3blocks.conf
 echo -e "markup=pango\n" >> i3blocks.conf
@@ -115,27 +115,25 @@ echo -e "[separator]\n" >> i3blocks.conf
 #echo "#[load_average]" >> i3blocks.conf
 #echo "#interval=10" >> i3blocks.conf
 
-echo "[wifi]" >> i3blocks.conf
-echo "label=NET:" >> i3blocks.conf
-echo "instance=wlp3s0" >> i3blocks.conf
-echo "interval=1" >> i3blocks.conf
-echo "color=$whited" >> i3blocks.conf
-echo "border=$whited" >> i3blocks.conf
-echo -e "separator=false\n" >> i3blocks.conf
-
-echo "[bandwidth]" >> i3blocks.conf
-echo "instance=eth0" >> i3blocks.conf
-echo "interval=1" >> i3blocks.conf
-echo "color=$whited" >> i3blocks.conf
-echo "border=$whited" >> i3blocks.conf
-echo -e "full_text=\n" >> i3blocks.conf
-
-echo -e "[separator]\n" >> i3blocks.conf
+#echo "[wifi]" >> i3blocks.conf
+#echo "label=NET:" >> i3blocks.conf
+#echo "instance=wlp3s0" >> i3blocks.conf
+#echo "interval=1" >> i3blocks.conf
+#echo "color=$whited" >> i3blocks.conf
+#echo "border=$whited" >> i3blocks.conf
+#echo -e "separator=false\n" >> i3blocks.conf
+#
+#echo "[bandwidth]" >> i3blocks.conf
+#echo "instance=eth0" >> i3blocks.conf
+#echo "interval=1" >> i3blocks.conf
+#echo "color=$whited" >> i3blocks.conf
+#echo "border=$whited" >> i3blocks.conf
+#echo -e "full_text=\n" >> i3blocks.conf
+#
+#echo -e "[separator]\n" >> i3blocks.conf
 
 echo "[battery]" >> i3blocks.conf
-echo "label=BAT" >> i3blocks.conf
-echo "#instance=12" >> i3blocks.conf
-echo "color=$blue" >> i3blocks.conf
+echo "command=bash ~/scripts/batt" >> i3blocks.conf
 echo "border=$blue" >> i3blocks.conf
 echo "interval=1" >> i3blocks.conf
 echo -e "separator=false\n" >> i3blocks.conf
