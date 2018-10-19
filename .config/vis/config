@@ -36,14 +36,14 @@ visualizer.scaling.multiplier=1.5
 
 ##Configures what character the spectrum visualizer will use. Specifying a space (e.g " ") means the
 ##background will be colored instead of the character. Defaults to " ".
-visualizer.spectrum.character=I
+#visualizer.spectrum.character=I
 
 ##Spectrum bar width. Defaults to 2.
 visualizer.spectrum.bar.width=1
 
 ##The amount of space between each bar in the spectrum visualizer. Defaults to 1. It's possible to set this to
 ##zero to have no space between bars
-visualizer.spectrum.bar.spacing=0
+visualizer.spectrum.bar.spacing=1
 
 ##Available smoothing options are monstercat, sgs, none.
 visualizer.spectrum.smoothing.mode=monstercat
@@ -73,7 +73,7 @@ visualizer.sgs.smoothing.passes=1
 
 ##Configures what character the ellipse visualizer will use. Specifying a space (e.g " ") means the
 ##background will be colored instead of the character. Defaults to "█".
-visualizer.ellipse.character=*
+visualizer.ellipse.character=o
 
 ##The radius of each color ring in the ellipse visualizer. Defaults to 2.
 visualizer.ellipse.radius=1
