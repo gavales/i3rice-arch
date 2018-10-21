@@ -4,6 +4,8 @@ bat=$(acpi | awk '{ print $4 }')
 
 if [[ ${#bat} == 3 ]]; then
     rawbat=${bat:0:-1}
+elif [[ ${bat} == "100%" ]]; then
+    rawbat="100"
 else
     rawbat=${bat:0:-2}
 fi
@@ -31,7 +33,7 @@ elif [[ $rawbat -le 25 ]]; then
     echo "<span background=\"#dc322f\" foreground=\"$(bash ~/scripts/getxcolors black)\"> BAT $rawbat% $stat $tim2 </span>"
 elif [[ $rawbat -le 75 ]]; then
     echo "<span background=\"$(bash ~/scripts/getxcolors white)\" foreground=\"$(bash ~/scripts/getxcolors black)\"> BAT $rawbat% $stat $tim2 </span>"
-elif [[ $stat == "FULL" ]]; then
+elif [[ $statu == "Unknown," ]]; then
     echo "<span background=\"$(bash ~/scripts/getxcolors blue)\" foreground=\"$(bash ~/scripts/getxcolors black)\"> BAT $rawbat% $stat $tim2</span>"
 else
     echo "<span background=\"$(bash ~/scripts/getxcolors blue)\" foreground=\"$(bash ~/scripts/getxcolors black)\"> BAT $rawbat% $stat $tim2 </span>"
