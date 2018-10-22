@@ -40,7 +40,6 @@ set_from_resource $white	color15
 
 # HOME DIR
 set $home /home/gavaro
-#set $home /home/gavarch
 
 # WORKSPACE NAMES
 set $ws1 " 1 "
@@ -272,7 +271,7 @@ for_window [class="Cam"] floating enable
 for_window [title="Log in with PayPal - Chromium"] floating enable
 for_window [class="Blueman-manager"] floating enable
 for_window [instance="CALC"] floating enable,resize set 480 480
-for_window [instance="BASHMOUNT"] floating enable,sticky enable,resize set 425 400
+for_window [instance="BASHMOUNT"] floating enable,sticky enable,resize set 430 500
 
 #############################################################################
 ### SHUTDOWN MODE
@@ -359,7 +358,7 @@ bindsym $mod+Shift+Home exec mpc play
 bindsym $mod+Shift+End exec mpc stop
 
 # VISUALISER
-bindsym $mod+Shift+v exec $term -name VIS -e vis
+bindsym $mod+Shift+v exec $term -name VIS -fn "xft:TerminessTTFNerdFontMono:size=9" -e vis
 
 # PRIME VIDEO
 bindsym $mod+Shift+n exec $browser2 --new-window\
@@ -401,7 +400,8 @@ bindsym $mod+apostrophe exec redshift -x
 
 # MULTI-MONITOR SETTINGS
 bindsym $mod+Ctrl+v move workspace to output VGA1
-bindsym $mod+Ctrl+e move workspace to output eDP1
+bindsym $mod+Ctrl+h move workspace to output HDMI1
+bindsym $mod+Ctrl+e move workspace to output primary
 bindsym $mod+Ctrl+m xrandr --output eDP1 --primary
 
 # SCROT
