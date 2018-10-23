@@ -40,6 +40,7 @@ set_from_resource $white	color15
 
 # HOME DIR
 set $home /home/gavaro
+#set $home /home/gavarch
 
 # WORKSPACE NAMES
 set $ws1 " 1 "
@@ -54,7 +55,7 @@ set $ws9 " 9 "
 set $ws10 " 10 "
 
 # TRANSPARENCY
-set $t ff
+set $t 99
 
 #############################################################################
 ### BORDERS
@@ -79,7 +80,7 @@ client.placeholder      $black $black $white $black $black
 bar {
 	i3bar_command i3bar -t
 	status_command i3blocks -c ~/scripts/i3blocks.conf
-	position top
+	position bottom
 
 	bindsym button4 nop
 	bindsym button5 nop
@@ -357,6 +358,7 @@ bindsym $mod+Shift+End exec mpc stop
 
 # VISUALISER
 bindsym $mod+Shift+v exec $term -name VIS -fn "xft:TerminessTTFNerdFontMono:size=9" -e vis
+bindsym $mod+Ctrl+n exec $term -fn "xft:TerminessTTFNerdFontMono:size=9" -e ncmpcpp -s visualizer
 
 # PRIME VIDEO
 bindsym $mod+Shift+n exec $browser2 --new-window\
