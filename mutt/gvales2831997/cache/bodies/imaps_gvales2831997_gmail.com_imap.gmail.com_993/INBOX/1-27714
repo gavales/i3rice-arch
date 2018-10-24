@@ -1,0 +1,819 @@
+Delivered-To: gvales2831997@gmail.com
+Received: by 2002:a67:af04:0:0:0:0:0 with SMTP id v4csp2517860vsl;
+        Thu, 11 Oct 2018 14:14:33 -0700 (PDT)
+X-Received: by 2002:a81:8505:: with SMTP id v5-v6mr1894321ywf.493.1539292473572;
+        Thu, 11 Oct 2018 14:14:33 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1539292473; cv=none;
+        d=google.com; s=arc-20160816;
+        b=v7IW+Kzl8DOB86TxuYEkHCtcz5N6e34z4l52O3lh4k0HT+CKeftPV6Mqol9MjieEzi
+         OM9hpZMhK5NPTrtejjShgzMv+BMfenDxWfQh2NNCG6r1ZIiSfRt6YWmvX8ZHVovDPqnk
+         H536lIJ896cRXRBvsCxZ8yubWyVk7xEVfH5nKJt+BTCYSILSVzHSi2Rf3lsXIyC8e1uk
+         vcmNu5H8F0uCJy4vRQRevgNhNlpCCPgojSvmZPeu3RNQ0NChT3ggfkRRF1hIqbGinWdj
+         bQtf3nOGJgOekryPi9a+43ObbtyfFOAbuiVuP+LjPGIzCCWoU5obaIV30aWG1cU9BANP
+         i2lw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:from:subject:message-id:list-unsubscribe:date:mime-version
+         :dkim-signature;
+        bh=OK8BYlKM5dolX0tWJz5umnAn77MOku5bGWgZbm29jMw=;
+        b=zVNAXyVfvH5e3Wp2qPxOrhagitG75fITkS2woGZeCnD+IaAs3cwRL0z4FVYxQ2Py+g
+         9/ikgvcDjyqzGSrz5GBARfYGoLniYrvb13Vqsz0cBCVj9OpDDyHP4IMXDmcuikLVNCaC
+         BZcybFLDq7gRJjdYPt7evvZt/+RrE4eCAryHDyjCKG41aQMe+XBQQx9KtQm9WQDLgdxV
+         hcp8OVSzeCw55Kz7MCdDGCCyOqDb54TocIKFLqfr7kUI9ysP9z8lxsAe8Cumu1rgzbPl
+         QJAtyMp/rec84nm42KBv2pvHzVaGv6yL6j8KTwf920jZvs9PPVr8pN1AJ6x+rPvN/KZ6
+         YBwA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@youtube.com header.s=20161025 header.b=bQhZEFQS;
+       spf=pass (google.com: domain of 3ol2_wwcldzucdg3eanndjij03.1db5kza3hrxsqyyw5bz7a.1db@youtube-subscriptions.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3OL2_WwcLDZUCDG3EANNDJIJ03.1DB5KzA3HRXSQYYW5Bz7A.1DB@youtube-subscriptions.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=youtube.com
+Return-Path: <3OL2_WwcLDZUCDG3EANNDJIJ03.1DB5KzA3HRXSQYYW5Bz7A.1DB@youtube-subscriptions.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id 1-v6sor11091311ybn.136.2018.10.11.14.14.32
+        for <gvales2831997@gmail.com>
+        (Google Transport Security);
+        Thu, 11 Oct 2018 14:14:33 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3ol2_wwcldzucdg3eanndjij03.1db5kza3hrxsqyyw5bz7a.1db@youtube-subscriptions.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@youtube.com header.s=20161025 header.b=bQhZEFQS;
+       spf=pass (google.com: domain of 3ol2_wwcldzucdg3eanndjij03.1db5kza3hrxsqyyw5bz7a.1db@youtube-subscriptions.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3OL2_WwcLDZUCDG3EANNDJIJ03.1DB5KzA3HRXSQYYW5Bz7A.1DB@youtube-subscriptions.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=youtube.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=youtube.com; s=20161025;
+        h=mime-version:date:list-unsubscribe:message-id:subject:from:to;
+        bh=OK8BYlKM5dolX0tWJz5umnAn77MOku5bGWgZbm29jMw=;
+        b=bQhZEFQS/EeE74ElUYnFCh6b/UZikB0zFE4kg4f6sfz72VFJ3qN67Um4RvIJwDKKDJ
+         AjhMEL4uPKZfggYLJaQ9ZW+lJz8jLrKX/7U0KYTyqbZZQi/0eQxxlWeKNygOif30RUWt
+         y5whbtzz2x/gaV4wDFigQgmjHYM3nB9qp9Lyk/lm9iy011O3SHxQ9ZBgcQXS7y3RnRA2
+         OBo7avJf8m3Z9B3ngaibVM6TFIDCnk39xPOKgNQp89Im+xFlFtXTHPKqAP5JCK+6QJ03
+         ijg9KvT/yuMgq9ONetFDQok3b0/gKS5Ina3RQ+o1hQs2WUZNkA8ZZj1j17Y27vHehHAa
+         URNw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:date:list-unsubscribe:message-id
+         :subject:from:to;
+        bh=OK8BYlKM5dolX0tWJz5umnAn77MOku5bGWgZbm29jMw=;
+        b=iKK/yZdjs1uVy1A0aGgx61GGls0qw4NwIQ2En1yeU0b7sjW9n5K2WFs33la1Ged5AC
+         UawDsyljzsJiS/4s2tk7QwE8UbGRih3r8LfnMMlXZfq1dheGGv7xd0vScH8tLVKRWQNi
+         Nb3XvqIXgjh88K0OdPpzX3VMjFbMwdtk3eLUhBqDnZ4cWyUZVXr08/yr+uD0iNNkl+FH
+         hsdUu1m/g63FGGzepUxMu6aEqdUNiiWJIAS7LA7h/NfYIR86WLXfYu5eU6KzA0vAUT6k
+         ylwqubObU+MmNIaHdJsNyNUkGqsFljT9P7XHMnwaypVoMjQJFAkgJlIJWdTavqB1QXPe
+         mVpw==
+X-Gm-Message-State: ABuFfogLObpJ1SwdAhE9oM/Vt9vRnZXRROCmRJkqjpoBZCO5VtVgX5pb
+	FvfM6MIUXz6PY5y2fELBjDTtvPtPgHY=
+X-Google-Smtp-Source: ACcGV61lAx8eGv8KiqUpTj7nbV0uScv9vZuozDj2jE99i4BR8L0D+pNdxHByHnxZbfRH5FC3zUneOAnihgQ+rthoedxjYu0=
+MIME-Version: 1.0
+X-Received: by 2002:a5b:587:: with SMTP id l7-v6mr1763698ybp.11.1539292472758;
+ Thu, 11 Oct 2018 14:14:32 -0700 (PDT)
+Date: Thu, 11 Oct 2018 14:14:32 -0700
+List-Unsubscribe: <mailto:yt-mailto@google.com?subject=http%3A%2F%2Fwww.youtube.com%2Fchannel_updates_unsubscribe%3Fuid%3D9Ib3R1VxRkZtVNuldPpiaQ%26channel_id%3DUCrlzSqLSGj8GIOeT5jrQsJA%26token%3Dh1jaH453lMoMKGmzBPznRYLoFnV8MTUzOTI5MjQ3MUAxNTM5MjkyNDcx%26feature%3Dem-uploademail>,
+ <http://www.youtube.com/channel_updates_unsubscribe?uid=9Ib3R1VxRkZtVNuldPpiaQ&channel_id=UCrlzSqLSGj8GIOeT5jrQsJA&token=h1jaH453lMoMKGmzBPznRYLoFnV8MTUzOTI5MjQ3MUAxNTM5MjkyNDcx&feature=em-uploademail>
+X-Google-Id: yt-em-uploademail
+X-Feedback-Id: em-uploademail:UCrlzSqLSGj8GIOeT5jrQsJA:ulkUG_wHeUI:YouTube
+X-No-Auto-Attachment: 1
+Message-ID: <0000000000000b50780577fa7588@google.com>
+Subject: Diversity & Comics just uploaded a video
+From: YouTube <noreply@youtube.com>
+To: Gavin Vales <gvales2831997@gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000000b505f0577fa7584"
+
+--0000000000000b505f0577fa7584
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+
+Diversity & Comics just uploaded a video
+DOOMSDAY CLOCK #7 Has The Two Funniest Panels In The History Of Comics
+http://www.youtube.com/watch?v=ulkUG_wHeUI&feature=em-uploademail
+You can unsubscribe from notifications for this user by visiting the  
+subscription center:
+http://www.youtube.com/subscription_manager
+
+--0000000000000b505f0577fa7584
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+<html lang=3D"en">
+<head>
+<title>
+Diversity &amp; Comics just uploaded a video
+</title>
+<style type=3D"text/css">
+* {
+font-family: arial, Arial, sans-serif;
+}
+@media only screen and (max-device-width: 480px) {
+body.suppress-border-on-mobile {
+margin: 0 !important;
+border: 0 !important;
+padding: 0 !important;
+}
+table.suppress-on-mobile, td.suppress-on-mobile, div.suppress-on-mobile, im=
+g.suppress-on-mobile, span.suppress-on-mobile {
+display: none !important;
+width: 0px !important;
+height: 0px !important;
+line-height: 0px !important;
+margin: 0 !important;
+border: 0 !important;
+padding: 0 !important;
+}
+table.outer-container-width, td.outer-container-width {
+width: 640px !important;
+}
+td.outer-container-padding-width {
+width: 20px !important;
+}
+table.inner-container-width, td.inner-container-width {
+width: 600px !important;
+}
+table.header-container-width {
+width: 600px !important;
+height: 100px !important;
+}
+td.header_left_padding_width {
+width: 25px !important;
+}
+td.logo_container_size {
+width: 575px !important;
+height: 100px !important;
+}
+img.header_logo_size {
+height: 47px !important;
+}
+table.footer-padding-width, td.footer-padding-width {
+width: 30px !important;
+}
+table.footer-width, td.footer-width {
+width: 540px !important;
+}
+td.footer-font, div.footer-font {
+font-size: 20px !important;
+line-height: 30px !important;
+}
+table.footer-content-padding-height, td.footer-content-padding-height {
+height: 30px !important;
+}
+table.large-section-padding-height, td.large-section-padding-height {
+height: 16px !important;
+}
+table.small-section-padding-height, td.small-section-padding-height {
+height: 20px !important;
+}
+table.content-container-padding-width, td.content-container-padding-width {
+width: 30px !important;
+}
+table.content-container-padding-height, td.content-container-padding-height=
+ {
+height: 30px !important;
+}
+table.content-container-width, td.content-container-width {
+width: 540px !important;
+}
+span.video-title-font-class, td.video-title-font-class, div.greeting-font, =
+td.greeting-font {
+font-size: 24px !important;
+line-height: 30px !important;
+}
+a.video-link-font-class, div.video-link-font-class, td.video-link-font-clas=
+s {
+font-size: 20px !important;
+line-height: 30px !important;
+}
+span.meta-data-font, div.meta-data-font, a.meta-data-font, td.meta-data-fon=
+t {
+display: block !important;
+font-size: 20px !important;
+line-height: 36px !important;
+}
+td.small-meta-data-font {
+font-size: 25px !important;
+line-height: 30px !important;
+}
+table.video-content-padding-height, td.video-content-padding-height {
+height: 45px !important;
+}
+td.avatar-size, img.avatar-size {
+width: 54px !important;
+height: 54px !important;
+}
+img.large-avatar-size {
+height: 32px !important;
+}
+img.channel-avatar-size {
+width: 80px !important;
+height: 80px !important;
+}
+img.thumbnail-size-class, td.thumbnail-size-class{
+width: 100px !important;
+height: 56px !important;
+}
+table.more-videos-size {
+height: 100px !important;
+}
+div.more-videos-font, td.more-videos-font {
+font-size: 24px !important;
+line-height: 27px !important;
+}
+table.more-videos-button-size {
+width: 230px !important;
+height: 60px !important;
+}
+td.more-videos-button-width {
+width: 250px !important;
+}
+td.more-videos-text-width {
+width: 270px !important;
+}
+table.video-spotlight-width {
+width:600px !important;
+height:332px !important;
+}
+td.video-spotlight-size, img.video-spotlight-size {
+width:600px !important;
+height:332px !important;
+}
+table.regular-button-height {
+height:60px !important;
+}
+td.regular-button-padding-width {
+width:20px !important;
+}
+td.regular-button-font {
+font-size:27.5px !important;
+line-height:27.5px !important;
+}
+img.play-button-img-size {
+width:20px !important;
+height:20px !important;
+}
+table.large-button-size {
+width:600px !important;
+height:70px !important;
+}
+table.video-2col-size {
+width:600px !important;
+}
+table.video-2col-width, td.video-2col-width {
+width:600px !important;
+}
+img.video-2col-thumb-size {
+width:600px !important;
+height:332px !important;
+}
+table.video-2col-outer-container-size, td.video-2col-outer-container-size {
+width: 600px !important;
+}
+table.video-2col-inner-container-size, td.video-2col-inner-container-size {
+width: 540px !important;
+}
+table.video-2col-inner-container-width, td.video-2col-inner-container-width=
+ {
+width: 540px !important;
+}
+div.section-title-font, td.section-title-font {
+font-size: 30px !important;
+line-height: 35px !important;
+}
+div.section-subtitle-font, td.section-subtitle-font {
+font-size: 25px !important;
+line-height: 25px !important;
+}
+table.video-3col-padding-height, td.video-3col-padding-height {
+height: 55px !important;
+}
+img.video-3col-thumb-size, table.video-3col-thumb-size {
+width: 600px !important;
+height: 332px !important;
+}
+table.video-3col-width, td.video-3col-width {
+width: 600px !important;
+}
+table.inner-3col-content-container-width, td.inner-3col-content-container-w=
+idth {
+width: 600px !important;
+}
+td.small-pad-width {
+width: 20px !important;
+}
+img.channel-avatar-size {
+width: 80px !important;
+height: 80px !important;
+}
+span.follow-and-subs-font {
+display: block !important;
+font-size: 24px !important;
+line-height: 27px !important;
+max-height:30px !important;
+}
+td.social-logo-padding-width {
+width: 32px !important;
+}
+table.channel-owner-block-content-width, td.channel-owner-block-content-wid=
+th {
+width: 420px !important;
+}
+td.show-only-on-mobile {
+display: block !important;
+width: 100% !important;
+max-height: 100% !important;
+overflow: visible !important;
+}
+td.show-not-on-mobile, tr.show-not-on-mobile {
+display: none !important;
+visibility: hidden !important;
+}
+}
+</style>
+<style type=3D"text/css">
+* {
+font-family: arial, Arial, sans-serif;
+}
+@media only screen and (max-device-width: 480px) {
+body[class=3Dsuppress-border-on-mobile] {
+margin: 0 !important;
+border: 0 !important;
+padding: 0 !important;
+}
+table[class=3Dsuppress-on-mobile], td[class=3Dsuppress-on-mobile], div[clas=
+s=3Dsuppress-on-mobile], img[class=3Dsuppress-on-mobile], span[class=3Dsupp=
+ress-on-mobile] {
+display: none !important;
+width: 0px !important;
+height: 0px !important;
+line-height: 0px !important;
+margin: 0 !important;
+border: 0 !important;
+padding: 0 !important;
+}
+table[class=3Douter-container-width], td[class=3Douter-container-width] {
+width: 640px !important;
+}
+td[class=3Douter-container-padding-width] {
+width: 20px !important;
+}
+table[class=3Dinner-container-width], td[class=3Dinner-container-width] {
+width: 600px !important;
+}
+table[class=3Dheader-container-width] {
+width: 600px !important;
+height: 100px !important;
+}
+td[class=3Dheader_left_padding_width] {
+width: 25px !important;
+}
+td[class=3Dlogo_container_size] {
+width: 575px !important;
+height: 100px !important;
+}
+img[class=3Dheader_logo_size] {
+height: 47px !important;
+}
+table[class=3Dfooter-padding-width], td[class=3Dfooter-padding-width] {
+width: 30px !important;
+}
+table[class=3Dfooter-width], td[class=3Dfooter-width] {
+width: 540px !important;
+}
+td[class=3Dfooter-font], div[class=3Dfooter-font] {
+font-size: 20px !important;
+line-height: 30px !important;
+}
+table[class=3Dfooter-content-padding-height], td[class=3Dfooter-content-pad=
+ding-height] {
+height: 30px !important;
+}
+table[class=3Dlarge-section-padding-height], td[class=3Dlarge-section-paddi=
+ng-height] {
+height: 16px !important;
+}
+table[class=3Dsmall-section-padding-height], td[class=3Dsmall-section-paddi=
+ng-height] {
+height: 20px !important;
+}
+table[class=3Dcontent-container-padding-width], td[class=3Dcontent-containe=
+r-padding-width] {
+width: 30px !important;
+}
+table[class=3Dcontent-container-padding-height], td[class=3Dcontent-contain=
+er-padding-height] {
+height: 30px !important;
+}
+table[class=3Dcontent-container-width], td[class=3Dcontent-container-width]=
+ {
+width: 540px !important;
+}
+span[class=3Dvideo-title-font-class], td[class=3Dvideo-title-font-class], d=
+iv[class=3Dgreeting-font], td[class=3Dgreeting-font] {
+font-size: 24px !important;
+line-height: 30px !important;
+}
+a[class=3Dvideo-link-font-class], div[class=3Dvideo-link-font-class], td[cl=
+ass=3Dvideo-link-font-class] {
+font-size: 20px !important;
+line-height: 30px !important;
+}
+span[class=3Dmeta-data-font], div[class=3Dmeta-data-font], a[class=3Dmeta-d=
+ata-font], td[class=3Dmeta-data-font] {
+display: block !important;
+font-size: 20px !important;
+line-height: 36px !important;
+}
+td[class=3Dsmall-meta-data-font] {
+font-size: 25px !important;
+line-height: 30px !important;
+}
+table[class=3Dvideo-content-padding-height], td[class=3Dvideo-content-paddi=
+ng-height] {
+height: 45px !important;
+}
+td[class=3Davatar-size], img[class=3Davatar-size] {
+width: 54px !important;
+height: 54px !important;
+}
+img[class=3Dlarge-avatar-size] {
+width: 32px !important;
+}
+img[class=3Dchannel-avatar-size] {
+width: 80px !important;
+height: 80px !important;
+}
+table[class=3Dmore-videos-size] {
+height: 100px !important;
+}
+div[class=3Dmore-videos-font], td[class=3Dmore-videos-font] {
+font-size: 24px !important;
+line-height: 27px !important;
+}
+table[class=3Dmore-videos-button-size] {
+width: 230px !important;
+height: 60px !important;
+}
+td[class=3Dmore-videos-button-width] {
+width: 250px !important;
+}
+td[class=3Dmore-videos-text-width] {
+width: 270px !important;
+}
+table[class=3Dvideo-spotlight-width] {
+width:600px !important;
+height:332px !important;
+}
+td[class=3Dvideo-spotlight-size], img[class=3Dvideo-spotlight-size] {
+width:600px !important;
+height:332px !important;
+}
+table[class=3Dregular-button-height] {
+height:60px !important;
+}
+td[class=3Dregular-button-padding-width] {
+width:20px !important;
+}
+td[class=3Dregular-button-font] {
+font-size:27.5px !important;
+line-height:27.5px !important;
+}
+img[class=3Dplay-button-img-size] {
+width:20px !important;
+height:20px !important;
+}
+table[class=3Dlarge-button-size] {
+width:600px !important;
+height:70px !important;
+}
+table[class=3Dvideo-2col-size] {
+width:600px !important;
+}
+table[class=3Dvideo-2col-width], td[class=3Dvideo-2col-width] {
+width:600px !important;
+}
+img[class=3Dvideo-2col-thumb-size] {
+width:600px !important;
+height:332px !important;
+}
+table[class=3Dvideo-2col-outer-container-size], td[class=3Dvideo-2col-outer=
+-container-size] {
+width: 600px !important;
+}
+table[class=3Dvideo-2col-inner-container-size], td[class=3Dvideo-2col-inner=
+-container-size] {
+width: 540px !important;
+}
+table[class=3Dvideo-2col-inner-container-width], td[class=3Dvideo-2col-inne=
+r-container-width] {
+width: 540px !important;
+}
+div[class=3Dsection-title-font], td[class=3Dsection-title-font] {
+font-size: 30px !important;
+line-height: 35px !important;
+}
+div[class=3Dsection-subtitle-font], td[class=3Dsection-subtitle-font] {
+font-size: 25px !important;
+line-height: 25px !important;
+}
+table[class=3Dvideo-3col-padding-height], td[class=3Dvideo-3col-padding-hei=
+ght] {
+height: 55px !important;
+}
+img[class=3Dvideo-3col-thumb-size], table[class=3Dvideo-3col-thumb-size] {
+width: 600px !important;
+height: 332px !important;
+}
+table[class=3Dvideo-3col-width], td[class=3Dvideo-3col-width] {
+width: 600px !important;
+}
+table[class=3Dinner-3col-content-container-width], td[class=3Dinner-3col-co=
+ntent-container-width] {
+width: 600px !important;
+}
+td[class=3Dsmall-pad-width] {
+width: 20px !important;
+}
+img[class=3Dchannel-avatar-size] {
+width: 80px !important;
+height: 80px !important;
+}
+img[class=3Dthumbnail-size-class], td[class=3Dthumbnail-size-class] {
+width: 80px !important;
+height: 44px !important;
+}
+span[class=3Dfollow-and-subs-font] {
+display: block !important;
+font-size: 24px !important;
+line-height: 27px !important;
+max-height:30px !important;
+}
+td[class=3Dsocial-logo-padding-width] {
+width: 32px !important;
+}
+table[class=3Dchannel-owner-block-content-width], td[class=3Dchannel-owner-=
+block-content-width] {
+width: 420px !important;
+}
+td[class=3Dshow-only-on-mobile] {
+display: block !important;
+width: 100% !important;
+max-height: 100% !important;
+overflow: visible !important;
+}
+td[class=3Dshow-not-on-mobile], tr[class=3Dshow-not-on-mobile]{
+display: none !important;
+visibility: hidden !important;
+}
+table., td. {
+width: 500px !important;
+}
+}
+</style>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head>
+<body class=3D"suppress-border-on-mobile">
+<span style=3D"display: none !important; visibility: hidden; width: 0; heig=
+ht: 0; opacity: 0; color: transparent;mso-hide:all"><a href=3D"https://www.=
+youtube.com/attribution_link?a=3DYFSBdPrlSlZDU52G&amp;u=3D/channel/UCrlzSqL=
+SGj8GIOeT5jrQsJA%3Ffeature%3Dem-uploademail" style=3D"text-decoration:none;=
+ color:#468ACA;">Diversity &amp; Comics</a> has uploaded <a href=3D"https:/=
+/www.youtube.com/attribution_link?a=3DYFSBdPrlSlZDU52G&amp;u=3D/watch%3Fv%3=
+DulkUG_wHeUI%26feature%3Dem-uploademail" style=3D"text-decoration:none; col=
+or:#468ACA;">DOOMSDAY CLOCK #7 Has The Two Funniest Panels In The History O=
+f Comics</a> Check out my JAWBREAKERS- L...</span>
+<table class=3D"outer-container-width" width=3D"680" bgcolor=3D"transparent=
+" align=3D"center" valign=3D"top" cellspacing=3D"0" cellpadding=3D"0" borde=
+r=3D"0">
+<tr>
+<td class=3D"outer-container-padding-width" width=3D'40'></td>
+<td class=3D"inner-container-width" width=3D'600'>
+<table class=3D"inner-container-width" width=3D'600' align=3D"center" cells=
+pacing=3D"0" cellpadding=3D"0" border=3D"0">
+<tr>
+<td>
+<table class=3D"header-container-width" width=3D'600' align=3D"left" valign=
+=3D"center" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+<tr>
+<td class=3D"logo_container_size" width=3D"584" valign=3D"center">
+<a href=3D"https://www.youtube.com/attribution_link?a=3DYFSBdPrlSlZDU52G&am=
+p;u=3D/"><img alt=3D"Youtube Logo" class=3D"header_logo_size" height=3D"30"=
+ src=3D"http://www.gstatic.com/youtube/img/branding/youtubelogo/1x/youtubel=
+ogo_60.png" border=3D"0" style=3D"display:block;"></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td style=3D"max-height:0px; font-size:0; display:none;"><hr class=3D"i=
+nner-container-width" width=3D"600" style=3D"height:0px; border:none; borde=
+r-color:transparent; padding:0px; margin:0px;"></td></tr>
+<tr><td class=3D"large-section-padding-height" height=3D"20"></td></tr>
+<tr>
+<td>
+<table class=3D"inner-container-width" width=3D'600' align=3D"center" valig=
+n=3D"center" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+<tr>
+<td>
+<table class=3D"video-spotlight-width" width=3D"600" align=3D"center" cells=
+pacing=3D"0" cellpadding=3D"0" border=3D"0">
+<!--[if gte mso 9]>
+<tr>
+<td class=3D"video-spotlight-size" width=3D"516" height=3D"290" align=3D"ce=
+nter">
+<a href=3D"http://www.youtube.com/watch?v=3DulkUG_wHeUI&feature=3Dem-upload=
+email" style=3D"text-decoration:none; display:block;" class=3D"nonplayable"=
+>
+<img class=3D"video-spotlight-size" src=3D"http://i.ytimg.com/vi/ulkUG_wHeU=
+I/sddefault.jpg?sqp=3D-oaymwEGCIAFEOgC&rs=3DAMzJL3nQ_JTG5zkX79MADy5Bfs9-Y_9=
+Z7A&feature=3Dem-uploademail" width=3D"516" height=3D"290" border=3D"0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style=3D"mso-hide:all">
+<td colspan=3D"3">
+<a href=3D"https://www.youtube.com/attribution_link?a=3DYFSBdPrlSlZDU52G&am=
+p;u=3D/watch%3Fv%3DulkUG_wHeUI%26feature%3Dem-uploademail" style=3D"text-de=
+coration:none; display:block;" class=3D"nonplayable">
+<table aria-label=3D"DOOMSDAY CLOCK #7 Has The Two Funniest Panels In The H=
+istory Of Comics" class=3D"video-spotlight-width" width=3D"600" align=3D"ce=
+nter" background=3D"http://i.ytimg.com/vi/ulkUG_wHeUI/sddefault.jpg?sqp=3D-=
+oaymwEGCIAFEOgC&rs=3DAMzJL3nQ_JTG5zkX79MADy5Bfs9-Y_9Z7A&feature=3Dem-upload=
+email"  style=3D"background-repeat:no-repeat; background-size:100% 100%;mso=
+-hide:all" height=3D"338" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+<tr style=3D"mso-hide:all"><td aria-label=3D"DOOMSDAY CLOCK #7 Has The Two =
+Funniest Panels In The History Of Comics">
+<img src=3D"https://www.gstatic.com/youtube/img/email/transparent_pixel.png=
+" alt=3D"DOOMSDAY CLOCK #7 Has The Two Funniest Panels In The History Of Co=
+mics" width=3D"600" style=3D"max-height: 300px;">
+</td></tr>
+<tr aria-label=3D"DOOMSDAY CLOCK #7 Has The Two Funniest Panels In The Hist=
+ory Of Comics" scope=3D"row" style=3D"mso-hide:all">
+<td  aria-label=3D"DOOMSDAY CLOCK #7 Has The Two Funniest Panels In The His=
+tory Of Comics" class=3D"footer-font" style=3D"color:#fff; text-align:right=
+; font-size: 12px;" valign=3D"bottom" width=3D"600">
+<div style=3D"margin-bottom:8px; margin-right:8px; border-radius:2px; backg=
+round-color: #212121; padding:2px 4px; display:inline-block;">10:02</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td>
+<table class=3D"large-section-padding-height" height=3D"16" cellspacing=3D"=
+0" cellpadding=3D"0" border=3D"0">
+<tr>
+<td class=3D"large-section-padding-height" height=3D"16"></td>
+</tr>
+</table>
+</td></tr>
+<tr>
+<td>
+<table class=3D"content-container-width" width=3D"560" cellspacing=3D"0" ce=
+llpadding=3D"0" border=3D"0" style=3D"table-layout:fixed;">
+<tr>
+<td class=3D"avatar-size"width=3D"32" style=3D"vertical-align:top;">
+<a href=3D"https://www.youtube.com/attribution_link?a=3DYFSBdPrlSlZDU52G&am=
+p;u=3D/channel/UCrlzSqLSGj8GIOeT5jrQsJA%3Ffeature%3Dem-uploademail">
+<img class=3D"avatar-size" src=3D"https://lh3.googleusercontent.com/-OLFeF0=
+3JIZo/AAAAAAAAAAI/AAAAAAAAAAA/T-GgYw5if80/s50-mo/photo.jpg" width=3D"32" st=
+yle=3D"display:block; border-radius: 50%;" border=3D"0">
+</a>
+</td>
+<td class=3D"small-pad-width" width=3D"16"></td>
+<td >
+<table class=3D"content-container-width" width=3D"540" cellspacing=3D"0" ce=
+llpadding=3D"0" border=3D"0" style=3D"table-layout:fixed;">
+<td valign=3D"center" >
+<table class=3D"content-container-width" cellspacing=3D"0" cellpadding=3D"0=
+" border=3D"0" style=3D"table-layout:fixed;">
+<tr>
+<td style=3D"padding-bottom:4px">
+<a href=3D"https://www.youtube.com/attribution_link?a=3DYFSBdPrlSlZDU52G&am=
+p;u=3D/watch%3Fv%3DulkUG_wHeUI%26feature%3Dem-uploademail" style=3D"text-de=
+coration:none;">
+<span class=3D"video-title-font-class" valign=3D"center" style=3D"font-fami=
+ly:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -web=
+kit-text-size-adjust:none;">
+DOOMSDAY CLOCK #7 Has The Two Funniest Panels In The History Of Comics
+</span>
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<a class=3D"video-link-font-class" href=3D"https://www.youtube.com/attribut=
+ion_link?a=3DYFSBdPrlSlZDU52G&amp;u=3D/channel/UCrlzSqLSGj8GIOeT5jrQsJA%3Ff=
+eature%3Dem-uploademail" style=3D"font-family:Roboto,sans-serif;font-size:1=
+2px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-si=
+ze-adjust:none; text-decoration:none;">
+Diversity &amp; Comics
+</a>
+</td>
+</tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table class=3D"large-section-padding-height" height=3D"16" cellspacing=3D"=
+0" cellpadding=3D"0" border=3D"0">
+<tr>
+<td class=3D"large-section-padding-height" height=3D"16"></td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<hr style=3D"display: block;height: 1px;border: 0;border-top: 1px solid #ea=
+eaea;margin-bottom: 16px;padding: 0;"></hr>
+<tr>
+<td>
+<table class=3D"inner-container-width" cellspacing=3D"0" cellpadding=3D"0" =
+border=3D"0" >
+<tr>
+<td class=3D"footer-font" style=3D"color: #757575; font-size:12px; line-hei=
+ght:16px; font-family:Roboto, sans-serif; letter-spacing:0px; -webkit-text-=
+size-adjust:none; word-wrap:break-word;">
+You were sent this email because you chose to receive updates from <a href=
+=3D"https://www.youtube.com/attribution_link?a=3DYFSBdPrlSlZDU52G&amp;u=3D/=
+channel/UCrlzSqLSGj8GIOeT5jrQsJA%3Ffeature%3Dem-uploademail" style=3D"text-=
+decoration:none; color:#065FD4;">Diversity &amp; Comics</a>. If you don't w=
+ant these updates anymore, you can <a href=3D"https://www.youtube.com/attri=
+bution_link?noapp=3D1&amp;a=3DYFSBdPrlSlZDU52G&amp;u=3D/channel_updates_uns=
+ubscribe%3Fuid%3D9Ib3R1VxRkZtVNuldPpiaQ%26channel_id%3DUCrlzSqLSGj8GIOeT5jr=
+QsJA%26token%3Dh1jaH453lMoMKGmzBPznRYLoFnV8MTUzOTI5MjQ3MUAxNTM5MjkyNDcx%26f=
+eature%3Dem-uploademail" style=3D"text-decoration:none; color:#065FD4;">uns=
+ubscribe here</a>.
+</td>
+</tr>
+<tr><td>
+<table class=3D"footer-content-padding-height" height=3D"16" cellspacing=3D=
+"0" cellpadding=3D"0" border=3D"0">
+<tr>
+<td class=3D"footer-content-padding-height" height=3D"16"></td>
+</tr>
+</table>
+</td></tr>
+<tr>
+<td class=3D"footer-font" style=3D"color: #757575; font-size:12px; line-hei=
+ght:16px; font-family:Roboto, sans-serif; letter-spacing:0px; text-decorati=
+on:none; -webkit-text-size-adjust:none;">
+=C2=A9 2018 YouTube, LLC 901 Cherry Ave, San Bruno, CA 94066
+</td>
+</tr>
+<tr><td>
+<table class=3D"footer-content-padding-height" height=3D"16" cellspacing=3D=
+"0" cellpadding=3D"0" border=3D"0">
+<tr>
+<td class=3D"footer-content-padding-height" height=3D"16"></td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td class=3D"outer-container-padding-width" width=3D'40'></td>
+</tr>
+<tr>
+<td colspan=3D"3">
+<table class=3D"content-container-width" width=3D"600" height=3D"18" align=
+=3D"left"  style=3D"background-repeat:no-repeat; background-size:100% 100%;=
+" height=3D"332" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+<tr>
+<td class=3D"outer-container-padding-width" width=3D'40'></td>
+<td width=3D"20" aria-label=3D"YouTube Link">
+<a href=3D"https://www.youtube.com/attribution_link?a=3DYFSBdPrlSlZDU52G&am=
+p;u=3D/youtube" target=3D"_blank">
+<img alt=3D"YouTube" class=3D"large-avatar-size" src=3D"https://www.gstatic=
+.com/youtube/img/email/youtube_email_icon_grey.png" height=3D"18" border=3D=
+"0">
+</a>
+</td>
+<td class=3D"social-logo-padding-width" width=3D"16"></td>
+<td aria-label=3D"Twitter Link">
+<a href=3D"https://twitter.com/YouTube" target=3D"_blank">
+<img alt=3D"Twitter" class=3D"large-avatar-size" src=3D"https://www.gstatic=
+.com/youtube/img/email/twitter_email_icon_grey.png" height=3D"18" border=3D=
+"0">
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+<img class=3D"open_tracking_img" src=3D"https://www.youtube.com/gen_204?a=
+=3Dem-uploademail" width=3D"1" height=3D"1" style=3D"display:none !importan=
+t; visibility: hidden; width: 0; height: 0; opacity: 0; color: transparent;=
+"/>
+
+--0000000000000b505f0577fa7584--
