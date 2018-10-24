@@ -27,6 +27,8 @@ if [[ $statu == "Charging," ]]; then
     stat="CHR"
 elif [[ $statu == "Unknown," ]]; then
     stat="FULL"
+elif [[ $statu == "Full," ]]; then
+    stat="FULL"
 else
     stat="DIS"
 fi
@@ -38,6 +40,8 @@ elif [[ $rawbat -le 25 ]]; then
 elif [[ $rawbat -le 75 ]]; then
     echo "<span background=\"$white\" foreground=\"$black\"> BAT $rawbat% $stat $tim2 </span>"
 elif [[ $statu == "Unknown," ]]; then
+    echo "<span background=\"$blue\" foreground=\"$black\"> BAT $rawbat% $stat $tim2</span>"
+elif [[ $statu == "Full," ]]; then
     echo "<span background=\"$blue\" foreground=\"$black\"> BAT $rawbat% $stat $tim2</span>"
 else
     echo "<span background=\"$blue\" foreground=\"$black\"> BAT $rawbat% $stat $tim2 </span>"

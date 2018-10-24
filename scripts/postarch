@@ -60,7 +60,7 @@ echo -e "${green}              >>>>>>>>>> INSTALL YAOURT APPS <<<<<<<<<<"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo -e "${purple} > POLYBAR <" && yaourt -S polybar-git
 echo -e "${purple} > i3LOCK-COLOR <" && yaourt -S i3-lock-color
-echo -e "${purple} > CHROMIUM <" && yaourt -S chromium-widevine
+echo -e "${purple} > CHROME STUFF <" && yaourt -S google-chrome && yaourt -S chrome-remote-desktop
 echo -e "${purple} > SPOTIFY <" && yaourt -S spotify
 echo -e "${purple} > GRIVE <" && yaourt -S grive
 echo -e "${purple} > CLIPIT <" && yaourt -S clipit
