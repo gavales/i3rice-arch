@@ -1,9 +1,12 @@
 #!/bin/bash
 
+black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+magenta=$(xrdb -query | grep '*color5' | awk '{print $NF}')
+
 stat=$(xset -q | grep 'Caps Lock:' | awk '{print $8}')
 
 if [[ $stat == "on" ]]; then
-    echo "<span background=\"$(bash ~/scripts/getxcolors magenta)\" foreground=\"$(bash ~/scripts/getxcolors black)\"> NUM LOCK </span>"
+    echo "<span background=\"$magenta\" foreground=\"$black\"> NUM LOCK </span>"
 else
     :
 fi

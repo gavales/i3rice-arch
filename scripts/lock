@@ -17,7 +17,7 @@ W="$red$t"  # wrong
 V="$green$t"  # verifying
 
 i3lock \
---image=/home/gavaro/.config/wall.png \
+--image=$HOME/.config/wall.png \
 --insidevercolor=$B	\
 --ringvercolor=$V	\
 \

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+
 DIR="${BLOCK_INSTANCE:-$HOME}"
 
 avail=$(df -h -P -l "$DIR"|grep 'dev'|awk '{print $4}')
@@ -7,7 +10,7 @@ usep=$(df -h -P -l "$DIR"|grep 'dev'|awk '{print $5}')
 use=${usep:0:-1}
 
 if [[ $use -ge 90 ]]; then
-    echo "<span background=\"#dc322f\" foreground=\"$(bash ~/scripts/getxcolors black)\"> HOME $avail </span>"
+    echo "<span background=\"#dc322f\" foreground=\"$black\">  $avail </span>"
 else
-    echo "<span background=\"$(bash ~/scripts/getxcolors blue)\" foreground=\"$(bash ~/scripts/getxcolors black)\"> HOME $avail </span>"
+    echo "<span background=\"$blue\" foreground=\"$black\">  $avail </span>"
 fi

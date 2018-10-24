@@ -11,33 +11,10 @@ magenta=$(xrdb -query | grep '*color5' | awk '{print $NF}')
 
 DIR="$HOME/.config/vis/colors/term"
 
-echo $magenta > $DIR
+echo "gradient=true" > $DIR
 echo $magenta >> $DIR
 echo $cyan >> $DIR
-echo $cyan >> $DIR
-echo $cyan >> $DIR
-echo $cyan >> $DIR
-echo $cyan >> $DIR
-echo $blue >> $DIR
-echo $blue >> $DIR
 echo $blue >> $DIR
 echo $green >> $DIR
-echo $green >> $DIR
-echo $yellow >> $DIR
 echo $yellow >> $DIR
 echo $red >> $DIR
-echo $red >> $DIR
-echo $red >> $DIR
-echo $yellow >> $DIR
-echo $yellow >> $DIR
-echo $green >> $DIR
-echo $green >> $DIR
-echo $blue >> $DIR
-echo $blue >> $DIR
-echo $blue >> $DIR
-echo $cyan >> $DIR
-echo $cyan >> $DIR
-echo $cyan >> $DIR
-echo $cyan >> $DIR
-echo $magenta >> $DIR
-echo $magenta >> $DIR

@@ -1,12 +1,15 @@
 #!/bin/bash
 
+black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+magenta=$(xrdb -query | grep '*color5' | awk '{print $NF}')
+
 playing=$(mpc current)
 
 if [ -z "$playing" ]
 then
 	:
 else
-	echo "<span background=\"$(bash ~/scripts/getxcolors magenta)\" foreground=\"$(bash ~/scripts/getxcolors black)\"> MPD ${playing} </span>"
+	echo "<span background=\"$magenta\" foreground=\"$black\"> MPD ${playing} </span>"
 fi
 
 case $BLOCK_BUTTON in
