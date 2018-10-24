@@ -1,0 +1,49 @@
+---
+title: My first R Markdown document
+author: Gavin Vales
+output: pdf_document
+documentclass: article
+classoption: a4paper
+fontsize: 11pt
+geometry: margin=1.25in
+---
+
+\tableofcontents
+
+# Section 1
+
+lhlwxnhrliuw
+
+## Subsection 1.1
+
+xlkjnhriu
+
+* kjhd
+* lkjhfd
+* dkjhswlu
+
+# Section 2
+
+_italics_
+
+**bold**
+
+~~strike-through~~
+
+\newpage
+
+# Compiling Code!
+
+## R!
+
+```{r}
+(56*23)^3
+```
+
+## Python!
+
+```{python}
+z = [1, 2, 3]
+for y in z: print(y*5)
+```
+
