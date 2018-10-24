@@ -3,10 +3,10 @@
 % PAGE STUFF
 \usepackage{multicol}
 \usepackage{setspace}
-\usepackage[top=2cm,bottom=2cm,left=3.8cm,right=1.9cm]{geometry}
+\usepackage[a4paper,margin=1in]{geometry}
 \setlength{\parindent}{2em}
 %\setlength{\parskip}{1em}
-\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\baselinestretch}{1.0}
 \pagenumbering{roman}
 
 
@@ -15,36 +15,36 @@
 \usepackage{minted}
 \usepackage{fontspec,lipsum}
 \defaultfontfeatures{Ligatures=TeX}
-\setromanfont{Calibri}
-\setsansfont{Calibri}
+\setromanfont{Arial}
+\setsansfont{Arial}
 \usepackage{titlesec}
 
-\titleformat{\section}
-{\LARGE\bfseries\color{NavyBlue}}
-{\Huge \thesection}
-{0.3em}
-{}
+%\titleformat{\section}
+%{\LARGE\bfseries}
+%{\thesection}
+%{0.3em}
+%{}
+%
+%\titleformat{\subsection}
+%{\large\bfseries}
+%{\thesubsection}
+%{1em}
+%{}
+%
+%\titleformat{\subsubsection}
+%{\it\bfseries}
+%{\thesubsubsection}
+%{1em}
+%{}
 
-\titleformat{\subsection}
-{\large\bfseries\color{RoyalBlue}}
-{\thesubsection}
-{1em}
-{}
-
-\titleformat{\subsubsection}
-{\it\bfseries\color{CornflowerBlue}}
-{\thesubsubsection}
-{1em}
-{}
-
-\titlespacing{\section}
-{1em}{1em}{1em}
-
-\titlespacing{\subsection}
-{0em}{1em}{0.125em}
-
-\titlespacing{\subsubsection}
-{0em}{1em}{0.125em}
+%\titlespacing{\section}
+%{1em}{1em}{1em}
+%
+%\titlespacing{\subsection}
+%{0em}{1em}{0.125em}
+%
+%\titlespacing{\subsubsection}
+%{0em}{1em}{0.125em}
 
 
 % GRAPHICS
@@ -59,7 +59,7 @@
 
 
 % TABLES
-%\usepackage[none]{hyphenat} % stops breaking up words in table
+%\usepackage[none]{hyphenat}
 \usepackage{array}
 
 
@@ -67,17 +67,21 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[RO,LE]{\small\thepage}
-\fancyhead[RE]{\small \textit{FEEG3003: Individual Project} -- Gavin Vales}
-\fancyhead[LO]{\small Gavin Vales -- \emph{\rightmark}}
-\fancyfoot[L,R,C]{}
-\renewcommand{\headrulewidth}{0.25pt}
-\renewcommand{\footrulewidth}{0.25pt}
+%\fancyhead[RO,LE]{\small\thepage}
+%\fancyhead[LO]{\small [Module Code]: [Module Name]}% odd page header and number to right top
+%\fancyhead[RE]{\small Vales, G., \textit{[TitleSubtitleETC]}}%Even page header and number at left top
+%\fancyfoot[L,R,C]{}
+\lhead{\color{Grey} [Module Code]: [Module Name]}
+\rhead{\color{Grey} [TitleSubtitleETC]}
+\cfoot{\color{Grey} \thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 \renewcommand{\sectionmark}[1]{\markright{#1}}
 
 
 % BIBLIOGRAPHY
-\usepackage[backend=biber,style=authoryear,natbib=true,maxcitenames=1]{biblatex}
+%\usepackage[backend=biber,style=authoryear,natbib=true,maxcitenames=1,sorting=none]{biblatex}
+\usepackage[backend=biber,natbib=true,sorting=none]{biblatex}
 \addbibresource{name.bib}
 
 
@@ -95,19 +99,44 @@
 \usepackage[hidelinks]{hyperref}
 
 
+% MAKING A TABLE
+%\begin{table}[H]
+%    \centering
+%    \begin{tabular}{l c r} % can also specify cell dimensions eg. p{1in} instead of l c r
+%        \bfseries{Date} & \bfseries{Number} & \bfseries{Letter} \\ \hline
+%        April 26 & 1 & A \\
+%        June 7 & 2 & B \\
+%        June 20 & 3 & C \\
+%    \end{tabular}
+%    \caption[this is the optional caption without reference]{local caption with reference
+%    \label{tab:table name}}
+%\end{table}
+
+% INSERTING A FIGURE
+%\begin{figure}[H]
+%    \centering
+%    \includegraphics[scale= ]{filename}
+%    \caption[Optional caption]{Real, local caption
+%    \label{fig:figurename}}
+%\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{document}
 
-\nomenclature[ga ]{$\alpha$}{Constant}
-\nomenclature[rx ]{$x$}{Variable}
-\printnomenclature
+\tableofcontents
 
-\section{Introduction}
+\section{Section}
 
+\subsection{Subsection}
+
+\subsubsection{Subsubsection}
 \lipsum[1]\\
 
-\cite{muscutt2017four}
+\cite{jenkins2003}
 
-\section{Nonsense}
+\printbibliography
 
-\lipsum[2-4]
 \end{document}

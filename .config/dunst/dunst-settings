@@ -43,4 +43,5 @@
     browser = /usr/bin/chromium
     icon_position = on
     icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    max_icon_size = 75
 

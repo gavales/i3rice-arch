@@ -1,10 +1,9 @@
 \documentclass[a4paper]{article}
 %\documentclass[11pt, a4paper, twoside]{article}
-% Comment the following line to NOT allow the usage of umlauts
 \usepackage[utf8]{inputenc}
 
+
 % PAGE STUFF %
-%%%%%%%%%%%%%%
 \usepackage{multicol}
 %\usepackage[top=2cm,bottom=2cm,left=3.8cm,right=1.9cm]{geometry}
 \usepackage[margin=1in]{geometry}
@@ -12,8 +11,8 @@
 %\setlength{\parskip}{1em}
 %\renewcommand{\baselinestretch}{1.25}
 
+
 % FONT STUFF %
-%%%%%%%%%%%%%%
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 %\usepackage{sectsty}
 %\sectionfont{\centering \sc \color{NavyBlue}}
@@ -36,8 +35,8 @@
 {1em}
 {}
 
+
 % GRAPHICS %
-%%%%%%%%%%%%
 \usepackage[pdftex]{graphicx}
 \usepackage{float}
 \usepackage{wrapfig}
@@ -47,13 +46,13 @@
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
 
+
 % TABLES %
-%%%%%%%%%%
-\usepackage[none]{hyphenat} % stops breaking up words in table
+\usepackage[none]{hyphenat}
 \usepackage{array}
 
+
 % HEADER and FOOTER %
-%%%%%%%%%%%%%%%%%%%%%
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -67,14 +66,15 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
+
 % BIBLIOGRAPHY %
-%%%%%%%%%%%%%%%%
 \usepackage[backend=biber,style=authoryear,natbib=true,maxcitenames=1]{biblatex}
 \addbibresource{[name].bib}
 
+
 % CLICKABLE REFERENCES %
-%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[hidelinks]{hyperref} % Allows for clickable references
+\usepackage[hidelinks]{hyperref}
+
 
 % MAKING A TABLE
 %\begin{table}[H]
