@@ -1,11 +1,50 @@
-shell 
-nano
-shellqq
+shell touch grive
+shell bash %s
+shell cp ~/Templates/md/name.md Con
+rename Autosub_Control.pdf
+bulk_rename
+bulkrename
+rename Epic Modern Futuristic Space Music.mp4
+rename Some Cyberpunk Futuristic Music (Remixed from Deus Ex Pancea Boss Mix).mp4
+shell touch disk
+open_with vim
+rename disk
+rename ram
+rename swap
+rename volume
+rename caps
+rename num
+open_with chromium
+shell bash %f
+shell sudo vim %s
+mkdir Design Journals
+shell mkdir Gavin Max Sam Noah Ilias Chris
+rename Control Diagram.pdf
+search i3blocks.conf
+scout -ftsea i3blo
+find i3blocks
 
-mkdir Screenshots
+wq
+rename i3ricemanjaro
 shell git clone https://github.com/StillANixRookie/i3rice-manjaro.git
-rename Music
+shell bash ~gitcommit.sh
+shell bash ~/gitcommit.sh
+shell touch 
+rename postmanj
+rename ws1.png
+rename .png
+rename ws2.png
+rename ws3.png
+rename ws4.png
+rename ws5.png
+shell 
+mkdir Uni
+shell cp ~/Templates/md/name.md presentationnotes.md
+open_with 
+shell unrar x %s /profiles
+shell unrar x %s /profiles/
+shell unrar e %s /profiles/
+shell unrar -x %s /profiles/
+rename ControlFlowchart (1).png
+rename ControlFlowchart.png
 delete
-shell grive
-filter zzzzzzzzzzzzzzzzzzzzh
-find`
