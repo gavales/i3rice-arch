@@ -1,22 +1,22 @@
 !!colors
 
-!boat
-#define blackd		#140d26
-#define blackl		#9a8f85
-#define redl		#ba7f56
-#define redd		#ba7f56
-#define greenl		#b5a888
-#define greend		#b5a888
-#define yellowl		#81a39a
-#define yellowd		#81a39a
-#define bluel		#3a51aa
-#define blued		#3a51aa
-#define magental	#9059a3
-#define magentad	#9059a3
-#define cyanl		#ad4554
-#define cyand		#ad4554
-#define whitel		#c7c7c6
-#define whited		#c7c7c6
+!!boat
+!#define blackd		#140d26
+!#define blackl		#9a8f85
+!#define redl		#ba7f56
+!#define redd		#ba7f56
+!#define greenl		#b5a888
+!#define greend		#b5a888
+!#define yellowl		#81a39a
+!#define yellowd		#81a39a
+!#define bluel		#3a51aa
+!#define blued		#3a51aa
+!#define magental	#9059a3
+!#define magentad	#9059a3
+!#define cyanl		#ad4554
+!#define cyand		#ad4554
+!#define whitel		#c7c7c6
+!#define whited		#c7c7c6
 
 !!lake
 !#define blackd		#253327
@@ -90,23 +90,23 @@
 !#define whited		#adbbcc
 !#define whitel		#adbbcc
 
-!!Solarized
-!#define blackd		#073642
-!#define blackl		#002b36
-!#define redd		#dc322f
-!#define redl		#cb4b16
-!#define greend		#859900
-!#define greenl		#586e75
-!#define yellowd		#b58900
-!#define yellowl		#657b83
-!#define blued		#268bd2
-!#define bluel		#839496
-!#define magentad	#d33682
-!#define magental	#6c71c4
-!#define cyand		#2aa198
-!#define cyanl		#93a1a1
-!#define whited		#eee8d5
-!#define whitel		#fdf6e3
+!Solarized
+#define blackd		#073642
+#define blackl		#002b36
+#define redd		#dc322f
+#define redl		#cb4b16
+#define greend		#859900
+#define greenl		#586e75
+#define yellowd		#b58900
+#define yellowl		#657b83
+#define blued		#268bd2
+#define bluel		#839496
+#define magentad	#d33682
+#define magental	#6c71c4
+#define cyand		#2aa198
+#define cyanl		#93a1a1
+#define whited		#eee8d5
+#define whitel		#fdf6e3
 
 *background:			blackd
 *foreground:			whitel
