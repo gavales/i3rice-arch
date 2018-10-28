@@ -304,6 +304,7 @@ bindsym $mod+Return exec $term
 # APPLICATION LAUNCHER
 bindsym $mod+Ctrl+b exec $term -e 'bmenu'
 bindsym $mod+d exec rofi -show drun
+bindsym $mod+Ctrl+d exec dmenu_run -fn "Ubuntu Mono:size=14" -nb "$black" -nf "$white" -sf "$black" -sb "$blue"
 bindsym $mod+z exec --no-startup-id morc_menu
 
 # BRIGHTNESS CONTROLS
