@@ -26,7 +26,7 @@ set $term2 gnome-terminal
 
 # BROWSER(S)
 set $browser qutebrowser
-set $browser2 chromium
+set $browser2 google-chrome-stable
 
 # COLORS
 set_from_resource $black	color0
@@ -41,6 +41,8 @@ set_from_resource $white	color15
 # HOME DIR
 set $home /home/gavaro
 #set $home /home/gavarch
+set $scripts scripts
+set $scriptpics scriptpics
 
 # WORKSPACE NAMES
 set $ws1 " 1 "
@@ -79,7 +81,8 @@ client.placeholder      $black $black $white $black $black
 # BAR
 bar {
 	i3bar_command i3bar -t
-	status_command i3blocks -c ~/scripts/i3blocks.conf
+	status_command i3blocks -c ~/$scripts/i3blocks.conf
+#	status_command i3blocks
 	position bottom
 
 	bindsym button4 nop
@@ -329,14 +332,11 @@ bindsym $mod+Shift+F3 exec gksu pcmanfm
 #bindsym $mod+F5 exec $term -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
-#bindsym $mod+Shift+d --release exec "killall dunst; polybar-msg cmd restart;\
-#	 bash ~/scripts/dunstthemeupdate;\
-#	 exec notify-send 'Dunst & Polybar have been restarted.'"
 bindsym $mod+Shift+d --release exec "killall dunst; xrdb -load ~/.Xresources;\
-	 bash ~/scripts/dunstthemeupdate;\
-	 bash ~/scripts/mkblocksconf;\
-	 bash ~/scripts/mkvistheme;\
-	 exec notify-send 'Dunst & .Xresources have been reloaded, and i3blocks.conf & vis config have been updated.'"
+	 bash ~/$scripts/dunstthemeupdate;\
+	 bash ~/$scripts/mkblocksconf;\
+	 bash ~/$scripts/mkvistheme;\
+	 exec notify-send '.Xresources has been reloaded' -i ~/$scriptpics/settingswhite.png"
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 #############################################################################
@@ -405,7 +405,7 @@ bindsym $mod+Ctrl+e move workspace to output primary
 bindsym $mod+Ctrl+m xrandr --output eDP1 --primary
 
 # SCROT
-bindsym Print exec "scrot $home/Pictures/ScreenShots/`date +%Y-%m-%d_%H:%M:%S`_`xdpyinfo  | grep -oP 'dimensions:\s+\K\S+'`.png ;exec notify-send 'Screenshot saved to ~/Pictures/ScreenShots.'"
+bindsym Print exec bash ~/$scripts/screenshot
 
 # RESTART POLYBAR
 bindsym $mod+Ctrl+p --release exec polybar top
@@ -417,7 +417,10 @@ bindsym $mod+Shift+b exec $term -name BASHMOUNT -e bashmount
 bindsym $mod+r exec --no-startup-id $term -name RSS -e newsboat
 
 # GRIVE SYNC
-bindsym $mod+Shift+g exec bash ~/scripts/grive
+bindsym $mod+Shift+g exec bash ~/$scripts/grive
+
+# GIT REPO UPDATE
+bindsym $mod+Ctrl+g exec bash ~/$scripts/gitcommit
 
 # GOOGLE DOCs
 bindsym $mod+Ctrl+q exec $browser2 --new-window\
@@ -426,7 +429,6 @@ bindsym $mod+Ctrl+w exec $browser2 --new-window\
  --app=https://docs.google.com/spreadsheets/u/0/
 bindsym $mod+Ctrl+r exec $browser2 --new-window\
  --app=https://docs.google.com/presentation/u/0/
-
 
 # OPEN CONFIGS
 bindsym $mod+Ctrl+1 exec --no-startup-id $term -e vim ~/.config/i3/config
