@@ -71,6 +71,7 @@ echo -e "${purple} > LIGHT <" && yaourt -S light
 echo -e "${purple} > BASHMOUNT <" && yaourt -S bashmount
 echo -e "${purple} > i3BLOCKS <" && yaourt -S i3blocks-gaps-git
 echo -e "${purple} > PAMAC <" && yaourt -S pamac-aur
+echo -e "${purple} > ROS <" && yaourt -S ros-melodic-desktop-full
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo -e "${green}                 >>>>>>>>>> CLI-VISUALISER <<<<<<<<<<"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
@@ -85,5 +86,11 @@ echo -e "${green}                >>>>>>>>>> MAKE MATLAB ICON <<<<<<<<<<"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 sudo wget "https://apprecs.org/gp/images/app-icons/300/c4/in.pxlcraft.matlabexpo.jpg" -O /usr/share/icons/matlab.png
 sudo wget "https://help.ubuntu.com/community/MATLAB?action=AttachFile&do=get&target=matlab-r2012a.desktop" -O /usr/share/applications/matlab.desktop
+echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+echo -e "${green}                   >>>>>>>>>> ROS SETUP <<<<<<<<<<"
+echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+sudo rosdep init
+rosdep update
+echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 
 echo -e "NOW I THINK ALL YOU HAVE TO DO IS REBOOT AND LOGIN AGAIN AND THEN STARTX?"
