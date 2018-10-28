@@ -33,3 +33,5 @@ blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
 
   cat dunst-theme dunst-settings > dunstrc
 )
+
+notify-send 'Dunst color theme updated' -i ~/scriptpics/settingswhite.png

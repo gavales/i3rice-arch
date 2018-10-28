@@ -152,3 +152,5 @@ echo "command=bash ~/scripts/td" >> i3blocks.conf
 echo "border=$whited" >> i3blocks.conf
 echo "interval=1" >> i3blocks.conf
 )
+
+notify-send 'i3blocks reloaded' -i ~/scriptpics/settingswhite.png

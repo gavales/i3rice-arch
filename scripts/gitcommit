@@ -13,12 +13,12 @@ if [[ -z $repo ]]; then
     :
 else
     cd ~/$repo
-    notify-send "Updating your $repo git repo..."
+    notify-send "Updating your $repo git repo..." -i ~/scriptpics/gitwhite.png
     git add .
     git commit -m "$(date +"%c")"
     git fetch
     git merge origin/master
     git push -u origin master
     cd
-    notify-send "... $repo repo updated."
+    notify-send "... $repo repo updated." -i ~/scriptpics/gitwhite.png
 fi
