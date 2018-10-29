@@ -1,0 +1,54 @@
+# TOP BAR
+#bar {
+#	i3bar_command i3bar
+#	status_command i3blocks -c ~/.i3/bartop.conf
+#	position top
+#	height 30
+#	tray_output none
+#
+#
+#	bindsym button4 nop
+#	bindsym button5 nop
+#	font pango:Ubuntu Mono 11
+#	workspace_buttons no
+#
+#	colors {
+#	background #002b36
+#
+##			   border  backgr. text
+#	focused_workspace  $green $green $black
+#	active_workspace   $green $green $black
+#	inactive_workspace #595B5B00 #28333900 $white
+#	binding_mode       $black $black $red
+#	urgent_workspace   $black $black $red
+#	}
+#}
+
+## BOTTOM BAR
+#bar {
+#	i3bar_command i3bar -t
+#	status_command i3blocks -c ~/.i3/barbot.conf
+#	position bottom
+#	height 30
+##	tray_output none
+#
+#	bindsym button4 nop
+#	bindsym button5 nop
+#	font pango:Ubuntu Mono, FontAwesome 11
+#	strip_workspace_numbers yes
+#
+#	colors {
+#	background #002b3600
+#
+##			   border  backgr. text
+#	focused_workspace  $green $green $black
+#	active_workspace   $green $green $black
+#	inactive_workspace #595B5B00 #28333900 $white
+#	binding_mode       #dc322f00 #dc322f00 $red
+#	urgent_workspace   #dc322f00 #dc322f00 $red
+#	}
+#}
+
+# hide/unhide i3status bar
+bindsym $mod+b bar mode toggle
+
