@@ -151,10 +151,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # RESIZE WINDOWS
-bindsym $mod+y resize shrink width 10 px or 10 ppt
-bindsym $mod+u resize grow height 10 px or 10 ppt
-bindsym $mod+i resize shrink height 10 px or 10 ppt
-bindsym $mod+o resize grow width 10 px or 10 ppt
+bindsym $mod+y resize shrink left 5 px or 5 ppt, resize shrink right 5 px or 5 ppt
+bindsym $mod+i resize grow down 5 px or 5 ppt, resize grow up 5 px or 5 ppt
+bindsym $mod+u resize shrink down 5 px or 5 ppt, resize shrink up 5 px or 5 ppt
+bindsym $mod+o resize grow left 5 px or 5 ppt, resize grow right 5 px or 5 ppt
 
 # WORKSPACE BACK & FORTH
 workspace_auto_back_and_forth yes
