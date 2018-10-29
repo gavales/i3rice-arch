@@ -485,3 +485,5 @@ exec --no-startup-id $term -name WORK -e ranger
 assign [instance="WORK"]	$ws5
 
 exec $browser2
+
+exec_always notify-send 'i3 (re)loaded!' -i ~/$scriptpics/i3white.png
