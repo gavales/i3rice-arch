@@ -346,7 +346,6 @@ bindsym $mod+F9 --release exec "killall dunst; xrdb -load ~/.Xresources;\
 	 bash ~/$scripts/mkvistheme;\
 	 exec notify-send '.Xresources has been reloaded' -i ~/$scriptpics/settingswhite.png"
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
-bindsym $mod+F7 exec bash ~/$scripts/multimon
 
 #############################################################################
 ### OWN BINDINGS
@@ -408,6 +407,7 @@ bindsym $mod+semicolon exec redshift -P -O 3700
 bindsym $mod+apostrophe exec redshift -x
 
 # MULTI-MONITOR SETTINGS
+bindsym $mod+F7 exec bash ~/$scripts/multimon
 bindsym $mod+Ctrl+v move workspace to output VGA1
 bindsym $mod+Ctrl+h move workspace to output HDMI1
 bindsym $mod+Ctrl+e move workspace to output primary
