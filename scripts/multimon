@@ -1,0 +1,33 @@
+#!/bin/bash
+
+black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+font=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
+dmenucolors="-fn "${font:4}" -nb "$black" -nf "$white" -sf "$black" -sb "$blue""
+
+conn=$(xrandr -q | grep ' connected' | awk '{print $1}')
+lenconnected=$(xrandr -q | grep ' connected' | awk '{print $1}' | wc -l)
+
+mode=$(echo -e "1 Monitor\n2 Monitors\n3 Monitors\nARandR" | dmenu -i -p "Choose mode:" $dmenucolors)
+
+if [[ $lenconnected == 1 ]]; then
+	echo "xrandr --output "$conn" --auto"
+elif [[ $mode == "1 Monitor" ]]; then
+	echo "xrandr --output "$(echo $conn | tr ' ' '\n' | dmenu -i -p "Choose monitor" $dmenucolors)" --auto"
+elif [[ $mode == "2 Monitors" ]]; then
+	primary=$(echo $conn | tr ' ' '\n' | dmenu -i -p "Choose primary monitor:" $dmenucolors)
+	second=$(echo $conn | tr ' ' '\n' | grep -v "$primary")
+	direction=$(echo -e "left-of\nright-of\nabove\nbelow\nsame-as" | dmenu -i -p "Choose position of second monitor:" $dmenucolors)
+	echo "xrandr --output "$primary" --auto --output "$secondary" --"$direction" "$primary" --auto"
+elif [[ $mode == "3 Monitors" ]]; then
+	primary=$(echo $conn | tr ' ' '\n' | dmenu -i -p "Choose primary monitor:" $dmenucolors)
+	second=$(echo $conn | tr ' ' '\n' | grep -v "$primary" | dmenu -i -p "Choose 2nd monitor:" $dmenucolors)
+	third=$(echo $conn | tr ' ' '\n' | grep -v "$primary" | grep -v "$second")
+	seconddirection=$(echo -e "left-of\nright-of\nabove\nbelow\nsame-as" | dmenu -i -p "Choose position of second monitor:" $dmenucolors)
+	thirddirection=$(echo -e "left-of\nright-of\nabove\nbelow\nsame-as" | dmenu -i -p "Monitor 3 will be..." $dmenucolors)
+	which=$(echo $conn | tr ' ' '\n' | dmenu -i -p "Which monitor?" $dmenucolors)
+	echo "xrandr --output "$primary" --auto --output "$second" --"$seconddirection" "$primary" --auto --output "$third" --"$thirddirection" "$which" --auto"
+elif [[ $mode == "ARandR" ]]; then
+	arandr ; exit
+fi
