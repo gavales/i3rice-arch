@@ -73,6 +73,7 @@ echo -e "${purple} > i3BLOCKS <" && yaourt -S i3blocks-gaps-git
 echo -e "${purple} > PAMAC <" && yaourt -S pamac-aur
 echo -e "${purple} > URXVT-CLIPBOARD <" && yaourt -S urxvt-clipboard
 echo -e "${purple} > URXVT-RESIZE-FONT <" && yaourt -S urxvt-resize-font-git
+echo -e "${purple} > URXVT-TABBEDEX <" && yaourt -S urxvt-tabbedex
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo -e "${green}                 >>>>>>>>>> CLI-VISUALISER <<<<<<<<<<"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
