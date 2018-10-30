@@ -71,7 +71,8 @@ echo -e "${purple} > LIGHT <" && yaourt -S light
 echo -e "${purple} > BASHMOUNT <" && yaourt -S bashmount
 echo -e "${purple} > i3BLOCKS <" && yaourt -S i3blocks-gaps-git
 echo -e "${purple} > PAMAC <" && yaourt -S pamac-aur
-echo -e "${purple} > ROS <" && yaourt -S ros-melodic-desktop-full
+echo -e "${purple} > URXVT-CLIPBOARD <" && yaourt -S urxvt-clipboard
+echo -e "${purple} > URXVT-RESIZE-FONT <" && yaourt -S urxvt-resize-font-git
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo -e "${green}                 >>>>>>>>>> CLI-VISUALISER <<<<<<<<<<"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
@@ -89,8 +90,8 @@ sudo wget "https://help.ubuntu.com/community/MATLAB?action=AttachFile&do=get&tar
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo -e "${green}                   >>>>>>>>>> ROS SETUP <<<<<<<<<<"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-sudo rosdep init
-rosdep update
-echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+#sudo rosdep init
+#rosdep update
+#echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 
 echo -e "NOW I THINK ALL YOU HAVE TO DO IS REBOOT AND LOGIN AGAIN AND THEN STARTX?"
