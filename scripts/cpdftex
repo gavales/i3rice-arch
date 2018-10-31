@@ -1,0 +1,7 @@
+#!/bin/bash
+
+file=$1
+pdflatex -interaction=nonstopmode -shell-escape ${file}.tex
+biber ${file}.bcf
+pdflatex -interaction=nonstopmode -shell-escape ${file}.tex
+pdflatex -interaction=nonstopmode -shell-escape ${file}.tex

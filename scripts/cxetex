@@ -1,0 +1,7 @@
+#!/bin/bash
+
+file=$1
+xelatex -interaction=nonstopmode -shell-escape ${file}.tex
+biber ${file}.bcf
+xelatex -interaction=nonstopmode -shell-escape ${file}.tex
+xelatex -interaction=nonstopmode -shell-escape ${file}.tex

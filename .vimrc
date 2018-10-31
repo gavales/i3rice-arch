@@ -5,10 +5,8 @@ filetype plugin on    " required
 execute pathogen#infect()
 syntax enable
 set encoding=utf-8
-set background=dark
-colorscheme slate
 set number
-" set relativenumber
+set relativenumber
 set hls
 set is
 set wrap
@@ -16,6 +14,7 @@ set linebreak
 set nolist  " list disables linebreak
 set textwidth=0
 set wrapmargin=0
+set tabstop=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ CHANGE HIGHLIGHT COLOURS
@@ -127,39 +126,31 @@ autocmd FileType m setlocal textwidth=78
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ LATEX-SUITE
 
-	let g:Tex_DefaultTargetFormat = 'pdf'
-	let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode -shell-escape $*'
-	"let g:Tex_ViewRule_pdf = '/usr/bin/evince'
-	let g:Tex_ViewRule_pdf = '/usr/bin/zathura'
-	let g:Tex_MultipleCompileFormats='pdf,dvi'
-	let g:Tex_BibtexFlavor = 'biber'
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode -shell-escape $*'
+"let g:Tex_ViewRule_pdf = '/usr/bin/evince'
+let g:Tex_ViewRule_pdf = '/usr/bin/zathura'
+let g:Tex_MultipleCompileFormats='pdf,dvi'
+let g:Tex_BibtexFlavor = 'biber'
 
-	"let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
-	"let g:Tex_CompileRule_dvi = 'latex --interaction=nonstopmode $*'
-	"let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
-	"let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
+"let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
+"let g:Tex_CompileRule_dvi = 'latex --interaction=nonstopmode $*'
+"let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
+"let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
 
-" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
-	filetype plugin on
-
-" IMPORTANT: grep will sometimes skip displaying the file name if you
-" search in a singe file. This will confuse Latex-Suite. Set your grep
-" program to always generate a file-name.
-	set grepprg=grep\ -nH\ $*
-
-" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
-" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-" The following changes the default filetype back to 'tex':
-	let g:tex_flavor='latex'
-
-" TIP: if you write your \label's as \label{fig:something}, then if you
-" type in \ref{fig: and press <C-n> you will automatically cycle through
-" all the figure labels. Very useful!
-	set iskeyword+=:
+filetype plugin on "invoke latex-suite when opening tex file
+set grepprg=grep\ -nH\ $* "set grep to always generate filename
+let g:tex_flavor='latex' "invoke tex, not plaintex, for empty tex file
+set iskeyword+=: "press <C-n> to cycle through \label's
 
 " COMPILE PDF
-autocmd Filetype tex map \cp :!pdflatex<space>-interaction=nonstopmode<space>-shell-escape<space><C-r>%<Enter><Enter>
-autocmd Filetype tex map \cx :!xelatex<space>-interaction=nonstopmode<space>-shell-escape<space><C-r>%<Enter><Enter>
+autocmd Filetype tex map \cp :!bash<space>~/scripts/cpdftex<space><C-r>%<BS><BS><BS><BS><Enter><Enter>
+autocmd Filetype tex map \cx :!bash<space>~/scripts/cxetex<space><C-r>%<BS><BS><BS><BS><Enter><Enter>
+
+" VIEW PDF
+autocmd Filetype tex map \vp :silent<space>!bash<space>~/scripts/openpdf<space><C-r>%<BS><BS><BS>pdf<Enter>
+autocmd Filetype rmd map \vp :silent<space>!bash<space>~/scripts/openpdf<space><C-r>%<BS><BS><BS>pdf<Enter>
+autocmd Filetype markdown map \vp :silent<space>!bash<space>~/scripts/openpdf<space><C-r>%<BS><BS>pdf<Enter>
 
 " BIBER
 autocmd Filetype tex map \cb :!biber<space><C-r>%<BS><BS><BS>bcf<Enter><Enter>
@@ -170,59 +161,60 @@ autocmd Filetype tex map \mi :!makeindex<space><C-r>%<BS><BS><BS><BS>
 	\.nls<Enter><Enter>
 
 " Luke Smith's Fantastic Vim macros
-autocmd FileType tex inoremap .ph <++><Space>
+autocmd FileType tex inoremap =ph <++><Space>
+autocmd FileType tex inoremap =pc \parencite{}<++><Esc>T{i
+autocmd FileType tex inoremap =pt \item 
 
-autocmd FileType tex inoremap .bf \textbf{}<++><Esc>T{i
-autocmd FileType tex inoremap .it \textit{}<++><Esc>T{i
-autocmd FileType tex inoremap .tt \texttt{}<++><Esc>T{i
-autocmd FileType tex inoremap .sc \textsc{}<++><Esc>T{i
-autocmd FileType tex inoremap .ci \cite{}<++><Esc>T{i
-autocmd FileType tex inoremap .ct \citet{}<++><Esc>T{i
-autocmd FileType tex inoremap .cp \citep{}<++><Esc>T{i
-autocmd FileType tex inoremap .pt \item 
-
-autocmd FileType tex inoremap .chap \chapter{}<Enter><Enter><++><Esc>2kf}i
-autocmd FileType tex inoremap .sec \section{}<Enter><Enter><++><Esc>2kf}i
-autocmd FileType tex inoremap .ssec \subsection{}<Enter><Enter><++><Esc>2kf}i
-autocmd FileType tex inoremap .sssec \subsubsection{}<Enter><Enter><++><Esc>2kf}i
-
-autocmd FileType tex inoremap .rf \ref{fig:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap .rt \ref{tab:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap .re \ref{eq:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap .rs \ref{sec:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap .rss \ref{ssec:}<Space><++><Esc>T:i
-
-autocmd FileType tex inoremap .lf \label{fig:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap .lt \label{tab:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap .le \label{eq:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap .ls \label{sec:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap .lss \label{ssec:}<Space><++><Esc>T:i
-
-autocmd FileType tex inoremap .bg \begin{DELRN}<Enter><++><Enter>\end{DELRN}
+autocmd FileType tex inoremap =bf \textbf{}<++><Esc>T{i
+autocmd FileType tex inoremap =bg \begin{DELRN}<Enter><++><Enter>\end{DELRN}
 	\<Enter><Enter><++><Esc>4k0fR:MultipleCursorsFind<Space>DELRN<Enter>c
-autocmd FileType tex inoremap .up \usepackage{}<++><Esc>T{i
-autocmd FileType tex inoremap .bm \begin{multicols}{2}<Enter><Enter><Enter>
+autocmd FileType tex inoremap =bm \begin{multicols}{2}<Enter><Enter><Enter>
 	\<Enter>\end{multicols}<Enter><Enter><++><Esc>4k0fR
-autocmd FileType tex inoremap .str {\setstretch{<++>}<Enter><++><Enter>
+
+autocmd FileType tex inoremap =it \textit{}<++><Esc>T{i
+
+autocmd FileType tex inoremap =tt \texttt{}<++><Esc>T{i
+autocmd FileType tex inoremap =tc \textcite{}<++><Esc>T{i
+
+autocmd FileType tex inoremap =st {\setstretch{<++>}<Enter><++><Enter>
 	\<Enter>}<Enter><Enter><++><Esc>5k0fR<Esc>T:i
+autocmd FileType tex inoremap =sc \textsc{}<++><Esc>T{i
+autocmd FileType tex inoremap =s1 \section{}<Enter><++><Esc>kf}i
+autocmd FileType tex inoremap =s2 \subsection{}<Enter><++><Esc>kf}i
+autocmd FileType tex inoremap =s3 \subsubsection{}<Enter><++><Esc>kf}i
+
+autocmd FileType tex inoremap =ci \cite{}<++><Esc>T{i
+autocmd FileType tex inoremap =ct \citet{}<++><Esc>T{i
+autocmd FileType tex inoremap =cp \citep{}<++><Esc>T{i
+autocmd FileType tex inoremap =ch \chapter{}<Enter><++><Esc>kf}i
+
+autocmd FileType tex inoremap =rf \ref{fig:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap =rt \ref{tab:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap =re \ref{eq:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap =rs1 \ref{sec:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap =rs2 \ref{ssec:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap =rs3 \ref{sssec:}<Space><++><Esc>T:i
+
+autocmd FileType tex inoremap =lf \label{fig:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap =lt \label{tab:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap =le \label{eq:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap =ls1 \label{sec:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap =ls2 \label{ssec:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap =ls3 \label{sssec:}<Space><++><Esc>T:i
+
+autocmd FileType tex inoremap =up \usepackage{}<++><Esc>T{i
 
 autocmd FileType tex map \ob :sp<space><C-r>%<BS><BS><BS>bib<Enter>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ PDF wordcount
 
-autocmd Filetype tex map \ps :!pdftops<space><C-r>%<BS><BS><BS>
-	\pdf<Enter><Enter>
-autocmd Filetype tex map \wc :!ps2ascii<space><C-r>%<BS><BS><BS>
-	\ps<bar>wc<space>-w<Enter>
-autocmd Filetype markdown map \ps :!pdftops<space><C-r>%<BS><BS>
-	\pdf<Enter><Enter>
-autocmd Filetype markdown map \wc :!ps2ascii<space><C-r>%<BS><BS>
-	\ps<bar>wc<space>-w<Enter>
-autocmd Filetype rmd map \ps :!pdftops<space><C-r>%<BS><BS><BS>
-	\pdf<Enter><Enter>
-autocmd Filetype rmd map \wc :!ps2ascii<space><C-r>%<BS><BS><BS>
-	\ps<bar>wc<space>-w<Enter>
+autocmd Filetype tex map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
+	\<BS><BS><BS><BS><Enter>
+autocmd Filetype rmd map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
+	\<BS><BS><BS><BS><Enter>
+autocmd Filetype markdown map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
+	\<BS><BS><BS><Enter>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ MARKDOWN FILES

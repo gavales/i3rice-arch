@@ -2,6 +2,8 @@
 # ~/.bashrc
 #
 
+set -o vi
+
 [[ $- != *i* ]] && return
 
 colors() {
@@ -163,3 +165,4 @@ export PATH="/home/gavaro/anaconda3/bin:$PATH"
 
 # added by Anaconda2 installer
 export PATH="/home/gavaro/anaconda2/bin:$PATH"
+
