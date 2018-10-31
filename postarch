@@ -24,7 +24,7 @@ cd
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo -e "${green}           >>>>>>>>>> INSTALLING YOUR PROGRAMS <<<<<<<<<<"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-sudo pacman -S xorg-server xorg-xinit i3 i3status feh dunst rofi dmenu ranger w3m sxiv lxappearance ncurses fftw qutebrowser nautilus neomutt evince mupdf pinta redshift mplayer r tk gcc-fortran mpd mpc ncmpcpp newsboat transmission-cli opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-citeproc python-pygments python2-pygments biber rxvt-unicode libmpdclient yajl dialog wpa_supplicant wireless_tools networkmanager network-manager-applet texlive-most papirus-icon-theme paper-icon-theme-git ntfs-3g lm_sensors sysstat polkit-gnome gnome-keyring acpi unrar dunstify
+sudo pacman -S xorg-server xorg-xinit i3 i3status feh dunst rofi dmenu ranger w3m sxiv lxappearance ncurses fftw nautilus neomutt evince mupdf pinta redshift mplayer r tk gcc-fortran mpd mpc ncmpcpp newsboat transmission-cli opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-citeproc python-pygments python2-pygments biber rxvt-unicode libmpdclient yajl dialog wpa_supplicant wireless_tools networkmanager network-manager-applet texlive-most papirus-icon-theme paper-icon-theme-git ntfs-3g lm_sensors sysstat polkit-gnome gnome-keyring acpi unrar dunstify
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo -e "${green}             >>>>>>>>>> NETWORK MANAGER STUFF <<<<<<<<<<"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
@@ -58,7 +58,6 @@ sudo cp sudoers /etc/
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo -e "${green}              >>>>>>>>>> INSTALL YAOURT APPS <<<<<<<<<<"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-echo -e "${purple} > POLYBAR <" && yaourt -S polybar-git
 echo -e "${purple} > i3LOCK-COLOR <" && yaourt -S i3-lock-color
 echo -e "${purple} > CHROME STUFF <" && yaourt -S google-chrome && yaourt -S chrome-remote-desktop
 echo -e "${purple} > SPOTIFY <" && yaourt -S spotify
