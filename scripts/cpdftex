@@ -2,6 +2,16 @@
 
 file=$1
 pdflatex -interaction=nonstopmode -shell-escape ${file}.tex
-biber ${file}.bcf
-pdflatex -interaction=nonstopmode -shell-escape ${file}.tex
-pdflatex -interaction=nonstopmode -shell-escape ${file}.tex
+if [[ -e ${file}.bcf ]]; then
+	biber ${file}.bcf
+	pdflatex -interaction=nonstopmode -shell-escape ${file}.tex
+	pdflatex -interaction=nonstopmode -shell-escape ${file}.tex
+else
+	:
+fi
+if [[ -e ${file}.nlo ]]; then
+	makeindex ${file}.nlo -s nomencl.ist -o ${file}.nls
+	pdflatex -interaction=nonstopmode -shell-escape ${file}.tex
+else
+	:
+fi

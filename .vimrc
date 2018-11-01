@@ -146,6 +146,8 @@ set iskeyword+=: "press <C-n> to cycle through \label's
 " COMPILE PDF
 autocmd Filetype tex map \cp :!bash<space>~/scripts/cpdftex<space><C-r>%<BS><BS><BS><BS><Enter><Enter>
 autocmd Filetype tex map \cx :!bash<space>~/scripts/cxetex<space><C-r>%<BS><BS><BS><BS><Enter><Enter>
+autocmd Filetype tex map \sp :!pdflatex<space>-interaction=nonstopmode<space>-shell-escape<space><C-r>%<Enter><Enter>
+autocmd Filetype tex map \sx :!pdflatex<space>-interaction=nonstopmode<space>-shell-escape<space><C-r>%<Enter><Enter>
 
 " VIEW PDF
 autocmd Filetype tex map \vp :silent<space>!bash<space>~/scripts/openpdf<space><C-r>%<BS><BS><BS>pdf<Enter>
@@ -156,55 +158,89 @@ autocmd Filetype markdown map \vp :silent<space>!bash<space>~/scripts/openpdf<sp
 autocmd Filetype tex map \cb :!biber<space><C-r>%<BS><BS><BS>bcf<Enter><Enter>
 
 " MAKEINDEX
-autocmd Filetype tex map \mi :!makeindex<space><C-r>%<BS><BS><BS><BS>
-	\.nlo<space>-s<space>nomencl.ist<space>-o<space><C-r>%<BS><BS><BS><BS>
-	\.nls<Enter><Enter>
+autocmd Filetype tex map \mi :!makeindex<space><C-r>%<BS><BS><BS>
+	\nlo<space>-s<space>nomencl.ist<space>-o<space><C-r>%<BS><BS><BS>
+	\nls<Enter><Enter>
 
 " Luke Smith's Fantastic Vim macros
-autocmd FileType tex inoremap =ph <++><Space>
-autocmd FileType tex inoremap =pc \parencite{}<++><Esc>T{i
-autocmd FileType tex inoremap =pt \item 
+autocmd FileType tex inoremap ,ph <++>
+autocmd FileType tex inoremap ,pc \parencite{}<++><Esc>T{i
+autocmd FileType tex inoremap ,pt \item 
 
-autocmd FileType tex inoremap =bf \textbf{}<++><Esc>T{i
-autocmd FileType tex inoremap =bg \begin{DELRN}<Enter><++><Enter>\end{DELRN}
+autocmd FileType tex inoremap ,bf \textbf{}<++><Esc>T{i
+autocmd FileType tex inoremap ,bg \begin{DELRN}<Enter><++><Enter>\end{DELRN}
 	\<Enter><Enter><++><Esc>4k0fR:MultipleCursorsFind<Space>DELRN<Enter>c
-autocmd FileType tex inoremap =bm \begin{multicols}{2}<Enter><Enter><Enter>
+autocmd FileType tex inoremap ,bm \begin{multicols}{2}<Enter><Enter><Enter>
 	\<Enter>\end{multicols}<Enter><Enter><++><Esc>4k0fR
 
-autocmd FileType tex inoremap =it \textit{}<++><Esc>T{i
+autocmd FileType tex inoremap ,it \textit{}<++><Esc>T{i
 
-autocmd FileType tex inoremap =tt \texttt{}<++><Esc>T{i
-autocmd FileType tex inoremap =tc \textcite{}<++><Esc>T{i
+autocmd FileType tex inoremap ,tt \texttt{}<++><Esc>T{i
+autocmd FileType tex inoremap ,tc \textcite{}<++><Esc>T{i
 
-autocmd FileType tex inoremap =st {\setstretch{<++>}<Enter><++><Enter>
-	\<Enter>}<Enter><Enter><++><Esc>5k0fR<Esc>T:i
-autocmd FileType tex inoremap =sc \textsc{}<++><Esc>T{i
-autocmd FileType tex inoremap =s1 \section{}<Enter><++><Esc>kf}i
-autocmd FileType tex inoremap =s2 \subsection{}<Enter><++><Esc>kf}i
-autocmd FileType tex inoremap =s3 \subsubsection{}<Enter><++><Esc>kf}i
+autocmd FileType tex inoremap ,st {\setstretch{}<Enter><++><Enter>
+	\<Enter>}<Enter><Enter><++><Esc>5k0f{a
+autocmd FileType tex inoremap ,sc \textsc{}<++><Esc>T{i
+autocmd FileType tex inoremap ,s1 \section{}<Enter><++><Esc>kf}i
+autocmd FileType tex inoremap ,s2 \subsection{}<Enter><++><Esc>kf}i
+autocmd FileType tex inoremap ,s3 \subsubsection{}<Enter><++><Esc>kf}i
 
-autocmd FileType tex inoremap =ci \cite{}<++><Esc>T{i
-autocmd FileType tex inoremap =ct \citet{}<++><Esc>T{i
-autocmd FileType tex inoremap =cp \citep{}<++><Esc>T{i
-autocmd FileType tex inoremap =ch \chapter{}<Enter><++><Esc>kf}i
+autocmd FileType tex inoremap ,ci \cite{}<++><Esc>T{i
+autocmd FileType tex inoremap ,ct \citet{}<++><Esc>T{i
+autocmd FileType tex inoremap ,cp \citep{}<++><Esc>T{i
+autocmd FileType tex inoremap ,ch \chapter{}<Enter><++><Esc>kf}i
 
-autocmd FileType tex inoremap =rf \ref{fig:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap =rt \ref{tab:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap =re \ref{eq:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap =rs1 \ref{sec:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap =rs2 \ref{ssec:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap =rs3 \ref{sssec:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap ,rf \ref{fig:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap ,rt \ref{tab:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap ,re \ref{eq:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap ,rs1 \ref{sec:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap ,rs2 \ref{ssec:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap ,rs3 \ref{sssec:}<Space><++><Esc>T:i
 
-autocmd FileType tex inoremap =lf \label{fig:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap =lt \label{tab:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap =le \label{eq:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap =ls1 \label{sec:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap =ls2 \label{ssec:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap =ls3 \label{sssec:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap ,lf \label{fig:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap ,lt \label{tab:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap ,le \label{eq:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap ,ls1 \label{sec:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap ,ls2 \label{ssec:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap ,ls3 \label{sssec:}<Space><++><Esc>T:i
 
-autocmd FileType tex inoremap =up \usepackage{}<++><Esc>T{i
+autocmd FileType tex inoremap ,up \usepackage{}<++><Esc>T{i
 
 autocmd FileType tex map \ob :sp<space><C-r>%<BS><BS><BS>bib<Enter>
+
+" BIB SHORTCUTS
+autocmd Filetype bib inoremap \b @book{,<Enter>
+	\title<space>=<space>{<++>},<Enter>
+	\author<space>=<space>{<++>},<Enter>
+	\year<space>=<space>{<++>},<Enter>
+	\publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>07kf{a
+autocmd Filetype bib inoremap \a @article{,<Enter>
+	\title<space>=<space>{<++>},<Enter>
+	\author<space>=<space>{<++>},<Enter>
+	\journal<space>=<space>{<++>},<Enter>
+	\volume<space>=<space>{<++>},<Enter>
+	\pages<space>=<space>{<++>},<Enter>
+	\year<space>=<space>{<++>},<Enter>
+	\publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>010kf{a
+autocmd Filetype bib inoremap \t @phdthesis{,<Enter>
+	\title<space>=<space>{<++>},<Enter>
+	\author<space>=<space>{<++>},<Enter>
+	\school<space>=<space>{<++>},<Enter>
+	\year<space>=<space>{<++>},<Enter>
+	\publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>08kf{a
+autocmd Filetype bib inoremap \i @inproceedings{,<Enter>
+	\title<space>=<space>{<++>},<Enter>
+	\author<space>=<space>{<++>},<Enter>
+	\booktitle<space>=<space>{<++>},<Enter>
+	\volume<space>=<space>{<++>},<Enter>
+	\number<space>=<space>{<++>},<Enter>
+	\pages<space>=<space>{<++>},<Enter>
+	\year<space>=<space>{<++>},<Enter>
+	\organization<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>011kf{a
+autocmd Filetype bib inoremap \o @online{,<Enter>
+	\title<space>=<space>{<++>},<Enter>
+	\author<space>=<space>{<++>},<Enter>
+	\publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>06kf{a
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ PDF wordcount
