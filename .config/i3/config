@@ -416,9 +416,6 @@ bindsym $mod+Ctrl+m xrandr --output eDP1 --primary
 # SCROT
 bindsym Print exec bash ~/$scripts/screenshot
 
-# RESTART POLYBAR
-bindsym $mod+Ctrl+p --release exec polybar top
-
 # BASHMOUNT
 bindsym $mod+Shift+b exec $term -name BASHMOUNT -e bashmount
 
@@ -444,7 +441,7 @@ bindsym $mod+Ctrl+1 exec --no-startup-id $term -e vim ~/.config/i3/config
 bindsym $mod+Ctrl+2 exec --no-startup-id $term -e vim ~/.Xresources
 bindsym $mod+Ctrl+3 exec --no-startup-id $term -e vim ~/.vimrc
 bindsym $mod+Ctrl+4 exec --no-startup-id $term -e vim ~/.config/ranger/rc.conf
-bindsym $mod+Ctrl+5 exec --no-startup-id $term -e vim ~/.config/polybar/config
+bindsym $mod+Ctrl+5 exec --no-startup-id $term -e vim ~/scripts/mkblocksconf
 bindsym $mod+Ctrl+6 exec --no-startup-id $term -e vim ~/.config/qutebrowser/config.py
 
 #############################################################################
