@@ -1,0 +1,24 @@
+#!/bin/bash
+
+black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+yellow=$(xrdb -query | grep '*color3' | awk '{print $NF}')
+
+idle=$(top -b -n1 | grep %Cpu | awk '{print $9}' | sed -e "s/^id,//")
+idlelen=$(echo $idle | tr ' ' '\n' | wc -l)
+idletot=$(echo $idle | tr ' ' '\n' | awk '{s+=$1} END {print s}')
+
+if [[ $idletot == *[.]* ]]; then
+	cpu=$(expr 100 - ${idletot:0:-2} / $idlelen)
+else
+	cpu=$(expr 100 - ${idletot} / $idlelen)
+fi
+
+#echo $cpu
+
+if [[ $cpu -ge 80 ]]; then
+    echo "<span background=\"#ff0000\" foreground=\"$black\"> CPU $cpu% </span>"
+elif [[ $cpu -ge 50 ]]; then
+    echo "<span background=\"#ffff00\" foreground=\"$black\"> CPU $cpu% </span>"
+else
+    echo "<span background=\"$yellow\" foreground=\"$black\"> CPU $cpu% </span>"
+fi
