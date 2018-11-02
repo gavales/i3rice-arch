@@ -46,16 +46,16 @@ set $scripts scripts
 set $scriptpics scriptpics
 
 # WORKSPACE NAMES
-set $ws1 " 1 "
-set $ws2 " 2 "
-set $ws3 " 3 "
-set $ws4 " 4 "
-set $ws5 " 5 "
-set $ws6 " 6 "
-set $ws7 " 7 "
-set $ws8 " 8 "
-set $ws9 " 9 "
-set $ws10 " 10 "
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+set $ws9 9
+set $ws10 10
 
 # TRANSPARENCY
 set $t 99
@@ -151,13 +151,18 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # RESIZE WINDOWS
-bindsym $mod+y resize shrink left 5 px or 5 ppt, resize shrink right 5 px or 5 ppt
-bindsym $mod+i resize grow down 5 px or 5 ppt, resize grow up 5 px or 5 ppt
-bindsym $mod+u resize shrink down 5 px or 5 ppt, resize shrink up 5 px or 5 ppt
-bindsym $mod+o resize grow left 5 px or 5 ppt, resize grow right 5 px or 5 ppt
+bindsym $mod+y resize shrink width 10 px or 10 ppt
+bindsym $mod+i resize grow height 10 px or 10 ppt
+bindsym $mod+u resize shrink height 10 px or 10 ppt
+bindsym $mod+o resize grow width 10 px or 10 ppt
+
+bindsym $mod+Shift+semicolon resize shrink left 5 px or 5 ppt, resize shrink right 5 px or 5 ppt
+bindsym $mod+Shift+slash resize grow down 5 px or 5 ppt, resize grow up 5 px or 5 ppt
+bindsym $mod+Shift+period resize shrink down 5 px or 5 ppt, resize shrink up 5 px or 5 ppt
+bindsym $mod+Shift+apostrophe resize grow left 5 px or 5 ppt, resize grow right 5 px or 5 ppt
 
 # WORKSPACE BACK & FORTH
-workspace_auto_back_and_forth yes
+#workspace_auto_back_and_forth yes
 
 # SPLIT ORIENTATION
 bindsym $mod+g split h
@@ -222,11 +227,19 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 
-assign [class="Pcmanfm"]					$ws2
-assign [class="Nautilus"]					$ws2
+assign [instance="RSS"]		$ws1
+assign [title="YouTube"]	$ws1
+assign [class="Pcmanfm"]	$ws2
+assign [class="Nautilus"]	$ws2
+assign [instance="FILES"]	$ws2
+for_window [class="Spotify"] move to workspace $ws9
+assign [instance="MUSIC"]	$ws9
+assign [instance="VIS"]		$ws9
+assign [class="Arandr"]		$ws10
 #assign [title="New Tab - Chromium"]		$ws1
 #assign [title="New Tab - Google Chrome"]	$ws1
-for_window [title="YouTube"] resize shrink right 20px or 20ppt, resize shrink left 20px or 20ppt
+#for_window [title="YouTube"] resize shrink width 20px or 20ppt, default_orientation vertical
+#for_window [instance="RSS"] resize shrink width 20px or 20ppt
 
 #############################################################################
 ### FLOATING WINDOWS
@@ -310,20 +323,20 @@ bindsym $mod+z exec --no-startup-id morc_menu
 
 # BRIGHTNESS CONTROLS
 
-bindsym $mod+F6 exec xbacklight -inc 10
-bindsym $mod+F5 exec xbacklight -dec 10
+bindsym $mod+F6 exec "xbacklight -inc 10; mpv $home/scriptsounds/Robot\ blip.mp3"
+bindsym $mod+F5 exec "xbacklight -dec 10; mpv $home/scriptsounds/Robot\ blip.mp3"
 
-#bindsym $mod+Home exec light -A 10
-#bindsym $mod+End exec light -U 10
+#bindsym $mod+Home exec "light -A 10; mpv $home/scriptsounds/Robot\ blip.mp3"
+#bindsym $mod+End exec "light -U 10; mpv $home/scriptsounds/Robot\ blip.mp3"
 
 # VOLUME CONTROLS
-bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume 0 +2%
-bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume 0 -2%
-bindsym $mod+F1 exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym $mod+F3 exec "pactl set-sink-volume 0 +2%; mpv $home/scriptsounds/Robot\ blip.mp3"
+bindsym $mod+F2 exec "pactl set-sink-volume 0 -2%; mpv $home/scriptsounds/Robot\ blip.mp3"
+bindsym $mod+F1 exec "pactl set-sink-mute 0 toggle; mpv $home/scriptsounds/Click\ On.mp3"
 
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +2%
-#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -2%
-#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+#bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +2%; mpv $home/scriptsounds/Robot\ blip.mp3"
+#bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -2%; mpv $home/scriptsounds/Robot\ blip.mp3"
+#bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle; mpv $home/scriptsounds/Click\ On.mp3"
 
 # FILE MANAGERS
 bindsym $mod+F12 exec pcmanfm
@@ -336,15 +349,17 @@ bindsym $mod+Shift+F3 exec gksu pcmanfm
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 #bindsym $mod+Shift+d --release exec "killall dunst; xrdb -load ~/.Xresources;\
-	 #bash ~/$scripts/dunstthemeupdate;\
-	 #bash ~/$scripts/mkblocksconf;\
-	 #bash ~/$scripts/mkvistheme;\
-	 #exec notify-send '.Xresources has been reloaded' -i ~/$scriptpics/settingswhite.png"
+	#mpv $home/scriptsounds/A\ Tone\ His\ Self.mp3;\
+	#bash ~/$scripts/dunstthemeupdate;\
+	#bash ~/$scripts/mkblocksconf;\
+	#bash ~/$scripts/mkvistheme;\
+	#exec notify-send '.Xresources has been reloaded' -i ~/$scriptpics/settingswhite.png"
 bindsym $mod+F9 --release exec "killall dunst; xrdb -load ~/.Xresources;\
-	 bash ~/$scripts/dunstthemeupdate;\
-	 bash ~/$scripts/mkblocksconf;\
-	 bash ~/$scripts/mkvistheme;\
-	 exec notify-send '.Xresources has been reloaded' -i ~/$scriptpics/settingswhite.png"
+	mpv $home/scriptsounds/A\ Tone\ His\ Self.mp3;\
+	bash ~/$scripts/dunstthemeupdate;\
+	bash ~/$scripts/mkblocksconf;\
+	bash ~/$scripts/mkvistheme;\
+	exec notify-send '.Xresources has been reloaded' -i ~/$scriptpics/settingswhite.png"
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 #############################################################################
@@ -452,32 +467,25 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
-exec_always xrdb -load ~/.Xresources
+exec_always --no-startup-id xrdb -load ~/.Xresources
 exec --no-startup-id blueman-applet
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id synclient VertEdgeScroll=1 HorizEdgeScroll=1 \
 	HorizTwoFingerScroll=1 PalmDetect=1 TapButton1=1 TapButton2=3 TapButton3=2
 exec_always compton --config ~/.config/compton.conf
-exec feh --bg-scale ~/.config/wall.png
+exec --no-startup-id feh --bg-scale ~/.config/wall.png
 exec --no-startup-id mpd
 exec setxkbmap us
 
 #############################################################################
 ### STARTUP PROGRAMS
 
-assign [instance="RSS"]		$ws1
-
-assign [instance="MUSIC"]	$ws3
-
-assign [instance="VIS"]		$ws3
-
-exec --no-startup-id $term -name FILES -e ranger
-assign [instance="FILES"]	$ws2
-
+exec --no-startup-id "i3-msg 'workspace 1; append_layout $home/.config/i3/workspace-1.json'"
+#exec --no-startup-id "i3-msg 'workspace 9; append_layout $home/.config/i3/workspace-9.json'"
 exec $browser2
-exec $browser2 --new-window\
- --app=https://www.youtube.com/
-assign [title="YouTube"]	$ws1
-
+exec $browser2 --new-window --app=https://www.youtube.com/
+exec --no-startup-id $term -name RSS -e newsboat
+exec --no-startup-id $term -name FILES -e ranger
+exec_always mpv $home/scriptsounds/A\ Tone\ His\ Self.mp3
 exec_always notify-send 'i3 (re)loaded!' -i ~/$scriptpics/i3white.png

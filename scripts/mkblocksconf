@@ -99,7 +99,7 @@ echo -e "[separator]\n" >> i3blocks.conf
 #echo -e "##separator=false\n" >> i3blocks.conf
 
 echo "[cpu_usage]" >> i3blocks.conf
-echo "command=bash ~/scripts/cpu" >> i3blocks.conf
+echo "command=bash ~/scripts/cpunew" >> i3blocks.conf
 echo "interval=5" >> i3blocks.conf
 echo "markup=pango" >> i3blocks.conf
 echo "border=$yellow" >> i3blocks.conf
