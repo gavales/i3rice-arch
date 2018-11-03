@@ -10,6 +10,7 @@
 *cursorColor:				ccynd
 *pointerColorBackground:	cblkd
 *pointerColorForeground:	ccynd
+*border:					cblkd
 
 !black dark/light
 *color0:	cblkd
@@ -83,7 +84,7 @@ URxvt*internalBorder: 1
 
 !extensions
 URxvt*perl-ext-common: default
-URxvt*perl-ext: clipboard,matcher,resize-font
+URxvt*perl-ext: clipboard,matcher,resize-font,config-reload
 !URxvt*perl-lib: /home/gavarch/.urxvt/ext
 URxvt*url-launcher:	/usr/bin/google-chrome-stable
 URxvt*matcher.button: 1

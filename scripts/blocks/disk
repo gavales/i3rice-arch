@@ -1,0 +1,16 @@
+#!/bin/bash
+
+black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+
+DIR="${BLOCK_INSTANCE:-$HOME}"
+
+avail=$(df -h -P -l "$DIR"|grep 'dev'|awk '{print $4}')
+usep=$(df -h -P -l "$DIR"|grep 'dev'|awk '{print $5}')
+use=${usep:0:-1}
+
+if [[ $use -ge 90 ]]; then
+    echo "<span background=\"#ff0000\"> <span face='Font Awesome 5 Free'>&#xf0a0;</span> $avail </span>"
+else
+    echo "<span background=\"$blue\"> <span face='Font Awesome 5 Free'>&#xf0a0;</span> $avail </span>"
+fi
