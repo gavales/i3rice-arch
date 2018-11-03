@@ -1,0 +1,4 @@
+killall dunst
+bash ~/scripts/dunstthemeupdate
+bash ~/scripts/mkblocksconf
+bash ~/scripts/mkvistheme

@@ -162,6 +162,10 @@ autocmd Filetype tex map \mi :!makeindex<space><C-r>%<BS><BS><BS>
 	\nlo<space>-s<space>nomencl.ist<space>-o<space><C-r>%<BS><BS><BS>
 	\nls<Enter><Enter>
 
+" COMMENT/UNCOMMENT
+autocmd Filetype tex vnoremap \% :'<,'>norm I% <Enter>
+autocmd Filetype tex vnoremap \d% :'<,'>norm 0xx<Enter>
+
 " Luke Smith's Fantastic Vim macros
 autocmd FileType tex inoremap ,ph <++>
 autocmd FileType tex inoremap ,pc \parencite{}<++><Esc>T{i
@@ -270,3 +274,14 @@ autocmd Filetype rmd inoremap ;p ```{python}<CR>```<CR><CR><esc>2kO
 """ PYTHON FILES
 
 autocmd Filetype python map \ll :w<space>!python<Enter>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" COMMENT/UNCOMMENT
+vnoremap \# :'<,'>norm I# <Enter>
+vnoremap \d# :'<,'>norm 0xx<Enter>
+vnoremap \% :'<,'>norm I% <Enter>
+vnoremap \d% :'<,'>norm 0xx<Enter>
+vnoremap \! :'<,'>norm I! <Enter>
+vnoremap \d! :'<,'>norm 0xx<Enter>
+vnoremap \" :'<,'>norm I" <Enter>
+vnoremap \d" :'<,'>norm 0xx<Enter>

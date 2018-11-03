@@ -12,21 +12,25 @@ bindsym $mod+Shift+r restart
 #############################################################################
 ### MAIN FONT
 
-font pango:Ubuntu Mono, pango:FontAwesome 12
+#font pango:Ubuntu Mono, pango:FontAwesome 12
+font pango:FixedsysMono, pango:FontAwesome 12
 
 #############################################################################
 ### DEFINE VARIABLES
 
 # SET $MOD
 set $mod Mod1
+set $super Mod4
 
 # SET TERM(S)
-set $term urxvt
+set $term urxvtc
+#set $term urxvt
 set $term2 gnome-terminal
 
 # BROWSER(S)
 set $browser qutebrowser
 #set $browser2 chromium
+#set $browser2 google-chrome-beta
 set $browser2 google-chrome-stable
 
 # COLORS
@@ -81,22 +85,22 @@ client.placeholder      $black $black $white $black $black
 
 # BAR
 bar {
-	i3bar_command i3bar -t
+	i3bar_command i3bar
 	status_command i3blocks -c ~/$scripts/i3blocks.conf
 #	status_command i3blocks
 	position bottom
 
 	bindsym button4 nop
 	bindsym button5 nop
-	font pango:Ubuntu Mono,FontAwesome 12
+	font pango:FixedsysMono,FontAwesome 12
 
 	colors {
-	background $black$t
+	background $black
 
 #			   border  backgr. text
 	focused_workspace  $blue $blue $black
 	active_workspace   $cyan $cyan $black
-	inactive_workspace $black$t $black$t $white
+	inactive_workspace $black $black $white
 	binding_mode       $yellow $yellow $black
 	urgent_workspace   $red $red $black
 	}
@@ -317,26 +321,25 @@ bindsym $mod+Return exec $term
 # APPLICATION LAUNCHER
 bindsym $mod+Ctrl+b exec $term -e 'bmenu'
 bindsym $mod+d exec rofi -show drun
-#bindsym $mod+Ctrl+d exec dmenu_run -fn "Ubuntu Mono:size=14" -nb "$black" -nf "$white" -sf "$black" -sb "$blue"
 bindsym $mod+Shift+d exec dmenu_run -fn "Ubuntu Mono:size=14" -nb "$black" -nf "$white" -sf "$black" -sb "$blue"
 bindsym $mod+z exec --no-startup-id morc_menu
 
 # BRIGHTNESS CONTROLS
 
-bindsym $mod+F6 exec "xbacklight -inc 10; mpv $home/scriptsounds/Robot\ blip.mp3"
-bindsym $mod+F5 exec "xbacklight -dec 10; mpv $home/scriptsounds/Robot\ blip.mp3"
+bindsym $mod+F6 exec xbacklight -inc 10
+bindsym $mod+F5 exec xbacklight -dec 10
 
-#bindsym $mod+Home exec "light -A 10; mpv $home/scriptsounds/Robot\ blip.mp3"
-#bindsym $mod+End exec "light -U 10; mpv $home/scriptsounds/Robot\ blip.mp3"
+#bindsym $mod+Home exec light -A 10
+#bindsym $mod+End exec light -U 10
 
 # VOLUME CONTROLS
-bindsym $mod+F3 exec "pactl set-sink-volume 0 +2%; mpv $home/scriptsounds/Robot\ blip.mp3"
-bindsym $mod+F2 exec "pactl set-sink-volume 0 -2%; mpv $home/scriptsounds/Robot\ blip.mp3"
-bindsym $mod+F1 exec "pactl set-sink-mute 0 toggle; mpv $home/scriptsounds/Click\ On.mp3"
+bindsym $mod+F3 exec pactl set-sink-volume 0 +2%
+bindsym $mod+F2 exec pactl set-sink-volume 0 -2%
+bindsym $mod+F1 exec pactl set-sink-mute 0 toggle
 
-#bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +2%; mpv $home/scriptsounds/Robot\ blip.mp3"
-#bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -2%; mpv $home/scriptsounds/Robot\ blip.mp3"
-#bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle; mpv $home/scriptsounds/Click\ On.mp3"
+#bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +2%
+#bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -2%
+#bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 
 # FILE MANAGERS
 bindsym $mod+F12 exec pcmanfm
@@ -348,18 +351,8 @@ bindsym $mod+Shift+F3 exec gksu pcmanfm
 #bindsym $mod+F5 exec $term -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
-#bindsym $mod+Shift+d --release exec "killall dunst; xrdb -load ~/.Xresources;\
-	#mpv $home/scriptsounds/A\ Tone\ His\ Self.mp3;\
-	#bash ~/$scripts/dunstthemeupdate;\
-	#bash ~/$scripts/mkblocksconf;\
-	#bash ~/$scripts/mkvistheme;\
-	#exec notify-send '.Xresources has been reloaded' -i ~/$scriptpics/settingswhite.png"
-bindsym $mod+F9 --release exec "killall dunst; xrdb -load ~/.Xresources;\
-	mpv $home/scriptsounds/A\ Tone\ His\ Self.mp3;\
-	bash ~/$scripts/dunstthemeupdate;\
-	bash ~/$scripts/mkblocksconf;\
-	bash ~/$scripts/mkvistheme;\
-	exec notify-send '.Xresources has been reloaded' -i ~/$scriptpics/settingswhite.png"
+bindsym $super+r exec bash ~/$scripts/reloadconfs
+bindsym $super+x exec bash ~/$scripts/xtheme
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 #############################################################################
@@ -424,9 +417,10 @@ bindsym $mod+apostrophe exec redshift -x
 # MULTI-MONITOR SETTINGS
 bindsym $mod+F7 exec bash ~/$scripts/multimon
 bindsym $mod+Ctrl+v move workspace to output VGA1
+#bindsym $mod+Ctrl+v move workspace to output VGA-1
 bindsym $mod+Ctrl+h move workspace to output HDMI1
-bindsym $mod+Ctrl+e move workspace to output primary
-bindsym $mod+Ctrl+m xrandr --output eDP1 --primary
+bindsym $mod+Ctrl+e move workspace to output eDP1
+#bindsym $mod+Ctrl+e move workspace to output LVDS-1
 
 # SCROT
 bindsym Print exec bash ~/$scripts/screenshot
@@ -481,6 +475,7 @@ exec setxkbmap us
 #############################################################################
 ### STARTUP PROGRAMS
 
+exec --no-startup-id urxvtd -q -o -f
 exec --no-startup-id "i3-msg 'workspace 1; append_layout $home/.config/i3/workspace-1.json'"
 #exec --no-startup-id "i3-msg 'workspace 9; append_layout $home/.config/i3/workspace-9.json'"
 exec $browser2
