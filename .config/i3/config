@@ -91,7 +91,6 @@ bar {
 	status_command i3blocks -c ~/$scripts/i3blocks.conf
 #	status_command i3blocks
 	position bottom
-    height 22
 
 	bindsym button4 nop
 	bindsym button5 nop
