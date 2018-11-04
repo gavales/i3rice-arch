@@ -277,11 +277,11 @@ autocmd Filetype python map \ll :w<space>!python<Enter>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ COMMENT/UNCOMMENT
-vnoremap \# :'<,'>norm I# <Enter>
-vnoremap \d# :'<,'>norm 0xx<Enter>
-vnoremap \% :'<,'>norm I% <Enter>
-vnoremap \d% :'<,'>norm 0xx<Enter>
-vnoremap \! :'<,'>norm I! <Enter>
-vnoremap \d! :'<,'>norm 0xx<Enter>
-vnoremap \" :'<,'>norm I" <Enter>
-vnoremap \d" :'<,'>norm 0xx<Enter>
+vnoremap \# :'<,'>norm 0i#<Enter>
+vnoremap \d# :'<,'>norm 0x<Enter>
+vnoremap \% :'<,'>norm 0i%<Enter>
+vnoremap \d% :'<,'>norm 0x<Enter>
+vnoremap \! :'<,'>norm 0i!<Enter>
+vnoremap \d! :'<,'>norm 0x<Enter>
+vnoremap \" :'<,'>norm 0i"<Enter>
+vnoremap \d" :'<,'>norm 0x<Enter>

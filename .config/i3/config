@@ -61,7 +61,7 @@ set $t 99
 #############################################################################
 
 # RELOAD CONFIG
-bindsym $mod+Shift+c exec --no-startup-id "bash $home/$scripts/xtheme; i3-msg reload; bash $home/$scripts/reloadconfs"
+bindsym $mod+Shift+c exec --no-startup-id "bash $home/$scripts/xtheme; bash $home/$scripts/reloadconfs; i3-msg reload"
 
 # RESTART i3
 bindsym $mod+Shift+r restart
@@ -91,7 +91,7 @@ bar {
 	status_command i3blocks -c ~/$scripts/i3blocks.conf
 #	status_command i3blocks
 	position bottom
-	height 20
+    height 22
 
 	bindsym button4 nop
 	bindsym button5 nop
@@ -343,7 +343,7 @@ bindsym $win+Shift+Return exec $term -e sudo ranger
 bindsym $mod+Shift+F3 exec gksu pcmanfm
 #bindsym $mod+F5 exec $term -e 'mocp'
 bindsym $win+t exec --no-startup-id pkill compton
-bindsym $win+Shift+t exec --no-startup-id compton -b
+bindsym $win+Shift+t exec --no-startup-id compton
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 #############################################################################
@@ -386,8 +386,8 @@ bindsym $mod+m exec $browser2 --new-window\
 bindsym $mod+Shift+y exec $browser2 --new-window\
  --app=https://www.youtube.com/
 
-# ALSAMIXER
-bindsym $win+a exec $term -e 'alsamixer'
+## ALSAMIXER
+#bindsym $win+a exec $term -e 'alsamixer'
 
 # BROWSERS
 bindsym $mod+c exec $browser2
@@ -434,6 +434,11 @@ bindsym $mod+Ctrl+w exec $browser2 --new-window\
 bindsym $mod+Ctrl+r exec $browser2 --new-window\
  --app=https://docs.google.com/presentation/u/0/
 
+# GET WS LAYOUT
+bindsym $win+l exec --no-startup-id bash ~/$scripts/getwslo
+# APPLY WS LAYOUT
+bindsym $win+a exec --no-startup-id bash ~/$scripts/appwslo
+
 # OPEN CONFIGS
 bindsym $win+1 exec --no-startup-id $term -e vim ~/.config/i3/config
 bindsym $win+2 exec --no-startup-id $term -e vim ~/.Xresources
@@ -445,12 +450,14 @@ bindsym $win+6 exec --no-startup-id $term -e vim ~/.config/qutebrowser/config.py
 #############################################################################
 ### STARTUP DAEMONS
 
+exec --no-startup-id urxvtd -q -o -f
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id blueman-applet
+exec --no-startup-id compton
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id feh --bg-scale ~/.config/wall.png
@@ -461,8 +468,7 @@ exec setxkbmap us
 #############################################################################
 ### STARTUP PROGRAMS
 
-exec_always --no-startup-id urxvtd -q -o -f
-exec --no-startup-id "i3-msg 'workspace 1; append_layout $home/.config/i3/workspace-1.json'"
+exec --no-startup-id "i3-msg 'workspace 1; append_layout $home/.config/i3/main.json'"
 #exec --no-startup-id "i3-msg 'workspace 9; append_layout $home/.config/i3/workspace-9.json'"
 exec $browser2
 exec $browser2 --new-window --app=https://www.youtube.com/

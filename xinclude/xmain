@@ -1,5 +1,6 @@
 
-#define fontname FixedsysMono
+#define fontname FixedsysMonoNerdFontComplete
+!#define fontname FixedsysMono
 !#define font TerminessTTFNerdFontMono
 #define fontsize 13
 

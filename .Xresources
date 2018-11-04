@@ -1,194 +1,95 @@
-!!colors
+#define cblkd #1e1e15
+#define cblkl #56564f
+#define credl #aa5c3c
+#define credd #aa5c3c
+#define cgrnl #3aab35
+#define cgrnd #3aab35
+#define cylwl #9c9e57
+#define cylwd #9c9e57
+#define cblul #57ab7b
+#define cblud #57ab7b
+#define cgntl #1bab73
+#define cgntd #1bab73
+#define ccynl #2bb5a8
+#define ccynd #2bb5a8
+#define cwhtl #c6c6c4
+#define cwhtd #c6c6c4
 
-!!boat
-!#define blackd		#140d26
-!#define blackl		#9a8f85
-!#define redl		#ba7f56
-!#define redd		#ba7f56
-!#define greenl		#b5a888
-!#define greend		#b5a888
-!#define yellowl		#81a39a
-!#define yellowd		#81a39a
-!#define bluel		#3a51aa
-!#define blued		#3a51aa
-!#define magental	#9059a3
-!#define magentad	#9059a3
-!#define cyanl		#ad4554
-!#define cyand		#ad4554
-!#define whitel		#c7c7c6
-!#define whited		#c7c7c6
+#define fontname FixedsysMonoNerdFontComplete
+!#define fontname FixedsysMono
+!#define font TerminessTTFNerdFontMono
+#define fontsize 13
 
-!!lake
-!#define blackd		#253327
-!#define blackl		#a49c93
-!#define redl		#637288
-!#define redd		#637288
-!#define greenl		#997789
-!#define greend		#997789
-!#define yellowl		#108DA5
-!#define yellowd		#108DA5
-!#define bluel		#43A1B1
-!#define blued		#43A1B1
-!#define magental	#A89692
-!#define magentad	#A89692
-!#define cyanl		#D3A895
-!#define cyand		#D3A895
-!#define whitel		#ebe0d3
-!#define whited		#ebe0d3
-
-!!forest
-!#define blackd		#1e1e15
-!#define blackl		#56564f
-!#define redl		#aa5c3c
-!#define redd		#aa5c3c
-!#define greenl		#3aab35
-!#define greend		#3aab35
-!#define yellowl		#9c9e57
-!#define yellowd		#9c9e57
-!#define bluel		#57ab7b
-!#define blued		#57ab7b
-!#define magental	#1bab73
-!#define magentad	#1bab73
-!#define cyanl		#2bb5a8
-!#define cyand		#2bb5a8
-!#define whitel		#c6c6c4
-!#define whited		#c6c6c4
-
-!!space2
-!#define blackd		#02020d
-!#define blackl		#6d8b8f
-!#define redl		#70847c
-!#define redd		#a45b55
-!#define greenl		#cda16e
-!#define greend		#70847c
-!#define yellowl		#306b8b
-!#define yellowd 	#cda16e
-!#define bluel		#435c8c
-!#define blued		#306b8b
-!#define magental	#4c9fa5
-!#define magentad	#435c8c
-!#define cyanl		#4c9fa5
-!#define cyand		#4c9fa5
-!#define whitel		#9cc7cd
-!#define whited		#9cc7cd
-
-!!space1
-!#define blackd		#060608
-!#define blackl		#79828e
-!#define redd		#BA614A
-!#define redl		#BA614A
-!#define greend		#D6864E
-!#define greenl		#D6864E
-!#define yellowd		#EF9466
-!#define yellowl		#EF9466
-!#define blued		#0C4C91
-!#define bluel		#0C4C91
-!#define magentad	#29498A
-!#define magental	#29498A
-!#define cyand		#A26E89
-!#define cyanl		#A26E89
-!#define whited		#adbbcc
-!#define whitel		#adbbcc
-
-!Solarized
-#define blackd		#073642
-#define blackl		#002b36
-#define redd		#dc322f
-#define redl		#dc322f
-#define greend		#859900
-#define greenl		#859900
-#define yellowd		#b58900
-#define yellowl		#b58900
-#define blued		#268bd2
-#define bluel		#268bd2
-#define magentad	#d33682
-#define magental	#d33682
-#define cyand		#2aa198
-#define cyanl		#2aa198
-#define whited		#eee8d5
-#define whitel		#fdf6e3
-
-*background:			blackd
-*foreground:			whitel
-*fading:			30
-*fadeColor:			black
-*cursorColor:			cyand
-*pointerColorBackground:	blackd
-*pointerColorForeground:	cyand
+*background:				cblkd
+*foreground:				cwhtl
+*fading:					30
+*fadeColor:					black
+*cursorColor:				ccynd
+*pointerColorBackground:	cblkd
+*pointerColorForeground:	ccynd
+*border:					cblkd
 
 !black dark/light
-*color0:	blackd
-*color8:	blackl
+*color0:	cblkd
+*color8:	cblkl
 !red dark/light
-*color1:	redd
-*color9:	redl
+*color1:	credd
+*color9:	credl
 !green dark/light
-*color2:	greend
-*color10:	greenl
+*color2:	cgrnd
+*color10:	cgrnl
 !yellow dark/light
-*color3:	yellowd
-*color11:	yellowl
+*color3:	cylwd
+*color11:	cylwl
 !blue dark/light
-*color4:	blued
-*color12:	bluel
+*color4:	cblud
+*color12:	cblul
 !magenta dark/light
-*color5:	magentad
-*color13:	magental
+*color5:	cgntd
+*color13:	cgntl
 !cyan dark/light
-*color6:	cyand
-*color14:	cyanl
+*color6:	ccynd
+*color14:	ccynl
 !white dark/light
-*color7:	whited
-*color15:	whitel
+*color7:	cwhtd
+*color15:	cwhtl
 
 
 !!ROFI
-!rofi.font:              Ubuntu Mono 17 
-rofi.location:          0
-!rofi.fullscreen:        true
-rofi.padding:           100
-rofi.hide-scrollbar:    true
-rofi.line-margin:       10
-rofi.yoffset:           30
-rofi.xoffset:           0
-rofi.width:             580
-rofi.lines:             5
-!rofi.terminal:          i3-sensible-terminal
-rofi.show-icons:	true
-rofi.drun-icon-theme:	'Numix-Reborn-Circle'
+!#include "/home/gavarch/xinclude/xrofi"
+#include "/home/gavaro/xinclude/xrofi"
 
 !!Xft
 Xft.dpi:		96
-Xft.antialias:		true
-Xft.hinting:		true
+Xft.antialias:	true
+Xft.hinting:	true
 Xft.rgba:		rgb
-Xft.autohint:		false
-Xft.hintstyle:		hintslight
-Xft.lcdfilter:		lcddefault
+Xft.autohint:	false
+Xft.hintstyle:	hintslight
+Xft.lcdfilter:	lcddefault
 
-!!XTerm
-XTerm*background:	blackd
-XTerm*foreground:	whited
-XTerm*pointerColor:	cyand
-XTerm*faceName:		Fixed
-XTerm*faceSize:		11
-XTerm*reverseVideo:	on
-XTerm*faceName:		Terminus:size=11:antialias=true
-XTerm*selectToClipboard:true
-
-Xcursor.theme:			capitaine-cursors
-Xcursor.size:			0
+! !!XTerm
+! XTerm*background:	cblkd
+! XTerm*foreground:	cwhtd
+! XTerm*pointerColor:	ccynd
+! XTerm*faceName:		Fixed
+! XTerm*faceSize:		11
+! XTerm*reverseVideo:	on
+! XTerm*faceName:		Terminus:size=11:antialias=true
+! XTerm*selectToClipboard:true
+! 
+! Xcursor.theme: capitaine-cursors
+! Xcursor.size:			0
 
 !!urxvt
-URxvt.font: xft:TerminessTTFNerdFontMono:size=10
+URxvt.font: xft:fontname:size=fontsize
 
 URxvt*depth: 32
 URxvt*scrollBar: false
 URxvt*mouseWheelScrollPage:	false
 URxvt*cursorBlink: true
-!URxvt*background: rgba:0000/0000/0000/cc90
-URxvt*background: blackd
-URxvt*foreground: whitel
+URxvt*background: cblkd
+URxvt*foreground: cwhtl
 URxvt*saveLines: 5000
 URxvt*useColor:	true
 URxvt*internalBorder: 1
@@ -200,16 +101,16 @@ URxvt*internalBorder: 1
 
 !extensions
 URxvt*perl-ext-common: default
-URxvt*perl-ext: clipboard,matcher,tabbedex,resize-font
+URxvt*perl-ext: clipboard,matcher,resize-font,config-reload
 !URxvt*perl-lib: /home/gavarch/.urxvt/ext
-URxvt*url-launcher:	/usr/bin/chromium
+URxvt*url-launcher:	/usr/bin/google-chrome-stable
 URxvt*matcher.button: 1
 URxvt*keysym.C-y: clipboard:copy
 URxvt*keysym.C-a: clipboard:paste
 URxvt*keysym.C-I: resize-font:smaller
 URxvt*keysym.C-U: resize-font:bigger
 URxvt*keysym.C-Y: resize-font:reset
-URxvt*tabbed.autohide: true
-URxvt*keysym.C-t: perl:tabbedex:new_tab
-URxvt*keysym.C-Tab: perl:tabbedex:next_tab
-URxvt*keysym.C-Shift-Tab: perl:tabbedex:prev_tab
+! URxvt*tabbed.autohide: true
+! URxvt*keysym.C-t: perl:tabbedex:new_tab
+! URxvt*keysym.C-Tab: perl:tabbedex:next_tab
+! URxvt*keysym.C-Shift-Tab: perl:tabbedex:prev_tab
