@@ -1,0 +1,100 @@
+
+#define fontname FixedsysMonoNerdFontComplete
+!#define fontname FixedsysMono
+!#define font TerminessTTFNerdFontMono
+#define fontsize 13
+
+*background:				cblkd
+*foreground:				cwhtl
+*fading:					30
+*fadeColor:					black
+*cursorColor:				ccynd
+*pointerColorBackground:	cblkd
+*pointerColorForeground:	ccynd
+*border:					cblkd
+
+!black dark/light
+*color0:	cblkd
+*color8:	cblkl
+!red dark/light
+*color1:	credd
+*color9:	credl
+!green dark/light
+*color2:	cgrnd
+*color10:	cgrnl
+!yellow dark/light
+*color3:	cylwd
+*color11:	cylwl
+!blue dark/light
+*color4:	cblud
+*color12:	cblul
+!magenta dark/light
+*color5:	cgntd
+*color13:	cgntl
+!cyan dark/light
+*color6:	ccynd
+*color14:	ccynl
+!white dark/light
+*color7:	cwhtd
+*color15:	cwhtl
+
+
+!!ROFI
+!#include "/home/gavarch/xinclude/xrofi"
+#include "/home/gavaro/xinclude/xrofi"
+
+!!Xft
+Xft.dpi:		96
+Xft.antialias:	true
+Xft.hinting:	true
+Xft.rgba:		rgb
+Xft.autohint:	false
+Xft.hintstyle:	hintslight
+Xft.lcdfilter:	lcddefault
+
+! !!XTerm
+! XTerm*background:	cblkd
+! XTerm*foreground:	cwhtd
+! XTerm*pointerColor:	ccynd
+! XTerm*faceName:		Fixed
+! XTerm*faceSize:		11
+! XTerm*reverseVideo:	on
+! XTerm*faceName:		Terminus:size=11:antialias=true
+! XTerm*selectToClipboard:true
+! 
+! Xcursor.theme: capitaine-cursors
+! Xcursor.size:			0
+
+!!urxvt
+URxvt.font: xft:fontname:size=fontsize
+
+URxvt*depth: 32
+URxvt*scrollBar: false
+URxvt*mouseWheelScrollPage:	false
+URxvt*cursorBlink: true
+URxvt*background: cblkd
+URxvt*foreground: cwhtl
+URxvt*saveLines: 5000
+URxvt*useColor:	true
+URxvt*internalBorder: 1
+
+! for 'fake' transparency (without Compton) uncomment the following three lines
+! URxvt*inheritPixmap:            true
+! URxvt*transparent:              true
+! URxvt*shading:                  138
+
+!extensions
+URxvt*perl-ext-common: default
+URxvt*perl-ext: clipboard,matcher,resize-font,config-reload
+!URxvt*perl-lib: /home/gavarch/.urxvt/ext
+URxvt*url-launcher:	/usr/bin/google-chrome-stable
+URxvt*matcher.button: 1
+URxvt*keysym.C-y: clipboard:copy
+URxvt*keysym.C-a: clipboard:paste
+URxvt*keysym.C-I: resize-font:smaller
+URxvt*keysym.C-U: resize-font:bigger
+URxvt*keysym.C-Y: resize-font:reset
+! URxvt*tabbed.autohide: true
+! URxvt*keysym.C-t: perl:tabbedex:new_tab
+! URxvt*keysym.C-Tab: perl:tabbedex:next_tab
+! URxvt*keysym.C-Shift-Tab: perl:tabbedex:prev_tab

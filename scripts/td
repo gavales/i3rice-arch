@@ -1,6 +1,0 @@
-#!/bin/bash
-
-black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
-
-echo "<span background=\"$white\" foreground=\"$black\"> TD $(date '+%d/%m/%Y, %H:%M:%S') </span>"

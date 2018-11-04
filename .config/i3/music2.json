@@ -1,0 +1,47 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 458,
+       "width": 722,
+       "x": 0,
+       "y": 0
+    },
+    "name": "Rosalia De Souza - O Cantador",
+    "percent": 0.7,
+    "swallows": [
+       {
+       // "class": "^URxvt$",
+       // "instance": "^MUSIC$",
+       // "title": "^Rosalia\\ De\\ Souza\\ \\-\\ O\\ Cantador$",
+       // "transient_for": "^$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 338,
+       "width": 482,
+       "x": 0,
+       "y": 0
+    },
+    "name": "vis",
+    "percent": 0.3,
+    "swallows": [
+       {
+       // "class": "^URxvt$",
+       // "instance": "^VIS$",
+       // "title": "^vis$",
+       // "transient_for": "^$"
+       }
+    ],
+    "type": "con"
+}
+

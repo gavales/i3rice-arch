@@ -1,0 +1,29 @@
+#!/bin/bash
+
+black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+cyan=$(xrdb -query | grep '*color6' | awk '{print $NF}')
+
+volraw=$(amixer get Master|grep 'Front Left:'|awk '{print $5}')
+stat=$(amixer get Master|grep 'Front Left:'|awk '{print $6}')
+vol=${volraw:1:-1}
+volint=${volraw:1:-2}
+
+if [[ $volint -ge 80 ]]; then
+    echo "<span background=\"#ff0000\"> <span face='Font Awesome 5 Free'>&#xf028;</span> $vol </span>"
+elif [[ $volint -ge 60 ]]; then
+    echo "<span background=\"#ffff00\"> <span face='Font Awesome 5 Free'>&#xf028;</span> $vol </span>"
+elif [[ $stat == "[off]" ]]; then
+    echo "<span background=\"$cyan\"> <span face='Font Awesome 5 Free'>&#xf6a9;</span> </span>"
+elif [[ $volint -le 30 ]]; then
+    echo "<span background=\"$cyan\"> <span face='Font Awesome 5 Free'>&#xf027;</span> $vol </span>"
+elif [[ $volint == 0 ]]; then
+    echo "<span background=\"$cyan\"> <span face='Font Awesome 5 Free'>&#xf026;</span> $vol </span>"
+else
+    echo "<span background=\"$cyan\"> <span face='Font Awesome 5 Free'>&#xf028;</span> $vol </span>"
+fi
+
+case $BLOCK_BUTTON in
+  3) pactl set-sink-mute 0 toggle ;;  #     right click, mute/unmute
+  4) pactl set-sink-volume 0 +5% ;; # scroll up, increase
+  5) pactl set-sink-volume 0 -5% ;; # scroll down, decrease 
+esac

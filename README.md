@@ -1,3 +1,5 @@
+[![Sparkline](https://stars.medv.io/StillANixRookie/i3rice-arch.svg)](https://stars.medv.io/StillANixRookie/i3rice-arch)
+
 # Scrots
 
 ![Workspace 1](ws1.png "Workspace 1")

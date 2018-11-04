@@ -1,0 +1,41 @@
+#!/bin/bash
+
+blackd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+blackl=$(xrdb -query | grep '*color8' | awk '{print $NF}')
+green=$(xrdb -query | grep '*color2' | awk '{print $NF}')
+yellow=$(xrdb -query | grep '*color3' | awk '{print $NF}')
+red=$(xrdb -query | grep '*color9' | awk '{print $NF}')
+whited=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+whitel=$(xrdb -query | grep '*color15' | awk '{print $NF}')
+blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+magenta=$(xrdb -query | grep '*color5' | awk '{print $NF}')
+cyan=$(xrdb -query | grep '*color6' | awk '{print $NF}')
+
+dir=$HOME/.themes/MINE/gtk-2.0/
+
+cd $dir
+
+echo -e "gtk-color-scheme = \"base_color: $whited\"" > gtkrc
+echo -e "gtk-color-scheme = \"text_color: $blackd\"" >> gtkrc
+echo -e "gtk-color-scheme = \"bg_color: $whited\"" >> gtkrc
+echo -e "gtk-color-scheme = \"fg_color: $blackl\"" >> gtkrc
+echo -e "gtk-color-scheme = \"tooltip_bg_color: $blackl\"" >> gtkrc
+echo -e "gtk-color-scheme = \"tooltip_fg_color: $whited\"" >> gtkrc
+echo -e "gtk-color-scheme = \"selected_bg_color: $blue\"" >> gtkrc
+echo -e "gtk-color-scheme = \"selected_fg_color: $whited\"" >> gtkrc
+echo -e "gtk-color-scheme = \"insensitive_bg_color: $whited\"" >> gtkrc
+echo -e "gtk-color-scheme = \"insensitive_fg_color: $whitel\"" >> gtkrc
+echo -e "gtk-color-scheme = \"notebook_bg: $whited\"" >> gtkrc
+echo -e "gtk-color-scheme = \"dark_sidebar_bg: $blackd\"" >> gtkrc
+echo -e "gtk-color-scheme = \"link_color: $blue\"" >> gtkrc
+echo -e "gtk-color-scheme = \"menu_bg: $whited\"" >> gtkrc
+echo -e "" >> gtkrc
+echo -e "gtk-icon-sizes = \"gtk-button=16,16\" # This makes button icons smaller." >> gtkrc
+echo -e "gtk-auto-mnemonics = 1" >> gtkrc
+echo -e "gtk-primary-button-warps-slider = 1" >> gtkrc
+echo -e "" >> gtkrc
+echo -e "include \"main.rc\"" >> gtkrc
+echo -e "include \"apps.rc\"" >> gtkrc
+echo -e "include \"panel.rc\"" >> gtkrc
+echo -e "include \"xfce-notify.rc\"" >> gtkrc
+echo -e "include \"menubar-toolbar/menubar-toolbar.rc\"" >> gtkrc

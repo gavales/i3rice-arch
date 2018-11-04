@@ -1,0 +1,177 @@
+#!/bin/bash
+
+blackd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+blackl=$(xrdb -query | grep '*color8' | awk '{print $NF}')
+green=$(xrdb -query | grep '*color2' | awk '{print $NF}')
+yellow=$(xrdb -query | grep '*color3' | awk '{print $NF}')
+red=$(xrdb -query | grep '*color9' | awk '{print $NF}')
+whited=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+whitel=$(xrdb -query | grep '*color15' | awk '{print $NF}')
+blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+magenta=$(xrdb -query | grep '*color5' | awk '{print $NF}')
+cyan=$(xrdb -query | grep '*color6' | awk '{print $NF}')
+
+dir=$HOME/.themes/MINE/gtk-2.0/
+
+cd $dir
+
+echo -e "style \"theme-panel\" {" > panel.rc
+echo -e "" >> panel.rc
+echo -e "  xthickness = 2" >> panel.rc
+echo -e "  ythickness = 0" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "  bg[NORMAL] = \"$blackd\"" >> panel.rc
+echo -e "  bg[ACTIVE] = @selected_bg_color" >> panel.rc
+echo -e "  bg[PRELIGHT] = \"$blackl\"" >> panel.rc
+echo -e "  bg[SELECTED] = @selected_bg_color" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "  fg[NORMAL] = \"$whitel\"" >> panel.rc
+echo -e "  fg[PRELIGHT] = @selected_fg_color" >> panel.rc
+echo -e "  fg[ACTIVE] = @selected_fg_color" >> panel.rc
+echo -e "  fg[SELECTED] = @selected_fg_color" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "  text[NORMAL] = \"$whitel\"" >> panel.rc
+echo -e "  text[PRELIGHT] = \"$whitel\"" >> panel.rc
+echo -e "  text[ACTIVE] = \"$whitel\"" >> panel.rc
+echo -e "  text[SELECTED] = \"$whitel\"" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "  engine \"murrine\" {" >> panel.rc
+echo -e "    reliefstyle = 0" >> panel.rc
+echo -e "    glazestyle = 0" >> panel.rc
+echo -e "    glow_shade = 1.0" >> panel.rc
+echo -e "    highlight_shade = 1.0" >> panel.rc
+echo -e "    roundness = 0" >> panel.rc
+echo -e "    gradient_shades = {1.0,1.0,1.0,1.0}" >> panel.rc
+echo -e "    textstyle = 0" >> panel.rc
+echo -e "    contrast = 0.0" >> panel.rc
+echo -e "  }" >> panel.rc
+echo -e "}" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "style \"theme-panel-progressbar\" {" >> panel.rc
+echo -e "  bg[ACTIVE] = \"$blackd\"" >> panel.rc
+echo -e "}" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "style \"panelbar\" {" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "  fg[NORMAL] = \"$whited\"" >> panel.rc
+echo -e "  fg[ACTIVE] = \"$whited\"" >> panel.rc
+echo -e "  fg[PRELIGHT] = \"$whited\"" >> panel.rc
+echo -e "  fg[SELECTED] = @selected_fg_color" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "  bg[SELECTED] = @selected_bg_color" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "  engine \"murrine\" {}" >> panel.rc
+echo -e "}" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "style \"panelbuttons\" {" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "  xthickness = 4" >> panel.rc
+echo -e "  ythickness = 0" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "  engine \"murrine\" {" >> panel.rc
+echo -e "    textstyle = 0" >> panel.rc
+echo -e "  }" >> panel.rc
+echo -e "}" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "style \"theme-panel-text\" {" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "  fg[NORMAL] = \"$whited\"" >> panel.rc
+echo -e "  fg[PRELIGHT] = @selected_fg_color" >> panel.rc
+echo -e "  fg[ACTIVE] = \"$whited\"" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "  text[NORMAL] = \"$whited\"" >> panel.rc
+echo -e "  text[PRELIGHT] = @selected_fg_color" >> panel.rc
+echo -e "  text[ACTIVE] = \"$whited\"" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "  engine \"murrine\" {" >> panel.rc
+echo -e "    textstyle = 0" >> panel.rc
+echo -e "    text_shade = 0.2" >> panel.rc
+echo -e "  }" >> panel.rc
+echo -e "}" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "style \"panel-entry\" {" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "  fg[NORMAL] = @text_color" >> panel.rc
+echo -e "  fg[PRELIGHT] = @text_color" >> panel.rc
+echo -e "  fg[ACTIVE] = @text_color" >> panel.rc
+echo -e "  fg[SELECTED] = @text_color" >> panel.rc
+echo -e "  fg[INSENSITIVE] = @text_color" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "  text[NORMAL] = @text_color" >> panel.rc
+echo -e "  text[PRELIGHT] = @text_color" >> panel.rc
+echo -e "  text[ACTIVE] = @text_color" >> panel.rc
+echo -e "  text[SELECTED] = @text_color" >> panel.rc
+echo -e "  text[INSENSITIVE] = @text_color" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "}" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "style \"theme-main-menu-text\" = \"theme-panel-text\" {" >> panel.rc
+echo -e "  fg[PRELIGHT] = @selected_fg_color" >> panel.rc
+echo -e "  text[PRELIGHT] = @selected_fg_color" >> panel.rc
+echo -e "}" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "style \"workspace-switcher\" = \"theme-panel\" {" >> panel.rc
+echo -e "  bg[SELECTED] = @selected_bg_color" >> panel.rc
+echo -e "}" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "style \"indicator\" = \"theme-panel\" {" >> panel.rc
+echo -e "  xthickness = 0" >> panel.rc
+echo -e "  ythickness = 0" >> panel.rc
+echo -e "}" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "widget \"*tasklist*\"                                   style \"panelbuttons\"" >> panel.rc
+echo -e "widget_class \"*Xfce*Panel*.GtkToggleButton\"           style \"panelbuttons\"" >> panel.rc
+echo -e "widget_class \"*Xfce*NetkTasklist*GtkToggleButton\"     style \"panelbuttons\"" >> panel.rc
+echo -e "widget_class \"*PanelToplevel*Button\"                  style \"panelbuttons\"" >> panel.rc
+echo -e "widget_class \"*Panel*GtkToggleButton\"                 style \"panelbuttons\"" >> panel.rc
+echo -e "widget_class \"*Xfce*Panel*Button*\"                    style \"panelbuttons\"" >> panel.rc
+echo -e "widget_class \"*<XfceArrowButton>\"                     style \"panelbuttons\"" >> panel.rc
+echo -e "widget_class \"*<XfceActionsPlugin>*\"                  style \"panelbuttons\"" >> panel.rc
+echo -e "widget_class \"*XfcePanelPlugin.GtkButton\"             style \"panelbuttons\"" >> panel.rc
+echo -e "widget \"*dict*Applet*\"                                style \"panelbuttons\"" >> panel.rc
+echo -e "widget_class \"*Xfce*NetkTasklist*GtkToggleButton\"     style \"panelbuttons\"" >> panel.rc
+echo -e "widget_class \"*Tasklist*\"                             style:highest \"panelbuttons\"" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "class \"*Panel*MenuBar*\"                               style \"panelbar\"" >> panel.rc
+echo -e "widget_class \"*Panel*MenuBar*\"                        style \"panelbar\"" >> panel.rc
+echo -e "widget_class \"*Panel*MenuBar*Item*\"                   style:highest \"panelbar\"" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "widget \"*PanelWidget*\"                                style \"theme-panel\"" >> panel.rc
+echo -e "widget \"*PanelApplet*\"                                style \"theme-panel\"" >> panel.rc
+echo -e "widget \"*fast-user-switch*\"                           style \"theme-panel\"" >> panel.rc
+echo -e "widget \"*CPUFreq*Applet*\"                             style \"theme-panel\"" >> panel.rc
+echo -e "class \"PanelApp*\"                                     style \"theme-panel\"" >> panel.rc
+echo -e "class \"PanelToplevel*\"                                style \"theme-panel\"" >> panel.rc
+echo -e "widget_class \"*PanelToplevel*\"                        style \"theme-panel\"" >> panel.rc
+echo -e "widget_class \"*notif*\"                                style \"theme-panel\"" >> panel.rc
+echo -e "widget_class \"*Notif*\"                                style \"theme-panel\"" >> panel.rc
+echo -e "widget_class \"*Tray*\"                                 style \"theme-panel\" " >> panel.rc
+echo -e "widget_class \"*tray*\"                                 style \"theme-panel\"" >> panel.rc
+echo -e "widget_class \"*computertemp*\"                         style \"theme-panel\"" >> panel.rc
+echo -e "widget_class \"*Applet*Tomboy*\"                        style \"theme-panel\"" >> panel.rc
+echo -e "widget_class \"*Applet*Netstatus*\"                     style \"theme-panel\"" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "# Fixes for tooltip text in some apps." >> panel.rc
+echo -e "widget_class \"*Notif*Beagle*\"                         style \"theme-panel\"" >> panel.rc
+echo -e "widget_class \"*Notif*Brasero*\"                        style \"theme-panel\"" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "# XFCE panel theming." >> panel.rc
+echo -e "widget \"*Xfce*Panel*\"                                 style \"theme-panel\"" >> panel.rc
+echo -e "class \"*Xfce*Panel*\"                                  style \"theme-panel\"" >> panel.rc
+echo -e "widget \"*Xfce*Panel*GtkProgressBar\"                   style \"theme-panel-progressbar\"" >> panel.rc
+echo -e "widget \"*WnckPager*\"                                  style \"workspace-switcher\"" >> panel.rc
+echo -e "widget \"*TopMenu*\"                                    style \"theme-panel\"" >> panel.rc
+echo -e "widget \"*XfceTasklist*\"                               style \"panelbuttons\"" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "# Fix gtk-entries in the panel" >> panel.rc
+echo -e "widget \"*bookmark*GtkEntry\"                           style \"panel-entry\" # fixes smartbookmark-plugin" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "# Make sure panel text color doesn't change" >> panel.rc
+echo -e "widget_class \"*Panel*MenuBar*\"                        style \"theme-main-menu-text\"" >> panel.rc
+echo -e "widget_class \"*Panel*<GtkMenuBar>*\"                   style \"theme-main-menu-text\"" >> panel.rc
+echo -e "widget \"*.clock-applet-button.*\"                      style \"theme-panel-text\"" >> panel.rc
+echo -e "widget \"*PanelApplet*\"                                style \"theme-panel-text\"" >> panel.rc
+echo -e "" >> panel.rc
+echo -e "# Override general panel-style with specific plugin-styles" >> panel.rc
+echo -e "widget \"*indicator-applet*\"                           style \"indicator\"" >> panel.rc
+echo -e "widget \"*indicator-button*\"                           style \"indicator\"" >> panel.rc

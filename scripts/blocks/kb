@@ -1,0 +1,13 @@
+#!/bin/bash
+
+black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+magenta=$(xrdb -query | grep '*color5' | awk '{print $NF}')
+
+stat=$(xset -q | grep 'Caps Lock:' | awk '{print $4}')
+lo=$(setxkbmap -query | grep 'layout' | awk '{print $2}')
+
+if [[ $stat == "on" ]]; then
+    echo "<span background=\"$magenta\"> <span face='Font Awesome 5 Free'>&#xf031;</span> </span>"
+else
+    echo "<span background=\"$magenta\"> <span face='Font Awesome 5 Free'>&#xf11c;</span> $lo </span>"
+fi

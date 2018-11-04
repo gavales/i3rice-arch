@@ -1,7 +1,0 @@
-#!/bin/sh
-
-blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
-
-echo $blue
-
-print("#FF0000\n")

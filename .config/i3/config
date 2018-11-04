@@ -2,31 +2,29 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 #############################################################################
-
-# RELOAD CONFIG
-bindsym $mod+Shift+c reload
-
-# RESTART i3
-bindsym $mod+Shift+r restart
-
-#############################################################################
 ### MAIN FONT
 
-font pango:Ubuntu Mono, pango:FontAwesome 12
+set $font1 FixedsysMono
+set $font2 FontAwesome
+set $fonts 12
+
+font pango:$font1,$font2 $fonts
 
 #############################################################################
 ### DEFINE VARIABLES
 
 # SET $MOD
 set $mod Mod1
+set $win Mod4
 
 # SET TERM(S)
-set $term urxvt
-set $term2 gnome-terminal
+set $term urxvtc
+#set $term urxvt
 
 # BROWSER(S)
 set $browser qutebrowser
 #set $browser2 chromium
+#set $browser2 google-chrome-beta
 set $browser2 google-chrome-stable
 
 # COLORS
@@ -61,6 +59,14 @@ set $ws10 10
 set $t 99
 
 #############################################################################
+
+# RELOAD CONFIG
+bindsym $mod+Shift+c exec --no-startup-id "bash $home/$scripts/xtheme; bash $home/$scripts/reloadconfs; i3-msg reload"
+
+# RESTART i3
+bindsym $mod+Shift+r restart
+
+#############################################################################
 ### BORDERS
 
 # BORDER STYLE <normal|1pixel|pixel xx|none|pixel>
@@ -81,22 +87,22 @@ client.placeholder      $black $black $white $black $black
 
 # BAR
 bar {
-	i3bar_command i3bar -t
+	i3bar_command i3bar
 	status_command i3blocks -c ~/$scripts/i3blocks.conf
 #	status_command i3blocks
 	position bottom
 
 	bindsym button4 nop
 	bindsym button5 nop
-	font pango:Ubuntu Mono,FontAwesome 12
+	font pango:$font1,$font2 $fonts
 
 	colors {
-	background $black$t
+	background $black
 
 #			   border  backgr. text
 	focused_workspace  $blue $blue $black
 	active_workspace   $cyan $cyan $black
-	inactive_workspace $black$t $black$t $white
+	inactive_workspace $black $black $white
 	binding_mode       $yellow $yellow $black
 	urgent_workspace   $red $red $black
 	}
@@ -156,13 +162,13 @@ bindsym $mod+i resize grow height 10 px or 10 ppt
 bindsym $mod+u resize shrink height 10 px or 10 ppt
 bindsym $mod+o resize grow width 10 px or 10 ppt
 
-bindsym $mod+Shift+semicolon resize shrink left 5 px or 5 ppt, resize shrink right 5 px or 5 ppt
-bindsym $mod+Shift+slash resize grow down 5 px or 5 ppt, resize grow up 5 px or 5 ppt
-bindsym $mod+Shift+period resize shrink down 5 px or 5 ppt, resize shrink up 5 px or 5 ppt
-bindsym $mod+Shift+apostrophe resize grow left 5 px or 5 ppt, resize grow right 5 px or 5 ppt
+# bindsym $mod+Shift+semicolon resize shrink left 5 px or 5 ppt, resize shrink right 5 px or 5 ppt
+# bindsym $mod+Shift+slash resize grow down 5 px or 5 ppt, resize grow up 5 px or 5 ppt
+# bindsym $mod+Shift+period resize shrink down 5 px or 5 ppt, resize shrink up 5 px or 5 ppt
+# bindsym $mod+Shift+apostrophe resize grow left 5 px or 5 ppt, resize grow right 5 px or 5 ppt
 
 # WORKSPACE BACK & FORTH
-#workspace_auto_back_and_forth yes
+workspace_auto_back_and_forth yes
 
 # SPLIT ORIENTATION
 bindsym $mod+g split h
@@ -236,10 +242,6 @@ for_window [class="Spotify"] move to workspace $ws9
 assign [instance="MUSIC"]	$ws9
 assign [instance="VIS"]		$ws9
 assign [class="Arandr"]		$ws10
-#assign [title="New Tab - Chromium"]		$ws1
-#assign [title="New Tab - Google Chrome"]	$ws1
-#for_window [title="YouTube"] resize shrink width 20px or 20ppt, default_orientation vertical
-#for_window [instance="RSS"] resize shrink width 20px or 20ppt
 
 #############################################################################
 ### FLOATING WINDOWS
@@ -317,49 +319,30 @@ bindsym $mod+Return exec $term
 # APPLICATION LAUNCHER
 bindsym $mod+Ctrl+b exec $term -e 'bmenu'
 bindsym $mod+d exec rofi -show drun
-#bindsym $mod+Ctrl+d exec dmenu_run -fn "Ubuntu Mono:size=14" -nb "$black" -nf "$white" -sf "$black" -sb "$blue"
-bindsym $mod+Shift+d exec dmenu_run -fn "Ubuntu Mono:size=14" -nb "$black" -nf "$white" -sf "$black" -sb "$blue"
+bindsym $mod+Shift+d exec dmenu_run -fn "$font1:size=$fonts" -nb "$black" -nf "$white" -sf "$black" -sb "$blue"
 bindsym $mod+z exec --no-startup-id morc_menu
 
 # BRIGHTNESS CONTROLS
-
-bindsym $mod+F6 exec "xbacklight -inc 10; mpv $home/scriptsounds/Robot\ blip.mp3"
-bindsym $mod+F5 exec "xbacklight -dec 10; mpv $home/scriptsounds/Robot\ blip.mp3"
-
-#bindsym $mod+Home exec "light -A 10; mpv $home/scriptsounds/Robot\ blip.mp3"
-#bindsym $mod+End exec "light -U 10; mpv $home/scriptsounds/Robot\ blip.mp3"
+bindsym $win+o exec xbacklight -inc 10
+bindsym $win+y exec xbacklight -dec 10
+#bindsym $win+o exec light -A 10
+#bindsym $win+y exec light -U 10
 
 # VOLUME CONTROLS
-bindsym $mod+F3 exec "pactl set-sink-volume 0 +2%; mpv $home/scriptsounds/Robot\ blip.mp3"
-bindsym $mod+F2 exec "pactl set-sink-volume 0 -2%; mpv $home/scriptsounds/Robot\ blip.mp3"
-bindsym $mod+F1 exec "pactl set-sink-mute 0 toggle; mpv $home/scriptsounds/Click\ On.mp3"
-
-#bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +2%; mpv $home/scriptsounds/Robot\ blip.mp3"
-#bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -2%; mpv $home/scriptsounds/Robot\ blip.mp3"
-#bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle; mpv $home/scriptsounds/Click\ On.mp3"
+bindsym $win+k exec pactl set-sink-volume 0 +2%
+bindsym $win+j exec pactl set-sink-volume 0 -2%
+bindsym $win+h exec pactl set-sink-mute 0 toggle
 
 # FILE MANAGERS
 bindsym $mod+F12 exec pcmanfm
-bindsym $mod+Shift+F12 exec nautilus
+bindsym $win+F12 exec nautilus
 bindsym $mod+Shift+Return exec $term -e ranger
-bindsym $mod+Ctrl+Return exec $term -e sudo ranger
+bindsym $win+Shift+Return exec $term -e sudo ranger
 
 bindsym $mod+Shift+F3 exec gksu pcmanfm
 #bindsym $mod+F5 exec $term -e 'mocp'
-bindsym $mod+t exec --no-startup-id pkill compton
-bindsym $mod+Ctrl+t exec --no-startup-id compton -b
-#bindsym $mod+Shift+d --release exec "killall dunst; xrdb -load ~/.Xresources;\
-	#mpv $home/scriptsounds/A\ Tone\ His\ Self.mp3;\
-	#bash ~/$scripts/dunstthemeupdate;\
-	#bash ~/$scripts/mkblocksconf;\
-	#bash ~/$scripts/mkvistheme;\
-	#exec notify-send '.Xresources has been reloaded' -i ~/$scriptpics/settingswhite.png"
-bindsym $mod+F9 --release exec "killall dunst; xrdb -load ~/.Xresources;\
-	mpv $home/scriptsounds/A\ Tone\ His\ Self.mp3;\
-	bash ~/$scripts/dunstthemeupdate;\
-	bash ~/$scripts/mkblocksconf;\
-	bash ~/$scripts/mkvistheme;\
-	exec notify-send '.Xresources has been reloaded' -i ~/$scriptpics/settingswhite.png"
+bindsym $win+t exec --no-startup-id pkill compton
+bindsym $win+Shift+t exec --no-startup-id compton
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 #############################################################################
@@ -371,17 +354,16 @@ bindsym $mod+s exec $term -name MUSIC -e ncmpcpp
 
 # MUSIC PLAYER CONTROLS
 bindsym $mod+p exec playerctl play-pause
-bindsym $mod+Shift+p exec mpc toggle
+bindsym $win+p exec mpc toggle
 bindsym $mod+bracketright exec playerctl next
-bindsym $mod+Shift+bracketright exec mpc next
+bindsym $win+bracketright exec mpc next
 bindsym $mod+bracketleft exec playerctl previous
-bindsym $mod+Shift+bracketleft exec mpc prev
-bindsym $mod+Shift+Home exec mpc play
-bindsym $mod+Shift+End exec mpc stop
+bindsym $win+bracketleft exec mpc prev
+bindsym $win+Home exec mpc play
+bindsym $win+End exec mpc stop
 
 # VISUALISER
 bindsym $mod+Shift+v exec $term -name VIS -fn "xft:TerminessTTFNerdFontMono:size=9" -e vis
-bindsym $mod+Ctrl+n exec $term -fn "xft:TerminessTTFNerdFontMono:size=9" -e ncmpcpp -s visualizer
 
 # PRIME VIDEO
 bindsym $mod+Shift+n exec $browser2 --new-window\
@@ -403,12 +385,11 @@ bindsym $mod+m exec $browser2 --new-window\
 bindsym $mod+Shift+y exec $browser2 --new-window\
  --app=https://www.youtube.com/
 
-# ALSAMIXER
-bindsym $mod+Ctrl+a exec $term -e 'alsamixer'
+## ALSAMIXER
+#bindsym $win+a exec $term -e 'alsamixer'
 
 # BROWSERS
-bindsym $mod+c exec $browser
-bindsym $mod+f exec $browser2
+bindsym $mod+c exec $browser2
 
 # QALC
 bindsym $mod+q exec $term -name CALC -e R
@@ -422,11 +403,12 @@ bindsym $mod+semicolon exec redshift -P -O 3700
 bindsym $mod+apostrophe exec redshift -x
 
 # MULTI-MONITOR SETTINGS
-bindsym $mod+F7 exec bash ~/$scripts/multimon
-bindsym $mod+Ctrl+v move workspace to output VGA1
-bindsym $mod+Ctrl+h move workspace to output HDMI1
-bindsym $mod+Ctrl+e move workspace to output primary
-bindsym $mod+Ctrl+m xrandr --output eDP1 --primary
+bindsym $win+m exec bash ~/$scripts/multimon
+bindsym $win+v move workspace to output VGA1
+#bindsym $win+v move workspace to output VGA-1
+bindsym $win+d move workspace to output HDMI1
+bindsym $win+e move workspace to output eDP1
+#bindsym $win+e move workspace to output LVDS-1
 
 # SCROT
 bindsym Print exec bash ~/$scripts/screenshot
@@ -441,7 +423,7 @@ bindsym $mod+r exec --no-startup-id $term -name RSS -e newsboat
 bindsym $mod+Shift+g exec bash ~/$scripts/grive
 
 # GIT REPO UPDATE
-bindsym $mod+Ctrl+g exec $term -name GITREPOUPDATE -e bash ~/$scripts/gitcommit
+bindsym $win+g exec $term -name GITREPOUPDATE -e bash ~/$scripts/gitcommit
 
 # GOOGLE DOCs
 bindsym $mod+Ctrl+q exec $browser2 --new-window\
@@ -451,37 +433,41 @@ bindsym $mod+Ctrl+w exec $browser2 --new-window\
 bindsym $mod+Ctrl+r exec $browser2 --new-window\
  --app=https://docs.google.com/presentation/u/0/
 
+# GET WS LAYOUT
+bindsym $win+l exec --no-startup-id bash ~/$scripts/getwslo
+# APPLY WS LAYOUT
+bindsym $win+a exec --no-startup-id bash ~/$scripts/appwslo
+
 # OPEN CONFIGS
-bindsym $mod+Ctrl+1 exec --no-startup-id $term -e vim ~/.config/i3/config
-bindsym $mod+Ctrl+2 exec --no-startup-id $term -e vim ~/.Xresources
-bindsym $mod+Ctrl+3 exec --no-startup-id $term -e vim ~/.vimrc
-bindsym $mod+Ctrl+4 exec --no-startup-id $term -e vim ~/.config/ranger/rc.conf
-bindsym $mod+Ctrl+5 exec --no-startup-id $term -e vim ~/scripts/mkblocksconf
-bindsym $mod+Ctrl+6 exec --no-startup-id $term -e vim ~/.config/qutebrowser/config.py
+bindsym $win+1 exec --no-startup-id $term -e vim ~/.config/i3/config
+bindsym $win+2 exec --no-startup-id $term -e vim ~/.Xresources
+bindsym $win+3 exec --no-startup-id $term -e vim ~/.vimrc
+bindsym $win+4 exec --no-startup-id $term -e vim ~/.config/ranger/rc.conf
+bindsym $win+5 exec --no-startup-id $term -e vim ~/scripts/mkblocksconf
+bindsym $win+6 exec --no-startup-id $term -e vim ~/.config/qutebrowser/config.py
 
 #############################################################################
 ### STARTUP DAEMONS
 
+exec --no-startup-id urxvtd -q -o -f
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
-exec_always --no-startup-id xrdb -load ~/.Xresources
 exec --no-startup-id blueman-applet
+exec --no-startup-id compton
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec_always --no-startup-id synclient VertEdgeScroll=1 HorizEdgeScroll=1 \
-	HorizTwoFingerScroll=1 PalmDetect=1 TapButton1=1 TapButton2=3 TapButton3=2
-exec_always compton --config ~/.config/compton.conf
 exec --no-startup-id feh --bg-scale ~/.config/wall.png
 exec --no-startup-id mpd
 exec setxkbmap us
+#exec setxkbmap gb
 
 #############################################################################
 ### STARTUP PROGRAMS
 
-exec --no-startup-id "i3-msg 'workspace 1; append_layout $home/.config/i3/workspace-1.json'"
+exec --no-startup-id "i3-msg 'workspace 1; append_layout $home/.config/i3/main.json'"
 #exec --no-startup-id "i3-msg 'workspace 9; append_layout $home/.config/i3/workspace-9.json'"
 exec $browser2
 exec $browser2 --new-window --app=https://www.youtube.com/

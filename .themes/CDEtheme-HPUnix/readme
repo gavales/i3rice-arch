@@ -1,0 +1,28 @@
+CDE/MOTIF LIKE THEME FOR GTK2/3 AND XFWM4
+
+(Jos van Riswick/gpl3/josvanr@gmail.com)
+
+
+
+Please copy the CDEtheme directory to ~/.themes/CDEtheme
+
+
+For the theme to take effect, go into Xfce Settings/Appearance and pick
+CDEtheme to make the colors apply to all running apps. Similar in other desktop
+envs.
+
+For the xfwm4 theme to apply, go into Xfce Settings/Window Manager/Theme and choose
+CDEtheme (for cde style window decorations)
+
+Default color scheme is 'Broica' but you can also switch to any other CDE
+colorscheme in the CDEtheme/palettes directory, by using the MotifColors.py
+script. For each palette, in CDE you could choose between 4 or 8 colors, so do
+one of these:
+
+MotifColors.py palettes/Broica.dp 8
+MotifColors.py palettes/Broica.dp 4
+
+to generate all new files. For this to take effect, you need to switch to another 
+scheme, and then switch back to CDEtheme again. 
+
+    

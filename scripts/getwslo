@@ -1,0 +1,15 @@
+#!/bin/bash
+
+black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+font=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
+dmenucolors="-fn "${font:4}" -nb "$black" -nf "$white" -sf "$black" -sb "$blue""
+
+ws=$(echo -e "1\n2\n3\n4\n5\n6\n7\n8\n9\n10" | dmenu -i -p "Get layout from which workspace?" $dmenucolors)
+
+if [[ -z $ws ]]; then
+	exit
+else
+	i3-save-tree --workspace ${ws} > ~/.config/i3/workspace-${ws}.json
+fi

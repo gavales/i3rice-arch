@@ -35,11 +35,12 @@ cd "$blocksDir" || exit 1
 
 echo -e "# i3blocks config file" > i3blocks.conf
 
-echo "# Global properties" >> i3blocks.conf
-echo "command=~/scripts2/\$BLOCK_NAME" >> i3blocks.conf
-echo "#command=/usr/lib/i3blocks/\$BLOCK_NAME" >> i3blocks.conf
-echo "color=$whited" >> i3blocks.conf
-echo "separator_block_width=10" >> i3blocks.conf
+# Global properties
+echo "command=bash ${blocksDir}blocks/\$BLOCK_NAME" >> i3blocks.conf
+#echo "command=/usr/lib/i3blocks/\$BLOCK_NAME" >> i3blocks.conf
+echo "color=$blackd" >> i3blocks.conf
+echo "separator_block_width=0" >> i3blocks.conf
+echo "separator=false" >> i3blocks.conf
 echo "border_top=0" >> i3blocks.conf
 echo "border_bottom=0" >> i3blocks.conf
 echo "border_left=0" >> i3blocks.conf
@@ -47,7 +48,6 @@ echo "border_right=0" >> i3blocks.conf
 echo -e "markup=pango\n" >> i3blocks.conf
 
 echo "[mpgui]" >> i3blocks.conf
-echo "command=bash ~/scripts/mpgui" >> i3blocks.conf
 echo "interval=5" >> i3blocks.conf
 echo "border=$magenta" >> i3blocks.conf
 echo -e "full_text=\n" >> i3blocks.conf
@@ -55,13 +55,11 @@ echo -e "full_text=\n" >> i3blocks.conf
 echo -e "[separator]\n" >> i3blocks.conf
 
 echo "[mpc]" >> i3blocks.conf
-echo "command=bash ~/scripts/mpc" >> i3blocks.conf
 echo "interval=5" >> i3blocks.conf
 echo "border=$magenta" >> i3blocks.conf
 echo -e "separator=false\n" >> i3blocks.conf
 
 echo "[brightness]" >> i3blocks.conf
-echo "command=bash ~/scripts/brightness" >> i3blocks.conf
 echo "interval=1" >> i3blocks.conf
 echo "border=$cyan" >> i3blocks.conf
 echo -e "full_text=\n" >> i3blocks.conf
@@ -69,21 +67,18 @@ echo -e "full_text=\n" >> i3blocks.conf
 echo -e "[separator]\n" >> i3blocks.conf
 
 echo "[volume]" >> i3blocks.conf
-echo "command=bash ~/scripts/volume" >> i3blocks.conf
 echo "border=$cyan" >> i3blocks.conf
 echo "interval=1" >> i3blocks.conf
 echo -e "separator=false\n" >> i3blocks.conf
 
 echo "[disk]" >> i3blocks.conf
-echo "command=bash ~/scripts/disk" >> i3blocks.conf
 echo "interval=60" >> i3blocks.conf
 echo "border=$blue" >> i3blocks.conf
 echo -e "full_text=\n" >> i3blocks.conf
 
 echo -e "[separator]\n" >> i3blocks.conf
 
-echo "[memory]" >> i3blocks.conf
-echo "command=bash ~/scripts/ram" >> i3blocks.conf
+echo "[ram]" >> i3blocks.conf
 echo "interval=10" >> i3blocks.conf
 echo "border=$green" >> i3blocks.conf
 echo -e "full_text=\n" >> i3blocks.conf
@@ -98,8 +93,7 @@ echo -e "[separator]\n" >> i3blocks.conf
 #echo "#interval=5" >> i3blocks.conf
 #echo -e "##separator=false\n" >> i3blocks.conf
 
-echo "[cpu_usage]" >> i3blocks.conf
-echo "command=bash ~/scripts/cpunew" >> i3blocks.conf
+echo "[cpu]" >> i3blocks.conf
 echo "interval=5" >> i3blocks.conf
 echo "markup=pango" >> i3blocks.conf
 echo "border=$yellow" >> i3blocks.conf
@@ -107,8 +101,7 @@ echo -e "full_text=\n" >> i3blocks.conf
 
 echo -e "[separator]\n" >> i3blocks.conf
 
-echo "[cpu-temp]" >> i3blocks.conf
-echo "command=bash ~/scripts/temp" >> i3blocks.conf
+echo "[temp]" >> i3blocks.conf
 echo "interval=5" >> i3blocks.conf
 echo "markup=pango" >> i3blocks.conf
 echo "border=$red" >> i3blocks.conf
@@ -131,24 +124,21 @@ echo -e "separator=false\n" >> i3blocks.conf
 #
 #echo -e "[separator]\n" >> i3blocks.conf
 
-echo "[battery]" >> i3blocks.conf
-echo "command=bash ~/scripts/batt" >> i3blocks.conf
+echo "[batt]" >> i3blocks.conf
 echo "border=$blue" >> i3blocks.conf
 echo "interval=10" >> i3blocks.conf
 echo -e "full_text=\n" >> i3blocks.conf
 
 echo -e "[separator]\n" >> i3blocks.conf
 
-echo "[caps]" >> i3blocks.conf
-echo "command=bash ~/scripts/caps" >> i3blocks.conf
+echo "[kb]" >> i3blocks.conf
 echo "border=$magenta" >> i3blocks.conf
-echo "interval=once" >> i3blocks.conf
+echo "interval=1" >> i3blocks.conf
 echo -e "full_text=\n" >> i3blocks.conf
 
 echo -e "[separator]\n" >> i3blocks.conf
 
-echo "[time]" >> i3blocks.conf
-echo "command=bash ~/scripts/td" >> i3blocks.conf
+echo "[td]" >> i3blocks.conf
 echo "border=$whited" >> i3blocks.conf
 echo "interval=1" >> i3blocks.conf
 )
