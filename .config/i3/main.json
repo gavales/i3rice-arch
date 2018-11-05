@@ -22,7 +22,7 @@
             "swallows": [
                {
                "class": "^Google\\-chrome$",
-               "class": "^Google\\-chrome\\-beta$",
+               //"class": "^Google\\-chrome\\-beta$",
                "instance": "^google\\-chrome$",
                // "title": "^unicode\\ bar\\ characters\\ \\-\\ Google\\ Search\\ \\-\\ Google\\ Chrome$",
                "transient_for": "^$",
@@ -54,7 +54,7 @@
                     "swallows": [
                        {
                        "class": "^Google\\-chrome$",
-                       "class": "^Google\\-chrome\\-beta$",
+                       //"class": "^Google\\-chrome\\-beta$",
                        "instance": "^www\\.youtube\\.com$",
                        // "title": "^\\(5\\)\\ The\\ Soccer\\ Player\\ Who\\ Doesn\\'t\\ Give\\ a\\ Crap\\ \\(The\\ Safest\\ Place\\ to\\ Light\\ Fireworks\\)\\ \\-\\ YouTube$",
                        "transient_for": "^$",
