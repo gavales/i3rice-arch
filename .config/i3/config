@@ -235,9 +235,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 
 assign [instance="RSS"]		$ws1
 assign [title="YouTube"]	$ws1
-assign [class="Pcmanfm"]	$ws2
 assign [class="Nautilus"]	$ws2
-assign [instance="FILES"]	$ws2
 for_window [class="Spotify"] move to workspace $ws9
 assign [instance="MUSIC"]	$ws9
 assign [instance="VIS"]		$ws9
@@ -471,7 +469,7 @@ exec --no-startup-id "i3-msg 'workspace 1; append_layout $home/.config/i3/main.j
 #exec --no-startup-id "i3-msg 'workspace 9; append_layout $home/.config/i3/workspace-9.json'"
 exec $browser2
 exec $browser2 --new-window --app=https://www.youtube.com/
-exec --no-startup-id $term -name RSS -e newsboat
-exec --no-startup-id $term -name FILES -e ranger
+exec pcmanfm
+exec $term -name RSS -e newsboat
 exec_always mpv $home/scriptsounds/A\ Tone\ His\ Self.mp3
 exec_always notify-send 'i3 (re)loaded!' -i ~/$scriptpics/i3white.png

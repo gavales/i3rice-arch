@@ -17,13 +17,14 @@
                "x": 0,
                "y": 0
             },
-            "name": "Google Chrome",
+            "name": "unicode bar characters - Google Search - Google Chrome",
             "percent": 0.6,
             "swallows": [
                {
                "class": "^Google\\-chrome$",
-               "class": "^Chromium$",
-               // "title": "^i3\\:\\ Layout\\ saving\\ in\\ i3\\ \\-\\ Google\\ Chrome$",
+               "class": "^Google\\-chrome\\-beta$",
+               "instance": "^google\\-chrome$",
+               // "title": "^unicode\\ bar\\ characters\\ \\-\\ Google\\ Search\\ \\-\\ Google\\ Chrome$",
                "transient_for": "^$",
                "window_role": "^browser$"
                }
@@ -48,14 +49,14 @@
                        "x": 0,
                        "y": 529
                     },
-                    "name": "YouTube",
-                    "percent": 0.5,
+                    "name": "(5) The Soccer Player Who Doesn't Give a Crap (The Safest Place to Light Fireworks) - YouTube",
+                    "percent": 0.4,
                     "swallows": [
                        {
                        "class": "^Google\\-chrome$",
-                       "class": "^Chromium$",
+                       "class": "^Google\\-chrome\\-beta$",
                        "instance": "^www\\.youtube\\.com$",
-                       // "title": "^\\(3\\)\\ YouTube$",
+                       // "title": "^\\(5\\)\\ The\\ Soccer\\ Player\\ Who\\ Doesn\\'t\\ Give\\ a\\ Crap\\ \\(The\\ Safest\\ Place\\ to\\ Light\\ Fireworks\\)\\ \\-\\ YouTube$",
                        "transient_for": "^$",
                        "window_role": "^pop\\-up$"
                        }
@@ -63,26 +64,58 @@
                     "type": "con"
                 },
                 {
+                    // tabbed split container with 2 children
                     "border": "pixel",
-                    "current_border_width": 0,
                     "floating": "auto_off",
-                    "geometry": {
-                       "height": 456,
-                       "width": 640,
-                       "x": 0,
-                       "y": 0
-                    },
-                    "name": "newsboat",
-                    "percent": 0.5,
-                    "swallows": [
-                       {
-                       "class": "^URxvt$",
-                       "instance": "^RSS$",
-                       // "title": "^newsboat$",
-                       "transient_for": "^$"
-                       }
-                    ],
-                    "type": "con"
+                    "layout": "tabbed",
+                    "percent": 0.6,
+                    "type": "con",
+                    "nodes": [
+                        {
+                            "border": "pixel",
+                            "current_border_width": 0,
+                            "floating": "auto_off",
+                            "geometry": {
+                               "height": 456,
+                               "width": 640,
+                               "x": 0,
+                               "y": 0
+                            },
+                            "name": "newsboat",
+                            "percent": 0.5,
+                            "swallows": [
+                               {
+                               "class": "^URxvt$",
+                               "instance": "^RSS$",
+                               "title": "^newsboat$",
+                               "transient_for": "^$"
+                               }
+                            ],
+                            "type": "con"
+                        },
+                        {
+                            "border": "pixel",
+                            "current_border_width": 0,
+                            "floating": "auto_off",
+                            "geometry": {
+                               "height": 998,
+                               "width": 1860,
+                               "x": 0,
+                               "y": 0
+                            },
+                            "name": "gavaro",
+                            "percent": 0.5,
+                            "swallows": [
+                               {
+                               "class": "^Pcmanfm$",
+                               "instance": "^pcmanfm$",
+                               // "title": "^gavaro$",
+                               "transient_for": "^$"
+                               }
+                            ],
+                            "type": "con"
+                        }
+                    ]
                 }
             ]
         }
