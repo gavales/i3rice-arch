@@ -2,14 +2,26 @@
 
 txt=$1
 ops=$2
-figops=""
+fnt="-f 3-d"
 
 if [[ $ops == *[s]* ]]; then
-	figops+=" -f slant"
-fi
-
-if [[ $ops == *[b]* ]]; then
-	figops+=" -f banner"
+	figops=$(echo ${fnt/3-d/slant})
+elif [[ $ops == *[b]* ]]; then
+	figops=$(echo ${fnt/3-d/banner3})
+elif [[ $ops == *[i]* ]]; then
+	figops=$(echo ${fnt/3-d/larry3d})
+elif [[ $ops == *[l]* ]]; then
+	figops=$(echo ${fnt/3-d/letters})
+elif [[ $ops == *[r]* ]]; then
+	figops=$(echo ${fnt/3-d/roman})
+elif [[ $ops == *[m]* ]]; then
+	figops=$(echo ${fnt/3-d/smisome1})
+elif [[ $ops == *[t]* ]]; then
+	figops=$(echo ${fnt/3-d/trek})
+elif [[ $ops == *[f]* ]]; then
+	figops=$(echo ${fnt/3-d/speed})
+elif [[ $ops == *[k]* ]]; then
+	figops=$(echo ${fnt/3-d/smkeyboard})
 fi
 
 if [[ $ops == *[c]* ]]; then
@@ -18,6 +30,19 @@ fi
 
 if [[ -z $ops ]]; then
 	echo "$(tput bold)$(echo -e "$txt" | figlet -f 3-d -c | tr '*' '#' | tr '/' '.')" | lolcat
+    if [[ $txt == "-h" ]]; then
+    	echo "                    >>>>>>>>>>OPTIONS"
+    	echo "                    c    centre"
+    	echo "                    s    slant"
+    	echo "                    b    banner3"
+    	echo "                    i    larry3d"
+    	echo "                    l    letters"
+    	echo "                    r    roman"
+    	echo "                    m    smisome1"
+    	echo "                    t    trek"
+    	echo "                    f    speed"
+    	echo "                    k    smkeyboard"
+	fi
 else
-	echo "$(tput bold)$(echo -e "$txt" | figlet${figops})" | lolcat
+	echo "$(tput bold)$(echo -e "$txt" | figlet ${figops})" | lolcat
 fi
