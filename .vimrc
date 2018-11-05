@@ -148,6 +148,11 @@ autocmd Filetype tex map \cx :!bash<space>~/scripts/cxetex<space><C-r>%<BS><BS><
 autocmd Filetype tex map \sp :!pdflatex<space>-interaction=nonstopmode<space>-shell-escape<space><C-r>%<Enter><Enter>
 autocmd Filetype tex map \sx :!pdflatex<space>-interaction=nonstopmode<space>-shell-escape<space><C-r>%<Enter><Enter>
 
+autocmd Filetype tex inoremap \cp <Esc>:w<Space>!bash<space>~/scripts/cpdftex<space><C-r>%<BS><BS><BS><BS><Enter><Enter>i
+autocmd Filetype tex inoremap \cx <Esc>:w<Space>!bash<space>~/scripts/cxetex<space><C-r>%<BS><BS><BS><BS><Enter><Enter>i
+autocmd Filetype tex inoremap \sp <Esc>:w<Space>!pdflatex<space>-interaction=nonstopmode<space>-shell-escape<space><C-r>%<Enter><Enter>i
+autocmd Filetype tex inoremap \sx <Esc>:w<Space>!pdflatex<space>-interaction=nonstopmode<space>-shell-escape<space><C-r>%<Enter><Enter>i
+
 " VIEW PDF
 autocmd Filetype tex map \vp :silent<space>!bash<space>~/scripts/openpdf<space><C-r>%<BS><BS><BS>pdf<Enter>
 autocmd Filetype rmd map \vp :silent<space>!bash<space>~/scripts/openpdf<space><C-r>%<BS><BS><BS>pdf<Enter>
