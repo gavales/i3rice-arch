@@ -1,0 +1,23 @@
+#!/bin/bash
+
+txt=$1
+ops=$2
+figops=""
+
+if [[ $ops == *[s]* ]]; then
+	figops+=" -f slant"
+fi
+
+if [[ $ops == *[b]* ]]; then
+	figops+=" -f banner"
+fi
+
+if [[ $ops == *[c]* ]]; then
+	figops+=" -c"
+fi
+
+if [[ -z $ops ]]; then
+	echo "$(tput bold)$(echo -e "$txt" | figlet -f 3-d -c | tr '*' '#' | tr '/' '.')" | lolcat
+else
+	echo "$(tput bold)$(echo -e "$txt" | figlet${figops})" | lolcat
+fi
