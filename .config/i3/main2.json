@@ -22,6 +22,7 @@
             "swallows": [
                {
                "class": "^Google\\-chrome$",
+               "class": "^Google\\-chrome\\-beta$",
                "instance": "^google\\-chrome$",
                // "title": "^i3\\:\\ Layout\\ saving\\ in\\ i3\\ \\-\\ Google\\ Chrome$",
                "transient_for": "^$",
@@ -53,6 +54,7 @@
                     "swallows": [
                        {
                        "class": "^Google\\-chrome$",
+                       "class": "^Google\\-chrome\\-beta$",
                        "instance": "^www\\.youtube\\.com$",
                        // "title": "^\\(3\\)\\ YouTube$",
                        "transient_for": "^$",

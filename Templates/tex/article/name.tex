@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 
 
-% PAGE FORMATTING %
+%====>> PAGE FORMATTING
 \setlength{\columnsep}{0.25in}
 \usepackage[margin=1in]{geometry}
 \setlength{\parindent}{2em}
@@ -11,7 +11,7 @@
 %\setcounter{page}{1}
 
 
-% FONT FORMATTING %
+%====>>FONT FORMATTING
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 %\usepackage{sectsty}
 %\sectionfont{\centering \sc \color{NavyBlue}}
@@ -35,7 +35,7 @@
 {}
 
 
-% GRAPHICS %
+%====>>GRAPHICS
 \usepackage[pdftex]{graphicx}
 \usepackage{float}
 \usepackage{wrapfig}
@@ -44,12 +44,12 @@
 \usepackage{chngcntr}
 
 
-% TABLES %
+%====>>TABLES
 \usepackage[none]{hyphenat}
 \usepackage{array}
 
 
-% HEADER and FOOTER %
+%====>>HEADER and FOOTER
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -64,34 +64,34 @@
 \renewcommand{\footrulewidth}{0pt}
 
 
-% BIBLIOGRAPHY %
+%====>>BIBLIOGRAPHY
 \usepackage[backend=biber]{biblatex}
 \addbibresource{name.bib}
 
 
-% CLICKABLE REFERENCES %
+%====>>CLICKABLE REFERENCES
 \usepackage[hidelinks]{hyperref}
 
 
-% MAKING A TABLE
+%====>>MAKING A TABLE
 %\begin{table}[H]
-%    \centering
-%    \begin{tabular}{l c r} % can also specify cell dimensions eg. p{1in} instead of l c r
-%        \bfseries{Date} & \bfseries{Number} & \bfseries{Letter} \\ \hline
-%        April 26 & 1 & A \\
-%        June 7 & 2 & B \\
-%        June 20 & 3 & C \\
-%    \end{tabular}
-%    \caption[this is the optional caption without reference]{local caption with reference
-%    \label{tab:table name}}
+%	\centering
+%	\begin{tabular}{l c r} % can also specify cell dimensions eg. p{1in} instead of l c r
+%	    \bfseries{Date} & \bfseries{Number} & \bfseries{Letter} \\ \hline
+%	    April 26 & 1 & A \\
+%	    June 7 & 2 & B \\
+%	    June 20 & 3 & C \\
+%	\end{tabular}
+%	\caption[this is the optional caption without reference]{local caption with reference
+%	\label{tab:table name}}
 %\end{table}
 
-% INSERTING A FIGURE
+%====>>INSERTING A FIGURE
 %\begin{figure}[H]
-%    \centering
-%    \includegraphics[scale= ]{filelocation}
-%    \caption[Optional caption]{Real, local caption} % optional caption appears in table of figures
-%    \label{fig:figurename}
+%	\centering
+%	\includegraphics[scale= ]{filelocation}
+%	\caption[Optional caption]{Real, local caption
+%	\label{fig:figurename}}
 %\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

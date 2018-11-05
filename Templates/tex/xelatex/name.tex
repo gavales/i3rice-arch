@@ -1,6 +1,6 @@
 \documentclass[11pt]{article}
 
-% PAGE STUFF
+%====>> PAGE STUFF
 \usepackage{multicol}
 \usepackage{setspace}
 \usepackage[a4paper,margin=1in]{geometry}
@@ -10,7 +10,7 @@
 \pagenumbering{roman}
 
 
-% FONT STUFF
+%====>> FONT STUFF
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage{minted}
 \usepackage{fontspec,lipsum}
@@ -47,7 +47,7 @@
 %{0em}{1em}{0.125em}
 
 
-% GRAPHICS
+%====>> GRAPHICS
 \usepackage[xetex]{graphicx}
 \usepackage{float}
 \usepackage{wrapfig}
@@ -58,17 +58,17 @@
 \counterwithin{table}{section}
 
 
-% TABLES
+%====>> TABLES
 %\usepackage[none]{hyphenat}
 \usepackage{array}
 
 
-% HEADER & FOOTER
+%====>> HEADER & FOOTER
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
 %\fancyhead[RO,LE]{\small\thepage}
-%\fancyhead[LO]{\small [Module Code]: [Module Name]}% odd page header and number to right top
+%\fancyhead[LO]{\small [Module Code]: [Module Name]}%odd page header and number to right top
 %\fancyhead[RE]{\small Vales, G., \textit{[TitleSubtitleETC]}}%Even page header and number at left top
 %\fancyfoot[L,R,C]{}
 \lhead{\color{Grey} [Module Code]: [Module Name]}
@@ -79,13 +79,13 @@
 \renewcommand{\sectionmark}[1]{\markright{#1}}
 
 
-% BIBLIOGRAPHY
+%====>> BIBLIOGRAPHY
 %\usepackage[backend=biber,style=authoryear,natbib=true,maxcitenames=1,sorting=none]{biblatex}
 \usepackage[backend=biber,natbib=true,sorting=none]{biblatex}
 \addbibresource{name.bib}
 
 
-% NOMENCLATURE
+%====>> NOMENCLATURE
 \usepackage{nomencl}
 \makenomenclature
 
@@ -95,29 +95,29 @@
 \ifthenelse{\equal{#1}{g}}{\item[\textbf{Constants}]}{}}}
 
 
-% CLICKABLE REFERENCES
+%====>> CLICKABLE REFERENCES
 \usepackage[hidelinks]{hyperref}
 
 
-% MAKING A TABLE
+%====>> MAKING A TABLE
 %\begin{table}[H]
-%    \centering
-%    \begin{tabular}{l c r} % can also specify cell dimensions eg. p{1in} instead of l c r
-%        \bfseries{Date} & \bfseries{Number} & \bfseries{Letter} \\ \hline
-%        April 26 & 1 & A \\
-%        June 7 & 2 & B \\
-%        June 20 & 3 & C \\
-%    \end{tabular}
-%    \caption[this is the optional caption without reference]{local caption with reference
-%    \label{tab:table name}}
+%	\centering
+%	\begin{tabular}{l c r} % can also specify cell dimensions eg. p{1in} instead of l c r
+%	    \bfseries{Date} & \bfseries{Number} & \bfseries{Letter} \\ \hline
+%	    April 26 & 1 & A \\
+%	    June 7 & 2 & B \\
+%	    June 20 & 3 & C \\
+%	\end{tabular}
+%	\caption[this is the optional caption without reference]{local caption with reference
+%	\label{tab:table name}}
 %\end{table}
 
-% INSERTING A FIGURE
+%====>> INSERTING A FIGURE
 %\begin{figure}[H]
-%    \centering
-%    \includegraphics[scale= ]{filename}
-%    \caption[Optional caption]{Real, local caption
-%    \label{fig:figurename}}
+%	\centering
+%	\includegraphics[scale= ]{filename}
+%	\caption[Optional caption]{Real, local caption
+%	\label{fig:figurename}}
 %\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

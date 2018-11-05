@@ -1,5 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" General Settings
+"====>> GENERAL SETTINGS
 
 filetype plugin on    " required
 execute pathogen#infect()
@@ -11,13 +10,26 @@ set hls
 set is
 set wrap
 set linebreak
-set nolist  " list disables linebreak
-set textwidth=0
+set nolist  "disable linebreak
+set textwidth=80
 set wrapmargin=0
 set tabstop=4
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" CHANGE HIGHLIGHT COLOURS
+inoremap ;<Space> <Esc>/====>><Enter>
+map ;<Space> <Esc>/====>><Enter>
+vnoremap ;<Space> <Esc>/====>><Enter>
+
+inoremap ;<Tab> <Esc>/==><Enter>
+map ;<Tab> <Esc>/==><Enter>
+vnoremap ;<Tab> <Esc>/==><Enter>
+
+inoremap ,ph <++>
+nnoremap ,ph i<++><Esc>
+
+inoremap ,<Tab> <Esc>/<++><Enter>
+nnoremap ,<Tab> <Esc>/<++><Enter>
+
+"====>> CHANGE HIGHLIGHT COLOURS
 
 hi Normal ctermbg=none guibg=black
 hi LineNr ctermbg=none ctermfg=grey
@@ -25,22 +37,19 @@ hi Folded ctermfg=grey ctermbg=none
 hi ModeMsg cterm=bold ctermfg=white
 hi lCursor ctermbg=white ctermfg=black
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" RESIZING
+"====>> RESIZING
 
 map .rk :res<space>+5<Enter>
 map .rj :res<space>-5<Enter>
 map .rh :vertical<space>resize<space>-5<Enter>
 map .rl :vertical<space>resize<space>+5<Enter>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" Splits open at the bottom and right
+"====>> SPLIT OPEN AT BOTTOM & RIGHT
 
 set splitbelow
 set splitright
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" Distraction-free mode with Goyo!
+"====>> GOYO
 
 map <F11> :Goyo<bar>hi<space>Normal<space>ctermbg=none<space>guibg=black<bar>
 	\hi<space>LineNr<space>ctermbg=none<space>ctermfg=grey<bar>
@@ -49,12 +58,10 @@ map <F11> :Goyo<bar>hi<space>Normal<space>ctermbg=none<space>guibg=black<bar>
 	\hi<space>lCursor<space>ctermbg=white<space>ctermfg=black
 	\<Enter><Enter>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" STATUSLINE
+"====>> STATUSLINE FUNCTIONS
 
 set laststatus=2
 
-" Find out current buffer's size and output it.
 function! FileSize()
   let bytes = getfsize(expand('%:p'))
   if (bytes >= 1024)
@@ -93,7 +100,8 @@ function! StatuslineGit()
   return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
 endfunction
 
-" Actual Statusline
+"====>> ACTUAL STATUSLINE
+
 	set statusline=
 	set statusline+=%#lCursor#
 	set statusline+=\ /%F 
@@ -115,16 +123,7 @@ endfunction
 	set statusline+=%c
 	set statusline+=\ 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" TEXT Files
-
-autocmd FileType text setlocal textwidth=78
-autocmd FileType py setlocal textwidth=78
-autocmd FileType m setlocal textwidth=78
-autocmd FileType m setlocal textwidth=78
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" LATEX-SUITE
+"====>> LATEX-SUITE
 
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode -shell-escape $*'
@@ -162,12 +161,7 @@ autocmd Filetype tex map \mi :!makeindex<space><C-r>%<BS><BS><BS>
 	\nlo<space>-s<space>nomencl.ist<space>-o<space><C-r>%<BS><BS><BS>
 	\nls<Enter><Enter>
 
-" COMMENT/UNCOMMENT
-autocmd Filetype tex vnoremap \% :'<,'>norm I% <Enter>
-autocmd Filetype tex vnoremap \d% :'<,'>norm 0xx<Enter>
-
-" Luke Smith's Fantastic Vim macros
-autocmd FileType tex inoremap ,ph <++>
+" LUKE SMITH'S FANTASTIC VIM MACROS
 autocmd FileType tex inoremap ,pc \parencite{}<++><Esc>T{i
 autocmd FileType tex inoremap ,pt \item 
 
@@ -246,8 +240,7 @@ autocmd Filetype bib inoremap \o @online{,<Enter>
 	\author<space>=<space>{<++>},<Enter>
 	\publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>06kf{a
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" PDF wordcount
+"====>> PDF WORDCOUNT
 
 autocmd Filetype tex map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
 	\<BS><BS><BS><BS><Enter>
@@ -256,8 +249,7 @@ autocmd Filetype rmd map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
 autocmd Filetype markdown map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
 	\<BS><BS><BS><Enter>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" MARKDOWN FILES
+"====>> MARKDOWN FILES
 
 autocmd Filetype markdown map \cp :!pandoc<space><C-r>%<space>-o<space><C-r>
 	\%<BS><BS><BS>.pdf<Enter><Enter>
@@ -270,13 +262,11 @@ autocmd Filetype rmd map \ll :!echo<space>"require(rmarkdown);<space>
 autocmd Filetype rmd inoremap ;r ```{r}<CR>```<CR><CR><esc>2kO
 autocmd Filetype rmd inoremap ;p ```{python}<CR>```<CR><CR><esc>2kO
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" PYTHON FILES
+"====>> PYTHON FILES
 
 autocmd Filetype python map \ll :w<space>!python<Enter>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" COMMENT/UNCOMMENT
+"====>> COMMENT/UNCOMMENT
 vnoremap \# :'<,'>norm 0i#<Enter>
 vnoremap \d# :'<,'>norm 0x<Enter>
 vnoremap \% :'<,'>norm 0i%<Enter>
