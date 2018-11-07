@@ -17,14 +17,13 @@
                "x": 0,
                "y": 0
             },
-            "name": "Google Chrome",
-            "percent": 0.6,
+            "name": "Noah | 2018/19 GDP AUV Slack - Google Chrome",
+            "percent": 0.7,
             "swallows": [
                {
-               "class": "^Google\\-chrome$",
                "class": "^Google\\-chrome\\-beta$",
-               "instance": "^google\\-chrome$",
-               // "title": "^i3\\:\\ Layout\\ saving\\ in\\ i3\\ \\-\\ Google\\ Chrome$",
+               "instance": "^google\\-chrome\\-beta$",
+               // "title": "^Noah\\ \\|\\ 2018\\/19\\ GDP\\ AUV\\ Slack\\ \\-\\ Google\\ Chrome$",
                "transient_for": "^$",
                "window_role": "^browser$"
                }
@@ -36,7 +35,7 @@
             "border": "pixel",
             "floating": "auto_off",
             "layout": "splitv",
-            "percent": 0.4,
+            "percent": 0.3,
             "type": "con",
             "nodes": [
                 {
@@ -44,19 +43,18 @@
                     "current_border_width": 0,
                     "floating": "auto_off",
                     "geometry": {
-                       "height": 528,
-                       "width": 1920,
-                       "x": 0,
-                       "y": 529
+                       "height": 312,
+                       "width": 640,
+                       "x": 640,
+                       "y": 468
                     },
-                    "name": "YouTube",
-                    "percent": 0.5,
+                    "name": "(16) \"Truth Speaks\" Gets a Lesson on Evolution - YouTube",
+                    "percent": 0.3,
                     "swallows": [
                        {
-                       "class": "^Google\\-chrome$",
                        "class": "^Google\\-chrome\\-beta$",
                        "instance": "^www\\.youtube\\.com$",
-                       // "title": "^\\(3\\)\\ YouTube$",
+                       // "title": "^\\(16\\)\\ \\\"Truth\\ Speaks\\\"\\ Gets\\ a\\ Lesson\\ on\\ Evolution\\ \\-\\ YouTube$",
                        "transient_for": "^$",
                        "window_role": "^pop\\-up$"
                        }
@@ -64,26 +62,58 @@
                     "type": "con"
                 },
                 {
+                    // tabbed split container with 2 children
                     "border": "pixel",
-                    "current_border_width": 0,
                     "floating": "auto_off",
-                    "geometry": {
-                       "height": 456,
-                       "width": 640,
-                       "x": 0,
-                       "y": 0
-                    },
-                    "name": "newsboat",
-                    "percent": 0.5,
-                    "swallows": [
-                       {
-                       "class": "^URxvt$",
-                       "instance": "^RSS$",
-                       // "title": "^newsboat$",
-                       "transient_for": "^$"
-                       }
-                    ],
-                    "type": "con"
+                    "layout": "tabbed",
+                    "percent": 0.7,
+                    "type": "con",
+                    "nodes": [
+                        {
+                            "border": "pixel",
+                            "current_border_width": 0,
+                            "floating": "auto_off",
+                            "geometry": {
+                               "height": 338,
+                               "width": 562,
+                               "x": 0,
+                               "y": 0
+                            },
+                            "name": "newsboat",
+                            "percent": 0.5,
+                            "swallows": [
+                               {
+                               "class": "^URxvt$",
+                               "instance": "^RSS$",
+                               "title": "^newsboat$",
+                               "transient_for": "^$"
+                               }
+                            ],
+                            "type": "con"
+                        },
+                        {
+                            "border": "pixel",
+                            "current_border_width": 0,
+                            "floating": "auto_off",
+                            "geometry": {
+                               "height": 762,
+                               "width": 384,
+                               "x": 0,
+                               "y": 0
+                            },
+                            "name": "gavarch",
+                            "percent": 0.5,
+                            "swallows": [
+                               {
+                               "class": "^Pcmanfm$",
+                               "instance": "^pcmanfm$",
+                               // "title": "^gavarch$",
+                               "transient_for": "^$"
+                               }
+                            ],
+                            "type": "con"
+                        }
+                    ]
                 }
             ]
         }
