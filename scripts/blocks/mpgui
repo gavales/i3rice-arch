@@ -12,6 +12,8 @@ playing="$playername: $trackname - $artistname"
 
 if [ -z $playstatus ]; then
 	:
+elif [ $playstatus == "unknown" ]; then
+	:
 elif [ $playstatus == "Paused" ]; then
 	echo "<span background=\"$magenta\"> <span face='Font Awesome 5 Free'>&#xf28b;</span> ${playing:0:50} </span>"
 else
