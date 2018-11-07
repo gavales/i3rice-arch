@@ -29,19 +29,19 @@ if [[ $ops == *[c]* ]]; then
 fi
 
 if [[ -z $ops ]]; then
-	echo "$(tput bold)$(echo -e "$txt" | figlet -f 3-d -c | tr '*' '#' | tr '/' '.')" | lolcat
-    if [[ $txt == "-h" ]]; then
-    	echo ">>>>>>>>>>OPTIONS"
-    	echo "c    centre"
-    	echo "s    slant"
-    	echo "b    banner3"
-    	echo "i    larry3d"
-    	echo "l    letters"
-    	echo "r    roman"
-    	echo "m    smisome1"
-    	echo "t    trek"
-    	echo "f    speed"
-    	echo "k    smkeyboard"
+	echo "$(tput bold)$(echo -e "$txt" | figlet -f 3-d -c | tr '*' '#' | tr '/' '"')" | lolcat
+    if [[ $txt == "help" ]]; then
+    	echo "------------------------------------OPTIONS------------------------------------"
+    	echo "                                  c    centre"
+    	echo "                                  s    slant"
+    	echo "                                  b    banner3"
+    	echo "                                  i    larry3d"
+    	echo "                                  l    letters"
+    	echo "                                  r    roman"
+    	echo "                                  m    smisome1"
+    	echo "                                  t    trek"
+    	echo "                                  f    speed"
+    	echo "                                  k    smkeyboard"
 	fi
 else
 	echo "$(tput bold)$(echo -e "$txt" | figlet ${figops})" | lolcat

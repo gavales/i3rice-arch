@@ -54,6 +54,7 @@ mkdir Downloads Drive Music Pictures Videos
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo -e "${green}              >>>>>>>>>> INSTALL YAOURT APPS <<<<<<<<<<"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::${normal}"
+echo -e "${purple} > PAMAC <" && yaourt -S pamac-aur
 echo -e "${purple} > i3LOCK-COLOR <" && yaourt -S i3lock-color
 echo -e "${purple} > CHROME BETA <" && yaourt -S google-chrome-beta
 echo -e "${purple} > CHROME REMOTE DESKTOP <" && yaourt -S chrome-remote-desktop
@@ -66,7 +67,8 @@ echo -e "${purple} > XBACKLIGHT <" && yaourt -S xorg-xbacklight
 echo -e "${purple} > LIGHT <" && yaourt -S light
 echo -e "${purple} > BASHMOUNT <" && yaourt -S bashmount
 echo -e "${purple} > i3BLOCKS <" && yaourt -S i3blocks-gaps-git
-echo -e "${purple} > PAMAC <" && yaourt -S pamac-aur
+echo -e "${purple} > MPRIS-CTL <" && yaourt -S mpris-ctl
+echo -e "${purple} > FIGLET FONTS <" && yaourt -S figlet-fonts
 echo -e "${purple} > URXVT-CONFIG-RELOAD <" && yaourt -S urxvt-config-reload-git
 echo -e "${purple} > URXVT-CLIPBOARD <" && yaourt -S urxvt-clipboard
 echo -e "${purple} > URXVT-RESIZE-FONT <" && yaourt -S urxvt-resize-font-git
