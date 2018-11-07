@@ -11,7 +11,7 @@ set is
 set wrap
 set linebreak
 set nolist  "disable linebreak
-set textwidth=80
+set textwidth=0
 set wrapmargin=0
 set tabstop=4
 
