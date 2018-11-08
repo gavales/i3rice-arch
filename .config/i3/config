@@ -359,8 +359,7 @@ bindsym $mod+bracketright exec playerctl next
 bindsym $win+bracketright exec mpc next
 bindsym $mod+bracketleft exec playerctl previous
 bindsym $win+bracketleft exec mpc prev
-bindsym $win+Home exec mpc play
-bindsym $win+End exec mpc stop
+bindsym $win+backslash exec mpc stop
 
 #==> VISUALISER
 bindsym $mod+Shift+v exec $term -name VIS -fn "xft:$font1:size=$fonts" -e vis
@@ -412,6 +411,7 @@ bindsym $win+e move workspace to output eDP1
 
 #==> SCROT
 bindsym Print exec bash ~/$scripts/screenshot
+bindsym $mod+Shift+p exec bash ~/$scripts/screenshot
 
 #==> BASHMOUNT
 bindsym $mod+Shift+b exec $term -name BASHMOUNT -e bashmount
