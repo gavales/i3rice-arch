@@ -17,13 +17,15 @@
                "x": 0,
                "y": 0
             },
-            "name": "[SOLVED] No Sound Output Chromebook Pixel - Linux Mint Forums - Google Chrome",
+            "name": "Google Chrome",
             "percent": 0.6,
             "swallows": [
                {
+               "class": "^Google\\-chrome$",
                "class": "^Google\\-chrome\\-beta$",
-               "instance": "^google\\-chrome\\-beta$",
-               // "title": "^\\[SOLVED\\]\\ No\\ Sound\\ Output\\ Chromebook\\ Pixel\\ \\-\\ Linux\\ Mint\\ Forums\\ \\-\\ Google\\ Chrome$",
+               "instance": "^google\\-chrome$",
+               // "title": "^i3\\:\\ Layout\\ saving\\ in\\ i3\\ \\-\\ Google\\ Chrome$",
+               "transient_for": "^$",
                "window_role": "^browser$"
                }
             ],
@@ -47,69 +49,41 @@
                        "x": 0,
                        "y": 529
                     },
-                    "name": "(42) Flat Earth (is DEAD!) Over 300m (~1000ft) of Curvature Demonstrated - YouTube",
-                    "percent": 0.3,
+                    "name": "YouTube",
+                    "percent": 0.5,
                     "swallows": [
                        {
+                       "class": "^Google\\-chrome$",
                        "class": "^Google\\-chrome\\-beta$",
                        "instance": "^www\\.youtube\\.com$",
-                       // "title": "^\\(42\\)\\ Flat\\ Earth\\ \\(is\\ DEAD\\!\\)\\ Over\\ 300m\\ \\(\\~1000ft\\)\\ of\\ Curvature\\ Demonstrated\\ \\-\\ YouTube$",
+                       // "title": "^\\(3\\)\\ YouTube$",
+                       "transient_for": "^$",
                        "window_role": "^pop\\-up$"
                        }
                     ],
                     "type": "con"
                 },
                 {
-                    // tabbed split container with 2 children
                     "border": "pixel",
+                    "current_border_width": 0,
                     "floating": "auto_off",
-                    "layout": "tabbed",
-                    "percent": 0.7,
-                    "type": "con",
-                    "nodes": [
-                        {
-                            "border": "pixel",
-                            "current_border_width": 0,
-                            "floating": "auto_off",
-                            "geometry": {
-                               "height": 602,
-                               "width": 1042,
-                               "x": 0,
-                               "y": 0
-                            },
-                            "name": "newsboat",
-                            "percent": 0.5,
-                            "swallows": [
-                               {
-                               "class": "^URxvt$",
-                               // "instance": "^RSS$",
-                               "title": "^newsboat$"
-                               }
-                            ],
-                            "type": "con"
-                        },
-                        {
-                            "border": "pixel",
-                            "current_border_width": 0,
-                            "floating": "auto_off",
-                            "geometry": {
-                               "height": 1138,
-                               "width": 1024,
-                               "x": 0,
-                               "y": 0
-                            },
-                            "name": "gavarch",
-                            "percent": 0.5,
-                            "swallows": [
-                               {
-                               "class": "^Pcmanfm$",
-                               "instance": "^pcmanfm$",
-                               // "title": "^gavarch$"
-                               }
-                            ],
-                            "type": "con"
-                        }
-                    ]
+                    "geometry": {
+                       "height": 456,
+                       "width": 640,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "newsboat",
+                    "percent": 0.5,
+                    "swallows": [
+                       {
+                       "class": "^URxvt$",
+                       "instance": "^RSS$",
+                       // "title": "^newsboat$",
+                       "transient_for": "^$"
+                       }
+                    ],
+                    "type": "con"
                 }
             ]
         }

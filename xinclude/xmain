@@ -39,8 +39,7 @@
 
 
 !!ROFI
-!#include "/home/gavarch/xinclude/xrofi"
-#include "/home/gavaro/xinclude/xrofi"
+#include "/home/gavarch/xinclude/xrofi"
 
 !!Xft
 Xft.dpi:		96

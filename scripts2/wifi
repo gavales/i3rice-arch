@@ -34,12 +34,9 @@ QUALITY=$(grep $INTERFACE /proc/net/wireless | awk '{ print int($3 * 100 / 70) }
 echo $QUALITY% # full text
 echo $QUALITY% # short text
 
-blackd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
 green=$(xrdb -query | grep '*color2' | awk '{print $NF}')
 yellow=$(xrdb -query | grep '*color3' | awk '{print $NF}')
 red=$(xrdb -query | grep '*color9' | awk '{print $NF}')
-white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
-blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
 cyan=$(xrdb -query | grep '*color6' | awk '{print $NF}')
 
 # color

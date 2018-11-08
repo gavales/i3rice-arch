@@ -1,10 +1,34 @@
 // vim:ts=4:sw=4:et
 {
-    // splith split container with 2 children
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1060,
+       "width": 945,
+       "x": 10,
+       "y": 10
+    },
+    "name": "New Tab - Google Chrome",
+    "percent": 0.7,
+    "swallows": [
+       {
+       "class": "^Google\\-chrome\\-beta$",
+       "instance": "^google\\-chrome\\-beta$",
+       // "title": "^New\\ Tab\\ \\-\\ Google\\ Chrome$",
+       "transient_for": "^$",
+       "window_role": "^browser$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    // splitv split container with 2 children
     "border": "pixel",
     "floating": "auto_off",
-    "layout": "splith",
-    "percent": 1,
+    "layout": "splitv",
+    "percent": 0.3,
     "type": "con",
     "nodes": [
         {
@@ -12,30 +36,30 @@
             "current_border_width": 0,
             "floating": "auto_off",
             "geometry": {
-               "height": 1057,
-               "width": 1920,
-               "x": 0,
-               "y": 0
+               "height": 1060,
+               "width": 945,
+               "x": 10,
+               "y": 10
             },
-            "name": "unicode bar characters - Google Search - Google Chrome",
-            "percent": 0.6,
+            "name": "(55) YouTube",
+            "percent": 0.3,
             "swallows": [
                {
-               "class": "^Google\\-chrome$",
-               "instance": "^google\\-chrome$",
-               // "title": "^unicode\\ bar\\ characters\\ \\-\\ Google\\ Search\\ \\-\\ Google\\ Chrome$",
+               "class": "^Google\\-chrome\\-beta$",
+               "instance": "^www\\.youtube\\.com$",
+               // "title": "^\\(55\\)\\ YouTube$",
                "transient_for": "^$",
-               "window_role": "^browser$"
+               "window_role": "^pop\\-up$"
                }
             ],
             "type": "con"
         },
         {
-            // splitv split container with 2 children
+            // tabbed split container with 2 children
             "border": "pixel",
             "floating": "auto_off",
-            "layout": "splitv",
-            "percent": 0.4,
+            "layout": "tabbed",
+            "percent": 0.7,
             "type": "con",
             "nodes": [
                 {
@@ -43,77 +67,44 @@
                     "current_border_width": 0,
                     "floating": "auto_off",
                     "geometry": {
-                       "height": 528,
-                       "width": 1920,
+                       "height": 458,
+                       "width": 722,
                        "x": 0,
-                       "y": 529
+                       "y": 0
                     },
-                    "name": "(5) The Soccer Player Who Doesn't Give a Crap (The Safest Place to Light Fireworks) - YouTube",
-                    "percent": 0.4,
+                    "name": "newsboat",
+                    "percent": 0.5,
                     "swallows": [
                        {
-                       "class": "^Google\\-chrome$",
-                       "instance": "^www\\.youtube\\.com$",
-                       // "title": "^\\(5\\)\\ The\\ Soccer\\ Player\\ Who\\ Doesn\\'t\\ Give\\ a\\ Crap\\ \\(The\\ Safest\\ Place\\ to\\ Light\\ Fireworks\\)\\ \\-\\ YouTube$",
-                       "transient_for": "^$",
-                       "window_role": "^pop\\-up$"
+                       "class": "^URxvt$",
+                       "instance": "^RSS$",
+                       "title": "^newsboat$",
+                       "transient_for": "^$"
                        }
                     ],
                     "type": "con"
                 },
                 {
-                    // tabbed split container with 2 children
                     "border": "pixel",
+                    "current_border_width": 0,
                     "floating": "auto_off",
-                    "layout": "tabbed",
-                    "percent": 0.6,
-                    "type": "con",
-                    "nodes": [
-                        {
-                            "border": "pixel",
-                            "current_border_width": 0,
-                            "floating": "auto_off",
-                            "geometry": {
-                               "height": 456,
-                               "width": 640,
-                               "x": 0,
-                               "y": 0
-                            },
-                            "name": "newsboat",
-                            "percent": 0.5,
-                            "swallows": [
-                               {
-                               "class": "^URxvt$",
-                               "instance": "^RSS$",
-                               "title": "^newsboat$",
-                               "transient_for": "^$"
-                               }
-                            ],
-                            "type": "con"
-                        },
-                        {
-                            "border": "pixel",
-                            "current_border_width": 0,
-                            "floating": "auto_off",
-                            "geometry": {
-                               "height": 998,
-                               "width": 1860,
-                               "x": 0,
-                               "y": 0
-                            },
-                            "name": "gavaro",
-                            "percent": 0.5,
-                            "swallows": [
-                               {
-                               "class": "^Pcmanfm$",
-                               "instance": "^pcmanfm$",
-                               // "title": "^gavaro$",
-                               "transient_for": "^$"
-                               }
-                            ],
-                            "type": "con"
-                        }
-                    ]
+                    "geometry": {
+                       "height": 458,
+                       "width": 722,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "ranger",
+                    "percent": 0.5,
+                    "swallows": [
+                       {
+                       "class": "^URxvt$",
+                       "instance": "^FILES$",
+                       "title": "^ranger$",
+                       "transient_for": "^$"
+                       }
+                    ],
+                    "type": "con"
                 }
             ]
         }

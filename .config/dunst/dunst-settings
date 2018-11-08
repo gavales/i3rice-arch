@@ -3,7 +3,7 @@
     close_all = ctrl+shift+space
 
 [global]
-    font = Ubuntu Mono 12
+    font = FixedsysMono 13
     
     allow_markup = yes
     

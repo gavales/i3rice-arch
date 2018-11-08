@@ -14,7 +14,7 @@ rofi.sidebar-mode:                   false
 rofi.terminal:                       termite
 rofi.ssh-client:                     ssh
 rofi.ssh-command:                    {terminal} -e "{ssh-client} {host}"
-rofi.opacity:                        90
+rofi.opacity:                        50
 rofi.columns:                        1
 rofi.font:                           fontname fontsize
 rofi.fg:                             cblud

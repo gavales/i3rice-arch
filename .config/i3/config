@@ -23,9 +23,7 @@ set $term urxvtc
 
 #==> BROWSER(S)
 set $browser qutebrowser
-#set $browser2 chromium
-#set $browser2 google-chrome-beta
-set $browser2 google-chrome-stable
+set $browser2 google-chrome-beta
 
 #==> COLORS
 set_from_resource $black	color0
@@ -38,8 +36,7 @@ set_from_resource $cyan		color6
 set_from_resource $white	color15
 
 #==> HOME DIR
-set $home /home/gavaro
-#set $home /home/gavarch
+set $home /home/gavarch
 set $scripts scripts
 set $scriptpics scriptpics
 
@@ -180,7 +177,7 @@ bindsym $mod+g split h
 bindsym $mod+v split v
 
 #==> FULLSCREEN TOGGLE
-bindsym $mod+F11 fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle
 
 #==> CHANGE CONTAINER LAYOUT
 bindsym $mod+w layout tabbed
@@ -337,10 +334,10 @@ bindsym $win+u exec pactl set-sink-volume 0 -2%
 bindsym $win+x exec pactl set-sink-mute 0 toggle
 
 #==> FILE MANAGERS
-bindsym $mod+F12 exec pcmanfm
-bindsym $win+F12 exec nautilus
-bindsym $mod+Shift+Return exec $term -e ranger
-bindsym $win+Shift+Return exec $term -e sudo ranger
+bindsym $mod+f exec pcmanfm
+bindsym $win+f exec nautilus
+bindsym $mod+Shift+Return exec $term -name FILES -e ranger
+bindsym $win+Shift+Return exec $term -name FILES_ADMIN -e sudo ranger
 
 bindsym $mod+Shift+F3 exec gksu pcmanfm
 #bindsym $mod+F5 exec $term -e 'mocp'
@@ -366,7 +363,7 @@ bindsym $win+Home exec mpc play
 bindsym $win+End exec mpc stop
 
 #==> VISUALISER
-bindsym $mod+Shift+v exec $term -name VIS -fn "xft:TerminessTTFNerdFontMono:size=9" -e vis
+bindsym $mod+Shift+v exec $term -name VIS -fn "xft:$font1:size=$fonts" -e vis
 
 #==> PRIME VIDEO
 bindsym $mod+Shift+n exec $browser2 --new-window\
@@ -474,7 +471,5 @@ exec --no-startup-id "i3-msg 'workspace 1; append_layout $home/.config/i3/main.j
 #exec --no-startup-id "i3-msg 'workspace 9; append_layout $home/.config/i3/workspace-9.json'"
 exec $browser2
 exec $browser2 --new-window --app=https://www.youtube.com/
-exec pcmanfm
-exec $term -name RSS -e newsboat
 exec_always mpv $home/scriptsounds/A\ Tone\ His\ Self.mp3
 exec_always notify-send 'i3 (re)loaded!' -i ~/$scriptpics/i3white.png

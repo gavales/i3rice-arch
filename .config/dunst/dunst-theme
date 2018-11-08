@@ -3,17 +3,17 @@ width = 5
 color = "#c7c7c6"
 
 [urgency_low]
-background = "#140d26"
-foreground = "#b5a888"
+background = "#1f201b"
+foreground = "#406b1f"
 timeout = 3
 
 [urgency_normal]
-background = "#140d26"
-foreground = "#81a39a"
+background = "#1f201b"
+foreground = "#797a2b"
 timeout = 3
 
 [urgency_critical]
-background = "#140d26"
-foreground = "#ba7f56"
+background = "#1f201b"
+foreground = "#68430f"
 timeout = 3
 

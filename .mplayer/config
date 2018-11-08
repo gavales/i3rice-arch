@@ -24,7 +24,7 @@ hardframedrop="0" #Make sure hard frame drop is off but can turn on easily now
 
 #subtitle code
 #Truetype fonts rock! (sudo apt-get msttcorefonts)
-font=/home/gavaro/.fonts/UbuntuMono-Regular.ttf
+font=/home/gavarch/.fonts/FixedsysMono.ttf
 
 ffactor="10" #black outline
 sub-bg-alpha="0" #background color ala closed captions

@@ -1,22 +1,22 @@
-#define cblkd #1e1e15
-#define cblkl #56564f
-#define credl #aa5c3c
-#define credd #aa5c3c
-#define cgrnl #3aab35
-#define cgrnd #3aab35
-#define cylwl #9c9e57
-#define cylwd #9c9e57
-#define cblul #57ab7b
-#define cblud #57ab7b
-#define cgntl #1bab73
-#define cgntd #1bab73
-#define ccynl #2bb5a8
-#define ccynd #2bb5a8
-#define cwhtl #c6c6c4
-#define cwhtd #c6c6c4
+!bamboo
+#define cblkd #1f201b
+#define cblkl #575754
+#define credl #68430f
+#define credd #68430f
+#define cgrnl #406b1f
+#define cgrnd #406b1f
+#define cylwl #797a2b
+#define cylwd #797a2b
+#define cblul #c28419
+#define cblud #c28419
+#define cgntl #84c11a
+#define cgntd #84c11a
+#define ccynl #c3df22
+#define ccynd #c3df22
+#define cwhtl #c7c7c6
+#define cwhtd #c7c7c6
 
-#define fontname FixedsysMonoNerdFontComplete
-!#define fontname FixedsysMono
+#define fontname FixedsysMono
 !#define font TerminessTTFNerdFontMono
 #define fontsize 13
 
@@ -56,8 +56,7 @@
 
 
 !!ROFI
-!#include "/home/gavarch/xinclude/xrofi"
-#include "/home/gavaro/xinclude/xrofi"
+#include "/home/gavarch/xinclude/xrofi"
 
 !!Xft
 Xft.dpi:		96

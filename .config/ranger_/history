@@ -1,43 +1,3 @@
-rename swap
-rename volume
-rename caps
-rename num
-open_with chromium
-open_with 
-shell bash %f
-shell sudo vim %s
-mkdir Design Journals
-shell mkdir Gavin Max Sam Noah Ilias Chris
-rename Control Diagram.pdf
-search i3blocks.conf
-scout -ftsea i3blo
-find i3blocks
-
-rename i3ricemanjaro
-shell git clone https://github.com/StillANixRookie/i3rice-manjaro.git
-shell bash ~gitcommit.sh
-shell bash ~/gitcommit.sh
-shell touch 
-rename postmanj
-rename ws1.png
-rename .png
-rename ws2.png
-rename ws3.png
-rename ws4.png
-rename ws5.png
-shell 
-mkdir Uni
-shell cp ~/Templates/md/name.md presentationnotes.md
-rename scriptpics
-touch screenshot
-wq
-rename multimonitor
-rename singlemonitor
-shell bash %s
-open_with k
-touch openpdf
-open_with vim
-shell sxiv -a %s
 shell sxiv -a 1.gif
 shell mpv --loop %s
 open_with pinta
@@ -47,4 +7,44 @@ rename workspace-$ws1.json
 rename Robot_blip-Marianne_Gagnon-120342607.wav
 bulk_rename
 bulkrename
+
+rename xrofi
+shell git clone https://github.com/regnarg/urxvt-config-reload.git
+shell unzip fontawesome-free-5.5.0-web.zip -d "fontawesome-free-5.5.0-web.zip" fontawesome-free-5.5.0-web
+shell unzip fontawesome-free-5.5.0-web.zip -d "fontawesome-free-5.5.0-web.zip" fontawesome-free-5.5.0-web/
+shell unzip fontawesome-free-5.5.0-web.zip -d "fontawesome-free-5.5.0-web.zip"
+shell unzip fontawesome-free-5.5.0-web.zip -d "fontawesome-free-5.5.0-web"
+shell wget https://raw.githubusercontent.com/wstam88/rofi-fontawesome/master/unicode-list.txt
+shell wget https://raw.githubusercontent.com/wstam88/rofi-fontawesome/master/fontawesome-menu/fontawesome-menu
+shell bash fontawesome-menu
+shell bash fontawesome-menu -f 
+shell bash fontawesome-menu -f unicode-list.txt
+shell wget https://raw.githubusercontent.com/wstam88/rofi-fontawesome/master/fa5-icon-list.txt
+shell bash fontawesome-menu -f fa5-icon-list.txt
+shell wget https://raw.githubusercontent.com/wstam88/rofi-fontawesome/master/icon-list.txt
+shell unzip fontawesome-free-5.5.0-desktop.zip -d "fontawesome-free-5.5.0-desktop"
+shell bash fontawesome-menu -f icon-list.txt
+mkdir blocks
+rename kb
+rename cpu
+rename gruvbox-light
+rename gruvbox-dark
+rename solarized-dark
+rename solarized-light
+rename solarizedlight
+rename solarizeddark
+rename gruvboxlight
+rename gruvboxdark
+search .otf
+search 
+scout -ftsea 
+rename bluepinkgrad
+rename deepjyoti30
+rename main.json
+rename music.json
+rename workspace-10.json
+rename music2.json
+shell git clone https://github.com/ryanoasis/nerd-fonts.git
+shell ./font-patcher ~/.fonts/FixedsysMono.ttf
 delete
+rename ranger
