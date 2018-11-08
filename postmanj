@@ -1,0 +1,70 @@
+#!/bin/bash
+
+black="\033[1;30m"
+darkgray="\033[1;30m"
+red="\033[1;31m"
+lightred="\033[1;31m"
+green="\033[1;32m"
+lightgreen="\033[1;32m"
+brownorange="\033[1;33m"
+yellow="\033[1;33m"
+blue="\033[1;34m"
+lightblue="\033[1;34m"
+purple="\033[1;35m"
+lightpurple="\033[1;35m"
+cyan="\033[1;36m"
+lightcyan="\033[1;36m"
+lightgray="\033[1;37m"
+white="\033[1;37m"
+normal="\033[0m"
+
+cd
+echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+echo -e "${green}           >>>>>>>>>> INSTALLING YOUR PROGRAMS <<<<<<<<<<"
+echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+sudo pacman -S rofi otf-font-awesome ttf-font-awesome xorg-xbacklight nautilus evince mupdf pinta redshift playerctl pulseaudio-ctl mplayer r tk gcc-fortran newsboat opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-citeproc python-pygments python2-pygments biber texlive-most acpi lm_sensors sysstat playerctl ntfs-3g libmpdclient lxappearance sxiv ncurse fftw w3m ranger mpd mpc ncmpcpp feh dunst unrar dunstify perl-anyevent perl-anyevent-i3 lolcat figlet
+echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+echo -e "${green}              >>>>>>>>>> INSTALL YAOURT APPS <<<<<<<<<<"
+echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+echo -e "${purple} > i3LOCK-COLOR <" && yaourt -S i3-lock-color
+echo -e "${purple} > CHROME STUFF <" && yaourt -S google-chrome && yaourt -S chrome-remote-desktop
+echo -e "${purple} > SPOTIFY <" && yaourt -S spotify
+echo -e "${purple} > GRIVE <" && yaourt -S grive
+echo -e "${purple} > CLIPIT <" && yaourt -S clipit
+echo -e "${purple} > PACTL <" && yaourt -S pulseaudio-ctl
+echo -e "${purple} > ZATHURA <" && yaourt -S zathura-pdf-mupdf
+echo -e "${purple} > XBACKLIGHT <" && yaourt -S xorg-xbacklight
+echo -e "${purple} > LIGHT <" && yaourt -S light
+echo -e "${purple} > BASHMOUNT <" && yaourt -S bashmount
+echo -e "${purple} > i3BLOCKS <" && yaourt -S i3blocks-gaps-git
+echo -e "${purple} > ROS <" && yaourt -S ros-melodic-desktop-full
+echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+echo -e "${green}                 >>>>>>>>>> CLI-VISUALISER <<<<<<<<<<"
+echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+cd
+git clone https://github.com/dpayne/cli-visualizer.git
+cd cli-visualiser
+./install.sh
+cd
+mkdir Drive
+echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+echo -e "${green}                >>>>>>>>>> MAKE MATLAB ICON <<<<<<<<<<"
+echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+sudo wget "https://apprecs.org/gp/images/app-icons/300/c4/in.pxlcraft.matlabexpo.jpg" -O /usr/share/icons/matlab.png
+sudo wget "https://help.ubuntu.com/community/MATLAB?action=AttachFile&do=get&target=matlab-r2012a.desktop" -O /usr/share/applications/matlab.desktop
+echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+echo -e "${green}         >>>>>>>>>> COPY/PASTE CONFIGS FROM GITHUB <<<<<<<<<<"
+echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+git clone https://github.com/StillANixRookie/i3rice-manjaro.git
+cp -R /~/i3rice-manjaro/. /~
+sudo cp ~/scripts/i3exit /usr/bin/
+cd
+rm -rf .git UNUSEDSTUFF README.md ws1.png ws2.png ws3.png ws4.png ws5.png
+chmod +x /usr/bin/i3exit
+sudo cp sudoers /etc/
+echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+echo -e "${green}                   >>>>>>>>>> ROS SETUP <<<<<<<<<<"
+echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+sudo rosdep init
+rosdep update
+echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
