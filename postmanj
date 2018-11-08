@@ -22,12 +22,14 @@ cd
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo -e "${green}           >>>>>>>>>> INSTALLING YOUR PROGRAMS <<<<<<<<<<"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-sudo pacman -S rofi otf-font-awesome ttf-font-awesome xorg-xbacklight nautilus evince mupdf pinta redshift playerctl pulseaudio-ctl mplayer r tk gcc-fortran newsboat opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-citeproc python-pygments python2-pygments biber texlive-most acpi lm_sensors sysstat playerctl ntfs-3g libmpdclient lxappearance sxiv ncurse fftw w3m ranger mpd mpc ncmpcpp feh dunst unrar dunstify perl-anyevent perl-anyevent-i3 lolcat figlet
+sudo pacman -S rofi otf-font-awesome ttf-font-awesome nautilus evince mupdf pinta redshift playerctl mplayer r tk gcc-fortran newsboat opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-citeproc python-pygments python2-pygments biber texlive-most acpi lm_sensors sysstat ntfs-3g libmpdclient lxappearance sxiv ncurses fftw w3m ranger mpd mpc ncmpcpp feh dunst unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl streamlink urxvt-perls
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo -e "${green}              >>>>>>>>>> INSTALL YAOURT APPS <<<<<<<<<<"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-echo -e "${purple} > i3LOCK-COLOR <" && yaourt -S i3-lock-color
-echo -e "${purple} > CHROME STUFF <" && yaourt -S google-chrome && yaourt -S chrome-remote-desktop
+echo -e "${purple} > PAMAC <" && yaourt -S pamac-aur
+echo -e "${purple} > i3LOCK-COLOR <" && yaourt -S i3lock-color
+echo -e "${purple} > CHROME BETA <" && yaourt -S google-chrome-beta
+echo -e "${purple} > CHROME REMOTE DESKTOP <" && yaourt -S chrome-remote-desktop
 echo -e "${purple} > SPOTIFY <" && yaourt -S spotify
 echo -e "${purple} > GRIVE <" && yaourt -S grive
 echo -e "${purple} > CLIPIT <" && yaourt -S clipit
@@ -37,7 +39,12 @@ echo -e "${purple} > XBACKLIGHT <" && yaourt -S xorg-xbacklight
 echo -e "${purple} > LIGHT <" && yaourt -S light
 echo -e "${purple} > BASHMOUNT <" && yaourt -S bashmount
 echo -e "${purple} > i3BLOCKS <" && yaourt -S i3blocks-gaps-git
-echo -e "${purple} > ROS <" && yaourt -S ros-melodic-desktop-full
+echo -e "${purple} > MPRIS-CTL <" && yaourt -S mpris-ctl
+echo -e "${purple} > FIGLET FONTS <" && yaourt -S figlet-fonts
+echo -e "${purple} > URXVT-CONFIG-RELOAD <" && yaourt -S urxvt-config-reload-git
+echo -e "${purple} > URXVT-CLIPBOARD <" && yaourt -S urxvt-clipboard
+echo -e "${purple} > URXVT-RESIZE-FONT <" && yaourt -S urxvt-resize-font-git
+#echo -e "${purple} > URXVT-TABBEDEX <" && yaourt -S urxvt-tabbedex
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo -e "${green}                 >>>>>>>>>> CLI-VISUALISER <<<<<<<<<<"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
@@ -56,15 +63,3 @@ echo -e "${green}:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 echo -e "${green}         >>>>>>>>>> COPY/PASTE CONFIGS FROM GITHUB <<<<<<<<<<"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 git clone https://github.com/StillANixRookie/i3rice-manjaro.git
-cp -R /~/i3rice-manjaro/. /~
-sudo cp ~/scripts/i3exit /usr/bin/
-cd
-rm -rf .git UNUSEDSTUFF README.md ws1.png ws2.png ws3.png ws4.png ws5.png
-chmod +x /usr/bin/i3exit
-sudo cp sudoers /etc/
-echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-echo -e "${green}                   >>>>>>>>>> ROS SETUP <<<<<<<<<<"
-echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-sudo rosdep init
-rosdep update
-echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
