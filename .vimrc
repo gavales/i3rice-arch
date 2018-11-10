@@ -14,6 +14,8 @@ set nolist  "disable linebreak
 set textwidth=0
 set wrapmargin=0
 set tabstop=4
+set cursorline
+set colorcolumn=80
 
 inoremap ;<Space> <Esc>/====>><Enter>
 map ;<Space> <Esc>/====>><Enter>

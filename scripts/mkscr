@@ -1,0 +1,25 @@
+#!/bin/bash
+
+scripts=$HOME/scripts
+
+cd $scripts
+if [[ -z $2 ]]; then
+	:
+else
+	if [[ ! -d $2 ]]; then
+		mkdir $2
+		cd $2
+	elif [[ -d $2 ]]; then
+		cd $2
+	fi
+fi
+
+if [[ -f $1 ]]; then
+	vim $1
+else
+	echo "#!/bin/bash" > $1
+	echo ""
+	echo ""
+	chmod +x $1
+	vim $1
+fi
