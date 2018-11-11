@@ -1,0 +1,20 @@
+#!/bin/bash
+
+black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+font=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
+dmenucolors="-fn "${font:4}" -nb "$black" -nf "$white" -sf "$black" -sb "$blue""
+
+white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+
+echo "<span background=\"$white\"> <span face='Font Awesome 5 Free'>&#xf011;</span> </span>"
+
+shutdown () {
+	opt=$(echo -e "lock\nsuspend\nlogout\nhibernate\nreboot\nshutdown" | dmenu -i -p "SHUTDOWN MODE [<esc> to cancel]" $dmenucolors)
+	i3exit ${opt}
+}
+
+case $BLOCK_BUTTON in
+	1) shutdown ;;
+esac

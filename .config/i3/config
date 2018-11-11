@@ -88,7 +88,7 @@ bar {
 	i3bar_command i3bar
 	status_command i3blocks -c ~/$scripts/i3blocks.conf
 #	status_command i3blocks
-	position bottom
+	position top
 
 	bindsym button4 nop
 	bindsym button5 nop
@@ -280,6 +280,7 @@ for_window [title="Netflix"] floating enable,sticky enable,resize set 460 259
 for_window [title="Amazon.co.uk: Prime Video"] \
 	floating enable,sticky enable,resize set 460 259
 for_window [class="MPlayer"] floating enable,sticky enable
+for_window [class="mpv"] floating enable,sticky enable
 for_window [class="Pavucontrol"] floating enable,resize set 525 300
 for_window [class="Pavucontrol"] move right 680,move down 405
 for_window [title="Google Play Movies & TV"] \
