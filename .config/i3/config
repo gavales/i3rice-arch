@@ -1,8 +1,7 @@
 #i3 config file (v4)
 #Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-#====>>
-#==> MAIN FONT
+#====>> MAIN FONT {{{
 
 set $font1 FixedsysMono
 set $font2 FontAwesome
@@ -10,8 +9,9 @@ set $fonts 12
 
 font pango:$font1,$font2 $fonts
 
-#====>>
-#==> DEFINE VARIABLES
+# }}}
+
+#====>> DEFINE VARIABLES {{{
 
 #==> SET $MOD
 set $mod Mod1
@@ -55,8 +55,9 @@ set $ws10 10
 #==> TRANSPARENCY
 set $t 99
 
-#====>>
-#==> IMPORTANT
+# }}}
+
+#====>> IMPORTANT {{{
 
 #==> RELOAD CONFIG
 bindsym $mod+Shift+c exec --no-startup-id "bash $home/$scripts/xtheme; bash $home/$scripts/reloadconfs; i3-msg reload"
@@ -64,8 +65,9 @@ bindsym $mod+Shift+c exec --no-startup-id "bash $home/$scripts/xtheme; bash $hom
 #==> RESTART i3
 bindsym $mod+Shift+r restart
 
-#====>>
-#==> BORDERS
+# }}}
+
+#====>> DECORATIONS {{{
 
 #==> BORDER STYLE <normal|1pixel|pixel xx|none|pixel>
 new_window pixel 0
@@ -75,15 +77,17 @@ new_float normal
 hide_edge_borders none
 
 #==> COLORS
-#==> class                   border  backgr. text    indic.   child_border
+# class                   border  backgr. text    indic.   child_border
 client.focused          $blue $blue $black $blue $blue
 client.focused_inactive $cyan $cyan $black $cyan $cyan
 client.unfocused        $black $black $white $black $black
 client.urgent           $red $red $black $red $black
 client.placeholder      $black $black $white $black $black
-#==> client.background	$black
+# client.background	$black
 
-#==> BAR
+# }}}
+
+#====>> BAR {{{
 bar {
 	i3bar_command i3bar
 	status_command i3blocks -c ~/$scripts/i3blocks.conf
@@ -109,9 +113,9 @@ bar {
 #==> hide/unhide i3status bar
 bindsym $mod+b bar mode toggle
 
+# }}}
 
-#====>>
-#==> FOR i3 GAPS
+#====>> FOR i3 GAPS {{{
 
 gaps inner 10
 gaps outer 20
@@ -128,8 +132,9 @@ workspace $ws5 gaps outer 0
 workspace $ws6 gaps inner 0
 workspace $ws6 gaps outer 0
 
-#====>>
-#==> WORKSPACE/CONTAINER OPERATIONS
+# }}}
+
+#====>> WORKSPACE/CONTAINER OPERATIONS {{{
 
 #==> KILL FOCUSSED
 bindsym $mod+Shift+q kill
@@ -243,8 +248,9 @@ assign [instance="MUSIC"]	$ws9
 assign [instance="VIS"]		$ws9
 assign [class="Arandr"]		$ws10
 
-#====>>
-#==> FLOATING WINDOWS
+# }}}
+
+#====>> FLOATING WINDOWS {{{
 
 #==> PRESET
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -293,8 +299,9 @@ for_window [instance="CALC"] floating enable border normal,resize set 480 480
 for_window [instance="BASHMOUNT"] floating enable border normal,sticky enable,resize set 430 500,move position center
 for_window [instance="GITREPOUPDATE"] floating enable border pixel 1,sticky enable,resize set 430 500,move position center
 
-#====>>
-#==> SHUTDOWN MODE
+# }}}
+
+#====>> SHUTDOWN MODE {{{
 
 bindsym $mod+Escape mode "SHUTDOWN"
 mode "SHUTDOWN" {
@@ -311,8 +318,9 @@ mode "SHUTDOWN" {
     bindsym Escape mode "default"
 }
 
-#====>>
-#==> MAIN
+# }}}
+
+#====>> MAIN {{{
 
 #==> START TERMINAL
 bindsym $mod+Return exec $term
@@ -346,8 +354,9 @@ bindsym $win+t exec --no-startup-id pkill compton
 bindsym $win+Shift+t exec --no-startup-id compton
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
-#====>>
-#==> OWN BINDINGS
+# }}}
+
+#====>> OWN BINDINGS {{{
 
 #==> SPOTIFY
 bindsym $mod+Shift+s exec spotify
@@ -447,8 +456,9 @@ bindsym $win+4 exec --no-startup-id $term -e vim ~/.config/ranger/rc.conf
 bindsym $win+5 exec --no-startup-id $term -e vim ~/scripts/mkblocksconf
 bindsym $win+6 exec --no-startup-id $term -e vim ~/.config/qutebrowser/config.py
 
-#====>>
-#==> STARTUP DAEMONS
+# }}}
+
+#====>> STARTUP DAEMONS {{{
 
 exec --no-startup-id urxvtd -q -o -f
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -465,8 +475,9 @@ exec --no-startup-id mpd
 exec setxkbmap us
 #exec setxkbmap gb
 
-#====>>
-#==> STARTUP PROGRAMS
+# }}}
+
+#====>> STARTUP PROGRAMS {{{
 
 exec --no-startup-id "i3-msg 'workspace 1; append_layout $home/.config/i3/main.json'"
 #exec --no-startup-id "i3-msg 'workspace 9; append_layout $home/.config/i3/workspace-9.json'"
@@ -474,3 +485,5 @@ exec $browser2
 exec $browser2 --new-window --app=https://www.youtube.com/
 exec_always mpv $home/scriptsounds/A\ Tone\ His\ Self.mp3
 exec_always notify-send 'i3 (re)loaded!' -i ~/$scriptpics/i3white.png
+
+# }}}
