@@ -1,26 +1,3 @@
-rename kb
-rename cpu
-rename gruvbox-light
-rename gruvbox-dark
-rename solarized-dark
-rename solarized-light
-rename solarizedlight
-rename solarizeddark
-rename gruvboxlight
-rename gruvboxdark
-search .otf
-search 
-scout -ftsea 
-rename bluepinkgrad
-rename deepjyoti30
-rename music.json
-rename workspace-10.json
-rename music2.json
-shell git clone https://github.com/ryanoasis/nerd-fonts.git
-shell ./font-patcher ~/.fonts/FixedsysMono.ttf
-rename ranger
-rename MINE
-rename MINEMAC
 shell git clone https://github.com/vlastavesely/raleigh-reloaded.git
 rename raliegh-reloaded
 shell cat %f >> ~/scripts/gtkcolorgen/cinnamon/cinnamon
@@ -42,9 +19,32 @@ mkdir bud
 rename gtk-3.0
 rename gtk-2.0
 deletey
-open_with 
 rename main2.json
 rename main.json
 open_with pinta
 rename bamboo
+mkdir My Uni Work
+rename xinitrc-manjaro
+shell git clone https://github.com/StillANixRookie/SomeUniWork.git
+shell mkdir LitReview 
+rename Literature Review
+mkdir Electronics 
+mkdir Manufacture
+open_with 
+mkdir Prelim.
+mkdir Actual
+rename Presentations
+rename Reports
+mkdir Literature
+touch mkscript
+open_with vim
+
+shell chmod +x %s
+rename mkscr
+shell mkscr rltheme
+shell mkscr shutdown blocks
+rename shutdown
+shell wget https://raw.githubusercontent.com/LukeSmithxyz/voidrice/master/.scripts/tools/linkhandler
+shell chmod +x %f
+rename ytmpv
 delete
