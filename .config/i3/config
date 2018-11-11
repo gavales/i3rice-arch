@@ -450,7 +450,7 @@ bindsym $win+a exec --no-startup-id bash ~/$scripts/appwslo
 
 #==> OPEN CONFIGS
 bindsym $win+1 exec --no-startup-id $term -e vim ~/.config/i3/config
-bindsym $win+2 exec --no-startup-id $term -e vim ~/.Xresources
+bindsym $win+2 exec --no-startup-id $term -e vim ~/xinclude/xmain
 bindsym $win+3 exec --no-startup-id $term -e vim ~/.vimrc
 bindsym $win+4 exec --no-startup-id $term -e vim ~/.config/ranger/rc.conf
 bindsym $win+5 exec --no-startup-id $term -e vim ~/scripts/mkblocksconf

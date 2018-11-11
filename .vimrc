@@ -17,29 +17,21 @@ set cursorline
 set colorcolumn=80
 set foldmethod=marker
 
-inoremap ;<Space> <Esc>/====>><Enter>
-map ;<Space> <Esc>/====>><Enter>
-vnoremap ;<Space> <Esc>/====>><Enter>
-
-inoremap ;<Tab> <Esc>/==><Enter>
-map ;<Tab> <Esc>/==><Enter>
-vnoremap ;<Tab> <Esc>/==><Enter>
+inoremap ;<Tab> <Esc>/====>><Enter>
+map ;<Tab> <Esc>/====>><Enter>
+vnoremap ;<Tab> <Esc>/====>><Enter>
 
 inoremap ,ph <++>
 nnoremap ,ph i<++><Esc>
 
-autocmd FileType markdown,rmd inoremap ,om <!-- {{{ -->
-autocmd FileType markdown,rmd nnoremap ,om i<!-- {{{ --><Esc>
-autocmd FileType markdown,rmd inoremap ,cm <!-- }}} -->
-autocmd FileType markdown,rmd nnoremap ,cm i<!-- }}} --><Esc>
+autocmd FileType markdown,rmd inoremap ,om <!-- {{{ --><Enter><Enter><!-- }}} --><Esc>ki
+autocmd FileType markdown,rmd nnoremap ,om i<!-- {{{ --><Enter><Enter><!-- }}} --><Esc>ki
 
-inoremap ,om {{{
-nnoremap ,om i{{{<Esc>
-inoremap ,cm }}}
-nnoremap ,cm i}}}<Esc>
+inoremap ,om {{{<Enter><Enter>}}}<Esc>ki
+nnoremap ,om i{{{<Enter><Enter>}}}<Esc>ki
 
-inoremap ,<Tab> <Esc>/<++><Enter>
-nnoremap ,<Tab> <Esc>/<++><Enter>
+inoremap ,<Tab> <Esc>/<++><Enter>4xi
+nnoremap ,<Tab> /<++><Enter>4xi
 "}}}
 
 "====>> CHANGE HIGHLIGHT COLOURS{{{
