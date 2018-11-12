@@ -1,22 +1,5 @@
 #!/bin/bash
 
-# align
-# color
-# background
-# border
-# command
-# full_text
-# instance
-# interval
-# label
-# min_width
-# name
-# separator
-# separator_block_width
-# short_text
-# signal
-# urgent
-
 blocksDir="$HOME/scripts/"
 
 blackd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
@@ -35,11 +18,27 @@ cd "$blocksDir" || exit 1
 
 echo -e "# i3blocks config file" > i3blocks.conf
 
-# Global properties
+#>>>> GLOBAL
+# align
+# color
+# background
+# border
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
 echo "command=bash ${blocksDir}blocks/\$BLOCK_NAME" >> i3blocks.conf
 #echo "command=/usr/lib/i3blocks/\$BLOCK_NAME" >> i3blocks.conf
 echo "color=$blackd" >> i3blocks.conf
-echo "separator_block_width=0" >> i3blocks.conf
+echo "separator_block_width=1" >> i3blocks.conf
 echo "separator=false" >> i3blocks.conf
 echo "border_top=0" >> i3blocks.conf
 echo "border_bottom=0" >> i3blocks.conf
@@ -47,97 +46,82 @@ echo "border_left=0" >> i3blocks.conf
 echo "border_right=0" >> i3blocks.conf
 echo -e "markup=pango\n" >> i3blocks.conf
 
+#>>>> mpgui
 echo "[mpgui]" >> i3blocks.conf
 echo "interval=5" >> i3blocks.conf
-echo "border=$magenta" >> i3blocks.conf
-echo -e "full_text=\n" >> i3blocks.conf
+echo -e "border=$magenta\n" >> i3blocks.conf
 
-echo -e "[separator]\n" >> i3blocks.conf
-
-echo "[mpc]" >> i3blocks.conf
+#>>>> mpcblk
+echo "[mpcblk]" >> i3blocks.conf
 echo "interval=5" >> i3blocks.conf
-echo "border=$magenta" >> i3blocks.conf
-echo -e "separator=false\n" >> i3blocks.conf
+echo -e "border=$magenta\n" >> i3blocks.conf
 
+#>>>> brightness
 echo "[brightness]" >> i3blocks.conf
 echo "interval=1" >> i3blocks.conf
-echo "border=$cyan" >> i3blocks.conf
-echo -e "full_text=\n" >> i3blocks.conf
+echo -e "border=$cyan\n" >> i3blocks.conf
 
-echo -e "[separator]\n" >> i3blocks.conf
-
+#>>>> volume
 echo "[volume]" >> i3blocks.conf
 echo "border=$cyan" >> i3blocks.conf
-echo "interval=1" >> i3blocks.conf
-echo -e "separator=false\n" >> i3blocks.conf
+echo -e "interval=1\n" >> i3blocks.conf
 
+#>>>> disk
 echo "[disk]" >> i3blocks.conf
 echo "interval=60" >> i3blocks.conf
-echo "border=$blue" >> i3blocks.conf
-echo -e "full_text=\n" >> i3blocks.conf
+echo -e "border=$blue\n " >> i3blocks.conf
 
-echo -e "[separator]\n" >> i3blocks.conf
-
+#>>>> ram
 echo "[ram]" >> i3blocks.conf
 echo "interval=10" >> i3blocks.conf
-echo "border=$green" >> i3blocks.conf
-echo -e "full_text=\n" >> i3blocks.conf
+echo -e "border=$green\n" >> i3blocks.conf
 
-echo -e "[separator]\n" >> i3blocks.conf
-
+#>>>> iface
 #echo "# If the instance is not specified, use the interface used for default route." >> i3blocks.conf
 #echo "# The address can be forced to IPv4 or IPv6 with -4 or -6 switches." >> i3blocks.conf
 #echo "#[iface]" >> i3blocks.conf
 #echo "##instance=wlan0" >> i3blocks.conf
 #echo "#color=#00FF00" >> i3blocks.conf
-#echo "#interval=5" >> i3blocks.conf
-#echo -e "##separator=false\n" >> i3blocks.conf
+#echo -e "#interval=5\n" >> i3blocks.conf
 
+#>>>> cpu
 echo "[cpu]" >> i3blocks.conf
 echo "interval=5" >> i3blocks.conf
 echo "markup=pango" >> i3blocks.conf
-echo "border=$yellow" >> i3blocks.conf
-echo -e "full_text=\n" >> i3blocks.conf
+echo -e "border=$yellow\n" >> i3blocks.conf
 
-echo -e "[separator]\n" >> i3blocks.conf
-
+#>>>> temp
 echo "[temp]" >> i3blocks.conf
 echo "interval=5" >> i3blocks.conf
 echo "markup=pango" >> i3blocks.conf
-echo "border=$red" >> i3blocks.conf
-echo -e "separator=false\n" >> i3blocks.conf
+echo -e "border=$red\n" >> i3blocks.conf
 
+#>>>> wifi
 #echo "[wifi]" >> i3blocks.conf
 #echo "label=NET:" >> i3blocks.conf
 #echo "instance=wlp3s0" >> i3blocks.conf
 #echo "interval=1" >> i3blocks.conf
 #echo "color=$whited" >> i3blocks.conf
-#echo "border=$whited" >> i3blocks.conf
-#echo -e "separator=false\n" >> i3blocks.conf
-#
+#echo -e "border=$whited\n" >> i3blocks.conf
+
+#>>>> bandwidth
 #echo "[bandwidth]" >> i3blocks.conf
 #echo "instance=eth0" >> i3blocks.conf
 #echo "interval=1" >> i3blocks.conf
 #echo "color=$whited" >> i3blocks.conf
-#echo "border=$whited" >> i3blocks.conf
-#echo -e "full_text=\n" >> i3blocks.conf
-#
-#echo -e "[separator]\n" >> i3blocks.conf
+#echo -e "border=$whited\n" >> i3blocks.conf
 
+#>>>> batt
 echo "[batt]" >> i3blocks.conf
 echo "border=$blue" >> i3blocks.conf
-echo "interval=10" >> i3blocks.conf
-echo -e "full_text=\n" >> i3blocks.conf
+echo -e "interval=10\n" >> i3blocks.conf
 
-echo -e "[separator]\n" >> i3blocks.conf
-
+#>>>> kb
 echo "[kb]" >> i3blocks.conf
 echo "border=$magenta" >> i3blocks.conf
-echo "interval=1" >> i3blocks.conf
-echo -e "full_text=\n" >> i3blocks.conf
+echo -e "interval=1\n" >> i3blocks.conf
 
-echo -e "[separator]\n" >> i3blocks.conf
-
+#>>>> td
 echo "[td]" >> i3blocks.conf
 echo "border=$whited" >> i3blocks.conf
 echo "interval=1" >> i3blocks.conf
