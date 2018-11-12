@@ -153,16 +153,4 @@ PS1+='\[\033[00;31m\]] \n'
 PS1+='\[\033[00;36m\]\w '
 PS1+='\[\033[00;35m\]\$ \[\033[00m\]'
 
-# added by Anaconda2 installer
-export PATH="/home/gavarch/anaconda2/bin:$PATH"
-
-# added by Anaconda3 installer
-export PATH="/home/gavarch/anaconda3/bin:$PATH"
-
-
-# added by Anaconda3 installer
-export PATH="/home/gavarch/anaconda3/bin:$PATH"
-
-# added by Anaconda2 installer
-export PATH="/home/gavarch/anaconda2/bin:$PATH"
-
+export PATH="$HOME/scripts:$HOME/anaconda2/bin:$HOME/anaconda2/bin:$PATH"
