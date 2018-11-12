@@ -55,8 +55,8 @@ echo -e "full_text=\n" >> i3blocks.conf
 
 echo -e "[separator]\n" >> i3blocks.conf
 
-#>>>> mpc
-echo "[mpc]" >> i3blocks.conf
+#>>>> mpcblk
+echo "[mpcblk]" >> i3blocks.conf
 echo "interval=5" >> i3blocks.conf
 echo "border=$magenta" >> i3blocks.conf
 echo -e "separator=false\n" >> i3blocks.conf
