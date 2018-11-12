@@ -1,8 +1,8 @@
 ---
 title:
-- Gavin's first try at Pandoc!
+- Title
 author:
-- Gavin Vales
+- Author
 theme:
 - CambridgeUS
 ---
@@ -34,5 +34,5 @@ _italic text_
 
 # Section 4: Images
 
-![Luoping, China in sweet sweet 1080p!](Luoping, China 1920x1080.jpg)
+![Luoping, China in 1080p!](Luoping, China 1920x1080.jpg)
 

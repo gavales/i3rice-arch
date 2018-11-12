@@ -1,6 +1,7 @@
+%>>>> PREAMBLE
 \documentclass[11pt]{article}
 
-%====>> PAGE STUFF
+%////// PAGE STUFF
 \usepackage{multicol}
 \usepackage{setspace}
 \usepackage[a4paper,margin=1in]{geometry}
@@ -9,8 +10,7 @@
 \renewcommand{\baselinestretch}{1.0}
 \pagenumbering{roman}
 
-
-%====>> FONT STUFF
+%////// FONT STUFF
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage{minted}
 \usepackage{fontspec,lipsum}
@@ -18,36 +18,29 @@
 \setromanfont{Arial}
 \setsansfont{Arial}
 \usepackage{titlesec}
-
 %\titleformat{\section}
 %{\LARGE\bfseries}
 %{\thesection}
 %{0.3em}
 %{}
-%
 %\titleformat{\subsection}
 %{\large\bfseries}
 %{\thesubsection}
 %{1em}
 %{}
-%
 %\titleformat{\subsubsection}
 %{\it\bfseries}
 %{\thesubsubsection}
 %{1em}
 %{}
-
 %\titlespacing{\section}
 %{1em}{1em}{1em}
-%
 %\titlespacing{\subsection}
 %{0em}{1em}{0.125em}
-%
 %\titlespacing{\subsubsection}
 %{0em}{1em}{0.125em}
 
-
-%====>> GRAPHICS
+%////// GRAPHICS
 \usepackage[xetex]{graphicx}
 \usepackage{float}
 \usepackage{wrapfig}
@@ -57,13 +50,11 @@
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
 
-
-%====>> TABLES
+%////// TABLES
 %\usepackage[none]{hyphenat}
 \usepackage{array}
 
-
-%====>> HEADER & FOOTER
+%////// HEADER & FOOTER
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -78,14 +69,12 @@
 \renewcommand{\footrulewidth}{0pt}
 \renewcommand{\sectionmark}[1]{\markright{#1}}
 
-
-%====>> BIBLIOGRAPHY
+%////// BIBLIOGRAPHY
 %\usepackage[backend=biber,style=authoryear,natbib=true,maxcitenames=1,sorting=none]{biblatex}
 \usepackage[backend=biber,natbib=true,sorting=none]{biblatex}
 \addbibresource{name.bib}
 
-
-%====>> NOMENCLATURE
+%////// NOMENCLATURE
 \usepackage{nomencl}
 \makenomenclature
 
@@ -94,12 +83,10 @@
 \ifthenelse{\equal{#1}{r}}{\item[\textbf{Variables}]}{%
 \ifthenelse{\equal{#1}{g}}{\item[\textbf{Constants}]}{}}}
 
-
-%====>> CLICKABLE REFERENCES
+%////// CLICKABLE REFERENCES
 \usepackage[hidelinks]{hyperref}
 
-
-%====>> MAKING A TABLE
+%////// MAKING A TABLE
 %\begin{table}[H]
 %	\centering
 %	\begin{tabular}{l c r} % can also specify cell dimensions eg. p{1in} instead of l c r
@@ -112,17 +99,13 @@
 %	\label{tab:table name}}
 %\end{table}
 
-%====>> INSERTING A FIGURE
+%////// INSERTING A FIGURE
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[scale= ]{filename}
 %	\caption[Optional caption]{Real, local caption
 %	\label{fig:figurename}}
 %\end{figure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
@@ -131,8 +114,9 @@
 \section{Section}
 
 \subsection{Subsection}
-
+iii
 \subsubsection{Subsubsection}
+iiii
 \lipsum[1]\\
 
 \cite{jenkins2003}

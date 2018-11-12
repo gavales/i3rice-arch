@@ -1,6 +1,6 @@
 ---
-title: My first R Markdown document
-author: Gavin Vales
+title: Title
+author: Author
 output: pdf_document
 documentclass: article
 classoption: a4paper
