@@ -1,6 +1,6 @@
 ---
-title:  Title
-author: Author
+title: My first R Markdown document
+author: Gavin Vales
 output: pdf_document
 documentclass: article
 classoption: a4paper
@@ -10,7 +10,7 @@ geometry: margin=1.25in
 
 \tableofcontents
 
-# Section 1<!-- {{{ -->
+# Section 1
 
 lhlwxnhrliuw
 
@@ -22,9 +22,7 @@ xlkjnhriu
 * lkjhfd
 * dkjhswlu
 
-<!-- }}} -->
-
-# Section 2<!-- {{{ -->
+# Section 2
 
 _italics_
 
@@ -34,26 +32,18 @@ _italics_
 
 \newpage
 
-<!-- }}} -->
+# Compiling Code!
 
-# Compiling Code!<!-- {{{ -->
-
-## R!<!-- {{{ -->
+## R!
 
 ```{r}
 (56*23)^3
 ```
 
-<!-- }}} -->
-
-## Python!<!-- {{{ -->
+## Python!
 
 ```{python}
 z = [1, 2, 3]
 for y in z: print(y*5)
 ```
-
-<!-- }}} -->
-
-<!-- }}} -->
 

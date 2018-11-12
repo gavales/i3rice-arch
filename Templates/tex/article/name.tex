@@ -1,17 +1,17 @@
-%====>> PREAMBLE {{{
 \documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
 
-%====>> PAGE FORMATTING {{{
+
+%====>> PAGE FORMATTING
 \setlength{\columnsep}{0.25in}
 \usepackage[margin=1in]{geometry}
 \setlength{\parindent}{2em}
 %\setlength{\parskip}{0.25em}
 \renewcommand{\baselinestretch}{1.25}
 %\setcounter{page}{1}
-% }}}
 
-%====>> FONT FORMATTING {{{
+
+%====>>FONT FORMATTING
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 %\usepackage{sectsty}
 %\sectionfont{\centering \sc \color{NavyBlue}}
@@ -33,23 +33,23 @@
 {\thesubsubsection}
 {1em}
 {}
-% }}}
 
-%====>> GRAPHICS {{{
+
+%====>>GRAPHICS
 \usepackage[pdftex]{graphicx}
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage[font={it,sf}]{caption}
 \usepackage{subcaption}
 \usepackage{chngcntr}
-% }}}
 
-%====>> TABLES {{{
+
+%====>>TABLES
 \usepackage[none]{hyphenat}
 \usepackage{array}
-% }}}
 
-%====>> HEADER and FOOTER {{{
+
+%====>>HEADER and FOOTER
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -62,18 +62,18 @@
 \cfoot{\color{Grey} \thepage}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-% }}}
 
-%====>> BIBLIOGRAPHY {{{
+
+%====>>BIBLIOGRAPHY
 \usepackage[backend=biber]{biblatex}
 \addbibresource{name.bib}
-% }}}
 
-%====>> CLICKABLE REFERENCES {{{
+
+%====>>CLICKABLE REFERENCES
 \usepackage[hidelinks]{hyperref}
-% }}}
 
-%====>> MAKING A TABLE {{{
+
+%====>>MAKING A TABLE
 %\begin{table}[H]
 %	\centering
 %	\begin{tabular}{l c r} % can also specify cell dimensions eg. p{1in} instead of l c r
@@ -85,26 +85,27 @@
 %	\caption[this is the optional caption without reference]{local caption with reference
 %	\label{tab:table name}}
 %\end{table}
-% }}}
 
-%====>> INSERTING A FIGURE {{{
+%====>>INSERTING A FIGURE
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[scale= ]{filelocation}
 %	\caption[Optional caption]{Real, local caption
 %	\label{fig:figurename}}
 %\end{figure}
-% }}}
-% }}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-\begin{center}% {{{
+\begin{center}
 
 \hfill\\
 \rule{\textwidth}{1pt}\\
 [1em]
-{\huge \textsc{[Report Title]}}\\
+{\huge {\color{RoyalBlue} \textsc{[Report Title]}}}\\
 [0.25em]
 \rule{\textwidth}{1pt}\\
 [1em]
@@ -112,28 +113,26 @@
 [0.25em]
 \rule{0.75\textwidth}{1pt}
 \end{center}
-% }}}
 
-\tableofcontents% {{{
+
+\tableofcontents
 %\thispagestyle{empty}
 \cleardoublepage
-% }}}
 
-\section{Section}% {{{
-\subsection{Subsection}% {{{
-\subsubsection{Subsubsection}% {{{
-% }}}
-% }}}
-% }}}
+\section{Section}
 
-\printbibliography% {{{
+\subsection{Subsection}
+
+\subsubsection{Subsubsection}
+
+\printbibliography
+
 \cleardoublepage
-% }}}
 
-\appendix% {{{
+\appendix
 \addcontentsline{toc}{section}{APPENDICES}
-\section{Appendix}% {{{
-% }}}
-% }}}
+
+\section{Appendix}
+
 
 \end{document}
