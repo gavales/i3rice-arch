@@ -9,5 +9,5 @@ lo=$(setxkbmap -query | grep 'layout' | awk '{print $2}')
 if [[ $stat == "on" ]]; then
     echo "<span background=\"$magenta\"> <span face='Font Awesome 5 Free'>&#xf031;</span> </span>"
 else
-    echo "<span background=\"$magenta\"> <span face='Font Awesome 5 Free'>&#xf11c;</span> $lo </span>"
+    echo " <span face='Font Awesome 5 Free'>&#xf11c;</span> $lo "
 fi

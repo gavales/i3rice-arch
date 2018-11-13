@@ -12,12 +12,10 @@ playing="$playername: $trackname - $artistname"
 
 if [ -z $playstatus ]; then
 	:
-elif [ $playstatus == "unknown" ]; then
-	:
 elif [ $playstatus == "Paused" ]; then
-	echo "<span background=\"$magenta\"> <span face='Font Awesome 5 Free'>&#xf28b;</span> ${playing:0:50} </span>"
+	echo "<span foreground=\"$magenta\"> <span face='Font Awesome 5 Free'>&#xf28b;</span> ${playing:0:50} </span>"
 else
-	echo "<span background=\"$magenta\"> <span face='Font Awesome 5 Free'>&#xf144;</span> ${playing:0:50} </span>"
+	echo "<span foreground=\"$magenta\"> <span face='Font Awesome 5 Free'>&#xf144;</span> ${playing:0:50} </span>"
 fi
 
 case $BLOCK_BUTTON in

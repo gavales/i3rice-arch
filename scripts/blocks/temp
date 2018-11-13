@@ -8,11 +8,11 @@ temp=${temp1:1}
 rawtemp=${temp1:1:-4}
 
 if [[ $rawtemp -ge 65 ]]; then
-    echo "<span background=\"#ffff00\"> <span face='Font Awesome 5 Free'>&#xf2c8;</span> $temp </span>"
+    echo "<span foreground=\"#ffff00\"> <span face='Font Awesome 5 Free'>&#xf2c8;</span> $temp </span>"
 elif [[ $rawtemp -ge 85 ]]; then
     echo "<span background=\"#ff0000\"> <span face='Font Awesome 5 Free'>&#xf2c7;</span> $temp </span>"
 elif [[ $rawtemp -ge 50 ]]; then
-    echo "<span background=\"$red\"> <span face='Font Awesome 5 Free'>&#xf2c9;</span> $temp </span>"
+    echo " <span face='Font Awesome 5 Free'>&#xf2c9;</span> $temp "
 else
-    echo "<span background=\"$red\"> <span face='Font Awesome 5 Free'>&#xf2ca;</span> $temp </span>"
+    echo " <span face='Font Awesome 5 Free'>&#xf2ca;</span> $temp "
 fi

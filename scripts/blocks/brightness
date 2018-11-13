@@ -1,14 +1,5 @@
 #!/usr/bin/env bash
 
-################################
-# Shows current brightness
-#
-# dependencies:
-# - xbacklight
-#
-# @return {Number}: Current brightness
-################################
-
 case $BLOCK_BUTTON in
 	# right click
 	# set to `20
@@ -30,4 +21,4 @@ bl=$(printf "%.0f" $blr)
 black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
 cyan=$(xrdb -query | grep '*color6' | awk '{print $NF}')
 
-echo "<span background=\"$cyan\"> <span face='Font Awesome 5 Free'>&#xf042;</span> ${bl}% </span>"
+echo " <span face='Font Awesome 5 Free'>&#xf042;</span> ${bl}% "

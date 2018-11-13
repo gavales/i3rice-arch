@@ -34,17 +34,17 @@ else
 fi
 
 if [[ $rawbat -le 50 ]]; then
-    echo "<span background=\"#ffff00\"> <span face='Font Awesome 5 Free'>&#xf242;</span> $stat $tim2 </span>"
+    echo "<span foreground=\"#ffff00\"> <span face='Font Awesome 5 Free'>&#xf242;</span> $stat $tim2 </span>"
 elif [[ $rawbat -le 25 ]]; then
-    echo "<span background=\"#ff0000\"> <span face='Font Awesome 5 Free'>&#xf243;</span> $stat $tim2 </span>"
+    echo "<span foreground=\"#ff0000\"> <span face='Font Awesome 5 Free'>&#xf243;</span> $stat $tim2 </span>"
 elif [[ $rawbat -le 10 ]]; then
     echo "<span background=\"#ff0000\"> <span face='Font Awesome 5 Free'>&#xf244;</span> $stat $tim2 </span>"
 elif [[ $rawbat -le 75 ]]; then
-    echo "<span background=\"$white\"> <span face='Font Awesome 5 Free'>&#xf241;</span> $stat $tim2 </span>"
+    echo " <span face='Font Awesome 5 Free'>&#xf241;</span> $stat $tim2 "
 elif [[ $statu == "Unknown," ]]; then
-    echo "<span background=\"$blue\"> <span face='Font Awesome 5 Free'>&#xf240;</span> $stat $tim2</span>"
+    echo " <span face='Font Awesome 5 Free'>&#xf240;</span> $stat $tim2 "
 elif [[ $statu == "Full," ]]; then
-    echo "<span background=\"$blue\"> <span face='Font Awesome 5 Free'>&#xf240;</span> $stat $tim2</span>"
+    echo " <span face='Font Awesome 5 Free'>&#xf240;</span> $stat $tim2 "
 else
-    echo "<span background=\"$blue\"> <span face='Font Awesome 5 Free'>&#xf240;</span> $tim2 </span>"
+    echo " <span face='Font Awesome 5 Free'>&#xf240;</span> $tim2 "
 fi

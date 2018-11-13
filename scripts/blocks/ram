@@ -11,7 +11,7 @@ c=$(awk -v t=${tot} -v u=${used} 'BEGIN{ print int(u/t*100) }')
 if [[ $c -ge 80 ]]; then
     echo "<span background=\"#ff0000\"> <span face='Font Awesome 5 Free'>&#xf538;</span> $c% </span>"
 elif [[ $c -ge 50 ]]; then
-    echo "<span background=\"#ffff00\"> <span face='Font Awesome 5 Free'>&#xf538;</span> $c% </span>"
+    echo "<span foreground=\"#ffff00\"> <span face='Font Awesome 5 Free'>&#xf538;</span> $c% </span>"
 else
-    echo "<span background=\"$green\"> <span face='Font Awesome 5 Free'>&#xf538;</span> $c% </span>"
+    echo " <span face='Font Awesome 5 Free'>&#xf538;</span> $c% "
 fi
