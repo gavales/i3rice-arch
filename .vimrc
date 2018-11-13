@@ -264,6 +264,8 @@ autocmd Filetype markdown map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
 ">>>> MARKDOWN FILES
 autocmd Filetype markdown map \cp :!pandoc<space><C-r>%<space>-o<space><C-r>
 	\%<BS><BS><BS>.pdf<Enter><Enter>
+autocmd Filetype markdown map \cw :w<space>!pandoc<space>-o<space><C-r>
+	\%<BS><BS><BS>.docx<Enter><Enter>
 autocmd Filetype markdown map \ch :!pandoc<space><C-r>%<space>--css<space>
 	\~/pandoc.css<space>-o<space><C-r>%<BS><BS><BS>.html<Enter><Enter>
 autocmd Filetype markdown map \cb :!pandoc<space><C-r>%<space>-t<space>
