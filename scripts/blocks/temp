@@ -1,8 +1,5 @@
 #!/bin/bash
 
-black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-red=$(xrdb -query | grep '*color9' | awk '{print $NF}')
-
 temp1=$(sensors coretemp-isa-0000 | grep '^Core 0' | awk '{ print $3 }')
 temp=${temp1:1}
 rawtemp=${temp1:1:-4}

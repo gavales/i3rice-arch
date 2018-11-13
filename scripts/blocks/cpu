@@ -1,8 +1,5 @@
 #!/bin/bash
 
-black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-yellow=$(xrdb -query | grep '*color3' | awk '{print $NF}')
-
 idle=$(top -b -n1 | grep %Cpu | awk '{print $8}' | sed -e "s/^id,//")
 idlelen=$(echo $idle | tr ' ' '\n' | wc -l)
 idletot=$(echo $idle | tr ' ' '\n' | awk '{s+=$1} END {print s}')

@@ -146,24 +146,27 @@ let g:tex_flavor='latex' "invoke tex, not plaintex, for empty tex file
 set iskeyword+=: "press <C-n> to cycle through \label's
 
 "////// COMPILE PDF
-autocmd Filetype tex map \cp :!bash<space>~/scripts/clatex<space><C-r>
+autocmd Filetype tex map \cp :w<space>!bash<space>~/scripts/clatex<space><C-r>
 	\%<Enter><Enter>
-autocmd Filetype tex map \sp :!pdflatex<space>-interaction=nonstopmode
+autocmd Filetype tex map \sp :w<space>!pdflatex<space>-interaction=nonstopmode
 	\<space>-shell-escape<space><C-r>%<Enter><Enter>
-autocmd Filetype tex map \sx :!pdflatex<space>-interaction=nonstopmode
+autocmd Filetype tex map \sx :w<space>!xelatex<space>-interaction=nonstopmode
 	\<space>-shell-escape<space><C-r>%<Enter><Enter>
 
 autocmd Filetype tex inoremap \cp <Esc>:w<Space>!bash<space>~/scripts/clatex
 	\<space><C-r>%<Enter><Enter>i
 autocmd Filetype tex inoremap \sp <Esc>:w<Space>!pdflatex<space>
 	\-interaction=nonstopmode<space>-shell-escape<space><C-r>%<Enter><Enter>i
-autocmd Filetype tex inoremap \sx <Esc>:w<Space>!pdflatex<space>
+autocmd Filetype tex inoremap \sx <Esc>:w<Space>!xelatex<space>
 	\-interaction=nonstopmode<space>-shell-escape<space><C-r>%<Enter><Enter>i
 
 "////// VIEW PDF
-autocmd Filetype tex map \vp :silent<space>!bash<space>~/scripts/openpdf<space><C-r>%<BS><BS><BS>pdf<Enter>
-autocmd Filetype rmd map \vp :silent<space>!bash<space>~/scripts/openpdf<space><C-r>%<BS><BS><BS>pdf<Enter>
-autocmd Filetype markdown map \vp :silent<space>!bash<space>~/scripts/openpdf<space><C-r>%<BS><BS>pdf<Enter>
+autocmd Filetype tex map \vp :silent<space>!bash<space>~/scripts/openpdf<space>
+	\<C-r>%<BS><BS><BS>pdf<Enter>
+autocmd Filetype rmd map \vp :silent<space>!bash<space>~/scripts/openpdf<space>
+	\<C-r>%<BS><BS><BS>pdf<Enter>
+autocmd Filetype markdown map \vp :silent<space>!bash<space>~/scripts/openpdf
+	\<space><C-r>%<BS><BS>pdf<Enter>
 
 "////// BIBER
 autocmd Filetype tex map \cb :!biber<space><C-r>%<BS><BS><BS>bcf<Enter><Enter>
@@ -178,8 +181,8 @@ autocmd FileType tex inoremap pc<Tab> \parencite{}<++><Esc>T{i
 autocmd FileType tex inoremap pt<Tab> \item 
 
 autocmd FileType tex inoremap bf<Tab> \textbf{}<++><Esc>T{i
-autocmd FileType tex inoremap bg<Tab> \begin{DELRN}% {{{<Enter><++><Enter>\end{DELRN}
-	\<Enter>% }}}<Enter><++><Esc>4k0fR:MultipleCursorsFind<Space>DELRN<Enter>c
+autocmd FileType tex inoremap bg<Tab> \begin{DELRN}% <Enter><++><Enter>\end{DELRN}
+	\<Enter><Enter><++><Esc>4k0fR:MultipleCursorsFind<Space>DELRN<Enter>c
 autocmd FileType tex inoremap bm<Tab> \begin{multicols}{2}<Enter><Enter><Enter>
 	\<Enter>\end{multicols}<Enter><Enter><++><Esc>4k0fR
 
@@ -191,14 +194,14 @@ autocmd FileType tex inoremap tc<Tab> \textcite{}<++><Esc>T{i
 autocmd FileType tex inoremap st<Tab> {\setstretch{}<Enter><++><Enter>
 	\<Enter>}<Enter><Enter><++><Esc>5k0f{a
 autocmd FileType tex inoremap sc<Tab> \textsc{}<++><Esc>T{i
-autocmd FileType tex inoremap s1<Tab> \section{}% {{{<Enter><++><Enter>% }}}<Esc>02kf}i
-autocmd FileType tex inoremap s2<Tab> \subsection{}% {{{<Enter><++><Enter>% }}}<Esc>02kf}i
-autocmd FileType tex inoremap s3<Tab> \subsubsection{}% {{{<Enter><++><Enter>% }}}<Esc>02kf}i
+autocmd FileType tex inoremap s1<Tab> \section{}<Enter><++><Esc>kf}i
+autocmd FileType tex inoremap s2<Tab> \subsection{}<Enter><++><Esc>kf}i
+autocmd FileType tex inoremap s3<Tab> \subsubsection{}<Enter><++><Esc>kf}i
 
 autocmd FileType tex inoremap ci<Tab> \cite{}<++><Esc>T{i
 autocmd FileType tex inoremap ct<Tab> \citet{}<++><Esc>T{i
 autocmd FileType tex inoremap cp<Tab> \citep{}<++><Esc>T{i
-autocmd FileType tex inoremap ch<Tab> \chapter{}% {{{<Enter><++><Enter>% }}}<Esc>02kf}i
+autocmd FileType tex inoremap ch<Tab> \chapter{}<Enter><++><Esc>kf}i
 
 autocmd FileType tex inoremap rf<Tab> \ref{fig:}<Space><++><Esc>T:i
 autocmd FileType tex inoremap rt<Tab> \ref{tab:}<Space><++><Esc>T:i
@@ -220,37 +223,37 @@ autocmd FileType tex map \ob :sp<space><C-r>%<BS><BS><BS>bib<Enter>
 
 "////// BIB SHORTCUTS
 autocmd Filetype bib inoremap b<Tab> @book{,<Enter>
-	\title<space>=<space>{<++>},<Enter>
-	\author<space>=<space>{<++>},<Enter>
-	\year<space>=<space>{<++>},<Enter>
-	\publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>07kf{a
+	\<Tab>title<space>=<space>{<++>},<Enter>
+	\<Tab>author<space>=<space>{<++>},<Enter>
+	\<Tab>year<space>=<space>{<++>},<Enter>
+	\<Tab>publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>07kf{a
 autocmd Filetype bib inoremap a<Tab> @article{,<Enter>
-	\title<space>=<space>{<++>},<Enter>
-	\author<space>=<space>{<++>},<Enter>
-	\journal<space>=<space>{<++>},<Enter>
-	\volume<space>=<space>{<++>},<Enter>
-	\pages<space>=<space>{<++>},<Enter>
-	\year<space>=<space>{<++>},<Enter>
-	\publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>010kf{a
+	\<Tab>title<space>=<space>{<++>},<Enter>
+	\<Tab>author<space>=<space>{<++>},<Enter>
+	\<Tab>journal<space>=<space>{<++>},<Enter>
+	\<Tab>volume<space>=<space>{<++>},<Enter>
+	\<Tab>pages<space>=<space>{<++>},<Enter>
+	\<Tab>year<space>=<space>{<++>},<Enter>
+	\<Tab>publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>010kf{a
 autocmd Filetype bib inoremap t<Tab> @phdthesis{,<Enter>
-	\title<space>=<space>{<++>},<Enter>
-	\author<space>=<space>{<++>},<Enter>
-	\school<space>=<space>{<++>},<Enter>
-	\year<space>=<space>{<++>},<Enter>
-	\publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>08kf{a
+	\<Tab>title<space>=<space>{<++>},<Enter>
+	\<Tab>author<space>=<space>{<++>},<Enter>
+	\<Tab>school<space>=<space>{<++>},<Enter>
+	\<Tab>year<space>=<space>{<++>},<Enter>
+	\<Tab>publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>08kf{a
 autocmd Filetype bib inoremap i<Tab> @inproceedings{,<Enter>
-	\title<space>=<space>{<++>},<Enter>
-	\author<space>=<space>{<++>},<Enter>
-	\booktitle<space>=<space>{<++>},<Enter>
-	\volume<space>=<space>{<++>},<Enter>
-	\number<space>=<space>{<++>},<Enter>
-	\pages<space>=<space>{<++>},<Enter>
-	\year<space>=<space>{<++>},<Enter>
-	\organization<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>011kf{a
+	\<Tab>title<space>=<space>{<++>},<Enter>
+	\<Tab>author<space>=<space>{<++>},<Enter>
+	\<Tab>booktitle<space>=<space>{<++>},<Enter>
+	\<Tab>volume<space>=<space>{<++>},<Enter>
+	\<Tab>number<space>=<space>{<++>},<Enter>
+	\<Tab>pages<space>=<space>{<++>},<Enter>
+	\<Tab>year<space>=<space>{<++>},<Enter>
+	\<Tab>organization<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>011kf{a
 autocmd Filetype bib inoremap o<Tab> @online{,<Enter>
-	\title<space>=<space>{<++>},<Enter>
-	\author<space>=<space>{<++>},<Enter>
-	\publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>06kf{a
+	\<Tab>title<space>=<space>{<++>},<Enter>
+	\<Tab>author<space>=<space>{<++>},<Enter>
+	\<Tab>publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>06kf{a
 
 ">>>> PDF WORDCOUNT
 autocmd Filetype tex map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
@@ -262,18 +265,62 @@ autocmd Filetype markdown map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
 
 
 ">>>> MARKDOWN FILES
-autocmd Filetype markdown map \cp :!pandoc<space><C-r>%<space>-o<space><C-r>
+autocmd FileType markdown inoremap 2h ##<space>
+autocmd FileType markdown inoremap 2h ###<space>
+autocmd FileType markdown inoremap 2h ####<space>
+autocmd FileType markdown inoremap 2h #####<space>
+autocmd FileType markdown inoremap 2h ######<space>
+
+autocmd FileType markdown inoremap 2p <Tab>-<space>
+autocmd FileType markdown inoremap 3p <Tab><Tab>-<space>
+autocmd FileType markdown inoremap 4p <Tab><Tab><Tab>-<space>
+autocmd FileType markdown inoremap 5p <Tab><Tab><Tab><Tab>-<space>
+autocmd FileType markdown inoremap 6p <Tab><Tab><Tab><Tab><Tab>-<space>
+
+autocmd FileType markdown inoremap b<Tab> ****<++><Esc>5hi
+autocmd FileType markdown inoremap i<Tab> __<++><Esc>4hi
+autocmd FileType markdown inoremap u<Tab> ~~~~<++><Esc>5hi
+autocmd FileType markdown inoremap pic<Tab> ![](<++>)<Esc>F]i
+autocmd FileType markdown inoremap lin<Tab> [](<++>)<Esc>F]i
+autocmd FileType markdown inoremap cod<Tab> ```<Enter><++><Enter>```<Esc>2kA
+autocmd FileType markdown inoremap ytb<Tab> [![](http://img.youtube.com/vi/<++>
+	\/0.jpg)](http://www.youtube.com/watch?v=<++>)<Esc>F[a
+
+autocmd Filetype markdown map \cp :w<space>!pandoc<space>-o<space><C-r>
 	\%<BS><BS><BS>.pdf<Enter><Enter>
 autocmd Filetype markdown map \cw :w<space>!pandoc<space>-o<space><C-r>
 	\%<BS><BS><BS>.docx<Enter><Enter>
-autocmd Filetype markdown map \ch :!pandoc<space><C-r>%<space>--css<space>
+autocmd Filetype markdown map \ch :w<space>!pandoc<space>--css<space>
 	\~/pandoc.css<space>-o<space><C-r>%<BS><BS><BS>.html<Enter><Enter>
-autocmd Filetype markdown map \cb :!pandoc<space><C-r>%<space>-t<space>
-	\beamer<space>-o<space><C-r>%<BS><BS><BS>beamer.pdf<Enter><Enter>
+autocmd Filetype markdown map \cb :w<space>!pandoc<space>-t<space>
+	\beamer<space>-o<space><C-r>%<BS><BS><BS>.pdf<Enter><Enter>
+
+">>>> R MARKDOWN
 autocmd Filetype rmd map \ll :!echo<space>"require(rmarkdown);<space>
 	\render('<c-r>%')"<space>\|<space>R<space>--vanilla<Enter><Enter>
 autocmd Filetype rmd inoremap ;r ```{r}<CR>```<CR><CR><esc>2kO
 autocmd Filetype rmd inoremap ;p ```{python}<CR>```<CR><CR><esc>2kO
+
+autocmd FileType rmd inoremap 2h ##<space>
+autocmd FileType rmd inoremap 2h ###<space>
+autocmd FileType rmd inoremap 2h ####<space>
+autocmd FileType rmd inoremap 2h #####<space>
+autocmd FileType rmd inoremap 2h ######<space>
+
+autocmd FileType rmd inoremap 2p <Tab>-<space>
+autocmd FileType rmd inoremap 3p <Tab><Tab>-<space>
+autocmd FileType rmd inoremap 4p <Tab><Tab><Tab>-<space>
+autocmd FileType rmd inoremap 5p <Tab><Tab><Tab><Tab>-<space>
+autocmd FileType rmd inoremap 6p <Tab><Tab><Tab><Tab><Tab>-<space>
+
+autocmd FileType rmd inoremap b<Tab> ****<++><Esc>5hi
+autocmd FileType rmd inoremap i<Tab> __<++><Esc>4hi
+autocmd FileType rmd inoremap u<Tab> ~~~~<++><Esc>5hi
+autocmd FileType rmd inoremap pic<Tab> ![](<++>)<Esc>F]i
+autocmd FileType rmd inoremap lin<Tab> [](<++>)<Esc>F]i
+autocmd FileType rmd inoremap cod<Tab> ```{}<Enter><++><Enter>```<Esc>02kf{a
+autocmd FileType rmd inoremap ytb<Tab> [![](http://img.youtube.com/vi/<++>
+	\/0.jpg)](http://www.youtube.com/watch?v=<++>)<Esc>F[a
 
 ">>>> PYTHON FILES
 autocmd Filetype python map \ll :w<space>!python<Enter>

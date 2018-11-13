@@ -18,7 +18,4 @@ blr=$(light -G)
 
 bl=$(printf "%.0f" $blr)
 
-black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-cyan=$(xrdb -query | grep '*color6' | awk '{print $NF}')
-
 echo " <span face='Font Awesome 5 Free'>&#xf042;</span> ${bl}% "

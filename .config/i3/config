@@ -54,7 +54,7 @@ set $t 99
 
 #>>>> IMPORTANT
 #////// RELOAD CONFIG
-bindsym $mod+Shift+c exec --no-startup-id "bash $home/$scripts/xtheme; bash $home/$scripts/reloadconfs; i3-msg reload"
+bindsym $mod+Shift+c exec --no-startup-id "bash $home/$scripts/xtheme; bash $home/$scripts/reloadconfs; i3-msg reload; killall i3bar; i3bar --bar_id=bar-1"
 
 #////// RESTART i3
 bindsym $mod+Shift+r restart
@@ -82,6 +82,7 @@ bar {
 	status_command i3blocks -c ~/$scripts/i3blocks.conf
 #	status_command i3blocks
 	position top
+	id bar-1
 
 	bindsym button4 nop
 	bindsym button5 nop
@@ -91,9 +92,9 @@ bar {
 	background $black
 
 #			   border  backgr. text
-	focused_workspace  $blue $blue $black
-	active_workspace   $cyan $cyan $black
-	inactive_workspace $black $black $white
+	focused_workspace  $black $black $white
+	active_workspace   $black $black $cyan
+	inactive_workspace $black $black $blue
 	binding_mode       $yellow $yellow $black
 	urgent_workspace   $red $red $black
 	}

@@ -1,9 +1,5 @@
 #!/bin/bash
 
-black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
-blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
-
 bat=$(acpi | awk '{ print $4 }')
 
 if [[ ${#bat} == 3 ]]; then
@@ -24,11 +20,11 @@ else
 fi
 
 if [[ $statu == "Charging," ]]; then
-    stat="<span face='Font Awesome 5 Free'>&#xf0e7;</span>"
+    stat="<span face='Font Awesome 5 Free'>&#xf1e6;</span>"
 elif [[ $statu == "Unknown," ]]; then
-    stat="<span face='Font Awesome 5 Free'>&#xf1e6;</span>"
+    stat="<span face='Font Awesome 5 Free'>&#xf00c;</span>"
 elif [[ $statu == "Full," ]]; then
-    stat="<span face='Font Awesome 5 Free'>&#xf1e6;</span>"
+    stat="<span face='Font Awesome 5 Free'>&#xf00c;</span>"
 else
     stat=""
 fi

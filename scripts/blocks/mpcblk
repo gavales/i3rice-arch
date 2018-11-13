@@ -1,15 +1,12 @@
 #!/bin/bash
 
-black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-magenta=$(xrdb -query | grep '*color5' | awk '{print $NF}')
-
 playing=$(mpc current)
 
 if [ -z "$playing" ]
 then
 	:
 else
-	echo "<span foreground=\"$magenta\"> <span face='Font Awesome 5 Free'>&#xf001;</span> ${playing} </span>"
+	echo " <span face='Font Awesome 5 Free'>&#xf001;</span> ${playing} "
 fi
 
 case $BLOCK_BUTTON in

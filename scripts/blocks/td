@@ -1,6 +1,3 @@
 #!/bin/bash
 
-black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
-
 echo " <span face='Font Awesome 5 Free'>&#xf073;</span> $(date '+%d/%m/%Y') <span face='Font Awesome 5 Free'>&#xf017;</span> $(date '+%H:%M:%S') "
