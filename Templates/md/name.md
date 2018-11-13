@@ -7,9 +7,7 @@ theme:
 - CambridgeUS
 ---
 
-# Section Heading<!-- {{{ -->
-
-<!-- {{{ -->
+# Section Heading
 
 Here is text.
 
@@ -20,17 +18,13 @@ Here's a list:
 + More List items
 + Even more items...
 
-<!-- }}} -->
+# Section 2
 
-## Subsection Heading<!-- {{{ -->
+## Subsection Heading
 
 Text in subsection
 
-<!-- }}} -->
-
-<!-- }}} -->
-
-# Section 3: Text Formatting<!-- {{{ -->
+# Section 3: Text Formatting
 
 **bold text**
 
@@ -38,10 +32,7 @@ _italic text_
 
 ~~strike-through~~
 
-<!-- }}} -->
-
-# Section 4: Images<!-- {{{ -->
+# Section 4: Images
 
 ![Luoping, China in 1080p!](Luoping, China 1920x1080.jpg)
 
-<!-- }}} -->

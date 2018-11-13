@@ -1,7 +1,7 @@
 #i3 config file (v4)
 #Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-#====>> MAIN FONT {{{
+#>>>> MAIN FONT
 
 set $font1 FixedsysMono
 set $font2 FontAwesome
@@ -9,23 +9,20 @@ set $fonts 12
 
 font pango:$font1,$font2 $fonts
 
-# }}}
-
-#====>> DEFINE VARIABLES {{{
-
-#==> SET $MOD
+#>>>> DEFINE VARIABLES
+#////// SET $MOD
 set $mod Mod1
 set $win Mod4
 
-#==> SET TERM(S)
+#////// SET TERM(S)
 set $term urxvtc
 #set $term urxvt
 
-#==> BROWSER(S)
+#////// BROWSER(S)
 set $browser qutebrowser
 set $browser2 google-chrome-beta
 
-#==> COLORS
+#////// COLORS
 set_from_resource $black	color0
 set_from_resource $red		color1
 set_from_resource $green	color2
@@ -35,12 +32,12 @@ set_from_resource $magenta	color5
 set_from_resource $cyan		color6
 set_from_resource $white	color15
 
-#==> HOME DIR
+#////// HOME DIR
 set $home /home/gavarch
 set $scripts scripts
 set $scriptpics scriptpics
 
-#==> WORKSPACE NAMES
+#////// WORKSPACE NAMES
 set $ws1 1
 set $ws2 2
 set $ws3 3
@@ -52,31 +49,25 @@ set $ws8 8
 set $ws9 9
 set $ws10 10
 
-#==> TRANSPARENCY
+#////// TRANSPARENCY
 set $t 99
 
-# }}}
-
-#====>> IMPORTANT {{{
-
-#==> RELOAD CONFIG
+#>>>> IMPORTANT
+#////// RELOAD CONFIG
 bindsym $mod+Shift+c exec --no-startup-id "bash $home/$scripts/xtheme; bash $home/$scripts/reloadconfs; i3-msg reload"
 
-#==> RESTART i3
+#////// RESTART i3
 bindsym $mod+Shift+r restart
 
-# }}}
-
-#====>> DECORATIONS {{{
-
-#==> BORDER STYLE <normal|1pixel|pixel xx|none|pixel>
+#>>>> DECORATIONS
+#////// BORDER STYLE <normal|1pixel|pixel xx|none|pixel>
 new_window pixel 0
 new_float normal
 
-#==> HIDE BORDERS
+#////// HIDE BORDERS
 hide_edge_borders none
 
-#==> COLORS
+#////// COLORS
 # class                   border  backgr. text    indic.   child_border
 client.focused          $blue $blue $black $blue $blue
 client.focused_inactive $cyan $cyan $black $cyan $cyan
@@ -85,9 +76,7 @@ client.urgent           $red $red $black $red $black
 client.placeholder      $black $black $white $black $black
 # client.background	$black
 
-# }}}
-
-#====>> BAR {{{
+#>>>> BAR
 bar {
 	i3bar_command i3bar
 	status_command i3blocks -c ~/$scripts/i3blocks.conf
@@ -110,13 +99,10 @@ bar {
 	}
 }
 
-#==> hide/unhide i3status bar
+#////// hide/unhide i3status bar
 bindsym $mod+b bar mode toggle
 
-# }}}
-
-#====>> FOR i3 GAPS {{{
-
+#>>>> FOR i3 GAPS
 gaps inner 10
 gaps outer 20
 
@@ -132,14 +118,11 @@ workspace $ws5 gaps outer 0
 workspace $ws6 gaps inner 0
 workspace $ws6 gaps outer 0
 
-# }}}
-
-#====>> WORKSPACE/CONTAINER OPERATIONS {{{
-
-#==> KILL FOCUSSED
+#>>>> WORKSPACE/CONTAINER OPERATIONS
+#////// KILL FOCUSSED
 bindsym $mod+Shift+q kill
 
-#==> CHANGE FOCUS
+#////// CHANGE FOCUS
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
@@ -149,7 +132,7 @@ bindsym $win+j exec "i3-msg focus parent; i3-msg focus down; i3-msg focus child"
 bindsym $win+k exec "i3-msg focus parent; i3-msg focus up; i3-msg focus child"
 bindsym $win+l exec "i3-msg focus parent; i3-msg focus right; i3-msg focus child"
 
-#==> MOVE FOCUSSED
+#////// MOVE FOCUSSED
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
@@ -163,7 +146,7 @@ bindsym $win+Shift+l exec "i3-msg focus parent; i3-msg move right; i3-msg focus 
 #bindsym $mod+Shift+Up move up
 #bindsym $mod+Shift+Right move right
 
-#==> RESIZE WINDOWS
+#////// RESIZE WINDOWS
 bindsym $mod+y resize shrink width 10 px or 10 ppt
 bindsym $mod+i resize grow height 10 px or 10 ppt
 bindsym $mod+u resize shrink height 10 px or 10 ppt
@@ -174,49 +157,49 @@ bindsym $mod+o resize grow width 10 px or 10 ppt
 #bindsym $mod+Shift+period resize shrink down 5 px or 5 ppt, resize shrink up 5 px or 5 ppt
 #bindsym $mod+Shift+apostrophe resize grow left 5 px or 5 ppt, resize grow right 5 px or 5 ppt
 
-#==> WORKSPACE BACK & FORTH
+#////// WORKSPACE BACK & FORTH
 workspace_auto_back_and_forth yes
 
-#==> SPLIT ORIENTATION
+#////// SPLIT ORIENTATION
 bindsym $mod+g split h
 bindsym $mod+v split v
 
-#==> FULLSCREEN TOGGLE
+#////// FULLSCREEN TOGGLE
 bindsym $mod+Shift+f fullscreen toggle
 
-#==> CHANGE CONTAINER LAYOUT
+#////// CHANGE CONTAINER LAYOUT
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
-#==> CLICK & DRAG FLOATERS
+#////// CLICK & DRAG FLOATERS
 floating_modifier $mod
 
-#==> TOGGLE TILING/FLOATING
+#////// TOGGLE TILING/FLOATING
 bindsym $mod+Shift+space floating toggle
 
-#==> CHANGE FOCUS TILING/FLOATING
+#////// CHANGE FOCUS TILING/FLOATING
 bindsym $mod+space focus mode_toggle
 
-#==> TOGGLE STICKY
+#////// TOGGLE STICKY
 bindsym $mod+Ctrl+s sticky toggle
 
-#==> FOCUS PARENT CONTAINER
+#////// FOCUS PARENT CONTAINER
 bindsym $mod+a focus parent
 
-#==> MOVE SCRATCHPAD
+#////// MOVE SCRATCHPAD
 bindsym $mod+Shift+minus move scratchpad
 
-#==> SCRATCHPAD
+#////// SCRATCHPAD
 bindsym $mod+minus scratchpad show
 
-#==> WORKSPACE NEXT/PREVIOUS
+#////// WORKSPACE NEXT/PREVIOUS
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
-#==> MOVE TO URGENT
+#////// MOVE TO URGENT
 for_window [urgent=latest] focus
 
-#==> switch to workspace
+#////// switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -228,7 +211,7 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-#==> Move to workspace with focused container
+#////// Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws3
@@ -248,11 +231,8 @@ assign [instance="MUSIC"]	$ws9
 assign [instance="VIS"]		$ws9
 assign [class="Arandr"]		$ws10
 
-# }}}
-
-#====>> FLOATING WINDOWS {{{
-
-#==> PRESET
+#>>>> FLOATING WINDOWS
+#////// PRESET
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="Calamares"] floating enable border normal
 for_window [class="Clipgrab"] floating enable
@@ -281,7 +261,7 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 
-#==> OWN
+#////// OWN
 for_window [title="Netflix"] floating enable,sticky enable,resize set 460 259
 for_window [title="Amazon.co.uk: Prime Video"] \
 	floating enable,sticky enable,resize set 460 259
@@ -299,10 +279,7 @@ for_window [instance="CALC"] floating enable border normal,resize set 480 480
 for_window [instance="BASHMOUNT"] floating enable border normal,sticky enable,resize set 430 500,move position center
 for_window [instance="GITREPOUPDATE"] floating enable border pixel 1,sticky enable,resize set 430 500,move position center
 
-# }}}
-
-#====>> SHUTDOWN MODE {{{
-
+#>>>> SHUTDOWN MODE
 bindsym $mod+Escape mode "SHUTDOWN"
 mode "SHUTDOWN" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"
@@ -318,31 +295,28 @@ mode "SHUTDOWN" {
     bindsym Escape mode "default"
 }
 
-# }}}
-
-#====>> MAIN {{{
-
-#==> START TERMINAL
+#>>>> MAIN
+#////// START TERMINAL
 bindsym $mod+Return exec $term
 
-#==> APPLICATION LAUNCHER
+#////// APPLICATION LAUNCHER
 bindsym $mod+Ctrl+b exec $term -e 'bmenu'
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+Shift+d exec dmenu_run -fn "$font1:size=$fonts" -nb "$black" -nf "$white" -sf "$black" -sb "$blue"
 bindsym $mod+z exec --no-startup-id morc_menu
 
-#==> BRIGHTNESS CONTROLS
+#////// BRIGHTNESS CONTROLS
 bindsym $win+o exec xbacklight -inc 10
 bindsym $win+y exec xbacklight -dec 10
 #bindsym $win+o exec light -A 10
 #bindsym $win+y exec light -U 10
 
-#==> VOLUME CONTROLS
+#////// VOLUME CONTROLS
 bindsym $win+i exec pactl set-sink-volume 0 +2%
 bindsym $win+u exec pactl set-sink-volume 0 -2%
 bindsym $win+x exec pactl set-sink-mute 0 toggle
 
-#==> FILE MANAGERS
+#////// FILE MANAGERS
 bindsym $mod+f exec pcmanfm
 bindsym $win+f exec nautilus
 bindsym $mod+Shift+Return exec $term -name FILES -e ranger
@@ -354,15 +328,12 @@ bindsym $win+t exec --no-startup-id pkill compton
 bindsym $win+Shift+t exec --no-startup-id compton
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
-# }}}
-
-#====>> OWN BINDINGS {{{
-
-#==> SPOTIFY
+#>>>> OWN BINDINGS
+#////// SPOTIFY
 bindsym $mod+Shift+s exec spotify
 bindsym $mod+s exec $term -name MUSIC -e ncmpcpp
 
-#==> MUSIC PLAYER CONTROLS
+#////// MUSIC PLAYER CONTROLS
 bindsym $mod+p exec playerctl play-pause
 bindsym $win+p exec mpc toggle
 bindsym $mod+bracketright exec playerctl next
@@ -371,47 +342,47 @@ bindsym $mod+bracketleft exec playerctl previous
 bindsym $win+bracketleft exec mpc prev
 bindsym $win+backslash exec mpc stop
 
-#==> VISUALISER
+#////// VISUALISER
 bindsym $mod+Shift+v exec $term -name VIS -fn "xft:$font1:size=$fonts" -e vis
 
-#==> PRIME VIDEO
+#////// PRIME VIDEO
 bindsym $mod+Shift+n exec $browser2 --new-window\
  --app=https://www.amazon.co.uk/Amazon-Video/b/?node=3010085031&ref=atv_surl_aiv
 
-#==> NETFLIX
+#////// NETFLIX
 bindsym $mod+n exec $browser2 --new-window\
  --app=https://www.netflix.com/
 
-#==> GOOGLE PLAY MOVIES
+#////// GOOGLE PLAY MOVIES
 bindsym $mod+Shift+m exec $browser2 --new-window\
  --app=https://play.google.com/movies/
 
-#==> GOOGLE PLAY MUSIC
+#////// GOOGLE PLAY MUSIC
 bindsym $mod+m exec $browser2 --new-window\
  --app=https://play.google.com/music/listen#/recents/
 
-#==> YOUTUBE
+#////// YOUTUBE
 bindsym $mod+Shift+y exec $browser2 --new-window\
  --app=https://www.youtube.com/
 
-##==> ALSAMIXER
+##////// ALSAMIXER
 #bindsym $win+a exec $term -e 'alsamixer'
 
-#==> BROWSERS
+#////// BROWSERS
 bindsym $mod+c exec $browser2
 
-#==> QALC
+#////// QALC
 bindsym $mod+q exec $term -name CALC -e R
 
-#==> EMAIL
+#////// EMAIL
 bindsym $mod+Shift+u exec $browser2 --new-window\
  --app=https://outlook.office365.com/owa/?realm=soton.ac.uk
 
-#==> NIGHT MODE
+#////// NIGHT MODE
 bindsym $mod+semicolon exec redshift -P -O 3700
 bindsym $mod+apostrophe exec redshift -x
 
-#==> MULTI-MONITOR SETTINGS
+#////// MULTI-MONITOR SETTINGS
 bindsym $win+m exec bash ~/$scripts/multimon
 bindsym $win+v move workspace to output VGA1
 #bindsym $win+v move workspace to output VGA-1
@@ -419,23 +390,23 @@ bindsym $win+d move workspace to output HDMI1
 bindsym $win+e move workspace to output eDP1
 #bindsym $win+e move workspace to output LVDS-1
 
-#==> SCROT
+#////// SCROT
 bindsym Print exec bash ~/$scripts/screenshot
 bindsym $mod+Shift+p exec bash ~/$scripts/screenshot
 
-#==> BASHMOUNT
+#////// BASHMOUNT
 bindsym $mod+Shift+b exec $term -name BASHMOUNT -e bashmount
 
-#==> NEWSBOAT
+#////// NEWSBOAT
 bindsym $mod+r exec --no-startup-id $term -name RSS -e newsboat
 
-#==> GRIVE SYNC
-bindsym $mod+Shift+g exec bash ~/$scripts/grive
+#////// GRIVE SYNC
+bindsym $mod+Shift+g exec bash ~/$scripts/grivesync
 
-#==> GIT REPO UPDATE
+#////// GIT REPO UPDATE
 bindsym $win+g exec $term -name GITREPOUPDATE -e bash ~/$scripts/gitcommit
 
-#==> GOOGLE DOCs
+#////// GOOGLE DOCs
 bindsym $mod+Ctrl+q exec $browser2 --new-window\
  --app=https://docs.google.com/document/u/0/
 bindsym $mod+Ctrl+w exec $browser2 --new-window\
@@ -443,12 +414,12 @@ bindsym $mod+Ctrl+w exec $browser2 --new-window\
 bindsym $mod+Ctrl+r exec $browser2 --new-window\
  --app=https://docs.google.com/presentation/u/0/
 
-#==> GET WS LAYOUT
+#////// GET WS LAYOUT
 bindsym $win+w exec --no-startup-id bash ~/$scripts/getwslo
-#==> APPLY WS LAYOUT
+#////// APPLY WS LAYOUT
 bindsym $win+a exec --no-startup-id bash ~/$scripts/appwslo
 
-#==> OPEN CONFIGS
+#////// OPEN CONFIGS
 bindsym $win+1 exec --no-startup-id $term -e vim ~/.config/i3/config
 bindsym $win+2 exec --no-startup-id $term -e vim ~/xinclude/xmain
 bindsym $win+3 exec --no-startup-id $term -e vim ~/.vimrc
@@ -456,10 +427,7 @@ bindsym $win+4 exec --no-startup-id $term -e vim ~/.config/ranger/rc.conf
 bindsym $win+5 exec --no-startup-id $term -e vim ~/scripts/mkblocksconf
 bindsym $win+6 exec --no-startup-id $term -e vim ~/.config/qutebrowser/config.py
 
-# }}}
-
-#====>> STARTUP DAEMONS {{{
-
+#>>>> STARTUP DAEMONS
 exec --no-startup-id urxvtd -q -o -f
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
@@ -475,15 +443,10 @@ exec --no-startup-id mpd
 exec setxkbmap us
 #exec setxkbmap gb
 
-# }}}
-
-#====>> STARTUP PROGRAMS {{{
-
+#>>>> STARTUP PROGRAMS
 exec --no-startup-id "i3-msg 'workspace 1; append_layout $home/.config/i3/main.json'"
 #exec --no-startup-id "i3-msg 'workspace 9; append_layout $home/.config/i3/workspace-9.json'"
 exec $browser2
 exec $browser2 --new-window --app=https://www.youtube.com/
 exec_always mpv $home/scriptsounds/A\ Tone\ His\ Self.mp3
 exec_always notify-send 'i3 (re)loaded!' -i ~/$scriptpics/i3white.png
-
-# }}}

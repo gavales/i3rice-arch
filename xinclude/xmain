@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 !> COLORS & VARIABLES {{{
+=======
+!>>>> COLORS & VARIABLES
+>>>>>>> origin/master
 #define fontname FixedsysMono
 !#define font TerminessTTFNerdFontMono
 #define fontsize 10
@@ -39,11 +43,19 @@
 *color15:	cwhtl
 ! }}}
 
+<<<<<<< HEAD
 !> ROFI {{{
+=======
+!>>>> ROFI
+>>>>>>> origin/master
 #include "/home/gavarch/xinclude/xrofi"
 !}}}
 
+<<<<<<< HEAD
 !> XFT {{{
+=======
+!>>>> Xft
+>>>>>>> origin/master
 Xft.dpi:		96
 Xft.antialias:	true
 Xft.hinting:	true
@@ -53,7 +65,11 @@ Xft.hintstyle:	hintslight
 Xft.lcdfilter:	lcddefault
 ! }}}
 
+<<<<<<< HEAD
 ! !> XTERM {{{
+=======
+!>>>> XTerm
+>>>>>>> origin/master
 ! XTerm*background:	cblkd
 ! XTerm*foreground:	cwhtd
 ! XTerm*pointerColor:	ccynd
@@ -67,7 +83,11 @@ Xft.lcdfilter:	lcddefault
 ! Xcursor.size:			0
 ! }}}
 
+<<<<<<< HEAD
 !> URXVT {{{
+=======
+!>>>> URXVT
+>>>>>>> origin/master
 URxvt.font: xft:fontname:size=fontsize
 
 URxvt*depth: 32
@@ -86,11 +106,16 @@ URxvt*internalBorder: 1
 ! URxvt*shading:                  138
 ! }}}
 
+<<<<<<< HEAD
 !> URXVT EXT {{{
 URxvt*perl-ext-common: default
 URxvt*perl-ext: clipboard,matcher,resize-font,config-reload
+=======
+!>>>> URXVT EXTENSIONS
+URxvt*perl-ext-common: default,clipboard,matcher,resize-font,config-reload
+>>>>>>> origin/master
 !URxvt*perl-lib: /home/gavarch/.urxvt/ext
-URxvt*url-launcher:	/usr/bin/google-chrome-stable
+URxvt*url-launcher:	/usr/bin/google-chrome-beta
 URxvt*matcher.button: 1
 URxvt*keysym.C-y: clipboard:copy
 URxvt*keysym.C-a: clipboard:paste
