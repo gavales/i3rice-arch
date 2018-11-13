@@ -1,12 +1,3 @@
-shell cat %f >> ~/scripts/gtkcolorgen/cinnamon/cinnamon
-shell cat %f >> ~/scripts/gtkcolorgen/gnome-shell/gnome-shell
-shell cat %f >> ~/scripts/gtkcolorgen/gtk-2.0/menubar-toolbar/menubar-toolbar
-shell cat %f >> ~/scripts/gtkcolorgen/gtk-2.0/menubar-toolbar/menubar-toolbar-dark
-shell cat %f >> ~/scripts/gtkcolorgen/gtk-2.0/gtkrc
-shell cat %f >> ~/scripts/gtkcolorgen/gtk-2.0/panel
-shell cat %f >> ~/scripts/gtkcolorgen/gtk-2.0/xfce-notify
-shell cat %f >> ~/scripts/gtkcolorgen/gtk-3.0/gtk-dark
-shell cat %f >> ~/scripts/gtkcolorgen/gtk-3.0/gtk
 shell cat %f >> ~/scripts/gtkcolorgen/xfwm4/themerc
 rename raleigh-reloaded
 rename own
@@ -28,7 +19,6 @@ shell mkdir LitReview
 rename Literature Review
 mkdir Electronics 
 mkdir Manufacture
-open_with 
 mkdir Prelim.
 mkdir Actual
 rename Presentations
@@ -36,7 +26,6 @@ rename Reports
 mkdir Literature
 touch mkscript
 open_with vim
-
 shell chmod +x %s
 rename mkscr
 shell mkscr rltheme
@@ -48,3 +37,14 @@ rename ytmpv
 delete
 shell trash-put %s
 shell trash-restore
+shell trash-list
+
+rename grivesync
+rename lockscreen
+rename mpcblk
+rename cssstyles
+rename uni
+open_with 
+scout -ftsea 3
+shell clatex name.tex
+shell bash ~/scripts/clatex name.tex
