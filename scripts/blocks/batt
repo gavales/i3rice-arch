@@ -41,6 +41,8 @@ elif [[ $statu == "Unknown," ]]; then
     echo " <span face='Font Awesome 5 Free'>&#xf240;</span> $stat "
 elif [[ $statu == "Full," ]]; then
     echo " <span face='Font Awesome 5 Free'>&#xf240;</span> $stat "
+elif [[ $rawbat == "100" ]]; then
+    echo " <span face='Font Awesome 5 Free'>&#xf240;</span> $stat "
 else
     echo " ${bat:0:-1} <span face='Font Awesome 5 Free'>&#xf240;</span> $stat $tim2 "
 fi
