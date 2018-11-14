@@ -302,14 +302,27 @@ autocmd FileType markdown inoremap 4p <Tab><Tab><Tab>-<space>
 autocmd FileType markdown inoremap 5p <Tab><Tab><Tab><Tab>-<space>
 autocmd FileType markdown inoremap 6p <Tab><Tab><Tab><Tab><Tab>-<space>
 
-autocmd FileType markdown inoremap b<Tab> ****<++><Esc>5hi
-autocmd FileType markdown inoremap i<Tab> __<++><Esc>4hi
-autocmd FileType markdown inoremap u<Tab> ~~~~<++><Esc>5hi
-autocmd FileType markdown inoremap pic<Tab> ![](<++>)<Esc>F]i
-autocmd FileType markdown inoremap lin<Tab> [](<++>)<Esc>F]i
-autocmd FileType markdown inoremap cod<Tab> ```<Enter><++><Enter>```<Esc>2kA
-autocmd FileType markdown inoremap ytb<Tab> [![](http://img.youtube.com/vi/<++>
+autocmd FileType markdown inoremap 1n 1.<space>
+autocmd FileType markdown inoremap 2n <Tab>1.<space>
+autocmd FileType markdown inoremap 3n <Tab><Tab>1.<space>
+autocmd FileType markdown inoremap 4n <Tab><Tab><Tab>1.<space>
+autocmd FileType markdown inoremap 5n <Tab><Tab><Tab><Tab>1.<space>
+autocmd FileType markdown inoremap 6n <Tab><Tab><Tab><Tab><Tab>1.<space>
+
+autocmd FileType markdown inoremap \b ****<++><Esc>5hi
+autocmd FileType markdown inoremap \i __<++><Esc>4hi
+autocmd FileType markdown inoremap \s ~~~~<++><Esc>5hi
+autocmd FileType markdown inoremap \pic ![](<++>)<Esc>F]i
+autocmd FileType markdown inoremap \lin [](<++>)<Esc>F]i
+autocmd FileType markdown inoremap \cod ```<Enter><++><Enter>```<Esc>2kA
+autocmd FileType markdown inoremap \ytb [![](http://img.youtube.com/vi/<++>
 	\/0.jpg)](http://www.youtube.com/watch?v=<++>)<Esc>F[a
+
+autocmd FileType markdown vnoremap \b xi**<Esc>pa**<Esc>
+autocmd FileType markdown vnoremap \i xi_<Esc>pa_<Esc>
+autocmd FileType markdown vnoremap \s xi~~<Esc>pa~~<Esc>
+autocmd FileType markdown vnoremap \p :'<,'>norm 0i-<space><Esc>
+autocmd FileType markdown vnoremap \n :'<,'>norm 0i1.<space><Esc>
 
 autocmd Filetype markdown map \cp :w<space>!pandoc<space>-o<space><C-r>
 	\%<BS><BS><BS>.pdf<Enter><Enter>
@@ -338,14 +351,27 @@ autocmd FileType rmd inoremap 4p <Tab><Tab><Tab>-<space>
 autocmd FileType rmd inoremap 5p <Tab><Tab><Tab><Tab>-<space>
 autocmd FileType rmd inoremap 6p <Tab><Tab><Tab><Tab><Tab>-<space>
 
-autocmd FileType rmd inoremap b<Tab> ****<++><Esc>5hi
-autocmd FileType rmd inoremap i<Tab> __<++><Esc>4hi
-autocmd FileType rmd inoremap u<Tab> ~~~~<++><Esc>5hi
-autocmd FileType rmd inoremap pic<Tab> ![](<++>)<Esc>F]i
-autocmd FileType rmd inoremap lin<Tab> [](<++>)<Esc>F]i
-autocmd FileType rmd inoremap cod<Tab> ```{}<Enter><++><Enter>```<Esc>02kf{a
-autocmd FileType rmd inoremap ytb<Tab> [![](http://img.youtube.com/vi/<++>
+autocmd FileType markdown inoremap 1n 1.<space>
+autocmd FileType markdown inoremap 2n <Tab>1.<space>
+autocmd FileType markdown inoremap 3n <Tab><Tab>1.<space>
+autocmd FileType markdown inoremap 4n <Tab><Tab><Tab>1.<space>
+autocmd FileType markdown inoremap 5n <Tab><Tab><Tab><Tab>1.<space>
+autocmd FileType markdown inoremap 6n <Tab><Tab><Tab><Tab><Tab>1.<space>
+
+autocmd FileType rmd inoremap \b ****<++><Esc>5hi
+autocmd FileType rmd inoremap \i __<++><Esc>4hi
+autocmd FileType rmd inoremap \u ~~~~<++><Esc>5hi
+autocmd FileType rmd inoremap \pic ![](<++>)<Esc>F]i
+autocmd FileType rmd inoremap \lin [](<++>)<Esc>F]i
+autocmd FileType rmd inoremap \cod ```{}<Enter><++><Enter>```<Esc>02kf{a
+autocmd FileType rmd inoremap \ytb [![](http://img.youtube.com/vi/<++>
 	\/0.jpg)](http://www.youtube.com/watch?v=<++>)<Esc>F[a
+
+autocmd FileType markdown vnoremap \b xi**<Esc>pa**<Esc>
+autocmd FileType markdown vnoremap \i xi_<Esc>pa_<Esc>
+autocmd FileType markdown vnoremap \s xi~~<Esc>pa~~<Esc>
+autocmd FileType markdown vnoremap \p :'<,'>norm 0i-<space><Esc>
+autocmd FileType markdown vnoremap \n :'<,'>norm 0i1.<space><Esc>
 
 ">>>> PYTHON FILES
 autocmd Filetype python map \ll :w<space>!python<Enter>
