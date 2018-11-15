@@ -1,16 +1,3 @@
-shell cat %f >> ~/scripts/gtkcolorgen/xfwm4/themerc
-rename raleigh-reloaded
-rename own
-shell git clone
-shell git clone https://github.com/budlabs/youtube/letslinux/022-027-mondo-setup.git
-shell git clone https://github.com/budlabs/youtube.git
-mkdir bud
-rename gtk-3.0
-rename gtk-2.0
-deletey
-rename main2.json
-rename main.json
-open_with pinta
 rename bamboo
 mkdir My Uni Work
 rename xinitrc-manjaro
@@ -38,13 +25,26 @@ delete
 shell trash-put %s
 shell trash-restore
 shell trash-list
-
 rename grivesync
 rename lockscreen
 rename mpcblk
 rename cssstyles
 rename uni
 open_with 
-scout -ftsea 3
-shell clatex name.tex
-shell bash ~/scripts/clatex name.tex
+shell unrar x SKU498166 ARDUINO_MPU9250 test code.rar
+shell unrar x SKU498166\ ARDUINO_MPU9250\ test\ code.rar
+
+shell unrar x I2Cdev.rar
+shell unrar x MPUxxxx测试过.rar
+rename Downes' Feedback.pdf
+rename Feedback.pdf
+rename space4
+rename ws1.png
+rename ws.png
+rename ws4.png
+rename ws2.png
+rename ws3.png
+rename andalusia
+rename 2018_11_15.md
+rename music.json
+rename musicvis.json

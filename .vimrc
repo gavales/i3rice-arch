@@ -15,7 +15,7 @@ set textwidth=0
 set wrapmargin=0
 set tabstop=4
 set cursorline
-set colorcolumn=80
+call matchadd('ColorColumn', '\%81v', 100)
 
 inoremap ;<Tab> <Esc>/>>>>>><Enter>
 map ;<Tab> <Esc>/>>>>>><Enter>
@@ -32,6 +32,7 @@ hi LineNr ctermbg=none ctermfg=grey
 hi Folded ctermfg=grey ctermbg=none
 hi ModeMsg cterm=bold ctermfg=white
 hi lCursor ctermbg=white ctermfg=black
+hi ColorColumn ctermbg=red
 
 "////// RESIZING
 map .rk :res<space>+5<Enter>
