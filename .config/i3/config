@@ -2,7 +2,6 @@
 #Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 #>>>> MAIN FONT
-
 set $font1 FixedsysMono
 set $font2 FontAwesome
 set $fonts 12
@@ -54,7 +53,9 @@ set $t 99
 
 #>>>> IMPORTANT
 #////// RELOAD CONFIG
-bindsym $mod+Shift+c exec --no-startup-id "bash $home/$scripts/xtheme; bash $home/$scripts/reloadconfs; i3-msg reload; killall i3bar; i3bar --bar_id=bar-1"
+bindsym $mod+Shift+c exec --no-startup-id "bash $home/$scripts/xtheme; \
+	bash $home/$scripts/reloadconfs; i3-msg reload; killall i3bar; \
+	i3bar --bar_id=bar-1"
 
 #////// RESTART i3
 bindsym $mod+Shift+r restart
@@ -114,10 +115,10 @@ bindsym $mod+Ctrl+i gaps inner current plus 5; gaps outer current plus 10
 
 workspace $ws1 gaps inner 0
 workspace $ws1 gaps outer 0
-workspace $ws5 gaps inner 0
-workspace $ws5 gaps outer 0
-workspace $ws6 gaps inner 0
-workspace $ws6 gaps outer 0
+workspace $ws2 gaps inner 0
+workspace $ws2 gaps outer 0
+workspace $ws9 gaps inner 40
+workspace $ws9 gaps outer 80
 
 #>>>> WORKSPACE/CONTAINER OPERATIONS
 #////// KILL FOCUSSED
@@ -138,14 +139,14 @@ bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-bindsym $win+Shift+h exec "i3-msg focus parent; i3-msg move left; i3-msg focus child"
-bindsym $win+Shift+j exec "i3-msg focus parent; i3-msg move down; i3-msg focus child"
-bindsym $win+Shift+k exec "i3-msg focus parent; i3-msg move up; i3-msg focus child"
-bindsym $win+Shift+l exec "i3-msg focus parent; i3-msg move right; i3-msg focus child"
-#bindsym $mod+Shift+Left move left
-#bindsym $mod+Shift+Down move down
-#bindsym $mod+Shift+Up move up
-#bindsym $mod+Shift+Right move right
+bindsym $win+Shift+h exec "i3-msg focus parent; i3-msg move left; \
+	i3-msg focus child"
+bindsym $win+Shift+j exec "i3-msg focus parent; i3-msg move down; \
+	i3-msg focus child"
+bindsym $win+Shift+k exec "i3-msg focus parent; i3-msg move up; \
+	i3-msg focus child"
+bindsym $win+Shift+l exec "i3-msg focus parent; i3-msg move right; \
+	i3-msg focus child"
 
 #////// RESIZE WINDOWS
 bindsym $mod+y resize shrink width 10 px or 10 ppt
@@ -153,24 +154,17 @@ bindsym $mod+i resize grow height 10 px or 10 ppt
 bindsym $mod+u resize shrink height 10 px or 10 ppt
 bindsym $mod+o resize grow width 10 px or 10 ppt
 
-#bindsym $mod+Shift+semicolon resize shrink left 5 px or 5 ppt, resize shrink right 5 px or 5 ppt
-#bindsym $mod+Shift+slash resize grow down 5 px or 5 ppt, resize grow up 5 px or 5 ppt
-#bindsym $mod+Shift+period resize shrink down 5 px or 5 ppt, resize shrink up 5 px or 5 ppt
-#bindsym $mod+Shift+apostrophe resize grow left 5 px or 5 ppt, resize grow right 5 px or 5 ppt
-
 #////// WORKSPACE BACK & FORTH
 workspace_auto_back_and_forth yes
 
 #////// SPLIT ORIENTATION
-bindsym $mod+g split h
-bindsym $mod+v split v
+bindsym $mod+g split toggle
 
 #////// FULLSCREEN TOGGLE
 bindsym $mod+Shift+f fullscreen toggle
 
 #////// CHANGE CONTAINER LAYOUT
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+e layout toggle tabbed splitv splith
 
 #////// CLICK & DRAG FLOATERS
 floating_modifier $mod
@@ -344,7 +338,8 @@ bindsym $win+bracketleft exec mpc prev
 bindsym $win+backslash exec mpc stop
 
 #////// VISUALISER
-bindsym $mod+Shift+v exec $term -name VIS -fn "xft:$font1:size=$fonts" -e vis
+bindsym $mod+v exec $term -name VIS -e vis
+bindsym $mod+Shift+v exec $term -name NCMVIS -e ncmpcpp -s visualizer
 
 #////// PRIME VIDEO
 bindsym $mod+Shift+n exec $browser2 --new-window\
@@ -415,18 +410,16 @@ bindsym $mod+Ctrl+w exec $browser2 --new-window\
 bindsym $mod+Ctrl+r exec $browser2 --new-window\
  --app=https://docs.google.com/presentation/u/0/
 
-#////// GET WS LAYOUT
+#////// GET/APPLY WS LAYOUT
 bindsym $win+w exec --no-startup-id bash ~/$scripts/getwslo
-#////// APPLY WS LAYOUT
 bindsym $win+a exec --no-startup-id bash ~/$scripts/appwslo
 
 #////// OPEN CONFIGS
-bindsym $win+1 exec --no-startup-id $term -e vim ~/.config/i3/config
-bindsym $win+2 exec --no-startup-id $term -e vim ~/xinclude/xmain
-bindsym $win+3 exec --no-startup-id $term -e vim ~/.vimrc
-bindsym $win+4 exec --no-startup-id $term -e vim ~/.config/ranger/rc.conf
-bindsym $win+5 exec --no-startup-id $term -e vim ~/scripts/mkblocksconf
-bindsym $win+6 exec --no-startup-id $term -e vim ~/.config/qutebrowser/config.py
+bindsym $win+1 exec --no-startup-id $term -n i3CONF -e vim ~/.config/i3/config
+bindsym $win+2 exec --no-startup-id $term -n XSETTINGS -e vim ~/xinclude/xmain
+bindsym $win+3 exec --no-startup-id $term -n VIMRC -e vim ~/.vimrc
+bindsym $win+4 exec --no-startup-id $term -n RANGER -e vim ~/.config/ranger/rc.conf
+bindsym $win+5 exec --no-startup-id $term -n i3BLOCKS -e vim ~/scripts/mkblocksconf
 
 #>>>> STARTUP DAEMONS
 exec --no-startup-id urxvtd -q -o -f

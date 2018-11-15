@@ -9,14 +9,14 @@
        "x": 0,
        "y": 0
     },
-    "name": "Rosalia De Souza - O Cantador",
+    "name": "ncmpcpp 0.8.2",
     "percent": 0.7,
     "swallows": [
        {
-       // "class": "^URxvt$",
-       // "instance": "^MUSIC$",
-       // "title": "^Rosalia\\ De\\ Souza\\ \\-\\ O\\ Cantador$",
-       // "transient_for": "^$"
+       "class": "^URxvt$",
+       "instance": "^MUSIC$",
+       "title": "^ncmpcpp$",
+       "transient_for": "^$"
        }
     ],
     "type": "con"
@@ -28,18 +28,18 @@
     "floating": "auto_off",
     "geometry": {
        "height": 338,
-       "width": 482,
+       "width": 562,
        "x": 0,
        "y": 0
     },
-    "name": "vis",
+    "name": "ncmpcpp 0.8.2",
     "percent": 0.3,
     "swallows": [
        {
-       // "class": "^URxvt$",
-       // "instance": "^VIS$",
-       // "title": "^vis$",
-       // "transient_for": "^$"
+       "class": "^URxvt$",
+       "instance": "^NCMVIS$",
+       "title": "^ncmpcpp$",
+       "transient_for": "^$"
        }
     ],
     "type": "con"
