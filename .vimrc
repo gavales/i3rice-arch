@@ -319,9 +319,9 @@ autocmd FileType markdown inoremap \cod ```<Enter><++><Enter>```<Esc>2kA
 autocmd FileType markdown inoremap \ytb [![](http://img.youtube.com/vi/<++>
 	\/0.jpg)](http://www.youtube.com/watch?v=<++>)<Esc>F[a
 
-autocmd FileType markdown vnoremap \b xi**<Esc>pa**<Esc>
-autocmd FileType markdown vnoremap \i xi_<Esc>pa_<Esc>
-autocmd FileType markdown vnoremap \s xi~~<Esc>pa~~<Esc>
+autocmd FileType markdown vnoremap \b xa**<Esc>pa**<Esc>
+autocmd FileType markdown vnoremap \i xa_<Esc>pa_<Esc>
+autocmd FileType markdown vnoremap \s xa~~<Esc>pa~~<Esc>
 autocmd FileType markdown vnoremap \p :'<,'>norm 0i-<space><Esc>
 autocmd FileType markdown vnoremap \n :'<,'>norm 0i1.<space><Esc>
 
@@ -368,9 +368,9 @@ autocmd FileType rmd inoremap \cod ```{}<Enter><++><Enter>```<Esc>02kf{a
 autocmd FileType rmd inoremap \ytb [![](http://img.youtube.com/vi/<++>
 	\/0.jpg)](http://www.youtube.com/watch?v=<++>)<Esc>F[a
 
-autocmd FileType rmd vnoremap \b xi**<Esc>pa**<Esc>
-autocmd FileType rmd vnoremap \i xi_<Esc>pa_<Esc>
-autocmd FileType rmd vnoremap \s xi~~<Esc>pa~~<Esc>
+autocmd FileType rmd vnoremap \b xa**<Esc>pa**<Esc>
+autocmd FileType rmd vnoremap \i xa_<Esc>pa_<Esc>
+autocmd FileType rmd vnoremap \s xa~~<Esc>pa~~<Esc>
 autocmd FileType rmd vnoremap \p :'<,'>norm 0i-<space><Esc>
 autocmd FileType rmd vnoremap \n :'<,'>norm 0i1.<space><Esc>
 
