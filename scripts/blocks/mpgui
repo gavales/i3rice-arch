@@ -1,8 +1,5 @@
 #!/bin/bash
 
-black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-magenta=$(xrdb -query | grep '*color5' | awk '{print $NF}')
-
 playername=$(mpris-ctl info "%player_name")
 trackname=$(mpris-ctl info "%track_name")
 artistname=$(mpris-ctl info "%artist_name")
@@ -11,6 +8,8 @@ playstatus=$(mpris-ctl info "%play_status")
 playing="$playername: $trackname - $artistname"
 
 if [ $playername == "%player_name" ]; then
+	:
+if [ -z $playername ]; then
 	:
 elif [ $playstatus == "Paused" ]; then
 	echo " <span face='Font Awesome 5 Free'>&#xf28b;</span> ${playing:0:50} "
