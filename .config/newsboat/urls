@@ -1,9 +1,10 @@
-# Queries
+#>>>> Queries
 "query:All Online Blogs/Feeds:tags # \"Blogs\"" "Blogs"
 "query:All JPL Feeds:tags # \"JPL\"" "JPL"
 "query:All YouTube Channels:tags # \"YouTube\"" "YouTube"
 "query:All Online Journals:tags # \"Journals\"" "Journals"
 
+#>>>> Journals
 http://rsob.royalsocietypublishing.org/rss/current.xml "Journals" "~The Royal Society: Open Biology Current"
 http://rspb.royalsocietypublishing.org/rss/current.xml "Journals" "~The Royal Society: Proceedings B Current"
 http://rspa.royalsocietypublishing.org/rss/current.xml "Journals" "~The Royal Society: Proceedings A Current"
@@ -11,6 +12,7 @@ http://rspb.royalsocietypublishing.org/rss/recent.xml "Journals" "~The Royal Soc
 http://rsob.royalsocietypublishing.org/rss/recent.xml "Journals" "~The Royal Society: Open Biology Recent"
 http://rspa.royalsocietypublishing.org/rss/recent.xml "Journals" "~The Royal Society: Proceedings A Recent"
 
+#>>>> YoutTube
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "YouTube" "~Luke Smith"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCaR-e8ComPih10DqPi3sdWg "YouTube" "~FactFiend"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC-ElvDDr3kszDmKVgvr_BtA "YouTube" "~The NonSequitor Show"
@@ -48,7 +50,9 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCfjaAUlTZRHJapJmCT6eyIg "Yo
 https://www.youtube.com/feeds/videos.xml?channel_id=UCDnnEbplERet4Lt5vRJCO5A "YouTube" "~Lore Reloaded"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC20_a5xMoC85LQXw17fufEQ "YouTube" "~Anti-Trekker"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCONd1SNf3_QqjzjCVsURNuA "YouTube" "~AntsCanada"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCGtGTAa-xarr2HrEKRgRUHQ "YouTube" "~Peter Draws"
 
+#>>>> Blogs
 http://newtonairlines.blogspot.com/feeds/posts/default "Blogs" "~Newton Airlines"
 https://goodereader.com/blog/feed "Blogs" "~Goodereader"
 https://primitivetechnology.wordpress.com/feed/ "Blogs" "~Primitive Technology"
@@ -56,6 +60,7 @@ http://www.factfiend.com/feed/ "Blogs" "~Fact Fiend"
 http://lukesmith.xyz/rss.xml "Blogs" "~Luke Smith"
 http://www.nonseqshow.com/rss "Blogs" "~The NonSequitor Show"
 
+#>>>> JPL
 http://www.jpl.nasa.gov/multimedia/rss/news.xml "JPL" "~News & Feature Stories"
 http://www.jpl.nasa.gov/multimedia/podcast/podfeed.xml "JPL" "~Podcasts (Audio & Video)"
 http://www.jpl.nasa.gov/multimedia/rss/podfeed-hd.xml "JPL" "~HD Videos"

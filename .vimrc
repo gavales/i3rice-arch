@@ -15,7 +15,7 @@ set textwidth=0
 set wrapmargin=0
 set tabstop=4
 set cursorline
-set colorcolumn=80
+call matchadd('ColorColumn', '\%81v', 100)
 
 inoremap ;<Tab> <Esc>/>>>>>><Enter>
 map ;<Tab> <Esc>/>>>>>><Enter>
@@ -32,6 +32,7 @@ hi LineNr ctermbg=none ctermfg=grey
 hi Folded ctermfg=grey ctermbg=none
 hi ModeMsg cterm=bold ctermfg=white
 hi lCursor ctermbg=white ctermfg=black
+hi ColorColumn ctermbg=red
 
 "////// RESIZING
 map .rk :res<space>+5<Enter>
@@ -290,24 +291,24 @@ autocmd Filetype markdown map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
 
 
 ">>>> MARKDOWN FILES
-autocmd FileType markdown inoremap 2h ##<space>
-autocmd FileType markdown inoremap 2h ###<space>
-autocmd FileType markdown inoremap 2h ####<space>
-autocmd FileType markdown inoremap 2h #####<space>
-autocmd FileType markdown inoremap 2h ######<space>
+autocmd FileType markdown inoremap 2h <Enter><Enter>##<space>
+autocmd FileType markdown inoremap 2h <Enter><Enter>###<space>
+autocmd FileType markdown inoremap 2h <Enter><Enter>####<space>
+autocmd FileType markdown inoremap 2h <Enter><Enter>#####<space>
+autocmd FileType markdown inoremap 2h <Enter><Enter>######<space>
 
-autocmd FileType markdown inoremap 2p <Tab>-<space>
-autocmd FileType markdown inoremap 3p <Tab><Tab>-<space>
-autocmd FileType markdown inoremap 4p <Tab><Tab><Tab>-<space>
-autocmd FileType markdown inoremap 5p <Tab><Tab><Tab><Tab>-<space>
-autocmd FileType markdown inoremap 6p <Tab><Tab><Tab><Tab><Tab>-<space>
+autocmd FileType markdown inoremap 2p <Enter><Tab>-<space>
+autocmd FileType markdown inoremap 3p <Enter><Tab><Tab>-<space>
+autocmd FileType markdown inoremap 4p <Enter><Tab><Tab><Tab>-<space>
+autocmd FileType markdown inoremap 5p <Enter><Tab><Tab><Tab><Tab>-<space>
+autocmd FileType markdown inoremap 6p <Enter><Tab><Tab><Tab><Tab><Tab>-<space>
 
-autocmd FileType markdown inoremap 1n 1.<space>
-autocmd FileType markdown inoremap 2n <Tab>1.<space>
-autocmd FileType markdown inoremap 3n <Tab><Tab>1.<space>
-autocmd FileType markdown inoremap 4n <Tab><Tab><Tab>1.<space>
-autocmd FileType markdown inoremap 5n <Tab><Tab><Tab><Tab>1.<space>
-autocmd FileType markdown inoremap 6n <Tab><Tab><Tab><Tab><Tab>1.<space>
+autocmd FileType markdown inoremap 1n <Enter>1.<space>
+autocmd FileType markdown inoremap 2n <Enter><Tab>1.<space>
+autocmd FileType markdown inoremap 3n <Enter><Tab><Tab>1.<space>
+autocmd FileType markdown inoremap 4n <Enter><Tab><Tab><Tab>1.<space>
+autocmd FileType markdown inoremap 5n <Enter><Tab><Tab><Tab><Tab>1.<space>
+autocmd FileType markdown inoremap 6n <Enter><Tab><Tab><Tab><Tab><Tab>1.<space>
 
 autocmd FileType markdown inoremap \b ****<++><Esc>5hi
 autocmd FileType markdown inoremap \i __<++><Esc>4hi
@@ -318,9 +319,9 @@ autocmd FileType markdown inoremap \cod ```<Enter><++><Enter>```<Esc>2kA
 autocmd FileType markdown inoremap \ytb [![](http://img.youtube.com/vi/<++>
 	\/0.jpg)](http://www.youtube.com/watch?v=<++>)<Esc>F[a
 
-autocmd FileType markdown vnoremap \b xi**<Esc>pa**<Esc>
-autocmd FileType markdown vnoremap \i xi_<Esc>pa_<Esc>
-autocmd FileType markdown vnoremap \s xi~~<Esc>pa~~<Esc>
+autocmd FileType markdown vnoremap \b xa**<Esc>pa**<Esc>
+autocmd FileType markdown vnoremap \i xa_<Esc>pa_<Esc>
+autocmd FileType markdown vnoremap \s xa~~<Esc>pa~~<Esc>
 autocmd FileType markdown vnoremap \p :'<,'>norm 0i-<space><Esc>
 autocmd FileType markdown vnoremap \n :'<,'>norm 0i1.<space><Esc>
 
@@ -339,24 +340,24 @@ autocmd Filetype rmd map \ll :!echo<space>"require(rmarkdown);<space>
 autocmd Filetype rmd inoremap ;r ```{r}<CR>```<CR><CR><esc>2kO
 autocmd Filetype rmd inoremap ;p ```{python}<CR>```<CR><CR><esc>2kO
 
-autocmd FileType rmd inoremap 2h ##<space>
-autocmd FileType rmd inoremap 2h ###<space>
-autocmd FileType rmd inoremap 2h ####<space>
-autocmd FileType rmd inoremap 2h #####<space>
-autocmd FileType rmd inoremap 2h ######<space>
+autocmd FileType rmd inoremap 2h <Enter><Enter>##<space>
+autocmd FileType rmd inoremap 2h <Enter><Enter>###<space>
+autocmd FileType rmd inoremap 2h <Enter><Enter>####<space>
+autocmd FileType rmd inoremap 2h <Enter><Enter>#####<space>
+autocmd FileType rmd inoremap 2h <Enter><Enter>######<space>
 
-autocmd FileType rmd inoremap 2p <Tab>-<space>
-autocmd FileType rmd inoremap 3p <Tab><Tab>-<space>
-autocmd FileType rmd inoremap 4p <Tab><Tab><Tab>-<space>
-autocmd FileType rmd inoremap 5p <Tab><Tab><Tab><Tab>-<space>
-autocmd FileType rmd inoremap 6p <Tab><Tab><Tab><Tab><Tab>-<space>
+autocmd FileType rmd inoremap 2p <Enter><Tab>-<space>
+autocmd FileType rmd inoremap 3p <Enter><Tab><Tab>-<space>
+autocmd FileType rmd inoremap 4p <Enter><Tab><Tab><Tab>-<space>
+autocmd FileType rmd inoremap 5p <Enter><Tab><Tab><Tab><Tab>-<space>
+autocmd FileType rmd inoremap 6p <Enter><Tab><Tab><Tab><Tab><Tab>-<space>
 
-autocmd FileType markdown inoremap 1n 1.<space>
-autocmd FileType markdown inoremap 2n <Tab>1.<space>
-autocmd FileType markdown inoremap 3n <Tab><Tab>1.<space>
-autocmd FileType markdown inoremap 4n <Tab><Tab><Tab>1.<space>
-autocmd FileType markdown inoremap 5n <Tab><Tab><Tab><Tab>1.<space>
-autocmd FileType markdown inoremap 6n <Tab><Tab><Tab><Tab><Tab>1.<space>
+autocmd FileType rmd inoremap 1n <Enter>1.<space>
+autocmd FileType rmd inoremap 2n <Enter><Tab>1.<space>
+autocmd FileType rmd inoremap 3n <Enter><Tab><Tab>1.<space>
+autocmd FileType rmd inoremap 4n <Enter><Tab><Tab><Tab>1.<space>
+autocmd FileType rmd inoremap 5n <Enter><Tab><Tab><Tab><Tab>1.<space>
+autocmd FileType rmd inoremap 6n <Enter><Tab><Tab><Tab><Tab><Tab>1.<space>
 
 autocmd FileType rmd inoremap \b ****<++><Esc>5hi
 autocmd FileType rmd inoremap \i __<++><Esc>4hi
@@ -367,11 +368,11 @@ autocmd FileType rmd inoremap \cod ```{}<Enter><++><Enter>```<Esc>02kf{a
 autocmd FileType rmd inoremap \ytb [![](http://img.youtube.com/vi/<++>
 	\/0.jpg)](http://www.youtube.com/watch?v=<++>)<Esc>F[a
 
-autocmd FileType markdown vnoremap \b xi**<Esc>pa**<Esc>
-autocmd FileType markdown vnoremap \i xi_<Esc>pa_<Esc>
-autocmd FileType markdown vnoremap \s xi~~<Esc>pa~~<Esc>
-autocmd FileType markdown vnoremap \p :'<,'>norm 0i-<space><Esc>
-autocmd FileType markdown vnoremap \n :'<,'>norm 0i1.<space><Esc>
+autocmd FileType rmd vnoremap \b xa**<Esc>pa**<Esc>
+autocmd FileType rmd vnoremap \i xa_<Esc>pa_<Esc>
+autocmd FileType rmd vnoremap \s xa~~<Esc>pa~~<Esc>
+autocmd FileType rmd vnoremap \p :'<,'>norm 0i-<space><Esc>
+autocmd FileType rmd vnoremap \n :'<,'>norm 0i1.<space><Esc>
 
 ">>>> PYTHON FILES
 autocmd Filetype python map \ll :w<space>!python<Enter>
