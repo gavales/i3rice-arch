@@ -23,12 +23,12 @@ home=/home/$username
 
 cd $home
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-echo -e "${green}           :::::::::: INSTALLING YOUR PROGRAMS <<<<<<<<<<"
+echo -e "${green}           :::::::::: INSTALLING YOUR PROGRAMS ::::::::::"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::${normal}"
 sudo pacman -S xorg-server xorg-xinit i3-gaps i3status feh dunst rofi dmenu ranger w3m sxiv lxappearance ncurses fftw nautilus neomutt evince mupdf pinta redshift mplayer r tk gcc-fortran mpd mpc ncmpcpp newsboat transmission-cli opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-citeproc python-pygments python2-pygments biber rxvt-unicode libmpdclient yajl dialog wpa_supplicant wireless_tools networkmanager network-manager-applet texlive-most ntfs-3g lm_sensors sysstat polkit-gnome gnome-keyring acpi unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl streamlimk dmenu compton xorg-xprop urxvt-perls trash-cli
 sudo cpan AnyEvent Linux::FD common::sense
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-echo -e "${green}             :::::::::: NETWORK MANAGER STUFF <<<<<<<<<<"
+echo -e "${green}             :::::::::: NETWORK MANAGER STUFF ::::::::::"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::${normal}"
 sudo systemctl enable NetworkManager.service
 sudo systemctl disable dhcpcd.service
@@ -36,7 +36,7 @@ sudo systemctl disable dhcpcd@.service
 sudo systemctl enable wpa_supplicant.service
 sudo gpasswd -a $username network
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-echo -e "${green}               :::::::::: INSTALLING YAOURT <<<<<<<<<<"
+echo -e "${green}               :::::::::: INSTALLING YAOURT ::::::::::"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::${normal}"
 git clone https://aur.archlinux.org/package-query.git
 cd package-query/
@@ -47,12 +47,12 @@ cd yaourt/
 makepkg -si
 cd $home
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-echo -e "${green}             :::::::::: GET CONFIGS FROM GITHUB <<<<<<<<<<"
+echo -e "${green}             :::::::::: GET CONFIGS FROM GITHUB ::::::::::"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::${normal}"
 git clone https://github.com/StillANixRookie/i3rice-arch.git
 mkdir Downloads Drive Music Pictures Videos
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-echo -e "${green}              :::::::::: INSTALL YAOURT APPS <<<<<<<<<<"
+echo -e "${green}              :::::::::: INSTALL YAOURT APPS ::::::::::"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::${normal}"
 echo -e "${purple} > PAMAC <" && yaourt -S pamac-aur
 echo -e "${purple} > i3LOCK-COLOR <" && yaourt -S i3lock-color
@@ -72,9 +72,11 @@ echo -e "${purple} > FIGLET FONTS <" && yaourt -S figlet-fonts
 echo -e "${purple} > URXVT-CONFIG-RELOAD <" && yaourt -S urxvt-config-reload-git
 echo -e "${purple} > URXVT-CLIPBOARD <" && yaourt -S urxvt-clipboard
 echo -e "${purple} > URXVT-RESIZE-FONT <" && yaourt -S urxvt-resize-font-git
+echo -e "${purple} > FLAT-REMIX-ICONS <" && yaourt -S flat-remix-git
+echo -e "${purple} > FLAT-REMIX-GNOME-GIT <" && yaourt -S flat-remix-gnome-git
 #echo -e "${purple} > URXVT-TABBEDEX <" && yaourt -S urxvt-tabbedex
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-echo -e "${green}                 :::::::::: CLI-VISUALISER <<<<<<<<<<"
+echo -e "${green}                 :::::::::: CLI-VISUALISER ::::::::::"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::${normal}"
 cd $home
 git clone https://github.com/dpayne/cli-visualizer.git
@@ -83,12 +85,12 @@ cd cli-visualiser
 cd $home
 mkdir Drive
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-echo -e "${green}                :::::::::: MAKE MATLAB ICON <<<<<<<<<<"
+echo -e "${green}                :::::::::: MAKE MATLAB ICON ::::::::::"
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::${normal}"
 sudo wget "https://apprecs.org/gp/images/app-icons/300/c4/in.pxlcraft.matlabexpo.jpg" -O /usr/share/icons/matlab.png
 sudo wget "https://help.ubuntu.com/community/MATLAB?action=AttachFile&do=get&target=matlab-r2012a.desktop" -O /usr/share/applications/matlab.desktop
 echo -e "${blue}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-echo -e "${blue}                :::::::::: FINAL STEPS! <<<<<<<<<<"
+echo -e "${blue}                 :::::::::: FINAL STEPS! ::::::::::"
 echo -e "${blue}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::${normal}"
 echo -e ""
 echo -e "${red}    -    OPEN RANGER AND COPY THE NECESSARY FOLDERS AND FILES"

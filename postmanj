@@ -43,6 +43,8 @@ echo -e "${purple} > MPRIS-CTL <" && yaourt -S mpris-ctl
 echo -e "${purple} > FIGLET FONTS <" && yaourt -S figlet-fonts
 echo -e "${purple} > URXVT-CONFIG-RELOAD <" && yaourt -S urxvt-config-reload-git
 echo -e "${purple} > URXVT-CLIPBOARD <" && yaourt -S urxvt-clipboard
+echo -e "${purple} > FLAT-REMIX-ICONS <" && yaourt -S flat-remix-git
+echo -e "${purple} > FLAT-REMIX-GNOME-GIT <" && yaourt -S flat-remix-gnome-git
 echo -e "${purple} > URXVT-RESIZE-FONT <" && yaourt -S urxvt-resize-font-git
 #echo -e "${purple} > URXVT-TABBEDEX <" && yaourt -S urxvt-tabbedex
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
