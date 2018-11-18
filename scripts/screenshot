@@ -1,7 +1,6 @@
 #!/bin/bash
 
+scrotdir=scrots
 name=`date +%Y-%m-%d_%H:%M:%S`_`xdpyinfo  | grep -oP 'dimensions:\s+\K\S+'`.png
-
-scrot $HOME/Pictures/ScreenShots/$name
-
-notify-send 'Screenshot saved to ~/Pictures/ScreenShots' -i ~/Pictures/ScreenShots/$name
+scrot $HOME/Pictures/$scrotdir/${name}
+notify-send "Screenshot saved to ~/Pictures/${scrotdir}" -i ~/Pictures/$scrotdir/${name}

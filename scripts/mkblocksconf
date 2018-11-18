@@ -151,6 +151,14 @@ echo -e "full_text=\n" >> i3blocks.conf
 
 echo -e "[separator]\n" >> i3blocks.conf
 
+#>>>> scrotblock
+echo "[scrotblock]" >> i3blocks.conf
+echo "border=$magenta" >> i3blocks.conf
+echo "interval=once" >> i3blocks.conf
+echo -e "full_text=\n" >> i3blocks.conf
+
+echo -e "[separator]\n" >> i3blocks.conf
+
 #>>>> td
 echo "[td]" >> i3blocks.conf
 echo "color=$yellow" >> i3blocks.conf
