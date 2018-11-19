@@ -14,6 +14,8 @@ set nolist  "disable linebreak
 set textwidth=0
 set wrapmargin=0
 set tabstop=4
+set shiftwidth=4
+set expandtab
 set cursorline
 call matchadd('ColorColumn', '\%81v', 100)
 
@@ -291,32 +293,55 @@ autocmd Filetype markdown map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
 
 
 ">>>> MARKDOWN FILES
-autocmd FileType markdown inoremap 2h <Enter><Enter>##<space>
-autocmd FileType markdown inoremap 2h <Enter><Enter>###<space>
-autocmd FileType markdown inoremap 2h <Enter><Enter>####<space>
-autocmd FileType markdown inoremap 2h <Enter><Enter>#####<space>
-autocmd FileType markdown inoremap 2h <Enter><Enter>######<space>
+autocmd FileType markdown nnoremap \1h A<Enter><Enter>#<space>
+autocmd FileType markdown nnoremap \2h A<Enter><Enter>##<space>
+autocmd FileType markdown nnoremap \3h A<Enter><Enter>###<space>
+autocmd FileType markdown nnoremap \4h A<Enter><Enter>####<space>
+autocmd FileType markdown nnoremap \5h A<Enter><Enter>#####<space>
+autocmd FileType markdown nnoremap \6h A<Enter><Enter>######<space>
 
-autocmd FileType markdown inoremap 2p <Enter><Tab>-<space>
-autocmd FileType markdown inoremap 3p <Enter><Tab><Tab>-<space>
-autocmd FileType markdown inoremap 4p <Enter><Tab><Tab><Tab>-<space>
-autocmd FileType markdown inoremap 5p <Enter><Tab><Tab><Tab><Tab>-<space>
-autocmd FileType markdown inoremap 6p <Enter><Tab><Tab><Tab><Tab><Tab>-<space>
+autocmd FileType markdown nnoremap \1p A<Enter>-<space>
+autocmd FileType markdown nnoremap \2p A<Enter><Tab>-<space>
+autocmd FileType markdown nnoremap \3p A<Enter><Tab><Tab>-<space>
+autocmd FileType markdown nnoremap \4p A<Enter><Tab><Tab><Tab>-<space>
+autocmd FileType markdown nnoremap \5p A<Enter><Tab><Tab><Tab><Tab>-<space>
+autocmd FileType markdown nnoremap \6p A<Enter><Tab><Tab><Tab><Tab><Tab>-<space>
 
-autocmd FileType markdown inoremap 1n <Enter>1.<space>
-autocmd FileType markdown inoremap 2n <Enter><Tab>1.<space>
-autocmd FileType markdown inoremap 3n <Enter><Tab><Tab>1.<space>
-autocmd FileType markdown inoremap 4n <Enter><Tab><Tab><Tab>1.<space>
-autocmd FileType markdown inoremap 5n <Enter><Tab><Tab><Tab><Tab>1.<space>
-autocmd FileType markdown inoremap 6n <Enter><Tab><Tab><Tab><Tab><Tab>1.<space>
+autocmd FileType markdown nnoremap \1n A<Enter>1.<space>
+autocmd FileType markdown nnoremap \2n A<Enter><Tab>1.<space>
+autocmd FileType markdown nnoremap \3n A<Enter><Tab><Tab>1.<space>
+autocmd FileType markdown nnoremap \4n A<Enter><Tab><Tab><Tab>1.<space>
+autocmd FileType markdown nnoremap \5n A<Enter><Tab><Tab><Tab><Tab>1.<space>
+autocmd FileType markdown nnoremap \6n A<Enter><Tab><Tab><Tab><Tab><Tab>1.<space>
+
+autocmd FileType markdown inoremap 1h <Esc>A<Enter><Enter>#<space>
+autocmd FileType markdown inoremap 2h <Esc>A<Enter><Enter>##<space>
+autocmd FileType markdown inoremap 3h <Esc>A<Enter><Enter>###<space>
+autocmd FileType markdown inoremap 4h <Esc>A<Enter><Enter>####<space>
+autocmd FileType markdown inoremap 5h <Esc>A<Enter><Enter>#####<space>
+autocmd FileType markdown inoremap 6h <Esc>A<Enter><Enter>######<space>
+
+autocmd FileType markdown inoremap 1p <Esc>A<Enter>-<space>
+autocmd FileType markdown inoremap 2p <Esc>A<Enter><Tab>-<space>
+autocmd FileType markdown inoremap 3p <Esc>A<Enter><Tab><Tab>-<space>
+autocmd FileType markdown inoremap 4p <Esc>A<Enter><Tab><Tab><Tab>-<space>
+autocmd FileType markdown inoremap 5p <Esc>A<Enter><Tab><Tab><Tab><Tab>-<space>
+autocmd FileType markdown inoremap 6p <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab>-<space>
+
+autocmd FileType markdown inoremap 1n <Esc>A<Enter>1.<space>
+autocmd FileType markdown inoremap 2n <Esc>A<Enter><Tab>1.<space>
+autocmd FileType markdown inoremap 3n <Esc>A<Enter><Tab><Tab>1.<space>
+autocmd FileType markdown inoremap 4n <Esc>A<Enter><Tab><Tab><Tab>1.<space>
+autocmd FileType markdown inoremap 5n <Esc>A<Enter><Tab><Tab><Tab><Tab>1.<space>
+autocmd FileType markdown inoremap 6n <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab>1.<space>
 
 autocmd FileType markdown inoremap \b ****<++><Esc>5hi
 autocmd FileType markdown inoremap \i __<++><Esc>4hi
 autocmd FileType markdown inoremap \s ~~~~<++><Esc>5hi
-autocmd FileType markdown inoremap \pic ![](<++>)<Esc>F]i
-autocmd FileType markdown inoremap \lin [](<++>)<Esc>F]i
-autocmd FileType markdown inoremap \cod ```<Enter><++><Enter>```<Esc>2kA
-autocmd FileType markdown inoremap \ytb [![](http://img.youtube.com/vi/<++>
+autocmd FileType markdown inoremap \pic <Esc>A<Enter><Enter>![](<++>)<Esc>F]i
+autocmd FileType markdown inoremap \lin <Esc>A<Enter><Enter>[](<++>)<Esc>F]i
+autocmd FileType markdown inoremap \cod <Esc>A<Enter><Enter>```<Enter><++><Enter>```<Esc>2kA
+autocmd FileType markdown inoremap \ytb <Esc>A<Enter><Enter>[![](http://img.youtube.com/vi/<++>
 	\/0.jpg)](http://www.youtube.com/watch?v=<++>)<Esc>F[a
 
 autocmd FileType markdown vnoremap \b xa**<Esc>pa**<Esc>
@@ -340,32 +365,55 @@ autocmd Filetype rmd map \ll :!echo<space>"require(rmarkdown);<space>
 autocmd Filetype rmd inoremap ;r ```{r}<CR>```<CR><CR><esc>2kO
 autocmd Filetype rmd inoremap ;p ```{python}<CR>```<CR><CR><esc>2kO
 
-autocmd FileType rmd inoremap 2h <Enter><Enter>##<space>
-autocmd FileType rmd inoremap 2h <Enter><Enter>###<space>
-autocmd FileType rmd inoremap 2h <Enter><Enter>####<space>
-autocmd FileType rmd inoremap 2h <Enter><Enter>#####<space>
-autocmd FileType rmd inoremap 2h <Enter><Enter>######<space>
+autocmd FileType rmd nnoremap \1h A<Enter><Enter>#<space>
+autocmd FileType rmd nnoremap \2h A<Enter><Enter>##<space>
+autocmd FileType rmd nnoremap \3h A<Enter><Enter>###<space>
+autocmd FileType rmd nnoremap \4h A<Enter><Enter>####<space>
+autocmd FileType rmd nnoremap \5h A<Enter><Enter>#####<space>
+autocmd FileType rmd nnoremap \6h A<Enter><Enter>######<space>
 
-autocmd FileType rmd inoremap 2p <Enter><Tab>-<space>
-autocmd FileType rmd inoremap 3p <Enter><Tab><Tab>-<space>
-autocmd FileType rmd inoremap 4p <Enter><Tab><Tab><Tab>-<space>
-autocmd FileType rmd inoremap 5p <Enter><Tab><Tab><Tab><Tab>-<space>
-autocmd FileType rmd inoremap 6p <Enter><Tab><Tab><Tab><Tab><Tab>-<space>
+autocmd FileType rmd nnoremap \1p A<Enter><Tab>-<space>
+autocmd FileType rmd nnoremap \2p A<Enter><Tab>-<space>
+autocmd FileType rmd nnoremap \3p A<Enter><Tab><Tab>-<space>
+autocmd FileType rmd nnoremap \4p A<Enter><Tab><Tab><Tab>-<space>
+autocmd FileType rmd nnoremap \5p A<Enter><Tab><Tab><Tab><Tab>-<space>
+autocmd FileType rmd nnoremap \6p A<Enter><Tab><Tab><Tab><Tab><Tab>-<space>
 
-autocmd FileType rmd inoremap 1n <Enter>1.<space>
-autocmd FileType rmd inoremap 2n <Enter><Tab>1.<space>
-autocmd FileType rmd inoremap 3n <Enter><Tab><Tab>1.<space>
-autocmd FileType rmd inoremap 4n <Enter><Tab><Tab><Tab>1.<space>
-autocmd FileType rmd inoremap 5n <Enter><Tab><Tab><Tab><Tab>1.<space>
-autocmd FileType rmd inoremap 6n <Enter><Tab><Tab><Tab><Tab><Tab>1.<space>
+autocmd FileType rmd nnoremap \1n A<Enter>1.<space>
+autocmd FileType rmd nnoremap \2n A<Enter><Tab>1.<space>
+autocmd FileType rmd nnoremap \3n A<Enter><Tab><Tab>1.<space>
+autocmd FileType rmd nnoremap \4n A<Enter><Tab><Tab><Tab>1.<space>
+autocmd FileType rmd nnoremap \5n A<Enter><Tab><Tab><Tab><Tab>1.<space>
+autocmd FileType rmd nnoremap \6n A<Enter><Tab><Tab><Tab><Tab><Tab>1.<space>
+
+autocmd FileType rmd inoremap 1h <Esc>A<Enter><Enter>#<space>
+autocmd FileType rmd inoremap 2h <Esc>A<Enter><Enter>##<space>
+autocmd FileType rmd inoremap 3h <Esc>A<Enter><Enter>###<space>
+autocmd FileType rmd inoremap 4h <Esc>A<Enter><Enter>####<space>
+autocmd FileType rmd inoremap 5h <Esc>A<Enter><Enter>#####<space>
+autocmd FileType rmd inoremap 6h <Esc>A<Enter><Enter>######<space>
+
+autocmd FileType rmd inoremap 1p <Esc>A<Enter><Tab>-<space>
+autocmd FileType rmd inoremap 2p <Esc>A<Enter><Tab>-<space>
+autocmd FileType rmd inoremap 3p <Esc>A<Enter><Tab><Tab>-<space>
+autocmd FileType rmd inoremap 4p <Esc>A<Enter><Tab><Tab><Tab>-<space>
+autocmd FileType rmd inoremap 5p <Esc>A<Enter><Tab><Tab><Tab><Tab>-<space>
+autocmd FileType rmd inoremap 6p <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab>-<space>
+
+autocmd FileType rmd inoremap 1n <Esc>A<Enter>1.<space>
+autocmd FileType rmd inoremap 2n <Esc>A<Enter><Tab>1.<space>
+autocmd FileType rmd inoremap 3n <Esc>A<Enter><Tab><Tab>1.<space>
+autocmd FileType rmd inoremap 4n <Esc>A<Enter><Tab><Tab><Tab>1.<space>
+autocmd FileType rmd inoremap 5n <Esc>A<Enter><Tab><Tab><Tab><Tab>1.<space>
+autocmd FileType rmd inoremap 6n <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab>1.<space>
 
 autocmd FileType rmd inoremap \b ****<++><Esc>5hi
 autocmd FileType rmd inoremap \i __<++><Esc>4hi
 autocmd FileType rmd inoremap \u ~~~~<++><Esc>5hi
-autocmd FileType rmd inoremap \pic ![](<++>)<Esc>F]i
-autocmd FileType rmd inoremap \lin [](<++>)<Esc>F]i
-autocmd FileType rmd inoremap \cod ```{}<Enter><++><Enter>```<Esc>02kf{a
-autocmd FileType rmd inoremap \ytb [![](http://img.youtube.com/vi/<++>
+autocmd FileType rmd inoremap \pic <Esc>A<Enter><Enter>![](<++>)<Esc>F]i
+autocmd FileType rmd inoremap \lin <Esc>A<Enter><Enter>[](<++>)<Esc>F]i
+autocmd FileType rmd inoremap \cod <Esc>A<Enter><Enter>```{}<Enter><++><Enter>```<Esc>02kf{a
+autocmd FileType rmd inoremap \ytb <Esc>A<Enter><Enter>[![](http://img.youtube.com/vi/<++>
 	\/0.jpg)](http://www.youtube.com/watch?v=<++>)<Esc>F[a
 
 autocmd FileType rmd vnoremap \b xa**<Esc>pa**<Esc>

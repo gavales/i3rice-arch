@@ -1,0 +1,4 @@
+player=mpv --cache 2048 --force-window --geometry=30%-10-10
+# player=mpv --cache 2048
+player-no-close
+default-stream=720p,1080p,480p,medium,best

@@ -393,8 +393,9 @@ bindsym $mod+Shift+p exec bash ~/$scripts/screenshot
 #////// BASHMOUNT
 bindsym $mod+Shift+b exec $term -name BASHMOUNT -e bashmount
 
-#////// NEWSBOAT
+#////// NEWS
 bindsym $mod+r exec --no-startup-id $term -name RSS -e newsboat
+bindsym $win+r exec --no-startup-id $term -name RTV -e rtv
 
 #////// GRIVE SYNC
 bindsym $mod+Shift+g exec bash ~/$scripts/grivesync
@@ -434,6 +435,7 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id feh --bg-scale ~/.config/wall.png
 exec --no-startup-id mpd
+exec --no-startup-id shutter --min_at_startup
 exec setxkbmap us
 #exec setxkbmap gb
 
