@@ -412,8 +412,8 @@ bindsym $mod+Ctrl+r exec $browser2 --new-window\
  --app=https://docs.google.com/presentation/u/0/
 
 #////// GET/APPLY WS LAYOUT
-bindsym $win+w exec --no-startup-id bash ~/$scripts/getwslo
-bindsym $win+a exec --no-startup-id bash ~/$scripts/appwslo
+bindsym $win+w exec --no-startup-id $term -n LAYOUT_EDITOR -e bash ~/$scripts/wsloget
+bindsym $win+a exec --no-startup-id bash ~/$scripts/wsloapp
 
 #////// OPEN CONFIGS
 bindsym $win+1 exec --no-startup-id $term -n i3CONF -e vim ~/.config/i3/config
@@ -430,7 +430,7 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id blueman-applet
-exec --no-startup-id compton --config $home/.config/compton.conf
+exec --no-startup-id compton
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id feh --bg-scale ~/.config/wall.png
