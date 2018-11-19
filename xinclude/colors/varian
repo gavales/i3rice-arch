@@ -1,17 +1,17 @@
 !varian
 #define cblkd #000000
-#define cblkl #7F7F7F
 #define credl #CD0000
-#define credd #FF0000
 #define cgrnl #00CD00
-#define cgrnd #00FF00
 #define cylwl #CDCD00
-#define cylwd #FFFF00
 #define cblul #0000EE
-#define cblud #5C5CFF
 #define cgntl #CD00CD
-#define cgntd #FF00FF
 #define ccynl #00CDCD
-#define ccynd #00FFFF
 #define cwhtl #E5E5E5
+#define cblkl #7F7F7F
+#define credd #FF0000
+#define cgrnd #00FF00
+#define cylwd #FFFF00
+#define cblud #5C5CFF
+#define cgntd #FF00FF
+#define ccynd #00FFFF
 #define cwhtd #FFFFFF

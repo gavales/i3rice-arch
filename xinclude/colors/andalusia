@@ -1,17 +1,17 @@
 !andalusia
 #define cblkd #17171f
-#define cblkl #515157
 #define credd #aa5745
-#define credl #aa5745
 #define cgrnd #6868aa
-#define cgrnl #6868aa
 #define cylwd #8978aa
-#define cylwl #8978aa
 #define cblud #992f9a
-#define cblul #992f9a
 #define cgntd #a58aa2
-#define cgntl #a58aa2
 #define ccynd #aa7a86
-#define ccynl #aa7a86
 #define cwhtd #c5c5c7
+#define cblkl #515157
+#define credl #aa5745
+#define cgrnl #6868aa
+#define cylwl #8978aa
+#define cblul #992f9a
+#define cgntl #a58aa2
+#define ccynl #aa7a86
 #define cwhtl #c5c5c7

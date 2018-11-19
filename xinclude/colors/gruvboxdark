@@ -1,17 +1,17 @@
 !gruvboxdark
 #define cblkd #282828
-#define cblkl #928374
 #define credl #fb4934
-#define credd #cc241d
 #define cgrnl #b8bb26
-#define cgrnd #98971a
 #define cylwl #fabd2f
-#define cylwd #d79921
 #define cblul #83a598
-#define cblud #458588
 #define cgntl #d3869b
-#define cgntd #b16286
 #define ccynl #8ec07c
-#define ccynd #689d6a
 #define cwhtl #a89984
+#define cblkl #928374
+#define credd #cc241d
+#define cgrnd #98971a
+#define cylwd #d79921
+#define cblud #458588
+#define cgntd #b16286
+#define ccynd #689d6a
 #define cwhtd #ebdbb2

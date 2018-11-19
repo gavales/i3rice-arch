@@ -1,17 +1,17 @@
 !bamboo
 #define cblkd #1f201b
-#define cblkl #575754
 #define credl #68430f
-#define credd #68430f
 #define cgrnl #406b1f
-#define cgrnd #406b1f
 #define cylwl #797a2b
-#define cylwd #797a2b
 #define cblul #c28419
-#define cblud #c28419
 #define cgntl #84c11a
-#define cgntd #84c11a
 #define ccynl #c3df22
-#define ccynd #c3df22
 #define cwhtl #c7c7c6
+#define cblkl #575754
+#define credd #68430f
+#define cgrnd #406b1f
+#define cylwd #797a2b
+#define cblud #c28419
+#define cgntd #84c11a
+#define ccynd #c3df22
 #define cwhtd #c7c7c6
