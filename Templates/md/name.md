@@ -7,7 +7,7 @@ theme:
 - CambridgeUS
 ---
 
-# Section 1: Heading
+# Heading
 
 Here is text.
 
@@ -18,13 +18,13 @@ Here's a list:
 + More List items
 + Even more items...
 
-# Section 2: Subsections
+# Subsections
 
 ## Subsection Heading
 
 Text in subsection
 
-# Section 3: Text Formatting
+# Text Formatting
 
 **bold text**
 
@@ -34,15 +34,15 @@ _italic text_
 
 ___
 
-# Section 4: Links
+# Links
 
 [youtube](youtube.com)
 
-# Section 5: Images
+# Images
 
 ![Luoping, China in 1080p!](Luoping, China 1920x1080.jpg)
 
-# Section 6: Quotes
+# Quotes
 
 > line 1
 
@@ -50,6 +50,3 @@ ___
 
 > line 3
 
-# Section 7: YouTube videos
-
-[![lukesmith](http://img.youtube.com/vi/Qem8cpbJeYc/0.jpg)](http://www.youtube.com/watch?v=Qem8cpbJeYc)
