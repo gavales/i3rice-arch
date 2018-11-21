@@ -66,6 +66,7 @@ Xft.lcdfilter:	lcddefault
 !>>>> URXVT
 URxvt.font: xft:fontname:size=fontsize
 
+URxvt*fading: 10
 URxvt*depth: 32
 URxvt*scrollBar: false
 URxvt*mouseWheelScrollPage:	false

@@ -1,8 +1,9 @@
-#>>>> Queries
-"query:All Online Blogs/Feeds:tags # \"Blogs\"" "Blogs"
-"query:All JPL Feeds:tags # \"JPL\"" "JPL"
-"query:All YouTube Channels:tags # \"YouTube\"" "YouTube"
-"query:All Online Journals:tags # \"Journals\"" "Journals"
+#>>>> QUERIES
+"query:Online Blogs/Feeds:tags # \"Blogs\"" "Blogs"
+"query:Nasa Jet Propulsion Laboratory:tags # \"JPL\"" "JPL"
+"query:YouTube Subscriptions:tags # \"YouTube\"" "YouTube"
+"query:Journal Articles:tags # \"Journals\"" "Journals"
+"query:NewScientist Articles:tags # \"NewScientist\"" "NewScientist"
 
 #>>>> Journals
 http://rsob.royalsocietypublishing.org/rss/current.xml "Journals" "~The Royal Society: Open Biology Current"
@@ -67,3 +68,14 @@ http://www.jpl.nasa.gov/multimedia/rss/podfeed-hd.xml "JPL" "~HD Videos"
 http://www.jpl.nasa.gov/blog/feed/ "JPL" "~Blogs"
 http://www.jpl.nasa.gov/multimedia/rss/slideshows.xml "JPL" "~Slide Shows & Interactive Features"
 
+#>>>> NewScienist
+http://feeds.newscientist.com/ "NewScientist" "~All Articles"
+http://feeds.newscientist.com/science-news "NewScientist" "~News"
+http://feeds.newscientist.com/features "NewScientist" "~Features"
+http://feeds.newscientist.com/physics-math "NewScientist" "~Physics"
+http://feeds.newscientist.com/tech "NewScientist" "~Technology"
+http://feeds.newscientist.com/space "NewScientist" "~Space"
+http://feeds.newscientist.com/life "NewScientist" "~Life"
+http://feeds.newscientist.com/environment "NewScientist" "~Earth"
+http://feeds.newscientist.com/health "NewScientist" "~Health"
+http://feeds.newscientist.com/humans "NewScientist" "~Humans"

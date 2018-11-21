@@ -1,10 +1,10 @@
 ---
-title:
-- Title
-author:
-- Author
-theme:
-- CambridgeUS
+title: Title
+subtitle: Subtitle
+author: Author
+theme: CambridgeUS
+---
+
 ---
 
 # Heading
@@ -17,6 +17,8 @@ Here's a list:
 + Here's another list item
 + More List items
 + Even more items...
+
+[@jenkins2003]
 
 # Subsections
 
@@ -36,7 +38,7 @@ ___
 
 # Links
 
-[youtube](youtube.com)
+[youtube](www.youtube.com)
 
 # Images
 
@@ -50,3 +52,4 @@ ___
 
 > line 3
 
+# References

@@ -17,7 +17,11 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set cursorline
-call matchadd('ColorColumn', '\%81v', 100)
+autocmd FileType python call matchadd('ColorColumn', '\%81v', 100)
+autocmd FileType vim call matchadd('ColorColumn', '\%81v', 100)
+autocmd FileType conf call matchadd('ColorColumn', '\%81v', 100)
+autocmd FileType perl call matchadd('ColorColumn', '\%81v', 100)
+autocmd FileType sh call matchadd('ColorColumn', '\%81v', 100)
 
 inoremap ;<Tab> <Esc>/>>>>>><Enter>
 map ;<Tab> <Esc>/>>>>>><Enter>
@@ -50,6 +54,12 @@ set splitright
 inoremap () ()<++><Esc>F)i
 inoremap [] []<++><Esc>F]i
 inoremap {} {}<++><Esc>F}i
+
+"////// CALENDAR
+let g:calendar_frame = 'default'
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
+let g:calendar_modifiable = 1
 
 ">>>> COMMENT/UNCOMMENT
 vnoremap \# :'<,'>norm 0i#<Enter>
@@ -299,13 +309,15 @@ autocmd FileType markdown nnoremap \3h A<Enter><Enter>###<space>
 autocmd FileType markdown nnoremap \4h A<Enter><Enter>####<space>
 autocmd FileType markdown nnoremap \5h A<Enter><Enter>#####<space>
 autocmd FileType markdown nnoremap \6h A<Enter><Enter>######<space>
+autocmd FileType markdown nnoremap \7h A<Enter><Enter>#######<space>
 
-autocmd FileType markdown nnoremap \1p A<Enter>-<space>
-autocmd FileType markdown nnoremap \2p A<Enter><Tab>-<space>
-autocmd FileType markdown nnoremap \3p A<Enter><Tab><Tab>-<space>
-autocmd FileType markdown nnoremap \4p A<Enter><Tab><Tab><Tab>-<space>
-autocmd FileType markdown nnoremap \5p A<Enter><Tab><Tab><Tab><Tab>-<space>
-autocmd FileType markdown nnoremap \6p A<Enter><Tab><Tab><Tab><Tab><Tab>-<space>
+autocmd FileType markdown nnoremap \1p A<Enter>+<space>
+autocmd FileType markdown nnoremap \2p A<Enter><Tab>+<space>
+autocmd FileType markdown nnoremap \3p A<Enter><Tab><Tab>+<space>
+autocmd FileType markdown nnoremap \4p A<Enter><Tab><Tab><Tab>+<space>
+autocmd FileType markdown nnoremap \5p A<Enter><Tab><Tab><Tab><Tab>+<space>
+autocmd FileType markdown nnoremap \6p A<Enter><Tab><Tab><Tab><Tab><Tab>+<space>
+autocmd FileType markdown nnoremap \7p A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>+<space>
 
 autocmd FileType markdown nnoremap \1n A<Enter>1.<space>
 autocmd FileType markdown nnoremap \2n A<Enter><Tab>1.<space>
@@ -313,6 +325,7 @@ autocmd FileType markdown nnoremap \3n A<Enter><Tab><Tab>1.<space>
 autocmd FileType markdown nnoremap \4n A<Enter><Tab><Tab><Tab>1.<space>
 autocmd FileType markdown nnoremap \5n A<Enter><Tab><Tab><Tab><Tab>1.<space>
 autocmd FileType markdown nnoremap \6n A<Enter><Tab><Tab><Tab><Tab><Tab>1.<space>
+autocmd FileType markdown nnoremap \7n A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>1.<space>
 
 autocmd FileType markdown inoremap 1h <Esc>A<Enter><Enter>#<space>
 autocmd FileType markdown inoremap 2h <Esc>A<Enter><Enter>##<space>
@@ -320,13 +333,15 @@ autocmd FileType markdown inoremap 3h <Esc>A<Enter><Enter>###<space>
 autocmd FileType markdown inoremap 4h <Esc>A<Enter><Enter>####<space>
 autocmd FileType markdown inoremap 5h <Esc>A<Enter><Enter>#####<space>
 autocmd FileType markdown inoremap 6h <Esc>A<Enter><Enter>######<space>
+autocmd FileType markdown inoremap 7h <Esc>A<Enter><Enter>#######<space>
 
-autocmd FileType markdown inoremap 1p <Esc>A<Enter>-<space>
-autocmd FileType markdown inoremap 2p <Esc>A<Enter><Tab>-<space>
-autocmd FileType markdown inoremap 3p <Esc>A<Enter><Tab><Tab>-<space>
-autocmd FileType markdown inoremap 4p <Esc>A<Enter><Tab><Tab><Tab>-<space>
-autocmd FileType markdown inoremap 5p <Esc>A<Enter><Tab><Tab><Tab><Tab>-<space>
-autocmd FileType markdown inoremap 6p <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab>-<space>
+autocmd FileType markdown inoremap 1p <Esc>A<Enter>+<space>
+autocmd FileType markdown inoremap 2p <Esc>A<Enter><Tab>+<space>
+autocmd FileType markdown inoremap 3p <Esc>A<Enter><Tab><Tab>+<space>
+autocmd FileType markdown inoremap 4p <Esc>A<Enter><Tab><Tab><Tab>+<space>
+autocmd FileType markdown inoremap 5p <Esc>A<Enter><Tab><Tab><Tab><Tab>+<space>
+autocmd FileType markdown inoremap 6p <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab>+<space>
+autocmd FileType markdown inoremap 7p <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>+<space>
 
 autocmd FileType markdown inoremap 1n <Esc>A<Enter>1.<space>
 autocmd FileType markdown inoremap 2n <Esc>A<Enter><Tab>1.<space>
@@ -334,6 +349,7 @@ autocmd FileType markdown inoremap 3n <Esc>A<Enter><Tab><Tab>1.<space>
 autocmd FileType markdown inoremap 4n <Esc>A<Enter><Tab><Tab><Tab>1.<space>
 autocmd FileType markdown inoremap 5n <Esc>A<Enter><Tab><Tab><Tab><Tab>1.<space>
 autocmd FileType markdown inoremap 6n <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab>1.<space>
+autocmd FileType markdown inoremap 7n <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>1.<space>
 
 autocmd FileType markdown inoremap \b ****<++><Esc>5hi
 autocmd FileType markdown inoremap \i __<++><Esc>4hi
@@ -350,13 +366,18 @@ autocmd FileType markdown vnoremap \s xa~~<Esc>pa~~<Esc>
 autocmd FileType markdown vnoremap \p :'<,'>norm 0i-<space><Esc>
 autocmd FileType markdown vnoremap \n :'<,'>norm 0i1.<space><Esc>
 
-autocmd Filetype markdown map \cp :w<space>!pandoc<space>-o<space><C-r>
-	\%<BS><BS><BS>.pdf<Enter><Enter>
-autocmd Filetype markdown map \cw :w<space>!pandoc<space>-o<space><C-r>
-	\%<BS><BS><BS>.docx<Enter><Enter>
-autocmd Filetype markdown map \ch :w<space>!pandoc<space>--css<space>
+autocmd Filetype markdown map \cp :w<space>!pandoc<space>--bibliography<space>
+    \~/global.bib<space>--filter<space>pandoc-citeproc<space>-o<space>
+    \<C-r>%<BS><BS><BS>.pdf<Enter><Enter>
+autocmd Filetype markdown map \cw :w<space>!pandoc<space>--bibliography<space>
+    \~/global.bib<space>--filter<space>pandoc-citeproc<space>--reference-
+    \doc<space>~/Templates/pandoc/reference.docx<space>-o<space>
+    \<C-r>%<BS><BS><BS>.docx<Enter><Enter>
+autocmd Filetype markdown map \ch :w<space>!pandoc<space>--bibliography<space>
+    \~/global.bib<space>--filter<space>pandoc-citeproc<space>--css<space>
 	\~/pandoc.css<space>-o<space><C-r>%<BS><BS><BS>.html<Enter><Enter>
-autocmd Filetype markdown map \cb :w<space>!pandoc<space>-t<space>
+autocmd Filetype markdown map \cb :w<space>!pandoc<space>--bibliography<space>
+    \~/global.bib<space>--filter<space>pandoc-citeproc<space>-t<space>
 	\beamer<space>-o<space><C-r>%<BS><BS><BS>.pdf<Enter><Enter>
 
 ">>>> R MARKDOWN
@@ -371,13 +392,15 @@ autocmd FileType rmd nnoremap \3h A<Enter><Enter>###<space>
 autocmd FileType rmd nnoremap \4h A<Enter><Enter>####<space>
 autocmd FileType rmd nnoremap \5h A<Enter><Enter>#####<space>
 autocmd FileType rmd nnoremap \6h A<Enter><Enter>######<space>
+autocmd FileType rmd nnoremap \7h A<Enter><Enter>#######<space>
 
-autocmd FileType rmd nnoremap \1p A<Enter><Tab>-<space>
-autocmd FileType rmd nnoremap \2p A<Enter><Tab>-<space>
-autocmd FileType rmd nnoremap \3p A<Enter><Tab><Tab>-<space>
-autocmd FileType rmd nnoremap \4p A<Enter><Tab><Tab><Tab>-<space>
-autocmd FileType rmd nnoremap \5p A<Enter><Tab><Tab><Tab><Tab>-<space>
-autocmd FileType rmd nnoremap \6p A<Enter><Tab><Tab><Tab><Tab><Tab>-<space>
+autocmd FileType rmd nnoremap \1p A<Enter>+<space>
+autocmd FileType rmd nnoremap \2p A<Enter><Tab>+<space>
+autocmd FileType rmd nnoremap \3p A<Enter><Tab><Tab>+<space>
+autocmd FileType rmd nnoremap \4p A<Enter><Tab><Tab><Tab>+<space>
+autocmd FileType rmd nnoremap \5p A<Enter><Tab><Tab><Tab><Tab>+<space>
+autocmd FileType rmd nnoremap \6p A<Enter><Tab><Tab><Tab><Tab><Tab>+<space>
+autocmd FileType rmd nnoremap \7p A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>+<space>
 
 autocmd FileType rmd nnoremap \1n A<Enter>1.<space>
 autocmd FileType rmd nnoremap \2n A<Enter><Tab>1.<space>
@@ -385,6 +408,7 @@ autocmd FileType rmd nnoremap \3n A<Enter><Tab><Tab>1.<space>
 autocmd FileType rmd nnoremap \4n A<Enter><Tab><Tab><Tab>1.<space>
 autocmd FileType rmd nnoremap \5n A<Enter><Tab><Tab><Tab><Tab>1.<space>
 autocmd FileType rmd nnoremap \6n A<Enter><Tab><Tab><Tab><Tab><Tab>1.<space>
+autocmd FileType rmd nnoremap \7n A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>1.<space>
 
 autocmd FileType rmd inoremap 1h <Esc>A<Enter><Enter>#<space>
 autocmd FileType rmd inoremap 2h <Esc>A<Enter><Enter>##<space>
@@ -392,13 +416,15 @@ autocmd FileType rmd inoremap 3h <Esc>A<Enter><Enter>###<space>
 autocmd FileType rmd inoremap 4h <Esc>A<Enter><Enter>####<space>
 autocmd FileType rmd inoremap 5h <Esc>A<Enter><Enter>#####<space>
 autocmd FileType rmd inoremap 6h <Esc>A<Enter><Enter>######<space>
+autocmd FileType rmd inoremap 7h <Esc>A<Enter><Enter>#######<space>
 
-autocmd FileType rmd inoremap 1p <Esc>A<Enter><Tab>-<space>
-autocmd FileType rmd inoremap 2p <Esc>A<Enter><Tab>-<space>
-autocmd FileType rmd inoremap 3p <Esc>A<Enter><Tab><Tab>-<space>
-autocmd FileType rmd inoremap 4p <Esc>A<Enter><Tab><Tab><Tab>-<space>
-autocmd FileType rmd inoremap 5p <Esc>A<Enter><Tab><Tab><Tab><Tab>-<space>
-autocmd FileType rmd inoremap 6p <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab>-<space>
+autocmd FileType rmd inoremap 1p <Esc>A<Enter>+<space>
+autocmd FileType rmd inoremap 2p <Esc>A<Enter><Tab>+<space>
+autocmd FileType rmd inoremap 3p <Esc>A<Enter><Tab><Tab>+<space>
+autocmd FileType rmd inoremap 4p <Esc>A<Enter><Tab><Tab><Tab>+<space>
+autocmd FileType rmd inoremap 5p <Esc>A<Enter><Tab><Tab><Tab><Tab>+<space>
+autocmd FileType rmd inoremap 6p <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab>+<space>
+autocmd FileType rmd inoremap 7p <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>+<space>
 
 autocmd FileType rmd inoremap 1n <Esc>A<Enter>1.<space>
 autocmd FileType rmd inoremap 2n <Esc>A<Enter><Tab>1.<space>
@@ -406,6 +432,7 @@ autocmd FileType rmd inoremap 3n <Esc>A<Enter><Tab><Tab>1.<space>
 autocmd FileType rmd inoremap 4n <Esc>A<Enter><Tab><Tab><Tab>1.<space>
 autocmd FileType rmd inoremap 5n <Esc>A<Enter><Tab><Tab><Tab><Tab>1.<space>
 autocmd FileType rmd inoremap 6n <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab>1.<space>
+autocmd FileType rmd inoremap 7n <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>1.<space>
 
 autocmd FileType rmd inoremap \b ****<++><Esc>5hi
 autocmd FileType rmd inoremap \i __<++><Esc>4hi
