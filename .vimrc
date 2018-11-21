@@ -366,19 +366,20 @@ autocmd FileType markdown vnoremap \s xa~~<Esc>pa~~<Esc>
 autocmd FileType markdown vnoremap \p :'<,'>norm 0i-<space><Esc>
 autocmd FileType markdown vnoremap \n :'<,'>norm 0i1.<space><Esc>
 
-autocmd Filetype markdown map \cp :w<space>!pandoc<space>--bibliography<space>
+autocmd Filetype markdown map \cp :!pandoc<space>--bibliography<space>
     \~/global.bib<space>--filter<space>pandoc-citeproc<space>-o<space>
-    \<C-r>%<BS><BS><BS>.pdf<Enter><Enter>
-autocmd Filetype markdown map \cw :w<space>!pandoc<space>--bibliography<space>
+    \<C-r>%<BS><BS><BS>.pdf<space><C-r>%<Enter><Enter>
+autocmd Filetype markdown map \cw :!pandoc<space>--bibliography<space>
     \~/global.bib<space>--filter<space>pandoc-citeproc<space>--reference-
     \doc<space>~/Templates/pandoc/reference.docx<space>-o<space>
-    \<C-r>%<BS><BS><BS>.docx<Enter><Enter>
-autocmd Filetype markdown map \ch :w<space>!pandoc<space>--bibliography<space>
-    \~/global.bib<space>--filter<space>pandoc-citeproc<space>--css<space>
-	\~/pandoc.css<space>-o<space><C-r>%<BS><BS><BS>.html<Enter><Enter>
-autocmd Filetype markdown map \cb :w<space>!pandoc<space>--bibliography<space>
+    \<C-r>%<BS><BS><BS>.docx<space><C-r>%<Enter><Enter>
+autocmd Filetype markdown map \ch :!pandoc<space>--bibliography<space>
+    \~/global.bib<space>--filter<space>pandoc-citeproc<space>-s<space>
+    \--toc<space>-c<space>~/Templates/css/ulysses.css<space><C-r>%<space>
+    \-o<space><C-r>%<BS><BS><BS>.html<Enter><Enter>
+autocmd Filetype markdown map \cb :!pandoc<space>--bibliography<space>
     \~/global.bib<space>--filter<space>pandoc-citeproc<space>-t<space>
-	\beamer<space>-o<space><C-r>%<BS><BS><BS>.pdf<Enter><Enter>
+	\beamer<space>-o<space><C-r>%<BS><BS><BS>.pdf<space><C-r>%<Enter><Enter>
 
 ">>>> R MARKDOWN
 autocmd Filetype rmd map \ll :!echo<space>"require(rmarkdown);<space>
