@@ -2,6 +2,10 @@
 title: Title
 subtitle: Subtitle
 author: Author
+abstract: |
+    This is an abstract
+    
+    It consists of two paragraphs
 theme: CambridgeUS
 ---
 
@@ -18,7 +22,9 @@ Here's a list:
 + More List items
 + Even more items...
 
-[@jenkins2003]
+[-@jenkins2003]
+
+[@fig:luoping]
 
 # Subsections
 
@@ -42,7 +48,7 @@ ___
 
 # Images
 
-![Luoping, China in 1080p!](Luoping, China 1920x1080.jpg)
+![Luoping, China in 1080p!](Luoping, China 1920x1080.jpg){#fig:luoping}
 
 # Quotes
 

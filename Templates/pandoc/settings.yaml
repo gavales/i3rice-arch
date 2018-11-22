@@ -1,0 +1,31 @@
+documentclass: article
+fontsize: 12pt
+geometry: margin=1in
+papersize: a4
+mainfont: Times New Roman
+sansfont: Arial
+monofont: Courier New
+linestretch: 1.25
+link-citations: true
+figureTitle: "Figure"
+tableTitle: "Table"
+figPrefix:
+    - "Fig."
+    - "Figs."
+eqnPrefix:
+    - "Eq."
+    - "Eqns."
+tblPrefix:
+    - "Tab."
+    - "Tabs."
+secPrefix:
+    - "Sec."
+    - "Sections"
+loftitle: "# List of Figures"
+lotTitle: "# List of Tables"
+lolTitle: "# List of Listings"
+chapters: True
+linkReferences: True
+nameInLink: True
+listings: True
+codeBlockCaptions: True
