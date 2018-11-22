@@ -236,7 +236,7 @@ for_window [class="Galculator"] floating enable border pixel 1
 for_window [class="GParted"] floating enable border normal
 for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Lightdm-gtk-greeter-settings"] floating enable
-for_window [class="Lxappearance"] floating enable sticky enable border normal
+for_window [class="Lxappearance"] floating enable sticky enable border normal 2
 for_window [class="Manjaro-hello"] floating enable
 for_window [class="Manjaro Settings Manager"] floating enable border normal
 for_window [title="MuseScore: Play Panel"] floating enable
@@ -268,11 +268,15 @@ for_window [title="Google Play Movies & TV"] \
 	floating enable,sticky enable,resize set 480 270
 for_window [class="matplotlib"] floating enable
 for_window [class="Cam"] floating enable
+for_window [class="Shutter"] floating enable,border normal 2,resize set 500 500,\
+    move position center
 for_window [title="Log in with PayPal - Chromium"] floating enable
 for_window [class="Blueman-manager"] floating enable
-for_window [instance="CALC"] floating enable border normal,resize set 480 480
-for_window [instance="BASHMOUNT"] floating enable border normal,sticky enable,resize set 430 500,move position center
-for_window [instance="GITREPOUPDATE"] floating enable border pixel 1,sticky enable,resize set 430 500,move position center
+for_window [instance="CALC"] floating enable border normal 2,resize set 480 480
+for_window [instance="BASHMOUNT"] floating enable border normal 2,sticky enable,\
+    resize set 430 500,move position center
+for_window [instance="GITREPOUPDATE"] floating enable border normal 2,\
+    sticky enable,resize set 430 500,move position center
 
 #>>>> SHUTDOWN MODE
 bindsym $mod+Escape mode "SHUTDOWN"
