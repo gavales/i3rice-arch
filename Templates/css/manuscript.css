@@ -73,11 +73,16 @@ html > body {
   #wrapper ol ul, #wrapper ol ol {
     margin-bottom: .4em; }
 
-h1, h2, h3, h4, h5, h6 {
+h3, h4, h5, h6 {
   margin: 3em 0 1em 0;
   font-size: 1em; }
 
-h1, h2 {
+h1 {
+  font-size: 3em;
+  text-align: center; }
+
+h2 {
+  font-size: 1.5em;
   text-align: center; }
 
 hr {

@@ -260,38 +260,38 @@ autocmd FileType tex vnoremap \bm xa\begin{multicols}{2}<Enter><Esc>pa
 autocmd FileType tex map \ob :sp<space><C-r>%<BS><BS><BS>bib<Enter>
 
 "////// BIB SHORTCUTS
-autocmd Filetype bib inoremap b<Tab> @book{,<Enter>
+autocmd Filetype bib inoremap \a <Esc>A<Enter>@article{,<Enter>}<Esc>kf,i
+autocmd Filetype bib inoremap \b <Esc>A<Enter>@book{,<Enter>}<Esc>kf,i
+autocmd Filetype bib inoremap \i <Esc>A<Enter>@inproceedings{,<Enter>}<Esc>kf,i
+autocmd Filetype bib inoremap \t <Esc>A<Enter>@phdthesis{,<Enter>}<Esc>kf,i
+
+autocmd Filetype bib inoremap tit<Tab> <Esc>A<Enter>
+    \<Tab>title<space>=<space>{},<Esc>hi
+autocmd Filetype bib inoremap aut<Tab> <Esc>A<Enter>
+    \<Tab>author<space>=<space>{},<Esc>hi
+autocmd Filetype bib inoremap yea<Tab> <Esc>A<Enter>
+    \<Tab>year<space>=<space>{},<Esc>hi
+autocmd Filetype bib inoremap pub<Tab> <Esc>A<Enter>
+    \<Tab>publisher<space>=<space>{},<Esc>hi
+autocmd Filetype bib inoremap jou<Tab> <Esc>A<Enter>
+    \<Tab>journal<space>=<space>{},<Esc>hi
+autocmd Filetype bib inoremap vol<Tab> <Esc>A<Enter>
+    \<Tab>volume<space>=<space>{},<Esc>hi
+autocmd Filetype bib inoremap pag<Tab> <Esc>A<Enter>
+    \<Tab>pages<space>=<space>{},<Esc>hi
+autocmd Filetype bib inoremap sch<Tab> <Esc>A<Enter>
+    \<Tab>school<space>=<space>{},<Esc>hi
+autocmd Filetype bib inoremap boo<Tab> <Esc>A<Enter>
+    \<Tab>booktitle<space>=<space>{},<Esc>hi
+autocmd Filetype bib inoremap num<Tab> <Esc>A<Enter>
+    \<Tab>number<space>=<space>{},<Esc>hi
+autocmd Filetype bib inoremap org<Tab> <Esc>A<Enter>
+    \<Tab>organization<space>=<space>{},<Esc>hi
+
+autocmd Filetype bib inoremap \o <Esc>A<Enter>@online{,<Enter>
 	\<Tab>title<space>=<space>{<++>},<Enter>
 	\<Tab>author<space>=<space>{<++>},<Enter>
-	\<Tab>year<space>=<space>{<++>},<Enter>
-	\<Tab>publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>07kf{a
-autocmd Filetype bib inoremap a<Tab> @article{,<Enter>
-	\<Tab>title<space>=<space>{<++>},<Enter>
-	\<Tab>author<space>=<space>{<++>},<Enter>
-	\<Tab>journal<space>=<space>{<++>},<Enter>
-	\<Tab>volume<space>=<space>{<++>},<Enter>
-	\<Tab>pages<space>=<space>{<++>},<Enter>
-	\<Tab>year<space>=<space>{<++>},<Enter>
-	\<Tab>publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>010kf{a
-autocmd Filetype bib inoremap t<Tab> @phdthesis{,<Enter>
-	\<Tab>title<space>=<space>{<++>},<Enter>
-	\<Tab>author<space>=<space>{<++>},<Enter>
-	\<Tab>school<space>=<space>{<++>},<Enter>
-	\<Tab>year<space>=<space>{<++>},<Enter>
-	\<Tab>publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>08kf{a
-autocmd Filetype bib inoremap i<Tab> @inproceedings{,<Enter>
-	\<Tab>title<space>=<space>{<++>},<Enter>
-	\<Tab>author<space>=<space>{<++>},<Enter>
-	\<Tab>booktitle<space>=<space>{<++>},<Enter>
-	\<Tab>volume<space>=<space>{<++>},<Enter>
-	\<Tab>number<space>=<space>{<++>},<Enter>
-	\<Tab>pages<space>=<space>{<++>},<Enter>
-	\<Tab>year<space>=<space>{<++>},<Enter>
-	\<Tab>organization<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>011kf{a
-autocmd Filetype bib inoremap o<Tab> @online{,<Enter>
-	\<Tab>title<space>=<space>{<++>},<Enter>
-	\<Tab>author<space>=<space>{<++>},<Enter>
-	\<Tab>publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>06kf{a
+	\<Tab>publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>06kf,i
 
 ">>>> PDF WORDCOUNT
 autocmd Filetype tex map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
@@ -302,7 +302,8 @@ autocmd Filetype markdown map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
 	\<BS><BS><BS><Enter>
 
 
-">>>> MARKDOWN FILES
+">>>> MARKDOWN
+"////// MACROS
 autocmd FileType markdown nnoremap \1h A<Enter><Enter>#<space>
 autocmd FileType markdown nnoremap \2h A<Enter><Enter>##<space>
 autocmd FileType markdown nnoremap \3h A<Enter><Enter>###<space>
@@ -354,11 +355,21 @@ autocmd FileType markdown inoremap 7n <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab><Tab
 autocmd FileType markdown inoremap \b ****<++><Esc>5hi
 autocmd FileType markdown inoremap \i __<++><Esc>4hi
 autocmd FileType markdown inoremap \s ~~~~<++><Esc>5hi
-autocmd FileType markdown inoremap \pic <Esc>A<Enter><Enter>![](<++>)<Esc>F]i
+
+autocmd FileType markdown inoremap \pic <Esc>A<Enter><Enter>![](<++>){#fig:<++>}<Esc>F]i
+autocmd FileType markdown inoremap \eq $$$$<space>{#eq:<++>}<++><Esc>F$hi
 autocmd FileType markdown inoremap \lin <Esc>A<Enter><Enter>[](<++>)<Esc>F]i
 autocmd FileType markdown inoremap \cod <Esc>A<Enter><Enter>```<Enter><++><Enter>```<Esc>2kA
 autocmd FileType markdown inoremap \ytb <Esc>A<Enter><Enter>[![](http://img.youtube.com/vi/<++>
 	\/0.jpg)](http://www.youtube.com/watch?v=<++>)<Esc>F[a
+
+autocmd FileType markdown inoremap \ci [@]<Esc>i
+autocmd FileType markdown inoremap \lt {#tbl:}<Esc>i
+autocmd FileType markdown inoremap \ls {#sec:}<Esc>i
+autocmd FileType markdown inoremap \rf [@fig:]<Esc>i
+autocmd FileType markdown inoremap \rs [@sec:]<Esc>i
+autocmd FileType markdown inoremap \re [@eq:]<Esc>i
+autocmd FileType markdown inoremap \rt [@tbl:]<Esc>i
 
 autocmd FileType markdown vnoremap \b xa**<Esc>pa**<Esc>
 autocmd FileType markdown vnoremap \i xa_<Esc>pa_<Esc>
@@ -366,20 +377,29 @@ autocmd FileType markdown vnoremap \s xa~~<Esc>pa~~<Esc>
 autocmd FileType markdown vnoremap \p :'<,'>norm 0i-<space><Esc>
 autocmd FileType markdown vnoremap \n :'<,'>norm 0i1.<space><Esc>
 
-autocmd Filetype markdown map \cp :!pandoc<space>--bibliography<space>
-    \~/global.bib<space>--filter<space>pandoc-citeproc<space>-o<space>
-    \<C-r>%<BS><BS><BS>.pdf<space><C-r>%<Enter><Enter>
-autocmd Filetype markdown map \cw :!pandoc<space>--bibliography<space>
-    \~/global.bib<space>--filter<space>pandoc-citeproc<space>--reference-
-    \doc<space>~/Templates/pandoc/reference.docx<space>-o<space>
-    \<C-r>%<BS><BS><BS>.docx<space><C-r>%<Enter><Enter>
-autocmd Filetype markdown map \ch :!pandoc<space>--bibliography<space>
-    \~/global.bib<space>--filter<space>pandoc-citeproc<space>-s<space>
-    \--toc<space>-c<space>~/Templates/css/ulysses.css<space><C-r>%<space>
-    \-o<space><C-r>%<BS><BS><BS>.html<Enter><Enter>
-autocmd Filetype markdown map \cb :!pandoc<space>--bibliography<space>
-    \~/global.bib<space>--filter<space>pandoc-citeproc<space>-t<space>
-	\beamer<space>-o<space><C-r>%<BS><BS><BS>.pdf<space><C-r>%<Enter><Enter>
+"////// COMPILERS
+autocmd Filetype markdown map \cp :!pandoc<space>-F<space>pandoc-crossref
+    \<space>--metadata-file<space>~/Templates/pandoc/settings.yaml
+    \<space>--bibliography<space>~/global.bib<space>-F<space>pandoc-citeproc
+    \<space>--pdf-engine=xelatex<space>--number-sections
+    \<space>-o<space><C-r>%<BS><BS><BS>.pdf<space><C-r>%<Enter><Enter>
+
+autocmd Filetype markdown map \cw :!pandoc<space>-F<space>pandoc-crossref
+    \<space>--metadata-file<space>~/Templates/pandoc/settings.yaml
+    \<space>--bibliography<space>~/global.bib<space>-F<space>pandoc-citeproc
+    \<space>--reference-doc<space>~/Templates/pandoc/reference.docx
+    \<space>-o<space><C-r>%<BS><BS><BS>.docx<space><C-r>%<Enter><Enter>
+
+autocmd Filetype markdown map \ch :!pandoc<space>-F<space>pandoc-crossref
+    \<space>--metadata-file<space>~/Templates/pandoc/settings.yaml
+    \<space>--bibliography<space>~/global.bib<space>-F<space>pandoc-citeproc
+    \<space>-s<space>--toc<space>-c<space>~/Templates/css/ulysses.css
+    \<space><C-r>%<space>-o<space><C-r>%<BS><BS><BS>.html<Enter><Enter>
+
+autocmd Filetype markdown map \cb :!pandoc<space>-F<space>pandoc-crossref
+    \<space>--bibliography<space>~/global.bib<space>-F<space>pandoc-citeproc
+    \<space>-t<space>beamer<space>--incremental
+    \<space>-o<space><C-r>%<BS><BS><BS>.pdf<space><C-r>%<Enter><Enter>
 
 ">>>> R MARKDOWN
 autocmd Filetype rmd map \ll :!echo<space>"require(rmarkdown);<space>

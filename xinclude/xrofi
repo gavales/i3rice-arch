@@ -1,22 +1,21 @@
 rofi.width:                          580
-rofi.lines:                          5
-rofi.location:                       0
-rofi.padding:                        25
-rofi.yoffset:                        30
+rofi.lines:                          15
+rofi.location:                       3
+rofi.padding:                        10
+rofi.yoffset:                        22
 rofi.xoffset:                        0
 rofi.show-icons:                     true
-rofi.drun-icon-theme:                'Numix-Reborn-Circle'
 rofi.line-margin:                    10
 rofi.hide-scrollbar:                 true
 
 rofi.modi:                           ssh,window,drun,run
-rofi.sidebar-mode:                   false
-rofi.terminal:                       termite
+rofi.sidebar-mode:                   true
+rofi.terminal:                       urxvt
 rofi.ssh-client:                     ssh
 rofi.ssh-command:                    {terminal} -e "{ssh-client} {host}"
 rofi.opacity:                        50
 rofi.columns:                        1
-rofi.font:                           fontname fontsize
+rofi.font:                           fontname fontsize2
 rofi.fg:                             cblud
 rofi.bg:                             cblkl
 rofi.fg-active:                      cblkd
@@ -33,9 +32,6 @@ rofi.hlbg:                           cblkd
 rofi.bc:                             ccynd
 ! State:           'bg',     'fg',     'bgalt',  'hlbg',   'hlfg'
 rofi.color-normal: cblkd,  cwhtd,  cblkd,  cblud,  cwhtd
-rofi.color-normal: cblkd,  cwhtd,  cblkd,  cblud,  cwhtd
-rofi.color-normal: cblkd,  cwhtd,  cblkd,  cblud,  cwhtd
-
 !                  'background', 'border'
 rofi.color-window: cblkd,      cblkd
 rofi.bw:                             10
