@@ -1,0 +1,61 @@
+#!/bin/bash
+
+file=$1
+settings=~/Templates/pandoc/settings.yaml
+output=$(cat $file | grep '%output' | awk '{print $NF}')
+
+whichwordtemp=$(cat $file | grep '%wordtemp' | awk '{print $NF}')
+if [[ -n $whichwordtemp ]]; then
+    wordtemp=$(cat $file | grep '%wordtemp' | awk '{print $NF}')
+elif [[ -z $whichwordtemp ]]; then
+    wordtemp=reference
+fi
+
+whichcss=$(cat $file | grep '%cssfile' | awk '{print $NF}')
+if [[ -n $whichcss ]]; then
+    css=$(cat $file | grep '%wordtemp' | awk '{print $NF}')
+elif [[ -z $whichcss ]]; then
+    css=ulysses
+fi
+
+latex() {
+    pandoc -F pandoc-crossref \
+        --metadata-file ${settings} \
+        --bibliography ${bib}-F pandoc-citeproc \
+        --pdf-engine=xelatex --number-sections \
+        -o ${file:0:-3}.pdf ${file} \
+        \
+}
+
+word() {
+    pandoc -F pandoc-crossref \
+        --metadata-file ${settings} \
+        --bibliography ${bib} -F pandoc-citeproc \
+        --reference-doc ~/Templates/pandoc/${wordtemp}.docx \
+        -o ${file:0:-3}.docx ${file} \
+        \
+}
+
+html() {
+    pandoc -F pandoc-crossref \
+        --metadata-file ${settings} \
+        --bibliography ${bib} -F pandoc-citeproc \
+        -s --toc -c ~/Templates/css/${css}.css \
+        -o ${file:0:-3}.html ${file} \
+        \
+}
+
+beamer() {
+    pandoc -F pandoc-crossref \
+        --metadata-file ${settings} \
+        --bibliography ${bib} -F pandoc-citeproc \
+        -t beamer --incremental \
+        -o ${file:0:-3}.pdf ${file} \
+        \
+}
+
+if [[ -n $output ]]; then
+    $output
+elif [[ -z $output ]]; then
+    latex
+fi
