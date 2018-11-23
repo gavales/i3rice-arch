@@ -377,29 +377,8 @@ autocmd FileType markdown vnoremap \s xa~~<Esc>pa~~<Esc>
 autocmd FileType markdown vnoremap \p :'<,'>norm 0i-<space><Esc>
 autocmd FileType markdown vnoremap \n :'<,'>norm 0i1.<space><Esc>
 
-"////// COMPILERS
-autocmd Filetype markdown map \cp :!pandoc<space>-F<space>pandoc-crossref
-    \<space>--metadata-file<space>~/Templates/pandoc/settings.yaml
-    \<space>--bibliography<space>~/global.bib<space>-F<space>pandoc-citeproc
-    \<space>--pdf-engine=xelatex<space>--number-sections
-    \<space>-o<space><C-r>%<BS><BS><BS>.pdf<space><C-r>%<Enter><Enter>
-
-autocmd Filetype markdown map \cw :!pandoc<space>-F<space>pandoc-crossref
-    \<space>--metadata-file<space>~/Templates/pandoc/settings.yaml
-    \<space>--bibliography<space>~/global.bib<space>-F<space>pandoc-citeproc
-    \<space>--reference-doc<space>~/Templates/pandoc/reference.docx
-    \<space>-o<space><C-r>%<BS><BS><BS>.docx<space><C-r>%<Enter><Enter>
-
-autocmd Filetype markdown map \ch :!pandoc<space>-F<space>pandoc-crossref
-    \<space>--metadata-file<space>~/Templates/pandoc/settings.yaml
-    \<space>--bibliography<space>~/global.bib<space>-F<space>pandoc-citeproc
-    \<space>-s<space>--toc<space>-c<space>~/Templates/css/ulysses.css
-    \<space><C-r>%<space>-o<space><C-r>%<BS><BS><BS>.html<Enter><Enter>
-
-autocmd Filetype markdown map \cb :!pandoc<space>-F<space>pandoc-crossref
-    \<space>--bibliography<space>~/global.bib<space>-F<space>pandoc-citeproc
-    \<space>-t<space>beamer<space>--incremental
-    \<space>-o<space><C-r>%<BS><BS><BS>.pdf<space><C-r>%<Enter><Enter>
+"////// COMPILER
+autocmd Filetype markdown map \cm :!bash<space>~/scripts/cmkd<space><C-r>%<Enter><Enter>
 
 ">>>> R MARKDOWN
 autocmd Filetype rmd map \ll :!echo<space>"require(rmarkdown);<space>

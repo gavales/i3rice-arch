@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ignore="grep -v 'sda' | grep -v 'sdb' | grep -v '^sr'"
+
+mountd () {
+    allposs=$(lsblk | ${ignore} | grep 'part') | grep -v '/')
+}
+
+unmountd () {
+
+}
+
+

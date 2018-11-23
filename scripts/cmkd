@@ -1,59 +1,74 @@
 #!/bin/bash
 
 file=$1
-settings=~/Templates/pandoc/settings.yaml
-output=$(cat $file | grep '%output' | awk '{print $NF}')
+wordtempDIR=$HOME/Templates/pandoc
+cssDIR=$HOME/Templates/css
+bibDIR=$HOME
+yamlDIR=$HOME/Templates/pandoc
 
-whichwordtemp=$(cat $file | grep '%wordtemp' | awk '{print $NF}')
+# WHICH BIBLIOGRAPHY FILE
+whichbib=$(cat $file | grep '#bib' | awk '{print $NF}')
+if [[ -n $whichcss ]]; then
+    bib="$HOME/${whichbib}"
+elif [[ -z $whichcss ]]; then
+    bib="$HOME/global.bib"
+fi
+
+# WHICH .yaml TO USE
+yaml=$(cat $file | grep '#yaml' | awk '{print $NF}')
+if [[ -n $whichcss ]]; then
+    settings="$HOME/Templates/pandoc/${yaml}.yaml"
+elif [[ -z $whichcss ]]; then
+    settings="$HOME/Templates/pandoc/settings.yaml"
+fi
+
+# WHICH TEMPLATE FOR WORD DOCUMENTS
+whichwordtemp=$(cat $file | grep '#word_template' | awk '{print $NF}')
 if [[ -n $whichwordtemp ]]; then
-    wordtemp=$(cat $file | grep '%wordtemp' | awk '{print $NF}')
+    wordtemp=$(cat $file | grep '#word_template' | awk '{print $NF}')
 elif [[ -z $whichwordtemp ]]; then
     wordtemp=reference
 fi
 
-whichcss=$(cat $file | grep '%cssfile' | awk '{print $NF}')
+# WHICH CSS FOR .html
+whichcss=$(cat $file | grep '#cssfile' | awk '{print $NF}')
 if [[ -n $whichcss ]]; then
-    css=$(cat $file | grep '%wordtemp' | awk '{print $NF}')
+    css=$(cat $file | grep '#cssfile' | awk '{print $NF}')
 elif [[ -z $whichcss ]]; then
     css=ulysses
 fi
 
+# WHICH LATEX ENGINE
+engine=$(cat $file | grep '#compiler' | awk '{print $NF}')
+if [[ -n $engine ]]; then
+    texgine="--pdf-engine=$engine"
+elif [[ -z $whichcss ]]; then
+    texgine=
+fi
+
+crossref="-F pandoc-crossref --metadata-file ${settings}"
+citeproc="--bibliography ${bib} -F pandoc-citeproc"
+style="-c ${cssDIR}/${css}.css"
+wordtemplate="--reference-doc ${wordtempDIR}/${wordtemp}.docx"
+nsec="--number-sections"
+
 latex() {
-    pandoc -F pandoc-crossref \
-        --metadata-file ${settings} \
-        --bibliography ${bib}-F pandoc-citeproc \
-        --pdf-engine=xelatex --number-sections \
-        -o ${file:0:-3}.pdf ${file} \
-        \
+    pandoc $crossref $citeproc $texgine $nsec -o ${file:0:-3}.pdf ${file}
 }
 
 word() {
-    pandoc -F pandoc-crossref \
-        --metadata-file ${settings} \
-        --bibliography ${bib} -F pandoc-citeproc \
-        --reference-doc ~/Templates/pandoc/${wordtemp}.docx \
-        -o ${file:0:-3}.docx ${file} \
-        \
+    pandoc $crossref $citeproc $wordtemplate -o ${file:0:-3}.docx ${file}
 }
 
 html() {
-    pandoc -F pandoc-crossref \
-        --metadata-file ${settings} \
-        --bibliography ${bib} -F pandoc-citeproc \
-        -s --toc -c ~/Templates/css/${css}.css \
-        -o ${file:0:-3}.html ${file} \
-        \
+    pandoc $crossref $citeproc -s --toc $style -o ${file:0:-3}.html ${file}
 }
 
 beamer() {
-    pandoc -F pandoc-crossref \
-        --metadata-file ${settings} \
-        --bibliography ${bib} -F pandoc-citeproc \
-        -t beamer --incremental \
-        -o ${file:0:-3}.pdf ${file} \
-        \
+    pandoc $citeproc -t beamer --incremental -o ${file:0:-3}.pdf ${file}
 }
 
+output=$(cat $file | grep '#output' | awk '{print $NF}')
 if [[ -n $output ]]; then
     $output
 elif [[ -z $output ]]; then
