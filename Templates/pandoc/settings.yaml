@@ -5,7 +5,7 @@ papersize: a4
 mainfont: Times New Roman
 sansfont: Arial
 monofont: Courier New
-linestretch: 1.25
+linestretch: 1.0
 link-citations: true
 figureTitle: "Figure"
 tableTitle: "Table"
