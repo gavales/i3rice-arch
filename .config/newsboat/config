@@ -38,3 +38,4 @@ macro p set browser "dmenuhandler"; open-in-browser ; set browser linkhandler
 # c copies the link to the clipboard.
 # The line below is probably the skiddiest line I've ever written.
 macro c set browser "copy(){ echo $1 | xclip ;}; copy "; open-in-browser ; set browser linkhandler
+macro y set browser "mpv --ytdl-format=bestvideo+bestaudio %u"; open-in-browser ; set browser linkhandler

@@ -321,6 +321,7 @@ bindsym $win+f exec nautilus
 bindsym $mod+Shift+Return exec $term -name FILES -e ranger
 bindsym $win+Shift+Return exec $term -name FILES_ADMIN -e sudo ranger
 
+#////// System
 bindsym $mod+Shift+F3 exec gksu pcmanfm
 #bindsym $mod+F5 exec $term -e 'mocp'
 bindsym $win+t exec --no-startup-id pkill compton
