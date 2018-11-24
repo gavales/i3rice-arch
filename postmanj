@@ -21,11 +21,11 @@ normal="\033[0m"
 cd
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo -e "${green}           :::::::::: INSTALLING YOUR PROGRAMS ::::::::::"
-echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::${normal}"
 sudo pacman -S rofi otf-font-awesome ttf-font-awesome nautilus evince mupdf pinta redshift playerctl mplayer r tk gcc-fortran newsboat opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-crossref pandoc-citeproc python-pygments python2-pygments biber texlive-most acpi lm_sensors sysstat ntfs-3g libmpdclient lxappearance sxiv ncurses fftw w3m ranger mpd mpc ncmpcpp feh dunst unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl streamlink urxvt-perls trash-cli
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo -e "${green}              :::::::::: INSTALL YAOURT APPS ::::::::::"
-echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::${normal}"
 echo -e "${purple} > PAMAC <" && yaourt -S pamac-aur
 echo -e "${purple} > i3LOCK-COLOR <" && yaourt -S i3lock-color
 echo -e "${purple} > CHROME BETA <" && yaourt -S google-chrome-beta
@@ -46,10 +46,10 @@ echo -e "${purple} > URXVT-CLIPBOARD <" && yaourt -S urxvt-clipboard
 echo -e "${purple} > FLAT-REMIX-ICONS <" && yaourt -S flat-remix-git
 echo -e "${purple} > FLAT-REMIX-GNOME-GIT <" && yaourt -S flat-remix-gnome-git
 echo -e "${purple} > URXVT-RESIZE-FONT <" && yaourt -S urxvt-resize-font-git
-#echo -e "${purple} > URXVT-TABBEDEX <" && yaourt -S urxvt-tabbedex
+echo -e "${purple} > i3IPC-PYTHON <" && yaourt -S i3ipc-python
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo -e "${green}                 :::::::::: CLI-VISUALISER ::::::::::"
-echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::${normal}"
 cd
 git clone https://github.com/dpayne/cli-visualizer.git
 cd cli-visualiser
@@ -58,10 +58,10 @@ cd
 mkdir Drive
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo -e "${green}                :::::::::: MAKE MATLAB ICON ::::::::::"
-echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::${normal}"
 sudo wget "https://apprecs.org/gp/images/app-icons/300/c4/in.pxlcraft.matlabexpo.jpg" -O /usr/share/icons/matlab.png
 sudo wget "https://help.ubuntu.com/community/MATLAB?action=AttachFile&do=get&target=matlab-r2012a.desktop" -O /usr/share/applications/matlab.desktop
 echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo -e "${green}         :::::::::: COPY/PASTE CONFIGS FROM GITHUB ::::::::::"
-echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+echo -e "${green}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::${normal}"
 git clone https://github.com/StillANixRookie/i3rice-manjaro.git
