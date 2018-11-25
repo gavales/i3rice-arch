@@ -56,7 +56,7 @@ set_from_resource $red	color1
 set_from_resource $grn	color2
 set_from_resource $ylw	color3
 set_from_resource $blu	color4
-set_from_resource $mgn	color5
+set_from_resource $gnt	color5
 set_from_resource $cyn	color6
 set_from_resource $wht  color15
 set $t 99
@@ -71,8 +71,8 @@ hide_edge_borders none
 
 # COLORS
 # class                 brdr bkgr text indi chlb
-client.focused          $blu $blu $blk $blu $blu
-client.focused_inactive $cyn $cyn $blk $cyn $cyn
+client.focused          $blu $blu $blk $blu $blk
+client.focused_inactive $cyn $cyn $blk $cyn $blk
 client.unfocused        $blk $blk $wht $blk $blk
 client.urgent           $red $red $blk $red $blk
 client.placeholder      $blk $blk $wht $blk $blk

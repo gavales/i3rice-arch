@@ -377,6 +377,22 @@ autocmd FileType markdown vnoremap \s xa~~<Esc>pa~~<Esc>
 autocmd FileType markdown vnoremap \p :'<,'>norm 0i-<space><Esc>
 autocmd FileType markdown vnoremap \n :'<,'>norm 0i1.<space><Esc>
 
+autocmd FileType markdown vnoremap \1p :'<,'>norm 0dt+<Enter>
+autocmd FileType markdown vnoremap \2p :'<,'>norm 0dt+i<Tab><Esc>
+autocmd FileType markdown vnoremap \3p :'<,'>norm 0dt+i<Tab><Tab><Esc>
+autocmd FileType markdown vnoremap \4p :'<,'>norm 0dt+i<Tab><Tab><Tab><Esc>
+autocmd FileType markdown vnoremap \5p :'<,'>norm 0dt+i<Tab><Tab><Tab><Tab><Esc>
+autocmd FileType markdown vnoremap \6p :'<,'>norm 0dt+i<Tab><Tab><Tab><Tab><Tab><Esc>
+autocmd FileType markdown vnoremap \7p :'<,'>norm 0dt+i<Tab><Tab><Tab><Tab><Tab><Tab><Esc>
+
+autocmd FileType markdown vnoremap \1n :'<,'>norm 0dt1.<Enter>
+autocmd FileType markdown vnoremap \2n :'<,'>norm 0dt1.i<Tab><Esc>
+autocmd FileType markdown vnoremap \3n :'<,'>norm 0dt1.i<Tab><Tab><Esc>
+autocmd FileType markdown vnoremap \4n :'<,'>norm 0dt1.                i<Tab><Tab><Tab><Esc>
+autocmd FileType markdown vnoremap \5n :'<,'>norm 0dt1.                i<Tab><Tab><Tab><Tab><Esc>
+autocmd FileType markdown vnoremap \6n :'<,'>norm 0dt1.                i<Tab><Tab><Tab><Tab><Tab><Esc>
+autocmd FileType markdown vnoremap \7n :'<,'>norm 0dt1.                i<Tab><Tab><Tab><Tab><Tab><Tab><Esc>
+
 "////// COMPILER
 autocmd Filetype markdown map \cm :!bash<space>~/scripts/cmkd<space><C-r>%<Enter><Enter>
 
