@@ -4,4 +4,4 @@ case $BLOCK_BUTTON in
     1) bash $HOME/scripts/screenshot
 esac
 
-echo " <span face='Font Awesome 5 Free'>&#xf03e;</span> "
+echo "<span face='Font Awesome 5 Free'>&#xf03e;</span>"

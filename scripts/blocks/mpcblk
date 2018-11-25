@@ -6,7 +6,7 @@ if [ -z "$playing" ]
 then
 	:
 else
-	echo " <span face='Font Awesome 5 Free'>&#xf001;</span> ${playing} "
+	echo "<span face='Font Awesome 5 Free'>&#xf001;</span> ${playing}"
 fi
 
 case $BLOCK_BUTTON in

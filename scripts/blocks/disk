@@ -7,7 +7,7 @@ usep=$(df -h -P -l "$DIR"|grep 'dev'|awk '{print $5}')
 use=${usep:0:-1}
 
 if [[ $use -ge 90 ]]; then
-    echo "<span foreground=\"#ff0000\"> <span face='Font Awesome 5 Free'>&#xf0a0;</span> $avail </span>"
+    echo "<span foreground=\"#ff0000\"><span face='Font Awesome 5 Free'>&#xf0a0;</span> $avail</span>"
 else
-    echo " <span face='Font Awesome 5 Free'>&#xf0a0;</span> $avail "
+    echo "<span face='Font Awesome 5 Free'>&#xf0a0;</span> $avail"
 fi

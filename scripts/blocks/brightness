@@ -18,4 +18,4 @@ blr=$(light -G)
 
 bl=$(printf "%.0f" $blr)
 
-echo " <span face='Font Awesome 5 Free'>&#xf042;</span> ${bl}% "
+echo "<span face='Font Awesome 5 Free'>&#xf042;</span> ${bl}%"

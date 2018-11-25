@@ -6,7 +6,7 @@ stat=$(xset -q | grep 'Caps Lock:' | awk '{print $4}')
 lo=$(setxkbmap -query | grep 'layout' | awk '{print $2}')
 
 if [[ $stat == "on" ]]; then
-    echo "<span background=\"$blue\">  CAPS  </span>"
+    echo "<span background=\"$blue\"> CAPS </span>"
 else
-    echo " <span face='Font Awesome 5 Free'>&#xf11c;</span> $lo "
+    echo "<span face='Font Awesome 5 Free'>&#xf11c;</span> $lo"
 fi

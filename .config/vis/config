@@ -31,7 +31,7 @@ visualizer.scaling.multiplier=1.5
 
 ##Configures the visualizers and the order they are in. Available visualizers are spectrum,lorenz,ellipse.
 ##Defaults to spectrum,ellipse,lorenz
-visualizers=ellipse,spectrum,lorenz
+#visualizers=spectrum,ellipse,lorenz
 
 
 ##Configures what character the spectrum visualizer will use. Specifying a space (e.g " ") means the
