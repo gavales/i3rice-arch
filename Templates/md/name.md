@@ -2,10 +2,6 @@
 title: Title
 subtitle: Subtitle
 author: Author
-abstract: |
-    This is an abstract
-    
-    It consists of two paragraphs
 theme: CambridgeUS
 ---
 

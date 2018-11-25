@@ -146,7 +146,7 @@ bindsym $win+3 exec --no-startup-id $term -n VIMRC -e vim ~/.vimrc
 bindsym $win+4 exec --no-startup-id $term -n RANGER -e vim ~/.config/ranger/rc.conf
 bindsym $win+5 exec --no-startup-id $term -n i3BLOCKS -e vim ~/scripts/mkblocksconf
 
-# >>>> WORK BINDINGS
+# >>>> MY BINDINGS
 # ////// WORKFLOW
 # QALC
 bindsym $mod+q exec $term -name CALC -e R
@@ -252,7 +252,7 @@ bindsym $win+k exec "i3-msg focus parent; i3-msg focus up; i3-msg focus child"
 bindsym $win+l exec "i3-msg focus parent; i3-msg focus right; i3-msg focus child"
 
 # FOCUS PARENT CONTAINER
-#bindsym $mod+a focus parent
+bindsym $mod+a focus parent
 
 # ////// MOVE FOCUSSED
 bindsym $mod+Shift+h move left
@@ -299,8 +299,9 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+Ctrl+s sticky toggle
 
 # STICKY
-bindsym $win+s exec bash $home/$scripts/kill-i3-sticky
+bindsym $win+s exec bash $home/$scripts/i3-sticky-toggle
 bindsym --whole-window $win+button1 exec --no-startup-id i3-input -F "[con_id=__focused__] mark _sticky_%s"
+bindsym --whole-window $win+button3 exec --no-startup-id i3-input -F "[con_id=__focused__] unmark _sticky_%s"
 
 
 # ////// SCRATCHPAD
@@ -353,7 +354,7 @@ assign [instance="MUSIC"]	$ws9
 assign [instance="VIS"]		$ws9
 assign [class="Arandr"]		$ws10
 
-# >>>> FLOATING WINDOWS
+# >>>> FOR_WINDOW
 # PRESET
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="Calamares"] floating enable border normal
@@ -384,15 +385,15 @@ for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 
 # OWN
-for_window [title="Netflix"] floating enable,sticky enable,resize set 460 259
+for_window [title="Netflix"] mark _sticky_1,\
+    floating enable,sticky enable,resize set 460 259
 for_window [title="Amazon.co.uk: Prime Video"] \
-	floating enable,sticky enable,resize set 460 259
+	mark _sticky_1,floating enable,sticky enable,resize set 460 259
 for_window [class="MPlayer"] floating enable,sticky enable
-for_window [class="mpv"] floating enable,sticky enable
+for_window [class="mpv"] mark _sticky_1,floating enable,sticky enable
 for_window [class="Pavucontrol"] floating enable,resize set 525 300
-for_window [class="Pavucontrol"] move right 680,move down 405
 for_window [title="Google Play Movies & TV"] \
-	floating enable,sticky enable,resize set 480 270
+	mark _sticky_1,floating enable,sticky enable,resize set 480 270
 for_window [class="matplotlib"] floating enable
 for_window [class="Cam"] floating enable
 for_window [class="Shutter"] floating enable,border normal 2,\
@@ -404,6 +405,7 @@ for_window [instance="BASHMOUNT"] floating enable border normal 2,\
     sticky enable,resize set 430 500,move position center
 for_window [instance="GITREPOUPDATE"] floating enable border normal 2,\
     sticky enable,resize set 430 500,move position center
+for_window [title="YouTube"] mark _sticky_1
 
 # >>>> GAPS
 gaps inner 10
@@ -452,12 +454,12 @@ exec_always --no-startup-id fix_xcursor
 exec --no-startup-id feh --bg-scale ~/.config/wall.png
 exec --no-startup-id mpd
 exec --no-startup-id shutter --min_at_startup
+exec --no-startup-id python $home/$scripts/i3-sticky
 exec setxkbmap us
 #exec setxkbmap gb
 
 # PROGRAMS
-exec --no-startup-id "i3-msg 'workspace 1; append_layout $home/.config/i3/main.json'"
-#exec --no-startup-id "i3-msg 'workspace 9; append_layout $home/.config/i3/workspace-9.json'"
+exec --no-startup-id "i3-msg 'workspace $ws1; append_layout $home/.config/i3/main.json'"
 exec $browser2
 exec $browser2 --new-window --app=https://www.youtube.com/
 exec_always mpv $home/scriptsounds/A\ Tone\ His\ Self.mp3

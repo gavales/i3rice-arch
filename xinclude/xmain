@@ -1,5 +1,5 @@
 
-!>>>> COLORS & VARIABLES
+! >>>> COLORS & VARIABLES
 #define fontname FixedsysMono
 !#define font TerminessTTFNerdFontMono
 #define fontsize 13
@@ -39,10 +39,10 @@
 *color7:	cwhtd
 *color15:	cwhtl
 
-!>>>> ROFI
+! >>>> ROFI
 #include "/home/gavarch/xinclude/xrofi"
 
-!>>>> Xft
+! >>>> Xft
 Xft.dpi:		96
 Xft.antialias:	true
 Xft.hinting:	true
@@ -51,7 +51,7 @@ Xft.autohint:	false
 Xft.hintstyle:	hintslight
 Xft.lcdfilter:	lcddefault
 
-!>>>> XTerm
+! >>>> XTerm
 ! XTerm*background:	cblkd
 ! XTerm*foreground:	cwhtd
 ! XTerm*pointerColor:	ccynd
@@ -60,11 +60,12 @@ Xft.lcdfilter:	lcddefault
 ! XTerm*reverseVideo:	on
 ! XTerm*faceName:		Terminus:size=11:antialias=true
 ! XTerm*selectToClipboard:true
-! 
-! Xcursor.theme: capitaine-cursors
-! Xcursor.size:			0
 
-!>>>> URXVT
+! >>>> Xcursor
+Xcursor.theme: Bibata_Red
+Xcursor.size: 32
+
+! >>>> URXVT
 URxvt.font: xft:fontname:size=fontsize
 
 URxvt*fading: 10
@@ -83,7 +84,7 @@ URxvt*internalBorder: 1
 ! URxvt*transparent:              true
 ! URxvt*shading:                  138
 
-!>>>> URXVT EXTENSIONS
+! >>>> URXVT EXTENSIONS
 URxvt*perl-ext-common: default,clipboard,matcher,resize-font,config-reload
 !URxvt*perl-lib: /home/gavarch/.urxvt/ext
 URxvt*url-launcher:	/usr/bin/google-chrome-beta

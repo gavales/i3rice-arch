@@ -35,7 +35,7 @@ whichcss=$(cat $file | grep '#cssfile' | awk '{print $NF}')
 if [[ -n $whichcss ]]; then
     css=$(cat $file | grep '#cssfile' | awk '{print $NF}')
 elif [[ -z $whichcss ]]; then
-    css=ulysses
+    css=manuscript
 fi
 
 # WHICH LATEX ENGINE
@@ -72,5 +72,5 @@ output=$(cat $file | grep '#output' | awk '{print $NF}')
 if [[ -n $output ]]; then
     $output
 elif [[ -z $output ]]; then
-    latex
+    html
 fi

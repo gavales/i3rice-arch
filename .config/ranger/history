@@ -1,23 +1,3 @@
-rename mkscr
-shell mkscr rltheme
-shell mkscr shutdown blocks
-rename shutdown
-shell wget https://raw.githubusercontent.com/LukeSmithxyz/voidrice/master/.scripts/tools/linkhandler
-shell chmod +x %f
-rename ytmpv
-delete
-shell trash-put %s
-shell trash-restore
-shell trash-list
-rename grivesync
-rename lockscreen
-rename mpcblk
-rename cssstyles
-rename uni
-open_with 
-shell unrar x SKU498166 ARDUINO_MPU9250 test code.rar
-shell unrar x SKU498166\ ARDUINO_MPU9250\ test\ code.rar
-shell unrar x I2Cdev.rar
 shell unrar x MPUxxxx测试过.rar
 rename Downes' Feedback.pdf
 rename Feedback.pdf
@@ -45,6 +25,26 @@ shell cp ~/Templates/md/name.md ListOfReqts.md
 touch mpv.conf
 shell wget https://raw.githubusercontent.com/mpv-player/mpv/master/etc/mpv.conf
 rename DJS_25_27733408_2_Vales_Gavin.pptx
-
 rename 2018-11-17_21:38:11_1920x1080.png
 open_with pinta
+rename colorhship
+rename colorship
+rename colors
+rename colorful
+rename colorship.jpg
+rename wsloget
+rename wsloapp
+mkdir pandoc
+shell unzip gvales2831997@gmail.com.ical.zip -d "gvales2831997@gmail.com.ical"
+rename #contacts@group.v.calendar.google.com.ics
+rename mkgcalrc
+shell chmod +x %f
+shell unzip calendar.vim-master.zip -d "calendar.vim-master"
+
+mkdir caldav
+rename 2018_11_22.md
+rename nikes
+rename manuscript.css
+wq
+rename i3exit
+rename i3-sticky-toggle
