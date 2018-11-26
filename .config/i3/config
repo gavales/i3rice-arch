@@ -71,10 +71,10 @@ hide_edge_borders none
 
 # COLORS
 # class                 brdr bkgr text indi chlb
-client.focused          $blu $blu $blk $blu $blk
-client.focused_inactive $cyn $cyn $blk $cyn $blk
+client.focused          $blu $blu $blk $blk $blk
+client.focused_inactive $cyn $cyn $blk $blk $blk
 client.unfocused        $blk $blk $wht $blk $blk
-client.urgent           $red $red $blk $red $blk
+client.urgent           $red $red $blk $blk $blk
 client.placeholder      $blk $blk $wht $blk $blk
 #client.background      $blk
 
@@ -174,7 +174,7 @@ $mod+bracketleft    exec playerctl previous
 
 # ////// LAYOUT
 $mod+g              split toggle
-$mod+e              layout toggle tabbed splitv splith
+$mod+e              layout toggle tabbed split
 $mod+Shift+f        fullscreen toggle
 floating_modifier   $modi
 $mod+Shift+space    floating toggle
@@ -270,10 +270,14 @@ $win+d              move workspace to output $tertiary
 $win+e              move workspace to output $primary
 
 # ////// CHANGE FOCUS
-$win+h              exec "i3-msg focus parent; i3-msg focus left; i3-msg focus child"
-$win+j              exec "i3-msg focus parent; i3-msg focus down; i3-msg focus child"
-$win+k              exec "i3-msg focus parent; i3-msg focus up; i3-msg focus child"
-$win+l              exec "i3-msg focus parent; i3-msg focus right; i3-msg focus child"
+$win+h              exec "i3-msg focus parent; i3-msg focus left; \
+                        i3-msg focus child"
+$win+j              exec "i3-msg focus parent; i3-msg focus down; \
+                        i3-msg focus child"
+$win+k              exec "i3-msg focus parent; i3-msg focus up; \
+                        i3-msg focus child"
+$win+l              exec "i3-msg focus parent; i3-msg focus right; \
+                        i3-msg focus child"
 
 # ////// MOVE FOCUSSED
 $win+Shift+h        exec "i3-msg focus parent; i3-msg move left; \
@@ -289,8 +293,12 @@ $win+Shift+l        exec "i3-msg focus parent; i3-msg move right; \
 $win+s              exec bash $home/$scripts/i3-sticky-toggle
 $winwlw+button1     $execn i3-input -F "[con_id=__focused__] mark _sticky_%s"
 $winwlw+button3     $execn i3-input -F "[con_id=__focused__] unmark _sticky_%s"
+$win+Shift+1        exec bash $home/$scripts/i3-sticky-create 1
+$win+Shift+2        exec bash $home/$scripts/i3-sticky-create 2
 
 # >>>> FOR_WINDOW
+for_window [class="^.*"] border pixel 1
+force_focus_wrapping yes
 workspace_auto_back_and_forth yes
 for_window  [urgent=latest] focus
 
