@@ -1,28 +1,5 @@
 // vim:ts=4:sw=4:et
 {
-    "border": "pixel",
-    "current_border_width": 0,
-    "floating": "auto_off",
-    "geometry": {
-       "height": 1060,
-       "width": 945,
-       "x": 10,
-       "y": 10
-    },
-    "name": "New Tab - Google Chrome",
-    "percent": 0.7,
-    "swallows": [
-       {
-       "class": "^Google\\-chrome\\-beta$",
-       "instance": "^google\\-chrome\\-beta$",
-       "transient_for": "^$",
-       "window_role": "^browser$"
-       }
-    ],
-    "type": "con"
-}
-
-{
     // splitv split container with 2 children
     "border": "pixel",
     "floating": "auto_off",
@@ -109,5 +86,28 @@
             ]
         }
     ]
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1060,
+       "width": 945,
+       "x": 10,
+       "y": 10
+    },
+    "name": "New Tab - Google Chrome",
+    "percent": 0.7,
+    "swallows": [
+       {
+       "class": "^Google\\-chrome\\-beta$",
+       "instance": "^google\\-chrome\\-beta$",
+       "transient_for": "^$",
+       "window_role": "^browser$"
+       }
+    ],
+    "type": "con"
 }
 

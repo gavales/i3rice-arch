@@ -72,9 +72,9 @@ hide_edge_borders none
 # COLORS
 # class                 brdr bkgr text indi chlb
 client.focused          $blu $blu $blk $blk $blk
-client.focused_inactive $cyn $cyn $blk $blk $blk
+client.focused_inactive $blk $blk $wht $blk $blk
 client.unfocused        $blk $blk $wht $blk $blk
-client.urgent           $red $red $blk $blk $blk
+client.urgent           $blk $red $blk $blk $blk
 client.placeholder      $blk $blk $wht $blk $blk
 #client.background      $blk
 
@@ -292,7 +292,7 @@ $win+Shift+l        exec "i3-msg focus parent; i3-msg move right; \
 # ////// STICKY TILED
 $win+s              exec bash $home/$scripts/i3-sticky-toggle
 $winwlw+button1     $execn i3-input -F "[con_id=__focused__] mark _sticky_%s"
-$winwlw+button3     $execn i3-input -F "[con_id=__focused__] unmark _sticky_%s"
+$winwlw+button2     $execn i3-input -F "[con_id=__focused__] unmark _sticky_%s"
 $win+Shift+1        exec bash $home/$scripts/i3-sticky-create 1
 $win+Shift+2        exec bash $home/$scripts/i3-sticky-create 2
 
@@ -333,14 +333,19 @@ for_window  [class="Xfburn"] floating enable
 
 # OWN
 for_window  [title="Netflix"] \
-                mark _sticky_1,floating enable,sticky enable,resize set 460 259
+                mark _sticky_1,border pixel 0,floating enable,\
+                sticky enable,resize set 460 259
 for_window  [title="Amazon.co.uk: Prime Video"] \
-                mark _sticky_1,floating enable,sticky enable,resize set 460 259
-for_window  [class="MPlayer"] floating enable,sticky enable
-for_window  [class="mpv"] mark _sticky_1,floating enable,sticky enable
+                mark _sticky_1,border pixel 0,floating enable,\
+                sticky enable,resize set 460 259
+for_window  [class="MPlayer"] floating enable,border pixel 0,sticky enable
+for_window  [class="mpv"] \
+                mark _sticky_1,border pixel 0,\
+                floating enable,sticky enable
 for_window  [class="Pavucontrol"] floating enable,resize set 525 300
 for_window  [title="Google Play Movies & TV"] \
-                mark _sticky_1,floating enable,sticky enable,resize set 480 270
+                mark _sticky_1,floating enable,\
+                border pixel 0,sticky enable,resize set 480 270
 for_window  [class="matplotlib"] floating enable
 for_window  [class="Cam"] floating enable
 for_window  [class="Shutter"] \
@@ -355,7 +360,7 @@ for_window  [instance="BASHMOUNT"] \
 for_window  [instance="GITREPOUPDATE"] \
                 floating enable border normal 2,sticky enable,\
                 resize set 430 500,move position center
-for_window  [title="YouTube"] mark _sticky_1
+for_window  [title="YouTube"] mark _sticky_1,border pixel 0
 
 assign      [instance="RSS"]    $ws1
 assign      [title="YouTube"]   $ws1

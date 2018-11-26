@@ -72,7 +72,7 @@ vnoremap \" :'<,'>norm 0i"<Enter>
 vnoremap \d" :'<,'>norm 0x<Enter>
 
 ">>>> GOYO
-map <F11> :Goyo<bar>hi<space>Normal<space>ctermbg=none<space>guibg=black<bar>
+map \gy :Goyo<bar>hi<space>Normal<space>ctermbg=none<space>guibg=black<bar>
 	\hi<space>LineNr<space>ctermbg=none<space>ctermfg=grey<bar>
 	\hi<space>Folded<space>ctermfg=grey<space>ctermbg=none<bar>
 	\hi<space>ModeMsg<space>cterm=bold<space>ctermfg=white<bar>
@@ -321,11 +321,11 @@ autocmd FileType markdown nnoremap \6p A<Enter><Tab><Tab><Tab><Tab><Tab>+<space>
 autocmd FileType markdown nnoremap \7p A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>+<space>
 
 autocmd FileType markdown nnoremap \1n A<Enter>1.<space>
-autocmd FileType markdown nnoremap \2n A<Enter><Tab>1.<space>
-autocmd FileType markdown nnoremap \3n A<Enter><Tab><Tab>1.<space>
-autocmd FileType markdown nnoremap \4n A<Enter><Tab><Tab><Tab>1.<space>
-autocmd FileType markdown nnoremap \5n A<Enter><Tab><Tab><Tab><Tab>1.<space>
-autocmd FileType markdown nnoremap \6n A<Enter><Tab><Tab><Tab><Tab><Tab>1.<space>
+autocmd FileType markdown nnoremap \2n A<Enter><Tab>#.<space>
+autocmd FileType markdown nnoremap \3n A<Enter><Tab><Tab>(#)<space>
+autocmd FileType markdown nnoremap \4n A<Enter><Tab><Tab><Tab>(1)<space>
+autocmd FileType markdown nnoremap \5n A<Enter><Tab><Tab><Tab><Tab>#.<space>
+autocmd FileType markdown nnoremap \6n A<Enter><Tab><Tab><Tab><Tab><Tab>(#)<space>
 autocmd FileType markdown nnoremap \7n A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>1.<space>
 
 autocmd FileType markdown inoremap 1h <Esc>A<Enter><Enter>#<space>
@@ -345,11 +345,11 @@ autocmd FileType markdown inoremap 6p <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab>+<sp
 autocmd FileType markdown inoremap 7p <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>+<space>
 
 autocmd FileType markdown inoremap 1n <Esc>A<Enter>1.<space>
-autocmd FileType markdown inoremap 2n <Esc>A<Enter><Tab>1.<space>
-autocmd FileType markdown inoremap 3n <Esc>A<Enter><Tab><Tab>1.<space>
-autocmd FileType markdown inoremap 4n <Esc>A<Enter><Tab><Tab><Tab>1.<space>
-autocmd FileType markdown inoremap 5n <Esc>A<Enter><Tab><Tab><Tab><Tab>1.<space>
-autocmd FileType markdown inoremap 6n <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab>1.<space>
+autocmd FileType markdown inoremap 2n <Esc>A<Enter><Tab>#.<space>
+autocmd FileType markdown inoremap 3n <Esc>A<Enter><Tab><Tab>(#)<space>
+autocmd FileType markdown inoremap 4n <Esc>A<Enter><Tab><Tab><Tab>(1)<space>
+autocmd FileType markdown inoremap 5n <Esc>A<Enter><Tab><Tab><Tab><Tab>#.<space>
+autocmd FileType markdown inoremap 6n <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab>(#)<space>
 autocmd FileType markdown inoremap 7n <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>1.<space>
 
 autocmd FileType markdown inoremap \b ****<++><Esc>5hi
@@ -418,13 +418,13 @@ autocmd FileType rmd nnoremap \5p A<Enter><Tab><Tab><Tab><Tab>+<space>
 autocmd FileType rmd nnoremap \6p A<Enter><Tab><Tab><Tab><Tab><Tab>+<space>
 autocmd FileType rmd nnoremap \7p A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>+<space>
 
-autocmd FileType rmd nnoremap \1n A<Enter>1.<space>
-autocmd FileType rmd nnoremap \2n A<Enter><Tab>1.<space>
-autocmd FileType rmd nnoremap \3n A<Enter><Tab><Tab>1.<space>
-autocmd FileType rmd nnoremap \4n A<Enter><Tab><Tab><Tab>1.<space>
-autocmd FileType rmd nnoremap \5n A<Enter><Tab><Tab><Tab><Tab>1.<space>
-autocmd FileType rmd nnoremap \6n A<Enter><Tab><Tab><Tab><Tab><Tab>1.<space>
-autocmd FileType rmd nnoremap \7n A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>1.<space>
+autocmd FileType rmd inoremap \1n A<Enter>1.<space>
+autocmd FileType rmd inoremap \2n A<Enter><Tab>#.<space>
+autocmd FileType rmd inoremap \3n A<Enter><Tab><Tab>(#)<space>
+autocmd FileType rmd inoremap \4n A<Enter><Tab><Tab><Tab>(1)<space>
+autocmd FileType rmd inoremap \5n A<Enter><Tab><Tab><Tab><Tab>#.<space>
+autocmd FileType rmd inoremap \6n A<Enter><Tab><Tab><Tab><Tab><Tab>(#)<space>
+autocmd FileType rmd inoremap \7n A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>1.<space>
 
 autocmd FileType rmd inoremap 1h <Esc>A<Enter><Enter>#<space>
 autocmd FileType rmd inoremap 2h <Esc>A<Enter><Enter>##<space>
@@ -442,13 +442,13 @@ autocmd FileType rmd inoremap 5p <Esc>A<Enter><Tab><Tab><Tab><Tab>+<space>
 autocmd FileType rmd inoremap 6p <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab>+<space>
 autocmd FileType rmd inoremap 7p <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>+<space>
 
-autocmd FileType rmd inoremap 1n <Esc>A<Enter>1.<space>
-autocmd FileType rmd inoremap 2n <Esc>A<Enter><Tab>1.<space>
-autocmd FileType rmd inoremap 3n <Esc>A<Enter><Tab><Tab>1.<space>
-autocmd FileType rmd inoremap 4n <Esc>A<Enter><Tab><Tab><Tab>1.<space>
-autocmd FileType rmd inoremap 5n <Esc>A<Enter><Tab><Tab><Tab><Tab>1.<space>
-autocmd FileType rmd inoremap 6n <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab>1.<space>
-autocmd FileType rmd inoremap 7n <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>1.<space>
+autocmd FileType rmd nnoremap 1n <Esc>A<Enter>1.<space>
+autocmd FileType rmd nnoremap 2n <Esc>A<Enter><Tab>#.<space>
+autocmd FileType rmd nnoremap 3n <Esc>A<Enter><Tab><Tab>(#)<space>
+autocmd FileType rmd nnoremap 4n <Esc>A<Enter><Tab><Tab><Tab>(1)<space>
+autocmd FileType rmd nnoremap 5n <Esc>A<Enter><Tab><Tab><Tab><Tab>#.<space>
+autocmd FileType rmd nnoremap 6n <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab>(#)<space>
+autocmd FileType rmd nnoremap 7n <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>1.<space>
 
 autocmd FileType rmd inoremap \b ****<++><Esc>5hi
 autocmd FileType rmd inoremap \i __<++><Esc>4hi
