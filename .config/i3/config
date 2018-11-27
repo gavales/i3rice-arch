@@ -4,6 +4,7 @@
 # >>>> FONT
 set $font1 FixedsysMono
 set $font2 FontAwesome
+set $font3 Monaco
 set $fonts 12
 
 font pango:$font1,$font2 $fonts
@@ -27,6 +28,8 @@ set $scriptpics scriptpics
 # ////// APPS
 set $term       urxvtc
 #set $term       urxvt
+set $edone      $term -e vim
+set $edtwo      subl3
 set $browser    google-chrome-beta
 set $brightinc  xbacklight -inc 10
 set $brightdec  xbacklight -dec 10
@@ -115,7 +118,7 @@ $mod+apostrophe     exec redshift -x
 bindsym Print       exec bash ~/$scripts/screenshot
 $mod+Shift+p        exec bash ~/$scripts/screenshot
 $mod+d              exec rofi -show drun
-$mod+Shift+d        exec dmenu_run -fn "$font1:size=$fonts" -nb \
+$mod+Shift+d        exec dmenu_run -fn "$font3:size=$fonts" -nb \
                         "$blk" -nf "$wht" -sf "$blk" -sb "$blu"
 
 # FOCUS/MOVE/RESIZE
