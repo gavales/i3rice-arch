@@ -1,6 +1,6 @@
 
 ! >>>> COLORS & VARIABLES
-#define fontname FixedsysMono
+#define fontname monospace
 !#define font TerminessTTFNerdFontMono
 #define fontsize 13
 #define fontsize2 15

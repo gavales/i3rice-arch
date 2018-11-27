@@ -1,0 +1,29 @@
+#!/bin/bash
+
+volraw=$(amixer get Master|grep 'Front Left:'|awk '{print $5}')
+stat=$(amixer get Master|grep 'Front Left:'|awk '{print $6}')
+volint=${volraw:1:-2}
+
+if [[ $volint == 100 ]]; then
+    dunstify -r 1234 --raw_icon=$HOME/scriptpics/speaker-full.png "=========|"
+elif [[ $volint -ge 90 ]]; then
+    dunstify -r 1234 --raw_icon=$HOME/scriptpics/speaker-full.png "========|-"
+elif [[ $volint -ge 80 ]]; then
+    dunstify -r 1234 --raw_icon=$HOME/scriptpics/speaker-full.png "=======|--"
+elif [[ $volint -ge 70 ]]; then
+    dunstify -r 1234 --raw_icon=$HOME/scriptpics/speaker-full.png "======|---"
+elif [[ $volint -ge 60 ]]; then
+    dunstify -r 1234 --raw_icon=$HOME/scriptpics/speaker-full.png "=====|----"
+elif [[ $volint -ge 50 ]]; then
+    dunstify -r 1234 --raw_icon=$HOME/scriptpics/speaker-full.png "====|-----"
+elif [[ $volint -ge 40 ]]; then
+    dunstify -r 1234 --raw_icon=$HOME/scriptpics/speaker-full.png "===|------"
+elif [[ $volint -ge 30 ]]; then
+    dunstify -r 1234 --raw_icon=$HOME/scriptpics/speaker-full.png "==|-------"
+elif [[ $volint -ge 20 ]]; then
+    dunstify -r 1234 --raw_icon=$HOME/scriptpics/speaker-full.png "=|--------"
+elif [[ $volint -ge 10 ]]; then
+    dunstify -r 1234 --raw_icon=$HOME/scriptpics/speaker-full.png "|---------"
+else
+    dunstify -r 1234 --raw_icon=$HOME/scriptpics/speaker-empty.png "MUTED"
+fi

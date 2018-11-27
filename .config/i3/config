@@ -235,11 +235,11 @@ mode "SHUTDOWN" {
 
 # >>>> MOD4 BINDINGS
 
-$win+o              exec $brightinc
-$win+y              exec $brightdec
-$win+i              exec pactl set-sink-volume 0 +2%
-$win+u              exec pactl set-sink-volume 0 -2%
-$win+x              exec pactl set-sink-mute 0 toggle
+$win+o              exec "$brightinc; bash ~/$scripts/notify_brightness"
+$win+y              exec "$brightdec; bash ~/$scripts/notify_brightness"
+$win+i              exec "pactl set-sink-volume 0 +2%; bash ~/$scripts/notify_volume"
+$win+u              exec "pactl set-sink-volume 0 -2%; bash ~/$scripts/notify_volume"
+$win+x              exec "pactl set-sink-mute 0 toggle; bash ~/$scripts/notify_volume"
 $win+f              exec gksu pcmanfm
 $win+Shift+f        exec nautilus
 $win+Shift+Return   exec $term -name FILES_ADMIN -e sudo ranger
@@ -292,12 +292,11 @@ $win+Shift+l        exec "i3-msg focus parent; i3-msg move right; \
 # ////// STICKY TILED
 $win+s              exec bash $home/$scripts/i3-sticky-toggle
 $winwlw+button1     $execn i3-input -F "[con_id=__focused__] mark _sticky_%s"
-$winwlw+button2     $execn i3-input -F "[con_id=__focused__] unmark _sticky_%s"
 $win+Shift+1        exec bash $home/$scripts/i3-sticky-create 1
 $win+Shift+2        exec bash $home/$scripts/i3-sticky-create 2
 
 # >>>> FOR_WINDOW
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border normal 1
 force_focus_wrapping yes
 workspace_auto_back_and_forth yes
 for_window  [urgent=latest] focus
@@ -351,7 +350,8 @@ for_window  [class="Cam"] floating enable
 for_window  [class="Shutter"] \
                 floating enable,border normal 2,\
                 resize set 500 500,move position center
-for_window  [title="Log in with PayPal - Chromium"] floating enable
+for_window  [title="Log in with PayPal"] floating enable
+for_window  [title="_popout="] floating enable,resize set 500 520
 for_window  [class="Blueman-manager"] floating enable
 for_window  [instance="CALC"] floating enable border normal 2,resize set 480 480
 for_window  [instance="BASHMOUNT"] \
@@ -361,6 +361,7 @@ for_window  [instance="GITREPOUPDATE"] \
                 floating enable border normal 2,sticky enable,\
                 resize set 430 500,move position center
 for_window  [title="YouTube"] mark _sticky_1,border pixel 0
+for_window  [class="Google-chrome-beta"] border pixel 1
 
 assign      [instance="RSS"]    $ws1
 assign      [title="YouTube"]   $ws1
