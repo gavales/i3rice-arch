@@ -36,6 +36,9 @@
             "border": "pixel",
             "floating": "auto_off",
             "layout": "tabbed",
+            "marks": [
+               "_sticky_2"
+            ],
             "percent": 0.7,
             "type": "con",
             "nodes": [

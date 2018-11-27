@@ -2,8 +2,8 @@
 ! >>>> COLORS & VARIABLES
 #define fontname monospace
 !#define font TerminessTTFNerdFontMono
-#define fontsize 13
-#define fontsize2 15
+#define fontsize 10
+#define fontsize2 12
 
 *background:				cblkd
 *foreground:				cwhtl
