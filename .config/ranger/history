@@ -1,3 +1,5 @@
+rename ws1.png
+rename ws.png
 rename ws4.png
 rename ws2.png
 rename ws3.png
@@ -20,6 +22,7 @@ touch mpv.conf
 shell wget https://raw.githubusercontent.com/mpv-player/mpv/master/etc/mpv.conf
 rename DJS_25_27733408_2_Vales_Gavin.pptx
 rename 2018-11-17_21:38:11_1920x1080.png
+open_with pinta
 rename colorhship
 rename colorship
 rename colors
@@ -33,18 +36,15 @@ rename #contacts@group.v.calendar.google.com.ics
 rename mkgcalrc
 shell chmod +x %f
 shell unzip calendar.vim-master.zip -d "calendar.vim-master"
-
 mkdir caldav
 rename 2018_11_22.md
-rename nikes
 rename manuscript.css
 rename i3exit
 rename i3-sticky-toggle
 open_with vim
-open_with 
 wq
-shell  %s
-shel %s
-open_with pinta
-shell subl3 %f
-shell git clone https://github.com/ap/vim-css-color.git
+
+open_with 
+shell 
+rename nikes
+rename purple

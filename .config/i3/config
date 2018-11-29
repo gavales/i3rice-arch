@@ -10,7 +10,7 @@ set $fonts 12
 font pango:$font1,$font2 $fonts
 
 # >>>> DEFINE VARIABLES
-# ////// $MOD
+# ////// i3
 set $mod        bindsym Mod1
 set $modi       Mod1
 set $win        bindsym Mod4
@@ -19,6 +19,7 @@ set $modrel     bindsym --release Mod1
 set $winwlw     bindsym --whole-window Mod4
 set $execn      exec --no-startup-id
 set $execna     exec_always --no-startup-id
+set $tf         title_format
 
 # ////// DIRS
 set $home       /home/gavarch
@@ -104,8 +105,7 @@ bar {
 	}
 }
 
-# >>>> MOD1 BINDINGS
-# ////// IMPORTANT
+# >>>> MOD1 IMPORTANT
 $mod+Shift+r        restart
 $mod+Shift+c        $execn "bash $home/$scripts/xtheme; \
 	                    bash $home/$scripts/reloadconfs; i3-msg reload; \
@@ -122,22 +122,25 @@ $mod+Shift+d        exec dmenu_run -fn "$font3:size=$fonts" -nb \
                         "$blk" -nf "$wht" -sf "$blk" -sb "$blu"
 
 # FOCUS/MOVE/RESIZE
-$mod+h              focus left
-$mod+j              focus down
-$mod+k              focus up
-$mod+l              focus right
+$mod+h              $execn bash $home/$scripts/i3focus left
+$mod+j              $execn bash $home/$scripts/i3focus down
+$mod+k              $execn bash $home/$scripts/i3focus up
+$mod+l              $execn bash $home/$scripts/i3focus right
+$mod+Tab            focus right
+$mod+Shift+Tab      focus left
 $mod+a              focus parent
-$mod+Shift+h        move left
-$mod+Shift+j        move down
-$mod+Shift+k        move up
-$mod+Shift+l        move right
+$mod+Shift+h        $execn bash $home/$scripts/i3move left
+$mod+Shift+j        $execn bash $home/$scripts/i3move down
+$mod+Shift+k        $execn bash $home/$scripts/i3move up
+$mod+Shift+l        $execn bash $home/$scripts/i3move right
 $mod+y resize       shrink width 10 px or 10 ppt
 $mod+i resize       grow height 10 px or 10 ppt
 $mod+u resize       shrink height 10 px or 10 ppt
 $mod+o resize       grow width 10 px or 10 ppt
 
+# >>>> MOD1 BINDINGS
 # ////// WORKFLOW
-$mod+Return         exec $term
+$mod+Return         exec $term -name TERMINAL
 $mod+f              exec pcmanfm
 $mod+Shift+Return   exec $term -name FILES -e ranger
 $mod+Shift+b        exec $term -name BASHMOUNT -e bashmount
@@ -187,8 +190,8 @@ $mod+Shift+minus    move scratchpad
 $mod+minus          scratchpad show
 
 # ////// WORKSPACE
-$mod+Ctrl+Right     workspace next # WORKSPACE NEXT
-$mod+Ctrl+Left      workspace prev # WORKSPACE PREV
+$mod+Ctrl+Right     workspace next
+$mod+Ctrl+Left      workspace prev
 
 # SWITCH WORKSPACE
 $mod+1              workspace $ws1
@@ -238,6 +241,7 @@ mode "SHUTDOWN" {
 
 # >>>> MOD4 BINDINGS
 
+$win+Shift+c        reload
 $win+o              exec "$brightinc; bash ~/$scripts/notify_brightness"
 $win+y              exec "$brightdec; bash ~/$scripts/notify_brightness"
 $win+i              exec "pactl set-sink-volume 0 +2%; bash ~/$scripts/notify_volume"
@@ -273,24 +277,16 @@ $win+d              move workspace to output $tertiary
 $win+e              move workspace to output $primary
 
 # ////// CHANGE FOCUS
-$win+h              exec "i3-msg focus parent; i3-msg focus left; \
-                        i3-msg focus child"
-$win+j              exec "i3-msg focus parent; i3-msg focus down; \
-                        i3-msg focus child"
-$win+k              exec "i3-msg focus parent; i3-msg focus up; \
-                        i3-msg focus child"
-$win+l              exec "i3-msg focus parent; i3-msg focus right; \
-                        i3-msg focus child"
+$win+h              focus left
+$win+j              focus down
+$win+k              focus up
+$win+l              focus right
 
 # ////// MOVE FOCUSSED
-$win+Shift+h        exec "i3-msg focus parent; i3-msg move left; \
-	                    i3-msg focus child"
-$win+Shift+j        exec "i3-msg focus parent; i3-msg move down; \
-	                    i3-msg focus child"
-$win+Shift+k        exec "i3-msg focus parent; i3-msg move up; \
-	                    i3-msg focus child"
-$win+Shift+l        exec "i3-msg focus parent; i3-msg move right; \
-	                    i3-msg focus child"
+$win+Shift+h        move left
+$win+Shift+j        move down
+$win+Shift+k        move up
+$win+Shift+l        move right
 
 # ////// STICKY TILED
 $win+s              exec bash $home/$scripts/i3-sticky-toggle
@@ -336,10 +332,10 @@ for_window  [class="Xfburn"] floating enable
 # OWN
 for_window  [title="Netflix"] \
                 mark _sticky_1,border pixel 0,floating enable,\
-                sticky enable,resize set 460 259
+                sticky enable,resize set 460 259,$tf "netflix"
 for_window  [title="Amazon.co.uk: Prime Video"] \
                 mark _sticky_1,border pixel 0,floating enable,\
-                sticky enable,resize set 460 259
+                sticky enable,resize set 460 259,$tf "prime-video"
 for_window  [class="MPlayer"] floating enable,border pixel 0,sticky enable
 for_window  [class="mpv"] \
                 mark _sticky_1,border pixel 0,\
@@ -347,24 +343,31 @@ for_window  [class="mpv"] \
 for_window  [class="Pavucontrol"] floating enable,resize set 525 300
 for_window  [title="Google Play Movies & TV"] \
                 mark _sticky_1,floating enable,\
-                border pixel 0,sticky enable,resize set 480 270
+                border pixel 0,sticky enable,resize set 480 270,$tf "gp-movies"
 for_window  [class="matplotlib"] floating enable
 for_window  [class="Cam"] floating enable
 for_window  [class="Shutter"] \
                 floating enable,border normal 2,\
                 resize set 500 500,move position center
-for_window  [title="Log in with PayPal"] floating enable
-for_window  [title="_popout="] floating enable,resize set 500 520
+for_window  [title="Log in with PayPal"] floating enable,$tf "paypal login"
+for_window  [title="_popout="] floating enable,resize set 500 520,$tf "youtube popout-chat"
 for_window  [class="Blueman-manager"] floating enable
-for_window  [instance="CALC"] floating enable border normal 2,resize set 480 480
+for_window  [instance="CALC"] floating enable border normal 2,\
+                resize set 480 480,$tf "calculator"
 for_window  [instance="BASHMOUNT"] \
                 floating enable border normal 2,sticky enable,\
-                resize set 430 500,move position center
+                resize set 430 500,move position center,$tf "bashmount"
 for_window  [instance="GITREPOUPDATE"] \
                 floating enable border normal 2,sticky enable,\
-                resize set 430 500,move position center
-for_window  [title="YouTube"] mark _sticky_1,border pixel 0
-for_window  [class="Google-chrome-beta"] border pixel 1
+                resize set 430 500,move position center,$tf "git-sync"
+for_window  [title="YouTube"] mark _sticky_1,border pixel 0,$tf "youtube"
+for_window  [class="Google-chrome-beta"] border pixel 1,$tf "google-chrome"
+for_window  [instance="RSS"] $tf "rss-reader"
+for_window  [instance="MUSIC"] $tf "music-player"
+for_window  [instance="VIS"] $tf "visualiser"
+for_window  [instance="TERM"] $tf "terminal"
+for_window  [instance="FILES"] $tf "file-manager"
+for_window  [instance="CALENDAR"] $tf "calendar",move to container [con_mark="_sticky_2"]
 
 assign      [instance="RSS"]    $ws1
 assign      [title="YouTube"]   $ws1

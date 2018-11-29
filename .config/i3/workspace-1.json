@@ -1,0 +1,146 @@
+// "transient_for": "^$"
+// vim:ts=4:sw=4:et
+{
+    // splitv split container with 1 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.6,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1060,
+               "width": 945,
+               "x": 10,
+               "y": 10
+            },
+            "name": "linux - How to take screenshot(using selection) in awesome wm via scrot - Super User - Google Chrome",
+            "percent": 1,
+            "swallows": [
+               {
+               // "class": "^Google\-chrome\-beta$",
+               // "instance": "^google\-chrome\-beta$",
+               // "title": "^linux\ \-\ How\ to\ take\ screenshot\(using\ selection\)\ in\ awesome\ wm\ via\ scrot\ \-\ Super\ User\ \-\ Google\ Chrome$",
+               // "window_role": "^browser$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    // splitv split container with 2 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.4,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1058,
+               "width": 640,
+               "x": 1280,
+               "y": 22
+            },
+            "marks": [
+               "_sticky_1"
+            ],
+            "name": "(1) \"Trans-ageism\" Man Demands Right To Legally Change Age - YouTube",
+            "percent": 0.4,
+            "swallows": [
+               {
+               // "class": "^Google\-chrome\-beta$",
+               // "instance": "^www\.youtube\.com$",
+               // "title": "^\(1\)\ \\"Trans\-ageism\\"\ Man\ Demands\ Right\ To\ Legally\ Change\ Age\ \-\ YouTube$",
+               // "window_role": "^pop\-up$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            // tabbed split container with 3 children
+            "border": "pixel",
+            "floating": "auto_off",
+            "layout": "tabbed",
+            "marks": [
+               "_sticky_2"
+            ],
+            "percent": 0.6,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "normal",
+                    "current_border_width": 1,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 410,
+                       "width": 642,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "newsboat",
+                    "percent": 0.333333333333333,
+                    "swallows": [
+                       {
+                       // "class": "^URxvt$",
+                       // "instance": "^RSS$",
+                       // "title": "^newsboat$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "normal",
+                    "current_border_width": 1,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 410,
+                       "width": 642,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "ranger",
+                    "percent": 0.333333333333333,
+                    "swallows": [
+                       {
+                       // "class": "^URxvt$",
+                       // "instance": "^FILES$",
+                       // "title": "^ranger$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "normal",
+                    "current_border_width": 1,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 410,
+                       "width": 642,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "bash",
+                    "percent": 0.333333333333333,
+                    "swallows": [
+                       {
+                       // "class": "^URxvt$",
+                       // "instance": "^LAYOUT_EDITOR$",
+                       // "title": "^bash$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        }
+    ]
+}

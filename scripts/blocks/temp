@@ -1,15 +1,14 @@
 #!/bin/bash
 
 temp1=$(sensors coretemp-isa-0000 | grep '^Core 0' | awk '{ print $3 }')
-temp=${temp1:1}
-rawtemp=${temp1:1:-4}
+rawtemp=$(printf %.0f ${temp1:1:-4})
 
 if [[ $rawtemp -ge 65 ]]; then
-    echo "<span foreground=\"#ffff00\"><span face='Font Awesome 5 Free'>&#xf2c8;</span> $temp</span>"
+    echo "<span foreground=\"#ffff00\"><span face='Font Awesome 5 Free'>&#xf2c8;</span> $rawtemp%</span>"
 elif [[ $rawtemp -ge 85 ]]; then
-    echo "<span background=\"#ff0000\"><span face='Font Awesome 5 Free'>&#xf2c7;</span> $temp</span>"
+    echo "<span background=\"#ff0000\"><span face='Font Awesome 5 Free'>&#xf2c7;</span> $rawtemp%</span>"
 elif [[ $rawtemp -ge 50 ]]; then
-    echo "<span face='Font Awesome 5 Free'>&#xf2c9;</span> $temp"
+    echo "<span face='Font Awesome 5 Free'>&#xf2c9;</span> $rawtemp%"
 else
-    echo "<span face='Font Awesome 5 Free'>&#xf2ca;</span> $temp"
+    echo "<span face='Font Awesome 5 Free'>&#xf2ca;</span> $rawtemp%"
 fi
