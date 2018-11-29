@@ -78,7 +78,7 @@ hide_edge_borders none
 client.focused          $blu $blu $blk $blk $blk
 client.focused_inactive $blk $blk $wht $blk $blk
 client.unfocused        $blk $blk $wht $blk $blk
-client.urgent           $blk $red $blk $blk $blk
+client.urgent           $red $red $blk $blk $blk
 client.placeholder      $blk $blk $wht $blk $blk
 #client.background      $blk
 
@@ -295,12 +295,13 @@ $win+Shift+1        exec bash $home/$scripts/i3-sticky-create 1
 $win+Shift+2        exec bash $home/$scripts/i3-sticky-create 2
 
 # >>>> FOR_WINDOW
-for_window [class="^.*"] border normal 1
-force_focus_wrapping yes
+# ////// ALL
+focus_wrapping yes
 workspace_auto_back_and_forth yes
+for_window  [class="^.*"] border normal 1
 for_window  [urgent=latest] focus
 
-# PRESET
+# ////// PRESET
 for_window  [title="alsamixer"] floating enable border pixel 1
 for_window  [class="Calamares"] floating enable border normal
 for_window  [class="Clipgrab"] floating enable
@@ -329,7 +330,7 @@ for_window  [class="Timeset-gui"] floating enable border normal
 for_window  [class="(?i)virtualbox"] floating enable border normal
 for_window  [class="Xfburn"] floating enable
 
-# OWN
+# ////// OWN
 for_window  [title="Netflix"] \
                 mark _sticky_1,border pixel 0,floating enable,\
                 sticky enable,resize set 460 259,$tf "netflix"

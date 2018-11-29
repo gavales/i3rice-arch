@@ -6,9 +6,9 @@ used=$(free|grep 'Swap'|awk '{print $3}')
 c=$(awk -v t=${tot} -v u=${used} 'BEGIN{ print int(u/t*100) }')
 
 if [[ $c -ge 80 ]]; then
-    echo "<span foreground=\"#ff0000\"><span face='Font Awesome 5 Free'>&#xf362;</span> $c%</span>"
+    echo "<span foreground=\"#ff0000\"><span face='Font Awesome 5 Free'>&#xf362;</span> $c</span>"
 elif [[ $c -ge 50 ]]; then
-    echo "<span foreground=\"#ffff00\"><span face='Font Awesome 5 Free'>&#xf362;</span> $c%</span>"
+    echo "<span foreground=\"#ffff00\"><span face='Font Awesome 5 Free'>&#xf362;</span> $c</span>"
 else
-    echo "<span face='Font Awesome 5 Free'>&#xf362;</span> $c%"
+    echo "<span face='Font Awesome 5 Free'>&#xf362;</span> $c"
 fi
