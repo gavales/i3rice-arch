@@ -1,0 +1,124 @@
+// vim:ts=4:sw=4:et
+{
+    // splitv split container with 2 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.3,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "layout": "tabbed",
+            "marks": [
+               "_sticky_1"
+            ],
+            "geometry": {
+               "height": 1060,
+               "width": 945,
+               "x": 10,
+               "y": 10
+            },
+            "name": "con1",
+            "percent": 0.3,
+            "swallows": [
+               {
+               "class": "^Google\\-chrome\\-beta$",
+               "instance": "^www\\.youtube\\.com$",
+               // "title": "^\\(55\\)\\ YouTube$",
+               "transient_for": "^$",
+               "window_role": "^pop\\-up$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            // tabbed split container with 2 children
+            "border": "pixel",
+            "floating": "auto_off",
+            "layout": "tabbed",
+            "marks": [
+               "_sticky_2"
+            ],
+            "name": "con2",
+            "percent": 0.7,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "pixel",
+                    "current_border_width": 0,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 458,
+                       "width": 722,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "newsboat",
+                    "percent": 0.5,
+                    "swallows": [
+                       {
+                       "class": "^URxvt$",
+                       "instance": "^RSS$",
+                       "title": "^newsboat$",
+                       "transient_for": "^$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "pixel",
+                    "current_border_width": 0,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 458,
+                       "width": 722,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "ranger",
+                    "percent": 0.5,
+                    "swallows": [
+                       {
+                       "class": "^URxvt$",
+                       "instance": "^FILES$",
+                       "title": "^ranger$",
+                       "transient_for": "^$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        }
+    ]
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "layout": "tabbed",
+    "marks": [
+        "_sticky_3"
+    ],
+    "geometry": {
+       "height": 1060,
+       "width": 945,
+       "x": 10,
+       "y": 10
+    },
+    "name": "con3",
+    "percent": 0.7,
+    "swallows": [
+       {
+       "class": "^Google\\-chrome\\-beta$",
+       "instance": "^google\\-chrome\\-beta$",
+       "transient_for": "^$",
+       "window_role": "^browser$"
+       }
+    ],
+    "type": "con"
+}
+

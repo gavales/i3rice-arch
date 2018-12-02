@@ -1,5 +1,10 @@
-#i3 config
-#Please see http://i3wm.org/docs/userguide.html for a complete reference!
+#     dBP   dBBBBb dBBBP  dBBBBP dBBBBb  dBBBBP dBP dBBBBb
+#                        dB'.BP     dBP                   
+#   dBP    dBBBP dBP    dB'.BP dBP dBP dBBBP  dBP dBBBB   
+#  dBP      dBP dBP    dB'.BP dBP dBP dBP    dBP dB' BB   
+# dBP   dBBBBP dBBBBP dBBBBP dBP dBP dBP    dBP dBBBBBB   
+
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # >>>> FONT
 set $font1 FixedsysMono
@@ -11,6 +16,7 @@ font pango:$font1,$font2 $fonts
 
 # >>>> DEFINE VARIABLES
 # ////// i3
+
 set $mod        bindsym Mod1
 set $modi       Mod1
 set $win        bindsym Mod4
@@ -20,13 +26,26 @@ set $winwlw     bindsym --whole-window Mod4
 set $execn      exec --no-startup-id
 set $execna     exec_always --no-startup-id
 set $tf         title_format
+set $mk1        mark _win1
+set $mk2        mark _win2
+set $mk3        mark _win3
+set $mvmk1      move to mark _win1
+set $mvmk2      move to mark _win2
+set $mvmk3      move to mark _win3
+set $fw         for_window
+set $flen       floating enable
+set $fldi       floating disable
+set $brnr       border normal
+set $mvcn       move position center
 
 # ////// DIRS
+
 set $home       /home/gavarch
 set $scripts    scripts
 set $scriptpics scriptpics
 
 # ////// APPS
+
 set $term       urxvtc
 #set $term       urxvt
 set $edone      $term -e vim
@@ -41,8 +60,11 @@ set $primary    eDP1
 set $secondary  VGA1
 #set $secondary  VGA-1
 set $tertiary   HDMI1
+set $kb         us
+#set $kb         gb
 
 # ////// WORKSPACE NAMES
+
 set $ws1 1
 set $ws2 2
 set $ws3 3
@@ -55,6 +77,7 @@ set $ws9 9
 set $ws10 10
 
 # ////// COLORS
+
 set_from_resource $blk	color0
 set_from_resource $red	color1
 set_from_resource $grn	color2
@@ -121,7 +144,7 @@ $mod+d              exec rofi -show drun
 $mod+Shift+d        exec dmenu_run -fn "$font3:size=$fonts" -nb \
                         "$blk" -nf "$wht" -sf "$blk" -sb "$blu"
 
-# FOCUS/MOVE/RESIZE
+# ////// FOCUS/MOVE/RESIZE
 $mod+h              $execn bash $home/$scripts/i3focus left
 $mod+j              $execn bash $home/$scripts/i3focus down
 $mod+k              $execn bash $home/$scripts/i3focus up
@@ -140,6 +163,7 @@ $mod+o resize       grow width 10 px or 10 ppt
 
 # >>>> MOD1 BINDINGS
 # ////// WORKFLOW
+
 $mod+Return         exec $term -name TERMINAL
 $mod+f              exec pcmanfm
 $mod+Shift+Return   exec $term -name FILES -e ranger
@@ -159,6 +183,7 @@ $mod+Ctrl+r         exec $browser --new-window \
                         --app=https://docs.google.com/presentation/u/0/
 
 # ////// MEDIA
+
 $mod+Shift+s        exec spotify
 $mod+s              exec $term -name MUSIC -e ncmpcpp
 $mod+v              exec $term -name VIS -e vis
@@ -179,6 +204,7 @@ $mod+bracketright   exec playerctl next
 $mod+bracketleft    exec playerctl previous
 
 # ////// LAYOUT
+
 $mod+g              split toggle
 $mod+e              layout toggle tabbed split
 $mod+Shift+f        fullscreen toggle
@@ -190,6 +216,7 @@ $mod+Shift+minus    move scratchpad
 $mod+minus          scratchpad show
 
 # ////// WORKSPACE
+
 $mod+Ctrl+Right     workspace next
 $mod+Ctrl+Left      workspace prev
 
@@ -218,12 +245,14 @@ $mod+Shift+9        move container to workspace $ws9; workspace $ws9
 $mod+Shift+0        move container to workspace $ws10; workspace $ws10
 
 # ////// GAPS
+
 $mod+Ctrl+y         gaps inner current set 0; gaps outer current set 0
 $mod+Ctrl+o         gaps inner current set 10; gaps outer current set 20
 $mod+Ctrl+u         gaps inner current minus 5; gaps outer current minus 10
 $mod+Ctrl+i         gaps inner current plus 5; gaps outer current plus 10
 
 # ////// SHUTDOWN MODE
+
 $mod+Escape         mode "SHUTDOWN"
 mode "SHUTDOWN" {
     bindsym l $execn i3exit lock, mode "default"
@@ -240,7 +269,6 @@ mode "SHUTDOWN" {
 }
 
 # >>>> MOD4 BINDINGS
-
 $win+Shift+c        reload
 $win+o              exec "$brightinc; bash ~/$scripts/notify_brightness"
 $win+y              exec "$brightdec; bash ~/$scripts/notify_brightness"
@@ -257,7 +285,7 @@ $win+a              $execn bash ~/$scripts/wsloapp
 $win+1              $execn $term -name i3CONF -e vim ~/.config/i3/config
 $win+2              $execn $term -name XSETTINGS -e vim ~/xinclude/xmain
 $win+3              $execn $term -name VIMRC -e vim ~/.vimrc
-$win+4              $execn $term -name RANGER -e vim ~/.config/ranger/rc.conf
+$win+4              $execn $term -name RCCONF -e vim ~/.config/ranger/rc.conf
 $win+5              $execn $term -name i3BLOCKS -e vim ~/scripts/mkblocksconf
 $win+g              exec $term -name GITREPOUPDATE -e bash ~/$scripts/gitcommit
 $win+c              exec $term -name CALENDAR -e vim +Calendar
@@ -265,118 +293,125 @@ $win+r              $execn $term -name RTV -e rtv
 #$win+a              exec $term -name ALSA -e alsamixer
 
 # ////// MPD CONTROLS
+
 $win+p              exec mpc toggle
 $win+bracketright   exec mpc next
 $win+bracketleft    exec mpc prev
 $win+backslash      exec mpc stop
 
 # ////// MULTI-MONITOR
+
 $win+m              exec bash ~/$scripts/multimon
 $win+v              move workspace to output $secondary
 $win+d              move workspace to output $tertiary
 $win+e              move workspace to output $primary
 
 # ////// CHANGE FOCUS
+
 $win+h              focus left
 $win+j              focus down
 $win+k              focus up
 $win+l              focus right
 
 # ////// MOVE FOCUSSED
+
 $win+Shift+h        move left
 $win+Shift+j        move down
 $win+Shift+k        move up
 $win+Shift+l        move right
 
 # ////// STICKY TILED
+
 $win+s              exec bash $home/$scripts/i3-sticky-toggle
 $winwlw+button1     $execn i3-input -F "[con_id=__focused__] mark _sticky_%s"
 $win+Shift+1        exec bash $home/$scripts/i3-sticky-create 1
 $win+Shift+2        exec bash $home/$scripts/i3-sticky-create 2
+$win+Shift+3        exec bash $home/$scripts/i3-sticky-create 3
 
 # >>>> FOR_WINDOW
 # ////// ALL
-focus_wrapping yes
+
+focus_wrapping force
 workspace_auto_back_and_forth yes
-for_window  [class="^.*"] border normal 1
-for_window  [urgent=latest] focus
+$fw [class="^.*"] border pixel 1
+$fw [urgent=latest] focus
 
-# ////// PRESET
-for_window  [title="alsamixer"] floating enable border pixel 1
-for_window  [class="Calamares"] floating enable border normal
-for_window  [class="Clipgrab"] floating enable
-for_window  [title="File Transfer*"] floating enable
-for_window  [class="Galculator"] floating enable border pixel 1
-for_window  [class="GParted"] floating enable border normal
-for_window  [title="i3_help"] floating enable sticky enable border normal
-for_window  [class="Lightdm-gtk-greeter-settings"] floating enable
-for_window  [class="Lxappearance"] floating enable sticky enable border normal 2
-for_window  [class="Manjaro-hello"] floating enable
-for_window  [class="Manjaro Settings Manager"] floating enable border normal
-for_window  [title="MuseScore: Play Panel"] floating enable
-for_window  [class="Nitrogen"] floating enable sticky enable border normal
-for_window  [class="Oblogout"] fullscreen enable
-for_window  [class="octopi"] floating enable
-for_window  [title="About Pale Moon"] floating enable
-for_window  [class="Pamac-manager"] floating enable
-for_window  [class="Pavucontrol"] floating enable
-for_window  [class="qt5ct"] floating enable sticky enable border normal
-for_window  [class="Qtconfig-qt4"] floating enable sticky enable border normal
-for_window  [class="Simple-scan"] floating enable border normal
-for_window  [class="(?i)System-config-printer.py"] floating enable border normal
-for_window  [class="Skype"] floating enable border normal
-for_window  [class="Thus"] floating enable border normal
-for_window  [class="Timeset-gui"] floating enable border normal
-for_window  [class="(?i)virtualbox"] floating enable border normal
-for_window  [class="Xfburn"] floating enable
+# ////// UNMARKED
 
-# ////// OWN
-for_window  [title="Netflix"] \
-                mark _sticky_1,border pixel 0,floating enable,\
-                sticky enable,resize set 460 259,$tf "netflix"
-for_window  [title="Amazon.co.uk: Prime Video"] \
-                mark _sticky_1,border pixel 0,floating enable,\
-                sticky enable,resize set 460 259,$tf "prime-video"
-for_window  [class="MPlayer"] floating enable,border pixel 0,sticky enable
-for_window  [class="mpv"] \
-                mark _sticky_1,border pixel 0,\
-                floating enable,sticky enable
-for_window  [class="Pavucontrol"] floating enable,resize set 525 300
-for_window  [title="Google Play Movies & TV"] \
-                mark _sticky_1,floating enable,\
-                border pixel 0,sticky enable,resize set 480 270,$tf "gp-movies"
-for_window  [class="matplotlib"] floating enable
-for_window  [class="Cam"] floating enable
-for_window  [class="Shutter"] \
-                floating enable,border normal 2,\
-                resize set 500 500,move position center
-for_window  [title="Log in with PayPal"] floating enable,$tf "paypal login"
-for_window  [title="_popout="] floating enable,resize set 500 520,$tf "youtube popout-chat"
-for_window  [class="Blueman-manager"] floating enable
-for_window  [instance="CALC"] floating enable border normal 2,\
-                resize set 480 480,$tf "calculator"
-for_window  [instance="BASHMOUNT"] \
-                floating enable border normal 2,sticky enable,\
-                resize set 430 500,move position center,$tf "bashmount"
-for_window  [instance="GITREPOUPDATE"] \
-                floating enable border normal 2,sticky enable,\
-                resize set 430 500,move position center,$tf "git-sync"
-for_window  [title="YouTube"] mark _sticky_1,border pixel 0,$tf "youtube"
-for_window  [class="Google-chrome-beta"] border pixel 1,$tf "google-chrome"
-for_window  [instance="RSS"] $tf "rss-reader"
-for_window  [instance="MUSIC"] $tf "music-player"
-for_window  [instance="VIS"] $tf "visualiser"
-for_window  [instance="TERM"] $tf "terminal"
-for_window  [instance="FILES"] $tf "file-manager"
-for_window  [instance="CALENDAR"] $tf "calendar",move to container [con_mark="_sticky_2"]
+$fw [class="Clipgrab"]                      $flen
+$fw [title="File Transfer*"]                $flen
+$fw [class="Lightdm-gtk-greeter-settings"]  $flen
+$fw [class="Manjaro-hello"]                 $flen
+$fw [class="octopi"]                        $flen
+$fw [title="About Pale Moon"]               $flen
+$fw [class="Pamac-manager"]                 $flen
+$fw [class="Pavucontrol"]                   $flen
+$fw [class="Xfburn"]                        $flen
+$fw [title="MuseScore: Play Panel"]         $flen
+$fw [title="alsamixer"]                     $flen
+$fw [class="Calamares"]                     $flen,$brnr
+$fw [class="Galculator"]                    $flen
+$fw [class="GParted"]                       $flen,$brnr
+$fw [title="i3_help"]                       $flen,$brnr
+$fw [class="Lxappearance"]                  $flen,$brnr
+$fw [class="Manjaro Settings Manager"]      $flen,$brnr
+$fw [class="Nitrogen"]                      $flen,$brnr
+$fw [class="Oblogout"]                      $flen
+$fw [class="qt5ct"]                         $flen,$brnr
+$fw [class="Qtconfig-qt4"]                  $flen,$brnr
+$fw [class="Simple-scan"]                   $flen,$brnr
+$fw [class="(?i)System-config-printer.py"]  $flen,$brnr
+$fw [class="Skype"]                         $flen,$brnr
+$fw [class="Thus"]                          $flen,$brnr
+$fw [class="Timeset-gui"]                   $flen,$brnr
+$fw [class="(?i)virtualbox"]                $flen,$brnr
+$fw [class="matplotlib"]                    $flen,$brnr
+$fw [class="Cam"]                           $flen,$brnr
+$fw [class="Blueman-manager"]               $flen,$brnr
+$fw [class="Shutter"]                       $flen,$brnr,$mvcn,\
+                                                resize set 500 500
+$fw [instance="CALC"]                       $flen,$brnr,$mvcn,\
+                                                resize set 480 480,\
+                                                $tf "calculator"
+$fw [instance="BASHMOUNT"]                  $flen,$brnr,$mvcn,\
+                                                resize set 430 500,\
+                                                $tf "bashmount"
+$fw [instance="GITREPOUPDATE"]              $flen,$brnr,$mvcn,\
+                                                resize set 430 500,\
+                                                $tf "git-sync"
+$fw [class="Pavucontrol"]                   $flen,$brnr,\
+                                                resize set 525 300
 
-assign      [instance="RSS"]    $ws1
-assign      [title="YouTube"]   $ws1
-assign      [class="Nautilus"]  $ws2
-for_window  [class="Spotify"]   move to workspace $ws9
-assign      [instance="MUSIC"]	$ws9
-assign      [instance="VIS"]    $ws9
-assign      [class="Arandr"]    $ws10
+# ////// MARKED
+
+$fw [instance="MUSIC"]                      $mk1,$tf "ncmpcpp"
+$fw [instance="RSS"]                        $mk2,$tf "newsboat"
+$fw [title="Google Chrome$"]                $mk3,$tf "google chrome"
+
+$fw [class="MPlayer"]                       $mvmk1
+$fw [class="mpv"]                           $mvmk1
+$fw [class="feh"]                           $mvmk1
+$fw [title="^My Movies & TV"]               $mvmk1,$tf "movies"
+$fw [title="Log in with PayPal"]            $mvmk1,$tf "paypal login"
+$fw [instance="VIS"]                        $mvmk1,$tf "visualiser"
+$fw [title="YouTube$"]                      $mvmk1,$tf "youtube"
+$fw [title="^Netflix$"]                     $mvmk1,$tf "netflix"
+$fw [title="Amazon.co.uk: Prime Video"]     $mvmk1,$tf "prime video"
+
+$fw [class="Nautilus"]                      $mvmk2
+$fw [class="Pcmanfm"]                       $mvmk2
+$fw [class="Arandr"]                        $mvmk2
+$fw [instance="RTV"]                        $mvmk2,$tf "reddit"
+$fw [title="_popout="]                      $mvmk2,$tf "popout chat"
+    
+$fw [instance="FILES"]                      $mvmk3
+$fw [class="Spotify"]                       $mvmk3
+$fw [instance="CALENDAR"]                   $mvmk3,$tf "vim calendar"
+$fw [instance="i3CONF"]                     $mvmk3,$tf "i3 config"
+$fw [instance="XSETTINGS"]                  $mvmk3,$tf "xresources"
+$fw [instance="VIMRC"]                      $mvmk3,$tf "vimrc"
+$fw [instance="RCCONF"]                     $mvmk3,$tf "ranger config"
+$fw [instance="i3BLOCKS"]                   $mvmk3,$tf "i3blocks"
 
 # >>>> GAPS
 gaps inner 10
@@ -386,8 +421,6 @@ workspace $ws1 gaps inner 0
 workspace $ws1 gaps outer 0
 workspace $ws2 gaps inner 0
 workspace $ws2 gaps outer 0
-workspace $ws9 gaps inner 40
-workspace $ws9 gaps outer 80
 
 # >>>> STARTUP
 # DAEMONS
@@ -405,8 +438,7 @@ $execn          feh --bg-scale ~/.config/wall.png
 $execn          mpd
 $execn          shutter --min_at_startup
 $execn          python $home/$scripts/i3-sticky
-exec            setxkbmap us
-#exec            setxkbmap gb
+exec            setxkbmap $kb
 
 # PROGRAMS
 $execn          "i3-msg 'workspace $ws1; append_layout $home/.config/i3/main.json'"

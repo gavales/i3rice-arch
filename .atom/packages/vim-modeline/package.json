@@ -1,0 +1,207 @@
+{
+  "_from": "https://www.atom.io/api/packages/vim-modeline/versions/0.5.2/tarball",
+  "_id": "vim-modeline@0.5.2",
+  "_inBundle": false,
+  "_integrity": "sha512-2XJSmyaboHN27LuiaBT1QJA3T8EpAqG6KOwtzsvO8eQ/9X8lUpFpfiHrWymXkcTMRlO7Hi6nr7ho9b/hlQu1bg==",
+  "_location": "/vim-modeline",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/vim-modeline/versions/0.5.2/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/vim-modeline/versions/0.5.2/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/vim-modeline/versions/0.5.2/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/vim-modeline/versions/0.5.2/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/vim-modeline/versions/0.5.2/tarball",
+  "_shasum": "7ae6dba7441e5decb1b880f9316cadbb873ac431",
+  "_spec": "https://www.atom.io/api/packages/vim-modeline/versions/0.5.2/tarball",
+  "_where": "/tmp/apm-install-dir-118112-16754-17xlfph.ivnth",
+  "bugs": {
+    "url": "https://github.com/fkfk/vim-modeline/issues"
+  },
+  "bundleDependencies": false,
+  "configSchema": {
+    "readLineNum": {
+      "type": "integer",
+      "default": 5,
+      "minimum": 1
+    },
+    "prefix": {
+      "type": "array",
+      "default": [
+        "vi",
+        "vim",
+        "ex",
+        "atom"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "insertPrefix": {
+      "type": "string",
+      "enum": [
+        "vi",
+        "vim",
+        "ex",
+        "atom"
+      ],
+      "default": "atom"
+    },
+    "insertModelinePosition": {
+      "type": "string",
+      "enum": [
+        "first row",
+        "last row",
+        "above cursor row",
+        "below cursor row"
+      ],
+      "default": "last row"
+    },
+    "insertModelineType": {
+      "type": "string",
+      "enum": [
+        "short",
+        "long",
+        "original"
+      ],
+      "default": "long"
+    }
+  },
+  "dependencies": {
+    "iconv-lite": "^0.4.13",
+    "underscore-plus": "^1.6.6"
+  },
+  "deprecated": false,
+  "description": "Enable Vim-style modeline in Atom.",
+  "engines": {
+    "atom": ">=1.0.0"
+  },
+  "homepage": "https://github.com/fkfk/vim-modeline#readme",
+  "keywords": [
+    "vim",
+    "format",
+    "code",
+    "style",
+    "code-style"
+  ],
+  "license": "MIT",
+  "main": "./lib/vim-modeline",
+  "name": "vim-modeline",
+  "providedServices": {
+    "vim-modeline-event-handler": {
+      "description": "vim-modeline event handler",
+      "versions": {
+        "1.0.0": "provideVimModelineEventHandlerV1"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fkfk/vim-modeline.git"
+  },
+  "version": "0.5.2",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "iconv-lite",
+        "version": "0.4.24",
+        "path": "node_modules/iconv-lite/lib/index.js"
+      },
+      {
+        "name": "safer-buffer",
+        "version": "2.1.2",
+        "path": "node_modules/safer-buffer/safer.js"
+      },
+      {
+        "name": "underscore",
+        "version": "1.8.3",
+        "path": "node_modules/underscore/underscore.js"
+      },
+      {
+        "name": "underscore-plus",
+        "version": "1.6.8",
+        "path": "node_modules/underscore-plus/lib/underscore-plus.js"
+      }
+    ],
+    "extensions": {
+      ".coffee": [
+        "lib/vim-modeline-filetype.coffee",
+        "lib/vim-modeline.coffee"
+      ],
+      ".js": [
+        "node_modules/iconv-lite/encodings/dbcs-codec.js",
+        "node_modules/iconv-lite/encodings/dbcs-data.js",
+        "node_modules/iconv-lite/encodings/index.js",
+        "node_modules/iconv-lite/encodings/internal.js",
+        "node_modules/iconv-lite/encodings/sbcs-codec.js",
+        "node_modules/iconv-lite/encodings/sbcs-data-generated.js",
+        "node_modules/iconv-lite/encodings/sbcs-data.js",
+        "node_modules/iconv-lite/encodings/utf16.js",
+        "node_modules/iconv-lite/encodings/utf7.js",
+        "node_modules/iconv-lite/lib/bom-handling.js",
+        "node_modules/iconv-lite/lib/extend-node.js",
+        "node_modules/iconv-lite/lib/index.js",
+        "node_modules/iconv-lite/lib/streams.js",
+        "node_modules/safer-buffer/dangerous.js",
+        "node_modules/safer-buffer/safer.js",
+        "node_modules/safer-buffer/tests.js",
+        "node_modules/underscore/underscore-min.js",
+        "node_modules/underscore/underscore.js",
+        "node_modules/underscore-plus/lib/underscore-plus.js"
+      ],
+      ".json": [
+        "node_modules/iconv-lite/encodings/tables/big5-added.json",
+        "node_modules/iconv-lite/encodings/tables/cp936.json",
+        "node_modules/iconv-lite/encodings/tables/cp949.json",
+        "node_modules/iconv-lite/encodings/tables/cp950.json",
+        "node_modules/iconv-lite/encodings/tables/eucjp.json",
+        "node_modules/iconv-lite/encodings/tables/gb18030-ranges.json",
+        "node_modules/iconv-lite/encodings/tables/gbk-added.json",
+        "node_modules/iconv-lite/encodings/tables/shiftjis.json",
+        "node_modules/iconv-lite/package.json",
+        "node_modules/safer-buffer/package.json",
+        "node_modules/underscore/package.json",
+        "node_modules/underscore-plus/package.json",
+        "package.json"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          "lib",
+          ""
+        ],
+        "dependencies": {
+          "iconv-lite": "^0.4.13",
+          "underscore-plus": "^1.6.6"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/iconv-lite/encodings",
+          "node_modules/iconv-lite/encodings/tables",
+          "node_modules/iconv-lite/lib",
+          "node_modules/iconv-lite"
+        ],
+        "dependencies": {
+          "safer-buffer": ">= 2.1.2 < 3"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/underscore-plus/lib",
+          "node_modules/underscore-plus"
+        ],
+        "dependencies": {
+          "underscore": "~1.8.3"
+        }
+      }
+    ]
+  }
+}

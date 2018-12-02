@@ -1,5 +1,11 @@
-">>>> SETTINGS
-"////// GENERAL
+"  dBP dP  dBP dBBBBBBb dBBBBBb    dBBBP
+"               '   dB'     dBP
+" dB .BP dBP dB'dB'dB'  dBBBBK'  dBP
+" BB.BP dBP dB'dB'dB'  dBP  BB  dBP
+" BBBP dBP dB'dB'dB'  dBP  dB' dBBBBP
+
+" >>>> SETTINGS
+" ////// GENERAL
 filetype plugin on    " required
 execute pathogen#infect()
 syntax enable
@@ -23,16 +29,12 @@ autocmd FileType conf call matchadd('ColorColumn', '\%81v', 100)
 autocmd FileType perl call matchadd('ColorColumn', '\%81v', 100)
 autocmd FileType sh call matchadd('ColorColumn', '\%81v', 100)
 
-inoremap ;<Tab> <Esc>/>>>>>><Enter>
-map ;<Tab> <Esc>/>>>>>><Enter>
+map <Tab><Tab> <Esc>/>>>><Enter>
 
-inoremap ph<Tab> <++>
-nnoremap ph<Tab> i<++><Esc>
+inoremap \ph <++>
+nnoremap \ph i<++><Esc>
 
-inoremap ,<Tab> <Esc>/<++><Enter>4xi
-nnoremap ,<Tab> /<++><Enter>4xi
-
-"////// CHANGE HIGHLIGHT COLOURS
+" ////// CHANGE HIGHLIGHT COLOURS
 hi Normal ctermbg=none guibg=black
 hi LineNr ctermbg=none ctermfg=grey
 hi Folded ctermfg=grey ctermbg=none
@@ -40,28 +42,28 @@ hi ModeMsg cterm=bold ctermfg=white
 hi lCursor ctermbg=white ctermfg=black
 hi ColorColumn ctermbg=red
 
-"////// RESIZING
+" ////// RESIZING
 map .rk :res<space>+5<Enter>
 map .rj :res<space>-5<Enter>
 map .rh :vertical<space>resize<space>-5<Enter>
 map .rl :vertical<space>resize<space>+5<Enter>
 
-"////// SPLIT OPEN AT BOTTOM & RIGHT
+" ////// SPLIT OPEN AT BOTTOM & RIGHT
 set splitbelow
 set splitright
 
-"////// BRACKETS
+" ////// BRACKETS
 inoremap () ()<++><Esc>F)i
 inoremap [] []<++><Esc>F]i
 inoremap {} {}<++><Esc>F}i
 
-"////// CALENDAR
+" ////// CALENDAR
 let g:calendar_frame = 'default'
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
 let g:calendar_modifiable = 1
 
-">>>> COMMENT/UNCOMMENT
+" >>>> COMMENT/UNCOMMENT
 vnoremap \# :'<,'>norm 0i#<Enter>
 vnoremap \d# :'<,'>norm 0x<Enter>
 vnoremap \% :'<,'>norm 0i%<Enter>
@@ -71,7 +73,7 @@ vnoremap \d! :'<,'>norm 0x<Enter>
 vnoremap \" :'<,'>norm 0i"<Enter>
 vnoremap \d" :'<,'>norm 0x<Enter>
 
-">>>> GOYO
+" >>>> GOYO
 map \gy :Goyo<bar>hi<space>Normal<space>ctermbg=none<space>guibg=black<bar>
 	\hi<space>LineNr<space>ctermbg=none<space>ctermfg=grey<bar>
 	\hi<space>Folded<space>ctermfg=grey<space>ctermbg=none<bar>
@@ -79,8 +81,8 @@ map \gy :Goyo<bar>hi<space>Normal<space>ctermbg=none<space>guibg=black<bar>
 	\hi<space>lCursor<space>ctermbg=white<space>ctermfg=black
 	\<Enter><Enter>
 
-">>>> STATUSLINE
-"////// FUNCTIONS
+" >>>> STATUSLINE
+" ////// FUNCTIONS
 set laststatus=2
 
 function! FileSize()
@@ -121,19 +123,19 @@ function! StatuslineGit()
   return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
 endfunction
 
-"////// ACTUAL
+" ////// ACTUAL
 set statusline=
 set statusline+=%#lCursor#
-set statusline+=\ /%F 
-set statusline+=\ 
+set statusline+=\ /%F
+set statusline+=\
 set statusline+=%#LineNr#
-set statusline+=\ %-3(%{FileSize()}%) 
-set statusline+=\ %{ReadOnly()}\ %m\ %w\ 
+set statusline+=\ %-3(%{FileSize()}%)
+set statusline+=\ %{ReadOnly()}\ %m\ %w\
 set statusline+=%=
 set statusline+=\ %Y
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\[%{&fileformat}\]
-set statusline+=\ 
+set statusline+=\
 set statusline+=%#lCursor#
 set statusline+=\ %p%%
 set statusline+=\ L:
@@ -141,11 +143,11 @@ set statusline+=%l/
 set statusline+=%L
 set statusline+=\ C:
 set statusline+=%c
-set statusline+=\ 
+set statusline+=\
 
 
-">>>> LATEX
-"////// LATEX-SUITE
+" >>>> LATEX
+" ////// LATEX-SUITE
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode -shell-escape $*'
 "let g:Tex_ViewRule_pdf = '/usr/bin/evince'
@@ -163,7 +165,7 @@ set grepprg=grep\ -nH\ $* "set grep to always generate filename
 let g:tex_flavor='latex' "invoke tex, not plaintex, for empty tex file
 set iskeyword+=: "press <C-n> to cycle through \label's
 
-"////// COMPILE PDF
+" ////// COMPILE PDF
 autocmd Filetype tex map \cp :w<space>!bash<space>~/scripts/clatex<space><C-r>
 	\%<Enter><Enter>
 autocmd Filetype tex map \sp :w<space>!pdflatex<space>-interaction=nonstopmode
@@ -178,7 +180,7 @@ autocmd Filetype tex inoremap \sp <Esc>:w<Space>!pdflatex<space>
 autocmd Filetype tex inoremap \sx <Esc>:w<Space>!xelatex<space>
 	\-interaction=nonstopmode<space>-shell-escape<space><C-r>%<Enter><Enter>i
 
-"////// VIEW PDF
+" ////// VIEW PDF
 autocmd Filetype tex map \vp :silent<space>!bash<space>~/scripts/openpdf<space>
 	\<C-r>%<BS><BS><BS>pdf<Enter>
 autocmd Filetype rmd map \vp :silent<space>!bash<space>~/scripts/openpdf<space>
@@ -186,15 +188,15 @@ autocmd Filetype rmd map \vp :silent<space>!bash<space>~/scripts/openpdf<space>
 autocmd Filetype markdown map \vp :silent<space>!bash<space>~/scripts/openpdf
 	\<space><C-r>%<BS><BS>pdf<Enter>
 
-"////// BIBER
+" ////// BIBER
 autocmd Filetype tex map \cb :!biber<space><C-r>%<BS><BS><BS>bcf<Enter><Enter>
 
-"////// MAKEINDEX
+" ////// MAKEINDEX
 autocmd Filetype tex map \mi :!makeindex<space><C-r>%<BS><BS><BS>
 	\nlo<space>-s<space>nomencl.ist<space>-o<space><C-r>%<BS><BS><BS>
 	\nls<Enter><Enter>
 
-"////// LUKE SMITH'S FANTASTIC VIM MACROS
+" ////// LUKE SMITH'S FANTASTIC VIM MACROS
 autocmd FileType tex inoremap $$ $$<++><Esc>F$i
 autocmd FileType tex inoremap \( \left(\right)<++><Esc>T(i
 autocmd FileType tex inoremap \{{ \left\{\right\}<++><Esc>T{i
@@ -226,7 +228,7 @@ autocmd FileType tex inoremap \ls2 \label{ssec:}<Space><++><Esc>T:i
 autocmd FileType tex inoremap \ls3 \label{sssec:}<Space><++><Esc>T:i
 
 autocmd FileType tex inoremap \pc \parencite{}<++><Esc>T{i
-autocmd FileType tex inoremap \pt \item 
+autocmd FileType tex inoremap \pt \item
 
 autocmd FileType tex inoremap \rf \ref{fig:}<Space><++><Esc>T:i
 autocmd FileType tex inoremap \rt \ref{tab:}<Space><++><Esc>T:i
@@ -259,7 +261,7 @@ autocmd FileType tex vnoremap \bm xa\begin{multicols}{2}<Enter><Esc>pa
 
 autocmd FileType tex map \ob :sp<space><C-r>%<BS><BS><BS>bib<Enter>
 
-"////// BIB SHORTCUTS
+" ////// BIB SHORTCUTS
 autocmd Filetype bib inoremap \a <Esc>A<Enter>@article{,<Enter>}<Esc>kf,i
 autocmd Filetype bib inoremap \b <Esc>A<Enter>@book{,<Enter>}<Esc>kf,i
 autocmd Filetype bib inoremap \i <Esc>A<Enter>@inproceedings{,<Enter>}<Esc>kf,i
@@ -293,7 +295,7 @@ autocmd Filetype bib inoremap \o <Esc>A<Enter>@online{,<Enter>
 	\<Tab>author<space>=<space>{<++>},<Enter>
 	\<Tab>publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>06kf,i
 
-">>>> PDF WORDCOUNT
+" >>>> PDF WORDCOUNT
 autocmd Filetype tex map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
 	\<BS><BS><BS><BS><Enter>
 autocmd Filetype rmd map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
@@ -302,8 +304,8 @@ autocmd Filetype markdown map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
 	\<BS><BS><BS><Enter>
 
 
-">>>> MARKDOWN
-"////// MACROS
+" >>>> MARKDOWN
+" ////// MACROS
 autocmd FileType markdown nnoremap \1h A<Enter><Enter>#<space>
 autocmd FileType markdown nnoremap \2h A<Enter><Enter>##<space>
 autocmd FileType markdown nnoremap \3h A<Enter><Enter>###<space>
@@ -388,15 +390,15 @@ autocmd FileType markdown vnoremap \7p :'<,'>norm 0dt+i<Tab><Tab><Tab><Tab><Tab>
 autocmd FileType markdown vnoremap \1n :'<,'>norm 0dt1.<Enter>
 autocmd FileType markdown vnoremap \2n :'<,'>norm 0dt1.i<Tab><Esc>
 autocmd FileType markdown vnoremap \3n :'<,'>norm 0dt1.i<Tab><Tab><Esc>
-autocmd FileType markdown vnoremap \4n :'<,'>norm 0dt1.                i<Tab><Tab><Tab><Esc>
-autocmd FileType markdown vnoremap \5n :'<,'>norm 0dt1.                i<Tab><Tab><Tab><Tab><Esc>
-autocmd FileType markdown vnoremap \6n :'<,'>norm 0dt1.                i<Tab><Tab><Tab><Tab><Tab><Esc>
-autocmd FileType markdown vnoremap \7n :'<,'>norm 0dt1.                i<Tab><Tab><Tab><Tab><Tab><Tab><Esc>
+autocmd FileType markdown vnoremap \4n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Esc>
+autocmd FileType markdown vnoremap \5n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Esc>
+autocmd FileType markdown vnoremap \6n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Tab><Esc>
+autocmd FileType markdown vnoremap \7n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Tab><Tab><Esc>
 
-"////// COMPILER
+" ////// COMPILER
 autocmd Filetype markdown map \cm :!bash<space>~/scripts/cmkd<space><C-r>%<Enter><Enter>
 
-">>>> R MARKDOWN
+" >>>> R MARKDOWN
 autocmd Filetype rmd map \ll :!echo<space>"require(rmarkdown);<space>
 	\render('<c-r>%')"<space>\|<space>R<space>--vanilla<Enter><Enter>
 autocmd Filetype rmd inoremap ;r ```{r}<CR>```<CR><CR><esc>2kO
@@ -465,7 +467,5 @@ autocmd FileType rmd vnoremap \s xa~~<Esc>pa~~<Esc>
 autocmd FileType rmd vnoremap \p :'<,'>norm 0i-<space><Esc>
 autocmd FileType rmd vnoremap \n :'<,'>norm 0i1.<space><Esc>
 
-">>>> PYTHON FILES
+" >>>> PYTHON FILES
 autocmd Filetype python map \ll :w<space>!python<Enter>
-
-

@@ -1,9 +1,3 @@
-rename ws1.png
-rename ws.png
-rename ws4.png
-rename ws2.png
-rename ws3.png
-rename andalusia
 rename 2018_11_15.md
 rename music.json
 rename musicvis.json
@@ -44,7 +38,13 @@ rename i3-sticky-toggle
 open_with vim
 wq
 
-open_with 
 shell 
 rename nikes
 rename purple
+rename .gvimrc
+open_with 
+open_with gvim
+rename main2.json_
+rename main2.json
+rename rice-syntax
+open_with atom

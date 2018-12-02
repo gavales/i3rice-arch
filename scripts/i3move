@@ -14,7 +14,7 @@ height=$(echo $geometry | awk '{print $2}')
 geo=\"width\":${width},\"height\":${height}
 
 if [[ $tabbed =~ $geo ]]; then
-    i3-msg "focus parent; move $dir"
+    i3-msg "focus parent; move $dir; focus child"
 else
     i3-msg move $dir
 fi
