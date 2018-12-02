@@ -8,11 +8,11 @@ ft=$3
 
 cd $HOME
 
-if [[ ! -d $bashDir ]]; then
-    mkdir $bashDir
-    cd $bashDir
+if [[ ! -d $pyDir ]]; then
+    mkdir $pyDir
+    cd $pyDir
 else
-    cd $bashDir
+    cd $pyDir
 fi
 
 if [[ -n $subdir ]]; then
@@ -29,10 +29,11 @@ fi
 if [[ -f $file ]]; then
     vim $file
 else
-    echo "#!/bin/bash" > $file
-    echo "" >> $file
-    echo "# OA: Gavin Vales" >> $file
+    echo "# OA: Gavin Vales" > $file
     echo "# CREATED: $(date)" >> $file
+    echo "" >> $file
+    echo "import numpy as np" >> $file
+    echo "import matplotlib.pyplot as py" >> $file
     echo "" >> $file
     echo "" >> $file
     chmod +x $file
