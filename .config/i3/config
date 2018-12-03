@@ -129,6 +129,8 @@ bar {
 }
 
 # >>>> MOD1 IMPORTANT
+# ////// PANIC
+
 $mod+Shift+r        restart
 $mod+Shift+c        $execn "bash $home/$scripts/xtheme; \
 	                    bash $home/$scripts/reloadconfs; i3-msg reload; \
@@ -145,10 +147,11 @@ $mod+Shift+d        exec dmenu_run -fn "$font3:size=$fonts" -nb \
                         "$blk" -nf "$wht" -sf "$blk" -sb "$blu"
 
 # ////// FOCUS/MOVE/RESIZE
-$mod+h              $execn bash $home/$scripts/i3focus left
-$mod+j              $execn bash $home/$scripts/i3focus down
-$mod+k              $execn bash $home/$scripts/i3focus up
-$mod+l              $execn bash $home/$scripts/i3focus right
+
+$mod+h              $execn bash $home/$scripts/i3viswiz left
+$mod+j              $execn bash $home/$scripts/i3viswiz down
+$mod+k              $execn bash $home/$scripts/i3viswiz up
+$mod+l              $execn bash $home/$scripts/i3viswiz right
 $mod+Tab            focus right
 $mod+Shift+Tab      focus left
 $mod+a              focus parent
@@ -173,6 +176,7 @@ $mod+q              exec $term -name CALC -e R
 $mod+Shift+u        exec $browser --new-window \
                         --app=https://outlook.office365.com/owa/?realm=soton.ac.uk
 $mod+Shift+g        exec bash ~/$scripts/grivesync
+$mod+Shift+a        exec atom
 
 # GOOGLE DOCs
 $mod+Ctrl+q         exec $browser --new-window \
@@ -185,7 +189,7 @@ $mod+Ctrl+r         exec $browser --new-window \
 # ////// MEDIA
 
 $mod+Shift+s        exec spotify
-$mod+s              exec $term -name MUSIC -e ncmpcpp
+$mod+s              exec $term -fn "xft:monospace:size=$fonts" -name MUSIC -e ncmpcpp
 $mod+v              exec $term -name VIS -e vis
 $mod+Shift+v        exec $term -name NCMVIS -e ncmpcpp -s visualizer
 $mod+Shift+n        exec $browser --new-window \
@@ -196,6 +200,8 @@ $mod+m              exec $browser --new-window \
                         --app=https://play.google.com/movies/
 $mod+Shift+y        exec $browser --new-window \
                         --app=https://www.youtube.com/
+$mod+Shift+i        exec $browser --new-window \
+                        --app=https://www.bbc.co.uk/iplayer/
 $mod+r              $execn $term -name RSS -e newsboat
 
 # GUI PLAYER CONTROLS
@@ -288,7 +294,8 @@ $win+3              $execn $term -name VIMRC -e vim ~/.vimrc
 $win+4              $execn $term -name RCCONF -e vim ~/.config/ranger/rc.conf
 $win+5              $execn $term -name i3BLOCKS -e vim ~/scripts/mkblocksconf
 $win+g              exec $term -name GITREPOUPDATE -e bash ~/$scripts/gitcommit
-$win+c              exec $term -name CALENDAR -e vim +Calendar
+$win+c              exec $term -fn "xft:monospace:size=$fonts" \
+                        -name CALENDAR -e vim "+Calendar -view=day"
 $win+r              $execn $term -name RTV -e rtv
 #$win+a              exec $term -name ALSA -e alsamixer
 
@@ -394,7 +401,9 @@ $fw [class="feh"]                           $mvmk1
 $fw [title="^My Movies & TV"]               $mvmk1,$tf "movies"
 $fw [title="Log in with PayPal"]            $mvmk1,$tf "paypal login"
 $fw [instance="VIS"]                        $mvmk1,$tf "visualiser"
+$fw [instance="NCMVIS"]                     $mvmk1,$tf "ncmpcpp vis"
 $fw [title="YouTube$"]                      $mvmk1,$tf "youtube"
+$fw [title="^BBC iPlayer$"]                 $mvmk1,$tf "iplayer"
 $fw [title="^Netflix$"]                     $mvmk1,$tf "netflix"
 $fw [title="Amazon.co.uk: Prime Video"]     $mvmk1,$tf "prime video"
 
@@ -403,11 +412,12 @@ $fw [class="Pcmanfm"]                       $mvmk2
 $fw [class="Arandr"]                        $mvmk2
 $fw [instance="RTV"]                        $mvmk2,$tf "reddit"
 $fw [title="_popout="]                      $mvmk2,$tf "popout chat"
+$fw [instance="CALENDAR"]                   $mvmk2,$tf "vim calendar"
     
-$fw [instance="FILES"]                      $mvmk3
+#$fw [instance="FILES"]                      $mvmk3
 $fw [class="Spotify"]                       $mvmk3
-$fw [instance="CALENDAR"]                   $mvmk3,$tf "vim calendar"
-$fw [instance="i3CONF"]                     $mvmk3,$tf "i3 config"
+$fw [class="Atom"]                          $mvmk3
+$fw [instance="i3CONF"]                     $mvmk3,$tf "i3config"
 $fw [instance="XSETTINGS"]                  $mvmk3,$tf "xresources"
 $fw [instance="VIMRC"]                      $mvmk3,$tf "vimrc"
 $fw [instance="RCCONF"]                     $mvmk3,$tf "ranger config"

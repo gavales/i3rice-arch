@@ -127,15 +127,15 @@ endfunction
 set statusline=
 set statusline+=%#lCursor#
 set statusline+=\ /%F
-set statusline+=\
+set statusline+=\ 
 set statusline+=%#LineNr#
 set statusline+=\ %-3(%{FileSize()}%)
-set statusline+=\ %{ReadOnly()}\ %m\ %w\
+set statusline+=\ %{ReadOnly()}\ %m\ %w\ 
 set statusline+=%=
 set statusline+=\ %Y
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\[%{&fileformat}\]
-set statusline+=\
+set statusline+=\ 
 set statusline+=%#lCursor#
 set statusline+=\ %p%%
 set statusline+=\ L:
@@ -143,7 +143,7 @@ set statusline+=%l/
 set statusline+=%L
 set statusline+=\ C:
 set statusline+=%c
-set statusline+=\
+set statusline+=\ 
 
 
 " >>>> LATEX
