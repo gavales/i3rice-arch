@@ -1,0 +1,57 @@
+{
+  "_from": "https://www.atom.io/api/packages/language-awk/versions/0.1.12/tarball",
+  "_id": "language-awk@0.1.12",
+  "_inBundle": false,
+  "_integrity": "sha512-hjD+Nm5rWfwdHX3BwNac4C0JoMadivOG1f1jxypv0CMcqte7qtEtsv9RMSUXeOMqqX7+C9Nl8nomyfaQkXSm5A==",
+  "_location": "/language-awk",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/language-awk/versions/0.1.12/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/language-awk/versions/0.1.12/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/language-awk/versions/0.1.12/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/language-awk/versions/0.1.12/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/language-awk/versions/0.1.12/tarball",
+  "_shasum": "f806558045e880b00ef1e5570527a553688bd48f",
+  "_spec": "https://www.atom.io/api/packages/language-awk/versions/0.1.12/tarball",
+  "_where": "/tmp/apm-install-dir-118112-9385-hil63s.9xx77",
+  "bugs": {
+    "url": "https://github.com/c-steiner/language-awk/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "AWK language support in Atom.",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/c-steiner/language-awk#readme",
+  "keywords": [
+    "language",
+    "awk",
+    "grammar"
+  ],
+  "license": "MIT",
+  "name": "language-awk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c-steiner/language-awk.git"
+  },
+  "version": "0.1.12",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "coffeelint.json",
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

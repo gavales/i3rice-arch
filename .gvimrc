@@ -17,13 +17,13 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set cursorline
-set guifont=Ubuntu\ Mono:h12
-set guioptions-=m  "remove menu bar
-set guioptions-=T  "remove toolbar
-set guioptions-=r  "remove right-hand scroll bar
-set guioptions-=L  "remove left-hand scroll bar
-set lines=999 columns=999
-au GUIEnter * simalt ~x
+"set guifont=Ubuntu\ Mono:h12
+"set guioptions-=m  "remove menu bar
+"set guioptions-=T  "remove toolbar
+"set guioptions-=r  "remove right-hand scroll bar
+"set guioptions-=L  "remove left-hand scroll bar
+"set lines=999 columns=999
+"au GUIEnter * simalt ~x
 autocmd FileType python call matchadd('ColorColumn', '\%81v', 100)
 autocmd FileType vim call matchadd('ColorColumn', '\%81v', 100)
 autocmd FileType conf call matchadd('ColorColumn', '\%81v', 100)

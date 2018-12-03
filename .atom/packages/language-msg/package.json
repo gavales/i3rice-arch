@@ -1,0 +1,55 @@
+{
+  "_from": "https://www.atom.io/api/packages/language-msg/versions/0.2.0/tarball",
+  "_id": "language-msg@0.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-xychTld2AuVUkLA1ill1nFyka6zDYAMXQoRkKL/0X/svX29rbd25cldKRXPcCsGtIN973IQ1NQg3Am9G43tabg==",
+  "_location": "/language-msg",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/language-msg/versions/0.2.0/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/language-msg/versions/0.2.0/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/language-msg/versions/0.2.0/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/language-msg/versions/0.2.0/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/language-msg/versions/0.2.0/tarball",
+  "_shasum": "fbc36c96f95ce1eb0bcb1481ddc16972c1840e93",
+  "_spec": "https://www.atom.io/api/packages/language-msg/versions/0.2.0/tarball",
+  "_where": "/tmp/apm-install-dir-118112-9630-l0larz.o9hlm",
+  "bugs": {
+    "url": "https://github.com/ajshort/atom-language-msg/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Language support for ROS action, msg and srv files",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/ajshort/atom-language-msg#readme",
+  "keywords": [
+    "language",
+    "ros",
+    "msg"
+  ],
+  "license": "MIT",
+  "name": "language-msg",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajshort/atom-language-msg.git"
+  },
+  "version": "0.2.0",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}
