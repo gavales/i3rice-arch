@@ -17,12 +17,12 @@ blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
   echo -e "color = \"$blackd\"\n" >> dunst-theme
 
   echo "[urgency_low]" >> dunst-theme
-  echo "background = \"$green\"" >> dunst-theme
+  echo "background = \"$blue\"" >> dunst-theme
   echo "foreground = \"$blackd\"" >> dunst-theme
   echo -e "timeout = 3\n" >> dunst-theme
 
   echo "[urgency_normal]" >> dunst-theme
-  echo "background = \"$yellow\"" >> dunst-theme
+  echo "background = \"$green\"" >> dunst-theme
   echo "foreground = \"$blackd\"" >> dunst-theme
   echo -e "timeout = 3\n" >> dunst-theme
 
