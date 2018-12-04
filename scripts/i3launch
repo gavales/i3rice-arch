@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+# CREATED: Tue  4 Dec 15:23:43 GMT 2018
+
+app=$1
+mark=$2
+
+if [[ -n $mark ]]; then
+    i3-msg -q [con_mark=$mark] focus
+    i3-msg -q exec "$app"
+else
+    i3-msg -q exec "$app"
+fi
