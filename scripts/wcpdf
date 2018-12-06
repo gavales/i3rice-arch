@@ -1,6 +1,0 @@
-#!/bin/bash
-
-file=$1
-pdftops ${file}.pdf
-count=$(ps2ascii ${file}.ps | wc -w)
-echo ">>>>> Number of Words = $count <<<<<"

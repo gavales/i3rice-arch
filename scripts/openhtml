@@ -1,5 +1,0 @@
-#!/bin/bash
-
-viewer=surf
-file=$1
-$viewer $file & disown $viewer

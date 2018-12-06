@@ -1,3 +1,0 @@
-#!/bin/bash
-
-mpv --geometry=35%-10-10 --ytdl-format=bestvideo+bestaudio $1
