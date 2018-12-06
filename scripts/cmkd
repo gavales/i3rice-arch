@@ -1,0 +1,76 @@
+#!/bin/bash
+
+file=$1
+wordtempDIR=$HOME/Templates/pandoc
+cssDIR=$HOME/Templates/css
+bibDIR=$HOME
+yamlDIR=$HOME/Templates/pandoc
+
+# WHICH BIBLIOGRAPHY FILE
+whichbib=$(cat $file | grep '#bib' | awk '{print $NF}')
+if [[ -n $whichbib ]]; then
+    bib="$HOME/${whichbib}"
+elif [[ -z $whichbib ]]; then
+    bib="$HOME/global.bib"
+fi
+
+# WHICH .yaml TO USE
+yaml=$(cat $file | grep '#yaml' | awk '{print $NF}')
+if [[ -n $yaml ]]; then
+    settings="$HOME/Templates/pandoc/${yaml}.yaml"
+elif [[ -z $yaml ]]; then
+    settings="$HOME/Templates/pandoc/settings.yaml"
+fi
+
+# WHICH TEMPLATE FOR WORD DOCUMENTS
+whichwordtemp=$(cat $file | grep '#word_template' | awk '{print $NF}')
+if [[ -n $whichwordtemp ]]; then
+    wordtemp=$(cat $file | grep '#word_template' | awk '{print $NF}')
+elif [[ -z $whichwordtemp ]]; then
+    wordtemp=reference
+fi
+
+# WHICH CSS FOR .html
+whichcss=$(cat $file | grep '#cssfile' | awk '{print $NF}')
+if [[ -n $whichcss ]]; then
+    css=$(cat $file | grep '#cssfile' | awk '{print $NF}')
+elif [[ -z $whichcss ]]; then
+    css=manuscript
+fi
+
+# WHICH LATEX ENGINE
+engine=$(cat $file | grep '#compiler' | awk '{print $NF}')
+if [[ -n $engine ]]; then
+    texgine="--pdf-engine=$engine"
+elif [[ -z $engine ]]; then
+    texgine=
+fi
+
+crossref="-F pandoc-crossref --metadata-file ${settings}"
+citeproc="--bibliography ${bib} -F pandoc-citeproc"
+style="-c ${cssDIR}/${css}.css"
+wordtemplate="--reference-doc ${wordtempDIR}/${wordtemp}.docx"
+nsec="--number-sections"
+
+latex() {
+    pandoc $crossref $citeproc $texgine $nsec -o ${file:0:-3}.pdf ${file}
+}
+
+word() {
+    pandoc $crossref $citeproc $wordtemplate -o ${file:0:-3}.docx ${file}
+}
+
+html() {
+    pandoc $crossref $citeproc -s --toc $style -o ${file:0:-3}.html ${file}
+}
+
+beamer() {
+    pandoc $citeproc -t beamer --incremental -o ${file:0:-3}.pdf ${file}
+}
+
+output=$(cat $file | grep '#output' | awk '{print $NF}')
+if [[ -n $output ]]; then
+    $output
+elif [[ -z $output ]]; then
+    html
+fi

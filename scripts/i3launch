@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+# CREATED: Tue  4 Dec 15:23:43 GMT 2018
+
+app=$1
+mark=$2
+
+if [[ $app =~ *[--new-window]* ]]; then
+    if [[ -n $mark ]]; then
+        i3-msg [con_mark=$mark] focus
+        i3-msg exec "\"$app\""
+    else
+        i3-msg exec \"$app\"
+    fi
+else
+    if [[ -n $mark ]]; then
+        i3-msg [con_mark=$mark] focus
+        i3-msg exec "$app"
+    else
+        i3-msg exec "$app"
+    fi
+fi

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+scrotdir=scrots
+name=`date +%Y-%m-%d_%H:%M:%S`_`xdpyinfo  | grep -oP 'dimensions:\s+\K\S+'`.png
+scrot $HOME/Pictures/$scrotdir/${name}
+notify-send "${name} saved to ~/Pictures/${scrotdir}" -i ~/Pictures/$scrotdir/${name}

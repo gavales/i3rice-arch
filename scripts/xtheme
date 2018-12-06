@@ -1,0 +1,19 @@
+#!/bin/bash
+
+black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+font=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
+dmenucolors="-fn "${font:4}" -nb "$black" -nf "$white" -sf "$black" -sb "$blue""
+
+theme=$(ls $HOME/xinclude/colors | dmenu -i -p "Choose theme:" $dmenucolors)
+
+if [[ -z $theme ]]; then
+	:
+else
+    cat $HOME/xinclude/colors/${theme} > $HOME/.Xresources
+    cat $HOME/xinclude/xmain >> $HOME/.Xresources
+    xrdb -load $HOME/.Xresources
+    kill -1 $(pidof urxvtd)
+    notify-send '.Xresources has been reloaded' -i $HOME/scriptpics/settingswhite.png
+fi

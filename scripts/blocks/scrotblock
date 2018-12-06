@@ -1,0 +1,8 @@
+#!/bin/bash
+
+case $BLOCK_BUTTON in
+    1) bash $HOME/scripts/screenshot ;;
+    3) bash $HOME/scripts/windowshot ;;
+esac
+
+echo "<span face='Font Awesome 5 Free'>&#xf03e;</span>"

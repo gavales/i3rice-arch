@@ -1,0 +1,22 @@
+#!/bin/bash
+
+black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+green=$(xrdb -query | grep '*color2' | awk '{print $NF}')
+yellow=$(xrdb -query | grep '*color3' | awk '{print $NF}')
+red=$(xrdb -query | grep '*color9' | awk '{print $NF}')
+white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+cyan=$(xrdb -query | grep '*color6' | awk '{print $NF}')
+magenta=$(xrdb -query | grep '*color5' | awk '{print $NF}')
+
+DIR="$HOME/.config/vis/colors/term"
+
+echo "gradient=true" > $DIR
+echo $magenta >> $DIR
+echo $cyan >> $DIR
+echo $blue >> $DIR
+echo $green >> $DIR
+echo $yellow >> $DIR
+echo $red >> $DIR
+
+notify-send 'cli-visualizer color theme updated' -i ~/scriptpics/settingswhite.png
