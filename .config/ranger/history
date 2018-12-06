@@ -1,10 +1,3 @@
-rename colorship
-rename colors
-rename colorful
-rename colorship.jpg
-rename wsloget
-rename wsloapp
-mkdir pandoc
 shell unzip gvales2831997@gmail.com.ical.zip -d "gvales2831997@gmail.com.ical"
 rename #contacts@group.v.calendar.google.com.ics
 rename mkgcalrc
@@ -15,10 +8,8 @@ rename manuscript.css
 rename i3exit
 rename i3-sticky-toggle
 wq
-shell 
 rename nikes
 rename purple
-open_with 
 open_with gvim
 rename main2.json_
 rename main2.json
@@ -27,7 +18,6 @@ open_with atom
 rename 2018_12_03.md
 rename template.md
 open_with vim
-shell chmod +x %f
 open_with kk
 rename gvimrc
 rename .gvimrc
@@ -48,3 +38,13 @@ shell git clone
 shell git clone https://github.com/PotatoesMaster/i3-vim-syntax.git
 
 rename test_1.csv
+open_with google-chrome-beta
+touch name.bib
+shell 
+shell ln -sf ~/global.bib %f
+shell pdfinfo %f
+shell chmod +x %f
+open_with 
+shell unzip stl.zip -d "stl"
+open_with freecad
+rename Power Systems for Autonomous Underwater Vehicles.pdf

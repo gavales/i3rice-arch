@@ -3,7 +3,7 @@ title: Title
 subtitle: Subtitle
 author: Author
 theme: CambridgeUS
-#cssfile fixedsys
+#cssfile pandoc
 ---
 
 ---
@@ -37,11 +37,9 @@ _italic text_
 
 ~~strike-through~~
 
-___
-
 # Links
 
-[youtube](www.youtube.com)
+[youtube](https://youtube.com)
 
 # Images
 

@@ -397,6 +397,7 @@ autocmd FileType markdown vnoremap \7n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Tab
 
 " ////// COMPILER
 autocmd Filetype markdown map \cm :!bash<space>~/scripts/cmkd<space><C-r>%<Enter><Enter>
+autocmd Filetype markdown map \vh :!bash<space>~/scripts/openhtml<space><C-r>%<BS><BS>html<Enter><Enter>
 
 " >>>> R MARKDOWN
 autocmd Filetype rmd map \ll :!echo<space>"require(rmarkdown);<space>

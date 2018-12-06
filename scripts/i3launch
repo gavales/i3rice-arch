@@ -6,9 +6,18 @@
 app=$1
 mark=$2
 
-if [[ -n $mark ]]; then
-    i3-msg -q [con_mark=$mark] focus
-    i3-msg -q exec "$app"
+if [[ $app =~ *[--new-window]* ]]; then
+    if [[ -n $mark ]]; then
+        i3-msg [con_mark=$mark] focus
+        i3-msg exec "\"$app\""
+    else
+        i3-msg exec \"$app\"
+    fi
 else
-    i3-msg -q exec "$app"
+    if [[ -n $mark ]]; then
+        i3-msg [con_mark=$mark] focus
+        i3-msg exec "$app"
+    else
+        i3-msg exec "$app"
+    fi
 fi

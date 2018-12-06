@@ -15,6 +15,12 @@ set $fonts 12
 font pango:$font1,$font2 $fonts
 
 # >>>> DEFINE VARIABLES
+# ////// DIRS
+
+set $home       /home/gavarch
+set $scripts    scripts
+set $scriptpics scriptpics
+
 # ////// i3
 
 set $mod        bindsym Mod1
@@ -25,10 +31,17 @@ set $modrel     bindsym --release Mod1
 set $winwlw     bindsym --whole-window Mod4
 set $execn      exec --no-startup-id
 set $execna     exec_always --no-startup-id
+set $lnch       exec ~/scripts/i3launch
 set $tf         title_format
-set $mk1        mark _win1
-set $mk2        mark _win2
-set $mk3        mark _win3
+set $mk1        _win1
+set $mk2        _win2
+set $mk3        _win3
+set $mrk1       mark _win1
+set $mrk2       mark _win2
+set $mrk3       mark _win3
+set $stmk1      mark _sticky_1
+set $stmk2      mark _sticky_2
+set $stmk3      mark _sticky_3
 set $mvmk1      move to mark _win1
 set $mvmk2      move to mark _win2
 set $mvmk3      move to mark _win3
@@ -38,18 +51,10 @@ set $fldi       floating disable
 set $brnr       border normal
 set $mvcn       move position center
 
-# ////// DIRS
-
-set $home       /home/gavarch
-set $scripts    scripts
-set $scriptpics scriptpics
-
 # ////// APPS
 
 set $term       urxvtc
 #set $term       urxvt
-set $edone      $term -e vim
-set $edtwo      subl3
 set $browser    google-chrome-beta
 set $brightinc  xbacklight -inc 10
 set $brightdec  xbacklight -dec 10
@@ -94,7 +99,7 @@ new_window pixel 0
 new_float normal
 
 # HIDE BORDERS
-hide_edge_borders none
+hide_edge_borders true
 
 # COLORS
 # class                 brdr bkgr text indi chlb
@@ -129,7 +134,7 @@ bar {
 }
 
 # >>>> MOD1 IMPORTANT
-# ////// PANIC
+# ////// MAIN
 
 $mod+Shift+r        restart
 $mod+Shift+c        $execn "bash $home/$scripts/xtheme; \
@@ -137,11 +142,11 @@ $mod+Shift+c        $execn "bash $home/$scripts/xtheme; \
                         killall i3bar; i3bar --bar_id=bar-1"
 $mod+Shift+q        kill
 $winwlw+button2     kill
-$mod+b bar          mode toggle
+$mod+b              bar mode toggle
 $mod+semicolon      exec redshift -P -O 3700
 $mod+apostrophe     exec redshift -x
-bindsym Print       exec bash ~/$scripts/screenshot
-$mod+Shift+p        exec bash ~/$scripts/screenshot
+bindsym Print       $execn bash ~/$scripts/screenshot
+$mod+Shift+p        $execn bash ~/$scripts/screenshot
 $mod+d              exec rofi -show drun
 $mod+Shift+d        exec dmenu_run -fn "$font3:size=$fonts" -nb \
                         "$blk" -nf "$wht" -sf "$blk" -sb "$blu"
@@ -168,15 +173,16 @@ $mod+o resize       grow width 10 px or 10 ppt
 # ////// WORKFLOW
 
 $mod+Return         exec $term -name TERMINAL
-$mod+f              exec pcmanfm
+$mod+f              $lnch pcmanfm $mk2
 $mod+Shift+Return   exec $term -name FILES -e ranger
 $mod+Shift+b        exec $term -name BASHMOUNT -e bashmount
 $mod+c              exec $browser
 $mod+q              exec $term -name CALC -e R
-$mod+Shift+u        exec $browser --new-window \
-                        --app=https://outlook.office365.com/owa/?realm=soton.ac.uk
+$mod+Shift+u        $lnch '$browser --new-window \
+                        --app=https://outlook.office365.com/owa/?realm=soton.ac.uk' \
+                        $mk3
 $mod+Shift+g        exec bash ~/$scripts/grivesync
-$mod+Shift+a        exec atom
+$mod+Shift+a        $lnch atom $mk3
 
 # GOOGLE DOCs
 $mod+Ctrl+q         exec $browser --new-window \
@@ -190,19 +196,22 @@ $mod+Ctrl+r         exec $browser --new-window \
 
 $mod+Shift+s        exec spotify
 $mod+s              exec $term -fn "xft:monospace:size=$fonts" -name MUSIC -e ncmpcpp
-$mod+v              exec $term -name VIS -e vis
-$mod+Shift+v        exec $term -name NCMVIS -e ncmpcpp -s visualizer
-$mod+Shift+n        exec $browser --new-window \
-                        --app=https://www.amazon.co.uk/Amazon-Video/b/?node=3010085031&ref=atv_surl_aiv
-$mod+n              exec $browser --new-window \
-                        --app=https://www.netflix.com/
-$mod+m              exec $browser --new-window \
-                        --app=https://play.google.com/movies/
-$mod+Shift+y        exec $browser --new-window \
-                        --app=https://www.youtube.com/
-$mod+Shift+i        exec $browser --new-window \
-                        --app=https://www.bbc.co.uk/iplayer/
-$mod+r              $execn $term -name RSS -e newsboat
+$mod+v              $lnch '$term -name VIS -e vis' $mk2
+$mod+Shift+v        $lnch '$term -name NCMVIS -e ncmpcpp -s visualizer' $mk2
+$mod+Shift+n        $lnch '$browser --new-window \
+                        --app=https://www.amazon.co.uk/Amazon-Video/b/?node=3010085031&ref=atv_surl_aiv' \
+                        $mk1
+$mod+n              $lnch '$browser --new-window \
+                        --app=https://www.netflix.com/' $mk1
+$mod+m              $lnch '$browser --new-window \
+                        --app=https://play.google.com/movies/' $mk1
+$mod+Shift+y        $lnch '$browser --new-window \
+                        --app=https://www.youtube.com/' $mk1
+$mod+Shift+i        $lnch '$browser --new-window \
+                        --app=https://www.bbc.co.uk/iplayer/' $mk1
+$mod+w              $lnch '$browser --new-window \
+                        --app=https://ww2.watch-series.co/' $mk1
+$mod+r              exec $term -name RSS -e newsboat
 
 # GUI PLAYER CONTROLS
 $mod+p              exec playerctl play-pause
@@ -275,29 +284,29 @@ mode "SHUTDOWN" {
 }
 
 # >>>> MOD4 BINDINGS
+# ////// MAIN
 $win+Shift+c        reload
 $win+o              exec "$brightinc; bash ~/$scripts/notify_brightness"
 $win+y              exec "$brightdec; bash ~/$scripts/notify_brightness"
 $win+i              exec "pactl set-sink-volume 0 +2%; bash ~/$scripts/notify_volume"
 $win+u              exec "pactl set-sink-volume 0 -2%; bash ~/$scripts/notify_volume"
 $win+x              exec "pactl set-sink-mute 0 toggle; bash ~/$scripts/notify_volume"
-$win+f              exec gksu pcmanfm
-$win+Shift+f        exec nautilus
+$win+f              $lnch 'gksu pcmanfm' $mk2
+$win+Shift+f        $lnch 'nautilus' $mk2
 $win+Shift+Return   exec $term -name FILES_ADMIN -e sudo ranger
 $win+t              $execn pkill compton
 $win+Shift+t        $execn compton
-$win+w              $execn $term -name LAYOUT_EDITOR -e bash ~/$scripts/wsloget
+$win+w              $lnch '$term -name LAYOUT_EDITOR -e bash ~/$scripts/wsloget' $mk2
 $win+a              $execn bash ~/$scripts/wsloapp
-$win+1              $execn $term -name i3CONF -e vim ~/.config/i3/config
-$win+2              $execn $term -name XSETTINGS -e vim ~/xinclude/xmain
-$win+3              $execn $term -name VIMRC -e vim ~/.vimrc
-$win+4              $execn $term -name RCCONF -e vim ~/.config/ranger/rc.conf
-$win+5              $execn $term -name i3BLOCKS -e vim ~/scripts/mkblocksconf
+$win+1              $lnch '$term -name i3CONF -e vim ~/.config/i3/config' $mk3
+$win+2              $lnch '$term -name XSETTINGS -e vim ~/xinclude/xmain' $mk3
+$win+3              $lnch '$term -name VIMRC -e vim ~/.vimrc' $mk3
+$win+4              $lnch '$term -name RCCONF -e vim ~/.config/ranger/rc.conf' $mk3
+$win+5              $lnch '$term -name i3BLOCKS -e vim ~/scripts/mkblocksconf' $mk3
 $win+g              exec $term -name GITREPOUPDATE -e bash ~/$scripts/gitcommit
-$win+c              exec $term -fn "xft:monospace:size=$fonts" \
-                        -name CALENDAR -e vim "+Calendar -view=day"
-$win+r              $execn $term -name RTV -e rtv
-#$win+a              exec $term -name ALSA -e alsamixer
+$win+c              $lnch '$term -fn "xft:monospace:size=$fonts" \
+                        -name CALENDAR -e vim "+Calendar -view=day"' $mk2
+$win+r              $lnch '$term -name RTV -e rtv' $mk2
 
 # ////// MPD CONTROLS
 
@@ -356,14 +365,15 @@ $fw [class="Pavucontrol"]                   $flen
 $fw [class="Xfburn"]                        $flen
 $fw [title="MuseScore: Play Panel"]         $flen
 $fw [title="alsamixer"]                     $flen
-$fw [class="Calamares"]                     $flen,$brnr
 $fw [class="Galculator"]                    $flen
+$fw [class="Oblogout"]                      $flen
+$fw [class="Arandr"]                        $flen
+$fw [class="Calamares"]                     $flen,$brnr
 $fw [class="GParted"]                       $flen,$brnr
 $fw [title="i3_help"]                       $flen,$brnr
 $fw [class="Lxappearance"]                  $flen,$brnr
 $fw [class="Manjaro Settings Manager"]      $flen,$brnr
 $fw [class="Nitrogen"]                      $flen,$brnr
-$fw [class="Oblogout"]                      $flen
 $fw [class="qt5ct"]                         $flen,$brnr
 $fw [class="Qtconfig-qt4"]                  $flen,$brnr
 $fw [class="Simple-scan"]                   $flen,$brnr
@@ -391,37 +401,36 @@ $fw [class="Pavucontrol"]                   $flen,$brnr,\
 
 # ////// MARKED
 
-$fw [instance="MUSIC"]                      $mk1,$tf "ncmpcpp"
-$fw [instance="RSS"]                        $mk2,$tf "newsboat"
-$fw [title="Google Chrome$"]                $mk3,$tf "google chrome"
+$fw [instance="MUSIC"]                  $mrk1,$tf "ncmpcpp"
+$fw [instance="RSS"]                    $mrk2,$tf "newsboat"
+$fw [title="Google Chrome$"]            $mrk3,$tf "google chrome"
 
-$fw [class="MPlayer"]                       $mvmk1
-$fw [class="mpv"]                           $mvmk1
-$fw [class="feh"]                           $mvmk1
-$fw [title="^My Movies & TV"]               $mvmk1,$tf "movies"
-$fw [title="Log in with PayPal"]            $mvmk1,$tf "paypal login"
-$fw [instance="VIS"]                        $mvmk1,$tf "visualiser"
-$fw [instance="NCMVIS"]                     $mvmk1,$tf "ncmpcpp vis"
-$fw [title="YouTube$"]                      $mvmk1,$tf "youtube"
-$fw [title="^BBC iPlayer$"]                 $mvmk1,$tf "iplayer"
-$fw [title="^Netflix$"]                     $mvmk1,$tf "netflix"
-$fw [title="Amazon.co.uk: Prime Video"]     $mvmk1,$tf "prime video"
+$fw [class="MPlayer"]                   $mvmk1
+$fw [class="mpv"]                       $mvmk1
+$fw [class="feh"]                       $mvmk1
 
-$fw [class="Nautilus"]                      $mvmk2
-$fw [class="Pcmanfm"]                       $mvmk2
-$fw [class="Arandr"]                        $mvmk2
-$fw [instance="RTV"]                        $mvmk2,$tf "reddit"
-$fw [title="_popout="]                      $mvmk2,$tf "popout chat"
-$fw [instance="CALENDAR"]                   $mvmk2,$tf "vim calendar"
+$fw [class="Surf"]                      $mvmk2
+$fw [title="_popout="]                  $mvmk2,$tf "popout chat"
+$fw [title="^localhost:8090$"]          $mvmk2,$tf "instant markdown preview"
+
+$fw [title="^My Movies & TV"]           $tf "movies",$stmk1
+$fw [title="- Watch Series$"]           $tf "watch series",$stmk1
+$fw [title="Log in with PayPal"]        $tf "paypal login",$flen
+$fw [instance="TERMINAL"]               $tf "terminal"
+$fw [instance="VIS"]                    $tf "visualiser"
+$fw [instance="NCMVIS"]                 $tf "ncmpcpp vis"
+$fw [title="YouTube$"]                  $tf "youtube",$stmk1
+$fw [title="^BBC iPlayer$"]             $tf "iplayer",$stmk1
+$fw [title="^Netflix$"]                 $tf "netflix",$stmk1
+$fw [title="Amazon.co.uk: Prime Video"] $tf "prime video",$stmk1
+$fw [instance="RTV"]                    $tf "reddit"
+$fw [instance="CALENDAR"]               $tf "vim calendar"
     
-#$fw [instance="FILES"]                      $mvmk3
-$fw [class="Spotify"]                       $mvmk3
-$fw [class="Atom"]                          $mvmk3
-$fw [instance="i3CONF"]                     $mvmk3,$tf "i3config"
-$fw [instance="XSETTINGS"]                  $mvmk3,$tf "xresources"
-$fw [instance="VIMRC"]                      $mvmk3,$tf "vimrc"
-$fw [instance="RCCONF"]                     $mvmk3,$tf "ranger config"
-$fw [instance="i3BLOCKS"]                   $mvmk3,$tf "i3blocks"
+$fw [instance="i3CONF"]                 $tf "i3config"
+$fw [instance="XSETTINGS"]              $tf "xresources"
+$fw [instance="VIMRC"]                  $tf "vimrc"
+$fw [instance="RCCONF"]                 $tf "ranger config"
+$fw [instance="i3BLOCKS"]               $tf "i3blocks"
 
 # >>>> GAPS
 gaps inner 10
