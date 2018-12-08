@@ -23,6 +23,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set cursorline
+set title titlestring=%F titlelen=70
 autocmd FileType python call matchadd('ColorColumn', '\%81v', 100)
 autocmd FileType vim call matchadd('ColorColumn', '\%81v', 100)
 autocmd FileType conf call matchadd('ColorColumn', '\%81v', 100)
@@ -250,13 +251,13 @@ autocmd FileType tex inoremap \tc \textcite{}<++><Esc>T{i
 autocmd FileType tex inoremap \up \usepackage{}<++><Esc>T{i
 autocmd FileType tex inoremap \ul \underline{}<++><Esc>T{i
 
-autocmd FileType tex vnoremap \bf xa\textbf{<Esc>pa}<Esc>
-autocmd FileType tex vnoremap \it xa\textit{<Esc>pa}<Esc>
-autocmd FileType tex vnoremap \sc xa\textsc{<Esc>pa}<Esc>
-autocmd FileType tex vnoremap \tt xa\texttt{<Esc>pa}<Esc>
-autocmd FileType tex vnoremap \ul xa\underline{<Esc>pa}<Esc>
-autocmd FileType tex vnoremap \st xa{\setstretch{1.0}<Enter><Esc>pa}<Esc>
-autocmd FileType tex vnoremap \bm xa\begin{multicols}{2}<Enter><Esc>pa
+autocmd FileType tex vnoremap \bf xi\textbf{<Esc>pa}<Esc>
+autocmd FileType tex vnoremap \it xi\textit{<Esc>pa}<Esc>
+autocmd FileType tex vnoremap \sc xi\textsc{<Esc>pa}<Esc>
+autocmd FileType tex vnoremap \tt xi\texttt{<Esc>pa}<Esc>
+autocmd FileType tex vnoremap \ul xi\underline{<Esc>pa}<Esc>
+autocmd FileType tex vnoremap \st xi{\setstretch{1.0}<Enter><Esc>pa}<Esc>
+autocmd FileType tex vnoremap \bm xi\begin{multicols}{2}<Enter><Esc>pa
 	\<Enter>\end{multicols}<Esc>
 
 autocmd FileType tex map \ob :sp<space><C-r>%<BS><BS><BS>bib<Enter>
@@ -302,7 +303,6 @@ autocmd Filetype rmd map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
 	\<BS><BS><BS><BS><Enter>
 autocmd Filetype markdown map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
 	\<BS><BS><BS><Enter>
-
 
 " >>>> MARKDOWN
 " ////// MACROS
