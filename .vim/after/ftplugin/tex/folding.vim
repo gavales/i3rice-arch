@@ -24,3 +24,6 @@ function! Folds()
 endfunction
 setlocal foldmethod=expr
 setlocal foldexpr=Folds()
+setlocal spell spelllang=en_gb
+setlocal nonumber norelativenumber laststatus=0
+autocmd VimEnter * Goyo"

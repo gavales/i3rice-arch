@@ -1,17 +1,9 @@
-rename Power Systems for Autonomous Underwater Vehicles.pdf
-shell git clone https://github.com/StillANixRookie/i3rice-arch.git
-shell git clone https://github.com/StillANixRookie/atompackages.git
-shell git clone https://github.com/StillANixRookie/dotfonts.git
-mkdir .fonts
-rename _icons
 rename .icons
 rename DamaDamas
 rename fixedsyscss
 rename fixedsys.css
-open_with scim
 open_with scimq
 rename scripts
-rename fonts
 shell ln -sf ~/%f/* %f
 
 shell ln -sf ~/scripts/%f/* %f/
@@ -42,9 +34,17 @@ rename rbseegps.step
 open_with lo-calc
 open_with libreoffics
 rename thrust_1.csv
-open_with 
 rename thrust_2.csv
 rename thrust_3.csv_
 rename thrust_3.csv
 rename name.bib
 open_with libreoffice
+rename fonts
+rename .fonts
+rename .bashrc
+rename pond.gif
+mkdir bits
+search tahoma.ttf
+open_with mat
+open_with 
+open_with scim

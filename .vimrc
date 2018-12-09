@@ -23,7 +23,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set cursorline
-set title titlestring=%F titlelen=70
+set title titlestring=%f titlelen=70
 autocmd FileType python call matchadd('ColorColumn', '\%81v', 100)
 autocmd FileType vim call matchadd('ColorColumn', '\%81v', 100)
 autocmd FileType conf call matchadd('ColorColumn', '\%81v', 100)

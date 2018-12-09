@@ -1,6 +1,8 @@
 function! Folds()
 	let thisline = getline(v:lnum)
 	if match(thisline, '^@') >= 0
+		return ">2"
+	elseif match(thisline, '>>>>') >= 0
 		return ">1"
 	else
 		return "="
@@ -8,3 +10,4 @@ function! Folds()
 endfunction
 setlocal foldmethod=expr
 setlocal foldexpr=Folds()
+setlocal spell spelllang=en_gb
