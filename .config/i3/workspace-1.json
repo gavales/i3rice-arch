@@ -1,0 +1,277 @@
+// "transient_for": "^$"
+// vim:ts=4:sw=4:et
+{
+    // splith split container with 2 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splith",
+    "percent": 1,
+    "type": "con",
+    "nodes": [
+        {
+            // splitv split container with 2 children
+            "border": "pixel",
+            "floating": "auto_off",
+            "layout": "splitv",
+            "percent": 0.2734375,
+            "type": "con",
+            "nodes": [
+                {
+                    // tabbed split container with 2 children
+                    "border": "pixel",
+                    "floating": "auto_off",
+                    "layout": "tabbed",
+                    "percent": 0.3,
+                    "type": "con",
+                    "nodes": [
+                        {
+                            "border": "pixel",
+                            "current_border_width": 1,
+                            "floating": "auto_off",
+                            "geometry": {
+                               "height": 458,
+                               "width": 802,
+                               "x": 0,
+                               "y": 0
+                            },
+                            "marks": [
+                               "_win1"
+                            ],
+                            "name": "ncmpcpp 0.8.2",
+                            "percent": 0.5,
+                            "swallows": [
+                               {
+                               // "class": "^URxvt$",
+                               // "instance": "^MUSIC$",
+                               // "title": "^ncmpcpp\ 0\.8\.2$"
+                               }
+                            ],
+                            "type": "con"
+                        },
+                        {
+                            "border": "pixel",
+                            "current_border_width": 1,
+                            "floating": "auto_off",
+                            "geometry": {
+                               "height": 367,
+                               "width": 680,
+                               "x": 31,
+                               "y": 72
+                            },
+                            "marks": [
+                               "_sticky_1"
+                            ],
+                            "name": "(16) We were Poisoned in China - YouTube",
+                            "percent": 0.5,
+                            "swallows": [
+                               {
+                               // "class": "^Google\-chrome\-beta$",
+                               // "instance": "^www\.youtube\.com$",
+                               // "title": "^\(16\)\ We\ were\ Poisoned\ in\ China\ \-\ YouTube$",
+                               // "window_role": "^pop\-up$"
+                               }
+                            ],
+                            "type": "con"
+                        }
+                    ]
+                },
+                {
+                    // tabbed split container with 4 children
+                    "border": "pixel",
+                    "floating": "auto_off",
+                    "layout": "tabbed",
+                    "percent": 0.7,
+                    "type": "con",
+                    "nodes": [
+                        {
+                            "border": "pixel",
+                            "current_border_width": 1,
+                            "floating": "auto_off",
+                            "geometry": {
+                               "height": 458,
+                               "width": 722,
+                               "x": 0,
+                               "y": 0
+                            },
+                            "marks": [
+                               "_win2"
+                            ],
+                            "name": "newsboat",
+                            "percent": 0.25,
+                            "swallows": [
+                               {
+                               // "class": "^URxvt$",
+                               // "instance": "^RSS$",
+                               // "title": "^newsboat$"
+                               }
+                            ],
+                            "type": "con"
+                        },
+                        {
+                            "border": "pixel",
+                            "current_border_width": 1,
+                            "floating": "auto_off",
+                            "geometry": {
+                               "height": 554,
+                               "width": 882,
+                               "x": 0,
+                               "y": 0
+                            },
+                            "name": "bash",
+                            "percent": 0.25,
+                            "swallows": [
+                               {
+                               // "class": "^URxvt$",
+                               // "instance": "^LAYOUT_EDITOR$",
+                               // "title": "^bash$"
+                               }
+                            ],
+                            "type": "con"
+                        },
+                        {
+                            "border": "pixel",
+                            "current_border_width": 1,
+                            "floating": "auto_off",
+                            "geometry": {
+                               "height": 458,
+                               "width": 802,
+                               "x": 0,
+                               "y": 0
+                            },
+                            "name": "[calendar]",
+                            "percent": 0.25,
+                            "swallows": [
+                               {
+                               // "class": "^URxvt$",
+                               // "instance": "^CALENDAR$",
+                               // "title": "^\[calendar\]$"
+                               }
+                            ],
+                            "type": "con"
+                        },
+                        {
+                            "border": "pixel",
+                            "current_border_width": 1,
+                            "floating": "auto_off",
+                            "geometry": {
+                               "height": 1037,
+                               "width": 1920,
+                               "x": 0,
+                               "y": 0
+                            },
+                            "name": "Uni",
+                            "percent": 0.25,
+                            "swallows": [
+                               {
+                               // "class": "^Pcmanfm$",
+                               // "instance": "^pcmanfm$",
+                               // "title": "^Uni$"
+                               }
+                            ],
+                            "type": "con"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            // tabbed split container with 4 children
+            "border": "pixel",
+            "floating": "auto_off",
+            "layout": "tabbed",
+            "percent": 0.7265625,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "pixel",
+                    "current_border_width": 1,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 977,
+                       "width": 1166,
+                       "x": 723,
+                       "y": 72
+                    },
+                    "marks": [
+                       "_win3"
+                    ],
+                    "name": "Hall-effect thruster - Wikipedia - Google Chrome",
+                    "percent": 0.25,
+                    "swallows": [
+                       {
+                       // "class": "^Google\-chrome\-beta$",
+                       // "instance": "^google\-chrome\-beta$",
+                       // "title": "^Hall\-effect\ thruster\ \-\ Wikipedia\ \-\ Google\ Chrome$",
+                       // "window_role": "^browser$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "pixel",
+                    "current_border_width": 1,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 554,
+                       "width": 882,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "ranger",
+                    "percent": 0.25,
+                    "swallows": [
+                       {
+                       // "class": "^URxvt$",
+                       // "instance": "^FILES$",
+                       // "title": "^ranger$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "pixel",
+                    "current_border_width": 1,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 1037,
+                       "width": 1202,
+                       "x": 718,
+                       "y": 42
+                    },
+                    "name": "Slack - 2018/19 GDP AUV",
+                    "percent": 0.25,
+                    "swallows": [
+                       {
+                       // "class": "^Slack$",
+                       // "instance": "^slack$",
+                       // "title": "^Slack\ \-\ 2018\/19\ GDP\ AUV$",
+                       // "window_role": "^browser\-window$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "pixel",
+                    "current_border_width": 1,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 642,
+                       "width": 600,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "Goebel_front matter_031108 — Fundamentals of Electric Propulsion: Ion and Hall Thrusters.pdf",
+                    "percent": 0.25,
+                    "swallows": [
+                       {
+                       // "class": "^Evince$",
+                       // "instance": "^evince$",
+                       // "title": "^Goebel_front\ matter_031108\ \—\ Fundamentals\ of\ Electric\ Propulsion\:\ Ion\ and\ Hall\ Thrusters\.pdf$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        }
+    ]
+}
