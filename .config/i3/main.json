@@ -82,13 +82,13 @@
                        "x": 0,
                        "y": 0
                     },
-                    "name": "newsboat",
+                    "name": "vim calendar",
                     "percent": 0.5,
                     "swallows": [
                        {
                        "class": "^URxvt$",
-                       "instance": "^RSS$",
-                       "title": "^newsboat$",
+                       "instance": "^CALENDAR$",
+                       "title": "^vim calendar$",
                        "transient_for": "^$"
                        }
                     ],
