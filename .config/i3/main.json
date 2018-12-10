@@ -88,7 +88,7 @@
                        {
                        "class": "^URxvt$",
                        "instance": "^CALENDAR$",
-                       "title": "^vim calendar$",
+                       //"title": "^vim calendar$",
                        "transient_for": "^$"
                        }
                     ],
