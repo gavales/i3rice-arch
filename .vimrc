@@ -37,6 +37,10 @@ map <Tab><Tab> <Esc>/>>>><Enter>
 
 inoremap \ph <++>
 nnoremap \ph i<++><Esc>
+nnoremap <Down> gj
+nnoremap <Up> gk
+inoremap <Down> <Esc>lgji
+inoremap <Up> <Esc>lgki
 
 " ////// CHANGE HIGHLIGHT COLOURS
 hi Normal ctermbg=none guibg=black
