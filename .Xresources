@@ -1,21 +1,21 @@
-!dracula
+!space_magenta
 ! vim:syntax=xdefaults
-#define cblkd #282A36
-#define credl #FF5555
-#define cgrnl #50FA7B
-#define cylwl #F1FA8C
-#define cblul #BD93F9
-#define cgntl #FF79C6
-#define ccynl #8BE9FD
-#define cwhtl #BFBFBF
-#define cblkl #4D4D4D
-#define credd #FF6E67
-#define cgrnd #5AF78E
-#define cylwd #F4F99D
-#define cblud #CAA9FA
-#define cgntd #FF92D0
-#define ccynd #9AEDFE
-#define cwhtd #E6E6E6
+#define cblkd #111a1f
+#define credd #aa5451
+#define cgrnd #347baa
+#define cylwd #7285aa
+#define cblud #b09bab
+#define cgntd #ad4975
+#define ccynd #b47289
+#define cwhtd #c3c5c7
+#define cblkl #4c5357
+#define credl #aa5451
+#define cgrnl #347baa
+#define cylwl #7285aa
+#define cblul #b09bab
+#define cgntl #ad4975
+#define ccynl #b47289
+#define cwhtl #c3c5c7
 
 ! >>>> COLORS & VARIABLES
 #define fontname monospace
