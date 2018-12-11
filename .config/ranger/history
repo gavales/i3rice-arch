@@ -1,18 +1,3 @@
-rename .icons
-rename DamaDamas
-rename fixedsyscss
-rename fixedsys.css
-open_with scimq
-rename scripts
-shell ln -sf ~/%f/* %f
-
-shell ln -sf ~/scripts/%f/* %f/
-shell ln -sf ~/scripts/%f/ %f/
-shell ln -sf ~/scripts/%f/ %f/h
-open_with vim
-shell ./scripts/linker %f %f
-shell ./scripts/linker ~/scripts/blocks/%f %f
-shell lndirl
 rename blocks
 shell lndir ~/scripts
 shell lndir ~/Documents
@@ -46,5 +31,20 @@ rename pond.gif
 mkdir bits
 search tahoma.ttf
 open_with mat
-open_with 
 open_with scim
+search Utopia
+rename UNI
+rename Uni
+rename quadbackups
+rename EPFUN_goebel.pdf
+rename GDPLitReview.bib
+shell ./grivesync
+shell grivesync
+shell grive
+shell touch log
+rename Fundamentals of Electric
+rename 
+rename Fundamentals of Electric Propulsion: Ion and Hall Thrusters.pdf
+rename spotlight
+rename spotlightq
+open_with 

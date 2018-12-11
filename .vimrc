@@ -29,11 +29,18 @@ autocmd FileType vim call matchadd('ColorColumn', '\%81v', 100)
 autocmd FileType conf call matchadd('ColorColumn', '\%81v', 100)
 autocmd FileType perl call matchadd('ColorColumn', '\%81v', 100)
 autocmd FileType sh call matchadd('ColorColumn', '\%81v', 100)
+autocmd Filetype calendar set laststatus=0
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
 
 map <Tab><Tab> <Esc>/>>>><Enter>
 
 inoremap \ph <++>
 nnoremap \ph i<++><Esc>
+nnoremap <Down> gj
+nnoremap <Up> gk
+inoremap <Down> <Esc>lgji
+inoremap <Up> <Esc>lgki
 
 " ////// CHANGE HIGHLIGHT COLOURS
 hi Normal ctermbg=none guibg=black

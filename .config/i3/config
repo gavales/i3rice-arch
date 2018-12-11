@@ -115,7 +115,7 @@ bar {
 	i3bar_command i3bar
 	status_command i3blocks -c ~/$scripts/i3blocks.conf
 #	status_command i3blocks
-	position top
+#	position top
 	id bar-1
 
 	bindsym button4 nop
@@ -181,7 +181,7 @@ $mod+q              exec $term -name CALC -e R
 $mod+Shift+u        $lnch '$browser --new-window \
                         --app=https://outlook.office365.com/owa/?realm=soton.ac.uk' \
                         $mk3
-$mod+Shift+g        exec bash ~/$scripts/grivesync
+$mod+Shift+g        $lnch '$term -name GRIVE -e bash ~/$scripts/grivesync' $mk2
 $mod+Shift+a        $lnch atom $mk3
 
 # GOOGLE DOCs
@@ -402,6 +402,8 @@ $fw [class="Pavucontrol"]                   $flen,$brnr,\
 
 # ////// MARKED
 
+$fw [con_mark=_sticky_1]                resize set 525 317
+
 $fw [instance="MUSIC"]                  $mrk1,$tf "ncmpcpp"
 $fw [instance="RSS"]                    $mrk2,$tf "newsboat"
 $fw [title="Google Chrome$"]            $mrk3,$tf "google chrome"
@@ -418,6 +420,7 @@ $fw [title="^My Movies & TV"]           $tf "movies",$stmk1
 $fw [title="- Watch Series$"]           $tf "watch series",$stmk1
 $fw [title="Log in with PayPal"]        $tf "paypal login",$flen
 $fw [instance="TERMINAL"]               $tf "terminal"
+$fw [instance="GRIVE"]                  $tf "google drive sync"
 $fw [instance="BIB"]                    $tf "biblbiography"
 $fw [instance="VIS"]                    $tf "visualiser"
 $fw [instance="NCMVIS"]                 $tf "ncmpcpp vis"
