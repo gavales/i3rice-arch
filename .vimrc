@@ -238,12 +238,12 @@ autocmd FileType tex inoremap \ls3 \label{sssec:}<Space><++><Esc>T:i
 autocmd FileType tex inoremap \pc \parencite{}<++><Esc>T{i
 autocmd FileType tex inoremap \pt \item
 
-autocmd FileType tex inoremap \rf \ref{fig:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \rt \ref{tab:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \re \ref{eq:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \rs1 \ref{sec:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \rs2 \ref{ssec:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \rs3 \ref{sssec:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap \rf \textit{Fig.<space>\ref{fig:}}<Space><++><Esc>T:i
+autocmd FileType tex inoremap \rt \textit{Tab.<space>\ref{tab:}}<Space><++><Esc>T:i
+autocmd FileType tex inoremap \re \textit{Eq.<space>\ref{eq:}}<Space><++><Esc>T:i
+autocmd FileType tex inoremap \rs1 \textit{Sec.<space>\ref{sec:}}<Space><++><Esc>T:i
+autocmd FileType tex inoremap \rs2 \textit{Sec.<space>\ref{ssec:}}<Space><++><Esc>T:i
+autocmd FileType tex inoremap \rs3 \textit{Sec.<space>\ref{sssec:}}<Space><++><Esc>T:i
 
 autocmd FileType tex inoremap \st {\setstretch{}<Enter><++><Enter>
 	\<Enter>}<Enter><Enter><++><Esc>5k0f{a
