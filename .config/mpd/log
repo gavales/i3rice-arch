@@ -1,0 +1,164 @@
+Dec 13 15:20 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Dec 13 15:20 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Dec 13 15:20 : client: [0] opened from [::1]:37816
+Dec 13 15:20 : client: [0] closed
+Dec 13 15:20 : client: [1] opened from [::1]:37818
+Dec 13 15:20 : client: [1] closed
+Dec 13 15:20 : client: [2] opened from [::1]:37920
+Dec 13 15:20 : client: [2] closed
+Dec 13 15:20 : client: [3] opened from [::1]:37954
+Dec 13 15:20 : client: [3] closed
+Dec 13 15:21 : client: [4] opened from [::1]:37974
+Dec 13 15:21 : client: [4] closed
+Dec 13 15:21 : client: [5] opened from [::1]:37982
+Dec 13 15:21 : client: [5] closed
+Dec 13 15:21 : client: [6] opened from [::1]:37992
+Dec 13 15:21 : client: [6] closed
+Dec 13 15:21 : client: [7] opened from [::1]:38032
+Dec 13 15:21 : client: [7] closed
+Dec 13 15:21 : client: [8] opened from [::1]:38034
+Dec 13 15:21 : client: [8] closed
+Dec 13 15:21 : client: [9] opened from [::1]:38036
+Dec 13 15:21 : client: [9] closed
+Dec 13 15:21 : client: [10] opened from [::1]:38040
+Dec 13 15:21 : client: [10] closed
+Dec 13 15:21 : client: [11] opened from [::1]:38042
+Dec 13 15:21 : client: [11] closed
+Dec 13 15:21 : client: [12] opened from [::1]:38046
+Dec 13 15:21 : client: [12] closed
+Dec 13 15:21 : client: [13] opened from [::1]:38050
+Dec 13 15:21 : client: [13] closed
+Dec 13 15:21 : client: [14] opened from [::1]:38054
+Dec 13 15:21 : client: [14] closed
+Dec 13 15:21 : client: [15] opened from [::1]:38056
+Dec 13 15:21 : client: [15] closed
+Dec 13 15:22 : client: [16] opened from [::1]:38062
+Dec 13 15:22 : client: [16] closed
+Dec 13 15:22 : client: [17] opened from [::1]:38068
+Dec 13 15:22 : client: [17] closed
+Dec 13 15:22 : client: [18] opened from [::1]:38070
+Dec 13 15:22 : client: [18] closed
+Dec 13 15:22 : client: [19] opened from [::1]:38072
+Dec 13 15:22 : client: [19] closed
+Dec 13 15:22 : client: [20] opened from [::1]:38074
+Dec 13 15:22 : client: [20] closed
+Dec 13 15:22 : client: [21] opened from [::1]:38076
+Dec 13 15:22 : client: [21] closed
+Dec 13 15:22 : client: [22] opened from [::1]:38078
+Dec 13 15:22 : client: [22] closed
+Dec 13 15:22 : client: [23] opened from [::1]:38080
+Dec 13 15:22 : client: [23] closed
+Dec 13 15:22 : client: [24] opened from [::1]:38082
+Dec 13 15:22 : client: [24] closed
+Dec 13 15:22 : client: [25] opened from [::1]:38084
+Dec 13 15:22 : client: [25] closed
+Dec 13 15:22 : client: [26] opened from [::1]:38086
+Dec 13 15:22 : client: [26] closed
+Dec 13 15:22 : client: [27] opened from [::1]:38092
+Dec 13 15:22 : client: [27] closed
+Dec 13 15:23 : client: [28] opened from [::1]:38094
+Dec 13 15:23 : client: [28] closed
+Dec 13 15:23 : client: [29] opened from [::1]:38098
+Dec 13 15:23 : client: [29] closed
+Dec 13 15:23 : client: [30] opened from [::1]:38100
+Dec 13 15:23 : client: [30] closed
+Dec 13 15:23 : client: [31] opened from [::1]:38102
+Dec 13 15:23 : client: [31] closed
+Dec 13 15:23 : client: [32] opened from [::1]:38104
+Dec 13 15:23 : client: [32] closed
+Dec 13 15:23 : client: [33] opened from [::1]:38106
+Dec 13 15:23 : client: [33] closed
+Dec 13 15:23 : client: [34] opened from [::1]:38108
+Dec 13 15:23 : client: [34] closed
+Dec 13 15:23 : client: [35] opened from [::1]:38110
+Dec 13 15:23 : client: [35] closed
+Dec 13 15:23 : client: [36] opened from [::1]:38112
+Dec 13 15:23 : client: [36] closed
+Dec 13 15:23 : client: [37] opened from [::1]:38114
+Dec 13 15:23 : client: [37] closed
+Dec 13 15:23 : client: [38] opened from [::1]:38116
+Dec 13 15:23 : client: [38] closed
+Dec 13 15:23 : client: [39] opened from [::1]:38118
+Dec 13 15:23 : client: [39] closed
+Dec 13 15:24 : client: [40] opened from [::1]:38120
+Dec 13 15:24 : client: [40] closed
+Dec 13 15:24 : client: [41] opened from [::1]:38122
+Dec 13 15:24 : client: [41] closed
+Dec 13 15:24 : client: [42] opened from [::1]:38124
+Dec 13 15:24 : client: [42] closed
+Dec 13 15:24 : client: [43] opened from [::1]:38126
+Dec 13 15:24 : client: [43] closed
+Dec 13 15:24 : client: [44] opened from [::1]:38130
+Dec 13 15:24 : client: [44] closed
+Dec 13 15:24 : client: [45] opened from [::1]:38132
+Dec 13 15:24 : client: [45] closed
+Dec 13 15:24 : client: [46] opened from [::1]:38138
+Dec 13 15:24 : client: [46] closed
+Dec 13 15:24 : client: [47] opened from [::1]:38140
+Dec 13 15:24 : client: [47] closed
+Dec 13 15:24 : client: [48] opened from [::1]:38144
+Dec 13 15:24 : client: [48] closed
+Dec 13 15:24 : client: [49] opened from [::1]:38146
+Dec 13 15:24 : client: [49] closed
+Dec 13 15:24 : client: [50] opened from [::1]:38148
+Dec 13 15:24 : client: [50] closed
+Dec 13 15:24 : client: [51] opened from [::1]:38150
+Dec 13 15:24 : client: [51] closed
+Dec 13 15:25 : client: [52] opened from [::1]:38154
+Dec 13 15:25 : client: [52] closed
+Dec 13 15:25 : client: [53] opened from [::1]:38156
+Dec 13 15:25 : client: [53] closed
+Dec 13 15:25 : client: [54] opened from [::1]:38158
+Dec 13 15:25 : client: [54] closed
+Dec 13 15:25 : client: [55] opened from [::1]:38160
+Dec 13 15:25 : client: [55] closed
+Dec 13 15:25 : client: [56] opened from [::1]:38162
+Dec 13 15:25 : client: [56] closed
+Dec 13 15:25 : client: [57] opened from [::1]:38164
+Dec 13 15:25 : client: [57] closed
+Dec 13 15:25 : client: [58] opened from [::1]:38166
+Dec 13 15:25 : client: [58] closed
+Dec 13 15:25 : client: [59] opened from [::1]:38168
+Dec 13 15:25 : client: [59] closed
+Dec 13 15:25 : client: [60] opened from [::1]:38170
+Dec 13 15:25 : client: [60] closed
+Dec 13 15:25 : client: [61] opened from [::1]:38172
+Dec 13 15:25 : client: [61] closed
+Dec 13 15:25 : client: [62] opened from [::1]:38176
+Dec 13 15:25 : client: [62] closed
+Dec 13 15:25 : client: [63] opened from [::1]:38178
+Dec 13 15:25 : client: [63] closed
+Dec 13 15:26 : client: [64] opened from [::1]:38180
+Dec 13 15:26 : client: [64] closed
+Dec 13 15:26 : client: [65] opened from [::1]:38184
+Dec 13 15:26 : client: [65] closed
+Dec 13 15:26 : client: [66] opened from [::1]:38186
+Dec 13 15:26 : client: [66] closed
+Dec 13 15:26 : client: [67] opened from [::1]:38192
+Dec 13 15:26 : client: [67] closed
+Dec 13 15:26 : client: [68] opened from [::1]:38194
+Dec 13 15:26 : client: [68] closed
+Dec 13 15:26 : client: [69] opened from [::1]:38200
+Dec 13 15:26 : client: [69] closed
+Dec 13 15:26 : client: [70] opened from [::1]:38202
+Dec 13 15:26 : client: [70] closed
+Dec 13 15:26 : client: [71] opened from [::1]:38204
+Dec 13 15:26 : client: [71] closed
+Dec 13 15:26 : client: [72] opened from [::1]:38214
+Dec 13 15:26 : client: [72] closed
+Dec 13 15:26 : client: [73] opened from [::1]:38216
+Dec 13 15:26 : client: [73] closed
+Dec 13 15:26 : client: [74] opened from [::1]:38220
+Dec 13 15:26 : client: [74] closed
+Dec 13 15:26 : client: [75] opened from [::1]:38224
+Dec 13 15:26 : client: [75] closed
+Dec 13 15:27 : client: [76] opened from [::1]:38226
+Dec 13 15:27 : client: [76] closed
+Dec 13 15:27 : client: [77] opened from [::1]:38228
+Dec 13 15:27 : client: [77] closed
+Dec 13 15:27 : client: [78] opened from [::1]:38230
+Dec 13 15:27 : client: [78] closed
+Dec 13 15:27 : client: [79] opened from [::1]:38232
+Dec 13 15:27 : client: [79] closed
+Dec 13 15:27 : client: [80] opened from [::1]:38234
+Dec 13 15:27 : client: [80] closed

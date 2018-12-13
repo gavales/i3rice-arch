@@ -1,4 +1,3 @@
-wq
 shell 
 rename nikes
 rename purple
@@ -48,3 +47,4 @@ shell unzip BAR100-ASM-R1.zip -d "BAR100-ASM-R1"
 electronics
 mkdir electronics
 shell unzip PENETRATOR-M-NUT-10-A-R2.zip -d "PENETRATOR-M-NUT-10-A-R2"
+rename Bmirror.png
