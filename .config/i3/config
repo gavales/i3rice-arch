@@ -405,7 +405,7 @@ $fw [class="Pavucontrol"]                   $flen,$brnr,\
 $fw [con_mark=_sticky_1]                resize set 525 317
 
 $fw [instance="MUSIC"]                  $mrk1,$tf "ncmpcpp"
-$fw [instance="CALENDAR"]               $mkr2,$tf "vim calendar"
+$fw [instance="CALENDAR"]               $mrk2,$tf "vim calendar"
 $fw [title="Google Chrome$"]            $mrk3,$tf "google chrome"
 
 $fw [class="MPlayer"]                   $mvmk1
