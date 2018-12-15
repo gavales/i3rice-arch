@@ -195,7 +195,7 @@ $mod+Ctrl+r         exec $browser --new-window \
 # ////// MEDIA
 
 $mod+Shift+s        exec spotify
-$mod+s              exec $term -fn "xft:monospace:size=$fonts" -name MUSIC -e ncmpcpp
+$mod+s              exec $term -fn "xft:$font3:size=$fonts" -name MUSIC -e ncmpcpp
 $mod+v              $lnch '$term -name VIS -e vis' $mk2
 $mod+Shift+v        $lnch '$term -name NCMVIS -e ncmpcpp -s visualizer' $mk2
 $mod+Shift+n        $lnch '$browser --new-window \
@@ -305,7 +305,7 @@ $win+3              $lnch '$term -name VIMRC -e vim ~/.vimrc' $mk3
 $win+4              $lnch '$term -name RCCONF -e vim ~/.config/ranger/rc.conf' $mk3
 $win+5              $lnch '$term -name i3BLOCKS -e vim ~/scripts/mkblocksconf' $mk3
 $win+g              exec $term -name GITREPOUPDATE -e bash ~/$scripts/gitcommit
-$win+c              $lnch '$term -fn "xft:monospace:size=$fonts" \
+$win+c              $lnch '$term -fn "xft:$font3:size=$fonts" \
                         -name CALENDAR -e vim "+Calendar -view=day"' $mk2
 $win+r              $lnch '$term -name RTV -e rtv' $mk2
 

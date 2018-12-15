@@ -1,6 +1,6 @@
 
 ! >>>> COLORS & VARIABLES
-#define fontname monospace
+#define fontname monaco
 !#define font TerminessTTFNerdFontMono
 #define fontsize 14
 #define fontsize2 12
