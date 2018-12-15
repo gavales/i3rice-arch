@@ -36,15 +36,15 @@ shell ln -sf ~/global.bib name.bib
 rename Calibration_data
 shell git clone https://github.com/StillANixRookie/.git
 rename 2018_12_07.md
-rename Uni
 rename DamaDamas
 rename colors
 
 shell ln -sf ~/i3rice-arch/global.bib %f
-shell ln -sf ~/Drive/global.bib %f
 rename xrofi
 shell unzip BAR100-ASM-R1.zip -d "BAR100-ASM-R1"
 electronics
 mkdir electronics
 shell unzip PENETRATOR-M-NUT-10-A-R2.zip -d "PENETRATOR-M-NUT-10-A-R2"
 rename Bmirror.png
+rename Uni
+shell ln -sf ~/Drive/global.bib %f
