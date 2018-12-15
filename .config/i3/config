@@ -10,7 +10,7 @@
 set $font1 FixedsysMono
 set $font2 FontAwesome
 set $font3 Monaco
-set $fonts 10
+set $fonts 12
 
 font pango:$font1,$font2 $fonts
 
@@ -54,19 +54,18 @@ set $mvcn       move position center
 # ////// APPS
 
 set $term       urxvtc
-#set $term       urxvt
 set $browser    google-chrome-beta
-#set $brightinc  xbacklight -inc 10
-#set $brightdec  xbacklight -dec 10
-set $brightinc  light -A 10
-set $brightdec  light -U 10
-#set $primary    eDP1
-set $primary    LVDS-1
-#set $secondary  VGA1
-set $secondary  VGA-1
+set $brightinc  xbacklight -inc 10
+set $brightdec  xbacklight -dec 10
+#set $brightinc  light -A 10
+#set $brightdec  light -U 10
+set $primary    eDP1
+#set $primary    LVDS-1
+set $secondary  VGA1
+#set $secondary  VGA-1
 set $tertiary   HDMI1
-#set $kb         us
-set $kb         gb
+set $kb         us
+#set $kb         gb
 
 # ////// WORKSPACE NAMES
 
