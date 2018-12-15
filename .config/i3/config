@@ -413,6 +413,7 @@ $fw [class="mpv"]                       $mvmk1
 $fw [class="feh"]                       $mvmk1
 
 $fw [class="Surf"]                      $mvmk2
+$fw [class="Zathura"]                   $mvmk2
 $fw [title="_popout="]                  $mvmk2,$tf "popout chat"
 $fw [title="^localhost:8090$"]          $mvmk2,$tf "instant markdown preview"
 
