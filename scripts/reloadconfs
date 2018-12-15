@@ -1,5 +1,7 @@
 #!/bin/bash
 
-bash ~/scripts/dunstthemeupdate
+bash ~/scripts/mkdunsttheme
 bash ~/scripts/mkblocksconf
 bash ~/scripts/mkvistheme
+bash ~/scripts/mkatomtheme
+bash ~/scripts/mkfixedsyscss

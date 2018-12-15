@@ -1,24 +1,27 @@
-!bamboo
-#define cblkd #1f201b
-#define cblkl #575754
-#define credl #68430f
-#define credd #68430f
-#define cgrnl #406b1f
-#define cgrnd #406b1f
-#define cylwl #797a2b
-#define cylwd #797a2b
-#define cblul #c28419
-#define cblud #c28419
-#define cgntl #84c11a
-#define cgntd #84c11a
-#define ccynl #c3df22
-#define ccynd #c3df22
-#define cwhtl #c7c7c6
-#define cwhtd #c7c7c6
+!city-lights
+! vim:syntax=xdefaults
+#define cblkd #181e24
+#define credd #d95468
+#define cgrnd #8bd49c
+#define cylwd #ebbf83
+#define cblud #539afc
+#define cgntd #b62d65
+#define ccynd #70e1e8
+#define cwhtd #b7c5d3
+#define cblkl #333f4a
+#define credl #d95468
+#define cgrnl #8bd49c
+#define cylwl #f7dab3
+#define cblul #5ec4ff
+#define cgntl #b62d65
+#define ccynl #70e1e8
+#define cwhtl #718ca1
 
-#define fontname FixedsysMono
+! >>>> COLORS & VARIABLES
+#define fontname monaco
 !#define font TerminessTTFNerdFontMono
-#define fontsize 13
+#define fontsize 14
+#define fontsize2 12
 
 *background:				cblkd
 *foreground:				cwhtl
@@ -54,11 +57,10 @@
 *color7:	cwhtd
 *color15:	cwhtl
 
-
-!!ROFI
+! >>>> ROFI
 #include "/home/gavarch/xinclude/xrofi"
 
-!!Xft
+! >>>> Xft
 Xft.dpi:		96
 Xft.antialias:	true
 Xft.hinting:	true
@@ -67,7 +69,7 @@ Xft.autohint:	false
 Xft.hintstyle:	hintslight
 Xft.lcdfilter:	lcddefault
 
-! !!XTerm
+! >>>> XTerm
 ! XTerm*background:	cblkd
 ! XTerm*foreground:	cwhtd
 ! XTerm*pointerColor:	ccynd
@@ -76,14 +78,16 @@ Xft.lcdfilter:	lcddefault
 ! XTerm*reverseVideo:	on
 ! XTerm*faceName:		Terminus:size=11:antialias=true
 ! XTerm*selectToClipboard:true
-! 
-! Xcursor.theme: capitaine-cursors
-! Xcursor.size:			0
 
-!!urxvt
+! >>>> Xcursor
+Xcursor.theme: Bibata_Red
+Xcursor.size: 32
+
+! >>>> URXVT
 URxvt.font: xft:fontname:size=fontsize
 
-URxvt*depth: 32
+URxvt*fading: 10
+URxvt*depth: 10
 URxvt*scrollBar: false
 URxvt*mouseWheelScrollPage:	false
 URxvt*cursorBlink: true
@@ -98,11 +102,10 @@ URxvt*internalBorder: 1
 ! URxvt*transparent:              true
 ! URxvt*shading:                  138
 
-!extensions
-URxvt*perl-ext-common: default
-URxvt*perl-ext: clipboard,matcher,resize-font,config-reload
+! >>>> URXVT EXTENSIONS
+URxvt*perl-ext-common: default,clipboard,matcher,resize-font,config-reload
 !URxvt*perl-lib: /home/gavarch/.urxvt/ext
-URxvt*url-launcher:	/usr/bin/google-chrome-stable
+URxvt*url-launcher:	/usr/bin/google-chrome-beta
 URxvt*matcher.button: 1
 URxvt*keysym.C-y: clipboard:copy
 URxvt*keysym.C-a: clipboard:paste

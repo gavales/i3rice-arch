@@ -1,9 +1,14 @@
 
 ! >>>> COLORS & VARIABLES
-#define fontname FixedsysMono
+#define fontname monaco
 !#define font TerminessTTFNerdFontMono
+<<<<<<< HEAD
 #define fontsize 11
 #define fontsize2 13
+=======
+#define fontsize 14
+#define fontsize2 12
+>>>>>>> origin/master
 
 *background:				cblkd
 *foreground:				cwhtl

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-idle=$(top -b -n1 | grep %Cpu | awk '{print $9}' | sed -e "s/^id,//")
+idle=$(top -b -n1 | sed -n 's/.* ni, \([^ ]*\).*/\1/p')
 idlelen=$(echo $idle | tr ' ' '\n' | wc -l)
 idletot=$(echo $idle | tr ' ' '\n' | awk '{s+=$1} END {print s}')
 
@@ -13,9 +13,9 @@ fi
 #echo $cpu
 
 if [[ $cpu -ge 80 ]]; then
-    echo "<span foreground=\"#ff0000\"><span face='Font Awesome 5 Free'>&#xf2db;</span> $cpu%</span>"
+    echo "<span foreground=\"#ff0000\"><span face='Font Awesome 5 Free'>&#xf2db;</span> $cpu</span>"
 elif [[ $cpu -ge 50 ]]; then
-    echo "<span foreground=\"#ffff00\"><span face='Font Awesome 5 Free'>&#xf2db;</span> $cpu%</span>"
+    echo "<span foreground=\"#ffff00\"><span face='Font Awesome 5 Free'>&#xf2db;</span> $cpu</span>"
 else
-    echo "<span face='Font Awesome 5 Free'>&#xf2db;</span> $cpu%"
+    echo "<span face='Font Awesome 5 Free'>&#xf2db;</span> $cpu"
 fi

@@ -8,17 +8,17 @@ yamlDIR=$HOME/Templates/pandoc
 
 # WHICH BIBLIOGRAPHY FILE
 whichbib=$(cat $file | grep '#bib' | awk '{print $NF}')
-if [[ -n $whichcss ]]; then
+if [[ -n $whichbib ]]; then
     bib="$HOME/${whichbib}"
-elif [[ -z $whichcss ]]; then
+elif [[ -z $whichbib ]]; then
     bib="$HOME/global.bib"
 fi
 
 # WHICH .yaml TO USE
 yaml=$(cat $file | grep '#yaml' | awk '{print $NF}')
-if [[ -n $whichcss ]]; then
+if [[ -n $yaml ]]; then
     settings="$HOME/Templates/pandoc/${yaml}.yaml"
-elif [[ -z $whichcss ]]; then
+elif [[ -z $yaml ]]; then
     settings="$HOME/Templates/pandoc/settings.yaml"
 fi
 
@@ -42,7 +42,7 @@ fi
 engine=$(cat $file | grep '#compiler' | awk '{print $NF}')
 if [[ -n $engine ]]; then
     texgine="--pdf-engine=$engine"
-elif [[ -z $whichcss ]]; then
+elif [[ -z $engine ]]; then
     texgine=
 fi
 

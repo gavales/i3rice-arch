@@ -1,22 +1,21 @@
 #!/bin/bash
 
-volraw=$(amixer get Master|grep 'Front Left:'|awk '{print $5}')
-stat=$(amixer get Master|grep 'Front Left:'|awk '{print $6}')
-vol=${volraw:1:-1}
-volint=${volraw:1:-2}
+volraw=$(amixer get Master|tail -1|grep -oh "\w*%\w*")
+stat=$(amixer get Master|tail -1|awk '{print $NF}')
+volint=${volraw:0:-1}
 
 if [[ $volint -ge 80 ]]; then
-    echo "<span foreground=\"#ff0000\"><span face='Font Awesome 5 Free'>&#xf028;</span> $vol</span>"
+    echo "<span foreground=\"#ff0000\"><span face='Font Awesome 5 Free'>&#xf028;</span> $volint</span>"
 elif [[ $volint -ge 60 ]]; then
-    echo "<span foreground=\"#ffff00\"><span face='Font Awesome 5 Free'>&#xf028;</span> $vol</span>"
+    echo "<span foreground=\"#ffff00\"><span face='Font Awesome 5 Free'>&#xf028;</span> $volint</span>"
 elif [[ $stat == "[off]" ]]; then
     echo "<span face='Font Awesome 5 Free'>&#xf6a9;</span>"
 elif [[ $volint -le 30 ]]; then
-    echo "<span face='Font Awesome 5 Free'>&#xf027;</span> $vol"
+    echo "<span face='Font Awesome 5 Free'>&#xf027;</span> $volint"
 elif [[ $volint == 0 ]]; then
-    echo "<span face='Font Awesome 5 Free'>&#xf026;</span> $vol"
+    echo "<span face='Font Awesome 5 Free'>&#xf026;</span> $volint"
 else
-    echo "<span face='Font Awesome 5 Free'>&#xf028;</span> $vol"
+    echo "<span face='Font Awesome 5 Free'>&#xf028;</span> $volint"
 fi
 
 case $BLOCK_BUTTON in

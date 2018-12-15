@@ -1,7 +1,0 @@
-#/bin/bash
-
-cd
-echo "[gcalcli]" > .gcalclirc
-echo "user: gvales2831997" >> .gcalclirc
-echo "pw: $(pass show googcal)" >> .gcalclirc
-gpg -r gvales2831997@gmail.com -e .gcalclirc
