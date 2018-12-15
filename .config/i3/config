@@ -10,7 +10,7 @@
 set $font1 FixedsysMono
 set $font2 FontAwesome
 set $font3 Monaco
-set $fonts 12
+set $fonts 10
 
 font pango:$font1,$font2 $fonts
 
@@ -56,17 +56,17 @@ set $mvcn       move position center
 set $term       urxvtc
 #set $term       urxvt
 set $browser    google-chrome-beta
-set $brightinc  xbacklight -inc 10
-set $brightdec  xbacklight -dec 10
-#set $brightinc  light -A 10
-#set $brightdec  light -U 10
-set $primary    eDP1
-#set $primary    LVDS-1
-set $secondary  VGA1
-#set $secondary  VGA-1
+#set $brightinc  xbacklight -inc 10
+#set $brightdec  xbacklight -dec 10
+set $brightinc  light -A 10
+set $brightdec  light -U 10
+#set $primary    eDP1
+set $primary    LVDS-1
+#set $secondary  VGA1
+set $secondary  VGA-1
 set $tertiary   HDMI1
-set $kb         us
-#set $kb         gb
+#set $kb         us
+set $kb         gb
 
 # ////// WORKSPACE NAMES
 
@@ -355,20 +355,21 @@ $fw [urgent=latest] focus
 
 # ////// UNMARKED
 
+$fw [title="About Pale Moon"]               $flen
+$fw [title="alsamixer"]                     $flen
+$fw [class="Arandr"]                        $flen
 $fw [class="Clipgrab"]                      $flen
 $fw [title="File Transfer*"]                $flen
+$fw [class="Galculator"]                    $flen
 $fw [class="Lightdm-gtk-greeter-settings"]  $flen
 $fw [class="Manjaro-hello"]                 $flen
+$fw [title="MuseScore: Play Panel"]         $flen
+$fw [class="Oblogout"]                      $flen
 $fw [class="octopi"]                        $flen
-$fw [title="About Pale Moon"]               $flen
 $fw [class="Pamac-manager"]                 $flen
 $fw [class="Pavucontrol"]                   $flen
 $fw [class="Xfburn"]                        $flen
-$fw [title="MuseScore: Play Panel"]         $flen
-$fw [title="alsamixer"]                     $flen
-$fw [class="Galculator"]                    $flen
-$fw [class="Oblogout"]                      $flen
-$fw [class="Arandr"]                        $flen
+
 $fw [class="Calamares"]                     $flen,$brnr
 $fw [class="GParted"]                       $flen,$brnr
 $fw [title="i3_help"]                       $flen,$brnr
@@ -386,8 +387,11 @@ $fw [class="(?i)virtualbox"]                $flen,$brnr
 $fw [class="matplotlib"]                    $flen,$brnr
 $fw [class="Cam"]                           $flen,$brnr
 $fw [class="Blueman-manager"]               $flen,$brnr
+
 $fw [class="Shutter"]                       $flen,$brnr,$mvcn,\
                                                 resize set 500 500
+$fw [class="Electron"]                      $flen,$brnr,$mvcn,\
+                                                resize set 1000 700
 $fw [instance="CALC"]                       $flen,$brnr,$mvcn,\
                                                 resize set 480 480,\
                                                 $tf "calculator"
@@ -413,7 +417,6 @@ $fw [class="mpv"]                       $mvmk1
 $fw [class="feh"]                       $mvmk1
 
 $fw [class="Surf"]                      $mvmk2
-$fw [class="Zathura"]                   $mvmk2
 $fw [title="_popout="]                  $mvmk2,$tf "popout chat"
 $fw [title="^localhost:8090$"]          $mvmk2,$tf "instant markdown preview"
 
