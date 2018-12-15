@@ -2,8 +2,8 @@
 ! >>>> COLORS & VARIABLES
 #define fontname FixedsysMono
 !#define font TerminessTTFNerdFontMono
-#define fontsize 13
-#define fontsize2 15
+#define fontsize 11
+#define fontsize2 13
 
 *background:				cblkd
 *foreground:				cwhtl
@@ -43,7 +43,7 @@
 #include "/home/gavarch/xinclude/xrofi"
 
 ! >>>> Xft
-Xft.dpi:		96
+Xft.dpi:		160
 Xft.antialias:	true
 Xft.hinting:	true
 Xft.rgba:		rgb
@@ -63,7 +63,7 @@ Xft.lcdfilter:	lcddefault
 
 ! >>>> Xcursor
 Xcursor.theme: Bibata_Red
-Xcursor.size: 32
+Xcursor.size: 48
 
 ! >>>> URXVT
 URxvt.font: xft:fontname:size=fontsize
