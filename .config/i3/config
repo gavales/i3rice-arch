@@ -122,11 +122,11 @@ bar {
 	font pango:$font1,$font2 $fonts
 
 	colors {
-	background $blk
+	background $blu
 #                       brdr bkgr text
-	focused_workspace   $blk $blk $wht
-	active_workspace    $blk $blk $cyn
-	inactive_workspace  $blk $blk $blu
+	focused_workspace   $blu $blu $wht
+	active_workspace    $blu $blu $cyn
+	inactive_workspace  $blu $blu $blk
 	binding_mode        $ylw $ylw $blk
 	urgent_workspace    $red $red $blk
 	}
