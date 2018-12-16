@@ -22,7 +22,7 @@ cd
 echo -e "${green}================================================"
 echo -e "${blue}= INSTALLING YOUR PROGRAMS ====================="
 echo -e "${green}================================================${normal}"
-sudo pacman -S rofi otf-font-awesome ttf-font-awesome nautilus evince mupdf pinta redshift playerctl mplayer r tk gcc-fortran newsboat opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-crossref pandoc-citeproc python-pygments python2-pygments biber texlive-most acpi lm_sensors sysstat ntfs-3g libmpdclient lxappearance sxiv ncurses fftw w3m ranger mpd mpc ncmpcpp feh dunst unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl streamlink urxvt-perls trash-cli
+sudo pacman -S rofi otf-font-awesome ttf-font-awesome nautilus evince mupdf pinta redshift playerctl mplayer r tk gcc-fortran newsboat opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-crossref pandoc-citeproc python-pygments python2-pygments biber texlive-most acpi lm_sensors sysstat ntfs-3g libmpdclient lxappearance sxiv ncurses fftw w3m ranger mpd mpc ncmpcpp feh dunst unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl urxvt-perls trash-cli atom python-pywal
 echo -e "${green}================================================"
 echo -e "${blue}= INSTALLING YAOURT ============================"
 echo -e "${green}================================================${normal}"
@@ -47,6 +47,7 @@ echo -e "${purple} > FLAT-REMIX-ICONS <" && yaourt -S flat-remix-git
 echo -e "${purple} > FLAT-REMIX-GNOME-GIT <" && yaourt -S flat-remix-gnome-git
 echo -e "${purple} > URXVT-RESIZE-FONT <" && yaourt -S urxvt-resize-font-git
 echo -e "${purple} > i3IPC-PYTHON <" && yaourt -S i3ipc-python
+echo -e "${purple} > DUNSTIFY <" && yaourt -S dunstify
 echo -e "${green}================================================"
 echo -e "${blue}= CLI-VISUALISER ==============================="
 echo -e "${green}================================================${normal}"

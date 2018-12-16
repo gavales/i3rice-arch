@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+# CREATED: Sun 16 Dec 18:22:14 GMT 2018
+
+xfilesDir=$HOME/xinclude
+xresDir=$HOME/i3rice-arch
+
+cd $xresDir
+
+echo "! >>>> PYWAL COLORVARS" > .Xresources
+cat $HOME/.cache/wal/colors-kitty.conf | grep 'color' | sed "s/color10/\#define\ cgrnl/g;s/color11/\#define\ cylwl/g;s/color12/\#define\ cblul/g;s/color13/\#define\ cgntl/g;s/color14/\#define\ ccynl/g;s/color15/\#define\ cwhtl/g;s/color0/\#define\ cblkd/g;s/color1/\#define\ credd/g;s/color2/\#define\ cgrnd/g;s/color3/\#define\ cylwd/g;s/color4/\#define\ cblud/g;s/color5/\#define\ cgntd/g;s/color6/\#define\ ccynd/g;s/color7/\#define\ cwhtd/g;s/color8/\#define\ cblkl/g;s/color9/\#define\ credl/g" >> .Xresources
+echo "" >> .Xresources
+cat ${xfilesDir}/xvars >> .Xresources
+echo "" >> .Xresources
+cat ${xfilesDir}/xcolorvars >> .Xresources
+echo "" >> .Xresources
+echo "! >>>> ROFI" >> .Xresources
+cat ${xfilesDir}/xrofi >> .Xresources
+cat ${xfilesDir}/xmain >> .Xresources
+
+xrdb -load .Xresources
+bash ~/scripts/reloadconfs
+i3-msg reload
+killall i3bar
+i3bar --bar_id=bar-1 & disown i3bar
+cp $1 $HOME/.config/wall.png

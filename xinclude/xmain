@@ -1,47 +1,4 @@
 
-! >>>> COLORS & VARIABLES
-#define fontname monaco
-!#define font TerminessTTFNerdFontMono
-#define fontsize 14
-#define fontsize2 12
-
-*background:				cblkd
-*foreground:				cwhtl
-*fading:					30
-*fadeColor:					black
-*cursorColor:				ccynd
-*pointerColorBackground:	cblkd
-*pointerColorForeground:	ccynd
-*border:					cblkd
-
-!black dark/light
-*color0:	cblkd
-*color8:	cblkl
-!red dark/light
-*color1:	credd
-*color9:	credl
-!green dark/light
-*color2:	cgrnd
-*color10:	cgrnl
-!yellow dark/light
-*color3:	cylwd
-*color11:	cylwl
-!blue dark/light
-*color4:	cblud
-*color12:	cblul
-!magenta dark/light
-*color5:	cgntd
-*color13:	cgntl
-!cyan dark/light
-*color6:	ccynd
-*color14:	ccynl
-!white dark/light
-*color7:	cwhtd
-*color15:	cwhtl
-
-! >>>> ROFI
-#include "/home/gavarch/xinclude/xrofi"
-
 ! >>>> Xft
 Xft.dpi:		96
 Xft.antialias:	true

@@ -7,12 +7,20 @@ font=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
 dmenucolors="-fn "${font:4}" -nb "$black" -nf "$white" -sf "$black" -sb "$blue""
 
 theme=$(ls $HOME/xinclude/colors | dmenu -i -p "Choose theme:" $dmenucolors)
+xfilesDir=$HOME/i3rice-arch/xinclude
 
 if [[ -z $theme ]]; then
 	:
 else
-    cat $HOME/xinclude/colors/${theme} > $HOME/.Xresources
-    cat $HOME/xinclude/xmain >> $HOME/.Xresources
+    cat ${xfilesDir}/colors/${theme} > $HOME/.Xresources
+    echo "" >> $HOME/.Xresources
+    cat ${xfilesDir}/xvars >> $HOME/.Xresources                           
+    echo "" >> $HOME/.Xresources
+    cat ${xfilesDir}/xcolorvars >> $HOME/.Xresources
+    echo "" >> $HOME/.Xresources
+    echo "! >>>> ROFI" >> $HOME/.Xresources
+    cat ${xfilesDir}/xrofi >> $HOME/.Xresources
+    cat ${xfilesDir}/xmain >> $HOME/.Xresources
     xrdb -load $HOME/.Xresources
     kill -1 $(pidof urxvtd)
     notify-send '.Xresources has been reloaded' -i $HOME/scriptpics/settingswhite.png

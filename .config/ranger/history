@@ -1,12 +1,3 @@
-open_with 
-open_with gvim
-rename main2.json_
-rename main2.json
-rename rice-syntax
-open_with atom
-rename 2018_12_03.md
-rename template.md
-open_with vim
 shell chmod +x %f
 open_with kk
 rename gvimrc
@@ -48,3 +39,12 @@ rename Bmirror.png
 rename 8_main
 rename 11_main
 shell git clone https://github.com/StillANixRookie/i3rice-arch.git
+open_with mpv --loop
+open_with sxiv -a
+shell cp -r ~/Templates/tex/xelatex Latex
+rename currentske.png
+rename seabedsubstrate.png
+rename sedimentsurvey.png
+rename breakoutforce.png
+rename .Xresources_
+rename .Xresources
