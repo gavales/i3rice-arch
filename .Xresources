@@ -81,7 +81,7 @@ Xft.lcdfilter:	lcddefault
 
 ! >>>> Xcursor
 Xcursor.theme: Bibata_Red
-Xcursor.size: 32
+Xcursor.size: 36
 
 ! >>>> URXVT
 URxvt.font: xft:fontname:size=fontsize
