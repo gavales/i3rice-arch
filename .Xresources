@@ -1,20 +1,20 @@
 ! >>>> PYWAL COLORVARS
-#define cblkd       #221610
-#define cblkl       #92a3a8
-#define credd       #737E81
-#define credl       #737E81
-#define cgrnd       #79898D
-#define cgrnl      #79898D
-#define cylwd       #9CAFB3
-#define cylwl      #9CAFB3
-#define cblud       #F9AD87
-#define cblul      #F9AD87
-#define cgntd       #D8BBA9
-#define cgntl      #D8BBA9
-#define ccynd       #A8D2E0
-#define ccynl      #A8D2E0
-#define cwhtd       #d1e9f1
-#define cwhtl      #d1e9f1
+#define cblkd       #130f1b
+#define cblkl       #6f938a
+#define credd       #2B6E70
+#define credl       #2B6E70
+#define cgrnd       #4B5C5E
+#define cgrnl      #4B5C5E
+#define cylwd       #3E8B77
+#define cylwl      #3E8B77
+#define cblud       #267A84
+#define cblul      #267A84
+#define cgntd       #2B928F
+#define cgntl      #2B928F
+#define ccynd       #2FA7A1
+#define ccynl      #2FA7A1
+#define cwhtd       #9fd3c6
+#define cwhtl      #9fd3c6
 
 
 ! >>>> VARIABLES
