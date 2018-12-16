@@ -1,20 +1,20 @@
 [frame]
 width = 1
-color = "#130f1b"
+color = "#150f08"
 
 [urgency_low]
-background = "#267A84"
-foreground = "#130f1b"
+background = "#EBAA50"
+foreground = "#150f08"
 timeout = 3
 
 [urgency_normal]
-background = "#267A84"
-foreground = "#130f1b"
+background = "#EBAA50"
+foreground = "#150f08"
 timeout = 3
 
 [urgency_critical]
-background = "#2B6E70"
-foreground = "#130f1b"
+background = "#7A856A"
+foreground = "#150f08"
 timeout = 3
 
 [shortcuts]
