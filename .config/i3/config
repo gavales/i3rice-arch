@@ -122,11 +122,11 @@ bar {
 	font pango:$font1,$font2 $fonts
 
 	colors {
-	background $blu
+	background $blk
 #                       brdr bkgr text
-	focused_workspace   $blu $blu $wht
-	active_workspace    $blu $blu $cyn
-	inactive_workspace  $blu $blu $blk
+	focused_workspace   $blk $blk $wht
+	active_workspace    $blk $blk $cyn
+	inactive_workspace  $blk $blk $blu
 	binding_mode        $ylw $ylw $blk
 	urgent_workspace    $red $red $blk
 	}
@@ -464,7 +464,10 @@ $execn          blueman-applet
 $execn          compton
 $execna         ff-theme-util
 $execna         fix_xcursor
-$execn          feh --bg-scale ~/.config/wall.png
+#$execn          feh --bg-fill ~/.config/wall.png
+$execn          "bash $home/$scripts/mkwalrando; \
+	                bash $home/$scripts/reloadconfs; i3-msg reload; \
+                    killall i3bar; i3bar --bar_id=bar-1"
 $execn          mpd
 $execn          shutter --min_at_startup
 $execn          python $home/$scripts/i3-sticky
