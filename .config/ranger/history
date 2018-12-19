@@ -1,50 +1,50 @@
-rename 2018_12_04.md
-rename fixedsys.css
-shell unzip 18_11_27_lab 9.zip -d "18_11_27_lab\ 9"
-shell unzip 18_11_27_lab 9.zip -d "18_11_27_lab_9"
-shell unzip 18_11_27_lab\ 9.zip -d "18_11_27_lab 9"
-rename onedark
-rename onelight
-rename city-lights
-rename test
-rename main
-rename optimisation
-rename 2_original
-rename DATA
-shell git clone
-shell git clone https://github.com/PotatoesMaster/i3-vim-syntax.git
-rename test_1.csv
-shell wget https://raw.githubusercontent.com/suan/vim-instant-markdown/master/after/ftplugin/markdown/instant-markdown.vim
-rename components.jpg
-shell ln -sf ~/global.bib name.bib
-rename Calibration_data
-shell git clone https://github.com/StillANixRookie/.git
-rename 2018_12_07.md
-rename Uni
-rename DamaDamas
+rename 2018_11_15.md
+rename music.json
+rename musicvis.json
+rename musicncm.json
+rename ncmpcpp.json
+rename spotify.json
+rename 2018_11_16.md
+shell gunzip Windows10Icons.tar.gz -d "Windows10Icons.tar"
+shell tar xvf Windows10Icons.tar
+scout -ftsea 
+shell unzip DamaDamas-icon-theme-master.zip -d "DamaDamas-icon-theme-master"
+mkdir python
+rename css
+shell cp ~/Templates/md/name.md ListOfReqts.md
+touch mpv.conf
+shell wget https://raw.githubusercontent.com/mpv-player/mpv/master/etc/mpv.conf
+rename DJS_25_27733408_2_Vales_Gavin.pptx
+rename 2018-11-17_21:38:11_1920x1080.png
+open_with pinta
+rename colorhship
+rename colorship
 rename colors
-shell ln -sf ~/i3rice-arch/global.bib %f
-shell ln -sf ~/Drive/global.bib %f
-rename xrofi
-shell unzip BAR100-ASM-R1.zip -d "BAR100-ASM-R1"
-electronics
-mkdir electronics
-shell unzip PENETRATOR-M-NUT-10-A-R2.zip -d "PENETRATOR-M-NUT-10-A-R2"
-rename Bmirror.png
-rename 8_main
-rename 11_main
-shell git clone https://github.com/StillANixRookie/i3rice-arch.git
-open_with mpv --loop
-open_with sxiv -a
-shell cp -r ~/Templates/tex/xelatex Latex
-rename currentske.png
-rename seabedsubstrate.png
-rename sedimentsurvey.png
-rename breakoutforce.png
-rename .Xresources_
-rename .Xresources
-mkdir IP
-mkdir spaceprop
-rename ip
-mkdir gdp
+rename colorful
+rename colorship.jpg
+rename wsloget
+rename wsloapp
+mkdir pandoc
+shell unzip gvales2831997@gmail.com.ical.zip -d "gvales2831997@gmail.com.ical"
+rename #contacts@group.v.calendar.google.com.ics
+rename mkgcalrc
+shell chmod +x %f
+shell unzip calendar.vim-master.zip -d "calendar.vim-master"
+mkdir caldav
+rename 2018_11_22.md
+rename manuscript.css
+rename i3exit
+rename i3-sticky-toggle
+open_with vim
 
+open_with 
+shell 
+rename nikes
+rename purple
+rename compton.conf__
+rename compton.conf_
+rename compton.conf
+wq
+mkdir Pictures/scrots
+mkdir Documents
+mkdir walls
