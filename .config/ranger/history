@@ -1,9 +1,3 @@
-rename 2018_12_04.md
-rename fixedsys.css
-shell unzip 18_11_27_lab 9.zip -d "18_11_27_lab\ 9"
-shell unzip 18_11_27_lab 9.zip -d "18_11_27_lab_9"
-shell unzip 18_11_27_lab\ 9.zip -d "18_11_27_lab 9"
-rename onedark
 rename onelight
 rename city-lights
 rename test
@@ -24,7 +18,6 @@ rename Uni
 rename DamaDamas
 rename colors
 shell ln -sf ~/i3rice-arch/global.bib %f
-shell ln -sf ~/Drive/global.bib %f
 rename xrofi
 shell unzip BAR100-ASM-R1.zip -d "BAR100-ASM-R1"
 electronics
@@ -48,3 +41,10 @@ mkdir spaceprop
 rename ip
 mkdir gdp
 
+shell ln -sf ~/Drive/global.bib %f
+rename ProjectPlanWriteUp.bib
+rename InterimReport.bib
+rename RamjetLabReport.bib
+rename TurbojetLabReport.bib
+mkdir exams
+mkdir lectureslides

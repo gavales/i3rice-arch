@@ -9,7 +9,7 @@ yamlDIR=$HOME/Templates/pandoc
 # WHICH BIBLIOGRAPHY FILE
 whichbib=$(cat $file | grep '#bib' | awk '{print $NF}')
 if [[ -n $whichbib ]]; then
-    bib="$HOME/${whichbib}"
+    bib="${whichbib}"
 elif [[ -z $whichbib ]]; then
     bib="$HOME/global.bib"
 fi
