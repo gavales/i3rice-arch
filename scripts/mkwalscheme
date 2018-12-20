@@ -6,7 +6,7 @@
 xfilesDir=$HOME/xinclude
 xresDir=$HOME/i3rice-arch
 
-feh --bg-fill "$1"
+feh --bg-scale "$1"
 wal -q -i "$1"
 
 cd $xresDir

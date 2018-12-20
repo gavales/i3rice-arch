@@ -1,21 +1,20 @@
-!andalusia
-! vim:syntax=xdefaults
-#define cblkd #17171f
-#define credd #aa5745
-#define cgrnd #6868aa
-#define cylwd #8978aa
-#define cblud #992f9a
-#define cgntd #a58aa2
-#define ccynd #aa7a86
-#define cwhtd #c5c5c7
-#define cblkl #515157
-#define credl #aa5745
-#define cgrnl #6868aa
-#define cylwl #8978aa
-#define cblul #992f9a
-#define cgntl #a58aa2
-#define ccynl #aa7a86
-#define cwhtl #c5c5c7
+! >>>> PYWAL COLORVARS
+#define cblkd       #121006
+#define cblkl       #7a8286
+#define credd       #655F45
+#define credl       #655F45
+#define cgrnd       #88751E
+#define cgrnl      #88751E
+#define cylwd       #856D4E
+#define cylwl      #856D4E
+#define cblud       #6D815F
+#define cblul      #6D815F
+#define cgntd       #988D17
+#define cgntl      #988D17
+#define ccynd       #978C6C
+#define ccynl      #978C6C
+#define cwhtd       #afbac0
+#define cwhtl      #afbac0
 
 
 ! >>>> VARIABLES
