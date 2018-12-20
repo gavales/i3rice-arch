@@ -221,8 +221,10 @@ autocmd FileType tex inoremap lt<Tab> \label{tab:}<Space><++><Esc>T:i
 autocmd FileType tex inoremap le<Tab> \label{eq:}<Space><++><Esc>T:i
 autocmd FileType tex inoremap ls<Tab> \label{sec:}<Space><++><Esc>T:i
 
+autocmd FileType tex inoremap nc<Tab> \newcommand{}[<++>]<++>{<++>}<Esc>2F}i
+
 autocmd FileType tex inoremap pc<Tab> \parencite{}<++><Esc>T{i
-autocmd FileType tex inoremap pt<Tab> \item
+autocmd FileType tex inoremap pt<Tab> \item<space>
                                      
 autocmd FileType tex inoremap rf<Tab> \figref{fig:}<++><Esc>T:i
 autocmd FileType tex inoremap rt<Tab> \tabref{tab:}<++><Esc>T:i
@@ -239,7 +241,7 @@ autocmd FileType tex inoremap s3<Tab> \subsubsection{}<Enter><++><Esc>kf}i
 autocmd FileType tex inoremap tt<Tab> \texttt{}<++><Esc>T{i
 autocmd FileType tex inoremap tc<Tab> \textcite{}<++><Esc>T{i
                                      
-autocmd FileType tex inoremap up<Tab> \usepackage{}<++><Esc>T{i
+autocmd FileType tex inoremap up<Tab> \usepackage[]<++>{<++>}<Esc>T[i
 autocmd FileType tex inoremap ul<Tab> \underline{}<++><Esc>T{i
                                      
 autocmd FileType tex vnoremap bf<Tab> xi\textbf{<Esc>pa}<Esc>
