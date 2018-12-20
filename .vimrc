@@ -216,10 +216,10 @@ autocmd FileType tex inoremap eq<Tab> $$<Enter><Enter>$$<Enter><++><Esc>03ki
                                      
 autocmd FileType tex inoremap it<Tab> \textit{}<++><Esc>T{i
                                      
-autocmd FileType tex inoremap lf<Tab> \label{fig:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap lt<Tab> \label{tab:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap le<Tab> \label{eq:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap ls<Tab> \label{sec:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap lf<Tab> \label{fig:}<Esc>T:i
+autocmd FileType tex inoremap lt<Tab> \label{tab:}<Esc>T:i
+autocmd FileType tex inoremap le<Tab> \label{eq:}<Esc>T:i
+autocmd FileType tex inoremap ls<Tab> \label{sec:}<Esc>T:i
 
 autocmd FileType tex inoremap nc<Tab> \newcommand{}[<++>]<++>{<++>}<Esc>2F}i
 

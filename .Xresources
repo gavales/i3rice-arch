@@ -1,20 +1,21 @@
-! >>>> PYWAL COLORVARS
-#define cblkd       #0c1924
-#define cblkl       #9a9389
-#define credd       #E09F70
-#define credl       #E09F70
-#define cgrnd       #FAC47B
-#define cgrnl      #FAC47B
-#define cylwd       #37748A
-#define cylwl      #37748A
-#define cblud       #537886
-#define cblul      #537886
-#define cgntd       #667B83
-#define cgntl      #667B83
-#define ccynd       #688287
-#define ccynl      #688287
-#define cwhtd       #dcd2c5
-#define cwhtl      #dcd2c5
+!andalusia
+! vim:syntax=xdefaults
+#define cblkd #17171f
+#define credd #aa5745
+#define cgrnd #6868aa
+#define cylwd #8978aa
+#define cblud #992f9a
+#define cgntd #a58aa2
+#define ccynd #aa7a86
+#define cwhtd #c5c5c7
+#define cblkl #515157
+#define credl #aa5745
+#define cgrnl #6868aa
+#define cylwl #8978aa
+#define cblul #992f9a
+#define cgntl #a58aa2
+#define ccynl #aa7a86
+#define cwhtl #c5c5c7
 
 
 ! >>>> VARIABLES
@@ -138,7 +139,7 @@ URxvt*background: cblkd
 URxvt*foreground: cwhtl
 URxvt*saveLines: 5000
 URxvt*useColor:	true
-URxvt*internalBorder: 1
+URxvt*internalBorder: 5
 
 ! for 'fake' transparency (without Compton) uncomment the following three lines
 ! URxvt*inheritPixmap:            true
