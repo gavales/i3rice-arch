@@ -1,15 +1,3 @@
-rename onelight
-rename city-lights
-rename test
-rename main
-rename optimisation
-rename 2_original
-rename DATA
-shell git clone
-shell git clone https://github.com/PotatoesMaster/i3-vim-syntax.git
-rename test_1.csv
-shell wget https://raw.githubusercontent.com/suan/vim-instant-markdown/master/after/ftplugin/markdown/instant-markdown.vim
-rename components.jpg
 shell ln -sf ~/global.bib name.bib
 rename Calibration_data
 shell git clone https://github.com/StillANixRookie/.git
@@ -48,3 +36,15 @@ rename RamjetLabReport.bib
 rename TurbojetLabReport.bib
 mkdir exams
 mkdir lectureslides
+rename Misc
+mkdir cnc
+shell cp -r ~/Templates/tex/xelatex UCASPersonalStatement
+rename personal
+rename UCAS
+rename GCSEs.tex_
+rename GCSEs.tex
+open_with h
+rename 4.jpg
+rename 2.jpeg
+rename article
+shell wget https://raw.githubusercontent.com/xuhdev/vim-latex-live-preview/master/plugin/latexlivepreview.vim

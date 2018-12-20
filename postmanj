@@ -48,6 +48,7 @@ echo -e "${purple} > FLAT-REMIX-GNOME-GIT <" && yaourt -S flat-remix-gnome-git
 echo -e "${purple} > URXVT-RESIZE-FONT <" && yaourt -S urxvt-resize-font-git
 echo -e "${purple} > i3IPC-PYTHON <" && yaourt -S i3ipc-python
 echo -e "${purple} > DUNSTIFY <" && yaourt -S dunstify
+echo -e "${purple} > LIVE LATEX PREVIEW <" && yaourt -S vim-live-latex-preview
 echo -e "${green}================================================"
 echo -e "${blue}= CLI-VISUALISER ==============================="
 echo -e "${green}================================================${normal}"

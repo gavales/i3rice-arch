@@ -36,11 +36,6 @@ let g:limelight_conceal_ctermfg = 240
 map <Tab><Tab> <Esc>/>>>><Enter>
 
 inoremap \ph <++>
-nnoremap \ph i<++><Esc>
-nnoremap <Down> gj
-nnoremap <Up> gk
-inoremap <Down> <Esc>lgji
-inoremap <Up> <Esc>lgki
 
 " ////// CHANGE HIGHLIGHT COLOURS
 hi Normal ctermbg=none guibg=black
@@ -174,100 +169,87 @@ let g:tex_flavor='latex' "invoke tex, not plaintex, for empty tex file
 set iskeyword+=: "press <C-n> to cycle through \label's
 
 " ////// COMPILE PDF
-autocmd Filetype tex map \cp :w<space>!bash<space>~/scripts/clatex<space><C-r>
+autocmd Filetype tex map ;cp :w<space>!bash<space>~/scripts/clatex<space><C-r>
 	\%<Enter><Enter>
-autocmd Filetype tex map \sp :w<space>!pdflatex<space>-interaction=nonstopmode
+autocmd Filetype tex map ;sp :w<space>!pdflatex<space>-interaction=nonstopmode
 	\<space>-shell-escape<space><C-r>%<Enter><Enter>
-autocmd Filetype tex map \sx :w<space>!xelatex<space>-interaction=nonstopmode
+autocmd Filetype tex map ;sx :w<space>!xelatex<space>-interaction=nonstopmode
 	\<space>-shell-escape<space><C-r>%<Enter><Enter>
-
-autocmd Filetype tex inoremap \cp <Esc>:w<Space>!bash<space>~/scripts/clatex
-	\<space><C-r>%<Enter><Enter>i
-autocmd Filetype tex inoremap \sp <Esc>:w<Space>!pdflatex<space>
-	\-interaction=nonstopmode<space>-shell-escape<space><C-r>%<Enter><Enter>i
-autocmd Filetype tex inoremap \sx <Esc>:w<Space>!xelatex<space>
-	\-interaction=nonstopmode<space>-shell-escape<space><C-r>%<Enter><Enter>i
 
 " ////// VIEW PDF
-autocmd Filetype tex map \vp :silent<space>!bash<space>~/scripts/openpdf<space>
+autocmd Filetype tex map ;vp :silent<space>!bash<space>~/scripts/openpdf<space>
 	\<C-r>%<BS><BS><BS>pdf<Enter>
-autocmd Filetype rmd map \vp :silent<space>!bash<space>~/scripts/openpdf<space>
+autocmd Filetype rmd map ;vp :silent<space>!bash<space>~/scripts/openpdf<space>
 	\<C-r>%<BS><BS><BS>pdf<Enter>
-autocmd Filetype markdown map \vp :silent<space>!bash<space>~/scripts/openpdf
+autocmd Filetype markdown map ;vp :silent<space>!bash<space>~/scripts/openpdf
 	\<space><C-r>%<BS><BS>pdf<Enter>
 
 " ////// BIBER
-autocmd Filetype tex map \cb :!biber<space><C-r>%<BS><BS><BS>bcf<Enter><Enter>
+autocmd Filetype tex map ;bb :!biber<space><C-r>%<BS><BS><BS>bcf<Enter><Enter>
 
 " ////// MAKEINDEX
-autocmd Filetype tex map \mi :!makeindex<space><C-r>%<BS><BS><BS>
+autocmd Filetype tex map ;mi :!makeindex<space><C-r>%<BS><BS><BS>
 	\nlo<space>-s<space>nomencl.ist<space>-o<space><C-r>%<BS><BS><BS>
 	\nls<Enter><Enter>
 
 " ////// LUKE SMITH'S FANTASTIC VIM MACROS
 autocmd FileType tex inoremap $$ $$<++><Esc>F$i
-autocmd FileType tex inoremap \( \left(\right)<++><Esc>T(i
-autocmd FileType tex inoremap \{{ \left\{\right\}<++><Esc>T{i
-autocmd FileType tex inoremap \[ \left[\right]<++><Esc>T[i
-autocmd FileType tex inoremap \bar \left\right<++><Esc>F\i
+autocmd FileType tex inoremap (<Tab> \left(\right)<++><Esc>T(i
+autocmd FileType tex inoremap {{<Tab> \left\{\right\}<++><Esc>T{i
+autocmd FileType tex inoremap [<Tab> \left[\right]<++><Esc>T[i
+autocmd FileType tex inoremap bar<Tab> \left\right<++><Esc>F\i
 
-autocmd FileType tex inoremap \bf \textbf{}<++><Esc>T{i
-autocmd FileType tex inoremap \bg \begin{DELRN}% <Enter><++><Enter>\end{DELRN}
+autocmd FileType tex inoremap bf<Tab> \textbf{}<++><Esc>T{i
+autocmd FileType tex inoremap bg<Tab> \begin{DELRN}<Enter><++><Enter>\end{DELRN}
 	\<Enter><Enter><++><Esc>4k0fR:MultipleCursorsFind<Space>DELRN<Enter>c
-autocmd FileType tex inoremap \bm \begin{multicols}{2}<Enter><Enter><Enter>
+autocmd FileType tex inoremap bm<Tab> \begin{multicols}{2}<Enter><Enter><Enter>
 	\<Enter>\end{multicols}<Enter><Enter><++><Esc>4k0fR
 
-autocmd FileType tex inoremap \ci \cite{}<++><Esc>T{i
-autocmd FileType tex inoremap \ct \citet{}<++><Esc>T{i
-autocmd FileType tex inoremap \cp \citep{}<++><Esc>T{i
-autocmd FileType tex inoremap \ch \chapter{}<Enter><++><Esc>kf}i
+autocmd FileType tex inoremap ci<Tab> \cite{}<++><Esc>T{i
+autocmd FileType tex inoremap ct<Tab> \citet{}<++><Esc>T{i
+autocmd FileType tex inoremap cp<Tab> \citep{}<++><Esc>T{i
+autocmd FileType tex inoremap ch<Tab> \chapter{}<Enter><++><Esc>kf}i
+                                     
+autocmd FileType tex inoremap en<Tab> \begin{equation}<Enter><Enter>\end{equation}
+	\<Enter><++><Esc>02ki            
+autocmd FileType tex inoremap eq<Tab> $$<Enter><Enter>$$<Enter><++><Esc>03ki
+                                     
+autocmd FileType tex inoremap it<Tab> \textit{}<++><Esc>T{i
+                                     
+autocmd FileType tex inoremap lf<Tab> \label{fig:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap lt<Tab> \label{tab:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap le<Tab> \label{eq:}<Space><++><Esc>T:i
+autocmd FileType tex inoremap ls<Tab> \label{sec:}<Space><++><Esc>T:i
 
-autocmd FileType tex inoremap \en \begin{equation}<Enter><Enter>\end{equation}
-	\<Enter><++><Esc>02ki
-autocmd FileType tex inoremap \eq $$<Enter><Enter>$$<Enter><++><Esc>03ki
+autocmd FileType tex inoremap pc<Tab> \parencite{}<++><Esc>T{i
+autocmd FileType tex inoremap pt<Tab> \item
+                                     
+autocmd FileType tex inoremap rf<Tab> \figref{fig:}<++><Esc>T:i
+autocmd FileType tex inoremap rt<Tab> \tabref{tab:}<++><Esc>T:i
+autocmd FileType tex inoremap re<Tab> \eqnref{eq:}<++><Esc>T:i
+autocmd FileType tex inoremap rs<Tab> \secref{sec:}<++><Esc>T:i
 
-autocmd FileType tex inoremap \it \textit{}<++><Esc>T{i
-
-autocmd FileType tex inoremap \lf \label{fig:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \lt \label{tab:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \le \label{eq:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \ls1 \label{sec:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \ls2 \label{ssec:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \ls3 \label{sssec:}<Space><++><Esc>T:i
-
-autocmd FileType tex inoremap \pc \parencite{}<++><Esc>T{i
-autocmd FileType tex inoremap \pt \item
-
-autocmd FileType tex inoremap \rf \textit{Fig.<space>\ref{fig:}}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \rt \textit{Tab.<space>\ref{tab:}}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \re \textit{Eq.<space>\ref{eq:}}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \rs1 \textit{Sec.<space>\ref{sec:}}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \rs2 \textit{Sec.<space>\ref{ssec:}}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \rs3 \textit{Sec.<space>\ref{sssec:}}<Space><++><Esc>T:i
-
-autocmd FileType tex inoremap \st {\setstretch{}<Enter><++><Enter>
+autocmd FileType tex inoremap st<Tab> {\setstretch{}<Enter><++><Enter>
 	\<Enter>}<Enter><Enter><++><Esc>5k0f{a
-autocmd FileType tex inoremap \sc \textsc{}<++><Esc>T{i
-autocmd FileType tex inoremap \s1 \section{}<Enter><++><Esc>kf}i
-autocmd FileType tex inoremap \s2 \subsection{}<Enter><++><Esc>kf}i
-autocmd FileType tex inoremap \s3 \subsubsection{}<Enter><++><Esc>kf}i
-
-autocmd FileType tex inoremap \tt \texttt{}<++><Esc>T{i
-autocmd FileType tex inoremap \tc \textcite{}<++><Esc>T{i
-
-autocmd FileType tex inoremap \up \usepackage{}<++><Esc>T{i
-autocmd FileType tex inoremap \ul \underline{}<++><Esc>T{i
-
-autocmd FileType tex vnoremap \bf xi\textbf{<Esc>pa}<Esc>
-autocmd FileType tex vnoremap \it xi\textit{<Esc>pa}<Esc>
-autocmd FileType tex vnoremap \sc xi\textsc{<Esc>pa}<Esc>
-autocmd FileType tex vnoremap \tt xi\texttt{<Esc>pa}<Esc>
-autocmd FileType tex vnoremap \ul xi\underline{<Esc>pa}<Esc>
-autocmd FileType tex vnoremap \st xi{\setstretch{1.0}<Enter><Esc>pa}<Esc>
-autocmd FileType tex vnoremap \bm xi\begin{multicols}{2}<Enter><Esc>pa
+autocmd FileType tex inoremap sc<Tab> \textsc{}<++><Esc>T{i
+autocmd FileType tex inoremap s1<Tab> \section{}<Enter><++><Esc>kf}i
+autocmd FileType tex inoremap s2<Tab> \subsection{}<Enter><++><Esc>kf}i
+autocmd FileType tex inoremap s3<Tab> \subsubsection{}<Enter><++><Esc>kf}i
+                                     
+autocmd FileType tex inoremap tt<Tab> \texttt{}<++><Esc>T{i
+autocmd FileType tex inoremap tc<Tab> \textcite{}<++><Esc>T{i
+                                     
+autocmd FileType tex inoremap up<Tab> \usepackage{}<++><Esc>T{i
+autocmd FileType tex inoremap ul<Tab> \underline{}<++><Esc>T{i
+                                     
+autocmd FileType tex vnoremap bf<Tab> xi\textbf{<Esc>pa}<Esc>
+autocmd FileType tex vnoremap it<Tab> xi\textit{<Esc>pa}<Esc>
+autocmd FileType tex vnoremap sc<Tab> xi\textsc{<Esc>pa}<Esc>
+autocmd FileType tex vnoremap tt<Tab> xi\texttt{<Esc>pa}<Esc>
+autocmd FileType tex vnoremap ul<Tab> xi\underline{<Esc>pa}<Esc>
+autocmd FileType tex vnoremap st<Tab> xi{\setstretch{1.0}<Enter><Esc>pa}<Esc>
+autocmd FileType tex vnoremap bm<Tab> xi\begin{multicols}{2}<Enter><Esc>pa
 	\<Enter>\end{multicols}<Esc>
-
-autocmd FileType tex map \ob :sp<space><C-r>%<BS><BS><BS>bib<Enter>
 
 " ////// BIB SHORTCUTS
 autocmd Filetype bib inoremap \a <Esc>A<Enter>@article{,<Enter>}<Esc>kf,i
