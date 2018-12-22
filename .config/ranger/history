@@ -1,8 +1,3 @@
-shell ln -sf ~/global.bib name.bib
-rename Calibration_data
-shell git clone https://github.com/StillANixRookie/.git
-rename 2018_12_07.md
-rename Uni
 rename DamaDamas
 rename colors
 shell ln -sf ~/i3rice-arch/global.bib %f
@@ -48,3 +43,8 @@ rename 4.jpg
 rename 2.jpeg
 rename article
 shell wget https://raw.githubusercontent.com/xuhdev/vim-latex-live-preview/master/plugin/latexlivepreview.vim
+shell pandoc %f -o test.docx
+shell sleep 5
+open_with lowriter
+shell pandoc %f -o test.tex
+shell mkdir engineering CassieJaye

@@ -139,6 +139,9 @@ $mod+Shift+r        restart
 $mod+Shift+c        $execn "bash $home/$scripts/xtheme; \
 	                    bash $home/$scripts/reloadconfs; i3-msg reload; \
                         killall i3bar; i3bar --bar_id=bar-1"
+$mod+t              $execn "bash $home/$scripts/mkwalrando; \
+                        bash $home/$scripts/reloadconfs; i3-msg reload; \
+                        killall i3bar; i3bar --bar_id=bar-1"
 $mod+Shift+q        kill
 $winwlw+button2     kill
 $mod+Shift+b              bar mode toggle
@@ -290,7 +293,9 @@ $win+y              exec "$brightdec; bash ~/$scripts/notify_brightness"
 $win+i              exec "pactl set-sink-volume 0 +2%; bash ~/$scripts/notify_volume"
 $win+u              exec "pactl set-sink-volume 0 -2%; bash ~/$scripts/notify_volume"
 $win+x              exec "pactl set-sink-mute 0 toggle; bash ~/$scripts/notify_volume"
-$win+b              exec $term -name BASHMOUNT -e bashmount
+$win+b              $lnch '$term -name MOUNT -e bash ~/$scripts/drives mount' $mk2
+$win+Shift+b        $lnch '$term -name UNMOUNT -e bash ~/$scripts/drives unmount' $mk2
+$win+Ctrl+b         $lnch '$term -name BASHMOUNT -e bashmount' $mk2
 $win+f              $lnch 'gksu pcmanfm' $mk2
 $win+Shift+f        $lnch 'nautilus' $mk2
 $win+Shift+Return   exec $term -name FILES_ADMIN -e sudo ranger
@@ -303,7 +308,7 @@ $win+2              $lnch '$term -name XSETTINGS -e vim ~/xinclude/xmain' $mk3
 $win+3              $lnch '$term -name VIMRC -e vim ~/.vimrc' $mk3
 $win+4              $lnch '$term -name RCCONF -e vim ~/.config/ranger/rc.conf' $mk3
 $win+5              $lnch '$term -name i3BLOCKS -e vim ~/scripts/mkblocksconf' $mk3
-$win+g              exec $term -name GITREPOUPDATE -e bash ~/$scripts/gitcommit
+$win+g              $lnch '$term -name GITREPOUPDATE -e bash ~/$scripts/gitcommit' $mk2
 $win+c              $lnch '$term -fn "xft:$font3:size=$fonts" \
                         -name CALENDAR -e vim "+Calendar -view=day"' $mk2
 $win+r              $lnch '$term -name RTV -e rtv' $mk2
@@ -368,6 +373,7 @@ $fw [class="octopi"]                        $flen
 $fw [class="Pamac-manager"]                 $flen
 $fw [class="Pavucontrol"]                   $flen
 $fw [class="Xfburn"]                        $flen
+$fw [class="i3bar"]                         $flen
 
 $fw [class="Calamares"]                     $flen,$brnr
 $fw [class="GParted"]                       $flen,$brnr
@@ -394,18 +400,12 @@ $fw [class="Electron"]                      $flen,$brnr,$mvcn,\
 $fw [instance="CALC"]                       $flen,$brnr,$mvcn,\
                                                 resize set 480 480,\
                                                 $tf "calculator"
-$fw [instance="BASHMOUNT"]                  $flen,$brnr,$mvcn,\
-                                                resize set 430 500,\
-                                                $tf "bashmount"
-$fw [instance="GITREPOUPDATE"]              $flen,$brnr,$mvcn,\
-                                                resize set 430 500,\
-                                                $tf "git-sync"
 $fw [class="Pavucontrol"]                   $flen,$brnr,\
                                                 resize set 525 300
 
 # ////// MARKED
 
-$fw [con_mark=_sticky_1]                resize set 525 317
+$fw [con_mark=_sticky_1]                resize set 717 423
 
 $fw [instance="MUSIC"]                  $mrk1,$tf "ncmpcpp"
 $fw [instance="CALENDAR"]               $mrk2,$tf "vim calendar"
@@ -443,6 +443,10 @@ $fw [instance="XSETTINGS"]              $tf "xresources"
 $fw [instance="VIMRC"]                  $tf "vimrc"
 $fw [instance="RCCONF"]                 $tf "ranger config"
 $fw [instance="i3BLOCKS"]               $tf "i3blocks"
+$fw [instance="BASHMOUNT"]              $tf "bashmount"
+$fw [instance="GITREPOUPDATE"]          $tf "git-sync"
+$fw [instance="MOUNT"]                  $tf "mount"
+$fw [instance="UNMOUNT"]                $tf "unmount"
 
 # >>>> GAPS
 gaps inner 10

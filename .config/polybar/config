@@ -1,4 +1,8 @@
-
+;   dBBBBBb  dBBBBP dBP dBP dBP dBBBBb dBBBBBb   dBBBBBb
+;       dB' dB'.BP         dBP     dBP      BB       dBP
+;   dBBBP' dB'.BP dBP     dBP  dBBBK'   dBP BB   dBBBBK'
+;  dBP    dB'.BP dBP     dBP  dB' db   dBP  BB  dBP  BB
+; dBP    dBBBBP dBBBBP  dBP  dBBBBP'  dBBBBBBB dBP  dB'
 
 [colors]
 black = ${xrdb:color0}
@@ -23,10 +27,10 @@ radius = 0.0
 fixed-center = false
 enable-ipc = true
 
-background = #99000000
+background = ${colors.black}
 foreground = ${colors.white}
 
-line-size = 1
+line-size = 0
 line-color = ${colors.red}
 
 border-size = 0
@@ -38,13 +42,12 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 1
 
-font-0 = ubuntumono:size=11;0
+font-0 = fixedsysmono:size=11;2
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = Wuncon Siji:pixelsize=10;0
 
 modules-left = i3
 modules-center = mpd
-modules-right = filesystem memory cpu temperature eth xbacklight pulseaudio battery date xkeyboard
+modules-right = filesystem memory cpu temperature eth backlight pulseaudio battery date xkeyboard
 
 tray-position = right
 tray-padding = 1
@@ -99,21 +102,21 @@ label-unmounted-foreground = ${colors.light}
 type = internal/bspwm
 
 label-focused = %index%
-label-focused-background = ${colors.green}
-;label-focused-foreground = ${colors.black}
+label-focused-background = ${colors.black}
+label-focused-foreground = ${colors.white}
 ;label-focused-underline= ${colors.black}
-label-focused-padding = 2
+label-focused-padding = 1
 
 label-occupied = %index%
-label-occupied-padding = 2
+label-occupied-padding = 1
 
 label-urgent = %index%!
 label-urgent-background = ${colors.red}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 label-empty = %index%
 label-empty-foreground = ${colors.light}
-label-empty-padding = 2
+label-empty-padding = 1
 
 ; Separator in between workspaces
 ; label-separator = |
@@ -124,40 +127,31 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
-; Only show workspaces on the same output as the bar
-;pin-workspaces = true
+pin-workspaces = true
 
-label-mode-padding = 2
+label-mode-padding = 1
 label-mode-foreground = ${colors.black}
 label-mode-background = ${colors.yellow}
 
-; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${module/bspwm.label-focused-background}
-;label-focused-underline = ${module/bspwm.label-focused-underline}
 label-focused-padding = ${module/bspwm.label-focused-padding}
 
-; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
+label-unfocused-foreground = ${colors.blue}
 label-unfocused-padding = ${module/bspwm.label-occupied-padding}
 
-; visible = Active workspace on unfocused monitor
 label-visible = %index%
 label-visible-background = ${self.label-focused-background}
-;label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
-; urgent = Workspace with urgency hint set
 label-urgent = %index%
 label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
-; Separator in between workspaces
-; label-separator = |
-
 [module/playerctl]
 type = custom/script
-exec = bash ~/i3blocks-gaps/scripts/mediaplayer
+exec = bash ~/scripts/blocks/mpgui
 interval = 1
 
 [module/mpd]
@@ -190,12 +184,17 @@ bar-width = 10
 bar-indicator = |
 bar-indicator-foreground = ${colors.white}
 bar-indicator-font = 0
-bar-fill = =
+bar-fill = -
 bar-fill-font = 0
-bar-fill-foreground = #ff00ff
+bar-fill-foreground = ${colors.magenta}
 bar-empty = -
 bar-empty-font = 0
 bar-empty-foreground = ${colors.light}
+
+[module/backlight]
+type = custom/script
+exec = bash ~/scripts/blocks/brightness
+interval = 1
 
 [module/backlight-acpi]
 inherit = module/xbacklight
