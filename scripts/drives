@@ -12,6 +12,7 @@ mountd () {
     [[ -z $chosen ]] && exit 1
     mountpoint=$(ls /run/media/${HOME:6} | dmenu -i -p "Which mountpoint?:" $dmenucolors)
     sudo mount /dev/$(echo $chosen | awk '{print $1}') /run/media/${HOME:6}/$mountpoint
+    sudo chmod 0777 /run/media/${HOME:6}/$mountpoint
     ranger /run/media/${HOME:6}/$mountpoint
 }
 
