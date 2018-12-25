@@ -1,30 +1,3 @@
-rename colors
-shell ln -sf ~/i3rice-arch/global.bib %f
-rename xrofi
-shell unzip BAR100-ASM-R1.zip -d "BAR100-ASM-R1"
-electronics
-mkdir electronics
-shell unzip PENETRATOR-M-NUT-10-A-R2.zip -d "PENETRATOR-M-NUT-10-A-R2"
-rename Bmirror.png
-rename 8_main
-rename 11_main
-shell git clone https://github.com/StillANixRookie/i3rice-arch.git
-open_with mpv --loop
-open_with sxiv -a
-shell cp -r ~/Templates/tex/xelatex Latex
-rename currentske.png
-rename seabedsubstrate.png
-rename sedimentsurvey.png
-rename breakoutforce.png
-rename .Xresources_
-rename .Xresources
-mkdir IP
-mkdir spaceprop
-rename ip
-mkdir gdp
-
-shell ln -sf ~/Drive/global.bib %f
-rename ProjectPlanWriteUp.bib
 rename InterimReport.bib
 rename RamjetLabReport.bib
 rename TurbojetLabReport.bib
@@ -48,3 +21,30 @@ open_with lowriter
 shell pandoc %f -o test.tex
 shell mkdir engineering CassieJaye
 rename Daddy I Do.mkv
+rename xft
+rename 1xcolorvars
+rename 1xvars
+rename 2xcolorvars
+rename 2xvars
+rename 3xrofi
+rename 1
+rename 2
+rename 3
+rename 4
+rename 5
+rename 6
+rename 7
+rename 8
+rename 1colorvars
+rename 2vars
+rename 3rofi
+rename 4xft
+rename 5xterm
+rename 6xcursor
+rename 7urxvt
+rename 8urxvtext
+rename 1vars
+rename 2colorvars
+shell sudo rm -rf %s
+rename poster
+rename background.png
