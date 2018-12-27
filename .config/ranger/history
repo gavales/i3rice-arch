@@ -1,5 +1,3 @@
-rename Daddy I Do.mkv
-rename xft
 rename 1xcolorvars
 rename 1xvars
 rename 2xcolorvars
@@ -48,3 +46,5 @@ shell tar -xvf %f -C test/
 shell tar -xJf %f
 shell tar -xf %f
 shell bash ~/scripts/extractor %f
+rename groff
+rename cgroff

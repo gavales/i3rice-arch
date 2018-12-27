@@ -74,3 +74,5 @@ if [[ -n $output ]]; then
 elif [[ -z $output ]]; then
     html
 fi
+
+pkill -HUP mupdf

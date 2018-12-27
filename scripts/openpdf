@@ -1,5 +1,5 @@
 #!/bin/bash
 
-viewer=zathura
+viewer=mupdf
 file=$1
-$viewer $file & disown $viewer
+$viewer ${file%.*}.pdf & disown $viewer

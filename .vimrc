@@ -176,14 +176,6 @@ autocmd Filetype tex map ;sp :w<space>!pdflatex<space>-interaction=nonstopmode
 autocmd Filetype tex map ;sx :w<space>!xelatex<space>-interaction=nonstopmode
 	\<space>-shell-escape<space><C-r>%<Enter><Enter>
 
-" ////// VIEW PDF
-autocmd Filetype tex map ;vp :silent<space>!bash<space>~/scripts/openpdf<space>
-	\<C-r>%<BS><BS><BS>pdf<Enter>
-autocmd Filetype rmd map ;vp :silent<space>!bash<space>~/scripts/openpdf<space>
-	\<C-r>%<BS><BS><BS>pdf<Enter>
-autocmd Filetype markdown map ;vp :silent<space>!bash<space>~/scripts/openpdf
-	\<space><C-r>%<BS><BS>pdf<Enter>
-
 " ////// BIBER
 autocmd Filetype tex map ;cb :!biber<space><C-r>%<BS><BS><BS>bcf<Enter><Enter>
 
@@ -287,13 +279,9 @@ autocmd Filetype bib inoremap \o <Esc>A<Enter>@online{,<Enter>
 	\<Tab>author<space>=<space>{<++>},<Enter>
 	\<Tab>publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>06kf,i
 
-" >>>> PDF WORDCOUNT
-autocmd Filetype tex map ;wc :!bash<space>~/scripts/wcpdf<space><C-r>%
-	\<BS><BS><BS><BS><Enter>
-autocmd Filetype rmd map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
-	\<BS><BS><BS><BS><Enter>
-autocmd Filetype markdown map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
-	\<BS><BS><BS><Enter>
+" >>>> GROFF
+au BufNewFile,BufRead *.groff,*.ms set filetype=groff
+nnoremap ;cp :!bash<space>~/scripts/cgroff<space><C-r>%<Enter><Enter>
 
 " >>>> MARKDOWN
 " ////// MACROS
@@ -388,7 +376,6 @@ autocmd FileType markdown vnoremap \7n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Tab
 
 " ////// COMPILER
 autocmd Filetype markdown map \cm :!bash<space>~/scripts/cmkd<space><C-r>%<Enter><Enter>
-autocmd Filetype markdown map \vh :!bash<space>~/scripts/openhtml<space><C-r>%<BS><BS>html<Enter><Enter>
 
 " >>>> R MARKDOWN
 autocmd Filetype rmd map \ll :!echo<space>"require(rmarkdown);<space>
@@ -459,5 +446,22 @@ autocmd FileType rmd vnoremap \s xa~~<Esc>pa~~<Esc>
 autocmd FileType rmd vnoremap \p :'<,'>norm 0i-<space><Esc>
 autocmd FileType rmd vnoremap \n :'<,'>norm 0i1.<space><Esc>
 
+" >>>> VIEW PDF
+autocmd FileType tex,rmd map ;vp :silent<space>!zathura<space>
+    \<C-r>%<BS><BS><BS>pdf<space>&<Enter>
+autocmd FileType markdown,groff map ;vp :silent<space>!zathura<space>
+    \<C-r>%<BS><BS>pdf<space>&<Enter>
+
+" >>>> VIEW HTML
+autocmd Filetype markdown map ;vh :!bash<space>~/scripts/openhtml<space><C-r>%<Enter><Enter>
+
 " >>>> PYTHON FILES
 autocmd Filetype python map \ll :w<space>!python<Enter>
+" >>>> PDF WORDCOUNT
+autocmd Filetype tex map ;wc :!bash<space>~/scripts/wcpdf<space><C-r>%
+	\<BS><BS><BS><BS><Enter>
+autocmd Filetype rmd map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
+	\<BS><BS><BS><BS><Enter>
+autocmd Filetype markdown map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
+	\<BS><BS><BS><Enter>
+

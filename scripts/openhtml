@@ -2,4 +2,4 @@
 
 viewer=surf
 file=$1
-$viewer $file & disown $viewer
+$viewer ${file%.*}.html & disown $viewer

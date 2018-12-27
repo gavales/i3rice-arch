@@ -467,10 +467,7 @@ $execn          blueman-applet
 $execn          compton
 $execna         ff-theme-util
 $execna         fix_xcursor
-#$execn          feh --bg-fill ~/.config/wall.png
-$execn          "bash $home/$scripts/mkwalrando; \
-	                bash $home/$scripts/reloadconfs; i3-msg reload; \
-                    killall i3bar; i3bar --bar_id=bar-1"
+$execn          feh --bg-fill ~/.config/wall.png
 $execn          mpd
 $execn          shutter --min_at_startup
 $execn          python $home/$scripts/i3-sticky

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+file=$1
+
+#groff -ms ${file} -T pdf > ${file:0:-3}.pdf
+refer -PS -e "${file}" | groff -me -ms -kejpt -T pdf > ${file:0:-3}.pdf
+pkill -HUP mupdf
