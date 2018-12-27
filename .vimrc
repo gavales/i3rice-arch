@@ -32,6 +32,8 @@ autocmd FileType sh call matchadd('ColorColumn', '\%81v', 100)
 autocmd Filetype calendar set laststatus=0
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
+autocmd CursorMoved,CursorMovedI * update
+autocmd CursorHold,CursorHoldI * redraw!
 
 map <Tab><Tab> <Esc>/>>>><Enter>
 
@@ -184,7 +186,7 @@ autocmd Filetype tex map ;mi :!makeindex<space><C-r>%<BS><BS><BS>
 	\nlo<space>-s<space>nomencl.ist<space>-o<space><C-r>%<BS><BS><BS>
 	\nls<Enter><Enter>
 
-" ////// LUKE SMITH'S FANTASTIC VIM MACROS
+" ////// LUKE SMITH'S SNIPPETS
 autocmd FileType tex inoremap $$ $$<++><Esc>F$i
 autocmd FileType tex inoremap <Tab>( \left(\right)<++><Esc>T(i
 autocmd FileType tex inoremap <Tab>{{ \left\{\right\}<++><Esc>T{i
@@ -282,6 +284,26 @@ autocmd Filetype bib inoremap \o <Esc>A<Enter>@online{,<Enter>
 " >>>> GROFF
 au BufNewFile,BufRead *.groff,*.ms set filetype=groff
 nnoremap ;cp :!bash<space>~/scripts/cgroff<space><C-r>%<Enter><Enter>
+
+" ////// SNIPPETS
+
+autocmd FileType groff inoremap ;b <Esc>o.B<space>""<space><++><Enter><++><Esc>0kf"a
+autocmd FileType groff inoremap ;c <Esc>o.[<Enter><Enter>.]<Enter><++><Esc>02ki
+autocmd FileType groff inoremap ;d <Esc>o.IP<space><space>2<Enter><++><Esc>0kt2i
+autocmd FileType groff inoremap ;e0 <Esc>o.nr<space>step<space>0<space>1<Enter>
+    \.IP<space>\n+[step]<Enter>
+autocmd FileType groff inoremap ;ei <Esc>o.IP<space>\n+[step]<Enter>
+autocmd FileType groff inoremap ;i <Esc>o.I<space>""<space><++><Enter><++><Esc>0kf"a
+autocmd FileType groff inoremap ;l <Esc>o.IP<space>\[bu]<space>2<Enter>
+autocmd FileType groff inoremap ;n <Esc>o.RS<Enter><Enter>.RE<Enter><++><Esc>02ki
+autocmd FileType groff inoremap ;s0 <Esc>o.SH<Enter><Enter>.PP<Enter><++><Esc>02ki
+autocmd FileType groff inoremap ;s1 <Esc>o.NH<Enter><Enter>.PP<Enter><++><Esc>02ki
+autocmd FileType groff inoremap ;s2 <Esc>o.NH<space>2<Enter><Enter>.PP<Enter><++><Esc>02ki
+autocmd FileType groff inoremap ;s3 <Esc>o.NH<space>3<Enter><Enter>.PP<Enter><++><Esc>02ki
+autocmd FileType groff inoremap ;s4 <Esc>o.NH<space>4<Enter><Enter>.PP<Enter><++><Esc>02ki
+autocmd FileType groff inoremap ;u <Esc>o.UL<space>""<space><++><Enter><++><Esc>0kf"a
+autocmd FileType groff inoremap ;x <Esc>o.BX<space>""<space><++><Enter><++><Esc>0kf"a
+autocmd FileType groff inoremap <Tab><Enter> <Esc>o.PP<Enter>
 
 " >>>> MARKDOWN
 " ////// MACROS

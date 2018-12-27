@@ -3,5 +3,4 @@
 file=$1
 
 #groff -ms ${file} -T pdf > ${file:0:-3}.pdf
-refer -PS -e "${file}" | groff -me -ms -kejpt -T pdf > ${file:0:-3}.pdf
-pkill -HUP mupdf
+refer -PS -p ~/Drive/global -e "${file}" | groff -me -ms -keEjpt -T pdf > ${file:0:-3}.pdf

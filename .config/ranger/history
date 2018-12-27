@@ -1,8 +1,3 @@
-rename 1xcolorvars
-rename 1xvars
-rename 2xcolorvars
-rename 2xvars
-rename 3xrofi
 rename 1
 rename 2
 rename 3
@@ -29,7 +24,6 @@ rename tikzposter
 rename poster
 shell mogrify -rotate "-45" foo.jpg
 shell mogrify -rotate "-90" background.jpg
-open_with 
 shell convert background.jpg -flip temp1.jpg
 
 shell convert background.jpg -flip temp2.jpg
@@ -48,3 +42,9 @@ shell tar -xf %f
 shell bash ~/scripts/extractor %f
 rename groff
 rename cgroff
+rename global.bibtex
+search monaco
+open_with 
+shell bash ~/scripts/
+shell bash ~/scripts/bibtorefer
+shell bash ~/scripts/bibtorefer %f
