@@ -6,6 +6,8 @@ function! Folds()
 		return ">2"
 	elseif match(thisline, '^\\section') >= 0
 		return ">1"
+	elseif match(thisline, '^\\documentclass') >= 0
+		return ">1"
 	elseif match(thisline, '^\\begin{document}') >= 0
 		return ">0"
 	elseif match(thisline, '^\\end{document}') >= 0
@@ -26,4 +28,4 @@ setlocal foldmethod=expr
 setlocal foldexpr=Folds()
 setlocal spell spelllang=en_gb
 setlocal nonumber norelativenumber laststatus=0
-autocmd VimEnter * Goyo"
+"autocmd VimEnter * Goyo"

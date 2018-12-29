@@ -1,50 +1,50 @@
-rename 2018_11_15.md
-rename music.json
-rename musicvis.json
-rename musicncm.json
-rename ncmpcpp.json
-rename spotify.json
-rename 2018_11_16.md
-shell gunzip Windows10Icons.tar.gz -d "Windows10Icons.tar"
-shell tar xvf Windows10Icons.tar
-scout -ftsea 
-shell unzip DamaDamas-icon-theme-master.zip -d "DamaDamas-icon-theme-master"
-mkdir python
-rename css
-shell cp ~/Templates/md/name.md ListOfReqts.md
-touch mpv.conf
-shell wget https://raw.githubusercontent.com/mpv-player/mpv/master/etc/mpv.conf
-rename DJS_25_27733408_2_Vales_Gavin.pptx
-rename 2018-11-17_21:38:11_1920x1080.png
-open_with pinta
-rename colorhship
-rename colorship
-rename colors
-rename colorful
-rename colorship.jpg
-rename wsloget
-rename wsloapp
-mkdir pandoc
-shell unzip gvales2831997@gmail.com.ical.zip -d "gvales2831997@gmail.com.ical"
-rename #contacts@group.v.calendar.google.com.ics
-rename mkgcalrc
-shell chmod +x %f
-shell unzip calendar.vim-master.zip -d "calendar.vim-master"
-mkdir caldav
-rename 2018_11_22.md
-rename manuscript.css
-rename i3exit
-rename i3-sticky-toggle
-open_with vim
+rename 1
+rename 2
+rename 3
+rename 4
+rename 5
+rename 6
+rename 7
+rename 8
+rename 1colorvars
+rename 2vars
+rename 3rofi
+rename 4xft
+rename 5xterm
+rename 6xcursor
+rename 7urxvt
+rename 8urxvtext
+rename 1vars
+rename 2colorvars
+shell sudo rm -rf %s
+mkdir poster
+touch 
+touch name.tex
+rename tikzposter
+rename poster
+shell mogrify -rotate "-45" foo.jpg
+shell mogrify -rotate "-90" background.jpg
+shell convert background.jpg -flip temp1.jpg
 
+shell convert background.jpg -flip temp2.jpg
+shell convert background.jpg -flop temp2.jpg
+shell convert background.jpg -flop background1.jpg
+shell convert background.jpg -flip background2.jpg
+shell convert %f -flip background2.jpg
+shell tar xf %f -C test
+shell tar xJf %f -C test
+shell tar xJf %f -C test/
+rename Flat-Remix-Miami.tar.xz
+shell tar -xJf %f -C test/
+shell tar -xvf %f -C test/
+shell tar -xJf %f
+shell tar -xf %f
+shell bash ~/scripts/extractor %f
+rename groff
+rename cgroff
+rename global.bibtex
+search monaco
 open_with 
-shell 
-rename nikes
-rename purple
-rename compton.conf__
-rename compton.conf_
-rename compton.conf
-wq
-mkdir Pictures/scrots
-mkdir Documents
-mkdir walls
+shell bash ~/scripts/
+shell bash ~/scripts/bibtorefer
+shell bash ~/scripts/bibtorefer %f

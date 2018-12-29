@@ -32,15 +32,12 @@ autocmd FileType sh call matchadd('ColorColumn', '\%81v', 100)
 autocmd Filetype calendar set laststatus=0
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
+autocmd CursorMoved,CursorMovedI * update
+autocmd CursorHold,CursorHoldI * redraw!
 
 map <Tab><Tab> <Esc>/>>>><Enter>
 
 inoremap \ph <++>
-nnoremap \ph i<++><Esc>
-nnoremap <Down> gj
-nnoremap <Up> gk
-inoremap <Down> <Esc>lgji
-inoremap <Up> <Esc>lgki
 
 " ////// CHANGE HIGHLIGHT COLOURS
 hi Normal ctermbg=none guibg=black
@@ -157,7 +154,7 @@ set statusline+=\
 " >>>> LATEX
 " ////// LATEX-SUITE
 let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode -shell-escape $*'
+let g:Tex_CompileRule_pdf = 'xelatex -interaction=nonstopmode -shell-escape $*'
 "let g:Tex_ViewRule_pdf = '/usr/bin/evince'
 let g:Tex_ViewRule_pdf = '/usr/bin/zathura'
 let g:Tex_MultipleCompileFormats='pdf,dvi'
@@ -174,100 +171,81 @@ let g:tex_flavor='latex' "invoke tex, not plaintex, for empty tex file
 set iskeyword+=: "press <C-n> to cycle through \label's
 
 " ////// COMPILE PDF
-autocmd Filetype tex map \cp :w<space>!bash<space>~/scripts/clatex<space><C-r>
+autocmd Filetype tex map ;cp :w<space>!bash<space>~/scripts/clatex<space><C-r>
 	\%<Enter><Enter>
-autocmd Filetype tex map \sp :w<space>!pdflatex<space>-interaction=nonstopmode
+autocmd Filetype tex map ;sp :w<space>!pdflatex<space>-interaction=nonstopmode
 	\<space>-shell-escape<space><C-r>%<Enter><Enter>
-autocmd Filetype tex map \sx :w<space>!xelatex<space>-interaction=nonstopmode
+autocmd Filetype tex map ;sx :w<space>!xelatex<space>-interaction=nonstopmode
 	\<space>-shell-escape<space><C-r>%<Enter><Enter>
-
-autocmd Filetype tex inoremap \cp <Esc>:w<Space>!bash<space>~/scripts/clatex
-	\<space><C-r>%<Enter><Enter>i
-autocmd Filetype tex inoremap \sp <Esc>:w<Space>!pdflatex<space>
-	\-interaction=nonstopmode<space>-shell-escape<space><C-r>%<Enter><Enter>i
-autocmd Filetype tex inoremap \sx <Esc>:w<Space>!xelatex<space>
-	\-interaction=nonstopmode<space>-shell-escape<space><C-r>%<Enter><Enter>i
-
-" ////// VIEW PDF
-autocmd Filetype tex map \vp :silent<space>!bash<space>~/scripts/openpdf<space>
-	\<C-r>%<BS><BS><BS>pdf<Enter>
-autocmd Filetype rmd map \vp :silent<space>!bash<space>~/scripts/openpdf<space>
-	\<C-r>%<BS><BS><BS>pdf<Enter>
-autocmd Filetype markdown map \vp :silent<space>!bash<space>~/scripts/openpdf
-	\<space><C-r>%<BS><BS>pdf<Enter>
 
 " ////// BIBER
-autocmd Filetype tex map \cb :!biber<space><C-r>%<BS><BS><BS>bcf<Enter><Enter>
+autocmd Filetype tex map ;cb :!biber<space><C-r>%<BS><BS><BS>bcf<Enter><Enter>
 
 " ////// MAKEINDEX
-autocmd Filetype tex map \mi :!makeindex<space><C-r>%<BS><BS><BS>
+autocmd Filetype tex map ;mi :!makeindex<space><C-r>%<BS><BS><BS>
 	\nlo<space>-s<space>nomencl.ist<space>-o<space><C-r>%<BS><BS><BS>
 	\nls<Enter><Enter>
 
-" ////// LUKE SMITH'S FANTASTIC VIM MACROS
+" ////// LUKE SMITH'S SNIPPETS
 autocmd FileType tex inoremap $$ $$<++><Esc>F$i
-autocmd FileType tex inoremap \( \left(\right)<++><Esc>T(i
-autocmd FileType tex inoremap \{{ \left\{\right\}<++><Esc>T{i
-autocmd FileType tex inoremap \[ \left[\right]<++><Esc>T[i
-autocmd FileType tex inoremap \bar \left\right<++><Esc>F\i
+autocmd FileType tex inoremap <Tab>( \left(\right)<++><Esc>T(i
+autocmd FileType tex inoremap <Tab>{{ \left\{\right\}<++><Esc>T{i
+autocmd FileType tex inoremap <Tab>[ \left[\right]<++><Esc>T[i
+autocmd FileType tex inoremap <Tab>bar \left\right<++><Esc>F\i
 
-autocmd FileType tex inoremap \bf \textbf{}<++><Esc>T{i
-autocmd FileType tex inoremap \bg \begin{DELRN}% <Enter><++><Enter>\end{DELRN}
+autocmd FileType tex inoremap <Tab>bf \textbf{}<++><Esc>T{i
+autocmd FileType tex inoremap <Tab>bg \begin{DELRN}<Enter><++><Enter>\end{DELRN}
 	\<Enter><Enter><++><Esc>4k0fR:MultipleCursorsFind<Space>DELRN<Enter>c
-autocmd FileType tex inoremap \bm \begin{multicols}{2}<Enter><Enter><Enter>
+autocmd FileType tex inoremap <Tab>bm \begin{multicols}{2}<Enter><Enter><Enter>
 	\<Enter>\end{multicols}<Enter><Enter><++><Esc>4k0fR
 
-autocmd FileType tex inoremap \ci \cite{}<++><Esc>T{i
-autocmd FileType tex inoremap \ct \citet{}<++><Esc>T{i
-autocmd FileType tex inoremap \cp \citep{}<++><Esc>T{i
-autocmd FileType tex inoremap \ch \chapter{}<Enter><++><Esc>kf}i
-
-autocmd FileType tex inoremap \en \begin{equation}<Enter><Enter>\end{equation}
-	\<Enter><++><Esc>02ki
-autocmd FileType tex inoremap \eq $$<Enter><Enter>$$<Enter><++><Esc>03ki
-
-autocmd FileType tex inoremap \it \textit{}<++><Esc>T{i
-
-autocmd FileType tex inoremap \lf \label{fig:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \lt \label{tab:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \le \label{eq:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \ls1 \label{sec:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \ls2 \label{ssec:}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \ls3 \label{sssec:}<Space><++><Esc>T:i
-
-autocmd FileType tex inoremap \pc \parencite{}<++><Esc>T{i
-autocmd FileType tex inoremap \pt \item
-
-autocmd FileType tex inoremap \rf \textit{Fig.<space>\ref{fig:}}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \rt \textit{Tab.<space>\ref{tab:}}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \re \textit{Eq.<space>\ref{eq:}}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \rs1 \textit{Sec.<space>\ref{sec:}}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \rs2 \textit{Sec.<space>\ref{ssec:}}<Space><++><Esc>T:i
-autocmd FileType tex inoremap \rs3 \textit{Sec.<space>\ref{sssec:}}<Space><++><Esc>T:i
-
-autocmd FileType tex inoremap \st {\setstretch{}<Enter><++><Enter>
+autocmd FileType tex inoremap <Tab>ci \cite{}<++><Esc>T{i
+autocmd FileType tex inoremap <Tab>ct \citet{}<++><Esc>T{i
+autocmd FileType tex inoremap <Tab>cp \citep{}<++><Esc>T{i
+autocmd FileType tex inoremap <Tab>ch \chapter{}<Enter><++><Esc>kf}i
+                                     
+autocmd FileType tex inoremap <Tab>en \begin{equation}<Enter><Enter>\end{equation}
+	\<Enter><++><Esc>02ki            
+autocmd FileType tex inoremap <Tab>eq $$<Enter><Enter>$$<Enter><++><Esc>03ki
+                                     
+autocmd FileType tex inoremap <Tab>it \textit{}<++><Esc>T{i
+                                     
+autocmd FileType tex inoremap <Tab>lf \label{fig:}<Esc>T:i
+autocmd FileType tex inoremap <Tab>lt \label{tab:}<Esc>T:i
+autocmd FileType tex inoremap <Tab>le \label{eq:}<Esc>T:i
+autocmd FileType tex inoremap <Tab>ls \label{sec:}<Esc>T:i
+                                   
+autocmd FileType tex inoremap <Tab>nc \newcommand{}[<++>]<++>{<++>}<Esc>2F}i
+                                   
+autocmd FileType tex inoremap <Tab>pc \parencite{}<++><Esc>T{i
+autocmd FileType tex inoremap <Tab>pt \item<space>
+                                     
+autocmd FileType tex inoremap <Tab>rf \figref{fig:}<++><Esc>T:i
+autocmd FileType tex inoremap <Tab>rt \tabref{tab:}<++><Esc>T:i
+autocmd FileType tex inoremap <Tab>re \eqnref{eq:}<++><Esc>T:i
+autocmd FileType tex inoremap <Tab>rs \secref{sec:}<++><Esc>T:i
+                                   
+autocmd FileType tex inoremap <Tab>st {\setstretch{}<Enter><++><Enter>
 	\<Enter>}<Enter><Enter><++><Esc>5k0f{a
-autocmd FileType tex inoremap \sc \textsc{}<++><Esc>T{i
-autocmd FileType tex inoremap \s1 \section{}<Enter><++><Esc>kf}i
-autocmd FileType tex inoremap \s2 \subsection{}<Enter><++><Esc>kf}i
-autocmd FileType tex inoremap \s3 \subsubsection{}<Enter><++><Esc>kf}i
-
-autocmd FileType tex inoremap \tt \texttt{}<++><Esc>T{i
-autocmd FileType tex inoremap \tc \textcite{}<++><Esc>T{i
-
-autocmd FileType tex inoremap \up \usepackage{}<++><Esc>T{i
-autocmd FileType tex inoremap \ul \underline{}<++><Esc>T{i
-
-autocmd FileType tex vnoremap \bf xi\textbf{<Esc>pa}<Esc>
-autocmd FileType tex vnoremap \it xi\textit{<Esc>pa}<Esc>
-autocmd FileType tex vnoremap \sc xi\textsc{<Esc>pa}<Esc>
-autocmd FileType tex vnoremap \tt xi\texttt{<Esc>pa}<Esc>
-autocmd FileType tex vnoremap \ul xi\underline{<Esc>pa}<Esc>
-autocmd FileType tex vnoremap \st xi{\setstretch{1.0}<Enter><Esc>pa}<Esc>
-autocmd FileType tex vnoremap \bm xi\begin{multicols}{2}<Enter><Esc>pa
+autocmd FileType tex inoremap <Tab>sc \textsc{}<++><Esc>T{i
+autocmd FileType tex inoremap <Tab>s1 \section{}<Enter><++><Esc>kf}i
+autocmd FileType tex inoremap <Tab>s2 \subsection{}<Enter><++><Esc>kf}i
+autocmd FileType tex inoremap <Tab>s3 \subsubsection{}<Enter><++><Esc>kf}i
+                                     
+autocmd FileType tex inoremap <Tab>tt \texttt{}<++><Esc>T{i
+autocmd FileType tex inoremap <Tab>tc \textcite{}<++><Esc>T{i
+                                     
+autocmd FileType tex inoremap <Tab>up \usepackage[]<++>{<++>}<Esc>T[i
+autocmd FileType tex inoremap <Tab>ul \underline{}<++><Esc>T{i
+                                     
+autocmd FileType tex vnoremap <Tab>bf xi\textbf{<Esc>pa}<Esc>
+autocmd FileType tex vnoremap <Tab>it xi\textit{<Esc>pa}<Esc>
+autocmd FileType tex vnoremap <Tab>sc xi\textsc{<Esc>pa}<Esc>
+autocmd FileType tex vnoremap <Tab>tt xi\texttt{<Esc>pa}<Esc>
+autocmd FileType tex vnoremap <Tab>ul xi\underline{<Esc>pa}<Esc>
+autocmd FileType tex vnoremap <Tab>st xi{\setstretch{1.0}<Enter><Esc>pa}<Esc>
+autocmd FileType tex vnoremap <Tab>bm xi\begin{multicols}{2}<Enter><Esc>pa
 	\<Enter>\end{multicols}<Esc>
-
-autocmd FileType tex map \ob :sp<space><C-r>%<BS><BS><BS>bib<Enter>
 
 " ////// BIB SHORTCUTS
 autocmd Filetype bib inoremap \a <Esc>A<Enter>@article{,<Enter>}<Esc>kf,i
@@ -303,13 +281,29 @@ autocmd Filetype bib inoremap \o <Esc>A<Enter>@online{,<Enter>
 	\<Tab>author<space>=<space>{<++>},<Enter>
 	\<Tab>publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>06kf,i
 
-" >>>> PDF WORDCOUNT
-autocmd Filetype tex map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
-	\<BS><BS><BS><BS><Enter>
-autocmd Filetype rmd map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
-	\<BS><BS><BS><BS><Enter>
-autocmd Filetype markdown map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
-	\<BS><BS><BS><Enter>
+" >>>> GROFF
+au BufNewFile,BufRead *.groff,*.ms set filetype=groff
+nnoremap ;cp :!bash<space>~/scripts/cgroff<space><C-r>%<Enter><Enter>
+
+" ////// SNIPPETS
+
+autocmd FileType groff inoremap ;b <Esc>o.B<space>""<space><++><Enter><++><Esc>0kf"a
+autocmd FileType groff inoremap ;c <Esc>o.[<Enter><Enter>.]<Enter><++><Esc>02ki
+autocmd FileType groff inoremap ;d <Esc>o.IP<space><space>2<Enter><++><Esc>0kt2i
+autocmd FileType groff inoremap ;e0 <Esc>o.nr<space>step<space>0<space>1<Enter>
+    \.IP<space>\n+[step]<Enter>
+autocmd FileType groff inoremap ;ei <Esc>o.IP<space>\n+[step]<Enter>
+autocmd FileType groff inoremap ;i <Esc>o.I<space>""<space><++><Enter><++><Esc>0kf"a
+autocmd FileType groff inoremap ;l <Esc>o.IP<space>\[bu]<space>2<Enter>
+autocmd FileType groff inoremap ;n <Esc>o.RS<Enter><Enter>.RE<Enter><++><Esc>02ki
+autocmd FileType groff inoremap ;s0 <Esc>o.SH<Enter><Enter>.PP<Enter><++><Esc>02ki
+autocmd FileType groff inoremap ;s1 <Esc>o.NH<Enter><Enter>.PP<Enter><++><Esc>02ki
+autocmd FileType groff inoremap ;s2 <Esc>o.NH<space>2<Enter><Enter>.PP<Enter><++><Esc>02ki
+autocmd FileType groff inoremap ;s3 <Esc>o.NH<space>3<Enter><Enter>.PP<Enter><++><Esc>02ki
+autocmd FileType groff inoremap ;s4 <Esc>o.NH<space>4<Enter><Enter>.PP<Enter><++><Esc>02ki
+autocmd FileType groff inoremap ;u <Esc>o.UL<space>""<space><++><Enter><++><Esc>0kf"a
+autocmd FileType groff inoremap ;x <Esc>o.BX<space>""<space><++><Enter><++><Esc>0kf"a
+autocmd FileType groff inoremap <Tab><Enter> <Esc>o.PP<Enter>
 
 " >>>> MARKDOWN
 " ////// MACROS
@@ -404,7 +398,6 @@ autocmd FileType markdown vnoremap \7n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Tab
 
 " ////// COMPILER
 autocmd Filetype markdown map \cm :!bash<space>~/scripts/cmkd<space><C-r>%<Enter><Enter>
-autocmd Filetype markdown map \vh :!bash<space>~/scripts/openhtml<space><C-r>%<BS><BS>html<Enter><Enter>
 
 " >>>> R MARKDOWN
 autocmd Filetype rmd map \ll :!echo<space>"require(rmarkdown);<space>
@@ -475,5 +468,22 @@ autocmd FileType rmd vnoremap \s xa~~<Esc>pa~~<Esc>
 autocmd FileType rmd vnoremap \p :'<,'>norm 0i-<space><Esc>
 autocmd FileType rmd vnoremap \n :'<,'>norm 0i1.<space><Esc>
 
+" >>>> VIEW PDF
+autocmd FileType tex,rmd map ;vp :silent<space>!zathura<space>
+    \<C-r>%<BS><BS><BS>pdf<space>&<Enter>
+autocmd FileType markdown,groff map ;vp :silent<space>!zathura<space>
+    \<C-r>%<BS><BS>pdf<space>&<Enter>
+
+" >>>> VIEW HTML
+autocmd Filetype markdown map ;vh :!bash<space>~/scripts/openhtml<space><C-r>%<Enter><Enter>
+
 " >>>> PYTHON FILES
 autocmd Filetype python map \ll :w<space>!python<Enter>
+" >>>> PDF WORDCOUNT
+autocmd Filetype tex map ;wc :!bash<space>~/scripts/wcpdf<space><C-r>%
+	\<BS><BS><BS><BS><Enter>
+autocmd Filetype rmd map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
+	\<BS><BS><BS><BS><Enter>
+autocmd Filetype markdown map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
+	\<BS><BS><BS><Enter>
+

@@ -13,14 +13,13 @@ if [[ -z $theme ]]; then
 	:
 else
     cat ${xfilesDir}/colors/${theme} > $HOME/.Xresources
-    echo "" >> $HOME/.Xresources
-    cat ${xfilesDir}/xvars >> $HOME/.Xresources                           
-    echo "" >> $HOME/.Xresources
-    cat ${xfilesDir}/xcolorvars >> $HOME/.Xresources
-    echo "" >> $HOME/.Xresources
-    echo "! >>>> ROFI" >> $HOME/.Xresources
-    cat ${xfilesDir}/xrofi >> $HOME/.Xresources
-    cat ${xfilesDir}/xmain >> $HOME/.Xresources
+    cat ${xfilesDir}/1vars >> $HOME/.Xresources                           
+    cat ${xfilesDir}/2colorvars >> $HOME/.Xresources
+    cat ${xfilesDir}/3rofi >> $HOME/.Xresources
+    cat ${xfilesDir}/4xft >> $HOME/.Xresources
+    cat ${xfilesDir}/6xcursor >> $HOME/.Xresources
+    cat ${xfilesDir}/7urxvt >> $HOME/.Xresources
+    cat ${xfilesDir}/8urxvtext >> $HOME/.Xresources
     xrdb -load $HOME/.Xresources
     kill -1 $(pidof urxvtd)
     notify-send '.Xresources has been reloaded' -i $HOME/scriptpics/settingswhite.png

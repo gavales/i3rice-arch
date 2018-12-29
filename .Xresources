@@ -1,28 +1,25 @@
-! >>>> PYWAL COLORVARS
-#define cblkd       #0F1007
-#define cblkl       #8aa3a8
-#define credd       #559652
-#define credl       #559652
-#define cgrnd       #4B768C
-#define cgrnl      #4B768C
-#define cylwd       #609A9F
-#define cylwl      #609A9F
-#define cblud       #5EB5CB
-#define cblul      #5EB5CB
-#define cgntd       #6DD9E7
-#define cgntl      #6DD9E7
-#define ccynd       #97B4B5
-#define ccynl      #97B4B5
-#define cwhtd       #c6eaf0
-#define cwhtl      #c6eaf0
-
+#define cblkd       #0E1524
+#define cblkl       #9d9085
+#define credd       #557891
+#define credl       #557891
+#define cgrnd       #1890B0
+#define cgrnl      #1890B0
+#define cylwd       #788180
+#define cylwl      #788180
+#define cblud       #6193A0
+#define cblul      #6193A0
+#define cgntd       #4AB4C1
+#define cgntl      #4AB4C1
+#define ccynd       #9E9F9A
+#define ccynl      #9E9F9A
+#define cwhtd       #e1cfbf
+#define cwhtl      #e1cfbf
 
 ! >>>> VARIABLES
 #define fontname monaco
 !#define font TerminessTTFNerdFontMono
 #define fontsize 14
 #define fontsize2 12
-
 
 ! >>>> COLORS
 *background:				cblkd
@@ -112,19 +109,11 @@ Xft.autohint:	false
 Xft.hintstyle:	hintslight
 Xft.lcdfilter:	lcddefault
 
-! >>>> XTerm
-! XTerm*background:	cblkd
-! XTerm*foreground:	cwhtd
-! XTerm*pointerColor:	ccynd
-! XTerm*faceName:		Fixed
-! XTerm*faceSize:		11
-! XTerm*reverseVideo:	on
-! XTerm*faceName:		Terminus:size=11:antialias=true
-! XTerm*selectToClipboard:true
 
 ! >>>> Xcursor
 Xcursor.theme: Bibata_Red
 Xcursor.size: 36
+
 
 ! >>>> URXVT
 URxvt.font: xft:fontname:size=fontsize
@@ -138,12 +127,13 @@ URxvt*background: cblkd
 URxvt*foreground: cwhtl
 URxvt*saveLines: 5000
 URxvt*useColor:	true
-URxvt*internalBorder: 1
+URxvt*internalBorder: 5
 
 ! for 'fake' transparency (without Compton) uncomment the following three lines
 ! URxvt*inheritPixmap:            true
 ! URxvt*transparent:              true
 ! URxvt*shading:                  138
+
 
 ! >>>> URXVT EXTENSIONS
 URxvt*perl-ext-common: default,clipboard,matcher,resize-font,config-reload

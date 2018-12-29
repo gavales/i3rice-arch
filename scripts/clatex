@@ -22,3 +22,5 @@ if [[ -e ${file:0:-4}.nlo ]]; then
 else
 	:
 fi
+
+pkill -HUP mupdf
