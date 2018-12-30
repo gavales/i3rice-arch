@@ -1,3 +1,4 @@
+rename 3xrofi
 rename 1
 rename 2
 rename 3
@@ -43,8 +44,7 @@ shell bash ~/scripts/extractor %f
 rename groff
 rename cgroff
 rename global.bibtex
-search monaco
 open_with 
-shell bash ~/scripts/
-shell bash ~/scripts/bibtorefer
-shell bash ~/scripts/bibtorefer %f
+open_with vim
+rename settings
+search monaco

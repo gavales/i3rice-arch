@@ -5,7 +5,7 @@
 " BBBP dBP dB'dB'dB'  dBP  dB' dBBBBP
 
 " >>>> SETTINGS
-" ////// GENERAL
+" //// GENERAL
 filetype plugin on    " required
 execute pathogen#infect()
 syntax enable
@@ -39,30 +39,30 @@ map <Tab><Tab> <Esc>/>>>><Enter>
 
 inoremap \ph <++>
 
-" ////// CHANGE HIGHLIGHT COLOURS
+" //// CHANGE HIGHLIGHT COLOURS
 hi Normal ctermbg=none guibg=black
 hi LineNr ctermbg=none ctermfg=grey
-hi Folded ctermfg=grey ctermbg=none
+hi Folded cterm=italic ctermfg=blue ctermbg=none
 hi ModeMsg cterm=bold ctermfg=white
 hi lCursor ctermbg=white ctermfg=black
 hi ColorColumn ctermbg=red
 
-" ////// RESIZING
+" //// RESIZING
 map .rk :res<space>+5<Enter>
 map .rj :res<space>-5<Enter>
 map .rh :vertical<space>resize<space>-5<Enter>
 map .rl :vertical<space>resize<space>+5<Enter>
 
-" ////// SPLIT OPEN AT BOTTOM & RIGHT
+" //// SPLIT OPEN AT BOTTOM & RIGHT
 set splitbelow
 set splitright
 
-" ////// BRACKETS
+" //// BRACKETS
 inoremap () ()<++><Esc>F)i
 inoremap [] []<++><Esc>F]i
 inoremap {} {}<++><Esc>F}i
 
-" ////// CALENDAR
+" //// CALENDAR
 let g:calendar_frame = 'default'
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
@@ -87,7 +87,7 @@ map \gy :Goyo<bar>hi<space>Normal<space>ctermbg=none<space>guibg=black<bar>
 	\<Enter><Enter>
 
 " >>>> STATUSLINE
-" ////// FUNCTIONS
+" //// FUNCTIONS
 set laststatus=2
 
 function! FileSize()
@@ -128,7 +128,7 @@ function! StatuslineGit()
   return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
 endfunction
 
-" ////// ACTUAL
+" //// ACTUAL
 set statusline=
 set statusline+=%#lCursor#
 set statusline+=\ /%F
@@ -152,10 +152,9 @@ set statusline+=\
 
 
 " >>>> LATEX
-" ////// LATEX-SUITE
+" //// LATEX-SUITE
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_CompileRule_pdf = 'xelatex -interaction=nonstopmode -shell-escape $*'
-"let g:Tex_ViewRule_pdf = '/usr/bin/evince'
 let g:Tex_ViewRule_pdf = '/usr/bin/zathura'
 let g:Tex_MultipleCompileFormats='pdf,dvi'
 let g:Tex_BibtexFlavor = 'biber'
@@ -170,23 +169,28 @@ set grepprg=grep\ -nH\ $* "set grep to always generate filename
 let g:tex_flavor='latex' "invoke tex, not plaintex, for empty tex file
 set iskeyword+=: "press <C-n> to cycle through \label's
 
-" ////// COMPILE PDF
-autocmd Filetype tex map ;cp :w<space>!bash<space>~/scripts/clatex<space><C-r>
+" //// COMPILING
+" COMPLETE
+autocmd Filetype tex map ;C :w<space>!bash<space>~/scripts/clatex<space><C-r>
 	\%<Enter><Enter>
-autocmd Filetype tex map ;sp :w<space>!pdflatex<space>-interaction=nonstopmode
-	\<space>-shell-escape<space><C-r>%<Enter><Enter>
-autocmd Filetype tex map ;sx :w<space>!xelatex<space>-interaction=nonstopmode
+
+" PDFLATEX
+autocmd Filetype tex map ;p :w<space>!pdflatex<space>-interaction=nonstopmode
 	\<space>-shell-escape<space><C-r>%<Enter><Enter>
 
-" ////// BIBER
-autocmd Filetype tex map ;cb :!biber<space><C-r>%<BS><BS><BS>bcf<Enter><Enter>
+" XELATEX
+autocmd Filetype tex map ;x :w<space>!xelatex<space>-interaction=nonstopmode
+	\<space>-shell-escape<space><C-r>%<Enter><Enter>
 
-" ////// MAKEINDEX
-autocmd Filetype tex map ;mi :!makeindex<space><C-r>%<BS><BS><BS>
+" BIBER
+autocmd Filetype tex map ;b :!biber<space><C-r>%<BS><BS><BS>bcf<Enter><Enter>
+
+" MAKEINDEX
+autocmd Filetype tex map ;n :!makeindex<space><C-r>%<BS><BS><BS>
 	\nlo<space>-s<space>nomencl.ist<space>-o<space><C-r>%<BS><BS><BS>
 	\nls<Enter><Enter>
 
-" ////// LUKE SMITH'S SNIPPETS
+" //// LUKE SMITH'S SNIPPETS
 autocmd FileType tex inoremap $$ $$<++><Esc>F$i
 autocmd FileType tex inoremap <Tab>( \left(\right)<++><Esc>T(i
 autocmd FileType tex inoremap <Tab>{{ \left\{\right\}<++><Esc>T{i
@@ -247,45 +251,44 @@ autocmd FileType tex vnoremap <Tab>st xi{\setstretch{1.0}<Enter><Esc>pa}<Esc>
 autocmd FileType tex vnoremap <Tab>bm xi\begin{multicols}{2}<Enter><Esc>pa
 	\<Enter>\end{multicols}<Esc>
 
-" ////// BIB SHORTCUTS
+" //// BIB SHORTCUTS
 autocmd Filetype bib inoremap \a <Esc>A<Enter>@article{,<Enter>}<Esc>kf,i
 autocmd Filetype bib inoremap \b <Esc>A<Enter>@book{,<Enter>}<Esc>kf,i
 autocmd Filetype bib inoremap \i <Esc>A<Enter>@inproceedings{,<Enter>}<Esc>kf,i
 autocmd Filetype bib inoremap \t <Esc>A<Enter>@phdthesis{,<Enter>}<Esc>kf,i
-
-autocmd Filetype bib inoremap tit<Tab> <Esc>A<Enter>
-    \<Tab>title<space>=<space>{},<Esc>hi
-autocmd Filetype bib inoremap aut<Tab> <Esc>A<Enter>
-    \<Tab>author<space>=<space>{},<Esc>hi
-autocmd Filetype bib inoremap yea<Tab> <Esc>A<Enter>
-    \<Tab>year<space>=<space>{},<Esc>hi
-autocmd Filetype bib inoremap pub<Tab> <Esc>A<Enter>
-    \<Tab>publisher<space>=<space>{},<Esc>hi
-autocmd Filetype bib inoremap jou<Tab> <Esc>A<Enter>
-    \<Tab>journal<space>=<space>{},<Esc>hi
-autocmd Filetype bib inoremap vol<Tab> <Esc>A<Enter>
-    \<Tab>volume<space>=<space>{},<Esc>hi
-autocmd Filetype bib inoremap pag<Tab> <Esc>A<Enter>
-    \<Tab>pages<space>=<space>{},<Esc>hi
-autocmd Filetype bib inoremap sch<Tab> <Esc>A<Enter>
-    \<Tab>school<space>=<space>{},<Esc>hi
-autocmd Filetype bib inoremap boo<Tab> <Esc>A<Enter>
-    \<Tab>booktitle<space>=<space>{},<Esc>hi
-autocmd Filetype bib inoremap num<Tab> <Esc>A<Enter>
-    \<Tab>number<space>=<space>{},<Esc>hi
-autocmd Filetype bib inoremap org<Tab> <Esc>A<Enter>
-    \<Tab>organization<space>=<space>{},<Esc>hi
-
 autocmd Filetype bib inoremap \o <Esc>A<Enter>@online{,<Enter>
 	\<Tab>title<space>=<space>{<++>},<Enter>
 	\<Tab>author<space>=<space>{<++>},<Enter>
 	\<Tab>publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>06kf,i
 
+autocmd Filetype bib inoremap <Tab>tit <Esc>A<Enter>
+    \<Tab>title<space>=<space>{},<Esc>hi
+autocmd Filetype bib inoremap <Tab>aut <Esc>A<Enter>
+    \<Tab>author<space>=<space>{},<Esc>hi
+autocmd Filetype bib inoremap <Tab>yea <Esc>A<Enter>
+    \<Tab>year<space>=<space>{},<Esc>hi
+autocmd Filetype bib inoremap <Tab>pub <Esc>A<Enter>
+    \<Tab>publisher<space>=<space>{},<Esc>hi
+autocmd Filetype bib inoremap <Tab>jou <Esc>A<Enter>
+    \<Tab>journal<space>=<space>{},<Esc>hi
+autocmd Filetype bib inoremap <Tab>vol <Esc>A<Enter>
+    \<Tab>volume<space>=<space>{},<Esc>hi
+autocmd Filetype bib inoremap <Tab>pag <Esc>A<Enter>
+    \<Tab>pages<space>=<space>{},<Esc>hi
+autocmd Filetype bib inoremap <Tab>sch <Esc>A<Enter>
+    \<Tab>school<space>=<space>{},<Esc>hi
+autocmd Filetype bib inoremap <Tab>boo <Esc>A<Enter>
+    \<Tab>booktitle<space>=<space>{},<Esc>hi
+autocmd Filetype bib inoremap <Tab>num <Esc>A<Enter>
+    \<Tab>number<space>=<space>{},<Esc>hi
+autocmd Filetype bib inoremap <Tab>org <Esc>A<Enter>
+    \<Tab>organization<space>=<space>{},<Esc>hi
+
 " >>>> GROFF
 au BufNewFile,BufRead *.groff,*.ms set filetype=groff
-nnoremap ;cp :!bash<space>~/scripts/cgroff<space><C-r>%<Enter><Enter>
+autocmd FileType groff nnoremap \c :!bash<space>~/scripts/cgroff<space><C-r>%<Enter><Enter>
 
-" ////// SNIPPETS
+" //// SNIPPETS
 
 autocmd FileType groff inoremap ;b <Esc>o.B<space>""<space><++><Enter><++><Esc>0kf"a
 autocmd FileType groff inoremap ;c <Esc>o.[<Enter><Enter>.]<Enter><++><Esc>02ki
@@ -306,31 +309,7 @@ autocmd FileType groff inoremap ;x <Esc>o.BX<space>""<space><++><Enter><++><Esc>
 autocmd FileType groff inoremap <Tab><Enter> <Esc>o.PP<Enter>
 
 " >>>> MARKDOWN
-" ////// MACROS
-autocmd FileType markdown nnoremap \1h A<Enter><Enter>#<space>
-autocmd FileType markdown nnoremap \2h A<Enter><Enter>##<space>
-autocmd FileType markdown nnoremap \3h A<Enter><Enter>###<space>
-autocmd FileType markdown nnoremap \4h A<Enter><Enter>####<space>
-autocmd FileType markdown nnoremap \5h A<Enter><Enter>#####<space>
-autocmd FileType markdown nnoremap \6h A<Enter><Enter>######<space>
-autocmd FileType markdown nnoremap \7h A<Enter><Enter>#######<space>
-
-autocmd FileType markdown nnoremap \1p A<Enter>+<space>
-autocmd FileType markdown nnoremap \2p A<Enter><Tab>+<space>
-autocmd FileType markdown nnoremap \3p A<Enter><Tab><Tab>+<space>
-autocmd FileType markdown nnoremap \4p A<Enter><Tab><Tab><Tab>+<space>
-autocmd FileType markdown nnoremap \5p A<Enter><Tab><Tab><Tab><Tab>+<space>
-autocmd FileType markdown nnoremap \6p A<Enter><Tab><Tab><Tab><Tab><Tab>+<space>
-autocmd FileType markdown nnoremap \7p A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>+<space>
-
-autocmd FileType markdown nnoremap \1n A<Enter>1.<space>
-autocmd FileType markdown nnoremap \2n A<Enter><Tab>#.<space>
-autocmd FileType markdown nnoremap \3n A<Enter><Tab><Tab>(#)<space>
-autocmd FileType markdown nnoremap \4n A<Enter><Tab><Tab><Tab>(1)<space>
-autocmd FileType markdown nnoremap \5n A<Enter><Tab><Tab><Tab><Tab>#.<space>
-autocmd FileType markdown nnoremap \6n A<Enter><Tab><Tab><Tab><Tab><Tab>(#)<space>
-autocmd FileType markdown nnoremap \7n A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>1.<space>
-
+" //// MACROS
 autocmd FileType markdown inoremap 1h <Esc>A<Enter><Enter>#<space>
 autocmd FileType markdown inoremap 2h <Esc>A<Enter><Enter>##<space>
 autocmd FileType markdown inoremap 3h <Esc>A<Enter><Enter>###<space>
@@ -355,24 +334,24 @@ autocmd FileType markdown inoremap 5n <Esc>A<Enter><Tab><Tab><Tab><Tab>#.<space>
 autocmd FileType markdown inoremap 6n <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab>(#)<space>
 autocmd FileType markdown inoremap 7n <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>1.<space>
 
-autocmd FileType markdown inoremap \b ****<++><Esc>5hi
-autocmd FileType markdown inoremap \i __<++><Esc>4hi
-autocmd FileType markdown inoremap \s ~~~~<++><Esc>5hi
+autocmd FileType markdown inoremap <Tab>b ****<++><Esc>5hi
+autocmd FileType markdown inoremap <Tab>i __<++><Esc>4hi
+autocmd FileType markdown inoremap <Tab>s ~~~~<++><Esc>5hi
 
-autocmd FileType markdown inoremap \pic <Esc>A<Enter><Enter>![](<++>){#fig:<++>}<Esc>F]i
-autocmd FileType markdown inoremap \eq $$$$<space>{#eq:<++>}<++><Esc>F$hi
-autocmd FileType markdown inoremap \lin <Esc>A<Enter><Enter>[](<++>)<Esc>F]i
-autocmd FileType markdown inoremap \cod <Esc>A<Enter><Enter>```<Enter><++><Enter>```<Esc>2kA
-autocmd FileType markdown inoremap \ytb <Esc>A<Enter><Enter>[![](http://img.youtube.com/vi/<++>
+autocmd FileType markdown inoremap <Tab>pic <Esc>A<Enter><Enter>![](<++>){#fig:<++>}<Esc>F]i
+autocmd FileType markdown inoremap <Tab>eq $$$$<space>{#eq:<++>}<++><Esc>F$hi
+autocmd FileType markdown inoremap <Tab>lin <Esc>A<Enter><Enter>[](<++>)<Esc>F]i
+autocmd FileType markdown inoremap <Tab>cod <Esc>A<Enter><Enter>```<Enter><++><Enter>```<Esc>2kA
+autocmd FileType markdown inoremap <Tab>ytb <Esc>A<Enter><Enter>[![](http://img.youtube.com/vi/<++>
 	\/0.jpg)](http://www.youtube.com/watch?v=<++>)<Esc>F[a
 
-autocmd FileType markdown inoremap \ci [@]<Esc>i
-autocmd FileType markdown inoremap \lt {#tbl:}<Esc>i
-autocmd FileType markdown inoremap \ls {#sec:}<Esc>i
-autocmd FileType markdown inoremap \rf [@fig:]<Esc>i
-autocmd FileType markdown inoremap \rs [@sec:]<Esc>i
-autocmd FileType markdown inoremap \re [@eq:]<Esc>i
-autocmd FileType markdown inoremap \rt [@tbl:]<Esc>i
+autocmd FileType markdown inoremap <Tab>ci [@]<Esc>i
+autocmd FileType markdown inoremap <Tab>lt {#tbl:}<Esc>i
+autocmd FileType markdown inoremap <Tab>ls {#sec:}<Esc>i
+autocmd FileType markdown inoremap <Tab>rf [@fig:]<Esc>i
+autocmd FileType markdown inoremap <Tab>rs [@sec:]<Esc>i
+autocmd FileType markdown inoremap <Tab>re [@eq:]<Esc>i
+autocmd FileType markdown inoremap <Tab>rt [@tbl:]<Esc>i
 
 autocmd FileType markdown vnoremap \b xa**<Esc>pa**<Esc>
 autocmd FileType markdown vnoremap \i xa_<Esc>pa_<Esc>
@@ -396,38 +375,20 @@ autocmd FileType markdown vnoremap \5n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Esc
 autocmd FileType markdown vnoremap \6n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Tab><Esc>
 autocmd FileType markdown vnoremap \7n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Tab><Tab><Esc>
 
-" ////// COMPILER
-autocmd Filetype markdown map \cm :!bash<space>~/scripts/cmkd<space><C-r>%<Enter><Enter>
+" //// COMPILER
+autocmd Filetype markdown map \c :!bash<space>~/scripts/cmkd<space><C-r>%<Enter><Enter>
 
 " >>>> R MARKDOWN
-autocmd Filetype rmd map \ll :!echo<space>"require(rmarkdown);<space>
+autocmd Filetype rmd map \c :!echo<space>"require(rmarkdown);<space>
 	\render('<c-r>%')"<space>\|<space>R<space>--vanilla<Enter><Enter>
-autocmd Filetype rmd inoremap ;r ```{r}<CR>```<CR><CR><esc>2kO
-autocmd Filetype rmd inoremap ;p ```{python}<CR>```<CR><CR><esc>2kO
 
-autocmd FileType rmd nnoremap \1h A<Enter><Enter>#<space>
-autocmd FileType rmd nnoremap \2h A<Enter><Enter>##<space>
-autocmd FileType rmd nnoremap \3h A<Enter><Enter>###<space>
-autocmd FileType rmd nnoremap \4h A<Enter><Enter>####<space>
-autocmd FileType rmd nnoremap \5h A<Enter><Enter>#####<space>
-autocmd FileType rmd nnoremap \6h A<Enter><Enter>######<space>
-autocmd FileType rmd nnoremap \7h A<Enter><Enter>#######<space>
-
-autocmd FileType rmd nnoremap \1p A<Enter>+<space>
-autocmd FileType rmd nnoremap \2p A<Enter><Tab>+<space>
-autocmd FileType rmd nnoremap \3p A<Enter><Tab><Tab>+<space>
-autocmd FileType rmd nnoremap \4p A<Enter><Tab><Tab><Tab>+<space>
-autocmd FileType rmd nnoremap \5p A<Enter><Tab><Tab><Tab><Tab>+<space>
-autocmd FileType rmd nnoremap \6p A<Enter><Tab><Tab><Tab><Tab><Tab>+<space>
-autocmd FileType rmd nnoremap \7p A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>+<space>
-
-autocmd FileType rmd inoremap \1n A<Enter>1.<space>
-autocmd FileType rmd inoremap \2n A<Enter><Tab>#.<space>
-autocmd FileType rmd inoremap \3n A<Enter><Tab><Tab>(#)<space>
-autocmd FileType rmd inoremap \4n A<Enter><Tab><Tab><Tab>(1)<space>
-autocmd FileType rmd inoremap \5n A<Enter><Tab><Tab><Tab><Tab>#.<space>
-autocmd FileType rmd inoremap \6n A<Enter><Tab><Tab><Tab><Tab><Tab>(#)<space>
-autocmd FileType rmd inoremap \7n A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>1.<space>
+autocmd FileType rmd inoremap 1n A<Enter>1.<space>
+autocmd FileType rmd inoremap 2n A<Enter><Tab>#.<space>
+autocmd FileType rmd inoremap 3n A<Enter><Tab><Tab>(#)<space>
+autocmd FileType rmd inoremap 4n A<Enter><Tab><Tab><Tab>(1)<space>
+autocmd FileType rmd inoremap 5n A<Enter><Tab><Tab><Tab><Tab>#.<space>
+autocmd FileType rmd inoremap 6n A<Enter><Tab><Tab><Tab><Tab><Tab>(#)<space>
+autocmd FileType rmd inoremap 7n A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>1.<space>
 
 autocmd FileType rmd inoremap 1h <Esc>A<Enter><Enter>#<space>
 autocmd FileType rmd inoremap 2h <Esc>A<Enter><Enter>##<space>
@@ -445,28 +406,20 @@ autocmd FileType rmd inoremap 5p <Esc>A<Enter><Tab><Tab><Tab><Tab>+<space>
 autocmd FileType rmd inoremap 6p <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab>+<space>
 autocmd FileType rmd inoremap 7p <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>+<space>
 
-autocmd FileType rmd nnoremap 1n <Esc>A<Enter>1.<space>
-autocmd FileType rmd nnoremap 2n <Esc>A<Enter><Tab>#.<space>
-autocmd FileType rmd nnoremap 3n <Esc>A<Enter><Tab><Tab>(#)<space>
-autocmd FileType rmd nnoremap 4n <Esc>A<Enter><Tab><Tab><Tab>(1)<space>
-autocmd FileType rmd nnoremap 5n <Esc>A<Enter><Tab><Tab><Tab><Tab>#.<space>
-autocmd FileType rmd nnoremap 6n <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab>(#)<space>
-autocmd FileType rmd nnoremap 7n <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>1.<space>
-
-autocmd FileType rmd inoremap \b ****<++><Esc>5hi
-autocmd FileType rmd inoremap \i __<++><Esc>4hi
-autocmd FileType rmd inoremap \u ~~~~<++><Esc>5hi
-autocmd FileType rmd inoremap \pic <Esc>A<Enter><Enter>![](<++>)<Esc>F]i
-autocmd FileType rmd inoremap \lin <Esc>A<Enter><Enter>[](<++>)<Esc>F]i
-autocmd FileType rmd inoremap \cod <Esc>A<Enter><Enter>```{}<Enter><++><Enter>```<Esc>02kf{a
-autocmd FileType rmd inoremap \ytb <Esc>A<Enter><Enter>[![](http://img.youtube.com/vi/<++>
+autocmd FileType rmd inoremap <Tab>b ****<++><Esc>5hi
+autocmd FileType rmd inoremap <Tab>i __<++><Esc>4hi
+autocmd FileType rmd inoremap <Tab>u ~~~~<++><Esc>5hi
+autocmd FileType rmd inoremap <Tab>pic <Esc>A<Enter><Enter>![](<++>)<Esc>F]i
+autocmd FileType rmd inoremap <Tab>lin <Esc>A<Enter><Enter>[](<++>)<Esc>F]i
+autocmd FileType rmd inoremap <Tab>cod <Esc>A<Enter><Enter>```{}<Enter><++><Enter>```<Esc>02kf{a
+autocmd FileType rmd inoremap <Tab>ytb <Esc>A<Enter><Enter>[![](http://img.youtube.com/vi/<++>
 	\/0.jpg)](http://www.youtube.com/watch?v=<++>)<Esc>F[a
 
 autocmd FileType rmd vnoremap \b xa**<Esc>pa**<Esc>
 autocmd FileType rmd vnoremap \i xa_<Esc>pa_<Esc>
 autocmd FileType rmd vnoremap \s xa~~<Esc>pa~~<Esc>
-autocmd FileType rmd vnoremap \p :'<,'>norm 0i-<space><Esc>
-autocmd FileType rmd vnoremap \n :'<,'>norm 0i1.<space><Esc>
+autocmd Filetype rmd inoremap \r ```{r}<CR>```<CR><CR><esc>2kO
+autocmd Filetype rmd inoremap \p ```{python}<CR>```<CR><CR><esc>2kO
 
 " >>>> VIEW PDF
 autocmd FileType tex,rmd map ;vp :silent<space>!zathura<space>
