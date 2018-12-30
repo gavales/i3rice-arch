@@ -1,11 +1,3 @@
-rename 1
-rename 2
-rename 3
-rename 4
-rename 5
-rename 6
-rename 7
-rename 8
 rename 1colorvars
 rename 2vars
 rename 3rofi
@@ -48,3 +40,11 @@ open_with
 shell bash ~/scripts/
 shell bash ~/scripts/bibtorefer
 shell bash ~/scripts/bibtorefer %f
+shell oft
+mkdir Flora
+mkdir Kerrianne
+rename latex_template
+open_with a
+rename tex
+rename 
+touch name.bib
