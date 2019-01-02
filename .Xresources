@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #define cblkd       #0b0a18
 #define cblkl       #9a7276
 #define credd       #5D294F
@@ -14,6 +15,24 @@
 #define ccynl      #DF254C
 #define cwhtd       #dca4a9
 #define cwhtl      #dca4a9
+=======
+#define cblkd       #0f1219
+#define cblkl       #aa9083
+#define credd       #DD755F
+#define credl       #DD755F
+#define cgrnd       #F69B6F
+#define cgrnl      #F69B6F
+#define cylwd       #FDC07E
+#define cylwl      #FDC07E
+#define cblud       #696D89
+#define cblul      #696D89
+#define cgntd       #877A8D
+#define cgntl      #877A8D
+#define ccynd       #B19DA6
+#define ccynl      #B19DA6
+#define cwhtd       #f3cfbc
+#define cwhtl      #f3cfbc
+>>>>>>> origin/master
 
 ! >>>> VARIABLES
 #define fontname monaco

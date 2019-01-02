@@ -1,16 +1,30 @@
 function! Folds()
 	let thisline = getline(v:lnum)
-	if match(thisline, '^\\subsubsection{') >= 0
-		return ">3"
+	if match(thisline, '^\\section{') >= 0
+		return ">1"
 	elseif match(thisline, '^\\subsection{') >= 0
-		return ">2"
-	elseif match(thisline, '^\\section{') >= 0
+		return ">1"
+	elseif match(thisline, '^\\subsubsection{') >= 0
+		return ">1"
+	elseif match(thisline, '\\column{') >= 0
+		return ">0"
+	elseif match(thisline, '\\block{') >= 0
+		return ">1"
+	elseif match(thisline, '^\\section\*{') >= 0
+		return ">1"
+	elseif match(thisline, '^\\subsection\*{') >= 0
+		return ">1"
+	elseif match(thisline, '^\\subsubsection\*{') >= 0
 		return ">1"
 	elseif match(thisline, '^\\documentclass') >= 0
 		return ">1"
 	elseif match(thisline, '^\\begin{document}') >= 0
 		return ">0"
 	elseif match(thisline, '^\\end{document}') >= 0
+		return ">0"
+	elseif match(thisline, '^\\begin{columns}') >= 0
+		return ">0"
+	elseif match(thisline, '^\\end{columns}') >= 0
 		return ">0"
 	elseif match(thisline, '^\\begin{multicols}') >= 0
 		return ">0"
@@ -40,15 +54,20 @@ function FoldText()
     let foldsize = (v:foldend-v:foldstart)
     let foldline = getline(v:foldstart)
     let foldline = substitute(foldline, '% ', "", "")
-    let foldline = substitute(foldline, '}.*', "", "")
-    let foldline = substitute(foldline, '////', "------", "")
-    let foldline = substitute(foldline, '\\documentclass', "Preamble: ", "")
-    let foldline = substitute(foldline, '\\section{', "===> ", "")
-    let foldline = substitute(foldline, '\\subsection{', "~~~~~~~> ", "")
-    let foldline = substitute(foldline, '\\subsubsection{', "-----------> ", "")
+    let foldline = substitute(foldline, '////', "-----", "")
+    let foldline = substitute(foldline, '\\documentclass', "------------  PREAMBLE:", "")
+    let foldline = substitute(foldline, '\\section{', "==> ", "")
+    let foldline = substitute(foldline, '\\subsection{', "~~~~~> ", "")
+    let foldline = substitute(foldline, '\\subsubsection{', "--------> ", "")
+    let foldline = substitute(foldline, '\\section\*{', "==* ", "")
+    let foldline = substitute(foldline, '\\subsection\*{', "~~~~~* ", "")
+    let foldline = substitute(foldline, '\\subsubsection\*{', "--------* ", "")
+    let foldline = substitute(foldline, '\\block{', "==> ", "")
+    let foldline = substitute(foldline, '\\column{', "Column: ", "")
     let foldline = substitute(foldline, '\[', " ", "")
     let foldline = substitute(foldline, '\]', ",", "")
     let foldline = substitute(foldline, '{', " ", "")
+    let foldline = substitute(foldline, '}.*', "", "")
     let text = foldline.foldsize.'lines     '
     let fillcharcount = windowwidth - strdisplaywidth(text)
     return ' '.foldline.'  '.repeat("-",fillcharcount).'  ('.foldsize.' lines)'
@@ -56,4 +75,6 @@ endfunction
 
 setlocal spell spelllang=en_gb
 setlocal nonumber norelativenumber laststatus=0
+filetype plugin indent on
+setlocal textwidth=80
 "autocmd VimEnter * Goyo"

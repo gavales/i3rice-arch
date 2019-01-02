@@ -31,4 +31,5 @@ endfunction
 
 setlocal spell spelllang=en_gb
 setlocal nonumber norelativenumber laststatus=0
+setlocal textwidth=80
 "autocmd VimEnter * Goyo"

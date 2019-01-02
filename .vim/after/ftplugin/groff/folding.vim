@@ -1,9 +1,9 @@
 function! Folds()
 	let thisline = getline(v:lnum)
 	if match(thisline, '^.NH 3') >= 0
-		return ">3"
+		return ">1"
 	elseif match(thisline, '^.NH 2') >= 0
-		return ">2"
+		return ">1"
 	elseif match(thisline, '^.NH') >= 0
 		return ">1"
 	elseif match(thisline, '^.SH') >= 0
@@ -23,17 +23,19 @@ function FoldText()
     let windowwidth = winwidth(0) - nucolwidth - 3
     let foldsize = (v:foldend-v:foldstart)
     let foldline = getline(v:foldstart)
-    let foldline = substitute(foldline, '.TL', "Preamble: ", "")
-    let foldline = substitute(foldline, '.NH', "====> ", "")
-    let foldline = substitute(foldline, '.SH', "~~~~> ", "")
-    let foldline = substitute(foldline, '.NH 2', "~~~~~~~~> ", "")
-    let foldline = substitute(foldline, '.NH 3', "------------> ", "")
-    let text = foldline.foldsize.'line '
+    let foldbel = getline(v:foldstart + 1)
+    let foldline = substitute(foldline, '.TL', "Title: ", "")
+    let foldline = substitute(foldline, '.NH 2', "~~~~~~> ", "")
+    let foldline = substitute(foldline, '.NH 3', "---------> ", "")
+    let foldline = substitute(foldline, '.NH', "===> ", "")
+    let foldline = substitute(foldline, '.SH', "~~~> ", "")
+    let text = foldline.foldbel.foldsize.'line     '
     let fillcharcount = windowwidth - strdisplaywidth(text)
-    return foldline. repeat("-",fillcharcount).'('.foldsize.' lines)'
+    return foldline.' '.foldbel.' '.repeat("-",fillcharcount).'  ('.foldsize.' lines)'
 endfunction
 
 setlocal updatetime=500
 setlocal spell spelllang=en_gb
 setlocal nonumber norelativenumber laststatus=0
 autocmd CursorHold,CursorHoldI * silent !bash ~/scripts/cgroff % &
+setlocal textwidth=80

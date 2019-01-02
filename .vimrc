@@ -32,7 +32,7 @@ autocmd FileType sh call matchadd('ColorColumn', '\%81v', 100)
 autocmd Filetype calendar set laststatus=0
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
-autocmd CursorMoved,CursorMovedI * update
+autocmd CursorHold,CursorHoldI * update
 autocmd CursorHold,CursorHoldI * redraw!
 
 map <Tab><Tab> <Esc>/>>>><Enter>
@@ -190,7 +190,7 @@ autocmd Filetype tex map ;n :!makeindex<space><C-r>%<BS><BS><BS>
 	\nlo<space>-s<space>nomencl.ist<space>-o<space><C-r>%<BS><BS><BS>
 	\nls<Enter><Enter>
 
-" //// LUKE SMITH'S SNIPPETS
+" //// (LUKE SMITH'S) SNIPPETS
 autocmd FileType tex inoremap $$ $$<++><Esc>F$i
 autocmd FileType tex inoremap <Tab>( \left(\right)<++><Esc>T(i
 autocmd FileType tex inoremap <Tab>{{ \left\{\right\}<++><Esc>T{i
@@ -223,6 +223,12 @@ autocmd FileType tex inoremap <Tab>nc \newcommand{}[<++>]<++>{<++>}<Esc>2F}i
                                    
 autocmd FileType tex inoremap <Tab>pc \parencite{}<++><Esc>T{i
 autocmd FileType tex inoremap <Tab>pt \item<space>
+autocmd FileType tex inoremap <Tab>pi \begin{figure}[H]<Enter>
+    \<Tab>\centering<Enter>
+    \<Tab>\includegraphics[width=]{<++>}<Enter>
+    \<Tab>\caption{<++><Enter>
+    \<Tab>\label{fig:<++>}}<Enter>
+    \\end{figure}<Esc>03kf=a
                                      
 autocmd FileType tex inoremap <Tab>rf \figref{fig:}<++><Esc>T:i
 autocmd FileType tex inoremap <Tab>rt \tabref{tab:}<++><Esc>T:i
@@ -238,6 +244,18 @@ autocmd FileType tex inoremap <Tab>s3 \subsubsection{}<Enter><++><Esc>kf}i
                                      
 autocmd FileType tex inoremap <Tab>tt \texttt{}<++><Esc>T{i
 autocmd FileType tex inoremap <Tab>tc \textcite{}<++><Esc>T{i
+autocmd FileType tex inoremap <Tab>ta \begin{table}[H]<Enter>
+    \<Tab>\centering<Enter>
+    \<Tab>\begin{tabular}{c}<Enter>
+    \<Tab><Tab>\toprule<Enter>
+    \<Tab><Tab>\textbf{<++>} \\<Enter>
+    \<Tab><Tab>\midrule<Enter>
+    \<Tab><Tab><++> \\<Enter>
+    \<Tab><Tab>\bottomrule<Enter>
+    \<Tab>\end{tabular}<Enter>
+    \<Tab>\caption{<++><Enter>
+    \<Tab>\label{tab:<++>}}<Enter>
+    \\end{table}<Esc>09kfca
                                      
 autocmd FileType tex inoremap <Tab>up \usepackage[]<++>{<++>}<Esc>T[i
 autocmd FileType tex inoremap <Tab>ul \underline{}<++><Esc>T{i
