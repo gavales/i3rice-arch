@@ -5,8 +5,18 @@ trackname=$(mpris-ctl info "%track_name")
 artistname=$(mpris-ctl info "%artist_name")
 playstatus=$(mpris-ctl info "%play_status")
 
-playing="$playername: $trackname - $artistname"
-playing="${playing:0:-10}..."
+if [[ ${#trackname} -ge 20 ]]; then
+    trackname="${trackname:0:-13}..."
+else
+    trackname=$trackname
+fi
+if [[ ${#artistname} -ge 20 ]]; then
+    artistname="${artistname:0:-13}..."
+else
+    artistname=$artistname
+fi
+
+playing="$playername: $artistname > $trackname"
 
 if [ $playername == "%player_name" ]; then
 	:

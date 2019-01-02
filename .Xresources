@@ -1,38 +1,19 @@
-<<<<<<< HEAD
-#define cblkd       #0b0a18
-#define cblkl       #9a7276
-#define credd       #5D294F
-#define credl       #5D294F
-#define cgrnd       #59465F
-#define cgrnl      #59465F
-#define cylwd       #9B0930
-#define cylwl      #9B0930
-#define cblud       #E0132E
-#define cblul      #E0132E
-#define cgntd       #9B2551
-#define cgntl      #9B2551
-#define ccynd       #DF254C
-#define ccynl      #DF254C
-#define cwhtd       #dca4a9
-#define cwhtl      #dca4a9
-=======
-#define cblkd       #0f1219
-#define cblkl       #aa9083
-#define credd       #DD755F
-#define credl       #DD755F
-#define cgrnd       #F69B6F
-#define cgrnl      #F69B6F
-#define cylwd       #FDC07E
-#define cylwl      #FDC07E
-#define cblud       #696D89
-#define cblul      #696D89
-#define cgntd       #877A8D
-#define cgntl      #877A8D
-#define ccynd       #B19DA6
-#define ccynl      #B19DA6
-#define cwhtd       #f3cfbc
-#define cwhtl      #f3cfbc
->>>>>>> origin/master
+#define cblkd       #0F1007
+#define cblkl       #8aa3a8
+#define credd       #559652
+#define credl       #559652
+#define cgrnd       #4B768C
+#define cgrnl      #4B768C
+#define cylwd       #609A9F
+#define cylwl      #609A9F
+#define cblud       #5EB5CB
+#define cblul      #5EB5CB
+#define cgntd       #6DD9E7
+#define cgntl      #6DD9E7
+#define ccynd       #97B4B5
+#define ccynl      #97B4B5
+#define cwhtd       #c6eaf0
+#define cwhtl      #c6eaf0
 
 ! >>>> VARIABLES
 #define fontname monaco

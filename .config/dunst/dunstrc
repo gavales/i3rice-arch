@@ -1,38 +1,20 @@
 [frame]
 width = 1
-<<<<<<< HEAD
-color = "#0b0a18"
+color = "#0F1007"
 
 [urgency_low]
-background = "#E0132E"
-foreground = "#0b0a18"
+background = "#5EB5CB"
+foreground = "#0F1007"
 timeout = 3
 
 [urgency_normal]
-background = "#E0132E"
-foreground = "#0b0a18"
+background = "#5EB5CB"
+foreground = "#0F1007"
 timeout = 3
 
 [urgency_critical]
-background = "#5D294F"
-foreground = "#0b0a18"
-=======
-color = "#0f1219"
-
-[urgency_low]
-background = "#696D89"
-foreground = "#0f1219"
-timeout = 3
-
-[urgency_normal]
-background = "#696D89"
-foreground = "#0f1219"
-timeout = 3
-
-[urgency_critical]
-background = "#DD755F"
-foreground = "#0f1219"
->>>>>>> origin/master
+background = "#559652"
+foreground = "#0F1007"
 timeout = 3
 
 [shortcuts]

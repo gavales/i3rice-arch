@@ -1,6 +1,3 @@
-rename 3rofi
-rename 4xft
-rename 5xterm
 rename 6xcursor
 rename 7urxvt
 rename 8urxvtext
@@ -48,3 +45,6 @@ touch name.bib
 shell mkdir kerriannev1 'myfirstlatex' 'mysecondlatex' 'mythirdlatex'
 rename 
 rename latexstuff
+rename Uni
+rename i3
+rename .fonts
