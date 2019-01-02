@@ -9,19 +9,19 @@
 # >>>> FONT
 set $font1 FixedsysMono
 set $font2 FontAwesome
-set $font3 Monaco Nerd Font
+set $font3 monaco
 set $fonts 12
 
 font pango:$font1,$font2 $fonts
 
 # >>>> DEFINE VARIABLES
-# ////// DIRS
+# //// DIRS
 
 set $home       /home/gavarch
 set $scripts    scripts
 set $scriptpics scriptpics
 
-# ////// i3
+# //// i3
 
 set $mod        bindsym Mod1
 set $modi       Mod1
@@ -51,7 +51,7 @@ set $fldi       floating disable
 set $brnr       border normal
 set $mvcn       move position center
 
-# ////// APPS
+# //// APPS
 
 set $term       urxvtc
 set $browser    google-chrome-beta
@@ -67,7 +67,7 @@ set $tertiary   HDMI1
 set $kb         us
 #set $kb         gb
 
-# ////// WORKSPACE NAMES
+# //// WORKSPACE NAMES
 
 set $ws1 1
 set $ws2 2
@@ -80,7 +80,7 @@ set $ws8 8
 set $ws9 9
 set $ws10 10
 
-# ////// COLORS
+# //// COLORS
 
 set_from_resource $blk	color0
 set_from_resource $red	color1
@@ -133,7 +133,7 @@ bar {
 }
 
 # >>>> MOD1 IMPORTANT
-# ////// MAIN
+# //// MAIN
 
 $mod+Shift+r        restart
 $mod+Shift+c        $execn "bash $home/$scripts/xtheme; \
@@ -153,7 +153,7 @@ $mod+d              exec rofi -show drun
 $mod+Shift+d        exec dmenu_run -fn "$font3:size=$fonts" -nb \
                         "$blk" -nf "$wht" -sf "$blk" -sb "$blu"
 
-# ////// FOCUS/MOVE/RESIZE
+# //// FOCUS/MOVE/RESIZE
 
 $mod+h              $execn bash $home/$scripts/i3viswiz left
 $mod+j              $execn bash $home/$scripts/i3viswiz down
@@ -172,7 +172,7 @@ $mod+u resize       shrink height 10 px or 10 ppt
 $mod+o resize       grow width 10 px or 10 ppt
 
 # >>>> MOD1 BINDINGS
-# ////// WORKFLOW
+# //// WORKFLOW
 
 $mod+Return         exec $term -name TERMINAL
 $mod+f              $lnch pcmanfm $mk2
@@ -194,10 +194,10 @@ $mod+Ctrl+w         exec $browser --new-window \
 $mod+Ctrl+r         exec $browser --new-window \
                         --app=https://docs.google.com/presentation/u/0/
 
-# ////// MEDIA
+# //// MEDIA
 
 $mod+Shift+s        exec spotify
-$mod+s              exec $term -fn "xft:$font3:size=$fonts" -name MUSIC -e ncmpcpp
+$mod+s              exec $term -name MUSIC -e ncmpcpp
 $mod+v              $lnch '$term -name VIS -e vis' $mk2
 $mod+Shift+v        $lnch '$term -name NCMVIS -e ncmpcpp -s visualizer' $mk2
 $mod+Shift+n        $lnch '$browser --new-window \
@@ -220,7 +220,7 @@ $mod+p              exec playerctl play-pause
 $mod+bracketright   exec playerctl next
 $mod+bracketleft    exec playerctl previous
 
-# ////// LAYOUT
+# //// LAYOUT
 
 $mod+g              split toggle
 $mod+e              layout toggle tabbed split
@@ -232,7 +232,7 @@ $mod+Ctrl+s         sticky toggle
 $mod+Shift+minus    move scratchpad
 $mod+minus          scratchpad show
 
-# ////// WORKSPACE
+# //// WORKSPACE
 
 $mod+Ctrl+Right     workspace next
 $mod+Ctrl+Left      workspace prev
@@ -261,14 +261,14 @@ $mod+Shift+8        move container to workspace $ws8; workspace $ws8
 $mod+Shift+9        move container to workspace $ws9; workspace $ws9
 $mod+Shift+0        move container to workspace $ws10; workspace $ws10
 
-# ////// GAPS
+# //// GAPS
 
 $mod+Ctrl+y         gaps inner current set 0; gaps outer current set 0
 $mod+Ctrl+o         gaps inner current set 10; gaps outer current set 20
 $mod+Ctrl+u         gaps inner current minus 5; gaps outer current minus 10
 $mod+Ctrl+i         gaps inner current plus 5; gaps outer current plus 10
 
-# ////// SHUTDOWN MODE
+# //// SHUTDOWN MODE
 
 $mod+Escape         mode "SHUTDOWN"
 mode "SHUTDOWN" {
@@ -286,7 +286,7 @@ mode "SHUTDOWN" {
 }
 
 # >>>> MOD4 BINDINGS
-# ////// MAIN
+# //// MAIN
 $win+Shift+c        reload
 $win+o              exec "$brightinc; bash ~/$scripts/notify_brightness"
 $win+y              exec "$brightdec; bash ~/$scripts/notify_brightness"
@@ -307,39 +307,38 @@ $win+3              $lnch '$term -name VIMRC -e vim ~/.vimrc' $mk3
 $win+4              $lnch '$term -name RCCONF -e vim ~/.config/ranger/rc.conf' $mk3
 $win+5              $lnch '$term -name i3BLOCKS -e vim ~/scripts/mkblocksconf' $mk3
 $win+g              $lnch '$term -name GITREPOUPDATE -e bash ~/$scripts/gitcommit' $mk2
-$win+c              $lnch '$term -fn "xft:$font3:size=$fonts" \
-                        -name CALENDAR -e vim "+Calendar -view=day"' $mk2
+$win+c              $lnch '$term -name CALENDAR -e vim "+Calendar -view=day"' $mk2
 $win+r              $lnch '$term -name RTV -e rtv' $mk2
 
-# ////// MPD CONTROLS
+# //// MPD CONTROLS
 
 $win+p              exec mpc toggle
 $win+bracketright   exec mpc next
 $win+bracketleft    exec mpc prev
 $win+backslash      exec mpc stop
 
-# ////// MULTI-MONITOR
+# //// MULTI-MONITOR
 
 $win+m              exec bash ~/$scripts/multimon
 $win+v              move workspace to output $secondary
 $win+d              move workspace to output $tertiary
 $win+e              move workspace to output $primary
 
-# ////// CHANGE FOCUS
+# //// CHANGE FOCUS
 
 $win+h              focus left
 $win+j              focus down
 $win+k              focus up
 $win+l              focus right
 
-# ////// MOVE FOCUSSED
+# //// MOVE FOCUSSED
 
 $win+Shift+h        move left
 $win+Shift+j        move down
 $win+Shift+k        move up
 $win+Shift+l        move right
 
-# ////// STICKY TILED
+# //// STICKY TILED
 
 $win+Shift+s        exec bash $home/$scripts/i3-sticky-toggle
 $winwlw+button1     $execn i3-input -F "[con_id=__focused__] mark _sticky_%s"
@@ -348,14 +347,14 @@ $win+Shift+2        exec python $home/$scripts/i3-sticky-open 2
 $win+Shift+3        exec python $home/$scripts/i3-sticky-open 3
 
 # >>>> FOR_WINDOW
-# ////// ALL
+# //// ALL
 
 focus_wrapping force
 workspace_auto_back_and_forth yes
 $fw [class="^.*"] border pixel 1
 $fw [urgent=latest] focus
 
-# ////// UNMARKED
+# //// UNMARKED
 
 $fw [title="About Pale Moon"]               $flen
 $fw [title="alsamixer"]                     $flen
@@ -401,7 +400,7 @@ $fw [instance="CALC"]                       $flen,$brnr,$mvcn,\
 $fw [class="Pavucontrol"]                   $flen,$brnr,\
                                                 resize set 525 300
 
-# ////// MARKED
+# //// MARKED
 
 $fw [con_mark=_sticky_1]                resize set 715 423
 

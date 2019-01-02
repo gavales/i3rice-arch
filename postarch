@@ -18,12 +18,11 @@ lightgray="\033[1;37m"
 white="\033[1;37m"
 normal="\033[0m"
 
-
 cd $HOME
 echo -e "${green}================================================"
 echo -e "${blue}= INSTALLING YOUR PROGRAMS ====================="
 echo -e "${green}================================================${normal}"
-sudo pacman -S xorg-server xorg-xinit i3-gaps i3status feh dunst rofi ranger w3m sxiv lxappearance ncurses fftw nautilus neomutt evince mupdf pinta redshift mplayer r tk gcc-fortran mpd mpc ncmpcpp newsboat transmission-cli opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-crossref pandoc-citeproc python-pygments python2-pygments biber rxvt-unicode libmpdclient yajl dialog wpa_supplicant wireless_tools networkmanager network-manager-applet texlive-most ntfs-3g lm_sensors sysstat polkit-gnome gnome-keyring acpi unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl dmenu compton xorg-xprop urxvt-perls trash-cli atom python-pywal
+sudo pacman -S xorg-server xorg-xinit i3-gaps i3status feh dunst rofi ranger w3m sxiv lxappearance ncurses fftw nautilus neomutt evince mupdf pinta redshift mplayer r tk gcc-fortran mpd mpc ncmpcpp newsboat transmission-cli opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-crossref pandoc-citeproc python-pygments python2-pygments biber rxvt-unicode libmpdclient yajl dialog wpa_supplicant wireless_tools networkmanager network-manager-applet texlive-most ntfs-3g lm_sensors sysstat polkit-gnome gnome-keyring acpi unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl dmenu compton xorg-xprop urxvt-perls trash-cli atom python-pywal vim-latexsuite
 sudo cpan AnyEvent Linux::FD common::sense
 echo -e "${green}================================================"
 echo -e "${blue}= NETWORK MANAGER STUFF ========================"
@@ -44,11 +43,6 @@ git clone https://aur.archlinux.org/yaourt.git
 cd yaourt/
 makepkg -si
 cd $HOME
-echo -e "${green}================================================"
-echo -e "${blue}= GET CONFIGS FROM GITHUB ======================"
-echo -e "${green}================================================${normal}"
-git clone https://github.com/StillANixRookie/i3rice-arch.git
-mkdir Downloads Drive Music Pictures Videos
 echo -e "${green}================================================"
 echo -e "${blue}= INSTALL YAOURT APPS =========================="
 echo -e "${green}================================================${normal}"
@@ -75,6 +69,11 @@ echo -e "${purple} > FLAT-REMIX-GNOME-GIT <" && yaourt -S flat-remix-gnome-git
 echo -e "${purple} > i3IPC-PYTHON <" && yaourt -S i3ipc-python
 echo -e "${purple} > DUNSTIFY <" && yaourt -S dunstify
 echo -e "${purple} > LIVE LATEX PREVIEW <" && yaourt -S vim-live-latex-preview
+echo -e "${green}================================================"
+echo -e "${blue}= GET CONFIGS FROM GITHUB ======================"
+echo -e "${green}================================================${normal}"
+git clone https://github.com/StillANixRookie/i3rice-arch.git
+mkdir Downloads Drive Music Pictures Videos
 echo -e "${green}================================================"
 echo -e "${blue}= CLI-VISUALISER ==============================="
 echo -e "${green}================================================${normal}"
