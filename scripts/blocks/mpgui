@@ -8,6 +8,8 @@ playstatus=$(mpris-ctl info "%play_status")
 shorttrack=$(expr ${#trackname} - 17)
 shortartist=$(expr ${#artistname} - 17)
 
+[[ $playername == "Spotify" ]] && playername="<span face='Font Awesome 5 Free'>&#xf1bc;</span>"
+
 if [[ ${#trackname} -ge 20 ]]; then
     trackname="${trackname:0:-$shorttrack}..."
 else
@@ -19,20 +21,20 @@ else
     artistname=$artistname
 fi
 
-playing="$playername: $artistname > $trackname"
+playing="$playername $artistname > $trackname"
 
 if [ $playername == "%player_name" ]; then
 	:
 elif [ -z $playername ]; then
 	:
 elif [ $playstatus == "Paused" ]; then
-	echo "<span face='Font Awesome 5 Free'>&#xf28b;</span> ${playing}"
+	echo "${playing} <span face='Font Awesome 5 Free'>&#xf28b;</span>"
 else
-	echo "<span face='Font Awesome 5 Free'>&#xf144;</span> ${playing}"
+	echo "${playing} <span face='Font Awesome 5 Free'>&#xf144;</span>"
 fi
 
 case $BLOCK_BUTTON in
-  4) playerctl previous ;;  # next song
-  5) playerctl play-pause ;;  # next song
-  1) playerctl next ;;  # next song
+  5) playerctl previous ;;
+  1) playerctl play-pause ;;
+  4) playerctl next ;;
 esac

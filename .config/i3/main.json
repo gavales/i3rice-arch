@@ -31,8 +31,8 @@
                     "swallows": [
                        {
                        "class": "^URxvt$",
-                       "instance": "^MUSIC$",
-                       "title": "^ncmpcpp$",
+                       "instance": "^VIS$",
+                       "title": "^vis$",
                        "transient_for": "^$"
                        }
                     ],
