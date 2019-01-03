@@ -5,13 +5,16 @@ trackname=$(mpris-ctl info "%track_name")
 artistname=$(mpris-ctl info "%artist_name")
 playstatus=$(mpris-ctl info "%play_status")
 
+shorttrack=$(expr ${#trackname} - 17)
+shortartist=$(expr ${#artistname} - 17)
+
 if [[ ${#trackname} -ge 20 ]]; then
-    trackname="${trackname:0:-13}..."
+    trackname="${trackname:0:-$shorttrack}..."
 else
     trackname=$trackname
 fi
 if [[ ${#artistname} -ge 20 ]]; then
-    artistname="${artistname:0:-13}..."
+    artistname="${artistname:0:-$shortartist}..."
 else
     artistname=$artistname
 fi
@@ -29,7 +32,7 @@ else
 fi
 
 case $BLOCK_BUTTON in
-  3) playerctl previous ;;  # next song
-  2) playerctl play-pause ;;  # next song
+  4) playerctl previous ;;  # next song
+  5) playerctl play-pause ;;  # next song
   1) playerctl next ;;  # next song
 esac
