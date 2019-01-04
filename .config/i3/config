@@ -55,17 +55,11 @@ set $mvcn       move position center
 
 set $term       urxvtc
 set $browser    google-chrome-beta
-set $brightinc  xbacklight -inc 10
-set $brightdec  xbacklight -dec 10
-#set $brightinc  light -A 10
-#set $brightdec  light -U 10
-set $primary    eDP1
-#set $primary    LVDS-1
-set $secondary  VGA1
-#set $secondary  VGA-1
-set $tertiary   HDMI1
-set $kb         us
-#set $kb         gb
+set $brightinc  light -A 10
+set $brightdec  light -U 10
+set $primary    eDP-1
+set $secondary  HDMI-1
+set $kb         gb
 
 # //// WORKSPACE NAMES
 
@@ -184,7 +178,9 @@ $mod+Shift+u        $lnch '$browser --new-window \
                         --app=https://outlook.office365.com/owa/?realm=soton.ac.uk' \
                         $mk3
 $mod+Shift+g        $lnch '$term -name GRIVE -e bash ~/$scripts/grivesync' $mk2
-$mod+Shift+a        $lnch atom $mk3
+$mod+Shift+a        $lnch '$browser --new-window \
+                        --app=https://www.funimation.com/' \
+                        $mk1
 
 # GOOGLE DOCs
 $mod+Ctrl+q         exec $browser --new-window \
@@ -197,8 +193,8 @@ $mod+Ctrl+r         exec $browser --new-window \
 # //// MEDIA
 
 $mod+Shift+s        exec spotify
-$mod+s              exec $term -name MUSIC -e ncmpcpp
-$mod+v              $lnch '$term -name VIS -e vis' $mk2
+$mod+s              $lnch '$term -name MUSIC -e ncmpcpp' $mk1
+$mod+v              $lnch '$term -name VIS -e vis' $mk1
 $mod+Shift+v        $lnch '$term -name NCMVIS -e ncmpcpp -s visualizer' $mk2
 $mod+Shift+n        $lnch '$browser --new-window \
                         --app=https://www.amazon.co.uk/Amazon-Video/b/?node=3010085031&ref=atv_surl_aiv' \
@@ -404,7 +400,8 @@ $fw [class="Pavucontrol"]                   $flen,$brnr,\
 
 $fw [con_mark=_sticky_1]                resize set 715 423
 
-$fw [instance="MUSIC"]                  $mrk1,$tf "ncmpcpp"
+#$fw [instance="MUSIC"]                  $mrk1,$tf "ncmpcpp"
+$fw [instance="VIS"]                    $mrk1,$tf "visualiser"
 $fw [instance="CALENDAR"]               $mrk2,$tf "vim calendar"
 $fw [title="Google Chrome$"]            $mrk3,$tf "google chrome"
 
@@ -426,11 +423,11 @@ $fw [title="Log in with PayPal"]        $tf "paypal login",$flen
 $fw [instance="TERMINAL"]               $tf "terminal"
 $fw [instance="GRIVE"]                  $tf "google drive sync"
 $fw [instance="BIB"]                    $tf "biblbiography"
-$fw [instance="VIS"]                    $tf "visualiser"
 $fw [instance="NCMVIS"]                 $tf "ncmpcpp vis"
 $fw [title="YouTube$"]                  $tf "youtube",$stmk1
 $fw [title="^BBC iPlayer$"]             $tf "iplayer",$stmk1
 $fw [title="^Netflix$"]                 $tf "netflix",$stmk1
+$fw [title="^Funimation"]               $tf "funimation",$stmk1
 $fw [title="Amazon.co.uk: Prime Video"] $tf "prime video",$stmk1
 $fw [instance="RTV"]                    $tf "reddit"
 $fw [class="Slack"]                     $tf "slack"
