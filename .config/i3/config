@@ -406,7 +406,7 @@ $fw [class="Pavucontrol"]                   $flen,$brnr,\
 
 $fw [con_mark=_sticky_1]                resize set 715 423
 
-$fw [instance="MUSIC"]                  $mrk1,$tf "ncmpcpp"
+$fw [instance="VIS"]                    $mrk1,$tf "visualiser"
 $fw [instance="CALENDAR"]               $mrk2,$tf "vim calendar"
 $fw [title="Google Chrome$"]            $mrk3,$tf "google chrome"
 
@@ -428,8 +428,8 @@ $fw [title="Log in with PayPal"]        $tf "paypal login",$flen
 $fw [instance="TERMINAL"]               $tf "terminal"
 $fw [instance="GRIVE"]                  $tf "google drive sync"
 $fw [instance="BIB"]                    $tf "biblbiography"
-$fw [instance="VIS"]                    $tf "visualiser"
 $fw [instance="NCMVIS"]                 $tf "ncmpcpp vis"
+$fw [instance="MUSIC"]                  $tf "ncmpcpp"
 $fw [title="YouTube$"]                  $tf "youtube",$stmk1
 $fw [title="^BBC iPlayer$"]             $tf "iplayer",$stmk1
 $fw [title="^Netflix$"]                 $tf "netflix",$stmk1
