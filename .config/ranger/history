@@ -1,4 +1,3 @@
-rename 1vars
 rename 2colorvars
 shell sudo rm -rf %s
 mkdir poster
@@ -48,3 +47,4 @@ rename .fonts
 shell 
 rename .ncmpcpp_
 rename .ncmpcpp
+rename 8.jpg
