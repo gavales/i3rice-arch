@@ -50,6 +50,8 @@ set $flen       floating enable
 set $fldi       floating disable
 set $brnr       border normal
 set $mvcn       move position center
+set $gapo       20
+set $gapi       10
 
 # //// APPS
 
@@ -446,8 +448,8 @@ $fw [instance="MOUNT"]                  $tf "mount"
 $fw [instance="UNMOUNT"]                $tf "unmount"
 
 # >>>> GAPS
-gaps inner 10
-gaps outer 20
+gaps inner $gapi
+gaps outer $gapo
 
 workspace $ws1 gaps inner 0
 workspace $ws1 gaps outer 0
