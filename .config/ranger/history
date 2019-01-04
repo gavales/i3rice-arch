@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-rename 5
-rename 6
-rename 7
-rename 8
-rename 1colorvars
-rename 2vars
-rename 3rofi
-rename 4xft
-rename 5xterm
-rename 6xcursor
-rename 7urxvt
-rename 8urxvtext
-=======
->>>>>>> origin/master
-rename 1vars
-rename 2colorvars
-shell sudo rm -rf %s
-mkdir poster
-touch 
-touch name.tex
-rename tikzposter
-rename poster
 shell mogrify -rotate "-45" foo.jpg
 shell mogrify -rotate "-90" background.jpg
 shell convert background.jpg -flip temp1.jpg
@@ -42,7 +19,6 @@ shell bash ~/scripts/extractor %f
 rename groff
 rename cgroff
 rename global.bibtex
-search monaco
 <<<<<<< HEAD
 shell chmod +x %f
 rename bash_logout
@@ -71,3 +47,4 @@ shell
 rename .ncmpcpp_
 rename .ncmpcpp
 >>>>>>> origin/master
+search monaco
