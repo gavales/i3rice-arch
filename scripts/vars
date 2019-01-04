@@ -1,0 +1,2 @@
+	xrandr --output "$primary" --auto --output "$second" --"$dir" "$primary" --auto
+	xrandr --output "$primary" --auto --output "$second" --"$dir" "$primary" --auto

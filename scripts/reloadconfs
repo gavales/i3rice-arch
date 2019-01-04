@@ -5,3 +5,4 @@ bash ~/scripts/mkblocksconf
 bash ~/scripts/mkvistheme
 bash ~/scripts/mkatomtheme
 bash ~/scripts/mkfixedsyscss
+bash ~/scripts/i3concat
