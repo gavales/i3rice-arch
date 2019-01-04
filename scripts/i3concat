@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+# CREATED: Fri  4 Jan 15:35:36 GMT 2019
+
+i3Dir=$HOME/.config/i3
+
+cd $i3Dir
+
+cat vars > config
+cat main >> config
+
+i3-msg reload

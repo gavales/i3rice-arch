@@ -10,8 +10,6 @@ else
 	cpu=$(expr 100 - ${idletot} / $idlelen)
 fi
 
-#echo $cpu
-
 if [[ $cpu -ge 80 ]]; then
     echo "<span foreground=\"#ff0000\"><span face='Font Awesome 5 Free'>&#xf2db;</span> $cpu</span>"
 elif [[ $cpu -ge 50 ]]; then
