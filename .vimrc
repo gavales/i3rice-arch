@@ -45,8 +45,15 @@ hi Normal ctermbg=none guibg=black
 hi LineNr ctermbg=none ctermfg=grey
 hi Folded cterm=italic ctermfg=blue ctermbg=none
 hi ModeMsg cterm=bold ctermfg=white
-hi lCursor ctermbg=white ctermfg=black
-hi ColorColumn ctermbg=red
+hi lCursor ctermbg=blue ctermfg=black
+hi ColorColumn ctermbg=red ctermfg=black
+
+hi User1 ctermbg=red ctermfg=black guibg=red guifg=black
+hi User2 ctermbg=yellow ctermfg=black guibg=yellow guifg=black
+hi User3 ctermbg=green ctermfg=black guibg=green guifg=black
+hi User4 ctermbg=grey ctermfg=black guibg=grey guifg=black
+hi User5 ctermbg=blue ctermfg=black guibg=blue guifg=black
+hi User6 ctermbg=magenta ctermfg=black guibg=magenta guifg=black
 
 " //// RESIZING
 map .rk :res<space>+5<Enter>
@@ -129,20 +136,56 @@ function! StatuslineGit()
   return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
 endfunction
 
+let g:currentmode={
+    \ 'n'      : 'N ',
+    \ 'no'     : 'N·Operator Pending ',
+    \ 'v'      : 'V ',
+    \ 'V'      : 'V·Line ',
+    \ '\<C-V>' : 'V·Block ',
+    \ 's'      : 'Select ',
+    \ 'S'      : 'S·Line ',
+    \ '\<C-S>' : 'S·Block ',
+    \ 'i'      : 'I ',
+    \ 'R'      : 'R ',
+    \ 'Rv'     : 'V·Replace ',
+    \ 'c'      : 'Command ',
+    \ 'cv'     : 'Vim Ex ',
+    \ 'ce'     : 'Ex ',
+    \ 'r'      : 'Prompt ',
+    \ 'rm'     : 'More ',
+    \ 'r?'     : 'Confirm ',
+    \ '!'      : 'Shell ',
+    \ 't'      : 'Terminal '
+    \}
+
+function! ModeCurrent() abort
+    let l:modecurrent = mode()
+    " use get() -> fails safely, since ^V doesn't seem to register
+    " 3rd arg is used when return of mode() == 0, which is case with ^V
+    " thus, ^V fails -> returns 0 -> replaced with 'V Block'
+    let l:modelist = toupper(get(g:currentmode, l:modecurrent, 'V·Block '))
+    let l:current_status_mode = l:modelist
+    return l:current_status_mode
+endfunction
+
 " //// ACTUAL
 set statusline=
-set statusline+=%#lCursor#
+set statusline+=%#User1#
+set statusline+=\ %{ModeCurrent()}
+set statusline+=%#User2#
 set statusline+=\ /%F
 set statusline+=\ 
-set statusline+=%#LineNr#
+set statusline+=%#User3#
 set statusline+=\ %-3(%{FileSize()}%)
+set statusline+=%#User4#
 set statusline+=\ %{ReadOnly()}\ %m\ %w\ 
 set statusline+=%=
+set statusline+=%#User5#
 set statusline+=\ %Y
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\[%{&fileformat}\]
 set statusline+=\ 
-set statusline+=%#lCursor#
+set statusline+=%#User6#
 set statusline+=\ %p%%
 set statusline+=\ L:
 set statusline+=%l/

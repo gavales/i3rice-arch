@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-=======
-rename 2colorvars
-shell sudo rm -rf %s
 mkdir poster
 touch 
 touch name.tex
 rename tikzposter
 rename poster
->>>>>>> origin/master
 shell mogrify -rotate "-45" foo.jpg
 shell mogrify -rotate "-90" background.jpg
 shell convert background.jpg -flip temp1.jpg
@@ -29,13 +24,7 @@ shell bash ~/scripts/extractor %f
 rename groff
 rename cgroff
 rename global.bibtex
-<<<<<<< HEAD
-shell chmod +x %f
-rename bash_logout
-search ranger
-search wifi
-rename C2_Loads_a.pdf
-=======
+search monaco
 open_with 
 shell bash ~/scripts/
 shell bash ~/scripts/bibtorefer
@@ -56,9 +45,6 @@ rename .fonts
 shell 
 rename .ncmpcpp_
 rename .ncmpcpp
-<<<<<<< HEAD
->>>>>>> origin/master
-search monaco
-=======
-rename 8.jpg
->>>>>>> origin/master
+shell unlink %f
+shell ln -sf ~/i3rice-arch/.config/i3/%f %f
+open_with vim
