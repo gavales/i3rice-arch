@@ -10,6 +10,7 @@ function! Folds()
 endfunction
 setlocal foldmethod=expr
 setlocal foldexpr=Folds()
+
 setlocal foldtext=FoldText()
 function FoldText()
     let nucolwidth = &fdc + &number * &numberwidth
@@ -24,5 +25,6 @@ function FoldText()
     let fillcharcount = windowwidth - strdisplaywidth(text)
     return foldline.'  '.repeat("-",fillcharcount).'  ('.foldsize.' lines)'
 endfunction
+
 setlocal spell spelllang=en_gb
-setlocal nonumber norelativenumber laststatus=0
+setlocal nonumber norelativenumber

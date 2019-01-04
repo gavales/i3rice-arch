@@ -77,4 +77,3 @@ setlocal spell spelllang=en_gb
 setlocal nonumber norelativenumber laststatus=0
 filetype plugin indent on
 setlocal textwidth=80
-"autocmd VimEnter * Goyo"
