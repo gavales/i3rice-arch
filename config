@@ -5,8 +5,11 @@
 # dBP   dBBBBP dBBBBP dBBBBP dBP dBP dBP    dBP dBBBBBB
 
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
+exec --no-startup-id xrandr --output eDP-1 --auto --output HDMI-1 --left-of eDP-1 --auto
 
-# >>>> FONT
+
+# >>>> MAIN
+# //// FONTS
 set $font1 FixedsysMono
 set $font2 FontAwesome
 set $font3 monaco
@@ -14,13 +17,22 @@ set $fonts 12
 
 font pango:$font1,$font2 $fonts
 
-# >>>> DEFINE VARIABLES
 # //// DIRS
 
 set $home       /home/gavarch
 set $scripts    scripts
 set $scriptpics scriptpics
 
+# //// APPS
+
+set $term       urxvtc
+set $browser    google-chrome-beta
+set $brightinc  light -A 10
+set $brightdec  light -U 10
+set $primary    eDP-1
+set $secondary  HDMI-1
+set $kb         gb
+# >>>> DEFINE VARIABLES
 # //// i3
 
 set $mod        bindsym Mod1
@@ -53,6 +65,7 @@ set $mvcn       move position center
 set $gapo       20
 set $gapi       10
 
+<<<<<<< HEAD:config
 # //// APPS
 
 set $term       urxvtc
@@ -64,6 +77,8 @@ set $secondary  VGA1
 set $secondary  HDMI1
 set $kb         us
 
+=======
+>>>>>>> origin/master:.config/i3/config
 # //// WORKSPACE NAMES
 
 set $ws1 1
@@ -134,10 +149,10 @@ bar {
 
 $mod+Shift+r        restart
 $mod+Shift+c        $execn "bash $home/$scripts/xtheme; \
-	                    bash $home/$scripts/reloadconfs; i3-msg reload; \
+	                    bash $home/$scripts/reloadconfs; \
                         killall i3bar; i3bar --bar_id=bar-1"
 $mod+t              $execn "bash $home/$scripts/mkwalrando; \
-                        bash $home/$scripts/reloadconfs; i3-msg reload; \
+                        bash $home/$scripts/reloadconfs; \
                         killall i3bar; i3bar --bar_id=bar-1"
 $mod+Shift+q        kill
 $winwlw+button2     kill
@@ -286,7 +301,7 @@ mode "SHUTDOWN" {
 
 # >>>> MOD4 BINDINGS
 # //// MAIN
-$win+Shift+c        reload
+$win+Shift+c        exec bash ~/$scripts/i3concat
 $win+o              exec "$brightinc; bash ~/$scripts/notify_brightness"
 $win+y              exec "$brightdec; bash ~/$scripts/notify_brightness"
 $win+i              exec "pactl set-sink-volume 0 +2%; bash ~/$scripts/notify_volume"
@@ -300,8 +315,8 @@ $win+t              $execn pkill compton
 $win+Shift+t        $execn compton
 $win+w              $lnch '$term -name LAYOUT_EDITOR -e bash ~/$scripts/wsloget' $mk2
 $win+a              $execn bash ~/$scripts/wsloapp
-$win+1              $lnch '$term -name i3CONF -e vim ~/.config/i3/config' $mk3
-$win+2              $lnch '$term -name XSETTINGS -e vim ~/xinclude/xmain' $mk3
+$win+1              $lnch '$term -name i3MAIN -e vim ~/.config/i3/main' $mk3
+$win+2              $lnch '$term -name i3VARS -e vim ~/.config/i3/main' $mk3
 $win+3              $lnch '$term -name VIMRC -e vim ~/.vimrc' $mk3
 $win+4              $lnch '$term -name RCCONF -e vim ~/.config/ranger/rc.conf' $mk3
 $win+5              $lnch '$term -name i3BLOCKS -e vim ~/scripts/mkblocksconf' $mk3
@@ -435,8 +450,8 @@ $fw [title="Amazon.co.uk: Prime Video"] $tf "prime video",$stmk1
 $fw [instance="RTV"]                    $tf "reddit"
 $fw [class="Slack"]                     $tf "slack"
 $fw [title="^MATLAB R20"]               $tf "matlab"
-$fw [instance="i3CONF"]                 $tf "i3config"
-$fw [instance="XSETTINGS"]              $tf "xresources"
+$fw [instance="i3MAIN"]                 $tf "i3main"
+$fw [instance="i3VARS"]                 $tf "i3vars"
 $fw [instance="VIMRC"]                  $tf "vimrc"
 $fw [instance="RCCONF"]                 $tf "ranger config"
 $fw [instance="i3BLOCKS"]               $tf "i3blocks"
@@ -473,7 +488,7 @@ $execn          python $home/$scripts/i3-sticky
 exec            setxkbmap $kb
 
 # PROGRAMS
-$execn          "i3-msg 'workspace $ws1; append_layout $home/.config/i3/main.json'"
+$execn          "i3-msg 'workspace 1; append_layout $home/.config/i3/main.json'"
 exec            $browser
 exec            $browser --new-window --app=https://www.youtube.com/
 exec_always     mpv $home/scriptsounds/A\ Tone\ His\ Self.mp3

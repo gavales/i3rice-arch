@@ -1,0 +1,34 @@
+#     dBP   dBBBBb dBBBP  dBBBBP dBBBBb  dBBBBP dBP dBBBB
+#                        dB'.BP     dBP
+#   dBP    dBBBP dBP    dB'.BP dBP dBP dBBBP  dBP dBBBB
+#  dBP      dBP dBP    dB'.BP dBP dBP dBP    dBP dB' BB
+# dBP   dBBBBP dBBBBP dBBBBP dBP dBP dBP    dBP dBBBBBB
+
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+exec --no-startup-id xrandr --output eDP-1 --auto --output HDMI-1 --left-of eDP-1 --auto
+
+
+# >>>> MAIN
+# //// FONTS
+set $font1 FixedsysMono
+set $font2 FontAwesome
+set $font3 monaco
+set $fonts 12
+
+font pango:$font1,$font2 $fonts
+
+# //// DIRS
+
+set $home       /home/gavarch
+set $scripts    scripts
+set $scriptpics scriptpics
+
+# //// APPS
+
+set $term       urxvtc
+set $browser    google-chrome-beta
+set $brightinc  light -A 10
+set $brightdec  light -U 10
+set $primary    eDP-1
+set $secondary  HDMI-1
+set $kb         gb

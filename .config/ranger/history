@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+rename 2colorvars
+shell sudo rm -rf %s
+mkdir poster
+touch 
+touch name.tex
+rename tikzposter
+rename poster
+>>>>>>> origin/master
 shell mogrify -rotate "-45" foo.jpg
 shell mogrify -rotate "-90" background.jpg
 shell convert background.jpg -flip temp1.jpg
@@ -46,5 +56,9 @@ rename .fonts
 shell 
 rename .ncmpcpp_
 rename .ncmpcpp
+<<<<<<< HEAD
 >>>>>>> origin/master
 search monaco
+=======
+rename 8.jpg
+>>>>>>> origin/master
