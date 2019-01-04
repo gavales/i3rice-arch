@@ -10,7 +10,7 @@ else
 fi
 
 case $BLOCK_BUTTON in
-  3) mpc prev ;;  # next song
-  2) mpc toggle ;;  # next song
-  1) mpc next ;;  # next song
+  5) mpc prev ;;
+  1) mpc toggle ;;
+  4) mpc next ;;
 esac

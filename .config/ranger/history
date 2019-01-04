@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 rename 5
 rename 6
 rename 7
@@ -10,6 +11,8 @@ rename 5xterm
 rename 6xcursor
 rename 7urxvt
 rename 8urxvtext
+=======
+>>>>>>> origin/master
 rename 1vars
 rename 2colorvars
 shell sudo rm -rf %s
@@ -39,12 +42,32 @@ shell bash ~/scripts/extractor %f
 rename groff
 rename cgroff
 rename global.bibtex
-open_with 
-open_with vim
-rename settings
 search monaco
+<<<<<<< HEAD
 shell chmod +x %f
 rename bash_logout
 search ranger
 search wifi
 rename C2_Loads_a.pdf
+=======
+open_with 
+shell bash ~/scripts/
+shell bash ~/scripts/bibtorefer
+shell bash ~/scripts/bibtorefer %f
+shell oft
+mkdir Flora
+mkdir Kerrianne
+rename latex_template
+open_with a
+rename tex
+touch name.bib
+shell mkdir kerriannev1 'myfirstlatex' 'mysecondlatex' 'mythirdlatex'
+rename 
+rename latexstuff
+rename Uni
+rename i3
+rename .fonts
+shell 
+rename .ncmpcpp_
+rename .ncmpcpp
+>>>>>>> origin/master

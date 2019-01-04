@@ -24,6 +24,7 @@ set shiftwidth=4
 set expandtab
 set cursorline
 set title titlestring=%f titlelen=70
+set mouse=a
 autocmd FileType python call matchadd('ColorColumn', '\%81v', 100)
 autocmd FileType vim call matchadd('ColorColumn', '\%81v', 100)
 autocmd FileType conf call matchadd('ColorColumn', '\%81v', 100)
