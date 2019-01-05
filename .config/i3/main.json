@@ -30,9 +30,9 @@
                     "percent": 0.5,
                     "swallows": [
                        {
-                       "class": "^URxvt$",
-                       "instance": "^VIS$",
-                       "title": "^vis$",
+                       "class": "^ProjectM-pulseaudio$",
+                       "instance": "^projectM-pulseaudio$",
+                       "title": "^projectM$",
                        "transient_for": "^$"
                        }
                     ],
