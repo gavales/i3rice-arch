@@ -1,13 +1,31 @@
+mkdir poster
+touch 
+touch name.tex
+rename tikzposter
+rename poster
+shell mogrify -rotate "-45" foo.jpg
+shell mogrify -rotate "-90" background.jpg
+shell convert background.jpg -flip temp1.jpg
+
+shell convert background.jpg -flip temp2.jpg
+shell convert background.jpg -flop temp2.jpg
+shell convert background.jpg -flop background1.jpg
+shell convert background.jpg -flip background2.jpg
+shell convert %f -flip background2.jpg
+shell tar xf %f -C test
+shell tar xJf %f -C test
+shell tar xJf %f -C test/
+rename Flat-Remix-Miami.tar.xz
+shell tar -xJf %f -C test/
+shell tar -xvf %f -C test/
+shell tar -xJf %f
+shell tar -xf %f
+shell bash ~/scripts/extractor %f
 rename groff
 rename cgroff
 rename global.bibtex
-<<<<<<< HEAD
-shell chmod +x %f
-rename bash_logout
-search ranger
-search wifi
-rename C2_Loads_a.pdf
-=======
+search monaco
+open_with 
 shell bash ~/scripts/
 shell bash ~/scripts/bibtorefer
 shell bash ~/scripts/bibtorefer %f
@@ -27,24 +45,6 @@ rename .fonts
 shell 
 rename .ncmpcpp_
 rename .ncmpcpp
->>>>>>> origin/master
-search monaco
-open_with k
-shell git clone --recursive https://github.com/kritzikratzi/Oscilloscope.git
-rename addo
-shell ./scripts/prepare.sh win32
-shell ./scripts/clean.sh
-shell ./scripts/prepare.sh linux64
-shell make
-shell make run
-shell sleep 5
-shell sudo make install
-shell git clone --recursive https://github.com/xdaimon/music_visualizer.git
-open_with 
-mkdir build
-mkdir build_result
-shell cmake ..
-shell && make -j4
-shell make -j4
-shell mv main ../build_result/music_visualizer
-shell cp -r ../src/shaders ../build_result/shaders
+shell unlink %f
+shell ln -sf ~/i3rice-arch/.config/i3/%f %f
+open_with vim

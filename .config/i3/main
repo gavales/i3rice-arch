@@ -78,6 +78,7 @@ bar {
 #	status_command i3blocks
 #	position top
 	id bar-1
+    output $primary
 
 	bindsym button4 nop
 	bindsym button5 nop
@@ -266,7 +267,7 @@ $win+Shift+t        $exn compton
 $win+w              $lch '$term -name LAYOUT_EDITOR -e bash ~/$scripts/wsloget' $mk2
 $win+a              $exn bash ~/$scripts/wsloapp
 $win+1              $lch '$term -name i3MAIN -e vim ~/.config/i3/main' $mk3
-$win+2              $lch '$term -name i3VARS -e vim ~/.config/i3/main' $mk3
+$win+2              $lch '$term -name i3VARS -e vim ~/.config/i3/vars' $mk3
 $win+3              $lch '$term -name VIMRC -e vim ~/.vimrc' $mk3
 $win+4              $lch '$term -name RCCONF -e vim ~/.config/ranger/rc.conf' $mk3
 $win+5              $lch '$term -name i3BLOCKS -e vim ~/scripts/mkblocksconf' $mk3
