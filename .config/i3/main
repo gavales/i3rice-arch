@@ -78,7 +78,7 @@ bar {
 #	status_command i3blocks
 #	position top
 	id bar-1
-    tray_output $primary
+    tray_output $nat
 
 	bindsym button4 nop
 	bindsym button5 nop
@@ -285,9 +285,9 @@ $win+backslash      exec mpc stop
 # //// MULTI-MONITOR
 
 $win+m              exec bash ~/$scripts/multimon
-$win+e              move workspace to output $primary
-$win+v              move workspace to output $secondary
-$win+d              move workspace to output $tertiary
+$win+Control+n      move workspace to output $nat
+$win+Control+v      move workspace to output $vga
+$win+Control+h      move workspace to output $hdm
 
 # //// CHANGE FOCUS
 
