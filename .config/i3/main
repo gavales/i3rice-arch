@@ -65,7 +65,7 @@ hide_edge_borders true
 # COLORS
 # class                 brdr bkgr text indi chlb
 client.focused          $blu $blu $blk $blk $blk
-client.focused_inactive $wht $wht $blk $blk $blk
+client.focused_inactive $blk $blk $blu $blk $blk
 client.unfocused        $blk $blk $wht $blk $blk
 client.urgent           $blk $blk $red $blk $blk
 client.placeholder      $blk $blk $wht $blk $blk
@@ -88,7 +88,7 @@ bar {
 	background $blk
 #                       brdr bkgr text
 	focused_workspace   $blu $blu $blk
-	active_workspace    $wht $wht $blk
+	active_workspace    $blk $blk $blu
 	inactive_workspace  $blk $blk $wht
 	binding_mode        $ylw $ylw $blk
 	urgent_workspace    $red $red $blk
@@ -163,8 +163,8 @@ $mod+Ctrl+r         exec $browser --new-window \
 
 $mod+Shift+s        exec spotify
 $mod+s              $lch '$term -name MUSIC -e ncmpcpp' $mk1
-$mod+v              $lch 'projectM-pulseaudio' $mk1
-$mod+Shift+v        $lch '$term -name NCMVIS -e ncmpcpp -s visualizer' $mk2
+$mod+Shift+v        $lch 'projectM-pulseaudio' $mk1
+$mod+v              $lch '$term -name VIS -e vis' $mk1
 $mod+Shift+n        $lch '$browser --new-window \
                         --app=https://www.amazon.co.uk/Amazon-Video/b/?node=3010085031&ref=atv_surl_aiv' \
                         $mk1
@@ -369,7 +369,7 @@ $fw [class="Pavucontrol"]                   $flen,$brnr,\
 
 $fw [con_mark=_sticky_1]                resize set 715 423
 
-$fw [class="ProjectM-pulseaudio"]       $mrk1
+$fw [instance="VIS"]                    $mrk1,$tf "visualizer"
 $fw [instance="CALENDAR"]               $mrk2,$tf "vim calendar"
 $fw [title="Google Chrome$"]            $mrk3,$tf "google chrome"
 
@@ -391,7 +391,6 @@ $fw [title="Log in with PayPal"]        $tf "paypal login",$flen
 $fw [instance="TERMINAL"]               $tf "terminal"
 $fw [instance="GRIVE"]                  $tf "google drive sync"
 $fw [instance="BIB"]                    $tf "biblbiography"
-$fw [instance="NCMVIS"]                 $tf "ncmpcpp vis"
 $fw [title="YouTube$"]                  $tf "youtube",$stm1
 $fw [title="^BBC iPlayer$"]             $tf "iplayer",$stm1
 $fw [title="^Netflix$"]                 $tf "netflix",$stm1
