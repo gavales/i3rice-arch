@@ -7,7 +7,7 @@ font=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
 dmenucolors="-fn "${font:4}" -nb "$black" -nf "$white" -sf "$black" -sb "$blue""
 
 theme=$(ls $HOME/xinclude/colors | dmenu -i -p "Choose theme:" $dmenucolors)
-xfilesDir=$HOME/i3rice-arch/xinclude
+xfilesDir=$HOME/xinclude
 
 if [[ -z $theme ]]; then
 	:

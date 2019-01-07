@@ -6,7 +6,7 @@
 sleep 1
 
 xfilesDir=$HOME/xinclude
-xresDir=$HOME/i3rice-arch
+xresDir=$HOME
 wallDir=$HOME/Pictures/walls/spotlight
 wall=$(ls $wallDir | shuf -n 1)
 
