@@ -1,10 +1,3 @@
-shell tar xJf %f -C test/
-rename Flat-Remix-Miami.tar.xz
-shell tar -xJf %f -C test/
-shell tar -xvf %f -C test/
-shell tar -xJf %f
-shell tar -xf %f
-shell bash ~/scripts/extractor %f
 rename groff
 rename cgroff
 rename global.bibtex
@@ -44,7 +37,14 @@ rename Afro Samurai Resurr.mkv
 rename Afro Samurai Resurrection.mkv
 rename Grey Digital Target.mkv
 mkdir
-mkdir Anime
 mkdir Cassie Jaye
 rename Berserk: Egg of the King.mkv
 mkdir TV
+mkdir Neon Genesis Evangelion
+mkdir Anime
+rename E12: She said, Don't make others suffer for your personal hatred.mkv
+rename ws1.png
+rename brogrammer
+mkdir colors
+shell wget https://raw.githubusercontent.com/marciomazza/vim-brogrammer-theme/master/colors/brogrammer.vim
+shell transmission-cli -n %f

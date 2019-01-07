@@ -36,8 +36,7 @@ visualizers=ellipse,spectrum,lorenz
 
 ##Configures what character the spectrum visualizer will use. Specifying a space (e.g " ") means the
 ##background will be colored instead of the character. Defaults to " ".
-#visualizer.spectrum.character=🌑
-visualizer.spectrum.character=●
+visualizer.spectrum.character=🌑
 
 ##Spectrum bar width. Defaults to 2.
 visualizer.spectrum.bar.width=1
@@ -74,7 +73,7 @@ visualizer.sgs.smoothing.passes=1
 
 ##Configures what character the ellipse visualizer will use. Specifying a space (e.g " ") means the
 ##background will be colored instead of the character. Defaults to "█".
-visualizer.ellipse.character=●
+#visualizer.ellipse.character=🌑
 
 ##The radius of each color ring in the ellipse visualizer. Defaults to 2.
 visualizer.ellipse.radius=1
@@ -82,7 +81,7 @@ visualizer.ellipse.radius=1
 
 ##Configures what character the lorenz visualizer will use. Specifying a space (e.g " ") means the
 ##background will be colored instead of the character. Defaults to "█".
-visualizer.lorenz.character=●
+#visualizer.lorenz.character=🌑
 
 
 ##Turns off overriding the user's terminal colors. This is true by default.
