@@ -1,3 +1,4 @@
+shell bash ~/scripts/
 shell bash ~/scripts/bibtorefer
 shell bash ~/scripts/bibtorefer %f
 shell oft
@@ -47,4 +48,3 @@ mkdir Evangelion
 rename Neon Genesis Evangelion
 rename Rebuild of Evangelion 1.0.mkv
 rename Rebuild of Evangelion 2.0.mkv
-rename Snowpiercer.mkv
