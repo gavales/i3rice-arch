@@ -15,7 +15,7 @@ lenconn=$(xrandr -q | grep ' connected' | awk '{print $1}' | wc -l)
 mode=$(echo -e "1 Monitor\n2 Monitors\n3 Monitors\nARandR" | dmenu -i -p "Choose mode:" $dmenucolors)
 
 if [[ $lenconn == 1 ]]; then
-	xrandr --output "$conn" --auto
+	xrandr --output "$conn" --primary --auto
     for i in "${disconn[@]}"
     do
         xrandr --output "$i" --off
@@ -23,7 +23,7 @@ if [[ $lenconn == 1 ]]; then
 elif [[ $mode == "1 Monitor" ]]; then
 	primary=$(echo $conn | tr ' ' '\n' | dmenu -i -p "Choose primary monitor:" $dmenucolors)
     declare -a off=($(echo $all | tr ' ' '\n' | grep -v "$primary"))
-	xrandr --output "$primary" --auto
+	xrandr --output "$primary" --primary --auto
     for i in "${off[@]}"
     do
         xrandr --output "$i" --off
@@ -32,7 +32,7 @@ elif [[ $mode == "2 Monitors" ]]; then
 	primary=$(echo $conn | tr ' ' '\n' | dmenu -i -p "Choose primary monitor:" $dmenucolors)
 	second=$(echo $conn | tr ' ' '\n' | grep -v "$primary")
 	dir=$(echo -e "left-of\nright-of\nabove\nbelow\nsame-as" | dmenu -i -p "Choose position of second monitor:" $dmenucolors)
-	xrandr --output "$primary" --auto --output "$second" --"$dir" "$primary" --auto
+	xrandr --output "$primary" --primary --auto --output "$second" --"$dir" "$primary" --auto
 elif [[ $mode == "3 Monitors" ]]; then
 	primary=$(echo $conn | tr ' ' '\n' | dmenu -i -p "Choose primary monitor:" $dmenucolors)
 	second=$(echo $conn | tr ' ' '\n' | grep -v "$primary" | dmenu -i -p "Choose 2nd monitor:" $dmenucolors)
@@ -40,7 +40,7 @@ elif [[ $mode == "3 Monitors" ]]; then
 	seconddir=$(echo -e "left-of\nright-of\nabove\nbelow\nsame-as" | dmenu -i -p "Choose position of second monitor:" $dmenucolors)
 	thirddir=$(echo -e "left-of\nright-of\nabove\nbelow\nsame-as" | dmenu -i -p "Monitor 3 will be..." $dmenucolors)
 	which=$(echo $conn | tr ' ' '\n' | dmenu -i -p "Which monitor?" $dmenucolors)
-	xrandr --output "$primary" --auto --output "$second" --"$seconddir" "$primary" --auto --output "$third" --"$thirddir" "$which" --auto
+	xrandr --output "$primary" --primary --auto --output "$second" --"$seconddir" "$primary" --auto --output "$third" --"$thirddir" "$which" --auto
 elif [[ $mode == "ARandR" ]]; then
 	arandr ; exit
 fi

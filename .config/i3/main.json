@@ -26,13 +26,13 @@
                        "x": 0,
                        "y": 0
                     },
-                    "name": "ncmpcpp",
+                    "name": "vis",
                     "percent": 0.5,
                     "swallows": [
                        {
-                       "class": "^ProjectM-pulseaudio$",
-                       "instance": "^projectM-pulseaudio$",
-                       "title": "^projectM$",
+                       "class": "^URxvt$",
+                       "instance": "^VIS$",
+                       "title": "^vis$",
                        "transient_for": "^$"
                        }
                     ],

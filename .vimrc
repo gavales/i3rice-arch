@@ -10,6 +10,7 @@ filetype plugin on    " required
 execute pathogen#infect()
 syntax enable
 set encoding=utf-8
+colorscheme pablo
 set number
 set relativenumber
 set hls
@@ -25,11 +26,12 @@ set expandtab
 set cursorline
 set title titlestring=%f titlelen=70
 set mouse=a
-autocmd FileType python call matchadd('ColorColumn', '\%81v', 100)
-autocmd FileType vim call matchadd('ColorColumn', '\%81v', 100)
-autocmd FileType conf call matchadd('ColorColumn', '\%81v', 100)
-autocmd FileType perl call matchadd('ColorColumn', '\%81v', 100)
-autocmd FileType sh call matchadd('ColorColumn', '\%81v', 100)
+autocmd FileType python,vim,conf,perl,sh set colorcolumn=80
+"autocmd FileType python call matchadd('ColorColumn', '\%81v', 100)
+"autocmd FileType vim call matchadd('ColorColumn', '\%81v', 100)
+"autocmd FileType conf call matchadd('ColorColumn', '\%81v', 100)
+"autocmd FileType perl call matchadd('ColorColumn', '\%81v', 100)
+"autocmd FileType sh call matchadd('ColorColumn', '\%81v', 100)
 autocmd Filetype calendar set laststatus=0
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
@@ -43,10 +45,10 @@ inoremap \ph <++>
 " //// CHANGE HIGHLIGHT COLOURS
 hi Normal ctermbg=none guibg=black
 hi LineNr ctermbg=none ctermfg=grey
-hi Folded cterm=italic ctermfg=blue ctermbg=none
+hi Folded cterm=italic ctermfg=blue ctermbg=black
 hi ModeMsg cterm=bold ctermfg=white
 hi lCursor ctermbg=blue ctermfg=black
-hi ColorColumn ctermbg=red ctermfg=black
+hi ColorColumn ctermbg=darkgray ctermfg=white
 
 hi User1 ctermbg=red ctermfg=black guibg=red guifg=black
 hi User2 ctermbg=yellow ctermfg=black guibg=yellow guifg=black
@@ -175,16 +177,17 @@ set statusline+=\ %{ModeCurrent()}
 set statusline+=%#User2#
 set statusline+=\ %f
 set statusline+=\ 
-set statusline+=%#User3#
-set statusline+=\ %-3(%{FileSize()}%)
 set statusline+=%#User4#
 set statusline+=\ %{ReadOnly()}\ %m\ %w\ 
 set statusline+=%=
-set statusline+=%#User5#
-set statusline+=\ %Y
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\[%{&fileformat}\]
 set statusline+=\ 
+set statusline+=%#User3#
+set statusline+=\ %Y
+set statusline+=\ 
+set statusline+=%#User5#
+set statusline+=\ %-3(%{FileSize()}%)
 set statusline+=%#User6#
 set statusline+=\ %p%%
 set statusline+=\ L:

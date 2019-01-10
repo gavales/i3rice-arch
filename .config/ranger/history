@@ -1,13 +1,5 @@
-rename groff
-rename cgroff
 rename global.bibtex
-<<<<<<< HEAD
-shell chmod +x %f
-rename bash_logout
-search ranger
-search wifi
-rename C2_Loads_a.pdf
-=======
+search monaco
 shell bash ~/scripts/
 shell bash ~/scripts/bibtorefer
 shell bash ~/scripts/bibtorefer %f
@@ -21,30 +13,38 @@ touch name.bib
 shell mkdir kerriannev1 'myfirstlatex' 'mysecondlatex' 'mythirdlatex'
 rename 
 rename latexstuff
-rename Uni
 rename i3
 rename .fonts
 shell 
 rename .ncmpcpp_
 rename .ncmpcpp
->>>>>>> origin/master
-search monaco
-open_with k
-shell git clone --recursive https://github.com/kritzikratzi/Oscilloscope.git
-rename addo
-shell ./scripts/prepare.sh win32
-shell ./scripts/clean.sh
-shell ./scripts/prepare.sh linux64
-shell make
-shell make run
-shell sleep 5
-shell sudo make install
-shell git clone --recursive https://github.com/xdaimon/music_visualizer.git
+shell ln -sf ~/i3rice-arch/.config/i3/%f %f
+open_with vim
+shell ln -sf ~/Drive/UNI/Part4 %f
+shell unlink %f
+rename Uni
 open_with 
-mkdir build
-mkdir build_result
-shell cmake ..
-shell && make -j4
-shell make -j4
-shell mv main ../build_result/music_visualizer
-shell cp -r ../src/shaders ../build_result/shaders
+mkdir Films
+rename Spriggan.mp4
+rename JIN-ROH.webm
+rename Vampire Hunter D: Bloodlust.mkv
+rename They Were Eleven.mkv
+rename Demon City Shinjuku.mp4
+rename Afro Samurai [Director's Cut].mkv
+rename Afro Samurai Resurr.mkv
+rename Afro Samurai Resurrection.mkv
+rename Grey Digital Target.mkv
+mkdir
+mkdir Cassie Jaye
+rename Berserk: Egg of the King.mkv
+mkdir TV
+mkdir Neon Genesis Evangelion
+mkdir Anime
+rename E12: She said, Don't make others suffer for your personal hatred.mkv
+rename ws1.png
+rename brogrammer
+mkdir colors
+shell wget https://raw.githubusercontent.com/marciomazza/vim-brogrammer-theme/master/colors/brogrammer.vim
+shell transmission-cli -n %f
+rename 2019_01_08.md_
+rename 2019_01_08.md
