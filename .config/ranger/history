@@ -41,6 +41,7 @@ rename brogrammer
 mkdir colors
 shell wget https://raw.githubusercontent.com/marciomazza/vim-brogrammer-theme/master/colors/brogrammer.vim
 shell transmission-cli -n %f
+<<<<<<< HEAD
 mkdir Evangelion
 rename Neon Genesis Evangelion
 rename Rebuild of Evangelion 1.0.mkv
@@ -48,3 +49,9 @@ rename Rebuild of Evangelion 2.0.mkv
 rename xinitrc
 wq
 rename .xinitrc
+=======
+rename 2019_01_08.md_
+rename 2019_01_08.md
+shell sudo vim
+shell sudo vim %f
+>>>>>>> origin/master

@@ -47,10 +47,10 @@ inoremap \ph <++>
 
 hi Normal ctermbg=none guibg=black
 hi LineNr ctermbg=none ctermfg=grey
-hi Folded cterm=italic ctermfg=blue ctermbg=none
+hi Folded cterm=italic ctermfg=blue ctermbg=black
 hi ModeMsg cterm=bold ctermfg=white
 hi lCursor ctermbg=blue ctermfg=black
-hi ColorColumn ctermbg=grey ctermfg=white
+hi ColorColumn ctermbg=darkgray ctermfg=white
 
 hi User1 ctermbg=red ctermfg=black guibg=red guifg=black
 hi User2 ctermbg=yellow ctermfg=black guibg=yellow guifg=black
