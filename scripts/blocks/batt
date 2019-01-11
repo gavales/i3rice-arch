@@ -1,5 +1,11 @@
 #!/bin/bash
 
+iconFu="<span face='Font Awesome 5 Free'>&#xf240;</span>"
+icon75="<span face='Font Awesome 5 Free'>&#xf241;</span>"
+icon50="<span face='Font Awesome 5 Free'>&#xf242;</span>"
+icon25="<span face='Font Awesome 5 Free'>&#xf243;</span>"
+icon00="<span face='Font Awesome 5 Free'>&#xf244;</span>"
+
 bat=$(acpi | awk '{ print $4 }')
 
 if [[ ${#bat} == 3 ]]; then
@@ -30,19 +36,19 @@ else
 fi
 
 if [[ $rawbat -le 50 ]]; then
-    echo "<span foreground=\"#ffff00\">${bat:0:-1} <span face='Font Awesome 5 Free'>&#xf242;</span> $stat $tim2</span>"
+    echo "<span foreground=\"#ffff00\">${bat:0:-1} $icon50 $stat $tim2</span>"
 elif [[ $rawbat -le 25 ]]; then                
-    echo "<span foreground=\"#ff0000\">${bat:0:-1} <span face='Font Awesome 5 Free'>&#xf243;</span> $stat $tim2</span>"
+    echo "<span foreground=\"#ff0000\">${bat:0:-1} $icon25 $stat $tim2</span>"
 elif [[ $rawbat -le 10 ]]; then                
-    echo "<span background=\"#ff0000\">${bat:0:-1} <span face='Font Awesome 5 Free'>&#xf244;</span> $stat $tim2</span>"
+    echo "<span background=\"#ff0000\">${bat:0:-1} $icon00 $stat $tim2</span>"
 elif [[ $rawbat -le 75 ]]; then
-    echo "${bat:0:-1} <span face='Font Awesome 5 Free'>&#xf241;</span> $stat $tim2"
+    echo "${bat:0:-1} $icon75 $stat $tim2"
 elif [[ $statu == "Unknown," ]]; then
-    echo "<span face='Font Awesome 5 Free'>&#xf240;</span> $stat"
+    echo "$iconFu $stat"
 elif [[ $statu == "Full," ]]; then
-    echo "<span face='Font Awesome 5 Free'>&#xf240;</span> $stat"
+    echo "$iconFu $stat"
 elif [[ $rawbat == "100" ]]; then
-    echo "<span face='Font Awesome 5 Free'>&#xf240;</span> $stat"
+    echo "$iconFu $stat"
 else
-    echo "${bat:0:-1} <span face='Font Awesome 5 Free'>&#xf240;</span> $stat $tim2"
+    echo "${bat:0:-1} $iconFu $stat $tim2"
 fi

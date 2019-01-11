@@ -5,18 +5,18 @@ trackname=$(mpris-ctl info "%track_name")
 artistname=$(mpris-ctl info "%artist_name")
 playstatus=$(mpris-ctl info "%play_status")
 
-shorttrack=$(expr ${#trackname} - 17)
-shortartist=$(expr ${#artistname} - 17)
+shorttrack=$(expr ${#trackname} - 19)
+shortartist=$(expr ${#artistname} - 19)
 
 [[ $playername == "Spotify" ]] && playername="<span face='Font Awesome 5 Free'>&#xf1bc;</span>"
 
 if [[ ${#trackname} -ge 20 ]]; then
-    trackname="${trackname:0:-$shorttrack}..."
+    trackname="${trackname:0:-$shorttrack}…"
 else
     trackname=$trackname
 fi
 if [[ ${#artistname} -ge 20 ]]; then
-    artistname="${artistname:0:-$shortartist}..."
+    artistname="${artistname:0:-$shortartist}…"
 else
     artistname=$artistname
 fi

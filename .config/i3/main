@@ -430,7 +430,7 @@ $exn            blueman-applet
 $exn            compton
 $ena            ff-theme-util
 $ena            fix_xcursor
-#$exn            feh --bg-fill ~/.config/wall.png
+$exn            feh --bg-fill ~/.config/wall.png
 $exn            mpd
 $exn            shutter --min_at_startup
 $exn            python $home/$scripts/i3-sticky
