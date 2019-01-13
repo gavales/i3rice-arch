@@ -1,21 +1,19 @@
-!dracula
-! vim:syntax=xdefaults
-#define cblkd #282A36
-#define credl #FF5555
-#define cgrnl #50FA7B
-#define cylwl #F1FA8C
-#define cblul #BD93F9
-#define cgntl #FF79C6
-#define ccynl #8BE9FD
-#define cwhtl #BFBFBF
-#define cblkl #4D4D4D
-#define credd #FF6E67
-#define cgrnd #5AF78E
-#define cylwd #F4F99D
-#define cblud #CAA9FA
-#define cgntd #FF92D0
-#define ccynd #9AEDFE
-#define cwhtd #E6E6E6
+#define cblkd       #1e1e25
+#define cblkl       #a29794
+#define credd       #778691
+#define credl       #778691
+#define cgrnd       #7A90A3
+#define cgrnl      #7A90A3
+#define cylwd       #9B9394
+#define cylwl      #9B9394
+#define cblud       #E49F93
+#define cblul      #E49F93
+#define cgntd       #D7BCB6
+#define cgntl      #D7BCB6
+#define ccynd       #E8B8A9
+#define ccynl      #E8B8A9
+#define cwhtd       #e8d8d4
+#define cwhtl      #e8d8d4
 
 ! >>>> VARIABLES
 #define fontname monaco

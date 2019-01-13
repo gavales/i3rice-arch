@@ -1,0 +1,30 @@
+#!/bin/bash
+
+zathDir=$HOME/.config/zathura
+
+blackd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+blackl=$(xrdb -query | grep '*color8' | awk '{print $NF}')
+green=$(xrdb -query | grep '*color2' | awk '{print $NF}')
+yellow=$(xrdb -query | grep '*color3' | awk '{print $NF}')
+red=$(xrdb -query | grep '*color9' | awk '{print $NF}')
+whited=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+whitel=$(xrdb -query | grep '*color15' | awk '{print $NF}')
+blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+magenta=$(xrdb -query | grep '*color5' | awk '{print $NF}')
+cyan=$(xrdb -query | grep '*color6' | awk '{print $NF}')
+
+cd $zathDir || exit 1
+echo "set adjust-open \"best-fit\"" > zathurarc
+echo "set default-bg \"$blackd\"" >> zathurarc
+echo "set default-fg \"$whited\"" >> zathurarc
+echo "set font \"FixedsysMono 10\"" >> zathurarc
+echo "set inputbar-bg \"$blackd\"" >> zathurarc
+echo "set inputbar-fg \"$whited\"" >> zathurarc
+echo "set statusbar-bg \"$blackd\"" >> zathurarc
+echo "set statusbar-fg \"$whited\"" >> zathurarc
+echo "set completion-bg \"$blackd\"" >> zathurarc
+echo "set completion-fg \"$whited\"" >> zathurarc
+echo "set show-scrollbars false" >> zathurarc
+#echo "set recolor true" >> zathurarc
+echo "set recolor-darkcolor \"$whited\"" >> zathurarc
+echo "set recolor-lightcolor \"$blackd\"" >> zathurarc

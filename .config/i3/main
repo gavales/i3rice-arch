@@ -413,8 +413,8 @@ $fw [instance="MOUNT"]									$tf "mount"
 $fw [instance="UNMOUNT"]								$tf "unmount"
 
 # >>>> GAPS
-gaps inner 0
-gaps outer 0
+gaps inner 20
+gaps outer 20
 
 # >>>> STARTUP
 # DAEMONS
