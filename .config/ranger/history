@@ -1,12 +1,9 @@
-shell oft
-mkdir Flora
 mkdir Kerrianne
 rename latex_template
 open_with a
 rename tex
 touch name.bib
 shell mkdir kerriannev1 'myfirstlatex' 'mysecondlatex' 'mythirdlatex'
-rename 
 rename latexstuff
 rename i3
 rename .fonts
@@ -14,7 +11,6 @@ shell
 rename .ncmpcpp_
 rename .ncmpcpp
 shell ln -sf ~/i3rice-arch/.config/i3/%f %f
-open_with vim
 shell ln -sf ~/Drive/UNI/Part4 %f
 shell unlink %f
 rename Uni
@@ -41,17 +37,14 @@ rename brogrammer
 mkdir colors
 shell wget https://raw.githubusercontent.com/marciomazza/vim-brogrammer-theme/master/colors/brogrammer.vim
 shell transmission-cli -n %f
-<<<<<<< HEAD
 mkdir Evangelion
 rename Neon Genesis Evangelion
 rename Rebuild of Evangelion 1.0.mkv
 rename Rebuild of Evangelion 2.0.mkv
-rename xinitrc
 wq
+shell sudo python %f
+rename 
+rename xinitrc
 rename .xinitrc
-=======
-rename 2019_01_08.md_
-rename 2019_01_08.md
-shell sudo vim
-shell sudo vim %f
->>>>>>> origin/master
+touch zathurarc
+open_with vim

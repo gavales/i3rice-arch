@@ -21,9 +21,9 @@ set linebreak
 set nolist  "disable linebreak
 set textwidth=0
 set wrapmargin=0
-set tabstop=4
-set shiftwidth=4
-set expandtab
+set tabstop=2
+set shiftwidth=2
+"set expandtab
 set cursorline
 set title titlestring=%f titlelen=70
 set mouse=a
