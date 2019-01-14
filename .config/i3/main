@@ -79,6 +79,7 @@ bar {
 #	position top
 	id bar-1
 	tray_output $nat
+#	output $nat
 
 	bindsym button4 nop
 	bindsym button5 nop
@@ -86,12 +87,12 @@ bar {
 
 	colors {
 	background $blk
-#						 brdr bkgr text
-	focused_workspace	 $blu $blu $blk
-	active_workspace	$blk $blk $blu
+#											brdr bkgr text
+	focused_workspace		$blu $blu $blk
+	active_workspace		$blk $blk $blu
 	inactive_workspace	$blk $blk $wht
-	binding_mode		$ylw $ylw $blk
-	urgent_workspace	$red $red $blk
+	binding_mode				$ylw $ylw $blk
+	urgent_workspace		$red $red $blk
 	}
 }
 
@@ -108,12 +109,12 @@ $mod+t					$exn "bash $home/$scripts/mkwalrando; \
 $mod+Shift+q		kill
 $wlw+button2		kill
 $mod+Shift+b		bar mode toggle
-$mod+semicolon	exec redshift -P -O 3700
-$mod+apostrophe exec redshift -x
+$mod+semicolon	$exn redshift -P -O 3700
+$mod+apostrophe $exn redshift -x
 bindsym Print	 	$exn bash ~/$scripts/screenshot
 $mod+Shift+p		$exn bash ~/$scripts/screenshot
-$mod+d					exec rofi -show drun
-$mod+Shift+d		exec dmenu_run -fn "$font3:size=$fonts" -nb \
+$mod+d					$exn rofi -show drun
+$mod+Shift+d		$exn dmenu_run -fn "$font3:size=$fonts" -nb \
 									"$blk" -nf "$wht" -sf "$blk" -sb "$blu"
 
 # //// FOCUS/MOVE/RESIZE
@@ -141,12 +142,12 @@ $mod+Control+4	$exn "i3-msg 'floating disable; $mvm4'"
 # >>>> MOD1 BINDINGS
 # //// WORKFLOW
 
-$mod+Return				exec $term -name TERMINAL
+$mod+Return				$exn $term -name TERMINAL
 $mod+f						$lch pcmanfm $mk2
-$mod+Shift+Return	exec $term -name FILES -e ranger
+$mod+Shift+Return	$exn $term -name FILES -e ranger
 $mod+b						$lch '$term -name BIB -e vim $home/Drive/global.bib' $mk2
-$mod+c						exec $browser
-$mod+q						exec $term -name CALC -e R
+$mod+c						$exn $browser
+$mod+q						$exn $term -name CALC -e R
 $mod+Shift+u			$lch '$browser --new-window \
 									--app=https://outlook.office365.com/owa/?realm=soton.ac.uk' \
 									$mk3
@@ -156,16 +157,16 @@ $mod+Shift+a			$lch '$browser --new-window \
 									$mk1
 
 # GOOGLE DOCs
-$mod+Ctrl+q		exec $browser --new-window \
+$mod+Ctrl+q		$exn $browser --new-window \
 								--app=https://docs.google.com/document/u/0/
-$mod+Ctrl+w		exec $browser --new-window \
+$mod+Ctrl+w		$exn $browser --new-window \
 								--app=https://docs.google.com/spreadsheets/u/0/
-$mod+Ctrl+r		exec $browser --new-window \
+$mod+Ctrl+r		$exn $browser --new-window \
 								--app=https://docs.google.com/presentation/u/0/
 
 # //// MEDIA
 
-$mod+Shift+s		exec spotify
+$mod+Shift+s		$exn spotify
 $mod+s					$lch '$term -name MUSIC -e ncmpcpp' $mk1
 $mod+Shift+v		$lch 'projectM-pulseaudio' $mk1
 $mod+v					$lch '$term -name VIS -e vis' $mk1
@@ -182,12 +183,12 @@ $mod+Shift+i		$lch '$browser --new-window \
 									--app=https://www.bbc.co.uk/iplayer/' $mk1
 $mod+w					$lch '$browser --new-window \
 									--app=https://ww2.watch-series.co/' $mk1
-$mod+r					exec $term -name RSS -e newsboat
+$mod+r					$exn $term -name RSS -e newsboat
 
 # GUI PLAYER CONTROLS
-$mod+p						exec playerctl play-pause
-$mod+bracketright	exec playerctl next
-$mod+bracketleft	exec playerctl previous
+$mod+p						$exn playerctl play-pause
+$mod+bracketright	$exn playerctl next
+$mod+bracketleft	$exn playerctl previous
 
 # //// LAYOUT
 
@@ -256,16 +257,16 @@ mode "SHUTDOWN" {
 
 # >>>> MOD4 BINDINGS
 # //// MAIN
-$win+Shift+c			exec bash ~/$scripts/i3concat
-$win+o						exec "$brightinc; bash ~/$scripts/notify_brightness"
-$win+y						exec "$brightdec; bash ~/$scripts/notify_brightness"
-$win+i						exec "pactl set-sink-volume 0 +2%; bash ~/$scripts/notify_volume"
-$win+u						exec "pactl set-sink-volume 0 -2%; bash ~/$scripts/notify_volume"
-$win+x						exec "pactl set-sink-mute 0 toggle; bash ~/$scripts/notify_volume"
+$win+Shift+c			$exn "i3-msg 'exec bash ~/$scripts/i3concat; exec polybar-msg cmd restart'"
+$win+o						$exn "$brightinc; bash ~/$scripts/notify_brightness"
+$win+y						$exn "$brightdec; bash ~/$scripts/notify_brightness"
+$win+i						$exn "pactl set-sink-volume 0 +2%; bash ~/$scripts/notify_volume"
+$win+u						$exn "pactl set-sink-volume 0 -2%; bash ~/$scripts/notify_volume"
+$win+x						$exn "pactl set-sink-mute 0 toggle; bash ~/$scripts/notify_volume"
 $win+b						$lch '$term -name BASHMOUNT -e bashmount' $mk2
 $win+f						$lch 'gksu pcmanfm' $mk2
 $win+Shift+f			$lch 'nautilus' $mk2
-$win+Shift+Return	exec $term -name FILES_ADMIN -e sudo ranger
+$win+Shift+Return	$exn $term -name FILES_ADMIN -e sudo ranger
 $win+t						$exn pkill compton
 $win+Shift+t			$exn compton
 $win+w						$lch '$term -name LAYOUT_EDITOR -e bash ~/$scripts/wsloget' $mk2
@@ -282,14 +283,14 @@ $win+5						$lch '$term -name i3BLOCKS -e vim ~/scripts/mkblocksconf' $mk3
 
 # //// MPD CONTROLS
 
-$win+p						exec mpc toggle
-$win+bracketright	exec mpc next
-$win+bracketleft	exec mpc prev
-$win+backslash		exec mpc stop
+$win+p						$exn mpc toggle
+$win+bracketright	$exn mpc next
+$win+bracketleft	$exn mpc prev
+$win+backslash		$exn mpc stop
 
 # //// MULTI-MONITOR
 
-$win+m					exec bash ~/$scripts/multimon
+$win+m					$exn bash ~/$scripts/multimon
 $win+Control+n	move workspace to output $nat
 $win+Control+v	move workspace to output $vga
 $win+Control+h	move workspace to output $hdm
@@ -308,11 +309,11 @@ $win+Shift+l	move right
 
 # //// STICKY TILED
 
-$win+Shift+s	exec bash $home/$scripts/i3-sticky-toggle
+$win+Shift+s	$exn bash $home/$scripts/i3-sticky-toggle
 $wlw+button1	$exn i3-input -F "[con_id=__focused__] mark _sticky_%s"
-$win+Shift+1	exec python $home/$scripts/i3-sticky-open 1
-$win+Shift+2	exec python $home/$scripts/i3-sticky-open 2
-$win+Shift+3	exec python $home/$scripts/i3-sticky-open 3
+$win+Shift+1	$exn python $home/$scripts/i3-sticky-open 1
+$win+Shift+2	$exn python $home/$scripts/i3-sticky-open 2
+$win+Shift+3	$exn python $home/$scripts/i3-sticky-open 3
 
 # >>>> FOR_WINDOW
 # //// ALL
@@ -322,7 +323,7 @@ workspace_auto_back_and_forth yes
 $fw [class="^.*"] border pixel 1
 $fw [urgent=latest] focus
 
-# //// UNMARKED
+# //// FLOATERS
 
 $fw [title="About Pale Moon"]				 				$flen
 $fw [title="alsamixer"]					 						$flen
@@ -335,7 +336,6 @@ $fw [class="Manjaro-hello"]				 					$flen
 $fw [title="MuseScore: Play Panel"]		 			$flen
 $fw [class="Oblogout"]											$flen
 $fw [class="octopi"]												$flen
-$fw [class="Pamac-manager"]				 					$flen
 $fw [class="Pavucontrol"]					 					$flen
 $fw [class="Xfburn"]												$flen
 $fw [class="i3bar"]													$flen
@@ -387,6 +387,8 @@ $fw [class="MuPDF"]											$mvm2
 $fw [title="_popout="]									$mvm2,$tf "popout chat"
 $fw [title="^localhost:8090$"]					$mvm2,$tf "instant markdown preview"
 
+$fw [class="Pamac-manager"]				 			$mvm3,$tf "software"
+
 $fw [instance="RSS"]										$tf "newsboat"
 $fw [title="^My Movies & TV"]						$tf "movies",$stm1
 $fw [title="- Watch Series$"]						$tf "watch series",$stm1
@@ -418,25 +420,25 @@ gaps outer 20
 
 # >>>> STARTUP
 # DAEMONS
-$exn			urxvtd -q -o -f
-$exn			/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-$exn			nm-applet
-$exn			xfce4-power-manager
-$exn			pamac-tray
-$exn			clipit
-$exn			blueman-applet
-$exn			compton
-$ena			ff-theme-util
-$ena			fix_xcursor
-$exn			feh --bg-fill ~/.config/wall.png
-$exn			mpd
-$exn			shutter --min_at_startup
-$exn			python $home/$scripts/i3-sticky
-exec			setxkbmap $kb
+$exn	urxvtd -q -o -f
+$exn	/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+$exn	nm-applet
+$exn	xfce4-power-manager
+$exn	pamac-tray
+$exn	clipit
+$exn	blueman-applet
+$exn	compton
+$ena	ff-theme-util
+$ena	fix_xcursor
+$exn	feh --bg-fill ~/.config/wall.png
+$exn	mpd
+$exn	shutter --min_at_startup
+$exn	python $home/$scripts/i3-sticky
+$exn	setxkbmap $kb
 
 # PROGRAMS
-$exn					"i3-msg 'workspace 1; append_layout $home/.config/i3/main.json'"
-exec					$browser
-exec					$browser --new-window --app=https://www.youtube.com/
-exec_always		mpv $home/scriptsounds/A\ Tone\ His\ Self.mp3
-exec_always		notify-send 'i3 (re)loaded!' -i ~/$scriptpics/i3white.png
+$exn	"i3-msg 'workspace 1; append_layout $home/.config/i3/main.json'"
+$exn	$browser
+$exn	$browser --new-window --app=https://www.youtube.com/
+$ena	mpv $home/scriptsounds/A\ Tone\ His\ Self.mp3
+$ena	notify-send 'i3 (re)loaded!' -i ~/$scriptpics/i3white.png
