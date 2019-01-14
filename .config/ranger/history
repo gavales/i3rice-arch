@@ -1,4 +1,3 @@
-touch name.bib
 shell mkdir kerriannev1 'myfirstlatex' 'mysecondlatex' 'mythirdlatex'
 rename latexstuff
 rename i3
@@ -48,3 +47,4 @@ rename 1314_SOLN
 rename 1718_SOLN
 rename 1314_SOLN.pdf
 rename 1718_SOLN.pdf
+rename compton.conf_
