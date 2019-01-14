@@ -64,7 +64,7 @@ hide_edge_borders true
 
 # COLORS
 # class				 					brdr bkgr text indi chlb
-client.focused					$blu $blu $blk $blk $blk
+client.focused					$blk $blu $blk $blk $blk
 client.focused_inactive $blk $blk $blu $blk $blk
 client.unfocused				$blk $blk $wht $blk $blk
 client.urgent			 			$blk $blk $red $blk $blk
