@@ -12,9 +12,9 @@ set $ena		exec_always --no-startup-id
 set $lch		exec ~/scripts/i3launch
 set $tf			title_format
 set $fw			for_window
-set $mk1		_win1
-set $mk2		_win2
-set $mk3		_win3
+set $mk1		_W1
+set $mk2		_W2
+set $mk3		_W3
 set $mrk1		mark _win1
 set $mrk2		mark _win2
 set $mrk3		mark _win3
@@ -123,9 +123,6 @@ $mod+h					$exn bash $home/$scripts/i3viswiz left
 $mod+j					$exn bash $home/$scripts/i3viswiz down
 $mod+k					$exn bash $home/$scripts/i3viswiz up
 $mod+l					$exn bash $home/$scripts/i3viswiz right
-$mod+Tab				focus right
-$mod+Shift+Tab	focus left
-$mod+a					focus parent
 $mod+Shift+h		$exn bash $home/$scripts/i3move left
 $mod+Shift+j		$exn bash $home/$scripts/i3move down
 $mod+Shift+k		$exn bash $home/$scripts/i3move up
@@ -134,10 +131,13 @@ $mod+y					resize shrink width 10 px or 10 ppt
 $mod+i					resize grow height 10 px or 10 ppt
 $mod+u					resize shrink height 10 px or 10 ppt
 $mod+o					resize grow width 10 px or 10 ppt
-$mod+Control+1	$exn "i3-msg 'floating disable; $mvm1'"
-$mod+Control+2	$exn "i3-msg 'floating disable; $mvm2'"
-$mod+Control+3	$exn "i3-msg 'floating disable; $mvm3'"
-$mod+Control+4	$exn "i3-msg 'floating disable; $mvm4'"
+$mod+Tab				focus right
+$mod+Shift+Tab	focus left
+$mod+a					focus parent
+$mod+Control+1	floating disable, $mvm1
+$mod+Control+2	floating disable, $mvm2
+$mod+Control+3	floating disable, $mvm3
+$mod+Control+4	floating disable, $mvm4
 
 # >>>> MOD1 BINDINGS
 # //// WORKFLOW
