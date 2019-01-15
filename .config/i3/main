@@ -15,15 +15,15 @@ set $fw			for_window
 set $mk1		_W1
 set $mk2		_W2
 set $mk3		_W3
-set $mrk1		mark _win1
-set $mrk2		mark _win2
-set $mrk3		mark _win3
+set $mrk1		mark _W1
+set $mrk2		mark _W2
+set $mrk3		mark _W3
 set $stm1		mark _sticky_1
 set $stm2		mark _sticky_2
 set $stm3		mark _sticky_3
-set $mvm1		move to mark _win1
-set $mvm2		move to mark _win2
-set $mvm3		move to mark _win3
+set $mvm1		move to mark _W1
+set $mvm2		move to mark _W2
+set $mvm3		move to mark _W3
 set $flen		floating enable
 set $fldi		floating disable
 set $brnr		border normal
@@ -143,8 +143,8 @@ $mod+Control+4	floating disable, $mvm4
 # //// WORKFLOW
 
 $mod+Return				$exn $term -name TERMINAL
-$mod+f						$lch pcmanfm $mk2
 $mod+Shift+Return	$exn $term -name FILES -e ranger
+$mod+f						$lch '$term -name MEDIA -e ranger' $mk2
 $mod+b						$lch '$term -name BIB -e vim $home/Drive/global.bib' $mk2
 $mod+c						$exn $browser
 $mod+q						$exn $term -name CALC -e R
@@ -257,15 +257,15 @@ mode "SHUTDOWN" {
 
 # >>>> MOD4 BINDINGS
 # //// MAIN
-$win+Shift+c			$exn "i3-msg 'exec bash ~/$scripts/i3concat; exec polybar-msg cmd restart'"
+$win+Shift+c			$exn bash ~/$scripts/reloadconfs
 $win+o						$exn "$brightinc; bash ~/$scripts/notify_brightness"
 $win+y						$exn "$brightdec; bash ~/$scripts/notify_brightness"
 $win+i						$exn "pactl set-sink-volume 0 +2%; bash ~/$scripts/notify_volume"
 $win+u						$exn "pactl set-sink-volume 0 -2%; bash ~/$scripts/notify_volume"
 $win+x						$exn "pactl set-sink-mute 0 toggle; bash ~/$scripts/notify_volume"
 $win+b						$lch '$term -name BASHMOUNT -e bashmount' $mk2
-$win+f						$lch 'gksu pcmanfm' $mk2
-$win+Shift+f			$lch 'nautilus' $mk2
+$win+Shift+f			$lch 'gksu pcmanfm' $mk2
+$win+f						$lch pcmanfm $mk2
 $win+Shift+Return	$exn $term -name FILES_ADMIN -e sudo ranger
 $win+t						$exn pkill compton
 $win+Shift+t			$exn compton
@@ -373,7 +373,7 @@ $fw [class="Pavucontrol"]	$flen,$brnr,\
 $fw [con_mark=_sticky_1]								resize set 715 423
 
 $fw [instance="VIS"]										$mrk1,$tf "visualizer"
-$fw [instance="CALENDAR"]								$mrk2,$tf "vim calendar"
+$fw [instance="MEDIA"]				 					$mrk2,$tf "browse media"
 $fw [title="Google Chrome$"]						$mrk3,$tf "google chrome"
 
 $fw [class="MPlayer"]										$mvm1
@@ -394,6 +394,7 @@ $fw [title="^My Movies & TV"]						$tf "movies",$stm1
 $fw [title="- Watch Series$"]						$tf "watch series",$stm1
 $fw [title="Log in with PayPal"]				$tf "paypal login",$flen
 $fw [instance="TERMINAL"]				 				$tf "terminal"
+$fw [instance="CALENDAR"]								$tf "vim calendar"
 $fw [instance="GRIVE"]									$tf "google drive sync"
 $fw [instance="BIB"]										$tf "biblbiography"
 $fw [title="YouTube$"]									$tf "youtube",$stm1
@@ -415,8 +416,11 @@ $fw [instance="MOUNT"]									$tf "mount"
 $fw [instance="UNMOUNT"]								$tf "unmount"
 
 # >>>> GAPS
-gaps inner 20
-gaps outer 20
+gaps inner 10
+gaps outer 5
+
+workspace $ws1 gaps inner 0
+workspace $ws1 gaps outer 0
 
 # >>>> STARTUP
 # DAEMONS

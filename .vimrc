@@ -27,6 +27,8 @@ set shiftwidth=2
 set cursorline
 set title titlestring=%f titlelen=70
 set mouse=a
+vnoremap <C-c> "+y
+map <C-p> "+P
 autocmd FileType python,vim,conf,perl,sh set colorcolumn=80
 "autocmd FileType python call matchadd('ColorColumn', '\%81v', 100)
 "autocmd FileType vim call matchadd('ColorColumn', '\%81v', 100)
@@ -50,7 +52,7 @@ hi LineNr ctermbg=none ctermfg=grey
 hi Folded cterm=italic ctermfg=blue ctermbg=black
 hi ModeMsg cterm=bold ctermfg=white
 hi lCursor ctermbg=blue ctermfg=black
-hi ColorColumn ctermbg=darkgray ctermfg=white
+"hi ColorColumn ctermbg=darkgray ctermfg=white
 
 hi User1 ctermbg=red ctermfg=black guibg=red guifg=black
 hi User2 ctermbg=yellow ctermfg=black guibg=yellow guifg=black

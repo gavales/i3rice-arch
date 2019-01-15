@@ -104,12 +104,12 @@
                        "x": 0,
                        "y": 0
                     },
-                    "name": "terminal",
+                    "name": "browse media",
                     "percent": 0.5,
                     "swallows": [
                        {
                        "class": "^URxvt$",
-                       "instance": "^TERMINAL$",
+                       "instance": "^MEDIA$",
                        // "title": "^ranger$",
                        "transient_for": "^$"
                        }

@@ -1,19 +1,21 @@
-#define cblkd       #0D121B
-#define cblkl       #92989b
-#define credd       #3A6785
-#define credl       #3A6785
-#define cgrnd       #637887
-#define cgrnl      #637887
-#define cylwd       #758A97
-#define cylwl      #758A97
-#define cblud       #7EAAC1
-#define cblul      #7EAAC1
-#define cgntd       #96A1A6
-#define cgntl      #96A1A6
-#define ccynd       #A6BAC3
-#define ccynl      #A6BAC3
-#define cwhtd       #d1dade
-#define cwhtl      #d1dade
+!onedark
+! vim:syntax=xdefaults
+#define cblkd #1E2127
+#define credd #E06C75
+#define cgrnd #98C379
+#define cylwd #D19A66
+#define cblud #61AFEF
+#define cgntd #C678DD
+#define ccynd #56B6C2
+#define cwhtd #ABB2BF
+#define cblkl #5C6370
+#define credl #E06C75
+#define cgrnl #98C379
+#define cylwl #D19A66
+#define cblul #61AFEF
+#define cgntl #C678DD
+#define ccynl #56B6C2
+#define cwhtl #FFFFFF
 
 ! >>>> VARIABLES
 #define fontname monaco
@@ -136,12 +138,12 @@ URxvt*internalBorder: 5
 
 
 ! >>>> URXVT EXTENSIONS
-URxvt*perl-ext-common: default,clipboard,matcher,resize-font,config-reload
+URxvt*perl-ext-common: default,matcher,resize-font,config-reload
 !URxvt*perl-lib: /home/gavarch/.urxvt/ext
 URxvt*url-launcher:	/usr/bin/google-chrome-beta
 URxvt*matcher.button: 1
-URxvt*keysym.C-y: clipboard:copy
-URxvt*keysym.C-a: clipboard:paste
+! URxvt*keysym.C-y: clipboard:copy
+! URxvt*keysym.C-a: clipboard:paste
 URxvt*keysym.C-I: resize-font:smaller
 URxvt*keysym.C-U: resize-font:bigger
 URxvt*keysym.C-Y: resize-font:reset

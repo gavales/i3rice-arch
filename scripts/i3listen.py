@@ -6,18 +6,33 @@ i3 = Connection()
 
 
 def windownotify(i3, event):
-    if event.container.fullscreen_mode == 0:
-        call('polybar-msg cmd show'.split(' '))
-    else:
-        call('polybar-msg cmd hide'.split(' '))
+#    if event.container.fullscreen_mode == 0:
+#        call('polybar-msg cmd show'.split(' '))
+#    else:
+#        call('polybar-msg cmd hide'.split(' '))
 
     if event.change == "close":
         if event.container.window_class == 'mpv':
             if event.container.focused == True:
-                call(''.split(' '))
+                call('i3-msg [title="browse media"] focus'.split(' '))
 
-    if event.change in "focus" "title":
-        call('polybar-msg hook titlehook 2'.split(' '))
+    if event.change == "close":
+        if event.container.window_class == 'Sxiv':
+            if event.container.focused == True:
+                call('i3-msg [title="browse media"] focus'.split(' '))
+
+    if event.change == "close":
+        if event.container.window_class == 'feh':
+            if event.container.focused == True:
+                call('i3-msg [title="reddit"] focus'.split(' '))
+
+    if event.change == "close":
+        if event.container.window_class == 'mpv':
+            if event.container.focused == True:
+                call('i3-msg [title="reddit"] focus'.split(' '))
+
+#    if event.change in "focus" "title":
+#        call('polybar-msg hook titlehook 2'.split(' '))
 
         # print(event.container.fullscreen_mode)
 
