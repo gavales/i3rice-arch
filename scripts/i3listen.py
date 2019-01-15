@@ -14,22 +14,22 @@ def windownotify(i3, event):
     if event.change == "close":
         if event.container.window_class == 'mpv':
             if event.container.focused == True:
-                call('i3-msg [title="browse media"] focus'.split(' '))
+                call('i3-msg [instance="MEDIA"] focus'.split(' '))
 
     if event.change == "close":
         if event.container.window_class == 'Sxiv':
             if event.container.focused == True:
-                call('i3-msg [title="browse media"] focus'.split(' '))
+                call('i3-msg [instance="MEDIA"] focus'.split(' '))
 
     if event.change == "close":
         if event.container.window_class == 'feh':
             if event.container.focused == True:
-                call('i3-msg [title="reddit"] focus'.split(' '))
+                call('i3-msg [instance="RTV"] focus'.split(' '))
 
     if event.change == "close":
         if event.container.window_class == 'mpv':
             if event.container.focused == True:
-                call('i3-msg [title="reddit"] focus'.split(' '))
+                call('i3-msg [instance="RTV"] focus'.split(' '))
 
 #    if event.change in "focus" "title":
 #        call('polybar-msg hook titlehook 2'.split(' '))
