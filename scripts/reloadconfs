@@ -8,4 +8,4 @@ bash ~/scripts/mkfixedsyscss
 bash ~/scripts/mkzathrc
 bash ~/scripts/i3concat
 pkill -9 -f $HOME/scripts/i3listen.py
-python $HOME/scripts/i3listen.py
+python $HOME/scripts/i3listen.py &>/dev/null &
