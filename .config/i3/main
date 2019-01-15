@@ -416,8 +416,8 @@ $fw [instance="MOUNT"]									$tf "mount"
 $fw [instance="UNMOUNT"]								$tf "unmount"
 
 # >>>> GAPS
-gaps inner 10
-gaps outer 5
+gaps inner 20
+gaps outer 10
 
 workspace $ws1 gaps inner 0
 workspace $ws1 gaps outer 0
