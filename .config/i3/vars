@@ -23,10 +23,6 @@ set $scriptpics scriptpics
 
 # //// APPS
 
-set $term       urxvtc
-set $browser    google-chrome-beta
-set $brightinc  light -A 10
-set $brightdec  light -U 10
 set $primary    eDP1
 set $secondary  VGA1
 set $tertiary   HDMI1
