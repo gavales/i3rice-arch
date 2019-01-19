@@ -7,5 +7,7 @@ bash ~/scripts/mkatomtheme
 bash ~/scripts/mkfixedsyscss
 bash ~/scripts/mkzathrc
 bash ~/scripts/i3concat
+killall i3bar
+i3bar -t --bar_id=bar-1 &>/dev/null &
 pkill -9 -f $HOME/scripts/i3listen.py
 python $HOME/scripts/i3listen.py &>/dev/null &
