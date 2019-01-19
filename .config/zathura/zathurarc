@@ -1,0 +1,14 @@
+set adjust-open "best-fit"
+set window-title-basename true
+set default-bg "#0D1208"
+set default-fg "#c5ccdc"
+set font "FixedsysMono 10"
+set inputbar-bg "#0D1208"
+set inputbar-fg "#c5ccdc"
+set statusbar-bg "#0D1208"
+set statusbar-fg "#c5ccdc"
+set completion-bg "#0D1208"
+set completion-fg "#c5ccdc"
+set show-scrollbars false
+set recolor-darkcolor "#c5ccdc"
+set recolor-lightcolor "#0D1208"

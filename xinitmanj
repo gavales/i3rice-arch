@@ -38,8 +38,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     unset f
 fi
 
-urxvtd -q -o -f
-
 get_session(){
 	local dbus_args=(--sh-syntax --exit-with-session)
 	case $1 in
@@ -66,3 +64,7 @@ get_session(){
 }
 
 exec $(get_session)
+
+xrandr --output eDP-1 --primary --auto --output HDMI-1 --left-of eDP-1 --auto
+
+urxvtd -q -o -f

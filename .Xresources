@@ -1,20 +1,19 @@
-! bartolome
-#define cblkd       #151e22
-#define cblkl       #8c9aa3
-#define credd       #0A6E9D
-#define credl       #0A6E9D
-#define cgrnd       #5C728F
-#define cgrnl      #5C728F
-#define cylwd       #8F7986
-#define cylwl      #8F7986
-#define cblud       #099499
-#define cblul      #099499
-#define cgntd       #68B1D4
-#define cgntl      #68B1D4
-#define ccynd       #AEADA8
-#define ccynl      #AEADA8
-#define cwhtd       #c9dde9
-#define cwhtl      #c9dde9
+#define cblkd       #0D1208
+#define cblkl       #898e9a
+#define credd       #96827F
+#define credl       #96827F
+#define cgrnd       #356FA7
+#define cgrnl      #356FA7
+#define cylwd       #566D97
+#define cylwl      #566D97
+#define cblud       #6687B5
+#define cblul      #6687B5
+#define cgntd       #7194C5
+#define cgntl      #7194C5
+#define ccynd       #9F96A5
+#define ccynl      #9F96A5
+#define cwhtd       #c5ccdc
+#define cwhtl      #c5ccdc
 
 ! >>>> VARIABLES
 #define fontname monaco
