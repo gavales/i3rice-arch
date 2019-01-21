@@ -1,22 +1,5 @@
 [frame]
 width = 1
-<<<<<<< HEAD
-color = "#181314"
-
-[urgency_low]
-background = "#AF9095"
-foreground = "#181314"
-timeout = 3
-
-[urgency_normal]
-background = "#AF9095"
-foreground = "#181314"
-timeout = 3
-
-[urgency_critical]
-background = "#6D6C91"
-foreground = "#181314"
-=======
 color = "#282A36"
 
 [urgency_low]
@@ -32,7 +15,6 @@ timeout = 3
 [urgency_critical]
 background = "#FF5555"
 foreground = "#282A36"
->>>>>>> origin/master
 timeout = 3
 
 [shortcuts]

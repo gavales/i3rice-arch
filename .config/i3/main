@@ -378,11 +378,7 @@ $fw [class="Pavucontrol"]	$flen,$brnr,\
 $fw [con_mark=_sticky_1]								resize set 715 423
 
 $fw [instance="VIS"]										$mrk1,$tf "visualizer"
-<<<<<<< HEAD
-$fw [instance="MEDIA"]				 					$mrk2,$tf "media"
-=======
 $fw [instance="MEDIA"]				 					$mrk2,$tf "browse media"
->>>>>>> origin/master
 $fw [title="Google Chrome$"]						$mrk3,$tf "chrome"
 
 $fw [class="MPlayer"]										$mvm1
@@ -451,7 +447,7 @@ $exn	python $home/$scripts/i3-sticky
 $exn	setxkbmap $kb
 
 # PROGRAMS
-$exn	workspace 1; append_layout $home/.config/i3/main.json
+$exn	i3-msg "workspace $ws1; append_layout $home/.config/i3/main.json"
 $exn	$browser
 $exn	$browser --new-window --app=https://www.youtube.com/
 $ena	mpv $home/scriptsounds/A\ Tone\ His\ Self.mp3
