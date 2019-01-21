@@ -2,7 +2,11 @@ sw_volume: 90
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
 state: stop
+<<<<<<< HEAD
 current: 650
+=======
+current: 2026
+>>>>>>> origin/master
 random: 1
 repeat: 1
 single: 0

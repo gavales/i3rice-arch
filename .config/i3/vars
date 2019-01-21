@@ -18,6 +18,11 @@ set $home       /home/gavarch
 set $scripts    scripts
 set $scriptpics scriptpics
 
+<<<<<<< HEAD
+=======
+# //// APPS
+
+>>>>>>> origin/master
 set $primary    eDP1
 set $secondary  VGA1
 set $tertiary   HDMI1
