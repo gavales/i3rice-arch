@@ -22,6 +22,3 @@ cat ${xfilesDir}/8urxvtext >> .Xresources
 
 xrdb -load .Xresources
 bash ~/scripts/reloadconfs
-i3-msg reload
-killall i3bar
-i3bar --bar_id=bar-1 &>/dev/null &

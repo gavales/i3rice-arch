@@ -1,5 +1,6 @@
 
-! >>>> URXVT
+!! URXVT
+
 URxvt.font: xft:fontname:size=fontsize
 
 URxvt*fading: 10
@@ -11,7 +12,7 @@ URxvt*background: cblkd
 URxvt*foreground: cwhtl
 URxvt*saveLines: 5000
 URxvt*useColor:	true
-URxvt*internalBorder: 5
+URxvt*internalBorder: 0
 
 ! for 'fake' transparency (without Compton) uncomment the following three lines
 ! URxvt*inheritPixmap:            true

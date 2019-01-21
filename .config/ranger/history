@@ -1,31 +1,3 @@
-shell bash ~/scripts/
-shell bash ~/scripts/bibtorefer
-shell bash ~/scripts/bibtorefer %f
-shell oft
-mkdir Flora
-mkdir Kerrianne
-rename latex_template
-open_with a
-rename tex
-touch name.bib
-shell mkdir kerriannev1 'myfirstlatex' 'mysecondlatex' 'mythirdlatex'
-rename 
-rename latexstuff
-rename i3
-rename .fonts
-shell 
-rename .ncmpcpp_
-rename .ncmpcpp
-shell ln -sf ~/i3rice-arch/.config/i3/%f %f
-open_with vim
-shell ln -sf ~/Drive/UNI/Part4 %f
-shell unlink %f
-rename Uni
-open_with 
-mkdir Films
-rename Spriggan.mp4
-rename JIN-ROH.webm
-rename Vampire Hunter D: Bloodlust.mkv
 rename They Were Eleven.mkv
 rename Demon City Shinjuku.mp4
 rename Afro Samurai [Director's Cut].mkv
@@ -44,7 +16,35 @@ rename brogrammer
 mkdir colors
 shell wget https://raw.githubusercontent.com/marciomazza/vim-brogrammer-theme/master/colors/brogrammer.vim
 shell transmission-cli -n %f
+<<<<<<< HEAD
 rename 2019_01_08.md_
 rename 2019_01_08.md
 shell sudo vim
 shell sudo vim %f
+=======
+mkdir Evangelion
+rename Neon Genesis Evangelion
+rename Rebuild of Evangelion 1.0.mkv
+rename Rebuild of Evangelion 2.0.mkv
+wq
+shell sudo python %f
+rename 
+rename xinitrc
+rename .xinitrc
+shell bash ~/scripts/reloadconfs
+rename 1314_SOLN
+rename 1718_SOLN
+rename 1314_SOLN.pdf
+rename 1718_SOLN.pdf
+rename compton.conf_
+rename compton.conf
+shell wget https://raw.githubusercontent.com/budlabs/youtube/master/letslinux/010-012-polybar-setup/i3listen.py
+shell chmod +x %f
+rename 1516_SOLN.pdf
+rename 1617_DRAFT.pdf
+rename 1617_SOLNS.pdf
+lectures
+mkdir lectures
+rename i3getlwinid
+rename i3focuslast
+>>>>>>> origin/master

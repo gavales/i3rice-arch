@@ -6,8 +6,7 @@
 
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-# >>>> MAIN
-# //// FONTS
+# >>>> SPECIFIC VARS
 set $font1 FixedsysMono
 set $font2 FontAwesome
 set $font3 monaco
@@ -15,18 +14,10 @@ set $fonts 12
 
 font pango:$font1,$font2 $fonts
 
-# //// DIRS
-
 set $home       /home/gavarch
 set $scripts    scripts
 set $scriptpics scriptpics
 
-# //// APPS
-
-set $term       urxvtc
-set $browser    google-chrome-beta
-set $brightinc  light -A 10
-set $brightdec  light -U 10
 set $primary    eDP1
 set $secondary  VGA1
 set $tertiary   HDMI1

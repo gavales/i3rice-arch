@@ -14,7 +14,8 @@ magenta=$(xrdb -query | grep '*color5' | awk '{print $NF}')
 cyan=$(xrdb -query | grep '*color6' | awk '{print $NF}')
 
 cd $zathDir || exit 1
-echo "set adjust-open \"best-fit\"" > zathurarc
+echo "set adjust-open \"width\"" > zathurarc
+echo "set window-title-basename true" >> zathurarc
 echo "set default-bg \"$blackd\"" >> zathurarc
 echo "set default-fg \"$whited\"" >> zathurarc
 echo "set font \"FixedsysMono 10\"" >> zathurarc

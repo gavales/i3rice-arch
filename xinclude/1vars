@@ -1,5 +1,6 @@
 
-! >>>> VARIABLES
+!! VARIABLES
+
 #define fontname monaco
 !#define font TerminessTTFNerdFontMono
 #define fontsize 14

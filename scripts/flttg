@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+# CREATED: Mon 21 Jan 13:27:00 GMT 2019
+
+width=$(xdotool getactivewindow getwindowgeometry | sed -n "/Geometry/p" | sed "s/x/\ /g" | awk '{print $2}')
+height=$(xdotool getactivewindow getwindowgeometry | sed -n "/Geometry/p" | sed "s/x/\ /g" | awk '{print $3}')
+
+echo " $width $height"
