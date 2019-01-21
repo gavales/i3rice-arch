@@ -1,5 +1,3 @@
-rename They Were Eleven.mkv
-rename Demon City Shinjuku.mp4
 rename Afro Samurai [Director's Cut].mkv
 rename Afro Samurai Resurr.mkv
 rename Afro Samurai Resurrection.mkv
@@ -48,3 +46,5 @@ mkdir lectures
 rename i3getlwinid
 rename i3focuslast
 >>>>>>> origin/master
+shell bash %f
+shell grive -a
