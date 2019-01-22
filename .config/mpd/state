@@ -1,8 +1,8 @@
-sw_volume: 90
+sw_volume: 84
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
 state: stop
-current: 313
+current: 1304
 random: 1
 repeat: 1
 single: 0
@@ -1315,4 +1315,5 @@ playlist_begin
 1301:The Zombies/Begin Here/07 She's Not There.mp3
 1302:The Zombies/Odessey And Oracle/12 Time of the Season.mp3
 1303:00 Power of Your Love_14396641032.mp3
+1304:_MUSIK/You Can Call Me Al.mp3
 playlist_end

@@ -1,19 +1,20 @@
-#define cblkd       #150719
-#define cblkl       #a59e8c
-#define credd       #B28D6D
-#define credl       #B28D6D
-#define cgrnd       #D08F74
-#define cgrnl      #D08F74
-#define cylwd       #DF9D77
-#define cylwl      #DF9D77
-#define cblud       #7785A8
-#define cblul      #7785A8
-#define cgntd       #AAAFB1
-#define cgntl      #AAAFB1
-#define ccynd       #DDAE8A
-#define ccynl      #DDAE8A
-#define cwhtd       #ede3c8
-#define cwhtl      #ede3c8
+!duelist
+#define cblkd       #0C0917
+#define cblkl       #9da8a2
+#define credd       #41A4AB
+#define credl       #41A4AB
+#define cgrnd       #1AB3CD
+#define cgrnl      #1AB3CD
+#define cylwd       #25D5EA
+#define cylwl      #25D5EA
+#define cblud       #5BDBD9
+#define cblul      #5BDBD9
+#define cgntd       #B6DFA7
+#define cgntl      #B6DFA7
+#define ccynd       #9EE9E0
+#define ccynl      #9EE9E0
+#define cwhtd       #e1f1e8
+#define cwhtl      #e1f1e8
 
 !! VARIABLES
 

@@ -1,7 +1,3 @@
-mkdir TV
-mkdir Neon Genesis Evangelion
-mkdir Anime
-rename E12: She said, Don't make others suffer for your personal hatred.mkv
 rename ws1.png
 rename brogrammer
 mkdir colors
@@ -45,6 +41,10 @@ rename monaco.ttf
 rename Documents
 rename Uni
 shell rm -rf %s
-shell sudo rm -rf %s
 search monaco
 rename Music
+rename .Xresources
+mkdir _MUSIK
+shell sudo rm -rf
+shell sudo rm -rf %s
+search *_

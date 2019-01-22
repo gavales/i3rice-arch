@@ -189,7 +189,7 @@ set statusline+=\ %{ModeCurrent()}
 set statusline+=%#User2#
 set statusline+=\ %f
 set statusline+=\ 
-set statusline+=%#User4#
+set statusline+=%#Normal#
 set statusline+=\ %{ReadOnly()}\ %m\ %w\ 
 set statusline+=%=
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
