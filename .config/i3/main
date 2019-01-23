@@ -58,6 +58,7 @@ set $t ff
 
 set $term       urxvtc
 set $browser    google-chrome-beta
+#set $browser    vivaldi-stable
 set $brightinc  light -A 10
 set $brightdec  light -U 10
 
@@ -395,7 +396,7 @@ $fw [title="^localhost:8090$"]					$mvm2,$tf "mdpreview"
 
 $fw [class="Pamac-manager"]				 			$mvm3,$tf "software"
 $fw [class="Slack"]					 						$mvm3,$tf "slack"
-$fw [class="Vivaldi-stable"]						$mvm3,$tf "vivaldi"
+$fw [title="- Vivaldi$"]								$mvm3,$tf "vivaldi"
 
 $fw [instance="RSS"]										$tf "newsboat"
 $fw [title="^My Movies & TV"]						$tf "movies",$stm1
