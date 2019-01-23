@@ -58,6 +58,7 @@ set $t ff
 
 set $term       urxvtc
 set $browser    google-chrome-beta
+#set $browser    vivaldi-stable
 set $brightinc  light -A 10
 set $brightdec  light -U 10
 
@@ -139,10 +140,10 @@ $mod+o					resize grow width 10 px or 10 ppt
 $mod+Tab				focus right
 $mod+Shift+Tab	focus left
 $mod+a					focus parent
-$mod+Control+1	focus, floating disable, $mvm1
-$mod+Control+2	focus, floating disable, $mvm2
-$mod+Control+3	focus, floating disable, $mvm3
-$mod+Control+4	focus, floating disable, $mvm4
+$mod+Control+1	floating disable, $mvm1, [con_mark=$mk1] focus, focus right
+$mod+Control+2	floating disable, $mvm2, [con_mark=$mk2] focus, focus right
+$mod+Control+3	floating disable, $mvm3, [con_mark=$mk3] focus, focus right
+$mod+Control+4	floating disable, $mvm4, [con_mark=$mk4] focus, focus right
 
 # >>>> MOD1 BINDINGS
 # //// WORKFLOW
@@ -395,6 +396,7 @@ $fw [title="^localhost:8090$"]					$mvm2,$tf "mdpreview"
 
 $fw [class="Pamac-manager"]				 			$mvm3,$tf "software"
 $fw [class="Slack"]					 						$mvm3,$tf "slack"
+$fw [title="- Vivaldi$"]								$mvm3,$tf "vivaldi"
 
 $fw [instance="RSS"]										$tf "newsboat"
 $fw [title="^My Movies & TV"]						$tf "movies",$stm1

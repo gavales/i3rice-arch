@@ -1,48 +1,29 @@
-<<<<<<< HEAD
-#define cblkd       #181314
-#define cblkl       #9a8d8f
-#define credd       #6D6C91
-#define credl       #6D6C91
-#define cgrnd       #987696
-#define cgrnl      #987696
-#define cylwd       #CD7989
-#define cylwl      #CD7989
-#define cblud       #AF9095
-#define cblul      #AF9095
-#define cgntd       #AD9DAB
-#define cgntl      #AD9DAB
-#define ccynd       #B297A6
-#define ccynl      #B297A6
-#define cwhtd       #ddcacd
-#define cwhtl      #ddcacd
-=======
-!dracula
-! vim:syntax=xdefaults
-#define cblkd #282A36
-#define credl #FF5555
-#define cgrnl #50FA7B
-#define cylwl #F1FA8C
-#define cblul #BD93F9
-#define cgntl #FF79C6
-#define ccynl #8BE9FD
-#define cwhtl #BFBFBF
-#define cblkl #4D4D4D
-#define credd #FF6E67
-#define cgrnd #5AF78E
-#define cylwd #F4F99D
-#define cblud #CAA9FA
-#define cgntd #FF92D0
-#define ccynd #9AEDFE
-#define cwhtd #E6E6E6
->>>>>>> origin/master
+#define cblkd       #221926
+#define cblkl       #9ba9a5
+#define credd       #78E6F3
+#define credl       #78E6F3
+#define cgrnd       #C3ACB8
+#define cgrnl      #C3ACB8
+#define cylwd       #94D4EC
+#define cylwl      #94D4EC
+#define cblud       #8FEEF4
+#define cblul      #8FEEF4
+#define cgntd       #AFF0EF
+#define cgntl      #AFF0EF
+#define ccynd       #F2F8DB
+#define ccynl      #F2F8DB
+#define cwhtd       #def2ed
+#define cwhtl      #def2ed
 
-! >>>> VARIABLES
+!! VARIABLES
+
 #define fontname monaco
 !#define font TerminessTTFNerdFontMono
-#define fontsize 14
+#define fontsize 10
 #define fontsize2 12
 
-! >>>> COLORS
+!! COLORS
+
 *background:				cblkd
 *foreground:				cwhtl
 *fading:					30
@@ -77,7 +58,8 @@
 *color7:	cwhtd
 *color15:	cwhtl
 
-! >>>> ROFI
+!! ROFI
+
 rofi.width:                          580
 rofi.lines:                          15
 rofi.location:                       2
@@ -121,7 +103,8 @@ rofi.fuzzy:                          false
 rofi.separator-style:                solid
 rofi.markup-rows:                    false
 
-! >>>> Xft
+!! Xft
+
 Xft.dpi:		96
 Xft.antialias:	true
 Xft.hinting:	true
@@ -131,12 +114,14 @@ Xft.hintstyle:	hintslight
 Xft.lcdfilter:	lcddefault
 
 
-! >>>> Xcursor
+!! Xcursor
+
 Xcursor.theme: Bibata_Red
 Xcursor.size: 36
 
 
-! >>>> URXVT
+!! URXVT
+
 URxvt.font: xft:fontname:size=fontsize
 
 URxvt*fading: 10
@@ -148,7 +133,7 @@ URxvt*background: cblkd
 URxvt*foreground: cwhtl
 URxvt*saveLines: 5000
 URxvt*useColor:	true
-URxvt*internalBorder: 5
+URxvt*internalBorder: 0
 
 ! for 'fake' transparency (without Compton) uncomment the following three lines
 ! URxvt*inheritPixmap:            true
@@ -156,7 +141,8 @@ URxvt*internalBorder: 5
 ! URxvt*shading:                  138
 
 
-! >>>> URXVT EXTENSIONS
+!! URXVT EXTENSIONS
+
 URxvt*perl-ext-common: default,matcher,resize-font,config-reload
 !URxvt*perl-lib: /home/gavarch/.urxvt/ext
 URxvt*url-launcher:	/usr/bin/google-chrome-beta
