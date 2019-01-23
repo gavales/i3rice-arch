@@ -1,25 +1,25 @@
-#define cblkd       #221926
-#define cblkl       #9ba9a5
-#define credd       #78E6F3
-#define credl       #78E6F3
-#define cgrnd       #C3ACB8
-#define cgrnl      #C3ACB8
-#define cylwd       #94D4EC
-#define cylwl      #94D4EC
-#define cblud       #8FEEF4
-#define cblul      #8FEEF4
-#define cgntd       #AFF0EF
-#define cgntl      #AFF0EF
-#define ccynd       #F2F8DB
-#define ccynl      #F2F8DB
-#define cwhtd       #def2ed
-#define cwhtl      #def2ed
+#define cblkd       #0D121B
+#define cblkl       #92989b
+#define credd       #3A6785
+#define credl       #3A6785
+#define cgrnd       #637887
+#define cgrnl      #637887
+#define cylwd       #758A97
+#define cylwl      #758A97
+#define cblud       #7EAAC1
+#define cblul      #7EAAC1
+#define cgntd       #96A1A6
+#define cgntl      #96A1A6
+#define ccynd       #A6BAC3
+#define ccynl      #A6BAC3
+#define cwhtd       #d1dade
+#define cwhtl      #d1dade
 
 !! VARIABLES
 
 #define fontname monaco
 !#define font TerminessTTFNerdFontMono
-#define fontsize 10
+#define fontsize 14
 #define fontsize2 12
 
 !! COLORS
