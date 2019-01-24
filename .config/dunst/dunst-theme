@@ -1,5 +1,6 @@
 [frame]
 width = 1
+<<<<<<< HEAD
 color = "#0C1825"
 
 [urgency_low]
@@ -15,5 +16,22 @@ timeout = 3
 [urgency_critical]
 background = "#947164"
 foreground = "#0C1825"
+=======
+color = "#0D121B"
+
+[urgency_low]
+background = "#7EAAC1"
+foreground = "#0D121B"
+timeout = 3
+
+[urgency_normal]
+background = "#7EAAC1"
+foreground = "#0D121B"
+timeout = 3
+
+[urgency_critical]
+background = "#3A6785"
+foreground = "#0D121B"
+>>>>>>> origin/master
 timeout = 3
 
