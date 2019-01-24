@@ -1,9 +1,10 @@
 sw_volume: 84
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
-state: stop
-current: 1067
-random: 1
+state: pause
+current: 1356
+time: 29.106000
+random: 0
 repeat: 1
 single: 0
 consume: 0
@@ -1314,6 +1315,87 @@ playlist_begin
 1300:Ziggy Marley/00 Love is My Religion.mp3
 1301:The Zombies/Begin Here/07 She's Not There.mp3
 1302:The Zombies/Odessey And Oracle/12 Time of the Season.mp3
-1303:00 Power of Your Love_14396641032.mp3
-1304:_MUSIK/You Can Call Me Al.mp3
+1303:_MUSIK/You Can Call Me Al.mp3
+1304:_MUSIK/Old Pine.mp3
+1305:_MUSIK/Move Like You Want.mp3
+1306:_MUSIK/The Wolves.mp3
+1307:_MUSIK/Only Love.mp3
+1308:_MUSIK/Gracious.mp3
+1309:_MUSIK/Rapid Roy (The Stock Car Boy).mp3
+1310:_MUSIK/You Don't Mess Around With Jim.mp3
+1311:Jim Croce/Photographs & Memories_ His Gr/04 Rapid Roy (The Stock Car Boy).mp3
+1312:Jim Croce/Photographs & Memories_ His Gr/10 You Don't Mess Around with Jim.mp3
+1313:_MUSIK/I'll Have To Say I Love You In A Song.mp3
+1314:_MUSIK/Lover's Cross.mp3
+1315:_MUSIK/Photographs And Memories.mp3
+1316:Jim Croce/Time in a Bottle_Greatest Love/07 I'll Have to Say I Love You in.mp3
+1317:Jim Croce/Time in a Bottle_Greatest Love/08 Lover's Cross.mp3
+1318:Jim Croce/Time in a Bottle_Greatest Love/12 Photographs and Memories.mp3
+1319:_MUSIK/Operator (That's Not The Way It Feels).mp3
+1320:_MUSIK/One Less Set Of Footsteps.mp3
+1321:Jim Croce/Jim Croce/08 One Less Set of Footsteps.mp3
+1322:Jim Croce/The Original Albums…Plus/08 Time In A Bottle.mp3
+1323:_MUSIK/Diamonds.mp3
+1324:Jaco Pastorius/Twins Live In Japan 1982/01 Invitation (Live 1982) (Remast.mp3
+1325:Jaco Pastorius/Twins Live In Japan 1982/02 Soul Intro_The Chicken (Remast.mp3
+1326:Jaco Pastorius/Twins Live In Japan 1982/03 Continuum (Live in Japan 1982).mp3
+1327:Jaco Pastorius/Twins Live In Japan 1982/04 Liberty City (Live in Japan 19.mp3
+1328:Jaco Pastorius/Twins Live In Japan 1982/05 Three Views Of A Secret (Live.mp3
+1329:Jaco Pastorius/Twins Live In Japan 1982/06 Sophisticated Lady (Live in Ja.mp3
+1330:Jaco Pastorius/Twins Live In Japan 1982/07 Amerika (Live in Japan 1982).mp3
+1331:Jaco Pastorius/Twins Live In Japan 1982/08 Okonkole' Y Trompa (Live in Ja.mp3
+1332:Jaco Pastorius/Twins Live In Japan 1982/09 Reza_Giant Steps_Reza (Live in.mp3
+1333:Jaco Pastorius/Twins Live In Japan 1982/10 Elegant People (Live in Japan.mp3
+1334:Jaco Pastorius/Twins Live In Japan 1982/11 Twins (Live in Japan 1982).mp3
+1335:Jaco Pastorius/Twins Live In Japan 1982/12 Pac-Man Blues (Fannie Mae) _Li.mp3
+1336:Jaco Pastorius/Twins Live In Japan 1982/13 Eleven (Live in Japan 1982).mp3
+1337:Jaco Pastorius/Word Of Mouth/01 Crisis.mp3
+1338:Jaco Pastorius/Word Of Mouth/02 Three Views Of A Secret (Live.mp3
+1339:Jaco Pastorius/Word Of Mouth/03 Liberty City (feat_ Herbie Han.mp3
+1340:Jaco Pastorius/Word Of Mouth/04 Chromatic Fantasy.mp3
+1341:Jaco Pastorius/Word Of Mouth/05 Blackbird.mp3
+1342:Jaco Pastorius/Word Of Mouth/06 Word Of Mouth.mp3
+1343:Jaco Pastorius/Word Of Mouth/07 John And Mary.mp3
+1344:Jaco Pastorius/Jaco Pastorius/01 Donna Lee.mp3
+1345:Jaco Pastorius/Jaco Pastorius/02 Come On_ Come Over.mp3
+1346:Jaco Pastorius/Jaco Pastorius/03 Continuum.mp3
+1347:Jaco Pastorius/Jaco Pastorius/04 Kuru_Speak Like A Child.mp3
+1348:Jaco Pastorius/Jaco Pastorius/05 Portrait of Tracy.mp3
+1349:Jaco Pastorius/Jaco Pastorius/06 Opus Pocus.mp3
+1350:Jaco Pastorius/Jaco Pastorius/07 Okonkole y Trompa.mp3
+1351:Jaco Pastorius/Jaco Pastorius/08 (Used To Be A) Cha-Cha.mp3
+1352:Jaco Pastorius/Jaco Pastorius/09 Forgotten Love.mp3
+1353:Jaco Pastorius/Jaco Pastorius/10 (Used To Be A) Cha-Cha.mp3
+1354:Jaco Pastorius/Jaco Pastorius/11 6_4 Jam.mp3
+1355:Jaco Pastorius/Twins Live In Japan 1982/01 Invitation (Live 1982) (Remast.mp3
+1356:Jaco Pastorius/Twins Live In Japan 1982/02 Soul Intro_The Chicken (Remast.mp3
+1357:Jaco Pastorius/Twins Live In Japan 1982/03 Continuum (Live in Japan 1982).mp3
+1358:Jaco Pastorius/Twins Live In Japan 1982/04 Liberty City (Live in Japan 19.mp3
+1359:Jaco Pastorius/Twins Live In Japan 1982/05 Three Views Of A Secret (Live.mp3
+1360:Jaco Pastorius/Twins Live In Japan 1982/06 Sophisticated Lady (Live in Ja.mp3
+1361:Jaco Pastorius/Twins Live In Japan 1982/07 Amerika (Live in Japan 1982).mp3
+1362:Jaco Pastorius/Twins Live In Japan 1982/08 Okonkole' Y Trompa (Live in Ja.mp3
+1363:Jaco Pastorius/Twins Live In Japan 1982/09 Reza_Giant Steps_Reza (Live in.mp3
+1364:Jaco Pastorius/Twins Live In Japan 1982/10 Elegant People (Live in Japan.mp3
+1365:Jaco Pastorius/Twins Live In Japan 1982/11 Twins (Live in Japan 1982).mp3
+1366:Jaco Pastorius/Twins Live In Japan 1982/12 Pac-Man Blues (Fannie Mae) _Li.mp3
+1367:Jaco Pastorius/Twins Live In Japan 1982/13 Eleven (Live in Japan 1982).mp3
+1368:Jaco Pastorius/Word Of Mouth/01 Crisis.mp3
+1369:Jaco Pastorius/Word Of Mouth/02 Three Views Of A Secret (Live.mp3
+1370:Jaco Pastorius/Word Of Mouth/03 Liberty City (feat_ Herbie Han.mp3
+1371:Jaco Pastorius/Word Of Mouth/04 Chromatic Fantasy.mp3
+1372:Jaco Pastorius/Word Of Mouth/05 Blackbird.mp3
+1373:Jaco Pastorius/Word Of Mouth/06 Word Of Mouth.mp3
+1374:Jaco Pastorius/Word Of Mouth/07 John And Mary.mp3
+1375:Jaco Pastorius/Jaco Pastorius/01 Donna Lee.mp3
+1376:Jaco Pastorius/Jaco Pastorius/02 Come On_ Come Over.mp3
+1377:Jaco Pastorius/Jaco Pastorius/03 Continuum.mp3
+1378:Jaco Pastorius/Jaco Pastorius/04 Kuru_Speak Like A Child.mp3
+1379:Jaco Pastorius/Jaco Pastorius/05 Portrait of Tracy.mp3
+1380:Jaco Pastorius/Jaco Pastorius/06 Opus Pocus.mp3
+1381:Jaco Pastorius/Jaco Pastorius/07 Okonkole y Trompa.mp3
+1382:Jaco Pastorius/Jaco Pastorius/08 (Used To Be A) Cha-Cha.mp3
+1383:Jaco Pastorius/Jaco Pastorius/09 Forgotten Love.mp3
+1384:Jaco Pastorius/Jaco Pastorius/10 (Used To Be A) Cha-Cha.mp3
+1385:Jaco Pastorius/Jaco Pastorius/11 6_4 Jam.mp3
 playlist_end

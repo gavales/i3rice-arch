@@ -22,7 +22,7 @@ cd $HOME
 echo -e "${green}================================================"
 echo -e "${blue}= INSTALLING YOUR PROGRAMS ====================="
 echo -e "${green}================================================${normal}"
-sudo pacman -S xorg-server xorg-xinit i3-gaps i3status feh dunst rofi ranger w3m sxiv lxappearance ncurses fftw nautilus neomutt evince mupdf pinta redshift mplayer r tk gcc-fortran mpd mpc ncmpcpp newsboat transmission-cli opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-crossref pandoc-citeproc python-pygments python2-pygments biber rxvt-unicode libmpdclient yajl dialog wpa_supplicant wireless_tools networkmanager network-manager-applet texlive-most ntfs-3g lm_sensors sysstat polkit-gnome gnome-keyring acpi unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl dmenu compton xorg-xprop urxvt-perls trash-cli atom python-pywal vim-latexsuite calibre
+sudo pacman -S xorg-server xorg-xinit i3-gaps i3status feh dunst rofi ranger w3m sxiv lxappearance ncurses fftw nautilus neomutt evince mupdf pinta redshift mplayer r tk gcc-fortran mpd mpc ncmpcpp newsboat transmission-cli opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-crossref pandoc-citeproc python-pygments python2-pygments biber rxvt-unicode libmpdclient yajl dialog wpa_supplicant wireless_tools networkmanager network-manager-applet texlive-most ntfs-3g lm_sensors sysstat polkit-gnome gnome-keyring acpi unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl dmenu compton xorg-xprop urxvt-perls trash-cli atom python-pywal vim-latexsuite calibre surf streamlink
 sudo cpan AnyEvent Linux::FD common::sense
 echo -e "${green}================================================"
 echo -e "${blue}= NETWORK MANAGER STUFF ========================"
@@ -49,6 +49,7 @@ echo -e "${green}================================================${normal}"
 echo -e "${purple} > PAMAC <" && yaourt -S pamac-aur
 echo -e "${purple} > i3LOCK-COLOR <" && yaourt -S i3lock-color
 echo -e "${purple} > CHROME BETA <" && yaourt -S google-chrome-beta
+echo -e "${purple} > OOMOX <" && yaourt -S oomox
 echo -e "${purple} > CHROME REMOTE DESKTOP <" && yaourt -S chrome-remote-desktop
 echo -e "${purple} > SPOTIFY <" && yaourt -S spotify
 echo -e "${purple} > GRIVE <" && yaourt -S grive

@@ -1,8 +1,10 @@
 #!/bin/bash
 
-playing=$(mpc current)
+status=$(mpc current)
 
-if [ -z "$playing" ]
+playing=$(ncmpcpp --current-song '%20A - %20t')
+
+if [ -z "$status" ]
 then
 	:
 else
