@@ -1,9 +1,8 @@
 sw_volume: 88
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
-state: play
+state: stop
 current: 1338
-time: 4.223000
 random: 0
 repeat: 1
 single: 0
