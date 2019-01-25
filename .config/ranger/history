@@ -1,3 +1,8 @@
+mkdir
+mkdir Cassie Jaye
+rename Berserk: Egg of the King.mkv
+mkdir TV
+mkdir Neon Genesis Evangelion
 mkdir Anime
 rename E12: She said, Don't make others suffer for your personal hatred.mkv
 rename ws1.png
@@ -28,7 +33,6 @@ rename 1718_SOLN.pdf
 rename compton.conf_
 rename compton.conf
 shell wget https://raw.githubusercontent.com/budlabs/youtube/master/letslinux/010-012-polybar-setup/i3listen.py
-shell chmod +x %f
 rename 1516_SOLN.pdf
 rename 1617_DRAFT.pdf
 rename 1617_SOLNS.pdf
@@ -37,14 +41,10 @@ mkdir lectures
 rename i3getlwinid
 rename i3focuslast
 >>>>>>> origin/master
-shell bash %f
-shell grive -a
-rename monaco.ttf
-rename Documents
-rename Uni
-shell rm -rf %s
-shell sudo rm -rf %s
-search monaco
-rename Music
-rename .Xresources
-search corinthia
+mkdir VivaldiPatch
+touch custom.css
+search bart
+search atha
+
+shell cat mp* >> mpblk
+shell chmod +x %f

@@ -1,19 +1,19 @@
-#define cblkd       #1c312a
-#define cblkl       #8e9c9c
-#define credd       #64A59C
-#define credl       #64A59C
-#define cgrnd       #0F8FCA
-#define cgrnl      #0F8FCA
-#define cylwd       #64B7C8
-#define cylwl      #64B7C8
-#define cblud       #6FC8CA
-#define cblul      #6FC8CA
-#define cgntd       #8CB0A5
-#define cgntl      #8CB0A5
-#define ccynd       #91D2CF
-#define ccynl      #91D2CF
-#define cwhtd       #cce0df
-#define cwhtl      #cce0df
+#define cblkd       #201d1c
+#define cblkl       #8c9aa1
+#define credd       #B38852
+#define credl       #B38852
+#define cgrnd       #D39653
+#define cgrnl      #D39653
+#define cylwd       #4563A2
+#define cylwl      #4563A2
+#define cblud       #53A8BE
+#define cblul      #53A8BE
+#define cgntd       #53A6D9
+#define cgntl      #53A6D9
+#define ccynd       #9EB2CF
+#define ccynl      #9EB2CF
+#define cwhtd       #c8dce6
+#define cwhtl      #c8dce6
 
 !! VARIABLES
 
