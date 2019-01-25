@@ -1,10 +1,9 @@
 sw_volume: 88
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
-state: play
-current: 1304
-time: 4.132000
-random: 1
+state: stop
+current: 1338
+random: 0
 repeat: 1
 single: 0
 consume: 0
@@ -1347,4 +1346,35 @@ playlist_begin
 1332:Jaco Pastorius/Jaco Pastorius/09 Forgotten Love.mp3
 1333:Jaco Pastorius/Jaco Pastorius/10 (Used To Be A) Cha-Cha.mp3
 1334:Jaco Pastorius/Jaco Pastorius/11 6_4 Jam.mp3
+1335:Jaco Pastorius/Twins Live In Japan 1982/01 Invitation (Live 1982) (Remast.mp3
+1336:Jaco Pastorius/Twins Live In Japan 1982/02 Soul Intro_The Chicken (Remast.mp3
+1337:Jaco Pastorius/Twins Live In Japan 1982/03 Continuum (Live in Japan 1982).mp3
+1338:Jaco Pastorius/Twins Live In Japan 1982/04 Liberty City (Live in Japan 19.mp3
+1339:Jaco Pastorius/Twins Live In Japan 1982/05 Three Views Of A Secret (Live.mp3
+1340:Jaco Pastorius/Twins Live In Japan 1982/06 Sophisticated Lady (Live in Ja.mp3
+1341:Jaco Pastorius/Twins Live In Japan 1982/07 Amerika (Live in Japan 1982).mp3
+1342:Jaco Pastorius/Twins Live In Japan 1982/08 Okonkole' Y Trompa (Live in Ja.mp3
+1343:Jaco Pastorius/Twins Live In Japan 1982/09 Reza_Giant Steps_Reza (Live in.mp3
+1344:Jaco Pastorius/Twins Live In Japan 1982/10 Elegant People (Live in Japan.mp3
+1345:Jaco Pastorius/Twins Live In Japan 1982/11 Twins (Live in Japan 1982).mp3
+1346:Jaco Pastorius/Twins Live In Japan 1982/12 Pac-Man Blues (Fannie Mae) _Li.mp3
+1347:Jaco Pastorius/Twins Live In Japan 1982/13 Eleven (Live in Japan 1982).mp3
+1348:Jaco Pastorius/Word Of Mouth/01 Crisis.mp3
+1349:Jaco Pastorius/Word Of Mouth/02 Three Views Of A Secret (Live.mp3
+1350:Jaco Pastorius/Word Of Mouth/03 Liberty City (feat_ Herbie Han.mp3
+1351:Jaco Pastorius/Word Of Mouth/04 Chromatic Fantasy.mp3
+1352:Jaco Pastorius/Word Of Mouth/05 Blackbird.mp3
+1353:Jaco Pastorius/Word Of Mouth/06 Word Of Mouth.mp3
+1354:Jaco Pastorius/Word Of Mouth/07 John And Mary.mp3
+1355:Jaco Pastorius/Jaco Pastorius/01 Donna Lee.mp3
+1356:Jaco Pastorius/Jaco Pastorius/02 Come On_ Come Over.mp3
+1357:Jaco Pastorius/Jaco Pastorius/03 Continuum.mp3
+1358:Jaco Pastorius/Jaco Pastorius/04 Kuru_Speak Like A Child.mp3
+1359:Jaco Pastorius/Jaco Pastorius/05 Portrait of Tracy.mp3
+1360:Jaco Pastorius/Jaco Pastorius/06 Opus Pocus.mp3
+1361:Jaco Pastorius/Jaco Pastorius/07 Okonkole y Trompa.mp3
+1362:Jaco Pastorius/Jaco Pastorius/08 (Used To Be A) Cha-Cha.mp3
+1363:Jaco Pastorius/Jaco Pastorius/09 Forgotten Love.mp3
+1364:Jaco Pastorius/Jaco Pastorius/10 (Used To Be A) Cha-Cha.mp3
+1365:Jaco Pastorius/Jaco Pastorius/11 6_4 Jam.mp3
 playlist_end
