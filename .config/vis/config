@@ -10,7 +10,7 @@ audio.pulse.source=0
 
 audio.stereo.enabled=true
 
-visualizer.rotation.secs=30
+#visualizer.rotation.secs=30
 
 #audio.sampling.frequency=44100
 #audio.low.cutoff.frequency=22050
@@ -51,6 +51,6 @@ visualizer.ellipse.radius=1
 
 #visualizer.lorenz.character=🌑
 
-#colors.override.terminal=false
+colors.override.terminal=false
 
 colors.scheme=term

@@ -332,7 +332,8 @@ $win+o						$exn "$brightinc; bash ~/$scripts/notify_brightness"
 
 $win+r						$lch '$term -name RTV -e rtv' $mk2
 
-$win+s						$exn bash $home/$scripts/i3-sticky-toggle
+$win+s						$lch slack $mk3
+$win+Shift+s			$exn bash $home/$scripts/i3-sticky-toggle
 
 $win+t						$exn compton
 $win+Shift+t			$exn pkill compton
@@ -423,9 +424,9 @@ $fw [title="_popout="]									$mvm2,$tf "ytchat"
 $fw [title="^localhost:8090$"]					$mvm2,$tf "mdpreview"
 
 $fw [class="Pamac-manager"]				 			$mvm3,$tf "software"
-$fw [class="Slack"]					 						$mvm3,$tf "slack"
 $fw [title="- Vivaldi$"]								$mvm3,$tf "vivaldi"
 
+$fw [class="Slack"]					 						$tf "slack"
 $fw [instance="RSS"]										$tf "newsboat"
 $fw [title="^My Movies & TV"]						$tf "movies",$stm1
 $fw [title="- Watch Series$"]						$tf "watch-series",$stm1

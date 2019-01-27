@@ -7,7 +7,7 @@ mpvtitle="$(xdotool getwindowname $(xdotool search --class mpv))"
 blocksDir="$HOME/scripts/blocks"
 
 if [[ -n $mpv ]]; then
-	echo "<span face='Font Awesome 5 Free'>&#xf03d;</span> ${mpvtitle:0:-6}"
+	echo "<span face='Font Awesome 5 Free'>&#xf03d;</span> ${mpvtitle%.*}"
 elif [[ -n $mpris ]]; then
 	bash $blocksDir/mpgui
 else

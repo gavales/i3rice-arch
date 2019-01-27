@@ -1,3 +1,4 @@
+shell transmission-cli -n %f
 <<<<<<< HEAD
 rename 2019_01_08.md_
 rename 2019_01_08.md
@@ -35,6 +36,7 @@ search bart
 search atha
 
 shell cat mp* >> mpblk
+shell chmod +x %f
 shell bash ~/scripts/mppipe %f
 rename Cybercassette - Prologue.mp4
 rename Bleed.mp4
@@ -46,5 +48,3 @@ rename DeusExPanceaBossMix.mp4
 scout -ftsea 
 rename Ghibli.mp4
 rename GhibliJazz.mp4
-rename media
-shell chmod +x %f
