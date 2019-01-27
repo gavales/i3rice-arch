@@ -81,7 +81,7 @@ client.placeholder			$blk $blk $wht $blk $blk
 
 # >>>> BAR
 bar {
-	i3bar_command i3bar -t
+	i3bar_command i3bar
 	status_command i3blocks -c ~/$scripts/i3blocks.conf
 #	status_command i3blocks
 #	position top
@@ -192,9 +192,11 @@ $mod+w					$lch '$chrm --new-window \
 $mod+r					$exn $term -name RSS -e newsboat
 
 # GUI PLAYER CONTROLS
-$mod+p						$exn playerctl play-pause
-$mod+bracketright	$exn playerctl next
-$mod+bracketleft	$exn playerctl previous
+$mod+p						$exn bash ~/$scripts/i3media togg
+$mod+bracketright	$exn bash ~/$scripts/i3media next
+$mod+bracketleft	$exn bash ~/$scripts/i3media prev
+$mod+backslash		$exn mpc stop
+
 
 # //// LAYOUT
 
@@ -286,13 +288,6 @@ $win+2						$lch '$term -name i3VARS -e vim ~/.config/i3/vars' $mk3
 $win+3						$lch '$term -name VIMRC -e vim ~/.vimrc' $mk3
 $win+4						$lch '$term -name RCCONF -e vim ~/.config/ranger/rc.conf' $mk3
 $win+5						$lch '$term -name i3BLOCKS -e vim ~/scripts/mkblocksconf' $mk3
-
-# //// MPD CONTROLS
-
-$win+p						$exn mpc toggle
-$win+bracketright	$exn mpc next
-$win+bracketleft	$exn mpc prev
-$win+backslash		$exn mpc stop
 
 # //// MULTI-MONITOR
 

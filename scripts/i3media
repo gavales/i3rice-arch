@@ -1,0 +1,33 @@
+#!/bin/bash
+
+command="$1"
+
+mpris=$(pidof spotify)
+mpv=$(pidof mpv)
+mpvtitle="$(xdotool getwindowname $(xdotool search --class mpv))"
+
+blocksDir="$HOME/scripts/blocks"
+
+if [[ -n $mpv ]]; then
+	togg="echo \"cycle pause\" > mp_fifo"
+	next="echo \"seek 10\" > mp_fifo"
+	prev="echo \"seek -10\" > mp_fifo"
+elif [[ -n $mpris ]]; then
+	togg="playerctl play-pause"
+	next="playerctl next"
+	prev="playerctl previous"
+else
+	togg="mpc toggle"
+	next="mpc next"
+	prev="mpc prev"
+fi
+
+if [[ $command == "togg" ]]; then
+	$togg
+elif [[ $command == "next" ]]; then
+	$next
+elif [[ $command == "prev" ]]; then
+	$prev
+else
+	:
+fi

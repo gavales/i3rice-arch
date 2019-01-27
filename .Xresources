@@ -1,19 +1,24 @@
-#define cblkd       #201d1c
-#define cblkl       #8c9aa1
-#define credd       #B38852
-#define credl       #B38852
-#define cgrnd       #D39653
-#define cgrnl      #D39653
-#define cylwd       #4563A2
-#define cylwl      #4563A2
-#define cblud       #53A8BE
-#define cblul      #53A8BE
-#define cgntd       #53A6D9
-#define cgntl      #53A6D9
-#define ccynd       #9EB2CF
-#define ccynl      #9EB2CF
-#define cwhtd       #c8dce6
-#define cwhtl      #c8dce6
+!andalusia
+! vim:syntax=xdefaults
+#515151 Selection
+#999999 Comment
+#f99157 Orange
+#define cblkd #2d2d2d
+#define credd #f2777a
+#define cgrnd #99cc99
+#define cylwd #ffcc66
+#define cblud #6699cc
+#define cgntd #cc99cc
+#define ccynd #66cccc
+#define cwhtd #cccccc
+#define cblkl #666666
+#define credl #f2777a
+#define cgrnl #99cc99
+#define cylwl #ffcc66
+#define cblul #6699cc
+#define cgntl #cc99cc
+#define ccynl #66cccc
+#define cwhtl #999999
 
 !! VARIABLES
 
@@ -135,10 +140,10 @@ URxvt*saveLines: 5000
 URxvt*useColor:	true
 URxvt*internalBorder: 0
 
-! for 'fake' transparency (without Compton) uncomment the following three lines
-! URxvt*inheritPixmap:            true
-! URxvt*transparent:              true
-! URxvt*shading:                  138
+!! for 'fake' transparency (without Compton) uncomment the following three lines
+!URxvt*inheritPixmap: true
+!URxvt*transparent: true
+!URxvt*shading: 138
 
 
 !! URXVT EXTENSIONS

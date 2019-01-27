@@ -1,0 +1,30 @@
+#!/bin/bash
+
+mpris=$(pidof spotify)
+mpv=$(pidof mpv)
+mpvtitle="$(xdotool getwindowname $(xdotool search --class mpv))"
+
+blocksDir="$HOME/scripts/blocks"
+
+if [[ -n $mpv ]]; then
+	echo "<span face='Font Awesome 5 Free'>&#xf03d;</span> ${mpvtitle:0:-6}"
+	b1="echo \"cycle pause\" > mp_fifo"
+	b4="echo \"seek 10\" > mp_fifo"
+	b5="echo \"seek -10\" > mp_fifo"
+elif [[ -n $mpris ]]; then
+	bash $blocksDir/mpgui
+	b1="playerctl play-pause"
+	b4="playerctl next"
+	b5="playerctl previous"
+else
+	bash $blocksDir/mpcblk
+	b1="mpc toggle"
+	b4="mpc next"
+	b5="mpc prev"
+fi
+
+case $BLOCK_BUTTON in
+  5) $b5 ;;
+  1) $b1 ;;
+  4) $b4 ;;
+esac

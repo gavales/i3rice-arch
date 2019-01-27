@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+# CREATED: Sat 26 Jan 21:59:12 GMT 2019
+
+vid="$1"
+open="$(pidof mpv)"
+fifo="$HOME/mp_fifo"
+
+if [[ -n $open ]]; then
+	echo "loadfile \"$vid\"" append-play > "$fifo"
+else
+	rm "$fifo"
+	mkfifo "$fifo"
+	mpv --input-file="$fifo" "$vid" &>/dev/null &
+fi

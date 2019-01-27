@@ -4,15 +4,14 @@ status=$(mpc current)
 
 playing=$(ncmpcpp --current-song '%20A - %20t')
 
-if [ -z "$status" ]
-then
-	:
+if [[ -z "$status" ]]; then
+	echo "<span face='Font Awesome 5 Free'>&#xf001;</span> ${playing}"
 else
 	echo "<span face='Font Awesome 5 Free'>&#xf001;</span> ${playing}"
 fi
 
-case $BLOCK_BUTTON in
-  5) mpc prev ;;
-  1) mpc toggle ;;
-  4) mpc next ;;
-esac
+#case $BLOCK_BUTTON in
+#  5) mpc prev ;;
+#  1) mpc toggle ;;
+#  4) mpc next ;;
+#esac

@@ -33,8 +33,8 @@ else
 	echo "${playing} <span face='Font Awesome 5 Free'>&#xf144;</span>"
 fi
 
-case $BLOCK_BUTTON in
-  5) playerctl previous ;;
-  1) playerctl play-pause ;;
-  4) playerctl next ;;
-esac
+#case $BLOCK_BUTTON in
+#  5) playerctl previous ;;
+#  1) playerctl play-pause ;;
+#  4) playerctl next ;;
+#esac
