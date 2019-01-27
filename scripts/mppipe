@@ -7,10 +7,20 @@ vid="$1"
 open="$(pidof mpv)"
 fifo="$HOME/mp_fifo"
 
-if [[ -n $open ]]; then
-	echo "loadfile \"$vid\"" append-play > "$fifo"
+if [[ ${vid} =~ 'youtube.com' ]]; then
+	if [[ -n ${open} ]]; then
+		echo "loadfile \"${vid}\"" append-play > "${fifo}"
+	else
+		rm "${fifo}"
+		mkfifo "${fifo}"
+		mpv --geometry=35%-10-10 --ytdl-format=bestvideo+bestaudio --input-file="${fifo}" "${vid}" &>/dev/null &
+	fi
 else
-	rm "$fifo"
-	mkfifo "$fifo"
-	mpv --input-file="$fifo" "$vid" &>/dev/null &
+	if [[ -n ${open} ]]; then
+		echo "loadfile \"${vid}\"" append-play > "${fifo}"
+	else
+		rm "${fifo}"
+		mkfifo "${fifo}"
+		mpv --input-file="${fifo}" "${vid}" &>/dev/null &
+	fi
 fi

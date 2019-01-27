@@ -33,7 +33,7 @@ echo -e "markup=pango\n" >> i3blocks.conf
 # >>>> media
 echo "[media]" >> i3blocks.conf
 echo "interval=5" >> i3blocks.conf
-echo "color=$green" >> i3blocks.conf
+echo "color=$blackl" >> i3blocks.conf
 echo -e "full_text=\n" >> i3blocks.conf
 
 echo -e "[separator]\n" >> i3blocks.conf

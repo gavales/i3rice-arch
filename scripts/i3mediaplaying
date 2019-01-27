@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+# CREATED: Sun 27 Jan 13:52:24 GMT 2019
+
+mpris=$(pidof spotify)
+mpv=$(pidof mpv)
+
+if [[ -n $mpv ]]; then
+	echo mpv
+elif [[ -n $mpris ]]; then
+	echo spotify
+else
+	echo mpd
+fi

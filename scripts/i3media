@@ -1,33 +1,26 @@
 #!/bin/bash
 
-command="$1"
+player=$(bash $HOME/scripts/i3mediaplaying)
 
-mpris=$(pidof spotify)
-mpv=$(pidof mpv)
-mpvtitle="$(xdotool getwindowname $(xdotool search --class mpv))"
-
-blocksDir="$HOME/scripts/blocks"
-
-if [[ -n $mpv ]]; then
-	togg="echo \"cycle pause\" > mp_fifo"
-	next="echo \"seek 10\" > mp_fifo"
-	prev="echo \"seek -10\" > mp_fifo"
-elif [[ -n $mpris ]]; then
-	togg="playerctl play-pause"
-	next="playerctl next"
-	prev="playerctl previous"
-else
-	togg="mpc toggle"
-	next="mpc next"
-	prev="mpc prev"
-fi
-
-if [[ $command == "togg" ]]; then
-	$togg
-elif [[ $command == "next" ]]; then
-	$next
-elif [[ $command == "prev" ]]; then
-	$prev
-else
-	:
-fi
+case $1 in
+	togg)
+	[[ $player == "mpv" ]] && echo "cycle pause" > $HOME/mp_fifo
+	[[ $player == "spotify" ]] && playerctl play-pause
+	[[ $player == "mpd" ]] && mpc toggle
+	;;
+	next)
+	[[ $player == "mpv" ]] && echo "seek 10" > $HOME/mp_fifo
+	[[ $player == "spotify" ]] && playerctl next
+	[[ $player == "mpd" ]] && mpc next
+	;;
+	prev)
+	[[ $player == "mpv" ]] && echo "seek -10" > $HOME/mp_fifo
+	[[ $player == "spotify" ]] && playerctl next
+	[[ $player == "mpd" ]] && mpc prev
+	;;
+	stop)
+	[[ $player == "mpv" ]] && kill $(pidof mpv)
+	[[ $player == "spotify" ]] && kill $(pidof spotify)
+	[[ $player == "mpd" ]] && mpc stop
+	;;
+esac

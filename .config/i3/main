@@ -104,217 +104,250 @@ bar {
 	}
 }
 
-# >>>> MOD1 IMPORTANT
-# //// MAIN
-
-$mod+Shift+r		restart
-$mod+Shift+c		$exn "bash $home/$scripts/xtheme; \
-									bash $home/$scripts/reloadconfs"
-$mod+t					$exn "bash $home/$scripts/mkwalrando; \
-									bash $home/$scripts/reloadconfs"
-$mod+Shift+q		kill
-$wlw+button2		kill
-$mod+Shift+b		bar mode toggle
-$mod+semicolon	$exn redshift -P -O 3700
-$mod+apostrophe $exn redshift -x
-bindsym Print	 	$exn bash ~/$scripts/screenshot
-$mod+Shift+p		$exn bash ~/$scripts/screenshot
-$mod+d					$exn rofi -show drun
-$mod+Shift+d		$exn dmenu_run -fn "$font3:size=$fonts" -nb \
-									"$blk" -nf "$wht" -sf "$blk" -sb "$blu"
-
-# //// FOCUS/MOVE/RESIZE
-
-$mod+h					$exn bash $home/$scripts/i3viswiz left
-$mod+j					$exn bash $home/$scripts/i3viswiz down
-$mod+k					$exn bash $home/$scripts/i3viswiz up
-$mod+l					$exn bash $home/$scripts/i3viswiz right
-$mod+Shift+h		$exn bash $home/$scripts/i3move left
-$mod+Shift+j		$exn bash $home/$scripts/i3move down
-$mod+Shift+k		$exn bash $home/$scripts/i3move up
-$mod+Shift+l		$exn bash $home/$scripts/i3move right
-$mod+y					resize shrink width 10 px or 10 ppt
-$mod+i					resize grow height 10 px or 10 ppt
-$mod+u					resize shrink height 10 px or 10 ppt
-$mod+o					resize grow width 10 px or 10 ppt
-$mod+Tab				focus right
-$mod+Shift+Tab	focus left
-$mod+a					focus parent
-$mod+Control+1	floating disable, $mvm1, [con_mark=$mk1] focus, focus right
-$mod+Control+2	floating disable, $mvm2, [con_mark=$mk2] focus, focus right
-$mod+Control+3	floating disable, $mvm3, [con_mark=$mk3] focus, focus right
-$mod+Control+4	floating disable, $mvm4, [con_mark=$mk4] focus, focus right
-
 # >>>> MOD1 BINDINGS
-# //// WORKFLOW
+
+floating_modifier	$mdi
+
+$mod+1						workspace $ws1
+$mod+Shift+1			move container to workspace $ws1; workspace $ws1
+$mod+Ctrl+1				floating disable, $mvm1, [con_mark=$mk1] focus, focus right
+
+$mod+2						workspace $ws2
+$mod+Shift+2			move container to workspace $ws2; workspace $ws2
+$mod+Ctrl+2				floating disable, $mvm2, [con_mark=$mk2] focus, focus right
+
+$mod+3						workspace $ws3
+$mod+Shift+3			move container to workspace $ws3; workspace $ws3
+$mod+Ctrl+3				floating disable, $mvm3, [con_mark=$mk3] focus, focus right
+
+$mod+4						workspace $ws4
+$mod+Shift+4			move container to workspace $ws4; workspace $ws4
+$mod+Ctrl+4				floating disable, $mvm4, [con_mark=$mk4] focus, focus right
+
+$mod+5						workspace $ws5
+$mod+Shift+5			move container to workspace $ws5; workspace $ws5
+
+$mod+6						workspace $ws6
+$mod+Shift+6			move container to workspace $ws6; workspace $ws6
+
+$mod+7						workspace $ws7
+$mod+Shift+7			move container to workspace $ws7; workspace $ws7
+
+$mod+8						workspace $ws8
+$mod+Shift+8			move container to workspace $ws8; workspace $ws8
+
+$mod+9						workspace $ws9
+$mod+Shift+9			move container to workspace $ws9; workspace $ws9
+
+$mod+0						workspace $ws10
+$mod+Shift+0			move container to workspace $ws10; workspace $ws10
 
 $mod+Return				$exn $term -name TERMINAL
 $mod+Shift+Return	$exn $term -name FILES -e ranger
-$mod+f						$lch '$term -name MEDIA -e ranger' $mk2
-$mod+b						$lch '$term -name BIB -e vim $home/Drive/global.bib' $mk2
-$mod+c						$exn $chrm
-$mod+q						$exn $term -name CALC -e R
-$mod+Shift+u			$lch '$chrm --new-window \
-									--app=https://outlook.office365.com/owa/?realm=soton.ac.uk' \
-									$mk3
-$mod+Shift+g			$lch '$term -name GRIVE -e bash ~/$scripts/grivesync' $mk2
+
+$mod+a						focus parent
 $mod+Shift+a			$lch '$chrm --new-window \
-									--app=https://www.funimation.com/' \
-									$mk1
+										--app=https://www.funimation.com/' \
+										$mk1
 
-# GOOGLE DOCs
-$mod+Ctrl+q		$exn $chrm --new-window \
-								--app=https://docs.google.com/document/u/0/
-$mod+Ctrl+w		$exn $chrm --new-window \
-								--app=https://docs.google.com/spreadsheets/u/0/
-$mod+Ctrl+r		$exn $chrm --new-window \
-								--app=https://docs.google.com/presentation/u/0/
+$mod+b						$lch '$term -name BIB -e vim $home/Drive/global.bib' $mk2
+$mod+Shift+b			bar mode toggle
 
-# //// MEDIA
+$mod+c						$exn $chrm
+$mod+Shift+c			$exn "bash $home/$scripts/xtheme; \
+										bash $home/$scripts/reloadconfs"
 
-$mod+Shift+s		$exn spotify
-$mod+s					$lch '$term -name MUSIC -e ncmpcpp' $mk1
-$mod+Shift+v		$lch 'projectM-pulseaudio' $mk1
-$mod+v					$lch '$term -name VIS -e vis' $mk1
-$mod+Shift+n		$lch '$chrm --new-window \
-									--app=https://www.amazon.co.uk/Amazon-Video/b/?node=3010085031&ref=atv_surl_aiv' \
-									$mk1
-$mod+n					$lch '$chrm --new-window \
-									--app=https://www.netflix.com/' $mk1
-$mod+m					$lch '$chrm --new-window \
-									--app=https://play.google.com/movies/' $mk1
-$mod+Shift+y		$lch '$chrm --new-window \
-									--app=https://www.youtube.com/' $mk1
-$mod+Shift+i		$lch '$chrm --new-window \
-									--app=https://www.bbc.co.uk/iplayer/' $mk1
-$mod+w					$lch '$chrm --new-window \
-									--app=https://ww2.watch-series.co/' $mk1
-$mod+r					$exn $term -name RSS -e newsboat
+$mod+d						$exn rofi -show drun
+$mod+Shift+d			$exn dmenu_run -fn "$font3:size=$fonts" -nb \
+										"$blk" -nf "$wht" -sf "$blk" -sb "$blu"
 
-# GUI PLAYER CONTROLS
-$mod+p						$exn bash ~/$scripts/i3media togg
-$mod+bracketright	$exn bash ~/$scripts/i3media next
-$mod+bracketleft	$exn bash ~/$scripts/i3media prev
-$mod+backslash		$exn mpc stop
+$mod+e						layout toggle tabbed split
 
-
-# //// LAYOUT
+$mod+f						$lch '$term -name MEDIA -e ranger' $mk2
+$mod+Shift+f			fullscreen toggle
 
 $mod+g						split toggle
-$mod+e						layout toggle tabbed split
-$mod+Shift+f			fullscreen toggle
-floating_modifier	$mdi
-$mod+Shift+space	floating toggle
-$mod+space				focus mode_toggle
+$mod+Shift+g			$lch '$term -name GRIVE -e bash ~/$scripts/grivesync' $mk2
+
+$mod+i						resize grow height 10 px or 10 ppt
+$mod+Shift+i			$lch '$chrm --new-window \
+										--app=https://www.bbc.co.uk/iplayer/' $mk1
+$mod+Ctrl+i				gaps inner current plus 5; gaps outer current plus 10
+
+$mod+h						$exn bash $home/$scripts/i3viswiz left
+$mod+Shift+h			$exn bash $home/$scripts/i3move left
+
+$mod+j						$exn bash $home/$scripts/i3viswiz down
+$mod+Shift+j			$exn bash $home/$scripts/i3move down
+
+$mod+k						$exn bash $home/$scripts/i3viswiz up
+$mod+Shift+k			$exn bash $home/$scripts/i3move up
+
+$mod+l						$exn bash $home/$scripts/i3viswiz right
+$mod+Shift+l			$exn bash $home/$scripts/i3move right
+
+$mod+m						$lch '$chrm --new-window \
+										--app=https://play.google.com/movies/' $mk1
+
+$mod+n						$lch '$chrm --new-window \
+										--app=https://www.netflix.com/' $mk1
+$mod+Shift+n			$lch '$chrm --new-window \
+										--app=https://www.amazon.co.uk/Amazon-Video/b/?node=3010085031&ref=atv_surl_aiv' \
+										$mk1
+
+$mod+o						resize grow width 10 px or 10 ppt
+$mod+Ctrl+o				gaps inner current set 10; gaps outer current set 20
+
+$mod+p						$exn bash ~/$scripts/i3media togg
+$mod+Shift+p			$exn bash ~/$scripts/screenshot
+
+$mod+q						$exn $term -name CALC -e R
+$mod+Shift+q			kill
+$mod+Ctrl+q				$exn $chrm --new-window \
+										--app=https://docs.google.com/document/u/0/
+
+$mod+r						$exn $term -name RSS -e newsboat
+$mod+Shift+r			restart
+$mod+Ctrl+r				$exn $chrm --new-window \
+										--app=https://docs.google.com/presentation/u/0/
+
+$mod+s						$lch '$term -name MUSIC -e ncmpcpp' $mk1
+$mod+Shift+s			$exn spotify
 $mod+Ctrl+s				sticky toggle
-$mod+Shift+minus	move scratchpad
+
+$mod+t						$exn "bash $home/$scripts/mkwalrando; \
+										bash $home/$scripts/reloadconfs"
+
+$mod+u						resize shrink height 10 px or 10 ppt
+$mod+Shift+u				$lch '$chrm --new-window \
+										--app=https://outlook.office365.com/owa/?realm=soton.ac.uk' \
+										$mk3
+$mod+Ctrl+u				gaps inner current minus 5; gaps outer current minus 10
+
+$mod+v						$lch '$term -name VIS -e vis' $mk1
+$mod+Shift+v			$lch 'projectM-pulseaudio' $mk1
+
+$mod+w						$lch '$chrm --new-window \
+										--app=https://ww2.watch-series.co/' $mk1
+$mod+Ctrl+w				$exn $chrm --new-window \
+										--app=https://docs.google.com/spreadsheets/u/0/
+
+$mod+y						resize shrink width 10 px or 10 ppt
+$mod+Shift+y			$lch '$chrm --new-window \
+										--app=https://www.youtube.com/' $mk1
+$mod+Ctrl+y				gaps inner current set 0; gaps outer current set 0
+
+$mod+space				focus mode_toggle
+$mod+Shift+space	floating toggle
+
 $mod+minus				scratchpad show
+$mod+Shift+minus	move scratchpad
 
-# //// WORKSPACE
+$mod+Ctrl+Right		workspace next
 
-$mod+Ctrl+Right	workspace next
-$mod+Ctrl+Left	workspace prev
+$mod+Ctrl+Left		workspace prev
 
-# SWITCH WORKSPACE
-$mod+1	workspace $ws1
-$mod+2	workspace $ws2
-$mod+3	workspace $ws3
-$mod+4	workspace $ws4
-$mod+5	workspace $ws5
-$mod+6	workspace $ws6
-$mod+7	workspace $ws7
-$mod+8	workspace $ws8
-$mod+9	workspace $ws9
-$mod+0	workspace $ws10
+$mod+bracketright	$exn bash ~/$scripts/i3media next
 
-# MOVE TO WORKSPACE WITH FOCUSSED
-$mod+Shift+1	move container to workspace $ws1; workspace $ws1
-$mod+Shift+2	move container to workspace $ws2; workspace $ws2
-$mod+Shift+3	move container to workspace $ws3; workspace $ws3
-$mod+Shift+4	move container to workspace $ws4; workspace $ws4
-$mod+Shift+5	move container to workspace $ws5; workspace $ws5
-$mod+Shift+6	move container to workspace $ws6; workspace $ws6
-$mod+Shift+7	move container to workspace $ws7; workspace $ws7
-$mod+Shift+8	move container to workspace $ws8; workspace $ws8
-$mod+Shift+9	move container to workspace $ws9; workspace $ws9
-$mod+Shift+0	move container to workspace $ws10; workspace $ws10
+$mod+bracketleft	$exn bash ~/$scripts/i3media prev
 
-# //// GAPS
+$mod+backslash		$exn bash ~/$scripts/i3media stop
 
-$mod+Ctrl+y		gaps inner current set 0; gaps outer current set 0
-$mod+Ctrl+o		gaps inner current set 10; gaps outer current set 20
-$mod+Ctrl+u		gaps inner current minus 5; gaps outer current minus 10
-$mod+Ctrl+i		gaps inner current plus 5; gaps outer current plus 10
+$wlw+button2			kill
 
-# //// SHUTDOWN MODE
+$mod+semicolon		$exn redshift -P -O 3700
 
-$mod+Escape	mode "SHUTDOWN"
+$mod+apostrophe		$exn redshift -x
+
+bindsym Print	 		$exn bash ~/$scripts/screenshot
+
+$mod+Tab					focus right
+$mod+Shift+Tab		focus left
+
+$mod+Escape				mode "SHUTDOWN"
+
 mode "SHUTDOWN" {
-	bindsym l $exn i3exit lock, mode "default"
-	bindsym s $exn i3exit suspend, mode "default"
-	bindsym u $exn i3exit switch_user, mode "default"
-	bindsym e $exn i3exit logout, mode "default"
-	bindsym h $exn i3exit hibernate, mode "default"
-	bindsym r $exn i3exit reboot, mode "default"
-	bindsym x $exn i3exit shutdown, mode "default"
+	bindsym l				$exn i3exit lock, mode "default"
+	bindsym s				$exn i3exit suspend, mode "default"
+	bindsym u				$exn i3exit switch_user, mode "default"
+	bindsym e				$exn i3exit logout, mode "default"
+	bindsym h				$exn i3exit hibernate, mode "default"
+	bindsym r				$exn i3exit reboot, mode "default"
+	bindsym x				$exn i3exit shutdown, mode "default"
 
 	#exit system mode: "Enter" or "Escape"
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
+	bindsym					Return mode "default"
+	bindsym					Escape mode "default"
 }
 
 # >>>> MOD4 BINDINGS
-# //// MAIN
-$win+Shift+c			$exn bash ~/$scripts/reloadconfs
-$win+o						$exn "$brightinc; bash ~/$scripts/notify_brightness"
-$win+y						$exn "$brightdec; bash ~/$scripts/notify_brightness"
-$win+i						$exn "pactl set-sink-volume 0 +2%; bash ~/$scripts/notify_volume"
-$win+u						$exn "pactl set-sink-volume 0 -2%; bash ~/$scripts/notify_volume"
-$win+x						$exn "pactl set-sink-mute 0 toggle; bash ~/$scripts/notify_volume"
-$win+b						$lch '$term -name BASHMOUNT -e bashmount' $mk2
-$win+f						$lch pcmanfm $mk2
-$win+Shift+f			$lch 'gksu pcmanfm' $mk2
 $win+Shift+Return	$exn $term -name FILES_ADMIN -e sudo ranger
-$win+t						$exn pkill compton
-$win+Shift+t			$exn compton
-$win+w						$lch '$term -name LAYOUT_EDITOR -e bash ~/$scripts/wsloget' $mk2
-$win+a						$exn bash ~/$scripts/wsloapp
-$win+g						$lch '$term -name GITREPOUPDATE -e bash ~/$scripts/gitcommit' $mk2
-$win+c						$lch '$term -name CALENDAR -e vim "+Calendar -view=day"' $mk2
-$win+r						$lch '$term -name RTV -e rtv' $mk2
 
 $win+1						$lch '$term -name i3MAIN -e vim ~/.config/i3/main' $mk3
+$win+Shift+1			$exn python $home/$scripts/i3-sticky-open 1
+
 $win+2						$lch '$term -name i3VARS -e vim ~/.config/i3/vars' $mk3
+$win+Shift+2			$exn python $home/$scripts/i3-sticky-open 2
+
 $win+3						$lch '$term -name VIMRC -e vim ~/.vimrc' $mk3
+$win+Shift+3			$exn python $home/$scripts/i3-sticky-open 3
+
 $win+4						$lch '$term -name RCCONF -e vim ~/.config/ranger/rc.conf' $mk3
+
 $win+5						$lch '$term -name i3BLOCKS -e vim ~/scripts/mkblocksconf' $mk3
 
-# //// MULTI-MONITOR
+$win+a						$exn bash ~/$scripts/wsloapp
 
-$win+m					$exn bash ~/$scripts/multimon
-$win+Control+n	move workspace to output $nat
-$win+Control+v	move workspace to output $vga
-$win+Control+h	move workspace to output $hdm
+$win+b						$lch '$term -name BASHMOUNT -e bashmount' $mk2
 
-# //// CHANGE FOCUS
+$win+c						$lch '$term -name CALENDAR -e vim "+Calendar -view=day"' $mk2
+$win+Shift+c			$exn bash ~/$scripts/reloadconfs
 
-$win+h	focus left
-$win+j	focus down
-$win+k	focus up
-$win+l	focus right
+$win+d						move workspace to output $hdm
 
-$win+Shift+h	move left
-$win+Shift+j	move down
-$win+Shift+k	move up
-$win+Shift+l	move right
+$win+f						$lch pcmanfm $mk2
+$win+Shift+f			$lch 'gksu pcmanfm' $mk2
 
-# //// STICKY TILED
+$win+g						$lch '$term -name GITREPOUPDATE -e bash ~/$scripts/gitcommit' $mk2
 
-$win+Shift+s	$exn bash $home/$scripts/i3-sticky-toggle
-$wlw+button1	$exn i3-input -F "[con_id=__focused__] mark _sticky_%s"
-$win+Shift+1	$exn python $home/$scripts/i3-sticky-open 1
-$win+Shift+2	$exn python $home/$scripts/i3-sticky-open 2
-$win+Shift+3	$exn python $home/$scripts/i3-sticky-open 3
+$win+i						$exn "pactl set-sink-volume 0 +2%; bash ~/$scripts/notify_volume"
+
+$win+h						focus left
+$win+Shift+h			move left
+
+$win+j						focus down
+$win+Shift+j			move down
+
+$win+k						focus up
+$win+Shift+k			move up
+
+$win+l						focus right
+$win+Shift+l			move right
+
+$win+m						$exn bash ~/$scripts/multimon
+
+$win+n						move workspace to output $nat
+
+$win+o						$exn "$brightinc; bash ~/$scripts/notify_brightness"
+
+$win+r						$lch '$term -name RTV -e rtv' $mk2
+
+$win+s						$exn bash $home/$scripts/i3-sticky-toggle
+
+$win+t						$exn compton
+$win+Shift+t			$exn pkill compton
+
+$win+u						$exn "pactl set-sink-volume 0 -2%; bash ~/$scripts/notify_volume"
+
+$win+v						move workspace to output $vga
+
+$win+w						$lch '$term -name LAYOUT_EDITOR -e bash ~/$scripts/wsloget' $mk2
+
+$win+y						$exn "$brightdec; bash ~/$scripts/notify_brightness"
+
+$win+x						$exn "pactl set-sink-mute 0 toggle; bash ~/$scripts/notify_volume"
+
+$wlw+button1			$exn i3-input -F "[con_id=__focused__] mark _sticky_%s"
 
 # >>>> FOR_WINDOW
 # //// ALL
