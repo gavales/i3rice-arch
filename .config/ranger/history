@@ -1,7 +1,3 @@
-rename xinitrc
-rename .xinitrc
-shell bash ~/scripts/reloadconfs
-rename 1314_SOLN
 rename 1718_SOLN
 rename 1314_SOLN.pdf
 rename 1718_SOLN.pdf
@@ -48,3 +44,7 @@ mkdir spotlight
 
 mkdir papes
 rename ex
+open_with 1
+open_with 2
+open_with zathura
+open_with 
