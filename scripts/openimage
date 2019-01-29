@@ -10,4 +10,4 @@ img="${1}"
 #	images+=("$f")
 #done
 
-sxiv -a "${img}" *
+sxiv -a -b "${img}" *

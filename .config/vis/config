@@ -51,6 +51,6 @@ visualizer.ellipse.radius=1
 
 #visualizer.lorenz.character=🌑
 
-colors.override.terminal=false
+colors.override.terminal=true
 
 colors.scheme=term

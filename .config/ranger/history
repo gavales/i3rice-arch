@@ -1,17 +1,3 @@
-shell transmission-cli -n %f
-<<<<<<< HEAD
-rename 2019_01_08.md_
-rename 2019_01_08.md
-shell sudo vim
-shell sudo vim %f
-=======
-mkdir Evangelion
-rename Neon Genesis Evangelion
-rename Rebuild of Evangelion 1.0.mkv
-rename Rebuild of Evangelion 2.0.mkv
-wq
-shell sudo python %f
-rename 
 rename xinitrc
 rename .xinitrc
 shell bash ~/scripts/reloadconfs
@@ -34,9 +20,7 @@ mkdir VivaldiPatch
 touch custom.css
 search bart
 search atha
-
 shell cat mp* >> mpblk
-shell chmod +x %f
 shell bash ~/scripts/mppipe %f
 rename Cybercassette - Prologue.mp4
 rename Bleed.mp4
@@ -48,3 +32,19 @@ rename DeusExPanceaBossMix.mp4
 scout -ftsea 
 rename Ghibli.mp4
 rename GhibliJazz.mp4
+rename media
+shell chmod +x %f
+mkdir Desktop
+mkdir Desktop_
+rename Desktop
+mkdir Downloads
+mkdir Downloads_
+rename Downloads
+rename Public_
+rename Public
+rename spotlight
+open_with q
+mkdir spotlight
+
+mkdir papes
+rename ex

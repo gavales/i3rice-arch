@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+# CREATED: Tue 29 Jan 11:32:27 GMT 2019
+
+width=$(xdotool getactivewindow getwindowgeometry | grep 'Geometry:' | sed 's/x/\ /g' | awk '{print $2}')
+height=$(xdotool getactivewindow getwindowgeometry | grep 'Geometry:' | sed 's/x/\ /g' | awk '{print $3}')
+
+xpos=$(xdotool getactivewindow getwindowgeometry | grep 'Position:' | sed 's/,/\ /g' | awk '{print $2}')
+ypos=$(xdotool getactivewindow getwindowgeometry | grep 'Position:' | sed 's/,/\ /g' | awk '{print $3}')
+
+xscr=$(xdotool getdisplaygeometry | awk '{print $1}')
+yscr=$(xdotool getdisplaygeometry | awk '{print $2}')
+
+echo "$width $height"
+echo "$xpos $ypos"
+echo "$xscr $yscr"

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+grn=$(xrdb -query | grep '*color2' | awk '{print $NF}')
+
 playername=$(mpris-ctl info "%player_name")
 trackname=$(mpris-ctl info "%track_name")
 artistname=$(mpris-ctl info "%artist_name")
@@ -28,9 +30,9 @@ if [ $playername == "%player_name" ]; then
 elif [ -z $playername ]; then
 	:
 elif [ $playstatus == "Paused" ]; then
-	echo "${playing} <span face='Font Awesome 5 Free'>&#xf28b;</span>"
+	echo "${playing}"
 else
-	echo "${playing} <span face='Font Awesome 5 Free'>&#xf144;</span>"
+	echo "<span foreground=\"$grn\">${playing}</span>"
 fi
 
 #case $BLOCK_BUTTON in

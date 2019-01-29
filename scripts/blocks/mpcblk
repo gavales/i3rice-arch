@@ -2,14 +2,16 @@
 
 status=$(mpc current)
 
+icon="<span face='Font Awesome 5 Free'>&#xf001;</span>"
+
 playing=$(ncmpcpp --current-song '%20A - %20t')
 grey=$(xrdb -query | grep '*color8' | awk '{print $NF}')
 green=$(xrdb -query | grep '*color2' | awk '{print $NF}')
 
 if [[ -z "$status" ]]; then
-	echo "<span foreground=\"$grey\"><span face='Font Awesome 5 Free'>&#xf001;</span> ${playing}</span>"
+	echo "<span foreground=\"$grey\">"$icon" ${playing}</span>"
 else
-	echo "<span foreground=\"$green\"><span face='Font Awesome 5 Free'>&#xf001;</span> ${playing}</span>"
+	echo "<span foreground=\"$green\">"$icon" ${playing}</span>"
 fi
 
 #case $BLOCK_BUTTON in

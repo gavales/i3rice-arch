@@ -6,8 +6,10 @@ mpvtitle="$(xdotool getwindowname $(xdotool search --class mpv))"
 
 blocksDir="$HOME/scripts/blocks"
 
+grn=$(xrdb -query | grep '*color2' | awk '{print $NF}')
+
 if [[ -n $mpv ]]; then
-	echo "<span face='Font Awesome 5 Free'>&#xf03d;</span> ${mpvtitle%.*}"
+	echo "<span foreground=\"$grn\"><span face='Font Awesome 5 Free'>&#xf03d;</span> ${mpvtitle:0:-6}</span>"
 elif [[ -n $mpris ]]; then
 	bash $blocksDir/mpgui
 else

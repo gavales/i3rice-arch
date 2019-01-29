@@ -167,9 +167,9 @@ $mod+f						$lch '$term -name MEDIA -e ranger' $mk2
 $mod+Shift+f			fullscreen toggle
 
 $mod+g						split toggle
-$mod+Shift+g			$lch '$term -name GRIVE -e bash ~/$scripts/grivesync' $mk2
+$mod+Shift+g			$lch '$term -name GRIVE -e bash ~/$scripts/grivesync' $mk2 fl
 
-$mod+i						resize grow height 10 px or 10 ppt
+$mod+i						resize grow height 5 px or 5 ppt
 $mod+Shift+i			$lch '$chrm --new-window \
 										--app=https://www.bbc.co.uk/iplayer/' $mk1
 $mod+Ctrl+i				gaps inner current plus 5; gaps outer current plus 10
@@ -195,7 +195,7 @@ $mod+Shift+n			$lch '$chrm --new-window \
 										--app=https://www.amazon.co.uk/Amazon-Video/b/?node=3010085031&ref=atv_surl_aiv' \
 										$mk1
 
-$mod+o						resize grow width 10 px or 10 ppt
+$mod+o						resize grow width 5 px or 5 ppt
 $mod+Ctrl+o				gaps inner current set 10; gaps outer current set 20
 
 $mod+p						$exn bash ~/$scripts/i3media togg
@@ -212,14 +212,14 @@ $mod+Ctrl+r				$exn $chrm --new-window \
 										--app=https://docs.google.com/presentation/u/0/
 
 $mod+s						$lch '$term -name MUSIC -e ncmpcpp' $mk1
-$mod+Shift+s			$exn spotify
+$mod+Shift+s			$lch spotify $mk1
 $mod+Ctrl+s				sticky toggle
 
 $mod+t						$exn "bash $home/$scripts/mkwalrando; \
 										bash $home/$scripts/reloadconfs"
 
-$mod+u						resize shrink height 10 px or 10 ppt
-$mod+Shift+u				$lch '$chrm --new-window \
+$mod+u						resize shrink height 5 px or 5 ppt
+$mod+Shift+u			$lch '$chrm --new-window \
 										--app=https://outlook.office365.com/owa/?realm=soton.ac.uk' \
 										$mk3
 $mod+Ctrl+u				gaps inner current minus 5; gaps outer current minus 10
@@ -232,7 +232,7 @@ $mod+w						$lch '$chrm --new-window \
 $mod+Ctrl+w				$exn $chrm --new-window \
 										--app=https://docs.google.com/spreadsheets/u/0/
 
-$mod+y						resize shrink width 10 px or 10 ppt
+$mod+y						resize shrink width 5 px or 5 ppt
 $mod+Shift+y			$lch '$chrm --new-window \
 										--app=https://www.youtube.com/' $mk1
 $mod+Ctrl+y				gaps inner current set 0; gaps outer current set 0
@@ -308,7 +308,7 @@ $win+d						move workspace to output $hdm
 $win+f						$lch pcmanfm $mk2
 $win+Shift+f			$lch 'gksu pcmanfm' $mk2
 
-$win+g						$lch '$term -name GITREPOUPDATE -e bash ~/$scripts/gitcommit' $mk2
+$win+g						$lch '$term -name GITREPOUPDATE -e bash ~/$scripts/gitcommit' $mk2 fl
 
 $win+i						$exn "pactl set-sink-volume 0 +2%; bash ~/$scripts/notify_volume"
 
@@ -352,7 +352,8 @@ $wlw+button1			$exn i3-input -F "[con_id=__focused__] mark _sticky_%s"
 
 # >>>> FOR_WINDOW
 # //// ALL
-				
+
+#focus_follows_mouse no
 focus_wrapping force
 workspace_auto_back_and_forth yes
 $fw [class="^.*"] border pixel 1
