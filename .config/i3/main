@@ -178,12 +178,6 @@ $mod+Shift+space	floating toggle
 $mod+minus				scratchpad show
 $mod+Shift+minus	move scratchpad
 
-$mod+bracketright	$exn bash ~/$scripts/i3media next
-
-$mod+bracketleft	$exn bash ~/$scripts/i3media prev
-
-$mod+backslash		$exn bash ~/$scripts/i3media stop
-
 $mod+semicolon		$exn redshift -P -O 3700
 
 $mod+apostrophe		$exn redshift -x
@@ -227,6 +221,12 @@ $mod+Ctrl+o				gaps inner current set 10; gaps outer current set 20
 
 $mod+p						$exn bash ~/$scripts/i3media togg
 $mod+Shift+p			$exn bash ~/$scripts/screenshot
+
+$mod+bracketright	$exn bash ~/$scripts/i3media next
+
+$mod+bracketleft	$exn bash ~/$scripts/i3media prev
+
+$mod+backslash		$exn bash ~/$scripts/i3media stop
 
 # //// 2nd Row
 
