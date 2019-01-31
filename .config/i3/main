@@ -311,17 +311,17 @@ $win+r						$lch '$term -name RTV -e rtv' $mk2
 $win+t						$exn compton
 $win+Shift+t			$exn pkill compton
 
-$win+y						[con_mark=$mk1] resize shrink width 5 px or 5 ppt, resize shrink height 5 px or 5 ppt
-$win+Shift+y			$exn "$brightdec; bash ~/$scripts/notify_brightness"
+$win+y						$exn "$brightdec; bash ~/$scripts/notify_brightness"
+$win+Shift+y			[con_mark=$mk1] resize shrink width 5 px or 5 ppt, resize shrink height 5 px or 5 ppt
 
-$win+u						$exn bash ~/$scripts/i3resize shrink 5
-$win+Shift+u			$exn "pactl set-sink-volume 0 -2%; bash ~/$scripts/notify_volume"
+$win+u						$exn "pactl set-sink-volume 0 -2%; bash ~/$scripts/notify_volume"
+$win+Shift+u			$exn bash ~/$scripts/i3resize shrink 5
 
-$win+i						$exn bash ~/$scripts/i3resize grow 5
-$win+Shift+i			$exn "pactl set-sink-volume 0 +2%; bash ~/$scripts/notify_volume"
+$win+i						$exn "pactl set-sink-volume 0 +2%; bash ~/$scripts/notify_volume"
+$win+Shift+i			$exn bash ~/$scripts/i3resize grow 5
 
-$win+o						[con_mark=$mk1] resize grow width 5 px or 5 ppt, resize grow height 5 px or 5 ppt
-$win+Shift+o			$exn "$brightinc; bash ~/$scripts/notify_brightness"
+$win+o						$exn "$brightinc; bash ~/$scripts/notify_brightness"
+$win+Shift+o			[con_mark=$mk1] resize grow width 5 px or 5 ppt, resize grow height 5 px or 5 ppt
 
 # //// 2nd Row
 

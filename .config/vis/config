@@ -19,7 +19,7 @@ audio.stereo.enabled=true
 visualizer.scaling.multiplier=1.5
 
 # spectrum ellipse lorenz
-visualizers=ellipse,spectrum,lorenz
+visualizers=spectrum,ellipse,lorenz
 
 #visualizer.spectrum.character=🌑
 
