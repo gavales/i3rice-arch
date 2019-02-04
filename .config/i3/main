@@ -110,9 +110,6 @@ floating_modifier	$mdi
 
 # //// Misc
 
-$mod+Return				$exn $term -name TERMINAL
-$mod+Shift+Return	$exn $term -name FILES -e ranger
-
 $mod+Escape				mode "SHUTDOWN"
 mode "SHUTDOWN" {
 	bindsym l				$exn i3exit lock, mode "default"
@@ -127,6 +124,9 @@ mode "SHUTDOWN" {
 	bindsym					Return mode "default"
 	bindsym					Escape mode "default"
 }
+
+$mod+space				focus mode_toggle
+$mod+Shift+space	floating toggle
 
 $mod+Ctrl+Right		workspace next
 
@@ -170,17 +170,8 @@ $mod+Shift+9			move container to workspace $ws9; workspace $ws9
 $mod+0						workspace $ws10
 $mod+Shift+0			move container to workspace $ws10; workspace $ws10
 
-# //// Punctuation
-
-$mod+space				focus mode_toggle
-$mod+Shift+space	floating toggle
-
 $mod+minus				scratchpad show
 $mod+Shift+minus	move scratchpad
-
-$mod+semicolon		$exn redshift -P -O 3700
-
-$mod+apostrophe		$exn redshift -x
 
 # //// 1st Row
 
@@ -257,6 +248,13 @@ $mod+Shift+k			$exn bash $home/$scripts/i3move up
 
 $mod+l						$exn bash $home/$scripts/i3viswiz right
 $mod+Shift+l			$exn bash $home/$scripts/i3move right
+
+$mod+semicolon		$exn redshift -P -O 3700
+
+$mod+apostrophe		$exn redshift -x
+
+$mod+Return				$exn $term -name TERMINAL
+$mod+Shift+Return	$exn $term -name FILES -e ranger
 
 # //// 3rd Row
 
