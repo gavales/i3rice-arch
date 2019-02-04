@@ -1,5 +1,5 @@
-"  dBP dP  dBP dBBBBBBb dBBBBBb	dBBBP
-"			   '   dB'	 dBP
+"  dBP dP  dBP dBBBBBBb dBBBBBb  dBBBP
+"         '   dB'   dBP
 " dB .BP dBP dB'dB'dB'  dBBBBK'  dBP
 " BB.BP dBP dB'dB'dB'  dBP  BB  dBP
 " BBBP dBP dB'dB'dB'  dBP  dB' dBBBBP
@@ -7,7 +7,7 @@
 " >>>> SETTINGS
 " //// GENERAL
 
-filetype plugin on	" required
+filetype plugin on " required
 execute pathogen#infect()
 syntax enable
 set encoding=utf-8
@@ -29,8 +29,10 @@ set title titlestring=%f titlelen=70
 set mouse=a
 vnoremap <C-c> "+y
 map <C-p> "+P
-autocmd FileType python,vim,conf,perl,sh set colorcolumn=80
-autocmd FileType python,vim,conf,perl,sh filetype indent on
+autocmd FileType python,vim,conf,json,perl,sh set colorcolumn=80
+autocmd FileType python,vim,conf,json,perl,sh filetype indent on
+autocmd FileType python,vim,perl,json,sh set list
+autocmd FileType python,vim,perl,json,sh set listchars=tab:\|\ 
 "autocmd FileType python call matchadd('ColorColumn', '\%81v', 100)
 "autocmd FileType vim call matchadd('ColorColumn', '\%81v', 100)
 "autocmd FileType conf call matchadd('ColorColumn', '\%81v', 100)
@@ -39,6 +41,7 @@ autocmd FileType python,vim,conf,perl,sh filetype indent on
 autocmd Filetype calendar set laststatus=0
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
+let g:indentLine_enabled = 0
 autocmd CursorHold,CursorHoldI * update
 autocmd CursorHold,CursorHoldI * redraw!
 
@@ -50,6 +53,7 @@ inoremap \ph <++>
 
 hi Normal ctermbg=none guibg=black
 hi LineNr ctermbg=none ctermfg=grey
+hi SpecialKey ctermbg=none ctermfg=grey
 hi Folded cterm=italic ctermfg=blue ctermbg=black
 hi ModeMsg cterm=bold ctermfg=white
 hi lCursor ctermbg=blue ctermfg=black
@@ -87,7 +91,7 @@ let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
 let g:calendar_modifiable = 1
 
-" >>>> COMMENT/UNCOMMENT
+" //// COMMENT/UNCOMMENT
 
 vnoremap \# :'<,'>norm 0i#<Enter>
 vnoremap \d# :'<,'>norm 0x<Enter>

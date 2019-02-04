@@ -15,15 +15,18 @@ set $fw			for_window
 set $mk1		_W1
 set $mk2		_W2
 set $mk3		_W3
+set $mk4		_W4
 set $mrk1		mark _W1
 set $mrk2		mark _W2
 set $mrk3		mark _W3
+set $mrk4		mark _W4
 set $stm1		mark _sticky_1
 set $stm2		mark _sticky_2
 set $stm3		mark _sticky_3
 set $mvm1		move to mark _W1
 set $mvm2		move to mark _W2
 set $mvm3		move to mark _W3
+set $mvm4		move to mark _W4
 set $flen		floating enable
 set $fldi		floating disable
 set $brnr		border normal
@@ -105,10 +108,9 @@ bar {
 }
 
 # >>>> MOD1 BINDINGS
+# //// Misc
 
 floating_modifier	$mdi
-
-# //// Misc
 
 $mod+Escape				mode "SHUTDOWN"
 mode "SHUTDOWN" {
@@ -253,7 +255,7 @@ $mod+semicolon		$exn redshift -P -O 3700
 
 $mod+apostrophe		$exn redshift -x
 
-$mod+Return				$exn $term -name TERMINAL
+$mod+Return				$exn $term -name FLOATTERM
 $mod+Shift+Return	$exn $term -name FILES -e ranger
 
 # //// 3rd Row
@@ -277,7 +279,7 @@ $mod+m						$lch '$chrm --new-window --app=https://play.google.com/movies/' $mk1
 # >>>> MOD4 BINDINGS
 # //// Misc
 
-$win+Return				$exn $term -name FLOATTERM
+$win+Return				$exn $term -name TERMINAL
 
 $win+Shift+Return	$exn $term -name FILES_ADMIN -e sudo ranger
 
@@ -421,9 +423,10 @@ $fw [class="Pavucontrol"]	$flen,$brnr,\
 
 $fw [con_mark=_sticky_1]								resize set 715 423
 
-$fw [instance="VIS"]										$mrk1,$tf "visualizer"
-$fw [instance="MEDIA"]				 					$mrk2,$tf "browse media"
+$fw [instance="RSS"]				 						$mrk1,$tf "newsboat"
+$fw [instance="MEDIA"]				 					$mrk2,$tf "media"
 $fw [title="Google Chrome$"]						$mrk3,$tf "chrome"
+$fw [instance="VIS"]										$mrk4,$tf "visualizer"
 
 $fw [class="MPlayer"]										$mvm1
 $fw [class="mpv"]												$mvm1
@@ -441,7 +444,6 @@ $fw [class="Pamac-manager"]				 			$mvm3,$tf "software"
 $fw [title="- Vivaldi$"]								$mvm3,$tf "vivaldi"
 
 $fw [class="Slack"]					 						$tf "slack"
-$fw [instance="RSS"]										$tf "newsboat"
 $fw [title="^My Movies & TV"]						$tf "movies",$stm1
 $fw [title="- Watch Series$"]						$tf "watch-series",$stm1
 $fw [title="Log in with PayPal"]				$tf "paypal",$flen
@@ -467,11 +469,11 @@ $fw [instance="MOUNT"]									$tf "mount"
 $fw [instance="UNMOUNT"]								$tf "unmount"
 
 # >>>> GAPS
-gaps inner 20
-gaps outer 10
+gaps inner 0
+gaps outer 0
 
-workspace $ws1 gaps inner 0
-workspace $ws1 gaps outer 0
+#workspace $ws1 gaps inner 0
+#workspace $ws1 gaps outer 0
 
 # >>>> STARTUP
 # DAEMONS
