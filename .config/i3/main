@@ -193,21 +193,21 @@ $mod+Ctrl+r				$exn $chrm --new-window --app=https://docs.google.com/presentatio
 
 $mod+t						$exn "bash $home/$scripts/mkwalrando; bash $home/$scripts/reloadconfs"
 
-$mod+y						resize shrink width 5 px or 5 ppt
-$mod+Shift+y			$lch '$chrm --new-window --app=https://www.youtube.com/' $mk1
+$mod+y						$lch '$chrm --new-window --app=https://www.youtube.com/' $mk1
+$mod+Shift+y			resize shrink width 5 px or 5 ppt
 $mod+Ctrl+y				gaps inner current set 0; gaps outer current set 0
 
-$mod+u						resize shrink height 5 px or 5 ppt
-$mod+Shift+u			$lch '$chrm --new-window \
+$mod+u						$lch '$chrm --new-window \
 										--app=https://outlook.office365.com/owa/?realm=soton.ac.uk' \
 										$mk3
+$mod+Shift+u			resize shrink height 5 px or 5 ppt
 $mod+Ctrl+u				gaps inner current minus 5; gaps outer current minus 10
 
-$mod+i						resize grow height 5 px or 5 ppt
-$mod+Shift+i			$lch '$chrm --new-window --app=https://www.bbc.co.uk/iplayer/' $mk1
+$mod+i						$lch '$chrm --new-window --app=https://www.bbc.co.uk/iplayer/' $mk1
+$mod+Shift+i			resize grow height 5 px or 5 ppt
 $mod+Ctrl+i				gaps inner current plus 5; gaps outer current plus 10
 
-$mod+o						resize grow width 5 px or 5 ppt
+$mod+Shift+o			resize grow width 5 px or 5 ppt
 $mod+Ctrl+o				gaps inner current set 10; gaps outer current set 20
 
 $mod+p						$exn bash ~/$scripts/i3media togg
@@ -365,7 +365,7 @@ $win+m						$exn bash ~/$scripts/multimon
 # >>>> FOR_WINDOW
 # //// ALL
 
-#focus_follows_mouse no
+focus_follows_mouse no
 focus_wrapping force
 workspace_auto_back_and_forth yes
 $fw [class="^.*"] border pixel 1
