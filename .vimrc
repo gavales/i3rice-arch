@@ -21,8 +21,8 @@ set linebreak
 set nolist  "disable linebreak
 set textwidth=0
 set wrapmargin=0
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 "set expandtab
 set cursorline
 set title titlestring=%f titlelen=70
@@ -33,7 +33,6 @@ autocmd FileType python,vim,conf,json,perl,sh set colorcolumn=80
 autocmd FileType python,vim,conf,json,perl,sh filetype indent on
 autocmd FileType python,vim,perl,json,sh set list
 autocmd FileType python,vim,perl,json,sh set listchars=tab:\|\ 
-autocmd FileType python,vim,perl,json,sh set listchars=trail:#
 "autocmd FileType python call matchadd('ColorColumn', '\%81v', 100)
 "autocmd FileType vim call matchadd('ColorColumn', '\%81v', 100)
 "autocmd FileType conf call matchadd('ColorColumn', '\%81v', 100)
@@ -274,20 +273,20 @@ autocmd FileType tex inoremap <Tab>ci \cite{}<++><Esc>T{i
 autocmd FileType tex inoremap <Tab>ct \citet{}<++><Esc>T{i
 autocmd FileType tex inoremap <Tab>cp \citep{}<++><Esc>T{i
 autocmd FileType tex inoremap <Tab>ch \chapter{}<Enter><++><Esc>kf}i
-									 
+
 autocmd FileType tex inoremap <Tab>en \begin{equation}<Enter><Enter>\end{equation}
-	\<Enter><++><Esc>02ki			
+	\<Enter><++><Esc>02ki
 autocmd FileType tex inoremap <Tab>eq $$<Enter><Enter>$$<Enter><++><Esc>03ki
-									 
+
 autocmd FileType tex inoremap <Tab>it \textit{}<++><Esc>T{i
-									 
+
 autocmd FileType tex inoremap <Tab>lf \label{fig:}<Esc>T:i
 autocmd FileType tex inoremap <Tab>lt \label{tab:}<Esc>T:i
 autocmd FileType tex inoremap <Tab>le \label{eq:}<Esc>T:i
 autocmd FileType tex inoremap <Tab>ls \label{sec:}<Esc>T:i
-								   
+
 autocmd FileType tex inoremap <Tab>nc \newcommand{}[<++>]<++>{<++>}<Esc>2F}i
-								   
+
 autocmd FileType tex inoremap <Tab>pc \parencite{}<++><Esc>T{i
 autocmd FileType tex inoremap <Tab>pt \item<space>
 autocmd FileType tex inoremap <Tab>pi \begin{figure}[H]<Enter>
@@ -296,19 +295,19 @@ autocmd FileType tex inoremap <Tab>pi \begin{figure}[H]<Enter>
 	\<Tab>\caption{<++><Enter>
 	\<Tab>\label{fig:<++>}}<Enter>
 	\\end{figure}<Esc>03kf=a
-									 
+
 autocmd FileType tex inoremap <Tab>rf \figref{fig:}<++><Esc>T:i
 autocmd FileType tex inoremap <Tab>rt \tabref{tab:}<++><Esc>T:i
 autocmd FileType tex inoremap <Tab>re \eqnref{eq:}<++><Esc>T:i
 autocmd FileType tex inoremap <Tab>rs \secref{sec:}<++><Esc>T:i
-								   
+
 autocmd FileType tex inoremap <Tab>st {\setstretch{}<Enter><++><Enter>
 	\<Enter>}<Enter><Enter><++><Esc>5k0f{a
 autocmd FileType tex inoremap <Tab>sc \textsc{}<++><Esc>T{i
 autocmd FileType tex inoremap <Tab>s1 \section{}<Enter><++><Esc>kf}i
 autocmd FileType tex inoremap <Tab>s2 \subsection{}<Enter><++><Esc>kf}i
 autocmd FileType tex inoremap <Tab>s3 \subsubsection{}<Enter><++><Esc>kf}i
-									 
+
 autocmd FileType tex inoremap <Tab>tt \texttt{}<++><Esc>T{i
 autocmd FileType tex inoremap <Tab>tc \textcite{}<++><Esc>T{i
 autocmd FileType tex inoremap <Tab>ta \begin{table}[H]<Enter>
@@ -323,10 +322,10 @@ autocmd FileType tex inoremap <Tab>ta \begin{table}[H]<Enter>
 	\<Tab>\caption{<++><Enter>
 	\<Tab>\label{tab:<++>}}<Enter>
 	\\end{table}<Esc>09kfca
-									 
+
 autocmd FileType tex inoremap <Tab>up \usepackage[]<++>{<++>}<Esc>T[i
 autocmd FileType tex inoremap <Tab>ul \underline{}<++><Esc>T{i
-									 
+
 autocmd FileType tex vnoremap <Tab>bf xi\textbf{<Esc>pa}<Esc>
 autocmd FileType tex vnoremap <Tab>it xi\textit{<Esc>pa}<Esc>
 autocmd FileType tex vnoremap <Tab>sc xi\textsc{<Esc>pa}<Esc>

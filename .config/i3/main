@@ -1,36 +1,36 @@
 # >>>> MAIN VARS
 # //// i3
 
-set $mod		bindsym Mod1
-set $mdi		Mod1
-set $win		bindsym Mod4
-set $wni		Mod4
-set $mrl		bindsym --release Mod1
-set $wlw		bindsym --whole-window Mod4
-set $exn		exec --no-startup-id
-set $ena		exec_always --no-startup-id
-set $lch		exec ~/scripts/i3launch
-set $tf			title_format
-set $fw			for_window
-set $mk1		_W1
-set $mk2		_W2
-set $mk3		_W3
-set $mk4		_W4
-set $mrk1		mark _W1
-set $mrk2		mark _W2
-set $mrk3		mark _W3
-set $mrk4		mark _W4
-set $stm1		mark _sticky_1
-set $stm2		mark _sticky_2
-set $stm3		mark _sticky_3
-set $mvm1		move to mark _W1
-set $mvm2		move to mark _W2
-set $mvm3		move to mark _W3
-set $mvm4		move to mark _W4
-set $flen		floating enable
-set $fldi		floating disable
-set $brnr		border normal
-set $mvcn		move position center
+set $mod	bindsym Mod1
+set $mdi	Mod1
+set $win	bindsym Mod4
+set $wni	Mod4
+set $mrl	bindsym --release Mod1
+set $wlw	bindsym --whole-window Mod4
+set $exn	exec --no-startup-id
+set $ena	exec_always --no-startup-id
+set $lch	exec ~/scripts/i3launch
+set $tf		title_format
+set $fw		for_window
+set $mk1	_W1
+set $mk2	_W2
+set $mk3	_W3
+set $mk4	_W4
+set $mrk1	mark _W1
+set $mrk2	mark _W2
+set $mrk3	mark _W3
+set $mrk4	mark _W4
+set $stm1	mark _sticky_1
+set $stm2	mark _sticky_2
+set $stm3	mark _sticky_3
+set $mvm1	move to mark _W1
+set $mvm2	move to mark _W2
+set $mvm3	move to mark _W3
+set $mvm4	move to mark _W4
+set $flen	floating enable
+set $fldi	floating disable
+set $brnr	border normal
+set $mvcn	move position center
 
 # //// WORKSPACE NAMES
 
@@ -59,9 +59,9 @@ set $t ff
 
 # //// APPS
 
-set $term				urxvtc
-set $chrm				google-chrome-beta
-set $viva				vivaldi-stable
+set $term		urxvtc
+set $chrm		google-chrome-beta
+set $viva		vivaldi-stable
 set $brightinc	light -A 10
 set $brightdec	light -U 10
 
@@ -74,13 +74,13 @@ new_float normal
 hide_edge_borders true
 
 # COLORS
-# class				 					brdr bkgr text indi chlb
-client.focused					$blk $blu $blk $blk $blk
+# class		 			brdr bkgr text indi chlb
+client.focused			$blk $blu $blk $blk $blk
 client.focused_inactive $blk $blk $blu $blk $blk
-client.unfocused				$blk $blk $wht $blk $blk
-client.urgent			 			$blk $blk $red $blk $blk
-client.placeholder			$blk $blk $wht $blk $blk
-#client.background			$blk
+client.unfocused		$blk $blk $wht $blk $blk
+client.urgent	 		$blk $blk $red $blk $blk
+client.placeholder		$blk $blk $wht $blk $blk
+#client.background		$blk
 
 # >>>> BAR
 bar {
@@ -98,12 +98,12 @@ bar {
 
 	colors {
 	background $blk
-#											brdr bkgr text
-	focused_workspace		$blu $blu $blk
-	active_workspace		$blk $blk $blu
+#						brdr bkgr text
+	focused_workspace	$blu $blu $blk
+	active_workspace	$blk $blk $blu
 	inactive_workspace	$blk $blk $wht
-	binding_mode				$ylw $ylw $blk
-	urgent_workspace		$red $red $blk
+	binding_mode		$ylw $ylw $blk
+	urgent_workspace	$red $red $blk
 	}
 }
 
@@ -112,108 +112,101 @@ bar {
 
 floating_modifier	$mdi
 
-$mod+Escape				mode "SHUTDOWN"
+$mod+Escape		mode "SHUTDOWN"
 mode "SHUTDOWN" {
-	bindsym l				$exn i3exit lock, mode "default"
-	bindsym s				$exn i3exit suspend, mode "default"
-	bindsym u				$exn i3exit switch_user, mode "default"
-	bindsym e				$exn i3exit logout, mode "default"
-	bindsym h				$exn i3exit hibernate, mode "default"
-	bindsym r				$exn i3exit reboot, mode "default"
-	bindsym x				$exn i3exit shutdown, mode "default"
+	bindsym l	$exn i3exit lock, mode "default"
+	bindsym s	$exn i3exit suspend, mode "default"
+	bindsym u	$exn i3exit switch_user, mode "default"
+	bindsym e	$exn i3exit logout, mode "default"
+	bindsym h	$exn i3exit hibernate, mode "default"
+	bindsym r	$exn i3exit reboot, mode "default"
+	bindsym x	$exn i3exit shutdown, mode "default"
 
 	#exit system mode: "Enter" or "Escape"
-	bindsym					Return mode "default"
-	bindsym					Escape mode "default"
+	bindsym		Return mode "default"
+	bindsym		Escape mode "default"
 }
 
-$mod+space				focus mode_toggle
+$mod+space			focus mode_toggle
 $mod+Shift+space	floating toggle
 
 $mod+Ctrl+Right		workspace next
 
 $mod+Ctrl+Left		workspace prev
 
-bindsym Print	 		$exn bash ~/$scripts/screenshot
+bindsym Print	 	$exn bash ~/$scripts/screenshot
 
 # //// Numbers
 
-$mod+1						workspace $ws1
-$mod+Shift+1			move container to workspace $ws1; workspace $ws1
-$mod+Ctrl+1				floating disable, $mvm1, [con_mark=$mk1] focus, focus right
+$mod+1				workspace $ws1
+$mod+Shift+1		move container to workspace $ws1; workspace $ws1
+$mod+Ctrl+1			floating disable, $mvm1, [con_mark=$mk1] focus, focus right
 
-$mod+2						workspace $ws2
-$mod+Shift+2			move container to workspace $ws2; workspace $ws2
-$mod+Ctrl+2				floating disable, $mvm2, [con_mark=$mk2] focus, focus right
+$mod+2				workspace $ws2
+$mod+Shift+2		move container to workspace $ws2; workspace $ws2
+$mod+Ctrl+2			floating disable, $mvm2, [con_mark=$mk2] focus, focus right
 
-$mod+3						workspace $ws3
-$mod+Shift+3			move container to workspace $ws3; workspace $ws3
-$mod+Ctrl+3				floating disable, $mvm3, [con_mark=$mk3] focus, focus right
+$mod+3				workspace $ws3
+$mod+Shift+3		move container to workspace $ws3; workspace $ws3
+$mod+Ctrl+3			floating disable, $mvm3, [con_mark=$mk3] focus, focus right
 
-$mod+4						workspace $ws4
-$mod+Shift+4			move container to workspace $ws4; workspace $ws4
-$mod+Ctrl+4				floating disable, $mvm4, [con_mark=$mk4] focus, focus right
+$mod+4				workspace $ws4
+$mod+Shift+4		move container to workspace $ws4; workspace $ws4
+$mod+Ctrl+4			floating disable, $mvm4, [con_mark=$mk4] focus, focus right
 
-$mod+5						workspace $ws5
-$mod+Shift+5			move container to workspace $ws5; workspace $ws5
+$mod+5				workspace $ws5
+$mod+Shift+5		move container to workspace $ws5; workspace $ws5
 
-$mod+6						workspace $ws6
-$mod+Shift+6			move container to workspace $ws6; workspace $ws6
+$mod+6				workspace $ws6
+$mod+Shift+6		move container to workspace $ws6; workspace $ws6
 
-$mod+7						workspace $ws7
-$mod+Shift+7			move container to workspace $ws7; workspace $ws7
+$mod+7				workspace $ws7
+$mod+Shift+7		move container to workspace $ws7; workspace $ws7
 
-$mod+8						workspace $ws8
-$mod+Shift+8			move container to workspace $ws8; workspace $ws8
+$mod+8				workspace $ws8
+$mod+Shift+8		move container to workspace $ws8; workspace $ws8
 
-$mod+9						workspace $ws9
-$mod+Shift+9			move container to workspace $ws9; workspace $ws9
+$mod+9				workspace $ws9
+$mod+Shift+9		move container to workspace $ws9; workspace $ws9
 
-$mod+0						workspace $ws10
-$mod+Shift+0			move container to workspace $ws10; workspace $ws10
+$mod+0				workspace $ws10
+$mod+Shift+0		move container to workspace $ws10; workspace $ws10
 
-$mod+minus				scratchpad show
+$mod+minus			scratchpad show
 $mod+Shift+minus	move scratchpad
 
 # //// 1st Row
 
-$mod+Tab					focus right
+$mod+Tab			focus right
 $mod+Shift+Tab		focus left
 
-$mod+q						$exn $term -name CALC -e R
-$mod+Shift+q			kill
-$mod+Ctrl+q				$exn $chrm --new-window --app=https://docs.google.com/document/u/0/
+$mod+q				$lch '$term -name CALC -e R' $mk2
+$mod+Shift+q		kill
 
-$mod+w						$lch '$chrm --new-window --app=https://ww2.watch-series.co/' $mk1
-$mod+Ctrl+w				$exn $chrm --new-window --app=https://docs.google.com/spreadsheets/u/0/
+$mod+w				$lch '$chrm --new-window --app=https://ww2.watch-series.co/' $mk1
 
-$mod+e						layout toggle tabbed split
+$mod+e				layout toggle tabbed split
 
-$mod+r						$exn $term -name RSS -e newsboat
-$mod+Shift+r			restart
-$mod+Ctrl+r				$exn $chrm --new-window --app=https://docs.google.com/presentation/u/0/
+$mod+r				$exn $term -name RSS -e newsboat
+$mod+Shift+r		restart
 
-$mod+t						$exn "bash $home/$scripts/mkwalrando; bash $home/$scripts/reloadconfs"
+$mod+t				$exn "bash $home/$scripts/mkwalrando; bash $home/$scripts/reloadconfs"
 
-$mod+y						$lch '$chrm --new-window --app=https://www.youtube.com/' $mk1
-$mod+Shift+y			resize shrink width 5 px or 5 ppt
-$mod+Ctrl+y				gaps inner current set 0; gaps outer current set 0
+$mod+y				resize shrink width 5 px or 5 ppt
+$mod+Shift+y		$lch '$chrm --new-window --app=https://www.youtube.com/' $mk1
 
-$mod+u						$lch '$chrm --new-window \
-										--app=https://outlook.office365.com/owa/?realm=soton.ac.uk' \
-										$mk3
-$mod+Shift+u			resize shrink height 5 px or 5 ppt
-$mod+Ctrl+u				gaps inner current minus 5; gaps outer current minus 10
+$mod+u				resize shrink height 5 px or 5 ppt
+$mod+Shift+u		$lch '$chrm --new-window \
+						--app=https://outlook.office365.com/owa/?realm=soton.ac.uk' \
+						$mk3
 
-$mod+i						$lch '$chrm --new-window --app=https://www.bbc.co.uk/iplayer/' $mk1
-$mod+Shift+i			resize grow height 5 px or 5 ppt
-$mod+Ctrl+i				gaps inner current plus 5; gaps outer current plus 10
+$mod+i				resize grow height 5 px or 5 ppt
+$mod+Shift+i		$lch '$chrm --new-window --app=https://www.bbc.co.uk/iplayer/' $mk1
 
-$mod+Shift+o			resize grow width 5 px or 5 ppt
-$mod+Ctrl+o				gaps inner current set 10; gaps outer current set 20
+$mod+o				resize grow width 5 px or 5 ppt
 
-$mod+p						$exn bash ~/$scripts/i3media togg
-$mod+Shift+p			$exn bash ~/$scripts/screenshot
+$mod+p				$exn bash ~/$scripts/i3media togg
+$mod+Shift+p		$exn bash ~/$scripts/screenshot
 
 $mod+bracketright	$exn bash ~/$scripts/i3media next
 
@@ -223,146 +216,157 @@ $mod+backslash		$exn bash ~/$scripts/i3media stop
 
 # //// 2nd Row
 
-$mod+a						focus parent
-$mod+Shift+a			$lch '$chrm --new-window --app=https://www.funimation.com/' $mk1
+$mod+a				focus parent
+$mod+Shift+a		$lch '$chrm --new-window --app=https://www.funimation.com/' $mk1
 
-$mod+s						$lch '$term -name MUSIC -e ncmpcpp' $mk1 fl
-$mod+Shift+s			$lch spotify $mk1 fl
-$mod+Ctrl+s				sticky toggle
+$mod+s				$lch '$term -name MUSIC -e ncmpcpp' $mk1 fl
+$mod+Shift+s		$lch spotify $mk1 fl
+$mod+Ctrl+s			sticky toggle
 
-$mod+d						$exn rofi -show drun
-$mod+Shift+d			$exn dmenu_run -fn "$font3:size=$fonts" -nb "$blk" -nf "$wht" -sf "$blk" -sb "$blu"
+$mod+d				$exn rofi -show drun
+$mod+Shift+d		$exn dmenu_run -fn "$font3:size=$fonts" -nb "$blk" -nf "$wht" -sf "$blk" -sb "$blu"
 
-$mod+f						$lch '$term -name MEDIA -e ranger' $mk2
-$mod+Shift+f			fullscreen toggle
+$mod+f				$lch '$term -name MEDIA -e ranger' $mk2
+$mod+Shift+f		fullscreen toggle
 
-$mod+g						split toggle
-$mod+Shift+g			$lch '$term -name GRIVE -e bash ~/$scripts/grivesync' $mk2 fl
+$mod+g				split toggle
+$mod+Shift+g		$lch '$term -name GRIVE -e bash ~/$scripts/grivesync' $mk2 fl
 
-$mod+h						$exn bash $home/$scripts/i3viswiz left
-$mod+Shift+h			$exn bash $home/$scripts/i3move left
+$mod+h				$exn bash $home/$scripts/i3viswiz left
+$mod+Shift+h		$exn bash $home/$scripts/i3move left
 
-$mod+j						$exn bash $home/$scripts/i3viswiz down
-$mod+Shift+j			$exn bash $home/$scripts/i3move down
+$mod+j				$exn bash $home/$scripts/i3viswiz down
+$mod+Shift+j		$exn bash $home/$scripts/i3move down
 
-$mod+k						$exn bash $home/$scripts/i3viswiz up
-$mod+Shift+k			$exn bash $home/$scripts/i3move up
+$mod+k				$exn bash $home/$scripts/i3viswiz up
+$mod+Shift+k		$exn bash $home/$scripts/i3move up
 
-$mod+l						$exn bash $home/$scripts/i3viswiz right
-$mod+Shift+l			$exn bash $home/$scripts/i3move right
+$mod+l				$exn bash $home/$scripts/i3viswiz right
+$mod+Shift+l		$exn bash $home/$scripts/i3move right
 
 $mod+semicolon		$exn redshift -P -O 3700
 
 $mod+apostrophe		$exn redshift -x
 
-$mod+Return				$exn $term -name FLOATTERM
+$mod+Return			$exn $term -name FLOATTERM
 $mod+Shift+Return	$exn $term -name FILES -e ranger
 
 # //// 3rd Row
 
-$mod+c						$exn $chrm
-$mod+Shift+c			$exn "bash $home/$scripts/xtheme; bash $home/$scripts/reloadconfs"
+$mod+z				$exn $chrm --new-window --app=https://docs.google.com/document/u/0/
 
-$mod+v						$lch '$term -name VIS -e vis' $mk1
-$mod+Shift+v			$lch 'projectM-pulseaudio' $mk1
+$mod+x				$exn $chrm --new-window --app=https://docs.google.com/spreadsheets/u/0/
 
-$mod+b						$lch '$term -name BIB -e vim $home/Drive/global.bib' $mk2
-$mod+Shift+b			bar mode toggle
+$mod+c				$exn $chrm
+$mod+Shift+c		$exn "bash $home/$scripts/xtheme; bash $home/$scripts/reloadconfs"
 
-$mod+n						$lch '$chrm --new-window --app=https://www.netflix.com/' $mk1
-$mod+Shift+n			$lch '$chrm --new-window \
-										--app=https://www.amazon.co.uk/Amazon-Video/b/?node=3010085031&ref=atv_surl_aiv' \
-										$mk1
+$mod+v				$lch '$term -name VIS -e vis' $mk1
+$mod+Shift+v		$lch 'projectM-pulseaudio' $mk1
 
-$mod+m						$lch '$chrm --new-window --app=https://play.google.com/movies/' $mk1
+$mod+b				$lch '$term -name BIB -e vim $home/Drive/global.bib' $mk2
+$mod+Shift+b		bar mode toggle
+
+$mod+n				$lch '$chrm --new-window --app=https://www.netflix.com/' $mk1
+$mod+Shift+n		$lch '$chrm --new-window \
+						--app=https://www.amazon.co.uk/Amazon-Video/b/?node=3010085031&ref=atv_surl_aiv' \
+						$mk1
+
+$mod+m				$exn $chrm --new-window --app=https://docs.google.com/presentation/u/0/
+$mod+Shift+m		$lch '$chrm --new-window --app=https://play.google.com/movies/' $mk1
+
+$mod+comma			$exn "pactl set-sink-volume 0 -2%; bash ~/$scripts/notify_volume"
+$mod+Shift+comma	$exn "$brightdec; bash ~/$scripts/notify_brightness"
+
+$mod+period			$exn "pactl set-sink-volume 0 +2%; bash ~/$scripts/notify_volume"
+$mod+Shift+period	$exn "$brightinc; bash ~/$scripts/notify_brightness"
 
 # >>>> MOD4 BINDINGS
 # //// Misc
 
-$win+Return				$exn $term -name TERMINAL
+$win+Return			$exn $term -name TERMINAL
 
 $win+Shift+Return	$exn $term -name FILES_ADMIN -e sudo ranger
 
-$wlw+button1			$exn i3-input -F "[con_id=__focused__] mark _sticky_%s"
+$wlw+button1		$exn i3-input -F "[con_id=__focused__] mark _sticky_%s"
 
-$wlw+button3			kill
+$wlw+button3		kill
 
 # //// Numbers
 
-$win+1						$lch '$term -name i3MAIN -e vim ~/.config/i3/main' $mk3
-$win+Shift+1			$exn python $home/$scripts/i3-sticky-open 1
+$win+1				$lch '$term -name i3MAIN -e vim ~/.config/i3/main' $mk3
+$win+Shift+1		$exn python $home/$scripts/i3-sticky-open 1
 
-$win+2						$lch '$term -name i3VARS -e vim ~/.config/i3/vars' $mk3
-$win+Shift+2			$exn python $home/$scripts/i3-sticky-open 2
+$win+2				$lch '$term -name i3VARS -e vim ~/.config/i3/vars' $mk3
+$win+Shift+2		$exn python $home/$scripts/i3-sticky-open 2
 
-$win+3						$lch '$term -name VIMRC -e vim ~/.vimrc' $mk3
-$win+Shift+3			$exn python $home/$scripts/i3-sticky-open 3
+$win+3				$lch '$term -name VIMRC -e vim ~/.vimrc' $mk3
+$win+Shift+3		$exn python $home/$scripts/i3-sticky-open 3
 
-$win+4						$lch '$term -name RCCONF -e vim ~/.config/ranger/rc.conf' $mk3
+$win+4				$lch '$term -name RCCONF -e vim ~/.config/ranger/rc.conf' $mk3
 
-$win+5						$lch '$term -name i3BLOCKS -e vim ~/scripts/mkblocksconf' $mk3
+$win+5				$lch '$term -name i3BLOCKS -e vim ~/scripts/mkblocksconf' $mk3
 
 # //// 1st Row
 
-$win+w						$lch '$term -name LAYOUT_EDITOR -e bash ~/$scripts/wsloget' $mk2
+$win+w				$lch '$term -name LAYOUT_EDITOR -e bash ~/$scripts/wsloget' $mk2
 
-$win+r						$lch '$term -name RTV -e rtv' $mk2
+$win+r				$lch '$term -name RTV -e rtv' $mk2
 
-$win+t						$exn compton
-$win+Shift+t			$exn pkill compton
+$win+t				$exn compton
+$win+Shift+t		$exn pkill compton
 
-$win+y						$exn "$brightdec; bash ~/$scripts/notify_brightness"
-$win+Shift+y			[con_mark=$mk1] resize shrink width 5 px or 5 ppt, resize shrink height 5 px or 5 ppt
+$win+y				[con_mark=$mk1] resize shrink width 5 px or 5 ppt, resize shrink height 5 px or 5 ppt
+$win+Shift+y		gaps inner current set 0; gaps outer current set 0
 
-$win+u						$exn "pactl set-sink-volume 0 -2%; bash ~/$scripts/notify_volume"
-$win+Shift+u			$exn bash ~/$scripts/i3resize shrink 5
+$win+u				$exn bash ~/$scripts/i3resize shrink 5
+$win+Shift+u		gaps inner current minus 5; gaps outer current minus 10
 
-$win+i						$exn "pactl set-sink-volume 0 +2%; bash ~/$scripts/notify_volume"
-$win+Shift+i			$exn bash ~/$scripts/i3resize grow 5
+$win+i				$exn bash ~/$scripts/i3resize grow 5
+$win+Shift+i		gaps inner current plus 5; gaps outer current plus 10
 
-$win+o						$exn "$brightinc; bash ~/$scripts/notify_brightness"
-$win+Shift+o			[con_mark=$mk1] resize grow width 5 px or 5 ppt, resize grow height 5 px or 5 ppt
+$win+o				[con_mark=$mk1] resize grow width 5 px or 5 ppt, resize grow height 5 px or 5 ppt
+$win+Shift+o		gaps inner current set 10; gaps outer current set 20
 
 # //// 2nd Row
 
-$win+a						$exn bash ~/$scripts/wsloapp
+$win+a				$exn bash ~/$scripts/wsloapp
 
-$win+s						$lch slack $mk3
-$win+Shift+s			$exn bash $home/$scripts/i3-sticky-toggle
+$win+s				$lch slack $mk3
+$win+Shift+s		$exn bash $home/$scripts/i3-sticky-toggle
 
-$win+d						move workspace to output $hdm
+$win+d				move workspace to output $hdm
 
-$win+f						$lch thunar $mk2
-$win+Shift+f			$lch 'gksu thunar' $mk2
+$win+f				$lch thunar $mk2
+$win+Shift+f		$lch 'gksu thunar' $mk2
 
-$win+g						$lch '$term -name GITREPOUPDATE -e bash ~/$scripts/gitcommit' $mk2
+$win+g				$lch '$term -name GITREPOUPDATE -e bash ~/$scripts/gitcommit' $mk2
 
-$win+h						focus left
-$win+Shift+h			move left
+$win+h				focus left
+$win+Shift+h		move left
 
-$win+j						focus down
-$win+Shift+j			move down
+$win+j				focus down
+$win+Shift+j		move down
 
-$win+k						focus up
-$win+Shift+k			move up
+$win+k				focus up
+$win+Shift+k		move up
 
-$win+l						focus right
-$win+Shift+l			move right
+$win+l				focus right
+$win+Shift+l		move right
 
 # //// 3rd Row
 
-$win+x						$exn "pactl set-sink-mute 0 toggle; bash ~/$scripts/notify_volume"
+$win+x				$exn "pactl set-sink-mute 0 toggle; bash ~/$scripts/notify_volume"
 
-$win+c						$lch '$term -name CALENDAR -e vim "+Calendar -view=day"' $mk2
-$win+Shift+c			$exn bash ~/$scripts/reloadconfs
+$win+c				$lch '$term -name CALENDAR -e vim "+Calendar -view=day"' $mk2
+$win+Shift+c		$exn bash ~/$scripts/reloadconfs
 
-$win+v						move workspace to output $vga
+$win+v				move workspace to output $vga
 
-$win+b						$lch '$term -name BASHMOUNT -e bashmount' $mk2
+$win+b				$lch '$term -name BASHMOUNT -e bashmount' $mk2
 
-$win+n						move workspace to output $nat
+$win+n				move workspace to output $nat
 
-$win+m						$exn bash ~/$scripts/multimon
+$win+m				$exn bash ~/$scripts/multimon
 
 # >>>> FOR_WINDOW
 # //// ALL
@@ -375,98 +379,93 @@ $fw [urgent=latest] focus
 
 # //// FLOATERS
 
-$fw [title="About Pale Moon"]				 				$flen
-$fw [title="alsamixer"]					 						$flen
-$fw [class="Arandr"]												$flen
-$fw [class="Clipgrab"]											$flen
-$fw [title="File Transfer*"]								$flen
-$fw [class="Galculator"]										$flen
+$fw [title="About Pale Moon"]		 		$flen
+$fw [title="alsamixer"]			 			$flen
+$fw [class="Arandr"]						$flen
+$fw [class="Clipgrab"]						$flen
+$fw [title="File Transfer*"]				$flen
+$fw [class="Galculator"]					$flen
 $fw [class="Lightdm-gtk-greeter-settings"]	$flen
-$fw [class="Manjaro-hello"]				 					$flen
-$fw [title="MuseScore: Play Panel"]		 			$flen
-$fw [class="Oblogout"]											$flen
-$fw [class="octopi"]												$flen
-$fw [class="Pavucontrol"]					 					$flen
-$fw [class="Xfburn"]												$flen
-$fw [class="i3bar"]													$flen
-$fw [instance="FLOATTERM"]				 					$tf "float-term",$flen
+$fw [class="Manjaro-hello"]		 			$flen
+$fw [title="MuseScore: Play Panel"]	 		$flen
+$fw [class="Oblogout"]						$flen
+$fw [class="octopi"]						$flen
+$fw [class="Pavucontrol"]			 		$flen
+$fw [class="Xfburn"]						$flen
+$fw [class="i3bar"]							$flen
+$fw [instance="FLOATTERM"]		 			$tf "float-term",$flen
 
-$fw [class="Calamares"]											$flen,$brnr
-$fw [class="GParted"]												$flen,$brnr
-$fw [title="i3_help"]												$flen,$brnr
-$fw [class="Lxappearance"]									$flen,$brnr
-$fw [class="Manjaro Settings Manager"]			$flen,$brnr
-$fw [class="Nitrogen"]											$flen,$brnr
-$fw [class="qt5ct"]						 							$flen,$brnr
-$fw [class="Qtconfig-qt4"]									$flen,$brnr
-$fw [class="Simple-scan"]										$flen,$brnr
+$fw [class="Calamares"]						$flen,$brnr
+$fw [class="GParted"]						$flen,$brnr
+$fw [title="i3_help"]						$flen,$brnr
+$fw [class="Lxappearance"]					$flen,$brnr
+$fw [class="Manjaro Settings Manager"]		$flen,$brnr
+$fw [class="Nitrogen"]						$flen,$brnr
+$fw [class="qt5ct"]			 				$flen,$brnr
+$fw [class="Qtconfig-qt4"]					$flen,$brnr
+$fw [class="Simple-scan"]					$flen,$brnr
 $fw [class="(?i)System-config-printer.py"]	$flen,$brnr
-$fw [class="Skype"]													$flen,$brnr
-$fw [class="Thus"]													$flen,$brnr
-$fw [class="Timeset-gui"]					 					$flen,$brnr
-$fw [class="(?i)virtualbox"]								$flen,$brnr
-$fw [class="matplotlib"]										$flen,$brnr
-$fw [class="Cam"]							 							$flen,$brnr
-$fw [class="Blueman-manager"]				 				$flen,$brnr
+$fw [class="Skype"]							$flen,$brnr
+$fw [class="Thus"]							$flen,$brnr
+$fw [class="Timeset-gui"]			 		$flen,$brnr
+$fw [class="(?i)virtualbox"]				$flen,$brnr
+$fw [class="matplotlib"]					$flen,$brnr
+$fw [class="Cam"]				 			$flen,$brnr
+$fw [class="Blueman-manager"]		 		$flen,$brnr
 
-$fw [class="Shutter"]			$flen,$brnr,$mvcn,\
-														resize set 500 500
-$fw [class="Electron"]		$flen,$brnr,$mvcn,\
-														resize set 1000 700
-$fw [instance="CALC"]			$flen,$brnr,$mvcn,\
-														resize set 480 480,\
-														$tf "calculator"
-$fw [class="Pavucontrol"]	$flen,$brnr,\
-														resize set 525 300
+$fw [class="Shutter"]		$flen,$brnr,$mvcn, resize set 500 500
+$fw [class="Electron"]		$flen,$brnr,$mvcn, resize set 1000 700
+$fw [class="Pavucontrol"]	$flen,$brnr, resize set 525 300
 
 # //// MARKED
 
-$fw [con_mark=_sticky_1]								resize set 715 423
+$fw [con_mark=_sticky_1]				resize set 715 423
 
-$fw [instance="RSS"]				 						$mrk1,$tf "newsboat"
-$fw [instance="MEDIA"]				 					$mrk2,$tf "media"
-$fw [title="Google Chrome$"]						$mrk3,$tf "chrome"
-$fw [instance="VIS"]										$mrk4,$tf "visualizer"
+$fw [instance="RSS"]		 			$mrk1,$tf "newsboat"
+$fw [instance="MEDIA"]		 			$mrk2,$tf "media"
+$fw [title="Google Chrome$"]			$mrk3,$tf "chrome"
+$fw [instance="VIS"]					$mrk4,$tf "visualizer"
 
-$fw [class="MPlayer"]										$mvm1
-$fw [class="mpv"]												$mvm1
-$fw [class="feh"]												$mvm1
-$fw [class="Sxiv"]											$mvm1
-$fw [window_role="pop-up"]							$mvm1
+$fw [class="MPlayer"]					$mvm1
+$fw [class="mpv"]						$mvm1
+$fw [class="feh"]						$mvm1
+$fw [class="Sxiv"]						$mvm1
+#$fw [window_role="pop-up"]				$mvm1
 
-$fw [class="Surf"]											$mvm2
-$fw [class="Zathura"]										$mvm2
-$fw [class="MuPDF"]											$mvm2
-$fw [title="_popout="]									$mvm2,$tf "ytchat"
-$fw [title="^localhost:8090$"]					$mvm2,$tf "mdpreview"
+$fw [class="Surf"]						$mvm2
+$fw [class="Zathura"]					$mvm2
+$fw [class="MuPDF"]						$mvm2
+$fw [title="_popout="]					$mvm2,$tf "ytchat"
+$fw [title="^localhost:8090$"]			$mvm2,$tf "mdpreview"
 
-$fw [class="Pamac-manager"]				 			$mvm3,$tf "software"
-$fw [title="- Vivaldi$"]								$mvm3,$tf "vivaldi"
+$fw [class="Pamac-manager"]		 		$mvm3,$tf "software"
+$fw [title="- Vivaldi$"]				$mvm3,$tf "vivaldi"
 
-$fw [class="Slack"]					 						$tf "slack"
-$fw [title="^My Movies & TV"]						$tf "movies",$stm1
-$fw [title="- Watch Series$"]						$tf "watch-series",$stm1
-$fw [title="Log in with PayPal"]				$tf "paypal",$flen
-$fw [instance="TERMINAL"]				 				$tf "terminal"
-$fw [instance="CALENDAR"]								$tf "calendar"
-$fw [instance="GRIVE"]									$tf "drive-sync"
-$fw [instance="BIB"]										$tf "biblbiography"
-$fw [title="YouTube$"]									$tf "youtube",$stm1
-$fw [title="^BBC iPlayer$"]			 				$tf "iplayer",$stm1
-$fw [title="^Netflix$"]									$tf "netflix",$stm1
-$fw [title="^Funimation"]				 				$tf "funimation",$stm1
+$fw [instance="CALC"]					$tf "calculator"
+$fw [class="Slack"]			 			$tf "slack"
+$fw [title="^My Movies & TV"]			$tf "movies",$stm1
+$fw [title="- Watch Series$"]			$tf "watch-series",$stm1
+$fw [title="Log in with PayPal"]		$tf "paypal",$flen
+$fw [instance="TERMINAL"]		 		$tf "terminal"
+$fw [instance="CALENDAR"]				$tf "calendar"
+$fw [instance="GRIVE"]					$tf "drive-sync"
+$fw [instance="BIB"]					$tf "biblbiography"
+$fw [title="YouTube$"]					$tf "youtube",$stm1
+$fw [title="^BBC iPlayer$"]		 		$tf "iplayer",$stm1
+$fw [title="^Netflix$"]					$tf "netflix",$stm1
+$fw [title="^Funimation"]		 		$tf "funimation",$stm1
 $fw [title="Amazon.co.uk: Prime Video"]	$tf "prime",$stm1
-$fw [instance="RTV"]										$tf "reddit"
-$fw [title="^MATLAB R20"]				 				$tf "matlab"
-$fw [instance="i3MAIN"]				 					$tf "i3main"
-$fw [instance="i3VARS"]				 					$tf "i3vars"
-$fw [instance="VIMRC"]									$tf "vimrc"
-$fw [instance="RCCONF"]				 					$tf "rcconf"
-$fw [instance="i3BLOCKS"]				 				$tf "i3blocks"
-$fw [instance="BASHMOUNT"]							$tf "bashmount"
-$fw [instance="GITREPOUPDATE"]					$tf "git-sync"
-$fw [instance="MOUNT"]									$tf "mount"
-$fw [instance="UNMOUNT"]								$tf "unmount"
+$fw [instance="RTV"]					$tf "reddit"
+$fw [title="^MATLAB R20"]		 		$tf "matlab"
+$fw [instance="i3MAIN"]		 			$tf "i3main"
+$fw [instance="i3VARS"]		 			$tf "i3vars"
+$fw [instance="VIMRC"]					$tf "vimrc"
+$fw [instance="RCCONF"]		 			$tf "rcconf"
+$fw [instance="i3BLOCKS"]		 		$tf "i3blocks"
+$fw [instance="BASHMOUNT"]				$tf "bashmount"
+$fw [instance="GITREPOUPDATE"]			$tf "git-sync"
+$fw [instance="MOUNT"]					$tf "mount"
+$fw [instance="UNMOUNT"]				$tf "unmount"
 
 # >>>> GAPS
 gaps inner 0
