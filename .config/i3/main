@@ -136,6 +136,8 @@ $mod+Ctrl+Left		workspace prev
 
 bindsym Print	 	$exn bash ~/$scripts/screenshot
 
+bindsym Delete	 	[title="placeholder"] kill
+
 # //// Numbers
 
 $mod+1				workspace $ws1
@@ -318,10 +320,10 @@ $win+Shift+t		$exn pkill compton
 $win+y				[con_mark=$mk1] resize shrink width 5 px or 5 ppt, resize shrink height 5 px or 5 ppt
 $win+Shift+y		gaps inner current set 0; gaps outer current set 0
 
-$win+u				$exn bash ~/$scripts/i3resize shrink 5
+$win+u				[con_mark=$mk1] resize shrink height 5 px or 5 ppt
 $win+Shift+u		gaps inner current minus 5; gaps outer current minus 10
 
-$win+i				$exn bash ~/$scripts/i3resize grow 5
+$win+i				[con_mark=$mk1] resize grow height 5 px or 5 ppt
 $win+Shift+i		gaps inner current plus 5; gaps outer current plus 10
 
 $win+o				[con_mark=$mk1] resize grow width 5 px or 5 ppt, resize grow height 5 px or 5 ppt
@@ -421,7 +423,7 @@ $fw [class="Pavucontrol"]	$flen,$brnr, resize set 525 300
 
 $fw [con_mark=_sticky_1]				resize set 715 423
 
-$fw [instance="RSS"]		 			$mrk1,$tf "newsboat"
+$fw [instance="MUSIC"]		 			$mrk1,$tf "ncmpcpp"
 $fw [instance="MEDIA"]		 			$mrk2,$tf "media"
 $fw [title="Google Chrome$"]			$mrk3,$tf "chrome"
 $fw [instance="VIS"]					$mrk4,$tf "visualizer"
@@ -441,6 +443,7 @@ $fw [title="^localhost:8090$"]			$mvm2,$tf "mdpreview"
 $fw [class="Pamac-manager"]		 		$mvm3,$tf "software"
 $fw [title="- Vivaldi$"]				$mvm3,$tf "vivaldi"
 
+$fw [instance="RSS"]		 			$tf "newsboat"
 $fw [instance="CALC"]					$tf "calculator"
 $fw [class="Slack"]			 			$tf "slack"
 $fw [title="^My Movies & TV"]			$tf "movies",$stm1

@@ -26,13 +26,13 @@
 						"x": 0,
 						"y": 0
 					},
-					"name": "newsboat",
+					"name": "ncmpcpp",
 					"percent": 0.5,
 					"swallows": [
 						{
 						"class": "^URxvt$",
-						"instance": "^RSS$",
-						"title": "^newsboat$",
+						"instance": "^MUSIC$",
+						// "title": "^ncmpcpp$",
 						"transient_for": "^$"
 						}
 					],
@@ -104,7 +104,7 @@
 						"x": 0,
 						"y": 0
 					},
-					"name": "zathura",
+					"name": "placeholder",
 					"percent": 0.5,
 					"swallows": [
 						{
@@ -224,7 +224,7 @@
 						"x": 0,
 						"y": 0
 					},
-					"name": "terminal",
+					"name": "placeholder",
 					"percent": 0.5,
 					"swallows": [
 						{
