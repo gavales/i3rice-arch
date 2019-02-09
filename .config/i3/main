@@ -84,7 +84,7 @@ client.placeholder		$blk $blk $wht $blk $blk
 
 # >>>> BAR
 bar {
-	i3bar_command i3bar
+	i3bar_command i3bar -t
 	status_command i3blocks -c ~/$scripts/i3blocks.conf
 #	status_command i3blocks
 #	position top
@@ -250,7 +250,7 @@ $mod+semicolon		$exn redshift -P -O 3700
 
 $mod+apostrophe		$exn redshift -x
 
-$mod+Return			$exn $term -name FLOATTERM
+$mod+Return			$exn $term -name URXVTC
 $mod+Shift+Return	$exn $term -name FILES -e ranger
 
 # //// 3rd Row
@@ -262,8 +262,8 @@ $mod+x				$exn $chrm --new-window --app=https://docs.google.com/spreadsheets/u/0
 $mod+c				$exn $chrm
 $mod+Shift+c		$exn "bash $home/$scripts/xtheme; bash $home/$scripts/reloadconfs"
 
-$mod+v				$lch '$term -name VIS -e vis' $mk1
-$mod+Shift+v		$lch 'projectM-pulseaudio' $mk1
+$mod+v				$exn $term -name VIS -e vis
+$mod+Shift+v		$lch 'projectM-pulseaudio' $mk4
 
 $mod+b				$lch '$term -name BIB -e vim $home/Drive/global.bib' $mk2
 $mod+Shift+b		bar mode toggle
@@ -284,10 +284,6 @@ $mod+Shift+period	$exn "$brightinc; bash ~/$scripts/notify_brightness"
 
 # >>>> MOD4 BINDINGS
 # //// Misc
-
-$win+Return			$exn $term -name TERMINAL
-
-$win+Shift+Return	$exn $term -name FILES_ADMIN -e sudo ranger
 
 $wlw+button1		$exn i3-input -F "[con_id=__focused__] mark _sticky_%s"
 
@@ -355,6 +351,9 @@ $win+Shift+k		move up
 $win+l				focus right
 $win+Shift+l		move right
 
+$win+Return			$exn xterm
+$win+Shift+Return	$exn $term -name FILES_ADMIN -e sudo ranger
+
 # //// 3rd Row
 
 $win+x				$exn "pactl set-sink-mute 0 toggle; bash ~/$scripts/notify_volume"
@@ -395,7 +394,6 @@ $fw [class="octopi"]						$flen
 $fw [class="Pavucontrol"]			 		$flen
 $fw [class="Xfburn"]						$flen
 $fw [class="i3bar"]							$flen
-$fw [instance="FLOATTERM"]		 			$tf "float-term",$flen
 
 $fw [class="Calamares"]						$flen,$brnr
 $fw [class="GParted"]						$flen,$brnr
@@ -443,6 +441,7 @@ $fw [title="^localhost:8090$"]			$mvm2,$tf "mdpreview"
 $fw [class="Pamac-manager"]		 		$mvm3,$tf "software"
 $fw [title="- Vivaldi$"]				$mvm3,$tf "vivaldi"
 
+$fw [instance="URXVT"]		 			$tf "urxvt"
 $fw [instance="RSS"]		 			$tf "newsboat"
 $fw [instance="CALC"]					$tf "calculator"
 $fw [class="Slack"]			 			$tf "slack"

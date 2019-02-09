@@ -9,32 +9,32 @@ ft=$3
 cd $HOME
 
 if [[ ! -d $bashDir ]]; then
-    mkdir $bashDir
-    cd $bashDir
+	mkdir $bashDir
+	cd $bashDir
 else
-    cd $bashDir
+	cd $bashDir
 fi
 
 if [[ -n $subdir ]]; then
-    if [[ ! -d $subdir ]]; then
-        mkdir $subdir
-        cd $subdir
-    else
-        cd $subdir
-    fi
+	if [[ ! -d $subdir ]]; then
+		mkdir $subdir
+		cd $subdir
+	else
+		cd $subdir
+	fi
 else
-    :
+	:
 fi
 
 if [[ -f $file ]]; then
-    vim $file
+	vim $file
 else
-    echo "#!/bin/bash" > $file
-    echo "" >> $file
-    echo "# OA: Gavin Vales" >> $file
-    echo "# CREATED: $(date)" >> $file
-    echo "" >> $file
-    echo "" >> $file
-    chmod +x $file
-    vim $file
+	echo "#!/bin/bash" > $file
+	echo "" >> $file
+	echo "# OA: Gavin Vales" >> $file
+	echo "# CREATED: $(date)" >> $file
+	echo "" >> $file
+	echo "" >> $file
+	chmod +x $file
+	vim $file
 fi

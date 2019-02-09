@@ -14,19 +14,19 @@ magenta=$(xrdb -query | grep '*color5' | awk '{print $NF}')
 cyan=$(xrdb -query | grep '*color6' | awk '{print $NF}')
 
 (
-    cd $atsynDir || exit 1
-
-    echo "// These colors are specific to the theme. Do not use in a package!" > colors.less
-    echo "@very-light-gray: $whitel;" >> colors.less
-    echo "@light-gray: $whited;" >> colors.less
-    echo "@gray: $blackl;" >> colors.less
-    echo "@dark-gray: $blackd;" >> colors.less
-    echo "@very-dark-gray: $blackd;" >> colors.less
-    echo "@cyan: $cyan;" >> colors.less
-    echo "@blue: $blue;" >> colors.less
-    echo "@purple: $magenta;" >> colors.less
-    echo "@green: $green;" >> colors.less
-    echo "@red: $red;" >> colors.less
-    echo "@orange: $yellow;" >> colors.less
-    echo "@light-orange: $yellow;" >> colors.less
+	cd $atsynDir || exit 1
+	
+	echo "// These colors are specific to the theme. Do not use in a package!" > colors.less
+	echo "@very-light-gray: $whitel;" >> colors.less
+	echo "@light-gray: $whited;" >> colors.less
+	echo "@gray: $blackl;" >> colors.less
+	echo "@dark-gray: $blackd;" >> colors.less
+	echo "@very-dark-gray: $blackd;" >> colors.less
+	echo "@cyan: $cyan;" >> colors.less
+	echo "@blue: $blue;" >> colors.less
+	echo "@purple: $magenta;" >> colors.less
+	echo "@green: $green;" >> colors.less
+	echo "@red: $red;" >> colors.less
+	echo "@orange: $yellow;" >> colors.less
+	echo "@light-orange: $yellow;" >> colors.less
 )

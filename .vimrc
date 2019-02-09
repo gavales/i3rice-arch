@@ -32,7 +32,7 @@ map <C-p> "+P
 autocmd FileType python,vim,conf,json,perl,sh set colorcolumn=80
 autocmd FileType python,vim,conf,json,perl,sh filetype indent on
 autocmd FileType python,vim,perl,json,sh set list
-autocmd FileType python,vim,perl,json,sh set listchars=tab:\|\ 
+autocmd FileType python,vim,perl,json,sh set listchars=tab:\:\ 
 "autocmd FileType python call matchadd('ColorColumn', '\%81v', 100)
 "autocmd FileType vim call matchadd('ColorColumn', '\%81v', 100)
 "autocmd FileType conf call matchadd('ColorColumn', '\%81v', 100)
@@ -189,6 +189,7 @@ endfunction
 " //// ACTUAL
 
 set statusline=
+set statusline+=\ 
 set statusline+=%#User1#
 set statusline+=\ %{ModeCurrent()}
 set statusline+=%#User2#
