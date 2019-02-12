@@ -15,7 +15,7 @@ else
 fi
 
 #case $BLOCK_BUTTON in
-#  5) mpc prev ;;
-#  1) mpc toggle ;;
-#  4) mpc next ;;
+#	5) mpc prev ;;
+#	1) mpc toggle ;;
+#	4) mpc next ;;
 #esac

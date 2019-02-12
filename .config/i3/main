@@ -427,7 +427,7 @@ $fw [title="Google Chrome$"]			$mrk3,$tf "chrome"
 $fw [instance="VIS"]					$mrk4,$tf "visualizer"
 
 $fw [class="MPlayer"]					$mvm1
-$fw [class="mpv"]						$mvm1
+$fw [class="mpv"]						$mvm1,$stm1
 $fw [class="feh"]						$mvm1
 $fw [class="Sxiv"]						$mvm1
 #$fw [window_role="pop-up"]				$mvm1

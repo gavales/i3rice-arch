@@ -1,5 +1,3 @@
-rename 1516_SOLN.pdf
-rename 1617_DRAFT.pdf
 rename 1617_SOLNS.pdf
 lectures
 mkdir lectures
@@ -44,7 +42,9 @@ open_with
 mkdir CPU10316
 mkdir Cowboy Bebop
 rename onelight
-shell sudo pacman -U %f
-shell sleep 5
+rename Futurama
+rename Twin Peaks
+shell mkdir S1 S2 S3
+wq
+rename 2019_02_12_WK20.md
 
-shell mkdir S1 S2 S3 S4 S5 S6 S7 S8
