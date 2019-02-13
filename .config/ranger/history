@@ -1,5 +1,3 @@
-rename 1617_SOLNS.pdf
-lectures
 mkdir lectures
 rename i3getlwinid
 rename i3focuslast
@@ -17,7 +15,6 @@ rename FuturisticSpace.mp4
 rename Decay of the Mainframe.mp4
 rename Ghibli25Concert.mp4
 rename DeusExPanceaBossMix.mp4
-scout -ftsea 
 rename Ghibli.mp4
 rename GhibliJazz.mp4
 rename media
@@ -48,3 +45,6 @@ shell mkdir S1 S2 S3
 wq
 rename 2019_02_12_WK20.md
 
+scout -ftsea 
+touch bindings
+open_with vim
