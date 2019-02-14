@@ -45,6 +45,10 @@ let g:indentLine_enabled = 0
 autocmd CursorHold,CursorHoldI * update
 autocmd CursorHold,CursorHoldI * redraw!
 
+let &t_SI = "\<esc>[5 q"
+let &t_SR = "\<esc>[5 q"
+let &t_EI = "\<esc>[2 q"
+
 map <Tab><Tab> <Esc>/>>>><Enter>
 
 inoremap \ph <++>
