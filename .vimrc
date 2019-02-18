@@ -57,7 +57,7 @@ inoremap \ph <++>
 
 hi Normal ctermbg=none guibg=black
 hi LineNr ctermbg=none ctermfg=grey
-hi Comment cterm=italic ctermbg=none ctermfg=grey
+hi Comment cterm=italic
 hi SpecialKey ctermbg=none ctermfg=grey
 hi Folded cterm=italic ctermfg=blue ctermbg=black
 hi ModeMsg cterm=bold ctermfg=white

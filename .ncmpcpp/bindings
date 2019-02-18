@@ -14,10 +14,10 @@ def_key "ctrl-u"
 def_key "ctrl-d"
     page_down
 #push_characters "jjjjjjjjjjjjjjj"
-def_key "u"
+def_key "K"
     page_up
 #push_characters "kkkkkkkkkkkkkkk"
-def_key "d"
+def_key "J"
     page_down
 #push_characters "jjjjjjjjjjjjjjj"
 def_key "h"
@@ -34,10 +34,10 @@ def_key "N"
     previous_found_item
 
 # not used but bound
-def_key "J"
-    move_sort_order_down
-def_key "K"
-    move_sort_order_up
+#def_key "J"
+#    move_sort_order_down
+#def_key "K"
+#    move_sort_order_up
 def_key "h"
   jump_to_parent_directory
 def_key "l"
@@ -59,8 +59,8 @@ def_key "G"
 def_key "g"
   move_home
 #jump_to_position_in_song
-def_key "U"
-  update_database
+#def_key "U"
+#  update_database
 def_key "s"
   reset_search_engine
 def_key "s"

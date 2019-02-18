@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+# CREATED: Mon 18 Feb 19:46:53 GMT 2019
+
+artist="${1}"
+album="${2}"
+
+echo " "
+echo "===================="
+echo "       Title"
+echo "===================="
+echo " "
+
+for i in *.mp3 ; do
+	resto=${i%.*}
+	mid3v2 -t "${resto}" "${i}"
+	echo "${i}"
+done
+
+
+if [[ -n $artist ]]; then
+	echo " "
+	echo "===================="
+	echo "       Artist"
+	echo "===================="
+	echo " "
+	for i in *.mp3 ; do
+		resto=${i%.*}
+		mid3v2 -a "${artist}" "${i}"
+		echo "${i}"
+	done
+fi
+
+
+if [[ -n $album ]]; then
+	echo " "
+	echo "===================="
+	echo "       Album"
+	echo "===================="
+	echo " "
+	for i in *.mp3 ; do
+		resto=${i%.*}
+		mid3v2 -A "${album}" "${i}"
+		echo "${i}"
+	done
+fi
