@@ -147,12 +147,12 @@
 						"x": 0,
 						"y": 0
 					},
-					"name": "chrome",
+					"name": "vivaldi",
 					"percent": 0.5,
 					"swallows": [
 						{
-						"class": "^Google\\-chrome\\-beta$",
-						"instance": "^google\\-chrome\\-beta$",
+						"class": "^Vivaldi-stable$",
+						"instance": "^vivaldi-stable$",
 						"transient_for": "^$",
 						"window_role": "^browser$"
 						}

@@ -1,4 +1,3 @@
-rename i3getlwinid
 rename i3focuslast
 >>>>>>> origin/master
 mkdir VivaldiPatch
@@ -48,3 +47,4 @@ scout -ftsea
 touch bindings
 touch .inputrc
 open_with vim
+mkdir Leo Moracchioli

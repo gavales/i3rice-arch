@@ -61,7 +61,7 @@ set $t ff
 
 set $term		urxvtc
 set $brow		google-chrome-beta
-#set $brow		vivaldi-stable
+set $viva		vivaldi-stable
 set $brightinc	light -A 10
 set $brightdec	light -U 10
 
@@ -259,7 +259,7 @@ $mod+z				$exn $brow --new-window --app=https://docs.google.com/document/u/0/
 
 $mod+x				$exn $brow --new-window --app=https://docs.google.com/spreadsheets/u/0/
 
-$mod+c				$exn $brow
+$mod+c				$exn $viva
 $mod+Shift+c		$exn "bash $home/$scripts/xtheme; bash $home/$scripts/reloadconfs"
 
 $mod+v				$exn $term -name VIS -e vis
@@ -316,10 +316,10 @@ $win+Shift+t		$exn pkill compton
 $win+y				[con_mark=$mk1] resize shrink width 5 px or 5 ppt, resize shrink height 5 px or 5 ppt
 $win+Shift+y		gaps inner current set 0; gaps outer current set 0
 
-$win+u				[con_mark=$mk1] resize shrink height 5 px or 5 ppt
+$win+u				[con_mark=$mk1] resize set 537 423
 $win+Shift+u		gaps inner current minus 5; gaps outer current minus 10
 
-$win+i				[con_mark=$mk1] resize grow height 5 px or 5 ppt
+$win+i				[con_mark=$mk1] resize set 715 423
 $win+Shift+i		gaps inner current plus 5; gaps outer current plus 10
 
 $win+o				[con_mark=$mk1] resize grow width 5 px or 5 ppt, resize grow height 5 px or 5 ppt
@@ -423,7 +423,7 @@ $fw [con_mark=_sticky_1]				resize set 715 423
 
 $fw [instance="MUSIC"]		 			$mrk1,$tf "ncmpcpp"
 $fw [instance="MEDIA"]		 			$mrk2,$tf "media"
-$fw [title="Google Chrome$"]			$mrk3,$tf "chrome"
+$fw [title="- Vivaldi$"]				$mrk3,$tf "vivaldi"
 $fw [instance="VIS"]					$mrk4,$tf "visualizer"
 
 $fw [class="MPlayer"]					$mvm1
@@ -439,7 +439,7 @@ $fw [title="_popout="]					$mvm2,$tf "ytchat"
 $fw [title="^localhost:8090$"]			$mvm2,$tf "mdpreview"
 
 $fw [class="Pamac-manager"]		 		$mvm3,$tf "software"
-$fw [title="- Vivaldi$"]				$mvm3,$tf "vivaldi"
+$fw [title="Google Chrome$"]			$mvm3,$tf "chrome"
 
 $fw [instance="URXVT"]		 			$tf "urxvt"
 $fw [instance="RSS"]		 			$tf "newsboat"
@@ -496,7 +496,7 @@ $exn	setxkbmap $kb
 
 # PROGRAMS
 $exn	i3-msg "workspace $ws1; append_layout $home/.config/i3/main.json"
-$exn	$brow
+$exn	$viva
 $exn	$brow --new-window --app=https://www.youtube.com/
 $ena	mpv $home/scriptsounds/A\ Tone\ His\ Self.mp3
 $ena	notify-send 'i3 (re)loaded!' -i ~/$scriptpics/i3white.png

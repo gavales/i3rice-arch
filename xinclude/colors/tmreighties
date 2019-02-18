@@ -1,8 +1,8 @@
 !andalusia
 ! vim:syntax=xdefaults
-#515151 Selection
-#999999 Comment
-#f99157 Orange
+!#515151 Selection
+!#999999 Comment
+!#f99157 Orange
 #define cblkd #2d2d2d
 #define credd #f2777a
 #define cgrnd #99cc99
