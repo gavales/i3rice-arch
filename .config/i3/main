@@ -60,8 +60,8 @@ set $t ff
 # //// APPS
 
 set $term		urxvtc
-set $chrm		google-chrome-beta
-set $viva		vivaldi-stable
+set $brow		google-chrome-beta
+#set $brow		vivaldi-stable
 set $brightinc	light -A 10
 set $brightdec	light -U 10
 
@@ -185,7 +185,7 @@ $mod+Shift+Tab		focus left
 $mod+q				$lch '$term -name CALC -e R' $mk2
 $mod+Shift+q		kill
 
-$mod+w				$lch '$chrm --new-window --app=https://ww2.watch-series.co/' $mk1
+$mod+w				$lch '$brow --new-window --app=https://ww2.watch-series.co/' $mk1
 
 $mod+e				layout toggle tabbed split
 
@@ -195,15 +195,15 @@ $mod+Shift+r		restart
 $mod+t				$exn "bash $home/$scripts/mkwalrando; bash $home/$scripts/reloadconfs"
 
 $mod+y				resize shrink width 5 px or 5 ppt
-$mod+Shift+y		$lch '$chrm --new-window --app=https://www.youtube.com/' $mk1
+$mod+Shift+y		$lch '$brow --new-window --app=https://www.youtube.com/' $mk1
 
 $mod+u				resize shrink height 5 px or 5 ppt
-$mod+Shift+u		$lch '$chrm --new-window \
+$mod+Shift+u		$lch '$brow --new-window \
 						--app=https://outlook.office365.com/owa/?realm=soton.ac.uk' \
 						$mk3
 
 $mod+i				resize grow height 5 px or 5 ppt
-$mod+Shift+i		$lch '$chrm --new-window --app=https://www.bbc.co.uk/iplayer/' $mk1
+$mod+Shift+i		$lch '$brow --new-window --app=https://www.bbc.co.uk/iplayer/' $mk1
 
 $mod+o				resize grow width 5 px or 5 ppt
 
@@ -219,7 +219,7 @@ $mod+backslash		$exn bash ~/$scripts/i3media stop
 # //// 2nd Row
 
 $mod+a				focus parent
-$mod+Shift+a		$lch '$chrm --new-window --app=https://www.funimation.com/' $mk1
+$mod+Shift+a		$lch '$brow --new-window --app=https://www.funimation.com/' $mk1
 
 $mod+s				$lch '$term -name MUSIC -e ncmpcpp' $mk1 fl
 $mod+Shift+s		$lch spotify $mk1 fl
@@ -255,11 +255,11 @@ $mod+Shift+Return	$exn $term -name FILES -e ranger
 
 # //// 3rd Row
 
-$mod+z				$exn $chrm --new-window --app=https://docs.google.com/document/u/0/
+$mod+z				$exn $brow --new-window --app=https://docs.google.com/document/u/0/
 
-$mod+x				$exn $chrm --new-window --app=https://docs.google.com/spreadsheets/u/0/
+$mod+x				$exn $brow --new-window --app=https://docs.google.com/spreadsheets/u/0/
 
-$mod+c				$exn $chrm
+$mod+c				$exn $brow
 $mod+Shift+c		$exn "bash $home/$scripts/xtheme; bash $home/$scripts/reloadconfs"
 
 $mod+v				$exn $term -name VIS -e vis
@@ -268,13 +268,13 @@ $mod+Shift+v		$lch 'projectM-pulseaudio' $mk4
 $mod+b				$lch '$term -name BIB -e vim $home/Drive/global.bib' $mk2
 $mod+Shift+b		bar mode toggle
 
-$mod+n				$lch '$chrm --new-window --app=https://www.netflix.com/' $mk1
-$mod+Shift+n		$lch '$chrm --new-window \
+$mod+n				$lch '$brow --new-window --app=https://www.netflix.com/' $mk1
+$mod+Shift+n		$lch '$brow --new-window \
 						--app=https://www.amazon.co.uk/Amazon-Video/b/?node=3010085031&ref=atv_surl_aiv' \
 						$mk1
 
-$mod+m				$exn $chrm --new-window --app=https://docs.google.com/presentation/u/0/
-$mod+Shift+m		$lch '$chrm --new-window --app=https://play.google.com/movies/' $mk1
+$mod+m				$exn $brow --new-window --app=https://docs.google.com/presentation/u/0/
+$mod+Shift+m		$lch '$brow --new-window --app=https://play.google.com/movies/' $mk1
 
 $mod+comma			$exn "pactl set-sink-volume 0 -2%; bash ~/$scripts/notify_volume"
 $mod+Shift+comma	$exn "$brightdec; bash ~/$scripts/notify_brightness"
@@ -496,7 +496,7 @@ $exn	setxkbmap $kb
 
 # PROGRAMS
 $exn	i3-msg "workspace $ws1; append_layout $home/.config/i3/main.json"
-$exn	$chrm
-$exn	$chrm --new-window --app=https://www.youtube.com/
+$exn	$brow
+$exn	$brow --new-window --app=https://www.youtube.com/
 $ena	mpv $home/scriptsounds/A\ Tone\ His\ Self.mp3
 $ena	notify-send 'i3 (re)loaded!' -i ~/$scriptpics/i3white.png

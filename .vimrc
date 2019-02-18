@@ -29,10 +29,10 @@ set title titlestring=%f titlelen=70
 set mouse=a
 vnoremap <C-c> "+y
 map <C-p> "+P
-autocmd FileType python,vim,conf,json,perl,sh set colorcolumn=80
-autocmd FileType python,vim,conf,json,perl,sh filetype indent on
-autocmd FileType python,vim,perl,json,sh set list
-autocmd FileType python,vim,perl,json,sh set listchars=tab:\:\ 
+autocmd FileType python,html,vim,conf,json,perl,sh set colorcolumn=80
+autocmd FileType python,html,vim,conf,json,perl,sh filetype indent on
+autocmd FileType python,html,vim,perl,json,sh set list
+autocmd FileType python,html,vim,perl,json,sh set listchars=tab:\:\ 
 "autocmd FileType python call matchadd('ColorColumn', '\%81v', 100)
 "autocmd FileType vim call matchadd('ColorColumn', '\%81v', 100)
 "autocmd FileType conf call matchadd('ColorColumn', '\%81v', 100)
@@ -57,6 +57,7 @@ inoremap \ph <++>
 
 hi Normal ctermbg=none guibg=black
 hi LineNr ctermbg=none ctermfg=grey
+hi Comment cterm=italic ctermbg=none ctermfg=grey
 hi SpecialKey ctermbg=none ctermfg=grey
 hi Folded cterm=italic ctermfg=blue ctermbg=black
 hi ModeMsg cterm=bold ctermfg=white

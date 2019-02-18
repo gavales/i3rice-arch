@@ -79,7 +79,7 @@ mouse_list_scroll_whole_page = "no"
 #song_library_format = {%n - }{%t}|{%f}
 
 
-song_list_format = " {$5%a }{ $R$7%30t} "
+song_list_format = " {$5%a}::{$R$7%30t} "
 song_columns_list_format = "(50)[magenta]{ar} (50)[green]{t}"
 
 # >>>> Bars
