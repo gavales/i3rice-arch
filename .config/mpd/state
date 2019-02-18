@@ -1,9 +1,9 @@
 sw_volume: 62
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
-state: pause
+state: play
 current: 0
-time: 118.089000
+time: 285.815000
 random: 0
 repeat: 1
 single: 0
@@ -12,262 +12,261 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Leo Moracchioli/3005 [acoustic].mp3
-1:Leo Moracchioli/4 Non Blondes - What´s Up.mp3
-2:Leo Moracchioli/60 Minutes.mp3
-3:Leo Moracchioli/9 metal_rock songs in 2 minutes.mp3
-4:Leo Moracchioli/9 rock_metal songs in 2_30 minutes.mp3
-5:Leo Moracchioli/AC_DC - Thunderstruck (Feat. Peter Honoré).mp3
-6:Leo Moracchioli/Ace of Spades.mp3
-7:Leo Moracchioli/Adele - Hello.mp3
-8:Leo Moracchioli/Adele - Someone Like You.mp3
-9:Leo Moracchioli/Aerials [acoustic].mp3
-10:Leo Moracchioli/All About That Bass.mp3
-11:Leo Moracchioli/All I Want For Christmas Is You.mp3
-12:Leo Moracchioli/All That She Wants.mp3
-13:Leo Moracchioli/Amy Winehouse - Rehab.mp3
-14:Leo Moracchioli/Anaconda.mp3
-15:Leo Moracchioli/Another One Bites the Dust.mp3
-16:Leo Moracchioli/Avicii - Wake Me up (Feat. Trey Xavier).mp3
-17:Leo Moracchioli/BAD.mp3
-18:Leo Moracchioli/Baby.mp3
-19:Leo Moracchioli/Baby Boy (Feat. Lillian).mp3
-20:Leo Moracchioli/Baby One More Time.mp3
-21:Leo Moracchioli/Baby Shark.mp3
-22:Leo Moracchioli/Bad Blood.mp3
-23:Leo Moracchioli/Bad Romance.mp3
-24:Leo Moracchioli/Bang Bang.mp3
-25:Leo Moracchioli/Barbie Girl.mp3
-26:Leo Moracchioli/Beat It.mp3
-27:Leo Moracchioli/Believer.mp3
-28:Leo Moracchioli/Bitter Sweet Symphony.mp3
-29:Leo Moracchioli/Black Hole Sun.mp3
-30:Leo Moracchioli/Black Night - Deep Purple.mp3
-31:Leo Moracchioli/Blackbird [acoustic].mp3
-32:Leo Moracchioli/Blacken The Cursed Sun - Lamb Of God Vocal .mp3
-33:Leo Moracchioli/Blame It On The Boogie [acoustic].mp3
-34:Leo Moracchioli/Blur - Song 2 (Feat. Stine Moracchioli).mp3
-35:Leo Moracchioli/Blurred Lines [acoustic].mp3
-36:Leo Moracchioli/Bob Marley - Redemption Song (Feat. Jared Dines).mp3
-37:Leo Moracchioli/Bombtrack (Metal Cover by Skar Productions).mp3
-38:Leo Moracchioli/Born This Way.mp3
-39:Leo Moracchioli/Born to Be Wild.mp3
-40:Leo Moracchioli/Bruno Mars - 24K Magic.mp3
-41:Leo Moracchioli/Burn The Witch  (360 video ).mp3
-42:Leo Moracchioli/California Dreamin´.mp3
-43:Leo Moracchioli/Californication (& more).mp3
-44:Leo Moracchioli/Call Me Maybe.mp3
-45:Leo Moracchioli/Can´t Stop the Feeling.mp3
-46:Leo Moracchioli/Careless Whisper (Feat. Jørgen Munkeby from Shining).mp3
-47:Leo Moracchioli/Chandelier.mp3
-48:Leo Moracchioli/Coldplay - In My Place (Feat. Rabea & Hannah).mp3
-49:Leo Moracchioli/Coldplay - Yellow (Feat. Davie504).mp3
-50:Leo Moracchioli/Come as You Are (Feat. Stine Moracchioli).mp3
-51:Leo Moracchioli/Cotton Eye Joe.mp3
-52:Leo Moracchioli/Crackerman [acoustic].mp3
-53:Leo Moracchioli/Creep.mp3
-54:Leo Moracchioli/DNCE - Cake By The Ocean (UMC Feat. Leo Moracchioli).mp3
-55:Leo Moracchioli/Dancing Queen.mp3
-56:Leo Moracchioli/Danger Zone (Feat. Erock).mp3
-57:Leo Moracchioli/Dark Horse.mp3
-58:Leo Moracchioli/Despacito.mp3
-59:Leo Moracchioli/Die Antwoord -  I FINK U FREEKY.mp3
-60:Leo Moracchioli/Die Antwoord - Baby´s On Fire.mp3
-61:Leo Moracchioli/Disco Inferno.mp3
-62:Leo Moracchioli/Don´t Speak.mp3
-63:Leo Moracchioli/Ed Sheeran - Shape of You.mp3
-64:Leo Moracchioli/Ed Sheeran - Sing.mp3
-65:Leo Moracchioli/Elastic Heart.mp3
-66:Leo Moracchioli/Eminem - Lose Yourself.mp3
-67:Leo Moracchioli/Everlong [acoustic].mp3
-68:Leo Moracchioli/Everybody [acoustic].mp3
-69:Leo Moracchioli/Everything Is AWESOME!!!.mp3
-70:Leo Moracchioli/Ex´s & Oh´s.mp3
-71:Leo Moracchioli/Eye of the Tiger (Feat. Rob Lundgren).mp3
-72:Leo Moracchioli/Faith [acoustic].mp3
-73:Leo Moracchioli/Fast Car (Feat. Mary Spender) [live acoustic].mp3
-74:Leo Moracchioli/Fatty Boom Boom.mp3
-75:Leo Moracchioli/Feel Good Inc..mp3
-76:Leo Moracchioli/Firework.mp3
-77:Leo Moracchioli/Folsom Prison Blues (Feat. Rob Chapman).mp3
-78:Leo Moracchioli/Fortunate Son.mp3
-79:Leo Moracchioli/Free Fallin´.mp3
-80:Leo Moracchioli/Friends Theme.mp3
-81:Leo Moracchioli/Gangnam Style.mp3
-82:Leo Moracchioli/Gangster´s Paradise.mp3
-83:Leo Moracchioli/Genesis - Mama.mp3
-84:Leo Moracchioli/Genie in a Bottle (Feat. Lillian).mp3
-85:Leo Moracchioli/Get Lucky.mp3
-86:Leo Moracchioli/Ghostbusters.mp3
-87:Leo Moracchioli/Gin and Juice.mp3
-88:Leo Moracchioli/Girl You Know It´s True.mp3
-89:Leo Moracchioli/Girls Just Want To Have Fun.mp3
-90:Leo Moracchioli/Give It Away.mp3
-91:Leo Moracchioli/Greased Lightning.mp3
-92:Leo Moracchioli/Groove Is In The Heart.mp3
-93:Leo Moracchioli/Hakuna Matata (Feat. Rob Scallon).mp3
-94:Leo Moracchioli/Halo.mp3
-95:Leo Moracchioli/Happy [acoustic].mp3
-96:Leo Moracchioli/Havana.mp3
-97:Leo Moracchioli/Heathens.mp3
-98:Leo Moracchioli/Here Comes the Sun (Feat. Stevic & Ro from Twelve Foot Ninja).mp3
-99:Leo Moracchioli/Hey Jude.mp3
-100:Leo Moracchioli/Hey Ya [acoustic].mp3
-101:Leo Moracchioli/Highway Star.mp3
-102:Leo Moracchioli/Hollaback Girl.mp3
-103:Leo Moracchioli/Hotline Bling.mp3
-104:Leo Moracchioli/Hurt.mp3
-105:Leo Moracchioli/I Believe I Can Fly.mp3
-106:Leo Moracchioli/I Heard It Through the Grapevine.mp3
-107:Leo Moracchioli/I Kissed a Girl (Feat. Phil X).mp3
-108:Leo Moracchioli/I Like To Move It.mp3
-109:Leo Moracchioli/I Wanna Dance with Somebody.mp3
-110:Leo Moracchioli/Ice Ice Baby.mp3
-111:Leo Moracchioli/Imagine Dragons - Thunder.mp3
-112:Leo Moracchioli/Imagine [acoustic].mp3
-113:Leo Moracchioli/Insane In The Brain.mp3
-114:Leo Moracchioli/Ironic.mp3
-115:Leo Moracchioli/It´s A Hard-Knock Life (Feat. Mary Spender & Pete Thorn).mp3
-116:Leo Moracchioli/It´s Gonna Be Me.mp3
-117:Leo Moracchioli/I´m Too Sexy.mp3
-118:Leo Moracchioli/Jailhouse Rock.mp3
-119:Leo Moracchioli/Jingle Bell Metal.mp3
-120:Leo Moracchioli/Johnny B. Goode.mp3
-121:Leo Moracchioli/Jump Around.mp3
-122:Leo Moracchioli/Justin Bieber - Sorry.mp3
-123:Leo Moracchioli/Killing In The Name.mp3
-124:Leo Moracchioli/Kiss from a Rose.mp3
-125:Leo Moracchioli/LMFAO - Party Rock Anthem (Feat. Bumblefoot).mp3
-126:Leo Moracchioli/Last Christmas.mp3
-127:Leo Moracchioli/Let It Go - from Frozen.mp3
-128:Leo Moracchioli/Like A Virgin.mp3
-129:Leo Moracchioli/Like a Prayer.mp3
-130:Leo Moracchioli/Linkin Park - Heavy.mp3
-131:Leo Moracchioli/Lips Are Movin.mp3
-132:Leo Moracchioli/Livin´ La Vida Loca.mp3
-133:Leo Moracchioli/Look What You Made Me Do.mp3
-134:Leo Moracchioli/Lorde - Royals.mp3
-135:Leo Moracchioli/Losing My Religion.mp3
-136:Leo Moracchioli/Love Me Like You Do.mp3
-137:Leo Moracchioli/MMMBop.mp3
-138:Leo Moracchioli/Macarena.mp3
-139:Leo Moracchioli/Make It Wit Chu [acoustic].mp3
-140:Leo Moracchioli/Mambo No. 5.mp3
-141:Leo Moracchioli/Mamma Mia.mp3
-142:Leo Moracchioli/Man Of Constant Sorrow [acoustic].mp3
-143:Leo Moracchioli/Maria Magdalena.mp3
-144:Leo Moracchioli/Maroon 5 - This Love.mp3
-145:Leo Moracchioli/Mentos Metal.mp3
-146:Leo Moracchioli/Metallica - Enter Sandman.mp3
-147:Leo Moracchioli/Money for Nothing.mp3
-148:Leo Moracchioli/Money, Money, Money.mp3
-149:Leo Moracchioli/Moves Like Jagger.mp3
-150:Leo Moracchioli/Mr. Brownstone [acoustic].mp3
-151:Leo Moracchioli/My Favourite Game.mp3
-152:Leo Moracchioli/Never Gonna Give You Up.mp3
-153:Leo Moracchioli/No Diggity.mp3
-154:Leo Moracchioli/No Limit.mp3
-155:Leo Moracchioli/OutKast - Hey Ya!.mp3
-156:Leo Moracchioli/Pantera - 5 Minutes Alone - Vocal Cover.mp3
-157:Leo Moracchioli/Pantera - F_g Hostile.mp3
-158:Leo Moracchioli/Pantera - Walk (Feat. Mr. Damage).mp3
-159:Leo Moracchioli/Paparazzi.mp3
-160:Leo Moracchioli/Paranoid [acoustic].mp3
-161:Leo Moracchioli/People Are Strange.mp3
-162:Leo Moracchioli/Personal Jesus [acoustic].mp3
-163:Leo Moracchioli/Pink - Just Give Me A Reason (Feat. Pete Cottrell).mp3
-164:Leo Moracchioli/Pink - Try.mp3
-165:Leo Moracchioli/Play That Funky Music [acoustic].mp3
-166:Leo Moracchioli/Pokemon Theme (Feat. Truls Haugen).mp3
-167:Leo Moracchioli/Poker Face.mp3
-168:Leo Moracchioli/Pretty Fly (For a White Guy) (Feat. Stine Moracchioli).mp3
-169:Leo Moracchioli/Push It.mp3
-170:Leo Moracchioli/Radioactive.mp3
-171:Leo Moracchioli/Rebecca Black - Friday.mp3
-172:Leo Moracchioli/Respect.mp3
-173:Leo Moracchioli/Ring of Fire.mp3
-174:Leo Moracchioli/Roar.mp3
-175:Leo Moracchioli/Rock Me Amadeus.mp3
-176:Leo Moracchioli/Rockin´ Around the Christmas Tree.mp3
-177:Leo Moracchioli/Rolling In The Deep.mp3
-178:Leo Moracchioli/Roxette - The Look.mp3
-179:Leo Moracchioli/Run Rudolph Run.mp3
-180:Leo Moracchioli/Sabotage.mp3
-181:Leo Moracchioli/Sail - Awolnation.mp3
-182:Leo Moracchioli/Santa Claus Is Coming To Town.mp3
-183:Leo Moracchioli/Santana - Smooth.mp3
-184:Leo Moracchioli/Scatman.mp3
-185:Leo Moracchioli/Seven Nation Army [acoustic].mp3
-186:Leo Moracchioli/Sexy and I Know It.mp3
-187:Leo Moracchioli/Shake It Off.mp3
-188:Leo Moracchioli/Sharp Dressed Man.mp3
-189:Leo Moracchioli/Shawn Mendes - Stitches.mp3
-190:Leo Moracchioli/Sia - Cheap Thrills.mp3
-191:Leo Moracchioli/Sia - The Greatest.mp3
-192:Leo Moracchioli/Sledgehammer.mp3
-193:Leo Moracchioli/Slipknot - Duality [acoustic].mp3
-194:Leo Moracchioli/Smells Like Teen Spirit (Feat. Stine Moracchioli).mp3
-195:Leo Moracchioli/Smooth Criminal.mp3
-196:Leo Moracchioli/Snow - Informer.mp3
-197:Leo Moracchioli/Sober [acoustic].mp3
-198:Leo Moracchioli/Somebody That I Used To Know.mp3
-199:Leo Moracchioli/Space Jam Theme Song.mp3
-200:Leo Moracchioli/Spider-Man theme song.mp3
-201:Leo Moracchioli/SpongeBob Theme Song.mp3
-202:Leo Moracchioli/Spoonman [acoustic].mp3
-203:Leo Moracchioli/Stay.mp3
-204:Leo Moracchioli/Stayin´ Alive.mp3
-205:Leo Moracchioli/Stressed Out.mp3
-206:Leo Moracchioli/Støv Og Sand [acoustic].mp3
-207:Leo Moracchioli/Sultans of Swing (Feat. Mary Spender).mp3
-208:Leo Moracchioli/Summer of 69.mp3
-209:Leo Moracchioli/Superstition.mp3
-210:Leo Moracchioli/Take Me To Church.mp3
-211:Leo Moracchioli/Take On Me.mp3
-212:Leo Moracchioli/Teardrop [acoustic].mp3
-213:Leo Moracchioli/The Bad Touch.mp3
-214:Leo Moracchioli/The Ballroom Blitz.mp3
-215:Leo Moracchioli/The Chainsmokers - Closer.mp3
-216:Leo Moracchioli/The Final Countdown.mp3
-217:Leo Moracchioli/The Fox (What Does the Fox Say).mp3
-218:Leo Moracchioli/The Fresh Prince of Bel-Air Theme Song.mp3
-219:Leo Moracchioli/The Muppet Show Theme.mp3
-220:Leo Moracchioli/The Pink Panther Theme.mp3
-221:Leo Moracchioli/The Power of Love.mp3
-222:Leo Moracchioli/The Pretender.mp3
-223:Leo Moracchioli/The Prodigy - Breathe.mp3
-224:Leo Moracchioli/The Safety Dance.mp3
-225:Leo Moracchioli/The Simpsons Theme.mp3
-226:Leo Moracchioli/The Underground in America (Feat. Ola Englund & Delta Empire).mp3
-227:Leo Moracchioli/The Wheels On The Bus.mp3
-228:Leo Moracchioli/This is America.mp3
-229:Leo Moracchioli/This is Halloween.mp3
-230:Leo Moracchioli/Thriller (Feat. C.J Pierce).mp3
-231:Leo Moracchioli/Times like these [acoustic].mp3
-232:Leo Moracchioli/Titanium.mp3
-233:Leo Moracchioli/Toto - Africa (Feat. Rabea & Hannah).mp3
-234:Leo Moracchioli/Toto - Hold the Line.mp3
-235:Leo Moracchioli/Toxic.mp3
-236:Leo Moracchioli/Toxic [acoustic].mp3
-237:Leo Moracchioli/True Survivor.mp3
-238:Leo Moracchioli/Tubthumping.mp3
-239:Leo Moracchioli/Turn Down For What.mp3
-240:Leo Moracchioli/Twinkle, Twinkle, Little Star.mp3
-241:Leo Moracchioli/U Can´t Touch This.mp3
-242:Leo Moracchioli/U2 - Vertigo.mp3
-243:Leo Moracchioli/Umbrella.mp3
-244:Leo Moracchioli/Uptown Funk.mp3
-245:Leo Moracchioli/Waka Waka.mp3
-246:Leo Moracchioli/Wake Me Up Before You Go-Go.mp3
-247:Leo Moracchioli/Walk This Way [acoustic].mp3
-248:Leo Moracchioli/Wannabe.mp3
-249:Leo Moracchioli/What A Wonderful World.mp3
-250:Leo Moracchioli/Whenever, Wherever.mp3
-251:Leo Moracchioli/While My Guitar Gently Weeps.mp3
-252:Leo Moracchioli/White Christmas.mp3
-253:Leo Moracchioli/White Wedding.mp3
-254:Leo Moracchioli/Wild Side - Motley Crue.mp3
-255:Leo Moracchioli/Wonderwall.mp3
-256:Leo Moracchioli/Wrecking Ball.mp3
-257:Leo Moracchioli/Zombie (Feat. Stine Moracchioli).mp3
+0:Leo Moracchioli/4 Non Blondes - What´s Up.mp3
+1:Leo Moracchioli/60 Minutes.mp3
+2:Leo Moracchioli/9 metal_rock songs in 2 minutes.mp3
+3:Leo Moracchioli/9 rock_metal songs in 2_30 minutes.mp3
+4:Leo Moracchioli/AC_DC - Thunderstruck (Feat. Peter Honoré).mp3
+5:Leo Moracchioli/Ace of Spades.mp3
+6:Leo Moracchioli/Adele - Hello.mp3
+7:Leo Moracchioli/Adele - Someone Like You.mp3
+8:Leo Moracchioli/Aerials [acoustic].mp3
+9:Leo Moracchioli/All About That Bass.mp3
+10:Leo Moracchioli/All I Want For Christmas Is You.mp3
+11:Leo Moracchioli/All That She Wants.mp3
+12:Leo Moracchioli/Amy Winehouse - Rehab.mp3
+13:Leo Moracchioli/Anaconda.mp3
+14:Leo Moracchioli/Another One Bites the Dust.mp3
+15:Leo Moracchioli/Avicii - Wake Me up (Feat. Trey Xavier).mp3
+16:Leo Moracchioli/BAD.mp3
+17:Leo Moracchioli/Baby.mp3
+18:Leo Moracchioli/Baby Boy (Feat. Lillian).mp3
+19:Leo Moracchioli/Baby One More Time.mp3
+20:Leo Moracchioli/Baby Shark.mp3
+21:Leo Moracchioli/Bad Blood.mp3
+22:Leo Moracchioli/Bad Romance.mp3
+23:Leo Moracchioli/Bang Bang.mp3
+24:Leo Moracchioli/Barbie Girl.mp3
+25:Leo Moracchioli/Beat It.mp3
+26:Leo Moracchioli/Believer.mp3
+27:Leo Moracchioli/Bitter Sweet Symphony.mp3
+28:Leo Moracchioli/Black Hole Sun.mp3
+29:Leo Moracchioli/Black Night - Deep Purple.mp3
+30:Leo Moracchioli/Blackbird [acoustic].mp3
+31:Leo Moracchioli/Blacken The Cursed Sun - Lamb Of God Vocal .mp3
+32:Leo Moracchioli/Blame It On The Boogie [acoustic].mp3
+33:Leo Moracchioli/Blur - Song 2 (Feat. Stine Moracchioli).mp3
+34:Leo Moracchioli/Blurred Lines [acoustic].mp3
+35:Leo Moracchioli/Bob Marley - Redemption Song (Feat. Jared Dines).mp3
+36:Leo Moracchioli/Bombtrack (Metal Cover by Skar Productions).mp3
+37:Leo Moracchioli/Born This Way.mp3
+38:Leo Moracchioli/Born to Be Wild.mp3
+39:Leo Moracchioli/Bruno Mars - 24K Magic.mp3
+40:Leo Moracchioli/Burn The Witch  (360 video ).mp3
+41:Leo Moracchioli/California Dreamin´.mp3
+42:Leo Moracchioli/Californication (& more).mp3
+43:Leo Moracchioli/Call Me Maybe.mp3
+44:Leo Moracchioli/Can´t Stop the Feeling.mp3
+45:Leo Moracchioli/Careless Whisper (Feat. Jørgen Munkeby from Shining).mp3
+46:Leo Moracchioli/Chandelier.mp3
+47:Leo Moracchioli/Coldplay - In My Place (Feat. Rabea & Hannah).mp3
+48:Leo Moracchioli/Coldplay - Yellow (Feat. Davie504).mp3
+49:Leo Moracchioli/Come as You Are (Feat. Stine Moracchioli).mp3
+50:Leo Moracchioli/Cotton Eye Joe.mp3
+51:Leo Moracchioli/Crackerman [acoustic].mp3
+52:Leo Moracchioli/Creep.mp3
+53:Leo Moracchioli/DNCE - Cake By The Ocean (UMC Feat. Leo Moracchioli).mp3
+54:Leo Moracchioli/Dancing Queen.mp3
+55:Leo Moracchioli/Danger Zone (Feat. Erock).mp3
+56:Leo Moracchioli/Dark Horse.mp3
+57:Leo Moracchioli/Despacito.mp3
+58:Leo Moracchioli/Die Antwoord -  I FINK U FREEKY.mp3
+59:Leo Moracchioli/Die Antwoord - Baby´s On Fire.mp3
+60:Leo Moracchioli/Disco Inferno.mp3
+61:Leo Moracchioli/Don´t Speak.mp3
+62:Leo Moracchioli/Ed Sheeran - Shape of You.mp3
+63:Leo Moracchioli/Ed Sheeran - Sing.mp3
+64:Leo Moracchioli/Elastic Heart.mp3
+65:Leo Moracchioli/Eminem - Lose Yourself.mp3
+66:Leo Moracchioli/Everlong [acoustic].mp3
+67:Leo Moracchioli/Everybody [acoustic].mp3
+68:Leo Moracchioli/Everything Is AWESOME!!!.mp3
+69:Leo Moracchioli/Ex´s & Oh´s.mp3
+70:Leo Moracchioli/Eye of the Tiger (Feat. Rob Lundgren).mp3
+71:Leo Moracchioli/Faith [acoustic].mp3
+72:Leo Moracchioli/Fast Car (Feat. Mary Spender) [live acoustic].mp3
+73:Leo Moracchioli/Fatty Boom Boom.mp3
+74:Leo Moracchioli/Feel Good Inc..mp3
+75:Leo Moracchioli/Firework.mp3
+76:Leo Moracchioli/Folsom Prison Blues (Feat. Rob Chapman).mp3
+77:Leo Moracchioli/Fortunate Son.mp3
+78:Leo Moracchioli/Free Fallin´.mp3
+79:Leo Moracchioli/Friends Theme.mp3
+80:Leo Moracchioli/Gangnam Style.mp3
+81:Leo Moracchioli/Gangster´s Paradise.mp3
+82:Leo Moracchioli/Genesis - Mama.mp3
+83:Leo Moracchioli/Genie in a Bottle (Feat. Lillian).mp3
+84:Leo Moracchioli/Get Lucky.mp3
+85:Leo Moracchioli/Ghostbusters.mp3
+86:Leo Moracchioli/Gin and Juice.mp3
+87:Leo Moracchioli/Girl You Know It´s True.mp3
+88:Leo Moracchioli/Girls Just Want To Have Fun.mp3
+89:Leo Moracchioli/Give It Away.mp3
+90:Leo Moracchioli/Greased Lightning.mp3
+91:Leo Moracchioli/Groove Is In The Heart.mp3
+92:Leo Moracchioli/Hakuna Matata (Feat. Rob Scallon).mp3
+93:Leo Moracchioli/Halo.mp3
+94:Leo Moracchioli/Happy [acoustic].mp3
+95:Leo Moracchioli/Havana.mp3
+96:Leo Moracchioli/Heathens.mp3
+97:Leo Moracchioli/Here Comes the Sun (Feat. Stevic & Ro from Twelve Foot Ninja).mp3
+98:Leo Moracchioli/Hey Jude.mp3
+99:Leo Moracchioli/Hey Ya [acoustic].mp3
+100:Leo Moracchioli/Highway Star.mp3
+101:Leo Moracchioli/Hollaback Girl.mp3
+102:Leo Moracchioli/Hotline Bling.mp3
+103:Leo Moracchioli/Hurt.mp3
+104:Leo Moracchioli/I Believe I Can Fly.mp3
+105:Leo Moracchioli/I Heard It Through the Grapevine.mp3
+106:Leo Moracchioli/I Kissed a Girl (Feat. Phil X).mp3
+107:Leo Moracchioli/I Like To Move It.mp3
+108:Leo Moracchioli/I Wanna Dance with Somebody.mp3
+109:Leo Moracchioli/Ice Ice Baby.mp3
+110:Leo Moracchioli/Imagine Dragons - Thunder.mp3
+111:Leo Moracchioli/Imagine [acoustic].mp3
+112:Leo Moracchioli/Insane In The Brain.mp3
+113:Leo Moracchioli/Ironic.mp3
+114:Leo Moracchioli/It´s A Hard-Knock Life (Feat. Mary Spender & Pete Thorn).mp3
+115:Leo Moracchioli/It´s Gonna Be Me.mp3
+116:Leo Moracchioli/I´m Too Sexy.mp3
+117:Leo Moracchioli/Jailhouse Rock.mp3
+118:Leo Moracchioli/Jingle Bell Metal.mp3
+119:Leo Moracchioli/Johnny B. Goode.mp3
+120:Leo Moracchioli/Jump Around.mp3
+121:Leo Moracchioli/Justin Bieber - Sorry.mp3
+122:Leo Moracchioli/Killing In The Name.mp3
+123:Leo Moracchioli/Kiss from a Rose.mp3
+124:Leo Moracchioli/LMFAO - Party Rock Anthem (Feat. Bumblefoot).mp3
+125:Leo Moracchioli/Last Christmas.mp3
+126:Leo Moracchioli/Let It Go - from Frozen.mp3
+127:Leo Moracchioli/Like A Virgin.mp3
+128:Leo Moracchioli/Like a Prayer.mp3
+129:Leo Moracchioli/Linkin Park - Heavy.mp3
+130:Leo Moracchioli/Lips Are Movin.mp3
+131:Leo Moracchioli/Livin´ La Vida Loca.mp3
+132:Leo Moracchioli/Look What You Made Me Do.mp3
+133:Leo Moracchioli/Lorde - Royals.mp3
+134:Leo Moracchioli/Losing My Religion.mp3
+135:Leo Moracchioli/Love Me Like You Do.mp3
+136:Leo Moracchioli/MMMBop.mp3
+137:Leo Moracchioli/Macarena.mp3
+138:Leo Moracchioli/Make It Wit Chu [acoustic].mp3
+139:Leo Moracchioli/Mambo No. 5.mp3
+140:Leo Moracchioli/Mamma Mia.mp3
+141:Leo Moracchioli/Man Of Constant Sorrow [acoustic].mp3
+142:Leo Moracchioli/Maria Magdalena.mp3
+143:Leo Moracchioli/Maroon 5 - This Love.mp3
+144:Leo Moracchioli/Mentos Metal.mp3
+145:Leo Moracchioli/Metallica - Enter Sandman.mp3
+146:Leo Moracchioli/Money for Nothing.mp3
+147:Leo Moracchioli/Money, Money, Money.mp3
+148:Leo Moracchioli/Moves Like Jagger.mp3
+149:Leo Moracchioli/Mr. Brownstone [acoustic].mp3
+150:Leo Moracchioli/My Favourite Game.mp3
+151:Leo Moracchioli/Never Gonna Give You Up.mp3
+152:Leo Moracchioli/No Diggity.mp3
+153:Leo Moracchioli/No Limit.mp3
+154:Leo Moracchioli/OutKast - Hey Ya!.mp3
+155:Leo Moracchioli/Pantera - 5 Minutes Alone - Vocal Cover.mp3
+156:Leo Moracchioli/Pantera - F_g Hostile.mp3
+157:Leo Moracchioli/Pantera - Walk (Feat. Mr. Damage).mp3
+158:Leo Moracchioli/Paparazzi.mp3
+159:Leo Moracchioli/Paranoid [acoustic].mp3
+160:Leo Moracchioli/People Are Strange.mp3
+161:Leo Moracchioli/Personal Jesus [acoustic].mp3
+162:Leo Moracchioli/Pink - Just Give Me A Reason (Feat. Pete Cottrell).mp3
+163:Leo Moracchioli/Pink - Try.mp3
+164:Leo Moracchioli/Play That Funky Music [acoustic].mp3
+165:Leo Moracchioli/Pokemon Theme (Feat. Truls Haugen).mp3
+166:Leo Moracchioli/Poker Face.mp3
+167:Leo Moracchioli/Pretty Fly (For a White Guy) (Feat. Stine Moracchioli).mp3
+168:Leo Moracchioli/Push It.mp3
+169:Leo Moracchioli/Radioactive.mp3
+170:Leo Moracchioli/Rebecca Black - Friday.mp3
+171:Leo Moracchioli/Respect.mp3
+172:Leo Moracchioli/Ring of Fire.mp3
+173:Leo Moracchioli/Roar.mp3
+174:Leo Moracchioli/Rock Me Amadeus.mp3
+175:Leo Moracchioli/Rockin´ Around the Christmas Tree.mp3
+176:Leo Moracchioli/Rolling In The Deep.mp3
+177:Leo Moracchioli/Roxette - The Look.mp3
+178:Leo Moracchioli/Run Rudolph Run.mp3
+179:Leo Moracchioli/Sabotage.mp3
+180:Leo Moracchioli/Sail - Awolnation.mp3
+181:Leo Moracchioli/Santa Claus Is Coming To Town.mp3
+182:Leo Moracchioli/Santana - Smooth.mp3
+183:Leo Moracchioli/Scatman.mp3
+184:Leo Moracchioli/Seven Nation Army [acoustic].mp3
+185:Leo Moracchioli/Sexy and I Know It.mp3
+186:Leo Moracchioli/Shake It Off.mp3
+187:Leo Moracchioli/Sharp Dressed Man.mp3
+188:Leo Moracchioli/Shawn Mendes - Stitches.mp3
+189:Leo Moracchioli/Sia - Cheap Thrills.mp3
+190:Leo Moracchioli/Sia - The Greatest.mp3
+191:Leo Moracchioli/Sledgehammer.mp3
+192:Leo Moracchioli/Slipknot - Duality [acoustic].mp3
+193:Leo Moracchioli/Smells Like Teen Spirit (Feat. Stine Moracchioli).mp3
+194:Leo Moracchioli/Smooth Criminal.mp3
+195:Leo Moracchioli/Snow - Informer.mp3
+196:Leo Moracchioli/Sober [acoustic].mp3
+197:Leo Moracchioli/Somebody That I Used To Know.mp3
+198:Leo Moracchioli/Space Jam Theme Song.mp3
+199:Leo Moracchioli/Spider-Man theme song.mp3
+200:Leo Moracchioli/SpongeBob Theme Song.mp3
+201:Leo Moracchioli/Spoonman [acoustic].mp3
+202:Leo Moracchioli/Stay.mp3
+203:Leo Moracchioli/Stayin´ Alive.mp3
+204:Leo Moracchioli/Stressed Out.mp3
+205:Leo Moracchioli/Støv Og Sand [acoustic].mp3
+206:Leo Moracchioli/Sultans of Swing (Feat. Mary Spender).mp3
+207:Leo Moracchioli/Summer of 69.mp3
+208:Leo Moracchioli/Superstition.mp3
+209:Leo Moracchioli/Take Me To Church.mp3
+210:Leo Moracchioli/Take On Me.mp3
+211:Leo Moracchioli/Teardrop [acoustic].mp3
+212:Leo Moracchioli/The Bad Touch.mp3
+213:Leo Moracchioli/The Ballroom Blitz.mp3
+214:Leo Moracchioli/The Chainsmokers - Closer.mp3
+215:Leo Moracchioli/The Final Countdown.mp3
+216:Leo Moracchioli/The Fox (What Does the Fox Say).mp3
+217:Leo Moracchioli/The Fresh Prince of Bel-Air Theme Song.mp3
+218:Leo Moracchioli/The Muppet Show Theme.mp3
+219:Leo Moracchioli/The Pink Panther Theme.mp3
+220:Leo Moracchioli/The Power of Love.mp3
+221:Leo Moracchioli/The Pretender.mp3
+222:Leo Moracchioli/The Prodigy - Breathe.mp3
+223:Leo Moracchioli/The Safety Dance.mp3
+224:Leo Moracchioli/The Simpsons Theme.mp3
+225:Leo Moracchioli/The Underground in America (Feat. Ola Englund & Delta Empire).mp3
+226:Leo Moracchioli/The Wheels On The Bus.mp3
+227:Leo Moracchioli/This is America.mp3
+228:Leo Moracchioli/This is Halloween.mp3
+229:Leo Moracchioli/Thriller (Feat. C.J Pierce).mp3
+230:Leo Moracchioli/Times like these [acoustic].mp3
+231:Leo Moracchioli/Titanium.mp3
+232:Leo Moracchioli/Toto - Africa (Feat. Rabea & Hannah).mp3
+233:Leo Moracchioli/Toto - Hold the Line.mp3
+234:Leo Moracchioli/Toxic.mp3
+235:Leo Moracchioli/Toxic [acoustic].mp3
+236:Leo Moracchioli/True Survivor.mp3
+237:Leo Moracchioli/Tubthumping.mp3
+238:Leo Moracchioli/Turn Down For What.mp3
+239:Leo Moracchioli/Twinkle, Twinkle, Little Star.mp3
+240:Leo Moracchioli/U Can´t Touch This.mp3
+241:Leo Moracchioli/U2 - Vertigo.mp3
+242:Leo Moracchioli/Umbrella.mp3
+243:Leo Moracchioli/Uptown Funk.mp3
+244:Leo Moracchioli/Waka Waka.mp3
+245:Leo Moracchioli/Wake Me Up Before You Go-Go.mp3
+246:Leo Moracchioli/Walk This Way [acoustic].mp3
+247:Leo Moracchioli/Wannabe.mp3
+248:Leo Moracchioli/What A Wonderful World.mp3
+249:Leo Moracchioli/Whenever, Wherever.mp3
+250:Leo Moracchioli/While My Guitar Gently Weeps.mp3
+251:Leo Moracchioli/White Christmas.mp3
+252:Leo Moracchioli/White Wedding.mp3
+253:Leo Moracchioli/Wild Side - Motley Crue.mp3
+254:Leo Moracchioli/Wonderwall.mp3
+255:Leo Moracchioli/Wrecking Ball.mp3
+256:Leo Moracchioli/Zombie (Feat. Stine Moracchioli).mp3
 playlist_end
