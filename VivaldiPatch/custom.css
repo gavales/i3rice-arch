@@ -1,0 +1,117 @@
+#header { display: none !important; }
+
+.vivaldi { /* Vivaldi button */
+	right: 32px !important;
+	height: 49px !important;
+	background: linear-gradient(#e6e6e6, #d0d0d0) !important;
+	border-top-width: 0px !important;
+	border-top-left-radius: 4px !important;
+	border-bottom: 1px solid #979797 !important;
+	box-shadow:
+		inset 0 1px 0 0 rgba(255,255,255, 0.2),
+		inset 0 -1px 0 0 rgba(255,255,255, 0.2) !important;
+}
+
+.toolbar-addressbar.toolbar::after {
+	display: none; /* Hide line under toolbar. */
+}
+
+#tabs-container {
+	border-top-width: 0px !important; /* Hide tab top border. */
+	padding-bottom: 0 !important;
+}
+
+#tabs-container .resize {
+	margin-right: -30px !important; /* Get rid of the space between tabs and the Trash button. */
+}
+
+button.button-tabbar.toggle-trash {
+	z-index: 1 !important; /* Fix clicking issues. */
+}
+
+button.window-close {
+	margin-top: 9px;
+	z-index: 1; /*put on top*/
+}
+#browser.tabs-off button.window-close {
+	display: none !important; /* Hide Close button in F11 Fullscreen mode. */
+}
+
+button.window-minimize {
+	display: none;
+}
+
+button.window-maximize {
+	margin-left: auto !important;
+	margin-top: 9px;
+	z-index: 2; /* Draw on top. */
+}
+
+#browser.tabs-off button.window-maximize {
+	display: none !important; /* Hide Maximize button in F11 Fullscreen mode. */
+}
+
+
+#browser.tabs-off button.vivaldi {
+	display: none !important; /* Hide Vivaldi button in F11 Fullscreen mode. */
+}
+
+span.burger-icon {
+	height: 22px !important; /* Magic number formatting. */
+	padding-top: 0px !important; /* Removing unneeded padding. */
+}
+
+.addressfield {
+	max-width: 750px; /* To leave some room to drag the toolbar. */
+	margin-left: auto;
+	margin-right: auto;
+	flex-shrink: 1; /* So the URL bar will shrink in small windows. */
+	background: linear-gradient(to bottom, #eee, #fff) !important;
+	background-clip: padding-box !important;
+	border: 1px solid rgba(0,0,0, 0.25) !important;
+	border-radius: 2.5px !important;
+	box-shadow: 
+			  inset 0 0 0 1px rgba(0,0,0, 0.06),
+			  0 1px 0 0 rgba(255,255,255, 0.3) !important;
+}
+
+/* Tabs and tab bar */
+button.button-tabbar.newtab {
+	left: 3px !important; /* Move New Tab button to the left. */
+}
+
+.tab {
+	border-left: 1px solid transparent !important;
+	border-right: 1px solid transparent !important;
+	border-image: linear-gradient(to bottom, transparent, rgba(0,0,0, 0.1)) 1 !important;
+}
+
+.tab-strip span .tab-position{
+	margin-left: 34px; /* Make room for New Tab button. */
+	max-height: 30px !important;
+	min-height: 30px !important;
+}
+
+.tab-strip {
+	width: 100vw !important;
+	display: flex !important;
+	justify-content: flex-end !important;
+	background: linear-gradient(var(--colorAccentBg), var(--colorAccentBg)) !important;
+	border-bottom: 1px solid var(--colorAccentBg) !important;
+	box-shadow: inset 0 1px 2px 1px rgba(0,0,0, 0.1) !important;
+	direction: ltr;
+}
+
+.tab-position .tab.active {
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 0px;
+	border-top-left-radius: 0px !important;
+	border-top-right-radius: 0px !important;
+}
+
+#browser.color-behind-tabs-off #main{
+	background: ; /* Use correct color behind control buttons not actually on toolbar. */
+}
+*/
