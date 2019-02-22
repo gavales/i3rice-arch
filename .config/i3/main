@@ -370,12 +370,12 @@ $win+n				move workspace to output $nat
 $win+m				$exn bash ~/$scripts/multimon
 
 # >>>> FOR_WINDOW
-# //// ALL
+# //// GLOBAL
 
 focus_follows_mouse no
 focus_wrapping force
 workspace_auto_back_and_forth yes
-$fw [class="^.*"] border pixel 1
+#$fw [class="^.*"] border normal 1
 $fw [urgent=latest] focus
 
 # //// FLOATERS
@@ -395,27 +395,27 @@ $fw [class="Pavucontrol"]			 		$flen
 $fw [class="Xfburn"]						$flen
 $fw [class="i3bar"]							$flen
 
-$fw [class="Calamares"]						$flen,$brnr
-$fw [class="GParted"]						$flen,$brnr
-$fw [title="i3_help"]						$flen,$brnr
-$fw [class="Lxappearance"]					$flen,$brnr
-$fw [class="Manjaro Settings Manager"]		$flen,$brnr
-$fw [class="Nitrogen"]						$flen,$brnr
-$fw [class="qt5ct"]			 				$flen,$brnr
-$fw [class="Qtconfig-qt4"]					$flen,$brnr
-$fw [class="Simple-scan"]					$flen,$brnr
-$fw [class="(?i)System-config-printer.py"]	$flen,$brnr
-$fw [class="Skype"]							$flen,$brnr
-$fw [class="Thus"]							$flen,$brnr
-$fw [class="Timeset-gui"]			 		$flen,$brnr
-$fw [class="(?i)virtualbox"]				$flen,$brnr
-$fw [class="matplotlib"]					$flen,$brnr
-$fw [class="Cam"]				 			$flen,$brnr
-$fw [class="Blueman-manager"]		 		$flen,$brnr
+$fw [class="Calamares"]						$flen
+$fw [class="GParted"]						$flen
+$fw [title="i3_help"]						$flen
+$fw [class="Lxappearance"]					$flen
+$fw [class="Manjaro Settings Manager"]		$flen
+$fw [class="Nitrogen"]						$flen
+$fw [class="qt5ct"]			 				$flen
+$fw [class="Qtconfig-qt4"]					$flen
+$fw [class="Simple-scan"]					$flen
+$fw [class="(?i)System-config-printer.py"]	$flen
+$fw [class="Skype"]							$flen
+$fw [class="Thus"]							$flen
+$fw [class="Timeset-gui"]			 		$flen
+$fw [class="(?i)virtualbox"]				$flen
+$fw [class="matplotlib"]					$flen
+$fw [class="Cam"]				 			$flen
+$fw [class="Blueman-manager"]		 		$flen
 
-$fw [class="Shutter"]		$flen,$brnr,$mvcn, resize set 500 500
-$fw [class="Electron"]		$flen,$brnr,$mvcn, resize set 1000 700
-$fw [class="Pavucontrol"]	$flen,$brnr, resize set 525 300
+$fw [class="Shutter"]		$flen,$mvcn,resize set 500 500
+$fw [class="Electron"]		$flen,$mvcn,resize set 1000 700
+$fw [class="Pavucontrol"]	$flen,resize set 525 300
 
 # //// MARKED
 
@@ -423,7 +423,7 @@ $fw [con_mark=_sticky_1]				resize set 715 423
 
 $fw [instance="MUSIC"]		 			$mrk1,$tf "ncmpcpp"
 $fw [instance="MEDIA"]		 			$mrk2,$tf "media"
-$fw [title="- Vivaldi$"]				$mrk3,$tf "vivaldi"
+$fw [class="Vivaldi-stable"]			$mrk3,$tf "vivaldi"
 $fw [instance="VIS"]					$mrk4,$tf "visualizer"
 
 $fw [class="MPlayer"]					$mvm1

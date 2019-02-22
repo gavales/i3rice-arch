@@ -182,61 +182,61 @@
 					"type": "con"
 				}
 			]
-		},
-		{
-			// tabbed split container with 2 children
-			"border": "pixel",
-			"floating": "auto_off",
-			"layout": "tabbed",
-			"name": "con2",
-			"percent": 0.15,
-			"type": "con",
-			"nodes": [
-				{
-					"border": "pixel",
-					"current_border_width": 0,
-					"floating": "auto_off",
-					"geometry": {
-						"height": 458,
-						"width": 722,
-						"x": 0,
-						"y": 0
-					},
-					"name": "vis",
-					"percent": 0.5,
-					"swallows": [
-						{
-						"class": "^URxvt$",
-						"instance": "^VIS$",
-						"title": "^vis$",
-						"transient_for": "^$"
-						}
-					],
-					"type": "con"
-				},
-				{
-					"border": "pixel",
-					"current_border_width": 0,
-					"floating": "auto_off",
-					"geometry": {
-						"height": 458,
-						"width": 722,
-						"x": 0,
-						"y": 0
-					},
-					"name": "placeholder",
-					"percent": 0.5,
-					"swallows": [
-						{
-						"class": "^URxvt$",
-						"instance": "^TERMINAL$",
-						// "title": "^vis$",
-						"transient_for": "^$"
-						}
-					],
-					"type": "con"
-				}
-			]
 		}
+// 		{
+// 			// tabbed split container with 2 children
+// 			"border": "pixel",
+// 			"floating": "auto_off",
+// 			"layout": "tabbed",
+// 			"name": "con2",
+// 			"percent": 0.15,
+// 			"type": "con",
+// 			"nodes": [
+// 				{
+// 					"border": "pixel",
+// 					"current_border_width": 0,
+// 					"floating": "auto_off",
+// 					"geometry": {
+// 						"height": 458,
+// 						"width": 722,
+// 						"x": 0,
+// 						"y": 0
+// 					},
+// 					"name": "vis",
+// 					"percent": 0.5,
+// 					"swallows": [
+// 						{
+// 						"class": "^URxvt$",
+// 						"instance": "^VIS$",
+// 						"title": "^vis$",
+// 						"transient_for": "^$"
+// 						}
+// 					],
+// 					"type": "con"
+// 				},
+// 				{
+// 					"border": "pixel",
+// 					"current_border_width": 0,
+// 					"floating": "auto_off",
+// 					"geometry": {
+// 						"height": 458,
+// 						"width": 722,
+// 						"x": 0,
+// 						"y": 0
+// 					},
+// 					"name": "placeholder",
+// 					"percent": 0.5,
+// 					"swallows": [
+// 						{
+// 						"class": "^URxvt$",
+// 						"instance": "^TERMINAL$",
+// 						// "title": "^vis$",
+// 						"transient_for": "^$"
+// 						}
+// 					],
+// 					"type": "con"
+// 				}
+// 			]
+// 		}
 	]
 }
