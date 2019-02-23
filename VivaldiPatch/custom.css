@@ -1,0 +1,101 @@
+#header { display: none !important; }
+
+.vivaldi { /* Vivaldi button */
+	right: 32px !important;
+	height: 49px !important;
+	border-top-width: 0px !important;
+	border-top-left-radius: 0px !important;
+	border-bottom: 0px !important;
+}
+
+.toolbar-addressbar.toolbar::after {
+	display: none; /* Hide line under toolbar. */
+}
+
+#tabs-container {
+	border-top-width: 0px !important; /* Hide tab top border. */
+	padding-bottom: 0 !important;
+}
+
+#tabs-container .resize {
+	margin-right: -30px !important; /* Get rid of the space between tabs and the Trash button. */
+}
+
+button.button-tabbar.toggle-trash {
+	z-index: 1 !important; /* Fix clicking issues. */
+}
+
+button.window-close {
+	margin-top: 9px;
+	z-index: 1; /*put on top*/
+}
+#browser.tabs-off button.window-close {
+	display: none !important; /* Hide Close button in F11 Fullscreen mode. */
+}
+
+button.window-minimize {
+	display: none;
+}
+
+button.window-maximize {
+	margin-left: auto !important;
+	margin-top: 9px;
+	z-index: 2; /* Draw on top. */
+}
+
+#browser.tabs-off button.window-maximize {
+	display: none !important; /* Hide Maximize button in F11 Fullscreen mode. */
+}
+
+
+#browser.tabs-off button.vivaldi {
+	display: none !important; /* Hide Vivaldi button in F11 Fullscreen mode. */
+}
+
+span.burger-icon {
+	height: 22px !important; /* Magic number formatting. */
+	padding-top: 0px !important; /* Removing unneeded padding. */
+}
+
+.addressfield {
+	max-width: 750px; /* To leave some room to drag the toolbar. */
+	margin-left: auto;
+	margin-right: auto;
+	flex-shrink: 1; /* So the URL bar will shrink in small windows. */
+	background-clip: padding-box !important;
+	border: 0px !important;
+	border-radius: 0px !important;
+}
+
+/* Tabs and tab bar */
+button.button-tabbar.newtab {
+	left: 3px !important; /* Move New Tab button to the left. */
+}
+
+.tab {
+	border-left: 0px solid transparent !important;
+	border-right: 0px solid transparent !important;
+}
+
+.tab-strip span .tab-position{
+	margin-left: 34px; /* Make room for New Tab button. */
+	max-height: 30px !important;
+	min-height: 30px !important;
+}
+
+.tab-strip {
+	width: 100vw !important;
+	display: flex !important;
+	justify-content: flex-end !important;
+	border-bottom: 0px !important;
+	direction: ltr;
+}
+
+.tab-position .tab.active {
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 0px;
+	border-top-left-radius: 0px !important;
+	border-top-right-radius: 0px !important;
+}

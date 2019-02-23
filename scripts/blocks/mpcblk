@@ -2,17 +2,28 @@
 
 status=$(mpc current)
 
+<<<<<<< HEAD
 playing=$(ncmpcpp --current-song '%20A - %20t')
 
 if [ -z "$status" ]
 then
 	:
+=======
+icon="<span face='Font Awesome 5 Free'>&#xf001;</span>"
+
+playing=$(ncmpcpp --current-song '%20a - %20t')
+grey=$(xrdb -query | grep '*color8' | awk '{print $NF}')
+green=$(xrdb -query | grep '*color2' | awk '{print $NF}')
+
+if [[ -z "$status" ]]; then
+	echo "<span foreground=\"$grey\">"$icon" ${playing}</span>"
+>>>>>>> origin/master
 else
-	echo "<span face='Font Awesome 5 Free'>&#xf001;</span> ${playing}"
+	echo "<span foreground=\"$green\">"$icon" ${playing}</span>"
 fi
 
-case $BLOCK_BUTTON in
-  5) mpc prev ;;
-  1) mpc toggle ;;
-  4) mpc next ;;
-esac
+#case $BLOCK_BUTTON in
+#	5) mpc prev ;;
+#	1) mpc toggle ;;
+#	4) mpc next ;;
+#esac

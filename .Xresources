@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define cblkd       #0C1825
 #define cblkl       #979c9a
 #define credd       #947164
@@ -33,13 +34,32 @@
 #define cwhtd       #d1dade
 #define cwhtl      #d1dade
 >>>>>>> origin/master
+=======
+!onedark
+! vim:syntax=xdefaults
+#define cblkd #1E2127
+#define credd #E06C75
+#define cgrnd #98C379
+#define cylwd #D19A66
+#define cblud #61AFEF
+#define cgntd #C678DD
+#define ccynd #56B6C2
+#define cwhtd #ABB2BF
+#define cblkl #5C6370
+#define credl #E06C75
+#define cgrnl #98C379
+#define cylwl #D19A66
+#define cblul #61AFEF
+#define cgntl #C678DD
+#define ccynl #56B6C2
+#define cwhtl #FFFFFF
+>>>>>>> origin/master
 
 !! VARIABLES
 
 #define fontname monaco
-!#define font TerminessTTFNerdFontMono
-#define fontsize 14
-#define fontsize2 12
+#define fontsize 12
+#define fontsize2 14
 
 !! COLORS
 
@@ -152,12 +172,12 @@ URxvt*background: cblkd
 URxvt*foreground: cwhtl
 URxvt*saveLines: 5000
 URxvt*useColor:	true
-URxvt*internalBorder: 0
+URxvt*internalBorder: 1
 
-! for 'fake' transparency (without Compton) uncomment the following three lines
-! URxvt*inheritPixmap:            true
-! URxvt*transparent:              true
-! URxvt*shading:                  138
+!! for 'fake' transparency (without Compton) uncomment the following three lines
+!URxvt*inheritPixmap: true
+!URxvt*transparent: true
+!URxvt*shading: 138
 
 
 !! URXVT EXTENSIONS

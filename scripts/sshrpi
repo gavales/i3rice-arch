@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+# CREATED: Fri 22 Feb 16:18:09 GMT 2019
+
+# Ethernet
+nmap -n -sP 10.42.0.255/24
+ssh -Y pi@10.42.0.243
+
+# Home WI-FI
+ssh -Y pi@192.168.1.159

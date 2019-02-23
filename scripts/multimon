@@ -16,18 +16,18 @@ mode=$(echo -e "1 Monitor\n2 Monitors\n3 Monitors\nARandR" | dmenu -i -p "Choose
 
 if [[ $lenconn == 1 ]]; then
 	xrandr --output "$conn" --primary --auto
-    for i in "${disconn[@]}"
-    do
-        xrandr --output "$i" --off
-    done
+	for i in "${disconn[@]}"
+	do
+		xrandr --output "$i" --off
+	done
 elif [[ $mode == "1 Monitor" ]]; then
 	primary=$(echo $conn | tr ' ' '\n' | dmenu -i -p "Choose primary monitor:" $dmenucolors)
-    declare -a off=($(echo $all | tr ' ' '\n' | grep -v "$primary"))
+	declare -a off=($(echo $all | tr ' ' '\n' | grep -v "$primary"))
 	xrandr --output "$primary" --primary --auto
-    for i in "${off[@]}"
-    do
-        xrandr --output "$i" --off
-    done
+	for i in "${off[@]}"
+	do
+		xrandr --output "$i" --off
+	done
 elif [[ $mode == "2 Monitors" ]]; then
 	primary=$(echo $conn | tr ' ' '\n' | dmenu -i -p "Choose primary monitor:" $dmenucolors)
 	second=$(echo $conn | tr ' ' '\n' | grep -v "$primary")

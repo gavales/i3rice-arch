@@ -1,0 +1,24 @@
+#!/bin/bash
+
+mpris=$(pidof spotify)
+mpv=$(pidof mpv)
+mpvtitle="$(xdotool getwindowname $(xdotool search --class mpv))"
+
+blocksDir="$HOME/scripts/blocks"
+
+grn=$(xrdb -query | grep '*color2' | awk '{print $NF}')
+
+if [[ -n $mpv ]]; then
+	echo "<span foreground=\"$grn\"><span face='Font Awesome 5 Free'>&#xf03d;</span> ${mpvtitle:0:-6}</span>"
+elif [[ -n $mpris ]]; then
+	bash $blocksDir/mpgui
+else
+	bash $blocksDir/mpcblk
+fi
+
+case $BLOCK_BUTTON in
+  1) bash $HOME/scripts/i3media togg ;;
+  3) bash $HOME/scripts/i3media stop ;;
+  4) bash $HOME/scripts/i3media next ;;
+  5) bash $HOME/scripts/i3media prev ;;
+esac

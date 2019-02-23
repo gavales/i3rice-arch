@@ -10,28 +10,28 @@ white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
 blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
 
 (
-  cd "$dunstDir" || exit 1
-
-  echo "[frame]" > dunst-theme
-  echo "width = 1" >> dunst-theme
-  echo -e "color = \"$blackd\"\n" >> dunst-theme
-
-  echo "[urgency_low]" >> dunst-theme
-  echo "background = \"$blue\"" >> dunst-theme
-  echo "foreground = \"$blackd\"" >> dunst-theme
-  echo -e "timeout = 3\n" >> dunst-theme
-
-  echo "[urgency_normal]" >> dunst-theme
-  echo "background = \"$blue\"" >> dunst-theme
-  echo "foreground = \"$blackd\"" >> dunst-theme
-  echo -e "timeout = 3\n" >> dunst-theme
-
-  echo "[urgency_critical]" >> dunst-theme
-  echo "background = \"$red\"" >> dunst-theme
-  echo "foreground = \"$blackd\"" >> dunst-theme
-  echo -e "timeout = 3\n" >> dunst-theme
-
-  cat dunst-theme dunst-settings > dunstrc
+	cd "$dunstDir" || exit 1
+	
+	echo "[frame]" > dunst-theme
+	echo "width = 1" >> dunst-theme
+	echo -e "color = \"$blackd\"\n" >> dunst-theme
+	
+	echo "[urgency_low]" >> dunst-theme
+	echo "background = \"$blue\"" >> dunst-theme
+	echo "foreground = \"$blackd\"" >> dunst-theme
+	echo -e "timeout = 3\n" >> dunst-theme
+	
+	echo "[urgency_normal]" >> dunst-theme
+	echo "background = \"$blue\"" >> dunst-theme
+	echo "foreground = \"$blackd\"" >> dunst-theme
+	echo -e "timeout = 3\n" >> dunst-theme
+	
+	echo "[urgency_critical]" >> dunst-theme
+	echo "background = \"$red\"" >> dunst-theme
+	echo "foreground = \"$blackd\"" >> dunst-theme
+	echo -e "timeout = 3\n" >> dunst-theme
+	
+	cat dunst-theme dunst-settings > dunstrc
 )
 
 killall dunst && notify-send 'Dunst color theme updated' -i ~/scriptpics/settingswhite.png

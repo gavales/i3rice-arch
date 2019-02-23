@@ -9,18 +9,18 @@ dmenucolors="-fn "${font:4}" -nb "$black" -nf "$white" -sf "$black" -sb "$blue""
 theme=$(ls $HOME/xinclude/colors | dmenu -i -p "Choose theme:" $dmenucolors)
 xfilesDir=$HOME/xinclude
 
-if [[ -z $theme ]]; then
-	:
+if [[ -f $xfilesDir/colors/${theme} ]]; then
+	cat ${xfilesDir}/colors/${theme} > $HOME/.Xresources
+	cat ${xfilesDir}/1vars >> $HOME/.Xresources
+	cat ${xfilesDir}/2colorvars >> $HOME/.Xresources
+	cat ${xfilesDir}/3rofi >> $HOME/.Xresources
+	cat ${xfilesDir}/4xft >> $HOME/.Xresources
+	cat ${xfilesDir}/6xcursor >> $HOME/.Xresources
+	cat ${xfilesDir}/7urxvt >> $HOME/.Xresources
+	cat ${xfilesDir}/8urxvtext >> $HOME/.Xresources
+	xrdb -load $HOME/.Xresources
+	kill -1 $(pidof urxvtd)
+	notify-send '.Xresources has been reloaded' -i $HOME/scriptpics/settingswhite.png
 else
-    cat ${xfilesDir}/colors/${theme} > $HOME/.Xresources
-    cat ${xfilesDir}/1vars >> $HOME/.Xresources                           
-    cat ${xfilesDir}/2colorvars >> $HOME/.Xresources
-    cat ${xfilesDir}/3rofi >> $HOME/.Xresources
-    cat ${xfilesDir}/4xft >> $HOME/.Xresources
-    cat ${xfilesDir}/6xcursor >> $HOME/.Xresources
-    cat ${xfilesDir}/7urxvt >> $HOME/.Xresources
-    cat ${xfilesDir}/8urxvtext >> $HOME/.Xresources
-    xrdb -load $HOME/.Xresources
-    kill -1 $(pidof urxvtd)
-    notify-send '.Xresources has been reloaded' -i $HOME/scriptpics/settingswhite.png
+	:
 fi

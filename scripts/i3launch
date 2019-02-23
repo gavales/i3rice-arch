@@ -5,19 +5,25 @@
 
 app=$1
 mark=$2
+lastfocus=$(xdotool getactivewindow)
 
 if [[ $app =~ *[--new-window]* ]]; then
-    if [[ -n $mark ]]; then
-        i3-msg [con_mark=$mark] focus
-        i3-msg exec "\"$app\""
-    else
-        i3-msg exec \"$app\"
-    fi
+	if [[ -n $mark ]]; then
+		i3-msg [con_mark=$mark] focus
+		i3-msg exec "\"$app\""
+	else
+		i3-msg exec \"$app\"
+	fi
 else
-    if [[ -n $mark ]]; then
-        i3-msg [con_mark=$mark] focus
-        i3-msg exec "$app"
-    else
-        i3-msg exec "$app"
-    fi
+	if [[ -n $mark ]]; then
+		i3-msg [con_mark=$mark] focus
+		i3-msg exec "$app"
+	else
+		i3-msg exec "$app"
+	fi
+fi
+
+if [[ ${3} == 'fl' ]]; then
+	sleep .5
+	i3-msg [id="$lastfocus"] focus
 fi

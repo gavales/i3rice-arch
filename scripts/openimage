@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+# CREATED: Sun 27 Jan 16:49:21 GMT 2019
+
+img="${1}"
+
+#for f in *.{png,jpg,jpeg}; do
+#	[[ "$f" = "$img" ]] && continue
+#	images+=("$f")
+#done
+
+sxiv -a -b "${img}" *

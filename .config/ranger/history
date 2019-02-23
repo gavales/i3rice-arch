@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 rename 2019_01_08.md_
 rename 2019_01_08.md
 shell sudo vim
@@ -48,3 +49,55 @@ rename spotbright
 rename spotlight
 open_with lowriter
 shell grive
+=======
+rename i3focuslast
+>>>>>>> origin/master
+mkdir VivaldiPatch
+touch custom.css
+search bart
+search atha
+shell cat mp* >> mpblk
+shell bash ~/scripts/mppipe %f
+rename Cybercassette - Prologue.mp4
+rename Bleed.mp4
+rename Cybercity.mp4
+rename FuturisticSpace.mp4
+rename Decay of the Mainframe.mp4
+rename Ghibli25Concert.mp4
+rename DeusExPanceaBossMix.mp4
+rename Ghibli.mp4
+rename GhibliJazz.mp4
+rename media
+shell chmod +x %f
+mkdir Desktop
+mkdir Desktop_
+rename Desktop
+mkdir Downloads
+mkdir Downloads_
+rename Downloads
+rename Public_
+rename Public
+rename spotlight
+open_with q
+mkdir spotlight
+mkdir papes
+rename ex
+open_with 1
+open_with 2
+open_with zathura
+open_with 
+mkdir CPU10316
+mkdir Cowboy Bebop
+rename onelight
+rename Futurama
+rename Twin Peaks
+shell mkdir S1 S2 S3
+wq
+rename 2019_02_12_WK20.md
+
+scout -ftsea 
+touch bindings
+touch .inputrc
+open_with vim
+mkdir Leo Moracchioli
+>>>>>>> origin/master

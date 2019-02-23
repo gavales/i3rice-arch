@@ -75,5 +75,5 @@ endfunction
 
 setlocal spell spelllang=en_gb
 setlocal nonumber norelativenumber laststatus=0
-filetype plugin indent on
+"filetype plugin on
 setlocal textwidth=80

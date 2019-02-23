@@ -1,5 +1,5 @@
-"  dBP dP  dBP dBBBBBBb dBBBBBb    dBBBP
-"               '   dB'     dBP
+"  dBP dP  dBP dBBBBBBb dBBBBBb  dBBBP
+"         '   dB'   dBP
 " dB .BP dBP dB'dB'dB'  dBBBBK'  dBP
 " BB.BP dBP dB'dB'dB'  dBP  BB  dBP
 " BBBP dBP dB'dB'dB'  dBP  dB' dBBBBP
@@ -7,7 +7,7 @@
 " >>>> SETTINGS
 " //// GENERAL
 
-filetype plugin on    " required
+filetype plugin on " required
 execute pathogen#infect()
 syntax enable
 set encoding=utf-8
@@ -18,28 +18,30 @@ set hls
 set is
 set wrap
 set linebreak
-set nolist  "disable linebreak
+"set nolist  "disable linebreak
 set textwidth=0
 set wrapmargin=0
-set tabstop=2
-set shiftwidth=2
-"set expandtab
+set tabstop=4
+set shiftwidth=4
 set cursorline
 set title titlestring=%f titlelen=70
 set mouse=a
 vnoremap <C-c> "+y
 map <C-p> "+P
-autocmd FileType python,vim,conf,perl,sh set colorcolumn=80
+autocmd FileType python,css,html,vim,json,perl,sh set tabstop=4
+autocmd FileType python,css,html,vim,json,perl,sh set shiftwidth=4
+autocmd FileType python,css,html,vim,json,perl,sh set colorcolumn=80
+autocmd FileType python,css,html,vim,json,perl,sh filetype indent on
+autocmd FileType python,css,html,vim,json,perl,sh set list
+autocmd FileType python,css,html,vim,json,perl,sh set listchars=tab:\:\ 
 "autocmd FileType python call matchadd('ColorColumn', '\%81v', 100)
-"autocmd FileType vim call matchadd('ColorColumn', '\%81v', 100)
-"autocmd FileType conf call matchadd('ColorColumn', '\%81v', 100)
-"autocmd FileType perl call matchadd('ColorColumn', '\%81v', 100)
-"autocmd FileType sh call matchadd('ColorColumn', '\%81v', 100)
 autocmd Filetype calendar set laststatus=0
-let g:limelight_conceal_ctermfg = 'gray'
-let g:limelight_conceal_ctermfg = 240
 autocmd CursorHold,CursorHoldI * update
 autocmd CursorHold,CursorHoldI * redraw!
+
+let &t_SI = "\<esc>[5 q"
+let &t_SR = "\<esc>[5 q"
+let &t_EI = "\<esc>[2 q"
 
 map <Tab><Tab> <Esc>/>>>><Enter>
 
@@ -49,10 +51,12 @@ inoremap \ph <++>
 
 hi Normal ctermbg=none guibg=black
 hi LineNr ctermbg=none ctermfg=grey
+hi Comment cterm=italic
+hi SpecialKey ctermbg=none ctermfg=grey
 hi Folded cterm=italic ctermfg=blue ctermbg=black
 hi ModeMsg cterm=bold ctermfg=white
 hi lCursor ctermbg=blue ctermfg=black
-"hi ColorColumn ctermbg=darkgray ctermfg=white
+hi ColorColumn ctermbg=blue ctermfg=black
 
 hi User1 ctermbg=red ctermfg=black guibg=red guifg=black
 hi User2 ctermbg=yellow ctermfg=black guibg=yellow guifg=black
@@ -86,7 +90,7 @@ let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
 let g:calendar_modifiable = 1
 
-" >>>> COMMENT/UNCOMMENT
+" //// COMMENT/UNCOMMENT
 
 vnoremap \# :'<,'>norm 0i#<Enter>
 vnoremap \d# :'<,'>norm 0x<Enter>
@@ -114,30 +118,30 @@ set laststatus=2
 function! FileSize()
   let bytes = getfsize(expand('%:p'))
   if (bytes >= 1024)
-    let kbytes = bytes / 1024
+	let kbytes = bytes / 1024
   endif
   if (exists('kbytes') && kbytes >= 1000)
-    let mbytes = kbytes / 1000
+	let mbytes = kbytes / 1000
   endif
 
   if bytes <= 0
-    return '0'
+	return '0'
   endif
 
   if (exists('mbytes'))
-    return mbytes . 'MB '
+	return mbytes . 'MB '
   elseif (exists('kbytes'))
-    return kbytes . 'KB '
+	return kbytes . 'KB '
   else
-    return bytes . 'B '
+	return bytes . 'B '
   endif
 endfunction
 
 function! ReadOnly()
   if &readonly || !&modifiable
-    return ''
+	return ''
   else
-    return ''
+	return ''
 endfunction
 
 function! GitBranch()
@@ -150,40 +154,41 @@ function! StatuslineGit()
 endfunction
 
 let g:currentmode={
-    \ 'n'      : 'N ',
-    \ 'no'     : 'N·Operator Pending ',
-    \ 'v'      : 'V ',
-    \ 'V'      : 'V·Line ',
-    \ '\<C-V>' : 'V·Block ',
-    \ 's'      : 'Select ',
-    \ 'S'      : 'S·Line ',
-    \ '\<C-S>' : 'S·Block ',
-    \ 'i'      : 'I ',
-    \ 'R'      : 'R ',
-    \ 'Rv'     : 'V·Replace ',
-    \ 'c'      : 'Command ',
-    \ 'cv'     : 'Vim Ex ',
-    \ 'ce'     : 'Ex ',
-    \ 'r'      : 'Prompt ',
-    \ 'rm'     : 'More ',
-    \ 'r?'     : 'Confirm ',
-    \ '!'      : 'Shell ',
-    \ 't'      : 'Terminal '
-    \}
+	\ 'n'	  : 'N ',
+	\ 'no'	 : 'N·Operator Pending ',
+	\ 'v'	  : 'V ',
+	\ 'V'	  : 'V·Line ',
+	\ '\<C-V>' : 'V·Block ',
+	\ 's'	  : 'Select ',
+	\ 'S'	  : 'S·Line ',
+	\ '\<C-S>' : 'S·Block ',
+	\ 'i'	  : 'I ',
+	\ 'R'	  : 'R ',
+	\ 'Rv'	 : 'V·Replace ',
+	\ 'c'	  : 'Command ',
+	\ 'cv'	 : 'Vim Ex ',
+	\ 'ce'	 : 'Ex ',
+	\ 'r'	  : 'Prompt ',
+	\ 'rm'	 : 'More ',
+	\ 'r?'	 : 'Confirm ',
+	\ '!'	  : 'Shell ',
+	\ 't'	  : 'Terminal '
+	\}
 
 function! ModeCurrent() abort
-    let l:modecurrent = mode()
-    " use get() -> fails safely, since ^V doesn't seem to register
-    " 3rd arg is used when return of mode() == 0, which is case with ^V
-    " thus, ^V fails -> returns 0 -> replaced with 'V Block'
-    let l:modelist = toupper(get(g:currentmode, l:modecurrent, 'V·Block '))
-    let l:current_status_mode = l:modelist
-    return l:current_status_mode
+	let l:modecurrent = mode()
+	" use get() -> fails safely, since ^V doesn't seem to register
+	" 3rd arg is used when return of mode() == 0, which is case with ^V
+	" thus, ^V fails -> returns 0 -> replaced with 'V Block'
+	let l:modelist = toupper(get(g:currentmode, l:modecurrent, 'V·Block '))
+	let l:current_status_mode = l:modelist
+	return l:current_status_mode
 endfunction
 
 " //// ACTUAL
 
 set statusline=
+set statusline+=\ 
 set statusline+=%#User1#
 set statusline+=\ %{ModeCurrent()}
 set statusline+=%#User2#
@@ -223,7 +228,7 @@ let g:Tex_BibtexFlavor = 'biber'
 "let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
 "let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
 
-filetype plugin on "invoke latex-suite when opening tex file
+"filetype plugin on "invoke latex-suite when opening tex file
 set grepprg=grep\ -nH\ $* "set grep to always generate filename
 let g:tex_flavor='latex' "invoke tex, not plaintex, for empty tex file
 set iskeyword+=: "press <C-n> to cycle through \label's
@@ -268,59 +273,59 @@ autocmd FileType tex inoremap <Tab>ci \cite{}<++><Esc>T{i
 autocmd FileType tex inoremap <Tab>ct \citet{}<++><Esc>T{i
 autocmd FileType tex inoremap <Tab>cp \citep{}<++><Esc>T{i
 autocmd FileType tex inoremap <Tab>ch \chapter{}<Enter><++><Esc>kf}i
-                                     
+
 autocmd FileType tex inoremap <Tab>en \begin{equation}<Enter><Enter>\end{equation}
-	\<Enter><++><Esc>02ki            
+	\<Enter><++><Esc>02ki
 autocmd FileType tex inoremap <Tab>eq $$<Enter><Enter>$$<Enter><++><Esc>03ki
-                                     
+
 autocmd FileType tex inoremap <Tab>it \textit{}<++><Esc>T{i
-                                     
+
 autocmd FileType tex inoremap <Tab>lf \label{fig:}<Esc>T:i
 autocmd FileType tex inoremap <Tab>lt \label{tab:}<Esc>T:i
 autocmd FileType tex inoremap <Tab>le \label{eq:}<Esc>T:i
 autocmd FileType tex inoremap <Tab>ls \label{sec:}<Esc>T:i
-                                   
+
 autocmd FileType tex inoremap <Tab>nc \newcommand{}[<++>]<++>{<++>}<Esc>2F}i
-                                   
+
 autocmd FileType tex inoremap <Tab>pc \parencite{}<++><Esc>T{i
 autocmd FileType tex inoremap <Tab>pt \item<space>
 autocmd FileType tex inoremap <Tab>pi \begin{figure}[H]<Enter>
-    \<Tab>\centering<Enter>
-    \<Tab>\includegraphics[width=]{<++>}<Enter>
-    \<Tab>\caption{<++><Enter>
-    \<Tab>\label{fig:<++>}}<Enter>
-    \\end{figure}<Esc>03kf=a
-                                     
+	\<Tab>\centering<Enter>
+	\<Tab>\includegraphics[width=]{<++>}<Enter>
+	\<Tab>\caption{<++><Enter>
+	\<Tab>\label{fig:<++>}}<Enter>
+	\\end{figure}<Esc>03kf=a
+
 autocmd FileType tex inoremap <Tab>rf \figref{fig:}<++><Esc>T:i
 autocmd FileType tex inoremap <Tab>rt \tabref{tab:}<++><Esc>T:i
 autocmd FileType tex inoremap <Tab>re \eqnref{eq:}<++><Esc>T:i
 autocmd FileType tex inoremap <Tab>rs \secref{sec:}<++><Esc>T:i
-                                   
+
 autocmd FileType tex inoremap <Tab>st {\setstretch{}<Enter><++><Enter>
 	\<Enter>}<Enter><Enter><++><Esc>5k0f{a
 autocmd FileType tex inoremap <Tab>sc \textsc{}<++><Esc>T{i
 autocmd FileType tex inoremap <Tab>s1 \section{}<Enter><++><Esc>kf}i
 autocmd FileType tex inoremap <Tab>s2 \subsection{}<Enter><++><Esc>kf}i
 autocmd FileType tex inoremap <Tab>s3 \subsubsection{}<Enter><++><Esc>kf}i
-                                     
+
 autocmd FileType tex inoremap <Tab>tt \texttt{}<++><Esc>T{i
 autocmd FileType tex inoremap <Tab>tc \textcite{}<++><Esc>T{i
 autocmd FileType tex inoremap <Tab>ta \begin{table}[H]<Enter>
-    \<Tab>\centering<Enter>
-    \<Tab>\begin{tabular}{c}<Enter>
-    \<Tab><Tab>\toprule<Enter>
-    \<Tab><Tab>\textbf{<++>} \\<Enter>
-    \<Tab><Tab>\midrule<Enter>
-    \<Tab><Tab><++> \\<Enter>
-    \<Tab><Tab>\bottomrule<Enter>
-    \<Tab>\end{tabular}<Enter>
-    \<Tab>\caption{<++><Enter>
-    \<Tab>\label{tab:<++>}}<Enter>
-    \\end{table}<Esc>09kfca
-                                     
+	\<Tab>\centering<Enter>
+	\<Tab>\begin{tabular}{c}<Enter>
+	\<Tab><Tab>\toprule<Enter>
+	\<Tab><Tab>\textbf{<++>} \\<Enter>
+	\<Tab><Tab>\midrule<Enter>
+	\<Tab><Tab><++> \\<Enter>
+	\<Tab><Tab>\bottomrule<Enter>
+	\<Tab>\end{tabular}<Enter>
+	\<Tab>\caption{<++><Enter>
+	\<Tab>\label{tab:<++>}}<Enter>
+	\\end{table}<Esc>09kfca
+
 autocmd FileType tex inoremap <Tab>up \usepackage[]<++>{<++>}<Esc>T[i
 autocmd FileType tex inoremap <Tab>ul \underline{}<++><Esc>T{i
-                                     
+
 autocmd FileType tex vnoremap <Tab>bf xi\textbf{<Esc>pa}<Esc>
 autocmd FileType tex vnoremap <Tab>it xi\textit{<Esc>pa}<Esc>
 autocmd FileType tex vnoremap <Tab>sc xi\textsc{<Esc>pa}<Esc>
@@ -342,27 +347,27 @@ autocmd Filetype bib inoremap \o <Esc>A<Enter>@online{,<Enter>
 	\<Tab>publisher<space>=<space>{<++>}<Enter>}<Enter><Enter><++><Esc>06kf,i
 
 autocmd Filetype bib inoremap <Tab>tit <Esc>A<Enter>
-    \<Tab>title<space>=<space>{},<Esc>hi
+	\<Tab>title<space>=<space>{},<Esc>hi
 autocmd Filetype bib inoremap <Tab>aut <Esc>A<Enter>
-    \<Tab>author<space>=<space>{},<Esc>hi
+	\<Tab>author<space>=<space>{},<Esc>hi
 autocmd Filetype bib inoremap <Tab>yea <Esc>A<Enter>
-    \<Tab>year<space>=<space>{},<Esc>hi
+	\<Tab>year<space>=<space>{},<Esc>hi
 autocmd Filetype bib inoremap <Tab>pub <Esc>A<Enter>
-    \<Tab>publisher<space>=<space>{},<Esc>hi
+	\<Tab>publisher<space>=<space>{},<Esc>hi
 autocmd Filetype bib inoremap <Tab>jou <Esc>A<Enter>
-    \<Tab>journal<space>=<space>{},<Esc>hi
+	\<Tab>journal<space>=<space>{},<Esc>hi
 autocmd Filetype bib inoremap <Tab>vol <Esc>A<Enter>
-    \<Tab>volume<space>=<space>{},<Esc>hi
+	\<Tab>volume<space>=<space>{},<Esc>hi
 autocmd Filetype bib inoremap <Tab>pag <Esc>A<Enter>
-    \<Tab>pages<space>=<space>{},<Esc>hi
+	\<Tab>pages<space>=<space>{},<Esc>hi
 autocmd Filetype bib inoremap <Tab>sch <Esc>A<Enter>
-    \<Tab>school<space>=<space>{},<Esc>hi
+	\<Tab>school<space>=<space>{},<Esc>hi
 autocmd Filetype bib inoremap <Tab>boo <Esc>A<Enter>
-    \<Tab>booktitle<space>=<space>{},<Esc>hi
+	\<Tab>booktitle<space>=<space>{},<Esc>hi
 autocmd Filetype bib inoremap <Tab>num <Esc>A<Enter>
-    \<Tab>number<space>=<space>{},<Esc>hi
+	\<Tab>number<space>=<space>{},<Esc>hi
 autocmd Filetype bib inoremap <Tab>org <Esc>A<Enter>
-    \<Tab>organization<space>=<space>{},<Esc>hi
+	\<Tab>organization<space>=<space>{},<Esc>hi
 
 " >>>> GROFF
 
@@ -375,7 +380,7 @@ autocmd FileType groff inoremap ;b <Esc>o.B<space>""<space><++><Enter><++><Esc>0
 autocmd FileType groff inoremap ;c <Esc>o.[<Enter><Enter>.]<Enter><++><Esc>02ki
 autocmd FileType groff inoremap ;d <Esc>o.IP<space><space>2<Enter><++><Esc>0kt2i
 autocmd FileType groff inoremap ;e0 <Esc>o.nr<space>step<space>0<space>1<Enter>
-    \.IP<space>\n+[step]<Enter>
+	\.IP<space>\n+[step]<Enter>
 autocmd FileType groff inoremap ;ei <Esc>o.IP<space>\n+[step]<Enter>
 autocmd FileType groff inoremap ;i <Esc>o.I<space>""<space><++><Enter><++><Esc>0kf"a
 autocmd FileType groff inoremap ;l <Esc>o.IP<space>\[bu]<space>2<Enter>
@@ -505,12 +510,38 @@ autocmd FileType rmd vnoremap \s xa~~<Esc>pa~~<Esc>
 autocmd Filetype rmd inoremap \r ```{r}<CR>```<CR><CR><esc>2kO
 autocmd Filetype rmd inoremap \p ```{python}<CR>```<CR><CR><esc>2kO
 
+" >>>> SHELL
+
+autocmd FileType sh inoremap if<Tab> if [[  ]]; then
+	\<Enter><++>
+	\<Enter>fi<Esc>02kf[2la
+autocmd FileType sh inoremap elif elif [[  ]]; then
+	\<Enter><++><Esc>0kf[2la
+autocmd FileType sh inoremap else else
+	\<Enter><Tab>
+autocmd FileType sh inoremap [[ [[  ]]<Esc>F]hi
+autocmd FileType sh inoremap for<Tab> for i in *; do
+	\<Enter><++>
+	\<Enter>done<Esc>02kf*i
+autocmd FileType sh inoremap col<Tab> <Enter>bkd=$(xrdb -query <bar> grep '*color0' <bar> awk '{print $NF}')
+	\<Enter>bkl=$(xrdb -query <bar> grep '*color8' <bar> awk '{print $NF}')
+	\<Enter>grn=$(xrdb -query <bar> grep '*color2' <bar> awk '{print $NF}')
+	\<Enter>ylw=$(xrdb -query <bar> grep '*color3' <bar> awk '{print $NF}')
+	\<Enter>red=$(xrdb -query <bar> grep '*color9' <bar> awk '{print $NF}')
+	\<Enter>wtd=$(xrdb -query <bar> grep '*color7' <bar> awk '{print $NF}')
+	\<Enter>wtl=$(xrdb -query <bar> grep '*color15' <bar> awk '{print $NF}')
+	\<Enter>blu=$(xrdb -query <bar> grep '*color4' <bar> awk '{print $NF}')
+	\<Enter>gnt=$(xrdb -query <bar> grep '*color5' <bar> awk '{print $NF}')
+	\<Enter>cyn=$(xrdb -query <bar> grep '*color6' <bar> awk '{print $NF}')
+	\<Enter>
+
+
 " >>>> VIEW PDF
 
 autocmd FileType tex,rmd map ;vp :silent<space>!zathura<space>
-    \<C-r>%<BS><BS><BS>pdf<space>&<Enter>
+	\<C-r>%<BS><BS><BS>pdf<space>&<Enter>
 autocmd FileType markdown,groff map ;vp :silent<space>!zathura<space>
-    \<C-r>%<BS><BS>pdf<space>&<Enter>
+	\<C-r>%<BS><BS>pdf<space>&<Enter>
 
 " >>>> VIEW HTML
 
