@@ -1,6 +1,5 @@
 set adjust-open "width"
 set window-title-basename true
-<<<<<<< HEAD
 set default-bg "#0C1825"
 set default-fg "#d8dfdd"
 set font "FixedsysMono 10"
@@ -13,17 +12,3 @@ set completion-fg "#d8dfdd"
 set show-scrollbars false
 set recolor-darkcolor "#d8dfdd"
 set recolor-lightcolor "#0C1825"
-=======
-set default-bg "#0D121B"
-set default-fg "#d1dade"
-set font "FixedsysMono 10"
-set inputbar-bg "#0D121B"
-set inputbar-fg "#d1dade"
-set statusbar-bg "#0D121B"
-set statusbar-fg "#d1dade"
-set completion-bg "#0D121B"
-set completion-fg "#d1dade"
-set show-scrollbars false
-set recolor-darkcolor "#d1dade"
-set recolor-lightcolor "#0D121B"
->>>>>>> origin/master
