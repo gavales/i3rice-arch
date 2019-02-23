@@ -18,7 +18,7 @@ set hls
 set is
 set wrap
 set linebreak
-set nolist  "disable linebreak
+"set nolist  "disable linebreak
 set textwidth=0
 set wrapmargin=0
 set tabstop=4
@@ -28,12 +28,12 @@ set title titlestring=%f titlelen=70
 set mouse=a
 vnoremap <C-c> "+y
 map <C-p> "+P
-autocmd FileType python,css,html,vim,conf,json,perl,sh set tabstop=4
-autocmd FileType python,css,html,vim,conf,json,perl,sh set shiftwidth=4
-autocmd FileType python,css,html,vim,conf,json,perl,sh set colorcolumn=80
-autocmd FileType python,css,html,vim,conf,json,perl,sh filetype indent on
-autocmd FileType python,css,html,vim,conf,json,perl,sh set list
-autocmd FileType python,css,html,vim,conf,json,perl,sh set listchars=tab:\:\ 
+autocmd FileType python,css,html,vim,json,perl,sh set tabstop=4
+autocmd FileType python,css,html,vim,json,perl,sh set shiftwidth=4
+autocmd FileType python,css,html,vim,json,perl,sh set colorcolumn=80
+autocmd FileType python,css,html,vim,json,perl,sh filetype indent on
+autocmd FileType python,css,html,vim,json,perl,sh set list
+autocmd FileType python,css,html,vim,json,perl,sh set listchars=tab:\:\ 
 "autocmd FileType python call matchadd('ColorColumn', '\%81v', 100)
 autocmd Filetype calendar set laststatus=0
 autocmd CursorHold,CursorHoldI * update

@@ -134,9 +134,9 @@ $mod+Ctrl+Right		workspace next
 
 $mod+Ctrl+Left		workspace prev
 
-bindsym Print	 	$exn bash ~/$scripts/screenshot
+bindsym Print		$exn bash ~/$scripts/screenshot
 
-bindsym Delete	 	[title="placeholder"] kill
+bindsym Delete		[title="placeholder"] kill
 
 # //// Numbers
 
@@ -500,3 +500,5 @@ $exn	$viva
 $exn	$brow --new-window --app=https://www.youtube.com/
 $ena	mpv $home/scriptsounds/A\ Tone\ His\ Self.mp3
 $ena	notify-send 'i3 (re)loaded!' -i ~/$scriptpics/i3white.png
+
+# vim:ft=i3
