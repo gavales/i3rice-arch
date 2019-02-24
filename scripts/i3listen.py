@@ -38,8 +38,6 @@ def windownotify(i3, event):
 def set_floating(i3, event):
 	event.container.command('border normal')
 
-i3.on('window::new', set_floating)
-
-#i3.on('window', windownotify)
+i3.on('window', windownotify)
 
 i3.main()

@@ -375,7 +375,7 @@ $win+m				$exn bash ~/$scripts/multimon
 focus_follows_mouse no
 focus_wrapping force
 workspace_auto_back_and_forth yes
-#$fw [class="^.*"] border normal 1
+$fw [class="^.*"] border normal 1
 $fw [urgent=latest] focus
 
 # //// FLOATERS
