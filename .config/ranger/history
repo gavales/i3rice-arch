@@ -1,5 +1,3 @@
-rename i3focuslast
->>>>>>> origin/master
 mkdir VivaldiPatch
 touch custom.css
 search bart
@@ -48,3 +46,5 @@ touch bindings
 touch .inputrc
 open_with vim
 mkdir Leo Moracchioli
+>>>>>>> origin/master
+rename VivaldiPatch
