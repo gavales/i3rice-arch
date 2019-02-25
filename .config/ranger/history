@@ -1,13 +1,3 @@
-rename i3focuslast
->>>>>>> origin/master
-mkdir VivaldiPatch
-touch custom.css
-search bart
-search atha
-shell cat mp* >> mpblk
-shell bash ~/scripts/mppipe %f
-rename Cybercassette - Prologue.mp4
-rename Bleed.mp4
 rename Cybercity.mp4
 rename FuturisticSpace.mp4
 rename Decay of the Mainframe.mp4
@@ -48,3 +38,13 @@ touch bindings
 touch .inputrc
 open_with vim
 mkdir Leo Moracchioli
+shell sudo python i3-sticky
+shell sudo python i3-sticky &
+search Lev
+shell tagger 
+mkdir All Videos
+shell bash ~/scripts/tagger 'Lev Weksler' 'All Videos'
+shell bash ~/scripts/tagger "Lev Weksler" "All Videos"
+shell wget https://raw.githubusercontent.com/StillANixRookie/i3rice-arch/master/.config/i3/main.json
+rename main_.json
+rename main.json

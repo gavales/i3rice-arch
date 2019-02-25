@@ -262,8 +262,8 @@ $mod+x				$exn $brow --new-window --app=https://docs.google.com/spreadsheets/u/0
 $mod+c				$exn $viva
 $mod+Shift+c		$exn "bash $home/$scripts/xtheme; bash $home/$scripts/reloadconfs"
 
-$mod+v				$exn $term -name VIS -e vis
-$mod+Shift+v		$lch 'projectM-pulseaudio' $mk4
+$mod+v				$lch '$term -name VIS -e vis' $mk1
+$mod+Shift+v		$lch 'projectM-pulseaudio' $mk1
 
 $mod+b				$lch '$term -name BIB -e vim $home/Drive/global.bib' $mk2
 $mod+Shift+b		bar mode toggle
@@ -424,7 +424,6 @@ $fw [con_mark=_sticky_1]				resize set 715 423
 $fw [instance="MUSIC"]		 			$mrk1,$tf "ncmpcpp"
 $fw [instance="MEDIA"]		 			$mrk2,$tf "media"
 $fw [class="Vivaldi-stable"]			$mrk3,$tf "vivaldi"
-$fw [instance="VIS"]					$mrk4,$tf "visualizer"
 
 $fw [class="MPlayer"]					$mvm1
 $fw [class="mpv"]						$mvm1,$stm1
@@ -441,6 +440,7 @@ $fw [title="^localhost:8090$"]			$mvm2,$tf "mdpreview"
 $fw [class="Pamac-manager"]		 		$mvm3,$tf "software"
 $fw [title="Google Chrome$"]			$mvm3,$tf "chrome"
 
+$fw [instance="VIS"]					$tf "visualizer"
 $fw [instance="URXVT"]		 			$tf "urxvt"
 $fw [instance="RSS"]		 			$tf "newsboat"
 $fw [instance="CALC"]					$tf "calculator"
@@ -491,7 +491,7 @@ $ena	fix_xcursor
 $exn	feh --bg-fill ~/.config/wall.png
 $exn	mpd
 $exn	shutter --min_at_startup
-$exn	python $home/$scripts/i3-sticky
+$exn	bash $home/$scripts/i3listen-toggle
 $exn	setxkbmap $kb
 
 # PROGRAMS
