@@ -2,13 +2,6 @@
 
 status=$(mpc current)
 
-<<<<<<< HEAD
-playing=$(ncmpcpp --current-song '%20A - %20t')
-
-if [ -z "$status" ]
-then
-	:
-=======
 icon="<span face='Font Awesome 5 Free'>&#xf001;</span>"
 
 playing=$(ncmpcpp --current-song '%20a - %20t')
@@ -17,7 +10,6 @@ green=$(xrdb -query | grep '*color2' | awk '{print $NF}')
 
 if [[ -z "$status" ]]; then
 	echo "<span foreground=\"$grey\">"$icon" ${playing}</span>"
->>>>>>> origin/master
 else
 	echo "<span foreground=\"$green\">"$icon" ${playing}</span>"
 fi
