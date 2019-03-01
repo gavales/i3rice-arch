@@ -413,7 +413,6 @@ $fw [class="matplotlib"]					$flen
 $fw [class="Cam"]				 			$flen
 $fw [class="Blueman-manager"]		 		$flen
 
-$fw [class="Shutter"]		$flen,$mvcn,resize set 500 500
 $fw [class="Electron"]		$flen,$mvcn,resize set 1000 700
 $fw [class="Pavucontrol"]	$flen,resize set 525 300
 
@@ -436,6 +435,7 @@ $fw [class="Zathura"]					$mvm2
 $fw [class="MuPDF"]						$mvm2
 $fw [title="_popout="]					$mvm2,$tf "ytchat"
 $fw [title="^localhost:8090$"]			$mvm2,$tf "mdpreview"
+$fw [class="Shutter"]					$mvm2,$tf "snip-tool"
 
 $fw [class="Pamac-manager"]		 		$mvm3,$tf "software"
 $fw [title="Google Chrome$"]			$mvm3,$tf "chrome"
