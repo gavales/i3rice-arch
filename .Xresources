@@ -20,9 +20,8 @@
 !! VARIABLES
 
 #define fontname monaco
-!#define font TerminessTTFNerdFontMono
-#define fontsize 10
-#define fontsize2 12
+#define fontsize 12
+#define fontsize2 14
 
 !! COLORS
 

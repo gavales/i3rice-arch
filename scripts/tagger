@@ -14,7 +14,7 @@ echo " "
 
 for i in *.mp3 ; do
 	resto=${i%.*}
-	mid3v2 -t "${resto}" "${i}"
+	id3v2 -t "${resto}" "${i}"
 	echo "${i}"
 done
 
@@ -27,7 +27,7 @@ if [[ -n $artist ]]; then
 	echo " "
 	for i in *.mp3 ; do
 		resto=${i%.*}
-		mid3v2 -a "${artist}" "${i}"
+		id3v2 -a "${artist}" "${i}"
 		echo "${i}"
 	done
 fi
@@ -41,7 +41,7 @@ if [[ -n $album ]]; then
 	echo " "
 	for i in *.mp3 ; do
 		resto=${i%.*}
-		mid3v2 -A "${album}" "${i}"
+		id3v2 -A "${album}" "${i}"
 		echo "${i}"
 	done
 fi
