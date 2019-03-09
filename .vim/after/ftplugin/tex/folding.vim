@@ -3,9 +3,9 @@ function! Folds()
 	if match(thisline, '^\\section{') >= 0
 		return ">1"
 	elseif match(thisline, '^\\subsection{') >= 0
-		return ">1"
+		return ">2"
 	elseif match(thisline, '^\\subsubsection{') >= 0
-		return ">1"
+		return ">3"
 	elseif match(thisline, '\\column{') >= 0
 		return ">0"
 	elseif match(thisline, '\\block{') >= 0
@@ -13,9 +13,9 @@ function! Folds()
 	elseif match(thisline, '^\\section\*{') >= 0
 		return ">1"
 	elseif match(thisline, '^\\subsection\*{') >= 0
-		return ">1"
+		return ">2"
 	elseif match(thisline, '^\\subsubsection\*{') >= 0
-		return ">1"
+		return ">3"
 	elseif match(thisline, '^\\documentclass') >= 0
 		return ">1"
 	elseif match(thisline, '^\\begin{document}') >= 0

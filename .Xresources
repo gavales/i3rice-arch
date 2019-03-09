@@ -1,21 +1,20 @@
-!onedark
-! vim:syntax=xdefaults
-#define cblkd #1E2127
-#define credd #E06C75
-#define cgrnd #98C379
-#define cylwd #D19A66
-#define cblud #61AFEF
-#define cgntd #C678DD
-#define ccynd #56B6C2
-#define cwhtd #ABB2BF
-#define cblkl #5C6370
-#define credl #E06C75
-#define cgrnl #98C379
-#define cylwl #D19A66
-#define cblul #61AFEF
-#define cgntl #C678DD
-#define ccynl #56B6C2
-#define cwhtl #FFFFFF
+! vim:ft=xdefaults
+#define cblkl      #585858
+#define cblkd      #262626
+#define credd      #ce537a
+#define credl      #ce537a
+#define cgrnd      #2d9574
+#define cgrnl      #2d9574
+#define cylwd      #b1951d
+#define cylwl      #b1951d
+#define cblud      #2aa1ae
+#define cblul      #2aa1ae
+#define cgntd      #5d4d7a
+#define cgntl      #5d4d7a
+#define ccynd      #28def0
+#define ccynl      #28def0
+#define cwhtd      #b2b2b2
+#define cwhtl      #b2b2b2
 
 !! VARIABLES
 

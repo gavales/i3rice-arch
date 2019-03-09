@@ -136,8 +136,6 @@ $mod+Ctrl+Left		workspace prev
 
 bindsym Print		$exn bash ~/$scripts/screenshot
 
-bindsym Delete		[title="placeholder"] kill
-
 # //// Numbers
 
 $mod+1				workspace $ws1
@@ -290,6 +288,8 @@ $wlw+button1		$exn i3-input -F "[con_id=__focused__] mark _sticky_%s"
 $wlw+button3		kill
 
 # //// Numbers
+
+$win+0				[title="placeholder"] kill
 
 $win+1				$lch '$term -name i3MAIN -e vim ~/.config/i3/main' $mk3
 $win+Shift+1		$exn python $home/$scripts/i3-sticky-open 1
