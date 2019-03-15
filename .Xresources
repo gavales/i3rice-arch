@@ -1,20 +1,20 @@
 ! vim:ft=xdefaults
-#define cblkl      #585858
 #define cblkd      #262626
+#define cblkl      #585858
 #define credd      #ce537a
 #define credl      #ce537a
-#define cgrnd      #2d9574
-#define cgrnl      #2d9574
+#define cgrnd      #5faf00
+#define cgrnl      #5faf00
 #define cylwd      #b1951d
 #define cylwl      #b1951d
-#define cblud      #2aa1ae
-#define cblul      #2aa1ae
+#define cblud      #21b8c7
+#define cblul      #21b8c7
 #define cgntd      #5d4d7a
 #define cgntl      #5d4d7a
-#define ccynd      #28def0
-#define ccynl      #28def0
-#define cwhtd      #b2b2b2
-#define cwhtl      #b2b2b2
+#define ccynd      #29d574
+#define ccynl      #29d574
+#define cwhtd      #d4d4d4
+#define cwhtl      #d4d4d4
 
 !! VARIABLES
 
@@ -25,7 +25,7 @@
 !! COLORS
 
 *background:				cblkd
-*foreground:				cwhtl
+*foreground:				cwhtd
 *fading:					30
 *fadeColor:					black
 *cursorColor:				ccynd

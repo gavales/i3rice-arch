@@ -2,13 +2,11 @@
 
 blocksDir="$HOME/scripts/"
 
-blackd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-blackl=$(xrdb -query | grep '*color8' | awk '{print $NF}')
+black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
 green=$(xrdb -query | grep '*color2' | awk '{print $NF}')
 yellow=$(xrdb -query | grep '*color3' | awk '{print $NF}')
 red=$(xrdb -query | grep '*color9' | awk '{print $NF}')
-whited=$(xrdb -query | grep '*color7' | awk '{print $NF}')
-whitel=$(xrdb -query | grep '*color15' | awk '{print $NF}')
+white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
 blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
 magenta=$(xrdb -query | grep '*color5' | awk '{print $NF}')
 cyan=$(xrdb -query | grep '*color6' | awk '{print $NF}')
@@ -21,7 +19,7 @@ echo -e "# i3blocks config file" > i3blocks.conf
 # >>>> GLOBAL
 echo "command=bash ${blocksDir}blocks/\$BLOCK_NAME" >> i3blocks.conf
 #echo "command=/usr/lib/i3blocks/\$BLOCK_NAME" >> i3blocks.conf
-echo "color=$whited" >> i3blocks.conf
+echo "color=$white" >> i3blocks.conf
 echo "separator_block_width=15" >> i3blocks.conf
 echo "separator=false" >> i3blocks.conf
 echo "border_top=0" >> i3blocks.conf
@@ -33,7 +31,7 @@ echo -e "markup=pango\n" >> i3blocks.conf
 # >>>> media
 echo "[media]" >> i3blocks.conf
 echo "interval=5" >> i3blocks.conf
-#echo "color=$blackl" >> i3blocks.conf
+#echo "color=$black" >> i3blocks.conf
 echo -e "full_text=\n" >> i3blocks.conf
 
 echo -e "[separator]\n" >> i3blocks.conf
@@ -116,16 +114,16 @@ echo -e "separator=false\n" >> i3blocks.conf
 #echo "label=NET:" >> i3blocks.conf
 #echo "instance=wlp3s0" >> i3blocks.conf
 #echo "interval=1" >> i3blocks.conf
-#echo "color=$whited" >> i3blocks.conf
-#echo "border=$whited" >> i3blocks.conf
+#echo "color=$white" >> i3blocks.conf
+#echo "border=$white" >> i3blocks.conf
 #echo -e "separator=false\n" >> i3blocks.conf
 
 # >>>> bandwidth
 #echo "[bandwidth]" >> i3blocks.conf
 #echo "instance=eth0" >> i3blocks.conf
 #echo "interval=1" >> i3blocks.conf
-#echo "color=$whited" >> i3blocks.conf
-#echo "border=$whited" >> i3blocks.conf
+#echo "color=$white" >> i3blocks.conf
+#echo "border=$white" >> i3blocks.conf
 #echo -e "full_text=\n" >> i3blocks.conf
 #
 #echo -e "[separator]\n" >> i3blocks.conf

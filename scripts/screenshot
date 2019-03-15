@@ -1,6 +1,24 @@
 #!/bin/bash
 
 scrotdir=scrots
-name=`date +%Y-%m-%d_%H:%M:%S`_`xdpyinfo  | grep -oP 'dimensions:\s+\K\S+'`.png
-scrot $HOME/Pictures/$scrotdir/${name}
-notify-send "${name} saved to ~/Pictures/${scrotdir}" -i ~/Pictures/$scrotdir/${name}
+seldir=sels
+fc_name="FULL_`date +%Y-%m-%d_%H:%M:%S`.png"
+sel_name="SELL_`date +%Y-%m-%d_%H:%M:%S`.png"
+
+black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+font=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
+dmenucolors="-fn "${font:4}" -nb "$black" -nf "$white" -sf "$black" -sb "$blue""
+
+scrot_type=$(echo -e "Fullscreen\nSelection" | dmenu -i -p "Scrot type?:" $dmenucolors)
+
+if [[ $scrot_type == "Fullscreen" ]]; then
+	maim --hidecursor $HOME/Pictures/${scrotdir}/${fc_name}
+	notify-send "${fc_name} saved to ~/Pictures/${scrotdir}" -i ~/Pictures/${scrotdir}/${fc_name}
+elif [[ $scrot_type == "Selection" ]]; then
+	maim --select --hidecursor $HOME/Pictures/${seldir}/${sel_name}
+	notify-send "${sel_name} saved to ~/Pictures/${seldir}" -i ~/Pictures/${seldir}/${sel_name}
+else
+	:
+fi

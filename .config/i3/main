@@ -275,10 +275,8 @@ $mod+m				$exn $brow --new-window --app=https://docs.google.com/presentation/u/0
 $mod+Shift+m		$lch '$brow --new-window --app=https://play.google.com/movies/' $mk1
 
 $mod+comma			$exn "pactl set-sink-volume 0 -2%; bash ~/$scripts/notify_volume"
-$mod+Shift+comma	$exn "$brightdec; bash ~/$scripts/notify_brightness"
 
 $mod+period			$exn "pactl set-sink-volume 0 +2%; bash ~/$scripts/notify_volume"
-$mod+Shift+period	$exn "$brightinc; bash ~/$scripts/notify_brightness"
 
 # >>>> MOD4 BINDINGS
 # //// Misc
@@ -368,6 +366,10 @@ $win+b				$lch '$term -name BASHMOUNT -e bashmount' $mk2
 $win+n				move workspace to output $nat
 
 $win+m				$exn bash ~/$scripts/multimon
+
+$win+comma			$exn "$brightdec; bash ~/$scripts/notify_brightness"
+
+$win+period			$exn "$brightinc; bash ~/$scripts/notify_brightness"
 
 # >>>> FOR_WINDOW
 # //// GLOBAL
