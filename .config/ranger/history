@@ -1,5 +1,3 @@
-rename Ghibli.mp4
-rename GhibliJazz.mp4
 rename media
 shell chmod +x %f
 mkdir Desktop
@@ -48,3 +46,5 @@ rename For_Electrical_Diagram.PNG
 rename VENT_PENETRATOR-M-NUT-10-8-R2.zip
 rename VENT-PENETRATOR-M-NUT-10-8-R2.zip
 shell 
+rename emacs
+mkdir sels

@@ -1,9 +1,6 @@
 #!/bin/bash
 
 scrotdir=scrots
-seldir=sels
-fc_name="FULL_`date +%Y-%m-%d_%H:%M:%S`.png"
-sel_name="SELL_`date +%Y-%m-%d_%H:%M:%S`.png"
 
 black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
 white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
@@ -11,14 +8,41 @@ blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
 font=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
 dmenucolors="-fn "${font:4}" -nb "$black" -nf "$white" -sf "$black" -sb "$blue""
 
-scrot_type=$(echo -e "Fullscreen\nSelection" | dmenu -i -p "Scrot type?:" $dmenucolors)
 
-if [[ $scrot_type == "Fullscreen" ]]; then
-	maim --hidecursor $HOME/Pictures/${scrotdir}/${fc_name}
-	notify-send "${fc_name} saved to ~/Pictures/${scrotdir}" -i ~/Pictures/${scrotdir}/${fc_name}
-elif [[ $scrot_type == "Selection" ]]; then
-	maim --select --hidecursor $HOME/Pictures/${seldir}/${sel_name}
-	notify-send "${sel_name} saved to ~/Pictures/${seldir}" -i ~/Pictures/${seldir}/${sel_name}
-else
-	:
-fi
+scrotname () {
+	time="`date +%Y-%m-%d_%H:%M:%S`.png"
+	name=$(echo -e "" | dmenu -i -p "Choose scrot name:" $dmenucolors)
+
+	if [[ -z $scrotname ]]; then
+		scrotname=$time
+	else
+		scrotname="${name}.png"
+	fi
+}
+
+confirmscrot () {
+	action=$(echo -e "Save\nNew" | dmenu -i -p "Save?" $dmenucolors)
+	if [[ $action == "Save" ]]; then
+		scrotname
+		mv $HOME/Pictures/scrots/tmp.png $HOME/Pictures/scrots/${scrotname}
+		notify-send "${scrotname} saved to ~/Pictures/${scrotdir}" -i ~/Pictures/${scrotdir}/${scrotname}
+	else
+		tmpscrot
+	fi
+}
+
+tmpscrot () {
+	scrot_type=$(echo -e "Fullscreen\nSelection" | dmenu -i -p "Scrot type?:" $dmenucolors)
+	if [[ $scrot_type == "Fullscreen" ]]; then
+		maim --hidecursor $HOME/Pictures/${scrotdir}/tmp.png
+	elif [[ $scrot_type == "Selection" ]]; then
+		maim --select --hidecursor $HOME/Pictures/${scrotdir}/tmp.png
+	else
+		:
+	fi
+
+	sxiv $HOME/Pictures/${scrotdir}/tmp.png 
+	confirmscrot
+}
+
+tmpscrot
