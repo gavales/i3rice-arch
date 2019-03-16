@@ -2,16 +2,9 @@
 
 scrotdir=scrots
 
-black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
-blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
-font=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
-dmenucolors="-fn "${font:4}" -nb "$black" -nf "$white" -sf "$black" -sb "$blue""
-
-
 scrotname () {
 	time="`date +%Y-%m-%d_%H:%M:%S`.png"
-	name=$(echo -e "" | dmenu -i -p "Choose scrot name:" $dmenucolors)
+	name=$(echo -e "" | bash $HOME/scripts/i3menu "Choose scrot name:")
 
 	if [[ -z $name ]]; then
 		scrotname=$time
@@ -21,7 +14,7 @@ scrotname () {
 }
 
 confirmscrot () {
-	action=$(echo -e "Save\nNew" | dmenu -i -p "Save?" $dmenucolors)
+	action=$(echo -e "Save\nNew" | bash $HOME/scripts/i3menu "Save?")
 	if [[ $action == "Save" ]]; then
 		scrotname
 		mv $HOME/Pictures/scrots/tmp.png $HOME/Pictures/scrots/${scrotname}
@@ -32,7 +25,7 @@ confirmscrot () {
 }
 
 tmpscrot () {
-	scrot_type=$(echo -e "Fullscreen\nSelection" | dmenu -i -p "Scrot type?:" $dmenucolors)
+	scrot_type=$(echo -e "Fullscreen\nSelection" | bash $HOME/scripts/i3menu "Scrot type?:")
 	if [[ $scrot_type == "Fullscreen" ]]; then
 		maim --hidecursor $HOME/Pictures/${scrotdir}/tmp.png
 	elif [[ $scrot_type == "Selection" ]]; then

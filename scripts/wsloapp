@@ -1,20 +1,9 @@
 #!/bin/bash
 
-black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
-blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
-font=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
-dmenucolors="-fn "${font:4}" -nb "$black" -nf "$white" -sf "$black" -sb "$blue""
+lo=$(ls $HOME/.config/i3 | tr '  ' '\n' | grep '.json' | bash $HOME/scripts/i3menu "Apply which layout?")
 
-lo=$(ls $HOME/.config/i3 | tr '  ' '\n' | grep '.json' | dmenu -i -p "Apply which layout?" $dmenucolors)
-ws=$(echo -e "current\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10" | dmenu -i -p "To which workspace?" $dmenucolors)
-
-if [ -z $lo ] || [ -z $ws ]; then
+if [[ -z $lo ]]; then
 	exit
 else
-	if [[ $ws == "current" ]]; then
-		i3-msg "append_layout $HOME/.config/i3/${lo}"
-	else
-		i3-msg "workspace ${ws}; append_layout $HOME/.config/i3/${lo}"
-	fi
+	i3-msg "append_layout $HOME/.config/i3/${lo}"
 fi
