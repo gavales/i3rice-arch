@@ -35,9 +35,6 @@ def windownotify(i3, event):
 			if event.container.focused == True:
 				call('i3-msg [instance="RTV"] focus'.split(' '))
 
-def set_floating(i3, event):
-	event.container.command('border normal')
-
 i3.on('window', windownotify)
 
 i3.main()
