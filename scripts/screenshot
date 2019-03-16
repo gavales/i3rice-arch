@@ -13,7 +13,7 @@ scrotname () {
 	time="`date +%Y-%m-%d_%H:%M:%S`.png"
 	name=$(echo -e "" | dmenu -i -p "Choose scrot name:" $dmenucolors)
 
-	if [[ -z $scrotname ]]; then
+	if [[ -z $name ]]; then
 		scrotname=$time
 	else
 		scrotname="${name}.png"

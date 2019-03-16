@@ -153,8 +153,6 @@ PS1+='\[\033[00;31m\]] \n'
 PS1+='\[\033[00;36m\]\w '
 PS1+='\[\033[00;35m\]\$ \[\033[00m\]'
 
-export PATH="$HOME/anaconda2/bin:$PATH"
-export PATH="$HOME/anaconda3/bin:$PATH"
-export PATH="$HOME/scripts:$PATH"
+export PATH="$HOME/anaconda2/bin:$HOME/anaconda3/bin:$HOME/scripts:$PATH"
 
 printf '\033[5 q\r'
