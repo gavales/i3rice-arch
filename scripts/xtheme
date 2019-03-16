@@ -3,7 +3,7 @@
 theme=$(ls $HOME/xinclude/colors | bash $HOME/scripts/i3menu "Choose theme:")
 xfilesDir=$HOME/xinclude
 
-if [[ -f $xfilesDir/colors/${theme} ]]; then
+main () {
 	cat ${xfilesDir}/colors/${theme} > $HOME/.Xresources
 	cat ${xfilesDir}/1vars >> $HOME/.Xresources
 	cat ${xfilesDir}/2colorvars >> $HOME/.Xresources
@@ -15,6 +15,11 @@ if [[ -f $xfilesDir/colors/${theme} ]]; then
 	xrdb -load $HOME/.Xresources
 	kill -1 $(pidof urxvtd)
 	notify-send '.Xresources has been reloaded' -i $HOME/scriptpics/settingswhite.png
+	bash $HOME/scripts/reloadconfs
+}
+
+if [[ -f $xfilesDir/colors/${theme} ]]; then
+	main
 else
 	:
 fi

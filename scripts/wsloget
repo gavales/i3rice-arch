@@ -9,7 +9,7 @@ getlayout () {
 }
 
 if [[ -z $ws ]]; then
-	exit
+	:
 else
 	getlayout
 fi

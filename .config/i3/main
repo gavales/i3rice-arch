@@ -258,7 +258,7 @@ $mod+z				$exn $brow --new-window --app=https://docs.google.com/document/u/0/
 $mod+x				$exn $brow --new-window --app=https://docs.google.com/spreadsheets/u/0/
 
 $mod+c				exec $viva
-$mod+Shift+c		$exn "bash $home/$scripts/xtheme; bash $home/$scripts/reloadconfs"
+$mod+Shift+c		$exn bash $home/$scripts/xtheme
 
 $mod+v				$lch '$term -name VIS -e vis' $mk1
 $mod+Shift+v		$lch 'projectM-pulseaudio' $mk1
