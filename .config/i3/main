@@ -257,7 +257,7 @@ $mod+z				$exn $brow --new-window --app=https://docs.google.com/document/u/0/
 
 $mod+x				$exn $brow --new-window --app=https://docs.google.com/spreadsheets/u/0/
 
-$mod+c				$exn $viva
+$mod+c				exec $viva
 $mod+Shift+c		$exn "bash $home/$scripts/xtheme; bash $home/$scripts/reloadconfs"
 
 $mod+v				$lch '$term -name VIS -e vis' $mk1
