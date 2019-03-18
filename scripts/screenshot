@@ -19,11 +19,12 @@ confirmscrot () {
 		scrotname
 		mv $HOME/Pictures/scrots/tmp.png $HOME/Pictures/scrots/${scrotname}
 		notify-send "${scrotname} saved to ~/Pictures/${scrotdir}" -i ~/Pictures/${scrotdir}/${scrotname}
+	elif [[ $action == "New" ]]; then
+		tmpscrot
 	elif [[ $action == "Clipboard" ]]; then
 		clipboard
-		rm $HOME/Pictures/${scrotdir}/tmp.png
 	else
-		tmpscrot
+		rm $HOME/Pictures/${scrotdir}/tmp.png
 	fi
 }
 
@@ -31,6 +32,7 @@ tmpscrot () {
 	scrot_type=$(echo -e "Fullscreen\nSelection" | bash $HOME/scripts/i3menu "Scrot type?:")
 
 	if [[ $scrot_type == "Fullscreen" ]]; then
+		sleep .25
 		maim --hidecursor $HOME/Pictures/${scrotdir}/tmp.png
 	elif [[ $scrot_type == "Selection" ]]; then
 		maim --select --hidecursor $HOME/Pictures/${scrotdir}/tmp.png
@@ -44,7 +46,8 @@ tmpscrot () {
 
 clipboard () {
 	xclip -selection clipboard -t image/png -i $HOME/Pictures/${scrotdir}/tmp.png
-	notify-send "Copied to Clipboard" -i ~/Pictures/${scrotdir}/tmp.png
+	notify-send "Copied scrot to Clipboard" -i ~/Pictures/${scrotdir}/tmp.png
+	rm $HOME/Pictures/${scrotdir}/tmp.png
 }
 
 tmpscrot
