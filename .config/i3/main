@@ -415,7 +415,6 @@ $fw [class="matplotlib"]					$flen
 $fw [class="Cam"]				 			$flen
 $fw [class="Blueman-manager"]		 		$flen
 
-$fw [class="Electron"]		$flen,$mvcn,resize set 1000 700
 $fw [class="Pavucontrol"]	$flen,resize set 525 300
 
 # //// MARKED
@@ -424,7 +423,7 @@ $fw [con_mark=_sticky_1]				resize set 715 423
 
 $fw [instance="MUSIC"]		 			$mrk1,$tf "ncmpcpp"
 $fw [instance="MEDIA"]		 			$mrk2,$tf "media"
-$fw [class="Vivaldi-stable"]			$mrk3,$tf "vivaldi"
+$fw [class="Vivaldi-stable" title="- Vivaldi$"]	$mrk3,$tf "vivaldi"
 
 $fw [class="MPlayer"]					$mvm1
 $fw [class="mpv"]						$mvm1,$stm1
@@ -435,6 +434,8 @@ $fw [class="Sxiv"]						$mvm1
 $fw [class="Surf"]						$mvm2
 $fw [class="Zathura"]					$mvm2
 $fw [class="MuPDF"]						$mvm2
+$fw [class="Electron"]					$mvm2
+$fw [window_role="GtkFileChooserDialog"]$mvm2
 $fw [title="_popout="]					$mvm2,$tf "ytchat"
 $fw [title="^localhost:8090$"]			$mvm2,$tf "mdpreview"
 $fw [class="Shutter"]					$mvm2,$tf "snip-tool"

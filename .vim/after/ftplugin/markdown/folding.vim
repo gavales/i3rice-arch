@@ -26,7 +26,7 @@ function FoldText()
     let foldline = substitute(foldline, '^### ', "--> ", "")
     let text = foldline.foldsize.'line     '
     let fillcharcount = windowwidth - strdisplaywidth(text)
-    return foldline.'  '.repeat("-",fillcharcount).'  ('.foldsize.' lines)'
+    return foldline.'  '.repeat(" ",fillcharcount).'  ('.foldsize.' lines)'
 endfunction
 
 setlocal spell spelllang=en_gb

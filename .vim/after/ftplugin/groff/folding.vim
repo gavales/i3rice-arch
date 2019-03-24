@@ -25,13 +25,13 @@ function FoldText()
     let foldline = getline(v:foldstart)
     let foldbel = getline(v:foldstart + 1)
     let foldline = substitute(foldline, '.TL', "Title: ", "")
-    let foldline = substitute(foldline, '.NH 2', "~~~~~~> ", "")
-    let foldline = substitute(foldline, '.NH 3', "---------> ", "")
-    let foldline = substitute(foldline, '.NH', "===> ", "")
-    let foldline = substitute(foldline, '.SH', "~~~> ", "")
+    let foldline = substitute(foldline, '.NH 2', "~~> ", "")
+    let foldline = substitute(foldline, '.NH 3', "--> ", "")
+    let foldline = substitute(foldline, '.NH', ">>> ", "")
+    let foldline = substitute(foldline, '.SH', "==> ", "")
     let text = foldline.foldbel.foldsize.'line     '
     let fillcharcount = windowwidth - strdisplaywidth(text)
-    return foldline.' '.foldbel.' '.repeat("-",fillcharcount).'  ('.foldsize.' lines)'
+    return foldline.' '.foldbel.' '.repeat(" ",fillcharcount).'  ('.foldsize.' lines)'
 endfunction
 
 setlocal updatetime=500

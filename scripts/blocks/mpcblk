@@ -2,11 +2,6 @@
 
 status=$(mpc current)
 
-<<<<<<< HEAD
-playing=$(ncmpcpp --current-song '%20A - %20t')
-
-=======
->>>>>>> origin/master
 icon="<span face='Font Awesome 5 Free'>&#xf001;</span>"
 
 playing=$(ncmpcpp --current-song '%20a - %20t')

@@ -1,12 +1,3 @@
-rename Public_
-rename Public
-rename spotlight
-open_with q
-mkdir spotlight
-mkdir papes
-rename ex
-open_with 1
-open_with 2
 open_with zathura
 open_with 
 mkdir CPU10316
@@ -39,7 +30,6 @@ rename VENT-PENETRATOR-M-NUT-10-8-R2.zip
 shell 
 rename LitReview.bib
 rename GDPFinalReport.bib
-wq
 mkdir Video
 shell cp ~/Templates/md/name.md notes.md
 search goudy
@@ -48,3 +38,13 @@ touch dummyimu.sh
 rename 2019_03_15_WK24.md
 shell git clone https://github.com/StillANixRookie/SeaBUG.git
 w
+shell  git clone https://github.com/dmitrysmagin/dmenu.git
+shell make
+shell sudo make install
+shell ./%f
+wq
+shell wget https://raw.githubusercontent.com/ControlEverythingCommunity/MS5803-14BA/master/Python/MS5803_14BA.py
+rename ahrs-parser.py
+shell git clone https://github.com/StillANixRookie/lily-pad.git
+shell processing %f
+rename projectlogo.png
