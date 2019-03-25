@@ -1,0 +1,21 @@
+#!/bin/bash
+
+name="$(xdotool getactivewindow getwindowname)"
+name="${name/ - File Manager/}"
+title="${name/gavarch/}"
+title="~/${title}"
+
+case $name in
+	gavarch)
+		xdotool key ctrl+2
+		i3-msg title_format "$title"
+		;;
+	Pictures)
+		xdotool key ctrl+1
+		i3-msg title_format "$title"
+		;;
+	Videos)
+		xdotool key ctrl+1
+		i3-msg title_format "$title"
+		;;
+esac

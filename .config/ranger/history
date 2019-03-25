@@ -47,4 +47,4 @@ rename ahrs-parser.py
 shell git clone https://github.com/StillANixRookie/lily-pad.git
 shell processing %f
 rename projectlogo.png
-rename screenshot
+redraw

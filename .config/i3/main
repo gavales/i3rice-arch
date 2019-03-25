@@ -141,19 +141,15 @@ bindsym Print		$exs/screenshot
 
 $mod+1				workspace $ws1
 $mod+Shift+1		move container to workspace $ws1; workspace $ws1
-$mod+Ctrl+1			floating disable, $mvm1, [con_mark=$mk1] focus, focus right
 
 $mod+2				workspace $ws2
 $mod+Shift+2		move container to workspace $ws2; workspace $ws2
-$mod+Ctrl+2			floating disable, $mvm2, [con_mark=$mk2] focus, focus right
 
 $mod+3				workspace $ws3
 $mod+Shift+3		move container to workspace $ws3; workspace $ws3
-$mod+Ctrl+3			floating disable, $mvm3, [con_mark=$mk3] focus, focus right
 
 $mod+4				workspace $ws4
 $mod+Shift+4		move container to workspace $ws4; workspace $ws4
-$mod+Ctrl+4			floating disable, $mvm4, [con_mark=$mk4] focus, focus right
 
 $mod+5				workspace $ws5
 $mod+Shift+5		move container to workspace $ws5; workspace $ws5
@@ -305,7 +301,12 @@ $win+5				$lch '$term -name i3BLOCKS -e vim ~/scripts/mkblocksconf' $mk3
 
 # //// 1st Row
 
-$win+w				$lch '$term -name LAYOUT_EDITOR -e bash ~/$scripts/wsloget' $mk2
+$win+q				floating disable, $mvm1, [con_mark=$mk1] focus, focus right
+
+$win+w				floating disable, $mvm2, [con_mark=$mk2] focus, focus right
+$win+Shift+w		$lch '$term -name LAYOUT_EDITOR -e bash ~/$scripts/wsloget' $mk2
+
+$win+e				floating disable, $mvm3, [con_mark=$mk3] focus, focus right
 
 $win+r				$lch '$term -name RTV -e rtv' $mk2
 
@@ -326,7 +327,7 @@ $win+Shift+o		gaps inner current set 10; gaps outer current set 20
 
 # //// 2nd Row
 
-$win+a				$exs/wsloapp
+$win+Shift+a		$exs/wsloapp
 
 $win+s				$lch slack $mk3
 $win+Shift+s		$exs/i3-sticky-toggle

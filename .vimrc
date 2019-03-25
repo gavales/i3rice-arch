@@ -188,6 +188,7 @@ endfunction
 " //// ACTUAL
 
 set statusline=
+set statusline+=%#Normal#
 set statusline+=\ 
 set statusline+=%#User1#
 set statusline+=\ %{ModeCurrent()}
