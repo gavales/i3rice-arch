@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-lo=$(ls $HOME/.config/i3 | tr '  ' '\n' | grep '.json' | bash $HOME/scripts/i3menu "Apply which layout?")
+lo=$(ls $HOME/.config/i3 | tr '  ' '\n' | grep '.json' | bash ~/scripts/i3menu "Apply which layout?")
 
 if [[ -z $lo ]]; then
 	:

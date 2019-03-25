@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 Dir=$HOME/Templates/css
 blackd=$(xrdb -query | grep '*color0' | awk '{print $NF}')

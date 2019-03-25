@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 grn=$(xrdb -query | grep '*color2' | awk '{print $NF}')
 

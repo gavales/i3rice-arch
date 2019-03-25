@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 temp1=$(sensors coretemp-isa-0000 | grep '^Core 0' | awk '{ print $3 }')
 rawtemp=$(printf %.0f ${temp1:1:-4})

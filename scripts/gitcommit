@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 cd
 
@@ -7,7 +7,7 @@ cd
 #blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
 #font=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
 
-repo=$(cat ~/scripts/githubrepos | bash $HOME/scripts/i3menu "Update which repo?:")
+repo=$(cat ~/scripts/githubrepos | bash ~/scripts/i3menu "Update which repo?:")
 
 if [[ -z $repo ]]; then
     :

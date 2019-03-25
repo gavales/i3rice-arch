@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 NAME="i3viswiz"
 VERSION="0.018"

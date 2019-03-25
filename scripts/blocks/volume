@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 volraw=$(amixer get Master|tail -1|grep -oh "\w*%\w*")
 stat=$(amixer get Master|tail -1|awk '{print $NF}')

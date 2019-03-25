@@ -1,23 +1,18 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
-blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
-font=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
-dmenucolors="-fn "${font:4}" -nb "$black" -nf "$white" -sf "$black" -sb "$blue""
 ignore="grep -v 'sda' | grep -v 'sdb'"
 
 mountd () {
-    chosen=$(lsblk -ro 'name,size,type,mountpoint' | grep -v 'sda' | grep -v 'sdb' | grep -v '/' | grep 'part' | dmenu -i -p "Mount which drive?:" $dmenucolors)
+    chosen=$(lsblk -ro 'name,size,type,mountpoint' | grep -v 'sda' | grep -v 'sdb' | grep -v '/' | grep 'part' | bash ~/scripts/i3menu "Mount which drive?:")
     [[ -z $chosen ]] && exit 1
-    mountpoint=$(ls /run/media/${HOME:6} | dmenu -i -p "Which mountpoint?:" $dmenucolors)
+    mountpoint=$(ls /run/media/${HOME:6} | bash ~/scripts/i3menu "Which mountpoint?:")
     sudo mount /dev/$(echo $chosen | awk '{print $1}') /run/media/${HOME:6}/$mountpoint
     sudo chmod 0777 /run/media/${HOME:6}/$mountpoint
     ranger /run/media/${HOME:6}/$mountpoint
 }
 
 unmountd () {
-    chosen=$(lsblk -ro 'name,size,type,mountpoint' | grep -v 'sda' | grep -v 'sdb' | grep '/' | grep 'part' | dmenu -i -p "Mount which drive?:" $dmenucolors)
+    chosen=$(lsblk -ro 'name,size,type,mountpoint' | grep -v 'sda' | grep -v 'sdb' | grep '/' | grep 'part' | bash ~/scripts/i3menu "Mount which drive?:")
     [[ -z $chosen ]] && exit 1
     sudo umount /dev/$(echo $chosen | awk '{print $1}')
 }

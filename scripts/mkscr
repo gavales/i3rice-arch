@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 bashDir=$HOME/scripts
 pyDir=$HOME/Documents/python

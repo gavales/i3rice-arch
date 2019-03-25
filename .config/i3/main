@@ -8,6 +8,7 @@ set $wni	Mod4
 set $mrl	bindsym --release Mod1
 set $wlw	bindsym --whole-window Mod4
 set $exn	exec --no-startup-id
+set $exs	exec --no-startup-id ~/scripts
 set $ena	exec_always --no-startup-id
 set $lch	exec ~/scripts/i3launch
 set $tf		title_format
@@ -134,7 +135,7 @@ $mod+Ctrl+Right		workspace next
 
 $mod+Ctrl+Left		workspace prev
 
-bindsym Print		$exn bash ~/$scripts/screenshot
+bindsym Print		$exs/screenshot
 
 # //// Numbers
 
@@ -190,7 +191,7 @@ $mod+e				layout toggle tabbed split
 $mod+r				$exn $term -name RSS -e newsboat
 $mod+Shift+r		restart
 
-$mod+t				$exn "bash $home/$scripts/mkwalrando; bash $home/$scripts/reloadconfs"
+$mod+t				$exn "bash ~/$scripts/mkwalrando; bash ~/$scripts/reloadconfs"
 
 $mod+y				resize shrink width 5 px or 5 ppt
 $mod+Shift+y		$lch '$brow --new-window --app=https://www.youtube.com/' $mk1
@@ -205,14 +206,14 @@ $mod+Shift+i		$lch '$brow --new-window --app=https://www.bbc.co.uk/iplayer/' $mk
 
 $mod+o				resize grow width 5 px or 5 ppt
 
-$mod+p				$exn bash ~/$scripts/i3media togg
-$mod+Shift+p		$exn bash ~/$scripts/screenshot
+$mod+p				$exs/i3media togg
+$mod+Shift+p		$exs/screenshot
 
-$mod+bracketright	$exn bash ~/$scripts/i3media next
+$mod+bracketright	$exs/i3media next
 
-$mod+bracketleft	$exn bash ~/$scripts/i3media prev
+$mod+bracketleft	$exs/i3media prev
 
-$mod+backslash		$exn bash ~/$scripts/i3media stop
+$mod+backslash		$exs/i3media stop
 
 # //// 2nd Row
 
@@ -232,17 +233,17 @@ $mod+Shift+f		fullscreen toggle
 $mod+g				split toggle
 $mod+Shift+g		$lch '$term -name GRIVE -e bash ~/$scripts/grivesync' $mk2 fl
 
-$mod+h				$exn bash $home/$scripts/i3viswiz left
-$mod+Shift+h		$exn bash $home/$scripts/i3move left
+$mod+h				$exn bash ~/$scripts/i3viswiz left
+$mod+Shift+h		$exn bash ~/$scripts/i3move left
 
-$mod+j				$exn bash $home/$scripts/i3viswiz down
-$mod+Shift+j		$exn bash $home/$scripts/i3move down
+$mod+j				$exn bash ~/$scripts/i3viswiz down
+$mod+Shift+j		$exn bash ~/$scripts/i3move down
 
-$mod+k				$exn bash $home/$scripts/i3viswiz up
-$mod+Shift+k		$exn bash $home/$scripts/i3move up
+$mod+k				$exn bash ~/$scripts/i3viswiz up
+$mod+Shift+k		$exn bash ~/$scripts/i3move up
 
-$mod+l				$exn bash $home/$scripts/i3viswiz right
-$mod+Shift+l		$exn bash $home/$scripts/i3move right
+$mod+l				$exn bash ~/$scripts/i3viswiz right
+$mod+Shift+l		$exn bash ~/$scripts/i3move right
 
 $mod+semicolon		$exn redshift -P -O 3700
 
@@ -258,7 +259,7 @@ $mod+z				$exn $brow --new-window --app=https://docs.google.com/document/u/0/
 $mod+x				$exn $brow --new-window --app=https://docs.google.com/spreadsheets/u/0/
 
 $mod+c				exec $viva
-$mod+Shift+c		$exn bash $home/$scripts/xtheme
+$mod+Shift+c		$exs/xtheme
 
 $mod+v				$lch '$term -name VIS -e vis' $mk1
 $mod+Shift+v		$lch 'projectM-pulseaudio' $mk1
@@ -274,9 +275,9 @@ $mod+Shift+n		$lch '$brow --new-window \
 $mod+m				$exn $brow --new-window --app=https://docs.google.com/presentation/u/0/
 $mod+Shift+m		$lch '$brow --new-window --app=https://play.google.com/movies/' $mk1
 
-$mod+comma			$exn "pactl set-sink-volume 0 -2%; bash ~/$scripts/notify_volume"
+$mod+comma			$exn "pactl set-sink-volume 0 -2%; ~/$scripts/notify_volume"
 
-$mod+period			$exn "pactl set-sink-volume 0 +2%; bash ~/$scripts/notify_volume"
+$mod+period			$exn "pactl set-sink-volume 0 +2%; ~/$scripts/notify_volume"
 
 # >>>> MOD4 BINDINGS
 # //// Misc
@@ -290,13 +291,13 @@ $wlw+button3		kill
 $win+0				[title="placeholder"] kill
 
 $win+1				$lch '$term -name i3MAIN -e vim ~/.config/i3/main' $mk3
-$win+Shift+1		$exn python $home/$scripts/i3-sticky-open 1
+$win+Shift+1		$exs/i3-sticky-create 1
 
 $win+2				$lch '$term -name i3VARS -e vim ~/.config/i3/vars' $mk3
-$win+Shift+2		$exn python $home/$scripts/i3-sticky-open 2
+$win+Shift+2		$exs/i3-sticky-create 2
 
 $win+3				$lch '$term -name VIMRC -e vim ~/.vimrc' $mk3
-$win+Shift+3		$exn python $home/$scripts/i3-sticky-open 3
+$win+Shift+3		$exs/i3-sticky-create 3
 
 $win+4				$lch '$term -name RCCONF -e vim ~/.config/ranger/rc.conf' $mk3
 
@@ -325,10 +326,10 @@ $win+Shift+o		gaps inner current set 10; gaps outer current set 20
 
 # //// 2nd Row
 
-$win+a				$exn bash ~/$scripts/wsloapp
+$win+a				$exs/wsloapp
 
 $win+s				$lch slack $mk3
-$win+Shift+s		$exn bash $home/$scripts/i3-sticky-toggle
+$win+Shift+s		$exs/i3-sticky-toggle
 
 $win+d				move workspace to output $hdm
 
@@ -354,10 +355,10 @@ $win+Shift+Return	$exn $term -name FILES_ADMIN -e sudo ranger
 
 # //// 3rd Row
 
-$win+x				$exn "pactl set-sink-mute 0 toggle; bash ~/$scripts/notify_volume"
+$win+x				$exn "pactl set-sink-mute 0 toggle; ~/$scripts/notify_volume"
 
 $win+c				$lch '$term -name CALENDAR -e vim "+Calendar -view=day"' $mk2
-$win+Shift+c		$exn bash ~/$scripts/reloadconfs
+$win+Shift+c		$exs/reloadconfs
 
 $win+v				move workspace to output $vga
 
@@ -365,11 +366,11 @@ $win+b				$lch '$term -name BASHMOUNT -e bashmount' $mk2
 
 $win+n				move workspace to output $nat
 
-$win+m				$exn bash ~/$scripts/multimon
+$win+m				$exs/multimon
 
-$win+comma			$exn "$brightdec; bash ~/$scripts/notify_brightness"
+$win+comma			$exn "$brightdec; ~/$scripts/notify_brightness"
 
-$win+period			$exn "$brightinc; bash ~/$scripts/notify_brightness"
+$win+period			$exn "$brightinc; ~/$scripts/notify_brightness"
 
 # >>>> FOR_WINDOW
 # //// GLOBAL
@@ -494,7 +495,7 @@ $ena	fix_xcursor
 $exn	feh --bg-fill ~/.config/wall.png
 $exn	mpd
 $exn	shutter --min_at_startup
-$exn	bash $home/$scripts/i3listen-toggle
+$exn	~/$scripts/i3listen-toggle
 $exn	setxkbmap $kb
 
 # PROGRAMS

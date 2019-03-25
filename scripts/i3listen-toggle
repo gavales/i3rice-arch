@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 pkill -f i3-sticky.py
 pkill -f i3listen.py

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # OA: Gavin Vales
 # CREATED: Sun 16 Dec 18:22:14 GMT 2018
@@ -21,4 +21,4 @@ cat ${xfilesDir}/7urxvt >> .Xresources
 cat ${xfilesDir}/8urxvtext >> .Xresources
 
 xrdb -load .Xresources
-bash ~/scripts/reloadconfs
+reloadconfs

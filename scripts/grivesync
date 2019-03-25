@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 notify-send "Syncing Drive folder..." -i ~/scriptpics/drivesyncing.png
 cd $HOME/Drive

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 magenta=$(xrdb -query | grep '*color5' | awk '{print $NF}')
 

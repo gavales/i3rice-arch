@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-player=$(bash $HOME/scripts/i3mediaplaying)
+player=$(bash ~/scripts/i3mediaplaying)
 
 case $1 in
 	togg)

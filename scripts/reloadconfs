@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 bash ~/scripts/mkdunsttheme
 bash ~/scripts/mkblocksconf
@@ -9,4 +9,4 @@ bash ~/scripts/mkzathrc
 bash ~/scripts/i3concat
 killall i3bar
 i3bar -t --bar_id=bar-1 &>/dev/null &
-bash $HOME/scripts/i3listen-toggle
+bash ~/scripts/i3listen-toggle

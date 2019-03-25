@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-theme=$(ls $HOME/xinclude/colors | bash $HOME/scripts/i3menu "Choose theme:")
+theme=$(ls $HOME/xinclude/colors | bash ~/scripts/i3menu "Choose theme:")
 xfilesDir=$HOME/xinclude
 
 main () {
@@ -15,7 +15,7 @@ main () {
 	xrdb -load $HOME/.Xresources
 	kill -1 $(pidof urxvtd)
 	notify-send '.Xresources has been reloaded' -i $HOME/scriptpics/settingswhite.png
-	bash $HOME/scripts/reloadconfs
+	bash ~/scripts/reloadconfs
 }
 
 if [[ -f $xfilesDir/colors/${theme} ]]; then

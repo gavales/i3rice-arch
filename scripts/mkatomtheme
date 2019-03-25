@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 atsynDir="$HOME/.atom/packages/rice-syntax/styles"
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 iconFu="<span face='Font Awesome 5 Free'>&#xf240;</span>"
 icon75="<span face='Font Awesome 5 Free'>&#xf241;</span>"

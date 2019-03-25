@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 blr=$(light -G)
 declare -i bl=$(printf "%.0f" $blr)
