@@ -41,7 +41,7 @@ tmpscrot () {
 	fi
 
 	sxiv $HOME/Pictures/${scrotdir}/tmp.png 
-	confirmscrot
+	[[ -n $scrot_type ]] && confirmscrot
 }
 
 clipboard () {

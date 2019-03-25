@@ -2,8 +2,7 @@
 
 name="$(xdotool getactivewindow getwindowname)"
 name="${name/ - File Manager/}"
-title="${name/gavarch/}"
-title="~/${title}"
+title="${name/gavarch/home}"
 
 case $name in
 	gavarch)

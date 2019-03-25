@@ -5,6 +5,18 @@ from subprocess import call
 i3 = Connection()
 
 def windownotify(i3, event):
+    if event.container.window_class == 'Vivaldi-stable':
+        if event.container.focused == True:
+            call('i3-msg mark _W1'.split(' '))
+
+    if event.container.window_instance == 'MEDIA':
+        if event.container.focused == True:
+            call('i3-msg mark _W2'.split(' '))
+
+    if event.container.window_instance == 'MUSIC':
+        if event.container.focused == True:
+            call('i3-msg mark _W3'.split(' '))
+
     if event.change == "close":
         if event.container.window_class == 'mpv':
             if event.container.focused == True:
