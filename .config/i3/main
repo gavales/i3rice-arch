@@ -504,7 +504,6 @@ $exs/i3listen-toggle
 $exn	i3-msg "workspace $ws1; append_layout $home/.config/i3/main.json"
 $exn	$viva
 $exn	$brow --new-window --app=https://www.youtube.com/
-$exn	$gfm
 $ena	mpv $home/scriptsounds/A\ Tone\ His\ Self.mp3
 $ena	notify-send 'i3 (re)loaded!' -i ~/$scriptpics/i3white.png
 
