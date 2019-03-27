@@ -1,7 +1,3 @@
-open_with 
-mkdir CPU10316
-mkdir Cowboy Bebop
-rename onelight
 rename Futurama
 rename Twin Peaks
 shell mkdir S1 S2 S3
@@ -48,3 +44,7 @@ shell git clone https://github.com/StillANixRookie/lily-pad.git
 shell processing %f
 rename projectlogo.png
 redraw
+shell chmod +x %s
+shell zip k
+shell zip -r Report_LaTex.zip Report_LaTex
+shell touch lotkavolterra.py

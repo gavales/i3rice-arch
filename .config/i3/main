@@ -1,10 +1,10 @@
 # >>>> MAIN VARS
 # //// i3
 
-set $mod	bindsym Mod1
 set $mdi	Mod1
-set $win	bindsym Mod4
 set $wni	Mod4
+set $mod	bindsym Mod1
+set $win	bindsym Mod4
 set $mrl	bindsym --release Mod1
 set $wlw	bindsym --whole-window Mod4
 set $exn	exec --no-startup-id
@@ -99,11 +99,11 @@ bar {
 	font pango:$font1,$font2 $fonts
 
 	colors {
-	background $blk
+	background $blu
 #						brdr bkgr text
-	focused_workspace	$blu $blu $blk
-	active_workspace	$blk $blk $blu
-	inactive_workspace	$blk $blk $wht
+	focused_workspace	$wht $wht $blu
+	active_workspace	$blu $blu $wht
+	inactive_workspace	$blu $blu $blk
 	binding_mode		$ylw $ylw $blk
 	urgent_workspace	$red $red $blk
 	}
@@ -116,13 +116,13 @@ floating_modifier	$mdi
 
 $mod+Escape		mode "SHUTDOWN"
 mode "SHUTDOWN" {
-	bindsym l	$exn i3exit lock, mode "default"
-	bindsym s	$exn i3exit suspend, mode "default"
-	bindsym u	$exn i3exit switch_user, mode "default"
-	bindsym e	$exn i3exit logout, mode "default"
-	bindsym h	$exn i3exit hibernate, mode "default"
-	bindsym r	$exn i3exit reboot, mode "default"
-	bindsym x	$exn i3exit shutdown, mode "default"
+	bindsym l	$exs/i3exit lock, mode "default"
+	bindsym s	$exs/i3exit suspend, mode "default"
+	bindsym u	$exs/i3exit switch_user, mode "default"
+	bindsym e	$exs/i3exit logout, mode "default"
+	bindsym h	$exs/i3exit hibernate, mode "default"
+	bindsym r	$exs/i3exit reboot, mode "default"
+	bindsym x	$exs/i3exit shutdown, mode "default"
 
 	#exit system mode: "Enter" or "Escape"
 	bindsym		Return mode "default"
@@ -188,7 +188,7 @@ $mod+e				layout toggle tabbed split
 $mod+r				$exn $term -name RSS -e newsboat
 $mod+Shift+r		restart
 
-$mod+t				$exn "bash ~/$scripts/mkwalrando; bash ~/$scripts/reloadconfs"
+$mod+t				$exs/mkwalrando
 
 $mod+y				resize shrink width 5 px or 5 ppt
 $mod+Shift+y		$lch '$brow --new-window --app=https://www.youtube.com/' $mk1
@@ -222,7 +222,7 @@ $mod+Shift+s		$lch spotify $mk1 fl
 $mod+Ctrl+s			sticky toggle
 
 $mod+d				$exn rofi -show drun
-$mod+Shift+d		$exn dmenu_run -fn "$font3:size=$fonts" -nb "$blk" -nf "$wht" -sf "$blk" -sb "$blu"
+$mod+Shift+d		$exs/i3menu -run
 
 $mod+f				$lch '$term -name MEDIA -e ranger' $mk2
 $mod+Shift+f		fullscreen toggle
@@ -230,17 +230,17 @@ $mod+Shift+f		fullscreen toggle
 $mod+g				split toggle
 $mod+Shift+g		$lch '$term -name GRIVE -e bash ~/$scripts/grivesync' $mk2 fl
 
-$mod+h				$exn bash ~/$scripts/i3viswiz left
-$mod+Shift+h		$exn bash ~/$scripts/i3move left
+$mod+h				$exs/i3viswiz left
+$mod+Shift+h		$exs/i3move left
 
-$mod+j				$exn bash ~/$scripts/i3viswiz down
-$mod+Shift+j		$exn bash ~/$scripts/i3move down
+$mod+j				$exs/i3viswiz down
+$mod+Shift+j		$exs/i3move down
 
-$mod+k				$exn bash ~/$scripts/i3viswiz up
-$mod+Shift+k		$exn bash ~/$scripts/i3move up
+$mod+k				$exs/i3viswiz up
+$mod+Shift+k		$exs/i3move up
 
-$mod+l				$exn bash ~/$scripts/i3viswiz right
-$mod+Shift+l		$exn bash ~/$scripts/i3move right
+$mod+l				$exs/i3viswiz right
+$mod+Shift+l		$exs/i3move right
 
 $mod+semicolon		$exn redshift -P -O 3700
 
@@ -497,8 +497,8 @@ $ena	fix_xcursor
 $exn	feh --bg-fill ~/.config/wall.png
 $exn	mpd
 $exn	shutter --min_at_startup
-$exn	~/$scripts/i3listen-toggle
 $exn	setxkbmap $kb
+$exs/i3listen-toggle
 
 # PROGRAMS
 $exn	i3-msg "workspace $ws1; append_layout $home/.config/i3/main.json"

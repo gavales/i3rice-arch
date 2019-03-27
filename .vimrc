@@ -11,7 +11,7 @@ filetype plugin on " required
 execute pathogen#infect()
 syntax enable
 set encoding=utf-8
-colorscheme pablo
+colorscheme koehler
 set number
 set relativenumber
 set hls

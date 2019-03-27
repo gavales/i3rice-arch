@@ -78,4 +78,4 @@ endfunction
 setlocal spell spelllang=en_gb
 setlocal nonumber norelativenumber laststatus=0
 "filetype plugin on
-setlocal textwidth=80
+"setlocal textwidth=80

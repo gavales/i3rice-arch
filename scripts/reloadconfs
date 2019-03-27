@@ -1,12 +1,12 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-bash ~/scripts/mkdunsttheme
-bash ~/scripts/mkblocksconf
-bash ~/scripts/mkvistheme
-bash ~/scripts/mkatomtheme
-bash ~/scripts/mkfixedsyscss
-bash ~/scripts/mkzathrc
-bash ~/scripts/i3concat
+~/scripts/mkdunsttheme
+~/scripts/mkblocksconf
+~/scripts/mkvistheme
+~/scripts/mkatomtheme
+~/scripts/mkfixedsyscss
+~/scripts/mkzathrc
+~/scripts/i3concat
 killall i3bar
 i3bar -t --bar_id=bar-1 &>/dev/null &
-bash ~/scripts/i3listen-toggle
+~/scripts/i3listen-toggle

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-grn=$(xrdb -query | grep '*color2' | awk '{print $NF}')
+clr=$(xrdb -query | grep '*color3' | awk '{print $NF}')
 
 playername=$(mpris-ctl info "%player_name")
 trackname=$(mpris-ctl info "%track_name")
@@ -32,7 +32,7 @@ elif [ -z $playername ]; then
 elif [ $playstatus == "Paused" ]; then
 	echo "${playing}"
 else
-	echo "<span foreground=\"$grn\">${playing}</span>"
+	echo "<span foreground=\"$clr\">${playing}</span>"
 fi
 
 #case $BLOCK_BUTTON in

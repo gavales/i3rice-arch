@@ -6,6 +6,10 @@ title="${name/gavarch/home}"
 
 case $name in
 	gavarch)
+		xdotool key ctrl+1
+		i3-msg title_format "$title"
+		;;
+	Drive)
 		xdotool key ctrl+2
 		i3-msg title_format "$title"
 		;;

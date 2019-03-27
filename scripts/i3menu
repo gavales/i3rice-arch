@@ -11,6 +11,14 @@ accent=$(xrdb -query | grep '*color5' | awk '{print $NF}')
 font=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
 font=${font#*:}
 font=${font%:*}
-dmenucolors="-fn "${font}:size=15" -nb "$accent" -nf "$black" -sf "$accent" -sb "$white""
+format="-fn "${font}:size=15" -nb "$accent" -nf "$black" -sf "$accent" -sb "$white""
 
-dmenu -i -p "${prompt}" $dmenucolors
+menu () {
+	dmenu -i -p "${prompt}" $format
+}
+
+if [[ ${prompt} == "-run" ]]; then
+	dmenu_run $format
+else
+	menu
+fi

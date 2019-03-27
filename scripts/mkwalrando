@@ -13,6 +13,9 @@ wall=$(ls $wallDir | shuf -n 1)
 cd $HOME
 
 wal -q -i "${wallDir}/${wall}"
+rm "$HOME/.config/wall.png"
+cp "${wallDir}/${wall}" "$HOME/.config/wall.png"
+feh --bg-scale "${wallDir}/${wall}"
 
 cd $xresDir
 
@@ -24,3 +27,5 @@ cat ${xfilesDir}/4xft >> .Xresources
 cat ${xfilesDir}/6xcursor >> .Xresources
 cat ${xfilesDir}/7urxvt >> .Xresources
 cat ${xfilesDir}/8urxvtext >> .Xresources
+
+reloadconfs

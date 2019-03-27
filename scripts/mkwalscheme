@@ -6,8 +6,12 @@
 xfilesDir=$HOME/xinclude
 xresDir=$HOME/i3rice-arch
 
-feh --bg-scale "$1"
-wal -q -i "$1"
+feh --bg-scale "${1}"
+wal -q -i "${1}"
+
+rm "$HOME/.config/wall.png"
+cp "${1}" "$HOME/.config/wall.png"
+feh --bg-scale "${1}"
 
 cd $xresDir
 
