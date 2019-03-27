@@ -9,41 +9,41 @@ yamlDIR=$HOME/Templates/pandoc
 # WHICH BIBLIOGRAPHY FILE
 whichbib=$(cat $file | grep '#bib' | awk '{print $NF}')
 if [[ -n $whichbib ]]; then
-    bib="${whichbib}"
+	bib="${whichbib}"
 elif [[ -z $whichbib ]]; then
-    bib="$HOME/global.bib"
+	bib="$HOME/global.bib"
 fi
 
 # WHICH .yaml TO USE
 yaml=$(cat $file | grep '#yaml' | awk '{print $NF}')
 if [[ -n $yaml ]]; then
-    settings="$HOME/Templates/pandoc/${yaml}.yaml"
+	settings="$HOME/Templates/pandoc/${yaml}.yaml"
 elif [[ -z $yaml ]]; then
-    settings="$HOME/Templates/pandoc/settings.yaml"
+	settings="$HOME/Templates/pandoc/settings.yaml"
 fi
 
 # WHICH TEMPLATE FOR WORD DOCUMENTS
 whichwordtemp=$(cat $file | grep '#word_template' | awk '{print $NF}')
 if [[ -n $whichwordtemp ]]; then
-    wordtemp=$(cat $file | grep '#word_template' | awk '{print $NF}')
+	wordtemp=$(cat $file | grep '#word_template' | awk '{print $NF}')
 elif [[ -z $whichwordtemp ]]; then
-    wordtemp=reference
+	wordtemp=reference
 fi
 
 # WHICH CSS FOR .html
 whichcss=$(cat $file | grep '#cssfile' | awk '{print $NF}')
 if [[ -n $whichcss ]]; then
-    css=$(cat $file | grep '#cssfile' | awk '{print $NF}')
+	css=$(cat $file | grep '#cssfile' | awk '{print $NF}')
 elif [[ -z $whichcss ]]; then
-    css=manuscript
+	css=manuscript
 fi
 
 # WHICH LATEX ENGINE
 engine=$(cat $file | grep '#compiler' | awk '{print $NF}')
 if [[ -n $engine ]]; then
-    texgine="--pdf-engine=$engine"
+	texgine="--pdf-engine=$engine"
 elif [[ -z $engine ]]; then
-    texgine=
+	texgine=
 fi
 
 crossref="-F pandoc-crossref --metadata-file ${settings}"
@@ -53,26 +53,26 @@ wordtemplate="--reference-doc ${wordtempDIR}/${wordtemp}.docx"
 nsec="--number-sections"
 
 latex() {
-    pandoc $crossref $citeproc $texgine $nsec -o ${file:0:-3}.pdf ${file}
+	pandoc $crossref $citeproc $texgine $nsec -o ${file:0:-3}.pdf ${file}
 }
 
 word() {
-    pandoc $crossref $citeproc $wordtemplate -o ${file:0:-3}.docx ${file}
+	pandoc $crossref $citeproc $wordtemplate -o ${file:0:-3}.docx ${file}
 }
 
 html() {
-    pandoc $crossref $citeproc -s --toc $style -o ${file:0:-3}.html ${file}
+	pandoc $crossref $citeproc -s --toc $style -o ${file:0:-3}.html ${file}
 }
 
 beamer() {
-    pandoc $citeproc -t beamer --incremental -o ${file:0:-3}.pdf ${file}
+	pandoc $citeproc -t beamer --incremental -o ${file:0:-3}.pdf ${file}
 }
 
 output=$(cat $file | grep '#output' | awk '{print $NF}')
 if [[ -n $output ]]; then
-    $output
+	$output
 elif [[ -z $output ]]; then
-    html
+	html
 fi
 
 pkill -HUP mupdf

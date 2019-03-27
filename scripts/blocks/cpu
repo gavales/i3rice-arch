@@ -13,9 +13,9 @@ else
 fi
 
 if [[ $cpu -ge 80 ]]; then
-    echo "<span foreground=\"#ff0000\">$icon $cpu</span>"
+	echo "<span foreground=\"#ff0000\">$icon $cpu</span>"
 elif [[ $cpu -ge 50 ]]; then
-    echo "<span foreground=\"#ffff00\">$icon $cpu</span>"
+	echo "<span foreground=\"#ffff00\">$icon $cpu</span>"
 else
-    echo "$icon $cpu"
+	echo "$icon $cpu"
 fi

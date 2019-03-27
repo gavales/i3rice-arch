@@ -9,48 +9,48 @@ icon00="<span face='Font Awesome 5 Free'>&#xf244;</span>"
 bat=$(acpi | awk '{ print $4 }')
 
 if [[ ${#bat} == 3 ]]; then
-    rawbat=${bat:0:-1}
+	rawbat=${bat:0:-1}
 elif [[ ${bat} == "100%" ]]; then
-    rawbat="100"
+	rawbat="100"
 else
-    rawbat=${bat:0:-2}
+	rawbat=${bat:0:-2}
 fi
 
 statu=$(acpi | awk '{ print $3 }')
 tim=$(acpi | awk '{ print $5 }')
 
 if [[ -z "$tim" ]]; then
-    tim2=
+	tim2=
 else
-    tim2="${tim:0:-3}"
+	tim2="${tim:0:-3}"
 fi
 
 if [[ $statu == "Charging," ]]; then
-    stat="<span face='Font Awesome 5 Free'>&#xf1e6;</span>"
+	stat="<span face='Font Awesome 5 Free'>&#xf1e6;</span>"
 elif [[ $statu == "Unknown," ]]; then
-    stat="<span face='Font Awesome 5 Free'>&#xf00c;</span>"
+	stat="<span face='Font Awesome 5 Free'>&#xf00c;</span>"
 elif [[ $statu == "Full," ]]; then
-    stat="<span face='Font Awesome 5 Free'>&#xf00c;</span>"
+	stat="<span face='Font Awesome 5 Free'>&#xf00c;</span>"
 else
-    stat=""
+	stat=""
 fi
 
 if [[ $rawbat -ge 50 ]]; then
-    echo "${bat:0:-1} $icon50 $stat $tim2"
-elif [[ $rawbat -ge 25 ]]; then                
-    echo "${bat:0:-1} $icon25 $stat $tim2"
-elif [[ $rawbat -le 10 ]]; then                
-    echo "<span background=\"#ffff00\">${bat:0:-1} $icon00 $stat $tim2</span>"
-elif [[ $rawbat -ge 10 ]]; then                
-    echo "<span background=\"#ff0000\">${bat:0:-1} $icon00 $stat $tim2</span>"
+	echo "${bat:0:-1} $icon50 $stat $tim2"
+elif [[ $rawbat -ge 25 ]]; then				
+	echo "${bat:0:-1} $icon25 $stat $tim2"
+elif [[ $rawbat -le 10 ]]; then				
+	echo "<span background=\"#ffff00\">${bat:0:-1} $icon00 $stat $tim2</span>"
+elif [[ $rawbat -ge 10 ]]; then				
+	echo "<span background=\"#ff0000\">${bat:0:-1} $icon00 $stat $tim2</span>"
 elif [[ $rawbat -ge 75 ]]; then
-    echo "${bat:0:-1} $icon75 $stat $tim2"
+	echo "${bat:0:-1} $icon75 $stat $tim2"
 elif [[ $statu == "Unknown," ]]; then
-    echo "$iconFu $stat"
+	echo "$iconFu $stat"
 elif [[ $statu == "Full," ]]; then
-    echo "$iconFu $stat"
+	echo "$iconFu $stat"
 elif [[ $rawbat == "100" ]]; then
-    echo "$iconFu $stat"
+	echo "$iconFu $stat"
 else
-    echo "${bat:0:-1} $iconFu $stat $tim2"
+	echo "${bat:0:-1} $iconFu $stat $tim2"
 fi

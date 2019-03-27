@@ -15,7 +15,7 @@ cyan=$(xrdb -query | grep '*color6' | awk '{print $NF}')
 
 (
 	cd $atsynDir || exit 1
-	
+
 	echo "// These colors are specific to the theme. Do not use in a package!" > colors.less
 	echo "@very-light-gray: $whitel;" >> colors.less
 	echo "@light-gray: $whited;" >> colors.less

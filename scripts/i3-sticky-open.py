@@ -17,17 +17,17 @@ Licensed under The MIT License (https://opensource.org/licenses/MIT), see LICENS
 """
 
 def create_text_widget(root, label):
-    widget = tk.Text(root, height = 1, borderwidth = 0, highlightthickness = 0)
-    widget.place(relx = .5, rely = .5, anchor = 'c')
+	widget = tk.Text(root, height = 1, borderwidth = 0, highlightthickness = 0)
+	widget.place(relx = .5, rely = .5, anchor = 'c')
 
-    widget.tag_configure('tag-center', justify = 'center')
-    widget.insert('end', label, 'tag-center')
+	widget.tag_configure('tag-center', justify = 'center')
+	widget.insert('end', label, 'tag-center')
 
 if __name__ == '__main__':
-    group = "1"
-    if len(sys.argv) > 1:
-        group = sys.argv[1]
+	group = "1"
+	if len(sys.argv) > 1:
+		group = sys.argv[1]
 
-    win = tk.Tk(className="i3-sticky-%s" % group)
-    create_text_widget(win, 'Sticky Placeholder – Group %s' % group)
-    win.mainloop()
+	win = tk.Tk(className="i3-sticky-%s" % group)
+	create_text_widget(win, 'Sticky Placeholder – Group %s' % group)
+	win.mainloop()

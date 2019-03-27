@@ -31,7 +31,6 @@ map <C-p> "+P
 autocmd FileType python,css,html,vim,json,perl,sh set tabstop=4
 autocmd FileType python,css,html,vim,json,perl,sh set shiftwidth=4
 autocmd FileType python,css,html,vim,json,perl,sh set colorcolumn=80
-autocmd FileType python,css,html,vim,json,perl,sh filetype indent on
 autocmd FileType python,css,html,vim,json,perl,sh set list
 autocmd FileType python,css,html,vim,json,perl,sh set listchars=tab:\:\ 
 "autocmd FileType python call matchadd('ColorColumn', '\%81v', 100)
@@ -50,10 +49,10 @@ inoremap \ph <++>
 " //// CHANGE HIGHLIGHT COLOURS
 
 hi Normal ctermbg=none guibg=black
-hi LineNr ctermbg=none ctermfg=grey
+hi LineNr ctermbg=none ctermfg=DarkGray
 hi Comment cterm=italic
-hi SpecialKey ctermbg=none ctermfg=grey
-hi Folded cterm=italic,bold ctermfg=grey ctermbg=black
+hi SpecialKey ctermbg=none ctermfg=DarkGray
+hi Folded cterm=italic,bold ctermfg=DarkGray ctermbg=black
 hi ModeMsg cterm=bold ctermfg=white
 hi lCursor ctermbg=blue ctermfg=black
 hi ColorColumn ctermbg=blue ctermfg=black
@@ -61,7 +60,7 @@ hi ColorColumn ctermbg=blue ctermfg=black
 hi User1 ctermbg=red ctermfg=black guibg=red guifg=black
 hi User2 ctermbg=yellow ctermfg=black guibg=yellow guifg=black
 hi User3 ctermbg=green ctermfg=black guibg=green guifg=black
-hi User4 ctermbg=grey ctermfg=black guibg=grey guifg=black
+hi User4 ctermbg=grey ctermfg=black guibg=DarkGray guifg=black
 hi User5 ctermbg=blue ctermfg=black guibg=blue guifg=black
 hi User6 ctermbg=magenta ctermfg=black guibg=magenta guifg=black
 

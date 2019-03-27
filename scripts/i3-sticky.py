@@ -25,59 +25,59 @@ Requires i3 >= 4.14
 STICKY_GROUP = re.compile(r'^_sticky_([^_]+)$')
 
 def get_marks(i3):
-    """ Returns a list of all currently used marks. """
-    return json.loads(i3.message(i3ipc.MessageType.GET_MARKS, ''))
+	""" Returns a list of all currently used marks. """
+	return json.loads(i3.message(i3ipc.MessageType.GET_MARKS, ''))
 
 def get_groups(i3):
-    """ Returns a list of sticky groups currently in use. """
-    matches = [ STICKY_GROUP.match(mark) for mark in get_marks(i3) ]
-    return [ match.group(1) for match in matches if match is not None ]
+	""" Returns a list of sticky groups currently in use. """
+	matches = [ STICKY_GROUP.match(mark) for mark in get_marks(i3) ]
+	return [ match.group(1) for match in matches if match is not None ]
 
 def get_suffixed_mark(i3, mark):
-    """ Returns the name of a currently unused mark starting with the given mark. """
-    marks = get_marks(i3)
+	""" Returns the name of a currently unused mark starting with the given mark. """
+	marks = get_marks(i3)
 
-    suffix = 1
-    while True:
-        result = '%s_%d' % (mark, suffix)
-        if not result in marks:
-            return result
-        suffix += 1
+	suffix = 1
+	while True:
+		result = '%s_%d' % (mark, suffix)
+		if not result in marks:
+			return result
+		suffix += 1
 
 def swap(i3, _):
-    """ Swaps each sticky container into the current workspace if possible. """
+	""" Swaps each sticky container into the current workspace if possible. """
 
-    # For each sticky group, try swapping the sticky container into this
-    # workspace.
-    for group in get_groups(i3):
-        # TODO XXX For the (technically invalid) case of the placeholder being
-        # on the same workspace as the sticky container, perhaps we should
-        # first look up the sticky container by mark, check that it's on a
-        # different workspace and then execute the command.
-        i3.command('[workspace="__focused__" con_mark="^_sticky_%s_"] swap container with mark "_sticky_%s"' % (group, group))
+	# For each sticky group, try swapping the sticky container into this
+	# workspace.
+	for group in get_groups(i3):
+		# TODO XXX For the (technically invalid) case of the placeholder being
+		# on the same workspace as the sticky container, perhaps we should
+		# first look up the sticky container by mark, check that it's on a
+		# different workspace and then execute the command.
+		i3.command('[workspace="__focused__" con_mark="^_sticky_%s_"] swap container with mark "_sticky_%s"' % (group, group))
 
 def on_new_window(i3, event):
-    instance = event.container.window_instance
-    if not instance:
-        return
+	instance = event.container.window_instance
+	if not instance:
+		return
 
-    match = re.match(r'^i3-sticky-(.*)$', instance)
-    if not match:
-        return
+	match = re.match(r'^i3-sticky-(.*)$', instance)
+	if not match:
+		return
 
-    mark = get_suffixed_mark(i3, '_sticky_%s' % match.group(1))
-    event.container.command('mark --add %s' % mark)
+	mark = get_suffixed_mark(i3, '_sticky_%s' % match.group(1))
+	event.container.command('mark --add %s' % mark)
 
 if __name__ == '__main__':
-    i3 = i3ipc.Connection()
-    i3.on('workspace::focus', swap)
-    i3.on('window::new', on_new_window)
-    # TODO XXX We should allow swapping between fullscreen containers. We could
-    # do this ourselves here, but it'd be better to do it in i3 itself instead.
-    i3.on('window::fullscreen_mode', swap)
-    i3.on('window::mark', swap)
+	i3 = i3ipc.Connection()
+	i3.on('workspace::focus', swap)
+	i3.on('window::new', on_new_window)
+	# TODO XXX We should allow swapping between fullscreen containers. We could
+	# do this ourselves here, but it'd be better to do it in i3 itself instead.
+	i3.on('window::fullscreen_mode', swap)
+	i3.on('window::mark', swap)
 
-    try:
-        i3.main()
-    except:
-        pass
+	try:
+		i3.main()
+	except:
+		pass

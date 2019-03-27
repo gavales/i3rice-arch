@@ -6,7 +6,7 @@ mpvtitle="$(xdotool getwindowname $(xdotool search --class mpv))"
 
 blocksDir="$HOME/scripts/blocks"
 
-clr=$(xrdb -query | grep '*color3' | awk '{print $NF}')
+clr=$(xrdb -query | grep '*color7' | awk '{print $NF}')
 
 if [[ -n $mpv ]]; then
 	echo "<span foreground=\"$clr\"><span face='Font Awesome 5 Free'>&#xf03d;</span> ${mpvtitle:0:-6}</span>"

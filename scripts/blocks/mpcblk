@@ -6,7 +6,7 @@ icon="<span face='Font Awesome 5 Free'>&#xf001;</span>"
 
 playing=$(ncmpcpp --current-song '%20a - %20t')
 white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
-clr=$(xrdb -query | grep '*color3' | awk '{print $NF}')
+clr=$(xrdb -query | grep '*color7' | awk '{print $NF}')
 
 if [[ -z "$status" ]]; then
 	echo "<span foreground=\"$white\">"$icon" ${playing}</span>"

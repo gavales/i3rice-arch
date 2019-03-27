@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-clr=$(xrdb -query | grep '*color3' | awk '{print $NF}')
+clr=$(xrdb -query | grep '*color7' | awk '{print $NF}')
 
 playername=$(mpris-ctl info "%player_name")
 trackname=$(mpris-ctl info "%track_name")
@@ -13,14 +13,14 @@ shortartist=$(expr ${#artistname} - 19)
 [[ $playername == "Spotify" ]] && playername="<span face='Font Awesome 5 Free'>&#xf1bc;</span>"
 
 if [[ ${#trackname} -ge 20 ]]; then
-    trackname="${trackname:0:-$shorttrack}…"
+	trackname="${trackname:0:-$shorttrack}…"
 else
-    trackname=$trackname
+	trackname=$trackname
 fi
 if [[ ${#artistname} -ge 20 ]]; then
-    artistname="${artistname:0:-$shortartist}…"
+	artistname="${artistname:0:-$shortartist}…"
 else
-    artistname=$artistname
+	artistname=$artistname
 fi
 
 playing="$playername $artistname > $trackname"

@@ -14,9 +14,9 @@ height=$(echo $geometry | awk '{print $2}')
 geo=\"width\":${width},\"height\":${height}
 
 if [[ $tabbed =~ $geo ]]; then
-    i3-msg "focus parent; focus $dir; focus child"
+	i3-msg "focus parent; focus $dir; focus child"
 else
-    i3-msg focus $dir
+	i3-msg focus $dir
 fi
 
 rm get_tree tree_new

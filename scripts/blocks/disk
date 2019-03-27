@@ -9,7 +9,7 @@ usep=$(df -h -P -l "$DIR"|grep 'dev'|awk '{print $5}')
 use=${usep:0:-1}
 
 if [[ $use -ge 90 ]]; then
-    echo "<span foreground=\"#ff0000\">$icon $avail</span>"
+	echo "<span foreground=\"#ff0000\">$icon $avail</span>"
 else
-    echo "$icon $avail"
+	echo "$icon $avail"
 fi

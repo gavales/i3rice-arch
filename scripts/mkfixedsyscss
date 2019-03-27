@@ -14,7 +14,7 @@ cyan=$(xrdb -query | grep '*color6' | awk '{print $NF}')
 
 (
 	cd $Dir || exit 1
-	
+
 	echo "pre," > fixedsys.css
 	echo "code {" >> fixedsys.css
 	echo "  font-family: \"Fixedsys Mono\", Menlo, Monaco, \"Courier New\", monospace;" >> fixedsys.css
