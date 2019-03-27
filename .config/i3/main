@@ -55,7 +55,7 @@ set_from_resource $ylw	color3
 set_from_resource $blu	color4
 set_from_resource $gnt	color5
 set_from_resource $cyn	color6
-set_from_resource $wht	color15
+set_from_resource $wht	color7
 set $t ff
 
 # //// APPS
@@ -77,7 +77,7 @@ hide_edge_borders true
 
 # COLORS
 # class		 			brdr bkgr text indi chlb
-client.focused			$blk $blu $blk $blk $blk
+client.focused			$blu $blu $blk $blk $blk
 client.focused_inactive $blk $blk $blu $blk $blk
 client.unfocused		$blk $blk $wht $blk $blk
 client.urgent	 		$blk $blk $red $blk $blk
@@ -101,9 +101,9 @@ bar {
 	colors {
 	background $blu
 #						brdr bkgr text
-	focused_workspace	$wht $wht $blu
+	focused_workspace	$blu $blu $blk
 	active_workspace	$blu $blu $wht
-	inactive_workspace	$blu $blu $blk
+	inactive_workspace	$blu $blu $wht
 	binding_mode		$ylw $ylw $blk
 	urgent_workspace	$red $red $blk
 	}
@@ -377,10 +377,10 @@ $win+period			$exn "$brightinc; ~/$scripts/notify_brightness"
 # >>>> FOR_WINDOW
 # //// GLOBAL
 
-focus_follows_mouse no
+#focus_follows_mouse no
 focus_wrapping force
 workspace_auto_back_and_forth yes
-$fw [class="^.*"] border normal 1
+$fw [class="^.*"] border normal 2
 $fw [urgent=latest] focus
 
 # //// FLOATERS

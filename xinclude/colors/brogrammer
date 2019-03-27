@@ -1,9 +1,9 @@
 ! brogrammer
 ! vim:syntax=xdefaults
 #define cblkd #1f1f1f
-#define cblkl #d6dbe5
+#define cblkl #666666
 #define credd #f81118
-#define credl #de352e
+#define credl #f81118
 #define cgrnd #2dc55e
 #define cgrnl #1dd361
 #define cylwd #ecba0f
@@ -14,5 +14,5 @@
 #define cgntl #5350b9
 #define ccynd #21b8c7
 #define ccynl #21b8c7
-#define cwhtl #d6dbe5
+#define cwhtl #ffffff
 #define cwhtd #ffffff

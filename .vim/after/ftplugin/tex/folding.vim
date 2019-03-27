@@ -57,7 +57,7 @@ function FoldText()
     let foldline = substitute(foldline, '% ', "", "")
     let foldline = substitute(foldline, '>>>>', " >>> ", "")
     let foldline = substitute(foldline, '////', " ~~> ", "")
-    let foldline = substitute(foldline, '\\documentclass', "        PREAMBLE:", "")
+    let foldline = substitute(foldline, '\\documentclass', "    Preamble:", "")
     let foldline = substitute(foldline, '\\section{', "==> ", "")
     let foldline = substitute(foldline, '\\subsection{', "~~~~~> ", "")
     let foldline = substitute(foldline, '\\subsubsection{', "--------> ", "")
@@ -78,4 +78,3 @@ endfunction
 setlocal spell spelllang=en_gb
 setlocal nonumber norelativenumber laststatus=0
 "filetype plugin on
-"setlocal textwidth=80

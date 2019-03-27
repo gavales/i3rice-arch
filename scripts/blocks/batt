@@ -35,13 +35,15 @@ else
     stat=""
 fi
 
-if [[ $rawbat -le 50 ]]; then
-    echo "<span foreground=\"#ffff00\">${bat:0:-1} $icon50 $stat $tim2</span>"
-elif [[ $rawbat -le 25 ]]; then                
-    echo "<span foreground=\"#ff0000\">${bat:0:-1} $icon25 $stat $tim2</span>"
+if [[ $rawbat -ge 50 ]]; then
+    echo "${bat:0:-1} $icon50 $stat $tim2"
+elif [[ $rawbat -ge 25 ]]; then                
+    echo "${bat:0:-1} $icon25 $stat $tim2"
 elif [[ $rawbat -le 10 ]]; then                
+    echo "<span background=\"#ffff00\">${bat:0:-1} $icon00 $stat $tim2</span>"
+elif [[ $rawbat -ge 10 ]]; then                
     echo "<span background=\"#ff0000\">${bat:0:-1} $icon00 $stat $tim2</span>"
-elif [[ $rawbat -le 75 ]]; then
+elif [[ $rawbat -ge 75 ]]; then
     echo "${bat:0:-1} $icon75 $stat $tim2"
 elif [[ $statu == "Unknown," ]]; then
     echo "$iconFu $stat"

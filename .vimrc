@@ -53,7 +53,7 @@ hi Normal ctermbg=none guibg=black
 hi LineNr ctermbg=none ctermfg=grey
 hi Comment cterm=italic
 hi SpecialKey ctermbg=none ctermfg=grey
-hi Folded cterm=italic,bold ctermfg=blue ctermbg=black
+hi Folded cterm=italic,bold ctermfg=grey ctermbg=black
 hi ModeMsg cterm=bold ctermfg=white
 hi lCursor ctermbg=blue ctermfg=black
 hi ColorColumn ctermbg=blue ctermfg=black
