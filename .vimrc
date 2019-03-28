@@ -67,6 +67,10 @@ hi Constant			cterm=italic,bold ctermfg=white ctermbg=none
 hi Special			cterm=italic,bold ctermfg=white ctermbg=none
 hi Statement		cterm=italic,bold ctermfg=white ctermbg=none
 hi PreProc			cterm=italic,bold ctermfg=magenta ctermbg=none
+hi SpellBad			cterm=italic,bold ctermfg=red ctermbg=none
+hi SpellCap			cterm=italic,bold ctermfg=blue ctermbg=none
+hi SpellRare		cterm=italic,bold ctermfg=magenta ctermbg=none
+hi SpellLocal		cterm=italic,bold ctermfg=cyan ctermbg=none
 
 "hi EndOfBuffer    Normal
 "hi NonText        Normal
@@ -92,10 +96,6 @@ hi PreProc			cterm=italic,bold ctermfg=magenta ctermbg=none
 "hi DiffText       Normal
 "hi SignColumn     Normal
 "hi Conceal        Normal
-"hi SpellBad       Normal
-"hi SpellCap       Normal
-"hi SpellRare      Normal
-"hi SpellLocal     Normal
 "hi Pmenu          Normal
 "hi PmenuSel       Normal
 "hi PmenuSbar      Normal
