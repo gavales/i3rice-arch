@@ -2,8 +2,8 @@ sw_volume: 62
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
 state: pause
-current: 5
-time: 59.455000
+current: 34
+time: 4.277000
 random: 1
 repeat: 0
 single: 0
@@ -17,63 +17,62 @@ playlist_begin
 2:Leo Moracchioli/Baby One More Time.mp3
 3:Leo Moracchioli/Bad Blood.mp3
 4:Leo Moracchioli/Bad Romance.mp3
-5:Leo Moracchioli/Blacken The Cursed Sun - Lamb Of God Vocal .mp3
-6:Leo Moracchioli/Blur - Song 2 (Feat. Stine Moracchioli).mp3
-7:Leo Moracchioli/Bruno Mars - 24K Magic.mp3
-8:Leo Moracchioli/Burn The Witch  (360 video ).mp3
-9:Leo Moracchioli/Creep.mp3
-10:Leo Moracchioli/Despacito.mp3
-11:Leo Moracchioli/Die Antwoord -  I FINK U FREEKY.mp3
-12:Leo Moracchioli/Eminem - Lose Yourself.mp3
-13:Leo Moracchioli/Ex´s & Oh´s.mp3
-14:Leo Moracchioli/Folsom Prison Blues (Feat. Rob Chapman).mp3
-15:Leo Moracchioli/Genie in a Bottle (Feat. Lillian).mp3
-16:Leo Moracchioli/Ghostbusters.mp3
-17:Leo Moracchioli/Groove Is In The Heart.mp3
-18:Leo Moracchioli/Highway Star.mp3
-19:Leo Moracchioli/I Believe I Can Fly.mp3
-20:Leo Moracchioli/I Wanna Dance with Somebody.mp3
-21:Leo Moracchioli/Imagine Dragons - Thunder.mp3
-22:Leo Moracchioli/Imagine [acoustic].mp3
-23:Leo Moracchioli/LMFAO - Party Rock Anthem (Feat. Bumblefoot).mp3
-24:Leo Moracchioli/Last Christmas.mp3
-25:Leo Moracchioli/Look What You Made Me Do.mp3
-26:Leo Moracchioli/Losing My Religion.mp3
-27:Leo Moracchioli/Make It Wit Chu [acoustic].mp3
-28:Leo Moracchioli/Mambo No. 5.mp3
-29:Leo Moracchioli/Mamma Mia.mp3
-30:Leo Moracchioli/Paranoid [acoustic].mp3
-31:Leo Moracchioli/People Are Strange.mp3
-32:Leo Moracchioli/Pink - Try.mp3
-33:Leo Moracchioli/Ring of Fire.mp3
-34:Leo Moracchioli/Seven Nation Army [acoustic].mp3
-35:Leo Moracchioli/Shake It Off.mp3
-36:Leo Moracchioli/Sharp Dressed Man.mp3
-37:Leo Moracchioli/Sia - Cheap Thrills.mp3
-38:Leo Moracchioli/Sledgehammer.mp3
-39:Leo Moracchioli/Smells Like Teen Spirit (Feat. Stine Moracchioli).mp3
-40:Leo Moracchioli/Somebody That I Used To Know.mp3
-41:Leo Moracchioli/Space Jam Theme Song.mp3
-42:Leo Moracchioli/Stay.mp3
-43:Leo Moracchioli/Stressed Out.mp3
-44:Leo Moracchioli/Støv Og Sand [acoustic].mp3
-45:Leo Moracchioli/Summer of 69.mp3
-46:Leo Moracchioli/Superstition.mp3
-47:Leo Moracchioli/The Final Countdown.mp3
-48:Leo Moracchioli/This is Halloween.mp3
-49:Leo Moracchioli/Toto - Africa (Feat. Rabea & Hannah).mp3
-50:Leo Moracchioli/True Survivor.mp3
-51:Leo Moracchioli/Twinkle, Twinkle, Little Star.mp3
-52:Leo Moracchioli/Walk This Way [acoustic].mp3
-53:Leo Moracchioli/Wannabe.mp3
-54:Leo Moracchioli/White Christmas.mp3
-55:Lev Weksler/All Videos/Adagio from Viola concerto in C minor by J.C. Bach (with speaking intro) Music starts at 7_07.mp3
-56:Lev Weksler/All Videos/Ave Maria by Franz Schubert (Lev Weksler and Boris Veksler).mp3
-57:Lev Weksler/All Videos/Czardas Monti for two Double Bass solo.mp3
-58:Lev Weksler/All Videos/Dmitri Shostakovich 'Romance'.mp3
-59:Lev Weksler/All Videos/Flight of the Bumblebee on Double Bass.mp3
-60:Lev Weksler/All Videos/Hungarian Dance #5 for Double Bass and Piano.mp3
-61:Lev Weksler/All Videos/Shalom Aleichem for Double Bass and Piano.mp3
-62:Lev Weksler/All Videos/Valse Sentimentale for Double Bass and Piano.mp3
-63:Lev Weksler/All Videos/Veksler Trio.mp3
+5:Leo Moracchioli/Blur - Song 2 (Feat. Stine Moracchioli).mp3
+6:Leo Moracchioli/Bruno Mars - 24K Magic.mp3
+7:Leo Moracchioli/Burn The Witch  (360 video ).mp3
+8:Leo Moracchioli/Creep.mp3
+9:Leo Moracchioli/Despacito.mp3
+10:Leo Moracchioli/Die Antwoord -  I FINK U FREEKY.mp3
+11:Leo Moracchioli/Eminem - Lose Yourself.mp3
+12:Leo Moracchioli/Ex´s & Oh´s.mp3
+13:Leo Moracchioli/Folsom Prison Blues (Feat. Rob Chapman).mp3
+14:Leo Moracchioli/Genie in a Bottle (Feat. Lillian).mp3
+15:Leo Moracchioli/Ghostbusters.mp3
+16:Leo Moracchioli/Groove Is In The Heart.mp3
+17:Leo Moracchioli/Highway Star.mp3
+18:Leo Moracchioli/I Believe I Can Fly.mp3
+19:Leo Moracchioli/I Wanna Dance with Somebody.mp3
+20:Leo Moracchioli/Imagine Dragons - Thunder.mp3
+21:Leo Moracchioli/Imagine [acoustic].mp3
+22:Leo Moracchioli/LMFAO - Party Rock Anthem (Feat. Bumblefoot).mp3
+23:Leo Moracchioli/Last Christmas.mp3
+24:Leo Moracchioli/Look What You Made Me Do.mp3
+25:Leo Moracchioli/Losing My Religion.mp3
+26:Leo Moracchioli/Make It Wit Chu [acoustic].mp3
+27:Leo Moracchioli/Mambo No. 5.mp3
+28:Leo Moracchioli/Mamma Mia.mp3
+29:Leo Moracchioli/Paranoid [acoustic].mp3
+30:Leo Moracchioli/People Are Strange.mp3
+31:Leo Moracchioli/Pink - Try.mp3
+32:Leo Moracchioli/Ring of Fire.mp3
+33:Leo Moracchioli/Seven Nation Army [acoustic].mp3
+34:Leo Moracchioli/Shake It Off.mp3
+35:Leo Moracchioli/Sharp Dressed Man.mp3
+36:Leo Moracchioli/Sia - Cheap Thrills.mp3
+37:Leo Moracchioli/Sledgehammer.mp3
+38:Leo Moracchioli/Smells Like Teen Spirit (Feat. Stine Moracchioli).mp3
+39:Leo Moracchioli/Somebody That I Used To Know.mp3
+40:Leo Moracchioli/Space Jam Theme Song.mp3
+41:Leo Moracchioli/Stay.mp3
+42:Leo Moracchioli/Stressed Out.mp3
+43:Leo Moracchioli/Støv Og Sand [acoustic].mp3
+44:Leo Moracchioli/Summer of 69.mp3
+45:Leo Moracchioli/Superstition.mp3
+46:Leo Moracchioli/The Final Countdown.mp3
+47:Leo Moracchioli/This is Halloween.mp3
+48:Leo Moracchioli/Toto - Africa (Feat. Rabea & Hannah).mp3
+49:Leo Moracchioli/True Survivor.mp3
+50:Leo Moracchioli/Twinkle, Twinkle, Little Star.mp3
+51:Leo Moracchioli/Walk This Way [acoustic].mp3
+52:Leo Moracchioli/Wannabe.mp3
+53:Leo Moracchioli/White Christmas.mp3
+54:Lev Weksler/All Videos/Adagio from Viola concerto in C minor by J.C. Bach (with speaking intro) Music starts at 7_07.mp3
+55:Lev Weksler/All Videos/Ave Maria by Franz Schubert (Lev Weksler and Boris Veksler).mp3
+56:Lev Weksler/All Videos/Czardas Monti for two Double Bass solo.mp3
+57:Lev Weksler/All Videos/Dmitri Shostakovich 'Romance'.mp3
+58:Lev Weksler/All Videos/Flight of the Bumblebee on Double Bass.mp3
+59:Lev Weksler/All Videos/Hungarian Dance #5 for Double Bass and Piano.mp3
+60:Lev Weksler/All Videos/Shalom Aleichem for Double Bass and Piano.mp3
+61:Lev Weksler/All Videos/Valse Sentimentale for Double Bass and Piano.mp3
+62:Lev Weksler/All Videos/Veksler Trio.mp3
 playlist_end

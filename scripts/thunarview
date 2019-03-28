@@ -6,19 +6,38 @@ title="${name/gavarch/home}"
 
 case $name in
 	gavarch)
-		xdotool key ctrl+1
-		i3-msg title_format "$title"
+		xdotool key ctrl+i
+		xdotool key ctrl+shift+n
 		;;
 	Drive)
-		xdotool key ctrl+2
-		i3-msg title_format "$title"
+		xdotool key ctrl+l
+		xdotool key ctrl+shift+n
+		;;
+	Downloads)
+		xdotool key ctrl+l
+		xdotool key ctrl+shift+d
 		;;
 	Pictures)
-		xdotool key ctrl+1
-		i3-msg title_format "$title"
+		xdotool key ctrl+l
+		;;
+	gifs)
+		xdotool key ctrl+i
+		;;
+	meme)
+		xdotool key ctrl+i
+		;;
+	scrots)
+		xdotool key ctrl+i
+		;;
+	walls)
+		xdotool key ctrl+i
 		;;
 	Videos)
-		xdotool key ctrl+1
-		i3-msg title_format "$title"
+		xdotool key ctrl+l
+		;;
+	*)
+		xdotool key ctrl+shift+n
 		;;
 esac
+
+i3-msg title_format "$title"
