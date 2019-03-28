@@ -69,19 +69,19 @@ set $brightdec	light -U 10
 
 # >>>> DECORATIONS
 # BORDER STYLE <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 0
-new_float normal
+#new_window pixel 1
+#new_float normal 1
 
-# HIDE BORDERS
-hide_edge_borders true
+## HIDE BORDERS
+#hide_edge_borders true
 
 # COLORS
 # class		 			brdr bkgr text indi chlb
-client.focused			$blu $blu $blk $blk $blk
-client.focused_inactive $blk $blk $blu $blk $blk
-client.unfocused		$blk $blk $wht $blk $blk
-client.urgent	 		$blk $blk $red $blk $blk
-client.placeholder		$blk $blk $wht $blk $blk
+client.focused			$blu $blk $wht $blu $blu
+client.focused_inactive $blu $blu $wht $blu $blu
+client.unfocused		$blu $blu $wht $blu $blu
+client.urgent	 		$blu $red $wht $red $red
+client.placeholder		$blu $blk $wht $blk $blk
 #client.background		$blk
 
 # >>>> BAR
@@ -317,10 +317,10 @@ $win+Shift+t		$exn pkill compton
 $win+y				[con_mark=$mk1] resize shrink width 5 px or 5 ppt, resize shrink height 5 px or 5 ppt
 $win+Shift+y		gaps inner current set 0; gaps outer current set 0
 
-$win+u				[con_mark=$mk1] resize set 537 423
+$win+u				[con_mark=$mk1] resize set 537 422
 $win+Shift+u		gaps inner current minus 5; gaps outer current minus 10
 
-$win+i				[con_mark=$mk1] resize set 715 423
+$win+i				[con_mark=$mk1] resize set 715 422
 $win+Shift+i		gaps inner current plus 5; gaps outer current plus 10
 
 $win+o				[con_mark=$mk1] resize grow width 5 px or 5 ppt, resize grow height 5 px or 5 ppt
@@ -380,7 +380,7 @@ $win+period			$exn "$brightinc; ~/$scripts/notify_brightness"
 #focus_follows_mouse no
 focus_wrapping force
 workspace_auto_back_and_forth yes
-$fw [class="^.*"] border normal 0
+$fw [class="^.*"] border normal 1
 $fw [urgent=latest] focus
 
 # //// FLOATERS
@@ -422,7 +422,7 @@ $fw [class="Pavucontrol"]	$flen,resize set 525 300
 
 # //// MARKED
 
-$fw [con_mark=_sticky_1]				resize set 715 423
+$fw [con_mark=_sticky_1]				resize set 715 422
 
 $fw [instance="MUSIC"]		 			$mrk1,$tf "ncmpcpp"
 $fw [instance="MEDIA"]		 			$mrk2,$tf "media"

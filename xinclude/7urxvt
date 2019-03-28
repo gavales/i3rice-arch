@@ -3,8 +3,8 @@
 
 URxvt.font: xft:fontname:size=fontsize
 
-URxvt*fading: 10
-URxvt*depth: 10
+URxvt*fading: 0
+URxvt*depth: 0
 URxvt*scrollBar: false
 URxvt*mouseWheelScrollPage:	false
 URxvt*cursorBlink: true

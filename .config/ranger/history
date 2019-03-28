@@ -1,6 +1,3 @@
-rename main.json
-scout -ftsea 
-mkdir Tommy
 rename For_Electrical_Diagram.PNG
 rename VENT_PENETRATOR-M-NUT-10-8-R2.zip
 rename VENT-PENETRATOR-M-NUT-10-8-R2.zip
@@ -48,3 +45,6 @@ rename solarized_
 rename tmreighties_
 rename .gtkrc-2.0.mine
 open_with 
+touch latex.vim
+open_with vim
+rename simple.vim

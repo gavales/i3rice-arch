@@ -4,46 +4,54 @@ name="$(xdotool getactivewindow getwindowname)"
 name="${name/ - File Manager/}"
 title="${name/gavarch/home}"
 
-xdotool key ctrl+i
-xdotool key ctrl+j
+xdotool key ctrl+shift+k
+xdotool key ctrl+l
 
 case $name in
 	gavarch)
+		xdotool key ctrl+shift+k
 		xdotool key ctrl+shift+n
 		xdotool key ctrl+i
 		xdotool key ctrl+shift+n
 		;;
 	Drive)
+		xdotool key ctrl+shift+k
 		xdotool key ctrl+shift+n
 		xdotool key ctrl+l
 		xdotool key ctrl+shift+n
 		;;
 	Downloads)
+		xdotool key ctrl+shift+j
 		xdotool key ctrl+shift+d
 		xdotool key ctrl+l
 		xdotool key ctrl+shift+d
 		;;
 	Pictures)
+		xdotool key ctrl+shift+k
 		xdotool key ctrl+l
 		;;
 	gifs)
+		xdotool key ctrl+shift+k
 		xdotool key ctrl+i
 		;;
 	meme)
+		xdotool key ctrl+shift+k
 		xdotool key ctrl+i
 		;;
 	scrots)
+		xdotool key ctrl+shift+k
 		xdotool key ctrl+i
 		;;
 	walls)
+		xdotool key ctrl+shift+k
 		xdotool key ctrl+i
 		;;
 	Videos)
+		xdotool key ctrl+shift+k
 		xdotool key ctrl+l
 		;;
-	*)
-		xdotool key ctrl+i
-		;;
+#	*)
+#		;;
 esac
 
 i3-msg title_format "$title"
