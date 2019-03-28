@@ -1,4 +1,3 @@
-rename main_.json
 rename main.json
 scout -ftsea 
 mkdir Tommy
@@ -31,7 +30,6 @@ shell chmod +x %s
 shell zip k
 shell zip -r Report_LaTex.zip Report_LaTex
 shell touch lotkavolterra.py
-open_with 
 rename emacslight
 rename deepjyotlight
 rename chooseyourweaponlight
@@ -48,3 +46,5 @@ rename one
 rename solarized
 rename solarized_
 rename tmreighties_
+rename .gtkrc-2.0.mine
+open_with 

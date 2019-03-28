@@ -48,14 +48,71 @@ inoremap \ph <++>
 
 " //// CHANGE HIGHLIGHT COLOURS
 
-hi Normal ctermbg=none guibg=black
-hi LineNr ctermbg=none ctermfg=DarkGray
-hi Comment cterm=italic
-hi SpecialKey ctermbg=none ctermfg=DarkGray
-hi Folded cterm=italic,bold ctermfg=DarkGray ctermbg=black
-hi ModeMsg cterm=bold ctermfg=white
-hi lCursor ctermbg=blue ctermfg=black
-hi ColorColumn ctermbg=blue ctermfg=black
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+hi Normal			ctermbg=none guibg=black
+hi Type				ctermbg=none ctermfg=blue
+hi StatusLineTerm	ctermbg=green ctermfg=black
+hi StatusLineTermNC	ctermbg=green ctermfg=white
+hi LineNr			ctermbg=none ctermfg=DarkGray
+hi Comment			cterm=italic ctermfg=blue
+hi SpecialKey		ctermbg=none ctermfg=DarkGray
+hi Folded			cterm=italic,bold ctermfg=DarkGray ctermbg=black
+hi ModeMsg			cterm=bold ctermfg=white
+hi lCursor			ctermbg=blue ctermfg=black
+hi ColorColumn		ctermbg=blue ctermfg=black
+hi Constant			cterm=italic,bold ctermfg=white ctermbg=none
+hi Special			cterm=italic,bold ctermfg=white ctermbg=none
+hi Statement		cterm=italic,bold ctermfg=white ctermbg=none
+hi PreProc			cterm=italic,bold ctermfg=magenta ctermbg=none
+
+"hi EndOfBuffer    Normal
+"hi NonText        Normal
+"hi Directory      Normal
+"hi ErrorMsg       Normal
+"hi IncSearch      Normal
+"hi Search         Normal
+"hi MoreMsg        Normal
+"hi CursorLineNr   Normal
+"hi Question       Normal
+"hi StatusLine     Normal
+"hi StatusLineNC   Normal
+"hi VertSplit      Normal
+"hi Title          Normal
+"hi Visual         Normal
+"hi VisualNOS      Normal
+"hi WarningMsg     Normal
+"hi WildMenu       Normal
+"hi FoldColumn     Normal
+"hi DiffAdd        Normal
+"hi DiffChange     Normal
+"hi DiffDelete     Normal
+"hi DiffText       Normal
+"hi SignColumn     Normal
+"hi Conceal        Normal
+"hi SpellBad       Normal
+"hi SpellCap       Normal
+"hi SpellRare      Normal
+"hi SpellLocal     Normal
+"hi Pmenu          Normal
+"hi PmenuSel       Normal
+"hi PmenuSbar      Normal
+"hi PmenuThumb     Normal
+"hi TabLine        Normal
+"hi TabLineSel     Normal
+"hi TabLineFill    Normal
+"hi CursorColumn   Normal
+"hi CursorLine     Normal
+"hi MatchParen     Normal
+"hi ToolbarLine    Normal
+"hi ToolbarButton  Normal
+"hi Identifier     Normal
+"hi Underlined     Normal
+"hi Ignore         Normal
+"hi Error          Normal
+"hi Todo           Normal
 
 hi User1 ctermbg=red ctermfg=black guibg=red guifg=black
 hi User2 ctermbg=yellow ctermfg=black guibg=yellow guifg=black

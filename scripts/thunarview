@@ -4,16 +4,22 @@ name="$(xdotool getactivewindow getwindowname)"
 name="${name/ - File Manager/}"
 title="${name/gavarch/home}"
 
+xdotool key ctrl+i
+xdotool key ctrl+j
+
 case $name in
 	gavarch)
+		xdotool key ctrl+shift+n
 		xdotool key ctrl+i
 		xdotool key ctrl+shift+n
 		;;
 	Drive)
+		xdotool key ctrl+shift+n
 		xdotool key ctrl+l
 		xdotool key ctrl+shift+n
 		;;
 	Downloads)
+		xdotool key ctrl+shift+d
 		xdotool key ctrl+l
 		xdotool key ctrl+shift+d
 		;;
@@ -36,7 +42,7 @@ case $name in
 		xdotool key ctrl+l
 		;;
 	*)
-		xdotool key ctrl+shift+n
+		xdotool key ctrl+i
 		;;
 esac
 
