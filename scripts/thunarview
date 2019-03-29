@@ -4,8 +4,8 @@ name="$(xdotool getactivewindow getwindowname)"
 name="${name/ - File Manager/}"
 title="${name/gavarch/home}"
 
-icn="ctrl+i"
-lst="ctrl+l"
+icn="ctrl+shift+i"
+lst="ctrl+shift+l"
 
 ora="ctrl+shift+k"
 ord="ctrl+shift+j"
@@ -14,9 +14,6 @@ nme="ctrl+shift+n"
 dte="ctrl+shift+d"
 sze="ctrl+shift+s"
 tpe="ctrl+shift+t"
-
-xdotool key $ora
-xdotool key $lst
 
 case $name in
 	gavarch)
@@ -41,6 +38,11 @@ case $name in
 		i3-msg title_format "$title"
 		;;
 	Pictures)
+		xdotool key $ora
+		xdotool key $lst
+		i3-msg title_format "$title"
+		;;
+	scripts)
 		xdotool key $ora
 		xdotool key $lst
 		i3-msg title_format "$title"

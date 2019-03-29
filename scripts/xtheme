@@ -1,13 +1,23 @@
 #!/usr/bin/env bash
 
-theme=$(ls $HOME/xinclude/colors | grep -v '_' | ~/scripts/i3menu "Choose theme:")
-variant=$(echo -e "Dark\nLight" | ~/scripts/i3menu "Light/Dark?:")
-if [[ $variant == "Light" ]]; then
-	theme="${theme}_"
-else
-	theme="${theme}"
-fi
 xfilesDir=$HOME/xinclude
+
+theme () {
+	theme=$(ls $HOME/xinclude/colors | grep -v '_' | ~/scripts/i3menu "Choose theme:")
+	if [[ -z $theme ]]; then
+		:
+	elif [[ ! -f $theme ]]; then
+		:
+	else
+		variant=$(echo -e "Dark\nLight" | ~/scripts/i3menu "Light/Dark?:")
+	fi
+
+	if [[ $variant == "Light" ]]; then
+		theme="${theme}_"
+	else
+		theme="${theme}"
+	fi
+}
 
 main () {
 	cat ${xfilesDir}/colors/${theme} > $HOME/.Xresources
@@ -23,6 +33,8 @@ main () {
 	notify-send '.Xresources has been reloaded' -i $HOME/scriptpics/settingswhite.png
 	~/scripts/reloadconfs
 }
+
+theme
 
 if [[ -f $xfilesDir/colors/${theme} ]]; then
 	main

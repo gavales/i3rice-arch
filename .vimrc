@@ -18,33 +18,35 @@ set hls
 set is
 set wrap
 set linebreak
-"set nolist  "disable linebreak
 set textwidth=0
 set wrapmargin=0
-set tabstop=4
-set shiftwidth=4
-set cursorline
 set title titlestring=%f titlelen=70
 set mouse=a
 vnoremap <C-c> "+y
 map <C-p> "+P
-autocmd FileType python,css,html,vim,json,perl,sh set tabstop=4
-autocmd FileType python,css,html,vim,json,perl,sh set shiftwidth=4
-autocmd FileType python,css,html,vim,json,perl,sh set colorcolumn=80
-autocmd FileType python,css,html,vim,json,perl,sh set list
-autocmd FileType python,css,html,vim,json,perl,sh set listchars=tab:\:\ 
-"autocmd FileType python call matchadd('ColorColumn', '\%81v', 100)
-autocmd Filetype calendar set laststatus=0
+set tabstop=4
+set shiftwidth=4
+set cursorline
+set colorcolumn=80
+set list
+set listchars=tab:│\ 
 autocmd CursorHold,CursorHoldI * update
 autocmd CursorHold,CursorHoldI * redraw!
 
+map <Tab><Tab> <Esc>/>>>><Enter>
+inoremap \ph <++>
+
+"autocmd FileType python,css,html,vim,json,perl,sh set tabstop=4
+"autocmd FileType python,css,html,vim,json,perl,sh set shiftwidth=4
+"autocmd FileType python,css,html,vim,json,perl,sh set colorcolumn=80
+"autocmd FileType python,css,html,vim,json,perl,sh set list
+"autocmd FileType python,css,html,vim,json,perl,sh set listchars=tab:│\ 
+"autocmd FileType python call matchadd('ColorColumn', '\%81v', 100)
+
+" //// CURSOR
 let &t_SI = "\<esc>[5 q"
 let &t_SR = "\<esc>[5 q"
 let &t_EI = "\<esc>[2 q"
-
-map <Tab><Tab> <Esc>/>>>><Enter>
-
-inoremap \ph <++>
 
 " //// CHANGE HIGHLIGHT COLOURS
 
@@ -52,33 +54,44 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
-hi Normal			ctermbg=none guibg=black
-hi Type				ctermbg=none ctermfg=blue
-hi StatusLineTerm	ctermbg=green ctermfg=black
-hi StatusLineTermNC	ctermbg=green ctermfg=white
-hi LineNr			ctermbg=none ctermfg=DarkGray
-hi Comment			cterm=italic ctermfg=blue
-hi SpecialKey		ctermbg=none ctermfg=DarkGray
-hi Folded			cterm=italic,bold ctermfg=DarkGray ctermbg=black
+hi Normal			ctermbg=none
+hi StatusLineTerm	ctermfg=black ctermbg=green
+hi StatusLineTermNC	ctermfg=white ctermbg=green
+hi LineNr			ctermfg=DarkGray ctermbg=none
+hi SpecialKey		ctermfg=DarkGray ctermbg=none
 hi ModeMsg			cterm=bold ctermfg=white
-hi lCursor			ctermbg=blue ctermfg=black
-hi ColorColumn		ctermbg=blue ctermfg=black
-hi Constant			cterm=italic,bold ctermfg=white ctermbg=none
-hi Special			cterm=italic ctermfg=blue ctermbg=none
-hi Statement		cterm=italic,bold ctermfg=white ctermbg=none
-hi PreProc			cterm=italic,bold ctermfg=magenta ctermbg=none
-hi MatchParen		cterm=italic,bold ctermfg=yellow ctermbg=none
-hi SpellBad			cterm=italic,bold ctermfg=red ctermbg=none
-hi SpellCap			cterm=italic,bold ctermfg=blue ctermbg=none
-hi SpellRare		cterm=italic,bold ctermfg=magenta ctermbg=none
-hi SpellLocal		cterm=italic,bold ctermfg=cyan ctermbg=none
+hi lCursor			ctermfg=black ctermbg=blue
+hi ColorColumn		ctermfg=black ctermbg=blue
+hi CursorLine		cterm=underline ctermbg=none
+
+hi Type				cterm=italic ctermfg=red ctermbg=black
+hi Identifier		cterm=italic ctermfg=yellow ctermbg=black
+hi Comment			cterm=italic ctermfg=DarkGray ctermbg=black
+hi Folded			cterm=italic ctermfg=DarkGray ctermbg=black
+hi Constant			cterm=italic ctermfg=white ctermbg=black
+hi Special			cterm=none ctermfg=blue ctermbg=black
+hi Statement		cterm=none ctermfg=magenta ctermbg=black
+hi PreProc			cterm=none ctermfg=magenta ctermbg=black
+hi MatchParen		cterm=italic,bold ctermfg=yellow ctermbg=black
+hi Search			cterm=none ctermfg=black ctermbg=yellow
+
+hi SpellBad			cterm=underline,bold ctermfg=red ctermbg=none
+hi SpellCap			cterm=underline,bold ctermfg=blue ctermbg=none
+hi SpellRare		cterm=underline,bold ctermfg=magenta ctermbg=none
+hi SpellLocal		cterm=underline,bold ctermfg=cyan ctermbg=none
+
+hi User1 ctermbg=red ctermfg=black guibg=red guifg=black
+hi User2 ctermbg=yellow ctermfg=black guibg=yellow guifg=black
+hi User3 ctermbg=green ctermfg=black guibg=green guifg=black
+hi User4 ctermbg=grey ctermfg=black guibg=DarkGray guifg=black
+hi User5 ctermbg=blue ctermfg=black guibg=blue guifg=black
+hi User6 ctermbg=magenta ctermfg=black guibg=magenta guifg=black
 
 "hi EndOfBuffer    Normal
 "hi NonText        Normal
 "hi Directory      Normal
 "hi ErrorMsg       Normal
 "hi IncSearch      Normal
-"hi Search         Normal
 "hi MoreMsg        Normal
 "hi CursorLineNr   Normal
 "hi Question       Normal
@@ -104,22 +117,12 @@ hi SpellLocal		cterm=italic,bold ctermfg=cyan ctermbg=none
 "hi TabLine        Normal
 "hi TabLineSel     Normal
 "hi TabLineFill    Normal
-"hi CursorColumn   Normal
-"hi CursorLine     Normal
 "hi ToolbarLine    Normal
 "hi ToolbarButton  Normal
-"hi Identifier     Normal
 "hi Underlined     Normal
 "hi Ignore         Normal
 "hi Error          Normal
 "hi Todo           Normal
-
-hi User1 ctermbg=red ctermfg=black guibg=red guifg=black
-hi User2 ctermbg=yellow ctermfg=black guibg=yellow guifg=black
-hi User3 ctermbg=green ctermfg=black guibg=green guifg=black
-hi User4 ctermbg=grey ctermfg=black guibg=DarkGray guifg=black
-hi User5 ctermbg=blue ctermfg=black guibg=blue guifg=black
-hi User6 ctermbg=magenta ctermfg=black guibg=magenta guifg=black
 
 " //// RESIZING
 
@@ -141,6 +144,8 @@ inoremap {} {}<++><Esc>F}i
 
 " //// CALENDAR
 
+autocmd Filetype calendar set laststatus=0
+autocmd Filetype calendar set nolist
 let g:calendar_frame = 'default'
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
@@ -159,12 +164,38 @@ vnoremap \d" :'<,'>norm 0x<Enter>
 
 " >>>> GOYO
 
-map \gy :Goyo<bar>hi<space>Normal<space>ctermbg=none<space>guibg=black<bar>
-	\hi<space>LineNr<space>ctermbg=none<space>ctermfg=grey<bar>
-	\hi<space>Folded<space>ctermfg=grey<space>ctermbg=none<bar>
-	\hi<space>ModeMsg<space>cterm=bold<space>ctermfg=white<bar>
-	\hi<space>lCursor<space>ctermbg=white<space>ctermfg=black
+map \gy :Goyo<bar>
+	\hi Normal ctermbg=none<bar>
+	\hi StatusLineTerm ctermfg=black ctermbg=green<bar>
+	\hi StatusLineTermNC ctermfg=white ctermbg=green<bar>
+	\hi LineNr ctermfg=DarkGray ctermbg=none<bar>
+	\hi SpecialKey ctermfg=DarkGray ctermbg=none<bar>
+	\hi ModeMsg cterm=bold ctermfg=white<bar>
+	\hi lCursor ctermfg=black ctermbg=blue<bar>
+	\hi ColorColumn ctermfg=black ctermbg=blue<bar>
+	\hi CursorLine cterm=underline ctermbg=none<bar>
+	\hi Type cterm=italic ctermfg=red ctermbg=black<bar>
+	\hi Identifier cterm=italic ctermfg=yellow ctermbg=black<bar>
+	\hi Comment cterm=italic ctermfg=DarkGray ctermbg=black<bar>
+	\hi Folded cterm=italic ctermfg=DarkGray ctermbg=black<bar>
+	\hi Constant cterm=italic ctermfg=white ctermbg=black<bar>
+	\hi Special cterm=none ctermfg=blue ctermbg=black<bar>
+	\hi Statement cterm=none ctermfg=magenta ctermbg=black<bar>
+	\hi PreProc cterm=none ctermfg=magenta ctermbg=black<bar>
+	\hi MatchParen cterm=italic,bold ctermfg=yellow ctermbg=black<bar>
+	\hi Search cterm=none ctermfg=black ctermbg=yellow<bar>
+	\hi SpellBad cterm=underline,bold ctermfg=red ctermbg=none<bar>
+	\hi SpellCap cterm=underline,bold ctermfg=blue ctermbg=none<bar>
+	\hi SpellRare cterm=underline,bold ctermfg=magenta ctermbg=none<bar>
+	\hi SpellLocal cterm=underline,bold ctermfg=cyan ctermbg=none<bar>
+	\hi User1 ctermbg=red ctermfg=black guibg=red guifg=black<bar>
+	\hi User2 ctermbg=yellow ctermfg=black guibg=yellow guifg=black<bar>
+	\hi User3 ctermbg=green ctermfg=black guibg=green guifg=black<bar>
+	\hi User4 ctermbg=grey ctermfg=black guibg=DarkGray guifg=black<bar>
+	\hi User5 ctermbg=blue ctermfg=black guibg=blue guifg=black<bar>
+	\hi User6 ctermbg=magenta ctermfg=black guibg=magenta guifg=black<bar>
 	\<Enter><Enter>
+
 
 " >>>> STATUSLINE
 " //// FUNCTIONS
@@ -570,15 +601,15 @@ autocmd Filetype rmd inoremap \p ```{python}<CR>```<CR><CR><esc>2kO
 " >>>> SHELL
 
 autocmd FileType sh inoremap if<Tab> if [[  ]]; then
-	\<Enter><++>
+	\<Enter><Tab><++>
 	\<Enter>fi<Esc>02kf[2la
 autocmd FileType sh inoremap elif elif [[  ]]; then
-	\<Enter><++><Esc>0kf[2la
+	\<Enter><Tab><++><Esc>0kf[2la
 autocmd FileType sh inoremap else else
 	\<Enter><Tab>
 autocmd FileType sh inoremap [[ [[  ]]<Esc>F]hi
 autocmd FileType sh inoremap for<Tab> for i in *; do
-	\<Enter><++>
+	\<Enter><Tab><++>
 	\<Enter>done<Esc>02kf*i
 autocmd FileType sh inoremap col<Tab> <Enter>bkd=$(xrdb -query <bar> grep '*color0' <bar> awk '{print $NF}')
 	\<Enter>bkl=$(xrdb -query <bar> grep '*color8' <bar> awk '{print $NF}')

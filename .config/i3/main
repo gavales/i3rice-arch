@@ -56,6 +56,7 @@ set_from_resource $blu	color4
 set_from_resource $gnt	color5
 set_from_resource $cyn	color6
 set_from_resource $wht	color7
+set_from_resource $gry	color8
 set $t ff
 
 # //// APPS
@@ -81,11 +82,11 @@ set $mediah2	422
 
 # COLORS
 # class		 			brdr bkgr text indi chlb
-client.focused			$blu $wht $blk $blu $blu
+client.focused			$blk $blk $wht $blk $blk
 client.focused_inactive $blu $blu $wht $blu $blu
 client.unfocused		$blu $blu $wht $blu $blu
-client.urgent	 		$blu $red $wht $red $red
-client.placeholder		$blu $blk $wht $blk $blk
+client.urgent	 		$red $red $wht $red $red
+client.placeholder		$blk $blk $wht $blk $blk
 #client.background		$blk
 
 # >>>> BAR
@@ -385,7 +386,7 @@ $win+period			$exn "$brightinc; ~/$scripts/notify_brightness"
 #focus_follows_mouse no
 focus_wrapping force
 workspace_auto_back_and_forth yes
-$fw [class="^.*"] border normal 1
+$fw [class="^.*"] border normal 2
 $fw [urgent=latest] focus
 
 # //// FLOATERS

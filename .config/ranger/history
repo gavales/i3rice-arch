@@ -1,4 +1,3 @@
-rename VENT_PENETRATOR-M-NUT-10-8-R2.zip
 rename VENT-PENETRATOR-M-NUT-10-8-R2.zip
 shell 
 rename LitReview.bib
@@ -43,8 +42,9 @@ rename solarized
 rename solarized_
 rename tmreighties_
 rename .gtkrc-2.0.mine
-open_with 
 touch latex.vim
 open_with vim
 rename simple.vim
 rename 2019_03_29_WK26.md
+open_with mupdf
+open_with 
