@@ -1,4 +1,3 @@
-rename For_Electrical_Diagram.PNG
 rename VENT_PENETRATOR-M-NUT-10-8-R2.zip
 rename VENT-PENETRATOR-M-NUT-10-8-R2.zip
 shell 
@@ -48,3 +47,4 @@ open_with
 touch latex.vim
 open_with vim
 rename simple.vim
+rename 2019_03_29_WK26.md
