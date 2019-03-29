@@ -64,9 +64,10 @@ hi ModeMsg			cterm=bold ctermfg=white
 hi lCursor			ctermbg=blue ctermfg=black
 hi ColorColumn		ctermbg=blue ctermfg=black
 hi Constant			cterm=italic,bold ctermfg=white ctermbg=none
-hi Special			cterm=italic,bold ctermfg=white ctermbg=none
+hi Special			cterm=italic ctermfg=blue ctermbg=none
 hi Statement		cterm=italic,bold ctermfg=white ctermbg=none
 hi PreProc			cterm=italic,bold ctermfg=magenta ctermbg=none
+hi MatchParen		cterm=italic,bold ctermfg=yellow ctermbg=none
 hi SpellBad			cterm=italic,bold ctermfg=red ctermbg=none
 hi SpellCap			cterm=italic,bold ctermfg=blue ctermbg=none
 hi SpellRare		cterm=italic,bold ctermfg=magenta ctermbg=none
@@ -105,7 +106,6 @@ hi SpellLocal		cterm=italic,bold ctermfg=cyan ctermbg=none
 "hi TabLineFill    Normal
 "hi CursorColumn   Normal
 "hi CursorLine     Normal
-"hi MatchParen     Normal
 "hi ToolbarLine    Normal
 "hi ToolbarButton  Normal
 "hi Identifier     Normal

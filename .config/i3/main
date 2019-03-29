@@ -66,6 +66,9 @@ set $viva		vivaldi-stable
 set $gfm		thunar
 set $brightinc	light -A 10
 set $brightdec	light -U 10
+set $mediaw		689
+set $mediaw2	525
+set $mediah		422
 
 # >>>> DECORATIONS
 # BORDER STYLE <normal|1pixel|pixel xx|none|pixel>
@@ -77,7 +80,7 @@ set $brightdec	light -U 10
 
 # COLORS
 # class		 			brdr bkgr text indi chlb
-client.focused			$blu $blk $wht $blu $blu
+client.focused			$blu $wht $blk $blu $blu
 client.focused_inactive $blu $blu $wht $blu $blu
 client.unfocused		$blu $blu $wht $blu $blu
 client.urgent	 		$blu $red $wht $red $red
@@ -215,7 +218,8 @@ $mod+backslash		$exs/i3media stop
 # //// 2nd Row
 
 $mod+a				focus parent
-$mod+Shift+a		$lch '$brow --new-window --app=https://www.funimation.com/' $mk1
+$mod+Shift+a		focus child
+#$mod+Shift+a		$lch '$brow --new-window --app=https://www.funimation.com/' $mk1
 
 $mod+s				$lch '$term -name MUSIC -e ncmpcpp' $mk1 fl
 $mod+Shift+s		$lch spotify $mk1 fl
@@ -317,10 +321,10 @@ $win+Shift+t		$exn pkill compton
 $win+y				[con_mark=$mk1] resize shrink width 5 px or 5 ppt, resize shrink height 5 px or 5 ppt
 $win+Shift+y		gaps inner current set 0; gaps outer current set 0
 
-$win+u				[con_mark=$mk1] resize set 537 422
+$win+u				[con_mark=$mk1] resize set $mediaw2 $mediah
 $win+Shift+u		gaps inner current minus 5; gaps outer current minus 10
 
-$win+i				[con_mark=$mk1] resize set 715 422
+$win+i				[con_mark=$mk1] resize set $mediaw $mediah
 $win+Shift+i		gaps inner current plus 5; gaps outer current plus 10
 
 $win+o				[con_mark=$mk1] resize grow width 5 px or 5 ppt, resize grow height 5 px or 5 ppt
@@ -422,7 +426,7 @@ $fw [class="Pavucontrol"]	$flen,resize set 525 300
 
 # //// MARKED
 
-$fw [con_mark=_sticky_1]				resize set 715 422
+$fw [con_mark=_sticky_1]				resize set $mediaw $mediah
 
 $fw [instance="MUSIC"]		 			$mrk1,$tf "ncmpcpp"
 $fw [instance="MEDIA"]		 			$mrk2,$tf "media"
@@ -476,11 +480,11 @@ $fw [instance="MOUNT"]					$tf "mount"
 $fw [instance="UNMOUNT"]				$tf "unmount"
 
 # >>>> GAPS
-gaps inner 0
-gaps outer 0
+gaps inner 5
+gaps outer 5
 
-#workspace $ws1 gaps inner 0
-#workspace $ws1 gaps outer 0
+workspace $ws2 gaps inner 0
+workspace $ws2 gaps outer 0
 
 # >>>> STARTUP
 # DAEMONS

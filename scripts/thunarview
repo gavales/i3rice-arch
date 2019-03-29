@@ -4,54 +4,73 @@ name="$(xdotool getactivewindow getwindowname)"
 name="${name/ - File Manager/}"
 title="${name/gavarch/home}"
 
-xdotool key ctrl+shift+k
-xdotool key ctrl+l
+icn="ctrl+i"
+lst="ctrl+l"
+
+ora="ctrl+shift+k"
+ord="ctrl+shift+j"
+
+nme="ctrl+shift+n"
+dte="ctrl+shift+d"
+sze="ctrl+shift+s"
+tpe="ctrl+shift+t"
+
+xdotool key $ora
+xdotool key $lst
 
 case $name in
 	gavarch)
-		xdotool key ctrl+shift+k
-		xdotool key ctrl+shift+n
-		xdotool key ctrl+i
-		xdotool key ctrl+shift+n
+		xdotool key $ora
+		xdotool key $nme
+		xdotool key $icn
+		xdotool key $nme
+		i3-msg title_format "$title"
 		;;
 	Drive)
-		xdotool key ctrl+shift+k
-		xdotool key ctrl+shift+n
-		xdotool key ctrl+l
-		xdotool key ctrl+shift+n
+		xdotool key $ora
+		xdotool key $nme
+		xdotool key $lst
+		xdotool key $nme
+		i3-msg title_format "$title"
 		;;
 	Downloads)
-		xdotool key ctrl+shift+j
-		xdotool key ctrl+shift+d
-		xdotool key ctrl+l
-		xdotool key ctrl+shift+d
+		xdotool key $ord
+		xdotool key $dte
+		xdotool key $lst
+		xdotool key $dte
+		i3-msg title_format "$title"
 		;;
 	Pictures)
-		xdotool key ctrl+shift+k
-		xdotool key ctrl+l
+		xdotool key $ora
+		xdotool key $lst
+		i3-msg title_format "$title"
 		;;
 	gifs)
-		xdotool key ctrl+shift+k
-		xdotool key ctrl+i
+		xdotool key $ora
+		xdotool key $icn
+		i3-msg title_format "$title"
 		;;
 	meme)
-		xdotool key ctrl+shift+k
-		xdotool key ctrl+i
+		xdotool key $ora
+		xdotool key $icn
+		i3-msg title_format "$title"
 		;;
 	scrots)
-		xdotool key ctrl+shift+k
-		xdotool key ctrl+i
+		xdotool key $ora
+		xdotool key $icn
+		i3-msg title_format "$title"
 		;;
 	walls)
-		xdotool key ctrl+shift+k
-		xdotool key ctrl+i
+		xdotool key $ora
+		xdotool key $icn
+		i3-msg title_format "$title"
 		;;
 	Videos)
-		xdotool key ctrl+shift+k
-		xdotool key ctrl+l
+		xdotool key $ora
+		xdotool key $lst
+		i3-msg title_format "$title"
 		;;
 #	*)
 #		;;
 esac
 
-i3-msg title_format "$title"

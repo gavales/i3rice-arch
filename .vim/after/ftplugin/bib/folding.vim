@@ -1,9 +1,9 @@
 function! Folds()
 	let thisline = getline(v:lnum)
 	if match(thisline, '^@') >= 0
-		return ">2"
-	elseif match(thisline, '>>>>') >= 0
 		return ">1"
+"	elseif match(thisline, '>>>>') >= 0
+"		return ">0"
 	else
 		return "="
 	endif
@@ -18,7 +18,7 @@ function FoldText()
     let foldsize = (v:foldend-v:foldstart)
     let foldline = getline(v:foldstart)
     let foldline = substitute(foldline, '% ', "", "")
-    let foldline = substitute(foldline, '>>>> ', "  >>>> ", "")
+"    let foldline = substitute(foldline, '>>>> ', "  >>>> ", "")
     let foldline = substitute(foldline, ',.*', "", "")
     let foldline = substitute(foldline, '^.*{', " --> ", "")
     let text = foldline.foldsize.'line     '
