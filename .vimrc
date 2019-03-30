@@ -7,7 +7,7 @@
 " >>>> SETTINGS
 " //// GENERAL
 
-filetype plugin on " required
+filetype plugin on
 execute pathogen#infect()
 syntax enable
 set encoding=utf-8
@@ -24,10 +24,11 @@ set title titlestring=%f titlelen=70
 set mouse=a
 vnoremap <C-c> "+y
 map <C-p> "+P
+set smartindent
 set tabstop=4
 set shiftwidth=4
 set cursorline
-set colorcolumn=80
+set colorcolumn=81
 set list
 set listchars=tab:│\ 
 autocmd CursorHold,CursorHoldI * update
@@ -48,6 +49,11 @@ let &t_SI = "\<esc>[5 q"
 let &t_SR = "\<esc>[5 q"
 let &t_EI = "\<esc>[2 q"
 
+" //// GUI-SPECIFIC
+if has("gui_running")
+	so ~/.guivimrc
+endif
+
 " //// CHANGE HIGHLIGHT COLOURS
 
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
@@ -55,6 +61,7 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 hi Normal			ctermbg=none
+hi Title			cterm=bold ctermfg=white ctermbg=none
 hi StatusLineTerm	ctermfg=black ctermbg=green
 hi StatusLineTermNC	ctermfg=white ctermbg=green
 hi LineNr			ctermfg=DarkGray ctermbg=none
@@ -80,12 +87,20 @@ hi SpellCap			cterm=underline,bold ctermfg=blue ctermbg=none
 hi SpellRare		cterm=underline,bold ctermfg=magenta ctermbg=none
 hi SpellLocal		cterm=underline,bold ctermfg=cyan ctermbg=none
 
-hi User1 ctermbg=red ctermfg=black guibg=red guifg=black
-hi User2 ctermbg=yellow ctermfg=black guibg=yellow guifg=black
-hi User3 ctermbg=green ctermfg=black guibg=green guifg=black
-hi User4 ctermbg=grey ctermfg=black guibg=DarkGray guifg=black
-hi User5 ctermbg=blue ctermfg=black guibg=blue guifg=black
-hi User6 ctermbg=magenta ctermfg=black guibg=magenta guifg=black
+hi Pmenu			cterm=none ctermfg=blue ctermbg=white
+hi PmenuSel			cterm=none ctermfg=black ctermbg=blue
+hi PmenuSbar		cterm=none ctermfg=blue ctermbg=black
+hi PmenuThumb		cterm=none ctermfg=green ctermbg=green
+hi TabLine			cterm=none ctermfg=blue ctermbg=black
+hi TabLineSel		cterm=none ctermfg=black ctermbg=blue
+hi TabLineFill		cterm=none ctermfg=blue ctermbg=black
+
+hi User1 ctermbg=red ctermfg=black
+hi User2 ctermbg=yellow ctermfg=black
+hi User3 ctermbg=green ctermfg=black
+hi User4 ctermbg=grey ctermfg=black
+hi User5 ctermbg=blue ctermfg=black
+hi User6 ctermbg=magenta ctermfg=black
 
 "hi EndOfBuffer    Normal
 "hi NonText        Normal
@@ -98,7 +113,6 @@ hi User6 ctermbg=magenta ctermfg=black guibg=magenta guifg=black
 "hi StatusLine     Normal
 "hi StatusLineNC   Normal
 "hi VertSplit      Normal
-"hi Title          Normal
 "hi Visual         Normal
 "hi VisualNOS      Normal
 "hi WarningMsg     Normal
@@ -110,13 +124,6 @@ hi User6 ctermbg=magenta ctermfg=black guibg=magenta guifg=black
 "hi DiffText       Normal
 "hi SignColumn     Normal
 "hi Conceal        Normal
-"hi Pmenu          Normal
-"hi PmenuSel       Normal
-"hi PmenuSbar      Normal
-"hi PmenuThumb     Normal
-"hi TabLine        Normal
-"hi TabLineSel     Normal
-"hi TabLineFill    Normal
 "hi ToolbarLine    Normal
 "hi ToolbarButton  Normal
 "hi Underlined     Normal
@@ -124,14 +131,17 @@ hi User6 ctermbg=magenta ctermfg=black guibg=magenta guifg=black
 "hi Error          Normal
 "hi Todo           Normal
 
-" //// RESIZING
+" //// LAYOUT
 
-map .rk :res<space>+5<Enter>
-map .rj :res<space>-5<Enter>
-map .rh :vertical<space>resize<space>-5<Enter>
-map .rl :vertical<space>resize<space>+5<Enter>
+map <C-Up> :res<space>+5<Enter>
+map <C-Down> :res<space>-5<Enter>
+map <C-Left> :vertical<space>resize<space>-5<Enter>
+map <C-Right> :vertical<space>resize<space>+5<Enter>
 
-" //// SPLIT OPEN AT BOTTOM & RIGHT
+noremap <C-T> :tabnew<return>
+noremap <C-W> :tabclose<return>
+noremap <C-H> :tabprevious<return>
+noremap <C-L> :tabNext<return>
 
 set splitbelow
 set splitright
@@ -304,22 +314,44 @@ set statusline+=\
 
 " >>>> LATEX
 " //// LATEX-SUITE
+autocmd FileType tex set smartindent
+	\ cinwords=\\begin
 
-let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_CompileRule_pdf = 'xelatex -interaction=nonstopmode -shell-escape $*'
-let g:Tex_ViewRule_pdf = '/usr/bin/zathura'
-let g:Tex_MultipleCompileFormats='pdf,dvi'
-let g:Tex_BibtexFlavor = 'biber'
+if has("win32")
+	let g:Tex_DefaultTargetFormat = 'pdf'
+	let g:Tex_CompileRule_pdf = 'xelatex -interaction=nonstopmode -shell-escape $*'
+	"let g:Tex_ViewRule_pdf = 'C:\Program Files\MuPDF\mupdf.exe'
+	let g:Tex_ViewRule_pdf = 'C:\Users\test\AppData\Local\Apps\Evince-2.32.0.145\bin\evince.exe'
+	let g:Tex_MultipleCompileFormats='dvi,pdf,bibtex,pdf'
+	let g:Tex_BibtexFlavor = 'biber'
 
-"let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
-"let g:Tex_CompileRule_dvi = 'latex --interaction=nonstopmode $*'
-"let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
-"let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
+	"let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
+	"let g:Tex_CompileRule_dvi = 'latex --interaction=nonstopmode $*'
+	"let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
+	"let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
 
-"filetype plugin on "invoke latex-suite when opening tex file
-set grepprg=grep\ -nH\ $* "set grep to always generate filename
-let g:tex_flavor='latex' "invoke tex, not plaintex, for empty tex file
-set iskeyword+=: "press <C-n> to cycle through \label's
+	"filetype plugin on "invoke latex-suite when opening tex file
+	set shellslash "for windows
+	set grepprg=grep\ -nH\ $* "set grep to always generate filename
+	let g:tex_flavor='latex' "invoke tex, not plaintex, for empty tex file
+	set iskeyword+=: "press <C-n> to cycle through \label's
+else
+	let g:Tex_DefaultTargetFormat = 'pdf'
+	let g:Tex_CompileRule_pdf = 'xelatex -interaction=nonstopmode -shell-escape $*'
+	let g:Tex_ViewRule_pdf = '/usr/bin/zathura'
+	let g:Tex_MultipleCompileFormats='pdf,dvi'
+	let g:Tex_BibtexFlavor = 'biber'
+
+	"let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
+	"let g:Tex_CompileRule_dvi = 'latex --interaction=nonstopmode $*'
+	"let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
+	"let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
+
+	"filetype plugin on "invoke latex-suite when opening tex file
+	set grepprg=grep\ -nH\ $* "set grep to always generate filename
+	let g:tex_flavor='latex' "invoke tex, not plaintex, for empty tex file
+	set iskeyword+=: "press <C-n> to cycle through \label's
+endif
 
 " //// COMPILING
 
@@ -378,11 +410,11 @@ autocmd FileType tex inoremap <Tab>nc \newcommand{}[<++>]<++>{<++>}<Esc>2F}i
 autocmd FileType tex inoremap <Tab>pc \parencite{}<++><Esc>T{i
 autocmd FileType tex inoremap <Tab>pt \item<space>
 autocmd FileType tex inoremap <Tab>pi \begin{figure}[H]<Enter>
-	\<Tab>\centering<Enter>
-	\<Tab>\includegraphics[width=]{<++>}<Enter>
-	\<Tab>\caption{<++><Enter>
-	\<Tab>\label{fig:<++>}}<Enter>
-	\\end{figure}<Esc>03kf=a
+	\\centering<Enter>
+	\\includegraphics[width=]{<++>}<Enter>
+	\\caption{<++><Enter>
+	\\label{fig:<++>}}<Enter>
+	\<BS>\end{figure}<Esc>03kf=a
 
 autocmd FileType tex inoremap <Tab>rf \figref{fig:}<++><Esc>T:i
 autocmd FileType tex inoremap <Tab>rt \tabref{tab:}<++><Esc>T:i
@@ -399,17 +431,17 @@ autocmd FileType tex inoremap <Tab>s3 \subsubsection{}<Enter><++><Esc>kf}i
 autocmd FileType tex inoremap <Tab>tt \texttt{}<++><Esc>T{i
 autocmd FileType tex inoremap <Tab>tc \textcite{}<++><Esc>T{i
 autocmd FileType tex inoremap <Tab>ta \begin{table}[H]<Enter>
-	\<Tab>\centering<Enter>
+	\\centering<Enter>
 	\<Tab>\begin{tabular}{c}<Enter>
-	\<Tab><Tab>\toprule<Enter>
-	\<Tab><Tab>\textbf{<++>} \\<Enter>
-	\<Tab><Tab>\midrule<Enter>
-	\<Tab><Tab><++> \\<Enter>
-	\<Tab><Tab>\bottomrule<Enter>
-	\<Tab>\end{tabular}<Enter>
-	\<Tab>\caption{<++><Enter>
-	\<Tab>\label{tab:<++>}}<Enter>
-	\\end{table}<Esc>09kfca
+	\<Tab>\toprule<Enter>
+	\\textbf{<++>} \\<Enter>
+	\\midrule<Enter>
+	\<++> \\<Enter>
+	\\bottomrule<Enter>
+	\<BS>\end{tabular}<Enter>
+	\<BS>\caption{<++><Enter>
+	\\label{tab:<++>}}<Enter>
+	\<BS>\end{table}<Esc>09kfca
 
 autocmd FileType tex inoremap <Tab>up \usepackage[]<++>{<++>}<Esc>T[i
 autocmd FileType tex inoremap <Tab>ul \underline{}<++><Esc>T{i
@@ -601,16 +633,16 @@ autocmd Filetype rmd inoremap \p ```{python}<CR>```<CR><CR><esc>2kO
 " >>>> SHELL
 
 autocmd FileType sh inoremap if<Tab> if [[  ]]; then
-	\<Enter><Tab><++>
-	\<Enter>fi<Esc>02kf[2la
-autocmd FileType sh inoremap elif elif [[  ]]; then
+	\<Enter><++>
+	\<Enter><BS>fi<Esc>02kf[2la
+autocmd FileType sh inoremap elif <BS>elif [[  ]]; then
 	\<Enter><Tab><++><Esc>0kf[2la
-autocmd FileType sh inoremap else else
+autocmd FileType sh inoremap else <BS>else
 	\<Enter><Tab>
 autocmd FileType sh inoremap [[ [[  ]]<Esc>F]hi
 autocmd FileType sh inoremap for<Tab> for i in *; do
-	\<Enter><Tab><++>
-	\<Enter>done<Esc>02kf*i
+	\<Enter><++>
+	\<Enter><BS>done<Esc>02kf*i
 autocmd FileType sh inoremap col<Tab> <Enter>bkd=$(xrdb -query <bar> grep '*color0' <bar> awk '{print $NF}')
 	\<Enter>bkl=$(xrdb -query <bar> grep '*color8' <bar> awk '{print $NF}')
 	\<Enter>grn=$(xrdb -query <bar> grep '*color2' <bar> awk '{print $NF}')
@@ -638,6 +670,8 @@ autocmd Filetype markdown map ;vh :!bash<space>~/scripts/openhtml<space><C-r>%<E
 " >>>> PYTHON FILES
 
 autocmd Filetype python map \ll :w<space>!python<Enter>
+autocmd FileType python set noexpandtab smartindent tabstop=4 shiftwidth=4
+	\ cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 " >>>> PDF WORDCOUNT
 

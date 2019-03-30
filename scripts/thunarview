@@ -15,62 +15,54 @@ dte="ctrl+shift+d"
 sze="ctrl+shift+s"
 tpe="ctrl+shift+t"
 
+i3-msg title_format "$title"
+
 case $name in
 	gavarch)
 		xdotool key $ora
 		xdotool key $nme
 		xdotool key $icn
 		xdotool key $nme
-		i3-msg title_format "$title"
 		;;
 	Drive)
 		xdotool key $ora
 		xdotool key $nme
 		xdotool key $lst
 		xdotool key $nme
-		i3-msg title_format "$title"
 		;;
 	Downloads)
 		xdotool key $ord
 		xdotool key $dte
 		xdotool key $lst
 		xdotool key $dte
-		i3-msg title_format "$title"
 		;;
 	Pictures)
 		xdotool key $ora
 		xdotool key $lst
-		i3-msg title_format "$title"
 		;;
 	scripts)
 		xdotool key $ora
 		xdotool key $lst
-		i3-msg title_format "$title"
 		;;
 	gifs)
 		xdotool key $ora
 		xdotool key $icn
-		i3-msg title_format "$title"
 		;;
 	meme)
 		xdotool key $ora
 		xdotool key $icn
-		i3-msg title_format "$title"
 		;;
 	scrots)
 		xdotool key $ora
 		xdotool key $icn
-		i3-msg title_format "$title"
 		;;
 	walls)
 		xdotool key $ora
 		xdotool key $icn
-		i3-msg title_format "$title"
 		;;
 	Videos)
 		xdotool key $ora
-		xdotool key $lst
-		i3-msg title_format "$title"
+		xdotool key $icn
 		;;
 #	*)
 #		;;

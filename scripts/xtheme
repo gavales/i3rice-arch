@@ -6,7 +6,7 @@ theme () {
 	theme=$(ls $HOME/xinclude/colors | grep -v '_' | ~/scripts/i3menu "Choose theme:")
 	if [[ -z $theme ]]; then
 		:
-	elif [[ ! -f $theme ]]; then
+	elif [[ ! -f $xfilesDir/colors/$theme ]]; then
 		:
 	else
 		variant=$(echo -e "Dark\nLight" | ~/scripts/i3menu "Light/Dark?:")
@@ -20,17 +20,7 @@ theme () {
 }
 
 main () {
-	cat ${xfilesDir}/colors/${theme} > $HOME/.Xresources
-	cat ${xfilesDir}/1vars >> $HOME/.Xresources
-	cat ${xfilesDir}/2colorvars >> $HOME/.Xresources
-	cat ${xfilesDir}/3rofi >> $HOME/.Xresources
-	cat ${xfilesDir}/4xft >> $HOME/.Xresources
-	cat ${xfilesDir}/6xcursor >> $HOME/.Xresources
-	cat ${xfilesDir}/7urxvt >> $HOME/.Xresources
-	cat ${xfilesDir}/8urxvtext >> $HOME/.Xresources
-	xrdb -load $HOME/.Xresources
-	kill -1 $(pidof urxvtd)
-	notify-send '.Xresources has been reloaded' -i $HOME/scriptpics/settingswhite.png
+	cat ${xfilesDir}/colors/${theme} > $xfilesDir/theme
 	~/scripts/reloadconfs
 }
 

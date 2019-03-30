@@ -1,6 +1,10 @@
 #!/bin/bash
 
+xrdb -load $HOME/.Xresources
+kill -1 $(pidof urxvtd)
+#notify-send '.Xresources has been reloaded' -i $HOME/scriptpics/settingswhite.png
 ~/scripts/mkdunsttheme
+~/scripts/mkvimtheme
 ~/scripts/mkblocksconf
 ~/scripts/mkvistheme
 ~/scripts/mkatomtheme
