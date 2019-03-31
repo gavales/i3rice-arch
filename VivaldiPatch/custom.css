@@ -68,9 +68,9 @@ span.burger-icon {
 }
 
 /* Tabs and tab bar */
-button.button-tabbar.newtab {
-	left: 3px !important; /* Move New Tab button to the left. */
-}
+/*button.button-tabbar.newtab { */
+	/*right: 3px !important; /* Move New Tab button to the left. */ */
+/*} */
 
 .tab {
 	border-left: 0px solid transparent !important;
@@ -78,7 +78,7 @@ button.button-tabbar.newtab {
 }
 
 .tab-strip span .tab-position{
-	margin-left: 34px; /* Make room for New Tab button. */
+/* 	margin-left: 34px; Make room for New Tab button. */
 	max-height: 30px !important;
 	min-height: 30px !important;
 }

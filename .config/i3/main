@@ -83,11 +83,11 @@ set $mediah2	422
 
 # COLORS
 # class		 			brdr bkgr text indi chlb
-client.focused			$blk $blk $wht $blk $blk
+client.focused			$blk $blk $wht $blu $blu
 client.focused_inactive $blu $blu $wht $blu $blu
 client.unfocused		$blu $blu $wht $blu $blu
 client.urgent	 		$red $red $wht $red $red
-client.placeholder		$blk $blk $wht $blk $blk
+client.placeholder		$blk $blk $wht $blu $blu
 #client.background		$blk
 
 # >>>> BAR
