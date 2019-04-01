@@ -1,19 +1,21 @@
 
-URxvt.font: xft:fontname:size=fontsize
+URxvt.font:					xft:fontname:size=fontsize
 
-URxvt*fading: 0
-URxvt*depth: 0
-URxvt*scrollBar: false
+URxvt*fading:				0
+URxvt*depth:				0
+URxvt*scrollBar:			false
 URxvt*mouseWheelScrollPage:	false
-URxvt*cursorBlink: true
-URxvt*background: cblkd
-URxvt*foreground: cwhtl
-URxvt*saveLines: 5000
-URxvt*useColor:	true
-URxvt*internalBorder: 10
+URxvt*cursorBlink:			true
+URxvt*background:			cblkd
+URxvt*foreground:			cwhtl
+URxvt*saveLines:			5000
+URxvt*useColor:				true
+URxvt*internalBorder:		10
+URxvt.letterSpace:			1
+URxvt.lineSpace:			2
 
 !! for 'fake' transparency (without Compton) uncomment the following three lines
-!URxvt*inheritPixmap: true
-!URxvt*transparent: true
-!URxvt*shading: 138
+!URxvt*inheritPixmap:		true
+!URxvt*transparent:			true
+!URxvt*shading:				138
 

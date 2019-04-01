@@ -2,10 +2,10 @@
 set guifont=monaco\ 15
 "set guioptions-=m	"remove menu bar
 set guioptions-=T	"remove toolbar
-set guioptions-=r	"remove right-hand scroll bar
-set guioptions-=L	"remove left-hand scroll bar
+"set guioptions-=r	"remove right-hand scroll bar
+"set guioptions-=L	"remove left-hand scroll bar
 colorscheme default
-set linespace=0
+set linespace=5
 "set lines=999 columns=999
 "au GUIEnter * simalt ~x
 
@@ -13,17 +13,19 @@ hi Normal			guibg=#ebdbb2
 hi Title			gui=bold guifg=#282828 guibg=#ebdbb2
 hi StatusLineTerm	guifg=#ebdbb2 guibg=#98971a
 hi StatusLineTermNC	guifg=#282828 guibg=#98971a
-hi LineNr			guifg=DarkGray guibg=#ebdbb2
-hi SpecialKey		guifg=DarkGray guibg=#ebdbb2
+hi LineNr			guifg=#928374 guibg=#ebdbb2
+hi SpecialKey		guifg=#928374 guibg=#ebdbb2
 hi ModeMsg			gui=bold guifg=#282828
 hi lCursor			guifg=#ebdbb2 guibg=#689d6a
 hi ColorColumn		guifg=#ebdbb2 guibg=#689d6a
 hi CursorLine		gui=underline guibg=#ebdbb2
+hi Visual			guifg=#ebdbb2 guibg=#689d6a
+hi VisualNOS		guifg=#ebdbb2 guibg=#689d6a
 
 hi Type				gui=italic guifg=#cc241d guibg=#ebdbb2
 hi Identifier		gui=italic guifg=#d79921 guibg=#ebdbb2
-hi Comment			gui=italic guifg=DarkGray guibg=#ebdbb2
-hi Folded			gui=italic guifg=DarkGray guibg=#ebdbb2
+hi Comment			gui=italic guifg=#928374 guibg=#ebdbb2
+hi Folded			gui=italic guifg=#928374 guibg=#ebdbb2
 hi Constant			gui=italic guifg=#282828 guibg=#ebdbb2
 hi Special			gui=none guifg=#689d6a guibg=#ebdbb2
 hi Statement		gui=none guifg=#b16286 guibg=#ebdbb2
@@ -47,6 +49,6 @@ hi TabLineFill		gui=none guifg=#689d6a guibg=#ebdbb2
 hi User1 guibg=#cc241d guifg=#ebdbb2
 hi User2 guibg=#d79921 guifg=#ebdbb2
 hi User3 guibg=#98971a guifg=#ebdbb2
-hi User4 guibg=DarkGray guifg=#ebdbb2
+hi User4 guibg=#928374 guifg=#ebdbb2
 hi User5 guibg=#689d6a guifg=#ebdbb2
 hi User6 guibg=#b16286 guifg=#ebdbb2

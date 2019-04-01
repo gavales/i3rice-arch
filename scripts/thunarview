@@ -2,7 +2,19 @@
 
 name="$(xdotool getactivewindow getwindowname)"
 name="${name/ - File Manager/}"
-title="${name/gavarch/home}"
+title="${name/'/home/gavarch'/'~'}"
+title="${title/Pictures/pic}"
+title="${title/Videos/vid}"
+title="${title/scripts/scr}"
+title="${title/script/scr}"
+title="${title/Documents/doc}"
+title="${title/Downloads/dwn}"
+title="${title/Desktop/dsk}"
+title="${title/i3rice-arch/dot}"
+title="${title/xinclude/xcnf}"
+title="${title/Templates/tmps}"
+
+name="${name##*/}"
 
 icn="ctrl+shift+i"
 lst="ctrl+shift+l"

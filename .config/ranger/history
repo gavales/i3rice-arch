@@ -1,5 +1,3 @@
-rename GDPFinalReport.bib
-mkdir Video
 shell cp ~/Templates/md/name.md notes.md
 search goudy
 mkdir ExProgs
@@ -48,3 +46,5 @@ open_with mupdf
 rename .guivimrc
 open_with 1
 open_with 
+rename opengvim
+rename openvim

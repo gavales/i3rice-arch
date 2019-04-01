@@ -4,9 +4,11 @@
 # CREATED: Sat 30 Mar 18:22:18 GMT 2019
 
 file=${1}
-checkactive="$(xdotool search --class Gvim)"
-if [[ -z $checkactive ]]; then
-	gvim --servername GVIM "${file}" &>/dev/null &
-else
-	gvim --servername GVIM --remote-tab "${file}" &>/dev/null &
-fi
+~/scripts/i3launch "urxvtc -e vim "${file}"" "_W3"
+
+#checkactive="$(xdotool search --class Gvim)"
+#if [[ -z $checkactive ]]; then
+#	gvim --servername GVIM "${file}" &>/dev/null &
+#else
+#	gvim --servername GVIM --remote-tab "${file}" &>/dev/null &
+#fi

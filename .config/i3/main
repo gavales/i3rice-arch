@@ -62,24 +62,24 @@ set $t ff
 # //// APPS
 
 set $term		urxvtc
-set $edit		exec --no-startup-id ~/scripts/openvim
+set $edit		exec --no-startup-id ~/scripts/opengvim
 set $brow		google-chrome-beta
 set $viva		vivaldi-stable
 set $gfm		thunar
 set $brightinc	light -A 10
 set $brightdec	light -U 10
-set $mediaw		537
-set $mediaw2	537
+set $mediaw		534
+set $mediaw2	534
 set $mediah		322
 set $mediah2	422
 
 # >>>> DECORATIONS
 # COLORS
-# class		 			brdr bkgr text indi chlb
+# class					brdr bkgr text indi chlb
 client.focused			$blk $blk $wht $blu $blu
-client.focused_inactive $blu $blu $wht $blu $blu
+client.focused_inactive	$blu $blu $wht $blu $blu
 client.unfocused		$blu $blu $wht $blu $blu
-client.urgent	 		$red $red $wht $red $red
+client.urgent			$red $red $wht $red $red
 client.placeholder		$blk $blk $wht $blu $blu
 #client.background		$blk
 
@@ -293,12 +293,16 @@ $win+Shift+1		$exs/i3-sticky-create 1
 $win+2				$edit ~/.config/i3/vars
 $win+Shift+2		$exs/i3-sticky-create 2
 
-$win+3				$edit ~/.vimrc
+$win+3				$edit ~/.bashrc
 $win+Shift+3		$exs/i3-sticky-create 3
 
-$win+4				$edit ~/.config/ranger/rc.conf
+$win+4				$edit ~/.vimrc
 
-$win+5				$edit ~/scripts/mkblocksconf
+$win+5				$edit ~/.config/ranger/rc.conf
+
+$win+6				$edit ~/.config/ranger/rifle.conf
+
+$win+7				$edit ~/$scripts/mkblocksconf
 
 # //// 1st Row
 

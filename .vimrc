@@ -37,6 +37,9 @@ autocmd CursorHold,CursorHoldI * redraw!
 map <Tab><Tab> <Esc>/>>>><Enter>
 inoremap \ph <++>
 
+vnoremap <S-j> :m '>+1<CR>gv=gv
+vnoremap <S-k> :m '<-2<CR>gv=gv
+
 "autocmd FileType python,css,html,vim,json,perl,sh set tabstop=4
 "autocmd FileType python,css,html,vim,json,perl,sh set shiftwidth=4
 "autocmd FileType python,css,html,vim,json,perl,sh set colorcolumn=80
@@ -60,16 +63,18 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
-hi Normal			ctermbg=none
+hi Normal			ctermfg=white ctermbg=none
 hi Title			cterm=bold ctermfg=white ctermbg=none
 hi StatusLineTerm	ctermfg=black ctermbg=green
 hi StatusLineTermNC	ctermfg=white ctermbg=green
-hi LineNr			ctermfg=DarkGray ctermbg=none
+hi LineNr			cterm=none ctermfg=DarkGray ctermbg=none
 hi SpecialKey		ctermfg=DarkGray ctermbg=none
 hi ModeMsg			cterm=bold ctermfg=white
-hi lCursor			ctermfg=black ctermbg=blue
+hi Cursor			ctermfg=black ctermbg=blue
 hi ColorColumn		ctermfg=black ctermbg=blue
 hi CursorLine		cterm=underline ctermbg=none
+hi Visual			ctermfg=blue ctermbg=black
+hi VisualNOS		ctermfg=blue ctermbg=black
 
 hi Type				cterm=italic ctermfg=red ctermbg=black
 hi Identifier		cterm=italic ctermfg=yellow ctermbg=black
@@ -113,8 +118,6 @@ hi User6 ctermbg=magenta ctermfg=black
 "hi StatusLine     Normal
 "hi StatusLineNC   Normal
 "hi VertSplit      Normal
-"hi Visual         Normal
-"hi VisualNOS      Normal
 "hi WarningMsg     Normal
 "hi WildMenu       Normal
 "hi FoldColumn     Normal

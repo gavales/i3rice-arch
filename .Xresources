@@ -1,33 +1,33 @@
-#include "/home/gavarch/xinclude/theme"
+#include "xinclude/theme"
 
 !! VARIABLES
 
-#include "/home/gavarch/xinclude/1vars"
+#include "xinclude/1vars"
 
 !! COLORS
 
-#include "/home/gavarch/xinclude/2colorvars"
+#include "xinclude/2colorvars"
 
 !! ROFI
 
-#include "/home/gavarch/xinclude/3rofi"
+#include "xinclude/3rofi"
 
 !! Xft
 
-#include "/home/gavarch/xinclude/4xft"
+#include "xinclude/4xft"
 
 !! XTERM
 
-#include "/home/gavarch/xinclude/5xterm"
+#include "xinclude/5xterm"
 
 !! Xcursor
 
-#include "/home/gavarch/xinclude/6xcursor"
+#include "xinclude/6xcursor"
 
 !! URXVT
 
-#include "/home/gavarch/xinclude/7urxvt"
+#include "xinclude/7urxvt"
 
 !! URXVT EXTENSIONS
 
-#include "/home/gavarch/xinclude/8urxvtext"
+#include "xinclude/8urxvtext"
