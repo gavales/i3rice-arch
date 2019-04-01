@@ -74,13 +74,6 @@ set $mediah		322
 set $mediah2	422
 
 # >>>> DECORATIONS
-# BORDER STYLE <normal|1pixel|pixel xx|none|pixel>
-#new_window pixel 1
-#new_float normal 1
-
-## HIDE BORDERS
-#hide_edge_borders true
-
 # COLORS
 # class		 			brdr bkgr text indi chlb
 client.focused			$blk $blk $wht $blu $blu
@@ -384,6 +377,9 @@ $win+period			$exn "$brightinc; ~/$scripts/notify_brightness"
 # >>>> FOR_WINDOW
 # //// GLOBAL
 
+#new_window pixel 1
+#new_float normal 1
+hide_edge_borders true
 #focus_follows_mouse no
 focus_wrapping force
 workspace_auto_back_and_forth yes
