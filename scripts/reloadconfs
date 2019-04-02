@@ -2,7 +2,6 @@
 
 xrdb -load $HOME/.Xresources
 kill -1 $(pidof urxvtd)
-#notify-send '.Xresources has been reloaded' -i $HOME/scriptpics/settingswhite.png
 ~/scripts/mkdunsttheme
 ~/scripts/mkvimtheme
 ~/scripts/mkblocksconf
@@ -14,3 +13,4 @@ kill -1 $(pidof urxvtd)
 killall i3bar
 i3bar -t --bar_id=bar-1 &>/dev/null &
 ~/scripts/i3listen-toggle
+notify-send 'CONFIGS RELOADED' -i $HOME/scriptpics/settingswhite.png

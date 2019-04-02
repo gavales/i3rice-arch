@@ -174,6 +174,8 @@ vnoremap \! :'<,'>norm 0i!<Enter>
 vnoremap \d! :'<,'>norm 0x<Enter>
 vnoremap \" :'<,'>norm 0i"<Enter>
 vnoremap \d" :'<,'>norm 0x<Enter>
+vnoremap \/ :'<,'>norm 0i//<Enter>
+vnoremap \d/ :'<,'>norm 0xx<Enter>
 
 " >>>> GOYO
 
@@ -643,10 +645,20 @@ autocmd FileType sh inoremap elif <BS>elif [[  ]]; then
 autocmd FileType sh inoremap else <BS>else
 	\<Enter><Tab>
 autocmd FileType sh inoremap [[ [[  ]]<Esc>F]hi
+autocmd FileType sh inoremap opt<Tab> while getopts ::<++> <++>; do
+	\<Enter><++>
+	\<Enter><BS>done<Esc>02kf:a
+autocmd FileType sh inoremap whi<Tab> while ; do
+	\<Enter><++>
+	\<Enter><BS>done<Esc>02kf;i
+autocmd FileType sh inoremap fun<Tab> * () {
+	\<Enter><++>
+	\<Enter><BS>}<Esc>02kf*xi
 autocmd FileType sh inoremap for<Tab> for i in *; do
 	\<Enter><++>
-	\<Enter><BS>done<Esc>02kf*i
-autocmd FileType sh inoremap col<Tab> <Enter>bkd=$(xrdb -query <bar> grep '*color0' <bar> awk '{print $NF}')
+	\<Enter><BS>done<Esc>02kf*xi
+autocmd FileType sh inoremap col<Tab> <Enter>
+	\bkd=$(xrdb -query <bar> grep '*color0' <bar> awk '{print $NF}')
 	\<Enter>bkl=$(xrdb -query <bar> grep '*color8' <bar> awk '{print $NF}')
 	\<Enter>grn=$(xrdb -query <bar> grep '*color2' <bar> awk '{print $NF}')
 	\<Enter>ylw=$(xrdb -query <bar> grep '*color3' <bar> awk '{print $NF}')

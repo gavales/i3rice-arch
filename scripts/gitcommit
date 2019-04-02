@@ -2,12 +2,7 @@
 
 cd
 
-#black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-#white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
-#blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
-#font=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
-
-repo=$(cat ~/scripts/githubrepos | bash ~/scripts/i3menu "Update which repo?:")
+repo=$(cat ~/scripts/githubrepos | ~/scripts/i3menu "Update which repo?:")
 
 if [[ -z $repo ]]; then
 	:

@@ -19,4 +19,4 @@ echo $green >> $DIR
 echo $yellow >> $DIR
 echo $red >> $DIR
 
-notify-send 'cli-visualizer color theme updated' -i ~/scriptpics/settingswhite.png
+#notify-send 'cli-visualizer color theme updated' -i ~/scriptpics/settingswhite.png

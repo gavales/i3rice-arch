@@ -158,4 +158,4 @@ main () {
 	echo "interval=1" >> i3blocks.conf
 }
 
-main && notify-send 'i3blocks reloaded' -i ~/scriptpics/settingswhite.png
+main # && notify-send 'i3blocks reloaded' -i ~/scriptpics/settingswhite.png
