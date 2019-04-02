@@ -1,5 +1,5 @@
 ! city-lights
-! vim:syntax=xdefaults
+! vim:ft=xdefaults
 #define cblkd #181e24
 #define cblkl #333f4a
 #define credd #539afc
