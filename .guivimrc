@@ -13,10 +13,10 @@ hi Normal			guibg=#ebdbb2
 hi Title			gui=bold guifg=#282828 guibg=#ebdbb2
 hi StatusLineTerm	guifg=#ebdbb2 guibg=#98971a
 hi StatusLineTermNC	guifg=#282828 guibg=#98971a
-hi LineNr			guifg=#928374 guibg=#ebdbb2
-hi SpecialKey		guifg=#928374 guibg=#ebdbb2
+hi LineNr			guifg=#8d836a guibg=#ebdbb2
+hi SpecialKey		guifg=#8d836a guibg=#ebdbb2
 hi ModeMsg			gui=bold guifg=#282828
-hi lCursor			guifg=#ebdbb2 guibg=#689d6a
+hi Cursor			guifg=#ebdbb2 guibg=#689d6a
 hi ColorColumn		guifg=#ebdbb2 guibg=#689d6a
 hi CursorLine		gui=underline guibg=#ebdbb2
 hi Visual			guifg=#ebdbb2 guibg=#689d6a
@@ -24,8 +24,8 @@ hi VisualNOS		guifg=#ebdbb2 guibg=#689d6a
 
 hi Type				gui=italic guifg=#cc241d guibg=#ebdbb2
 hi Identifier		gui=italic guifg=#d79921 guibg=#ebdbb2
-hi Comment			gui=italic guifg=#928374 guibg=#ebdbb2
-hi Folded			gui=italic guifg=#928374 guibg=#ebdbb2
+hi Comment			gui=italic guifg=#8d836a guibg=#ebdbb2
+hi Folded			gui=italic guifg=#8d836a guibg=#ebdbb2
 hi Constant			gui=italic guifg=#282828 guibg=#ebdbb2
 hi Special			gui=none guifg=#689d6a guibg=#ebdbb2
 hi Statement		gui=none guifg=#b16286 guibg=#ebdbb2
@@ -49,6 +49,6 @@ hi TabLineFill		gui=none guifg=#689d6a guibg=#ebdbb2
 hi User1 guibg=#cc241d guifg=#ebdbb2
 hi User2 guibg=#d79921 guifg=#ebdbb2
 hi User3 guibg=#98971a guifg=#ebdbb2
-hi User4 guibg=#928374 guifg=#ebdbb2
+hi User4 guibg=#8d836a guifg=#ebdbb2
 hi User5 guibg=#689d6a guifg=#ebdbb2
 hi User6 guibg=#b16286 guifg=#ebdbb2

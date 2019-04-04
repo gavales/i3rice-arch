@@ -35,37 +35,37 @@ if [[ $1 == "-h" ]]; then
 	help
 fi
 
-while getopts :h:s:b:i:l:r:m:t:f:k: opts; do
+while getopts :h:s:b:i:l:r:m:t:f:k:d: opts; do
 	case "$opts" in
 		s)
 		fnt="-f slant"
-		echo -e "${cyn}$(figlet ${fnt} -c)"
+		echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c)"
 		;;
 		b)
 		fnt="-f banner3"
-		echo -e "${cyn}$(figlet ${fnt} -c "$txt" | \
+		echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c | \
 			sed $'s/\#/\u2588/g')"
 		;;
 		i)
 		fnt="-f larry3d"
-		echo -e "${cyn}$(figlet ${fnt} -c "$txt" )"
+		echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c )"
 		;;
 		l)
 		fnt="-f letters"
-		echo -e "${cyn}$(figlet ${fnt} -c "$txt" )"
+		echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c )"
 		;;
 		r)
 		fnt="-f roman"
-		echo -e "${cyn}$(figlet ${fnt} -c "$txt" | \
+		echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c | \
 			sed $'s/\#/\u2588/g')"
 		;;
 		m)
 		fnt="-f smisome1"
-		echo -e "${cyn}$(figlet ${fnt} -c "$txt" )"
+		echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c )"
 		;;
 		t)
 		fnt="-f trek"
-		echo -e "${cyn}$(figlet ${fnt} -c "$txt" | \
+		echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c | \
 			sed $'s/B/\u2588/g;s/8/\u2588/g' | \
 			sed $'s/K/\u258C/g;s/P/\u259B/g' | \
 			sed $'s/d/\u259F/g;s/b/\u2599/g' | \
@@ -74,11 +74,16 @@ while getopts :h:s:b:i:l:r:m:t:f:k: opts; do
 		;;
 		f)
 		fnt="-f speed"
-		echo -e "${cyn}$(figlet ${fnt} -c "$txt" )"
+		echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c )"
 		;;
 		k)
 		fnt="-f smkeyboard"
-		echo -e "${cyn}$(figlet ${fnt} -c "$txt" )"
+		echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c )"
+		;;
+		d)
+		fnt="-f 3-d"
+		echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c | \
+			sed $'s/\*/\u2588/g;s/\//\u2592/g')"
 		;;
 	esac
 done

@@ -1,37 +1,37 @@
 # >>>> MAIN VARS
 # //// i3
 
-set $mdi	Mod1
-set $wni	Mod4
-set $mod	bindsym Mod1
-set $win	bindsym Mod4
-set $mrl	bindsym --release Mod1
-set $wlw	bindsym --whole-window Mod4
-set $exn	exec --no-startup-id
-set $exs	exec --no-startup-id ~/scripts
-set $ena	exec_always --no-startup-id
-set $lch	exec ~/scripts/i3launch
-set $tf		title_format
-set $fw		for_window
-set $mk1	_W1
-set $mk2	_W2
-set $mk3	_W3
-set $mk4	_W4
-set $mrk1	mark _W1
-set $mrk2	mark _W2
-set $mrk3	mark _W3
-set $mrk4	mark _W4
-set $stm1	mark _sticky_1
-set $stm2	mark _sticky_2
-set $stm3	mark _sticky_3
-set $mvm1	move to mark _W1
-set $mvm2	move to mark _W2
-set $mvm3	move to mark _W3
-set $mvm4	move to mark _W4
-set $flen	floating enable
-set $fldi	floating disable
-set $brnr	border normal
-set $mvcn	move position center
+set $mdi		Mod1
+set $wni		Mod4
+set $mod		bindsym Mod1
+set $win		bindsym Mod4
+set $mrl		bindsym --release Mod1
+set $wlw		bindsym --whole-window Mod4
+set $exn		exec --no-startup-id
+set $exs		exec --no-startup-id ~/scr
+set $ena		exec_always --no-startup-id
+set $lch		exec ~/scr/i3launch
+set $tf			title_format
+set $fw			for_window
+set $mk1		_W1
+set $mk2		_W2
+set $mk3		_W3
+set $mk4		_W4
+set $mrk1		mark _W1
+set $mrk2		mark _W2
+set $mrk3		mark _W3
+set $mrk4		mark _W4
+set $stm1		mark _sticky_1
+set $stm2		mark _sticky_2
+set $stm3		mark _sticky_3
+set $mvm1		move to mark _W1
+set $mvm2		move to mark _W2
+set $mvm3		move to mark _W3
+set $mvm4		move to mark _W4
+set $flen		floating enable
+set $fldi		floating disable
+set $brnr		border normal
+set $mvcn		move position center
 
 # //// WORKSPACE NAMES
 
@@ -62,7 +62,7 @@ set $t ff
 # //// APPS
 
 set $term		urxvtc
-set $edit		exec --no-startup-id ~/scripts/opengvim
+set $edit		exec --no-startup-id ~/scr/opengvim
 set $brow		google-chrome-beta
 set $viva		vivaldi-stable
 set $gfm		thunar
@@ -86,7 +86,7 @@ client.placeholder		$blk $blk $wht $blu $blu
 # >>>> BAR
 bar {
 	i3bar_command i3bar -t
-	status_command i3blocks -c ~/$scripts/i3blocks.conf
+	status_command i3blocks -c ~/$scr/i3blocks.conf
 #	status_command i3blocks
 #	position top
 	id bar-1
@@ -228,7 +228,7 @@ $mod+f				$lch '$term -name MEDIA -e ranger' $mk2
 $mod+Shift+f		fullscreen toggle
 
 $mod+g				split toggle
-$mod+Shift+g		$lch '$term -name GRIVE -e bash ~/$scripts/grivesync' $mk2 fl
+$mod+Shift+g		$lch '$term -name GRIVE -e bash ~/$scr/grivesync' $mk2 fl
 
 $mod+h				$exs/i3viswiz left
 $mod+Shift+h		$exs/i3move left
@@ -272,9 +272,9 @@ $mod+Shift+n		$lch '$brow --new-window \
 $mod+m				$exn $brow --new-window --app=https://docs.google.com/presentation/u/0/
 $mod+Shift+m		$lch '$brow --new-window --app=https://play.google.com/movies/' $mk1
 
-$mod+comma			$exn "pactl set-sink-volume 0 -2%; ~/$scripts/notify_volume"
+$mod+comma			$exn "pactl set-sink-volume 0 -2%; ~/$scr/notify_volume"
 
-$mod+period			$exn "pactl set-sink-volume 0 +2%; ~/$scripts/notify_volume"
+$mod+period			$exn "pactl set-sink-volume 0 +2%; ~/$scr/notify_volume"
 
 # >>>> MOD4 BINDINGS
 # //// Misc
@@ -302,14 +302,14 @@ $win+5				$edit ~/.config/ranger/rc.conf
 
 $win+6				$edit ~/.config/ranger/rifle.conf
 
-$win+7				$edit ~/$scripts/mkblocksconf
+$win+7				$edit ~/$scr/mkblocksconf
 
 # //// 1st Row
 
 $win+q				floating disable, $mvm1, [con_mark=$mk1] focus, focus right
 
 $win+w				floating disable, $mvm2, [con_mark=$mk2] focus, focus right
-$win+Shift+w		$lch '$term -name LAYOUT_EDITOR -e bash ~/$scripts/wsloget' $mk2
+$win+Shift+w		$lch '$term -name LAYOUT_EDITOR -e bash ~/$scr/wsloget' $mk2
 
 $win+e				floating disable, $mvm3, [con_mark=$mk3] focus, focus right
 
@@ -342,7 +342,7 @@ $win+d				move workspace to output $hdm
 $win+f				$lch thunar $mk2
 $win+Shift+f		$lch 'gksu thunar' $mk2
 
-$win+g				$lch '$term -name GITREPOUPDATE -e bash ~/$scripts/gitcommit' $mk2
+$win+g				$lch '$term -name GITREPOUPDATE -e bash ~/$scr/gitcommit' $mk2
 
 $win+h				focus left
 $win+Shift+h		move left
@@ -361,7 +361,7 @@ $win+Shift+Return	$exn $term -name FILES_ADMIN -e sudo ranger
 
 # //// 3rd Row
 
-$win+x				$exn "pactl set-sink-mute 0 toggle; ~/$scripts/notify_volume"
+$win+x				$exn "pactl set-sink-mute 0 toggle; ~/$scr/notify_volume"
 
 $win+c				$lch '$term -name CALENDAR -e vim "+Calendar -view=day"' $mk2
 $win+Shift+c		$exs/reloadconfs
@@ -374,9 +374,9 @@ $win+n				move workspace to output $nat
 
 $win+m				$exs/multimon
 
-$win+comma			$exn "$brightdec; ~/$scripts/notify_brightness"
+$win+comma			$exn "$brightdec; ~/$scr/notify_brightness"
 
-$win+period			$exn "$brightinc; ~/$scripts/notify_brightness"
+$win+period			$exn "$brightinc; ~/$scr/notify_brightness"
 
 # >>>> FOR_WINDOW
 # //// GLOBAL
@@ -429,7 +429,7 @@ $fw [class="Pavucontrol"]	$flen,resize set 525 300
 
 # //// MARKED
 
-$fw [con_mark=_sticky_1]				resize set $mediaw $mediah
+$fw [con_mark=_sticky_1]				resize set $mediaw2 $mediah2
 
 $fw [instance="MUSIC"]					$mrk1,$tf "ncmpcpp"
 $fw [instance="MEDIA"]					$mrk2,$tf "media"
@@ -512,7 +512,7 @@ $exs/i3listen-toggle
 $exn	i3-msg "workspace $ws1; append_layout $home/.config/i3/main.json"
 $exn	$viva
 $exn	$brow --new-window --app=https://www.youtube.com/
-$ena	mpv $home/scriptsounds/A\ Tone\ His\ Self.mp3
-$ena	notify-send 'i3 (re)loaded!' -i ~/$scriptpics/i3white.png
+$ena	mpv $home/$scrmus/A\ Tone\ His\ Self.mp3
+$ena	notify-send 'i3 (re)loaded!' -i ~/$scrpic/i3white.png
 
 # vim:ft=i3

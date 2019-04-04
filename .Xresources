@@ -1,33 +1,33 @@
-#include "xinclude/theme"
+#include "xrs/theme"
 
 !! VARIABLES
 
-#include "xinclude/1vars"
+#include "xrs/1vars"
 
 !! COLORS
 
-#include "xinclude/2colorvars"
+#include "xrs/2colorvars"
 
 !! ROFI
 
-#include "xinclude/3rofi"
+#include "xrs/3rofi"
 
 !! Xft
 
-#include "xinclude/4xft"
+#include "xrs/4xft"
 
 !! XTERM
 
-#include "xinclude/5xterm"
+#include "xrs/5xterm"
 
 !! Xcursor
 
-#include "xinclude/6xcursor"
+#include "xrs/6xcursor"
 
 !! URXVT
 
-#include "xinclude/7urxvt"
+#include "xrs/7urxvt"
 
 !! URXVT EXTENSIONS
 
-#include "xinclude/8urxvtext"
+#include "xrs/8urxvtext"

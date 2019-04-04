@@ -2,8 +2,8 @@ sw_volume: 62
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
 state: pause
-current: 39
-time: 70.855000
+current: 8
+time: 217.104000
 random: 1
 repeat: 0
 single: 0
@@ -51,25 +51,24 @@ playlist_begin
 36:Leo Moracchioli/Sledgehammer.mp3
 37:Leo Moracchioli/Smells Like Teen Spirit (Feat. Stine Moracchioli).mp3
 38:Leo Moracchioli/Somebody That I Used To Know.mp3
-39:Leo Moracchioli/Space Jam Theme Song.mp3
-40:Leo Moracchioli/Stay.mp3
-41:Leo Moracchioli/Stressed Out.mp3
-42:Leo Moracchioli/Støv Og Sand [acoustic].mp3
-43:Leo Moracchioli/Superstition.mp3
-44:Leo Moracchioli/The Final Countdown.mp3
-45:Leo Moracchioli/This is Halloween.mp3
-46:Leo Moracchioli/Toto - Africa (Feat. Rabea & Hannah).mp3
-47:Leo Moracchioli/True Survivor.mp3
-48:Leo Moracchioli/Twinkle, Twinkle, Little Star.mp3
-49:Leo Moracchioli/Walk This Way [acoustic].mp3
-50:Leo Moracchioli/Wannabe.mp3
-51:Lev Weksler/All Videos/Adagio from Viola concerto in C minor by J.C. Bach (with speaking intro) Music starts at 7_07.mp3
-52:Lev Weksler/All Videos/Ave Maria by Franz Schubert (Lev Weksler and Boris Veksler).mp3
-53:Lev Weksler/All Videos/Czardas Monti for two Double Bass solo.mp3
-54:Lev Weksler/All Videos/Dmitri Shostakovich 'Romance'.mp3
-55:Lev Weksler/All Videos/Flight of the Bumblebee on Double Bass.mp3
-56:Lev Weksler/All Videos/Hungarian Dance #5 for Double Bass and Piano.mp3
-57:Lev Weksler/All Videos/Shalom Aleichem for Double Bass and Piano.mp3
-58:Lev Weksler/All Videos/Valse Sentimentale for Double Bass and Piano.mp3
-59:Lev Weksler/All Videos/Veksler Trio.mp3
+39:Leo Moracchioli/Stay.mp3
+40:Leo Moracchioli/Stressed Out.mp3
+41:Leo Moracchioli/Støv Og Sand [acoustic].mp3
+42:Leo Moracchioli/Superstition.mp3
+43:Leo Moracchioli/The Final Countdown.mp3
+44:Leo Moracchioli/This is Halloween.mp3
+45:Leo Moracchioli/Toto - Africa (Feat. Rabea & Hannah).mp3
+46:Leo Moracchioli/True Survivor.mp3
+47:Leo Moracchioli/Twinkle, Twinkle, Little Star.mp3
+48:Leo Moracchioli/Walk This Way [acoustic].mp3
+49:Leo Moracchioli/Wannabe.mp3
+50:Lev Weksler/All Videos/Adagio from Viola concerto in C minor by J.C. Bach (with speaking intro) Music starts at 7_07.mp3
+51:Lev Weksler/All Videos/Ave Maria by Franz Schubert (Lev Weksler and Boris Veksler).mp3
+52:Lev Weksler/All Videos/Czardas Monti for two Double Bass solo.mp3
+53:Lev Weksler/All Videos/Dmitri Shostakovich 'Romance'.mp3
+54:Lev Weksler/All Videos/Flight of the Bumblebee on Double Bass.mp3
+55:Lev Weksler/All Videos/Hungarian Dance #5 for Double Bass and Piano.mp3
+56:Lev Weksler/All Videos/Shalom Aleichem for Double Bass and Piano.mp3
+57:Lev Weksler/All Videos/Valse Sentimentale for Double Bass and Piano.mp3
+58:Lev Weksler/All Videos/Veksler Trio.mp3
 playlist_end

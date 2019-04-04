@@ -59,6 +59,8 @@ endif
 
 " //// CHANGE HIGHLIGHT COLOURS
 
+set t_Co=16
+
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
@@ -76,13 +78,13 @@ hi CursorLine		cterm=underline ctermbg=none
 hi Visual			ctermfg=blue ctermbg=black
 hi VisualNOS		ctermfg=blue ctermbg=black
 
-hi Type				cterm=italic ctermfg=red ctermbg=black
+hi Type				cterm=italic ctermfg=cyan ctermbg=black
 hi Identifier		cterm=italic ctermfg=yellow ctermbg=black
 hi Comment			cterm=italic ctermfg=DarkGray ctermbg=black
 hi Folded			cterm=italic ctermfg=DarkGray ctermbg=black
 hi Constant			cterm=italic ctermfg=white ctermbg=black
 hi Special			cterm=none ctermfg=blue ctermbg=black
-hi Statement		cterm=none ctermfg=magenta ctermbg=black
+hi Statement		cterm=none ctermfg=blue ctermbg=black
 hi PreProc			cterm=none ctermfg=magenta ctermbg=black
 hi MatchParen		cterm=italic,bold ctermfg=yellow ctermbg=black
 hi Search			cterm=none ctermfg=black ctermbg=yellow

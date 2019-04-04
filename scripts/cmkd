@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 file=$1
-wordtempDIR=$HOME/Templates/pandoc
-cssDIR=$HOME/Templates/css
+wordtempDIR=$HOME/$TEMPLATES/pandoc
+cssDIR=$HOME/$TEMPLATES/css
 bibDIR=$HOME
-yamlDIR=$HOME/Templates/pandoc
+yamlDIR=$HOME/$TEMPLATES/pandoc
 
 # WHICH BIBLIOGRAPHY FILE
 whichbib=$(cat $file | grep '#bib' | awk '{print $NF}')
@@ -17,9 +17,9 @@ fi
 # WHICH .yaml TO USE
 yaml=$(cat $file | grep '#yaml' | awk '{print $NF}')
 if [[ -n $yaml ]]; then
-	settings="$HOME/Templates/pandoc/${yaml}.yaml"
+	settings="$HOME/$TEMPLATES/pandoc/${yaml}.yaml"
 elif [[ -z $yaml ]]; then
-	settings="$HOME/Templates/pandoc/settings.yaml"
+	settings="$HOME/$TEMPLATES/pandoc/settings.yaml"
 fi
 
 # WHICH TEMPLATE FOR WORD DOCUMENTS

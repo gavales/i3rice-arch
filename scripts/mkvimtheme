@@ -32,7 +32,7 @@ echo "hi StatusLineTermNC	guifg=${wtd} guibg=${grn}" >> $HOME/.guivimrc
 echo "hi LineNr			guifg=${bkl} guibg=${bkd}" >> $HOME/.guivimrc
 echo "hi SpecialKey		guifg=${bkl} guibg=${bkd}" >> $HOME/.guivimrc
 echo "hi ModeMsg			gui=bold guifg=${wtd}" >> $HOME/.guivimrc
-echo "hi lCursor			guifg=${bkd} guibg=${blu}" >> $HOME/.guivimrc
+echo "hi Cursor			guifg=${bkd} guibg=${blu}" >> $HOME/.guivimrc
 echo "hi ColorColumn		guifg=${bkd} guibg=${blu}" >> $HOME/.guivimrc
 echo "hi CursorLine		gui=underline guibg=${bkd}" >> $HOME/.guivimrc
 echo "hi Visual			guifg=${bkd} guibg=${blu}" >> $HOME/.guivimrc
