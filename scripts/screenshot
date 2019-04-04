@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
 scrotdir=scrots
+picDir="$HOME/pic"
 
 scrotname () {
 	time="`date +%Y-%m-%d_%H:%M:%S`.png"
-	name=$(echo -e "" | bash $HOME/scripts/i3menu "Choose scrot name:")
+	name=$(echo -e "" | $HOME/scr/i3menu "Choose scrot name:")
 
 	if [[ -z $name ]]; then
 		scrotname=$time
@@ -14,40 +15,40 @@ scrotname () {
 }
 
 confirmscrot () {
-	action=$(echo -e "Save\nNew\nClipboard" | bash $HOME/scripts/i3menu "Save?")
+	action=$(echo -e "Save\nNew\nClipboard" | $HOME/scr/i3menu "Save?")
 	if [[ $action == "Save" ]]; then
 		scrotname
-		mv $HOME/Pictures/scrots/tmp.png $HOME/Pictures/scrots/${scrotname}
-		notify-send "${scrotname} saved to ~/Pictures/${scrotdir}" -i ~/Pictures/${scrotdir}/${scrotname}
+		mv $picDir/$scrotdir/tmp.png $picDir/$scrotdir/${scrotname}
+		notify-send "${scrotname} saved to $picDir/${scrotdir}" -i $picDir/${scrotdir}/${scrotname}
 	elif [[ $action == "New" ]]; then
 		tmpscrot
 	elif [[ $action == "Clipboard" ]]; then
 		clipboard
 	else
-		rm $HOME/Pictures/${scrotdir}/tmp.png
+		rm $picDir/${scrotdir}/tmp.png
 	fi
 }
 
 tmpscrot () {
-	scrot_type=$(echo -e "Fullscreen\nSelection" | bash $HOME/scripts/i3menu "Scrot type?:")
+	scrot_type=$(echo -e "Fullscreen\nSelection" | $HOME/scr/i3menu "Scrot type?:")
 
 	if [[ $scrot_type == "Fullscreen" ]]; then
 		sleep .25
-		maim --hidecursor $HOME/Pictures/${scrotdir}/tmp.png
+		maim --hidecursor $picDir/${scrotdir}/tmp.png
 	elif [[ $scrot_type == "Selection" ]]; then
-		maim --select --hidecursor $HOME/Pictures/${scrotdir}/tmp.png
+		maim --select --hidecursor $picDir/${scrotdir}/tmp.png
 	else
 		:
 	fi
 
-	sxiv $HOME/Pictures/${scrotdir}/tmp.png 
+	sxiv $picDir/${scrotdir}/tmp.png 
 	[[ -n $scrot_type ]] && confirmscrot
 }
 
 clipboard () {
-	xclip -selection clipboard -t image/png -i $HOME/Pictures/${scrotdir}/tmp.png
-	notify-send "Copied scrot to Clipboard" -i ~/Pictures/${scrotdir}/tmp.png
-	rm $HOME/Pictures/${scrotdir}/tmp.png
+	xclip -selection clipboard -t image/png -i $picDir/${scrotdir}/tmp.png
+	notify-send "Copied scrot to Clipboard" -i $picDir/${scrotdir}/tmp.png
+	rm $picDir/${scrotdir}/tmp.png
 }
 
 tmpscrot

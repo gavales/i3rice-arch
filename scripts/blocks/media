@@ -4,7 +4,7 @@ mpris=$(pidof spotify)
 mpv=$(pidof mpv)
 mpvtitle="$(xdotool getwindowname $(xdotool search --class mpv))"
 
-blocksDir="$HOME/scripts/blocks"
+blocksDir="$HOME/scr/blocks"
 
 clr=$(xrdb -query | grep '*color7' | awk '{print $NF}')
 
@@ -17,8 +17,8 @@ else
 fi
 
 case $BLOCK_BUTTON in
-	1) $HOME/scripts/i3media togg ;;
-	3) $HOME/scripts/i3media stop ;;
-	4) $HOME/scripts/i3media next ;;
-	5) $HOME/scripts/i3media prev ;;
+	1) $HOME/scr/i3media togg ;;
+	3) $HOME/scr/i3media stop ;;
+	4) $HOME/scr/i3media next ;;
+	5) $HOME/scr/i3media prev ;;
 esac

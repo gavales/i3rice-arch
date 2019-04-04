@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 case $BLOCK_BUTTON in
-	1) bash $HOME/scripts/screenshot ;;
-	3) bash $HOME/scripts/windowshot ;;
+	1) bash $HOME/scr/screenshot ;;
+	3) bash $HOME/scr/windowshot ;;
 esac
 
 echo "<span face='Font Awesome 5 Free'>&#xf03e;</span>"

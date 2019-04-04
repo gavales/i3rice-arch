@@ -37,7 +37,7 @@ def windownotify(i3, event):
 	
 	if event.container.window_class == 'Thunar':
 		if event.container.focused == True:
-			call('bash /home/gavarch/scripts/thunarview'.split(' '))
+			call('bash /home/gavarch/scr/thunarview'.split(' '))
 
 i3.on('window', windownotify)
 

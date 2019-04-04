@@ -7,7 +7,7 @@ black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
 white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
 blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
 
-cd
+cd $HOME
 echo "#" > .dmenurc
 echo "# ~/.dmenurc" >> .dmenurc
 echo "#" >> .dmenurc

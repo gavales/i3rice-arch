@@ -1,7 +1,10 @@
+rename 2019_03_15_WK24.md
+shell git clone https://github.com/StillANixRookie/SeaBUG.git
+w
+shell  git clone https://github.com/dmitrysmagin/dmenu.git
 shell make
 shell sudo make install
 shell ./%f
-wq
 shell wget https://raw.githubusercontent.com/ControlEverythingCommunity/MS5803-14BA/master/Python/MS5803_14BA.py
 rename ahrs-parser.py
 shell git clone https://github.com/StillANixRookie/lily-pad.git
@@ -43,8 +46,5 @@ rename openvim
 rename banner
 rename global_
 shell ~/scripts/bibtorefer %f
-rename plt
-rename SomeUniWork
-rename SeaBUG
-mkdir git
-rename .Xresources
+rename atompackages
+wq

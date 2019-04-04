@@ -4,7 +4,7 @@
 # CREATED: Sat 30 Mar 18:22:18 GMT 2019
 
 file=${1}
-~/scripts/i3launch "urxvtc -e vim "${file}"" "_W3"
+$HOME/scr/i3launch "urxvtc -e vim "${file}"" "_W3"
 
 #checkactive="$(xdotool search --class Gvim)"
 #if [[ -z $checkactive ]]; then

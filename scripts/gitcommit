@@ -2,18 +2,18 @@
 
 cd
 
-repo=$(cat $SCRIPTDIR/githubrepos | $SCRIPTDIR/i3menu "Update which repo?:")
+repo=$(cat $HOME/scr/githubrepos | $HOME/scr/i3menu "Update which repo?:")
 
 if [[ -z $repo ]]; then
 	:
 else
-	cd $GITDIR/$repo
-	notify-send "Updating your $repo git repo..." -i $SCRIPTPIC/gitwhite.png
+	cd $HOME/git/$repo
+	notify-send "Updating your $repo git repo..." -i $HOME/scrpic/gitwhite.png
 	git add .
 	git commit -m "$(date +"%c")"
 	git fetch
 	git merge origin/master
 	git push -u origin master
 	cd
-	notify-send "... $repo repo updated." -i $SCRIPTPIC/gitwhite.png
+	notify-send "... $repo repo updated." -i $HOME/scrpic/gitwhite.png
 fi

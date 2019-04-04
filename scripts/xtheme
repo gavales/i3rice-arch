@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
-xfilesDir=$HOME/xinclude
+xfilesDir=$HOME/xrs
 
 theme () {
-	theme=$(ls $HOME/xinclude/colors | grep -v '_' | ~/scripts/i3menu "Choose theme:")
+	theme=$(ls $xfilesDir/colors | grep -v '_' | $HOME/scr/i3menu "Choose theme:")
 	if [[ -z $theme ]]; then
 		:
 	elif [[ ! -f $xfilesDir/colors/$theme ]]; then
 		:
 	else
-		variant=$(echo -e "Dark\nLight" | ~/scripts/i3menu "Light/Dark?:")
+		variant=$(echo -e "Dark\nLight" | $HOME/scr/i3menu "Light/Dark?:")
 	fi
 
 	if [[ $variant == "Light" ]]; then
@@ -21,7 +21,7 @@ theme () {
 
 main () {
 	cat ${xfilesDir}/colors/${theme} > $xfilesDir/theme
-	~/scripts/reloadconfs
+	$HOME/scr/reloadconfs
 }
 
 theme

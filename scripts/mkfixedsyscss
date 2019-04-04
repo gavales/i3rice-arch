@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-Dir=$HOME/Templates/css
+Dir=$HOME/plt/css
 blackd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
 blackl=$(xrdb -query | grep '*color8' | awk '{print $NF}')
 green=$(xrdb -query | grep '*color2' | awk '{print $NF}')

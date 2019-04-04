@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#ws=$(echo -e "1\n2\n3\n4\n5\n6\n7\n8\n9\n10" | bash $HOME/scripts/i3menu "Get layout from which workspace?")
+#ws=$(echo -e "1\n2\n3\n4\n5\n6\n7\n8\n9\n10" | $HOME/scr/i3menu "Get layout from which workspace?")
 
 getlayout () {
 	i3-save-tree > $HOME/.config/i3/layout.json

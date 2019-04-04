@@ -164,6 +164,7 @@ export XRESOURCE="$HOME/xrs"
 export PICTURES="$HOME/pic"
 export VIDEOS="$HOME/vid"
 export GITDIR="$HOME/git"
+export DRIVE="$HOME/Drive"
 export PATH="$PATH:$HOME/anaconda2/bin:$HOME/anaconda3/bin:$SCRIPTDIR"
 
 printf '\033[5 q\r'

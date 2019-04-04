@@ -5,9 +5,9 @@
 
 sleep 1
 
-xfilesDir=$HOME/xinclude
+xfilesDir=$HOME/xrs
 xresDir=$HOME
-wallDir=$HOME/Pictures/walls/spotlight
+wallDir=$HOME/pic/walls/spotlight
 wall=$(ls $wallDir | shuf -n 1)
 
 cd $HOME
@@ -19,6 +19,6 @@ feh --bg-scale "${wallDir}/${wall}"
 
 cd $xresDir
 
-cat $HOME/.cache/wal/colors-kitty.conf | grep 'color' | sed "s/color10/\#define\ cgrnl/g;s/color11/\#define\ cylwl/g;s/color12/\#define\ cblul/g;s/color13/\#define\ cgntl/g;s/color14/\#define\ ccynl/g;s/color15/\#define\ cwhtl/g;s/color0/\#define\ cblkd/g;s/color1/\#define\ credd/g;s/color2/\#define\ cgrnd/g;s/color3/\#define\ cylwd/g;s/color4/\#define\ cblud/g;s/color5/\#define\ cgntd/g;s/color6/\#define\ ccynd/g;s/color7/\#define\ cwhtd/g;s/color8/\#define\ cblkl/g;s/color9/\#define\ credl/g" > $HOME/$xfilesDir/theme
+cat $HOME/.cache/wal/colors-kitty.conf | grep 'color' | sed "s/color10/\#define\ cgrnl/g;s/color11/\#define\ cylwl/g;s/color12/\#define\ cblul/g;s/color13/\#define\ cgntl/g;s/color14/\#define\ ccynl/g;s/color15/\#define\ cwhtl/g;s/color0/\#define\ cblkd/g;s/color1/\#define\ credd/g;s/color2/\#define\ cgrnd/g;s/color3/\#define\ cylwd/g;s/color4/\#define\ cblud/g;s/color5/\#define\ cgntd/g;s/color6/\#define\ ccynd/g;s/color7/\#define\ cwhtd/g;s/color8/\#define\ cblkl/g;s/color9/\#define\ credl/g" > $xfilesDir/theme
 
-~/scripts/reloadconfs
+$HOME/scr/reloadconfs

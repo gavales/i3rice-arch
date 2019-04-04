@@ -1,16 +1,25 @@
 #!/bin/bash
 
+cat $HOME/xrs/theme > $HOME/.Xresources
+cat $HOME/xrs/1vars >> $HOME/.Xresources
+cat $HOME/xrs/2colorvars >> $HOME/.Xresources
+cat $HOME/xrs/3rofi >> $HOME/.Xresources
+cat $HOME/xrs/4xft >> $HOME/.Xresources
+cat $HOME/xrs/5xterm >> $HOME/.Xresources
+cat $HOME/xrs/6xcursor >> $HOME/.Xresources
+cat $HOME/xrs/7urxvt >> $HOME/.Xresources
+cat $HOME/xrs/8urxvtext >> $HOME/.Xresources
 xrdb -load $HOME/.Xresources
 kill -1 $(pidof urxvtd)
-~/scripts/mkdunsttheme
-~/scripts/mkvimtheme
-~/scripts/mkblocksconf
-~/scripts/mkvistheme
-~/scripts/mkatomtheme
-~/scripts/mkfixedsyscss
-~/scripts/mkzathrc
-~/scripts/i3concat
+$HOME/scr/mkdunsttheme
+$HOME/scr/mkvimtheme
+$HOME/scr/mkblocksconf
+$HOME/scr/mkvistheme
+$HOME/scr/mkatomtheme
+$HOME/scr/mkfixedsyscss
+$HOME/scr/mkzathrc
+$HOME/scr/i3concat
 killall i3bar
 i3bar -t --bar_id=bar-1 &>/dev/null &
-~/scripts/i3listen-toggle
-notify-send 'CONFIGS RELOADED' -i $HOME/scriptpics/settingswhite.png
+$HOME/scr/i3listen-toggle
+notify-send 'CONFIGS RELOADED' -i $HOME/scrpic/settingswhite.png
