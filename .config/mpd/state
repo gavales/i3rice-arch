@@ -1,9 +1,8 @@
 sw_volume: 62
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
-state: pause
-current: 8
-time: 217.104000
+state: stop
+current: 9
 random: 1
 repeat: 0
 single: 0
@@ -12,63 +11,30 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Leo Moracchioli/Another One Bites the Dust.mp3
-1:Leo Moracchioli/Baby Boy (Feat. Lillian).mp3
-2:Leo Moracchioli/Baby One More Time.mp3
-3:Leo Moracchioli/Bad Blood.mp3
-4:Leo Moracchioli/Bad Romance.mp3
-5:Leo Moracchioli/Blur - Song 2 (Feat. Stine Moracchioli).mp3
-6:Leo Moracchioli/Bruno Mars - 24K Magic.mp3
-7:Leo Moracchioli/Burn The Witch  (360 video ).mp3
-8:Leo Moracchioli/Creep.mp3
-9:Leo Moracchioli/Despacito.mp3
-10:Leo Moracchioli/Die Antwoord -  I FINK U FREEKY.mp3
-11:Leo Moracchioli/Eminem - Lose Yourself.mp3
-12:Leo Moracchioli/Ex´s & Oh´s.mp3
-13:Leo Moracchioli/Folsom Prison Blues (Feat. Rob Chapman).mp3
-14:Leo Moracchioli/Genie in a Bottle (Feat. Lillian).mp3
-15:Leo Moracchioli/Ghostbusters.mp3
-16:Leo Moracchioli/Groove Is In The Heart.mp3
-17:Leo Moracchioli/Highway Star.mp3
-18:Leo Moracchioli/I Believe I Can Fly.mp3
-19:Leo Moracchioli/I Wanna Dance with Somebody.mp3
-20:Leo Moracchioli/Imagine Dragons - Thunder.mp3
-21:Leo Moracchioli/Imagine [acoustic].mp3
-22:Leo Moracchioli/LMFAO - Party Rock Anthem (Feat. Bumblefoot).mp3
-23:Leo Moracchioli/Last Christmas.mp3
-24:Leo Moracchioli/Look What You Made Me Do.mp3
-25:Leo Moracchioli/Losing My Religion.mp3
-26:Leo Moracchioli/Make It Wit Chu [acoustic].mp3
-27:Leo Moracchioli/Mambo No. 5.mp3
-28:Leo Moracchioli/Mamma Mia.mp3
-29:Leo Moracchioli/Paranoid [acoustic].mp3
-30:Leo Moracchioli/People Are Strange.mp3
-31:Leo Moracchioli/Pink - Try.mp3
-32:Leo Moracchioli/Ring of Fire.mp3
-33:Leo Moracchioli/Seven Nation Army [acoustic].mp3
-34:Leo Moracchioli/Sharp Dressed Man.mp3
-35:Leo Moracchioli/Sia - Cheap Thrills.mp3
-36:Leo Moracchioli/Sledgehammer.mp3
-37:Leo Moracchioli/Smells Like Teen Spirit (Feat. Stine Moracchioli).mp3
-38:Leo Moracchioli/Somebody That I Used To Know.mp3
-39:Leo Moracchioli/Stay.mp3
-40:Leo Moracchioli/Stressed Out.mp3
-41:Leo Moracchioli/Støv Og Sand [acoustic].mp3
-42:Leo Moracchioli/Superstition.mp3
-43:Leo Moracchioli/The Final Countdown.mp3
-44:Leo Moracchioli/This is Halloween.mp3
-45:Leo Moracchioli/Toto - Africa (Feat. Rabea & Hannah).mp3
-46:Leo Moracchioli/True Survivor.mp3
-47:Leo Moracchioli/Twinkle, Twinkle, Little Star.mp3
-48:Leo Moracchioli/Walk This Way [acoustic].mp3
-49:Leo Moracchioli/Wannabe.mp3
-50:Lev Weksler/All Videos/Adagio from Viola concerto in C minor by J.C. Bach (with speaking intro) Music starts at 7_07.mp3
-51:Lev Weksler/All Videos/Ave Maria by Franz Schubert (Lev Weksler and Boris Veksler).mp3
-52:Lev Weksler/All Videos/Czardas Monti for two Double Bass solo.mp3
-53:Lev Weksler/All Videos/Dmitri Shostakovich 'Romance'.mp3
-54:Lev Weksler/All Videos/Flight of the Bumblebee on Double Bass.mp3
-55:Lev Weksler/All Videos/Hungarian Dance #5 for Double Bass and Piano.mp3
-56:Lev Weksler/All Videos/Shalom Aleichem for Double Bass and Piano.mp3
-57:Lev Weksler/All Videos/Valse Sentimentale for Double Bass and Piano.mp3
-58:Lev Weksler/All Videos/Veksler Trio.mp3
+0:Leo Moracchioli/Baby Boy (Feat. Lillian).mp3
+1:Leo Moracchioli/Baby One More Time.mp3
+2:Leo Moracchioli/Burn The Witch  (360 video ).mp3
+3:Leo Moracchioli/Genie in a Bottle (Feat. Lillian).mp3
+4:Leo Moracchioli/Ghostbusters.mp3
+5:Leo Moracchioli/I Believe I Can Fly.mp3
+6:Leo Moracchioli/I Wanna Dance with Somebody.mp3
+7:Leo Moracchioli/Imagine Dragons - Thunder.mp3
+8:Leo Moracchioli/Last Christmas.mp3
+9:Leo Moracchioli/Look What You Made Me Do.mp3
+10:Leo Moracchioli/Make It Wit Chu [acoustic].mp3
+11:Leo Moracchioli/Mambo No. 5.mp3
+12:Leo Moracchioli/Paranoid [acoustic].mp3
+13:Leo Moracchioli/People Are Strange.mp3
+14:Leo Moracchioli/Ring of Fire.mp3
+15:Leo Moracchioli/Seven Nation Army [acoustic].mp3
+16:Leo Moracchioli/Somebody That I Used To Know.mp3
+17:Leo Moracchioli/Stressed Out.mp3
+18:Leo Moracchioli/Støv Og Sand [acoustic].mp3
+19:Leo Moracchioli/This is Halloween.mp3
+20:Leo Moracchioli/True Survivor.mp3
+21:Leo Moracchioli/Twinkle, Twinkle, Little Star.mp3
+22:Leo Moracchioli/Walk This Way [acoustic].mp3
+23:Lev Weksler/All Videos/Ave Maria by Franz Schubert (Lev Weksler and Boris Veksler).mp3
+24:Lev Weksler/All Videos/Hungarian Dance #5 for Double Bass and Piano.mp3
+25:Lev Weksler/All Videos/Veksler Trio.mp3
 playlist_end

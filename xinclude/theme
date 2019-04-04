@@ -1,18 +1,18 @@
-! gruvbox
+! chooseyourweapon
 ! vim:ft=xdefaults
 #define cwhtd #282828
 #define cwhtl #282828
-#define credd #cc241d
-#define credl #cc241d
-#define cgrnd #98971a
-#define cgrnl #98971a
-#define cylwd #d79921
-#define cylwl #d79921
-#define cblud #689d6a
-#define cblul #689d6a
-#define cgntd #b16286
-#define cgntl #b16286
-#define ccynd #458588
-#define ccynl #458588
-#define cblkd #ebdbb2
-#define cblkl #8d836a
+#define credd #e93c93
+#define credl #e93c93
+#define cgrnd #76a571
+#define cgrnl #76a571
+#define cylwd #008ba5
+#define cylwl #008ba5
+#define cblud #d0a845
+#define cblul #d0a845
+#define cgntd #86458b
+#define cgntl #86458b
+#define ccynd #007d62
+#define ccynl #007d62
+#define cblkd #f4f3e2
+#define cblkl #aaaa9e

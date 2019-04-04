@@ -154,17 +154,17 @@ PS1+='\[\033[00;31m\]] \n'
 PS1+='\[\033[00;36m\]\w '
 PS1+='\[\033[00;35m\]\$ \[\033[00m\]'
 
-export SCRIPTDIR="$HOME/scr"
-export SCRIPTMUS="$HOME/scrmus"
-export SCRIPTPIC="$HOME/scrpic"
-export DOCUMENTS="$HOME/doc"
-export DOWNLOADS="$HOME/dwn"
-export TEMPLATES="$HOME/plt"
-export XRESOURCE="$HOME/xrs"
-export PICTURES="$HOME/pic"
-export VIDEOS="$HOME/vid"
-export GITDIR="$HOME/git"
-export DRIVE="$HOME/Drive"
-export PATH="$PATH:$HOME/anaconda2/bin:$HOME/anaconda3/bin:$SCRIPTDIR"
+#export SCRIPTDIR="$HOME/scr"
+#export SCRIPTMUS="$HOME/scrmus"
+#export SCRIPTPIC="$HOME/scrpic"
+#export DOCUMENTS="$HOME/doc"
+#export DOWNLOADS="$HOME/dwn"
+#export TEMPLATES="$HOME/plt"
+#export XRESOURCE="$HOME/xrs"
+#export PICTURES="$HOME/pic"
+#export VIDEOS="$HOME/vid"
+#export DRIVE="$HOME/Drive"
+#export GITDIR="$HOME/git"
+export PATH="$PATH:$HOME/anaconda2/bin:$HOME/anaconda3/bin:$HOME/scr"
 
 printf '\033[5 q\r'

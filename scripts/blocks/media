@@ -11,9 +11,9 @@ clr=$(xrdb -query | grep '*color7' | awk '{print $NF}')
 if [[ -n $mpv ]]; then
 	echo "<span foreground=\"$clr\"><span face='Font Awesome 5 Free'>&#xf03d;</span> ${mpvtitle:0:-6}</span>"
 elif [[ -n $mpris ]]; then
-	bash $blocksDir/mpgui
+	$blocksDir/mpgui
 else
-	bash $blocksDir/mpcblk
+	$blocksDir/mpcblk
 fi
 
 case $BLOCK_BUTTON in
