@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+mpris=$(pidof spotify)
+mpv=$(pidof mpv)
+
+blocksDir="$HOME/scr/pb"
+
+clr=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+
+if [[ -n $mpv ]]; then
+	mpvtitle="$(xdotool getwindowname $(xdotool search --class mpv))"
+	echo "%{T1}%{T-} ${mpvtitle:0:-6}"
+elif [[ -n $mpris ]]; then
+	$blocksDir/mpgui
+else
+	$blocksDir/mpcblk
+fi

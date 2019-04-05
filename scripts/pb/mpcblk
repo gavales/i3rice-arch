@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+status=$(mpc current)
+
+icon="%{T1}%{T-}"
+
+playing=$(ncmpcpp -q --current-song '%20a > %30t')
+white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+clr=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+
+if [[ -z "$status" ]]; then
+	echo "${icon} ${playing}"
+else
+	echo "${icon} ${playing}"
+fi
+
+#case $BLOCK_BUTTON in
+#	5) mpc prev ;;
+#	1) mpc toggle ;;
+#	4) mpc next ;;
+#esac

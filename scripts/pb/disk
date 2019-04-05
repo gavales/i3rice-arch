@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+icon="%{T1}%{T-}"
+DIR="${BLOCK_INSTANCE:-$HOME}"
+
+avail=$(df -h -P -l "$DIR"|grep 'dev'|awk '{print $4}')
+usep=$(df -h -P -l "$DIR"|grep 'dev'|awk '{print $5}')
+use=${usep:0:-1}
+
+echo "$icon $avail"

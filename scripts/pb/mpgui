@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+playername=$(mpris-ctl info "%player_name")
+trackname=$(mpris-ctl info "%track_name")
+artistname=$(mpris-ctl info "%artist_name")
+playstatus=$(mpris-ctl info "%play_status")
+
+shorttrack=$(expr ${#trackname} - 29)
+shortartist=$(expr ${#artistname} - 19)
+
+[[ $playername == "Spotify" ]] && playername="%{T1}%{T-}"
+
+if [[ ${#trackname} -ge 30 ]]; then
+	trackname="${trackname:0:-$shorttrack}…"
+else
+	trackname=$trackname
+fi
+if [[ ${#artistname} -ge 20 ]]; then
+	artistname="${artistname:0:-$shortartist}…"
+else
+	artistname=$artistname
+fi
+
+playing="$playername $artistname > $trackname"
+
+if [ $playername == "%player_name" ]; then
+	:
+elif [ -z $playername ]; then
+	:
+else
+	echo "${playing}"
+fi
+
+#case $BLOCK_BUTTON in
+#  5) playerctl previous ;;
+#  1) playerctl play-pause ;;
+#  4) playerctl next ;;
+#esac

@@ -1,8 +1,11 @@
-"  dBP dP  dBP dBBBBBBb dBBBBBb  dBBBP
-"         '   dB'   dBP
-" dB .BP dBP dB'dB'dB'  dBBBBK'  dBP
-" BB.BP dBP dB'dB'dB'  dBP  BB  dBP
-" BBBP dBP dB'dB'dB'  dBP  dB' dBBBBP
+"                 ██      ██ ██ ████     ████ ███████     ██████ 
+"                ▒██     ▒██▒██▒██▒██   ██▒██▒██▒▒▒▒██   ██▒▒▒▒██
+"                ▒██     ▒██▒██▒██▒▒██ ██ ▒██▒██   ▒██  ██    ▒▒ 
+"                ▒▒██    ██ ▒██▒██ ▒▒███  ▒██▒███████  ▒██       
+"                 ▒▒██  ██  ▒██▒██  ▒▒█   ▒██▒██▒▒▒██  ▒██       
+"                  ▒▒████   ▒██▒██   ▒    ▒██▒██  ▒▒██ ▒▒██    ██
+"                   ▒▒██    ▒██▒██        ▒██▒██   ▒▒██ ▒▒██████ 
+"                    ▒▒     ▒▒ ▒▒         ▒▒ ▒▒     ▒▒   ▒▒▒▒▒▒  
 
 " >>>> SETTINGS
 " //// GENERAL
@@ -178,6 +181,8 @@ vnoremap \" :'<,'>norm 0i"<Enter>
 vnoremap \d" :'<,'>norm 0x<Enter>
 vnoremap \/ :'<,'>norm 0i//<Enter>
 vnoremap \d/ :'<,'>norm 0xx<Enter>
+vnoremap \; :'<,'>norm 0i;<Enter>
+vnoremap \d; :'<,'>norm 0x<Enter>
 
 " >>>> GOYO
 

@@ -1,6 +1,10 @@
 #!/bin/bash
 
-cat $HOME/xrs/theme > $HOME/.Xresources
+if [[ -z $(cat $HOME/xrs/theme) ]]; then
+	cat $HOME/xrs/colors/gruvbox_ > $HOME/.Xresources
+else
+	cat $HOME/xrs/theme > $HOME/.Xresources
+fi
 cat $HOME/xrs/1vars >> $HOME/.Xresources
 cat $HOME/xrs/2colorvars >> $HOME/.Xresources
 cat $HOME/xrs/3rofi >> $HOME/.Xresources
@@ -19,7 +23,9 @@ $HOME/scr/mkatomtheme
 $HOME/scr/mkfixedsyscss
 $HOME/scr/mkzathrc
 $HOME/scr/i3concat
-killall i3bar
-i3bar -t --bar_id=bar-1 &>/dev/null &
+#killall i3bar
+#i3bar -t --bar_id=bar-1 &>/dev/null &
+killall -q polybar
+polybar top &>/dev/null &
 $HOME/scr/i3listen-toggle
 notify-send 'CONFIGS RELOADED' -i $HOME/scrpic/settingswhite.png

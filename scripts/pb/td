@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+iconDa="%{T1}%{T-}"
+iconTi="%{T1}%{T-}"
+
+echo " $iconDa $(date '+%b %d') $iconTi $(date '+%T')"

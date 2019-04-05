@@ -24,3 +24,5 @@ case $1 in
 	[[ $player == "mpd" ]] && mpc stop
 	;;
 esac
+
+polybar-msg hook media 1
