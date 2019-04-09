@@ -62,25 +62,25 @@ set $t ff
 # //// APPS
 
 set $term		urxvtc
-set $edit		exec --no-startup-id ~/scr/openvim
+set $edit		exec --no-startup-id ~/scr/opengvim
 set $brow		google-chrome-beta
 set $viva		vivaldi-stable
 set $gfm		thunar
 set $brightinc	light -A 10
 set $brightdec	light -U 10
-set $mediaw		534
-set $mediaw2	534
-set $mediah		322
-set $mediah2	422
+set $mediaw		499
+set $mediaw2	499
+set $mediah		301
+set $mediah2	401
 
 # >>>> DECORATIONS
 # COLORS
-# class					brdr	bkgr	text	indi	chlb
-client.focused			$blu	$blu	$blk	$blu	$blu
-client.focused_inactive	$blu	$blu	$wht	$blu	$blu
-client.unfocused		$blu	$blu	$wht	$blu	$blu
-client.urgent			$red	$red	$wht	$red	$red
-client.placeholder		$blk	$blk	$wht	$blu	$blu
+# class					brdr bkgr text indi chlb
+client.focused			$blk $blk $blu $blu $blu
+client.focused_inactive	$blu $blu $wht $blu $blu
+client.unfocused		$blu $blu $wht $blu $blu
+client.urgent			$red $red $wht $red $red
+client.placeholder		$blk $blk $wht $blu $blu
 #client.background		$blk
 
 # >>>> BAR
@@ -139,35 +139,20 @@ bindsym Print		$exs/screenshot
 
 # //// Numbers
 
-$mod+1				workspace $ws1; exec polybar-msg hook ws 1
+$mod+1				workspace $ws1
 $mod+Shift+1		move container to workspace $ws1; workspace $ws1
 
-$mod+2				workspace $ws2; exec polybar-msg hook ws 1
+$mod+2				workspace $ws2
 $mod+Shift+2		move container to workspace $ws2; workspace $ws2
 
-$mod+3				workspace $ws3; exec polybar-msg hook ws 1
+$mod+3				workspace $ws3
 $mod+Shift+3		move container to workspace $ws3; workspace $ws3
 
-$mod+4				workspace $ws4; exec polybar-msg hook ws 1
+$mod+4				workspace $ws4
 $mod+Shift+4		move container to workspace $ws4; workspace $ws4
 
-$mod+5				workspace $ws5; exec polybar-msg hook ws 1
+$mod+5				workspace $ws5
 $mod+Shift+5		move container to workspace $ws5; workspace $ws5
-
-$mod+6				workspace $ws6; exec polybar-msg hook ws 1
-$mod+Shift+6		move container to workspace $ws6; workspace $ws6
-
-$mod+7				workspace $ws7; exec polybar-msg hook ws 1
-$mod+Shift+7		move container to workspace $ws7; workspace $ws7
-
-$mod+8				workspace $ws8; exec polybar-msg hook ws 1
-$mod+Shift+8		move container to workspace $ws8; workspace $ws8
-
-$mod+9				workspace $ws9; exec polybar-msg hook ws 1
-$mod+Shift+9		move container to workspace $ws9; workspace $ws9
-
-$mod+0				workspace $ws10; exec polybar-msg hook ws 1
-$mod+Shift+0		move container to workspace $ws10; workspace $ws10
 
 $mod+minus			scratchpad show
 $mod+Shift+minus	move scratchpad
@@ -276,6 +261,8 @@ $mod+comma			$exn "pactl set-sink-volume 0 -2%; ~/$scr/notify_volume"
 
 $mod+period			$exn "pactl set-sink-volume 0 +2%; ~/$scr/notify_volume"
 
+$mod+slash			$exn "pactl set-sink-mute 0 toggle; ~/$scr/notify_volume"
+
 # >>>> MOD4 BINDINGS
 # //// Misc
 
@@ -361,7 +348,7 @@ $win+Shift+Return	$exn $term -name FILES_ADMIN -e sudo ranger
 
 # //// 3rd Row
 
-$win+x				$exn "pactl set-sink-mute 0 toggle; ~/$scr/notify_volume"
+#$win+x				$exn "pactl set-sink-mute 0 toggle; ~/$scr/notify_volume"
 
 $win+c				$lch '$term -name CALENDAR -e vim "+Calendar -view=day"' $mk2
 $win+Shift+c		$exs/reloadconfs
@@ -387,7 +374,7 @@ hide_edge_borders both
 #focus_follows_mouse no
 focus_wrapping force
 workspace_auto_back_and_forth yes
-$fw [class="^.*"] border normal 2
+$fw [class="^.*"] border normal 1
 $fw [urgent=latest] focus
 
 # //// FLOATERS

@@ -32,6 +32,8 @@ set tabstop=4
 set shiftwidth=4
 set cursorline
 set colorcolumn=81
+set conceallevel=3
+set concealcursor=nic
 set list
 set listchars=tab:│\ 
 autocmd CursorHold,CursorHoldI * update
@@ -68,42 +70,44 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
-hi Normal			ctermfg=white ctermbg=none
-hi Title			cterm=bold ctermfg=white ctermbg=none
-hi StatusLineTerm	ctermfg=black ctermbg=green
-hi StatusLineTermNC	ctermfg=white ctermbg=green
-hi LineNr			cterm=none ctermfg=DarkGray ctermbg=none
-hi SpecialKey		ctermfg=DarkGray ctermbg=none
-hi ModeMsg			cterm=bold ctermfg=white
-hi Cursor			ctermfg=black ctermbg=blue
-hi ColorColumn		ctermfg=black ctermbg=blue
-hi CursorLine		cterm=underline ctermbg=none
-hi Visual			ctermfg=blue ctermbg=black
-hi VisualNOS		ctermfg=blue ctermbg=black
+hi Normal ctermfg=white ctermbg=none
+hi Title cterm=bold ctermfg=white ctermbg=none
+hi StatusLineTerm ctermfg=black ctermbg=green
+hi StatusLineTermNC ctermfg=white ctermbg=green
+hi LineNr cterm=none ctermfg=DarkGray ctermbg=none
+hi SpecialKey ctermfg=DarkGray ctermbg=none
+hi ModeMsg cterm=bold ctermfg=white
+hi Cursor ctermfg=black ctermbg=blue
+hi ColorColumn ctermfg=black ctermbg=blue
+hi CursorLine cterm=underline ctermbg=none
+hi Visual ctermfg=blue ctermbg=black
+hi VisualNOS ctermfg=blue ctermbg=black
 
-hi Type				cterm=italic ctermfg=cyan ctermbg=black
-hi Identifier		cterm=italic ctermfg=yellow ctermbg=black
-hi Comment			cterm=italic ctermfg=DarkGray ctermbg=black
-hi Folded			cterm=italic ctermfg=DarkGray ctermbg=black
-hi Constant			cterm=italic ctermfg=white ctermbg=black
-hi Special			cterm=none ctermfg=blue ctermbg=black
-hi Statement		cterm=none ctermfg=blue ctermbg=black
-hi PreProc			cterm=none ctermfg=magenta ctermbg=black
-hi MatchParen		cterm=italic,bold ctermfg=yellow ctermbg=black
-hi Search			cterm=none ctermfg=black ctermbg=yellow
+hi Type cterm=bold ctermfg=white ctermbg=black
+hi Identifier cterm=italic ctermfg=yellow ctermbg=black
+hi Comment cterm=italic ctermfg=DarkGray ctermbg=black
+hi Folded cterm=italic ctermfg=DarkGray ctermbg=black
+hi Constant cterm=italic ctermfg=white ctermbg=black
+hi Special cterm=bold ctermfg=white ctermbg=black
+hi Statement cterm=none ctermfg=white ctermbg=black
+hi PreProc cterm=none ctermfg=blue ctermbg=black
+hi MatchParen cterm=bold ctermfg=yellow ctermbg=black
+hi Search cterm=none ctermfg=black ctermbg=yellow
+hi Error cterm=none ctermfg=red ctermbg=black
+hi EndOfBuffer cterm=none ctermfg=black ctermbg=black
 
-hi SpellBad			cterm=underline,bold ctermfg=red ctermbg=none
-hi SpellCap			cterm=underline,bold ctermfg=blue ctermbg=none
-hi SpellRare		cterm=underline,bold ctermfg=magenta ctermbg=none
-hi SpellLocal		cterm=underline,bold ctermfg=cyan ctermbg=none
+hi SpellBad cterm=underline,bold ctermfg=red ctermbg=none
+hi SpellCap cterm=underline,bold ctermfg=blue ctermbg=none
+hi SpellRare cterm=underline,bold ctermfg=magenta ctermbg=none
+hi SpellLocal cterm=underline,bold ctermfg=cyan ctermbg=none
 
-hi Pmenu			cterm=none ctermfg=blue ctermbg=white
-hi PmenuSel			cterm=none ctermfg=black ctermbg=blue
-hi PmenuSbar		cterm=none ctermfg=blue ctermbg=black
-hi PmenuThumb		cterm=none ctermfg=green ctermbg=green
-hi TabLine			cterm=none ctermfg=blue ctermbg=black
-hi TabLineSel		cterm=none ctermfg=black ctermbg=blue
-hi TabLineFill		cterm=none ctermfg=blue ctermbg=black
+hi Pmenu cterm=none ctermfg=blue ctermbg=white
+hi PmenuSel cterm=none ctermfg=black ctermbg=blue
+hi PmenuSbar cterm=none ctermfg=blue ctermbg=black
+hi PmenuThumb cterm=none ctermfg=green ctermbg=green
+hi TabLine cterm=none ctermfg=blue ctermbg=black
+hi TabLineSel cterm=none ctermfg=black ctermbg=blue
+hi TabLineFill cterm=none ctermfg=blue ctermbg=black
 
 hi User1 ctermbg=red ctermfg=black
 hi User2 ctermbg=yellow ctermfg=black
@@ -112,7 +116,6 @@ hi User4 ctermbg=grey ctermfg=black
 hi User5 ctermbg=blue ctermfg=black
 hi User6 ctermbg=magenta ctermfg=black
 
-"hi EndOfBuffer    Normal
 "hi NonText        Normal
 "hi Directory      Normal
 "hi ErrorMsg       Normal
@@ -136,7 +139,6 @@ hi User6 ctermbg=magenta ctermfg=black
 "hi ToolbarButton  Normal
 "hi Underlined     Normal
 "hi Ignore         Normal
-"hi Error          Normal
 "hi Todo           Normal
 
 " //// LAYOUT
@@ -187,35 +189,46 @@ vnoremap \d; :'<,'>norm 0x<Enter>
 " >>>> GOYO
 
 map \gy :Goyo<bar>
-	\hi Normal ctermbg=none<bar>
+	\hi Normal ctermfg=white ctermbg=none<bar>
+	\hi Title cterm=bold ctermfg=white ctermbg=none<bar>
 	\hi StatusLineTerm ctermfg=black ctermbg=green<bar>
 	\hi StatusLineTermNC ctermfg=white ctermbg=green<bar>
-	\hi LineNr ctermfg=DarkGray ctermbg=none<bar>
+	\hi LineNr cterm=none ctermfg=DarkGray ctermbg=none<bar>
 	\hi SpecialKey ctermfg=DarkGray ctermbg=none<bar>
 	\hi ModeMsg cterm=bold ctermfg=white<bar>
-	\hi lCursor ctermfg=black ctermbg=blue<bar>
+	\hi Cursor ctermfg=black ctermbg=blue<bar>
 	\hi ColorColumn ctermfg=black ctermbg=blue<bar>
 	\hi CursorLine cterm=underline ctermbg=none<bar>
-	\hi Type cterm=italic ctermfg=red ctermbg=black<bar>
+	\hi Error cterm=none ctermfg=red ctermbg=black<bar>
+	\hi Visual ctermfg=black ctermbg=blue<bar>
+	\hi VisualNOS ctermfg=blue ctermbg=black<bar>
+	\hi Type cterm=bold ctermfg=white ctermbg=black<bar>
 	\hi Identifier cterm=italic ctermfg=yellow ctermbg=black<bar>
 	\hi Comment cterm=italic ctermfg=DarkGray ctermbg=black<bar>
 	\hi Folded cterm=italic ctermfg=DarkGray ctermbg=black<bar>
 	\hi Constant cterm=italic ctermfg=white ctermbg=black<bar>
-	\hi Special cterm=none ctermfg=blue ctermbg=black<bar>
-	\hi Statement cterm=none ctermfg=magenta ctermbg=black<bar>
-	\hi PreProc cterm=none ctermfg=magenta ctermbg=black<bar>
-	\hi MatchParen cterm=italic,bold ctermfg=yellow ctermbg=black<bar>
+	\hi Special cterm=none ctermfg=white ctermbg=black<bar>
+	\hi Statement cterm=none ctermfg=white ctermbg=black<bar>
+	\hi PreProc cterm=none ctermfg=blue ctermbg=black<bar>
+	\hi MatchParen cterm=bold ctermfg=yellow ctermbg=black<bar>
 	\hi Search cterm=none ctermfg=black ctermbg=yellow<bar>
 	\hi SpellBad cterm=underline,bold ctermfg=red ctermbg=none<bar>
 	\hi SpellCap cterm=underline,bold ctermfg=blue ctermbg=none<bar>
 	\hi SpellRare cterm=underline,bold ctermfg=magenta ctermbg=none<bar>
 	\hi SpellLocal cterm=underline,bold ctermfg=cyan ctermbg=none<bar>
-	\hi User1 ctermbg=red ctermfg=black guibg=red guifg=black<bar>
-	\hi User2 ctermbg=yellow ctermfg=black guibg=yellow guifg=black<bar>
-	\hi User3 ctermbg=green ctermfg=black guibg=green guifg=black<bar>
-	\hi User4 ctermbg=grey ctermfg=black guibg=DarkGray guifg=black<bar>
-	\hi User5 ctermbg=blue ctermfg=black guibg=blue guifg=black<bar>
-	\hi User6 ctermbg=magenta ctermfg=black guibg=magenta guifg=black<bar>
+	\hi Pmenu cterm=none ctermfg=blue ctermbg=white<bar>
+	\hi PmenuSel cterm=none ctermfg=black ctermbg=blue<bar>
+	\hi PmenuSbar cterm=none ctermfg=blue ctermbg=black<bar>
+	\hi PmenuThumb cterm=none ctermfg=green ctermbg=green<bar>
+	\hi TabLine cterm=none ctermfg=blue ctermbg=black<bar>
+	\hi TabLineSel cterm=none ctermfg=black ctermbg=blue<bar>
+	\hi TabLineFill cterm=none ctermfg=blue ctermbg=black<bar>
+	\hi User1 ctermbg=red ctermfg=black<bar>
+	\hi User2 ctermbg=yellow ctermfg=black<bar>
+	\hi User3 ctermbg=green ctermfg=black<bar>
+	\hi User4 ctermbg=grey ctermfg=black<bar>
+	\hi User5 ctermbg=blue ctermfg=black<bar>
+	\hi User6 ctermbg=magenta ctermfg=black
 	\<Enter><Enter>
 
 
@@ -225,41 +238,41 @@ map \gy :Goyo<bar>
 set laststatus=2
 
 function! FileSize()
-  let bytes = getfsize(expand('%:p'))
-  if (bytes >= 1024)
-	let kbytes = bytes / 1024
-  endif
-  if (exists('kbytes') && kbytes >= 1000)
-	let mbytes = kbytes / 1000
-  endif
+	let bytes = getfsize(expand('%:p'))
+	if (bytes >= 1024)
+		let kbytes = bytes / 1024
+	endif
+	if (exists('kbytes') && kbytes >= 1000)
+		let mbytes = kbytes / 1000
+	endif
 
-  if bytes <= 0
-	return '0'
-  endif
+	if bytes <= 0
+		return '0'
+	endif
 
-  if (exists('mbytes'))
-	return mbytes . 'MB '
-  elseif (exists('kbytes'))
-	return kbytes . 'KB '
-  else
-	return bytes . 'B '
-  endif
+	if (exists('mbytes'))
+		return mbytes . 'MB '
+	elseif (exists('kbytes'))
+		return kbytes . 'KB '
+	else
+		return bytes . 'B '
+	endif
 endfunction
 
 function! ReadOnly()
-  if &readonly || !&modifiable
-	return ''
-  else
-	return ''
+	if &readonly || !&modifiable
+		return ''
+	else
+		return ''
 endfunction
 
 function! GitBranch()
-  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+	return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
 endfunction
 
 function! StatuslineGit()
-  let l:branchname = GitBranch()
-  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+	let l:branchname = GitBranch()
+	return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
 endfunction
 
 let g:currentmode={
@@ -652,6 +665,9 @@ autocmd FileType sh inoremap elif <BS>elif [[  ]]; then
 autocmd FileType sh inoremap else <BS>else
 	\<Enter><Tab>
 autocmd FileType sh inoremap [[ [[  ]]<Esc>F]hi
+autocmd FileType sh inoremap cas<Tab> case $* in
+	\<Enter><Tab><++>) <++> ;;
+	\<Enter><BS>esac<Esc>02kf*xi
 autocmd FileType sh inoremap opt<Tab> while getopts ::<++> <++>; do
 	\<Enter><++>
 	\<Enter><BS>done<Esc>02kf:a

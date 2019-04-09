@@ -31,7 +31,7 @@ function FoldText()
     let foldline = substitute(foldline, '.SH', "==> ", "")
     let text = foldline.foldbel.foldsize.'line     '
     let fillcharcount = windowwidth - strdisplaywidth(text)
-    return foldline.' '.foldbel.' '.repeat(" ",fillcharcount).'  ('.foldsize.' lines)'
+    return foldline.' '.foldbel.' '.repeat(".",fillcharcount).'  ('.foldsize.' lines)'
 endfunction
 
 setlocal updatetime=500

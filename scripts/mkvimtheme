@@ -16,56 +16,53 @@ cyn=$(xrdb -query | grep '*color6' | awk '{print $NF}')
 
 echo "\"set guifont=Ubuntu\ Mono\ Regular:h20" > $HOME/.guivimrc
 echo "set guifont=monaco\ 15" >> $HOME/.guivimrc
-echo "\"set guioptions-=m	\"remove menu bar" >> $HOME/.guivimrc
-echo "set guioptions-=T	\"remove toolbar" >> $HOME/.guivimrc
-echo "\"set guioptions-=r	\"remove right-hand scroll bar" >> $HOME/.guivimrc
-echo "\"set guioptions-=L	\"remove left-hand scroll bar" >> $HOME/.guivimrc
+echo "set guioptions-=m \"remove menu bar" >> $HOME/.guivimrc
+echo "set guioptions-=T \"remove toolbar" >> $HOME/.guivimrc
+echo "set guioptions-=r \"remove right-hand scroll bar" >> $HOME/.guivimrc
+echo "set guioptions-=L \"remove left-hand scroll bar" >> $HOME/.guivimrc
 echo "colorscheme default" >> $HOME/.guivimrc
 echo "set linespace=5" >> $HOME/.guivimrc
 echo "\"set lines=999 columns=999" >> $HOME/.guivimrc
 echo "\"au GUIEnter * simalt ~x" >> $HOME/.guivimrc
 echo "" >> $HOME/.guivimrc
-echo "hi Normal			guibg=${bkd}" >> $HOME/.guivimrc
-echo "hi Title			gui=bold guifg=${wtd} guibg=${bkd}" >> $HOME/.guivimrc
-echo "hi StatusLineTerm	guifg=${bkd} guibg=${grn}" >> $HOME/.guivimrc
-echo "hi StatusLineTermNC	guifg=${wtd} guibg=${grn}" >> $HOME/.guivimrc
-echo "hi LineNr			guifg=${bkl} guibg=${bkd}" >> $HOME/.guivimrc
-echo "hi SpecialKey		guifg=${bkl} guibg=${bkd}" >> $HOME/.guivimrc
-echo "hi ModeMsg			gui=bold guifg=${wtd}" >> $HOME/.guivimrc
-echo "hi Cursor			guifg=${bkd} guibg=${blu}" >> $HOME/.guivimrc
-echo "hi ColorColumn		guifg=${bkd} guibg=${blu}" >> $HOME/.guivimrc
-echo "hi CursorLine		gui=underline guibg=${bkd}" >> $HOME/.guivimrc
-echo "hi Visual			guifg=${bkd} guibg=${blu}" >> $HOME/.guivimrc
-echo "hi VisualNOS		guifg=${bkd} guibg=${blu}" >> $HOME/.guivimrc
-echo "" >> $HOME/.guivimrc
-echo "hi Type				gui=italic guifg=${red} guibg=${bkd}" >> $HOME/.guivimrc
-echo "hi Identifier		gui=italic guifg=${ylw} guibg=${bkd}" >> $HOME/.guivimrc
-echo "hi Comment			gui=italic guifg=${bkl} guibg=${bkd}" >> $HOME/.guivimrc
-echo "hi Folded			gui=italic guifg=${bkl} guibg=${bkd}" >> $HOME/.guivimrc
-echo "hi Constant			gui=italic guifg=${wtd} guibg=${bkd}" >> $HOME/.guivimrc
-echo "hi Special			gui=none guifg=${blu} guibg=${bkd}" >> $HOME/.guivimrc
-echo "hi Statement		gui=none guifg=${gnt} guibg=${bkd}" >> $HOME/.guivimrc
-echo "hi PreProc			gui=none guifg=${gnt} guibg=${bkd}" >> $HOME/.guivimrc
-echo "hi MatchParen		gui=italic,bold guifg=${ylw} guibg=${bkd}" >> $HOME/.guivimrc
-echo "hi Search			gui=none guifg=${bkd} guibg=${ylw}" >> $HOME/.guivimrc
-echo "" >> $HOME/.guivimrc
-echo "hi SpellBad			gui=underline,bold guifg=${red} guibg=${bkd}" >> $HOME/.guivimrc
-echo "hi SpellCap			gui=underline,bold guifg=${blu} guibg=${bkd}" >> $HOME/.guivimrc
-echo "hi SpellRare		gui=underline,bold guifg=${gnt} guibg=${bkd}" >> $HOME/.guivimrc
-echo "hi SpellLocal		gui=underline,bold guifg=${cyn} guibg=${bkd}" >> $HOME/.guivimrc
-echo "" >> $HOME/.guivimrc
-echo "hi Pmenu			gui=none guifg=${blu} guibg=${wtd}" >> $HOME/.guivimrc
-echo "hi PmenuSel			gui=none guifg=${bkd} guibg=${blu}" >> $HOME/.guivimrc
-echo "hi PmenuSbar		gui=none guifg=${blu} guibg=${bkd}" >> $HOME/.guivimrc
-echo "hi PmenuThumb		gui=none guifg=${grn} guibg=${grn}" >> $HOME/.guivimrc
-echo "hi TabLine			gui=none guifg=${blu} guibg=${bkd}" >> $HOME/.guivimrc
-echo "hi TabLineSel		gui=none guifg=${bkd} guibg=${blu}" >> $HOME/.guivimrc
-echo "hi TabLineFill		gui=none guifg=${blu} guibg=${bkd}" >> $HOME/.guivimrc
-echo "" >> $HOME/.guivimrc
-echo "hi User1 guibg=${red} guifg=${bkd}" >> $HOME/.guivimrc
-echo "hi User2 guibg=${ylw} guifg=${bkd}" >> $HOME/.guivimrc
-echo "hi User3 guibg=${grn} guifg=${bkd}" >> $HOME/.guivimrc
-echo "hi User4 guibg=${bkl} guifg=${bkd}" >> $HOME/.guivimrc
-echo "hi User5 guibg=${blu} guifg=${bkd}" >> $HOME/.guivimrc
-echo "hi User6 guibg=${gnt} guifg=${bkd}" >> $HOME/.guivimrc
-
+echo "hi Normal guifg=$wtd guibg=$bkd" >> $HOME/.guivimrc
+echo "hi Title gui=bold guifg=$wtd guibg=$bkd" >> $HOME/.guivimrc
+echo "hi StatusLineTerm guifg=$bkd guibg=$grn" >> $HOME/.guivimrc
+echo "hi StatusLineTermNC guifg=$wtd guibg=$grn" >> $HOME/.guivimrc
+echo "hi LineNr gui=none guifg=$bkl guibg=$bkd" >> $HOME/.guivimrc
+echo "hi SpecialKey guifg=$bkl guibg=$bkd" >> $HOME/.guivimrc
+echo "hi ModeMsg gui=bold guifg=$wtd" >> $HOME/.guivimrc
+echo "hi Cursor guifg=$bkd guibg=$blu" >> $HOME/.guivimrc
+echo "hi ColorColumn guifg=$bkd guibg=$blu" >> $HOME/.guivimrc
+echo "hi CursorLine gui=underline guibg=$bkd" >> $HOME/.guivimrc
+echo "hi Visual guifg=$bkd guibg=$blu" >> $HOME/.guivimrc
+echo "hi VisualNOS guifg=$bkd guibg=$blu" >> $HOME/.guivimrc
+echo "hi Type  gui=bold guifg=$wtd guibg=$bkd" >> $HOME/.guivimrc
+echo "hi Identifier gui=italic guifg=$ylw guibg=$bkd" >> $HOME/.guivimrc
+echo "hi Comment gui=italic guifg=$bkl guibg=$bkd" >> $HOME/.guivimrc
+echo "hi Folded gui=italic guifg=$bkl guibg=$bkd" >> $HOME/.guivimrc
+echo "hi Constant gui=italic guifg=$wtd guibg=$bkd" >> $HOME/.guivimrc
+echo "hi Special gui=none guifg=$wtd guibg=$bkd" >> $HOME/.guivimrc
+echo "hi Statement gui=none guifg=$wtd guibg=$bkd" >> $HOME/.guivimrc
+echo "hi PreProc gui=none guifg=$blu guibg=$bkd" >> $HOME/.guivimrc
+echo "hi MatchParen gui=bold guifg=$ylw guibg=$bkd" >> $HOME/.guivimrc
+echo "hi Search gui=none guifg=$bkd guibg=$ylw" >> $HOME/.guivimrc
+echo "hi Error gui=none guifg=$red guibg=$bkd" >> $HOME/.guivimrc
+echo "hi EndOfBuffer guifg=$bkd guibg=$bkd" >> $HOME/.guivimrc
+echo "hi SpellBad gui=underline,bold guifg=$red guibg=$bkd" >> $HOME/.guivimrc
+echo "hi SpellCap gui=underline,bold guifg=$blu guibg=$bkd" >> $HOME/.guivimrc
+echo "hi SpellRare gui=underline,bold guifg=$gnt guibg=$bkd" >> $HOME/.guivimrc
+echo "hi SpellLocal gui=underline,bold guifg=$cyn guibg=$bkd" >> $HOME/.guivimrc
+echo "hi Pmenu gui=none guifg=$blu guibg=$wtd" >> $HOME/.guivimrc
+echo "hi PmenuSel gui=none guifg=$bkd guibg=$blu" >> $HOME/.guivimrc
+echo "hi PmenuSbar gui=none guifg=$blu guibg=$bkd" >> $HOME/.guivimrc
+echo "hi PmenuThumb gui=none guifg=$grn guibg=$grn" >> $HOME/.guivimrc
+echo "hi TabLine gui=none guifg=$blu guibg=$bkd" >> $HOME/.guivimrc
+echo "hi TabLineSel gui=none guifg=$bkd guibg=$blu" >> $HOME/.guivimrc
+echo "hi TabLineFill gui=none guifg=$blu guibg=$bkd" >> $HOME/.guivimrc
+echo "hi User1 guibg=$red guifg=$bkd" >> $HOME/.guivimrc
+echo "hi User2 guibg=$ylw guifg=$bkd" >> $HOME/.guivimrc
+echo "hi User3 guibg=$grn guifg=$bkd" >> $HOME/.guivimrc
+echo "hi User4 guibg=grey guifg=$bkd" >> $HOME/.guivimrc
+echo "hi User5 guibg=$blu guifg=$bkd" >> $HOME/.guivimrc
+echo "hi User6 guibg=$gnt guifg=$bkd" >> $HOME/.guivimrc

@@ -51,9 +51,9 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 1
 
-font-0 = fixedsysmono:size=11;3
-font-1 = FontAwesome5Free:style=Solid:size=11;3
-font-2 = FontAwesome5Brands:style=Solid:size=11;3
+font-0 = fixedsysmono:size=12;2
+font-1 = FontAwesome5Free:style=Solid:size=12;3
+font-2 = FontAwesome5Brands:style=Solid:size=12;3
 
 tray-position = right
 tray-padding = 1
@@ -72,7 +72,7 @@ tray-padding = 1
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-modules-left = td ws
+modules-left = powermenu shot td ws
 modules-center = xwindow
 modules-right = media disk memory cpu temperature xkeyboard backlight pulseaudio battery
 
@@ -80,25 +80,56 @@ modules-right = media disk memory cpu temperature xkeyboard backlight pulseaudio
 margin-top = 0
 margin-bottom = 0
 
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open = %{T1} %{T-}
+label-open-foreground = ${colors.bkd}
+label-close = %{T1} %{T-} cancel
+label-close-foreground = ${colors.bkd}
+label-separator = |
+label-separator-foreground = ${colors.bkd}
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = sudo reboot
+
+menu-2-0 = power off
+menu-2-0-exec = sudo poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
+
 ; vim:ft=dosini
+[module/shot]
+type = custom/script
+exec = echo %{T1}%{T-}
+click-left = ~/scr/screenshot
+format-foreground = ${colors.wtd}
+interval = 1
+
 [module/td]
 type = custom/script
-
 exec = bash ~/scr/pb/td
-
 format-foreground = ${colors.wtd}
-
 interval = 1
 
 [module/ws]
 type = custom/ipc
-
-;hook-0 = i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2
 hook-0 = ~/scr/pb/ws
 initial = 1
-
-click-left = i3-msg workspace next
-click-right = i3-msg workspace prev
+click-left = i3-msg workspace back_and_forth
+scroll-up = i3-msg workspace next
+scroll-down = i3-msg workspace prev
 
 [module/xwindow]
 type = internal/xwindow
@@ -106,12 +137,9 @@ label = %title:0:30:...%
 
 [module/media]
 type = custom/ipc
-
 hook-0 = ~/scr/pb/media
 initial = 1
-
 format-foreground = ${colors.wtd}
-
 click-left = ~/scr/i3media togg
 click-right = ~/scr/i3media stop
 scroll-up = ~/scr/i3media next
@@ -119,11 +147,7 @@ scroll-down = ~/scr/i3media prev
 
 [module/disk]
 type = custom/script
-
 exec = bash ~/scr/pb/disk
-
-; Seconds to sleep between updates
-; Default: 5 (0 if `tail = true`)
 interval = 60
 
 [module/memory]
@@ -148,16 +172,13 @@ interval = 2
 type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
-
 format = <ramp> <label>
 format-underline = ${colors.red}
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
-
 label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.ylw}
-
 ramp-0 = %{T1}%{T-}
 ramp-1 = %{T1}%{T-}
 ramp-2 = %{T1}%{T-}
@@ -166,14 +187,11 @@ ramp-foreground = ${colors.bkd}
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
-
 format-prefix = %{T1} %{T-}
 format-prefix-foreground = ${colors.bkd}
 ;format-prefix-underline = ${colors.gnt}
-
 label-layout = %layout%
 ;label-layout-underline = ${colors.gnt}
-
 label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-background = ${colors.gnt}
@@ -188,13 +206,11 @@ scroll-down = "light -U 10 && polybar-msg hook backlight 1"
 
 [module/pulseaudio]
 type = internal/pulseaudio
-
 format-volume = <label-volume>
 label-volume = %{T1}%{T-} %percentage%
 label-volume-foreground = ${root.foreground}
 label-muted = %{T1}%{T-} --
 label-muted-foreground = ${colors.wtd}
-
 bar-volume-width = 10
 bar-volume-foreground-0 = ${colors.cyn}
 bar-volume-foreground-1 = ${colors.cyn}
@@ -217,24 +233,19 @@ type = internal/battery
 battery = BAT0
 adapter = AC
 full-at = 100
-
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = ${colors.bkd}
-
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
-
-format-full-prefix = "=== "
+format-full-prefix = "%{T1}%{T-}"
 format-full-prefix-foreground = ${colors.bkd}
 format-full-underline = ${self.format-charging-underline}
-
 ramp-capacity-0 = %{T1}%{T-}
 ramp-capacity-1 = %{T1}%{T-}
 ramp-capacity-2 = %{T1}%{T-}
 ramp-capacity-3 = %{T1}%{T-}
 ramp-capacity-4 = %{T1}%{T-}
 ramp-capacity-foreground = ${colors.bkd}
-
 animation-charging-0 = %{T1}%{T-}
 animation-charging-1 = %{T1}%{T-}
 animation-charging-2 = %{T1}%{T-}
@@ -242,218 +253,5 @@ animation-charging-3 = %{T1}%{T-}
 animation-charging-4 = %{T1}%{T-}
 animation-charging-foreground = ${colors.bkd}
 animation-charging-framerate = 500
-
-[module/mpd]
-;type = internal/mpd
-;format-online = <label-song> <label-time>
-;label-song = %artist% - %title% //
-;label-offline = --- mpd is offline ---
-;
-;icon-prev = <<<
-;icon-stop = Stop
-;icon-play = Play
-;icon-pause = Pause
-;icon-next = >>>
-;
-;label-song-maxlen = 65
-;label-song-ellipsis = true
-;
-;bar-progress-width = 45
-;bar-progress-indicator = |
-;bar-progress-fill = =
-;bar-progress-empty = -
-;
-;[module/date]
-;type = internal/date
-;interval = 1
-;
-;date = %b %d,
-;date-alt = %b %d,
-;
-;time = %T
-;time-alt = %T
-;
-;format-prefix = "%{T1} %{T-}"
-;format-prefix-foreground = ${colors.bkd}
-;format-underline = ${colors.bkd}
-;
-;label = %date% %time%
-;
-;[module/filesystem]
-;type = internal/fs
-;interval = 25
-;
-;mount-0 = /home
-;
-;label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
-;label-unmounted = %mountpoint% not mounted
-;label-unmounted-foreground = ${colors.wtd}
-;
-;[module/bspwm]
-;type = internal/bspwm
-;
-;label-focused = %index%
-;label-focused-background = ${colors.bkd}
-;label-focused-foreground = ${colors.blu}
-;;label-focused-underline= ${colors.bkd}
-;label-focused-padding = 1
-;
-;label-occupied = %index%
-;label-occupied-padding = 1
-;
-;label-urgent = %index%!
-;label-urgent-background = ${colors.red}
-;label-urgent-padding = 1
-;
-;label-empty = %index%
-;label-empty-foreground = ${colors.wtd}
-;label-empty-padding = 1
-;
-;; Separator in between workspaces
-;; label-separator = |
-;
-;[module/i3]
-;type = internal/i3
-;format = <label-state> <label-mode>
-;index-sort = true
-;wrapping-scroll = false
-;
-;pin-workspaces = true
-;
-;label-mode-padding = 1
-;label-mode-foreground = ${colors.bkd}
-;label-mode-background = ${colors.ylw}
-;
-;label-focused = %index%
-;label-focused-foreground = ${colors.blu}
-;label-focused-background = ${module/bspwm.label-focused-background}
-;label-focused-padding = ${module/bspwm.label-focused-padding}
-;
-;label-unfocused = %index%
-;label-unfocused-foreground = ${colors.bkd}
-;label-unfocused-padding = ${module/bspwm.label-occupied-padding}
-;
-;label-visible = %index%
-;label-visible-background = ${self.label-focused-background}
-;label-visible-padding = ${self.label-focused-padding}
-;
-;label-urgent = %index%
-;label-urgent-background = ${module/bspwm.label-urgent-background}
-;label-urgent-padding = ${module/bspwm.label-urgent-padding}
-;
-;[module/xbacklight]
-;type = internal/xbacklight
-;format = <label>
-;label = %{T1}%{T-} %percentage%
-;
-;bar-width = 10
-;bar-indicator = |
-;bar-indicator-foreground = ${colors.wtd}
-;bar-indicator-font = 0
-;bar-fill = -
-;bar-fill-font = 0
-;bar-fill-foreground = ${colors.gnt}
-;bar-empty = -
-;bar-empty-font = 0
-;bar-empty-foreground = ${colors.wtd}
-;
-;[module/backlight-acpi]
-;inherit = module/xbacklight
-;type = internal/backlight
-;card = intel_backlight
-;
-;[module/wlan]
-;type = internal/network
-;interface = wlp3s0
-;interval = 3.0
-;
-;format-connected = <ramp-signal> <label-connected>
-;format-connected-underline = ${colors.cyn}
-;label-connected = %essid%
-;
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = ---- offline
-;label-disconnected-foreground = ${colors.red}
-;
-;ramp-signal-0 = ----
-;ramp-signal-1 = |---
-;ramp-signal-2 = ||--
-;ramp-signal-3 = |||-
-;ramp-signal-4 = ||||
-;ramp-signal-foreground = ${colors.cyn}
-;
-;[module/eth]
-;type = internal/network
-;interface = enp0s25
-;interval = 3.0
-;
-;format-connected-underline = #55aa55
-;format-connected-prefix = "ETH: "
-;format-connected-prefix-foreground = ${colors.wtd}
-;label-connected = %local_ip%
-;
-;format-disconnected =
-;;format-disconnected = <label-disconnected>
-;;format-disconnected-underline = ${self.format-connected-underline}
-;;label-disconnected = %ifname% disconnected
-;;label-disconnected-foreground = ${colors.wtd}
-;
-;[module/alsa]
-;type = internal/alsa
-;
-;format-volume = <label-volume> <bar-volume>
-;label-volume = VOL
-;label-volume-foreground = ${root.foreground}
-;
-;format-muted-prefix = " "
-;format-muted-foreground = ${colors.wtd}
-;label-muted = sound muted
-;
-;bar-volume-width = 10
-;bar-volume-foreground-0 = #55aa55
-;bar-volume-foreground-1 = #55aa55
-;bar-volume-foreground-2 = #55aa55
-;bar-volume-foreground-3 = #55aa55
-;bar-volume-foreground-4 = #55aa55
-;bar-volume-foreground-5 = #f5a70a
-;bar-volume-foreground-6 = #ff5555
-;bar-volume-gradient = false
-;bar-volume-indicator = |
-;bar-volume-indicator-font = 2
-;bar-volume-fill = =
-;bar-volume-fill-font = 2
-;bar-volume-empty = -
-;bar-volume-empty-font = 2
-;bar-volume-empty-foreground = ${colors.wtd}
-;
-[module/powermenu]
-type = custom/menu
-
-expand-right = true
-
-format-spacing = 1
-
-label-open = 
-label-open-foreground = ${colors.gnt}
-label-close =  cancel
-label-close-foreground = ${colors.gnt}
-label-separator = |
-label-separator-foreground = ${colors.wtd}
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
 
 ; vim:ft=dosini

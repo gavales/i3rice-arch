@@ -4,6 +4,10 @@ from subprocess import call
 
 i3 = Connection()
 
+def wsnotify(i3, event):
+	if event.change == 'focus':
+		call('polybar-msg hook ws 1'.split(' '))
+
 def windownotify(i3, event):
 	if event.container.fullscreen_mode == 0:
 		call('polybar-msg cmd show'.split(' '))
@@ -45,6 +49,7 @@ def windownotify(i3, event):
 			call('bash /home/gavarch/scr/thunarview'.split(' '))
 
 i3.on('window', windownotify)
+i3.on('workspace', wsnotify)
 
 i3.main()
 #	if event.container.window_instance == 'MEDIA':

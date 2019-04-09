@@ -18,12 +18,11 @@ function FoldText()
     let foldsize = (v:foldend-v:foldstart)
     let foldline = getline(v:foldstart)
     let foldline = substitute(foldline, '% ', "", "")
-"    let foldline = substitute(foldline, '>>>> ', "  >>>> ", "")
     let foldline = substitute(foldline, ',.*', "", "")
     let foldline = substitute(foldline, '^.*{', " --> ", "")
     let text = foldline.foldsize.'line     '
     let fillcharcount = windowwidth - strdisplaywidth(text)
-    return foldline.'  '.repeat(" ",fillcharcount).'  ('.foldsize.' lines)'
+    return foldline.'  '.repeat(".",fillcharcount).'  ('.foldsize.' lines)'
 endfunction
 
 setlocal spell spelllang=en_gb

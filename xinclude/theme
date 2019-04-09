@@ -1,18 +1,18 @@
-! brogrammer
+! gruvbox
 ! vim:ft=xdefaults
-#define cwhtd #1f1f1f
-#define cwhtl #1f1f1f
-#define credd #f81118
-#define credl #f81118
-#define cgrnd #2dc55e
-#define cgrnl #1dd361
-#define cylwd #ecba0f
-#define cylwl #f3bd09
-#define cblud #4e5ab7
-#define cblul #5350b9
-#define cgntd #2a84d2
-#define cgntl #1081d6
-#define ccynd #21b8c7
-#define ccynl #21b8c7
-#define cblkl #b2b2b2
-#define cblkd #ffffff
+#define cwhtd #282828
+#define cwhtl #282828
+#define credd #cc241d
+#define credl #cc241d
+#define cgrnd #98971a
+#define cgrnl #98971a
+#define cylwd #d79921
+#define cylwl #d79921
+#define cblud #689d6a
+#define cblul #689d6a
+#define cgntd #b16286
+#define cgntl #b16286
+#define ccynd #458588
+#define ccynl #458588
+#define cblkd #ebdbb2
+#define cblkl #8d836a
