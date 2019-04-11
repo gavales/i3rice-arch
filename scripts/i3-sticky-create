@@ -4,6 +4,8 @@ stkpar=$1
 declare -i stkchl=1
 marks=$(i3-msg -t get_marks)
 
+urxvtc
+
 if [[ $marks != *"_sticky_$stkpar"* ]]; then
 	markfoc="i3-msg [con_id=__focused__] mark _sticky_$stkpar"
 	echo True

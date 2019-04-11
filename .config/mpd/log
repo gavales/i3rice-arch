@@ -17529,3 +17529,240 @@ Apr 09 15:53 : client: [22] opened from [::1]:41082
 Apr 09 15:53 : client: [22] closed
 Apr 09 15:53 : client: [23] opened from [::1]:41084
 Apr 09 15:53 : client: [23] closed
+Apr 09 17:41 : client: [24] opened from [::1]:42148
+Apr 09 17:41 : client: [24] closed
+Apr 09 17:41 : client: [25] opened from [::1]:42150
+Apr 09 17:41 : client: [25] closed
+Apr 09 17:41 : client: [26] opened from [::1]:42152
+Apr 09 17:41 : client: [26] closed
+Apr 09 17:41 : client: [27] opened from [::1]:42154
+Apr 09 17:41 : client: [27] closed
+Apr 09 17:42 : client: [15] closed
+Apr 09 17:42 : player: played "Leo Moracchioli/Baby Boy (Feat. Lillian).mp3"
+Apr 09 17:42 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 09 17:42 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 09 17:42 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Apr 09 17:43 : client: [0] opened from [::1]:55978
+Apr 09 17:48 : client: [1] opened from [::1]:56342
+Apr 09 17:48 : client: [1] closed
+Apr 09 17:48 : client: [2] opened from [::1]:56344
+Apr 09 17:48 : client: [2] closed
+Apr 09 17:50 : client: [3] opened from [::1]:56350
+Apr 09 17:50 : client: [3] closed
+Apr 09 17:50 : client: [4] opened from [::1]:56352
+Apr 09 17:50 : client: [4] closed
+Apr 09 17:56 : client: [5] opened from [::1]:56442
+Apr 09 17:56 : client: [5] closed
+Apr 09 17:56 : client: [6] opened from [::1]:56444
+Apr 09 17:56 : client: [6] closed
+Apr 09 18:01 : client: [0] closed
+Apr 09 18:01 : client: [7] opened from [::1]:56612
+Apr 09 18:01 : client: [7] closed
+Apr 09 18:01 : client: [8] opened from [::1]:56614
+Apr 09 18:01 : client: [8] closed
+Apr 09 18:02 : client: [9] opened from [::1]:56616
+Apr 09 18:02 : client: [9] closed
+Apr 09 18:02 : client: [10] opened from [::1]:56618
+Apr 09 18:02 : client: [10] closed
+Apr 09 18:02 : client: [11] opened from [::1]:56620
+Apr 09 18:02 : client: [11] closed
+Apr 09 18:02 : client: [12] opened from [::1]:56622
+Apr 09 18:02 : client: [12] closed
+Apr 09 18:02 : client: [13] opened from [::1]:56624
+Apr 09 18:02 : client: [13] closed
+Apr 09 18:02 : client: [14] opened from [::1]:56626
+Apr 09 18:02 : client: [14] closed
+Apr 09 18:03 : client: [15] opened from [::1]:56630
+Apr 09 18:03 : client: [15] closed
+Apr 09 18:03 : client: [16] opened from [::1]:56632
+Apr 09 18:03 : client: [16] closed
+Apr 09 18:09 : client: [17] opened from [::1]:57296
+Apr 09 18:09 : client: [17] closed
+Apr 09 18:09 : client: [18] opened from [::1]:57298
+Apr 09 18:09 : client: [18] closed
+Apr 09 18:11 : player: played "Leo Moracchioli/Baby Boy (Feat. Lillian).mp3"
+Apr 09 18:11 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 09 18:11 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 09 18:11 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Apr 09 18:11 : client: [0] opened from [::1]:41798
+Apr 09 18:12 : client: [1] opened from [::1]:41902
+Apr 09 18:12 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 09 18:12 : client: [1] closed
+Apr 09 18:12 : client: [2] opened from [::1]:41904
+Apr 09 18:12 : client: [2] closed
+Apr 09 18:12 : client: [3] opened from [::1]:41906
+Apr 09 18:12 : client: [3] closed
+Apr 09 18:12 : client: [4] opened from [::1]:41908
+Apr 09 18:12 : client: [4] closed
+Apr 09 18:12 : client: [5] opened from [::1]:41910
+Apr 09 18:12 : client: [5] closed
+Apr 09 18:12 : client: [6] opened from [::1]:41912
+Apr 09 18:12 : client: [6] closed
+Apr 09 18:43 : client: [7] opened from [::1]:42304
+Apr 09 18:43 : client: [7] closed
+Apr 09 18:43 : client: [8] opened from [::1]:42306
+Apr 09 18:43 : client: [8] closed
+Apr 09 18:44 : client: [9] opened from [::1]:42308
+Apr 09 18:44 : client: [9] closed
+Apr 09 18:44 : client: [10] opened from [::1]:42310
+Apr 09 18:44 : client: [10] closed
+Apr 09 18:45 : client: [11] opened from [::1]:42324
+Apr 09 18:45 : client: [11] closed
+Apr 09 18:45 : client: [12] opened from [::1]:42326
+Apr 09 18:45 : client: [12] closed
+Apr 09 18:46 : client: [13] opened from [::1]:42336
+Apr 09 18:46 : client: [13] closed
+Apr 09 18:46 : client: [14] opened from [::1]:42338
+Apr 09 18:46 : client: [14] closed
+Apr 09 18:56 : client: [15] opened from [::1]:42378
+Apr 09 18:56 : client: [15] closed
+Apr 09 18:56 : client: [16] opened from [::1]:42380
+Apr 09 18:56 : client: [16] closed
+Apr 09 19:07 : client: [17] opened from [::1]:42402
+Apr 09 19:07 : client: [17] closed
+Apr 09 19:07 : client: [18] opened from [::1]:42404
+Apr 09 19:07 : client: [18] closed
+Apr 09 19:11 : client: [0] closed
+Apr 09 19:12 : player: played "Leo Moracchioli/Baby Boy (Feat. Lillian).mp3"
+Apr 09 19:12 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 09 19:12 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 09 19:12 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Apr 09 19:12 : client: [0] opened from [::1]:40010
+Apr 09 19:15 : client: [1] opened from [::1]:40180
+Apr 09 19:15 : client: [1] closed
+Apr 09 19:15 : client: [2] opened from [::1]:40182
+Apr 09 19:15 : client: [2] closed
+Apr 09 19:15 : client: [3] opened from [::1]:40184
+Apr 09 19:15 : client: [3] closed
+Apr 09 19:15 : client: [4] opened from [::1]:40186
+Apr 09 19:15 : client: [4] closed
+Apr 09 19:19 : client: [5] opened from [::1]:40218
+Apr 09 19:19 : client: [5] closed
+Apr 09 19:19 : client: [6] opened from [::1]:40220
+Apr 09 19:19 : client: [6] closed
+Apr 09 19:19 : client: [7] opened from [::1]:40222
+Apr 09 19:19 : client: [7] closed
+Apr 09 19:19 : client: [8] opened from [::1]:40224
+Apr 09 19:19 : client: [8] closed
+Apr 09 19:20 : client: [9] opened from [::1]:40226
+Apr 09 19:20 : client: [9] closed
+Apr 09 19:20 : client: [10] opened from [::1]:40228
+Apr 09 19:20 : client: [10] closed
+Apr 09 19:20 : client: [11] opened from [::1]:40230
+Apr 09 19:20 : client: [11] closed
+Apr 09 19:20 : client: [12] opened from [::1]:40232
+Apr 09 19:20 : client: [12] closed
+Apr 09 19:21 : client: [13] opened from [::1]:40238
+Apr 09 19:21 : client: [13] closed
+Apr 09 19:21 : client: [14] opened from [::1]:40240
+Apr 09 19:21 : client: [14] closed
+Apr 09 19:22 : client: [15] opened from [::1]:40244
+Apr 09 19:22 : client: [15] closed
+Apr 09 19:22 : client: [16] opened from [::1]:40246
+Apr 09 19:22 : client: [16] closed
+Apr 09 19:34 : client: [17] opened from [::1]:40344
+Apr 09 19:34 : client: [17] closed
+Apr 09 19:34 : client: [18] opened from [::1]:40346
+Apr 09 19:34 : client: [18] closed
+Apr 09 19:34 : client: [19] opened from [::1]:40348
+Apr 09 19:34 : client: [19] closed
+Apr 09 19:34 : client: [20] opened from [::1]:40350
+Apr 09 19:34 : client: [20] closed
+Apr 11 13:03 : client: [0] closed
+Apr 11 13:03 : client: [21] opened from [::1]:46534
+Apr 11 13:03 : client: [21] closed
+Apr 11 13:03 : client: [22] opened from [::1]:46536
+Apr 11 13:03 : client: [22] closed
+Apr 11 13:03 : client: [23] opened from [::1]:46538
+Apr 11 13:03 : client: [23] closed
+Apr 11 13:03 : client: [24] opened from [::1]:46540
+Apr 11 13:03 : client: [24] closed
+Apr 11 13:04 : client: [25] opened from [::1]:46544
+Apr 11 13:04 : client: [25] closed
+Apr 11 13:04 : client: [26] opened from [::1]:46546
+Apr 11 13:04 : client: [26] closed
+Apr 11 13:04 : client: [27] opened from [::1]:46548
+Apr 11 13:04 : client: [27] closed
+Apr 11 13:04 : client: [28] opened from [::1]:46550
+Apr 11 13:04 : client: [28] closed
+Apr 11 13:09 : client: [29] opened from [::1]:46578
+Apr 11 13:09 : client: [29] closed
+Apr 11 13:09 : client: [30] opened from [::1]:46580
+Apr 11 13:09 : client: [30] closed
+Apr 11 13:10 : client: [31] opened from [::1]:46582
+Apr 11 13:10 : client: [31] closed
+Apr 11 13:10 : client: [32] opened from [::1]:46584
+Apr 11 13:10 : client: [32] closed
+Apr 11 13:13 : client: [33] opened from [::1]:46588
+Apr 11 13:13 : client: [33] closed
+Apr 11 13:13 : client: [34] opened from [::1]:46590
+Apr 11 13:13 : client: [34] closed
+Apr 11 16:26 : client: [35] opened from [::1]:47094
+Apr 11 17:24 : client: [35] closed
+Apr 11 18:34 : client: [36] opened from [::1]:47918
+Apr 11 18:34 : client: [36] closed
+Apr 11 18:34 : client: [37] opened from [::1]:47920
+Apr 11 18:34 : client: [37] closed
+Apr 11 18:34 : client: [38] opened from [::1]:47922
+Apr 11 18:34 : client: [38] closed
+Apr 11 18:34 : client: [39] opened from [::1]:47924
+Apr 11 18:34 : client: [39] closed
+Apr 11 18:34 : client: [40] opened from [::1]:47930
+Apr 11 18:34 : client: [40] closed
+Apr 11 18:34 : client: [41] opened from [::1]:47932
+Apr 11 18:34 : client: [41] closed
+Apr 11 18:35 : client: [42] opened from [::1]:47934
+Apr 11 18:35 : client: [42] closed
+Apr 11 18:35 : client: [43] opened from [::1]:47936
+Apr 11 18:35 : client: [43] closed
+Apr 11 18:35 : client: [44] opened from [::1]:47938
+Apr 11 18:35 : client: [44] closed
+Apr 11 18:35 : client: [45] opened from [::1]:47940
+Apr 11 18:35 : client: [45] closed
+Apr 11 18:40 : client: [46] opened from [::1]:47954
+Apr 11 18:40 : client: [46] closed
+Apr 11 18:40 : client: [47] opened from [::1]:47956
+Apr 11 18:40 : client: [47] closed
+Apr 11 18:40 : client: [48] opened from [::1]:47960
+Apr 11 18:40 : client: [48] closed
+Apr 11 18:40 : client: [49] opened from [::1]:47962
+Apr 11 18:40 : client: [49] closed
+Apr 11 18:47 : client: [50] opened from [::1]:48494
+Apr 11 18:47 : client: [50] closed
+Apr 11 18:47 : client: [51] opened from [::1]:48496
+Apr 11 18:47 : client: [51] closed
+Apr 11 18:47 : client: [52] opened from [::1]:48498
+Apr 11 18:47 : client: [52] closed
+Apr 11 18:47 : client: [53] opened from [::1]:48500
+Apr 11 18:47 : client: [53] closed
+Apr 11 18:48 : client: [54] opened from [::1]:48502
+Apr 11 18:48 : client: [54] closed
+Apr 11 18:48 : client: [55] opened from [::1]:48504
+Apr 11 18:48 : client: [55] closed
+Apr 11 18:48 : client: [56] opened from [::1]:48506
+Apr 11 18:48 : client: [56] closed
+Apr 11 18:48 : client: [57] opened from [::1]:48508
+Apr 11 18:48 : client: [57] closed
+Apr 11 18:48 : client: [58] opened from [::1]:48510
+Apr 11 19:02 : client: [59] opened from [::1]:48566
+Apr 11 19:02 : client: [59] closed
+Apr 11 19:02 : client: [60] opened from [::1]:48568
+Apr 11 19:02 : client: [60] closed
+Apr 11 19:02 : client: [61] opened from [::1]:48570
+Apr 11 19:02 : client: [61] closed
+Apr 11 19:02 : client: [62] opened from [::1]:48572
+Apr 11 19:02 : client: [62] closed
+Apr 11 19:04 : client: [58] closed
+Apr 11 19:04 : client: [63] opened from [::1]:48584
+Apr 11 19:04 : client: [63] closed
+Apr 11 19:04 : client: [64] opened from [::1]:48586
+Apr 11 19:04 : client: [64] closed
+Apr 11 19:04 : client: [65] opened from [::1]:48588
+Apr 11 19:04 : client: [65] closed
+Apr 11 19:04 : client: [66] opened from [::1]:48590
+Apr 11 19:04 : client: [66] closed
+Apr 11 19:04 : client: [67] opened from [::1]:48592
+Apr 11 19:04 : client: [67] closed
+Apr 11 19:04 : client: [68] opened from [::1]:48594
+Apr 11 19:04 : client: [68] closed
+Apr 11 19:04 : client: [69] opened from [::1]:48596

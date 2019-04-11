@@ -12,7 +12,7 @@ URxvt*saveLines:			5000
 URxvt*useColor:				true
 URxvt*internalBorder:		10
 URxvt.letterSpace:			1
-URxvt.lineSpace:			2
+URxvt.lineSpace:			3
 
 !! for 'fake' transparency (without Compton) uncomment the following three lines
 !URxvt*inheritPixmap:		true

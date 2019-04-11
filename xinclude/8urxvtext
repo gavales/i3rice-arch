@@ -1,14 +1,14 @@
 
-URxvt*perl-ext-common: default,matcher,resize-font,config-reload
-!URxvt*perl-lib: /home/gavarch/.urxvt/ext
-URxvt*url-launcher:	/usr/bin/google-chrome-beta
-URxvt*matcher.button: 1
-! URxvt*keysym.C-y: clipboard:copy
-! URxvt*keysym.C-a: clipboard:paste
-URxvt*keysym.C-I: resize-font:smaller
-URxvt*keysym.C-U: resize-font:bigger
-URxvt*keysym.C-Y: resize-font:reset
-! URxvt*tabbed.autohide: true
-! URxvt*keysym.C-t: perl:tabbedex:new_tab
-! URxvt*keysym.C-Tab: perl:tabbedex:next_tab
-! URxvt*keysym.C-Shift-Tab: perl:tabbedex:prev_tab
+URxvt*perl-ext-common:		default,matcher,resize-font,config-reload
+!URxvt*perl-lib:			/home/gavarch/.urxvt/ext
+URxvt*url-launcher:			/usr/bin/google-chrome-beta
+URxvt*matcher.button:		1
+! URxvt*keysym.C-y:			clipboard:copy
+! URxvt*keysym.C-a:			clipboard:paste
+URxvt*keysym.C-I:			resize-font:smaller
+URxvt*keysym.C-U:			resize-font:bigger
+URxvt*keysym.C-Y:			resize-font:reset
+! URxvt*tabbed.autohide:	true
+! URxvt*keysym.C-t:			perl:tabbedex:new_tab
+! URxvt*keysym.C-Tab:		perl:tabbedex:next_tab
+! URxvt*keysym.C-Shift-Tab:	perl:tabbedex:prev_tab

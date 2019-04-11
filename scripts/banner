@@ -31,11 +31,7 @@ help () {
 	echo "				k -- smkeyboard"
 }
 
-if [[ $1 == "-h" ]]; then
-	help
-fi
-
-while getopts :h:s:b:i:l:r:m:t:f:k:d: opts; do
+while getopts :hsbilrmtfkdh: opts; do
 	case "$opts" in
 		s)
 		fnt="-f slant"
@@ -84,6 +80,9 @@ while getopts :h:s:b:i:l:r:m:t:f:k:d: opts; do
 		fnt="-f 3-d"
 		echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c | \
 			sed $'s/\*/\u2588/g;s/\//\u2592/g')"
+		;;
+		h)
+		help
 		;;
 	esac
 done

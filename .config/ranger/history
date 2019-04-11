@@ -1,7 +1,3 @@
-shell sudo make install
-shell ./%f
-shell wget https://raw.githubusercontent.com/ControlEverythingCommunity/MS5803-14BA/master/Python/MS5803_14BA.py
-rename ahrs-parser.py
 shell git clone https://github.com/StillANixRookie/lily-pad.git
 shell processing %f
 rename projectlogo.png
@@ -48,3 +44,7 @@ rename aim
 rename pb
 shell bash ~/scr/opengvim
 shell bash ~/scr/opengvim %f
+search pres
+shell fnteditfs %f
+search presti
+shell fontforge %f
