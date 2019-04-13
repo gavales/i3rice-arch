@@ -1,6 +1,6 @@
 ! gruvbox
 ! vim:ft=xdefaults
-#define cwhtd #282828
+#define cwhtd #d3af55
 #define cwhtl #282828
 #define credd #cc241d
 #define credl #cc241d
@@ -15,4 +15,4 @@
 #define ccynd #458588
 #define ccynl #458588
 #define cblkd #ebdbb2
-#define cblkl #8d836a
+#define cblkl #a4c4a5

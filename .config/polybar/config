@@ -10,8 +10,7 @@
 [colors]
 bkd = ${xrdb:color0}
 bkl = ${xrdb:color8}
-wtd = ${xrdb:color7}
-;wtd = ${xrdb:color7}
+wtd = ${xrdb:color15}
 ylw = ${xrdb:color3}
 gnt = ${xrdb:color5}
 red = ${xrdb:color1}

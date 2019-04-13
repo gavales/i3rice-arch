@@ -1,18 +1,18 @@
 ! paper
 ! vim:ft=xdefaults
-#define cwhtd #EDEDED
+#define cwhtd #525252
 #define cwhtl #EDEDED
-#define credd #4271AE
-#define credl #4271AE
+#define credd #D7005F
+#define credl #D7005F
 #define cgrnd #718C00
 #define cgrnl #718C00
-#define cylwd #D75F00
-#define cylwl #D75F00
-#define cblud #D7005F
-#define cblul #D7005F
+#define cylwd #4271AE
+#define cylwl #4271AE
+#define cblud #D75F00
+#define cblul #D75F00
 #define cgntd #8959A8
 #define cgntl #8959A8
 #define ccynd #3E999F
 #define ccynl #3E999F
 #define cblkd #353535
-#define cblkl #717171
+#define cblkl #3a1a00

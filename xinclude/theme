@@ -1,18 +1,18 @@
-! brogrammer
+! tmreighties
 ! vim:ft=xdefaults
-#define cwhtd #1f1f1f
-#define cwhtl #1f1f1f
-#define credd #f81118
-#define credl #f81118
-#define cgrnd #2dc55e
-#define cgrnl #1dd361
-#define cylwd #ecba0f
-#define cylwl #f3bd09
-#define cblud #4e5ab7
-#define cblul #5350b9
-#define cgntd #2a84d2
-#define cgntl #1081d6
-#define ccynd #21b8c7
-#define ccynl #21b8c7
-#define cblkl #b2b2b2
-#define cblkd #ffffff
+#define cblkd #2d2d2d
+#define cblkl #914749
+#define credd #6699cc
+#define credl #6699cc
+#define cgrnd #99cc99
+#define cgrnl #99cc99
+#define cylwd #ffcc66
+#define cylwl #ffcc66
+#define cblud #f2777a
+#define cblul #f2777a
+#define cgntd #cc99cc
+#define cgntl #cc99cc
+#define ccynd #66cccc
+#define ccynl #66cccc
+#define cwhtd #545454
+#define cwhtl #cccccc

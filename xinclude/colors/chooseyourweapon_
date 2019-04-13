@@ -1,6 +1,6 @@
 ! chooseyourweapon
 ! vim:ft=xdefaults
-#define cwhtd #282828
+#define cwhtd #ceca7e
 #define cwhtl #282828
 #define credd #008ba5
 #define credl #008ba5
@@ -15,4 +15,4 @@
 #define ccynd #007d62
 #define ccynl #007d62
 #define cblkd #f4f3e2
-#define cblkl #aaaa9e
+#define cblkl #f9c9e1

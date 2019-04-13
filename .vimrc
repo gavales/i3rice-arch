@@ -74,24 +74,25 @@ hi Normal ctermfg=white ctermbg=none
 hi Title cterm=bold ctermfg=white ctermbg=none
 hi StatusLineTerm ctermfg=black ctermbg=green
 hi StatusLineTermNC ctermfg=white ctermbg=green
-hi LineNr cterm=none ctermfg=DarkGray ctermbg=none
+hi LineNr cterm=none ctermfg=blue ctermbg=none
+hi CursorLineNr cterm=bold ctermfg=red ctermbg=DarkGray
 hi SpecialKey ctermfg=DarkGray ctermbg=none
 hi ModeMsg cterm=bold ctermfg=white
 hi Cursor ctermfg=black ctermbg=blue
 hi ColorColumn ctermfg=black ctermbg=blue
-hi CursorLine cterm=underline ctermbg=none
+hi CursorLine cterm=none ctermbg=DarkGray
 hi Visual ctermfg=blue ctermbg=black
 hi VisualNOS ctermfg=blue ctermbg=black
 
 hi Type cterm=bold ctermfg=white ctermbg=black
 hi Identifier cterm=italic ctermfg=yellow ctermbg=black
-hi Comment cterm=italic ctermfg=DarkGray ctermbg=black
-hi Folded cterm=italic ctermfg=DarkGray ctermbg=black
+hi Comment cterm=italic ctermfg=Gray ctermbg=black
+hi Folded cterm=italic ctermfg=blue ctermbg=black
 hi Constant cterm=italic ctermfg=white ctermbg=black
 hi Special cterm=bold ctermfg=white ctermbg=black
-hi Statement cterm=none ctermfg=white ctermbg=black
-hi PreProc cterm=none ctermfg=blue ctermbg=black
-hi MatchParen cterm=bold ctermfg=yellow ctermbg=black
+hi Statement cterm=bold ctermfg=white ctermbg=black
+hi PreProc cterm=bold ctermfg=blue ctermbg=black
+hi MatchParen cterm=bold ctermfg=yellow 
 hi Search cterm=none ctermfg=black ctermbg=yellow
 hi Error cterm=none ctermfg=red ctermbg=black
 hi EndOfBuffer cterm=none ctermfg=black ctermbg=black
@@ -121,7 +122,6 @@ hi User6 ctermbg=magenta ctermfg=black
 "hi ErrorMsg       Normal
 "hi IncSearch      Normal
 "hi MoreMsg        Normal
-"hi CursorLineNr   Normal
 "hi Question       Normal
 "hi StatusLine     Normal
 "hi StatusLineNC   Normal

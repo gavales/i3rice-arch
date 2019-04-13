@@ -1,6 +1,6 @@
 ! city-lights
 ! vim:ft=xdefaults
-#define cwhtd #181e24
+#define cwhtd #a3a3a3
 #define cwhtl #181e24
 #define credd #539afc
 #define credl #539afc
@@ -15,4 +15,4 @@
 #define ccynd #70e1e8
 #define ccynl #70e1e8
 #define cblkd #ffffff
-#define cblkl #b2b2b2
+#define cblkl #f6d4d9

@@ -1,6 +1,6 @@
 ! one
 ! vim:ft=xdefaults
-#define cwhtd #1E2127
+#define cwhtd #adadad
 #define cwhtl #1E2127
 #define credd #E06C75
 #define credl #E06C75
@@ -15,4 +15,4 @@
 #define ccynd #56B6C2
 #define ccynl #56B6C2
 #define cblkd #FFFFFF
-#define cblkl #b2b2b2
+#define cblkl #deeefc

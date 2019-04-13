@@ -1,7 +1,7 @@
 ! brogrammer
 ! vim:ft=xdefaults
 #define cblkd #1f1f1f
-#define cblkl #4b4b4b
+#define cblkl #1e234a
 #define credd #f81118
 #define credl #f81118
 #define cgrnd #2dc55e
@@ -15,4 +15,4 @@
 #define ccynd #21b8c7
 #define ccynl #21b8c7
 #define cwhtl #ffffff
-#define cwhtd #ffffff
+#define cwhtd #5a5a5a

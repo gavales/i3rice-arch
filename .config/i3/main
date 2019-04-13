@@ -55,7 +55,7 @@ set_from_resource $ylw	color3
 set_from_resource $blu	color4
 set_from_resource $gnt	color5
 set_from_resource $cyn	color6
-set_from_resource $wht	color7
+set_from_resource $wht	color15
 set_from_resource $gry	color8
 set $t ff
 

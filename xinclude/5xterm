@@ -1,10 +1,9 @@
 
-XTerm*background:			cwhtd
+XTerm*background:			cwhtl
 XTerm*foreground:			cblkd
 ! XTerm*pointerColor:		ccynd
-XTerm*faceName:				JMH Typewriter Mono
+XTerm*faceName:				iosevka
 XTerm*faceSize:				16
 ! XTerm*reverseVideo:		on
-!XTerm*faceName:			FixedsysMono=11:antialias=true
 XTerm*selectToClipboard:	true
 

@@ -1,18 +1,18 @@
 ! tmreighties
 ! vim:ft=xdefaults
-#define cwhtd #2d2d2d
+#define cwhtd #a3a3a3
 #define cwhtl #2d2d2d
-#define credd #f2777a
-#define credl #f2777a
+#define credd #6699cc
+#define credl #6699cc
 #define cgrnd #99cc99
 #define cgrnl #99cc99
 #define cylwd #ffcc66
 #define cylwl #ffcc66
-#define cblud #6699cc
-#define cblul #6699cc
+#define cblud #f2777a
+#define cblul #f2777a
 #define cgntd #cc99cc
 #define cgntl #cc99cc
 #define ccynd #66cccc
 #define ccynl #66cccc
 #define cblkd #ffffff
-#define cblkl #b2b2b2
+#define cblkl #f9c8c9

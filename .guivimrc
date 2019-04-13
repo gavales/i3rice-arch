@@ -1,5 +1,5 @@
 "set guifont=Ubuntu\ Mono\ Regular:h20
-set guifont=monaco\ 15
+set guifont=Iosevka\ 15
 set guioptions-=m "remove menu bar
 set guioptions-=T "remove toolbar
 set guioptions-=r "remove right-hand scroll bar
@@ -9,44 +9,45 @@ set linespace=5
 "set lines=999 columns=999
 "au GUIEnter * simalt ~x
 
-hi Normal guifg=#1f1f1f guibg=#ffffff
-hi Title gui=bold guifg=#1f1f1f guibg=#ffffff
-hi StatusLineTerm guifg=#ffffff guibg=#2dc55e
-hi StatusLineTermNC guifg=#1f1f1f guibg=#2dc55e
-hi LineNr gui=none guifg=#b2b2b2 guibg=#ffffff
-hi SpecialKey guifg=#b2b2b2 guibg=#ffffff
-hi ModeMsg gui=bold guifg=#1f1f1f
-hi Cursor guifg=#ffffff guibg=#4e5ab7
-hi ColorColumn guifg=#ffffff guibg=#4e5ab7
-hi CursorLine gui=underline guibg=#ffffff
-hi Visual guifg=#ffffff guibg=#4e5ab7
-hi VisualNOS guifg=#ffffff guibg=#4e5ab7
-hi Type  gui=bold guifg=#1f1f1f guibg=#ffffff
-hi Identifier gui=italic guifg=#ecba0f guibg=#ffffff
-hi Comment gui=italic guifg=#b2b2b2 guibg=#ffffff
-hi Folded gui=italic guifg=#b2b2b2 guibg=#ffffff
-hi Constant gui=italic guifg=#1f1f1f guibg=#ffffff
-hi Special gui=none guifg=#1f1f1f guibg=#ffffff
-hi Statement gui=none guifg=#1f1f1f guibg=#ffffff
-hi PreProc gui=none guifg=#4e5ab7 guibg=#ffffff
-hi MatchParen gui=bold guifg=#ecba0f guibg=#ffffff
-hi Search gui=none guifg=#ffffff guibg=#ecba0f
-hi Error gui=none guifg=#f81118 guibg=#ffffff
-hi EndOfBuffer guifg=#ffffff guibg=#ffffff
-hi SpellBad gui=underline,bold guifg=#f81118 guibg=#ffffff
-hi SpellCap gui=underline,bold guifg=#4e5ab7 guibg=#ffffff
-hi SpellRare gui=underline,bold guifg=#2a84d2 guibg=#ffffff
-hi SpellLocal gui=underline,bold guifg=#21b8c7 guibg=#ffffff
-hi Pmenu gui=none guifg=#4e5ab7 guibg=#1f1f1f
-hi PmenuSel gui=none guifg=#ffffff guibg=#4e5ab7
-hi PmenuSbar gui=none guifg=#4e5ab7 guibg=#ffffff
-hi PmenuThumb gui=none guifg=#2dc55e guibg=#2dc55e
-hi TabLine gui=none guifg=#4e5ab7 guibg=#ffffff
-hi TabLineSel gui=none guifg=#ffffff guibg=#4e5ab7
-hi TabLineFill gui=none guifg=#4e5ab7 guibg=#ffffff
-hi User1 guibg=#f81118 guifg=#ffffff
-hi User2 guibg=#ecba0f guifg=#ffffff
-hi User3 guibg=#2dc55e guifg=#ffffff
-hi User4 guibg=grey guifg=#ffffff
-hi User5 guibg=#4e5ab7 guifg=#ffffff
-hi User6 guibg=#2a84d2 guifg=#ffffff
+hi Normal guifg=#cccccc guibg=#2d2d2d
+hi Title gui=bold guifg=#cccccc guibg=#2d2d2d
+hi StatusLineTerm guifg=#2d2d2d guibg=#99cc99
+hi StatusLineTermNC guifg=#cccccc guibg=#99cc99
+hi LineNr gui=none guifg=#545454 guibg=#2d2d2d
+hi CursorLineNr gui=bold guifg=#6699cc guibg=#914749
+hi SpecialKey guifg=#914749 guibg=#2d2d2d
+hi ModeMsg gui=bold guifg=#cccccc
+hi Cursor guifg=#2d2d2d guibg=#f2777a
+hi ColorColumn guifg=#2d2d2d guibg=#f2777a
+hi CursorLine gui=none guibg=#914749
+hi Visual guifg=#2d2d2d guibg=#f2777a
+hi VisualNOS guifg=#2d2d2d guibg=#f2777a
+hi Type gui=bold guifg=#cccccc guibg=#2d2d2d
+hi Identifier gui=italic guifg=#ffcc66 guibg=#2d2d2d
+hi Comment gui=italic guifg=#545454 guibg=#2d2d2d
+hi Folded gui=italic guifg=#545454 guibg=#2d2d2d
+hi Constant gui=italic guifg=#cccccc guibg=#2d2d2d
+hi Special gui=bold guifg=#cccccc guibg=#2d2d2d
+hi Statement gui=bold guifg=#cccccc guibg=#2d2d2d
+hi PreProc gui=none guifg=#f2777a guibg=#2d2d2d
+hi MatchParen gui=bold guifg=#ffcc66 guibg=#2d2d2d
+hi Search gui=none guifg=#2d2d2d guibg=#ffcc66
+hi Error gui=none guifg=#6699cc guibg=#2d2d2d
+hi EndOfBuffer gui=none guifg=#2d2d2d guibg=#2d2d2d
+hi SpellBad gui=underline,bold guifg=#6699cc guibg=#2d2d2d
+hi SpellCap gui=underline,bold guifg=#f2777a guibg=#2d2d2d
+hi SpellRare gui=underline,bold guifg=#cc99cc guibg=#2d2d2d
+hi SpellLocal gui=underline,bold guifg=#66cccc guibg=#2d2d2d
+hi Pmenu gui=none guifg=#f2777a guibg=#cccccc
+hi PmenuSel gui=none guifg=#2d2d2d guibg=#f2777a
+hi PmenuSbar gui=none guifg=#f2777a guibg=#2d2d2d
+hi PmenuThumb gui=none guifg=#99cc99 guibg=#99cc99
+hi TabLine gui=none guifg=#f2777a guibg=#2d2d2d
+hi TabLineSel gui=none guifg=#2d2d2d guibg=#f2777a
+hi TabLineFill gui=none guifg=#f2777a guibg=#2d2d2d
+hi User1 guibg=#6699cc guifg=#2d2d2d
+hi User2 guibg=#ffcc66 guifg=#2d2d2d
+hi User3 guibg=#99cc99 guifg=#2d2d2d
+hi User4 guibg=#914749 guifg=#2d2d2d
+hi User5 guibg=#f2777a guifg=#2d2d2d
+hi User6 guibg=#cc99cc guifg=#2d2d2d
