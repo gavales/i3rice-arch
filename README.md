@@ -4,14 +4,6 @@
 
 ![Workspace 1](ws1.png "Workspace 1")
 
-![Workspace 2](ws2.png "Workspace 2")
-
-![Workspace 3](ws3.png "Workspace 3")
-
-![Workspace 4](ws4.png "Workspace 4")
-
-![Workspace 5](ws5.png "Workspace 5")
-
 # Main Install
 
 First check UEFI:
