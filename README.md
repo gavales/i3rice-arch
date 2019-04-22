@@ -6,6 +6,8 @@
 
 ![Scrot 2](ws2.png "Scrot 2")
 
+![Scrot 3](ws3.png "Scrot 3")
+
 # Main Install
 
 First check UEFI:
