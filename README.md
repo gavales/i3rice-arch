@@ -2,7 +2,9 @@
 
 # Scrots
 
-![Workspace 1](ws1.png "Workspace 1")
+![Scrot 1](ws1.png "Scrot 1")
+
+![Scrot 2](ws2.png "Scrot 2")
 
 # Main Install
 
