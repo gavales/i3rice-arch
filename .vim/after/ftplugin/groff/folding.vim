@@ -37,5 +37,5 @@ endfunction
 setlocal updatetime=500
 setlocal spell spelllang=en_gb
 setlocal nonumber norelativenumber laststatus=0
-autocmd CursorHold,CursorHoldI * silent !bash ~/scripts/cgroff % &
+autocmd CursorHold,CursorHoldI * silent !bash ~/scr/cgroff % &
 setlocal textwidth=80

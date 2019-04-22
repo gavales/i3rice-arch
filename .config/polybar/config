@@ -71,7 +71,7 @@ tray-padding = 1
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-modules-left = powermenu shot td ws
+modules-left = td ws shot
 modules-center = xwindow
 modules-right = media disk memory cpu temperature xkeyboard backlight pulseaudio battery
 
@@ -113,13 +113,14 @@ menu-2-1-exec = menu-open-0
 type = custom/script
 exec = echo %{T1}%{T-}
 click-left = ~/scr/screenshot
-format-foreground = ${colors.wtd}
 interval = 1
 
 [module/td]
 type = custom/script
 exec = bash ~/scr/pb/td
+format-background = ${colors.bkd}
 format-foreground = ${colors.wtd}
+format-padding = 1
 interval = 1
 
 [module/ws]
@@ -129,16 +130,20 @@ initial = 1
 click-left = i3-msg workspace back_and_forth
 scroll-up = i3-msg workspace next
 scroll-down = i3-msg workspace prev
+;format-background = ${colors.bkd}
+;format-foreground = ${colors.blu}
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
+label = %title:0:40:...%
+format-background = ${colors.bkd}
+format-foreground = ${colors.wtd}
+format-padding = 2
 
 [module/media]
 type = custom/ipc
 hook-0 = ~/scr/pb/media
 initial = 1
-format-foreground = ${colors.wtd}
 click-left = ~/scr/i3media togg
 click-right = ~/scr/i3media stop
 scroll-up = ~/scr/i3media next

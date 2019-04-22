@@ -1,50 +1,50 @@
-shell processing %f
-rename projectlogo.png
-redraw
-shell chmod +x %s
-shell zip k
-shell zip -r Report_LaTex.zip Report_LaTex
-shell touch lotkavolterra.py
-rename emacslight
-rename deepjyotlight
-rename chooseyourweaponlight
-rename citylgts
-rename citylgtslight
-rename deepjyot_
-rename citylgts_
-rename chooseyourweapon_
-rename emacs_
-rename gruvbox
-rename gruvbox_
-rename one_
-rename one
-rename solarized
-rename solarized_
-rename tmreighties_
-rename .gtkrc-2.0.mine
-touch latex.vim
-open_with vim
-rename simple.vim
-rename 2019_03_29_WK26.md
-open_with mupdf
-
-rename .guivimrc
-open_with 1
-open_with 
-rename opengvim
-rename openvim
-rename banner
-rename global_
-shell ~/scripts/bibtorefer %f
-rename atompackages
-wq
-rename vivpat
-rename aim
-rename pb
-shell bash ~/scr/opengvim
-shell bash ~/scr/opengvim %f
-search pres
 shell fnteditfs %f
 search presti
 shell fontforge %f
 search jmh-
+rename GEGA
+rename MEGA
+mkdir MEGA
+rename 
+rename S06E1517 Benderama - Möbius Dick.mkv
+rename S06E1619 Ghost in the Machines - Law and Oracle.mkv
+rename S06E1716 Law and Oracle - Benderama.mkv
+rename S06E1814 The Silence of the Clamps - The Tip of the Zoidberg.mkv
+rename S06E1921 Yo Leela Leela - Ghost in the Machines.mkv
+rename S06E2023 All the Presidents' Heads - Neutopia.mkv
+rename S06E2115 Mobius Dick - Yo Leela Leela.mkv
+rename S06E2318 The Tip of the Zoidberg - All the Presidents' Heads.mkv
+rename S06E1420 Neutopia - The Silence of the Clamps.mkv
+rename S06E20 Neutopia.mkv
+rename S06E17 Benderama.mkv
+rename S06E19 Ghost in the Machines.mkv
+rename S06E16 Law and Oracle.mkv
+rename S06E14 The Silence of the Clamps.mkv
+rename S06E21 Yo Leela Leela.mkv
+rename S06E23 All the Presidents' Heads.mkv
+rename S06E15 Mobius Dick.mkv
+rename S06E18 The Tip of the Zoidberg.mkv
+rename S07E14 2-D Blacktop -  Forty Percent Leadbelly.mkv
+rename S07E14 2-D Blacktop - Forty Percent Leadbelly.mkv
+rename S07E14 Forty Percent Leadbelly - 2-D Blacktop.mkv
+rename 10.jpeg
+shell git
+shell git clone https://github.com/reorr/my-theme-collection.git
+rename moonburn_
+rename moonburn
+rename 4.jpg
+rename 11.jpg
+rename comics
+mkdir urban
+rename 1.jpg
+mkdir weebie
+rename 12.jpg
+rename 4.png
+rename o.jpg
+rename 2.jpg
+rename 13.jpg
+rename 14.jpeg
+rename warmviolet
+rename grad1.jpg
+rename 5.jpg
+rename graininess

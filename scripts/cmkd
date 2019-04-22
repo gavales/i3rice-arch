@@ -76,3 +76,4 @@ elif [[ -z $output ]]; then
 fi
 
 pkill -HUP mupdf
+pkill -HUP surf

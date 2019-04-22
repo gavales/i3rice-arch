@@ -74,12 +74,12 @@ hi Normal ctermfg=white ctermbg=none
 hi Title cterm=bold ctermfg=white ctermbg=none
 hi StatusLineTerm ctermfg=black ctermbg=green
 hi StatusLineTermNC ctermfg=white ctermbg=green
-hi LineNr cterm=none ctermfg=blue ctermbg=none
-hi CursorLineNr cterm=bold ctermfg=red ctermbg=DarkGray
+hi LineNr cterm=none ctermfg=blue ctermbg=black
+hi CursorLineNr cterm=bold ctermfg=blue ctermbg=DarkGray
 hi SpecialKey ctermfg=DarkGray ctermbg=none
 hi ModeMsg cterm=bold ctermfg=white
-hi Cursor ctermfg=black ctermbg=blue
-hi ColorColumn ctermfg=black ctermbg=blue
+hi Cursor ctermfg=black ctermbg=red
+hi ColorColumn cterm=none ctermbg=DarkGray
 hi CursorLine cterm=none ctermbg=DarkGray
 hi Visual ctermfg=blue ctermbg=black
 hi VisualNOS ctermfg=blue ctermbg=black
@@ -87,7 +87,7 @@ hi VisualNOS ctermfg=blue ctermbg=black
 hi Type cterm=bold ctermfg=white ctermbg=black
 hi Identifier cterm=italic ctermfg=yellow ctermbg=black
 hi Comment cterm=italic ctermfg=Gray ctermbg=black
-hi Folded cterm=italic ctermfg=blue ctermbg=black
+hi Folded cterm=italic ctermfg=white ctermbg=black
 hi Constant cterm=italic ctermfg=white ctermbg=black
 hi Special cterm=bold ctermfg=white ctermbg=black
 hi Statement cterm=bold ctermfg=white ctermbg=black
@@ -193,25 +193,27 @@ map \gy :Goyo<bar>
 	\hi Title cterm=bold ctermfg=white ctermbg=none<bar>
 	\hi StatusLineTerm ctermfg=black ctermbg=green<bar>
 	\hi StatusLineTermNC ctermfg=white ctermbg=green<bar>
-	\hi LineNr cterm=none ctermfg=DarkGray ctermbg=none<bar>
+	\hi LineNr cterm=none ctermfg=blue ctermbg=DarkGray<bar>
+	\hi CursorLineNr cterm=bold ctermfg=blue ctermbg=DarkGray<bar>
 	\hi SpecialKey ctermfg=DarkGray ctermbg=none<bar>
 	\hi ModeMsg cterm=bold ctermfg=white<bar>
 	\hi Cursor ctermfg=black ctermbg=blue<bar>
-	\hi ColorColumn ctermfg=black ctermbg=blue<bar>
-	\hi CursorLine cterm=underline ctermbg=none<bar>
-	\hi Error cterm=none ctermfg=red ctermbg=black<bar>
-	\hi Visual ctermfg=black ctermbg=blue<bar>
+	\hi ColorColumn cterm=none ctermbg=DarkGray<bar>
+	\hi CursorLine cterm=none ctermbg=DarkGray<bar>
+	\hi Visual ctermfg=blue ctermbg=black<bar>
 	\hi VisualNOS ctermfg=blue ctermbg=black<bar>
 	\hi Type cterm=bold ctermfg=white ctermbg=black<bar>
 	\hi Identifier cterm=italic ctermfg=yellow ctermbg=black<bar>
-	\hi Comment cterm=italic ctermfg=DarkGray ctermbg=black<bar>
-	\hi Folded cterm=italic ctermfg=DarkGray ctermbg=black<bar>
+	\hi Comment cterm=italic ctermfg=Gray ctermbg=black<bar>
+	\hi Folded cterm=italic ctermfg=white ctermbg=DarkGray<bar>
 	\hi Constant cterm=italic ctermfg=white ctermbg=black<bar>
-	\hi Special cterm=none ctermfg=white ctermbg=black<bar>
-	\hi Statement cterm=none ctermfg=white ctermbg=black<bar>
-	\hi PreProc cterm=none ctermfg=blue ctermbg=black<bar>
-	\hi MatchParen cterm=bold ctermfg=yellow ctermbg=black<bar>
+	\hi Special cterm=bold ctermfg=white ctermbg=black<bar>
+	\hi Statement cterm=bold ctermfg=white ctermbg=black<bar>
+	\hi PreProc cterm=bold ctermfg=blue ctermbg=black<bar>
+	\hi MatchParen cterm=bold ctermfg=yellow <bar>
 	\hi Search cterm=none ctermfg=black ctermbg=yellow<bar>
+	\hi Error cterm=none ctermfg=red ctermbg=black<bar>
+	\hi EndOfBuffer cterm=none ctermfg=black ctermbg=black<bar>
 	\hi SpellBad cterm=underline,bold ctermfg=red ctermbg=none<bar>
 	\hi SpellCap cterm=underline,bold ctermfg=blue ctermbg=none<bar>
 	\hi SpellRare cterm=underline,bold ctermfg=magenta ctermbg=none<bar>
@@ -228,7 +230,7 @@ map \gy :Goyo<bar>
 	\hi User3 ctermbg=green ctermfg=black<bar>
 	\hi User4 ctermbg=grey ctermfg=black<bar>
 	\hi User5 ctermbg=blue ctermfg=black<bar>
-	\hi User6 ctermbg=magenta ctermfg=black
+	\hi User6 ctermbg=magenta ctermfg=black<bar>
 	\<Enter><Enter>
 
 
@@ -609,7 +611,7 @@ autocmd FileType markdown vnoremap \7n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Tab
 
 " //// COMPILER
 
-autocmd Filetype markdown map \c :!bash<space>~/scripts/cmkd<space><C-r>%<Enter><Enter>
+autocmd Filetype markdown map \c :!bash<space>~/scr/cmkd<space><C-r>%<Enter><Enter>
 
 " >>>> R MARKDOWN
 
@@ -703,7 +705,7 @@ autocmd FileType markdown,groff map ;vp :silent<space>!zathura<space>
 
 " >>>> VIEW HTML
 
-autocmd Filetype markdown map ;vh :!bash<space>~/scripts/openhtml<space><C-r>%<Enter><Enter>
+autocmd Filetype markdown map \vh :!bash<space>~/scr/openhtml<space><C-r>%<Enter><Enter>
 
 " >>>> PYTHON FILES
 

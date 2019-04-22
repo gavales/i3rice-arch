@@ -32,7 +32,7 @@ rofi.hlfg:				cblkd
 rofi.hlbg:				cblkd
 rofi.bc:				ccynd
 !State:					'bg',	'fg',	'bgalt',	'hlbg',	'hlfg'
-rofi.color-normal:		cblkd,	cwhtd,	cblkd,		cblud,	cwhtd
+rofi.color-normal:		cblkd,	cwhtl,	cblkd,		cblud,	cwhtl
 !						'background',	'border'
 rofi.color-window:		cblkd,			cblkd
 rofi.bw:				10

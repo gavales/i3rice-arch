@@ -6,7 +6,7 @@
 prompt="${1}"
 
 black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+white=$(xrdb -query | grep '*color15' | awk '{print $NF}')
 accent=$(xrdb -query | grep '*color5' | awk '{print $NF}')
 font=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
 font=${font#*:}

@@ -1,18 +1,18 @@
 ! emacs
 ! vim:ft=xdefaults
 #define cblkd #262626
-#define cblkl #003c3c
+#define cblkl #303030
 #define credd #ce537a
 #define credl #ce537a
 #define cgrnd #5faf00
 #define cgrnl #5faf00
 #define cylwd #b1951d
 #define cylwl #b1951d
-#define cblud #00b2b2
-#define cblul #00b2b2
-#define cgntd #5d4d7a
-#define cgntl #5d4d7a
-#define ccynd #21b8c7
-#define ccynl #21b8c7
+#define cblud #5d4d7a
+#define cblul #5d4d7a
+#define cgntd #21b8c7
+#define cgntl #21b8c7
+#define ccynd #00b2b2
+#define ccynl #00b2b2
 #define cwhtd #575757
 #define cwhtl #d4d4d4

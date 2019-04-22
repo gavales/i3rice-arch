@@ -21,7 +21,7 @@ echo "set guioptions-=T \"remove toolbar" >> $HOME/.guivimrc
 echo "set guioptions-=r \"remove right-hand scroll bar" >> $HOME/.guivimrc
 echo "set guioptions-=L \"remove left-hand scroll bar" >> $HOME/.guivimrc
 echo "colorscheme default" >> $HOME/.guivimrc
-echo "set linespace=5" >> $HOME/.guivimrc
+echo "set linespace=0" >> $HOME/.guivimrc
 echo "\"set lines=999 columns=999" >> $HOME/.guivimrc
 echo "\"au GUIEnter * simalt ~x" >> $HOME/.guivimrc
 echo "" >> $HOME/.guivimrc
@@ -29,12 +29,12 @@ echo "hi Normal guifg=${wtl} guibg=${bkd}" >> $HOME/.guivimrc
 echo "hi Title gui=bold guifg=${wtl} guibg=${bkd}" >> $HOME/.guivimrc
 echo "hi StatusLineTerm guifg=${bkd} guibg=${grn}" >> $HOME/.guivimrc
 echo "hi StatusLineTermNC guifg=${wtl} guibg=${grn}" >> $HOME/.guivimrc
-echo "hi LineNr gui=none guifg=${wtd} guibg=${bkd}" >> $HOME/.guivimrc
-echo "hi CursorLineNr gui=bold guifg=${red} guibg=${bkl}" >> $HOME/.guivimrc
+echo "hi LineNr gui=none guifg=${blu} guibg=${bkd}" >> $HOME/.guivimrc
+echo "hi CursorLineNr gui=bold guifg=${blu} guibg=${bkl}" >> $HOME/.guivimrc
 echo "hi SpecialKey guifg=${bkl} guibg=${bkd}" >> $HOME/.guivimrc
 echo "hi ModeMsg gui=bold guifg=${wtl}" >> $HOME/.guivimrc
-echo "hi Cursor guifg=${bkd} guibg=${blu}" >> $HOME/.guivimrc
-echo "hi ColorColumn guifg=${bkd} guibg=${blu}" >> $HOME/.guivimrc
+echo "hi Cursor guifg=${bkd} guibg=${red}" >> $HOME/.guivimrc
+echo "hi ColorColumn guifg=${bkd} guibg=${bkl}" >> $HOME/.guivimrc
 echo "hi CursorLine gui=none guibg=${bkl}" >> $HOME/.guivimrc
 echo "hi Visual guifg=${bkd} guibg=${blu}" >> $HOME/.guivimrc
 echo "hi VisualNOS guifg=${bkd} guibg=${blu}" >> $HOME/.guivimrc
