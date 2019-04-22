@@ -18857,3 +18857,238 @@ Apr 21 19:39 : client: [439] closed
 Apr 21 19:39 : client: [440] opened from [::1]:55228
 Apr 22 16:23 : client: [441] opened from [::1]:59370
 Apr 22 16:23 : client: [440] closed
+Apr 22 17:12 : client: [441] closed
+Apr 22 17:13 : player: played "Leo Moracchioli/Baby Boy (Feat. Lillian).mp3"
+Apr 22 17:17 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 22 17:17 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 22 17:17 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Apr 22 17:18 : client: [0] opened from [::1]:39268
+Apr 22 17:19 : client: [1] opened from [::1]:39304
+Apr 22 17:19 : client: [1] closed
+Apr 22 17:19 : client: [2] opened from [::1]:39306
+Apr 22 17:19 : client: [2] closed
+Apr 22 17:20 : client: [3] opened from [::1]:39310
+Apr 22 17:20 : client: [0] closed
+Apr 22 17:20 : client: [4] opened from [::1]:39382
+Apr 22 17:20 : client: [4] closed
+Apr 22 17:20 : client: [5] opened from [::1]:39384
+Apr 22 17:20 : client: [5] closed
+Apr 22 17:21 : client: [6] opened from [::1]:39388
+Apr 22 17:21 : client: [6] closed
+Apr 22 17:21 : client: [7] opened from [::1]:39390
+Apr 22 17:21 : client: [7] closed
+Apr 22 17:23 : client: [8] opened from [::1]:39562
+Apr 22 17:24 : client: [3] closed
+Apr 22 17:41 : client: [9] opened from [::1]:41144
+Apr 22 17:41 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 22 17:41 : client: [9] closed
+Apr 22 17:41 : client: [10] opened from [::1]:41146
+Apr 22 17:41 : client: [10] closed
+Apr 22 17:41 : client: [11] opened from [::1]:41148
+Apr 22 17:41 : client: [11] closed
+Apr 22 17:41 : client: [12] opened from [::1]:41150
+Apr 22 17:41 : client: [12] closed
+Apr 22 17:41 : client: [13] opened from [::1]:41152
+Apr 22 17:41 : client: [13] closed
+Apr 22 17:41 : client: [14] opened from [::1]:41154
+Apr 22 17:41 : client: [14] closed
+Apr 22 18:23 : client: [15] opened from [::1]:43288
+Apr 22 18:23 : client: [15] closed
+Apr 22 18:23 : client: [16] opened from [::1]:43290
+Apr 22 18:23 : client: [16] closed
+Apr 22 18:23 : client: [17] opened from [::1]:43292
+Apr 22 18:23 : client: [17] closed
+Apr 22 18:23 : client: [18] opened from [::1]:43294
+Apr 22 18:23 : client: [18] closed
+Apr 22 18:23 : client: [19] opened from [::1]:43296
+Apr 22 18:23 : client: [19] closed
+Apr 22 18:23 : client: [20] opened from [::1]:43298
+Apr 22 18:23 : client: [20] closed
+Apr 22 18:54 : client: [8] closed
+Apr 22 18:55 : client: [21] opened from [::1]:44254
+Apr 22 18:58 : client: [21] closed
+Apr 22 18:59 : client: [22] opened from [::1]:44314
+Apr 22 19:47 : client: [23] opened from [::1]:44752
+Apr 22 19:47 : client: [23] closed
+Apr 22 19:47 : client: [24] opened from [::1]:44754
+Apr 22 19:47 : client: [24] closed
+Apr 22 19:47 : client: [25] opened from [::1]:44756
+Apr 22 19:47 : client: [25] closed
+Apr 22 19:47 : client: [26] opened from [::1]:44758
+Apr 22 19:47 : client: [26] closed
+Apr 22 19:47 : client: [27] opened from [::1]:44760
+Apr 22 19:47 : client: [27] closed
+Apr 22 19:47 : client: [28] opened from [::1]:44762
+Apr 22 19:47 : client: [28] closed
+Apr 22 19:54 : client: [29] opened from [::1]:44798
+Apr 22 19:54 : client: [29] closed
+Apr 22 19:54 : client: [30] opened from [::1]:44800
+Apr 22 19:54 : client: [30] closed
+Apr 22 19:54 : client: [31] opened from [::1]:44802
+Apr 22 19:54 : client: [31] closed
+Apr 22 19:54 : client: [32] opened from [::1]:44804
+Apr 22 19:54 : client: [32] closed
+Apr 22 19:59 : client: [33] opened from [::1]:44818
+Apr 22 19:59 : client: [33] closed
+Apr 22 19:59 : client: [34] opened from [::1]:44820
+Apr 22 19:59 : client: [34] closed
+Apr 22 21:28 : client: [35] opened from [::1]:45534
+Apr 22 21:28 : client: [35] closed
+Apr 22 21:28 : client: [36] opened from [::1]:45536
+Apr 22 21:28 : client: [36] closed
+Apr 22 21:28 : client: [37] opened from [::1]:45538
+Apr 22 21:28 : client: [37] closed
+Apr 22 21:28 : client: [38] opened from [::1]:45540
+Apr 22 21:28 : client: [38] closed
+Apr 22 21:28 : client: [39] opened from [::1]:45542
+Apr 22 21:28 : client: [39] closed
+Apr 22 21:28 : client: [40] opened from [::1]:45544
+Apr 22 21:28 : client: [40] closed
+Apr 22 21:28 : client: [41] opened from [::1]:45546
+Apr 22 21:28 : client: [41] closed
+Apr 22 21:28 : client: [42] opened from [::1]:45548
+Apr 22 21:28 : client: [42] closed
+Apr 22 21:28 : client: [43] opened from [::1]:45550
+Apr 22 21:28 : client: [43] closed
+Apr 22 21:28 : client: [44] opened from [::1]:45552
+Apr 22 21:28 : client: [44] closed
+Apr 22 21:28 : client: [45] opened from [::1]:45554
+Apr 22 21:28 : client: [45] closed
+Apr 22 21:28 : client: [46] opened from [::1]:45556
+Apr 22 21:28 : client: [46] closed
+Apr 22 21:28 : client: [47] opened from [::1]:45560
+Apr 22 21:28 : client: [47] closed
+Apr 22 21:28 : client: [48] opened from [::1]:45562
+Apr 22 21:28 : client: [48] closed
+Apr 22 21:28 : client: [49] opened from [::1]:45564
+Apr 22 21:28 : client: [49] closed
+Apr 22 21:28 : client: [50] opened from [::1]:45566
+Apr 22 21:28 : client: [50] closed
+Apr 22 21:29 : client: [51] opened from [::1]:45568
+Apr 22 21:29 : client: [51] closed
+Apr 22 21:29 : client: [52] opened from [::1]:45570
+Apr 22 21:29 : client: [52] closed
+Apr 22 21:29 : client: [53] opened from [::1]:45572
+Apr 22 21:29 : client: [53] closed
+Apr 22 21:29 : client: [54] opened from [::1]:45574
+Apr 22 21:29 : client: [54] closed
+Apr 22 21:37 : client: [55] opened from [::1]:45680
+Apr 22 21:37 : client: [55] closed
+Apr 22 21:37 : client: [56] opened from [::1]:45682
+Apr 22 21:37 : client: [56] closed
+Apr 22 21:37 : client: [57] opened from [::1]:45684
+Apr 22 21:37 : client: [57] closed
+Apr 22 21:37 : client: [58] opened from [::1]:45686
+Apr 22 21:37 : client: [58] closed
+Apr 22 21:38 : client: [59] opened from [::1]:45690
+Apr 22 21:38 : client: [59] closed
+Apr 22 21:38 : client: [60] opened from [::1]:45692
+Apr 22 21:38 : client: [60] closed
+Apr 22 21:39 : client: [61] opened from [::1]:45736
+Apr 22 21:39 : client: [61] closed
+Apr 22 21:39 : client: [62] opened from [::1]:45738
+Apr 22 21:39 : client: [62] closed
+Apr 22 21:40 : client: [63] opened from [::1]:45744
+Apr 22 21:40 : client: [63] closed
+Apr 22 21:40 : client: [64] opened from [::1]:45746
+Apr 22 21:40 : client: [64] closed
+Apr 22 21:40 : client: [65] opened from [::1]:45748
+Apr 22 21:40 : client: [65] closed
+Apr 22 21:40 : client: [66] opened from [::1]:45750
+Apr 22 21:40 : client: [66] closed
+Apr 22 21:41 : client: [67] opened from [::1]:45776
+Apr 22 21:41 : client: [67] closed
+Apr 22 21:41 : client: [68] opened from [::1]:45778
+Apr 22 21:41 : client: [68] closed
+Apr 22 21:46 : client: [69] opened from [::1]:45836
+Apr 22 21:46 : client: [69] closed
+Apr 22 21:46 : client: [70] opened from [::1]:45838
+Apr 22 21:46 : client: [70] closed
+Apr 22 21:47 : client: [71] opened from [::1]:45840
+Apr 22 21:47 : client: [71] closed
+Apr 22 21:47 : client: [72] opened from [::1]:45842
+Apr 22 21:47 : client: [72] closed
+Apr 22 21:47 : client: [73] opened from [::1]:45858
+Apr 22 21:47 : client: [73] closed
+Apr 22 21:47 : client: [74] opened from [::1]:45860
+Apr 22 21:47 : client: [74] closed
+Apr 22 21:49 : client: [75] opened from [::1]:45862
+Apr 22 21:49 : client: [75] closed
+Apr 22 21:49 : client: [76] opened from [::1]:45864
+Apr 22 21:49 : client: [76] closed
+Apr 22 21:50 : client: [77] opened from [::1]:45870
+Apr 22 21:50 : client: [77] closed
+Apr 22 21:50 : client: [78] opened from [::1]:45872
+Apr 22 21:50 : client: [78] closed
+Apr 22 21:52 : client: [79] opened from [::1]:45892
+Apr 22 21:52 : client: [79] closed
+Apr 22 21:52 : client: [80] opened from [::1]:45894
+Apr 22 21:52 : client: [80] closed
+Apr 22 21:59 : client: [81] opened from [::1]:45988
+Apr 22 21:59 : client: [81] closed
+Apr 22 21:59 : client: [82] opened from [::1]:45990
+Apr 22 21:59 : client: [82] closed
+Apr 22 21:59 : client: [83] opened from [::1]:46004
+Apr 22 21:59 : client: [83] closed
+Apr 22 21:59 : client: [84] opened from [::1]:46006
+Apr 22 21:59 : client: [84] closed
+Apr 22 22:00 : client: [85] opened from [::1]:46008
+Apr 22 22:00 : client: [85] closed
+Apr 22 22:00 : client: [86] opened from [::1]:46010
+Apr 22 22:00 : client: [86] closed
+Apr 22 22:00 : client: [87] opened from [::1]:46012
+Apr 22 22:00 : client: [87] closed
+Apr 22 22:00 : client: [88] opened from [::1]:46014
+Apr 22 22:00 : client: [88] closed
+Apr 22 22:00 : client: [89] opened from [::1]:46016
+Apr 22 22:00 : client: [89] closed
+Apr 22 22:00 : client: [90] opened from [::1]:46018
+Apr 22 22:00 : client: [90] closed
+Apr 22 22:02 : client: [91] opened from [::1]:46030
+Apr 22 22:02 : client: [91] closed
+Apr 22 22:02 : client: [92] opened from [::1]:46032
+Apr 22 22:02 : client: [92] closed
+Apr 22 22:02 : client: [93] opened from [::1]:46034
+Apr 22 22:02 : client: [93] closed
+Apr 22 22:02 : client: [94] opened from [::1]:46036
+Apr 22 22:02 : client: [94] closed
+Apr 22 22:05 : client: [95] opened from [::1]:46100
+Apr 22 22:05 : client: [95] closed
+Apr 22 22:05 : client: [96] opened from [::1]:46102
+Apr 22 22:05 : client: [96] closed
+Apr 22 22:06 : client: [97] opened from [::1]:46108
+Apr 22 22:06 : client: [97] closed
+Apr 22 22:06 : client: [98] opened from [::1]:46110
+Apr 22 22:06 : client: [98] closed
+Apr 22 22:06 : client: [99] opened from [::1]:46112
+Apr 22 22:06 : client: [99] closed
+Apr 22 22:06 : client: [100] opened from [::1]:46114
+Apr 22 22:06 : client: [100] closed
+Apr 22 22:06 : client: [101] opened from [::1]:46116
+Apr 22 22:06 : client: [101] closed
+Apr 22 22:06 : client: [102] opened from [::1]:46118
+Apr 22 22:06 : client: [102] closed
+Apr 22 22:06 : client: [103] opened from [::1]:46120
+Apr 22 22:06 : client: [103] closed
+Apr 22 22:06 : client: [104] opened from [::1]:46122
+Apr 22 22:06 : client: [104] closed
+Apr 22 22:06 : client: [105] opened from [::1]:46124
+Apr 22 22:06 : client: [105] closed
+Apr 22 22:06 : client: [106] opened from [::1]:46126
+Apr 22 22:06 : client: [106] closed
+Apr 22 22:07 : client: [107] opened from [::1]:46128
+Apr 22 22:07 : client: [107] closed
+Apr 22 22:07 : client: [108] opened from [::1]:46130
+Apr 22 22:07 : client: [108] closed
+Apr 22 22:07 : client: [109] opened from [::1]:46132
+Apr 22 22:07 : client: [109] closed
+Apr 22 22:07 : client: [110] opened from [::1]:46134
+Apr 22 22:07 : client: [110] closed
+Apr 22 22:12 : client: [111] opened from [::1]:46188
+Apr 22 22:12 : client: [111] closed
+Apr 22 22:12 : client: [112] opened from [::1]:46190
+Apr 22 22:12 : client: [112] closed
+Apr 22 22:12 : client: [113] opened from [::1]:46192
+Apr 22 22:12 : client: [113] closed
+Apr 22 22:12 : client: [114] opened from [::1]:46194
+Apr 22 22:12 : client: [114] closed

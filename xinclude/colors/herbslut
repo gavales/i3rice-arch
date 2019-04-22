@@ -1,18 +1,18 @@
 ! herbslut
 ! vim:ft=xdefaults
-#define cblkd #1B1B1B
-#define cblkl #383838
+#define cwhtl #1B1B1B
+#define cwhtd #7d7d7d
 #define credd #6673BF
 #define credl #6673BF
-#define cgrnd #31658C
-#define cgrnl #31658C
-#define cylwd #B0EAD9
-#define cylwl #B0EAD9
-#define cblud #3EA290
-#define cblul #3EA290
+#define cgrnd #B0EAD9
+#define cgrnl #B0EAD9
+#define cylwd #3EA290
+#define cylwl #3EA290
+#define cblud #31658C
+#define cblul #31658C
 #define cgntd #596196
 #define cgntl #596196
 #define ccynd #8292B2
 #define ccynl #8292B2
-#define cwhtd #81858a
-#define cwhtl #C8CACC
+#define cblkl #b4b6b9
+#define cblkd #C8CACC

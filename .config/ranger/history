@@ -1,3 +1,4 @@
+search pres
 shell fnteditfs %f
 search presti
 shell fontforge %f
@@ -40,11 +41,10 @@ rename 1.jpg
 mkdir weebie
 rename 12.jpg
 rename 4.png
+rename 5.jpg
 rename o.jpg
 rename 2.jpg
 rename 13.jpg
 rename 14.jpeg
-rename warmviolet
-rename grad1.jpg
-rename 5.jpg
-rename graininess
+shell wget https://raw.githubusercontent.com/budlabs/i3ass/next/src/i3gw
+shell chmod +x %s

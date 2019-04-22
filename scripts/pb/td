@@ -3,4 +3,4 @@
 iconDa="%{T1}%{T-}"
 iconTi="%{T1}%{T-}"
 
-echo " $iconDa $(date '+%b %d') $iconTi $(date '+%T')"
+echo "$iconDa $(date '+%b %d') $iconTi $(date '+%T')"

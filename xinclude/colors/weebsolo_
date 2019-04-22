@@ -1,7 +1,7 @@
 ! wweebsolo
 ! vim:ft=xdefaults
-#define cwhtl #2b2222
-#define cwhtd #959090
+#define cblkd #2b2222
+#define cblkl #403838
 #define credd #A97288
 #define credl #A97288
 #define cgrnd #88a972
@@ -14,5 +14,5 @@
 #define cgntl #a972a4
 #define ccynd #72a993
 #define ccynl #72a993
-#define cblkl #f4eee3
-#define cblkd #ede3d1
+#define cwhtd #aaa69e
+#define cwhtl #ede3d1

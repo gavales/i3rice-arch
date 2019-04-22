@@ -9,10 +9,10 @@ theme () {
 	elif [[ ! -f $xfilesDir/colors/$theme ]]; then
 		:
 	else
-		variant=$(echo -e "Dark\nLight" | $HOME/scr/i3menu "Light/Dark?:")
+		variant=$(echo -e "Main\nAlternate" | $HOME/scr/i3menu "Variant?:")
 	fi
 
-	if [[ $variant == "Light" ]]; then
+	if [[ $variant == "Alternate" ]]; then
 		theme="${theme}_"
 	else
 		theme="${theme}"
