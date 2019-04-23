@@ -1,9 +1,9 @@
 sw_volume: 62
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
-state: pause
-current: 0
-time: 269.699000
+state: play
+current: 8
+time: 4.097000
 random: 1
 repeat: 0
 single: 0
@@ -12,28 +12,14 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Leo Moracchioli/Baby Boy (Feat. Lillian).mp3
-1:Leo Moracchioli/Baby One More Time.mp3
-2:Leo Moracchioli/Burn The Witch  (360 video ).mp3
-3:Leo Moracchioli/Genie in a Bottle (Feat. Lillian).mp3
-4:Leo Moracchioli/Ghostbusters.mp3
-5:Leo Moracchioli/I Wanna Dance with Somebody.mp3
-6:Leo Moracchioli/Imagine Dragons - Thunder.mp3
-7:Leo Moracchioli/Last Christmas.mp3
-8:Leo Moracchioli/Look What You Made Me Do.mp3
-9:Leo Moracchioli/Make It Wit Chu [acoustic].mp3
-10:Leo Moracchioli/Mambo No. 5.mp3
-11:Leo Moracchioli/Paranoid [acoustic].mp3
-12:Leo Moracchioli/People Are Strange.mp3
-13:Leo Moracchioli/Ring of Fire.mp3
-14:Leo Moracchioli/Somebody That I Used To Know.mp3
-15:Leo Moracchioli/Stressed Out.mp3
-16:Leo Moracchioli/Støv Og Sand [acoustic].mp3
-17:Leo Moracchioli/This is Halloween.mp3
-18:Leo Moracchioli/True Survivor.mp3
-19:Leo Moracchioli/Twinkle, Twinkle, Little Star.mp3
-20:Leo Moracchioli/Walk This Way [acoustic].mp3
-21:Lev Weksler/All Videos/Ave Maria by Franz Schubert (Lev Weksler and Boris Veksler).mp3
-22:Lev Weksler/All Videos/Hungarian Dance #5 for Double Bass and Piano.mp3
-23:Lev Weksler/All Videos/Veksler Trio.mp3
+0:The Brothers Johnson/Right on Time/04 Right on Time.mp3
+1:The Brothers Johnson/Right on Time/08 Love Is.mp3
+2:The Brothers Johnson/Blam!!/03 Blam!!.mp3
+3:Various Artists/Billboard Top Dance Hits_ 1980/06 Stomp!.mp3
+4:The Brothers Johnson/Classics_ Vol_ 11/06 _Q_.mp3
+5:The Brothers Johnson/Greatest Hits/07 Land of Ladies.mp3
+6:The Brothers Johnson/Greatest Hits/09 I'll Be Good to You.mp3
+7:The Brothers Johnson/20th Century Masters - The Mil/05 Runnin' for Your Lovin'.mp3
+8:The Brothers Johnson/Strawberry Letter 23_ The Best/03 Thunder Thumbs and Lightnin' L.mp3
+9:The Brothers Johnson/Strawberry Letter 23_ The Best/19 Funk It (Funkadelala).mp3
 playlist_end

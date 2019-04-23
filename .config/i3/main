@@ -175,7 +175,7 @@ $mod+Shift+r		restart
 $mod+t				$exs/mkwalrando
 
 $mod+y				resize shrink width 5 px or 5 ppt
-$mod+Shift+y		$lch '$brow --new-window --app=https://www.youtube.com/' $mk1
+$mod+Shift+y		$lch 'surf www.youtube.com' $mk1
 
 $mod+u				resize shrink height 5 px or 5 ppt
 $mod+Shift+u		$lch '$brow --new-window \
@@ -200,7 +200,6 @@ $mod+backslash		$exs/i3media stop
 
 $mod+a				focus parent
 $mod+Shift+a		focus child
-#$mod+Shift+a		$lch '$brow --new-window --app=https://www.funimation.com/' $mk1
 
 $mod+s				$lch '$term -name MUSIC -e ncmpcpp' $mk1 fl
 $mod+Shift+s		$lch spotify $mk1 fl
@@ -236,9 +235,9 @@ $mod+Shift+Return	$exn $term -name FILES -e ranger
 
 # //// 3rd Row
 
-$mod+z				$exn $brow --new-window --app=https://docs.google.com/document/u/0/
+$mod+z				$lch 'surf docs.google.com/document/u/0/' $mk3
 
-$mod+x				$exn $brow --new-window --app=https://docs.google.com/spreadsheets/u/0/
+$mod+x				$lch 'surf docs.google.com/spreadsheets/u/0/' $mk3
 
 $mod+c				exec $viva
 $mod+Shift+c		$exs/xtheme
@@ -250,11 +249,8 @@ $mod+b				$lch '$term -name BIB -e vim $home/Drive/global.bib' $mk2
 $mod+Shift+b		bar mode toggle
 
 $mod+n				$lch '$brow --new-window --app=https://www.netflix.com/' $mk1
-$mod+Shift+n		$lch '$brow --new-window \
-						--app=https://www.amazon.co.uk/Amazon-Video/b/?node=3010085031&ref=atv_surl_aiv' \
-						$mk1
 
-$mod+m				$exn $brow --new-window --app=https://docs.google.com/presentation/u/0/
+$mod+m				$lch 'surf docs.google.com/presentation/u/0/' $mk3
 $mod+Shift+m		$lch '$brow --new-window --app=https://play.google.com/movies/' $mk1
 
 $mod+comma			$exn "pactl set-sink-volume 0 -2%; ~/$scr/notify_volume"
@@ -428,7 +424,6 @@ $fw [class="feh"]						$mvm1
 $fw [class="Sxiv"]						$mvm1
 #$fw [window_role="pop-up"]				$mvm1
 
-$fw [class="Surf"]						$mvm2
 $fw [class="Zathura"]					$mvm2
 $fw [class="MuPDF"]						$mvm2
 $fw [class="Electron"]					$mvm2
@@ -499,7 +494,7 @@ $exs/i3listen-toggle
 # PROGRAMS
 $exn	i3-msg "workspace $ws1; append_layout $home/.config/i3/main.json"
 $exn	$viva
-$exn	$brow --new-window --app=https://www.youtube.com/
+$exn	surf www.youtube.com
 $ena	mpv $home/$scrmus/A\ Tone\ His\ Self.mp3
 $ena	notify-send 'i3 (re)loaded!' -i ~/$scrpic/i3white.png
 

@@ -172,11 +172,11 @@
 					"percent": 0.5,
 					"swallows": [
 						{
-						"class": "^Google\\-chrome\\-beta$",
-						"instance": "^www\\.youtube\\.com$",
+						"class": "^Surf$",
+						// "instance": "www\\.youtube\\.com",
 						// "title": "YouTube$",
-						"transient_for": "^$",
-						"window_role": "^pop\\-up$"
+						"transient_for": "^$"
+						// "window_role": "^pop\\-up$"
 						}
 					],
 					"type": "con"
