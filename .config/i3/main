@@ -175,7 +175,7 @@ $mod+Shift+r		restart
 $mod+t				$exs/mkwalrando
 
 $mod+y				resize shrink width 5 px or 5 ppt
-$mod+Shift+y		$lch 'surf www.youtube.com' $mk1
+$mod+Shift+y		$lch '$brow --new-window --app=https://www.youtube.com/' $mk1
 
 $mod+u				resize shrink height 5 px or 5 ppt
 $mod+Shift+u		$lch '$brow --new-window \

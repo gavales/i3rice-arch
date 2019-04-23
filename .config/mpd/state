@@ -1,9 +1,9 @@
 sw_volume: 62
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
-state: play
-current: 8
-time: 4.097000
+state: pause
+current: 6
+time: 103.712000
 random: 1
 repeat: 0
 single: 0
@@ -20,6 +20,5 @@ playlist_begin
 5:The Brothers Johnson/Greatest Hits/07 Land of Ladies.mp3
 6:The Brothers Johnson/Greatest Hits/09 I'll Be Good to You.mp3
 7:The Brothers Johnson/20th Century Masters - The Mil/05 Runnin' for Your Lovin'.mp3
-8:The Brothers Johnson/Strawberry Letter 23_ The Best/03 Thunder Thumbs and Lightnin' L.mp3
-9:The Brothers Johnson/Strawberry Letter 23_ The Best/19 Funk It (Funkadelala).mp3
+8:The Brothers Johnson/Strawberry Letter 23_ The Best/19 Funk It (Funkadelala).mp3
 playlist_end
