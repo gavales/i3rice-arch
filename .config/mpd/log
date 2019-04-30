@@ -20010,3 +20010,23 @@ Apr 30 14:56 : client: [12] opened from [::1]:53876
 Apr 30 14:56 : client: [12] closed
 Apr 30 14:56 : client: [13] opened from [::1]:53878
 Apr 30 14:56 : client: [13] closed
+Apr 30 19:26 : client: [8] closed
+Apr 30 19:26 : client: [14] opened from [::1]:56706
+Apr 30 19:26 : client: [14] closed
+Apr 30 19:26 : client: [15] opened from [::1]:56708
+Apr 30 19:26 : client: [15] closed
+Apr 30 19:26 : client: [16] opened from [::1]:56710
+Apr 30 19:26 : client: [16] closed
+Apr 30 21:50 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 30 21:50 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Apr 30 21:51 : client: [0] opened from [::1]:42250
+Apr 30 21:51 : client: [1] opened from [::1]:42266
+Apr 30 21:51 : client: [1] closed
+Apr 30 21:51 : client: [2] opened from [::1]:42268
+Apr 30 21:51 : client: [2] closed
+Apr 30 21:52 : client: [3] opened from [::1]:42270
+Apr 30 21:52 : client: [3] closed
+Apr 30 21:52 : client: [4] opened from [::1]:42272
+Apr 30 21:52 : client: [4] closed
+Apr 30 21:52 : client: [5] opened from [::1]:42330
+Apr 30 21:52 : client: [0] closed

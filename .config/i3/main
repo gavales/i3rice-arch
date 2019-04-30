@@ -76,11 +76,11 @@ set $mediah2	401
 # >>>> DECORATIONS
 # COLORS
 # class					brdr bkgr text indi chlb
-client.focused			$blu $blu $wht $blu $blu
-client.focused_inactive	$blu $blk $blu $blk $blu
-client.unfocused		$blu $blk $wht $blk $blu
+client.focused			$blu $blk $wht $blu $blu
+client.focused_inactive	$blu $blu $wht $blk $blu
+client.unfocused		$blu $blu $blk $blk $blu
 client.urgent			$blu $red $wht $red $blu
-client.placeholder		$blu $blk $wht $blu $blu
+client.placeholder		$blu $grn $wht $blu $blu
 #client.background		$blk
 
 # >>>> # BAR
