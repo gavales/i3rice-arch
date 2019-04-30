@@ -383,7 +383,7 @@ endif
 " //// COMPILING
 
 " COMPLETE
-autocmd Filetype tex map ;C :w<space>!bash<space>~/scripts/clatex<space><C-r>
+autocmd Filetype tex map ;C :w<space>!bash<space>~/scr/clatex<space><C-r>
 	\%<Enter><Enter>
 
 " PDFLATEX

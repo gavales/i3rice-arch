@@ -2,16 +2,16 @@
 ! vim:ft=xdefaults
 #define cblkd #393532
 #define cblkl #58524d
-#define credd #7F6647
-#define credl #7F6647
-#define cgrnd #cb9885
-#define cgrnl #cb9885
-#define cylwd #b18270
-#define cylwl #b18270
-#define cblud #957559
-#define cblul #957559
-#define cgntd #a66e57
-#define cgntl #bd5e4a
+#define credd #bd5e4a
+#define credl #bd5e4a
+#define cgrnd #957559
+#define cgrnl #957559
+#define cylwd #7F6647
+#define cylwl #7F6647
+#define cblud #cb9885
+#define cblul #cb9885
+#define cgntd #b18270
+#define cgntl #b18270
 #define ccynd #c78958
 #define ccynl #c78958
 #define cwhtd #d99c65

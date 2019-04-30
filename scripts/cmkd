@@ -54,6 +54,7 @@ nsec="--number-sections"
 
 latex() {
 	pandoc $crossref $citeproc $texgine $nsec -o ${file:0:-3}.pdf ${file}
+	pkill -HUP mupdf
 }
 
 word() {
@@ -62,10 +63,12 @@ word() {
 
 html() {
 	pandoc $crossref $citeproc -s --toc $style -o ${file:0:-3}.html ${file}
+	ls *.html | entr $HOME/scr/reload-browser surf &>/dev/null &
 }
 
 beamer() {
 	pandoc $citeproc -t beamer --incremental -o ${file:0:-3}.pdf ${file}
+	pkill -HUP mupdf
 }
 
 output=$(cat $file | grep '#output' | awk '{print $NF}')
@@ -75,5 +78,3 @@ elif [[ -z $output ]]; then
 	html
 fi
 
-pkill -HUP mupdf
-pkill -HUP surf

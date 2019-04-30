@@ -1,18 +1,18 @@
 ! moonburn
 ! vim:ft=xdefaults
-#define cblkd #D5D3C7
-#define cblkl #99B1A3
-#define credd #715250
-#define credl #715250
-#define cgrnd #629D7D
-#define cgrnl #629D7D
-#define cylwd #506070
-#define cylwl #506070
-#define cblud #8B6A57
-#define cblul #8B6A57
-#define cgntd #DA8ABF
-#define cgntl #DA8ABF
+#define cwhtl #D5D3C7
+#define cwhtd #928d6d
+#define credd #8b575e
+#define credl #8b575e
+#define cgrnd #578b6a
+#define cgrnl #578b6a
+#define cylwd #8b8457
+#define cylwl #8b8457
+#define cblud #575e8b
+#define cblul #575e8b
+#define cgntd #8b5778
+#define cgntl #8b5778
 #define ccynd #608389
 #define ccynl #608389
-#define cwhtd #a66b87
-#define cwhtl #553343
+#define cblkl #434132
+#define cblkd #2d2b22

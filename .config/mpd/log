@@ -19639,3 +19639,374 @@ Apr 23 23:34 : client: [376] opened from [::1]:56206
 Apr 23 23:34 : client: [376] closed
 Apr 23 23:34 : client: [377] opened from [::1]:56208
 Apr 23 23:34 : client: [377] closed
+Apr 24 10:01 : client: [361] closed
+Apr 24 10:01 : player: played "The Brothers Johnson/Greatest Hits/09 I'll Be Good to You.mp3"
+Apr 24 10:02 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 24 10:02 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 24 10:02 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Apr 24 10:04 : client: [0] opened from [::1]:54536
+Apr 24 11:07 : client: [1] opened from [::1]:54934
+Apr 24 11:07 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 24 11:07 : client: [1] closed
+Apr 24 11:07 : client: [2] opened from [::1]:54936
+Apr 24 11:07 : client: [2] closed
+Apr 24 11:07 : client: [3] opened from [::1]:54938
+Apr 24 11:07 : client: [3] closed
+Apr 24 11:09 : client: [4] opened from [::1]:54972
+Apr 24 11:09 : client: [4] closed
+Apr 24 11:09 : client: [5] opened from [::1]:54974
+Apr 24 11:09 : client: [5] closed
+Apr 24 11:09 : client: [6] opened from [::1]:54976
+Apr 24 11:09 : client: [6] closed
+Apr 24 11:19 : client: [7] opened from [::1]:55086
+Apr 24 11:19 : client: [7] closed
+Apr 24 11:19 : client: [8] opened from [::1]:55088
+Apr 24 11:19 : client: [8] closed
+Apr 24 11:19 : client: [9] opened from [::1]:55090
+Apr 24 11:19 : client: [9] closed
+Apr 24 11:20 : client: [10] opened from [::1]:55092
+Apr 24 11:20 : client: [10] closed
+Apr 24 11:20 : client: [11] opened from [::1]:55094
+Apr 24 11:20 : client: [11] closed
+Apr 24 11:20 : client: [12] opened from [::1]:55096
+Apr 24 11:20 : client: [12] closed
+Apr 24 11:20 : client: [13] opened from [::1]:55098
+Apr 24 11:20 : client: [13] closed
+Apr 24 11:20 : client: [14] opened from [::1]:55100
+Apr 24 11:20 : client: [14] closed
+Apr 24 11:20 : client: [15] opened from [::1]:55102
+Apr 24 11:20 : client: [15] closed
+Apr 24 11:21 : player: played "The Brothers Johnson/Greatest Hits/09 I'll Be Good to You.mp3"
+Apr 24 11:24 : client: [16] opened from [::1]:55134
+Apr 24 11:24 : client: [16] closed
+Apr 24 11:24 : client: [17] opened from [::1]:55138
+Apr 24 11:24 : client: [17] closed
+Apr 24 11:24 : client: [18] opened from [::1]:55140
+Apr 24 11:24 : client: [18] closed
+Apr 24 11:24 : client: [19] opened from [::1]:55146
+Apr 24 11:24 : client: [19] closed
+Apr 24 11:24 : client: [20] opened from [::1]:55148
+Apr 24 11:24 : client: [20] closed
+Apr 24 11:24 : client: [21] opened from [::1]:55150
+Apr 24 11:24 : client: [21] closed
+Apr 24 11:24 : player: played "The Brothers Johnson/Classics_ Vol_ 11/06 _Q_.mp3"
+Apr 24 11:24 : client: [22] opened from [::1]:55184
+Apr 24 11:24 : client: [22] closed
+Apr 24 11:24 : client: [23] opened from [::1]:55186
+Apr 24 11:24 : client: [23] closed
+Apr 24 11:24 : client: [24] opened from [::1]:55188
+Apr 24 11:24 : client: [24] closed
+Apr 24 11:35 : client: [25] opened from [::1]:55268
+Apr 24 11:35 : client: [25] closed
+Apr 24 11:35 : client: [26] opened from [::1]:55270
+Apr 24 11:35 : client: [26] closed
+Apr 24 11:35 : client: [27] opened from [::1]:55272
+Apr 24 11:35 : client: [0] closed
+Apr 24 11:36 : client: [27] closed
+Apr 24 11:36 : player: played "The Brothers Johnson/Strawberry Letter 23_ The Best/19 Funk It (Funkadelala).mp3"
+Apr 24 11:37 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 24 11:37 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 24 11:37 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Apr 24 11:37 : client: [0] opened from [::1]:60090
+Apr 24 11:43 : client: [1] opened from [::1]:60156
+Apr 24 11:43 : client: [1] closed
+Apr 24 11:43 : client: [2] opened from [::1]:60158
+Apr 24 11:43 : client: [2] closed
+Apr 24 11:43 : client: [3] opened from [::1]:60176
+Apr 24 11:43 : client: [0] closed
+Apr 26 15:10 : client: [3] closed
+Apr 26 15:11 : player: played "The Brothers Johnson/Strawberry Letter 23_ The Best/19 Funk It (Funkadelala).mp3"
+Apr 26 15:11 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 26 15:11 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 26 15:11 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Apr 26 15:11 : client: [0] opened from [::1]:49324
+Apr 26 15:16 : client: [1] opened from [::1]:49896
+Apr 26 15:16 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 26 15:16 : client: [1] closed
+Apr 26 15:16 : client: [2] opened from [::1]:49898
+Apr 26 15:16 : client: [2] closed
+Apr 26 15:16 : client: [3] opened from [::1]:49900
+Apr 26 15:16 : client: [3] closed
+Apr 26 15:16 : client: [4] opened from [::1]:49904
+Apr 26 15:16 : client: [4] closed
+Apr 26 15:16 : client: [5] opened from [::1]:49908
+Apr 26 15:16 : client: [5] closed
+Apr 26 15:16 : client: [6] opened from [::1]:49910
+Apr 26 15:16 : client: [6] closed
+Apr 26 18:02 : client: [7] opened from [::1]:51426
+Apr 26 18:02 : client: [7] closed
+Apr 26 18:02 : client: [8] opened from [::1]:51428
+Apr 26 18:02 : client: [8] closed
+Apr 26 18:02 : client: [9] opened from [::1]:51432
+Apr 26 18:02 : client: [9] closed
+Apr 26 18:02 : client: [10] opened from [::1]:51434
+Apr 26 18:02 : client: [10] closed
+Apr 26 18:02 : client: [11] opened from [::1]:51436
+Apr 26 18:02 : client: [11] closed
+Apr 26 18:02 : client: [12] opened from [::1]:51438
+Apr 26 18:02 : client: [12] closed
+Apr 26 18:03 : client: [13] opened from [::1]:51440
+Apr 26 18:03 : client: [13] closed
+Apr 26 18:03 : client: [14] opened from [::1]:51442
+Apr 26 18:03 : client: [14] closed
+Apr 26 18:03 : client: [15] opened from [::1]:51444
+Apr 26 18:03 : client: [15] closed
+Apr 26 18:03 : client: [16] opened from [::1]:51446
+Apr 26 18:03 : client: [16] closed
+Apr 26 18:04 : client: [17] opened from [::1]:51452
+Apr 26 18:04 : client: [17] closed
+Apr 26 18:04 : client: [18] opened from [::1]:51454
+Apr 26 18:04 : client: [18] closed
+Apr 26 20:43 : client: [19] opened from [::1]:52648
+Apr 26 20:43 : client: [19] closed
+Apr 26 20:43 : client: [20] opened from [::1]:52650
+Apr 26 20:43 : client: [20] closed
+Apr 26 21:03 : client: [21] opened from [::1]:53066
+Apr 26 21:03 : client: [21] closed
+Apr 26 21:03 : client: [22] opened from [::1]:53068
+Apr 26 21:03 : client: [22] closed
+Apr 26 21:03 : client: [23] opened from [::1]:53070
+Apr 26 21:03 : client: [23] closed
+Apr 26 21:03 : client: [24] opened from [::1]:53072
+Apr 26 21:03 : client: [24] closed
+Apr 26 21:08 : client: [25] opened from [::1]:53116
+Apr 26 21:08 : client: [25] closed
+Apr 26 21:08 : client: [26] opened from [::1]:53118
+Apr 26 21:08 : client: [26] closed
+Apr 27 13:17 : client: [27] opened from [::1]:54444
+Apr 27 13:17 : client: [27] closed
+Apr 27 13:17 : client: [28] opened from [::1]:54446
+Apr 27 13:17 : client: [28] closed
+Apr 27 14:30 : client: [29] opened from [::1]:55144
+Apr 27 14:30 : client: [29] closed
+Apr 27 14:30 : client: [30] opened from [::1]:55146
+Apr 27 14:30 : client: [30] closed
+Apr 27 14:43 : client: [31] opened from [::1]:55564
+Apr 27 14:43 : client: [31] closed
+Apr 27 14:43 : client: [32] opened from [::1]:55566
+Apr 27 14:43 : client: [32] closed
+Apr 27 14:44 : client: [33] opened from [::1]:55570
+Apr 27 14:44 : client: [0] closed
+Apr 27 15:18 : client: [34] opened from [::1]:55832
+Apr 27 15:18 : client: [34] closed
+Apr 27 15:18 : client: [35] opened from [::1]:55834
+Apr 27 15:18 : client: [35] closed
+Apr 27 15:18 : client: [36] opened from [::1]:55836
+Apr 27 15:18 : client: [36] closed
+Apr 27 15:21 : client: [33] closed
+Apr 27 15:22 : player: played "The Brothers Johnson/Strawberry Letter 23_ The Best/19 Funk It (Funkadelala).mp3"
+Apr 27 15:27 : player: played "The Brothers Johnson/20th Century Masters - The Mil/05 Runnin' for Your Lovin'.mp3"
+Apr 27 15:32 : player: played "The Brothers Johnson/Blam!!/03 Blam!!.mp3"
+Apr 27 15:34 : client: [37] opened from [::1]:56394
+Apr 27 15:34 : client: [37] closed
+Apr 27 15:34 : client: [38] opened from [::1]:56396
+Apr 27 15:34 : client: [38] closed
+Apr 27 15:34 : client: [39] opened from [::1]:56398
+Apr 27 15:34 : client: [39] closed
+Apr 27 15:34 : client: [40] opened from [::1]:56400
+Apr 27 15:34 : client: [40] closed
+Apr 27 15:34 : client: [41] opened from [::1]:56402
+Apr 27 15:34 : client: [41] closed
+Apr 27 15:34 : client: [42] opened from [::1]:56404
+Apr 27 15:34 : client: [42] closed
+Apr 27 15:34 : client: [43] opened from [::1]:56406
+Apr 27 15:34 : client: [43] closed
+Apr 27 15:34 : client: [44] opened from [::1]:56408
+Apr 27 15:34 : client: [44] closed
+Apr 27 15:36 : player: played "The Brothers Johnson/Greatest Hits/07 Land of Ladies.mp3"
+Apr 27 15:37 : client: [45] opened from [::1]:56594
+Apr 27 15:37 : client: [45] closed
+Apr 27 15:37 : client: [46] opened from [::1]:56596
+Apr 27 15:37 : client: [46] closed
+Apr 27 15:37 : client: [47] opened from [::1]:56598
+Apr 27 15:37 : client: [47] closed
+Apr 27 15:46 : player: played "The Brothers Johnson/Right on Time/04 Right on Time.mp3"
+Apr 27 15:47 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 27 15:47 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 27 15:47 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Apr 27 15:47 : client: [0] opened from [::1]:52578
+Apr 27 15:48 : client: [1] opened from [::1]:52600
+Apr 27 15:48 : client: [1] closed
+Apr 27 15:48 : client: [2] opened from [::1]:52602
+Apr 27 15:48 : client: [2] closed
+Apr 27 15:49 : client: [3] opened from [::1]:52682
+Apr 27 15:49 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 27 15:49 : client: [3] closed
+Apr 27 15:51 : client: [4] opened from [::1]:52724
+Apr 27 15:51 : client: [4] closed
+Apr 27 15:51 : client: [5] opened from [::1]:52726
+Apr 27 15:51 : client: [5] closed
+Apr 27 15:51 : client: [6] opened from [::1]:52728
+Apr 27 15:51 : client: [6] closed
+Apr 27 16:01 : client: [7] opened from [::1]:52828
+Apr 27 16:01 : client: [7] closed
+Apr 27 16:01 : client: [8] opened from [::1]:52830
+Apr 27 16:01 : client: [8] closed
+Apr 27 16:01 : client: [9] opened from [::1]:52832
+Apr 27 16:01 : client: [9] closed
+Apr 27 16:01 : client: [10] opened from [::1]:52834
+Apr 27 16:01 : client: [10] closed
+Apr 27 16:01 : client: [0] closed
+Apr 27 16:05 : player: played "The Brothers Johnson/Right on Time/04 Right on Time.mp3"
+Apr 27 16:06 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 27 16:06 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 27 16:06 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Apr 27 16:06 : client: [0] opened from [::1]:55504
+Apr 27 16:09 : client: [1] opened from [::1]:55652
+Apr 27 16:09 : client: [1] closed
+Apr 27 16:09 : client: [2] opened from [::1]:55654
+Apr 27 16:09 : client: [2] closed
+Apr 27 16:09 : client: [3] opened from [::1]:55656
+Apr 27 16:09 : client: [3] closed
+Apr 27 16:09 : client: [4] opened from [::1]:55658
+Apr 27 16:09 : client: [4] closed
+Apr 27 16:09 : client: [5] opened from [::1]:55660
+Apr 27 16:09 : client: [5] closed
+Apr 27 16:09 : client: [6] opened from [::1]:55662
+Apr 27 16:09 : client: [6] closed
+Apr 27 16:10 : client: [7] opened from [::1]:55666
+Apr 27 16:10 : client: [7] closed
+Apr 27 16:10 : client: [8] opened from [::1]:55668
+Apr 27 16:10 : client: [8] closed
+Apr 27 16:11 : client: [9] opened from [::1]:55670
+Apr 27 16:11 : client: [9] closed
+Apr 27 16:11 : client: [10] opened from [::1]:55672
+Apr 27 16:11 : client: [10] closed
+Apr 27 16:11 : client: [11] opened from [::1]:55678
+Apr 27 16:11 : client: [11] closed
+Apr 27 16:11 : client: [12] opened from [::1]:55680
+Apr 27 16:11 : client: [12] closed
+Apr 27 16:11 : client: [13] opened from [::1]:55686
+Apr 27 16:11 : client: [13] closed
+Apr 27 16:11 : client: [14] opened from [::1]:55688
+Apr 27 16:11 : client: [14] closed
+Apr 27 16:28 : client: [15] opened from [::1]:55828
+Apr 27 16:28 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 27 16:28 : client: [15] closed
+Apr 27 16:28 : client: [16] opened from [::1]:55830
+Apr 27 16:28 : client: [16] closed
+Apr 27 16:28 : client: [17] opened from [::1]:55832
+Apr 27 16:28 : client: [17] closed
+Apr 27 16:29 : player: played "The Brothers Johnson/Right on Time/04 Right on Time.mp3"
+Apr 27 16:33 : player: played "Various Artists/Billboard Top Dance Hits_ 1980/06 Stomp!.mp3"
+Apr 27 16:38 : player: played "The Brothers Johnson/Right on Time/08 Love Is.mp3"
+Apr 27 16:44 : client: [18] opened from [::1]:55882
+Apr 27 16:44 : client: [18] closed
+Apr 27 16:44 : client: [19] opened from [::1]:55884
+Apr 27 16:44 : client: [19] closed
+Apr 27 16:44 : client: [20] opened from [::1]:55886
+Apr 27 16:44 : client: [20] closed
+Apr 27 17:12 : client: [0] closed
+Apr 27 18:00 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 27 18:00 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Apr 27 18:00 : client: [0] opened from [::1]:37660
+Apr 27 18:00 : client: [0] closed
+Apr 27 18:01 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 27 18:01 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Apr 27 18:01 : client: [0] opened from [::1]:50926
+Apr 27 18:11 : client: [1] opened from [::1]:51228
+Apr 27 18:11 : client: [1] closed
+Apr 27 18:11 : client: [2] opened from [::1]:51230
+Apr 27 18:11 : client: [2] closed
+Apr 27 18:11 : client: [3] opened from [::1]:51232
+Apr 27 18:11 : client: [3] closed
+Apr 27 18:11 : client: [4] opened from [::1]:51234
+Apr 27 18:11 : client: [4] closed
+Apr 27 18:11 : client: [5] opened from [::1]:51236
+Apr 27 18:11 : client: [5] closed
+Apr 27 18:11 : client: [6] opened from [::1]:51238
+Apr 27 18:11 : client: [6] closed
+Apr 27 18:15 : client: [7] opened from [::1]:51246
+Apr 27 18:15 : client: [7] closed
+Apr 27 18:15 : client: [8] opened from [::1]:51248
+Apr 27 18:15 : client: [8] closed
+Apr 27 18:15 : client: [9] opened from [::1]:51250
+Apr 27 18:15 : client: [9] closed
+Apr 27 18:15 : client: [10] opened from [::1]:51252
+Apr 27 18:15 : client: [10] closed
+Apr 27 18:15 : client: [11] opened from [::1]:51254
+Apr 27 18:15 : client: [0] closed
+Apr 27 18:16 : client: [12] opened from [::1]:51272
+Apr 27 18:16 : client: [12] closed
+Apr 27 18:16 : client: [13] opened from [::1]:51274
+Apr 27 18:16 : client: [13] closed
+Apr 27 18:16 : client: [14] opened from [::1]:51280
+Apr 27 18:16 : client: [14] closed
+Apr 27 18:16 : client: [15] opened from [::1]:51282
+Apr 27 18:16 : client: [15] closed
+Apr 27 18:18 : client: [16] opened from [::1]:51370
+Apr 27 18:18 : client: [16] closed
+Apr 27 18:18 : client: [17] opened from [::1]:51372
+Apr 27 18:18 : client: [17] closed
+Apr 27 18:18 : client: [18] opened from [::1]:51376
+Apr 27 18:18 : client: [11] closed
+Apr 27 18:20 : client: [18] closed
+Apr 27 18:22 : client: [19] opened from [::1]:51388
+Apr 27 18:22 : client: [19] closed
+Apr 27 18:22 : client: [20] opened from [::1]:51390
+Apr 27 18:22 : client: [20] closed
+Apr 27 18:22 : client: [21] opened from [::1]:51400
+Apr 27 18:22 : client: [21] closed
+Apr 27 18:24 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 27 18:24 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Apr 27 18:24 : client: [0] opened from [::1]:46736
+Apr 27 18:31 : client: [1] opened from [::1]:47002
+Apr 27 18:31 : client: [1] closed
+Apr 27 18:31 : client: [2] opened from [::1]:47004
+Apr 27 18:31 : client: [2] closed
+Apr 27 18:31 : client: [3] opened from [::1]:47006
+Apr 27 18:31 : client: [3] closed
+Apr 27 18:31 : client: [4] opened from [::1]:47008
+Apr 27 18:31 : client: [4] closed
+Apr 27 18:31 : client: [5] opened from [::1]:47010
+Apr 27 18:31 : client: [5] closed
+Apr 27 18:31 : client: [6] opened from [::1]:47012
+Apr 27 18:31 : client: [6] closed
+Apr 28 16:35 : client: [7] opened from [::1]:51706
+Apr 28 16:35 : client: [7] closed
+Apr 28 16:35 : client: [8] opened from [::1]:51708
+Apr 28 16:35 : client: [8] closed
+Apr 28 16:35 : client: [9] opened from [::1]:51710
+Apr 28 16:35 : client: [9] closed
+Apr 28 16:35 : client: [10] opened from [::1]:51712
+Apr 28 16:35 : client: [10] closed
+Apr 28 16:36 : client: [11] opened from [::1]:51718
+Apr 28 16:36 : client: [11] closed
+Apr 28 16:36 : client: [12] opened from [::1]:51720
+Apr 28 16:36 : client: [12] closed
+Apr 28 16:36 : client: [13] opened from [::1]:51722
+Apr 28 16:36 : client: [13] closed
+Apr 28 16:36 : client: [14] opened from [::1]:51724
+Apr 28 16:36 : client: [14] closed
+Apr 28 16:37 : client: [0] closed
+Apr 28 16:37 : client: [15] opened from [::1]:51794
+Apr 28 17:53 : client: [15] closed
+Apr 28 18:07 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 28 18:07 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Apr 28 18:07 : client: [0] opened from [::1]:38354
+Apr 28 21:58 : client: [1] opened from [::1]:39732
+Apr 28 21:58 : client: [1] closed
+Apr 28 21:58 : client: [2] opened from [::1]:39734
+Apr 28 21:58 : client: [2] closed
+Apr 28 21:58 : client: [3] opened from [::1]:39736
+Apr 28 21:58 : client: [3] closed
+Apr 28 21:58 : client: [4] opened from [::1]:39738
+Apr 28 21:58 : client: [4] closed
+Apr 28 21:58 : client: [5] opened from [::1]:39740
+Apr 28 21:58 : client: [5] closed
+Apr 28 21:58 : client: [6] opened from [::1]:39742
+Apr 28 21:58 : client: [6] closed
+Apr 28 21:58 : client: [7] opened from [::1]:39826
+Apr 28 21:58 : client: [0] closed
+Apr 30 13:23 : client: [8] opened from [::1]:53464
+Apr 30 13:23 : client: [7] closed
+Apr 30 14:45 : client: [9] opened from [::1]:53806
+Apr 30 14:45 : client: [9] closed
+Apr 30 14:45 : client: [10] opened from [::1]:53808
+Apr 30 14:45 : client: [10] closed
+Apr 30 14:56 : client: [11] opened from [::1]:53874
+Apr 30 14:56 : client: [11] closed
+Apr 30 14:56 : client: [12] opened from [::1]:53876
+Apr 30 14:56 : client: [12] closed
+Apr 30 14:56 : client: [13] opened from [::1]:53878
+Apr 30 14:56 : client: [13] closed

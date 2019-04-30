@@ -76,11 +76,11 @@ set $mediah2	401
 # >>>> DECORATIONS
 # COLORS
 # class					brdr bkgr text indi chlb
-client.focused			$blk $blk $wht $blu $blu
-client.focused_inactive	$blu $blu $blk $blu $blu
-client.unfocused		$blu $blu $wht $blu $blu
-client.urgent			$red $red $wht $red $red
-client.placeholder		$blk $blk $wht $blu $blu
+client.focused			$blu $blu $wht $blu $blu
+client.focused_inactive	$blu $blk $blu $blk $blu
+client.unfocused		$blu $blk $wht $blk $blu
+client.urgent			$blu $red $wht $red $blu
+client.placeholder		$blu $blk $wht $blu $blu
 #client.background		$blk
 
 # >>>> # BAR
@@ -357,20 +357,20 @@ $win+n				move workspace to output $nat
 
 $win+m				$exs/multimon
 
-$win+comma			$exn "$brightdec; ~/$scr/notify_brightness"
+$win+comma			$exn "$brightdec; ~/$scr/notify_brightness; polybar-msg cmd hook backlight 1"
 
-$win+period			$exn "$brightinc; ~/$scr/notify_brightness"
+$win+period			$exn "$brightinc; ~/$scr/notify_brightness; polybar-msg cmd hook backlight 1"
 
 # >>>> FOR_WINDOW
 # //// GLOBAL
 
 new_window normal 0
-new_float pixel 2
+#new_float pixel 2
 hide_edge_borders both
 #focus_follows_mouse no
 focus_wrapping force
 workspace_auto_back_and_forth yes
-#$fw [class="^.*"] border pixel 2
+$fw [class="^.*"] border normal 1
 $fw [urgent=latest] focus
 
 # //// FLOATERS
@@ -420,6 +420,7 @@ $fw [class="Vivaldi-stable" title="- Vivaldi$"]	$mrk3,$tf "vivaldi"
 
 $fw [class="MPlayer"]					$mvm1
 $fw [class="mpv"]						$mvm1,$stm1
+$fw [class="Spotify"]					$stm1
 $fw [class="feh"]						$mvm1
 $fw [class="Sxiv"]						$mvm1
 #$fw [window_role="pop-up"]				$mvm1
@@ -494,7 +495,7 @@ $exs/i3listen-toggle
 # PROGRAMS
 $exn	i3-msg "workspace $ws1; append_layout $home/.config/i3/main.json"
 $exn	$viva
-$exn	surf www.youtube.com
+$exn	$brow --new-window --app=https://www.youtube.com/
 $ena	mpv $home/$scrmus/A\ Tone\ His\ Self.mp3
 $ena	notify-send 'i3 (re)loaded!' -i ~/$scrpic/i3white.png
 

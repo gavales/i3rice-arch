@@ -1,16 +1,3 @@
-search pres
-shell fnteditfs %f
-search presti
-shell fontforge %f
-search jmh-
-rename GEGA
-rename MEGA
-mkdir MEGA
-rename 
-rename S06E1517 Benderama - Möbius Dick.mkv
-rename S06E1619 Ghost in the Machines - Law and Oracle.mkv
-rename S06E1716 Law and Oracle - Benderama.mkv
-rename S06E1814 The Silence of the Clamps - The Tip of the Zoidberg.mkv
 rename S06E1921 Yo Leela Leela - Ghost in the Machines.mkv
 rename S06E2023 All the Presidents' Heads - Neutopia.mkv
 rename S06E2115 Mobius Dick - Yo Leela Leela.mkv
@@ -48,3 +35,16 @@ rename 13.jpg
 rename 14.jpeg
 shell wget https://raw.githubusercontent.com/budlabs/i3ass/next/src/i3gw
 shell chmod +x %s
+mkdir surf
+rename default.css
+shell convert 
+shell convert -transparent 
+shell convert -trim -transparent white %f test.png
+shell convert -trim -transparent white %f %f
+shell convert -trim -transparent white -fuzz 50% eigen.png eigen.png
+shell convert -trim -transparent white -fuzz 50%% eigen.png eigen.png
+rename logoglider.png
+rename projectlogo.png
+shell convert -trim -transparent white -fuzz 10%% Mitigation_Frame.png Mitigation_Frame.png
+shell mogrify -rotate "10" %f
+shell mogrify -rotate "5" %f
