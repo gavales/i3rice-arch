@@ -1,7 +1,7 @@
 ! fishmans
 ! vim:ft=xdefaults
 #define cblkd #0f1211
-#define cblkl #909496
+#define cblkl #333d39
 #define credd #566066
 #define credl #566066
 #define cgrnd #937A69
@@ -14,5 +14,5 @@
 #define cgntl #6D8FA2
 #define ccynd #9DA3A7
 #define ccynl #9DA3A7
-#define cwhtd #cfd4d7
+#define cwhtd #86a6b7
 #define cwhtl #cfd4d7

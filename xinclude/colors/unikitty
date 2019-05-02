@@ -1,7 +1,7 @@
 ! Base16 Unikitty Light
 ! vim:ft=xdefaults
 #define cblkd #322d34
-#define cblkl #07342e
+#define cblkl #5a515e
 #define credd #d65407
 #define credl #d65407
 #define cgrnd #149bda
@@ -15,4 +15,4 @@
 #define ccynd #775dff
 #define ccynl #775dff
 #define cwhtl #ffffff
-#define cwhtd #5a5a5a
+#define cwhtd #2fe3ca

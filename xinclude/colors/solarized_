@@ -1,15 +1,15 @@
 ! solarized
 ! vim:ft=xdefaults
-#define cwhtd #c6b273
+#define cwhtd #ffcc2c
 #define cwhtl #002b36
 #define credd #dc322f
 #define credl #dc322f
 #define cgrnd #859900
 #define cgrnl #859900
-#define cylwd #b58900
-#define cylwl #b58900
-#define cblud #268bd2
-#define cblul #268bd2
+#define cylwd #268bd2
+#define cylwl #268bd2
+#define cblud #b58900
+#define cblul #b58900
 #define cgntd #d33682
 #define cgntl #d33682
 #define ccynd #2aa198

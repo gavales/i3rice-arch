@@ -30,6 +30,7 @@ map <C-p> "+P
 set smartindent
 set tabstop=4
 set shiftwidth=4
+set incsearch
 set cursorline
 set colorcolumn=81
 set conceallevel=3
@@ -44,6 +45,7 @@ inoremap \ph <++>
 
 vnoremap <S-j> :m '>+1<CR>gv=gv
 vnoremap <S-k> :m '<-2<CR>gv=gv
+vnoremap // y/<C-R>"<CR>
 
 "autocmd FileType python,css,html,vim,json,perl,sh set tabstop=4
 "autocmd FileType python,css,html,vim,json,perl,sh set shiftwidth=4

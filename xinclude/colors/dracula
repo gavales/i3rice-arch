@@ -1,7 +1,7 @@
 ! dracula
 ! vim:ft=xdefaults
 #define cblkd #282A36
-#define cblkl #400300
+#define cblkl #414458
 #define credd #BD93F9
 #define credl #BD93F9
 #define cgrnd #5AF78E
@@ -14,5 +14,5 @@
 #define cgntl #FF79C6
 #define ccynd #8BE9FD
 #define ccynl #8BE9FD
-#define cwhtd #494d63
-#define cwhtl #ffffe5
+#define cwhtd #ffa3a3
+#define cwhtl #fffff2

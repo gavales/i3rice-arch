@@ -20030,3 +20030,25 @@ Apr 30 21:52 : client: [4] opened from [::1]:42272
 Apr 30 21:52 : client: [4] closed
 Apr 30 21:52 : client: [5] opened from [::1]:42330
 Apr 30 21:52 : client: [0] closed
+May 01 16:42 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 01 16:42 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 01 16:42 : client: [6] opened from [::1]:49586
+May 01 16:42 : client: [6] closed
+May 01 16:42 : client: [7] opened from [::1]:49588
+May 01 16:42 : client: [7] closed
+May 01 16:42 : client: [8] opened from [::1]:49590
+May 01 16:42 : client: [8] closed
+May 01 16:43 : client: [5] closed
+May 01 16:43 : client: [9] opened from [::1]:49664
+May 02 18:39 : client: [9] closed
+May 02 18:39 : player: played "The Brothers Johnson/Right on Time/04 Right on Time.mp3"
+May 02 18:39 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 02 18:39 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 02 18:39 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 02 18:39 : client: [0] opened from [::1]:50314
+May 02 18:40 : client: [0] closed
+May 02 18:40 : player: played "The Brothers Johnson/Right on Time/04 Right on Time.mp3"
+May 02 18:40 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 02 18:40 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 02 18:40 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 02 18:40 : client: [0] opened from [::1]:60424
