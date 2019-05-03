@@ -11,6 +11,7 @@ shorttrack=$(expr ${#trackname} - 19)
 shortartist=$(expr ${#artistname} - 19)
 
 [[ $playername == "Spotify" ]] && playername="<span face='Font Awesome 5 Free'>&#xf1bc;</span>"
+[[ $playername == "Rhythmbox" ]] && playername="<span face='Font Awesome 5 Free'>&#xf1bc;</span>"
 
 if [[ ${#trackname} -ge 20 ]]; then
 	trackname="${trackname:0:-$shorttrack}…"

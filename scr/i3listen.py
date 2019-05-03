@@ -9,6 +9,9 @@ def wsnotify(i3, event):
 		call('polybar-msg hook ws 1'.split(' '))
 
 def windownotify(i3, event):
+	if event.change == 'focus':
+		call('polybar-msg hook wintitle 1'.split(' '))
+
 	if event.container.fullscreen_mode == 0:
 		call('polybar-msg cmd show'.split(' '))
 	else:

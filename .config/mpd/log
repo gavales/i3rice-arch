@@ -20052,3 +20052,1155 @@ May 02 18:40 : exception: RTIOThread could not get realtime scheduling, continui
 May 02 18:40 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 May 02 18:40 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
 May 02 18:40 : client: [0] opened from [::1]:60424
+May 03 09:15 : client: [1] opened from [::1]:37024
+May 03 09:15 : client: [2] opened from [::1]:37026
+May 03 09:15 : client: [2] closed
+May 03 09:15 : client: [0] closed
+May 03 09:16 : client: [3] opened from [::1]:37044
+May 03 09:16 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 03 09:16 : client: [3] closed
+May 03 09:16 : client: [4] opened from [::1]:37046
+May 03 09:16 : client: [4] closed
+May 03 09:16 : client: [5] opened from [::1]:37048
+May 03 09:16 : client: [5] closed
+May 03 09:19 : player: played "The Brothers Johnson/Right on Time/04 Right on Time.mp3"
+May 03 09:19 : client: [6] opened from [::1]:37056
+May 03 09:19 : client: [6] closed
+May 03 09:22 : client: [7] opened from [::1]:37064
+May 03 09:22 : client: [7] closed
+May 03 09:22 : client: [8] opened from [::1]:37066
+May 03 09:22 : client: [8] closed
+May 03 09:22 : client: [9] opened from [::1]:37068
+May 03 09:22 : client: [9] closed
+May 03 09:25 : client: [10] opened from [::1]:37152
+May 03 09:25 : client: [1] closed
+May 03 09:25 : client: [11] opened from [::1]:37154
+May 03 09:25 : client: [11] closed
+May 03 09:25 : client: [12] opened from [::1]:37156
+May 03 09:25 : client: [12] closed
+May 03 09:25 : client: [13] opened from [::1]:37158
+May 03 09:25 : client: [13] closed
+May 03 09:25 : client: [14] opened from [::1]:37160
+May 03 09:25 : client: [14] closed
+May 03 09:25 : client: [15] opened from [::1]:37162
+May 03 09:25 : client: [15] closed
+May 03 09:25 : client: [16] opened from [::1]:37164
+May 03 09:25 : client: [16] closed
+May 03 09:25 : client: [17] opened from [::1]:37166
+May 03 09:25 : client: [17] closed
+May 03 09:25 : client: [18] opened from [::1]:37168
+May 03 09:25 : client: [18] closed
+May 03 09:25 : client: [19] opened from [::1]:37170
+May 03 09:25 : client: [19] closed
+May 03 09:25 : client: [20] opened from [::1]:37172
+May 03 09:25 : client: [20] closed
+May 03 09:25 : client: [21] opened from [::1]:37174
+May 03 09:25 : client: [21] closed
+May 03 09:25 : client: [22] opened from [::1]:37176
+May 03 09:25 : client: [22] closed
+May 03 09:25 : client: [23] opened from [::1]:37178
+May 03 09:25 : client: [23] closed
+May 03 09:25 : client: [24] opened from [::1]:37180
+May 03 09:25 : client: [24] closed
+May 03 09:25 : client: [25] opened from [::1]:37182
+May 03 09:25 : client: [25] closed
+May 03 09:26 : client: [26] opened from [::1]:37196
+May 03 09:26 : client: [26] closed
+May 03 09:26 : client: [27] opened from [::1]:37198
+May 03 09:26 : client: [27] closed
+May 03 09:26 : client: [28] opened from [::1]:37200
+May 03 09:26 : client: [28] closed
+May 03 09:27 : client: [29] opened from [::1]:37202
+May 03 09:27 : client: [29] closed
+May 03 09:27 : client: [30] opened from [::1]:37204
+May 03 09:27 : client: [31] opened from [::1]:37206
+May 03 09:27 : client: [30] closed
+May 03 09:27 : client: [31] closed
+May 03 09:27 : client: [32] opened from [::1]:37208
+May 03 09:27 : client: [32] closed
+May 03 09:27 : client: [33] opened from [::1]:37210
+May 03 09:27 : client: [33] closed
+May 03 09:27 : client: [34] opened from [::1]:37212
+May 03 09:27 : client: [34] closed
+May 03 09:27 : client: [35] opened from [::1]:37214
+May 03 09:27 : client: [35] closed
+May 03 09:27 : client: [36] opened from [::1]:37216
+May 03 09:27 : client: [37] opened from [::1]:37218
+May 03 09:27 : client: [36] closed
+May 03 09:27 : client: [38] opened from [::1]:37220
+May 03 09:27 : client: [37] closed
+May 03 09:27 : client: [38] closed
+May 03 09:27 : client: [39] opened from [::1]:37222
+May 03 09:27 : client: [39] closed
+May 03 09:27 : client: [40] opened from [::1]:37224
+May 03 09:27 : client: [40] closed
+May 03 09:27 : client: [41] opened from [::1]:37226
+May 03 09:27 : client: [41] closed
+May 03 09:27 : client: [42] opened from [::1]:37228
+May 03 09:27 : client: [43] opened from [::1]:37230
+May 03 09:27 : client: [42] closed
+May 03 09:27 : client: [43] closed
+May 03 09:27 : client: [44] opened from [::1]:37232
+May 03 09:27 : client: [44] closed
+May 03 09:27 : client: [45] opened from [::1]:37234
+May 03 09:27 : client: [45] closed
+May 03 09:27 : client: [46] opened from [::1]:37236
+May 03 09:27 : client: [46] closed
+May 03 09:27 : client: [47] opened from [::1]:37238
+May 03 09:27 : client: [47] closed
+May 03 09:27 : client: [48] opened from [::1]:37240
+May 03 09:27 : client: [48] closed
+May 03 09:27 : client: [49] opened from [::1]:37242
+May 03 09:27 : client: [49] closed
+May 03 09:27 : client: [50] opened from [::1]:37244
+May 03 09:27 : client: [50] closed
+May 03 09:27 : client: [51] opened from [::1]:37246
+May 03 09:27 : client: [51] closed
+May 03 09:27 : client: [52] opened from [::1]:37248
+May 03 09:27 : client: [52] closed
+May 03 09:30 : client: [53] opened from [::1]:37256
+May 03 09:30 : client: [54] opened from [::1]:37258
+May 03 09:30 : client: [54] closed
+May 03 09:30 : client: [10] closed
+May 03 09:30 : client: [55] opened from [::1]:37260
+May 03 09:30 : client: [55] closed
+May 03 09:30 : client: [56] opened from [::1]:37262
+May 03 09:30 : client: [56] closed
+May 03 09:30 : client: [57] opened from [::1]:37264
+May 03 09:30 : client: [57] closed
+May 03 09:30 : client: [58] opened from [::1]:37266
+May 03 09:30 : client: [58] closed
+May 03 09:30 : client: [59] opened from [::1]:37268
+May 03 09:30 : client: [59] closed
+May 03 09:30 : client: [60] opened from [::1]:37270
+May 03 09:30 : client: [60] closed
+May 03 09:30 : client: [61] opened from [::1]:37272
+May 03 09:30 : client: [61] closed
+May 03 09:30 : client: [62] opened from [::1]:37274
+May 03 09:30 : client: [62] closed
+May 03 09:30 : client: [63] opened from [::1]:37276
+May 03 09:30 : client: [63] closed
+May 03 09:30 : client: [64] opened from [::1]:37278
+May 03 09:30 : client: [64] closed
+May 03 09:30 : client: [65] opened from [::1]:37280
+May 03 09:30 : client: [65] closed
+May 03 09:30 : client: [66] opened from [::1]:37282
+May 03 09:30 : client: [66] closed
+May 03 09:30 : client: [67] opened from [::1]:37284
+May 03 09:30 : client: [67] closed
+May 03 09:30 : client: [68] opened from [::1]:37286
+May 03 09:30 : client: [68] closed
+May 03 09:30 : client: [69] opened from [::1]:37288
+May 03 09:30 : client: [69] closed
+May 03 09:30 : client: [70] opened from [::1]:37290
+May 03 09:30 : client: [70] closed
+May 03 09:30 : client: [71] opened from [::1]:37292
+May 03 09:30 : client: [71] closed
+May 03 09:30 : client: [72] opened from [::1]:37294
+May 03 09:30 : client: [72] closed
+May 03 09:30 : client: [73] opened from [::1]:37296
+May 03 09:30 : client: [73] closed
+May 03 09:30 : client: [74] opened from [::1]:37298
+May 03 09:30 : client: [74] closed
+May 03 09:30 : client: [75] opened from [::1]:37300
+May 03 09:30 : client: [75] closed
+May 03 09:30 : client: [76] opened from [::1]:37302
+May 03 09:30 : client: [76] closed
+May 03 09:30 : client: [77] opened from [::1]:37304
+May 03 09:30 : client: [77] closed
+May 03 09:30 : client: [78] opened from [::1]:37306
+May 03 09:30 : client: [78] closed
+May 03 09:30 : client: [79] opened from [::1]:37308
+May 03 09:30 : client: [79] closed
+May 03 09:30 : client: [80] opened from [::1]:37310
+May 03 09:30 : client: [80] closed
+May 03 09:35 : player: played "The Brothers Johnson/Blam!!/08 Streetwave.mp3"
+May 03 09:35 : client: [81] opened from [::1]:37358
+May 03 09:35 : client: [81] closed
+May 03 09:38 : client: [82] opened from [::1]:37360
+May 03 09:38 : client: [82] closed
+May 03 09:38 : client: [83] opened from [::1]:37362
+May 03 09:38 : client: [83] closed
+May 03 09:38 : client: [84] opened from [::1]:37364
+May 03 09:38 : client: [84] closed
+May 03 09:49 : client: [53] closed
+May 03 09:49 : client: [85] opened from [::1]:37400
+May 03 09:49 : client: [85] closed
+May 03 09:49 : client: [86] opened from [::1]:37402
+May 03 09:49 : client: [86] closed
+May 03 09:49 : client: [87] opened from [::1]:37406
+May 03 09:49 : client: [87] closed
+May 03 09:49 : client: [88] opened from [::1]:37408
+May 03 09:49 : client: [88] closed
+May 03 09:52 : client: [89] opened from [::1]:37420
+May 03 09:52 : client: [89] closed
+May 03 09:52 : client: [90] opened from [::1]:37422
+May 03 09:52 : client: [90] closed
+May 03 12:12 : client: [91] opened from [::1]:37994
+May 03 12:12 : client: [91] closed
+May 03 12:12 : client: [92] opened from [::1]:37996
+May 03 12:12 : client: [92] closed
+May 03 13:31 : client: [93] opened from [::1]:38208
+May 03 13:31 : client: [94] opened from [::1]:38210
+May 03 13:31 : client: [94] closed
+May 03 13:58 : client: [95] opened from [::1]:38542
+May 03 13:58 : client: [95] closed
+May 03 13:58 : client: [96] opened from [::1]:38544
+May 03 13:58 : client: [96] closed
+May 03 14:46 : client: [97] opened from [::1]:38874
+May 03 14:46 : client: [97] closed
+May 03 14:46 : client: [98] opened from [::1]:38876
+May 03 14:46 : client: [98] closed
+May 03 15:03 : client: [99] opened from [::1]:38956
+May 03 15:03 : client: [99] closed
+May 03 15:03 : client: [100] opened from [::1]:38958
+May 03 15:03 : client: [100] closed
+May 03 15:45 : client: [101] opened from [::1]:39232
+May 03 15:45 : client: [101] closed
+May 03 15:45 : client: [102] opened from [::1]:39234
+May 03 15:45 : client: [102] closed
+May 03 15:45 : client: [103] opened from [::1]:39236
+May 03 15:45 : client: [103] closed
+May 03 15:45 : client: [104] opened from [::1]:39238
+May 03 15:45 : client: [104] closed
+May 03 15:46 : client: [105] opened from [::1]:39242
+May 03 15:46 : client: [105] closed
+May 03 15:46 : client: [106] opened from [::1]:39244
+May 03 15:46 : client: [106] closed
+May 03 16:09 : client: [107] opened from [::1]:39420
+May 03 16:09 : client: [108] opened from [::1]:39422
+May 03 16:09 : client: [108] closed
+May 03 16:10 : client: [93] closed
+May 03 16:18 : client: [109] opened from [::1]:39778
+May 03 16:18 : client: [109] closed
+May 03 16:18 : client: [110] opened from [::1]:39780
+May 03 16:18 : client: [110] closed
+May 03 16:18 : client: [111] opened from [::1]:39782
+May 03 16:18 : client: [111] closed
+May 03 16:19 : client: [112] opened from [::1]:39790
+May 03 16:19 : client: [112] closed
+May 03 16:19 : client: [113] opened from [::1]:39794
+May 03 16:19 : client: [113] closed
+May 03 16:19 : client: [114] opened from [::1]:39796
+May 03 16:19 : client: [114] closed
+May 03 16:22 : client: [115] opened from [::1]:39888
+May 03 16:22 : client: [115] closed
+May 03 16:23 : client: [116] opened from [::1]:39892
+May 03 16:23 : client: [116] closed
+May 03 16:23 : client: [117] opened from [::1]:39894
+May 03 16:23 : client: [117] closed
+May 03 16:24 : client: [118] opened from [::1]:39898
+May 03 16:24 : client: [118] closed
+May 03 16:25 : client: [119] opened from [::1]:39900
+May 03 16:25 : client: [119] closed
+May 03 16:25 : client: [120] opened from [::1]:39902
+May 03 16:25 : client: [120] closed
+May 03 16:27 : client: [121] opened from [::1]:39910
+May 03 16:27 : client: [121] closed
+May 03 16:27 : client: [122] opened from [::1]:39912
+May 03 16:27 : client: [122] closed
+May 03 16:27 : client: [123] opened from [::1]:39914
+May 03 16:27 : client: [123] closed
+May 03 16:28 : client: [124] opened from [::1]:39916
+May 03 16:28 : client: [124] closed
+May 03 16:28 : client: [125] opened from [::1]:39918
+May 03 16:28 : client: [125] closed
+May 03 16:28 : client: [126] opened from [::1]:39920
+May 03 16:28 : client: [126] closed
+May 03 16:28 : client: [127] opened from [::1]:39922
+May 03 16:28 : client: [127] closed
+May 03 16:28 : client: [128] opened from [::1]:39924
+May 03 16:28 : client: [128] closed
+May 03 16:28 : player: played "The Brothers Johnson/Strawberry Letter 23_ The Best/05 Free and Single.mp3"
+May 03 16:29 : client: [129] opened from [::1]:39928
+May 03 16:29 : client: [129] closed
+May 03 16:29 : client: [130] opened from [::1]:39930
+May 03 16:29 : client: [130] closed
+May 03 16:29 : client: [107] closed
+May 03 16:31 : client: [131] opened from [::1]:39938
+May 03 16:31 : client: [131] closed
+May 03 16:31 : client: [132] opened from [::1]:39940
+May 03 16:31 : client: [132] closed
+May 03 16:31 : client: [133] opened from [::1]:39942
+May 03 16:31 : client: [133] closed
+May 03 16:31 : client: [134] opened from [::1]:39944
+May 03 16:31 : client: [134] closed
+May 03 16:31 : client: [135] opened from [::1]:39946
+May 03 16:31 : client: [135] closed
+May 03 16:31 : client: [136] opened from [::1]:39948
+May 03 16:31 : client: [136] closed
+May 03 16:32 : client: [137] opened from [::1]:39960
+May 03 16:32 : client: [138] opened from [::1]:39962
+May 03 16:32 : client: [138] closed
+May 03 16:32 : client: [139] opened from [::1]:39964
+May 03 16:32 : client: [139] closed
+May 03 16:32 : client: [140] opened from [::1]:39966
+May 03 16:32 : client: [140] closed
+May 03 16:32 : client: [141] opened from [::1]:39968
+May 03 16:32 : client: [141] closed
+May 03 16:32 : client: [142] opened from [::1]:39970
+May 03 16:32 : client: [143] opened from [::1]:39972
+May 03 16:32 : client: [142] closed
+May 03 16:32 : client: [143] closed
+May 03 16:32 : client: [144] opened from [::1]:39974
+May 03 16:32 : client: [144] closed
+May 03 16:32 : client: [145] opened from [::1]:39976
+May 03 16:32 : client: [145] closed
+May 03 16:32 : client: [146] opened from [::1]:39978
+May 03 16:32 : client: [146] closed
+May 03 16:33 : client: [147] opened from [::1]:39980
+May 03 16:33 : client: [147] closed
+May 03 16:33 : client: [148] opened from [::1]:39982
+May 03 16:33 : client: [149] opened from [::1]:39984
+May 03 16:33 : client: [148] closed
+May 03 16:33 : client: [149] closed
+May 03 16:33 : client: [150] opened from [::1]:39986
+May 03 16:33 : client: [150] closed
+May 03 16:33 : client: [151] opened from [::1]:39988
+May 03 16:33 : client: [151] closed
+May 03 16:33 : client: [152] opened from [::1]:39990
+May 03 16:33 : client: [152] closed
+May 03 16:34 : client: [153] opened from [::1]:39992
+May 03 16:34 : client: [153] closed
+May 03 16:34 : client: [154] opened from [::1]:39994
+May 03 16:34 : client: [155] opened from [::1]:39996
+May 03 16:34 : client: [154] closed
+May 03 16:34 : client: [155] closed
+May 03 16:34 : client: [156] opened from [::1]:39998
+May 03 16:34 : client: [156] closed
+May 03 16:34 : client: [157] opened from [::1]:40000
+May 03 16:34 : client: [157] closed
+May 03 16:34 : client: [158] opened from [::1]:40002
+May 03 16:34 : client: [158] closed
+May 03 16:34 : client: [159] opened from [::1]:40010
+May 03 16:34 : client: [159] closed
+May 03 16:34 : client: [160] opened from [::1]:40012
+May 03 16:34 : client: [160] closed
+May 03 16:38 : client: [161] opened from [::1]:40016
+May 03 16:38 : player: played "Bruno Mars/24K Magic/09 Too Good To Say Goodbye.mp3"
+May 03 16:38 : client: [137] closed
+May 03 16:38 : client: [161] closed
+May 03 16:39 : client: [162] opened from [::1]:40022
+May 03 16:39 : client: [163] opened from [::1]:40024
+May 03 16:39 : client: [163] closed
+May 03 16:41 : client: [164] opened from [::1]:40028
+May 03 16:41 : client: [164] closed
+May 03 16:41 : client: [165] opened from [::1]:40030
+May 03 16:41 : client: [166] opened from [::1]:40032
+May 03 16:41 : client: [165] closed
+May 03 16:41 : client: [166] closed
+May 03 16:41 : client: [167] opened from [::1]:40034
+May 03 16:41 : client: [167] closed
+May 03 16:41 : client: [168] opened from [::1]:40036
+May 03 16:41 : client: [168] closed
+May 03 16:41 : client: [169] opened from [::1]:40038
+May 03 16:41 : client: [170] opened from [::1]:40040
+May 03 16:41 : client: [169] closed
+May 03 16:41 : client: [170] closed
+May 03 16:42 : client: [171] opened from [::1]:40044
+May 03 16:42 : client: [171] closed
+May 03 16:42 : client: [172] opened from [::1]:40046
+May 03 16:42 : client: [173] opened from [::1]:40048
+May 03 16:42 : client: [172] closed
+May 03 16:42 : client: [173] closed
+May 03 16:42 : client: [174] opened from [::1]:40050
+May 03 16:42 : client: [174] closed
+May 03 16:42 : client: [175] opened from [::1]:40052
+May 03 16:42 : client: [175] closed
+May 03 16:42 : client: [176] opened from [::1]:40054
+May 03 16:42 : client: [176] closed
+May 03 16:42 : client: [177] opened from [::1]:40058
+May 03 16:42 : client: [178] opened from [::1]:40056
+May 03 16:42 : client: [178] closed
+May 03 16:42 : client: [177] closed
+May 03 16:43 : client: [179] opened from [::1]:40062
+May 03 16:43 : client: [179] closed
+May 03 16:43 : client: [180] opened from [::1]:40064
+May 03 16:43 : client: [181] opened from [::1]:40066
+May 03 16:43 : client: [180] closed
+May 03 16:43 : client: [181] closed
+May 03 16:43 : client: [182] opened from [::1]:40068
+May 03 16:43 : client: [182] closed
+May 03 16:43 : client: [183] opened from [::1]:40070
+May 03 16:43 : client: [183] closed
+May 03 16:45 : client: [184] opened from [::1]:40074
+May 03 16:45 : client: [185] opened from [::1]:40076
+May 03 16:45 : client: [184] closed
+May 03 16:45 : client: [185] closed
+May 03 16:45 : client: [186] opened from [::1]:40078
+May 03 16:45 : client: [186] closed
+May 03 16:45 : client: [187] opened from [::1]:40080
+May 03 16:45 : client: [187] closed
+May 03 16:45 : client: [188] opened from [::1]:40082
+May 03 16:45 : client: [188] closed
+May 03 16:45 : client: [189] opened from [::1]:40084
+May 03 16:45 : client: [189] closed
+May 03 16:45 : client: [190] opened from [::1]:40086
+May 03 16:45 : client: [190] closed
+May 03 16:46 : client: [191] opened from [::1]:40088
+May 03 16:46 : client: [191] closed
+May 03 16:46 : client: [192] opened from [::1]:40090
+May 03 16:46 : client: [193] opened from [::1]:40092
+May 03 16:46 : client: [192] closed
+May 03 16:46 : client: [193] closed
+May 03 16:46 : client: [194] opened from [::1]:40094
+May 03 16:46 : client: [194] closed
+May 03 16:46 : client: [195] opened from [::1]:40096
+May 03 16:46 : client: [195] closed
+May 03 16:46 : client: [196] opened from [::1]:40098
+May 03 16:46 : client: [196] closed
+May 03 16:46 : client: [197] opened from [::1]:40100
+May 03 16:46 : client: [198] opened from [::1]:40102
+May 03 16:46 : client: [197] closed
+May 03 16:46 : client: [198] closed
+May 03 16:46 : client: [199] opened from [::1]:40104
+May 03 16:46 : client: [199] closed
+May 03 16:46 : client: [200] opened from [::1]:40106
+May 03 16:46 : client: [200] closed
+May 03 16:46 : client: [201] opened from [::1]:40112
+May 03 16:46 : client: [201] closed
+May 03 16:46 : client: [202] opened from [::1]:40114
+May 03 16:46 : client: [202] closed
+May 03 16:46 : client: [203] opened from [::1]:40116
+May 03 16:46 : client: [203] closed
+May 03 16:46 : client: [204] opened from [::1]:40118
+May 03 16:46 : client: [204] closed
+May 03 16:46 : client: [205] opened from [::1]:40120
+May 03 16:46 : client: [205] closed
+May 03 16:46 : client: [206] opened from [::1]:40122
+May 03 16:46 : client: [206] closed
+May 03 16:46 : client: [207] opened from [::1]:40124
+May 03 16:46 : client: [207] closed
+May 03 16:47 : client: [208] opened from [::1]:40126
+May 03 16:47 : client: [208] closed
+May 03 16:47 : client: [209] opened from [::1]:40128
+May 03 16:47 : client: [209] closed
+May 03 16:47 : client: [210] opened from [::1]:40130
+May 03 16:47 : client: [210] closed
+May 03 16:47 : client: [211] opened from [::1]:40132
+May 03 16:47 : client: [211] closed
+May 03 16:47 : client: [212] opened from [::1]:40134
+May 03 16:47 : client: [212] closed
+May 03 16:47 : client: [213] opened from [::1]:40136
+May 03 16:47 : client: [213] closed
+May 03 16:47 : client: [214] opened from [::1]:40138
+May 03 16:47 : client: [214] closed
+May 03 16:47 : client: [215] opened from [::1]:40140
+May 03 16:47 : client: [215] closed
+May 03 16:47 : client: [216] opened from [::1]:40142
+May 03 16:47 : client: [216] closed
+May 03 16:47 : client: [217] opened from [::1]:40144
+May 03 16:47 : client: [217] closed
+May 03 16:47 : client: [218] opened from [::1]:40146
+May 03 16:47 : client: [218] closed
+May 03 16:47 : client: [219] opened from [::1]:40148
+May 03 16:47 : client: [219] closed
+May 03 16:47 : client: [220] opened from [::1]:40150
+May 03 16:47 : client: [220] closed
+May 03 16:47 : client: [221] opened from [::1]:40152
+May 03 16:47 : client: [221] closed
+May 03 16:47 : client: [222] opened from [::1]:40154
+May 03 16:47 : client: [222] closed
+May 03 16:47 : client: [223] opened from [::1]:40156
+May 03 16:47 : client: [223] closed
+May 03 16:47 : client: [224] opened from [::1]:40158
+May 03 16:47 : client: [224] closed
+May 03 16:47 : client: [225] opened from [::1]:40160
+May 03 16:47 : client: [225] closed
+May 03 16:47 : client: [226] opened from [::1]:40162
+May 03 16:47 : client: [226] closed
+May 03 16:47 : client: [227] opened from [::1]:40164
+May 03 16:47 : client: [227] closed
+May 03 16:47 : client: [228] opened from [::1]:40166
+May 03 16:47 : client: [228] closed
+May 03 16:51 : player: played "Balkan Beat Box/Nu Med/00 Mexico City.mp3"
+May 03 16:51 : client: [229] opened from [::1]:40398
+May 03 16:51 : client: [229] closed
+May 03 16:51 : client: [230] opened from [::1]:40400
+May 03 16:51 : client: [230] closed
+May 03 16:52 : client: [231] opened from [::1]:40408
+May 03 16:52 : client: [232] opened from [::1]:40410
+May 03 16:52 : client: [232] closed
+May 03 16:52 : client: [233] opened from [::1]:40412
+May 03 16:52 : client: [233] closed
+May 03 16:52 : client: [162] closed
+May 03 16:55 : client: [234] opened from [::1]:40426
+May 03 16:55 : client: [234] closed
+May 03 16:55 : client: [235] opened from [::1]:40428
+May 03 16:55 : client: [235] closed
+May 03 16:55 : client: [236] opened from [::1]:40430
+May 03 16:55 : client: [236] closed
+May 03 16:55 : client: [237] opened from [::1]:40432
+May 03 16:55 : client: [237] closed
+May 03 16:55 : client: [238] opened from [::1]:40434
+May 03 16:55 : client: [238] closed
+May 03 16:55 : client: [239] opened from [::1]:40436
+May 03 16:55 : client: [239] closed
+May 03 16:55 : client: [240] opened from [::1]:40438
+May 03 16:55 : client: [240] closed
+May 03 16:55 : client: [241] opened from [::1]:40440
+May 03 16:55 : client: [241] closed
+May 03 16:55 : client: [242] opened from [::1]:40442
+May 03 16:55 : client: [242] closed
+May 03 16:55 : client: [243] opened from [::1]:40444
+May 03 16:55 : client: [243] closed
+May 03 16:55 : client: [244] opened from [::1]:40446
+May 03 16:55 : client: [244] closed
+May 03 16:55 : client: [245] opened from [::1]:40448
+May 03 16:55 : client: [245] closed
+May 03 16:55 : client: [246] opened from [::1]:40450
+May 03 16:55 : client: [246] closed
+May 03 16:55 : client: [247] opened from [::1]:40452
+May 03 16:55 : client: [247] closed
+May 03 16:55 : client: [248] opened from [::1]:40454
+May 03 16:55 : client: [248] closed
+May 03 16:57 : client: [249] opened from [::1]:40458
+May 03 16:57 : client: [249] closed
+May 03 16:57 : client: [250] opened from [::1]:40460
+May 03 16:57 : client: [250] closed
+May 03 16:57 : client: [251] opened from [::1]:40462
+May 03 16:57 : client: [251] closed
+May 03 16:57 : client: [252] opened from [::1]:40464
+May 03 16:57 : client: [252] closed
+May 03 16:57 : client: [253] opened from [::1]:40466
+May 03 16:57 : client: [253] closed
+May 03 16:57 : client: [254] opened from [::1]:40468
+May 03 16:57 : client: [254] closed
+May 03 17:04 : client: [255] opened from [::1]:40706
+May 03 17:04 : client: [255] closed
+May 03 17:04 : client: [256] opened from [::1]:40708
+May 03 17:04 : client: [256] closed
+May 03 17:04 : client: [257] opened from [::1]:40710
+May 03 17:04 : client: [257] closed
+May 03 17:04 : client: [258] opened from [::1]:40712
+May 03 17:04 : client: [258] closed
+May 03 17:04 : client: [259] opened from [::1]:40714
+May 03 17:04 : client: [259] closed
+May 03 17:04 : client: [260] opened from [::1]:40716
+May 03 17:04 : client: [260] closed
+May 03 17:06 : client: [261] opened from [::1]:40724
+May 03 17:06 : client: [261] closed
+May 03 17:06 : client: [262] opened from [::1]:40726
+May 03 17:06 : client: [262] closed
+May 03 17:06 : client: [263] opened from [::1]:40728
+May 03 17:06 : client: [263] closed
+May 03 17:06 : client: [264] opened from [::1]:40730
+May 03 17:06 : client: [264] closed
+May 03 17:06 : client: [265] opened from [::1]:40732
+May 03 17:06 : client: [265] closed
+May 03 17:06 : client: [266] opened from [::1]:40734
+May 03 17:06 : client: [266] closed
+May 03 17:06 : player: played "Balkan Beat Box/The Very Best Of Balkan Beat B/00 Sunday Arak (featuring Dana Le.mp3"
+May 03 17:06 : client: [267] opened from [::1]:40736
+May 03 17:06 : client: [267] closed
+May 03 17:06 : client: [268] opened from [::1]:40738
+May 03 17:06 : client: [268] closed
+May 03 17:06 : client: [269] opened from [::1]:40740
+May 03 17:06 : client: [269] closed
+May 03 17:06 : client: [270] opened from [::1]:40742
+May 03 17:06 : client: [270] closed
+May 03 17:06 : client: [271] opened from [::1]:40744
+May 03 17:06 : client: [271] closed
+May 03 17:06 : client: [272] opened from [::1]:40746
+May 03 17:06 : client: [272] closed
+May 03 17:08 : client: [273] opened from [::1]:40750
+May 03 17:08 : client: [273] closed
+May 03 17:08 : client: [274] opened from [::1]:40752
+May 03 17:08 : client: [274] closed
+May 03 17:08 : client: [275] opened from [::1]:40754
+May 03 17:08 : client: [275] closed
+May 03 17:08 : client: [276] opened from [::1]:40756
+May 03 17:08 : client: [276] closed
+May 03 17:08 : client: [277] opened from [::1]:40758
+May 03 17:08 : client: [277] closed
+May 03 17:08 : client: [278] opened from [::1]:40760
+May 03 17:08 : client: [278] closed
+May 03 17:08 : client: [279] opened from [::1]:40762
+May 03 17:08 : client: [279] closed
+May 03 17:08 : client: [280] opened from [::1]:40764
+May 03 17:08 : client: [280] closed
+May 03 17:09 : client: [281] opened from [::1]:40770
+May 03 17:09 : client: [281] closed
+May 03 17:09 : client: [282] opened from [::1]:40772
+May 03 17:09 : client: [282] closed
+May 03 17:09 : client: [283] opened from [::1]:40774
+May 03 17:09 : client: [283] closed
+May 03 17:09 : client: [284] opened from [::1]:40776
+May 03 17:09 : client: [284] closed
+May 03 17:09 : client: [285] opened from [::1]:40778
+May 03 17:09 : client: [285] closed
+May 03 17:09 : client: [286] opened from [::1]:40780
+May 03 17:09 : client: [286] closed
+May 03 17:10 : player: played "Yoko Kanno/Cowboy Bebop OST 1/00 Trgovina Cukuzy (Skit).mp3"
+May 03 17:10 : client: [287] opened from [::1]:40786
+May 03 17:10 : client: [287] closed
+May 03 17:10 : client: [288] opened from [::1]:40788
+May 03 17:10 : client: [288] closed
+May 03 17:10 : client: [289] opened from [::1]:40790
+May 03 17:10 : client: [289] closed
+May 03 17:10 : client: [290] opened from [::1]:40792
+May 03 17:10 : client: [290] closed
+May 03 17:16 : player: played "10CC/I Don't Like Cricket (I Love I/01 I Don't Like Cricket - I Love.mp3"
+May 03 17:16 : client: [291] opened from [::1]:40804
+May 03 17:16 : client: [291] closed
+May 03 17:16 : client: [292] opened from [::1]:40806
+May 03 17:16 : client: [292] closed
+May 03 17:16 : client: [293] opened from [::1]:40808
+May 03 17:16 : client: [293] closed
+May 03 17:16 : client: [294] opened from [::1]:40810
+May 03 17:16 : client: [294] closed
+May 03 17:22 : player: played "Various Artists/70s Love/05 I'm Not In Love.mp3"
+May 03 17:23 : client: [295] opened from [::1]:40836
+May 03 17:23 : client: [231] closed
+May 03 17:24 : client: [296] opened from [::1]:40874
+May 03 17:24 : client: [296] closed
+May 03 17:24 : client: [297] opened from [::1]:40876
+May 03 17:24 : client: [297] closed
+May 03 17:24 : client: [298] opened from [::1]:40884
+May 03 17:25 : client: [295] closed
+May 03 17:25 : client: [298] closed
+May 03 17:25 : client: [299] opened from [::1]:40892
+May 03 17:25 : client: [299] closed
+May 03 17:25 : client: [300] opened from [::1]:40920
+May 03 17:33 : client: [301] opened from [::1]:41056
+May 03 17:33 : client: [301] closed
+May 03 17:33 : client: [302] opened from [::1]:41058
+May 03 17:33 : client: [302] closed
+May 03 17:35 : client: [300] closed
+May 03 17:35 : client: [303] opened from [::1]:41066
+May 03 17:35 : client: [303] closed
+May 03 17:35 : client: [304] opened from [::1]:41068
+May 03 17:35 : client: [304] closed
+May 03 17:35 : client: [305] opened from [::1]:41070
+May 03 17:37 : client: [305] closed
+May 03 17:37 : client: [306] opened from [::1]:41172
+May 03 17:43 : client: [306] closed
+May 03 17:43 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 03 17:43 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 03 17:44 : client: [0] opened from [::1]:48700
+May 03 17:44 : client: [0] closed
+May 03 17:46 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 03 17:46 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 03 17:46 : client: [0] opened from [::1]:42922
+May 03 17:47 : client: [1] opened from [::1]:43098
+May 03 17:47 : client: [1] closed
+May 03 17:47 : client: [2] opened from [::1]:43100
+May 03 17:47 : client: [2] closed
+May 03 17:47 : client: [3] opened from [::1]:43102
+May 03 17:47 : client: [3] closed
+May 03 17:48 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 03 17:48 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 03 17:48 : client: [4] opened from [::1]:43110
+May 03 17:48 : client: [4] closed
+May 03 17:48 : client: [5] opened from [::1]:43112
+May 03 17:48 : client: [5] closed
+May 03 17:48 : client: [6] opened from [::1]:43114
+May 03 17:48 : client: [6] closed
+May 03 17:48 : client: [7] opened from [::1]:43116
+May 03 17:48 : client: [7] closed
+May 03 17:48 : client: [8] opened from [::1]:43118
+May 03 17:48 : client: [8] closed
+May 03 17:48 : client: [9] opened from [::1]:43120
+May 03 17:48 : client: [9] closed
+May 03 17:48 : client: [10] opened from [::1]:43122
+May 03 17:48 : client: [10] closed
+May 03 17:48 : client: [11] opened from [::1]:43124
+May 03 17:48 : client: [11] closed
+May 03 17:49 : client: [12] opened from [::1]:43128
+May 03 17:49 : client: [12] closed
+May 03 17:49 : client: [13] opened from [::1]:43130
+May 03 17:49 : client: [13] closed
+May 03 17:49 : client: [14] opened from [::1]:43132
+May 03 17:49 : client: [14] closed
+May 03 17:49 : client: [15] opened from [::1]:43134
+May 03 17:49 : client: [15] closed
+May 03 17:49 : client: [16] opened from [::1]:43136
+May 03 17:49 : client: [16] closed
+May 03 17:49 : client: [17] opened from [::1]:43138
+May 03 17:49 : client: [17] closed
+May 03 17:49 : client: [18] opened from [::1]:43140
+May 03 17:49 : client: [18] closed
+May 03 17:49 : client: [19] opened from [::1]:43142
+May 03 17:49 : client: [19] closed
+May 03 17:49 : client: [20] opened from [::1]:43144
+May 03 17:49 : client: [20] closed
+May 03 17:49 : client: [21] opened from [::1]:43146
+May 03 17:49 : client: [21] closed
+May 03 17:49 : client: [22] opened from [::1]:43148
+May 03 17:49 : client: [22] closed
+May 03 17:49 : client: [23] opened from [::1]:43150
+May 03 17:49 : client: [23] closed
+May 03 17:49 : client: [24] opened from [::1]:43152
+May 03 17:49 : client: [24] closed
+May 03 17:49 : client: [25] opened from [::1]:43154
+May 03 17:49 : client: [25] closed
+May 03 17:49 : client: [26] opened from [::1]:43156
+May 03 17:49 : client: [26] closed
+May 03 17:49 : client: [27] opened from [::1]:43158
+May 03 17:49 : client: [27] closed
+May 03 17:49 : client: [28] opened from [::1]:43160
+May 03 17:49 : client: [28] closed
+May 03 17:49 : client: [29] opened from [::1]:43162
+May 03 17:49 : client: [29] closed
+May 03 17:51 : client: [30] opened from [::1]:43172
+May 03 17:51 : client: [30] closed
+May 03 17:51 : client: [31] opened from [::1]:43174
+May 03 17:51 : client: [31] closed
+May 03 17:55 : player: played "Barry Manilow/Ultimate Manilow _Arista_/13 Copacabana (At the Copa).mp3"
+May 03 17:55 : client: [32] opened from [::1]:43182
+May 03 17:55 : client: [32] closed
+May 03 17:55 : client: [33] opened from [::1]:43184
+May 03 17:55 : client: [33] closed
+May 03 17:55 : client: [34] opened from [::1]:43186
+May 03 17:55 : client: [34] closed
+May 03 17:55 : client: [35] opened from [::1]:43188
+May 03 17:55 : client: [35] closed
+May 03 18:00 : player: played "Victor Wooten/00 Me And My Bass Guitar.mp3"
+May 03 18:00 : client: [36] opened from [::1]:43208
+May 03 18:00 : client: [36] closed
+May 03 18:00 : client: [37] opened from [::1]:43210
+May 03 18:00 : client: [37] closed
+May 03 18:00 : client: [38] opened from [::1]:43212
+May 03 18:00 : client: [38] closed
+May 03 18:00 : client: [39] opened from [::1]:43214
+May 03 18:00 : client: [39] closed
+May 03 18:06 : player: played "Victor Wooten/00 The Lesson.mp3"
+May 03 18:06 : client: [40] opened from [::1]:43488
+May 03 18:06 : client: [40] closed
+May 03 18:06 : client: [41] opened from [::1]:43490
+May 03 18:06 : client: [41] closed
+May 03 18:06 : client: [42] opened from [::1]:43492
+May 03 18:06 : client: [42] closed
+May 03 18:06 : client: [43] opened from [::1]:43494
+May 03 18:06 : client: [43] closed
+May 03 18:08 : client: [44] opened from [::1]:43496
+May 03 18:08 : client: [45] opened from [::1]:43498
+May 03 18:08 : client: [45] closed
+May 03 18:08 : client: [46] opened from [::1]:43500
+May 03 18:08 : client: [46] closed
+May 03 18:08 : client: [47] opened from [::1]:43502
+May 03 18:08 : client: [47] closed
+May 03 18:08 : client: [48] opened from [::1]:43504
+May 03 18:08 : client: [48] closed
+May 03 18:08 : client: [0] closed
+May 03 18:11 : player: played "Victor Wooten/00 You Can't Hold No Groove.mp3"
+May 03 18:11 : client: [49] opened from [::1]:43510
+May 03 18:11 : client: [49] closed
+May 03 18:11 : client: [50] opened from [::1]:43512
+May 03 18:11 : client: [50] closed
+May 03 18:11 : client: [51] opened from [::1]:43514
+May 03 18:11 : client: [51] closed
+May 03 18:11 : client: [52] opened from [::1]:43516
+May 03 18:11 : client: [52] closed
+May 03 18:11 : player: played "Victor Wooten/Soul Circus/01 Intro_ Adam.mp3"
+May 03 18:11 : client: [53] opened from [::1]:43522
+May 03 18:11 : client: [53] closed
+May 03 18:11 : client: [54] opened from [::1]:43524
+May 03 18:11 : client: [54] closed
+May 03 18:11 : client: [55] opened from [::1]:43526
+May 03 18:11 : client: [55] closed
+May 03 18:11 : client: [56] opened from [::1]:43528
+May 03 18:11 : client: [56] closed
+May 03 18:14 : client: [57] opened from [::1]:43594
+May 03 18:14 : client: [57] closed
+May 03 18:14 : client: [58] opened from [::1]:43596
+May 03 18:14 : client: [58] closed
+May 03 18:14 : client: [59] opened from [::1]:43598
+May 03 18:14 : client: [59] closed
+May 03 18:15 : client: [60] opened from [::1]:43610
+May 03 18:15 : client: [60] closed
+May 03 18:15 : client: [61] opened from [::1]:43612
+May 03 18:15 : client: [61] closed
+May 03 18:15 : client: [62] opened from [::1]:43614
+May 03 18:15 : client: [62] closed
+May 03 18:16 : client: [63] opened from [::1]:43618
+May 03 18:16 : client: [64] opened from [::1]:43620
+May 03 18:16 : client: [64] closed
+May 03 18:16 : client: [65] opened from [::1]:43622
+May 03 18:16 : client: [65] closed
+May 03 18:16 : client: [66] opened from [::1]:43624
+May 03 18:16 : client: [66] closed
+May 03 18:16 : client: [67] opened from [::1]:43626
+May 03 18:16 : client: [67] closed
+May 03 18:16 : player: played "Victor Wooten/Soul Circus/02 Victa.mp3"
+May 03 18:16 : client: [68] opened from [::1]:43628
+May 03 18:16 : client: [69] opened from [::1]:43630
+May 03 18:16 : client: [68] closed
+May 03 18:16 : client: [69] closed
+May 03 18:16 : client: [70] opened from [::1]:43632
+May 03 18:16 : client: [71] opened from [::1]:43634
+May 03 18:16 : client: [70] closed
+May 03 18:16 : client: [71] closed
+May 03 18:16 : client: [44] closed
+May 03 18:16 : client: [72] opened from [::1]:43636
+May 03 18:16 : client: [72] closed
+May 03 18:16 : client: [73] opened from [::1]:43638
+May 03 18:16 : client: [73] closed
+May 03 18:17 : client: [74] opened from [::1]:43642
+May 03 18:17 : client: [74] closed
+May 03 18:17 : client: [75] opened from [::1]:43644
+May 03 18:17 : client: [75] closed
+May 03 18:21 : client: [63] closed
+May 03 18:21 : client: [76] opened from [::1]:43766
+May 03 18:21 : client: [77] opened from [::1]:43768
+May 03 18:21 : client: [77] closed
+May 03 18:21 : client: [78] opened from [::1]:43770
+May 03 18:21 : client: [78] closed
+May 03 18:21 : client: [79] opened from [::1]:43772
+May 03 18:21 : client: [79] closed
+May 03 18:21 : client: [80] opened from [::1]:43774
+May 03 18:21 : client: [80] closed
+May 03 18:22 : player: played "Victor Wooten/Soul Circus/03 Bass Tribute.mp3"
+May 03 18:22 : client: [81] opened from [::1]:43776
+May 03 18:22 : client: [81] closed
+May 03 18:22 : client: [82] opened from [::1]:43778
+May 03 18:22 : client: [82] closed
+May 03 18:22 : client: [83] opened from [::1]:43780
+May 03 18:22 : client: [83] closed
+May 03 18:22 : client: [84] opened from [::1]:43782
+May 03 18:22 : client: [84] closed
+May 03 18:22 : client: [85] opened from [::1]:43788
+May 03 18:22 : client: [86] opened from [::1]:43790
+May 03 18:22 : client: [86] closed
+May 03 18:22 : client: [87] opened from [::1]:43792
+May 03 18:22 : client: [87] closed
+May 03 18:22 : client: [88] opened from [::1]:43794
+May 03 18:22 : client: [88] closed
+May 03 18:22 : client: [89] opened from [::1]:43796
+May 03 18:22 : client: [89] closed
+May 03 18:22 : client: [85] closed
+May 03 18:23 : client: [90] opened from [::1]:43798
+May 03 18:23 : client: [91] opened from [::1]:43800
+May 03 18:23 : client: [91] closed
+May 03 18:23 : client: [92] opened from [::1]:43802
+May 03 18:23 : client: [92] closed
+May 03 18:23 : client: [93] opened from [::1]:43804
+May 03 18:23 : client: [93] closed
+May 03 18:23 : client: [94] opened from [::1]:43806
+May 03 18:23 : client: [94] closed
+May 03 18:23 : client: [76] closed
+May 03 18:23 : client: [95] opened from [::1]:43808
+May 03 18:23 : client: [96] opened from [::1]:43810
+May 03 18:23 : client: [96] closed
+May 03 18:23 : client: [97] opened from [::1]:43812
+May 03 18:23 : client: [97] closed
+May 03 18:23 : client: [98] opened from [::1]:43814
+May 03 18:23 : client: [98] closed
+May 03 18:23 : client: [99] opened from [::1]:43816
+May 03 18:23 : client: [99] closed
+May 03 18:23 : client: [95] closed
+May 03 18:23 : client: [100] opened from [::1]:43818
+May 03 18:23 : client: [101] opened from [::1]:43820
+May 03 18:23 : client: [101] closed
+May 03 18:23 : client: [102] opened from [::1]:43822
+May 03 18:23 : client: [102] closed
+May 03 18:23 : client: [103] opened from [::1]:43824
+May 03 18:23 : client: [103] closed
+May 03 18:23 : client: [104] opened from [::1]:43826
+May 03 18:23 : client: [104] closed
+May 03 18:23 : client: [100] closed
+May 03 18:24 : client: [90] closed
+May 03 18:24 : client: [105] opened from [::1]:43830
+May 03 18:24 : client: [106] opened from [::1]:43832
+May 03 18:24 : client: [106] closed
+May 03 18:24 : client: [107] opened from [::1]:43834
+May 03 18:24 : client: [107] closed
+May 03 18:24 : client: [108] opened from [::1]:43836
+May 03 18:24 : client: [108] closed
+May 03 18:24 : client: [109] opened from [::1]:43838
+May 03 18:24 : client: [109] closed
+May 03 18:25 : client: [110] opened from [::1]:43842
+May 03 18:25 : client: [110] closed
+May 03 18:25 : client: [111] opened from [::1]:43844
+May 03 18:25 : client: [111] closed
+May 03 18:26 : client: [105] closed
+May 03 18:26 : player: played "Victor Wooten/Soul Circus/04 Prayer.mp3"
+May 03 18:26 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 03 18:26 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 03 18:26 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 03 18:26 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 03 18:26 : client: [0] opened from [::1]:43642
+May 03 18:26 : client: [1] opened from [::1]:43644
+May 03 18:26 : client: [1] closed
+May 03 18:26 : client: [2] opened from [::1]:43646
+May 03 18:26 : client: [2] closed
+May 03 18:26 : client: [3] opened from [::1]:43648
+May 03 18:26 : client: [3] closed
+May 03 18:26 : client: [4] opened from [::1]:43650
+May 03 18:26 : client: [4] closed
+May 03 18:27 : client: [5] opened from [::1]:43714
+May 03 18:27 : client: [6] opened from [::1]:43716
+May 03 18:27 : client: [6] closed
+May 03 18:27 : client: [7] opened from [::1]:43718
+May 03 18:27 : client: [7] closed
+May 03 18:27 : client: [8] opened from [::1]:43720
+May 03 18:27 : client: [8] closed
+May 03 18:27 : client: [9] opened from [::1]:43722
+May 03 18:27 : client: [9] closed
+May 03 18:27 : client: [0] closed
+May 03 18:28 : player: played "Victor Wooten/Soul Circus/04 Prayer.mp3"
+May 03 18:28 : client: [10] opened from [::1]:43796
+May 03 18:28 : client: [10] closed
+May 03 18:28 : client: [11] opened from [::1]:43798
+May 03 18:28 : client: [11] closed
+May 03 18:28 : client: [12] opened from [::1]:43800
+May 03 18:28 : client: [12] closed
+May 03 18:28 : client: [13] opened from [::1]:43802
+May 03 18:28 : client: [13] closed
+May 03 18:30 : client: [5] closed
+May 03 18:30 : client: [14] opened from [::1]:43812
+May 03 18:30 : client: [14] closed
+May 03 18:30 : client: [15] opened from [::1]:43814
+May 03 18:30 : client: [15] closed
+May 03 18:30 : client: [16] opened from [::1]:43816
+May 03 18:30 : client: [16] closed
+May 03 18:30 : player: played "Victor Wooten/Soul Circus/05 Natives.mp3"
+May 03 18:31 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 03 18:31 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 03 18:31 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 03 18:31 : client: [0] opened from [::1]:39996
+May 03 18:31 : client: [1] opened from [::1]:39998
+May 03 18:31 : client: [1] closed
+May 03 18:31 : client: [2] opened from [::1]:40000
+May 03 18:31 : client: [2] closed
+May 03 18:31 : client: [3] opened from [::1]:40002
+May 03 18:31 : client: [3] closed
+May 03 18:31 : client: [4] opened from [::1]:40004
+May 03 18:31 : client: [4] closed
+May 03 18:36 : client: [0] closed
+May 03 18:36 : player: played "Victor Wooten/Soul Circus/05 Natives.mp3"
+May 03 18:36 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 03 18:36 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 03 18:36 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 03 18:37 : client: [0] opened from [::1]:47386
+May 03 18:37 : client: [1] opened from [::1]:47388
+May 03 18:37 : client: [1] closed
+May 03 18:37 : client: [2] opened from [::1]:47390
+May 03 18:37 : client: [2] closed
+May 03 18:37 : client: [3] opened from [::1]:47392
+May 03 18:37 : client: [3] closed
+May 03 18:37 : client: [4] opened from [::1]:47394
+May 03 18:37 : client: [4] closed
+May 03 18:37 : client: [5] opened from [::1]:47396
+May 03 18:37 : client: [6] opened from [::1]:47398
+May 03 18:37 : client: [6] closed
+May 03 18:37 : client: [7] opened from [::1]:47400
+May 03 18:37 : client: [7] closed
+May 03 18:37 : client: [8] opened from [::1]:47402
+May 03 18:37 : client: [8] closed
+May 03 18:37 : client: [9] opened from [::1]:47404
+May 03 18:37 : client: [9] closed
+May 03 18:37 : client: [0] closed
+May 03 18:40 : client: [10] opened from [::1]:47422
+May 03 18:40 : client: [10] closed
+May 03 18:40 : client: [11] opened from [::1]:47424
+May 03 18:40 : client: [11] closed
+May 03 18:44 : client: [12] opened from [::1]:47462
+May 03 18:44 : client: [12] closed
+May 03 18:44 : client: [13] opened from [::1]:47464
+May 03 18:44 : client: [13] closed
+May 03 18:44 : client: [14] opened from [::1]:47466
+May 03 18:44 : client: [14] closed
+May 03 18:44 : client: [15] opened from [::1]:47468
+May 03 18:44 : client: [15] closed
+May 03 18:49 : client: [16] opened from [::1]:47548
+May 03 18:49 : client: [16] closed
+May 03 18:49 : client: [17] opened from [::1]:47550
+May 03 18:49 : client: [17] closed
+May 03 18:51 : client: [18] opened from [::1]:47560
+May 03 18:51 : client: [19] opened from [::1]:47562
+May 03 18:51 : client: [19] closed
+May 03 18:51 : client: [20] opened from [::1]:47564
+May 03 18:51 : client: [20] closed
+May 03 18:51 : client: [21] opened from [::1]:47566
+May 03 18:51 : client: [21] closed
+May 03 18:51 : client: [22] opened from [::1]:47568
+May 03 18:51 : client: [22] closed
+May 03 18:51 : client: [5] closed
+May 03 18:52 : client: [23] opened from [::1]:47572
+May 03 18:52 : client: [23] closed
+May 03 18:52 : client: [24] opened from [::1]:47574
+May 03 18:52 : client: [24] closed
+May 03 18:57 : client: [18] closed
+May 03 18:57 : client: [25] opened from [::1]:47588
+May 03 18:57 : client: [26] opened from [::1]:47590
+May 03 18:57 : client: [26] closed
+May 03 18:57 : client: [27] opened from [::1]:47592
+May 03 18:57 : client: [27] closed
+May 03 18:57 : client: [28] opened from [::1]:47594
+May 03 18:57 : client: [28] closed
+May 03 18:57 : client: [29] opened from [::1]:47596
+May 03 18:57 : client: [29] closed
+May 03 19:00 : client: [25] closed
+May 03 19:00 : client: [30] opened from [::1]:47706
+May 03 19:00 : client: [31] opened from [::1]:47708
+May 03 19:00 : client: [31] closed
+May 03 19:00 : client: [32] opened from [::1]:47710
+May 03 19:00 : client: [32] closed
+May 03 19:00 : client: [33] opened from [::1]:47712
+May 03 19:00 : client: [33] closed
+May 03 19:00 : client: [34] opened from [::1]:47714
+May 03 19:00 : client: [34] closed
+May 03 19:02 : client: [35] opened from [::1]:47724
+May 03 19:02 : client: [36] opened from [::1]:47726
+May 03 19:02 : client: [36] closed
+May 03 19:02 : client: [37] opened from [::1]:47728
+May 03 19:02 : client: [37] closed
+May 03 19:02 : client: [38] opened from [::1]:47730
+May 03 19:02 : client: [38] closed
+May 03 19:02 : client: [39] opened from [::1]:47732
+May 03 19:02 : client: [39] closed
+May 03 19:02 : client: [30] closed
+May 03 19:17 : client: [35] closed
+May 03 19:17 : player: played "Victor Wooten/Soul Circus/05 Natives.mp3"
+May 03 19:18 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 03 19:18 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 03 19:18 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 03 19:18 : client: [0] opened from [::1]:42250
+May 03 19:18 : client: [1] opened from [::1]:42252
+May 03 19:18 : client: [1] closed
+May 03 19:18 : client: [2] opened from [::1]:42258
+May 03 19:18 : client: [2] closed
+May 03 19:18 : client: [3] opened from [::1]:42260
+May 03 19:18 : client: [3] closed
+May 03 19:18 : client: [4] opened from [::1]:42262
+May 03 19:18 : client: [4] closed
+May 03 19:18 : client: [5] opened from [::1]:42270
+May 03 19:18 : client: [6] opened from [::1]:42272
+May 03 19:18 : client: [6] closed
+May 03 19:18 : client: [7] opened from [::1]:42276
+May 03 19:18 : client: [7] closed
+May 03 19:18 : client: [8] opened from [::1]:42278
+May 03 19:18 : client: [8] closed
+May 03 19:18 : client: [9] opened from [::1]:42280
+May 03 19:18 : client: [9] closed
+May 03 19:18 : client: [0] closed
+May 03 19:20 : client: [10] opened from [::1]:42378
+May 03 19:20 : client: [11] opened from [::1]:42380
+May 03 19:20 : client: [11] closed
+May 03 19:20 : client: [12] opened from [::1]:42382
+May 03 19:20 : client: [12] closed
+May 03 19:20 : client: [13] opened from [::1]:42384
+May 03 19:20 : client: [13] closed
+May 03 19:20 : client: [14] opened from [::1]:42386
+May 03 19:20 : client: [14] closed
+May 03 19:20 : client: [5] closed
+May 03 19:22 : client: [15] opened from [::1]:42408
+May 03 19:22 : client: [15] closed
+May 03 19:22 : client: [16] opened from [::1]:42410
+May 03 19:22 : client: [16] closed
+May 03 20:58 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 03 20:58 : client: [17] opened from [::1]:43048
+May 03 20:58 : client: [17] closed
+May 03 20:58 : client: [18] opened from [::1]:43050
+May 03 20:58 : client: [18] closed
+May 03 20:58 : client: [19] opened from [::1]:43052
+May 03 20:58 : client: [19] closed
+May 03 20:58 : client: [20] opened from [::1]:43054
+May 03 20:58 : client: [20] closed
+May 03 20:58 : client: [21] opened from [::1]:43056
+May 03 20:58 : client: [21] closed
+May 03 20:58 : client: [22] opened from [::1]:43058
+May 03 20:58 : client: [22] closed
+May 03 20:58 : client: [23] opened from [::1]:43060
+May 03 20:58 : client: [23] closed
+May 03 20:58 : client: [24] opened from [::1]:43062
+May 03 20:58 : client: [24] closed
+May 03 20:59 : client: [25] opened from [::1]:43064
+May 03 20:59 : client: [25] closed
+May 03 20:59 : client: [26] opened from [::1]:43066
+May 03 20:59 : client: [26] closed
+May 03 20:59 : client: [27] opened from [::1]:43068
+May 03 20:59 : client: [27] closed
+May 03 20:59 : client: [28] opened from [::1]:43070
+May 03 20:59 : client: [28] closed
+May 03 20:59 : client: [29] opened from [::1]:43072
+May 03 20:59 : client: [29] closed
+May 03 20:59 : client: [30] opened from [::1]:43074
+May 03 20:59 : client: [30] closed
+May 03 20:59 : client: [31] opened from [::1]:43076
+May 03 20:59 : client: [31] closed
+May 03 20:59 : client: [32] opened from [::1]:43078
+May 03 20:59 : client: [32] closed
+May 03 20:59 : client: [33] opened from [::1]:43080
+May 03 20:59 : client: [33] closed
+May 03 20:59 : client: [34] opened from [::1]:43082
+May 03 20:59 : client: [34] closed
+May 03 20:59 : client: [35] opened from [::1]:43084
+May 03 20:59 : client: [35] closed
+May 03 20:59 : client: [36] opened from [::1]:43086
+May 03 20:59 : client: [36] closed
+May 03 20:59 : client: [37] opened from [::1]:43088
+May 03 20:59 : client: [37] closed
+May 03 20:59 : client: [38] opened from [::1]:43090
+May 03 20:59 : client: [38] closed
+May 03 20:59 : client: [39] opened from [::1]:43092
+May 03 20:59 : client: [39] closed
+May 03 20:59 : client: [40] opened from [::1]:43094
+May 03 20:59 : client: [40] closed
+May 03 21:00 : client: [41] opened from [::1]:43096
+May 03 21:00 : client: [41] closed
+May 03 21:00 : client: [42] opened from [::1]:43098
+May 03 21:00 : client: [42] closed
+May 03 21:00 : client: [43] opened from [::1]:43100
+May 03 21:00 : client: [43] closed
+May 03 21:08 : client: [44] opened from [::1]:43202
+May 03 21:08 : client: [44] closed
+May 03 21:08 : client: [45] opened from [::1]:43204
+May 03 21:08 : client: [45] closed
+May 03 21:08 : client: [46] opened from [::1]:43206
+May 03 21:08 : client: [46] closed
+May 03 21:08 : client: [47] opened from [::1]:43208
+May 03 21:08 : client: [47] closed
+May 03 21:08 : client: [48] opened from [::1]:43210
+May 03 21:08 : client: [48] closed
+May 03 21:08 : client: [49] opened from [::1]:43212
+May 03 21:08 : client: [49] closed
+May 03 21:09 : client: [50] opened from [::1]:43218
+May 03 21:09 : client: [50] closed
+May 03 21:09 : client: [51] opened from [::1]:43220
+May 03 21:09 : client: [51] closed
+May 03 21:23 : client: [52] opened from [::1]:43890
+May 03 21:23 : client: [52] closed
+May 03 21:23 : client: [53] opened from [::1]:43892
+May 03 21:23 : client: [53] closed
+May 03 21:23 : client: [54] opened from [::1]:43894
+May 03 21:23 : client: [54] closed
+May 03 21:26 : player: played "Warren G & Nate Dogg/Regulate___ G Funk Era/01 Regulate.mp3"
+May 03 21:26 : client: [55] opened from [::1]:43898
+May 03 21:26 : client: [55] closed
+May 03 21:26 : client: [56] opened from [::1]:43900
+May 03 21:26 : client: [56] closed
+May 03 21:26 : client: [57] opened from [::1]:43902
+May 03 21:26 : client: [57] closed
+May 03 21:26 : client: [58] opened from [::1]:43904
+May 03 21:26 : client: [58] closed
+May 03 21:29 : player: played "Xiomara Alfaro/Moliendo Café/01 Moliendo Café (Calypso).mp3"
+May 03 21:29 : client: [59] opened from [::1]:43916
+May 03 21:29 : client: [59] closed
+May 03 21:29 : client: [60] opened from [::1]:43918
+May 03 21:29 : client: [60] closed
+May 03 21:29 : client: [61] opened from [::1]:43920
+May 03 21:29 : client: [61] closed
+May 03 21:29 : client: [62] opened from [::1]:43922
+May 03 21:29 : client: [62] closed
+May 03 21:30 : client: [63] opened from [::1]:43924
+May 03 21:30 : client: [63] closed
+May 03 21:30 : client: [64] opened from [::1]:43926
+May 03 21:30 : client: [64] closed
+May 03 21:30 : client: [65] opened from [::1]:43928
+May 03 21:30 : client: [65] closed
+May 03 22:55 : client: [10] closed
+May 03 22:56 : player: played "Xiomara Alfaro/Moliendo Café/02 Never On Sunday (Cha Cha Cha).mp3"
+May 03 22:56 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 03 22:56 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 03 22:56 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 03 22:56 : client: [0] opened from [::1]:37642
+May 03 22:56 : client: [1] opened from [::1]:37644
+May 03 22:56 : client: [1] closed
+May 03 22:56 : client: [2] opened from [::1]:37646
+May 03 22:56 : client: [2] closed
+May 03 22:56 : client: [3] opened from [::1]:37648
+May 03 22:56 : client: [3] closed
+May 03 22:56 : client: [4] opened from [::1]:37650
+May 03 22:56 : client: [4] closed

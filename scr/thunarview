@@ -27,7 +27,8 @@ dte="ctrl+shift+d"
 sze="ctrl+shift+s"
 tpe="ctrl+shift+t"
 
-i3-msg title_format "$title"
+#i3-msg title_format "$title"
+wmctrl -r :ACTIVE: -N ${title}
 
 xdotool key $ora
 

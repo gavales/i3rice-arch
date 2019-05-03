@@ -9,6 +9,7 @@ shorttrack=$(expr ${#trackname} - 29)
 shortartist=$(expr ${#artistname} - 19)
 
 [[ $playername == "Spotify" ]] && playername="%{T1}%{T-}"
+[[ $playername == "Rhythmbox" ]] && playername="%{T1}%{T-}"
 
 if [[ ${#trackname} -ge 30 ]]; then
 	trackname="${trackname:0:-$shorttrack}…"

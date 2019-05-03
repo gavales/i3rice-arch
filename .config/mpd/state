@@ -2,9 +2,9 @@ sw_volume: 62
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
 state: pause
-current: 0
-time: 4.701000
-random: 1
+current: 15
+time: 69.972000
+random: 0
 repeat: 1
 single: 0
 consume: 1
@@ -12,27 +12,30 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:The Brothers Johnson/Right on Time/04 Right on Time.mp3
-1:The Brothers Johnson/Right on Time/06 Brother Man.mp3
-2:The Brothers Johnson/Right on Time/08 Love Is.mp3
-3:The Brothers Johnson/Blam!!/03 Blam!!.mp3
-4:The Brothers Johnson/Blam!!/08 Streetwave.mp3
-5:Various Artists/Billboard Top Dance Hits_ 1980/06 Stomp!.mp3
-6:The Brothers Johnson/Light Up the Night/07 Smilin' on Ya.mp3
-7:The Brothers Johnson/Classics_ Vol_ 11/06 _Q_.mp3
-8:The Brothers Johnson/Classics_ Vol_ 11/08 Get the Funk Out Ma Face.mp3
-9:The Brothers Johnson/Kickin'/05 P_O_ Box 2000.mp3
-10:The Brothers Johnson/Greatest Hits/07 Land of Ladies.mp3
-11:The Brothers Johnson/Greatest Hits/09 I'll Be Good to You.mp3
-12:The Brothers Johnson/Best of the Brothers Johnson/17 I'm Giving You All of My Love.mp3
-13:The Brothers Johnson/20th Century Masters - The Mil/05 Runnin' for Your Lovin'.mp3
-14:The Brothers Johnson/20th Century Masters - The Mil/10 The Real Thing.mp3
-15:The Brothers Johnson/Strawberry Letter 23_ The Best/01 Is It Love That We're Missing_.mp3
-16:The Brothers Johnson/Strawberry Letter 23_ The Best/03 Thunder Thumbs and Lightnin' L.mp3
-17:The Brothers Johnson/Strawberry Letter 23_ The Best/05 Free and Single.mp3
-18:The Brothers Johnson/Strawberry Letter 23_ The Best/10 Ain't We Funkin' Now.mp3
-19:The Brothers Johnson/Strawberry Letter 23_ The Best/12 Mista' Cool.mp3
-20:The Brothers Johnson/Strawberry Letter 23_ The Best/14 Light up the Night.mp3
-21:The Brothers Johnson/Strawberry Letter 23_ The Best/19 Funk It (Funkadelala).mp3
-22:Various Artists/Pulp Fiction (Collector's Edit/19 Strawberry Letter 23.mp3
+0:Victor Wooten/Soul Circus/05 Natives.mp3
+1:Victor Wooten/Soul Circus/06 Can't Hide Love.mp3
+2:Victor Wooten/Soul Circus/07 Stay.mp3
+3:Victor Wooten/Soul Circus/08 On And On.mp3
+4:Victor Wooten/Soul Circus/09 Cell Phone.mp3
+5:Victor Wooten/Soul Circus/10 Back To India.mp3
+6:Victor Wooten/Soul Circus/11 Soul Circus.mp3
+7:Victor Wooten/Soul Circus/12 Higher Law.mp3
+8:Victor Wooten/Soul Circus/13 Take U There.mp3
+9:Victor Wooten/Soul Circus/14 Ari's Eyes.mp3
+10:Victor Wooten/Soul Circus/15 Outro_ Kids.mp3
+11:Victor Wooten/Soul Circus/16 Bass Tribute (Reprise).mp3
+12:Tower Of Power/Tower Of Power/01 What Is Hip_.mp3
+13:Various Artists/Community (Music from the Orig/12 Party Where Your Heart Is.mp3
+14:Various Artists/Jackie Brown - Music From The/02 The Lions and the Cucumber.mp3
+15:Xiomara Alfaro/Moliendo Café/02 Never On Sunday (Cha Cha Cha).mp3
+16:Xiomara Alfaro/Moliendo Café/03 Tres Meses de Vida (Son).mp3
+17:Xiomara Alfaro/Moliendo Café/04 Mi Gallo Tuerto (Golpe).mp3
+18:Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3
+19:Xiomara Alfaro/Moliendo Café/06 Don Chimbilico (Afro).mp3
+20:Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3
+21:Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3
+22:Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3
+23:Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3
+24:Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3
+25:Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3
 playlist_end

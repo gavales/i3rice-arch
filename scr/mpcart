@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+# CREATED: Fri  3 May 16:37:43 GMT 2019
+
+rm -rf $HOME/cover.jpg
+ffmpeg -i "$HOME/mus/$(mpc -f %file% | head -n1)" cover.jpg &>/dev/null &
+
+#notify-send "Now Playing ♫" "$(mpc current)" -i $HOME/cover.jpg
+sleep .5
+if [[ -f $HOME/cover.jpg ]]; then
+	dunstify -r 1234 --raw_icon=$HOME/cover.jpg "Now Playing ♫" "$(mpc current)"
+else
+	dunstify -r 1234 "Now Playing ♫" "$(mpc current)"
+fi
+
+polybar-msg hook media 1 &>/dev/null &

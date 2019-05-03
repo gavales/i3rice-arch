@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: Tue  4 Dec 15:23:43 GMT 2018
+
+app=$1
+mark=$2
+marks=$(i3-msg -t get_marks)
+lastfocus=$(xdotool getactivewindow)
+
+if [[ $app == *"--new-window"* ]]; then
+	if [[ -n $mark ]]; then
+		if [[ ${marks} == *"${mark}"* ]]; then
+			i3-msg [con_mark="$mark"] focus
+			i3-msg focus child
+			i3-msg exec "\"$app\""
+		else
+			i3-msg exec \"$app\"
+			i3-msg focus parent
+			i3-msg mark $mark
+			i3-msg "mark --add _sticky_${mark/_W/}"
+			i3-msg focus child
+		fi
+	else
+		i3-msg exec \"$app\"
+	fi
+else
+	if [[ -n $mark ]]; then
+		if [[ ${marks} == *"${mark}"* ]]; then
+			i3-msg [con_mark="$mark"] focus
+			i3-msg focus child
+			i3-msg exec "$app"
+		else
+			i3-msg exec "$app"
+			i3-msg focus parent
+			i3-msg mark $mark
+			i3-msg "mark --add _sticky_${mark/_W/}"
+			i3-msg focus child
+		fi
+	else
+		i3-msg exec "$app"
+	fi
+fi
+
+if [[ ${3} == 'fl' ]]; then
+	sleep .5
+	i3-msg [id="$lastfocus"] focus
+fi
+
+echo $marks

@@ -6,21 +6,25 @@ case $1 in
 	togg)
 	[[ $player == "mpv" ]] && echo "cycle pause" > $HOME/mp_fifo
 	[[ $player == "spotify" ]] && playerctl play-pause
+	[[ $player == "box" ]] && playerctl play-pause
 	[[ $player == "mpd" ]] && mpc toggle
 	;;
 	next)
 	[[ $player == "mpv" ]] && echo "seek 10" > $HOME/mp_fifo
 	[[ $player == "spotify" ]] && playerctl next
+	[[ $player == "box" ]] && playerctl next
 	[[ $player == "mpd" ]] && mpc next
 	;;
 	prev)
 	[[ $player == "mpv" ]] && echo "seek -10" > $HOME/mp_fifo
 	[[ $player == "spotify" ]] && playerctl next
+	[[ $player == "box" ]] && playerctl next
 	[[ $player == "mpd" ]] && mpc prev
 	;;
 	stop)
 	[[ $player == "mpv" ]] && kill $(pidof mpv)
 	[[ $player == "spotify" ]] && kill $(pidof spotify)
+	[[ $player == "box" ]] && kill $(pidof spotify)
 	[[ $player == "mpd" ]] && mpc stop
 	;;
 esac

@@ -72,7 +72,7 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 
 modules-left = td ws xkeyboard
-modules-center = xwindow
+modules-center = wintitle
 modules-right = media disk memory cpu temperature backlight pulseaudio battery
 
 [global/wm]
@@ -136,6 +136,15 @@ scroll-down = i3-msg workspace prev
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:40:...%
+format-background = ${colors.bkd}
+format-foreground = ${colors.wtd}
+format-padding = 2
+
+[module/wintitle]
+type = custom/ipc
+hook-0 = ~/scr/pb/wintitle
+initial = 1
+click-left = polybar-msg cmd hide
 format-background = ${colors.bkd}
 format-foreground = ${colors.wtd}
 format-padding = 2
