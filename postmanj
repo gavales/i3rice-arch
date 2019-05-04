@@ -24,30 +24,30 @@ echo -e "${blue}= INSTALLING YOUR PROGRAMS ====================="
 echo -e "${green}================================================${normal}"
 sudo pacman -S rofi otf-font-awesome ttf-font-awesome nautilus evince mupdf pinta redshift playerctl mplayer r tk gcc-fortran newsboat opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-crossref pandoc-citeproc python-pygments python2-pygments biber texlive-most acpi lm_sensors sysstat ntfs-3g libmpdclient lxappearance sxiv ncurses fftw w3m ranger mpd mpc ncmpcpp feh dunst unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl urxvt-perls trash-cli atom python-pywal vim-latexsuite calibre
 sudo cpan AnyEvent Linux::FD common::sense
-echo -e "${green}================================================"
-echo -e "${blue}= INSTALLING YAOURT ============================"
-echo -e "${green}================================================${normal}"
-echo -e "${purple} > PAMAC <" && yaourt -S pamac-aur
-echo -e "${purple} > i3LOCK-COLOR <" && yaourt -S i3lock-color
-echo -e "${purple} > CHROME BETA <" && yaourt -S google-chrome-beta
-echo -e "${purple} > CHROME REMOTE DESKTOP <" && yaourt -S chrome-remote-desktop
-echo -e "${purple} > SPOTIFY <" && yaourt -S spotify
-echo -e "${purple} > GRIVE <" && yaourt -S grive
-echo -e "${purple} > CLIPIT <" && yaourt -S clipit
-echo -e "${purple} > PACTL <" && yaourt -S pulseaudio-ctl
-echo -e "${purple} > ZATHURA <" && yaourt -S zathura-pdf-mupdf
-echo -e "${purple} > XBACKLIGHT <" && yaourt -S xorg-xbacklight
-echo -e "${purple} > LIGHT <" && yaourt -S light
-echo -e "${purple} > BASHMOUNT <" && yaourt -S bashmount
-echo -e "${purple} > i3BLOCKS <" && yaourt -S i3blocks-gaps-git
-echo -e "${purple} > MPRIS-CTL <" && yaourt -S mpris-ctl
-echo -e "${purple} > FIGLET FONTS <" && yaourt -S figlet-fonts
-echo -e "${purple} > URXVT-CONFIG-RELOAD <" && yaourt -S urxvt-config-reload-git
-echo -e "${purple} > FLAT-REMIX-ICONS <" && yaourt -S flat-remix-git
-echo -e "${purple} > FLAT-REMIX-GNOME-GIT <" && yaourt -S flat-remix-gnome-git
-echo -e "${purple} > URXVT-RESIZE-FONT <" && yaourt -S urxvt-resize-font-git
-echo -e "${purple} > i3IPC-PYTHON <" && yaourt -S i3ipc-python
-echo -e "${purple} > LIVE LATEX PREVIEW <" && yaourt -S vim-live-latex-preview
+#echo -e "${green}================================================"
+#echo -e "${blue}= INSTALLING YAOURT ============================"
+#echo -e "${green}================================================${normal}"
+#echo -e "${purple} > PAMAC <" && yaourt -S pamac-aur
+#echo -e "${purple} > i3LOCK-COLOR <" && yaourt -S i3lock-color
+#echo -e "${purple} > CHROME BETA <" && yaourt -S google-chrome-beta
+#echo -e "${purple} > CHROME REMOTE DESKTOP <" && yaourt -S chrome-remote-desktop
+#echo -e "${purple} > SPOTIFY <" && yaourt -S spotify
+#echo -e "${purple} > GRIVE <" && yaourt -S grive
+#echo -e "${purple} > CLIPIT <" && yaourt -S clipit
+#echo -e "${purple} > PACTL <" && yaourt -S pulseaudio-ctl
+#echo -e "${purple} > ZATHURA <" && yaourt -S zathura-pdf-mupdf
+#echo -e "${purple} > XBACKLIGHT <" && yaourt -S xorg-xbacklight
+#echo -e "${purple} > LIGHT <" && yaourt -S light
+#echo -e "${purple} > BASHMOUNT <" && yaourt -S bashmount
+#echo -e "${purple} > i3BLOCKS <" && yaourt -S i3blocks-gaps-git
+#echo -e "${purple} > MPRIS-CTL <" && yaourt -S mpris-ctl
+#echo -e "${purple} > FIGLET FONTS <" && yaourt -S figlet-fonts
+#echo -e "${purple} > URXVT-CONFIG-RELOAD <" && yaourt -S urxvt-config-reload-git
+#echo -e "${purple} > FLAT-REMIX-ICONS <" && yaourt -S flat-remix-git
+#echo -e "${purple} > FLAT-REMIX-GNOME-GIT <" && yaourt -S flat-remix-gnome-git
+#echo -e "${purple} > URXVT-RESIZE-FONT <" && yaourt -S urxvt-resize-font-git
+#echo -e "${purple} > i3IPC-PYTHON <" && yaourt -S i3ipc-python
+#echo -e "${purple} > LIVE LATEX PREVIEW <" && yaourt -S vim-live-latex-preview
 echo -e "${green}================================================"
 echo -e "${blue}= CLI-VISUALISER ==============================="
 echo -e "${green}================================================${normal}"
