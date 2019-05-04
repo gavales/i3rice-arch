@@ -68,10 +68,6 @@ set $viva		vivaldi-stable
 set $gfm		thunar
 set $brightinc	light -A 10
 set $brightdec	light -U 10
-set $mediaw		499
-set $mediaw2	499
-set $mediah		301
-set $mediah2	401
 
 # >>>> DECORATIONS
 # COLORS

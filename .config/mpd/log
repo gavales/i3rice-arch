@@ -21204,3 +21204,269 @@ May 03 22:56 : client: [3] opened from [::1]:37648
 May 03 22:56 : client: [3] closed
 May 03 22:56 : client: [4] opened from [::1]:37650
 May 03 22:56 : client: [4] closed
+May 04 19:45 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 04 19:45 : avahi: Service 'Music Player @ ThinkPadX200' successfully established.
+May 04 19:45 : client: [0] opened from [::1]:41256
+May 04 19:45 : client: [0] closed
+May 04 19:45 : client: [1] opened from [::1]:41258
+May 04 19:45 : client: [1] closed
+May 04 19:45 : client: [2] opened from [::1]:41414
+May 04 19:46 : client: [2] closed
+May 04 19:48 : client: [3] opened from [::1]:41576
+May 04 19:48 : client: [3] closed
+May 04 19:48 : client: [4] opened from [::1]:41578
+May 04 19:48 : client: [4] closed
+May 04 19:48 : client: [5] opened from [::1]:41588
+May 04 19:48 : client: [5] closed
+May 04 19:48 : client: [6] opened from [::1]:41590
+May 04 19:48 : client: [6] closed
+May 04 19:49 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 04 19:49 : avahi: Service 'Music Player @ ThinkPadX200' successfully established.
+May 04 19:49 : client: [0] opened from [::1]:34882
+May 04 19:49 : client: [0] closed
+May 04 19:50 : client: [1] opened from [::1]:34890
+May 04 19:50 : client: [1] closed
+May 04 19:50 : client: [2] opened from [::1]:34892
+May 04 19:50 : client: [2] closed
+May 04 20:07 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 04 20:07 : avahi: Service 'Music Player @ ThinkPadX200' successfully established.
+May 04 20:07 : client: [0] opened from [::1]:49946
+May 04 20:07 : client: [0] closed
+May 04 20:07 : client: [1] opened from [::1]:49948
+May 04 20:07 : client: [1] closed
+May 04 20:07 : client: [2] opened from [::1]:49988
+May 04 20:10 : client: [3] opened from [::1]:50400
+May 04 20:10 : client: [3] closed
+May 04 20:10 : client: [4] opened from [::1]:50402
+May 04 20:10 : client: [4] closed
+May 04 20:11 : client: [5] opened from [::1]:50448
+May 04 20:11 : client: [2] closed
+May 04 20:11 : client: [6] opened from [::1]:50458
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/02 Never On Sunday (Cha Cha Cha).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/02 Never On Sunday (Cha Cha Cha).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/02 Never On Sunday (Cha Cha Cha).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/03 Tres Meses de Vida (Son).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/03 Tres Meses de Vida (Son).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/03 Tres Meses de Vida (Son).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/04 Mi Gallo Tuerto (Golpe).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/04 Mi Gallo Tuerto (Golpe).mp3': No such file or directory
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/04 Mi Gallo Tuerto (Golpe).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/06 Don Chimbilico (Afro).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/06 Don Chimbilico (Afro).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/06 Don Chimbilico (Afro).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/05 Natives.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/05 Natives.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/05 Natives.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/06 Can't Hide Love.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/06 Can't Hide Love.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/06 Can't Hide Love.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/07 Stay.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/07 Stay.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/07 Stay.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/08 On And On.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/08 On And On.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/08 On And On.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/09 Cell Phone.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/09 Cell Phone.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/09 Cell Phone.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/10 Back To India.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/10 Back To India.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/10 Back To India.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/11 Soul Circus.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/11 Soul Circus.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/11 Soul Circus.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/12 Higher Law.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/12 Higher Law.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/12 Higher Law.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/13 Take U There.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/13 Take U There.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/13 Take U There.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/14 Ari's Eyes.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/14 Ari's Eyes.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/14 Ari's Eyes.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/15 Outro_ Kids.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/15 Outro_ Kids.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/15 Outro_ Kids.mp3"
+May 04 20:11 : client: [6] closed
+May 04 20:11 : client: [7] opened from [::1]:50460
+May 04 20:11 : client: [7] closed
+May 04 20:11 : client: [8] opened from [::1]:50462
+May 04 20:11 : client: [8] closed
+May 04 20:11 : client: [9] opened from [::1]:50464
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/15 Outro_ Kids.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/15 Outro_ Kids.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/15 Outro_ Kids.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/16 Bass Tribute (Reprise).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/16 Bass Tribute (Reprise).mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/16 Bass Tribute (Reprise).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Tower Of Power/Tower Of Power/01 What Is Hip_.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Tower Of Power/Tower Of Power/01 What Is Hip_.mp3': No such file or directory
+May 04 20:11 : player: played "Tower Of Power/Tower Of Power/01 What Is Hip_.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Various Artists/Community (Music from the Orig/12 Party Where Your Heart Is.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Community (Music from the Orig/12 Party Where Your Heart Is.mp3': No such file or directory
+May 04 20:11 : player: played "Various Artists/Community (Music from the Orig/12 Party Where Your Heart Is.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Various Artists/Jackie Brown - Music From The/02 The Lions and the Cucumber.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Jackie Brown - Music From The/02 The Lions and the Cucumber.mp3': No such file or directory
+May 04 20:11 : player: played "Various Artists/Jackie Brown - Music From The/02 The Lions and the Cucumber.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/05 Natives.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/05 Natives.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/05 Natives.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/06 Can't Hide Love.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/06 Can't Hide Love.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/06 Can't Hide Love.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/07 Stay.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/07 Stay.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/07 Stay.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/08 On And On.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/08 On And On.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/08 On And On.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/09 Cell Phone.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/09 Cell Phone.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/09 Cell Phone.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/10 Back To India.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/10 Back To India.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/10 Back To India.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/11 Soul Circus.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/11 Soul Circus.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/11 Soul Circus.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/12 Higher Law.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/12 Higher Law.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/12 Higher Law.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/13 Take U There.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/13 Take U There.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/13 Take U There.mp3"
+May 04 20:11 : client: [9] closed
+May 04 20:11 : client: [10] opened from [::1]:50466
+May 04 20:11 : client: [10] closed
+May 04 20:11 : client: [11] opened from [::1]:50468
+May 04 20:11 : client: [11] closed
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/05 Natives.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/05 Natives.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/05 Natives.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/06 Can't Hide Love.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/06 Can't Hide Love.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/06 Can't Hide Love.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/07 Stay.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/07 Stay.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/07 Stay.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/08 On And On.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/08 On And On.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/08 On And On.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/09 Cell Phone.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/09 Cell Phone.mp3': No such file or directory
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/10 Back To India.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/10 Back To India.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/09 Cell Phone.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/10 Back To India.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/10 Back To India.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/10 Back To India.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/11 Soul Circus.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/11 Soul Circus.mp3': No such file or directory
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/12 Higher Law.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/12 Higher Law.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/11 Soul Circus.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3': No such file or directory
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/06 Can't Hide Love.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/06 Can't Hide Love.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/06 Can't Hide Love.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/11 Soul Circus.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/11 Soul Circus.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/11 Soul Circus.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/12 Higher Law.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/12 Higher Law.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/12 Higher Law.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/13 Take U There.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/13 Take U There.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/13 Take U There.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/14 Ari's Eyes.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/14 Ari's Eyes.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/14 Ari's Eyes.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/16 Bass Tribute (Reprise).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/16 Bass Tribute (Reprise).mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/16 Bass Tribute (Reprise).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Tower Of Power/Tower Of Power/01 What Is Hip_.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Tower Of Power/Tower Of Power/01 What Is Hip_.mp3': No such file or directory
+May 04 20:11 : player: played "Tower Of Power/Tower Of Power/01 What Is Hip_.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Various Artists/Community (Music from the Orig/12 Party Where Your Heart Is.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Community (Music from the Orig/12 Party Where Your Heart Is.mp3': No such file or directory
+May 04 20:11 : player: played "Various Artists/Community (Music from the Orig/12 Party Where Your Heart Is.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Various Artists/Jackie Brown - Music From The/02 The Lions and the Cucumber.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Jackie Brown - Music From The/02 The Lions and the Cucumber.mp3': No such file or directory
+May 04 20:11 : player: played "Various Artists/Jackie Brown - Music From The/02 The Lions and the Cucumber.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3"
+May 04 20:12 : client: [12] opened from [::1]:50472
+May 04 20:12 : client: [5] closed

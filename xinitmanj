@@ -41,6 +41,7 @@ fi
 get_session(){
 	local dbus_args=(--sh-syntax --exit-with-session)
 	case $1 in
+		i3|i3wm) dbus_args+=(i3 --shmlog-size 0) ;;
 		awesome) dbus_args+=(awesome) ;;
 		bspwm) dbus_args+=(bspwm-session) ;;
 		budgie) dbus_args+=(budgie-desktop) ;;
@@ -49,7 +50,6 @@ get_session(){
 		enlightenment) dbus_args+=(enlightenment_start) ;;
 		fluxbox) dbus_args+=(startfluxbox) ;;
 		gnome) dbus_args+=(gnome-session) ;;
-		i3|i3wm) dbus_args+=(i3 --shmlog-size 0) ;;
 		jwm) dbus_args+=(jwm) ;;
 		kde) dbus_args+=(startkde) ;;
 		lxde) dbus_args+=(startlxde) ;;

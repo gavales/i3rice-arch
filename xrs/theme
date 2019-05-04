@@ -1,18 +1,18 @@
-! dracula
+! chooseyourweapon
 ! vim:ft=xdefaults
-#define cblkd #282A36
-#define cblkl #414458
-#define credd #BD93F9
-#define credl #BD93F9
-#define cgrnd #5AF78E
-#define cgrnl #50FA7B
-#define cylwd #cccc00
-#define cylwl #cccc00
-#define cblud #FF6E67
-#define cblul #FF5555
-#define cgntd #FF92D0
-#define cgntl #FF79C6
-#define ccynd #8BE9FD
-#define ccynl #8BE9FD
-#define cwhtd #ffa3a3
-#define cwhtl #fffff2
+#define cblkd #181512
+#define cblkl #282828
+#define credd #e93c93
+#define credl #e93c93
+#define cgrnd #76a571
+#define cgrnl #76a571
+#define cylwd #d0a845
+#define cylwl #d0a845
+#define cblud #007d62
+#define cblul #007d62
+#define cgntd #86458b
+#define cgntl #86458b
+#define ccynd #008ba5
+#define ccynl #008ba5
+#define cwhtd #00a480
+#define cwhtl #f4f3e2
