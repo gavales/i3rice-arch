@@ -21204,3 +21204,356 @@ May 03 22:56 : client: [3] opened from [::1]:37648
 May 03 22:56 : client: [3] closed
 May 03 22:56 : client: [4] opened from [::1]:37650
 May 03 22:56 : client: [4] closed
+May 04 15:25 : client: [5] opened from [::1]:41300
+May 04 15:25 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 04 15:25 : client: [5] closed
+May 04 15:25 : client: [6] opened from [::1]:41302
+May 04 15:25 : client: [6] closed
+May 04 15:25 : client: [7] opened from [::1]:41304
+May 04 15:25 : client: [7] closed
+May 04 15:27 : player: played "Xiomara Alfaro/Moliendo Café/02 Never On Sunday (Cha Cha Cha).mp3"
+May 04 15:27 : client: [8] opened from [::1]:41318
+May 04 15:27 : client: [8] closed
+May 04 15:27 : client: [9] opened from [::1]:41320
+May 04 15:27 : client: [9] closed
+May 04 15:27 : client: [10] opened from [::1]:41322
+May 04 15:27 : client: [10] closed
+May 04 15:27 : client: [11] opened from [::1]:41324
+May 04 15:27 : client: [11] closed
+May 04 15:27 : client: [12] opened from [::1]:41326
+May 04 15:27 : client: [12] closed
+May 04 15:27 : client: [13] opened from [::1]:41328
+May 04 15:27 : client: [13] closed
+May 04 15:27 : client: [14] opened from [::1]:41330
+May 04 15:27 : client: [14] closed
+May 04 15:27 : client: [15] opened from [::1]:41332
+May 04 15:27 : client: [15] closed
+May 04 15:27 : client: [16] opened from [::1]:41334
+May 04 15:27 : client: [16] closed
+May 04 15:27 : client: [17] opened from [::1]:41336
+May 04 15:27 : client: [17] closed
+May 04 15:30 : player: played "Xiomara Alfaro/Moliendo Café/03 Tres Meses de Vida (Son).mp3"
+May 04 15:30 : client: [18] opened from [::1]:41360
+May 04 15:30 : client: [18] closed
+May 04 15:30 : client: [19] opened from [::1]:41362
+May 04 15:30 : client: [19] closed
+May 04 15:30 : client: [20] opened from [::1]:41364
+May 04 15:30 : client: [20] closed
+May 04 15:30 : client: [21] opened from [::1]:41366
+May 04 15:30 : client: [21] closed
+May 04 15:32 : player: played "Xiomara Alfaro/Moliendo Café/04 Mi Gallo Tuerto (Golpe).mp3"
+May 04 15:32 : client: [22] opened from [::1]:41382
+May 04 15:32 : client: [22] closed
+May 04 15:32 : client: [23] opened from [::1]:41384
+May 04 15:32 : client: [23] closed
+May 04 15:32 : client: [24] opened from [::1]:41386
+May 04 15:32 : client: [24] closed
+May 04 15:32 : client: [25] opened from [::1]:41388
+May 04 15:32 : client: [25] closed
+May 04 15:35 : player: played "Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3"
+May 04 15:35 : client: [26] opened from [::1]:41430
+May 04 15:35 : client: [26] closed
+May 04 15:35 : client: [27] opened from [::1]:41432
+May 04 15:35 : client: [27] closed
+May 04 15:35 : client: [28] opened from [::1]:41434
+May 04 15:35 : client: [28] closed
+May 04 15:35 : client: [29] opened from [::1]:41436
+May 04 15:35 : client: [29] closed
+May 04 15:38 : player: played "Xiomara Alfaro/Moliendo Café/06 Don Chimbilico (Afro).mp3"
+May 04 15:38 : client: [30] opened from [::1]:41442
+May 04 15:38 : client: [30] closed
+May 04 15:38 : client: [31] opened from [::1]:41444
+May 04 15:38 : client: [31] closed
+May 04 15:38 : client: [32] opened from [::1]:41446
+May 04 15:38 : client: [32] closed
+May 04 15:38 : client: [33] opened from [::1]:41448
+May 04 15:38 : client: [33] closed
+May 04 15:40 : player: played "Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3"
+May 04 15:40 : client: [34] opened from [::1]:41500
+May 04 15:40 : client: [34] closed
+May 04 15:40 : client: [35] opened from [::1]:41502
+May 04 15:40 : client: [35] closed
+May 04 15:40 : client: [36] opened from [::1]:41504
+May 04 15:40 : client: [36] closed
+May 04 15:40 : client: [37] opened from [::1]:41506
+May 04 15:40 : client: [37] closed
+May 04 15:43 : player: played "Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3"
+May 04 15:43 : client: [38] opened from [::1]:41516
+May 04 15:43 : client: [38] closed
+May 04 15:43 : client: [39] opened from [::1]:41518
+May 04 15:43 : client: [39] closed
+May 04 15:43 : client: [40] opened from [::1]:41520
+May 04 15:43 : client: [40] closed
+May 04 15:43 : client: [41] opened from [::1]:41522
+May 04 15:43 : client: [41] closed
+May 04 15:45 : player: played "Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3"
+May 04 15:45 : client: [42] opened from [::1]:41530
+May 04 15:45 : client: [42] closed
+May 04 15:45 : client: [43] opened from [::1]:41532
+May 04 15:45 : client: [43] closed
+May 04 15:45 : client: [44] opened from [::1]:41534
+May 04 15:45 : client: [44] closed
+May 04 15:45 : client: [45] opened from [::1]:41536
+May 04 15:45 : client: [45] closed
+May 04 15:49 : player: played "Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3"
+May 04 15:49 : client: [46] opened from [::1]:41546
+May 04 15:49 : client: [46] closed
+May 04 15:49 : client: [47] opened from [::1]:41548
+May 04 15:49 : client: [47] closed
+May 04 15:49 : client: [48] opened from [::1]:41550
+May 04 15:49 : client: [48] closed
+May 04 15:49 : client: [49] opened from [::1]:41552
+May 04 15:49 : client: [49] closed
+May 04 15:51 : player: played "Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3"
+May 04 15:51 : client: [50] opened from [::1]:41564
+May 04 15:51 : client: [50] closed
+May 04 15:51 : client: [51] opened from [::1]:41566
+May 04 15:51 : client: [51] closed
+May 04 15:51 : client: [52] opened from [::1]:41568
+May 04 15:51 : client: [52] closed
+May 04 15:51 : client: [53] opened from [::1]:41570
+May 04 15:51 : client: [53] closed
+May 04 15:54 : player: played "Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3"
+May 04 15:54 : client: [54] opened from [::1]:41576
+May 04 15:54 : client: [54] closed
+May 04 15:54 : client: [55] opened from [::1]:41578
+May 04 15:54 : client: [55] closed
+May 04 15:54 : client: [56] opened from [::1]:41580
+May 04 15:54 : client: [56] closed
+May 04 15:54 : client: [57] opened from [::1]:41582
+May 04 15:54 : client: [57] closed
+May 04 15:58 : player: played "Victor Wooten/Soul Circus/05 Natives.mp3"
+May 04 15:58 : client: [58] opened from [::1]:41604
+May 04 15:58 : client: [58] closed
+May 04 15:58 : client: [59] opened from [::1]:41606
+May 04 15:58 : client: [59] closed
+May 04 15:58 : client: [60] opened from [::1]:41608
+May 04 15:58 : client: [60] closed
+May 04 15:58 : client: [61] opened from [::1]:41610
+May 04 15:58 : client: [61] closed
+May 04 16:03 : player: played "Victor Wooten/Soul Circus/06 Can't Hide Love.mp3"
+May 04 16:03 : client: [62] opened from [::1]:41626
+May 04 16:03 : client: [62] closed
+May 04 16:03 : client: [63] opened from [::1]:41628
+May 04 16:03 : client: [63] closed
+May 04 16:03 : client: [64] opened from [::1]:41630
+May 04 16:03 : client: [64] closed
+May 04 16:03 : client: [65] opened from [::1]:41632
+May 04 16:03 : client: [65] closed
+May 04 16:08 : player: played "Victor Wooten/Soul Circus/07 Stay.mp3"
+May 04 16:08 : client: [66] opened from [::1]:41644
+May 04 16:08 : client: [66] closed
+May 04 16:08 : client: [67] opened from [::1]:41646
+May 04 16:08 : client: [67] closed
+May 04 16:08 : client: [68] opened from [::1]:41648
+May 04 16:08 : client: [68] closed
+May 04 16:08 : client: [69] opened from [::1]:41650
+May 04 16:08 : client: [69] closed
+May 04 16:13 : player: played "Victor Wooten/Soul Circus/08 On And On.mp3"
+May 04 16:13 : client: [70] opened from [::1]:41670
+May 04 16:13 : client: [70] closed
+May 04 16:13 : client: [71] opened from [::1]:41672
+May 04 16:13 : client: [71] closed
+May 04 16:13 : client: [72] opened from [::1]:41674
+May 04 16:13 : client: [72] closed
+May 04 16:13 : client: [73] opened from [::1]:41676
+May 04 16:13 : client: [73] closed
+May 04 16:17 : player: played "Victor Wooten/Soul Circus/09 Cell Phone.mp3"
+May 04 16:17 : client: [74] opened from [::1]:41684
+May 04 16:17 : client: [74] closed
+May 04 16:17 : client: [75] opened from [::1]:41686
+May 04 16:17 : client: [75] closed
+May 04 16:17 : client: [76] opened from [::1]:41688
+May 04 16:17 : client: [76] closed
+May 04 16:17 : client: [77] opened from [::1]:41690
+May 04 16:17 : client: [77] closed
+May 04 16:22 : player: played "Victor Wooten/Soul Circus/10 Back To India.mp3"
+May 04 16:22 : client: [78] opened from [::1]:41708
+May 04 16:22 : client: [78] closed
+May 04 16:22 : client: [79] opened from [::1]:41710
+May 04 16:22 : client: [79] closed
+May 04 16:22 : client: [80] opened from [::1]:41712
+May 04 16:22 : client: [80] closed
+May 04 16:22 : client: [81] opened from [::1]:41714
+May 04 16:22 : client: [81] closed
+May 04 16:26 : player: played "Victor Wooten/Soul Circus/11 Soul Circus.mp3"
+May 04 16:26 : client: [82] opened from [::1]:41734
+May 04 16:26 : client: [82] closed
+May 04 16:26 : client: [83] opened from [::1]:41736
+May 04 16:26 : client: [83] closed
+May 04 16:26 : client: [84] opened from [::1]:41738
+May 04 16:26 : client: [84] closed
+May 04 16:26 : client: [85] opened from [::1]:41740
+May 04 16:26 : client: [85] closed
+May 04 16:31 : player: played "Victor Wooten/Soul Circus/12 Higher Law.mp3"
+May 04 16:31 : client: [86] opened from [::1]:41768
+May 04 16:31 : client: [86] closed
+May 04 16:31 : client: [87] opened from [::1]:41770
+May 04 16:31 : client: [87] closed
+May 04 16:31 : client: [88] opened from [::1]:41772
+May 04 16:31 : client: [88] closed
+May 04 16:31 : client: [89] opened from [::1]:41774
+May 04 16:31 : client: [89] closed
+May 04 16:31 : player: played "Victor Wooten/Soul Circus/13 Take U There.mp3"
+May 04 16:31 : client: [90] opened from [::1]:41776
+May 04 16:31 : client: [90] closed
+May 04 16:31 : client: [91] opened from [::1]:41778
+May 04 16:31 : client: [91] closed
+May 04 16:31 : client: [92] opened from [::1]:41780
+May 04 16:31 : client: [92] closed
+May 04 16:31 : client: [93] opened from [::1]:41782
+May 04 16:31 : client: [93] closed
+May 04 16:36 : player: played "Victor Wooten/Soul Circus/14 Ari's Eyes.mp3"
+May 04 16:36 : client: [94] opened from [::1]:41808
+May 04 16:36 : client: [94] closed
+May 04 16:36 : client: [95] opened from [::1]:41810
+May 04 16:36 : client: [95] closed
+May 04 16:36 : client: [96] opened from [::1]:41812
+May 04 16:36 : client: [96] closed
+May 04 16:36 : client: [97] opened from [::1]:41814
+May 04 16:36 : client: [97] closed
+May 04 16:36 : player: played "Victor Wooten/Soul Circus/15 Outro_ Kids.mp3"
+May 04 16:36 : client: [98] opened from [::1]:41816
+May 04 16:36 : client: [98] closed
+May 04 16:36 : client: [99] opened from [::1]:41818
+May 04 16:36 : client: [99] closed
+May 04 16:36 : client: [100] opened from [::1]:41820
+May 04 16:36 : client: [100] closed
+May 04 16:36 : client: [101] opened from [::1]:41822
+May 04 16:36 : client: [101] closed
+May 04 16:39 : player: played "Victor Wooten/Soul Circus/16 Bass Tribute (Reprise).mp3"
+May 04 16:39 : client: [102] opened from [::1]:41826
+May 04 16:39 : client: [102] closed
+May 04 16:39 : client: [103] opened from [::1]:41828
+May 04 16:39 : client: [103] closed
+May 04 16:39 : client: [104] opened from [::1]:41830
+May 04 16:39 : client: [104] closed
+May 04 16:39 : client: [105] opened from [::1]:41832
+May 04 16:39 : client: [105] closed
+May 04 16:44 : player: played "Tower Of Power/Tower Of Power/01 What Is Hip_.mp3"
+May 04 16:44 : client: [106] opened from [::1]:41840
+May 04 16:44 : client: [106] closed
+May 04 16:44 : client: [107] opened from [::1]:41842
+May 04 16:44 : client: [107] closed
+May 04 16:44 : client: [108] opened from [::1]:41844
+May 04 16:44 : client: [108] closed
+May 04 16:44 : client: [109] opened from [::1]:41846
+May 04 16:44 : client: [109] closed
+May 04 16:45 : player: played "Various Artists/Community (Music from the Orig/12 Party Where Your Heart Is.mp3"
+May 04 16:45 : client: [110] opened from [::1]:41852
+May 04 16:45 : client: [110] closed
+May 04 16:45 : client: [111] opened from [::1]:41854
+May 04 16:45 : client: [111] closed
+May 04 16:45 : client: [112] opened from [::1]:41856
+May 04 16:45 : client: [112] closed
+May 04 16:45 : client: [113] opened from [::1]:41858
+May 04 16:45 : client: [113] closed
+May 04 16:50 : client: [114] opened from [::1]:41906
+May 04 16:50 : client: [114] closed
+May 04 16:50 : client: [115] opened from [::1]:41908
+May 04 16:50 : client: [115] closed
+May 04 16:50 : client: [116] opened from [::1]:41910
+May 04 16:50 : client: [116] closed
+May 04 16:50 : client: [117] opened from [::1]:41912
+May 04 16:50 : client: [117] closed
+May 04 16:50 : client: [118] opened from [::1]:41914
+May 04 16:50 : client: [118] closed
+May 04 16:50 : client: [119] opened from [::1]:41916
+May 04 16:50 : client: [119] closed
+May 04 16:50 : client: [120] opened from [::1]:41918
+May 04 16:50 : client: [120] closed
+May 04 16:50 : client: [121] opened from [::1]:41920
+May 04 16:50 : client: [121] closed
+May 04 16:50 : client: [122] opened from [::1]:41922
+May 04 16:50 : client: [122] closed
+May 04 16:50 : client: [123] opened from [::1]:41924
+May 04 16:50 : player: played "Various Artists/Jackie Brown - Music From The/02 The Lions and the Cucumber.mp3"
+May 04 16:50 : client: [123] closed
+May 04 16:50 : client: [124] opened from [::1]:41926
+May 04 16:50 : client: [124] closed
+May 04 16:50 : client: [125] opened from [::1]:41928
+May 04 16:50 : client: [125] closed
+May 04 16:50 : client: [126] opened from [::1]:41930
+May 04 16:50 : exception: Not playing
+May 04 16:50 : client: [126] closed
+May 04 16:50 : client: [127] opened from [::1]:41932
+May 04 16:50 : client: [127] closed
+May 04 16:50 : client: [128] opened from [::1]:41934
+May 04 16:50 : client: [128] closed
+May 04 16:50 : client: [129] opened from [::1]:41936
+May 04 16:50 : client: [129] closed
+May 04 16:50 : client: [130] opened from [::1]:41938
+May 04 16:50 : client: [130] closed
+May 04 16:50 : client: [131] opened from [::1]:41940
+May 04 16:50 : client: [131] closed
+May 04 16:51 : client: [132] opened from [::1]:41944
+May 04 16:51 : client: [132] closed
+May 04 16:51 : client: [133] opened from [::1]:41946
+May 04 16:51 : client: [133] closed
+May 04 16:51 : client: [134] opened from [::1]:41948
+May 04 16:51 : client: [134] closed
+May 04 16:51 : client: [135] opened from [::1]:41950
+May 04 16:51 : client: [135] closed
+May 04 16:53 : client: [136] opened from [::1]:41954
+May 04 16:53 : client: [136] closed
+May 04 16:53 : client: [137] opened from [::1]:41956
+May 04 16:53 : client: [137] closed
+May 04 16:53 : client: [138] opened from [::1]:41958
+May 04 16:53 : client: [138] closed
+May 04 17:44 : client: [139] opened from [::1]:42208
+May 04 17:44 : client: [139] closed
+May 04 17:44 : client: [140] opened from [::1]:42210
+May 04 17:44 : client: [140] closed
+May 04 17:44 : client: [141] opened from [::1]:42212
+May 04 17:44 : client: [141] closed
+May 04 17:46 : player: played "Buju Banton/00 Champion.mp3"
+May 04 17:46 : client: [142] opened from [::1]:42224
+May 04 17:46 : client: [142] closed
+May 04 17:46 : client: [143] opened from [::1]:42226
+May 04 17:46 : client: [143] closed
+May 04 17:46 : client: [144] opened from [::1]:42228
+May 04 17:46 : client: [144] closed
+May 04 17:46 : client: [145] opened from [::1]:42230
+May 04 17:46 : client: [145] closed
+May 04 17:47 : client: [146] opened from [::1]:42272
+May 04 17:47 : client: [146] closed
+May 04 17:47 : client: [147] opened from [::1]:42274
+May 04 17:47 : client: [147] closed
+May 04 17:47 : client: [148] opened from [::1]:42276
+May 04 17:47 : client: [148] closed
+May 04 17:50 : client: [149] opened from [::1]:42294
+May 04 17:50 : client: [149] closed
+May 04 17:50 : client: [150] opened from [::1]:42296
+May 04 17:50 : client: [150] closed
+May 04 17:50 : client: [151] opened from [::1]:42298
+May 04 17:50 : client: [151] closed
+May 04 17:50 : client: [152] opened from [::1]:42348
+May 04 17:50 : client: [152] closed
+May 04 17:50 : client: [153] opened from [::1]:42350
+May 04 17:50 : client: [153] closed
+May 04 17:50 : client: [154] opened from [::1]:42352
+May 04 17:50 : client: [154] closed
+May 04 17:57 : client: [155] opened from [::1]:43386
+May 04 17:57 : client: [155] closed
+May 04 17:57 : client: [156] opened from [::1]:43388
+May 04 17:57 : client: [156] closed
+May 04 17:57 : client: [157] opened from [::1]:43390
+May 04 17:57 : client: [157] closed
+May 04 17:57 : client: [158] opened from [::1]:43440
+May 04 17:57 : client: [158] closed
+May 04 17:57 : client: [159] opened from [::1]:43442
+May 04 17:57 : client: [159] closed
+May 04 17:57 : client: [160] opened from [::1]:43444
+May 04 17:57 : client: [160] closed
+May 04 20:01 : client: [161] opened from [::1]:45372
+May 04 20:01 : client: [161] closed
+May 04 20:01 : client: [162] opened from [::1]:45374
+May 04 20:01 : client: [162] closed
+May 04 20:01 : client: [163] opened from [::1]:45376
+May 04 20:01 : client: [163] closed
+May 04 20:01 : client: [164] opened from [::1]:45378
+May 04 20:01 : client: [164] closed
+May 04 20:01 : client: [165] opened from [::1]:45380
+May 04 20:01 : client: [165] closed
+May 04 20:01 : client: [166] opened from [::1]:45382
+May 04 20:01 : client: [166] closed
