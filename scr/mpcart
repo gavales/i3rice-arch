@@ -8,10 +8,8 @@ ffmpeg -i "$HOME/mus/$(mpc -f %file% | head -n1)" cover.jpg &>/dev/null &
 
 #notify-send "Now Playing ♫" "$(mpc current)" -i $HOME/cover.jpg
 sleep .5
-if [[ -f $HOME/cover.jpg ]]; then
-	dunstify -r 1234 --raw_icon=$HOME/cover.jpg "Now Playing ♫" "$(mpc current)"
-else
-	dunstify -r 1234 "Now Playing ♫" "$(mpc current)"
-fi
+[[ ! -f $HOME/cover.jpg ]] && cp $HOME/scrpic/albartdef.jpg $HOME/cover.jpg
+
+dunstify -r 1234 --raw_icon=$HOME/cover.jpg "Now Playing ♫" "$(mpc current)"
 
 polybar-msg hook media 1 &>/dev/null &

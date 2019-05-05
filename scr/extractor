@@ -6,8 +6,14 @@
 file="$1"
 
 case "$file" in
-	*\.tar.gz) tar -xvf "${file}" ;;
-	*\.tar.xz) tar -xJf "${file}" ;;
+	*\.tar.gz)
+		mkdir "${file/.tar.gz/}"
+		tar -xvf "${file}" -C "${file/.tar.gz/}"
+		;;
+	*\.tar.xz)
+		mkdir "${file/.tar.xz/}"
+		tar -xJf "${file}" -C "${file/.tar.xz/}"
+		;;
 	*\.zip) unzip "${file}" -d "${file:0:-4}" ;;
 	*\.gz) gunzip "${file}" -d "${file:0:-3}" ;;
 	*\.rar) unrar x "${file}" ;;

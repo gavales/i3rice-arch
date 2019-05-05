@@ -21204,6 +21204,7 @@ May 03 22:56 : client: [3] opened from [::1]:37648
 May 03 22:56 : client: [3] closed
 May 03 22:56 : client: [4] opened from [::1]:37650
 May 03 22:56 : client: [4] closed
+<<<<<<< HEAD
 May 04 15:25 : client: [5] opened from [::1]:41300
 May 04 15:25 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 May 04 15:25 : client: [5] closed
@@ -21557,3 +21558,867 @@ May 04 20:01 : client: [165] opened from [::1]:45380
 May 04 20:01 : client: [165] closed
 May 04 20:01 : client: [166] opened from [::1]:45382
 May 04 20:01 : client: [166] closed
+=======
+May 04 19:45 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 04 19:45 : avahi: Service 'Music Player @ ThinkPadX200' successfully established.
+May 04 19:45 : client: [0] opened from [::1]:41256
+May 04 19:45 : client: [0] closed
+May 04 19:45 : client: [1] opened from [::1]:41258
+May 04 19:45 : client: [1] closed
+May 04 19:45 : client: [2] opened from [::1]:41414
+May 04 19:46 : client: [2] closed
+May 04 19:48 : client: [3] opened from [::1]:41576
+May 04 19:48 : client: [3] closed
+May 04 19:48 : client: [4] opened from [::1]:41578
+May 04 19:48 : client: [4] closed
+May 04 19:48 : client: [5] opened from [::1]:41588
+May 04 19:48 : client: [5] closed
+May 04 19:48 : client: [6] opened from [::1]:41590
+May 04 19:48 : client: [6] closed
+May 04 19:49 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 04 19:49 : avahi: Service 'Music Player @ ThinkPadX200' successfully established.
+May 04 19:49 : client: [0] opened from [::1]:34882
+May 04 19:49 : client: [0] closed
+May 04 19:50 : client: [1] opened from [::1]:34890
+May 04 19:50 : client: [1] closed
+May 04 19:50 : client: [2] opened from [::1]:34892
+May 04 19:50 : client: [2] closed
+May 04 20:07 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 04 20:07 : avahi: Service 'Music Player @ ThinkPadX200' successfully established.
+May 04 20:07 : client: [0] opened from [::1]:49946
+May 04 20:07 : client: [0] closed
+May 04 20:07 : client: [1] opened from [::1]:49948
+May 04 20:07 : client: [1] closed
+May 04 20:07 : client: [2] opened from [::1]:49988
+May 04 20:10 : client: [3] opened from [::1]:50400
+May 04 20:10 : client: [3] closed
+May 04 20:10 : client: [4] opened from [::1]:50402
+May 04 20:10 : client: [4] closed
+May 04 20:11 : client: [5] opened from [::1]:50448
+May 04 20:11 : client: [2] closed
+May 04 20:11 : client: [6] opened from [::1]:50458
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/02 Never On Sunday (Cha Cha Cha).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/02 Never On Sunday (Cha Cha Cha).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/02 Never On Sunday (Cha Cha Cha).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/03 Tres Meses de Vida (Son).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/03 Tres Meses de Vida (Son).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/03 Tres Meses de Vida (Son).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/04 Mi Gallo Tuerto (Golpe).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/04 Mi Gallo Tuerto (Golpe).mp3': No such file or directory
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/04 Mi Gallo Tuerto (Golpe).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/06 Don Chimbilico (Afro).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/06 Don Chimbilico (Afro).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/06 Don Chimbilico (Afro).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/05 Natives.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/05 Natives.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/05 Natives.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/06 Can't Hide Love.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/06 Can't Hide Love.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/06 Can't Hide Love.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/07 Stay.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/07 Stay.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/07 Stay.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/08 On And On.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/08 On And On.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/08 On And On.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/09 Cell Phone.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/09 Cell Phone.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/09 Cell Phone.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/10 Back To India.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/10 Back To India.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/10 Back To India.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/11 Soul Circus.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/11 Soul Circus.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/11 Soul Circus.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/12 Higher Law.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/12 Higher Law.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/12 Higher Law.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/13 Take U There.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/13 Take U There.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/13 Take U There.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/14 Ari's Eyes.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/14 Ari's Eyes.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/14 Ari's Eyes.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/15 Outro_ Kids.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/15 Outro_ Kids.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/15 Outro_ Kids.mp3"
+May 04 20:11 : client: [6] closed
+May 04 20:11 : client: [7] opened from [::1]:50460
+May 04 20:11 : client: [7] closed
+May 04 20:11 : client: [8] opened from [::1]:50462
+May 04 20:11 : client: [8] closed
+May 04 20:11 : client: [9] opened from [::1]:50464
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/15 Outro_ Kids.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/15 Outro_ Kids.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/15 Outro_ Kids.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/16 Bass Tribute (Reprise).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/16 Bass Tribute (Reprise).mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/16 Bass Tribute (Reprise).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Tower Of Power/Tower Of Power/01 What Is Hip_.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Tower Of Power/Tower Of Power/01 What Is Hip_.mp3': No such file or directory
+May 04 20:11 : player: played "Tower Of Power/Tower Of Power/01 What Is Hip_.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Various Artists/Community (Music from the Orig/12 Party Where Your Heart Is.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Community (Music from the Orig/12 Party Where Your Heart Is.mp3': No such file or directory
+May 04 20:11 : player: played "Various Artists/Community (Music from the Orig/12 Party Where Your Heart Is.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Various Artists/Jackie Brown - Music From The/02 The Lions and the Cucumber.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Jackie Brown - Music From The/02 The Lions and the Cucumber.mp3': No such file or directory
+May 04 20:11 : player: played "Various Artists/Jackie Brown - Music From The/02 The Lions and the Cucumber.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/05 Natives.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/05 Natives.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/05 Natives.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/06 Can't Hide Love.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/06 Can't Hide Love.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/06 Can't Hide Love.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/07 Stay.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/07 Stay.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/07 Stay.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/08 On And On.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/08 On And On.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/08 On And On.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/09 Cell Phone.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/09 Cell Phone.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/09 Cell Phone.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/10 Back To India.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/10 Back To India.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/10 Back To India.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/11 Soul Circus.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/11 Soul Circus.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/11 Soul Circus.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/12 Higher Law.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/12 Higher Law.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/12 Higher Law.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/13 Take U There.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/13 Take U There.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/13 Take U There.mp3"
+May 04 20:11 : client: [9] closed
+May 04 20:11 : client: [10] opened from [::1]:50466
+May 04 20:11 : client: [10] closed
+May 04 20:11 : client: [11] opened from [::1]:50468
+May 04 20:11 : client: [11] closed
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/05 Natives.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/05 Natives.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/05 Natives.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/06 Can't Hide Love.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/06 Can't Hide Love.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/06 Can't Hide Love.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/07 Stay.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/07 Stay.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/07 Stay.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/08 On And On.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/08 On And On.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/08 On And On.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/09 Cell Phone.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/09 Cell Phone.mp3': No such file or directory
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/10 Back To India.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/10 Back To India.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/09 Cell Phone.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/10 Back To India.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/10 Back To India.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/10 Back To India.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/11 Soul Circus.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/11 Soul Circus.mp3': No such file or directory
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/12 Higher Law.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/12 Higher Law.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/11 Soul Circus.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3': No such file or directory
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/06 Can't Hide Love.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/06 Can't Hide Love.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/06 Can't Hide Love.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/11 Soul Circus.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/11 Soul Circus.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/11 Soul Circus.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/12 Higher Law.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/12 Higher Law.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/12 Higher Law.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/13 Take U There.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/13 Take U There.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/13 Take U There.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/14 Ari's Eyes.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/14 Ari's Eyes.mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/14 Ari's Eyes.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Victor Wooten/Soul Circus/16 Bass Tribute (Reprise).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Victor Wooten/Soul Circus/16 Bass Tribute (Reprise).mp3': No such file or directory
+May 04 20:11 : player: played "Victor Wooten/Soul Circus/16 Bass Tribute (Reprise).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Tower Of Power/Tower Of Power/01 What Is Hip_.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Tower Of Power/Tower Of Power/01 What Is Hip_.mp3': No such file or directory
+May 04 20:11 : player: played "Tower Of Power/Tower Of Power/01 What Is Hip_.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Various Artists/Community (Music from the Orig/12 Party Where Your Heart Is.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Community (Music from the Orig/12 Party Where Your Heart Is.mp3': No such file or directory
+May 04 20:11 : player: played "Various Artists/Community (Music from the Orig/12 Party Where Your Heart Is.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Various Artists/Jackie Brown - Music From The/02 The Lions and the Cucumber.mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Jackie Brown - Music From The/02 The Lions and the Cucumber.mp3': No such file or directory
+May 04 20:11 : player: played "Various Artists/Jackie Brown - Music From The/02 The Lions and the Cucumber.mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3"
+May 04 20:11 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3
+May 04 20:11 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3': No such file or directory
+May 04 20:11 : player: played "Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3"
+May 04 20:12 : client: [12] opened from [::1]:50472
+May 04 20:12 : client: [5] closed
+>>>>>>> origin/master
+May 05 12:47 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 12:47 : state_file: Unrecognized line in state file: <<<<<<< HEAD
+May 05 12:47 : playlist: Malformed playlist line in state file
+May 05 12:47 : playlist: Malformed playlist line in state file
+May 05 12:47 : playlist: Malformed playlist line in state file
+May 05 12:47 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 12:47 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 05 14:00 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 14:00 : state_file: Unrecognized line in state file: <<<<<<< HEAD
+May 05 14:00 : playlist: Malformed playlist line in state file
+May 05 14:00 : playlist: Malformed playlist line in state file
+May 05 14:00 : playlist: Malformed playlist line in state file
+May 05 14:00 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 14:00 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 05 14:02 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 14:02 : state_file: Unrecognized line in state file: <<<<<<< HEAD
+May 05 14:02 : playlist: Malformed playlist line in state file
+May 05 14:02 : playlist: Malformed playlist line in state file
+May 05 14:02 : playlist: Malformed playlist line in state file
+May 05 14:02 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 14:02 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 14:02 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 05 14:19 : player: played "Victor Wooten/Soul Circus/06 Can't Hide Love.mp3"
+May 05 14:19 : player: played "Victor Wooten/Soul Circus/06 Can't Hide Love.mp3"
+May 05 14:19 : player: played "Buju Banton/00 Have To Get You Tonight.mp3"
+May 05 14:19 : player: played "Victor Wooten/Soul Circus/06 Can't Hide Love.mp3"
+May 05 14:56 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 14:56 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 14:56 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 05 14:56 : client: [0] opened from [::1]:34822
+May 05 14:56 : client: [1] opened from [::1]:34824
+May 05 14:56 : client: [1] closed
+May 05 14:56 : client: [2] opened from [::1]:34826
+May 05 14:56 : client: [2] closed
+May 05 14:56 : client: [3] opened from [::1]:34828
+May 05 14:56 : client: [3] closed
+May 05 14:56 : client: [4] opened from [::1]:34830
+May 05 14:56 : client: [4] closed
+May 05 14:57 : client: [5] opened from [::1]:35150
+May 05 14:57 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 14:57 : client: [5] closed
+May 05 14:57 : client: [6] opened from [::1]:35152
+May 05 14:57 : client: [6] closed
+May 05 14:57 : client: [7] opened from [::1]:35154
+May 05 14:57 : client: [7] closed
+May 05 14:59 : player: played "Victor Wooten/Soul Circus/06 Can't Hide Love.mp3"
+May 05 14:59 : client: [8] opened from [::1]:35184
+May 05 14:59 : client: [8] closed
+May 05 14:59 : client: [9] opened from [::1]:35186
+May 05 14:59 : client: [9] closed
+May 05 14:59 : client: [10] opened from [::1]:35188
+May 05 14:59 : client: [10] closed
+May 05 14:59 : client: [11] opened from [::1]:35190
+May 05 14:59 : client: [11] closed
+May 05 15:00 : client: [12] opened from [::1]:35192
+May 05 15:00 : client: [12] closed
+May 05 15:00 : client: [13] opened from [::1]:35194
+May 05 15:00 : client: [13] closed
+May 05 15:00 : client: [14] opened from [::1]:35196
+May 05 15:00 : client: [14] closed
+May 05 15:00 : client: [15] opened from [::1]:35198
+May 05 15:00 : client: [15] closed
+May 05 15:00 : client: [16] opened from [::1]:35200
+May 05 15:00 : client: [16] closed
+May 05 15:00 : client: [17] opened from [::1]:35202
+May 05 15:00 : client: [17] closed
+May 05 15:04 : player: played "Victor Wooten/Soul Circus/11 Soul Circus.mp3"
+May 05 15:04 : client: [18] opened from [::1]:35222
+May 05 15:04 : client: [18] closed
+May 05 15:04 : client: [19] opened from [::1]:35224
+May 05 15:04 : client: [19] closed
+May 05 15:04 : client: [20] opened from [::1]:35226
+May 05 15:04 : client: [20] closed
+May 05 15:04 : client: [21] opened from [::1]:35228
+May 05 15:04 : client: [21] closed
+May 05 15:09 : player: played "Victor Wooten/Soul Circus/12 Higher Law.mp3"
+May 05 15:09 : client: [22] opened from [::1]:35270
+May 05 15:09 : client: [22] closed
+May 05 15:09 : client: [23] opened from [::1]:35272
+May 05 15:09 : client: [23] closed
+May 05 15:09 : client: [24] opened from [::1]:35274
+May 05 15:09 : client: [24] closed
+May 05 15:09 : client: [25] opened from [::1]:35276
+May 05 15:09 : client: [25] closed
+May 05 15:09 : player: played "Victor Wooten/Soul Circus/13 Take U There.mp3"
+May 05 15:09 : client: [26] opened from [::1]:35280
+May 05 15:09 : client: [26] closed
+May 05 15:09 : client: [27] opened from [::1]:35282
+May 05 15:09 : client: [27] closed
+May 05 15:09 : client: [28] opened from [::1]:35284
+May 05 15:09 : client: [28] closed
+May 05 15:09 : client: [29] opened from [::1]:35286
+May 05 15:09 : client: [29] closed
+May 05 15:09 : client: [30] opened from [::1]:35304
+May 05 15:09 : client: [30] closed
+May 05 15:09 : client: [31] opened from [::1]:35306
+May 05 15:09 : client: [31] closed
+May 05 15:09 : client: [32] opened from [::1]:35308
+May 05 15:09 : client: [32] closed
+May 05 15:09 : client: [0] closed
+May 05 15:10 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 15:10 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 15:10 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 15:10 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 05 15:10 : client: [33] opened from [::1]:35312
+May 05 15:10 : client: [33] closed
+May 05 15:10 : client: [34] opened from [::1]:35314
+May 05 15:10 : client: [34] closed
+May 05 15:10 : client: [35] opened from [::1]:35316
+May 05 15:10 : client: [35] closed
+May 05 15:10 : client: [36] opened from [::1]:35318
+May 05 15:10 : client: [36] closed
+May 05 15:11 : client: [37] opened from [::1]:35344
+May 05 15:11 : client: [37] closed
+May 05 15:11 : client: [38] opened from [::1]:35346
+May 05 15:11 : client: [38] closed
+May 05 15:11 : client: [39] opened from [::1]:35348
+May 05 15:11 : client: [39] closed
+May 05 15:11 : client: [40] opened from [::1]:35350
+May 05 15:11 : client: [40] closed
+May 05 15:11 : client: [41] opened from [::1]:35352
+May 05 15:11 : client: [41] closed
+May 05 15:11 : client: [42] opened from [::1]:35354
+May 05 15:11 : client: [42] closed
+May 05 15:11 : client: [43] opened from [::1]:35358
+May 05 15:11 : client: [43] closed
+May 05 15:11 : client: [44] opened from [::1]:35360
+May 05 15:11 : client: [44] closed
+May 05 15:11 : client: [45] opened from [::1]:35362
+May 05 15:11 : client: [45] closed
+May 05 15:12 : client: [46] opened from [::1]:35366
+May 05 15:12 : client: [46] closed
+May 05 15:12 : client: [47] opened from [::1]:35368
+May 05 15:12 : client: [47] closed
+May 05 15:12 : client: [48] opened from [::1]:35370
+May 05 15:12 : client: [48] closed
+May 05 15:12 : client: [49] opened from [::1]:35372
+May 05 15:12 : client: [49] closed
+May 05 15:12 : client: [50] opened from [::1]:35374
+May 05 15:12 : client: [50] closed
+May 05 15:12 : client: [51] opened from [::1]:35376
+May 05 15:12 : client: [51] closed
+May 05 15:13 : player: played "Victor Wooten/Soul Circus/16 Bass Tribute (Reprise).mp3"
+May 05 15:17 : client: [52] opened from [::1]:35382
+May 05 15:17 : client: [52] closed
+May 05 15:18 : player: played "Tower Of Power/Tower Of Power/01 What Is Hip_.mp3"
+May 05 15:19 : player: played "Various Artists/Community (Music from the Orig/12 Party Where Your Heart Is.mp3"
+May 05 15:24 : player: played "Various Artists/Jackie Brown - Music From The/02 The Lions and the Cucumber.mp3"
+May 05 15:27 : player: played "Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3"
+May 05 15:29 : player: played "Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3"
+May 05 15:32 : player: played "Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3"
+May 05 15:34 : client: [53] opened from [::1]:35400
+May 05 15:34 : client: [53] closed
+May 05 15:34 : client: [54] opened from [::1]:35402
+May 05 15:34 : client: [54] closed
+May 05 15:34 : client: [55] opened from [::1]:35404
+May 05 15:34 : client: [55] closed
+May 05 15:50 : client: [56] opened from [::1]:35418
+May 05 15:50 : client: [56] closed
+May 05 15:51 : client: [57] opened from [::1]:35420
+May 05 15:51 : client: [57] closed
+May 05 15:51 : client: [58] opened from [::1]:35422
+May 05 15:51 : client: [58] closed
+May 05 15:51 : client: [59] opened from [::1]:35424
+May 05 15:51 : client: [59] closed
+May 05 15:51 : client: [60] opened from [::1]:35426
+May 05 15:51 : client: [60] closed
+May 05 15:51 : client: [61] opened from [::1]:35428
+May 05 15:51 : client: [61] closed
+May 05 15:51 : client: [62] opened from [::1]:35430
+May 05 15:51 : player: played "Collection Spirit Of Ragga Dan/Spirit Of Ragga Dancehall/40 Hills & Valley.mp3"
+May 05 15:51 : client: [62] closed
+May 05 15:51 : client: [63] opened from [::1]:35432
+May 05 15:51 : exception: Not playing
+May 05 15:51 : client: [63] closed
+May 05 15:51 : client: [64] opened from [::1]:35434
+May 05 15:51 : exception: Not playing
+May 05 15:51 : client: [64] closed
+May 05 15:51 : client: [65] opened from [::1]:35436
+May 05 15:51 : client: [65] closed
+May 05 15:51 : client: [66] opened from [::1]:35438
+May 05 15:51 : client: [66] closed
+May 05 15:51 : client: [67] opened from [::1]:35440
+May 05 15:51 : client: [67] closed
+May 05 15:51 : client: [68] opened from [::1]:35442
+May 05 15:51 : client: [68] closed
+May 05 15:51 : client: [69] opened from [::1]:35444
+May 05 15:51 : client: [69] closed
+May 05 15:51 : client: [70] opened from [::1]:35446
+May 05 15:51 : client: [70] closed
+May 05 15:51 : client: [71] opened from [::1]:35448
+May 05 15:51 : client: [71] closed
+May 05 15:55 : client: [72] opened from [::1]:35454
+May 05 15:55 : client: [72] closed
+May 05 15:55 : client: [73] opened from [::1]:35456
+May 05 15:55 : client: [73] closed
+May 05 15:55 : client: [74] opened from [::1]:35458
+May 05 15:55 : client: [74] closed
+May 05 15:55 : client: [75] opened from [::1]:35460
+May 05 15:55 : client: [75] closed
+May 05 15:55 : client: [76] opened from [::1]:35462
+May 05 15:55 : client: [76] closed
+May 05 15:55 : client: [77] opened from [::1]:35464
+May 05 15:55 : client: [77] closed
+May 05 15:55 : client: [78] opened from [::1]:35466
+May 05 15:55 : client: [78] closed
+May 05 15:55 : client: [79] opened from [::1]:35468
+May 05 15:55 : client: [79] closed
+May 05 15:55 : client: [80] opened from [::1]:35470
+May 05 15:55 : client: [80] closed
+May 05 15:55 : client: [81] opened from [::1]:35472
+May 05 15:55 : player: played "Various Artists/Reggae Gold 1997/10 Love Sponge.mp3"
+May 05 15:55 : client: [81] closed
+May 05 15:55 : client: [82] opened from [::1]:35474
+May 05 15:55 : client: [82] closed
+May 05 15:55 : client: [83] opened from [::1]:35476
+May 05 15:55 : client: [83] closed
+May 05 15:55 : client: [84] opened from [::1]:35478
+May 05 15:55 : client: [84] closed
+May 05 15:55 : client: [85] opened from [::1]:35480
+May 05 15:55 : client: [85] closed
+May 05 15:55 : client: [86] opened from [::1]:35482
+May 05 15:55 : client: [86] closed
+May 05 15:55 : client: [87] opened from [::1]:35484
+May 05 15:55 : player: played "Various Artists/Reggae Gold 1997/10 Love Sponge.mp3"
+May 05 15:55 : client: [87] closed
+May 05 15:55 : client: [88] opened from [::1]:35486
+May 05 15:55 : client: [88] closed
+May 05 15:55 : client: [89] opened from [::1]:35488
+May 05 15:55 : client: [89] closed
+May 05 15:55 : client: [90] opened from [::1]:35490
+May 05 15:55 : client: [90] closed
+May 05 15:55 : client: [91] opened from [::1]:35492
+May 05 15:55 : client: [91] closed
+May 05 15:55 : client: [92] opened from [::1]:35494
+May 05 15:55 : client: [92] closed
+May 05 15:58 : client: [93] opened from [::1]:35496
+May 05 15:58 : client: [93] closed
+May 05 15:58 : client: [94] opened from [::1]:35498
+May 05 15:58 : client: [94] closed
+May 05 15:58 : client: [95] opened from [::1]:35500
+May 05 15:58 : client: [95] closed
+May 05 15:58 : client: [96] opened from [::1]:35502
+May 05 15:58 : client: [96] closed
+May 05 15:58 : client: [97] opened from [::1]:35504
+May 05 15:58 : client: [97] closed
+May 05 15:58 : client: [98] opened from [::1]:35506
+May 05 15:58 : client: [98] closed
+May 05 15:58 : client: [99] opened from [::1]:35508
+May 05 15:58 : client: [99] closed
+May 05 15:58 : client: [100] opened from [::1]:35510
+May 05 15:58 : client: [100] closed
+May 05 15:58 : client: [101] opened from [::1]:35512
+May 05 15:58 : client: [101] closed
+May 05 15:58 : client: [102] opened from [::1]:35514
+May 05 15:58 : client: [102] closed
+May 05 15:58 : client: [103] opened from [::1]:35516
+May 05 15:58 : client: [103] closed
+May 05 15:58 : client: [104] opened from [::1]:35518
+May 05 15:58 : client: [104] closed
+May 05 15:58 : client: [105] opened from [::1]:35520
+May 05 15:58 : client: [105] closed
+May 05 15:58 : client: [106] opened from [::1]:35522
+May 05 15:58 : client: [106] closed
+May 05 15:59 : player: played "Various Artists/Reggae Gold 1997/10 Love Sponge.mp3"
+May 05 16:04 : player: played "Collection Spirit Of Ragga Dan/Spirit Of Ragga Dancehall/40 Hills & Valley.mp3"
+May 05 16:08 : player: played "Buju Banton/00 Optimistic Soul.mp3"
+May 05 16:09 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 16:09 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 16:09 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 16:09 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 05 16:09 : client: [107] opened from [::1]:35536
+May 05 16:09 : client: [107] closed
+May 05 16:09 : client: [108] opened from [::1]:35538
+May 05 16:09 : client: [108] closed
+May 05 16:09 : client: [109] opened from [::1]:35540
+May 05 16:09 : client: [109] closed
+May 05 16:09 : client: [110] opened from [::1]:35542
+May 05 16:09 : client: [110] closed
+May 05 16:09 : client: [111] opened from [::1]:35544
+May 05 16:09 : client: [111] closed
+May 05 16:09 : client: [112] opened from [::1]:35546
+May 05 16:09 : client: [112] closed
+May 05 16:09 : client: [113] opened from [::1]:35548
+May 05 16:09 : client: [113] closed
+May 05 16:09 : client: [114] opened from [::1]:35554
+May 05 16:09 : client: [114] closed
+May 05 16:09 : client: [115] opened from [::1]:35556
+May 05 16:09 : client: [115] closed
+May 05 16:09 : client: [116] opened from [::1]:35558
+May 05 16:09 : client: [116] closed
+May 05 16:09 : client: [117] opened from [::1]:35560
+May 05 16:09 : client: [117] closed
+May 05 16:09 : client: [118] opened from [::1]:35562
+May 05 16:09 : client: [118] closed
+May 05 16:09 : client: [119] opened from [::1]:35564
+May 05 16:09 : client: [119] closed
+May 05 16:09 : client: [120] opened from [::1]:35566
+May 05 16:09 : client: [120] closed
+May 05 16:09 : client: [121] opened from [::1]:35568
+May 05 16:09 : client: [121] closed
+May 05 16:09 : client: [122] opened from [::1]:35570
+May 05 16:09 : client: [122] closed
+May 05 16:09 : client: [123] opened from [::1]:35572
+May 05 16:09 : client: [123] closed
+May 05 16:09 : client: [124] opened from [::1]:35574
+May 05 16:09 : client: [124] closed
+May 05 16:09 : client: [125] opened from [::1]:35576
+May 05 16:09 : client: [125] closed
+May 05 16:09 : client: [126] opened from [::1]:35578
+May 05 16:09 : client: [126] closed
+May 05 16:09 : client: [127] opened from [::1]:35580
+May 05 16:09 : client: [127] closed
+May 05 16:09 : client: [128] opened from [::1]:35586
+May 05 16:09 : client: [128] closed
+May 05 16:09 : client: [129] opened from [::1]:35588
+May 05 16:09 : client: [129] closed
+May 05 16:09 : client: [130] opened from [::1]:35590
+May 05 16:09 : client: [130] closed
+May 05 16:09 : client: [131] opened from [::1]:35592
+May 05 16:09 : client: [131] closed
+May 05 16:09 : client: [132] opened from [::1]:35594
+May 05 16:09 : client: [132] closed
+May 05 16:09 : client: [133] opened from [::1]:35596
+May 05 16:09 : client: [134] opened from [::1]:35598
+May 05 16:09 : client: [133] closed
+May 05 16:09 : client: [134] closed
+May 05 16:09 : client: [135] opened from [::1]:35600
+May 05 16:09 : client: [136] opened from [::1]:35602
+May 05 16:09 : client: [136] closed
+May 05 16:09 : client: [135] closed
+May 05 16:09 : client: [137] opened from [::1]:35604
+May 05 16:09 : client: [137] closed
+May 05 16:09 : client: [138] opened from [::1]:35606
+May 05 16:09 : client: [138] closed
+May 05 16:09 : client: [139] opened from [::1]:35608
+May 05 16:09 : client: [139] closed
+May 05 16:09 : client: [140] opened from [::1]:35610
+May 05 16:09 : client: [140] closed
+May 05 16:09 : client: [141] opened from [::1]:35612
+May 05 16:09 : client: [141] closed
+May 05 16:10 : player: played "Victor Wooten/Soul Circus/14 Ari's Eyes.mp3"
+May 05 16:10 : player: played "Buju Banton/00 Untold Stories.mp3"
+May 05 16:10 : player: played "Buju Banton/00 Untold Stories.mp3"
+May 05 16:10 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 16:10 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 16:10 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 05 16:10 : client: [0] opened from [::1]:56454
+May 05 16:10 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 16:10 : client: [0] closed
+May 05 16:10 : client: [1] opened from [::1]:56456
+May 05 16:10 : client: [1] closed
+May 05 16:10 : client: [2] opened from [::1]:56458
+May 05 16:10 : client: [2] closed
+May 05 16:10 : client: [3] opened from [::1]:56460
+May 05 16:10 : client: [3] closed
+May 05 16:10 : client: [4] opened from [::1]:56462
+May 05 16:10 : client: [4] closed
+May 05 16:10 : client: [5] opened from [::1]:56464
+May 05 16:10 : client: [5] closed
+May 05 16:10 : client: [6] opened from [::1]:56466
+May 05 16:10 : client: [6] closed
+May 05 16:10 : client: [7] opened from [::1]:56528
+May 05 16:10 : client: [8] opened from [::1]:56530
+May 05 16:10 : client: [8] closed
+May 05 16:10 : client: [9] opened from [::1]:56532
+May 05 16:10 : client: [9] closed
+May 05 16:10 : client: [10] opened from [::1]:56534
+May 05 16:10 : client: [10] closed
+May 05 16:10 : client: [11] opened from [::1]:56536
+May 05 16:10 : client: [11] closed
+May 05 16:12 : client: [12] opened from [::1]:56674
+May 05 16:12 : client: [12] closed
+May 05 16:12 : client: [13] opened from [::1]:56676
+May 05 16:12 : client: [13] closed
+May 05 16:12 : client: [14] opened from [::1]:56678
+May 05 16:12 : client: [14] closed
+May 05 16:12 : client: [15] opened from [::1]:56680
+May 05 16:12 : client: [15] closed
+May 05 16:12 : client: [16] opened from [::1]:56682
+May 05 16:12 : client: [16] closed
+May 05 16:12 : client: [17] opened from [::1]:56684
+May 05 16:12 : client: [17] closed
+May 05 16:12 : client: [18] opened from [::1]:56686
+May 05 16:12 : client: [18] closed
+May 05 16:22 : client: [19] opened from [::1]:57200
+May 05 16:22 : client: [19] closed
+May 05 16:22 : client: [20] opened from [::1]:57202
+May 05 16:22 : client: [20] closed
+May 05 16:22 : client: [21] opened from [::1]:57204
+May 05 16:22 : client: [21] closed
+May 05 16:22 : client: [22] opened from [::1]:57206
+May 05 16:22 : client: [22] closed
+May 05 16:22 : client: [23] opened from [::1]:57208
+May 05 16:22 : client: [23] closed
+May 05 16:22 : client: [24] opened from [::1]:57210
+May 05 16:22 : client: [24] closed
+May 05 16:22 : client: [25] opened from [::1]:57212
+May 05 16:22 : client: [25] closed
+May 05 16:24 : player: played "Buju Banton/00 Untold Stories.mp3"
+May 05 16:24 : client: [26] opened from [::1]:57218
+May 05 16:24 : client: [26] closed
+May 05 16:24 : client: [27] opened from [::1]:57220
+May 05 16:24 : client: [27] closed
+May 05 16:24 : client: [28] opened from [::1]:57222
+May 05 16:24 : client: [28] closed
+May 05 16:24 : client: [29] opened from [::1]:57224
+May 05 16:24 : client: [29] closed
+May 05 16:24 : client: [30] opened from [::1]:57228
+May 05 16:24 : client: [30] closed
+May 05 16:24 : client: [31] opened from [::1]:57230
+May 05 16:24 : client: [31] closed
+May 05 16:26 : client: [32] opened from [::1]:57238
+May 05 16:26 : client: [32] closed
+May 05 16:26 : client: [33] opened from [::1]:57240
+May 05 16:26 : client: [33] closed
+May 05 16:27 : player: played "Buju Banton/00 Wanna Be Loved.mp3"
+May 05 16:27 : client: [34] opened from [::1]:57252
+May 05 16:27 : client: [34] closed
+May 05 16:27 : client: [35] opened from [::1]:57254
+May 05 16:27 : client: [35] closed
+May 05 16:27 : client: [36] opened from [::1]:57256
+May 05 16:27 : client: [36] closed
+May 05 16:27 : client: [37] opened from [::1]:57258
+May 05 16:27 : client: [37] closed
+May 05 16:29 : client: [38] opened from [::1]:57278
+May 05 16:29 : client: [38] closed
+May 05 16:29 : client: [39] opened from [::1]:57280
+May 05 16:29 : client: [39] closed
+May 05 16:29 : client: [40] opened from [::1]:57282
+May 05 16:29 : client: [40] closed
+May 05 16:29 : client: [41] opened from [::1]:57284
+May 05 16:29 : client: [41] closed
+May 05 16:29 : client: [42] opened from [::1]:57286
+May 05 16:29 : client: [42] closed
+May 05 16:29 : client: [43] opened from [::1]:57288
+May 05 16:29 : client: [43] closed
+May 05 16:29 : client: [44] opened from [::1]:57290
+May 05 16:29 : client: [44] closed
+May 05 16:32 : client: [45] opened from [::1]:57300
+May 05 16:32 : client: [45] closed
+May 05 16:32 : client: [46] opened from [::1]:57302
+May 05 16:32 : client: [46] closed
+May 05 16:32 : client: [47] opened from [::1]:57304
+May 05 16:32 : client: [47] closed
+May 05 16:32 : client: [48] opened from [::1]:57306
+May 05 16:32 : client: [48] closed
+May 05 16:32 : client: [49] opened from [::1]:57308
+May 05 16:32 : client: [49] closed
+May 05 16:32 : client: [50] opened from [::1]:57310
+May 05 16:32 : client: [50] closed
+May 05 16:32 : client: [51] opened from [::1]:57312
+May 05 16:32 : client: [51] closed
+May 05 16:34 : player: played "Buju Banton/Inna Heights/05 African Pride.mp3"
+May 05 16:34 : client: [52] opened from [::1]:57318
+May 05 16:34 : client: [52] closed
+May 05 16:34 : client: [53] opened from [::1]:57320
+May 05 16:34 : client: [53] closed
+May 05 16:34 : client: [54] opened from [::1]:57322
+May 05 16:34 : client: [54] closed
+May 05 16:34 : client: [55] opened from [::1]:57324
+May 05 16:34 : client: [55] closed
+May 05 16:35 : client: [7] closed
+May 05 16:35 : client: [56] opened from [::1]:57328
+May 05 16:35 : client: [57] opened from [::1]:57330
+May 05 16:35 : client: [57] closed
+May 05 16:35 : client: [58] opened from [::1]:57332
+May 05 16:35 : client: [58] closed
+May 05 16:35 : client: [59] opened from [::1]:57334
+May 05 16:35 : client: [59] closed
+May 05 16:35 : client: [60] opened from [::1]:57336
+May 05 16:35 : client: [60] closed
+May 05 16:36 : client: [61] opened from [::1]:57342
+May 05 16:36 : client: [61] closed
+May 05 16:36 : client: [62] opened from [::1]:57344
+May 05 16:36 : client: [62] closed
+May 05 16:38 : player: played "Buju Banton/Voice Of Jamaica/02 Red Rose.mp3"
+May 05 16:38 : client: [63] opened from [::1]:57362
+May 05 16:38 : client: [63] closed
+May 05 16:38 : client: [64] opened from [::1]:57364
+May 05 16:38 : client: [64] closed
+May 05 16:38 : client: [65] opened from [::1]:57366
+May 05 16:38 : client: [65] closed
+May 05 16:38 : client: [66] opened from [::1]:57368
+May 05 16:38 : client: [66] closed
+May 05 16:38 : client: [67] opened from [::1]:57370
+May 05 16:38 : client: [67] closed
+May 05 16:38 : client: [68] opened from [::1]:57372
+May 05 16:38 : client: [68] closed
+May 05 16:38 : client: [69] opened from [::1]:57374
+May 05 16:38 : client: [69] closed
+May 05 16:38 : client: [70] opened from [::1]:57376
+May 05 16:38 : client: [70] closed
+May 05 16:38 : client: [71] opened from [::1]:57378
+May 05 16:38 : client: [71] closed
+May 05 16:38 : client: [72] opened from [::1]:57380
+May 05 16:38 : client: [72] closed
+May 05 16:38 : client: [73] opened from [::1]:57382
+May 05 16:38 : client: [73] closed
+May 05 16:38 : client: [74] opened from [::1]:57384
+May 05 16:38 : client: [74] closed
+May 05 16:40 : client: [75] opened from [::1]:57392
+May 05 16:40 : client: [75] closed
+May 05 16:40 : client: [76] opened from [::1]:57394
+May 05 16:40 : client: [76] closed
+May 05 16:40 : client: [77] opened from [::1]:57396
+May 05 16:40 : client: [77] closed
+May 05 16:40 : client: [78] opened from [::1]:57398
+May 05 16:40 : client: [78] closed
+May 05 16:42 : client: [79] opened from [::1]:57408
+May 05 16:42 : client: [79] closed
+May 05 16:42 : client: [80] opened from [::1]:57410
+May 05 16:42 : client: [80] closed
+May 05 16:43 : client: [81] opened from [::1]:57414
+May 05 16:43 : client: [81] closed
+May 05 16:43 : client: [82] opened from [::1]:57416
+May 05 16:43 : client: [82] closed
+May 05 16:43 : client: [56] closed
+May 05 16:43 : client: [83] opened from [::1]:57418
+May 05 16:43 : client: [84] opened from [::1]:57420
+May 05 16:43 : client: [84] closed
+May 05 16:43 : client: [85] opened from [::1]:57422
+May 05 16:43 : client: [85] closed
+May 05 16:43 : client: [86] opened from [::1]:57424
+May 05 16:43 : client: [86] closed
+May 05 16:43 : client: [87] opened from [::1]:57426
+May 05 16:43 : client: [87] closed
+May 05 17:00 : client: [88] opened from [::1]:57908
+May 05 17:00 : client: [88] closed
+May 05 17:00 : client: [89] opened from [::1]:57910
+May 05 17:00 : client: [89] closed
+May 05 17:03 : client: [90] opened from [::1]:57994
+May 05 17:03 : client: [90] closed
+May 05 17:03 : client: [91] opened from [::1]:57996
+May 05 17:03 : client: [91] closed
+May 05 17:03 : client: [92] opened from [::1]:57998
+May 05 17:03 : client: [92] closed
+May 05 17:03 : client: [93] opened from [::1]:58000
+May 05 17:03 : client: [93] closed
+May 05 17:03 : client: [94] opened from [::1]:58002
+May 05 17:03 : client: [94] closed
+May 05 17:03 : client: [95] opened from [::1]:58004
+May 05 17:03 : client: [95] closed
+May 05 17:22 : client: [96] opened from [::1]:58150
+May 05 17:22 : client: [96] closed
+May 05 17:22 : client: [97] opened from [::1]:58152
+May 05 17:22 : client: [97] closed
+May 05 17:25 : client: [98] opened from [::1]:58160
+May 05 17:25 : client: [98] closed
+May 05 17:25 : client: [99] opened from [::1]:58162
+May 05 17:25 : client: [99] closed
+May 05 17:44 : client: [100] opened from [::1]:58408
+May 05 17:44 : client: [100] closed
+May 05 17:44 : client: [101] opened from [::1]:58410
+May 05 17:44 : client: [101] closed
+May 05 17:44 : client: [102] opened from [::1]:58412
+May 05 17:44 : client: [102] closed
+May 05 17:44 : client: [103] opened from [::1]:58414
+May 05 17:44 : client: [103] closed
+May 05 17:45 : client: [104] opened from [::1]:58418
+May 05 17:45 : client: [104] closed
+May 05 17:45 : client: [105] opened from [::1]:58420
+May 05 17:45 : client: [105] closed
+May 05 18:54 : player: played "Buju Banton/'Til Shiloh/02 'Til I'm Laid To Rest.mp3"
+May 05 18:55 : client: [106] opened from [::1]:58892
+May 05 18:55 : client: [106] closed
+May 05 18:55 : client: [107] opened from [::1]:58894
+May 05 18:55 : client: [107] closed
+May 05 18:55 : client: [108] opened from [::1]:58896
+May 05 18:55 : client: [108] closed
+May 05 18:55 : client: [109] opened from [::1]:58898
+May 05 18:55 : client: [109] closed
+May 05 18:55 : client: [110] opened from [::1]:58900
+May 05 18:55 : client: [110] closed
+May 05 18:55 : client: [111] opened from [::1]:58902
+May 05 18:55 : client: [111] closed
+May 05 18:55 : client: [112] opened from [::1]:58904
+May 05 18:55 : client: [112] closed
+May 05 18:55 : client: [113] opened from [::1]:58906
+May 05 18:55 : client: [113] closed
+May 05 18:56 : client: [114] opened from [::1]:58912
+May 05 18:56 : client: [114] closed
+May 05 18:56 : client: [115] opened from [::1]:58914
+May 05 18:56 : client: [115] closed
+May 05 18:56 : client: [116] opened from [::1]:58916
+May 05 18:56 : client: [116] closed
+May 05 18:56 : client: [117] opened from [::1]:58918
+May 05 18:56 : client: [117] closed
+May 05 18:56 : client: [118] opened from [::1]:58920
+May 05 18:56 : client: [118] closed
+May 05 18:56 : client: [119] opened from [::1]:58922
+May 05 18:56 : client: [119] closed
+May 05 18:56 : client: [120] opened from [::1]:58924
+May 05 18:56 : client: [120] closed
+May 05 18:56 : client: [121] opened from [::1]:58926
+May 05 18:56 : client: [121] closed

@@ -1,9 +1,3 @@
-rename S06E2318 The Tip of the Zoidberg - All the Presidents' Heads.mkv
-rename S06E1420 Neutopia - The Silence of the Clamps.mkv
-rename S06E20 Neutopia.mkv
-rename S06E17 Benderama.mkv
-rename S06E19 Ghost in the Machines.mkv
-rename S06E16 Law and Oracle.mkv
 rename S06E14 The Silence of the Clamps.mkv
 rename S06E21 Yo Leela Leela.mkv
 rename S06E23 All the Presidents' Heads.mkv
@@ -48,3 +42,9 @@ rename config
 shell wget https://github.com/addy-dclxvi/almighty-dotfiles/raw/master/.ncmpcpp/art-light.sh
 shell chmod +x %s
 wq
+rename JoJo's Bizarre Adventure - Complete
+rename aim
+shell convert -blur 0x4 "%f" "test.png"
+shell convert %f -blur 0x8 test.png
+shell convert %f -blur 0x16 test.png
+shell convert %f -blur 0x16 ~/.config/test.png
