@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+volraw=$(amixer get Master|tail -1|grep -oh "\w*%\w*")
+stat=$(amixer get Master|tail -1|awk '{print $NF}')
+volint=${volraw:0:-1}
+
+#action=${1}
+
+case $1 in
+	inc) pactl set-sink-volume 0 +2% ;;
+	dec) pactl set-sink-volume 0 -2% ;;
+	mute) pactl set-sink-mute 0 toggle ;;
+esac
+
+if [[ $volint == 100 ]]; then
+	dunstify -r 1234 --raw_icon=$HOME/scrpic/speaker-full.png "=========|"
+elif [[ $volint -ge 90 ]]; then
+	dunstify -r 1234 --raw_icon=$HOME/scrpic/speaker-full.png "========|-"
+elif [[ $volint -ge 80 ]]; then
+	dunstify -r 1234 --raw_icon=$HOME/scrpic/speaker-full.png "=======|--"
+elif [[ $volint -ge 70 ]]; then
+	dunstify -r 1234 --raw_icon=$HOME/scrpic/speaker-full.png "======|---"
+elif [[ $volint -ge 60 ]]; then
+	dunstify -r 1234 --raw_icon=$HOME/scrpic/speaker-full.png "=====|----"
+elif [[ $volint -ge 50 ]]; then
+	dunstify -r 1234 --raw_icon=$HOME/scrpic/speaker-full.png "====|-----"
+elif [[ $volint -ge 40 ]]; then
+	dunstify -r 1234 --raw_icon=$HOME/scrpic/speaker-full.png "===|------"
+elif [[ $volint -ge 30 ]]; then
+	dunstify -r 1234 --raw_icon=$HOME/scrpic/speaker-full.png "==|-------"
+elif [[ $volint -ge 20 ]]; then
+	dunstify -r 1234 --raw_icon=$HOME/scrpic/speaker-full.png "=|--------"
+elif [[ $volint -ge 10 ]]; then
+	dunstify -r 1234 --raw_icon=$HOME/scrpic/speaker-full.png "|---------"
+else
+	dunstify -r 1234 --raw_icon=$HOME/scrpic/speaker-empty.png "MUTED"
+fi

@@ -1,15 +1,3 @@
-rename S06E14 The Silence of the Clamps.mkv
-rename S06E21 Yo Leela Leela.mkv
-rename S06E23 All the Presidents' Heads.mkv
-rename S06E15 Mobius Dick.mkv
-rename S06E18 The Tip of the Zoidberg.mkv
-rename S07E14 2-D Blacktop -  Forty Percent Leadbelly.mkv
-rename S07E14 2-D Blacktop - Forty Percent Leadbelly.mkv
-rename S07E14 Forty Percent Leadbelly - 2-D Blacktop.mkv
-rename 10.jpeg
-shell git
-shell git clone https://github.com/reorr/my-theme-collection.git
-rename moonburn_
 rename moonburn
 rename 4.jpg
 rename 11.jpg
@@ -44,7 +32,19 @@ shell chmod +x %s
 wq
 rename JoJo's Bizarre Adventure - Complete
 rename aim
-shell convert -blur 0x4 "%f" "test.png"
-shell convert %f -blur 0x8 test.png
-shell convert %f -blur 0x16 test.png
-shell convert %f -blur 0x16 ~/.config/test.png
+shell convert "%f" -blur 0x8 "%f"
+shell convert "%f" -blur 0x8 "test test.png"
+shell convert %"%f%" -blur 0x8 %"test test.png%"
+shell convert '%f' -blur 0x8 'test test.png'
+
+shell convert -trim -transparent white -fuzz 50%% 'fullscalebattcap.png' 'fullscalebattcap.png'
+shell convert -trim -transparent white -fuzz 15%% 'fullscalebattcap.png' 'fullscalebattcap.png'
+shell convert -trim -transparent white -fuzz 15%% 'prototypebattcap.png' 'prototypebattcap.png'
+shell convert -trim -transparent white -fuzz 10%% 'close.png' 'close.png'
+shell convert -trim -transparent white -fuzz 10%% 'iconify.png' 'iconify.png'
+shell convert -trim -transparent white -fuzz 10%% 'maximize.png' 'maximize.png'
+rename i3volume
+rename i3brightness
+shell convert -trim -transparent blue -fuzz 10%% 'pamship.png' 'pamship.png'
+shell convert -trim -transparent blue -fuzz 20%% 'pamship.png' 'pamship.png'
+shell convert -trim -transparent blue -fuzz 50%% 'pamship.png' 'pamship.png'

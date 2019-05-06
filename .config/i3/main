@@ -248,11 +248,11 @@ $mod+n				$lch '$brow --new-window --app=https://www.netflix.com/' $mk1
 $mod+m				$lch 'surf docs.google.com/presentation/u/0/' $mk3
 $mod+Shift+m		$lch '$brow --new-window --app=https://play.google.com/movies/' $mk1
 
-$mod+comma			$exn "pactl set-sink-volume 0 -2%; ~/$scr/notify_volume"
+$mod+comma			$exs/i3volume dec
 
-$mod+period			$exn "pactl set-sink-volume 0 +2%; ~/$scr/notify_volume"
+$mod+period			$exs/i3volume inc
 
-$mod+slash			$exn "pactl set-sink-mute 0 toggle; ~/$scr/notify_volume"
+$mod+slash			$exs/i3volume mute
 
 # >>>> MOD4 BINDINGS
 # //// Misc
@@ -352,9 +352,9 @@ $win+n				move workspace to output $nat
 
 $win+m				$exs/multimon
 
-$win+comma			$exn "$brightdec; ~/$scr/notify_brightness; polybar-msg cmd hook backlight 1"
+$win+comma			$exs/i3brightness dec
 
-$win+period			$exn "$brightinc; ~/$scr/notify_brightness; polybar-msg cmd hook backlight 1"
+$win+period			$exs/i3brightness inc
 
 # >>>> FOR_WINDOW
 # //// GLOBAL

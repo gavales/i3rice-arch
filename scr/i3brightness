@@ -3,6 +3,11 @@
 blr=$(light -G)
 declare -i bl=$(printf "%.0f" $blr)
 
+case $1 in
+	inc) light -A 10 ;;
+	dec) light -U 10 ;;
+esac
+
 if [[ $bl == 100 ]]; then
 	dunstify -r 1234 --raw_icon=$HOME/scrpic/brightness-full.png "=========|"
 elif [[ $bl -ge 90 ]]; then
@@ -24,5 +29,7 @@ elif [[ $bl -ge 20 ]]; then
 else
 	dunstify -r 1234 --raw_icon=$HOME/scrpic/brightness-full.png "|---------"
 fi
+
+polybar-msg hook backlight 1
 
 echo $bl

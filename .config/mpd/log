@@ -22422,3 +22422,232 @@ May 05 18:56 : client: [120] opened from [::1]:58924
 May 05 18:56 : client: [120] closed
 May 05 18:56 : client: [121] opened from [::1]:58926
 May 05 18:56 : client: [121] closed
+May 05 19:41 : client: [122] opened from [::1]:59130
+May 05 19:41 : client: [122] closed
+May 05 19:41 : client: [123] opened from [::1]:59132
+May 05 19:41 : client: [123] closed
+May 05 19:49 : client: [124] opened from [::1]:59156
+May 05 19:49 : client: [124] closed
+May 05 19:49 : client: [125] opened from [::1]:59158
+May 05 19:49 : client: [125] closed
+May 05 20:49 : client: [83] closed
+May 05 20:50 : player: played "Leo Moracchioli/(Don´t Fear) The Reaper.mp3"
+May 05 21:11 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 21:11 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 21:11 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 05 21:11 : client: [0] opened from [::1]:43252
+May 05 21:11 : client: [0] closed
+May 05 21:11 : client: [1] opened from [::1]:43254
+May 05 21:11 : client: [1] closed
+May 05 21:11 : client: [2] opened from [::1]:43256
+May 05 21:11 : client: [2] closed
+May 05 21:11 : client: [3] opened from [::1]:43258
+May 05 21:11 : client: [3] closed
+May 05 21:16 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 21:16 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 21:16 : client: [4] opened from [::1]:43280
+May 05 21:16 : client: [4] closed
+May 05 21:16 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 21:16 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 05 21:16 : client: [5] opened from [::1]:43282
+May 05 21:16 : client: [5] closed
+May 05 21:16 : client: [6] opened from [::1]:43284
+May 05 21:16 : client: [6] closed
+May 05 21:16 : client: [7] opened from [::1]:43286
+May 05 21:16 : client: [7] closed
+May 05 21:16 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 21:16 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 21:16 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 21:16 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 05 21:17 : client: [8] opened from [::1]:43338
+May 05 21:17 : client: [9] opened from [::1]:43340
+May 05 21:17 : client: [9] closed
+May 05 21:17 : client: [10] opened from [::1]:43342
+May 05 21:17 : client: [10] closed
+May 05 21:17 : client: [11] opened from [::1]:43344
+May 05 21:17 : client: [11] closed
+May 05 21:17 : client: [12] opened from [::1]:43346
+May 05 21:17 : client: [12] closed
+May 05 21:25 : client: [13] opened from [::1]:43606
+May 05 21:25 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 21:25 : client: [13] closed
+May 05 21:25 : client: [14] opened from [::1]:43608
+May 05 21:25 : client: [14] closed
+May 05 21:25 : client: [15] opened from [::1]:43610
+May 05 21:25 : client: [15] closed
+May 05 21:25 : client: [16] opened from [::1]:43612
+May 05 21:25 : client: [16] closed
+May 05 21:30 : player: played "Leo Moracchioli/(Don´t Fear) The Reaper.mp3"
+May 05 21:30 : client: [17] opened from [::1]:43628
+May 05 21:30 : client: [17] closed
+May 05 21:30 : client: [18] opened from [::1]:43630
+May 05 21:30 : client: [18] closed
+May 05 21:30 : client: [19] opened from [::1]:43632
+May 05 21:30 : client: [19] closed
+May 05 21:30 : client: [20] opened from [::1]:43634
+May 05 21:30 : client: [20] closed
+May 05 21:32 : client: [21] opened from [::1]:43650
+May 05 21:32 : client: [21] closed
+May 05 21:32 : client: [22] opened from [::1]:43652
+May 05 21:32 : client: [22] closed
+May 05 21:32 : client: [23] opened from [::1]:43654
+May 05 21:32 : client: [23] closed
+May 05 21:32 : client: [24] opened from [::1]:43656
+May 05 21:32 : client: [24] closed
+May 05 21:32 : client: [25] opened from [::1]:43658
+May 05 21:32 : client: [25] closed
+May 05 21:32 : client: [26] opened from [::1]:43660
+May 05 21:32 : client: [26] closed
+May 05 21:32 : client: [27] opened from [::1]:43662
+May 05 21:32 : client: [27] closed
+May 05 21:32 : client: [28] opened from [::1]:43664
+May 05 21:32 : client: [28] closed
+May 05 21:35 : player: played "Leo Moracchioli/10 rock_metal songs in 3 minutes.mp3"
+May 05 21:35 : client: [29] opened from [::1]:43678
+May 05 21:35 : client: [29] closed
+May 05 21:35 : client: [30] opened from [::1]:43680
+May 05 21:35 : client: [30] closed
+May 05 21:35 : client: [31] opened from [::1]:43682
+May 05 21:35 : client: [31] closed
+May 05 21:35 : client: [32] opened from [::1]:43684
+May 05 21:35 : client: [32] closed
+May 05 21:38 : player: played "Leo Moracchioli/3005 [acoustic].mp3"
+May 05 21:39 : client: [33] opened from [::1]:43688
+May 05 21:39 : client: [33] closed
+May 05 21:39 : client: [34] opened from [::1]:43690
+May 05 21:39 : client: [34] closed
+May 05 21:39 : client: [35] opened from [::1]:43692
+May 05 21:39 : client: [35] closed
+May 05 21:39 : client: [36] opened from [::1]:43694
+May 05 21:39 : client: [36] closed
+May 05 21:45 : player: played "Leo Moracchioli/4 Non Blondes - What´s Up.mp3"
+May 05 21:45 : client: [37] opened from [::1]:43710
+May 05 21:45 : client: [37] closed
+May 05 21:45 : client: [38] opened from [::1]:43712
+May 05 21:45 : client: [38] closed
+May 05 21:45 : client: [39] opened from [::1]:43714
+May 05 21:45 : client: [39] closed
+May 05 21:45 : client: [40] opened from [::1]:43716
+May 05 21:45 : client: [40] closed
+May 05 21:53 : client: [41] opened from [::1]:43734
+May 05 21:53 : client: [41] closed
+May 05 21:53 : client: [42] opened from [::1]:43736
+May 05 21:53 : client: [42] closed
+May 05 21:53 : client: [43] opened from [::1]:43738
+May 05 21:53 : client: [43] closed
+May 05 21:53 : client: [44] opened from [::1]:43740
+May 05 21:53 : client: [44] closed
+May 05 22:44 : client: [45] opened from [::1]:44078
+May 05 22:44 : client: [45] closed
+May 05 22:44 : client: [46] opened from [::1]:44080
+May 05 22:44 : client: [46] closed
+May 05 22:44 : client: [47] opened from [::1]:44082
+May 05 22:44 : client: [47] closed
+May 05 22:44 : client: [48] opened from [::1]:44084
+May 05 22:44 : client: [48] closed
+May 05 22:44 : player: played "Leo Moracchioli/60 Minutes.mp3"
+May 05 22:45 : client: [49] opened from [::1]:44086
+May 05 22:45 : client: [49] closed
+May 05 22:45 : client: [50] opened from [::1]:44088
+May 05 22:45 : client: [50] closed
+May 05 22:45 : client: [51] opened from [::1]:44090
+May 05 22:45 : client: [51] closed
+May 05 22:45 : client: [52] opened from [::1]:44092
+May 05 22:45 : client: [52] closed
+May 05 22:45 : client: [53] opened from [::1]:44096
+May 05 22:45 : client: [53] closed
+May 05 22:45 : client: [54] opened from [::1]:44098
+May 05 22:45 : client: [54] closed
+May 05 22:45 : client: [55] opened from [::1]:44100
+May 05 22:45 : client: [55] closed
+May 05 22:45 : client: [56] opened from [::1]:44102
+May 05 22:45 : client: [56] closed
+May 05 22:45 : client: [57] opened from [::1]:44104
+May 05 22:45 : client: [57] closed
+May 05 22:45 : client: [58] opened from [::1]:44106
+May 05 22:45 : client: [58] closed
+May 05 22:45 : client: [59] opened from [::1]:44108
+May 05 22:45 : client: [59] closed
+May 05 22:45 : client: [60] opened from [::1]:44110
+May 05 22:45 : client: [60] closed
+May 05 22:45 : client: [61] opened from [::1]:44114
+May 05 22:45 : client: [61] closed
+May 05 22:45 : client: [62] opened from [::1]:44116
+May 05 22:45 : client: [62] closed
+May 05 22:45 : client: [63] opened from [::1]:44118
+May 05 22:45 : client: [63] closed
+May 05 22:45 : client: [64] opened from [::1]:44120
+May 05 22:45 : client: [64] closed
+May 05 22:45 : client: [65] opened from [::1]:44122
+May 05 22:45 : client: [65] closed
+May 05 22:45 : client: [66] opened from [::1]:44124
+May 05 22:45 : client: [66] closed
+May 05 22:45 : client: [67] opened from [::1]:44126
+May 05 22:45 : client: [67] closed
+May 05 22:45 : client: [68] opened from [::1]:44128
+May 05 22:45 : client: [68] closed
+May 05 22:47 : client: [69] opened from [::1]:44136
+May 05 22:47 : client: [69] closed
+May 05 22:47 : client: [70] opened from [::1]:44138
+May 05 22:47 : client: [70] closed
+May 05 22:47 : client: [71] opened from [::1]:44140
+May 05 22:47 : client: [71] closed
+May 05 22:47 : client: [72] opened from [::1]:44142
+May 05 22:47 : client: [72] closed
+May 05 22:51 : client: [73] opened from [::1]:44170
+May 05 22:51 : client: [73] closed
+May 05 22:51 : client: [74] opened from [::1]:44172
+May 05 22:51 : client: [74] closed
+May 05 22:51 : client: [75] opened from [::1]:44174
+May 05 22:51 : client: [75] closed
+May 05 22:51 : client: [76] opened from [::1]:44176
+May 05 22:51 : client: [76] closed
+May 05 22:52 : player: played "La Sonora Dinamita/32 Cañonazos/19 Como Hago Con Mi Marido (feat_.mp3"
+May 05 22:52 : client: [77] opened from [::1]:44194
+May 05 22:52 : client: [77] closed
+May 05 22:52 : client: [78] opened from [::1]:44196
+May 05 22:52 : client: [78] closed
+May 05 22:52 : client: [79] opened from [::1]:44198
+May 05 22:52 : client: [79] closed
+May 05 22:52 : client: [80] opened from [::1]:44200
+May 05 22:52 : client: [80] closed
+May 05 22:54 : client: [81] opened from [::1]:44210
+May 05 22:54 : client: [82] opened from [::1]:44212
+May 05 22:54 : client: [81] closed
+May 05 22:54 : client: [82] closed
+May 05 22:54 : client: [83] opened from [::1]:44214
+May 05 22:54 : client: [83] closed
+May 05 22:54 : client: [84] opened from [::1]:44216
+May 05 22:54 : client: [84] closed
+May 05 22:54 : client: [85] opened from [::1]:44218
+May 05 22:54 : client: [85] closed
+May 05 22:54 : client: [86] opened from [::1]:44220
+May 05 22:54 : client: [86] closed
+May 05 22:54 : client: [87] opened from [::1]:44222
+May 05 22:54 : client: [87] closed
+May 05 22:54 : client: [88] opened from [::1]:44224
+May 05 22:54 : client: [88] closed
+May 05 22:57 : client: [89] opened from [::1]:44240
+May 05 22:57 : client: [89] closed
+May 05 22:57 : client: [90] opened from [::1]:44242
+May 05 22:57 : client: [90] closed
+May 05 22:57 : client: [91] opened from [::1]:44244
+May 05 22:57 : client: [91] closed
+May 05 22:57 : client: [92] opened from [::1]:44246
+May 05 22:57 : client: [92] closed
+May 05 22:57 : client: [8] closed
+May 05 22:57 : player: played "Leo Moracchioli/(Don´t Fear) The Reaper.mp3"
+May 05 22:57 : player: played "Leo Moracchioli/(Don´t Fear) The Reaper.mp3"
+May 05 22:57 : player: played "Various Artists/Perfect Bebop/10 Venus De Milo.mp3"
+May 06 00:30 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 06 00:30 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 06 00:30 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 06 00:30 : client: [0] opened from [::1]:46910
+May 06 00:30 : client: [1] opened from [::1]:46912
+May 06 00:30 : client: [1] closed
+May 06 00:30 : client: [2] opened from [::1]:46914
+May 06 00:30 : client: [2] closed
+May 06 00:30 : client: [3] opened from [::1]:46918
+May 06 00:30 : client: [3] closed
+May 06 00:30 : client: [4] opened from [::1]:46920
+May 06 00:30 : client: [4] closed
