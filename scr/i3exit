@@ -6,7 +6,7 @@
 
 case "$1" in
 	lock)
-		dm-tool lock
+		bash ~/scr/lockscreen
 		;;
 	logout)
 		i3-msg exit
@@ -15,10 +15,10 @@ case "$1" in
 		dm-tool switch-to-greeter
 		;;
 	suspend)
-		dm-tool lock && $logind suspend
+		bash ~/scr/lockscreen && $logind suspend
 		;;
 	hibernate)
-		dm-tool lock && $logind hibernate
+		bash ~/scr/lockscreen && $logind hibernate
 		;;
 	reboot)
 		$logind reboot

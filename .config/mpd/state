@@ -2,8 +2,8 @@ sw_volume: 62
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
 state: pause
-current: 519
-time: 174.595000
+current: 364
+time: 198.454000
 random: 1
 repeat: 1
 single: 0
@@ -531,133 +531,132 @@ playlist_begin
 516:Various Artists/Perfect Bebop/07 Salt Peanuts.mp3
 517:Various Artists/Perfect Bebop/08 Billie's Bounce.mp3
 518:Various Artists/Perfect Bebop/09 Bop!.mp3
-519:Various Artists/Perfect Bebop/10 Venus De Milo.mp3
-520:Various Artists/Perfect Bebop/11 Symphonette.mp3
-521:Various Artists/Perfect Bebop/12 Twisted.mp3
-522:Various Artists/Perfect Bebop/13 A Night In Tunisia.mp3
-523:Various Artists/Perfect Bebop/14 Bird's Nest.mp3
-524:Various Artists/Perfect Bebop/15 What A Diff'rence A Day Made.mp3
-525:Various Artists/Perfect Bebop/16 Babik.mp3
-526:Various Artists/Perfect Bebop/17 Oop Bop Sh'bam.mp3
-527:Various Artists/Perfect Bebop/18 'Round About Midnight.mp3
-528:Various Artists/Perfect Bebop/19 Donna Lee.mp3
-529:Various Artists/Perfect Bebop/20 52nd Street Theme.mp3
-530:Various Artists/Perfect Bebop/21 What's New.mp3
-531:Various Artists/Perfect Bebop/22 Budo.mp3
-532:Various Artists/Perfect Bebop/23 Scrapple From The Apple.mp3
-533:Various Artists/Perfect Bebop/24 Goin To Minton's.mp3
-534:Various Artists/Perfect Bebop/25 Groovin' High.mp3
-535:Various Artists/Perfect Bebop/26 Constellation.mp3
-536:Various Artists/Perfect Blues/01 Good Morning Blues.mp3
-537:Various Artists/Perfect Blues/02 Fine And Mellow.mp3
-538:Various Artists/Perfect Blues/03 Original Jelly Roll Blues.mp3
-539:Various Artists/Perfect Blues/04 Beale Street Blues.mp3
-540:Various Artists/Perfect Blues/05 Nobody Knows You When You're D.mp3
-541:Various Artists/Perfect Blues/06 Potato Head Blues.mp3
-542:Various Artists/Perfect Blues/07 Backwater Blues.mp3
-543:Various Artists/Perfect Blues/08 Stormy Weather.mp3
-544:Various Artists/Perfect Blues/09 Fats Waller's Original E-Flat.mp3
-545:Various Artists/Perfect Blues/10 Blues In The Night.mp3
-546:Various Artists/Perfect Blues/11 St_ Louis Blues.mp3
-547:Various Artists/Perfect Blues/12 Swingin' The Blues.mp3
-548:Various Artists/Perfect Blues/13 Freight Train Blues.mp3
-549:Various Artists/Perfect Blues/14 (What Did I Do To Be So) Black.mp3
-550:Various Artists/Perfect Blues/15 I'm Down In The Dumps.mp3
-551:Various Artists/Perfect Blues/16 To To Blues.mp3
-552:Various Artists/Perfect Blues/17 Hesitation Blues.mp3
-553:Various Artists/Perfect Blues/18 Red Onion Blues.mp3
-554:Various Artists/Perfect Blues/19 Early In The Morning.mp3
-555:Various Artists/Perfect Blues/20 I Love My Man.mp3
-556:Various Artists/Perfect Blues/21 Blues On Parade.mp3
-557:Various Artists/Perfect Blues/22 Lover Man.mp3
-558:Various Artists/Perfect Blues/23 Harvard Blues.mp3
-559:Various Artists/Playlist_ Reggae/13 Oh Carolina.mp3
-560:Various Artists/Ragga Ragga Ragga 2009/11 Gimme Gimme.mp3
-561:Various Artists/Rap Dog/08 Deep Cover feat Snoop Dogg.mp3
-562:Various Artists/Reggae Gold 1997/10 Love Sponge.mp3
-563:Various Artists/Reggae Gold 2007/12 Love And Affection.mp3
-564:Various Artists/Reggae Gold 2011/01 Jah Army.mp3
-565:Various Artists/Strictly The Best Vol_ 39/03 Playing Games.mp3
-566:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/01 Tea For Two.mp3
-567:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/02 Java Jive.mp3
-568:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/03 Sugar Foot Stomp.mp3
-569:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/04 My Very Good Friend The Milkma.mp3
-570:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/05 Jersey Bounce.mp3
-571:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/06 Happy Feet.mp3
-572:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/07 Begin the Beguine (Foxtrot).mp3
-573:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/08 When I Take My Sugar To Tea.mp3
-574:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/09 For Dancers Only.mp3
-575:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/10 Sugar.mp3
-576:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/11 Flying Home.mp3
-577:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/12 Singin' The Blues.mp3
-578:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/13 Lovable And Sweet.mp3
-579:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/14 Sweeter Than Sugar.mp3
-580:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/15 (I've Got A Gal In) Kalamazoo.mp3
-581:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/16 The Lambeth Walk.mp3
-582:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/17 China Boy.mp3
-583:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/18 Let's Face The Music And Dance.mp3
-584:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/19 It Don't Mean A Thing (If It A.mp3
-585:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/20 Moonlight Cocktail.mp3
-586:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/21 Sing Me A Swing Song.mp3
-587:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/22 Rockin' Chair.mp3
-588:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/23 Shortnin' Bread.mp3
-589:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/24 Texas Tea Party.mp3
-590:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/25 Three Little Words.mp3
-591:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/26 A Nice Cup Of Tea.mp3
-592:Various Artists/Tea Dance 2 - Another 1920s_ 3/01 Deep Purple (Slow Foxtrot).mp3
-593:Various Artists/Tea Dance 2 - Another 1920s_ 3/02 On the Beach at Bali Bali (Pal.mp3
-594:Various Artists/Tea Dance 2 - Another 1920s_ 3/03 Eeny Meeny Miney Mo (Quickstep.mp3
-595:Various Artists/Tea Dance 2 - Another 1920s_ 3/04 Oh! Lady Be Good (Balboa).mp3
-596:Various Artists/Tea Dance 2 - Another 1920s_ 3/05 Sing a Song of Sunbeams (Quick.mp3
-597:Various Artists/Tea Dance 2 - Another 1920s_ 3/06 The Vict'ry Polka (Polka).mp3
-598:Various Artists/Tea Dance 2 - Another 1920s_ 3/07 When Buddha Smiles (Collegiate.mp3
-599:Various Artists/Tea Dance 2 - Another 1920s_ 3/08 Palais De Danse (Quickstep).mp3
-600:Various Artists/Tea Dance 2 - Another 1920s_ 3/09 Let's Fall in Love for the Las.mp3
-601:Various Artists/Tea Dance 2 - Another 1920s_ 3/10 On the Sunny Side of the Stree.mp3
-602:Various Artists/Tea Dance 2 - Another 1920s_ 3/11 On the Air (Slow Foxtrot _ Mel.mp3
-603:Various Artists/Tea Dance 2 - Another 1920s_ 3/12 Begin the Beguine (Foxtrot).mp3
-604:Various Artists/Tea Dance 2 - Another 1920s_ 3/13 Goodnight_ Vienna (Square Tang.mp3
-605:Various Artists/Tea Dance 2 - Another 1920s_ 3/14 That's You Baby _ Walking with.mp3
-606:Various Artists/Tea Dance 2 - Another 1920s_ 3/15 A String of Pearls (Foxtrot).mp3
-607:Various Artists/Tea Dance 2 - Another 1920s_ 3/16 Harlem Air Shaft (Balboa).mp3
-608:Various Artists/Tea Dance 2 - Another 1920s_ 3/17 Got to Dance My Way to Heaven.mp3
-609:Various Artists/Tea Dance 2 - Another 1920s_ 3/18 You Turned Your Head (Quickste.mp3
-610:Various Artists/Tea Dance 2 - Another 1920s_ 3/19 American Patrol (Quickstep_Jiv.mp3
-611:Various Artists/Tea Dance 2 - Another 1920s_ 3/20 Moonlight Serenade (Slow Foxtr.mp3
-612:Various Artists/Top of the Pops - Top Tens/2-16 Don't Worry Be Happy.mp3
-613:Various Artists/Trojan Lovers Collection/2-02 It Must Be True Love.mp3
-614:Various Artists/Twelve Inch Classics from the/05 Dance to the Drummer's Beat.mp3
-615:Various Artists/Vol_ 2 Guardians of the Galaxy/03 Lake Shore Drive.mp3
-616:Various Artists/Vol_ 2 Guardians of the Galaxy/05 Bring It on Home to Me.mp3
-617:Various Artists/Vol_ 2 Guardians of the Galaxy/06 Southern Nights.mp3
-618:Various Artists/Vol_ 2 Guardians of the Galaxy/07 My Sweet Lord.mp3
-619:Various Artists/Vol_ 2 Guardians of the Galaxy/08 Brandy (You're A Fine Girl).mp3
-620:Various Artists/Vol_ 2 Guardians of the Galaxy/09 Come A Little Bit Closer.mp3
-621:Various Artists/Vol_ 2 Guardians of the Galaxy/10 Wham Bam Shang-a-Lang.mp3
-622:Various Artists/Vol_ 2 Guardians of the Galaxy/11 Surrender.mp3
+519:Various Artists/Perfect Bebop/11 Symphonette.mp3
+520:Various Artists/Perfect Bebop/12 Twisted.mp3
+521:Various Artists/Perfect Bebop/13 A Night In Tunisia.mp3
+522:Various Artists/Perfect Bebop/14 Bird's Nest.mp3
+523:Various Artists/Perfect Bebop/15 What A Diff'rence A Day Made.mp3
+524:Various Artists/Perfect Bebop/16 Babik.mp3
+525:Various Artists/Perfect Bebop/17 Oop Bop Sh'bam.mp3
+526:Various Artists/Perfect Bebop/18 'Round About Midnight.mp3
+527:Various Artists/Perfect Bebop/19 Donna Lee.mp3
+528:Various Artists/Perfect Bebop/20 52nd Street Theme.mp3
+529:Various Artists/Perfect Bebop/21 What's New.mp3
+530:Various Artists/Perfect Bebop/22 Budo.mp3
+531:Various Artists/Perfect Bebop/23 Scrapple From The Apple.mp3
+532:Various Artists/Perfect Bebop/24 Goin To Minton's.mp3
+533:Various Artists/Perfect Bebop/25 Groovin' High.mp3
+534:Various Artists/Perfect Bebop/26 Constellation.mp3
+535:Various Artists/Perfect Blues/01 Good Morning Blues.mp3
+536:Various Artists/Perfect Blues/02 Fine And Mellow.mp3
+537:Various Artists/Perfect Blues/03 Original Jelly Roll Blues.mp3
+538:Various Artists/Perfect Blues/04 Beale Street Blues.mp3
+539:Various Artists/Perfect Blues/05 Nobody Knows You When You're D.mp3
+540:Various Artists/Perfect Blues/06 Potato Head Blues.mp3
+541:Various Artists/Perfect Blues/07 Backwater Blues.mp3
+542:Various Artists/Perfect Blues/08 Stormy Weather.mp3
+543:Various Artists/Perfect Blues/09 Fats Waller's Original E-Flat.mp3
+544:Various Artists/Perfect Blues/10 Blues In The Night.mp3
+545:Various Artists/Perfect Blues/11 St_ Louis Blues.mp3
+546:Various Artists/Perfect Blues/12 Swingin' The Blues.mp3
+547:Various Artists/Perfect Blues/13 Freight Train Blues.mp3
+548:Various Artists/Perfect Blues/14 (What Did I Do To Be So) Black.mp3
+549:Various Artists/Perfect Blues/15 I'm Down In The Dumps.mp3
+550:Various Artists/Perfect Blues/16 To To Blues.mp3
+551:Various Artists/Perfect Blues/17 Hesitation Blues.mp3
+552:Various Artists/Perfect Blues/18 Red Onion Blues.mp3
+553:Various Artists/Perfect Blues/19 Early In The Morning.mp3
+554:Various Artists/Perfect Blues/20 I Love My Man.mp3
+555:Various Artists/Perfect Blues/21 Blues On Parade.mp3
+556:Various Artists/Perfect Blues/22 Lover Man.mp3
+557:Various Artists/Perfect Blues/23 Harvard Blues.mp3
+558:Various Artists/Playlist_ Reggae/13 Oh Carolina.mp3
+559:Various Artists/Ragga Ragga Ragga 2009/11 Gimme Gimme.mp3
+560:Various Artists/Rap Dog/08 Deep Cover feat Snoop Dogg.mp3
+561:Various Artists/Reggae Gold 1997/10 Love Sponge.mp3
+562:Various Artists/Reggae Gold 2007/12 Love And Affection.mp3
+563:Various Artists/Reggae Gold 2011/01 Jah Army.mp3
+564:Various Artists/Strictly The Best Vol_ 39/03 Playing Games.mp3
+565:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/01 Tea For Two.mp3
+566:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/02 Java Jive.mp3
+567:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/03 Sugar Foot Stomp.mp3
+568:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/04 My Very Good Friend The Milkma.mp3
+569:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/05 Jersey Bounce.mp3
+570:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/06 Happy Feet.mp3
+571:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/07 Begin the Beguine (Foxtrot).mp3
+572:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/08 When I Take My Sugar To Tea.mp3
+573:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/09 For Dancers Only.mp3
+574:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/10 Sugar.mp3
+575:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/11 Flying Home.mp3
+576:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/12 Singin' The Blues.mp3
+577:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/13 Lovable And Sweet.mp3
+578:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/14 Sweeter Than Sugar.mp3
+579:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/15 (I've Got A Gal In) Kalamazoo.mp3
+580:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/16 The Lambeth Walk.mp3
+581:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/17 China Boy.mp3
+582:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/18 Let's Face The Music And Dance.mp3
+583:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/19 It Don't Mean A Thing (If It A.mp3
+584:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/20 Moonlight Cocktail.mp3
+585:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/21 Sing Me A Swing Song.mp3
+586:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/22 Rockin' Chair.mp3
+587:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/23 Shortnin' Bread.mp3
+588:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/24 Texas Tea Party.mp3
+589:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/25 Three Little Words.mp3
+590:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/26 A Nice Cup Of Tea.mp3
+591:Various Artists/Tea Dance 2 - Another 1920s_ 3/01 Deep Purple (Slow Foxtrot).mp3
+592:Various Artists/Tea Dance 2 - Another 1920s_ 3/02 On the Beach at Bali Bali (Pal.mp3
+593:Various Artists/Tea Dance 2 - Another 1920s_ 3/03 Eeny Meeny Miney Mo (Quickstep.mp3
+594:Various Artists/Tea Dance 2 - Another 1920s_ 3/04 Oh! Lady Be Good (Balboa).mp3
+595:Various Artists/Tea Dance 2 - Another 1920s_ 3/05 Sing a Song of Sunbeams (Quick.mp3
+596:Various Artists/Tea Dance 2 - Another 1920s_ 3/06 The Vict'ry Polka (Polka).mp3
+597:Various Artists/Tea Dance 2 - Another 1920s_ 3/07 When Buddha Smiles (Collegiate.mp3
+598:Various Artists/Tea Dance 2 - Another 1920s_ 3/08 Palais De Danse (Quickstep).mp3
+599:Various Artists/Tea Dance 2 - Another 1920s_ 3/09 Let's Fall in Love for the Las.mp3
+600:Various Artists/Tea Dance 2 - Another 1920s_ 3/10 On the Sunny Side of the Stree.mp3
+601:Various Artists/Tea Dance 2 - Another 1920s_ 3/11 On the Air (Slow Foxtrot _ Mel.mp3
+602:Various Artists/Tea Dance 2 - Another 1920s_ 3/12 Begin the Beguine (Foxtrot).mp3
+603:Various Artists/Tea Dance 2 - Another 1920s_ 3/13 Goodnight_ Vienna (Square Tang.mp3
+604:Various Artists/Tea Dance 2 - Another 1920s_ 3/14 That's You Baby _ Walking with.mp3
+605:Various Artists/Tea Dance 2 - Another 1920s_ 3/15 A String of Pearls (Foxtrot).mp3
+606:Various Artists/Tea Dance 2 - Another 1920s_ 3/16 Harlem Air Shaft (Balboa).mp3
+607:Various Artists/Tea Dance 2 - Another 1920s_ 3/17 Got to Dance My Way to Heaven.mp3
+608:Various Artists/Tea Dance 2 - Another 1920s_ 3/18 You Turned Your Head (Quickste.mp3
+609:Various Artists/Tea Dance 2 - Another 1920s_ 3/19 American Patrol (Quickstep_Jiv.mp3
+610:Various Artists/Tea Dance 2 - Another 1920s_ 3/20 Moonlight Serenade (Slow Foxtr.mp3
+611:Various Artists/Top of the Pops - Top Tens/2-16 Don't Worry Be Happy.mp3
+612:Various Artists/Trojan Lovers Collection/2-02 It Must Be True Love.mp3
+613:Various Artists/Twelve Inch Classics from the/05 Dance to the Drummer's Beat.mp3
+614:Various Artists/Vol_ 2 Guardians of the Galaxy/03 Lake Shore Drive.mp3
+615:Various Artists/Vol_ 2 Guardians of the Galaxy/05 Bring It on Home to Me.mp3
+616:Various Artists/Vol_ 2 Guardians of the Galaxy/06 Southern Nights.mp3
+617:Various Artists/Vol_ 2 Guardians of the Galaxy/07 My Sweet Lord.mp3
+618:Various Artists/Vol_ 2 Guardians of the Galaxy/08 Brandy (You're A Fine Girl).mp3
+619:Various Artists/Vol_ 2 Guardians of the Galaxy/09 Come A Little Bit Closer.mp3
+620:Various Artists/Vol_ 2 Guardians of the Galaxy/10 Wham Bam Shang-a-Lang.mp3
+621:Various Artists/Vol_ 2 Guardians of the Galaxy/11 Surrender.mp3
+622:Various Artists/Vol_ 2 Guardians of the Galaxy/12 Father And Son.mp3
 623:Various Artists/Vol_ 2 Guardians of the Galaxy/12 Father And Son.mp3
-624:Various Artists/Vol_ 2 Guardians of the Galaxy/12 Father And Son.mp3
-625:War/The World Is A Ghetto/00 The World Is A Ghetto.mp3
-626:War/Why Can't We Be Friends_/01 Don't Let No One Get You Down.mp3
-627:War/Why Can't We Be Friends_/06 So.mp3
-628:War/The Best of War and More/02 Low Rider.mp3
-629:War/The Best of War and More/10 Summer.mp3
-630:War/The Best of War and More_ Vol_/11 Cinco de Mayo.mp3
-631:Walter Hawkins/Love Alive/09 Goin' Up Yonder.mp3
-632:Warren G & Nate Dogg/Regulate___ G Funk Era/01 Regulate.mp3
-633:Xiomara Alfaro/Moliendo Café/01 Moliendo Café (Calypso).mp3
-634:Xiomara Alfaro/Moliendo Café/02 Never On Sunday (Cha Cha Cha).mp3
-635:Xiomara Alfaro/Moliendo Café/03 Tres Meses de Vida (Son).mp3
-636:Xiomara Alfaro/Moliendo Café/04 Mi Gallo Tuerto (Golpe).mp3
-637:Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3
-638:Xiomara Alfaro/Moliendo Café/06 Don Chimbilico (Afro).mp3
-639:Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3
-640:Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3
-641:Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3
-642:Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3
-643:Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3
-644:Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3
-645:Ziggy Marley/00 Love is My Religion.mp3
-646:The Zombies/Begin Here/07 She's Not There.mp3
-647:The Zombies/Odessey And Oracle/12 Time of the Season.mp3
+624:War/The World Is A Ghetto/00 The World Is A Ghetto.mp3
+625:War/Why Can't We Be Friends_/01 Don't Let No One Get You Down.mp3
+626:War/Why Can't We Be Friends_/06 So.mp3
+627:War/The Best of War and More/02 Low Rider.mp3
+628:War/The Best of War and More/10 Summer.mp3
+629:War/The Best of War and More_ Vol_/11 Cinco de Mayo.mp3
+630:Walter Hawkins/Love Alive/09 Goin' Up Yonder.mp3
+631:Warren G & Nate Dogg/Regulate___ G Funk Era/01 Regulate.mp3
+632:Xiomara Alfaro/Moliendo Café/01 Moliendo Café (Calypso).mp3
+633:Xiomara Alfaro/Moliendo Café/02 Never On Sunday (Cha Cha Cha).mp3
+634:Xiomara Alfaro/Moliendo Café/03 Tres Meses de Vida (Son).mp3
+635:Xiomara Alfaro/Moliendo Café/04 Mi Gallo Tuerto (Golpe).mp3
+636:Xiomara Alfaro/Moliendo Café/05 Sebastiana (Baión).mp3
+637:Xiomara Alfaro/Moliendo Café/06 Don Chimbilico (Afro).mp3
+638:Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3
+639:Xiomara Alfaro/Moliendo Café/08 Ayúdame (Pasaje).mp3
+640:Xiomara Alfaro/Moliendo Café/09 Amame o Déjame (Mambo).mp3
+641:Xiomara Alfaro/Moliendo Café/10 Tipi Tipi Tin (Guaracha).mp3
+642:Xiomara Alfaro/Moliendo Café/11 Sueño en Mi Corazón (Samba C.mp3
+643:Xiomara Alfaro/Moliendo Café/12 Los Gitanos (Pasodoble).mp3
+644:Ziggy Marley/00 Love is My Religion.mp3
+645:The Zombies/Begin Here/07 She's Not There.mp3
+646:The Zombies/Odessey And Oracle/12 Time of the Season.mp3
 playlist_end

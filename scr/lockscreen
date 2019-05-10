@@ -1,32 +1,32 @@
 #!/usr/bin/env bash
 
-black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-green=$(xrdb -query | grep '*color2' | awk '{print $NF}')
-yellow=$(xrdb -query | grep '*color3' | awk '{print $NF}')
+bkd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+grn=$(xrdb -query | grep '*color2' | awk '{print $NF}')
+ylw=$(xrdb -query | grep '*color3' | awk '{print $NF}')
 red=$(xrdb -query | grep '*color9' | awk '{print $NF}')
-white=$(xrdb -query | grep '*color7' | awk '{print $NF}')
-blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+wtd=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+blu=$(xrdb -query | grep '*color4' | awk '{print $NF}')
 
-t="99"
+t="80"
 
-B="$black$t"  # blank
-C="$white$t"  # clear ish
-D="$blue$t"  # default
-T="$white$t"  # text
+B="$bkd$t"  # blank
+C="$wtd$t"  # clear ish
+D="$blu$t"  # default
+T="${wtd}ff"  # text
 W="$red$t"  # wrong
-V="$green$t"  # verifying
+V="$grn$t"  # verifying
 
 i3lock \
 --image=$HOME/.config/wall.png \
---insidevercolor=$B \
+--insidevercolor=$V \
 --ringvercolor=$V \
 \
 --insidewrongcolor=$W \
 --ringwrongcolor=$W \
 \
---insidecolor=$B \
+--insidecolor=$D \
 --ringcolor=$D \
---linecolor=$B \
+--linecolor=$D \
 --separatorcolor=$D \
 \
 --verifcolor=$V \

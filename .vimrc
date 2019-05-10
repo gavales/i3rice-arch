@@ -717,10 +717,7 @@ autocmd FileType python set noexpandtab smartindent tabstop=4 shiftwidth=4
 
 " >>>> PDF WORDCOUNT
 
-autocmd Filetype tex map ;wc :!bash<space>~/scripts/wcpdf<space><C-r>%
-	\<BS><BS><BS><BS><Enter>
-autocmd Filetype rmd map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
-	\<BS><BS><BS><BS><Enter>
-autocmd Filetype markdown map \wc :!bash<space>~/scripts/wcpdf<space><C-r>%
-	\<BS><BS><BS><Enter>
+autocmd Filetype tex map \wc :!pdftotext <C-r>%<BS><BS><BS><BS>.pdf -  <bar> wc -w<Enter>
+autocmd Filetype rmd map \wc :!pdftotext <C-r>%<BS><BS><BS><BS>.pdf -  <bar> wc -w<Enter>
+autocmd Filetype markdown map \wc :!pdftotext <C-r>%<BS><BS><BS>.pdf - <bar> wc -w<Enter>
 

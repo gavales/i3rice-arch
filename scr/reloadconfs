@@ -2,6 +2,8 @@
 
 if [[ -z $(cat $HOME/xrs/theme) ]]; then
 	cat $HOME/xrs/colors/gruvbox_ > $HOME/.Xresources
+elif [[ ! -f $HOME/xrs/theme ]]; then
+	cat $HOME/xrs/colors/gruvbox_ > $HOME/.Xresources
 else
 	cat $HOME/xrs/theme > $HOME/.Xresources
 fi
@@ -15,7 +17,6 @@ cat $HOME/xrs/7urxvt >> $HOME/.Xresources
 cat $HOME/xrs/8urxvtext >> $HOME/.Xresources
 xrdb -load $HOME/.Xresources
 kill -1 $(pidof urxvtd)
-$HOME/scr/mkdunsttheme
 $HOME/scr/mkvimtheme
 $HOME/scr/mkblocksconf
 $HOME/scr/mkvistheme
@@ -28,4 +29,6 @@ $HOME/scr/i3concat
 killall -q polybar
 polybar top &>/dev/null &
 $HOME/scr/i3listen-toggle
-notify-send 'CONFIGS RELOADED' -i $HOME/scrpic/settingswhite.png
+#notify-send 'CONFIGS RELOADED' -i $HOME/scrpic/settingswhite.png
+$HOME/scr/mkdunsttheme
+$HOME/scr/mkgtktheme

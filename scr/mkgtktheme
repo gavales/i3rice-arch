@@ -1,0 +1,171 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+# CREATED: Tue  7 May 23:07:28 GMT 2019
+
+thm="$HOME/numix-solarized-gtk-theme"
+vrt="$(sed '2q;d' .Xresources | awk '{print $2}')"
+
+echo $thm
+echo $vrt
+
+help () {
+	echo ""
+	echo "			Options"
+	echo ""
+	echo "-t	-->	full path to theme folder, optional,"
+	echo "				DEFAULT = \$HOME/numix-solarized-gtk-theme"
+	echo ""
+	echo ""
+	echo "Script to make gtk theme use terminal colours"
+	echo "To make theme template, just cd into the theme's main dir, duplicate the"
+	echo "file(s) with the colors, rename with \"_template\" ending, and run this"
+	echo "script in the theme's main directory, and any other commands that you"
+	echo "need to run"
+}
+
+while getopts :h:t:d:v:h: opts; do
+	case "$opts" in
+		t)
+			thm="${OPTARG}"
+			echo $thm
+			;;
+		v)
+			vrt="${OPTARG}"
+			echo $vrt
+			;;
+		h) help ;;
+	esac
+done
+
+#if [[ $vrt == "light" ]]; then
+#	wtd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+#	wtl=$(xrdb -query | grep '*color8' | awk '{print $NF}')
+#	bkl=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+#	bkd=$(xrdb -query | grep '*color15' | awk '{print $NF}')
+#else
+bkd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+bkl=$(xrdb -query | grep '*color8' | awk '{print $NF}')
+wtl=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+wtd=$(xrdb -query | grep '*color15' | awk '{print $NF}')
+#fi
+
+grn=$(xrdb -query | grep '*color2' | awk '{print $NF}')
+ylw=$(xrdb -query | grep '*color3' | awk '{print $NF}')
+red=$(xrdb -query | grep '*color9' | awk '{print $NF}')
+blu=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+gnt=$(xrdb -query | grep '*color5' | awk '{print $NF}')
+cyn=$(xrdb -query | grep '*color6' | awk '{print $NF}')
+
+# convert to RGB
+
+wtdR=$((16#${wtd:1:-4}))
+wtdG=$((16#${wtd:3:-2}))
+wtdB=$((16#${wtd:5}))
+wtlR=$((16#${wtd:1:-4}))
+wtlG=$((16#${wtd:3:-2}))
+wtlB=$((16#${wtd:5}))
+bkdR=$((16#${bkd:1:-4}))
+bkdG=$((16#${bkd:3:-2}))
+bkdB=$((16#${bkd:5}))
+bklR=$((16#${bkd:1:-4}))
+bklG=$((16#${bkd:3:-2}))
+bklB=$((16#${bkd:5}))
+redR=$((16#${red:1:-4}))
+redG=$((16#${red:3:-2}))
+redB=$((16#${red:5}))
+ylwR=$((16#${ylw:1:-4}))
+ylwG=$((16#${ylw:3:-2}))
+ylwB=$((16#${ylw:5}))
+bluR=$((16#${blu:1:-4}))
+bluG=$((16#${blu:3:-2}))
+bluB=$((16#${blu:5}))
+grnR=$((16#${grn:1:-4}))
+grnG=$((16#${grn:3:-2}))
+grnB=$((16#${grn:5}))
+cynR=$((16#${cyn:1:-4}))
+cynG=$((16#${cyn:3:-2}))
+cynB=$((16#${cyn:5}))
+gntR=$((16#${gnt:1:-4}))
+gntG=$((16#${gnt:3:-2}))
+gntB=$((16#${gnt:5}))
+
+if [[ $vrt == "light" ]]; then
+	wt1R=$(expr ${wtlR} + 20)
+	wt1G=$(expr ${wtlG} + 20)
+	wt1B=$(expr ${wtlB} + 20)
+	wt2R=$(expr ${wtlR} + 40)
+	wt2G=$(expr ${wtlG} + 40)
+	wt2B=$(expr ${wtlB} + 40)
+	bk1R=$(expr ${bkdR} - 20)
+	bk1G=$(expr ${bkdG} - 20)
+	bk1B=$(expr ${bkdB} - 20)
+	bk2R=$(expr ${bkdR} - 40)
+	bk2G=$(expr ${bkdG} - 40)
+	bk2B=$(expr ${bkdB} - 40)
+else
+	wt1R=$(expr ${wtlR} - 20)
+	wt1G=$(expr ${wtlG} - 20)
+	wt1B=$(expr ${wtlB} - 20)
+	wt2R=$(expr ${wtlR} - 40)
+	wt2G=$(expr ${wtlG} - 40)
+	wt2B=$(expr ${wtlB} - 40)
+	bk1R=$(expr ${bkdR} + 20)
+	bk1G=$(expr ${bkdG} + 20)
+	bk1B=$(expr ${bkdB} + 20)
+	bk2R=$(expr ${bkdR} + 40)
+	bk2G=$(expr ${bkdG} + 40)
+	bk2B=$(expr ${bkdB} + 40)
+fi
+
+wtdRGB="${wtdR}, ${wtdG}, ${wtdB}"
+wt1RGB="${wt1R}, ${wt1G}, ${wt1B}"
+wt2RGB="${wt2R}, ${wt2G}, ${wt2B}"
+wtlRGB="${wtlR}, ${wtlG}, ${wtlB}"
+bkdRGB="${bkdR}, ${bkdG}, ${bkdB}"
+bk1RGB="${bk1R}, ${bk1G}, ${bk1B}"
+bk2RGB="${bk2R}, ${bk2G}, ${bk2B}"
+bklRGB="${bklR}, ${bklG}, ${bklB}"
+grnRGB="${grnR}, ${grnG}, ${grnB}"
+ylwRGB="${ylwR}, ${ylwG}, ${ylwB}"
+redRGB="${redR}, ${redG}, ${redB}"
+bluRGB="${bluR}, ${bluG}, ${bluB}"
+gntRGB="${gntR}, ${gntG}, ${gntB}"
+cynRGB="${cynR}, ${cynG}, ${cynB}"
+
+# variations of foreground and background colors in hex
+
+wt1RX=$(printf '%x\n' ${wt1R})
+wt1GX=$(printf '%x\n' ${wt1G})
+wt1BX=$(printf '%x\n' ${wt1B})
+wt2RX=$(printf '%x\n' ${wt2R})
+wt2GX=$(printf '%x\n' ${wt2G})
+wt2BX=$(printf '%x\n' ${wt2B})
+bk1RX=$(printf '%x\n' ${bk1R})
+bk1GX=$(printf '%x\n' ${bk1G})
+bk1BX=$(printf '%x\n' ${bk1B})
+bk2RX=$(printf '%x\n' ${bk2R})
+bk2GX=$(printf '%x\n' ${bk2G})
+bk2BX=$(printf '%x\n' ${bk2B})
+
+wt1="\#${wt1RX}${wt1GX}${wt1BX}"
+wt2="\#${wt2RX}${wt2GX}${wt2BX}"
+bk1="\#${bk1RX}${bk1GX}${bk1BX}"
+bk2="\#${bk2RX}${bk2GX}${bk2BX}"
+
+regex="s/\%\%bkd\%\%/\"${bkd}\"/g;s/\%\%bkl\%\%/\"${bkl}\"/g;s/\%\%wtd\%\%/\"${wtd}\"/g;s/\%\%wtl\%\%/\"${wtl}\"/g;s/\%\%grn\%\%/\"${grn}\"/g;s/\%\%ylw\%\%/\"${ylw}\"/g;s/\%\%red\%\%/\"${red}\"/g;s/\%\%blu\%\%/\"${blu}\"/g;s/\%\%gnt\%\%/\"${gnt}\"/g;s/\%\%cyn\%\%/\"${cyn}\"/g;s/\%\%cynRGB\%\%/\"${cynRGB}\"/g;s/\%\%gntRGB\%\%/\"${gntRGB}\"/g;s/\%\%bluRGB\%\%/\"${bluRGB}\"/g;s/\%\%redRGB\%\%/\"${redRGB}\"/g;s/\%\%ylwRGB\%\%/\"${ylwRGB}\"/g;s/\%\%grnRGB\%\%/\"${grnRGB}\"/g;s/\%\%bklRGB\%\%/\"${bklRGB}\"/g;s/\%\%bkdRGB\%\%/\"${bkdRGB}\"/g;s/\%\%wtlRGB\%\%/\"${wtlRGB}\"/g;s/\%\%wtdRGB\%\%/\"${wtdRGB}\"/g;s/\%\%wt1\%\%/\"${wt1}\"/g;s/\%\%wt2\%\%/\"${wt2}\"/g;s/\%\%bk1\%\%/\"${bk1}\"/g;s/\%\%bk2\%\%/\"${bk2}\"/g"
+
+main () {
+	cd ${thm} || exit 1
+	templates=$(find . | grep '_template' | sed "s/^\.\///g")
+	for i in ${templates}; do
+#		cat ${i} | sed -e "${regex}" > ${i}
+		cat ${i} | sed -e "${regex};s/\\\"//g" > ${i/_template/}
+	done
+	gksu make THEME=Standard-light install
+	notify-send "Built numix-solarized-gtk-theme"
+	gtkrc-reload
+	gksu make THEME=Standard-dark install
+}
+
+main

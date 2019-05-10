@@ -1,4 +1,5 @@
 ! chooseyourweapon
+! light
 ! vim:ft=xdefaults
 #define cwhtd #00a480
 #define cwhtl #282828
@@ -15,4 +16,4 @@
 #define ccynd #008ba5
 #define ccynl #008ba5
 #define cblkd #f4f3e2
-#define cblkl #fbf0d2
+#define cblkl #e4e1b7

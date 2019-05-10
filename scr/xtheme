@@ -3,31 +3,40 @@
 xfilesDir=$HOME/xrs
 
 main () {
-	cat ${xfilesDir}/colors/${theme} > ${xfilesDir}/theme
+	cat ${xfilesDir}/colors/${finaltheme} > ${xfilesDir}/theme
 	$HOME/scr/reloadconfs
 }
 
 variant () {
-	variant=$(echo -e "Main\nAlternate" | $HOME/scr/i3menu "Variant?:")
-	if [[ ${variant} == "Alternate" ]]; then
-		theme="${theme}_"
-	else
-		theme="${theme}"
-	fi
+	finaltheme=$(ls ${xfilesDir}/colors | grep "${theme}" | $HOME/scr/i3menu "Variant?:")
+#	if [[ ${variant} == "Alternate" ]]; then
+#		theme="${theme}_"
+#	else
+#		theme="${theme}"
+#	fi
 	main
 }
 
 theme () {
 	theme=$(ls ${xfilesDir}/colors | grep -v '_' | $HOME/scr/i3menu "Choose theme:")
+	variants=$(ls ${xfilesDir}/colors | grep "${theme}")
+	vrts=$(ls ${xfilesDir}/colors | grep "${theme}" | wc -l)
 	if [[ -z ${theme} ]]; then
+		notify-send "No theme chosen"
 		:
 	elif [[ ! -f ${xfilesDir}/colors/${theme} ]]; then
+		notify-send "Theme don't exist"
 		:
-	elif [[ -f ${xfilesDir}/colors/${theme}_ ]]; then
+	elif [[ ${vrts} -ge 2 ]]; then
+		notify-send "Choosing variant"
 		variant
 	else
+		notify-send "No variants"
+		finaltheme=${theme}
 		main
 	fi
 }
 
 theme
+echo $variants
+echo $vrts

@@ -22663,3 +22663,1011 @@ May 06 13:20 : client: [9] opened from [::1]:47746
 May 06 13:20 : client: [9] closed
 May 06 13:20 : client: [10] opened from [::1]:47748
 May 06 13:20 : client: [10] closed
+May 06 13:26 : client: [0] closed
+May 06 13:26 : player: played "Various Artists/Perfect Bebop/10 Venus De Milo.mp3"
+May 06 13:46 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 06 13:46 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 06 13:46 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 06 13:46 : client: [0] opened from [::1]:40560
+May 06 13:46 : client: [0] closed
+May 06 13:46 : client: [1] opened from [::1]:40562
+May 06 13:46 : client: [1] closed
+May 06 13:46 : client: [2] opened from [::1]:40564
+May 06 13:46 : client: [2] closed
+May 06 13:46 : client: [3] opened from [::1]:40566
+May 06 13:46 : client: [3] closed
+May 06 13:48 : client: [4] opened from [::1]:40730
+May 06 13:48 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 06 13:48 : client: [4] closed
+May 06 13:48 : client: [5] opened from [::1]:40732
+May 06 13:48 : client: [5] closed
+May 06 13:48 : client: [6] opened from [::1]:40734
+May 06 13:48 : client: [6] closed
+May 06 13:48 : client: [7] opened from [::1]:40736
+May 06 13:48 : client: [7] closed
+May 06 13:48 : client: [8] opened from [::1]:40738
+May 06 13:48 : client: [9] opened from [::1]:40740
+May 06 13:48 : client: [9] closed
+May 06 13:48 : client: [10] opened from [::1]:40742
+May 06 13:48 : client: [10] closed
+May 06 13:48 : client: [11] opened from [::1]:40744
+May 06 13:48 : client: [11] closed
+May 06 13:48 : client: [12] opened from [::1]:40746
+May 06 13:48 : client: [12] closed
+May 06 13:48 : player: played "Various Artists/Perfect Bebop/10 Venus De Milo.mp3"
+May 06 13:48 : client: [13] opened from [::1]:40748
+May 06 13:48 : client: [13] closed
+May 06 13:48 : client: [14] opened from [::1]:40750
+May 06 13:48 : client: [14] closed
+May 06 13:48 : client: [15] opened from [::1]:40752
+May 06 13:48 : client: [15] closed
+May 06 13:48 : client: [16] opened from [::1]:40754
+May 06 13:48 : client: [16] closed
+May 06 13:48 : client: [8] closed
+May 06 13:50 : client: [17] opened from [::1]:40764
+May 06 13:50 : client: [17] closed
+May 06 13:50 : client: [18] opened from [::1]:40766
+May 06 13:50 : client: [18] closed
+May 06 13:50 : client: [19] opened from [::1]:40768
+May 06 13:50 : client: [19] closed
+May 06 13:50 : client: [20] opened from [::1]:40770
+May 06 13:50 : client: [20] closed
+May 06 13:51 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 06 13:51 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 06 13:51 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 06 13:51 : client: [21] opened from [::1]:40844
+May 06 13:51 : client: [22] opened from [::1]:40846
+May 06 13:51 : client: [22] closed
+May 06 13:51 : client: [23] opened from [::1]:40854
+May 06 13:51 : client: [23] closed
+May 06 13:58 : client: [24] opened from [::1]:40978
+May 06 13:58 : client: [24] closed
+May 06 13:58 : client: [25] opened from [::1]:40980
+May 06 13:58 : client: [25] closed
+May 06 14:16 : client: [26] opened from [::1]:41096
+May 06 14:16 : client: [26] closed
+May 06 14:16 : client: [27] opened from [::1]:41098
+May 06 14:16 : client: [27] closed
+May 06 14:16 : client: [28] opened from [::1]:41100
+May 06 14:16 : client: [28] closed
+May 06 14:16 : client: [29] opened from [::1]:41102
+May 06 14:16 : client: [29] closed
+May 06 14:17 : player: played "Shaggy/Hot Shot/02 Lonely Lover.mp3"
+May 06 14:17 : client: [30] opened from [::1]:41166
+May 06 14:17 : client: [30] closed
+May 06 14:17 : client: [31] opened from [::1]:41168
+May 06 14:17 : client: [31] closed
+May 06 14:17 : client: [32] opened from [::1]:41170
+May 06 14:17 : client: [32] closed
+May 06 14:17 : client: [33] opened from [::1]:41172
+May 06 14:17 : client: [33] closed
+May 06 14:21 : player: played "MarchFourth Marching Band/Rise Up/13 Happiness.mp3"
+May 06 14:21 : client: [34] opened from [::1]:41186
+May 06 14:21 : client: [34] closed
+May 06 14:21 : client: [35] opened from [::1]:41188
+May 06 14:21 : client: [35] closed
+May 06 14:21 : client: [36] opened from [::1]:41190
+May 06 14:21 : client: [36] closed
+May 06 14:21 : client: [37] opened from [::1]:41192
+May 06 14:21 : client: [37] closed
+May 06 14:25 : player: played "The Traveling Wilburys/The Traveling Wilburys Collect/1-12 Like A Ship.mp3"
+May 06 14:25 : client: [38] opened from [::1]:41208
+May 06 14:25 : client: [38] closed
+May 06 14:25 : client: [39] opened from [::1]:41210
+May 06 14:25 : client: [39] closed
+May 06 14:25 : client: [40] opened from [::1]:41212
+May 06 14:25 : client: [40] closed
+May 06 14:25 : client: [41] opened from [::1]:41214
+May 06 14:25 : client: [41] closed
+May 06 14:30 : player: played "10CC/I Don't Like Cricket (I Love I/01 I Don't Like Cricket - I Love.mp3"
+May 06 14:30 : client: [42] opened from [::1]:41370
+May 06 14:30 : client: [42] closed
+May 06 14:30 : client: [43] opened from [::1]:41372
+May 06 14:30 : client: [43] closed
+May 06 14:30 : client: [44] opened from [::1]:41374
+May 06 14:30 : client: [44] closed
+May 06 14:30 : client: [45] opened from [::1]:41376
+May 06 14:30 : client: [45] closed
+May 06 14:32 : player: played "Sergio Mendes & Brasil '66/Look Around/02 Roda.mp3"
+May 06 14:32 : client: [46] opened from [::1]:41424
+May 06 14:32 : client: [46] closed
+May 06 14:32 : client: [47] opened from [::1]:41426
+May 06 14:32 : client: [47] closed
+May 06 14:32 : client: [48] opened from [::1]:41428
+May 06 14:32 : client: [48] closed
+May 06 14:32 : client: [49] opened from [::1]:41430
+May 06 14:32 : client: [49] closed
+May 06 14:35 : player: played "Various Artists/Jazz Café - 1920s_ 30s_ 40s V/18 If I Could Be With You (One Ho.mp3"
+May 06 14:35 : client: [50] opened from [::1]:41450
+May 06 14:35 : client: [50] closed
+May 06 14:35 : client: [51] opened from [::1]:41452
+May 06 14:35 : client: [51] closed
+May 06 14:35 : client: [52] opened from [::1]:41454
+May 06 14:35 : client: [52] closed
+May 06 14:35 : client: [53] opened from [::1]:41456
+May 06 14:35 : client: [53] closed
+May 06 14:42 : player: played "Ondatrópica/Ondatrópica/11 Descarga Trópica.mp3"
+May 06 14:42 : client: [54] opened from [::1]:41492
+May 06 14:42 : client: [54] closed
+May 06 14:42 : client: [55] opened from [::1]:41494
+May 06 14:42 : client: [55] closed
+May 06 14:42 : client: [56] opened from [::1]:41496
+May 06 14:42 : client: [56] closed
+May 06 14:42 : client: [57] opened from [::1]:41498
+May 06 14:42 : client: [57] closed
+May 06 14:45 : player: played "Plastic Bertrand/Plastic Bertrand/17 Jacques Cousteau.mp3"
+May 06 14:45 : client: [58] opened from [::1]:41522
+May 06 14:45 : client: [58] closed
+May 06 14:45 : client: [59] opened from [::1]:41524
+May 06 14:45 : client: [59] closed
+May 06 14:45 : client: [60] opened from [::1]:41526
+May 06 14:45 : client: [60] closed
+May 06 14:45 : client: [61] opened from [::1]:41528
+May 06 14:45 : client: [61] closed
+May 06 14:47 : client: [62] opened from [::1]:41540
+May 06 14:47 : client: [62] closed
+May 06 14:47 : client: [63] opened from [::1]:41542
+May 06 14:47 : client: [63] closed
+May 06 14:47 : client: [64] opened from [::1]:41544
+May 06 14:47 : client: [64] closed
+May 06 14:47 : client: [65] opened from [::1]:41546
+May 06 14:47 : client: [65] closed
+May 06 15:06 : client: [66] opened from [::1]:41600
+May 06 15:06 : client: [66] closed
+May 06 15:06 : client: [67] opened from [::1]:41602
+May 06 15:06 : client: [67] closed
+May 06 15:06 : client: [68] opened from [::1]:41604
+May 06 15:06 : client: [68] closed
+May 06 15:06 : client: [69] opened from [::1]:41606
+May 06 15:06 : client: [69] closed
+May 06 15:07 : player: played "La Sonora Dinamita/32 Cañonazos/16 Grito Vagabundo (feat_ Alvaro.mp3"
+May 06 15:07 : client: [70] opened from [::1]:41704
+May 06 15:07 : client: [70] closed
+May 06 15:07 : client: [71] opened from [::1]:41706
+May 06 15:07 : client: [71] closed
+May 06 15:07 : client: [72] opened from [::1]:41708
+May 06 15:07 : client: [72] closed
+May 06 15:07 : client: [73] opened from [::1]:41710
+May 06 15:07 : client: [73] closed
+May 06 15:09 : player: played "Soundtrack/Nacho Libre _Original Soundtra/10 10_ 000 Pesos.mp3"
+May 06 15:09 : client: [74] opened from [::1]:41714
+May 06 15:09 : client: [74] closed
+May 06 15:09 : client: [75] opened from [::1]:41716
+May 06 15:09 : client: [75] closed
+May 06 15:09 : client: [76] opened from [::1]:41718
+May 06 15:09 : client: [76] closed
+May 06 15:09 : client: [77] opened from [::1]:41720
+May 06 15:09 : client: [77] closed
+May 06 15:13 : player: played "The Zombies/Odessey And Oracle/12 Time of the Season.mp3"
+May 06 15:13 : client: [78] opened from [::1]:41738
+May 06 15:13 : client: [78] closed
+May 06 15:13 : client: [79] opened from [::1]:41740
+May 06 15:13 : client: [79] closed
+May 06 15:13 : client: [80] opened from [::1]:41742
+May 06 15:13 : client: [80] closed
+May 06 15:13 : client: [81] opened from [::1]:41744
+May 06 15:13 : client: [81] closed
+May 06 15:13 : client: [82] opened from [::1]:41746
+May 06 15:13 : client: [83] opened from [::1]:41748
+May 06 15:13 : client: [82] closed
+May 06 15:13 : client: [83] closed
+May 06 15:13 : client: [84] opened from [::1]:41750
+May 06 15:13 : client: [84] closed
+May 06 15:13 : client: [85] opened from [::1]:41752
+May 06 15:13 : client: [85] closed
+May 06 15:13 : client: [86] opened from [::1]:41754
+May 06 15:13 : client: [86] closed
+May 06 15:13 : client: [87] opened from [::1]:41756
+May 06 15:13 : client: [87] closed
+May 06 15:13 : client: [88] opened from [::1]:41758
+May 06 15:13 : client: [88] closed
+May 06 15:13 : client: [89] opened from [::1]:41760
+May 06 15:13 : client: [89] closed
+May 06 15:16 : player: played "Various Artists/Perfect Blues/13 Freight Train Blues.mp3"
+May 06 15:16 : client: [90] opened from [::1]:41780
+May 06 15:16 : client: [90] closed
+May 06 15:16 : client: [91] opened from [::1]:41782
+May 06 15:16 : client: [91] closed
+May 06 15:16 : client: [92] opened from [::1]:41784
+May 06 15:16 : client: [92] closed
+May 06 15:16 : client: [93] opened from [::1]:41786
+May 06 15:16 : client: [93] closed
+May 06 15:19 : player: played "Various Artists/Perfect Bebop/07 Salt Peanuts.mp3"
+May 06 15:19 : client: [94] opened from [::1]:41956
+May 06 15:19 : client: [94] closed
+May 06 15:19 : client: [95] opened from [::1]:41958
+May 06 15:19 : client: [95] closed
+May 06 15:19 : client: [96] opened from [::1]:41960
+May 06 15:19 : client: [96] closed
+May 06 15:19 : client: [97] opened from [::1]:41962
+May 06 15:19 : client: [97] closed
+May 06 15:23 : player: played "La Sonora Dinamita/32 Cañonazos/01 El Africano (feat_ Juliette).mp3"
+May 06 15:23 : client: [98] opened from [::1]:41990
+May 06 15:23 : client: [98] closed
+May 06 15:23 : client: [99] opened from [::1]:41992
+May 06 15:23 : client: [99] closed
+May 06 15:23 : client: [100] opened from [::1]:41994
+May 06 15:23 : client: [100] closed
+May 06 15:23 : client: [101] opened from [::1]:41996
+May 06 15:23 : client: [101] closed
+May 06 15:26 : player: played "Roy Ayers/Coffy/04 Aragon.mp3"
+May 06 15:26 : client: [102] opened from [::1]:42008
+May 06 15:26 : client: [102] closed
+May 06 15:26 : client: [103] opened from [::1]:42010
+May 06 15:26 : client: [103] closed
+May 06 15:26 : client: [104] opened from [::1]:42012
+May 06 15:26 : client: [104] closed
+May 06 15:26 : client: [105] opened from [::1]:42014
+May 06 15:26 : client: [105] closed
+May 06 15:29 : player: played "Various Artists/Jazz cafe'/13 Back O' Town Blues.mp3"
+May 06 15:29 : client: [106] opened from [::1]:42022
+May 06 15:29 : client: [106] closed
+May 06 15:29 : client: [107] opened from [::1]:42024
+May 06 15:29 : client: [107] closed
+May 06 15:29 : client: [108] opened from [::1]:42026
+May 06 15:29 : client: [108] closed
+May 06 15:29 : client: [109] opened from [::1]:42028
+May 06 15:29 : client: [109] closed
+May 06 15:40 : player: played "War/The World Is A Ghetto/00 The World Is A Ghetto.mp3"
+May 06 15:40 : client: [110] opened from [::1]:42100
+May 06 15:40 : client: [110] closed
+May 06 15:40 : client: [111] opened from [::1]:42102
+May 06 15:40 : client: [111] closed
+May 06 15:40 : client: [112] opened from [::1]:42104
+May 06 15:40 : client: [112] closed
+May 06 15:40 : client: [113] opened from [::1]:42106
+May 06 15:40 : client: [113] closed
+May 06 15:43 : player: played "Shaggy/Hot Shot/08 Luv Me_ Luv Me.mp3"
+May 06 15:43 : client: [114] opened from [::1]:42122
+May 06 15:43 : client: [114] closed
+May 06 15:43 : client: [115] opened from [::1]:42124
+May 06 15:43 : client: [115] closed
+May 06 15:43 : client: [116] opened from [::1]:42126
+May 06 15:43 : client: [116] closed
+May 06 15:43 : client: [117] opened from [::1]:42128
+May 06 15:43 : client: [117] closed
+May 06 15:47 : player: played "Renaud Garcia-Fons/Méditerranées/02 Luces de Lorca.mp3"
+May 06 15:47 : client: [118] opened from [::1]:42138
+May 06 15:47 : client: [118] closed
+May 06 15:47 : client: [119] opened from [::1]:42140
+May 06 15:47 : client: [119] closed
+May 06 15:47 : client: [120] opened from [::1]:42142
+May 06 15:47 : client: [120] closed
+May 06 15:47 : client: [121] opened from [::1]:42144
+May 06 15:47 : client: [121] closed
+May 06 15:51 : player: played "Simple Minds/Celebrate Greatest Hits/1-14 Don't You (Forget About Me).mp3"
+May 06 15:51 : client: [122] opened from [::1]:42192
+May 06 15:51 : client: [122] closed
+May 06 15:51 : client: [123] opened from [::1]:42194
+May 06 15:51 : client: [123] closed
+May 06 15:51 : client: [124] opened from [::1]:42196
+May 06 15:51 : client: [124] closed
+May 06 15:51 : client: [125] opened from [::1]:42198
+May 06 15:51 : client: [125] closed
+May 06 15:56 : player: played "Ini Kamoze/Here Comes The Hotstepper/11 I Want Ital.mp3"
+May 06 15:56 : client: [126] opened from [::1]:42332
+May 06 15:56 : client: [126] closed
+May 06 15:56 : client: [127] opened from [::1]:42334
+May 06 15:56 : client: [127] closed
+May 06 15:56 : client: [128] opened from [::1]:42336
+May 06 15:56 : client: [128] closed
+May 06 15:56 : client: [129] opened from [::1]:42338
+May 06 15:56 : client: [129] closed
+May 06 15:59 : player: played "The Traveling Wilburys/The Traveling Wilburys Collect/1-07 Heading For The Light.mp3"
+May 06 16:00 : client: [130] opened from [::1]:42830
+May 06 16:00 : client: [130] closed
+May 06 16:00 : client: [131] opened from [::1]:42832
+May 06 16:00 : client: [131] closed
+May 06 16:00 : client: [132] opened from [::1]:42834
+May 06 16:00 : client: [132] closed
+May 06 16:00 : client: [133] opened from [::1]:42836
+May 06 16:00 : client: [133] closed
+May 06 16:00 : client: [134] opened from [::1]:42840
+May 06 16:00 : client: [135] opened from [::1]:42842
+May 06 16:00 : client: [134] closed
+May 06 16:00 : client: [135] closed
+May 06 16:00 : client: [136] opened from [::1]:42844
+May 06 16:00 : client: [136] closed
+May 06 16:00 : client: [137] opened from [::1]:42846
+May 06 16:00 : client: [137] closed
+May 06 16:00 : client: [138] opened from [::1]:42848
+May 06 16:00 : client: [138] closed
+May 06 16:00 : client: [139] opened from [::1]:42850
+May 06 16:00 : client: [139] closed
+May 06 16:00 : client: [140] opened from [::1]:42852
+May 06 16:00 : client: [140] closed
+May 06 16:00 : client: [141] opened from [::1]:42854
+May 06 16:00 : client: [141] closed
+May 06 16:00 : client: [142] opened from [::1]:42858
+May 06 16:00 : client: [142] closed
+May 06 16:00 : client: [143] opened from [::1]:42860
+May 06 16:00 : client: [143] closed
+May 06 16:00 : client: [144] opened from [::1]:42862
+May 06 16:00 : client: [144] closed
+May 06 16:00 : client: [145] opened from [::1]:42864
+May 06 16:00 : client: [145] closed
+May 06 16:00 : client: [146] opened from [::1]:42866
+May 06 16:00 : client: [146] closed
+May 06 16:00 : client: [147] opened from [::1]:42868
+May 06 16:00 : client: [147] closed
+May 06 16:00 : client: [148] opened from [::1]:42870
+May 06 16:00 : client: [148] closed
+May 06 16:00 : client: [149] opened from [::1]:42872
+May 06 16:00 : client: [149] closed
+May 06 16:00 : client: [150] opened from [::1]:42878
+May 06 16:00 : client: [150] closed
+May 06 16:00 : client: [151] opened from [::1]:42880
+May 06 16:00 : client: [151] closed
+May 06 16:00 : client: [152] opened from [::1]:42882
+May 06 16:00 : client: [152] closed
+May 06 16:00 : client: [153] opened from [::1]:42884
+May 06 16:00 : client: [153] closed
+May 06 16:00 : client: [154] opened from [::1]:42886
+May 06 16:00 : client: [154] closed
+May 06 16:00 : client: [155] opened from [::1]:42888
+May 06 16:00 : client: [155] closed
+May 06 16:00 : client: [156] opened from [::1]:42890
+May 06 16:00 : client: [156] closed
+May 06 16:00 : client: [157] opened from [::1]:42892
+May 06 16:00 : client: [157] closed
+May 06 16:00 : client: [158] opened from [::1]:42894
+May 06 16:00 : client: [158] closed
+May 06 16:00 : client: [159] opened from [::1]:42896
+May 06 16:00 : client: [159] closed
+May 06 16:00 : client: [160] opened from [::1]:42898
+May 06 16:00 : client: [161] opened from [::1]:42900
+May 06 16:00 : client: [160] closed
+May 06 16:00 : client: [161] closed
+May 06 16:00 : client: [162] opened from [::1]:42902
+May 06 16:00 : client: [162] closed
+May 06 16:00 : client: [163] opened from [::1]:42904
+May 06 16:00 : client: [163] closed
+May 06 16:00 : client: [164] opened from [::1]:42906
+May 06 16:00 : client: [164] closed
+May 06 16:00 : client: [165] opened from [::1]:42908
+May 06 16:00 : client: [165] closed
+May 06 16:03 : player: played "Various Artists/Perfect Blues/01 Good Morning Blues.mp3"
+May 06 16:03 : client: [166] opened from [::1]:42926
+May 06 16:03 : client: [166] closed
+May 06 16:03 : client: [167] opened from [::1]:42928
+May 06 16:03 : client: [167] closed
+May 06 16:03 : client: [168] opened from [::1]:42930
+May 06 16:03 : client: [168] closed
+May 06 16:03 : client: [169] opened from [::1]:42932
+May 06 16:03 : client: [169] closed
+May 06 16:06 : player: played "Various Artists/Jazz Café - 1920s_ 30s_ 40s V/20 My Sugar Is So Refined.mp3"
+May 06 16:06 : client: [170] opened from [::1]:42956
+May 06 16:06 : client: [170] closed
+May 06 16:06 : client: [171] opened from [::1]:42958
+May 06 16:06 : client: [171] closed
+May 06 16:06 : client: [172] opened from [::1]:42960
+May 06 16:06 : client: [172] closed
+May 06 16:06 : client: [173] opened from [::1]:42962
+May 06 16:06 : client: [173] closed
+May 06 16:10 : player: played "Various Artists/Vol_ 2 Guardians of the Galaxy/03 Lake Shore Drive.mp3"
+May 06 16:10 : client: [174] opened from [::1]:42978
+May 06 16:10 : client: [174] closed
+May 06 16:10 : client: [175] opened from [::1]:42980
+May 06 16:10 : client: [175] closed
+May 06 16:10 : client: [176] opened from [::1]:42982
+May 06 16:10 : client: [176] closed
+May 06 16:10 : client: [177] opened from [::1]:42984
+May 06 16:10 : client: [177] closed
+May 06 16:13 : player: played "Sergio Mendes/Más que Nada/05 Olhou para Mim.mp3"
+May 06 16:13 : client: [178] opened from [::1]:43038
+May 06 16:13 : client: [178] closed
+May 06 16:13 : client: [179] opened from [::1]:43040
+May 06 16:13 : client: [179] closed
+May 06 16:13 : client: [180] opened from [::1]:43042
+May 06 16:13 : client: [180] closed
+May 06 16:13 : client: [181] opened from [::1]:43044
+May 06 16:13 : client: [181] closed
+May 06 16:16 : player: played "Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/15 (I've Got A Gal In) Kalamazoo.mp3"
+May 06 16:16 : client: [182] opened from [::1]:43066
+May 06 16:16 : client: [182] closed
+May 06 16:16 : client: [183] opened from [::1]:43068
+May 06 16:16 : client: [183] closed
+May 06 16:16 : client: [184] opened from [::1]:43070
+May 06 16:16 : client: [184] closed
+May 06 16:16 : client: [185] opened from [::1]:43072
+May 06 16:16 : client: [185] closed
+May 06 16:20 : player: played "Gregory Isaacs/Ultimate Selection/18 Private Secretary.mp3"
+May 06 16:20 : client: [186] opened from [::1]:43120
+May 06 16:20 : client: [186] closed
+May 06 16:20 : client: [187] opened from [::1]:43122
+May 06 16:20 : client: [187] closed
+May 06 16:20 : client: [188] opened from [::1]:43124
+May 06 16:20 : client: [188] closed
+May 06 16:20 : client: [189] opened from [::1]:43126
+May 06 16:20 : client: [189] closed
+May 06 16:23 : player: played "Various Artists/Perfect Bebop/23 Scrapple From The Apple.mp3"
+May 06 16:23 : client: [190] opened from [::1]:43160
+May 06 16:23 : client: [190] closed
+May 06 16:23 : client: [191] opened from [::1]:43162
+May 06 16:23 : client: [191] closed
+May 06 16:23 : client: [192] opened from [::1]:43164
+May 06 16:23 : client: [192] closed
+May 06 16:23 : client: [193] opened from [::1]:43166
+May 06 16:23 : client: [193] closed
+May 06 16:28 : player: played "Ondatrópica/Ondatrópica/06 Remando.mp3"
+May 06 16:28 : client: [194] opened from [::1]:43294
+May 06 16:28 : client: [194] closed
+May 06 16:28 : client: [195] opened from [::1]:43296
+May 06 16:28 : client: [195] closed
+May 06 16:28 : client: [196] opened from [::1]:43298
+May 06 16:28 : client: [196] closed
+May 06 16:28 : client: [197] opened from [::1]:43300
+May 06 16:28 : client: [197] closed
+May 06 16:30 : client: [198] opened from [::1]:43354
+May 06 16:30 : client: [198] closed
+May 06 16:30 : client: [199] opened from [::1]:43356
+May 06 16:30 : client: [199] closed
+May 06 16:30 : client: [200] opened from [::1]:43358
+May 06 16:30 : client: [200] closed
+May 06 16:30 : client: [201] opened from [::1]:43360
+May 06 16:30 : client: [201] closed
+May 06 18:03 : client: [202] opened from [::1]:43700
+May 06 18:03 : client: [202] closed
+May 06 18:03 : client: [203] opened from [::1]:43702
+May 06 18:03 : client: [203] closed
+May 06 18:03 : client: [204] opened from [::1]:43704
+May 06 18:03 : client: [204] closed
+May 06 18:03 : client: [205] opened from [::1]:43706
+May 06 18:03 : client: [205] closed
+May 06 18:03 : player: played "Sergio Mendes/Más que Nada/07 Tema Sem Palavras.mp3"
+May 06 18:03 : client: [206] opened from [::1]:43708
+May 06 18:03 : client: [206] closed
+May 06 18:03 : client: [207] opened from [::1]:43710
+May 06 18:03 : client: [207] closed
+May 06 18:03 : client: [208] opened from [::1]:43712
+May 06 18:03 : client: [208] closed
+May 06 18:03 : client: [209] opened from [::1]:43714
+May 06 18:03 : client: [209] closed
+May 06 18:05 : client: [210] opened from [::1]:43738
+May 06 18:05 : client: [210] closed
+May 06 18:05 : client: [211] opened from [::1]:43740
+May 06 18:05 : client: [211] closed
+May 06 18:05 : client: [212] opened from [::1]:43742
+May 06 18:05 : client: [212] closed
+May 06 18:05 : client: [213] opened from [::1]:43744
+May 06 18:05 : client: [213] closed
+May 06 18:05 : client: [214] opened from [::1]:43748
+May 06 18:05 : client: [214] closed
+May 06 18:05 : client: [215] opened from [::1]:43750
+May 06 18:05 : client: [215] closed
+May 06 18:05 : client: [216] opened from [::1]:43752
+May 06 18:05 : client: [216] closed
+May 06 18:05 : client: [217] opened from [::1]:43754
+May 06 18:05 : client: [217] closed
+May 06 18:05 : client: [218] opened from [::1]:43756
+May 06 18:05 : client: [218] closed
+May 06 18:05 : client: [219] opened from [::1]:43758
+May 06 18:05 : client: [219] closed
+May 06 18:05 : client: [220] opened from [::1]:43760
+May 06 18:05 : client: [220] closed
+May 06 18:05 : client: [221] opened from [::1]:43762
+May 06 18:05 : client: [221] closed
+May 06 18:05 : client: [222] opened from [::1]:43764
+May 06 18:05 : client: [222] closed
+May 06 18:05 : client: [223] opened from [::1]:43766
+May 06 18:05 : client: [223] closed
+May 06 18:05 : client: [224] opened from [::1]:43768
+May 06 18:05 : client: [224] closed
+May 06 18:05 : client: [225] opened from [::1]:43770
+May 06 18:05 : client: [225] closed
+May 06 18:07 : player: played "Ondatrópica/Ondatrópica/12 Libya.mp3"
+May 06 18:07 : client: [226] opened from [::1]:43820
+May 06 18:07 : client: [226] closed
+May 06 18:07 : client: [227] opened from [::1]:43822
+May 06 18:07 : client: [227] closed
+May 06 18:07 : client: [228] opened from [::1]:43824
+May 06 18:07 : client: [228] closed
+May 06 18:07 : client: [229] opened from [::1]:43826
+May 06 18:07 : client: [229] closed
+May 06 18:10 : player: played "Various Artists/Tea Dance 2 - Another 1920s_ 3/10 On the Sunny Side of the Stree.mp3"
+May 06 18:10 : client: [230] opened from [::1]:43852
+May 06 18:10 : client: [230] closed
+May 06 18:10 : client: [231] opened from [::1]:43854
+May 06 18:10 : client: [231] closed
+May 06 18:10 : client: [232] opened from [::1]:43856
+May 06 18:10 : client: [232] closed
+May 06 18:10 : client: [233] opened from [::1]:43858
+May 06 18:10 : client: [233] closed
+May 06 18:15 : client: [234] opened from [::1]:43896
+May 06 18:15 : client: [234] closed
+May 06 18:15 : client: [235] opened from [::1]:43898
+May 06 18:15 : client: [235] closed
+May 06 18:15 : client: [236] opened from [::1]:43900
+May 06 18:15 : client: [236] closed
+May 06 18:15 : client: [237] opened from [::1]:43902
+May 06 18:15 : client: [237] closed
+May 06 18:17 : client: [238] opened from [::1]:43920
+May 06 18:17 : client: [238] closed
+May 06 18:17 : client: [239] opened from [::1]:43922
+May 06 18:17 : client: [239] closed
+May 06 18:17 : client: [240] opened from [::1]:43924
+May 06 18:17 : client: [240] closed
+May 06 18:17 : client: [241] opened from [::1]:43926
+May 06 18:17 : client: [241] closed
+May 06 18:17 : client: [242] opened from [::1]:43928
+May 06 18:17 : client: [242] closed
+May 06 18:17 : client: [243] opened from [::1]:43930
+May 06 18:17 : client: [243] closed
+May 06 18:17 : client: [244] opened from [::1]:43932
+May 06 18:17 : client: [244] closed
+May 06 18:17 : client: [245] opened from [::1]:43934
+May 06 18:17 : client: [245] closed
+May 06 18:17 : client: [246] opened from [::1]:43936
+May 06 18:17 : client: [246] closed
+May 06 18:17 : client: [247] opened from [::1]:43938
+May 06 18:17 : client: [247] closed
+May 06 18:17 : client: [248] opened from [::1]:43940
+May 06 18:17 : client: [248] closed
+May 06 18:17 : client: [249] opened from [::1]:43942
+May 06 18:17 : client: [249] closed
+May 06 18:20 : player: played "Shaggy/Lucky Day/02 Full Control Featuring Barring.mp3"
+May 06 18:20 : client: [250] opened from [::1]:43968
+May 06 18:20 : client: [250] closed
+May 06 18:20 : client: [251] opened from [::1]:43970
+May 06 18:20 : client: [251] closed
+May 06 18:20 : client: [252] opened from [::1]:43972
+May 06 18:20 : client: [252] closed
+May 06 18:20 : client: [253] opened from [::1]:43974
+May 06 18:20 : client: [253] closed
+May 06 18:22 : player: played "Bob Marley/Legend (Bonus Track Version)/00 One Love.mp3"
+May 06 18:22 : client: [254] opened from [::1]:44002
+May 06 18:22 : client: [254] closed
+May 06 18:22 : client: [255] opened from [::1]:44004
+May 06 18:22 : client: [255] closed
+May 06 18:22 : client: [256] opened from [::1]:44006
+May 06 18:22 : client: [256] closed
+May 06 18:22 : client: [257] opened from [::1]:44008
+May 06 18:22 : client: [257] closed
+May 06 18:26 : player: played "Ondatrópica/Ondatrópica/02 Punkero Sonidero.mp3"
+May 06 18:26 : client: [258] opened from [::1]:44052
+May 06 18:26 : client: [258] closed
+May 06 18:26 : client: [259] opened from [::1]:44054
+May 06 18:26 : client: [259] closed
+May 06 18:26 : client: [260] opened from [::1]:44056
+May 06 18:26 : client: [260] closed
+May 06 18:26 : client: [261] opened from [::1]:44058
+May 06 18:26 : client: [261] closed
+May 06 18:29 : player: played "La Sonora Dinamita/32 Cañonazos/08 Ay Chave (feat_ Lucho Argain).mp3"
+May 06 18:29 : client: [262] opened from [::1]:44082
+May 06 18:29 : client: [262] closed
+May 06 18:29 : client: [263] opened from [::1]:44084
+May 06 18:29 : client: [263] closed
+May 06 18:29 : client: [264] opened from [::1]:44086
+May 06 18:29 : client: [264] closed
+May 06 18:29 : client: [265] opened from [::1]:44088
+May 06 18:29 : client: [265] closed
+May 06 18:33 : player: played "Gregory Isaacs/Night Nurse/02 Stranger In Town.mp3"
+May 06 18:33 : client: [266] opened from [::1]:44122
+May 06 18:33 : client: [266] closed
+May 06 18:33 : client: [267] opened from [::1]:44124
+May 06 18:33 : client: [267] closed
+May 06 18:33 : client: [268] opened from [::1]:44126
+May 06 18:33 : client: [268] closed
+May 06 18:33 : client: [269] opened from [::1]:44128
+May 06 18:33 : client: [269] closed
+May 06 18:37 : player: played "Sade/The Best Of Sade/03 Smooth Operator (Single Versio.mp3"
+May 06 18:37 : client: [270] opened from [::1]:44148
+May 06 18:37 : client: [270] closed
+May 06 18:37 : client: [271] opened from [::1]:44150
+May 06 18:37 : client: [271] closed
+May 06 18:37 : client: [272] opened from [::1]:44152
+May 06 18:37 : client: [272] closed
+May 06 18:37 : client: [273] opened from [::1]:44154
+May 06 18:37 : client: [273] closed
+May 06 18:41 : player: played "Various Artists/Dancehall 101 Vol_4/02 Here I Come.mp3"
+May 06 18:41 : client: [274] opened from [::1]:44184
+May 06 18:41 : client: [274] closed
+May 06 18:41 : client: [275] opened from [::1]:44186
+May 06 18:41 : client: [275] closed
+May 06 18:41 : client: [276] opened from [::1]:44188
+May 06 18:41 : client: [276] closed
+May 06 18:41 : client: [277] opened from [::1]:44190
+May 06 18:41 : client: [277] closed
+May 06 18:44 : player: played "Rosalia De Souza/D'improvviso/12 5 Dias de Carnaval.mp3"
+May 06 18:44 : client: [278] opened from [::1]:44214
+May 06 18:44 : client: [278] closed
+May 06 18:44 : client: [279] opened from [::1]:44216
+May 06 18:44 : client: [279] closed
+May 06 18:44 : client: [280] opened from [::1]:44218
+May 06 18:44 : client: [280] closed
+May 06 18:44 : client: [281] opened from [::1]:44220
+May 06 18:44 : client: [281] closed
+May 06 18:47 : player: played "Culture/Too Long In Slavery/08 The International Herb.mp3"
+May 06 18:47 : client: [282] opened from [::1]:44230
+May 06 18:47 : client: [282] closed
+May 06 18:47 : client: [283] opened from [::1]:44232
+May 06 18:47 : client: [283] closed
+May 06 18:47 : client: [284] opened from [::1]:44234
+May 06 18:47 : client: [284] closed
+May 06 18:47 : client: [285] opened from [::1]:44236
+May 06 18:47 : client: [285] closed
+May 06 18:49 : player: played "Plastic Bertrand/Plastic Bertrand/14 Coeur d'acier.mp3"
+May 06 18:49 : client: [286] opened from [::1]:44308
+May 06 18:49 : client: [286] closed
+May 06 18:49 : client: [287] opened from [::1]:44310
+May 06 18:49 : client: [287] closed
+May 06 18:49 : client: [288] opened from [::1]:44312
+May 06 18:49 : client: [288] closed
+May 06 18:49 : client: [289] opened from [::1]:44314
+May 06 18:49 : client: [289] closed
+May 06 18:52 : player: played "Jim Croce/Jim Croce/08 One Less Set of Footsteps.mp3"
+May 06 18:52 : client: [290] opened from [::1]:44328
+May 06 18:52 : client: [290] closed
+May 06 18:52 : client: [291] opened from [::1]:44330
+May 06 18:52 : client: [291] closed
+May 06 18:52 : client: [292] opened from [::1]:44332
+May 06 18:52 : client: [292] closed
+May 06 18:52 : client: [293] opened from [::1]:44334
+May 06 18:52 : client: [293] closed
+May 06 18:55 : player: played "Various Artists/Perfect Bebop/01 Blue Bird.mp3"
+May 06 18:55 : client: [294] opened from [::1]:44358
+May 06 18:55 : client: [294] closed
+May 06 18:55 : client: [295] opened from [::1]:44360
+May 06 18:55 : client: [295] closed
+May 06 18:55 : client: [296] opened from [::1]:44362
+May 06 18:55 : client: [296] closed
+May 06 18:55 : client: [297] opened from [::1]:44364
+May 06 18:55 : client: [297] closed
+May 06 18:56 : client: [298] opened from [::1]:44366
+May 06 18:56 : client: [298] closed
+May 06 18:56 : client: [299] opened from [::1]:44368
+May 06 18:56 : client: [299] closed
+May 06 18:59 : player: played "Protoje/00 Kingston Be Wise.mp3"
+May 06 18:59 : client: [300] opened from [::1]:44390
+May 06 18:59 : client: [300] closed
+May 06 18:59 : client: [301] opened from [::1]:44392
+May 06 18:59 : client: [301] closed
+May 06 18:59 : client: [302] opened from [::1]:44394
+May 06 18:59 : client: [302] closed
+May 06 18:59 : client: [303] opened from [::1]:44396
+May 06 18:59 : client: [303] closed
+May 06 19:03 : player: played "UB40/Labour Of Love I & II/2-03 Groovin'.mp3"
+May 06 19:03 : client: [304] opened from [::1]:44476
+May 06 19:03 : client: [304] closed
+May 06 19:03 : client: [305] opened from [::1]:44478
+May 06 19:03 : client: [305] closed
+May 06 19:03 : client: [306] opened from [::1]:44480
+May 06 19:03 : client: [306] closed
+May 06 19:03 : client: [307] opened from [::1]:44482
+May 06 19:03 : client: [307] closed
+May 06 19:07 : player: played "Various Artists/Jazz cafe'/02 Linda.mp3"
+May 06 19:07 : client: [308] opened from [::1]:44522
+May 06 19:07 : client: [308] closed
+May 06 19:07 : client: [309] opened from [::1]:44524
+May 06 19:07 : client: [309] closed
+May 06 19:07 : client: [310] opened from [::1]:44526
+May 06 19:07 : client: [310] closed
+May 06 19:07 : client: [311] opened from [::1]:44528
+May 06 19:07 : client: [311] closed
+May 06 19:09 : player: played "Various Artists/Jazz Café - 1920s_ 30s_ 40s V/13 Scrapple From The Apple.mp3"
+May 06 19:09 : client: [312] opened from [::1]:44542
+May 06 19:09 : client: [312] closed
+May 06 19:10 : client: [313] opened from [::1]:44546
+May 06 19:10 : client: [313] closed
+May 06 19:10 : client: [314] opened from [::1]:44548
+May 06 19:10 : client: [314] closed
+May 06 19:10 : client: [315] opened from [::1]:44550
+May 06 19:10 : client: [315] closed
+May 06 19:13 : player: played "Various Artists/Playlist_ Reggae/13 Oh Carolina.mp3"
+May 06 19:13 : client: [316] opened from [::1]:44574
+May 06 19:13 : client: [316] closed
+May 06 19:13 : client: [317] opened from [::1]:44576
+May 06 19:13 : client: [317] closed
+May 06 19:13 : client: [318] opened from [::1]:44578
+May 06 19:13 : client: [318] closed
+May 06 19:13 : client: [319] opened from [::1]:44580
+May 06 19:13 : client: [319] closed
+May 06 19:16 : player: played "La Sonora Dinamita/32 Cañonazos/28 Saca la Maleta (feat_ Margarit.mp3"
+May 06 19:16 : client: [320] opened from [::1]:44600
+May 06 19:16 : client: [320] closed
+May 06 19:16 : client: [321] opened from [::1]:44602
+May 06 19:16 : client: [321] closed
+May 06 19:16 : client: [322] opened from [::1]:44604
+May 06 19:16 : client: [322] closed
+May 06 19:16 : client: [323] opened from [::1]:44606
+May 06 19:16 : client: [323] closed
+May 06 19:21 : player: played "Bob Marley/Legend (Bonus Track Version)/00 Could You Be Loved.mp3"
+May 06 19:21 : client: [324] opened from [::1]:44648
+May 06 19:21 : client: [324] closed
+May 06 19:21 : client: [325] opened from [::1]:44650
+May 06 19:21 : client: [325] closed
+May 06 19:21 : client: [326] opened from [::1]:44652
+May 06 19:21 : client: [326] closed
+May 06 19:21 : client: [327] opened from [::1]:44654
+May 06 19:21 : client: [327] closed
+May 06 19:24 : player: played "The Traveling Wilburys/The Traveling Wilburys Collect/2-06 Poor House.mp3"
+May 06 19:24 : client: [328] opened from [::1]:44678
+May 06 19:24 : client: [328] closed
+May 06 19:24 : client: [329] opened from [::1]:44680
+May 06 19:24 : client: [329] closed
+May 06 19:24 : client: [330] opened from [::1]:44682
+May 06 19:24 : client: [330] closed
+May 06 19:24 : client: [331] opened from [::1]:44684
+May 06 19:24 : client: [331] closed
+May 06 19:26 : player: played "Piero Piccioni/00 La chatte à la Satie.mp3"
+May 06 19:26 : client: [332] opened from [::1]:44702
+May 06 19:26 : client: [332] closed
+May 06 19:26 : client: [333] opened from [::1]:44704
+May 06 19:26 : client: [333] closed
+May 06 19:26 : client: [334] opened from [::1]:44706
+May 06 19:26 : client: [334] closed
+May 06 19:26 : client: [335] opened from [::1]:44708
+May 06 19:26 : client: [335] closed
+May 06 19:28 : player: played "Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/18 Let's Face The Music And Dance.mp3"
+May 06 19:28 : client: [336] opened from [::1]:44738
+May 06 19:28 : client: [336] closed
+May 06 19:28 : client: [337] opened from [::1]:44740
+May 06 19:28 : client: [337] closed
+May 06 19:28 : client: [338] opened from [::1]:44742
+May 06 19:28 : client: [338] closed
+May 06 19:28 : client: [339] opened from [::1]:44744
+May 06 19:28 : client: [339] closed
+May 06 19:32 : player: played "KEN BOOTHE/BLOOD BROTHERS/04 EVERYTHING I OWN.mp3"
+May 06 19:32 : client: [340] opened from [::1]:44768
+May 06 19:32 : client: [340] closed
+May 06 19:32 : client: [341] opened from [::1]:44770
+May 06 19:32 : client: [341] closed
+May 06 19:32 : client: [342] opened from [::1]:44772
+May 06 19:32 : client: [342] closed
+May 06 19:32 : client: [343] opened from [::1]:44774
+May 06 19:32 : client: [343] closed
+May 06 19:32 : client: [344] opened from [::1]:44776
+May 06 19:32 : client: [344] closed
+May 06 19:32 : client: [345] opened from [::1]:44778
+May 06 19:32 : client: [345] closed
+May 06 19:32 : client: [346] opened from [::1]:44780
+May 06 19:32 : client: [346] closed
+May 06 19:32 : client: [347] opened from [::1]:44782
+May 06 19:32 : client: [347] closed
+May 06 19:39 : client: [348] opened from [::1]:44836
+May 06 19:39 : client: [348] closed
+May 06 19:39 : client: [349] opened from [::1]:44838
+May 06 19:39 : client: [349] closed
+May 06 19:39 : client: [350] opened from [::1]:44840
+May 06 19:39 : client: [350] closed
+May 06 19:39 : client: [351] opened from [::1]:44842
+May 06 19:39 : client: [351] closed
+May 06 19:39 : client: [352] opened from [::1]:44844
+May 06 19:39 : client: [352] closed
+May 06 19:39 : client: [353] opened from [::1]:44846
+May 06 19:39 : client: [353] closed
+May 06 19:39 : client: [354] opened from [::1]:44848
+May 06 19:39 : client: [354] closed
+May 06 19:39 : client: [355] opened from [::1]:44850
+May 06 19:39 : client: [355] closed
+May 06 19:41 : client: [356] opened from [::1]:44934
+May 06 19:41 : client: [356] closed
+May 06 19:41 : client: [357] opened from [::1]:44940
+May 06 19:41 : client: [357] closed
+May 06 19:41 : client: [358] opened from [::1]:44944
+May 06 19:41 : client: [358] closed
+May 06 19:44 : client: [359] opened from [::1]:45072
+May 06 19:44 : client: [359] closed
+May 06 19:44 : client: [360] opened from [::1]:45074
+May 06 19:44 : client: [360] closed
+May 06 19:44 : client: [361] opened from [::1]:45076
+May 06 19:44 : client: [361] closed
+May 06 19:44 : client: [362] opened from [::1]:45078
+May 06 19:44 : client: [362] closed
+May 06 19:44 : client: [363] opened from [::1]:45080
+May 06 19:44 : client: [363] closed
+May 06 19:44 : client: [364] opened from [::1]:45082
+May 06 19:44 : client: [364] closed
+May 06 19:44 : client: [365] opened from [::1]:45084
+May 06 19:44 : client: [365] closed
+May 06 19:44 : client: [366] opened from [::1]:45086
+May 06 19:44 : client: [366] closed
+May 06 19:44 : client: [367] opened from [::1]:45088
+May 06 19:44 : client: [367] closed
+May 06 19:44 : client: [368] opened from [::1]:45090
+May 06 19:44 : client: [368] closed
+May 06 19:45 : client: [369] opened from [::1]:45092
+May 06 19:45 : client: [369] closed
+May 06 19:45 : client: [370] opened from [::1]:45094
+May 06 19:45 : client: [370] closed
+May 06 19:45 : client: [371] opened from [::1]:45096
+May 06 19:45 : client: [371] closed
+May 06 19:45 : client: [372] opened from [::1]:45098
+May 06 19:45 : client: [372] closed
+May 06 19:45 : client: [373] opened from [::1]:45100
+May 06 19:45 : client: [374] opened from [::1]:45102
+May 06 19:45 : client: [373] closed
+May 06 19:45 : client: [374] closed
+May 06 19:45 : client: [375] opened from [::1]:45104
+May 06 19:45 : client: [375] closed
+May 06 19:45 : client: [376] opened from [::1]:45106
+May 06 19:45 : client: [376] closed
+May 06 19:45 : client: [377] opened from [::1]:45108
+May 06 19:45 : client: [377] closed
+May 06 19:45 : client: [378] opened from [::1]:45110
+May 06 19:45 : client: [378] closed
+May 06 19:45 : client: [379] opened from [::1]:45112
+May 06 19:45 : client: [379] closed
+May 06 19:45 : client: [380] opened from [::1]:45114
+May 06 19:45 : client: [380] closed
+May 06 19:45 : client: [381] opened from [::1]:45116
+May 06 19:45 : client: [381] closed
+May 06 19:45 : client: [382] opened from [::1]:45118
+May 06 19:45 : client: [382] closed
+May 06 19:45 : client: [383] opened from [::1]:45120
+May 06 19:45 : client: [383] closed
+May 06 19:45 : client: [384] opened from [::1]:45122
+May 06 19:45 : client: [384] closed
+May 07 12:29 : client: [21] closed
+May 07 12:29 : client: [385] opened from [::1]:51246
+May 07 12:29 : client: [386] opened from [::1]:51248
+May 07 12:29 : client: [386] closed
+May 07 12:29 : client: [387] opened from [::1]:51252
+May 07 12:29 : client: [387] closed
+May 07 12:29 : client: [388] opened from [::1]:51254
+May 07 12:29 : client: [388] closed
+May 07 12:29 : client: [389] opened from [::1]:51256
+May 07 12:29 : client: [389] closed
+May 08 15:11 : client: [385] closed
+May 08 15:11 : client: [390] opened from [::1]:40148
+May 08 15:11 : client: [391] opened from [::1]:40150
+May 08 15:11 : client: [391] closed
+May 08 15:11 : client: [392] opened from [::1]:40152
+May 08 15:11 : client: [392] closed
+May 08 23:39 : client: [390] closed
+May 09 20:29 : client: [393] opened from [::1]:60218
+May 09 20:29 : client: [394] opened from [::1]:60220
+May 09 20:29 : client: [394] closed
+May 09 20:29 : client: [395] opened from [::1]:60224
+May 09 20:29 : client: [395] closed
+May 09 20:29 : client: [393] closed
+May 10 01:42 : client: [396] opened from [::1]:37716
+May 10 01:42 : client: [397] opened from [::1]:37718
+May 10 01:42 : client: [397] closed
+May 10 01:42 : client: [398] opened from [::1]:37720
+May 10 01:42 : client: [398] closed
+May 10 01:42 : client: [396] closed
+May 10 12:58 : player: played "Protoje/Seven Year Itch/00 Take Control (The Message Ridd.mp3"
+May 10 12:58 : player: played "Shaggy/Hot Shot/02 Lonely Lover.mp3"
+May 10 12:59 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 10 12:59 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 10 12:59 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 10 12:59 : client: [0] opened from [::1]:39144
+May 10 12:59 : client: [1] opened from [::1]:39146
+May 10 12:59 : client: [1] closed
+May 10 12:59 : client: [2] opened from [::1]:39148
+May 10 12:59 : client: [2] closed
+May 10 12:59 : client: [3] opened from [::1]:39150
+May 10 12:59 : client: [3] closed
+May 10 12:59 : client: [4] opened from [::1]:39152
+May 10 12:59 : client: [4] closed
+May 10 13:00 : client: [5] opened from [::1]:39206
+May 10 13:00 : client: [5] closed
+May 10 13:00 : client: [6] opened from [::1]:39208
+May 10 13:00 : client: [6] closed
+May 10 13:08 : client: [7] opened from [::1]:39246
+May 10 13:08 : client: [7] closed
+May 10 13:08 : client: [8] opened from [::1]:39248
+May 10 13:08 : client: [8] closed
+May 10 13:14 : client: [9] opened from [::1]:39262
+May 10 13:14 : client: [9] closed
+May 10 13:14 : client: [10] opened from [::1]:39264
+May 10 13:14 : client: [10] closed
+May 10 13:15 : client: [11] opened from [::1]:39268
+May 10 13:15 : client: [11] closed
+May 10 13:15 : client: [12] opened from [::1]:39270
+May 10 13:15 : client: [12] closed
+May 10 13:17 : client: [13] opened from [::1]:39278
+May 10 13:17 : client: [14] opened from [::1]:39280
+May 10 13:17 : client: [14] closed
+May 10 13:17 : client: [15] opened from [::1]:39282
+May 10 13:17 : client: [15] closed
+May 10 13:18 : client: [16] opened from [::1]:39284
+May 10 13:18 : client: [16] closed
+May 10 13:18 : client: [17] opened from [::1]:39286
+May 10 13:18 : client: [17] closed
+May 10 13:18 : client: [0] closed
+May 10 13:18 : client: [13] closed
+May 10 13:38 : client: [18] opened from [::1]:39788
+May 10 13:38 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 10 13:38 : client: [18] closed
+May 10 13:38 : client: [19] opened from [::1]:39790
+May 10 13:38 : client: [19] closed
+May 10 13:38 : client: [20] opened from [::1]:39792
+May 10 13:38 : client: [20] closed
+May 10 13:38 : client: [21] opened from [::1]:39794
+May 10 13:38 : client: [21] closed
+May 10 13:38 : client: [22] opened from [::1]:39796
+May 10 13:38 : client: [22] closed
+May 10 13:38 : client: [23] opened from [::1]:39798
+May 10 13:38 : client: [23] closed
+May 10 13:38 : client: [24] opened from [::1]:39800
+May 10 13:38 : client: [24] closed
+May 10 13:38 : client: [25] opened from [::1]:39802
+May 10 13:38 : client: [25] closed
+May 10 13:41 : client: [26] opened from [::1]:39914
+May 10 13:41 : client: [27] opened from [::1]:39916
+May 10 13:41 : client: [27] closed
+May 10 13:41 : client: [28] opened from [::1]:39918
+May 10 13:41 : client: [28] closed
+May 10 13:41 : client: [29] opened from [::1]:39920
+May 10 13:41 : client: [29] closed
+May 10 13:41 : client: [30] opened from [::1]:39922
+May 10 13:41 : client: [30] closed
+May 10 13:43 : client: [31] opened from [::1]:39926
+May 10 13:43 : client: [31] closed
+May 10 13:43 : client: [32] opened from [::1]:39928
+May 10 13:43 : client: [32] closed
+May 10 14:06 : client: [26] closed
+May 10 14:06 : client: [33] opened from [::1]:41204
+May 10 14:06 : client: [34] opened from [::1]:41206
+May 10 14:06 : client: [34] closed
+May 10 14:06 : client: [35] opened from [::1]:41208
+May 10 14:06 : client: [35] closed
+May 10 14:06 : client: [36] opened from [::1]:41210
+May 10 14:06 : client: [36] closed
+May 10 14:06 : client: [37] opened from [::1]:41212
+May 10 14:06 : client: [37] closed
+May 10 14:07 : client: [33] closed
+May 10 14:07 : client: [38] opened from [::1]:41222
+May 10 14:07 : client: [39] opened from [::1]:41224
+May 10 14:07 : client: [39] closed
+May 10 14:07 : client: [40] opened from [::1]:41226
+May 10 14:07 : client: [40] closed
+May 10 14:07 : client: [41] opened from [::1]:41228
+May 10 14:07 : client: [41] closed
+May 10 14:07 : client: [42] opened from [::1]:41230
+May 10 14:07 : client: [42] closed
+May 10 14:07 : client: [43] opened from [::1]:41234
+May 10 14:07 : client: [43] closed
+May 10 14:07 : client: [44] opened from [::1]:41236
+May 10 14:07 : client: [44] closed
+May 10 14:07 : client: [45] opened from [::1]:41238
+May 10 14:07 : client: [45] closed
+May 10 14:07 : client: [46] opened from [::1]:41240
+May 10 14:07 : client: [46] closed
+May 10 14:08 : client: [47] opened from [::1]:41248
+May 10 14:08 : client: [47] closed
+May 10 14:08 : client: [48] opened from [::1]:41250
+May 10 14:08 : client: [48] closed
+May 10 14:08 : client: [49] opened from [::1]:41252
+May 10 14:08 : client: [49] closed
+May 10 14:08 : client: [50] opened from [::1]:41254
+May 10 14:08 : client: [50] closed
+May 10 16:11 : client: [51] opened from [::1]:43006
+May 10 16:11 : client: [51] closed
+May 10 16:11 : client: [52] opened from [::1]:43008
+May 10 16:11 : client: [52] closed
+May 10 16:12 : client: [53] opened from [::1]:43012
+May 10 16:12 : client: [53] closed
+May 10 16:12 : client: [54] opened from [::1]:43014
+May 10 16:12 : client: [54] closed
+May 10 16:13 : client: [38] closed
+May 10 16:17 : client: [55] opened from [::1]:43074
+May 10 16:17 : client: [55] closed
+May 10 16:17 : client: [56] opened from [::1]:43076
+May 10 16:17 : client: [56] closed
+May 10 16:23 : client: [57] opened from [::1]:43188
+May 10 16:23 : client: [57] closed
+May 10 16:23 : client: [58] opened from [::1]:43190
+May 10 16:23 : client: [58] closed
+May 10 16:24 : client: [59] opened from [::1]:43194
+May 10 16:24 : client: [59] closed
+May 10 16:24 : client: [60] opened from [::1]:43196
+May 10 16:24 : client: [60] closed
+May 10 16:27 : client: [61] opened from [::1]:43284
+May 10 16:27 : client: [61] closed
+May 10 16:27 : client: [62] opened from [::1]:43286
+May 10 16:27 : client: [62] closed
+May 10 16:36 : client: [63] opened from [::1]:43356
+May 10 16:36 : client: [63] closed
+May 10 16:36 : client: [64] opened from [::1]:43358
+May 10 16:36 : client: [64] closed
+May 10 16:47 : client: [65] opened from [::1]:43440
+May 10 16:47 : client: [65] closed
+May 10 16:47 : client: [66] opened from [::1]:43442
+May 10 16:47 : client: [66] closed
+May 10 16:50 : client: [67] opened from [::1]:43452
+May 10 16:50 : client: [67] closed
+May 10 16:50 : client: [68] opened from [::1]:43454
+May 10 16:50 : client: [68] closed
