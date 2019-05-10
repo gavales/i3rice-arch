@@ -1,0 +1,61 @@
+/******************
+ ! Budgie Desktop *
+*******************/
+
+@include exports("budgie-desktop") {
+    .budgie-container {
+        background-color: transparent;
+    }
+
+    .raven {
+        background-color: transparentize($bg_color, .07);
+
+        .raven-header {
+            background-color: $bg_color;
+            border: solid $borders_color;
+            border-width: 1px 0;
+        }
+
+        .raven-background {
+            background-color: transparentize($bg_color, .07);
+        }
+    }
+
+    .raven-mpris {
+        background-color: transparentize($bg_color, .3);
+    }
+
+    .budgie-panel {
+        background-color: $dark_bg_color;
+        color: $dark_fg_color;
+    }
+    
+    .budgie-panel > box > widget > separator {
+        background-color: transparentize($dark_fg_color, .8);
+    }
+    
+    .workspace-switcher {
+        background-color: $dark_bg_color;
+        .workspace-icon-button {
+            background-color: transparent;
+            &:hover {
+                background-color: transparentize($selected_bg_color, .5);
+                border: transparent;
+            }
+        }
+        .workspace-more-label {
+            color: $dark_fg_color;
+        }
+        .workspace-add-button {
+            background-color: transparentize($selected_bg_color, .8);
+            color: $selected_bg_color;
+            border: transparent;
+            &:hover {
+                background-color: transparentize($selected_bg_color, .5);
+            }
+        }
+        .current-workspace {
+            background-color: $selected_bg_color;
+        }
+    }
+}

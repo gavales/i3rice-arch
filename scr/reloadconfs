@@ -27,8 +27,7 @@ $HOME/scr/i3concat
 #killall i3bar
 #i3bar -t --bar_id=bar-1 &>/dev/null &
 killall -q polybar
-polybar top &>/dev/null &
+polybar i3 &>/dev/null &
 $HOME/scr/i3listen-toggle
 #notify-send 'CONFIGS RELOADED' -i $HOME/scrpic/settingswhite.png
 $HOME/scr/mkdunsttheme
-$HOME/scr/mkgtktheme

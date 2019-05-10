@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=NumixStandard
+Comment=A themable modern flat theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=NumixStandard
+IconTheme=Numix
+MetacityTheme=NumixStandard
+ButtonLayout=:minimize,maximize,close

@@ -31,17 +31,16 @@ wmctrl -r :ACTIVE: -N ${title}
 i3-msg title_format "${title}"
 
 xdotool key $ora
-xdotool key $nme
 xdotool key $icn
 xdotool key $nme
 
 case $name in
-	gavarch)
-		xdotool key $ora
-		xdotool key $nme
-		xdotool key $icn
-		xdotool key $nme
-		;;
+#	gavarch)
+#		xdotool key $ora
+#		xdotool key $nme
+#		xdotool key $icn
+#		xdotool key $nme
+#		;;
 	Drive)
 		xdotool key $ora
 		xdotool key $nme

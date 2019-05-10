@@ -15,12 +15,14 @@ SetEnv icons $[HOME]/.fvwm/icons
 DestroyFunc StartFunction
 AddToFunc   StartFunction
 + I Test Exec exec feh --bg-scale ~/.config/wall.png
++ I Exec exec killall polybar
++ I Test exec polybar fvwm
 # Only execute once
 DestroyFunc InitFunction
 AddToFunc InitFunction
 + I Exec exec urxvtd -q -o -f
 + I Exec exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-+ I Exec exec polybar top
+#+ I Exec exec polybar fvwm
 + I Exec exec nm-applet
 + I Exec exec xfce4-power-manager
 + I Exec exec pamac-tray
@@ -105,88 +107,88 @@ AddToFunc RaiseMove
 IgnoreModifiers L25
 
 # //// MISC
-Key space A 4 Exec rofi -show drun
+Key space A 1 Exec rofi -show drun
 
-Key Print A A Exec $[scripts]/screenshot
+Key Print A 1 Exec $[scripts]/screenshot
 
 # //// NUM ROW
-Key 1 A 4 GotoPage 0 0
-Key 1 A 4S MovetoPage 0 0
+Key 1 A 1 GotoPage 0 0
+Key 1 A 1S MovetoPage 0 0
 
-Key 2 A 4 GotoPage 1 0
-Key 2 A 4S MovetoPage 1 0
+Key 2 A 1 GotoPage 1 0
+Key 2 A 1S MovetoPage 1 0
 
-Key 3 A 4 GotoPage 2 0
-Key 3 A 4S MovetoPage 2 0
+Key 3 A 1 GotoPage 2 0
+Key 3 A 1S MovetoPage 2 0
 
-Key 4 A 4 GotoPage 3 0
-Key 4 A 4S MovetoPage 3 0
+Key 4 A 1 GotoPage 3 0
+Key 4 A 1S MovetoPage 3 0
 
-Key minus A 4 Thumbnail
+Key minus A 1 Thumbnail
 
 # //// 1st ROW
-Key q WT 4S Close
+Key q WT 1S Close
 
-Key r A 4S Restart
+Key r A 1S Restart
 
-key t WT 4 ToggleTitle
+key t WT 1 ToggleTitle
 
-Key i A 4 Exec notify-send "$(LANG=en_US.utf8 LC_TIME=en_US.utf8 date +'%H:%M')" \
+Key i A 1 Exec notify-send "$(LANG=en_US.utf8 LC_TIME=en_US.utf8 date +'%H:%M')" \
 "$(LANG=en_US.utf8 LC_TIME=en_US.utf8 date +'%A %-d %B %Y')"
 
-Key p A 4 Exec bash $[scripts]/i3media togg
+Key p A 1 Exec bash $[scripts]/i3media togg
 
-Key bracketleft A 4 Exec bash $[scripts]/i3media next
+Key bracketleft A 1 Exec bash $[scripts]/i3media next
 
-Key bracketright A 4 Exec bash $[scripts]/i3media prev
+Key bracketright A 1 Exec bash $[scripts]/i3media prev
 
-Key backslash A 4 Exec bash $[scripts]/i3media stop
+Key backslash A 1 Exec bash $[scripts]/i3media stop
 
 # //// 2nd ROW
-Key a A 4 Move 50-50w 50-50w
+Key a A 1 Move 50-50w 50-50w
 
-Key f WT 4S Maximize
-Key f A 4 Exec thunar
+Key f WT 1S Maximize
+Key f A 1 Exec thunar
 
-Key g A 4S Exec geany
+Key g A 1S Exec geany
 
-Key h A 4 SnapLeft
-Key h A 4S MoveToPage -1p +0p
+Key h A 1 SnapLeft
+Key h A 1S MoveToPage -1p +0p
 Key h A CM GotoPage -1p +0p
-Key h A C4 Move 0 w+0
-Key h A M4 Direction West (AcceptsFocus) Focus
+Key h A C1 Move 0 w+0
+Key h A M1 Direction West (AcceptsFocus) Focus
 
-Key l A 4 SnapRight
-Key l A 4S MoveToPage +1p +0p
+Key l A 1 SnapRight
+Key l A 1S MoveToPage +1p +0p
 Key l A CM GotoPage +1p +0p
-Key l A C4 Move -0 w+0
-Key l A M4 Direction East (AcceptsFocus) Focus
+Key l A C1 Move -0 w+0
+Key l A M1 Direction East (AcceptsFocus) Focus
 
-Key k A 4 SnapHalf
-Key k A C4 Move w+0 0
-Key k A M4 Direction North (AcceptsFocus) Focus
+Key k A 1 SnapHalf
+Key k A C1 Move w+0 0
+Key k A M1 Direction North (AcceptsFocus) Focus
 
-Key j A 4 SnapQuarter
-Key j A C4 Move w+0 -0
-Key j A M4 Direction South (AcceptsFocus) Focus
+Key j A 1 SnapQuarter
+Key j A C1 Move w+0 -0
+Key j A M1 Direction South (AcceptsFocus) Focus
 
-Key Return A 4 Exec urxvtc
-Key Return A 4S Exec urxvtc -name FILES -e ranger
+Key Return A 1 Exec urxvtc
+Key Return A 1S Exec urxvtc -name FILES -e ranger
 
 # //// 3rd ROW
-Key z WT 4 Thumbnail
+Key z WT 1 Thumbnail
 
-Key x A 4 Exec amixer set Master toggle
+Key x A 1 Exec amixer set Master toggle
 
-Key c A 4 Exec vivaldi-stable
+Key c A 1 Exec vivaldi-stable
 
-Key n A 4 SnapTiny
+Key n A 1 SnapTiny
 
 #Key m A 4 Exec notify-send "Now Playing ♫" "$(mpc current)"
 Key m A M Move
 
-Key comma A 4 Exec amixer -q set Master 5%+ 
-Key period A 4 Exec amixer -q set Master 5%- 
+Key comma A 1 Exec amixer -q set Master 5%+ 
+Key period A 1 Exec amixer -q set Master 5%- 
 
 # >>>> MOUSEBINDS
 
@@ -195,7 +197,7 @@ ClickTime 250
 MoveThreshold 3
 
 ## SloppyFocus Instead of ClickToFocus
-Style * SloppyFocus, MouseFocusClickRaises
+#Style * SloppyFocus, MouseFocusClickRaises
 
 ## Titlebar Buttons
 Mouse 1 1 A Menu
@@ -323,35 +325,35 @@ AddToMenu MenuSendTo
 
 # >>>> COLORSET
 
-# Default
+#  0 Default
+#  1 Inactive windows
+#  2 Active windows
+#  3 Inactive windows borders
+#  4 Active windows borders
+#  5 Menu inactive item
+#  6 Menu active item
+#  7 Menu grayed item
+#  8 Menu title
+# 10 Reserved
+# 10 Module default
+# 11 Module highlight
+# 12 Module active buttons (mouse hover)
+# 13 Pager inactive page
+# 14 Pager active page
 Colorset 0 fg #d8dee8, bg #7a7a7a, hi, sh, Plain, NoShape
-# Inactive windows
 Colorset 1 fg #f4ebd4, bg #f4ebd4, hi, sh, Plain, NoShape
-# Active windows
 Colorset 2 fg #f4ebd4, bg #f4ebd4, hi, sh, Plain, NoShape
-# Inactive windows borders
 Colorset 3 fg #f4ebd4, bg #f4ebd4, hi #f4ebd4, sh #f4ebd4, Plain, NoShape
-# Active windows borders
 Colorset 4 fg #f4ebd4, bg #f4ebd4, hi #f4ebd4, sh #f4ebd4, Plain, NoShape
-# Menu inactive item
 Colorset 5 fg #4f5159, bg #f4ebd4, hi #f4ebd4, sh #f4ebd4, Plain, NoShape
-# Menu active item
 Colorset 6 fg #bf616a, bg #f4ebd4, hi #f4ebd4, sh #f4ebd4, Plain, NoShape
-# Menu grayed item
 Colorset 7 fg #7a7a7a, bg #f4ebd4, hi #f4ebd4, sh #f4ebd4, Plain, NoShape
-# Menu title
 Colorset 8 fg #2f343f, bg #f4ebd4, hi #f4ebd4, sh #f4ebd4, Plain, NoShape
-# Reserved
 Colorset 10 fg #d8dee8, bg #2f343f, hi #2f343f, sh #2f343f, Plain, NoShape
-# Module default
 Colorset 10 fg #d8dee8, bg #2f343f, hi #2f343f, sh #2f343f, Plain, NoShape
-# Module highlight
 Colorset 11 fg #4b5262, bg #2f343f, hi #2f343f, sh #2f343f, Plain, NoShape
-# Module active buttons (mouse hover)
 Colorset 12 fg #bf616a, bg #2f343f, hi, sh, Plain, NoShape
-# Pager inactive page
 Colorset 13 fg #efefef, bg #efefef, hi #b0b0b0, sh #b0b0b0, Plain, NoShape
-# Pager active page
 Colorset 14 fg #dfdfdf, bg #f3d6d2, hi #b0b0b0, sh #b0b0b0, Plain, NoShape
 
 

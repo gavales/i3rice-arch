@@ -464,8 +464,10 @@ $fw [instance="UNMOUNT"]				$tf "unmount"
 gaps inner 0
 gaps outer 0
 
-#workspace $ws2 gaps inner 0
-#workspace $ws2 gaps outer 0
+workspace $ws4 gaps inner 40
+workspace $ws4 gaps outer 40
+workspace $ws5 gaps inner 40
+workspace $ws5 gaps outer 40
 
 # >>>> STARTUP
 # DAEMONS

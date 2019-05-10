@@ -56,6 +56,11 @@ def windownotify(i3, event):
 			if event.change == 'title':
 				call('bash /home/gavarch/scr/thunarview'.split(' '))
 
+#def set_floating(i3, event):
+#	if event.container.window_class != 'URxvt':
+#		event.container.command('floating enable, border normal 2')
+#
+#i3.on('window::new', set_floating)
 i3.on('window', windownotify)
 i3.on('workspace', wsnotify)
 

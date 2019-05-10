@@ -5,6 +5,7 @@
 
 thm="$HOME/numix-solarized-gtk-theme"
 vrt="$(sed '2q;d' .Xresources | awk '{print $2}')"
+scr="post-build-apply"
 
 echo $thm
 echo $vrt
@@ -24,7 +25,7 @@ help () {
 	echo "need to run"
 }
 
-while getopts :h:t:d:v:h: opts; do
+while getopts :h:t:x:v:h: opts; do
 	case "$opts" in
 		t)
 			thm="${OPTARG}"
@@ -33,6 +34,10 @@ while getopts :h:t:d:v:h: opts; do
 		v)
 			vrt="${OPTARG}"
 			echo $vrt
+			;;
+		x)
+			scr="${OPTARG}"
+			echo $scr
 			;;
 		h) help ;;
 	esac
@@ -162,10 +167,7 @@ main () {
 #		cat ${i} | sed -e "${regex}" > ${i}
 		cat ${i} | sed -e "${regex};s/\\\"//g" > ${i/_template/}
 	done
-	gksu make THEME=Standard-light install
-	notify-send "Built numix-solarized-gtk-theme"
-	gtkrc-reload
-	gksu make THEME=Standard-dark install
+	bash $scr
 }
 
 main

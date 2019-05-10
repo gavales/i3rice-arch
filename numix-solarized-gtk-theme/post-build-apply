@@ -1,0 +1,6 @@
+#!/bin/bash
+
+gksu make THEME=Standard-light install
+notify-send "Built numix-solarized-gtk-theme"
+gtkrc-reload
+gksu make THEME=Standard-dark install

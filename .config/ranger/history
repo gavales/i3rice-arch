@@ -1,3 +1,14 @@
+shell convert '%f' -blur 0x8 'test test.png'
+
+shell convert -trim -transparent white -fuzz 50%% 'fullscalebattcap.png' 'fullscalebattcap.png'
+shell convert -trim -transparent white -fuzz 15%% 'fullscalebattcap.png' 'fullscalebattcap.png'
+shell convert -trim -transparent white -fuzz 15%% 'prototypebattcap.png' 'prototypebattcap.png'
+shell convert -trim -transparent white -fuzz 10%% 'close.png' 'close.png'
+shell convert -trim -transparent white -fuzz 10%% 'iconify.png' 'iconify.png'
+shell convert -trim -transparent white -fuzz 10%% 'maximize.png' 'maximize.png'
+rename i3volume
+rename i3brightness
+shell convert -trim -transparent blue -fuzz 10%% 'pamship.png' 'pamship.png'
 shell convert -trim -transparent blue -fuzz 20%% 'pamship.png' 'pamship.png'
 shell convert -trim -transparent blue -fuzz 50%% 'pamship.png' 'pamship.png'
 mkdir Electronics
@@ -34,17 +45,6 @@ shell  git clone https://github.com/budRich/numix-solarized-gtk-theme.git
 shell git clone https://uk.rs-online.com/web/p/radio-frequency-development-kits/7916397/?relevancy-data=636F3D3126696E3D4931384E53656172636847656E65726963266C753D656E266D6D3D6D61746368616C6C7061727469616C26706D3D5E2E2A2426706F3D31333326736E3D592673723D2673743D43415443485F414C4C5F44454641554C542673633D592677633D4E4F4E45267573743D4750532055426C6F78204C45412D3653267374613D4750532055426C6F78204C45412D365326&searchHistory=%7B%22enabled%22%3Atrue%7D
 shell git clone https://github.com/Ferdi265/numix-solarized-gtk-theme.git
 rename template_Standard.colors
-shell sudo make install
-rename Standard-Dark.colors
-rename Standard-light.colors
-rename Standard-dark.colors
-rename Standard-dark.colors_template
-rename Standard-light.colors_template
 rename Standard.colors
 rename Standard.colors_template
-open_with evince
-shell evince %f
-shell touch %f.bib
-rename SESA3038_CW_Gavin_Vales.bib
-open_with 
-open_with lowri
+shell sudo make install
