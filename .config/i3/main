@@ -471,7 +471,6 @@ workspace $ws5 gaps outer 40
 
 # >>>> STARTUP
 # DAEMONS
-$exn polybar top
 $exn urxvtd -q -o -f
 $exn /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 $exn nm-applet
@@ -486,6 +485,7 @@ $exn feh --bg-fill ~/.config/wall.png
 $exn mpd
 $exn shutter --min_at_startup
 $exn setxkbmap $kb
+$exn polybar top
 $exs/i3listen-toggle
 
 # PROGRAMS

@@ -107,6 +107,8 @@ font-2 = FontAwesome5Brands:style=Solid:size=12;3
 
 tray-position = right
 tray-padding = 2
+tray-background = ${colors.blu}
+tray-foreground = ${colors.bkd}
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -122,7 +124,7 @@ tray-padding = 2
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-modules-left = startfvwm fvwmtd ws xkeyboard wintitle
+modules-left = startfvwm fvwmtd xkeyboard wintitle
 modules-center = 
 modules-right = media disk memory cpu temperature backlight pulseaudio battery
 
@@ -162,19 +164,19 @@ menu-2-1-exec = menu-open-0
 ; vim:ft=dosini
 [module/start]
 type = custom/text
-content = %{T1} %{T-}
+content = %{T1}%{T-}
 click-left = rofi -show drun
 content-background = ${colors.wtd}
 content-foreground = ${colors.bkd}
-content-padding = 2
+content-padding = 3
 
 [module/startfvwm]
 type = custom/text
-content = %{T1} %{T-}
+content = %{T1}%{T-}
 click-left = rofi -show drun -yoffset 50 -xoffset 10
 content-background = ${colors.wtd}
 content-foreground = ${colors.bkd}
-content-padding = 2
+content-padding = 3
 
 [module/shot]
 type = custom/script
@@ -357,19 +359,23 @@ battery = BAT0
 adapter = AC
 full-at = 100
 format-padding = 1
+label-charging-padding = 1
+label-discharging-padding = 1
+format-full-padding = 1
+format-full-prefix-padding = 1
+format-full-foreground = ${colors.bkd}
+format-full-background = ${colors.wtd}
+format-full-prefix-foreground = ${colors.bkd}
+format-full-prefix-background = ${colors.wtd}
 label-charging-background = ${colors.wtd}
 label-charging-foreground = ${colors.bkd}
 label-discharging-background = ${colors.wtd}
 label-discharging-foreground = ${colors.bkd}
-label-charging-padding = 1
-label-discharging-padding = 1
 format-charging = <animation-charging><label-charging>
 format-charging-underline = ${colors.bkd}
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 format-full-prefix = "%{T1}%{T-}"
-format-full-prefix-foreground = ${colors.bkd}
-format-full-prefix-background = ${colors.wtd}
 format-full-underline = ${self.format-charging-underline}
 ramp-capacity-0 = %{T1}%{T-}
 ramp-capacity-1 = %{T1}%{T-}

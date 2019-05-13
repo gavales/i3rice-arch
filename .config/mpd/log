@@ -24078,3 +24078,284 @@ May 10 21:56 : client: [3] closed
 May 10 21:56 : client: [4] opened from [::1]:38398
 May 10 21:56 : client: [4] closed
 May 10 21:58 : client: [0] closed
+May 10 22:09 : client: [5] opened from [::1]:38472
+May 10 22:09 : client: [5] closed
+May 10 22:09 : client: [6] opened from [::1]:38474
+May 10 22:09 : client: [6] closed
+May 10 22:21 : player: played "Shaggy/Hot Shot/02 Lonely Lover.mp3"
+May 10 22:22 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 10 22:22 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 10 22:22 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 10 22:22 : client: [0] opened from [::1]:46716
+May 10 22:22 : client: [1] opened from [::1]:46718
+May 10 22:22 : client: [1] closed
+May 10 22:22 : client: [2] opened from [::1]:46720
+May 10 22:22 : client: [2] closed
+May 10 22:23 : client: [3] opened from [::1]:46956
+May 10 22:23 : client: [3] closed
+May 10 22:23 : client: [4] opened from [::1]:46958
+May 10 22:23 : client: [4] closed
+May 10 22:37 : client: [5] opened from [::1]:47004
+May 10 22:37 : client: [5] closed
+May 10 22:37 : client: [6] opened from [::1]:47006
+May 10 22:37 : client: [6] closed
+May 10 22:56 : client: [7] opened from [::1]:47042
+May 10 22:56 : client: [7] closed
+May 10 22:56 : client: [8] opened from [::1]:47044
+May 10 22:56 : client: [8] closed
+May 10 22:56 : client: [9] opened from [::1]:47046
+May 10 22:56 : client: [9] closed
+May 10 22:56 : client: [10] opened from [::1]:47048
+May 10 22:56 : client: [10] closed
+May 10 23:00 : player: played "Shaggy/Hot Shot/02 Lonely Lover.mp3"
+May 10 23:02 : client: [11] opened from [::1]:47070
+May 10 23:02 : client: [11] closed
+May 10 23:02 : client: [12] opened from [::1]:47072
+May 10 23:02 : client: [12] closed
+May 10 23:02 : client: [13] opened from [::1]:47074
+May 10 23:02 : client: [13] closed
+May 10 23:02 : client: [14] opened from [::1]:47076
+May 10 23:02 : client: [14] closed
+May 10 23:04 : client: [15] opened from [::1]:47078
+May 10 23:04 : client: [15] closed
+May 10 23:04 : client: [16] opened from [::1]:47080
+May 10 23:04 : client: [16] closed
+May 10 23:04 : client: [17] opened from [::1]:47082
+May 10 23:04 : client: [17] closed
+May 10 23:04 : client: [18] opened from [::1]:47084
+May 10 23:04 : client: [18] closed
+May 10 23:11 : client: [19] opened from [::1]:47100
+May 10 23:11 : client: [19] closed
+May 10 23:11 : client: [20] opened from [::1]:47102
+May 10 23:11 : client: [20] closed
+May 10 23:13 : client: [21] opened from [::1]:47166
+May 10 23:13 : client: [21] closed
+May 10 23:13 : client: [22] opened from [::1]:47168
+May 10 23:13 : client: [22] closed
+May 10 23:13 : client: [23] opened from [::1]:47170
+May 10 23:13 : client: [23] closed
+May 10 23:13 : client: [24] opened from [::1]:47172
+May 10 23:13 : client: [24] closed
+May 10 23:13 : client: [25] opened from [::1]:47174
+May 10 23:13 : client: [25] closed
+May 10 23:13 : client: [26] opened from [::1]:47176
+May 10 23:13 : client: [26] closed
+May 10 23:14 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 10 23:14 : client: [27] opened from [::1]:47178
+May 10 23:14 : client: [27] closed
+May 10 23:14 : client: [28] opened from [::1]:47180
+May 10 23:14 : client: [28] closed
+May 10 23:14 : client: [29] opened from [::1]:47182
+May 10 23:14 : client: [29] closed
+May 10 23:14 : client: [30] opened from [::1]:47184
+May 10 23:14 : client: [30] closed
+May 10 23:14 : client: [31] opened from [::1]:47186
+May 10 23:14 : client: [31] closed
+May 10 23:14 : client: [32] opened from [::1]:47188
+May 10 23:14 : client: [32] closed
+May 10 23:14 : client: [33] opened from [::1]:47190
+May 10 23:14 : client: [33] closed
+May 10 23:14 : client: [34] opened from [::1]:47192
+May 10 23:14 : client: [34] closed
+May 10 23:14 : client: [35] opened from [::1]:47194
+May 10 23:14 : client: [35] closed
+May 10 23:14 : client: [36] opened from [::1]:47196
+May 10 23:14 : client: [36] closed
+May 10 23:14 : client: [37] opened from [::1]:47198
+May 10 23:14 : client: [37] closed
+May 10 23:14 : client: [38] opened from [::1]:47200
+May 10 23:14 : client: [38] closed
+May 10 23:14 : client: [39] opened from [::1]:47202
+May 10 23:14 : client: [39] closed
+May 10 23:14 : client: [40] opened from [::1]:47204
+May 10 23:14 : client: [40] closed
+May 10 23:15 : client: [41] opened from [::1]:47206
+May 10 23:15 : client: [41] closed
+May 10 23:15 : client: [42] opened from [::1]:47208
+May 10 23:15 : client: [42] closed
+May 10 23:15 : client: [43] opened from [::1]:47210
+May 10 23:15 : client: [43] closed
+May 10 23:15 : client: [44] opened from [::1]:47212
+May 10 23:15 : client: [44] closed
+May 10 23:15 : client: [45] opened from [::1]:47214
+May 10 23:15 : client: [45] closed
+May 10 23:15 : client: [46] opened from [::1]:47216
+May 10 23:15 : client: [46] closed
+May 10 23:15 : client: [47] opened from [::1]:47218
+May 10 23:15 : client: [47] closed
+May 10 23:15 : client: [48] opened from [::1]:47220
+May 10 23:15 : client: [48] closed
+May 10 23:17 : client: [49] opened from [::1]:47230
+May 10 23:17 : client: [50] opened from [::1]:47232
+May 10 23:17 : client: [50] closed
+May 10 23:17 : client: [51] opened from [::1]:47234
+May 10 23:17 : client: [51] closed
+May 10 23:17 : client: [52] opened from [::1]:47236
+May 10 23:17 : client: [52] closed
+May 10 23:17 : client: [53] opened from [::1]:47238
+May 10 23:17 : client: [53] closed
+May 10 23:17 : client: [0] closed
+May 10 23:23 : client: [54] opened from [::1]:47248
+May 10 23:23 : client: [54] closed
+May 10 23:23 : client: [55] opened from [::1]:47250
+May 10 23:23 : client: [55] closed
+May 10 23:24 : client: [56] opened from [::1]:47252
+May 10 23:24 : client: [56] closed
+May 10 23:24 : client: [57] opened from [::1]:47254
+May 10 23:24 : client: [57] closed
+May 10 23:24 : client: [58] opened from [::1]:47256
+May 10 23:24 : client: [58] closed
+May 10 23:24 : client: [59] opened from [::1]:47258
+May 10 23:24 : client: [59] closed
+May 10 23:26 : client: [60] opened from [::1]:47262
+May 10 23:26 : client: [60] closed
+May 10 23:26 : client: [61] opened from [::1]:47264
+May 10 23:26 : client: [61] closed
+May 10 23:26 : client: [49] closed
+May 10 23:26 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 10 23:26 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 10 23:26 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 10 23:26 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 10 23:26 : client: [62] opened from [::1]:47270
+May 10 23:26 : client: [62] closed
+May 10 23:26 : client: [63] opened from [::1]:47272
+May 10 23:26 : client: [63] closed
+May 10 23:27 : client: [64] opened from [::1]:47292
+May 10 23:27 : client: [64] closed
+May 10 23:27 : client: [65] opened from [::1]:47294
+May 10 23:27 : client: [65] closed
+May 10 23:31 : client: [66] opened from [::1]:47304
+May 10 23:31 : client: [66] closed
+May 10 23:31 : client: [67] opened from [::1]:47306
+May 10 23:31 : client: [67] closed
+May 10 23:31 : client: [68] opened from [::1]:47308
+May 10 23:31 : client: [68] closed
+May 10 23:31 : client: [69] opened from [::1]:47310
+May 10 23:31 : client: [69] closed
+May 10 23:31 : client: [70] opened from [::1]:47312
+May 10 23:31 : client: [70] closed
+May 10 23:31 : client: [71] opened from [::1]:47314
+May 10 23:31 : client: [71] closed
+May 10 23:31 : client: [72] opened from [::1]:47316
+May 10 23:31 : client: [72] closed
+May 10 23:31 : client: [73] opened from [::1]:47318
+May 10 23:31 : client: [73] closed
+May 10 23:31 : client: [74] opened from [::1]:47320
+May 10 23:31 : client: [74] closed
+May 10 23:31 : client: [75] opened from [::1]:47322
+May 10 23:31 : client: [75] closed
+May 10 23:43 : client: [76] opened from [::1]:47332
+May 10 23:43 : client: [76] closed
+May 10 23:43 : client: [77] opened from [::1]:47334
+May 10 23:43 : client: [77] closed
+May 10 23:44 : client: [78] opened from [::1]:47336
+May 10 23:44 : client: [78] closed
+May 10 23:44 : client: [79] opened from [::1]:47338
+May 10 23:44 : client: [79] closed
+May 10 23:48 : client: [80] opened from [::1]:47344
+May 10 23:48 : client: [80] closed
+May 10 23:48 : client: [81] opened from [::1]:47346
+May 10 23:48 : client: [81] closed
+May 10 23:53 : client: [82] opened from [::1]:47392
+May 10 23:53 : client: [82] closed
+May 10 23:53 : client: [83] opened from [::1]:47394
+May 10 23:53 : client: [83] closed
+May 10 23:53 : client: [84] opened from [::1]:47396
+May 10 23:53 : client: [84] closed
+May 10 23:53 : client: [85] opened from [::1]:47398
+May 10 23:53 : client: [85] closed
+May 10 23:55 : client: [86] opened from [::1]:47404
+May 10 23:55 : client: [86] closed
+May 10 23:55 : client: [87] opened from [::1]:47406
+May 10 23:55 : client: [87] closed
+May 10 23:55 : client: [88] opened from [::1]:47410
+May 10 23:55 : client: [88] closed
+May 10 23:55 : client: [89] opened from [::1]:47412
+May 10 23:55 : client: [89] closed
+May 11 00:00 : client: [90] opened from [::1]:47424
+May 11 00:00 : client: [90] closed
+May 11 00:00 : client: [91] opened from [::1]:47426
+May 11 00:00 : client: [91] closed
+May 11 00:01 : client: [92] opened from [::1]:47428
+May 11 00:01 : client: [92] closed
+May 11 00:01 : client: [93] opened from [::1]:47430
+May 11 00:01 : client: [93] closed
+May 11 00:12 : client: [94] opened from [::1]:47546
+May 11 00:12 : client: [94] closed
+May 11 00:12 : client: [95] opened from [::1]:47548
+May 11 00:12 : client: [95] closed
+May 11 00:13 : client: [96] opened from [::1]:47550
+May 11 00:13 : client: [96] closed
+May 11 00:13 : client: [97] opened from [::1]:47552
+May 11 00:13 : client: [97] closed
+May 11 00:18 : client: [98] opened from [::1]:47562
+May 11 00:18 : client: [98] closed
+May 11 00:18 : client: [99] opened from [::1]:47564
+May 11 00:18 : client: [99] closed
+May 11 00:23 : client: [100] opened from [::1]:47580
+May 11 00:23 : client: [100] closed
+May 11 00:23 : client: [101] opened from [::1]:47582
+May 11 00:23 : client: [101] closed
+May 11 00:25 : client: [102] opened from [::1]:47584
+May 11 00:25 : client: [102] closed
+May 11 00:25 : client: [103] opened from [::1]:47586
+May 11 00:25 : client: [103] closed
+May 11 00:25 : client: [104] opened from [::1]:47592
+May 11 00:25 : client: [104] closed
+May 11 00:25 : client: [105] opened from [::1]:47594
+May 11 00:25 : client: [105] closed
+May 11 00:28 : player: played "Damian Marley/00 Affairs Of The Heart.mp3"
+May 11 00:28 : player: played "Damian Marley/00 Affairs Of The Heart.mp3"
+May 11 00:29 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 11 00:29 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 11 00:29 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 11 00:29 : client: [0] opened from [::1]:46974
+May 11 00:29 : client: [1] opened from [::1]:46976
+May 11 00:29 : client: [1] closed
+May 11 00:29 : client: [2] opened from [::1]:46978
+May 11 00:29 : client: [2] closed
+May 11 00:30 : client: [0] closed
+May 11 00:31 : client: [3] opened from [::1]:47128
+May 11 00:31 : client: [3] closed
+May 11 00:31 : client: [4] opened from [::1]:47130
+May 11 00:31 : client: [4] closed
+May 11 19:43 : client: [5] opened from [::1]:48712
+May 11 19:43 : client: [5] closed
+May 11 19:43 : client: [6] opened from [::1]:48714
+May 11 19:43 : client: [6] closed
+May 11 19:44 : client: [7] opened from [::1]:48718
+May 11 19:44 : client: [7] closed
+May 11 19:44 : client: [8] opened from [::1]:48720
+May 11 19:44 : client: [8] closed
+May 11 19:46 : client: [9] opened from [::1]:48726
+May 11 19:46 : client: [9] closed
+May 11 19:46 : client: [10] opened from [::1]:48728
+May 11 19:46 : client: [10] closed
+May 11 19:46 : client: [11] opened from [::1]:48730
+May 11 19:46 : client: [11] closed
+May 11 19:46 : client: [12] opened from [::1]:48732
+May 11 19:46 : client: [12] closed
+May 11 19:47 : client: [13] opened from [::1]:48736
+May 11 19:47 : client: [13] closed
+May 11 19:47 : client: [14] opened from [::1]:48738
+May 11 19:47 : client: [14] closed
+May 11 20:34 : client: [15] opened from [::1]:48862
+May 11 20:34 : client: [15] closed
+May 11 20:34 : client: [16] opened from [::1]:48864
+May 11 20:34 : client: [16] closed
+May 11 20:43 : client: [17] opened from [::1]:48884
+May 11 20:43 : client: [17] closed
+May 11 20:43 : client: [18] opened from [::1]:48886
+May 11 20:43 : client: [18] closed
+May 11 21:40 : client: [19] opened from [::1]:49072
+May 11 21:40 : client: [19] closed
+May 11 21:40 : client: [20] opened from [::1]:49074
+May 11 21:40 : client: [20] closed
+May 11 21:49 : client: [21] opened from [::1]:49414
+May 11 21:49 : client: [21] closed
+May 11 21:49 : client: [22] opened from [::1]:49416
+May 11 21:49 : client: [22] closed
+May 13 13:34 : client: [23] opened from [::1]:33062
+May 13 13:34 : client: [23] closed
+May 13 13:34 : client: [24] opened from [::1]:33064
+May 13 13:34 : client: [24] closed

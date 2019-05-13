@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [[ -z $(cat $HOME/xrs/theme) ]]; then
+	cat $HOME/xrs/colors/gruvbox_ > $HOME/.Xresources
+elif [[ ! -f $HOME/xrs/theme ]]; then
+	cat $HOME/xrs/colors/gruvbox_ > $HOME/.Xresources
+else
+	cat $HOME/xrs/theme > $HOME/.Xresources
+fi
+cat $HOME/xrs/1vars >> $HOME/.Xresources
+cat $HOME/xrs/2colorvars >> $HOME/.Xresources
+cat $HOME/xrs/3rofi >> $HOME/.Xresources
+cat $HOME/xrs/4xft >> $HOME/.Xresources
+cat $HOME/xrs/5xterm >> $HOME/.Xresources
+cat $HOME/xrs/6xcursor >> $HOME/.Xresources
+cat $HOME/xrs/7urxvt >> $HOME/.Xresources
+cat $HOME/xrs/8urxvtext >> $HOME/.Xresources
+xrdb -load $HOME/.Xresources
+kill -1 $(pidof urxvtd)
+$HOME/scr/mkvimtheme
+$HOME/scr/mkvistheme
+$HOME/scr/mkatomtheme
+$HOME/scr/mkfixedsyscss
+$HOME/scr/mkzathrc
+killall -q polybar
+polybar fvwm &>/dev/null &
+$HOME/scr/mkdunsttheme &>/dev/null &
