@@ -308,7 +308,7 @@ $win+Shift+i		gaps inner current plus 5; gaps outer current plus 10
 $win+o				[con_mark=$mk1] resize grow width 5 px or 5 ppt, resize grow height 5 px or 5 ppt
 $win+Shift+o		gaps inner current set 10; gaps outer current set 20
 
-$win+p				[con_mark=$mk2] resize set 45 ppt 70 ppt
+$win+p				[con_mark=$mk1] resize set 45 ppt 30 ppt
 
 # //// 2nd Row
 

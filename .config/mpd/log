@@ -24824,3 +24824,24 @@ May 14 21:01 : client: [3] opened from [::1]:41984
 May 14 21:01 : client: [3] closed
 May 14 21:01 : client: [4] opened from [::1]:41986
 May 14 21:01 : client: [4] closed
+May 14 21:46 : player: played "MarchFourth Marching Band/Live/12 Safety Third.mp3"
+May 14 21:46 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 14 21:46 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 14 21:46 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 14 21:47 : client: [0] opened from [::1]:38820
+May 14 21:47 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 14 21:47 : client: [0] closed
+May 14 21:47 : client: [1] opened from [::1]:38822
+May 14 21:47 : client: [1] closed
+May 14 21:47 : client: [2] opened from [::1]:38824
+May 14 21:47 : client: [2] closed
+May 14 21:47 : client: [3] opened from [::1]:38826
+May 14 21:47 : client: [3] closed
+May 14 21:47 : client: [4] opened from [::1]:38828
+May 14 21:47 : client: [4] closed
+May 14 21:47 : client: [5] opened from [::1]:38830
+May 14 21:47 : client: [5] closed
+May 14 21:47 : client: [6] opened from [::1]:38832
+May 14 21:47 : client: [6] closed
+May 14 21:47 : client: [7] opened from [::1]:38834
+May 14 21:47 : client: [7] closed
