@@ -24359,3 +24359,468 @@ May 13 13:34 : client: [23] opened from [::1]:33062
 May 13 13:34 : client: [23] closed
 May 13 13:34 : client: [24] opened from [::1]:33064
 May 13 13:34 : client: [24] closed
+May 14 14:16 : client: [25] opened from [::1]:38434
+May 14 14:16 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 14 14:16 : client: [25] closed
+May 14 14:16 : client: [26] opened from [::1]:38436
+May 14 14:16 : client: [26] closed
+May 14 14:16 : client: [27] opened from [::1]:38438
+May 14 14:16 : client: [27] closed
+May 14 14:16 : client: [28] opened from [::1]:38440
+May 14 14:16 : client: [28] closed
+May 14 14:17 : client: [29] opened from [::1]:38442
+May 14 14:17 : client: [30] opened from [::1]:38444
+May 14 14:17 : client: [30] closed
+May 14 14:17 : client: [31] opened from [::1]:38446
+May 14 14:17 : client: [31] closed
+May 14 14:17 : client: [32] opened from [::1]:38448
+May 14 14:17 : client: [32] closed
+May 14 14:17 : client: [33] opened from [::1]:38450
+May 14 14:17 : client: [33] closed
+May 14 14:18 : client: [34] opened from [::1]:38456
+May 14 14:18 : client: [34] closed
+May 14 14:18 : client: [35] opened from [::1]:38458
+May 14 14:18 : client: [35] closed
+May 14 14:18 : client: [36] opened from [::1]:38460
+May 14 14:18 : client: [36] closed
+May 14 14:18 : client: [37] opened from [::1]:38462
+May 14 14:18 : client: [37] closed
+May 14 14:18 : player: played "Jaco Pastorius/Twins Live In Japan 1982/01 Invitation (Live 1982) (Remast.mp3"
+May 14 14:18 : client: [38] opened from [::1]:38464
+May 14 14:18 : client: [38] closed
+May 14 14:18 : client: [39] opened from [::1]:38466
+May 14 14:18 : client: [39] closed
+May 14 14:18 : client: [40] opened from [::1]:38468
+May 14 14:18 : client: [40] closed
+May 14 14:18 : client: [41] opened from [::1]:38470
+May 14 14:18 : client: [41] closed
+May 14 14:27 : player: played "Jaco Pastorius/Twins Live In Japan 1982/01 Invitation (Live 1982) (Remast.mp3"
+May 14 14:27 : client: [42] opened from [::1]:38486
+May 14 14:27 : client: [42] closed
+May 14 14:27 : client: [43] opened from [::1]:38488
+May 14 14:27 : client: [43] closed
+May 14 14:27 : client: [44] opened from [::1]:38490
+May 14 14:27 : client: [44] closed
+May 14 14:27 : client: [45] opened from [::1]:38492
+May 14 14:27 : client: [45] closed
+May 14 14:28 : player: played "Jaco Pastorius/Twins Live In Japan 1982/07 Amerika (Live in Japan 1982).mp3"
+May 14 14:28 : client: [46] opened from [::1]:38496
+May 14 14:28 : client: [46] closed
+May 14 14:28 : client: [47] opened from [::1]:38498
+May 14 14:28 : client: [47] closed
+May 14 14:28 : client: [48] opened from [::1]:38500
+May 14 14:28 : client: [48] closed
+May 14 14:28 : client: [49] opened from [::1]:38502
+May 14 14:28 : client: [49] closed
+May 14 14:34 : client: [50] opened from [::1]:38640
+May 14 14:34 : client: [50] closed
+May 14 14:34 : client: [51] opened from [::1]:38642
+May 14 14:34 : client: [51] closed
+May 14 14:34 : client: [52] opened from [::1]:38644
+May 14 14:34 : client: [52] closed
+May 14 14:34 : client: [53] opened from [::1]:38646
+May 14 14:34 : client: [53] closed
+May 14 14:37 : client: [54] opened from [::1]:38652
+May 14 14:37 : client: [54] closed
+May 14 14:37 : client: [55] opened from [::1]:38654
+May 14 14:37 : client: [55] closed
+May 14 14:37 : client: [56] opened from [::1]:38656
+May 14 14:37 : client: [56] closed
+May 14 14:37 : client: [57] opened from [::1]:38658
+May 14 14:37 : client: [57] closed
+May 14 14:43 : client: [58] opened from [::1]:38678
+May 14 14:43 : client: [58] closed
+May 14 14:43 : client: [59] opened from [::1]:38680
+May 14 14:43 : client: [59] closed
+May 14 14:43 : client: [60] opened from [::1]:38684
+May 14 14:43 : client: [60] closed
+May 14 14:43 : client: [61] opened from [::1]:38686
+May 14 14:43 : client: [61] closed
+May 14 14:44 : client: [62] opened from [::1]:38692
+May 14 14:44 : client: [62] closed
+May 14 14:44 : client: [63] opened from [::1]:38694
+May 14 14:44 : client: [63] closed
+May 14 14:45 : player: played "Jaco Pastorius/Twins Live In Japan 1982/09 Reza_Giant Steps_Reza (Live in.mp3"
+May 14 14:45 : client: [64] opened from [::1]:38700
+May 14 14:45 : client: [64] closed
+May 14 14:45 : client: [65] opened from [::1]:38702
+May 14 14:45 : client: [65] closed
+May 14 14:45 : client: [66] opened from [::1]:38704
+May 14 14:45 : client: [66] closed
+May 14 14:45 : client: [67] opened from [::1]:38706
+May 14 14:45 : client: [67] closed
+May 14 14:46 : client: [68] opened from [::1]:38708
+May 14 14:46 : client: [68] closed
+May 14 14:46 : client: [69] opened from [::1]:38710
+May 14 14:46 : client: [69] closed
+May 14 14:46 : client: [70] opened from [::1]:38718
+May 14 14:46 : client: [70] closed
+May 14 14:46 : client: [71] opened from [::1]:38720
+May 14 14:46 : client: [71] closed
+May 14 14:46 : player: played "Jaco Pastorius/Twins Live In Japan 1982/13 Eleven (Live in Japan 1982).mp3"
+May 14 14:46 : client: [72] opened from [::1]:38722
+May 14 14:46 : client: [72] closed
+May 14 14:46 : client: [73] opened from [::1]:38724
+May 14 14:46 : client: [73] closed
+May 14 14:46 : client: [74] opened from [::1]:38726
+May 14 14:46 : client: [74] closed
+May 14 14:46 : client: [75] opened from [::1]:38728
+May 14 14:46 : client: [75] closed
+May 14 14:47 : client: [29] closed
+May 14 14:48 : client: [76] opened from [::1]:38732
+May 14 14:48 : client: [77] opened from [::1]:38734
+May 14 14:48 : client: [77] closed
+May 14 14:48 : client: [78] opened from [::1]:38736
+May 14 14:48 : client: [78] closed
+May 14 14:48 : client: [79] opened from [::1]:38738
+May 14 14:48 : client: [79] closed
+May 14 14:48 : client: [80] opened from [::1]:38740
+May 14 14:48 : client: [80] closed
+May 14 14:48 : client: [81] opened from [::1]:38742
+May 14 14:48 : client: [81] closed
+May 14 14:48 : client: [82] opened from [::1]:38744
+May 14 14:48 : client: [82] closed
+May 14 14:51 : player: played "Jaco Pastorius/Jaco Pastorius/03 Continuum.mp3"
+May 14 14:51 : client: [83] opened from [::1]:38756
+May 14 14:51 : client: [83] closed
+May 14 14:51 : client: [84] opened from [::1]:38758
+May 14 14:51 : client: [84] closed
+May 14 14:51 : client: [85] opened from [::1]:38760
+May 14 14:51 : client: [85] closed
+May 14 14:51 : client: [86] opened from [::1]:38762
+May 14 14:51 : client: [86] closed
+May 14 14:51 : client: [87] opened from [::1]:38768
+May 14 14:51 : client: [87] closed
+May 14 14:51 : client: [88] opened from [::1]:38770
+May 14 14:51 : client: [88] closed
+May 14 14:54 : client: [89] opened from [::1]:38848
+May 14 14:54 : client: [89] closed
+May 14 14:54 : client: [90] opened from [::1]:38850
+May 14 14:54 : client: [90] closed
+May 14 14:56 : client: [91] opened from [::1]:38860
+May 14 14:56 : client: [91] closed
+May 14 14:56 : client: [92] opened from [::1]:38862
+May 14 14:56 : client: [92] closed
+May 14 14:56 : player: played "Jaco Pastorius/Jaco Pastorius/06 Opus Pocus.mp3"
+May 14 14:56 : client: [93] opened from [::1]:38864
+May 14 14:56 : client: [93] closed
+May 14 14:56 : client: [94] opened from [::1]:38866
+May 14 14:56 : client: [94] closed
+May 14 14:56 : client: [95] opened from [::1]:38868
+May 14 14:56 : client: [95] closed
+May 14 14:56 : client: [96] opened from [::1]:38870
+May 14 14:56 : client: [96] closed
+May 14 14:57 : client: [97] opened from [::1]:38900
+May 14 14:57 : client: [97] closed
+May 14 14:57 : client: [98] opened from [::1]:38902
+May 14 14:57 : client: [98] closed
+May 14 15:00 : client: [99] opened from [::1]:38912
+May 14 15:00 : client: [99] closed
+May 14 15:00 : client: [100] opened from [::1]:38914
+May 14 15:00 : client: [100] closed
+May 14 15:00 : client: [101] opened from [::1]:38916
+May 14 15:00 : client: [101] closed
+May 14 15:00 : client: [102] opened from [::1]:38918
+May 14 15:00 : client: [102] closed
+May 14 15:02 : player: played "Jaco Pastorius/Twins Live In Japan 1982/05 Three Views Of A Secret (Live.mp3"
+May 14 15:02 : client: [103] opened from [::1]:38966
+May 14 15:02 : client: [103] closed
+May 14 15:02 : client: [104] opened from [::1]:38968
+May 14 15:02 : client: [104] closed
+May 14 15:02 : client: [105] opened from [::1]:38970
+May 14 15:02 : client: [105] closed
+May 14 15:02 : client: [106] opened from [::1]:38972
+May 14 15:02 : client: [106] closed
+May 14 15:05 : player: played "Jaco Pastorius/Word Of Mouth/04 Chromatic Fantasy.mp3"
+May 14 15:05 : client: [107] opened from [::1]:38980
+May 14 15:05 : client: [107] closed
+May 14 15:05 : client: [108] opened from [::1]:38982
+May 14 15:05 : client: [108] closed
+May 14 15:05 : client: [109] opened from [::1]:38984
+May 14 15:05 : client: [109] closed
+May 14 15:05 : client: [110] opened from [::1]:38986
+May 14 15:05 : client: [110] closed
+May 14 15:07 : player: played "Jaco Pastorius/Jaco Pastorius/05 Portrait of Tracy.mp3"
+May 14 15:07 : client: [111] opened from [::1]:38994
+May 14 15:07 : client: [111] closed
+May 14 15:07 : client: [112] opened from [::1]:38996
+May 14 15:07 : client: [112] closed
+May 14 15:07 : client: [113] opened from [::1]:38998
+May 14 15:07 : client: [113] closed
+May 14 15:07 : client: [114] opened from [::1]:39000
+May 14 15:07 : client: [114] closed
+May 14 15:10 : player: played "Jaco Pastorius/Word Of Mouth/05 Blackbird.mp3"
+May 14 15:10 : client: [115] opened from [::1]:39008
+May 14 15:10 : client: [115] closed
+May 14 15:10 : client: [116] opened from [::1]:39010
+May 14 15:10 : client: [116] closed
+May 14 15:10 : client: [117] opened from [::1]:39012
+May 14 15:10 : client: [117] closed
+May 14 15:10 : client: [118] opened from [::1]:39014
+May 14 15:10 : client: [118] closed
+May 14 15:15 : player: played "Jaco Pastorius/Jaco Pastorius/11 6_4 Jam.mp3"
+May 14 15:15 : client: [119] opened from [::1]:39068
+May 14 15:15 : client: [119] closed
+May 14 15:15 : client: [120] opened from [::1]:39070
+May 14 15:15 : client: [120] closed
+May 14 15:15 : client: [121] opened from [::1]:39072
+May 14 15:15 : client: [121] closed
+May 14 15:15 : client: [122] opened from [::1]:39074
+May 14 15:15 : client: [122] closed
+May 14 15:24 : player: played "Jaco Pastorius/Jaco Pastorius/08 (Used To Be A) Cha-Cha.mp3"
+May 14 15:24 : client: [123] opened from [::1]:39098
+May 14 15:24 : client: [123] closed
+May 14 15:24 : client: [124] opened from [::1]:39100
+May 14 15:24 : client: [124] closed
+May 14 15:24 : client: [125] opened from [::1]:39102
+May 14 15:24 : client: [125] closed
+May 14 15:24 : client: [126] opened from [::1]:39104
+May 14 15:24 : client: [126] closed
+May 14 15:24 : client: [127] opened from [::1]:39356
+May 14 15:24 : client: [128] opened from [::1]:39358
+May 14 15:24 : client: [127] closed
+May 14 15:24 : client: [128] closed
+May 14 15:24 : client: [129] opened from [::1]:39360
+May 14 15:24 : client: [129] closed
+May 14 15:24 : client: [130] opened from [::1]:39362
+May 14 15:24 : client: [130] closed
+May 14 15:30 : client: [131] opened from [::1]:39426
+May 14 15:30 : client: [131] closed
+May 14 15:30 : client: [132] opened from [::1]:39428
+May 14 15:30 : client: [132] closed
+May 14 15:30 : client: [133] opened from [::1]:39430
+May 14 15:30 : client: [133] closed
+May 14 15:30 : client: [134] opened from [::1]:39432
+May 14 15:30 : client: [134] closed
+May 14 15:35 : client: [135] opened from [::1]:40170
+May 14 15:35 : client: [135] closed
+May 14 15:35 : client: [136] opened from [::1]:40172
+May 14 15:35 : client: [136] closed
+May 14 15:35 : client: [137] opened from [::1]:40174
+May 14 15:35 : client: [137] closed
+May 14 15:35 : client: [138] opened from [::1]:40176
+May 14 15:35 : client: [138] closed
+May 14 15:36 : client: [139] opened from [::1]:40180
+May 14 15:36 : client: [139] closed
+May 14 15:36 : client: [140] opened from [::1]:40182
+May 14 15:36 : client: [140] closed
+May 14 15:36 : client: [141] opened from [::1]:40184
+May 14 15:36 : client: [141] closed
+May 14 15:36 : client: [142] opened from [::1]:40186
+May 14 15:36 : client: [142] closed
+May 14 15:39 : player: played "Jaco Pastorius/Jaco Pastorius/10 (Used To Be A) Cha-Cha.mp3"
+May 14 15:39 : client: [143] opened from [::1]:40260
+May 14 15:39 : client: [143] closed
+May 14 15:39 : client: [144] opened from [::1]:40262
+May 14 15:39 : client: [144] closed
+May 14 15:39 : client: [145] opened from [::1]:40264
+May 14 15:39 : client: [145] closed
+May 14 15:39 : client: [146] opened from [::1]:40266
+May 14 15:39 : client: [146] closed
+May 14 15:45 : player: played "Jaco Pastorius/Word Of Mouth/02 Three Views Of A Secret (Live.mp3"
+May 14 15:45 : client: [147] opened from [::1]:40280
+May 14 15:45 : client: [147] closed
+May 14 15:45 : client: [148] opened from [::1]:40282
+May 14 15:45 : client: [148] closed
+May 14 15:45 : client: [149] opened from [::1]:40284
+May 14 15:45 : client: [149] closed
+May 14 15:45 : client: [150] opened from [::1]:40286
+May 14 15:45 : client: [150] closed
+May 14 15:57 : player: played "Jaco Pastorius/Twins Live In Japan 1982/04 Liberty City (Live in Japan 19.mp3"
+May 14 15:57 : client: [151] opened from [::1]:40318
+May 14 15:57 : client: [151] closed
+May 14 15:57 : client: [152] opened from [::1]:40320
+May 14 15:57 : client: [152] closed
+May 14 15:57 : client: [153] opened from [::1]:40322
+May 14 15:57 : client: [153] closed
+May 14 15:57 : client: [154] opened from [::1]:40324
+May 14 15:57 : client: [154] closed
+May 14 15:59 : player: played "Jaco Pastorius/Jaco Pastorius/01 Donna Lee.mp3"
+May 14 15:59 : client: [155] opened from [::1]:40330
+May 14 15:59 : client: [155] closed
+May 14 15:59 : client: [156] opened from [::1]:40332
+May 14 15:59 : client: [156] closed
+May 14 15:59 : client: [157] opened from [::1]:40334
+May 14 15:59 : client: [157] closed
+May 14 15:59 : client: [158] opened from [::1]:40336
+May 14 15:59 : client: [158] closed
+May 14 16:10 : client: [159] opened from [::1]:40364
+May 14 16:10 : client: [159] closed
+May 14 16:10 : client: [160] opened from [::1]:40366
+May 14 16:10 : client: [160] closed
+May 14 16:10 : client: [161] opened from [::1]:40368
+May 14 16:10 : client: [161] closed
+May 14 16:10 : client: [162] opened from [::1]:40370
+May 14 16:10 : client: [162] closed
+May 14 16:10 : client: [163] opened from [::1]:40372
+May 14 16:10 : client: [163] closed
+May 14 16:10 : client: [164] opened from [::1]:40374
+May 14 16:10 : client: [164] closed
+May 14 16:10 : client: [165] opened from [::1]:40376
+May 14 16:10 : client: [165] closed
+May 14 16:10 : client: [166] opened from [::1]:40378
+May 14 16:10 : client: [166] closed
+May 14 16:10 : client: [167] opened from [::1]:40380
+May 14 16:10 : client: [167] closed
+May 14 16:10 : client: [168] opened from [::1]:40382
+May 14 16:10 : client: [168] closed
+May 14 16:10 : client: [169] opened from [::1]:40384
+May 14 16:10 : client: [169] closed
+May 14 16:10 : client: [170] opened from [::1]:40386
+May 14 16:10 : client: [170] closed
+May 14 16:11 : client: [171] opened from [::1]:40392
+May 14 16:11 : client: [171] closed
+May 14 16:11 : client: [172] opened from [::1]:40394
+May 14 16:11 : client: [172] closed
+May 14 16:11 : client: [173] opened from [::1]:40396
+May 14 16:11 : client: [173] closed
+May 14 16:11 : client: [174] opened from [::1]:40398
+May 14 16:11 : client: [174] closed
+May 14 16:11 : client: [175] opened from [::1]:40400
+May 14 16:11 : client: [175] closed
+May 14 16:11 : client: [176] opened from [::1]:40402
+May 14 16:11 : client: [176] closed
+May 14 16:11 : client: [177] opened from [::1]:40404
+May 14 16:11 : client: [177] closed
+May 14 16:11 : client: [178] opened from [::1]:40406
+May 14 16:11 : client: [178] closed
+May 14 16:13 : client: [179] opened from [::1]:40446
+May 14 16:13 : client: [179] closed
+May 14 16:13 : client: [180] opened from [::1]:40448
+May 14 16:13 : client: [180] closed
+May 14 16:13 : client: [181] opened from [::1]:40450
+May 14 16:13 : client: [181] closed
+May 14 16:13 : client: [182] opened from [::1]:40452
+May 14 16:13 : client: [182] closed
+May 14 16:14 : player: played "Jaco Pastorius/Twins Live In Japan 1982/10 Elegant People (Live in Japan.mp3"
+May 14 16:14 : client: [183] opened from [::1]:40454
+May 14 16:14 : client: [183] closed
+May 14 16:14 : client: [184] opened from [::1]:40456
+May 14 16:14 : client: [184] closed
+May 14 16:14 : client: [185] opened from [::1]:40458
+May 14 16:14 : client: [185] closed
+May 14 16:14 : client: [186] opened from [::1]:40460
+May 14 16:14 : client: [186] closed
+May 14 16:18 : player: played "Jaco Pastorius/Word Of Mouth/06 Word Of Mouth.mp3"
+May 14 16:18 : client: [187] opened from [::1]:40474
+May 14 16:18 : client: [187] closed
+May 14 16:18 : client: [188] opened from [::1]:40476
+May 14 16:18 : client: [188] closed
+May 14 16:18 : client: [189] opened from [::1]:40478
+May 14 16:18 : client: [189] closed
+May 14 16:18 : client: [190] opened from [::1]:40480
+May 14 16:18 : client: [190] closed
+May 14 16:24 : player: played "Jaco Pastorius/Word Of Mouth/01 Crisis.mp3"
+May 14 16:24 : client: [191] opened from [::1]:40496
+May 14 16:24 : client: [191] closed
+May 14 16:24 : client: [192] opened from [::1]:40498
+May 14 16:24 : client: [192] closed
+May 14 16:24 : client: [193] opened from [::1]:40500
+May 14 16:24 : client: [193] closed
+May 14 16:24 : client: [194] opened from [::1]:40502
+May 14 16:24 : client: [194] closed
+May 14 16:31 : player: played "Jaco Pastorius/Jaco Pastorius/04 Kuru_Speak Like A Child.mp3"
+May 14 16:31 : client: [195] opened from [::1]:40940
+May 14 16:31 : client: [195] closed
+May 14 16:31 : client: [196] opened from [::1]:40942
+May 14 16:31 : client: [196] closed
+May 14 16:31 : client: [197] opened from [::1]:40944
+May 14 16:31 : client: [197] closed
+May 14 16:31 : client: [198] opened from [::1]:40946
+May 14 16:31 : client: [198] closed
+May 14 16:42 : player: played "Jaco Pastorius/Word Of Mouth/07 John And Mary.mp3"
+May 14 16:42 : client: [199] opened from [::1]:41924
+May 14 16:42 : client: [199] closed
+May 14 16:42 : client: [200] opened from [::1]:41928
+May 14 16:42 : client: [200] closed
+May 14 16:42 : client: [201] opened from [::1]:41930
+May 14 16:42 : client: [201] closed
+May 14 16:42 : client: [202] opened from [::1]:41932
+May 14 16:42 : client: [202] closed
+May 14 16:47 : client: [203] opened from [::1]:42182
+May 14 16:47 : client: [203] closed
+May 14 16:47 : client: [204] opened from [::1]:42184
+May 14 16:47 : client: [204] closed
+May 14 16:47 : client: [205] opened from [::1]:42186
+May 14 16:47 : client: [205] closed
+May 14 16:47 : client: [206] opened from [::1]:42188
+May 14 16:47 : client: [206] closed
+May 14 16:47 : client: [207] opened from [::1]:42190
+May 14 16:47 : client: [207] closed
+May 14 16:47 : client: [208] opened from [::1]:42192
+May 14 16:47 : client: [208] closed
+May 14 16:51 : client: [209] opened from [::1]:42204
+May 14 16:51 : client: [209] closed
+May 14 16:51 : client: [210] opened from [::1]:42206
+May 14 16:51 : client: [210] closed
+May 14 16:51 : client: [211] opened from [::1]:42208
+May 14 16:51 : client: [211] closed
+May 14 16:51 : client: [212] opened from [::1]:42210
+May 14 16:51 : client: [212] closed
+May 14 16:54 : client: [213] opened from [::1]:42216
+May 14 16:54 : client: [213] closed
+May 14 16:54 : client: [214] opened from [::1]:42218
+May 14 16:54 : client: [214] closed
+May 14 16:54 : client: [215] opened from [::1]:42220
+May 14 16:54 : client: [215] closed
+May 14 16:54 : client: [216] opened from [::1]:42222
+May 14 16:54 : client: [216] closed
+May 14 16:54 : player: played "Jaco Pastorius/Twins Live In Japan 1982/11 Twins (Live in Japan 1982).mp3"
+May 14 16:54 : client: [76] closed
+May 14 17:01 : client: [217] opened from [::1]:42444
+May 14 17:01 : client: [218] opened from [::1]:42446
+May 14 17:01 : client: [218] closed
+May 14 17:01 : client: [219] opened from [::1]:42448
+May 14 17:01 : client: [219] closed
+May 14 17:01 : client: [220] opened from [::1]:42450
+May 14 17:01 : client: [220] closed
+May 14 17:01 : client: [221] opened from [::1]:42452
+May 14 17:01 : client: [221] closed
+May 14 17:04 : client: [222] opened from [::1]:42544
+May 14 17:04 : client: [222] closed
+May 14 17:04 : client: [223] opened from [::1]:42546
+May 14 17:04 : client: [223] closed
+May 14 17:04 : client: [224] opened from [::1]:42548
+May 14 17:04 : client: [224] closed
+May 14 17:04 : client: [225] opened from [::1]:42550
+May 14 17:04 : client: [225] closed
+May 14 17:22 : client: [226] opened from [::1]:42918
+May 14 17:22 : client: [226] closed
+May 14 17:22 : client: [227] opened from [::1]:42920
+May 14 17:22 : client: [227] closed
+May 14 17:22 : client: [228] opened from [::1]:42922
+May 14 17:22 : client: [228] closed
+May 14 17:22 : client: [229] opened from [::1]:42924
+May 14 17:22 : client: [229] closed
+May 14 17:23 : player: played "Gyptian/Hold You/02 Beautiful Lady.mp3"
+May 14 17:23 : client: [230] opened from [::1]:42930
+May 14 17:23 : client: [230] closed
+May 14 17:23 : client: [231] opened from [::1]:42932
+May 14 17:23 : client: [231] closed
+May 14 17:23 : client: [232] opened from [::1]:42934
+May 14 17:23 : client: [232] closed
+May 14 17:23 : client: [233] opened from [::1]:42936
+May 14 17:23 : client: [233] closed
+May 14 17:23 : client: [234] opened from [::1]:42938
+May 14 17:23 : client: [234] closed
+May 14 17:23 : client: [235] opened from [::1]:42940
+May 14 17:23 : client: [235] closed
+May 14 17:23 : client: [236] opened from [::1]:42942
+May 14 17:23 : client: [236] closed
+May 14 17:23 : client: [237] opened from [::1]:42944
+May 14 17:23 : client: [237] closed
+May 14 19:18 : client: [217] closed
+May 14 20:56 : player: played "MarchFourth Marching Band/Live/12 Safety Third.mp3"
+May 14 20:57 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 14 20:57 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 14 20:57 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 14 20:58 : client: [0] opened from [::1]:41896
+May 14 20:58 : client: [1] opened from [::1]:41898
+May 14 20:58 : client: [1] closed
+May 14 20:58 : client: [2] opened from [::1]:41900
+May 14 20:58 : client: [2] closed
+May 14 20:59 : client: [0] closed
+May 14 21:01 : client: [3] opened from [::1]:41984
+May 14 21:01 : client: [3] closed
+May 14 21:01 : client: [4] opened from [::1]:41986
+May 14 21:01 : client: [4] closed

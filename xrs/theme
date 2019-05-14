@@ -1,19 +1,19 @@
-! snow
+! nikes
 ! light
 ! vim:ft=xdefaults
-#define cwhtl #1c2a34
-#define cwhtd #355f8a
-#define credd #b79594
-#define credl #b79594
-#define cgrnd #94A5B7
-#define cgrnl #94A5B7
-#define cylwd #C2C0BC
-#define cylwl #C2C0BC
-#define cblud #6E9AC7
-#define cblul #6E9AC7
-#define cgntd #8799AD
-#define cgntl #8799AD
-#define ccynd #90ACCC
-#define ccynl #90ACCC
-#define cblkl #d0dbe6
-#define cblkd #f6f8fa
+#define cblkl #dcdcd3
+#define cblkd #f6f6f4
+#define credd #ff4845
+#define credl #ff4845
+#define cgrnd #47aa12
+#define cgrnl #47aa12
+#define cylwd #ff890a
+#define cylwl #ff890a
+#define cblud #b46b7d
+#define cblul #b46b7d
+#define cgntd #288ad6
+#define cgntl #288ad6
+#define ccynd #6bb4a2
+#define ccynl #6bb4a2
+#define cwhtl #303030
+#define cwhtd #7d404f

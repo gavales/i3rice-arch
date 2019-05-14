@@ -1,7 +1,3 @@
-shell convert -trim -transparent white -fuzz 15%% 'fullscalebattcap.png' 'fullscalebattcap.png'
-shell convert -trim -transparent white -fuzz 15%% 'prototypebattcap.png' 'prototypebattcap.png'
-shell convert -trim -transparent white -fuzz 10%% 'close.png' 'close.png'
-shell convert -trim -transparent white -fuzz 10%% 'iconify.png' 'iconify.png'
 shell convert -trim -transparent white -fuzz 10%% 'maximize.png' 'maximize.png'
 rename i3volume
 rename i3brightness
@@ -48,3 +44,7 @@ shell sudo make install
 rename reloadconfsfvwm
 mkdir fvwm
 rename reloadconfs
+shell cp -r ~/plt/tex/article excheatsheet
+shell bash %f
+shell wget https://gist.githubusercontent.com/oquno/3658426/raw/055ab5042bca3690415947f29cc137a7dc5c7be4/googleplaylist.py
+shell chmod +x %f

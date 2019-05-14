@@ -20,6 +20,10 @@ normal="\033[0m"
 
 cd $HOME
 echo -e "${green}================================================"
+echo -e "${blue}= UPDATE ======================================="
+echo -e "${green}================================================${normal}"
+sudo pacman -Syyu
+echo -e "${green}================================================"
 echo -e "${blue}= INSTALLING YOUR PROGRAMS ====================="
 echo -e "${green}================================================${normal}"
 sudo pacman -S rofi otf-font-awesome ttf-font-awesome nautilus evince mupdf pinta redshift playerctl mplayer r tk gcc-fortran newsboat opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-crossref pandoc-citeproc python-pygments python2-pygments biber texlive-most acpi lm_sensors sysstat ntfs-3g libmpdclient lxappearance sxiv ncurses fftw w3m ranger mpd mpc ncmpcpp feh dunst unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl urxvt-perls trash-cli atom python-pywal vim-latexsuite calibre
@@ -29,6 +33,8 @@ sudo cpan AnyEvent Linux::FD common::sense
 #echo -e "${green}================================================${normal}"
 #echo -e "${purple} > PAMAC <" && yaourt -S pamac-aur
 #echo -e "${purple} > i3LOCK-COLOR <" && yaourt -S i3lock-color
+#echo -e "${purple} > VIVALDI <" && yaourt -S vivaldi
+#echo -e "${purple} > THUNAR <" && yaourt -S thunar-gtk2
 #echo -e "${purple} > CHROME BETA <" && yaourt -S google-chrome-beta
 #echo -e "${purple} > CHROME REMOTE DESKTOP <" && yaourt -S chrome-remote-desktop
 #echo -e "${purple} > SPOTIFY <" && yaourt -S spotify

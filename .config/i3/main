@@ -196,7 +196,7 @@ $mod+a				focus parent
 $mod+Shift+a		focus child
 
 $mod+s				$lch '$term -name MUSIC -e ncmpcpp' $mk1 fl
-$mod+Shift+s		$lch spotify $mk1 fl
+$mod+Shift+s		$lch spotify $mk1
 $mod+Ctrl+s			sticky toggle
 
 $mod+d				$exn rofi -show drun
@@ -307,6 +307,8 @@ $win+Shift+i		gaps inner current plus 5; gaps outer current plus 10
 
 $win+o				[con_mark=$mk1] resize grow width 5 px or 5 ppt, resize grow height 5 px or 5 ppt
 $win+Shift+o		gaps inner current set 10; gaps outer current set 20
+
+$win+p				[con_mark=$mk2] resize set 45 ppt 70 ppt
 
 # //// 2nd Row
 
@@ -472,6 +474,7 @@ workspace $ws5 gaps outer 40
 # >>>> STARTUP
 # DAEMONS
 $exn urxvtd -q -o -f
+$exn polybar i3
 $exn /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 $exn nm-applet
 $exn xfce4-power-manager
@@ -485,7 +488,6 @@ $exn feh --bg-fill ~/.config/wall.png
 $exn mpd
 $exn shutter --min_at_startup
 $exn setxkbmap $kb
-$exn polybar top
 $exs/i3listen-toggle
 
 # PROGRAMS
