@@ -202,7 +202,8 @@ $mod+Ctrl+s			sticky toggle
 $mod+d				$exn rofi -show drun
 $mod+Shift+d		$exs/i3menu -run
 
-$mod+f				$lch '$term -name MEDIA -e ranger' $mk2
+#$mod+f				$lch '$term -name MEDIA -e ranger' $mk2
+$mod+f				$lch thunar $mk2
 $mod+Shift+f		fullscreen toggle
 
 $mod+g				split toggle
@@ -260,6 +261,12 @@ $mod+slash			$exs/i3volume mute
 $wlw+button1		$exn i3-input -F "[con_id=__focused__] mark _sticky_%s"
 
 $wlw+button3		kill
+
+$wlw+button4		focus left
+$wlw+Shift+button4	move left
+
+$wlw+button5		focus right
+$wlw+Shift+button5	move right
 
 # //// Numbers
 
@@ -319,8 +326,7 @@ $win+Shift+s		$exs/i3-sticky-toggle
 
 $win+d				move workspace to output $hdm
 
-$win+f				$lch thunar $mk2
-$win+Shift+f		$lch 'gksu thunar' $mk2
+$win+f				$lch 'gksu thunar' $mk2
 
 $win+g				$lch '$term -name GITREPOUPDATE -e bash ~/$scr/gitcommit' $mk2
 

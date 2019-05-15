@@ -15,6 +15,10 @@ def windownotify(i3, event):
 	if event.change == 'title':
 		call('polybar-msg hook wintitle 1'.split(' '))
 
+	if event.container.window_instance == 'spotify':
+		if event.change == 'title':
+			call('polybar-msg hook media 1'.split(' '))
+
 	if event.container.fullscreen_mode == 0:
 		call('polybar-msg cmd show'.split(' '))
 	else:
@@ -33,13 +37,14 @@ def windownotify(i3, event):
 	if event.change == "close":
 		if event.container.window_class == 'Zathura':
 			if event.container.focused == True:
+				call('i3-msg [class="Thunar"] focus'.split(' '))
 				call('i3-msg [instance="FILES"] focus'.split(' '))
 	
 	if event.change == "close":
 		if event.container.window_class == 'Sxiv':
 			if event.container.focused == True:
-				call('i3-msg [instance="MEDIA"] focus'.split(' '))
 				call('i3-msg [class="Thunar"] focus'.split(' '))
+				call('i3-msg [instance="MEDIA"] focus'.split(' '))
 	
 	if event.change == "close":
 		if event.container.window_class == 'feh':

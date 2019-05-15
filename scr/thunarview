@@ -2,7 +2,8 @@
 
 name="$(xdotool getactivewindow getwindowname)"
 name="${name/ - File Manager/}"
-title="${name/'/home/gavarch'/'~'}"
+title="${name/'gavarch'/'~'}"
+title="${title/'/home/gavarch'/'~'}"
 #title="${title/Pictures/pic}"
 #title="${title/Videos/vid}"
 #title="${title/scripts/scr}"
