@@ -35,7 +35,6 @@
 ; (gtk_accel_path "<Actions>/ThunarStandardView/paste" "<Primary>v")
 ; (gtk_accel_path "<Actions>/ThunarActions/uca-action-1553969453106627-1" "")
 ; (gtk_accel_path "<Actions>/ThunarLauncher/sendto-desktop" "")
-; (gtk_accel_path "<Actions>/ThunarBookmarks/9179a59bb8a4186459057e17f0d206f4" "")
 (gtk_accel_path "<Actions>/ThunarWindow/view-location-selector-toolbar" "<Primary><Shift>a")
 ; (gtk_accel_path "<Actions>/ThunarWindow/contents" "F1")
 ; (gtk_accel_path "<Actions>/ThunarLauncher/open-with-other" "")
