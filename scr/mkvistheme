@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-black=$(xrdb -query | grep '*color8' | awk '{print $NF}')
+black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
 green=$(xrdb -query | grep '*color2' | awk '{print $NF}')
 yellow=$(xrdb -query | grep '*color3' | awk '{print $NF}')
 red=$(xrdb -query | grep '*color9' | awk '{print $NF}')
@@ -20,5 +20,8 @@ DIR="$HOME/.config/vis/colors/term"
 #echo $red >> $DIR
 
 echo "gradient=true" > $DIR
-echo $blue >> $DIR
 echo $black >> $DIR
+echo $blue >> $DIR
+echo $blue >> $DIR
+echo $blue >> $DIR
+echo $blue >> $DIR
