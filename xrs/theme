@@ -1,19 +1,19 @@
-! nikes
+! gruvbox
 ! light
 ! vim:ft=xdefaults
-#define cblkl #dcdcd3
-#define cblkd #f6f6f4
-#define credd #ff4845
-#define credl #ff4845
-#define cgrnd #47aa12
-#define cgrnl #47aa12
-#define cylwd #ff890a
-#define cylwl #ff890a
-#define cblud #b46b7d
-#define cblul #b46b7d
-#define cgntd #288ad6
-#define cgntl #288ad6
-#define ccynd #6bb4a2
-#define ccynl #6bb4a2
-#define cwhtl #303030
-#define cwhtd #7d404f
+#define cwhtd #406341
+#define cwhtl #282828
+#define credd #cc241d
+#define credl #cc241d
+#define cgrnd #98971a
+#define cgrnl #98971a
+#define cylwd #d79921
+#define cylwl #d79921
+#define cblud #689d6a
+#define cblul #689d6a
+#define cgntd #b16286
+#define cgntl #b16286
+#define ccynd #458588
+#define ccynl #458588
+#define cblkd #fbf1c7
+#define cblkl #ebdbb2

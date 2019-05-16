@@ -1,5 +1,3 @@
-shell convert -trim -transparent black -fuzz 10%%'2-lisocl2-14.5ah-3.6v.jpg' '2-lisocl2-14.5ah-3.6v.jpg'
-shell convert -trim -transparent black -fuzz 10%% '2-lisocl2-14.5ah-3.6v.jpg' '2-lisocl2-14.5ah-3.6v.jpg'
 shell convert -trim -transparent black -fuzz 15%% '2-lisocl2-14.5ah-3.6v.jpg' '2-lisocl2-14.5ah-3.6v.jpg'
 shell convert -trim -transparent black -fuzz 20%% '2-lisocl2-14.5ah-3.6v.jpg' '2-lisocl2-14.5ah-3.6v.jpg'
 shell convert -trim -transparent white -fuzz 10%% '2-lisocl2-14.5ah-3.6v.jpg' '2-lisocl2-14.5ah-3.6v.jpg'
@@ -48,3 +46,5 @@ rename Makefile__
 rename Makefile
 rename Makefile_
 shell git clone https://github.com/budRich/numix-solarized-gtk-theme.git
+rename term_
+wq

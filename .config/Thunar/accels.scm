@@ -22,6 +22,7 @@
 (gtk_accel_path "<Actions>/ThunarStandardView/properties" "<Primary>p")
 ; (gtk_accel_path "<Actions>/ThunarLauncher/open-in-new-window" "<Primary><Shift>o")
 ; (gtk_accel_path "<Actions>/ThunarLauncher/open-with-menu" "")
+; (gtk_accel_path "<Actions>/ThunarStandardView/setup-columns" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/sendto-menu" "")
 (gtk_accel_path "<Actions>/ThunarStandardView/delete" "Delete")
 (gtk_accel_path "<Actions>/ThunarStandardView/select-by-pattern" "")
