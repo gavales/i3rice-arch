@@ -8,7 +8,7 @@
 ;     ▒▒         ▒▒▒▒▒▒▒   ▒▒▒▒▒▒▒▒    ▒▒    ▒▒▒▒▒▒▒  ▒▒      ▒▒ ▒▒     ▒▒ 
 
 [colors]
-bkd = ${xrdb:color0}
+bkd = ${xrdb:color8}
 tr = #000000ff
 bkl = ${xrdb:color8}
 wtd = ${xrdb:color15}

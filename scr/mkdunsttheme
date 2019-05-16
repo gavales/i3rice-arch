@@ -13,7 +13,7 @@ blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
 	cd "$dunstDir" || exit 1
 
 	echo "[frame]" > dunst-theme
-	echo "width = 1" >> dunst-theme
+	echo "width = 0" >> dunst-theme
 	echo -e "color = \"$blackd\"\n" >> dunst-theme
 
 	echo "[urgency_low]" >> dunst-theme

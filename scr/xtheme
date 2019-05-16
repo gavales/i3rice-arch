@@ -10,12 +10,15 @@ main () {
 
 variant () {
 	finaltheme=$(ls ${xfilesDir}/colors | grep "${theme}" | $HOME/scr/i3menu "Variant?:")
-#	if [[ ${variant} == "Alternate" ]]; then
-#		theme="${theme}_"
-#	else
-#		theme="${theme}"
-#	fi
-	main
+	if [[ -z ${finaltheme} ]]; then
+		notify-send "No theme chosen" -i "~/scrpic/theme.png"
+		:
+	elif [[ ! -f ${xfilesDir}/colors/${finaltheme} ]]; then
+		notify-send "Theme don't exist" -i "~/scrpic/theme.png"
+		:
+	else
+		main
+	fi
 }
 
 theme () {
@@ -23,16 +26,16 @@ theme () {
 	variants=$(ls ${xfilesDir}/colors | grep "${theme}")
 	vrts=$(ls ${xfilesDir}/colors | grep "${theme}" | wc -l)
 	if [[ -z ${theme} ]]; then
-		notify-send "No theme chosen"
+		notify-send "No theme chosen" -i "~/scrpic/theme.png"
 		:
 	elif [[ ! -f ${xfilesDir}/colors/${theme} ]]; then
-		notify-send "Theme don't exist"
+		notify-send "Theme don't exist" -i "~/scrpic/theme.png"
 		:
 	elif [[ ${vrts} -ge 2 ]]; then
-		notify-send "Choosing variant"
+		notify-send "Choosing variant" -i "~/scrpic/theme.png"
 		variant
 	else
-		notify-send "No variants"
+		notify-send "No variants" -i "~/scrpic/themepic.png"
 		finaltheme=${theme}
 		main
 	fi

@@ -22,6 +22,4 @@ DIR="$HOME/.config/vis/colors/term"
 echo "gradient=true" > $DIR
 echo $black >> $DIR
 echo $blue >> $DIR
-echo $blue >> $DIR
-echo $blue >> $DIR
-echo $blue >> $DIR
+echo $white >> $DIR
