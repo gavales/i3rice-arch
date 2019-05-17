@@ -3,7 +3,7 @@
 	close_all = ctrl+shift+space
 
 [global]
-	font = Iosevka 13
+	font = Iosevka 10
 	
 	allow_markup = yes
 	
@@ -24,7 +24,7 @@
 	show_age_threshold = 60
 	word_wrap = yes
 	ignore_newline = no
-	geometry = "500x5-5+25"
+	geometry = "350x5-5+25"
 	shrink = no
 	transparency = 10
 	idle_threshold = 120
@@ -44,5 +44,5 @@
 	browser = /usr/bin/chromium
 	icon_position = on
 	icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
-	max_icon_size = 100
+	max_icon_size = 75
 
