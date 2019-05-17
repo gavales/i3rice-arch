@@ -64,7 +64,7 @@ set $t ff
 set $term		urxvtc
 set $edit		exec --no-startup-id ~/scr/opengvim
 set $brow		google-chrome-beta
-set $viva		vivaldi-stable
+set $viva		firefox
 set $gfm		thunar
 set $brightinc	light -A 10
 set $brightdec	light -U 10
@@ -108,6 +108,8 @@ client.placeholder		$grn $grn $wht $grn $grn
 # //// Misc
 
 floating_modifier	$mdi
+
+$mod+Home		$exs/keybindingsmenu
 
 $mod+Escape		mode "SHUTDOWN"
 mode "SHUTDOWN" {
@@ -291,12 +293,12 @@ $win+7				$edit ~/.config/polybar/config
 
 # //// 1st Row
 
-$win+q				floating disable, $mvm1, [con_mark=$mk1] focus, focus right
+$win+q				floating disable, $mvm1, [con_mark=$mk1] focus, focus child
 
-$win+w				floating disable, $mvm2, [con_mark=$mk2] focus, focus right
+$win+w				floating disable, $mvm2, [con_mark=$mk2] focus, focus child
 $win+Shift+w		$lch '$term -name LAYOUT_EDITOR -e bash ~/$scr/wsloget' $mk2
 
-$win+e				floating disable, $mvm3, [con_mark=$mk3] focus, focus right
+$win+e				floating disable, $mvm3, [con_mark=$mk3] focus, focus child
 
 $win+r				$lch '$term -name RTV -e rtv' $mk2
 

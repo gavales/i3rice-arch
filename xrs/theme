@@ -1,8 +1,8 @@
 ! dracula
-! light
+! dark
 ! vim:ft=xdefaults
-#define cwhtl #282A36
-#define cwhtd #7b0600
+#define cblkd #282A36
+#define cblkl #414458
 #define credd #BD93F9
 #define credl #BD93F9
 #define cgrnd #5AF78E
@@ -15,5 +15,5 @@
 #define cgntl #FF79C6
 #define ccynd #8BE9FD
 #define ccynl #8BE9FD
-#define cblkl #e5e5c7
-#define cblkd #ffffde
+#define cwhtd #ffa3a3
+#define cwhtl #fffff2
