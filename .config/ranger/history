@@ -1,14 +1,3 @@
-shell convert -trim -transparent black -fuzz 15%% '2-lisocl2-14.5ah-3.6v.jpg' '2-lisocl2-14.5ah-3.6v.jpg'
-shell convert -trim -transparent black -fuzz 20%% '2-lisocl2-14.5ah-3.6v.jpg' '2-lisocl2-14.5ah-3.6v.jpg'
-shell convert -trim -transparent white -fuzz 10%% '2-lisocl2-14.5ah-3.6v.jpg' '2-lisocl2-14.5ah-3.6v.jpg'
-shell convert -trim -transparent white -fuzz 15%% '2-lisocl2-14.5ah-3.6v.jpg' '2-lisocl2-14.5ah-3.6v.jpg'
-shell convert -trim -transparent white -fuzz 20%% '1-cr34615-3v-10000mah-10ah.jpg' '1-cr34615-3v-10000mah-10ah.jpg'
-shell convert -trim -transparent white -fuzz 15%% '4-lithium-14ah.jpg' '4-lithium-14ah.jpg'
-shell convert -trim -transparent white -fuzz 30%% '1-cr34615-3v-10000mah-10ah.jpg' '1-cr34615-3v-10000mah-10ah.jpg'
-rename _global.scss_template
-rename cinnamon.css_
-rename cinnamon.css_template
-rename gtkrc.hidpi_template
 rename gtkrc_template
 rename gtk-dark.css_template
 rename gtk.css_template
@@ -48,3 +37,14 @@ rename Makefile_
 shell git clone https://github.com/budRich/numix-solarized-gtk-theme.git
 rename term_
 wq
+open_with gB
+rename theme.png
+shell convert -trim -transparent white -fuzz 10%% 'theme.png' 'theme.png'
+shell convert -fuzz 10%% -fill red -opaque white 'theme.png' 'theme.png'
+shell convert -fuzz 10%% -fill white -opaque black 'theme.png' 'theme.png'
+shell convert -fuzz 20%% -fill white -opaque black 'theme.png' 'theme.png'
+shell convert -fuzz 50%% -fill white -opaque black 'theme.png' 'theme.png'
+shell convert -fuzz 50%% -fill white -opaque red '%f' '%f'
+shell convert -fuzz 80%% -fill white -opaque red '%f' '%f'
+shell convert -fuzz 50%% -fill white -opaque black '%f' '%f'
+shell convert -fuzz 90%% -fill white -opaque black '%f' '%f'
