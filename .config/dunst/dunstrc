@@ -1,20 +1,20 @@
 [frame]
 width = 0
-color = "#282A36"
+color = "#fcf7f9"
 
 [urgency_low]
-background = "#FF6E67"
-foreground = "#282A36"
+background = "#b44a70"
+foreground = "#fcf7f9"
 timeout = 3
 
 [urgency_normal]
-background = "#FF6E67"
-foreground = "#282A36"
+background = "#b44a70"
+foreground = "#fcf7f9"
 timeout = 3
 
 [urgency_critical]
-background = "#BD93F9"
-foreground = "#282A36"
+background = "#4a70b4"
+foreground = "#fcf7f9"
 timeout = 3
 
 [shortcuts]
@@ -43,7 +43,7 @@ timeout = 3
 	show_age_threshold = 60
 	word_wrap = yes
 	ignore_newline = no
-	geometry = "350x5-5+25"
+	geometry = "400x5-5+25"
 	shrink = no
 	transparency = 10
 	idle_threshold = 120

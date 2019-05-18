@@ -52,7 +52,7 @@ module-margin-left = 0
 module-margin-right = 0
 
 font-0 = Iosevka:style=Semibold Oblique:size=12;3
-font-1 = FontAwesome5Free:style=Solid:size=12;3
+font-1 = FontAwesome5Free:style=Solid:size=14;3
 font-2 = FontAwesome5Brands:style=Solid:size=12;3
 
 tray-position = right
@@ -102,7 +102,7 @@ module-margin-left = 0
 module-margin-right = 0
 
 font-0 = Iosevka:style=Semibold Oblique:size=12;3
-font-1 = FontAwesome5Free:style=Solid:size=12;3
+font-1 = FontAwesome5Free:style=Solid:size=14;3
 font-2 = FontAwesome5Brands:style=Solid:size=12;3
 
 tray-position = right
@@ -136,7 +136,7 @@ margin-bottom = 0
 type = custom/text
 content = %{T1}%{T-}
 click-left = rofi -show drun
-click-right = ~/scr/keybindingsmenu
+click-right = ~/scr/keybindingsmenu launch
 content-background = ${colors.wtd}
 content-foreground = ${colors.bkd}
 content-padding = 2
@@ -145,7 +145,6 @@ content-padding = 2
 type = custom/text
 content = %{T1}%{T-}
 click-left = rofi -show drun -yoffset 50 -xoffset 10
-click-right = ~/scr/keybindingsmenu
 content-background = ${colors.wtd}
 content-foreground = ${colors.bkd}
 content-padding = 3
@@ -316,6 +315,8 @@ hook-0 = echo "%{T1} %{T-}"
 hook-1 = echo "%{T1} %{T-}"
 initial = 1
 click-left = ~/scr/nightmodetog
+scroll-up = "light -A 10 && polybar-msg hook backlight 1"
+scroll-down = "light -U 10 && polybar-msg hook backlight 1"
 format-background = ${colors.wtd}
 format-foreground = ${colors.bkd}
 format-padding = 0
@@ -324,8 +325,7 @@ format-padding = 0
 type = custom/ipc
 hook-0 = ~/scr/pb/brightness
 initial = 1
-click-left = redshift -P -O 3700
-click-right = redshift -x
+click-left = ~/scr/nightmodetog
 scroll-up = "light -A 10 && polybar-msg hook backlight 1"
 scroll-down = "light -U 10 && polybar-msg hook backlight 1"
 format-background = ${colors.wtd}

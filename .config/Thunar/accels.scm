@@ -48,6 +48,7 @@
 ; (gtk_accel_path "<Actions>/ThunarWindow/close-window" "<Primary>q")
 ; (gtk_accel_path "<Actions>/ThunarWindow/preferences" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/duplicate" "")
+; (gtk_accel_path "<Actions>/ThunarActions/uca-action-1558184717602262-3" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/arrange-items-menu" "")
 (gtk_accel_path "<Actions>/ThunarWindow/view-statusbar" "<Primary>s")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/copy" "<Primary>c")

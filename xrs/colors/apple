@@ -1,19 +1,19 @@
 ! apple
-! dark
+! light
 ! vim:ft=xdefaults
-#define cblkd #31121f
-#define cblkl #5c223a
-#define credd #908676
-#define credl #908676
-#define cgrnd #AD9071
-#define cgrnl #AD9071
+#define cwhtl #31121f
+#define cwhtd #77314a
+#define credd #4a70b4
+#define credl #4a70b4
+#define cgrnd #4ab459
+#define cgrnl #4ab459
 #define cylwd #CB9D6B
 #define cylwl #CB9D6B
-#define cblud #C36E8C
-#define cblul #C36E8C
-#define cgntd #788986
-#define cgntl #788986
-#define ccynd #9B9D93
-#define ccynl #9B9D93
-#define cwhtd #e0b3c3
-#define cwhtl #ccd1cf
+#define cblud #b44a70
+#define cblul #b44a70
+#define cgntd #a56ec3
+#define cgntl #a56ec3
+#define ccynd #6ec3a5
+#define ccynl #6ec3a5
+#define cblkl #e2dee0
+#define cblkd #fcf7f9
