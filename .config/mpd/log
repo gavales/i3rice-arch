@@ -26950,3 +26950,140 @@ May 16 00:18 : exception: RTIOThread could not get realtime scheduling, continui
 May 16 00:18 : avahi: Service 'Music Player @ IdeacentreAIO' successfully established.
 May 16 15:24 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 May 16 15:24 : avahi: Service 'Music Player @ IdeacentreAIO' successfully established.
+May 18 21:48 : client: [0] opened from [::1]:54666
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/Bo Diddley/THE SHOW MUST GO ON with Bo Di/30 Bo Diddley.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/Bo Diddley/THE SHOW MUST GO ON with Bo Di/30 Bo Diddley.mp3': No such file or directory
+May 18 21:48 : player: played "Bo Diddley/THE SHOW MUST GO ON with Bo Di/30 Bo Diddley.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/Beny Moré/Enlaces Beny Moré - Tony Cama/16 La Llorona Loca.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/Beny Moré/Enlaces Beny Moré - Tony Cama/16 La Llorona Loca.mp3': No such file or directory
+May 18 21:48 : player: played "Beny Moré/Enlaces Beny Moré - Tony Cama/16 La Llorona Loca.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/Renaud Garcia-Fons/Mediterranées - A Mediterrane/10 Aigues-mortes.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/Renaud Garcia-Fons/Mediterranées - A Mediterrane/10 Aigues-mortes.mp3': No such file or directory
+May 18 21:48 : player: played "Renaud Garcia-Fons/Mediterranées - A Mediterrane/10 Aigues-mortes.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/Sergio Mendes & Brasil '66/Look Around/02 Roda.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/Sergio Mendes & Brasil '66/Look Around/02 Roda.mp3': No such file or directory
+May 18 21:48 : player: played "Sergio Mendes & Brasil '66/Look Around/02 Roda.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/Various Artists/Tea Dance 2 - Another 1920s_ 3/14 That's You Baby _ Walking with.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Tea Dance 2 - Another 1920s_ 3/14 That's You Baby _ Walking with.mp3': No such file or directory
+May 18 21:48 : player: played "Various Artists/Tea Dance 2 - Another 1920s_ 3/14 That's You Baby _ Walking with.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/Gregory Isaacs/Ultimate Selection/05 Black a Kill Black.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/Gregory Isaacs/Ultimate Selection/05 Black a Kill Black.mp3': No such file or directory
+May 18 21:48 : player: played "Gregory Isaacs/Ultimate Selection/05 Black a Kill Black.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/Toots & The Maytals/Take Me Home Country Road/01 Take Me Home Country Road.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/Toots & The Maytals/Take Me Home Country Road/01 Take Me Home Country Road.mp3': No such file or directory
+May 18 21:48 : player: played "Toots & The Maytals/Take Me Home Country Road/01 Take Me Home Country Road.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/Ini Kamoze/Here Comes The Hotstepper/05 World-A-Music.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/Ini Kamoze/Here Comes The Hotstepper/05 World-A-Music.mp3': No such file or directory
+May 18 21:48 : player: played "Ini Kamoze/Here Comes The Hotstepper/05 World-A-Music.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/Various Artists/Jazz cafe'/03 Daddy.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Jazz cafe'/03 Daddy.mp3': No such file or directory
+May 18 21:48 : player: played "Various Artists/Jazz cafe'/03 Daddy.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/Various Artists/Brazil Brazil!/03 The Girl from Ipanema.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Brazil Brazil!/03 The Girl from Ipanema.mp3': No such file or directory
+May 18 21:48 : player: played "Various Artists/Brazil Brazil!/03 The Girl from Ipanema.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/MarchFourth Marching Band/Live/02 Marionette.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/MarchFourth Marching Band/Live/02 Marionette.mp3': No such file or directory
+May 18 21:48 : player: played "MarchFourth Marching Band/Live/02 Marionette.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/Various Artists/Essential Reggae ((Double CD)/22 It Wasn't Me.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Essential Reggae ((Double CD)/22 It Wasn't Me.mp3': No such file or directory
+May 18 21:48 : player: played "Various Artists/Essential Reggae ((Double CD)/22 It Wasn't Me.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/The Traveling Wilburys/The Traveling Wilburys Collect/2-13 Runaway.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/The Traveling Wilburys/The Traveling Wilburys Collect/2-13 Runaway.mp3': No such file or directory
+May 18 21:48 : player: played "The Traveling Wilburys/The Traveling Wilburys Collect/2-13 Runaway.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/Gregory Isaacs/Ultimate Selection/09 Mr_ Cop.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/Gregory Isaacs/Ultimate Selection/09 Mr_ Cop.mp3': No such file or directory
+May 18 21:48 : player: played "Gregory Isaacs/Ultimate Selection/09 Mr_ Cop.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/Various Artists/Perfect Blues/22 Lover Man.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Perfect Blues/22 Lover Man.mp3': No such file or directory
+May 18 21:48 : player: played "Various Artists/Perfect Blues/22 Lover Man.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/Sergio Mendes/Más que Nada/10 Disa.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/Sergio Mendes/Más que Nada/10 Disa.mp3': No such file or directory
+May 18 21:48 : player: played "Sergio Mendes/Más que Nada/10 Disa.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/La Sonora Dinamita/32 Cañonazos/06 Pobre Muchacho (feat_ Lucho Ar.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/La Sonora Dinamita/32 Cañonazos/06 Pobre Muchacho (feat_ Lucho Ar.mp3': No such file or directory
+May 18 21:48 : player: played "La Sonora Dinamita/32 Cañonazos/06 Pobre Muchacho (feat_ Lucho Ar.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/15 Hmar Nadir.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/15 Hmar Nadir.mp3': No such file or directory
+May 18 21:48 : player: played "Renaud Garcia-Fons/Méditerranées/15 Hmar Nadir.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/07 Begin the Beguine (Foxtrot).mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/07 Begin the Beguine (Foxtrot).mp3': No such file or directory
+May 18 21:48 : player: played "Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/07 Begin the Beguine (Foxtrot).mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/Simple Minds/Celebrate Greatest Hits/1-14 Don't You (Forget About Me).mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/Simple Minds/Celebrate Greatest Hits/1-14 Don't You (Forget About Me).mp3': No such file or directory
+May 18 21:48 : player: played "Simple Minds/Celebrate Greatest Hits/1-14 Don't You (Forget About Me).mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/Various Artists/Jazz cafe'/01 Flying Home.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Jazz cafe'/01 Flying Home.mp3': No such file or directory
+May 18 21:48 : player: played "Various Artists/Jazz cafe'/01 Flying Home.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/La Sonora Dinamita/32 Cañonazos/10 Mi Cucu (feat_ Lucho Argain &.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/La Sonora Dinamita/32 Cañonazos/10 Mi Cucu (feat_ Lucho Argain &.mp3': No such file or directory
+May 18 21:48 : player: played "La Sonora Dinamita/32 Cañonazos/10 Mi Cucu (feat_ Lucho Argain &.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/MarchFourth Marching Band/Rise Up/13 Happiness.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/MarchFourth Marching Band/Rise Up/13 Happiness.mp3': No such file or directory
+May 18 21:48 : player: played "MarchFourth Marching Band/Rise Up/13 Happiness.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/The Tragically Hip/Yer Favourites/1-06 Ahead By A Century.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/The Tragically Hip/Yer Favourites/1-06 Ahead By A Century.mp3': No such file or directory
+May 18 21:48 : player: played "The Tragically Hip/Yer Favourites/1-06 Ahead By A Century.mp3"
+May 18 21:48 : exception: Failed to decode /home/gavarch/mus/The Seatbelts/Cowboy Bebop Tank! THE! BEST!/00 Fe.mp3
+May 18 21:48 : exception: nested: Failed to open '/home/gavarch/mus/The Seatbelts/Cowboy Bebop Tank! THE! BEST!/00 Fe.mp3': No such file or directory
+May 18 21:48 : player: played "The Seatbelts/Cowboy Bebop Tank! THE! BEST!/00 Fe.mp3"
+May 18 21:48 : client: [0] closed
+May 18 21:48 : client: [1] opened from [::1]:54668
+May 18 21:48 : client: [1] closed
+May 18 21:48 : client: [2] opened from [::1]:54670
+May 18 21:48 : client: [2] closed
+May 18 21:48 : client: [3] opened from [::1]:54672
+May 18 21:48 : client: [3] closed
+May 18 21:49 : client: [4] opened from [::1]:54674
+May 18 21:49 : client: [4] closed
+May 18 21:49 : client: [5] opened from [::1]:54676
+May 18 21:49 : client: [5] closed
+May 18 22:29 : client: [6] opened from [::1]:55844
+May 18 22:29 : exception: Failed to decode /home/gavarch/mus/The Seatbelts/Cowboy Bebop Tank! THE! BEST!/00 Fe.mp3
+May 18 22:29 : exception: nested: Failed to open '/home/gavarch/mus/The Seatbelts/Cowboy Bebop Tank! THE! BEST!/00 Fe.mp3': No such file or directory
+May 18 22:29 : player: played "The Seatbelts/Cowboy Bebop Tank! THE! BEST!/00 Fe.mp3"
+May 18 22:29 : exception: Failed to decode /home/gavarch/mus/La Sonora Dinamita/32 Cañonazos/22 La Oaxaqueña (feat_ Lucho Arg.mp3
+May 18 22:29 : exception: nested: Failed to open '/home/gavarch/mus/La Sonora Dinamita/32 Cañonazos/22 La Oaxaqueña (feat_ Lucho Arg.mp3': No such file or directory
+May 18 22:29 : player: played "La Sonora Dinamita/32 Cañonazos/22 La Oaxaqueña (feat_ Lucho Arg.mp3"
+May 18 22:29 : exception: Failed to decode /home/gavarch/mus/Shabba Ranks/00 Dem Bow (Well Done).mp3
+May 18 22:29 : exception: nested: Failed to open '/home/gavarch/mus/Shabba Ranks/00 Dem Bow (Well Done).mp3': No such file or directory
+May 18 22:29 : player: played "Shabba Ranks/00 Dem Bow (Well Done).mp3"
+May 18 22:29 : exception: Failed to decode /home/gavarch/mus/Shabba Ranks/00 Dem Bow (Well Done).mp3
+May 18 22:29 : exception: nested: Failed to open '/home/gavarch/mus/Shabba Ranks/00 Dem Bow (Well Done).mp3': No such file or directory
+May 18 22:29 : player: played "Shabba Ranks/00 Dem Bow (Well Done).mp3"
+May 18 22:29 : exception: Failed to decode /home/gavarch/mus/Shabba Ranks/00 Bedroom Bully.mp3
+May 18 22:29 : exception: nested: Failed to open '/home/gavarch/mus/Shabba Ranks/00 Bedroom Bully.mp3': No such file or directory
+May 18 22:29 : player: played "Shabba Ranks/00 Bedroom Bully.mp3"
+May 18 22:29 : exception: Failed to decode /home/gavarch/mus/La Sonora Dinamita/32 Cañonazos/29 Murió en Su Ley (feat_ Lucho.mp3
+May 18 22:29 : exception: nested: Failed to open '/home/gavarch/mus/La Sonora Dinamita/32 Cañonazos/29 Murió en Su Ley (feat_ Lucho.mp3': No such file or directory
+May 18 22:29 : player: played "La Sonora Dinamita/32 Cañonazos/29 Murió en Su Ley (feat_ Lucho.mp3"
+May 18 22:29 : exception: Failed to decode /home/gavarch/mus/Damian Marley/00 More Justice.mp3
+May 18 22:29 : exception: nested: Failed to open '/home/gavarch/mus/Damian Marley/00 More Justice.mp3': No such file or directory
+May 18 22:29 : player: played "Damian Marley/00 More Justice.mp3"
+May 18 22:29 : exception: Failed to decode /home/gavarch/mus/The Traveling Wilburys/The Traveling Wilburys Collect/2-09 New Blue Moon.mp3
+May 18 22:29 : exception: nested: Failed to open '/home/gavarch/mus/The Traveling Wilburys/The Traveling Wilburys Collect/2-09 New Blue Moon.mp3': No such file or directory
+May 18 22:29 : player: played "The Traveling Wilburys/The Traveling Wilburys Collect/2-09 New Blue Moon.mp3"
+May 18 22:29 : exception: Failed to decode /home/gavarch/mus/Ondatrópica/Ondatrópica/18 Donde Suena el Bombo.mp3
+May 18 22:29 : exception: nested: Failed to open '/home/gavarch/mus/Ondatrópica/Ondatrópica/18 Donde Suena el Bombo.mp3': No such file or directory
+May 18 22:29 : player: played "Ondatrópica/Ondatrópica/18 Donde Suena el Bombo.mp3"
+May 18 22:29 : exception: Failed to decode /home/gavarch/mus/Various Artists/Perfect Bebop/04 The Squirrel.mp3
+May 18 22:29 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Perfect Bebop/04 The Squirrel.mp3': No such file or directory
+May 18 22:29 : player: played "Various Artists/Perfect Bebop/04 The Squirrel.mp3"
+May 18 22:29 : exception: Failed to decode /home/gavarch/mus/Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3
+May 18 22:29 : exception: nested: Failed to open '/home/gavarch/mus/Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3': No such file or directory
+May 18 22:29 : player: played "Xiomara Alfaro/Moliendo Café/07 Alguien Me Ama (Beguine).mp3"
+May 18 22:29 : exception: Failed to decode /home/gavarch/mus/Ondatrópica/Ondatrópica/15 Rap-Maya.mp3
+May 18 22:29 : exception: nested: Failed to open '/home/gavarch/mus/Ondatrópica/Ondatrópica/15 Rap-Maya.mp3': No such file or directory
+May 18 22:29 : player: played "Ondatrópica/Ondatrópica/15 Rap-Maya.mp3"
+May 18 22:29 : exception: Failed to decode /home/gavarch/mus/Ini Kamoze/Here Comes The Hotstepper/07 General.mp3
+May 18 22:29 : exception: nested: Failed to open '/home/gavarch/mus/Ini Kamoze/Here Comes The Hotstepper/07 General.mp3': No such file or directory
+May 18 22:29 : player: played "Ini Kamoze/Here Comes The Hotstepper/07 General.mp3"
+May 18 22:29 : exception: Failed to decode /home/gavarch/mus/Plastic Bertrand/Plastic Bertrand/07 Le monde est merveilleux.mp3
+May 18 22:29 : exception: nested: Failed to open '/home/gavarch/mus/Plastic Bertrand/Plastic Bertrand/07 Le monde est merveilleux.mp3': No such file or directory
+May 18 22:29 : player: played "Plastic Bertrand/Plastic Bertrand/07 Le monde est merveilleux.mp3"
+May 18 22:29 : client: [6] closed
+May 18 22:29 : client: [7] opened from [::1]:55846
+May 18 22:29 : client: [7] closed
+May 18 22:29 : client: [8] opened from [::1]:55848
+May 18 22:29 : client: [8] closed
+May 18 22:29 : client: [9] opened from [::1]:55850
+May 18 22:29 : client: [9] closed

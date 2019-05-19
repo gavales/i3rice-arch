@@ -3,19 +3,21 @@
 # OA: Gavin Vales
 # CREATED: Fri  3 May 14:48:22 GMT 2019
 
-utit="${1}"
-
+srch="${1}"
+utit="${2}"
 otit=$(xdotool getactivewindow getwindowname)
 ntit=${otit/ - YouTube/}
 ntit=${ntit/ - Vivaldi/}
 ntit=${ntit/ - Vivaldi/}
-#id=$(wmctrl -l -x | grep -n "${INSTANCE}" | awk '{print $1}')
+id=$(wmctrl -l -x | grep -n "${INSTANCE}" | awk '{print $1}')
 #ntit=$(wmctrl -i -r ${id#*:} -N ${INSTANCE})
 #echo ${id#*:}
 #echo ${ntit}
 
-if [[ -z ${utit} ]]; then
-	xdotool set_window --name "${ntit}"
+if [[ -n ${utit} ]]; then
+	xdotool search $srch set_window --name "${utit}" --class "${utit}"
+#	i3-msg title_format "$utit"
 else
-	xdotool set_window --name "${utit}" --class "${utit}"
+	xdotool search $srch set_window --name "${ntit}"
+#	i3-msg title_format "$ntit"
 fi

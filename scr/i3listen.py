@@ -14,10 +14,7 @@ def windownotify(i3, event):
 
 	if event.change == 'title':
 		call('polybar-msg hook wintitle 1'.split(' '))
-
-	if event.container.window_instance == 'spotify':
-		if event.change == 'title':
-			call('polybar-msg hook media 1'.split(' '))
+		call('polybar-msg hook media 1'.split(' '))
 
 	if event.container.fullscreen_mode == 0:
 		call('polybar-msg cmd show'.split(' '))

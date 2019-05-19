@@ -1,3 +1,6 @@
+rename cinnamon.css_
+rename cinnamon.css_template
+rename gtkrc.hidpi_template
 rename gtkrc_template
 rename gtk-dark.css_template
 rename gtk.css_template
@@ -36,15 +39,12 @@ rename Makefile
 rename Makefile_
 shell git clone https://github.com/budRich/numix-solarized-gtk-theme.git
 rename term_
+rename Makefileq
+touch compton.conf
+rename compton.conf__
+rename compton.conf
+rename compton.conf_
+shell wget https://github.com/budlabs/youtube/raw/master/letslinux/040-keybindings-rofi-2/keybindingsmenu
+shell  chmod +x %f
 wq
-open_with gB
-rename theme.png
-shell convert -trim -transparent white -fuzz 10%% 'theme.png' 'theme.png'
-shell convert -fuzz 10%% -fill red -opaque white 'theme.png' 'theme.png'
-shell convert -fuzz 10%% -fill white -opaque black 'theme.png' 'theme.png'
-shell convert -fuzz 20%% -fill white -opaque black 'theme.png' 'theme.png'
-shell convert -fuzz 50%% -fill white -opaque black 'theme.png' 'theme.png'
-shell convert -fuzz 50%% -fill white -opaque red '%f' '%f'
-shell convert -fuzz 80%% -fill white -opaque red '%f' '%f'
-shell convert -fuzz 50%% -fill white -opaque black '%f' '%f'
-shell convert -fuzz 90%% -fill white -opaque black '%f' '%f'
+

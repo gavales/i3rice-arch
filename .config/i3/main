@@ -434,7 +434,6 @@ $fw [class="mpv"]						$mvm1
 $fw [class="feh"]						$mvm1
 $fw [class="Sxiv"]						$mvm1
 #$fw [window_role="pop-up"]				$mvm1
-
 $fw [class="Zathura"]					$mvm2
 $fw [class="MuPDF"]						$mvm2
 $fw [class="Electron"]					$mvm2
@@ -447,15 +446,15 @@ $fw [class="Gvim"]						$mvm3
 $fw [class="Pamac-manager"]				$mvm3,$tf "software"
 $fw [title="Google Chrome$"]			$mvm3,$tf "chrome"
 
+$fw [class="Spotify"]					$tf "spotify"
 $fw [instance="VIS"]					$tf "visualizer"
-$fw [instance="URXVT"]					$tf "urxvt"
+$fw [instance="URXVTC"]					$tf "urxvtc"
 $fw [instance="RSS"]					$tf "newsboat"
 $fw [instance="CALC"]					$tf "calculator"
 $fw [class="Slack"]						$tf "slack"
 $fw [title="^My Movies & TV"]			$tf "movies"
 $fw [title="- Watch Series$"]			$tf "watch-series"
 $fw [title="Log in with PayPal"]		$tf "paypal",$flen
-$fw [instance="TERMINAL"]				$tf "terminal"
 $fw [instance="CALENDAR"]				$tf "calendar"
 $fw [instance="GRIVE"]					$tf "drive-sync"
 $fw [instance="BIB"]					$tf "biblbiography"
