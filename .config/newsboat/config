@@ -28,7 +28,7 @@ color listfocus_unread yellow default bold
 color info red black bold
 color article cyan default
 
-browser bash ~/scripts/linkhandler
+browser bash ~/scr/linkhandler
 macro , open-in-browser
 macro t set browser "tsp youtube-dl --add-metadata -ic"; open-in-browser ; set browser linkhandler
 macro a set browser "tsp youtube-dl --add-metadata -xic"; open-in-browser ; set browser linkhandler
