@@ -64,7 +64,7 @@ set $t ff
 set $term		urxvtc
 set $edit		exec --no-startup-id ~/scr/opengvim
 set $brow		google-chrome-beta
-set $viva		vivaldi-stable
+set $viva		firefox
 set $gfm		thunar
 set $brightinc	light -A 10
 set $brightdec	light -U 10
@@ -108,6 +108,8 @@ client.placeholder		$grn $grn $wht $grn $grn
 # //// Misc
 
 floating_modifier	$mdi
+
+$mod+Home		$exs/keybindingsmenu
 
 $mod+Escape		mode "SHUTDOWN"
 mode "SHUTDOWN" {
@@ -202,7 +204,8 @@ $mod+Ctrl+s			sticky toggle
 $mod+d				$exn rofi -show drun
 $mod+Shift+d		$exs/i3menu -run
 
-$mod+f				$lch '$term -name MEDIA -e ranger' $mk2
+#$mod+f				$lch '$term -name MEDIA -e ranger' $mk2
+$mod+f				$lch thunar $mk2
 $mod+Shift+f		fullscreen toggle
 
 $mod+g				split toggle
@@ -220,7 +223,7 @@ $mod+Shift+k		$exs/i3move up
 $mod+l				$exs/i3viswiz right
 $mod+Shift+l		$exs/i3move right
 
-$mod+semicolon		$exn redshift -P -O 3700
+$mod+semicolon		$exs/nightmodetog
 
 $mod+apostrophe		$exn redshift -x
 
@@ -261,6 +264,12 @@ $wlw+button1		$exn i3-input -F "[con_id=__focused__] mark _sticky_%s"
 
 $wlw+button3		kill
 
+$wlw+button4		focus left
+$wlw+Shift+button4	move left
+
+$wlw+button5		focus right
+$wlw+Shift+button5	move right
+
 # //// Numbers
 
 $win+0				[title="placeholder"] kill
@@ -284,12 +293,12 @@ $win+7				$edit ~/.config/polybar/config
 
 # //// 1st Row
 
-$win+q				floating disable, $mvm1, [con_mark=$mk1] focus, focus right
+$win+q				floating disable, $mvm1, [con_mark=$mk1] focus, focus child
 
-$win+w				floating disable, $mvm2, [con_mark=$mk2] focus, focus right
+$win+w				floating disable, $mvm2, [con_mark=$mk2] focus, focus child
 $win+Shift+w		$lch '$term -name LAYOUT_EDITOR -e bash ~/$scr/wsloget' $mk2
 
-$win+e				floating disable, $mvm3, [con_mark=$mk3] focus, focus right
+$win+e				floating disable, $mvm3, [con_mark=$mk3] focus, focus child
 
 $win+r				$lch '$term -name RTV -e rtv' $mk2
 
@@ -308,7 +317,13 @@ $win+Shift+i		gaps inner current plus 5; gaps outer current plus 10
 $win+o				[con_mark=$mk1] resize grow width 5 px or 5 ppt, resize grow height 5 px or 5 ppt
 $win+Shift+o		gaps inner current set 10; gaps outer current set 20
 
-$win+p				[con_mark=$mk1] resize set 45 ppt 30 ppt
+$win+p				[con_mark=$mk1] resize set 45 ppt 20 ppt
+
+$win+bracketleft	[con_mark=$mk1] resize set height 98
+
+#$win+bracketright	$exs/i3media prev
+#
+#$win+backslash		$exs/i3media stop
 
 # //// 2nd Row
 
@@ -319,8 +334,7 @@ $win+Shift+s		$exs/i3-sticky-toggle
 
 $win+d				move workspace to output $hdm
 
-$win+f				$lch thunar $mk2
-$win+Shift+f		$lch 'gksu thunar' $mk2
+$win+f				$lch 'gksu thunar' $mk2
 
 $win+g				$lch '$term -name GITREPOUPDATE -e bash ~/$scr/gitcommit' $mk2
 
@@ -420,7 +434,6 @@ $fw [class="mpv"]						$mvm1
 $fw [class="feh"]						$mvm1
 $fw [class="Sxiv"]						$mvm1
 #$fw [window_role="pop-up"]				$mvm1
-
 $fw [class="Zathura"]					$mvm2
 $fw [class="MuPDF"]						$mvm2
 $fw [class="Electron"]					$mvm2
@@ -433,15 +446,15 @@ $fw [class="Gvim"]						$mvm3
 $fw [class="Pamac-manager"]				$mvm3,$tf "software"
 $fw [title="Google Chrome$"]			$mvm3,$tf "chrome"
 
+$fw [class="Spotify"]					$tf "spotify"
 $fw [instance="VIS"]					$tf "visualizer"
-$fw [instance="URXVT"]					$tf "urxvt"
+$fw [instance="URXVTC"]					$tf "urxvtc"
 $fw [instance="RSS"]					$tf "newsboat"
 $fw [instance="CALC"]					$tf "calculator"
 $fw [class="Slack"]						$tf "slack"
 $fw [title="^My Movies & TV"]			$tf "movies"
 $fw [title="- Watch Series$"]			$tf "watch-series"
 $fw [title="Log in with PayPal"]		$tf "paypal",$flen
-$fw [instance="TERMINAL"]				$tf "terminal"
 $fw [instance="CALENDAR"]				$tf "calendar"
 $fw [instance="GRIVE"]					$tf "drive-sync"
 $fw [instance="BIB"]					$tf "biblbiography"

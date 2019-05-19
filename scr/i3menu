@@ -14,7 +14,7 @@ font=${font%:*}
 format="-fn "${font}:size=15" -nb "$accent" -nf "$black" -sf "$accent" -sb "$white""
 
 menu () {
-	dmenu -i -p "${prompt}" $format
+	rofi -dmenu -location 0 -p "${prompt}"
 }
 
 if [[ ${prompt} == "-run" ]]; then

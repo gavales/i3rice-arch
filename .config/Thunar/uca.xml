@@ -3,8 +3,8 @@
 <action>
 	<icon>utilities-terminal</icon>
 	<name>Open Terminal Here</name>
-	<unique-id>1553977435691685-1</unique-id>
-	<command>/usr/bin/urxvtc %f</command>
+	<unique-id>1558184717602262-3</unique-id>
+	<command>/usr/bin/xterm</command>
 	<description>Example for a custom action</description>
 	<patterns>*</patterns>
 	<directories/>

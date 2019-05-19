@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ -z $(cat $HOME/xrs/theme) ]]; then
-	cat $HOME/xrs/colors/gruvbox_ > $HOME/.Xresources
+	cat $HOME/xrs/colors/gruvbox_light > $HOME/.Xresources
 elif [[ ! -f $HOME/xrs/theme ]]; then
 	cat $HOME/xrs/colors/gruvbox_ > $HOME/.Xresources
 else

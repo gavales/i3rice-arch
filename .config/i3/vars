@@ -7,24 +7,23 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # >>>> SPECIFIC VARS
-set $font1 FixedsysMono
+set $font1 Iosevka Medium Oblique
 set $font2 FontAwesome
 set $font3 monaco
-set $fonts 12
+set $fonts 11
 
 font pango:$font1,$font2 $fonts
 
-set $home       /home/gavarch
-set $scripts    scripts
-set $scriptpics scriptpics
+set $home		/home/gavarch
+set $scr		scr
+set $scrpic		scrpic
 
-<<<<<<< HEAD
-=======
-# //// APPS
+set $primary	eDP1
+set $secondary	VGA1
+set $tertiary	HDMI1
+set $kb			gb
 
->>>>>>> origin/master
-set $primary    eDP1
-set $secondary  VGA1
-set $tertiary   HDMI1
-set $kb         us
-
+set $mediaw		500
+set $mediah		306
+set $mediaw2	500
+set $mediah2	400

@@ -14,6 +14,7 @@ def windownotify(i3, event):
 
 	if event.change == 'title':
 		call('polybar-msg hook wintitle 1'.split(' '))
+		call('polybar-msg hook media 1'.split(' '))
 
 	if event.container.fullscreen_mode == 0:
 		call('polybar-msg cmd show'.split(' '))
@@ -37,8 +38,8 @@ def windownotify(i3, event):
 	
 		if event.container.window_class == 'Sxiv':
 			if event.container.focused == True:
-				call('i3-msg [instance="MEDIA"] focus'.split(' '))
 				call('i3-msg [class="Thunar"] focus'.split(' '))
+				call('i3-msg [instance="MEDIA"] focus'.split(' '))
 	
 		if event.container.window_class == 'feh':
 			if event.container.focused == True:

@@ -2,6 +2,7 @@
 
 name="$(xdotool getactivewindow getwindowname)"
 name="${name/ - File Manager/}"
+#title="${name/'gavarch'/'~'}"
 title="${name/'/home/gavarch'/'~'}"
 #title="${title/Pictures/pic}"
 #title="${title/Videos/vid}"
@@ -31,16 +32,15 @@ wmctrl -r :ACTIVE: -N ${title}
 i3-msg title_format "${title}"
 
 xdotool key $ora
-xdotool key $icn
 xdotool key $nme
 
 case $name in
-#	gavarch)
-#		xdotool key $ora
-#		xdotool key $nme
-#		xdotool key $icn
-#		xdotool key $nme
-#		;;
+	gavarch)
+		xdotool key $ora
+		xdotool key $nme
+		xdotool key $icn
+		xdotool key $nme
+		;;
 	Drive)
 		xdotool key $ora
 		xdotool key $nme

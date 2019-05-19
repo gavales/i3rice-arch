@@ -27,5 +27,5 @@ echo "set completion-bg \"$bkd\"" >> zathurarc
 echo "set completion-fg \"$wtl\"" >> zathurarc
 echo "set show-scrollbars false" >> zathurarc
 #echo "set recolor true" >> zathurarc
-echo "set recolor-darkcolor \"$wtl\"" >> zathurarc
+echo "set recolor-darkcolor \"$wtd\"" >> zathurarc
 echo "set recolor-lightcolor \"$bkd\"" >> zathurarc

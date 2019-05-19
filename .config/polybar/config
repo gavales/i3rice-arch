@@ -8,7 +8,7 @@
 ;     ▒▒         ▒▒▒▒▒▒▒   ▒▒▒▒▒▒▒▒    ▒▒    ▒▒▒▒▒▒▒  ▒▒      ▒▒ ▒▒     ▒▒ 
 
 [colors]
-bkd = ${xrdb:color0}
+bkd = ${xrdb:color8}
 tr = #000000ff
 bkl = ${xrdb:color8}
 wtd = ${xrdb:color15}
@@ -52,7 +52,7 @@ module-margin-left = 0
 module-margin-right = 0
 
 font-0 = Iosevka:style=Semibold Oblique:size=12;3
-font-1 = FontAwesome5Free:style=Solid:size=12;3
+font-1 = FontAwesome5Free:style=Solid:size=14;3
 font-2 = FontAwesome5Brands:style=Solid:size=12;3
 
 tray-position = right
@@ -72,9 +72,9 @@ tray-padding = 2
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-modules-left = start td ws xkeyboard wintitle
+modules-left = start td wintitle ws xkeyboard
 modules-center = 
-modules-right = media disk memory cpu temperature backlight pulseaudio battery
+modules-right = media disk memory cpu temperature nm backlight pulseaudio battery
 
 [bar/fvwm]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -102,7 +102,7 @@ module-margin-left = 0
 module-margin-right = 0
 
 font-0 = Iosevka:style=Semibold Oblique:size=12;3
-font-1 = FontAwesome5Free:style=Solid:size=12;3
+font-1 = FontAwesome5Free:style=Solid:size=14;3
 font-2 = FontAwesome5Brands:style=Solid:size=12;3
 
 tray-position = right
@@ -126,49 +126,21 @@ cursor-scroll = ns-resize
 
 modules-left = startfvwm fvwmtd xkeyboard wintitle
 modules-center = 
-modules-right = media disk memory cpu temperature backlight pulseaudio battery
+modules-right = media disk memory cpu temperature nm backlight pulseaudio battery
 
 [global/wm]
 margin-top = 0
 margin-bottom = 0
 
-[module/powermenu]
-type = custom/menu
-
-expand-right = true
-
-format-spacing = 1
-
-label-open = %{T1} %{T-}
-label-open-foreground = ${colors.bkd}
-label-close = %{T1} %{T-} cancel
-label-close-foreground = ${colors.bkd}
-label-separator = |
-label-separator-foreground = ${colors.bkd}
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
-
-; vim:ft=dosini
 [module/start]
 type = custom/text
 content = %{T1}%{T-}
 click-left = rofi -show drun
+click-middle = ~/scr/xtheme
+click-right = ~/scr/keybindingsmenu launch
 content-background = ${colors.wtd}
 content-foreground = ${colors.bkd}
-content-padding = 3
+content-padding = 2
 
 [module/startfvwm]
 type = custom/text
@@ -177,6 +149,30 @@ click-left = rofi -show drun -yoffset 50 -xoffset 10
 content-background = ${colors.wtd}
 content-foreground = ${colors.bkd}
 content-padding = 3
+
+[module/kill]
+type = custom/text
+content = %{T1}%{T-}
+click-left = i3-msg kill
+content-background = ${colors.bkd}
+content-foreground = ${colors.wtd}
+content-padding = 1
+
+[module/min]
+type = custom/text
+content = %{T1}%{T-}
+click-left = i3-msg "floating disable, move to mark _W2"
+content-background = ${colors.bkd}
+content-foreground = ${colors.wtd}
+content-padding = 1
+
+[module/max]
+type = custom/text
+content = %{T1}%{T-}
+click-left = i3-msg floating enable
+content-background = ${colors.bkd}
+content-foreground = ${colors.wtd}
+content-padding = 1
 
 [module/shot]
 type = custom/script
@@ -190,8 +186,8 @@ interval = 1
 [module/td]
 type = custom/script
 exec = bash ~/scr/pb/td
-format-background = ${colors.bkd}
-format-foreground = ${colors.wtd}
+format-background = ${colors.wtd}
+format-foreground = ${colors.bkd}
 format-padding = 1
 interval = 1
 
@@ -208,8 +204,8 @@ type = custom/ipc
 hook-0 = ~/scr/pb/ws
 initial = 1
 click-left = i3-msg workspace back_and_forth
-scroll-up = i3-msg workspace next
-scroll-down = i3-msg workspace prev
+scroll-up = i3-msg workspace prev
+scroll-down = i3-msg workspace next
 format-background = ${colors.blu}
 format-foreground = ${colors.bkd}
 format-padding = 1
@@ -230,7 +226,7 @@ initial = 1
 click-left = polybar-msg cmd hide
 format-background = ${colors.bkd}
 format-foreground = ${colors.wtd}
-format-padding = 2
+format-padding = 1
 
 [module/media]
 type = custom/ipc
@@ -314,10 +310,23 @@ label-indicator-margin = 1
 label-indicator-background = ${colors.gnt}
 ;label-indicator-underline = ${colors.gnt}
 
+[module/nm]
+type = custom/ipc
+hook-0 = echo "%{T1} %{T-}"
+hook-1 = echo "%{T1} %{T-}"
+initial = 1
+click-left = ~/scr/nightmodetog
+scroll-up = "light -A 10 && polybar-msg hook backlight 1"
+scroll-down = "light -U 10 && polybar-msg hook backlight 1"
+format-background = ${colors.wtd}
+format-foreground = ${colors.bkd}
+format-padding = 0
+
 [module/backlight]
 type = custom/ipc
 hook-0 = ~/scr/pb/brightness
 initial = 1
+click-left = ~/scr/nightmodetog
 scroll-up = "light -A 10 && polybar-msg hook backlight 1"
 scroll-down = "light -U 10 && polybar-msg hook backlight 1"
 format-background = ${colors.wtd}
@@ -392,5 +401,35 @@ animation-charging-4 = %{T1}%{T-}
 animation-charging-foreground = ${colors.bkd}
 animation-charging-background = ${colors.wtd}
 animation-charging-framerate = 500
+
+; vim:ft=dosini
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open = %{T1} %{T-}
+label-open-foreground = ${colors.bkd}
+label-close = %{T1} %{T-} cancel
+label-close-foreground = ${colors.bkd}
+label-separator = |
+label-separator-foreground = ${colors.bkd}
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = sudo reboot
+
+menu-2-0 = power off
+menu-2-0-exec = sudo poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
 
 ; vim:ft=dosini

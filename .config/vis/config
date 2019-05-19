@@ -8,7 +8,7 @@ audio.pulse.source=0
 
 #mpd.fifo.path=/tmp/mpd.fifo
 
-audio.stereo.enabled=true
+audio.stereo.enabled=false
 
 #visualizer.rotation.secs=30
 
@@ -51,6 +51,6 @@ visualizer.ellipse.radius=1
 
 #visualizer.lorenz.character=🌑
 
-colors.override.terminal=true
+#colors.override.terminal=true
 
 colors.scheme=term

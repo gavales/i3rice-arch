@@ -4,4 +4,5 @@ blr=$(light -G)
 
 bl=$(printf "%.0f" $blr)
 
-echo "%{T1}%{T-} ${bl}"
+echo "${bl}"
+#echo "%{T1}%{T-} ${bl}"
