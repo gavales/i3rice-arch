@@ -1,19 +1,19 @@
-! grta
+! solarized
 ! light
 ! vim:ft=xdefaults
-#define cwhtd #873f47
-#define cwhtl #1a2937
-#define credd #537592
-#define credl #537592
-#define cgrnd #bcbd82
-#define cgrnl #bcbd82
-#define cylwd #dbc36e
-#define cylwl #dbc36e
-#define cblud #c17b82
-#define cblul #c17b82
-#define cgntd #e6b179
-#define cgntl #e6b179
-#define ccynd #98b2a7
-#define ccynl #98b2a7
-#define cblkd #f0ede7
-#define cblkl #e1dbcf
+#define cwhtd #16534f
+#define cwhtl #002b36
+#define credd #dc322f
+#define credl #dc322f
+#define cgrnd #859900
+#define cgrnl #859900
+#define cylwd #b58900
+#define cylwl #b58900
+#define cblud #2aa198
+#define cblul #2aa198
+#define cgntd #d33682
+#define cgntl #d33682
+#define ccynd #268bd2
+#define ccynl #268bd2
+#define cblkd #fdf6e3
+#define cblkl #eee8d5
