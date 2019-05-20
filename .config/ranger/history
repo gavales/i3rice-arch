@@ -1,4 +1,3 @@
-rename cinnamon.css_
 rename cinnamon.css_template
 rename gtkrc.hidpi_template
 rename gtkrc_template
@@ -48,3 +47,4 @@ shell wget https://github.com/budlabs/youtube/raw/master/letslinux/040-keybindin
 shell  chmod +x %f
 wq
 
+scout -ftsea 
