@@ -17,8 +17,8 @@ case $1 in
 	;;
 	prev)
 	[[ $player == "mpv" ]] && echo "seek -10" > $HOME/mp_fifo
-	[[ $player == "spotify" ]] && playerctl next
-	[[ $player == "box" ]] && playerctl next
+	[[ $player == "spotify" ]] && playerctl previous
+	[[ $player == "box" ]] && playerctl previous
 	[[ $player == "mpd" ]] && mpc prev && dunstify -r 1234 --raw_icon=$HOME/cover.jpg "Previous Song" "$(mpc current)"
 	;;
 	stop)

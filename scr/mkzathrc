@@ -13,19 +13,27 @@ blu=$(xrdb -query | grep '*color4' | awk '{print $NF}')
 gnt=$(xrdb -query | grep '*color5' | awk '{print $NF}')
 cyn=$(xrdb -query | grep '*color6' | awk '{print $NF}')
 
-cd $zathDir || exit 1
-echo "set adjust-open \"width\"" > zathurarc
-echo "set window-title-basename true" >> zathurarc
-echo "set default-bg \"$wtl\"" >> zathurarc
-echo "set default-fg \"$bkd\"" >> zathurarc
-echo "set font \"FixedsysMono 10\"" >> zathurarc
-echo "set inputbar-bg \"$bkd\"" >> zathurarc
-echo "set inputbar-fg \"$wtl\"" >> zathurarc
-echo "set statusbar-bg \"$bkd\"" >> zathurarc
-echo "set statusbar-fg \"$wtl\"" >> zathurarc
-echo "set completion-bg \"$bkd\"" >> zathurarc
-echo "set completion-fg \"$wtl\"" >> zathurarc
-echo "set show-scrollbars false" >> zathurarc
-#echo "set recolor true" >> zathurarc
-echo "set recolor-darkcolor \"$wtd\"" >> zathurarc
-echo "set recolor-lightcolor \"$bkd\"" >> zathurarc
+main () {
+	cd $zathDir || exit 1
+	echo "set adjust-open \"width\"" > zathurarc
+	echo "set window-title-basename true" >> zathurarc
+	echo "set default-bg \"$wtl\"" >> zathurarc
+	echo "set default-fg \"$bkd\"" >> zathurarc
+	echo "set font \"FixedsysMono 10\"" >> zathurarc
+	echo "set inputbar-bg \"$bkd\"" >> zathurarc
+	echo "set inputbar-fg \"$wtl\"" >> zathurarc
+	echo "set statusbar-bg \"$bkd\"" >> zathurarc
+	echo "set statusbar-fg \"$wtl\"" >> zathurarc
+	echo "set completion-bg \"$bkd\"" >> zathurarc
+	echo "set completion-fg \"$wtl\"" >> zathurarc
+	echo "set show-scrollbars false" >> zathurarc
+	#echo "set recolor true" >> zathurarc
+	echo "set recolor-darkcolor \"$wtd\"" >> zathurarc
+	echo "set recolor-lightcolor \"$bkd\"" >> zathurarc
+}
+
+reloadinst () {
+	ps -fp $(pgrep -d, -x zathura)
+}
+
+main

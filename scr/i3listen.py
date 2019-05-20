@@ -24,7 +24,7 @@ def windownotify(i3, event):
 	if event.change == "close":
 		if event.container.window_class == 'mpv':
 			if event.container.focused == True:
-				call('i3-msg [instance="MEDIA"] focus'.split(' '))
+#				call('i3-msg [instance="MEDIA"] focus'.split(' '))
 				call('i3-msg [class="Thunar"] focus'.split(' '))
 	
 		if event.container.window_role == 'pop-up':
@@ -34,12 +34,12 @@ def windownotify(i3, event):
 		if event.container.window_class == 'Zathura':
 			if event.container.focused == True:
 				call('i3-msg [class="Thunar"] focus'.split(' '))
-				call('i3-msg [instance="FILES"] focus'.split(' '))
+#				call('i3-msg [instance="FILES"] focus'.split(' '))
 	
 		if event.container.window_class == 'Sxiv':
 			if event.container.focused == True:
 				call('i3-msg [class="Thunar"] focus'.split(' '))
-				call('i3-msg [instance="MEDIA"] focus'.split(' '))
+#				call('i3-msg [instance="MEDIA"] focus'.split(' '))
 	
 		if event.container.window_class == 'feh':
 			if event.container.focused == True:

@@ -152,8 +152,9 @@ $mod+Shift+4		move container to workspace $ws4; workspace $ws4
 $mod+5				workspace $ws5
 $mod+Shift+5		move container to workspace $ws5; workspace $ws5
 
-$mod+minus			scratchpad show
-$mod+Shift+minus	move scratchpad
+$mod+minus			$mvm2, [con_mark=$mk3] focus
+
+$mod+equal			$mvm3, [con_mark=$mk3] focus
 
 # //// 1st Row
 
@@ -176,7 +177,7 @@ $mod+y				resize shrink width 5 px or 5 ppt
 $mod+Shift+y		$lch '$brow --new-window --app=https://www.youtube.com/' $mk1
 
 $mod+u				resize shrink height 5 px or 5 ppt
-$mod+Shift+u		unmark
+$mod+Shift+u		$lch '$brow --new-window --app=https://outlook.office.com/mail/inbox/id/AAQkAGZjZGU2MmYyLTc5ZDctNDI1My05MzU4LWRjYTc3NjdhN2NkOAAQAOwToE4JkJhIgjz322aPjPU%3D' $mk3
 
 $mod+i				resize grow height 5 px or 5 ppt
 $mod+Shift+i		$lch '$brow --new-window --app=https://www.bbc.co.uk/iplayer/' $mk1
@@ -356,6 +357,7 @@ $win+Shift+Return	$exn $term -name FILES_ADMIN -e sudo ranger
 # //// 3rd Row
 
 #$win+x				$exn "pactl set-sink-mute 0 toggle; ~/$scr/notify_volume"
+$win+x				unmark
 
 $win+c				$lch '$term -name CALENDAR -e vim "+Calendar -view=day"' $mk2
 $win+Shift+c		$exs/reloadconfs
