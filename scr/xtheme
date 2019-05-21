@@ -6,6 +6,7 @@ main () {
 	cat ${xfilesDir}/colors/${finaltheme} > ${xfilesDir}/theme
 	$HOME/scr/reloadconfs
 	$HOME/scr/mkgtktheme
+	$HOME/scr/restartapps
 }
 
 variant () {

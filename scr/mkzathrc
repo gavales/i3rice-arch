@@ -16,6 +16,7 @@ cyn=$(xrdb -query | grep '*color6' | awk '{print $NF}')
 main () {
 	cd $zathDir || exit 1
 	echo "set adjust-open \"width\"" > zathurarc
+	echo "set recolor true" > zathurarc
 	echo "set window-title-basename true" >> zathurarc
 	echo "set default-bg \"$wtl\"" >> zathurarc
 	echo "set default-fg \"$bkd\"" >> zathurarc
@@ -46,5 +47,5 @@ reloadinst () {
 	fi
 }
 
-main
 reloadinst
+main
