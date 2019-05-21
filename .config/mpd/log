@@ -27107,3 +27107,5 @@ May 20 22:28 : exception: RTIOThread could not get realtime scheduling, continui
 May 20 22:28 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 May 20 22:28 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
 >>>>>>> origin/master
+May 22 00:56 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 22 00:56 : avahi: Service 'Music Player @ IdeacentreAIO' successfully established.

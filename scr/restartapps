@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
 firefox () {
-	killall firefox
-	firefox &
+	kill -l $(pidof firefox)
+	firefox --new-instance &
 }
-
-firefox

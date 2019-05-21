@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-rename gtkrc.hidpi_template
-rename gtkrc_template
-=======
->>>>>>> origin/master
 rename gtk-dark.css_template
 rename gtk.css_template
 rename metacity-theme-2.xml_template
@@ -47,14 +42,9 @@ rename compton.conf
 rename compton.conf_
 shell wget https://github.com/budlabs/youtube/raw/master/letslinux/040-keybindings-rofi-2/keybindingsmenu
 shell  chmod +x %f
-<<<<<<< HEAD
 wq
 
 scout -ftsea 
 mkdir ex
-=======
->>>>>>> origin/master
-
-wq
-rename 1617.pdf
->>>>>>> origin/master
+rename rszath
+rename restartapps
