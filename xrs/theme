@@ -1,19 +1,19 @@
-! solarized
-! light
+! dracula
+! dark
 ! vim:ft=xdefaults
-#define cwhtd #16534f
-#define cwhtl #002b36
-#define credd #dc322f
-#define credl #dc322f
-#define cgrnd #859900
-#define cgrnl #859900
-#define cylwd #b58900
-#define cylwl #b58900
-#define cblud #2aa198
-#define cblul #2aa198
-#define cgntd #d33682
-#define cgntl #d33682
-#define ccynd #268bd2
-#define ccynl #268bd2
-#define cblkd #fdf6e3
-#define cblkl #eee8d5
+#define cblkd #282A36
+#define cblkl #414458
+#define credd #BD93F9
+#define credl #BD93F9
+#define cgrnd #5AF78E
+#define cgrnl #50FA7B
+#define cylwd #cccc00
+#define cylwl #cccc00
+#define cblud #FF6E67
+#define cblul #FF5555
+#define cgntd #FF92D0
+#define cgntl #FF79C6
+#define ccynd #8BE9FD
+#define ccynl #8BE9FD
+#define cwhtd #ffa3a3
+#define cwhtl #fffff2
