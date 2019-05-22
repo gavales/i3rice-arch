@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+firefox () {
+	kill -l $(pidof firefox)
+	firefox --new-instance &
+}

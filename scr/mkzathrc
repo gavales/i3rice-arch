@@ -16,6 +16,7 @@ cyn=$(xrdb -query | grep '*color6' | awk '{print $NF}')
 main () {
 	cd $zathDir || exit 1
 	echo "set adjust-open \"width\"" > zathurarc
+	echo "set recolor true" > zathurarc
 	echo "set window-title-basename true" >> zathurarc
 	echo "set default-bg \"$wtl\"" >> zathurarc
 	echo "set default-fg \"$bkd\"" >> zathurarc
@@ -33,7 +34,18 @@ main () {
 }
 
 reloadinst () {
-	ps -fp $(pgrep -d, -x zathura)
+	pdfs=$(ps -fp $(pgrep -d, -x zathura) | sed -n '/UID/!p' | sed 's/\ //g')
+	pids=$(ps -fp $(pgrep -d, -x zathura))
+	if [[ $pids =~ "zathura" ]]; then
+		killall zathura
+		for i in $pdfs; do
+			zathura "$HOME/${i#*/home/gavarch}" &
+		done
+	else
+		echo "no pdfs open"
+		:
+	fi
 }
 
+reloadinst
 main

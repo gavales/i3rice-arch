@@ -1,4 +1,4 @@
-set adjust-open "width"
+set recolor true
 set window-title-basename true
 set default-bg "#002b36"
 set default-fg "#fdf6e3"
