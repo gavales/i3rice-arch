@@ -2,84 +2,40 @@
 
 name="$(xdotool getactivewindow getwindowname)"
 name="${name/ - File Manager/}"
-#title="${name/'gavarch'/'~'}"
 title="${name/'/home/gavarch'/'~'}"
-#title="${title/Pictures/pic}"
-#title="${title/Videos/vid}"
-#title="${title/scripts/scr}"
-#title="${title/script/scr}"
-#title="${title/Documents/doc}"
-#title="${title/Downloads/dwn}"
-#title="${title/Desktop/dsk}"
 title="${title/i3rice-arch/dot}"
-#title="${title/xinclude/xcnf}"
-#title="${title/Templates/tmps}"
+cd $name
+numSDir="$(ls -l | grep '^d' | wc -l)"
 
-name="${name##*/}"
+currDir="${name##*/}"
 
-icn="ctrl+shift+i"
-lst="ctrl+shift+l"
-
-ora="ctrl+shift+k"
-ord="ctrl+shift+j"
-
-nme="ctrl+shift+n"
-dte="ctrl+shift+d"
-sze="ctrl+shift+s"
-tpe="ctrl+shift+t"
+icn="xdotool key shift+ctrl+i"
+lst="xdotool key shift+ctrl+l"
+                            
+ora="xdotool key shift+ctrl+k"
+ord="xdotool key shift+ctrl+j"
+                            
+nme="xdotool key shift+ctrl+n"
+dte="xdotool key shift+ctrl+d"
+sze="xdotool key shift+ctrl+s"
+tpe="xdotool key shift+ctrl+t"
 
 wmctrl -r :ACTIVE: -N ${title}
 i3-msg title_format "${title}"
 
-xdotool key $ora
-xdotool key $nme
+if [[ $numSDir -le 5 ]]; then
+	$icn
+else
+	$lst
+fi
 
-case $name in
-	gavarch)
-		xdotool key $ora
-		xdotool key $nme
-		xdotool key $icn
-		xdotool key $nme
-		;;
-	Drive)
-		xdotool key $ora
-		xdotool key $nme
-		xdotool key $lst
-		xdotool key $nme
+case $currDir in
+	*)
+		$ora
+		$nme
 		;;
 	dwn)
-		xdotool key $ord
-		xdotool key $dte
-		xdotool key $lst
-		xdotool key $dte
-		;;
-	pic)
-		xdotool key $ora
-		xdotool key $lst
-		;;
-	scr)
-		xdotool key $ora
-		xdotool key $lst
-		;;
-	gifs)
-		xdotool key $ora
-		xdotool key $icn
-		;;
-	meme)
-		xdotool key $ora
-		xdotool key $icn
-		;;
-	scrots)
-		xdotool key $ora
-		xdotool key $icn
-		;;
-	walls)
-		xdotool key $ora
-		xdotool key $icn
-		;;
-	vid)
-		xdotool key $ora
-		xdotool key $icn
+		$ord
+		$dte
 		;;
 esac
-

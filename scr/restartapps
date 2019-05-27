@@ -4,3 +4,26 @@ firefox () {
 	kill -l $(pidof firefox)
 	firefox --new-instance &
 }
+
+reloadinst () {
+	pdfs=$(ps -fp $(pgrep -d, -x zathura) -o command| sed -n '/COMMAND/!p' | sed 's/zathura //g')
+	len=$(ps -fp $(pgrep -d, -x zathura) -o command| sed -n '/COMMAND/!p' | sed 's/zathura //g' | grep -c ".pdf")
+	pids=$(pidof zathura)
+	if [[ -n $pids ]]; then
+		if [[ $len == 1 ]]; then
+			killall zathura
+			zathura "${pdfs}" &
+		else
+			killall zathura
+			for i in $pdfs; do
+				zathura "$i" &
+			done
+		fi
+	else
+		echo "no pdfs open"
+		:
+	fi
+	echo $len
+}
+
+reloadinst

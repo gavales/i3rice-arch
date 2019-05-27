@@ -2,7 +2,7 @@ sw_volume: 62
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
 state: stop
-current: 5
+current: 0
 random: 1
 repeat: 1
 single: 0
@@ -11,17 +11,5 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Bob Marley/Natural Mystic (Remastered)/00 Positive Vibration.mp3
-1:Gregory Isaacs/Night Nurse/04 Hot Stepper.mp3
-2:Kid Creole And The Coconuts/Tropical Gangsters (Remastered/01 Annie_ I'm Not Your Daddy.mp3
-3:La Sonora Dinamita/32 Cañonazos/24 La Piña Madura (feat_ Macondo.mp3
-4:Plastic Bertrand/Plastic Bertrand/07 Le monde est merveilleux.mp3
-5:Protoje/8 Year Affair/00 Shot By Love (Feat_ Toi).mp3
-6:Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3
-7:Sergio Mendes/Más que Nada/13 Mas Que Nada.mp3
-8:Shabba Ranks/Caan Dun (the Best Of Shabba)/16 Telephone Love.mp3
-9:Shaggy/Hot Shot/02 Lonely Lover.mp3
-10:Various Artists/Playlist_ Reggae/13 Oh Carolina.mp3
-11:Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/17 China Boy.mp3
-12:Various Artists/Tea Dance 2 - Another 1920s_ 3/01 Deep Purple (Slow Foxtrot).mp3
+0:Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3
 playlist_end

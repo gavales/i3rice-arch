@@ -27109,3 +27109,142 @@ May 20 22:28 : avahi: Service 'Music Player @ ThinkPadT440p' successfully establ
 >>>>>>> origin/master
 May 22 00:56 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 May 22 00:56 : avahi: Service 'Music Player @ IdeacentreAIO' successfully established.
+May 22 18:18 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 22 18:18 : avahi: Service 'Music Player @ IdeacentreAIO' successfully established.
+May 22 18:19 : client: [0] opened from [::1]:45018
+May 22 18:19 : client: [0] closed
+May 22 18:20 : client: [1] opened from [::1]:45092
+May 22 18:20 : exception: Failed to decode /home/gavarch/mus/Shaggy/Hot Shot/02 Lonely Lover.mp3
+May 22 18:20 : exception: nested: Failed to open '/home/gavarch/mus/Shaggy/Hot Shot/02 Lonely Lover.mp3': No such file or directory
+May 22 18:20 : player: played "Shaggy/Hot Shot/02 Lonely Lover.mp3"
+May 22 18:20 : exception: Failed to decode /home/gavarch/mus/Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/17 China Boy.mp3
+May 22 18:20 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/17 China Boy.mp3': No such file or directory
+May 22 18:20 : exception: Failed to decode /home/gavarch/mus/La Sonora Dinamita/32 Cañonazos/24 La Piña Madura (feat_ Macondo.mp3
+May 22 18:20 : exception: nested: Failed to open '/home/gavarch/mus/La Sonora Dinamita/32 Cañonazos/24 La Piña Madura (feat_ Macondo.mp3': No such file or directory
+May 22 18:20 : player: played "Various Artists/Tea Dance 1920s_ 30s_ 40s Vint/17 China Boy.mp3"
+May 22 18:20 : exception: Failed to decode /home/gavarch/mus/La Sonora Dinamita/32 Cañonazos/24 La Piña Madura (feat_ Macondo.mp3
+May 22 18:20 : exception: nested: Failed to open '/home/gavarch/mus/La Sonora Dinamita/32 Cañonazos/24 La Piña Madura (feat_ Macondo.mp3': No such file or directory
+May 22 18:20 : player: played "La Sonora Dinamita/32 Cañonazos/24 La Piña Madura (feat_ Macondo.mp3"
+May 22 18:20 : exception: Failed to decode /home/gavarch/mus/Protoje/8 Year Affair/00 Shot By Love (Feat_ Toi).mp3
+May 22 18:20 : exception: nested: Failed to open '/home/gavarch/mus/Protoje/8 Year Affair/00 Shot By Love (Feat_ Toi).mp3': No such file or directory
+May 22 18:20 : player: played "Protoje/8 Year Affair/00 Shot By Love (Feat_ Toi).mp3"
+May 22 18:20 : exception: Failed to decode /home/gavarch/mus/Gregory Isaacs/Night Nurse/04 Hot Stepper.mp3
+May 22 18:20 : exception: nested: Failed to open '/home/gavarch/mus/Gregory Isaacs/Night Nurse/04 Hot Stepper.mp3': No such file or directory
+May 22 18:20 : player: played "Gregory Isaacs/Night Nurse/04 Hot Stepper.mp3"
+May 22 18:20 : exception: Failed to decode /home/gavarch/mus/Bob Marley/Natural Mystic (Remastered)/00 Positive Vibration.mp3
+May 22 18:20 : exception: nested: Failed to open '/home/gavarch/mus/Bob Marley/Natural Mystic (Remastered)/00 Positive Vibration.mp3': No such file or directory
+May 22 18:20 : player: played "Bob Marley/Natural Mystic (Remastered)/00 Positive Vibration.mp3"
+May 22 18:20 : exception: Failed to decode /home/gavarch/mus/Various Artists/Tea Dance 2 - Another 1920s_ 3/01 Deep Purple (Slow Foxtrot).mp3
+May 22 18:20 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Tea Dance 2 - Another 1920s_ 3/01 Deep Purple (Slow Foxtrot).mp3': No such file or directory
+May 22 18:20 : player: played "Various Artists/Tea Dance 2 - Another 1920s_ 3/01 Deep Purple (Slow Foxtrot).mp3"
+May 22 18:20 : exception: Failed to decode /home/gavarch/mus/Sergio Mendes/Más que Nada/13 Mas Que Nada.mp3
+May 22 18:20 : exception: nested: Failed to open '/home/gavarch/mus/Sergio Mendes/Más que Nada/13 Mas Que Nada.mp3': No such file or directory
+May 22 18:20 : player: played "Sergio Mendes/Más que Nada/13 Mas Que Nada.mp3"
+May 22 18:20 : client: [1] closed
+May 22 18:20 : client: [2] opened from [::1]:45094
+May 22 18:20 : client: [2] closed
+May 22 18:20 : client: [3] opened from [::1]:45096
+May 22 18:20 : client: [3] closed
+May 22 18:20 : client: [4] opened from [::1]:45098
+May 22 18:20 : client: [4] closed
+May 23 14:40 : client: [5] opened from [::1]:58682
+May 23 14:40 : exception: Failed to decode /home/gavarch/mus/Sergio Mendes/Más que Nada/13 Mas Que Nada.mp3
+May 23 14:40 : exception: nested: Failed to open '/home/gavarch/mus/Sergio Mendes/Más que Nada/13 Mas Que Nada.mp3': No such file or directory
+May 23 14:40 : player: played "Sergio Mendes/Más que Nada/13 Mas Que Nada.mp3"
+May 23 14:40 : exception: Failed to decode /home/gavarch/mus/Plastic Bertrand/Plastic Bertrand/07 Le monde est merveilleux.mp3
+May 23 14:40 : exception: nested: Failed to open '/home/gavarch/mus/Plastic Bertrand/Plastic Bertrand/07 Le monde est merveilleux.mp3': No such file or directory
+May 23 14:40 : player: played "Plastic Bertrand/Plastic Bertrand/07 Le monde est merveilleux.mp3"
+May 23 14:40 : exception: Failed to decode /home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3
+May 23 14:40 : exception: nested: Failed to open '/home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3': No such file or directory
+May 23 14:40 : player: played "Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3"
+May 23 14:40 : exception: Failed to decode /home/gavarch/mus/Shabba Ranks/Caan Dun (the Best Of Shabba)/16 Telephone Love.mp3
+May 23 14:40 : exception: nested: Failed to open '/home/gavarch/mus/Shabba Ranks/Caan Dun (the Best Of Shabba)/16 Telephone Love.mp3': No such file or directory
+May 23 14:40 : player: played "Shabba Ranks/Caan Dun (the Best Of Shabba)/16 Telephone Love.mp3"
+May 23 14:40 : exception: Failed to decode /home/gavarch/mus/Kid Creole And The Coconuts/Tropical Gangsters (Remastered/01 Annie_ I'm Not Your Daddy.mp3
+May 23 14:40 : exception: nested: Failed to open '/home/gavarch/mus/Kid Creole And The Coconuts/Tropical Gangsters (Remastered/01 Annie_ I'm Not Your Daddy.mp3': No such file or directory
+May 23 14:40 : player: played "Kid Creole And The Coconuts/Tropical Gangsters (Remastered/01 Annie_ I'm Not Your Daddy.mp3"
+May 23 14:40 : client: [5] closed
+May 23 14:40 : client: [6] opened from [::1]:58684
+May 23 14:40 : client: [6] closed
+May 23 14:40 : client: [7] opened from [::1]:58686
+May 23 14:40 : client: [7] closed
+May 23 14:40 : client: [8] opened from [::1]:58688
+May 23 14:40 : client: [8] closed
+May 23 14:40 : client: [9] opened from [::1]:58696
+May 23 14:40 : exception: Failed to decode /home/gavarch/mus/Kid Creole And The Coconuts/Tropical Gangsters (Remastered/01 Annie_ I'm Not Your Daddy.mp3
+May 23 14:40 : exception: nested: Failed to open '/home/gavarch/mus/Kid Creole And The Coconuts/Tropical Gangsters (Remastered/01 Annie_ I'm Not Your Daddy.mp3': No such file or directory
+May 23 14:40 : player: played "Kid Creole And The Coconuts/Tropical Gangsters (Remastered/01 Annie_ I'm Not Your Daddy.mp3"
+May 23 14:40 : exception: Failed to decode /home/gavarch/mus/Various Artists/Playlist_ Reggae/13 Oh Carolina.mp3
+May 23 14:40 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Playlist_ Reggae/13 Oh Carolina.mp3': No such file or directory
+May 23 14:40 : player: played "Various Artists/Playlist_ Reggae/13 Oh Carolina.mp3"
+May 23 14:40 : exception: Failed to decode /home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3
+May 23 14:40 : exception: nested: Failed to open '/home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3': No such file or directory
+May 23 14:40 : player: played "Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3"
+May 23 14:40 : exception: Failed to decode /home/gavarch/mus/Kid Creole And The Coconuts/Tropical Gangsters (Remastered/01 Annie_ I'm Not Your Daddy.mp3
+May 23 14:40 : exception: nested: Failed to open '/home/gavarch/mus/Kid Creole And The Coconuts/Tropical Gangsters (Remastered/01 Annie_ I'm Not Your Daddy.mp3': No such file or directory
+May 23 14:40 : player: played "Kid Creole And The Coconuts/Tropical Gangsters (Remastered/01 Annie_ I'm Not Your Daddy.mp3"
+May 23 14:40 : client: [9] closed
+May 23 14:40 : client: [10] opened from [::1]:58698
+May 23 14:40 : client: [10] closed
+May 23 14:40 : client: [11] opened from [::1]:58700
+May 23 14:40 : client: [11] closed
+May 23 14:40 : client: [12] opened from [::1]:58702
+May 23 14:40 : client: [12] closed
+May 23 14:40 : client: [13] opened from [::1]:58706
+May 23 14:40 : exception: Failed to decode /home/gavarch/mus/Kid Creole And The Coconuts/Tropical Gangsters (Remastered/01 Annie_ I'm Not Your Daddy.mp3
+May 23 14:40 : exception: nested: Failed to open '/home/gavarch/mus/Kid Creole And The Coconuts/Tropical Gangsters (Remastered/01 Annie_ I'm Not Your Daddy.mp3': No such file or directory
+May 23 14:40 : player: played "Kid Creole And The Coconuts/Tropical Gangsters (Remastered/01 Annie_ I'm Not Your Daddy.mp3"
+May 23 14:40 : exception: Failed to decode /home/gavarch/mus/Shabba Ranks/Caan Dun (the Best Of Shabba)/16 Telephone Love.mp3
+May 23 14:40 : exception: nested: Failed to open '/home/gavarch/mus/Shabba Ranks/Caan Dun (the Best Of Shabba)/16 Telephone Love.mp3': No such file or directory
+May 23 14:40 : player: played "Shabba Ranks/Caan Dun (the Best Of Shabba)/16 Telephone Love.mp3"
+May 23 14:40 : exception: Failed to decode /home/gavarch/mus/Various Artists/Playlist_ Reggae/13 Oh Carolina.mp3
+May 23 14:40 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Playlist_ Reggae/13 Oh Carolina.mp3': No such file or directory
+May 23 14:40 : player: played "Various Artists/Playlist_ Reggae/13 Oh Carolina.mp3"
+May 23 14:40 : client: [13] closed
+May 23 14:40 : client: [14] opened from [::1]:58708
+May 23 14:40 : client: [14] closed
+May 23 14:40 : client: [15] opened from [::1]:58710
+May 23 14:40 : client: [15] closed
+May 23 14:40 : client: [16] opened from [::1]:58712
+May 23 14:40 : client: [16] closed
+May 23 14:40 : client: [17] opened from [::1]:58714
+May 23 14:40 : exception: Failed to decode /home/gavarch/mus/Various Artists/Playlist_ Reggae/13 Oh Carolina.mp3
+May 23 14:40 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Playlist_ Reggae/13 Oh Carolina.mp3': No such file or directory
+May 23 14:40 : player: played "Various Artists/Playlist_ Reggae/13 Oh Carolina.mp3"
+May 23 14:40 : exception: Failed to decode /home/gavarch/mus/Various Artists/Playlist_ Reggae/13 Oh Carolina.mp3
+May 23 14:40 : exception: nested: Failed to open '/home/gavarch/mus/Various Artists/Playlist_ Reggae/13 Oh Carolina.mp3': No such file or directory
+May 23 14:40 : exception: Failed to decode /home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3
+May 23 14:40 : exception: nested: Failed to open '/home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3': No such file or directory
+May 23 14:40 : player: played "Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3"
+May 23 14:40 : client: [17] closed
+May 23 14:40 : client: [18] opened from [::1]:58716
+May 23 14:40 : client: [18] closed
+May 23 14:40 : client: [19] opened from [::1]:58718
+May 23 14:40 : client: [19] closed
+May 23 14:40 : client: [20] opened from [::1]:58720
+May 23 14:40 : exception: Failed to decode /home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3
+May 23 14:40 : exception: nested: Failed to open '/home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3': No such file or directory
+May 23 14:40 : player: played "Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3"
+May 23 14:40 : client: [20] closed
+May 23 14:40 : client: [21] opened from [::1]:58722
+May 23 14:40 : client: [21] closed
+May 23 14:40 : client: [22] opened from [::1]:58724
+May 23 14:40 : client: [22] closed
+May 23 14:40 : client: [23] opened from [::1]:58726
+May 23 14:40 : client: [23] closed
+May 23 15:29 : client: [24] opened from [::1]:59272
+May 23 15:29 : client: [24] closed
+May 23 15:29 : client: [25] opened from [::1]:59274
+May 23 15:29 : client: [25] closed
+May 24 15:00 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 24 15:00 : avahi: Service 'Music Player @ IdeacentreAIO' successfully established.
+May 24 15:03 : client: [0] opened from [::1]:41100
+May 24 15:03 : client: [0] closed
+May 24 18:01 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 24 18:01 : avahi: Service 'Music Player @ IdeacentreAIO' successfully established.
+May 24 19:21 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 24 19:21 : avahi: Service 'Music Player @ IdeacentreAIO' successfully established.
+May 25 21:54 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 25 21:54 : avahi: Service 'Music Player @ IdeacentreAIO' successfully established.
+May 26 21:05 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 26 21:05 : avahi: Service 'Music Player @ IdeacentreAIO' successfully established.

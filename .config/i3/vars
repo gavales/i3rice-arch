@@ -21,7 +21,7 @@ set $scrpic		scrpic
 set $primary	eDP1
 set $secondary	VGA1
 set $tertiary	HDMI1
-set $kb			gb
+set $kb			us
 
 set $mediaw		500
 set $mediah		306
