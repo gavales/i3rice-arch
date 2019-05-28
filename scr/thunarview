@@ -2,84 +2,81 @@
 
 name="$(xdotool getactivewindow getwindowname)"
 name="${name/ - File Manager/}"
-#title="${name/'gavarch'/'~'}"
-title="${name/'/home/gavarch'/'~'}"
-#title="${title/Pictures/pic}"
-#title="${title/Videos/vid}"
-#title="${title/scripts/scr}"
-#title="${title/script/scr}"
-#title="${title/Documents/doc}"
-#title="${title/Downloads/dwn}"
-#title="${title/Desktop/dsk}"
+title="${name/$HOME/'~'}"
 title="${title/i3rice-arch/dot}"
-#title="${title/xinclude/xcnf}"
-#title="${title/Templates/tmps}"
 
-name="${name##*/}"
+dir="${name##*/}"
 
-icn="ctrl+shift+i"
-lst="ctrl+shift+l"
+icn="xdotool key ctrl+shift+i"
+lst="xdotool key ctrl+shift+l"
 
-ora="ctrl+shift+k"
-ord="ctrl+shift+j"
+ora="xdotool key ctrl+shift+k"
+ord="xdotool key ctrl+shift+j"
 
-nme="ctrl+shift+n"
-dte="ctrl+shift+d"
-sze="ctrl+shift+s"
-tpe="ctrl+shift+t"
+nme="xdotool key ctrl+shift+n"
+dte="xdotool key ctrl+shift+d"
+sze="xdotool key ctrl+shift+s"
+tpe="xdotool key ctrl+shift+t"
 
 wmctrl -r :ACTIVE: -N ${title}
-i3-msg title_format "${title}"
+i3-msg -q title_format "${title}"
 
-xdotool key $ora
-xdotool key $nme
+$ora
+$nme
 
-case $name in
+case $dir in
 	gavarch)
-		xdotool key $ora
-		xdotool key $nme
-		xdotool key $icn
-		xdotool key $nme
+		$ora
+		$nme
+		$icn
+		$nme
 		;;
 	Drive)
-		xdotool key $ora
-		xdotool key $nme
-		xdotool key $lst
-		xdotool key $nme
+		$ora
+		$nme
+		$lst
+		$nme
 		;;
 	dwn)
-		xdotool key $ord
-		xdotool key $dte
-		xdotool key $lst
-		xdotool key $dte
+		$ord
+		$dte
+		$lst
+		$dte
 		;;
 	pic)
-		xdotool key $ora
-		xdotool key $lst
+		$ora
+		$lst
 		;;
 	scr)
-		xdotool key $ora
-		xdotool key $lst
+		$ora
+		$lst
 		;;
 	gifs)
-		xdotool key $ora
-		xdotool key $icn
+		$ora
+		$icn
 		;;
 	meme)
-		xdotool key $ora
-		xdotool key $icn
+		$ora
+		$icn
 		;;
 	scrots)
-		xdotool key $ora
-		xdotool key $icn
+		$ora
+		$icn
 		;;
 	walls)
-		xdotool key $ora
-		xdotool key $icn
+		$ora
+		$icn
 		;;
 	vid)
-		xdotool key $ora
-		xdotool key $icn
+		$ora
+		$lst
+		;;
+	lecs)
+		$ora
+		$lst
+		;;
+	ex)
+		$ora
+		$lst
 		;;
 esac
-

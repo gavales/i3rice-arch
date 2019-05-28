@@ -28,24 +28,8 @@ main () {
 	echo "set completion-bg \"$bkd\"" >> zathurarc
 	echo "set completion-fg \"$wtl\"" >> zathurarc
 	echo "set show-scrollbars false" >> zathurarc
-	#echo "set recolor true" >> zathurarc
 	echo "set recolor-darkcolor \"$wtd\"" >> zathurarc
 	echo "set recolor-lightcolor \"$bkd\"" >> zathurarc
 }
 
-reloadinst () {
-	pdfs=$(ps -fp $(pgrep -d, -x zathura) | sed -n '/UID/!p' | sed 's/\ //g')
-	pids=$(ps -fp $(pgrep -d, -x zathura))
-	if [[ $pids =~ "zathura" ]]; then
-		killall zathura
-		for i in $pdfs; do
-			zathura "$HOME/${i#*/home/gavarch}" &
-		done
-	else
-		echo "no pdfs open"
-		:
-	fi
-}
-
-reloadinst
 main

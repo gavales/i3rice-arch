@@ -1,9 +1,14 @@
 sw_volume: 62
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
+<<<<<<< HEAD
 state: pause
 current: 0
 time: 132.739000
+=======
+state: stop
+current: 0
+>>>>>>> origin/master
 random: 1
 repeat: 1
 single: 0
@@ -12,6 +17,7 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
+<<<<<<< HEAD
 0:Sergio Mendes/Más que Nada/01 Oba-La-La.mp3
 1:Sergio Mendes/Más que Nada/02 Love for Sale.mp3
 2:Sergio Mendes/Más que Nada/03 Tristeza de nos Dois.mp3
@@ -26,4 +32,7 @@ playlist_begin
 11:Sergio Mendes/Más que Nada/12 Diagonal.mp3
 12:Sergio Mendes/Más que Nada/13 Mas Que Nada.mp3
 13:Sergio Mendes & Brasil '66/Look Around/02 Roda.mp3
+=======
+0:Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3
+>>>>>>> origin/master
 playlist_end

@@ -7,6 +7,7 @@ set $mod		bindsym Mod1
 set $win		bindsym Mod4
 set $mrl		bindsym --release Mod1
 set $wlw		bindsym --whole-window Mod4
+set $mlw		bindsym --whole-window Mod1
 set $exn		exec --no-startup-id
 set $exs		exec --no-startup-id ~/scr
 set $ena		exec_always --no-startup-id
@@ -107,9 +108,19 @@ client.placeholder		$grn $grn $wht $grn $grn
 # >>>> MOD1 BINDINGS
 # //// Misc
 
-floating_modifier	$mdi
-
 $mod+Home		$exs/keybindingsmenu
+
+$mlw+button1		$mvm3, [con_mark=$mk3] focus, focus child
+                                                
+$mlw+button2		kill
+
+$mlw+button3		$mvm2
+
+$mlw+button4		focus left
+$mlw+Shift+button4	move left
+
+$mlw+button5		focus right
+$mlw+Shift+button5	move right
 
 $mod+Escape		mode "SHUTDOWN"
 mode "SHUTDOWN" {
@@ -152,9 +163,9 @@ $mod+Shift+4		move container to workspace $ws4; workspace $ws4
 $mod+5				workspace $ws5
 $mod+Shift+5		move container to workspace $ws5; workspace $ws5
 
-$mod+minus			$mvm2, [con_mark=$mk3] focus
+$mod+minus			$mvm2
 
-$mod+equal			$mvm3, [con_mark=$mk3] focus
+$mod+equal			$mvm3, [con_mark=$mk3] focus, focus child
 
 # //// 1st Row
 
@@ -199,7 +210,7 @@ $mod+a				focus parent
 $mod+Shift+a		focus child
 
 $mod+s				$lch '$term -name MUSIC -e ncmpcpp' $mk1 fl
-$mod+Shift+s		$lch spotify $mk1
+$mod+Shift+s		$lch 'spotify && xdotool search --sync --classname spotify set_window --class SPOTIFY' $mk1
 $mod+Ctrl+s			sticky toggle
 
 $mod+d				$exn rofi -show drun
@@ -261,15 +272,7 @@ $mod+slash			$exs/i3volume mute
 # >>>> MOD4 BINDINGS
 # //// Misc
 
-$wlw+button1		$exn i3-input -F "[con_id=__focused__] mark _sticky_%s"
-
-$wlw+button3		kill
-
-$wlw+button4		focus left
-$wlw+Shift+button4	move left
-
-$wlw+button5		focus right
-$wlw+Shift+button5	move right
+floating_modifier	$wni
 
 # //// Numbers
 
