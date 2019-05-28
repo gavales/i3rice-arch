@@ -1,13 +1,14 @@
 
+
 URxvt.font:					xft:fontname:size=fontsize
 
 URxvt*fading:				0
 URxvt*depth:				0
-URxvt*scrollBar:			true
-URxvt*scrollBar_right:		true
-URxvt*scrollColor:			cblkl
-URxvt*troughColor:			cblkd
-URxvt*scrollstyle:			plain
+URxvt*scrollBar:			false
+!URxvt*scrollBar_right:		true
+!URxvt*scrollColor:			cblkl
+!URxvt*troughColor:			cblkd
+!URxvt*scrollstyle:			plain
 URxvt*mouseWheelScrollPage:	false
 URxvt*cursorBlink:			true
 URxvt*background:			cblkd

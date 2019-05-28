@@ -135,7 +135,7 @@ margin-bottom = 0
 [module/start]
 type = custom/text
 content = %{T1}%{T-}
-click-left = rofi -show drun
+click-left = rofi -show drun -theme dmenu
 click-middle = ~/scr/xtheme
 click-right = ~/scr/keybindingsmenu launch
 content-background = ${colors.wtd}

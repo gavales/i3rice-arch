@@ -1,4 +1,5 @@
 
+
 XTerm*background:			cwhtl
 XTerm*foreground:			cblkd
 ! XTerm*pointerColor:		ccynd
@@ -6,4 +7,3 @@ XTerm*faceName:				iosevka
 XTerm*faceSize:				16
 ! XTerm*reverseVideo:		on
 XTerm*selectToClipboard:	true
-

@@ -94,7 +94,7 @@ hi Constant cterm=italic ctermfg=white ctermbg=black
 hi Special cterm=bold ctermfg=white ctermbg=black
 hi Statement cterm=bold ctermfg=white ctermbg=black
 hi PreProc cterm=bold ctermfg=blue ctermbg=black
-hi MatchParen cterm=bold ctermfg=yellow 
+hi MatchParen cterm=bold ctermfg=yellow ctermbg=black
 hi Search cterm=none ctermfg=black ctermbg=yellow
 hi Error cterm=none ctermfg=red ctermbg=black
 hi EndOfBuffer cterm=none ctermfg=black ctermbg=black
@@ -667,14 +667,18 @@ autocmd FileType sh inoremap if<Tab> if [[  ]]; then
 autocmd FileType sh inoremap elif <BS>elif [[  ]]; then
 	\<Enter><Tab><++><Esc>0kf[2la
 autocmd FileType sh inoremap else <BS>else
-	\<Enter><Tab>
+	\<Enter>
 autocmd FileType sh inoremap [[ [[  ]]<Esc>F]hi
 autocmd FileType sh inoremap cas<Tab> case $* in
 	\<Enter><Tab><++>) <++> ;;
 	\<Enter><BS>esac<Esc>02kf*xi
-autocmd FileType sh inoremap opt<Tab> while getopts ::<++> <++>; do
-	\<Enter><++>
-	\<Enter><BS>done<Esc>02kf:a
+autocmd FileType sh inoremap opt<Tab> while getopts ::<++> opts; do
+	\<Enter>case $opts in
+	\<Enter><Tab><++>)
+	\<Enter><Tab><++>
+	\<Enter>;;
+	\<Enter><BS><BS>esac
+	\<Enter><BS>done<Esc>06kf:a
 autocmd FileType sh inoremap whi<Tab> while ; do
 	\<Enter><++>
 	\<Enter><BS>done<Esc>02kf;i
