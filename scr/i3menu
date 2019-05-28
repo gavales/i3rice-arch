@@ -29,8 +29,11 @@ msloc="-xoffset ${msX:2} -yoffset ${msY:2}"
 wnloc="-xoffset $(expr $wnX - $brdr) -yoffset $(expr $wnY - $ttlbr)"
 dmenuloc="-x $(expr $wnX - $brdr) -y $(expr $wnY - $ttlbr)"
 
-#while getopts :sptmwlxy: opts; do
+#while getopts :dsptmwlxy: opts; do
 #	case $opts in
+#		d)
+#			<++>
+#			;;
 #		s)
 #			<++>
 #			;;
