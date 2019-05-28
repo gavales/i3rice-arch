@@ -27252,3 +27252,24 @@ May 28 01:09 : client: [0] opened from [::1]:53700
 May 28 01:09 : client: [0] closed
 May 28 01:09 : client: [1] opened from [::1]:53702
 May 28 01:09 : client: [1] closed
+May 28 19:08 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 28 19:08 : avahi: Service 'Music Player @ IdeacentreAIO' successfully established.
+May 28 19:08 : client: [0] opened from [::1]:53272
+May 28 19:08 : client: [0] closed
+May 28 19:08 : client: [1] opened from [::1]:53278
+May 28 19:08 : client: [1] closed
+May 28 19:08 : client: [2] opened from [::1]:53512
+May 28 19:08 : client: [2] closed
+May 28 19:08 : client: [3] opened from [::1]:53514
+May 28 19:08 : client: [3] closed
+May 28 19:09 : client: [4] opened from [::1]:53534
+May 28 19:09 : exception: Failed to decode /home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3
+May 28 19:09 : exception: nested: Failed to open '/home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3': No such file or directory
+May 28 19:09 : player: played "Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3"
+May 28 19:09 : client: [4] closed
+May 28 19:09 : client: [5] opened from [::1]:53536
+May 28 19:09 : client: [5] closed
+May 28 19:09 : client: [6] opened from [::1]:53538
+May 28 19:09 : client: [6] closed
+May 28 19:09 : client: [7] opened from [::1]:53540
+May 28 19:09 : client: [7] closed
