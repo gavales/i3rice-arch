@@ -68,6 +68,7 @@
 ; (gtk_accel_path "<Actions>/ThunarStandardView/restore" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/file-menu" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/make-link" "")
+; (gtk_accel_path "<Actions>/ThunarActions/Tap::create-archive" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/new-tab" "<Primary>t")
 ; (gtk_accel_path "<Actions>/ThunarWindow/go-menu" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/show-hidden" "<Primary>h")

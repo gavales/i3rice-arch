@@ -6,6 +6,7 @@
 prompt="${1}"
 mouseX=$(xdotool getmouselocation | awk '{print $1}')
 mouseY=$(xdotool getmouselocation | awk '{print $2}')
+monitor=$(xdotool getmouselocation | awk '{print $3}')
 
 black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
 white=$(xrdb -query | grep '*color15' | awk '{print $NF}')
@@ -14,11 +15,16 @@ font=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
 font=${font#*:}
 font=${font%:*}
 format="-fn "${font}:size=15" -nb "$accent" -nf "$black" -sf "$accent" -sb "$white" -l 20"
-location="-x ${mouseX:2} -y ${mouseY:2}"
+location="-xoffset ${mouseX:2} -yoffset ${mouseY:2}"
+
+right-click () {
+	rofi -dmenu -monitor ${monitor:7} -location 1 $location -lines 10 -p "${prompt}"
+#	dmenu $format $location -p "${prompt}" -w 500
+}
 
 menu () {
-#	rofi -dmenu -location 0 -p "${prompt}"
-	dmenu $format $location -p "${prompt}" -w 500
+	rofi -dmenu -monitor ${monitor:7} -location 0 -p "${prompt}"
+#	dmenu $format $location -p "${prompt}" -w 500
 }
 
 if [[ ${prompt} == "-run" ]]; then

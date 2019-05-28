@@ -10,7 +10,7 @@
 set $font1 Iosevka Medium Oblique
 set $font2 FontAwesome
 set $font3 monaco
-set $fonts 11
+set $fonts 9
 
 font pango:$font1,$font2 $fonts
 
@@ -24,6 +24,6 @@ set $tertiary	HDMI1
 set $kb			us
 
 set $mediaw		500
-set $mediah		306
+set $mediah		302
 set $mediaw2	500
-set $mediah2	400
+set $mediah2	396

@@ -2,40 +2,81 @@
 
 name="$(xdotool getactivewindow getwindowname)"
 name="${name/ - File Manager/}"
-title="${name/'/home/gavarch'/'~'}"
+title="${name/$HOME/'~'}"
 title="${title/i3rice-arch/dot}"
-cd $name
-numSDir="$(ls -l | grep '^d' | wc -l)"
 
-currDir="${name##*/}"
+dir="${name##*/}"
 
-icn="xdotool key shift+ctrl+i"
-lst="xdotool key shift+ctrl+l"
-                            
-ora="xdotool key shift+ctrl+k"
-ord="xdotool key shift+ctrl+j"
-                            
-nme="xdotool key shift+ctrl+n"
-dte="xdotool key shift+ctrl+d"
-sze="xdotool key shift+ctrl+s"
-tpe="xdotool key shift+ctrl+t"
+icn="xdotool key ctrl+shift+i"
+lst="xdotool key ctrl+shift+l"
+
+ora="xdotool key ctrl+shift+k"
+ord="xdotool key ctrl+shift+j"
+
+nme="xdotool key ctrl+shift+n"
+dte="xdotool key ctrl+shift+d"
+sze="xdotool key ctrl+shift+s"
+tpe="xdotool key ctrl+shift+t"
 
 wmctrl -r :ACTIVE: -N ${title}
-i3-msg title_format "${title}"
+i3-msg -q title_format "${title}"
 
-if [[ $numSDir -le 5 ]]; then
-	$icn
-else
-	$lst
-fi
+$ora
+$nme
 
-case $currDir in
-	*)
+case $dir in
+	gavarch)
 		$ora
+		$nme
+		$icn
+		$nme
+		;;
+	Drive)
+		$ora
+		$nme
+		$lst
 		$nme
 		;;
 	dwn)
 		$ord
 		$dte
+		$lst
+		$dte
+		;;
+	pic)
+		$ora
+		$lst
+		;;
+	scr)
+		$ora
+		$lst
+		;;
+	gifs)
+		$ora
+		$icn
+		;;
+	meme)
+		$ora
+		$icn
+		;;
+	scrots)
+		$ora
+		$icn
+		;;
+	walls)
+		$ora
+		$icn
+		;;
+	vid)
+		$ora
+		$lst
+		;;
+	lecs)
+		$ora
+		$lst
+		;;
+	ex)
+		$ora
+		$lst
 		;;
 esac
