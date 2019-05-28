@@ -2,33 +2,50 @@
 
 # OA: Gavin Vales
 # CREATED: Sat 16 Mar 20:08:40 GMT 2019
+# requires dmenu-manjaro
 
+ttlbr=24
+brdr=2
 prompt="${1}"
-mouseX=$(xdotool getmouselocation | awk '{print $1}')
-mouseY=$(xdotool getmouselocation | awk '{print $2}')
-monitor=$(xdotool getmouselocation | awk '{print $3}')
+wnloc=$(xdotool getactivewindow getwindowgeometry | grep 'Position' | awk '{print $2}')
+wngeo=$(xdotool getactivewindow getwindowgeometry | grep 'Geometry' | awk '{print $2}')
+wnX=${wnloc%,*}
+wnY=${wnloc#*,}
+wnW=${wngeo%x*}
+wnH=${wngeo#*x}
+msX=$(xdotool getmouselocation | awk '{print $1}')
+msY=$(xdotool getmouselocation | awk '{print $2}')
+mon=$(xdotool getmouselocation | awk '{print $3}')
 
-black=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-white=$(xrdb -query | grep '*color15' | awk '{print $NF}')
-accent=$(xrdb -query | grep '*color5' | awk '{print $NF}')
-font=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
-font=${font#*:}
-font=${font%:*}
-format="-fn "${font}:size=15" -nb "$accent" -nf "$black" -sf "$accent" -sb "$white" -l 20"
-location="-xoffset ${mouseX:2} -yoffset ${mouseY:2}"
+bkd=$(xrdb -query | grep '*color8' | awk '{print $NF}')
+wtl=$(xrdb -query | grep '*color15' | awk '{print $NF}')
+blu=$(xrdb -query | grep '*color3' | awk '{print $NF}')
+fnt=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
+fnt=${fnt#*:}
+fnt=${fnt%:*}
+format="-fn "${fnt}:size=11" -nb "$bkd" -nf "$blu" -sf "$bkd" -sb "$blu""
+msloc="-xoffset ${msX:2} -yoffset ${msY:2}"
+wnloc="-xoffset $(expr $wnX - $brdr - $brdr) -yoffset $(expr $wnY - $ttlbr)"
+dmenuloc="-x $(expr $wnX - $brdr - $brdr) -y $(expr $wnY - $ttlbr)"
 
-right-click () {
-	rofi -dmenu -monitor ${monitor:7} -location 1 $location -lines 10 -p "${prompt}"
-#	dmenu $format $location -p "${prompt}" -w 500
+window () {
+	rofi -dmenu -monitor ${mon:7} -location 1 $wnloc -lines 10 -p "${prompt}"
 }
 
-menu () {
-	rofi -dmenu -monitor ${monitor:7} -location 0 -p "${prompt}"
-#	dmenu $format $location -p "${prompt}" -w 500
+right-click () {
+	rofi -dmenu -monitor ${mon:7} -location 1 $msloc -lines 10 -p "${prompt}"
+}
+
+centre () {
+	rofi -dmenu -monitor ${mon:7} -location 0 -p "${prompt}"
+}
+
+dmenu () {
+	dmenu_run $dmenuloc $format -w $(expr $wnW + $brdr + $brdr) -h $ttlbr
 }
 
 if [[ ${prompt} == "-run" ]]; then
-	dmenu_run $format
+	dmenu
 else
-	menu
+	centre
 fi
