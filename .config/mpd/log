@@ -27109,3 +27109,44 @@ May 20 22:28 : avahi: Service 'Music Player @ ThinkPadT440p' successfully establ
 >>>>>>> origin/master
 May 22 00:56 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 May 22 00:56 : avahi: Service 'Music Player @ IdeacentreAIO' successfully established.
+May 23 23:14 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 23 23:14 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 23 23:14 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 23 23:16 : client: [0] opened from [::1]:37578
+May 23 23:16 : client: [0] closed
+May 23 23:16 : client: [1] opened from [::1]:37580
+May 23 23:16 : client: [1] closed
+May 23 23:16 : client: [2] opened from [::1]:37614
+May 23 23:16 : client: [3] opened from [::1]:37616
+May 23 23:16 : client: [3] closed
+May 23 23:16 : client: [4] opened from [::1]:37618
+May 23 23:16 : client: [4] closed
+May 23 23:16 : client: [5] opened from [::1]:37620
+May 23 23:16 : client: [5] closed
+May 23 23:16 : client: [6] opened from [::1]:37622
+May 23 23:16 : client: [6] closed
+May 23 23:16 : client: [2] closed
+May 23 23:22 : client: [7] opened from [::1]:37882
+May 23 23:22 : client: [7] closed
+May 23 23:22 : client: [8] opened from [::1]:37884
+May 23 23:22 : client: [8] closed
+May 23 23:25 : client: [9] opened from [::1]:38302
+May 23 23:25 : client: [9] closed
+May 23 23:25 : client: [10] opened from [::1]:38304
+May 23 23:25 : client: [10] closed
+May 23 23:47 : client: [11] opened from [::1]:40168
+May 23 23:47 : client: [11] closed
+May 23 23:47 : client: [12] opened from [::1]:40170
+May 23 23:47 : client: [12] closed
+May 23 23:47 : client: [13] opened from [::1]:40172
+May 23 23:47 : client: [13] closed
+May 23 23:47 : client: [14] opened from [::1]:40174
+May 23 23:47 : client: [14] closed
+May 23 23:49 : client: [15] opened from [::1]:40182
+May 23 23:49 : client: [15] closed
+May 23 23:49 : client: [16] opened from [::1]:40184
+May 23 23:49 : client: [16] closed
+May 23 23:49 : client: [17] opened from [::1]:40186
+May 23 23:49 : client: [17] closed
+May 23 23:49 : client: [18] opened from [::1]:40188
+May 23 23:49 : client: [18] closed
