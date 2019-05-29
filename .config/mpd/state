@@ -1,14 +1,8 @@
 sw_volume: 62
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
-<<<<<<< HEAD
-state: pause
-current: 0
-time: 132.739000
-=======
 state: stop
 current: 0
->>>>>>> origin/master
 random: 1
 repeat: 1
 single: 0
@@ -17,22 +11,5 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-<<<<<<< HEAD
-0:Sergio Mendes/Más que Nada/01 Oba-La-La.mp3
-1:Sergio Mendes/Más que Nada/02 Love for Sale.mp3
-2:Sergio Mendes/Más que Nada/03 Tristeza de nos Dois.mp3
-3:Sergio Mendes/Más que Nada/04 What Is This Thing Called Love.mp3
-4:Sergio Mendes/Más que Nada/05 Olhou para Mim.mp3
-5:Sergio Mendes/Más que Nada/06 Satin Doll.mp3
-6:Sergio Mendes/Más que Nada/07 Tema Sem Palavras.mp3
-7:Sergio Mendes/Más que Nada/08 On Green Dolphin Street.mp3
-8:Sergio Mendes/Más que Nada/09 Outra Vez.mp3
-9:Sergio Mendes/Más que Nada/10 Disa.mp3
-10:Sergio Mendes/Más que Nada/11 Sica's Dream.mp3
-11:Sergio Mendes/Más que Nada/12 Diagonal.mp3
-12:Sergio Mendes/Más que Nada/13 Mas Que Nada.mp3
-13:Sergio Mendes & Brasil '66/Look Around/02 Roda.mp3
-=======
 0:Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3
->>>>>>> origin/master
 playlist_end
