@@ -21,6 +21,7 @@ shell cp -r ~/plt/tex/article excheatsheet
 shell wget https://gist.githubusercontent.com/oquno/3658426/raw/055ab5042bca3690415947f29cc137a7dc5c7be4/googleplaylist.py
 shell chmod +x %f
 rename scr2
+rename doc
 rename plt
 rename uni
 shell bash %f
@@ -41,10 +42,9 @@ rename compton.conf_
 shell wget https://github.com/budlabs/youtube/raw/master/letslinux/040-keybindings-rofi-2/keybindingsmenu
 shell  chmod +x %f
 wq
+
 scout -ftsea 
 mkdir ex
 rename rszath
 rename restartapps
-rename doc
-
-shell git clone https://github.com/StillANixRookie/atompackages
+mkdir themes

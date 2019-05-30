@@ -1,20 +1,20 @@
 [frame]
 width = 0
-color = "#ffffde"
+color = "#fdf6e3"
 
 [urgency_low]
-background = "#FF6E67"
-foreground = "#ffffde"
+background = "#2aa198"
+foreground = "#fdf6e3"
 timeout = 3
 
 [urgency_normal]
-background = "#FF6E67"
-foreground = "#ffffde"
+background = "#2aa198"
+foreground = "#fdf6e3"
 timeout = 3
 
 [urgency_critical]
-background = "#BD93F9"
-foreground = "#ffffde"
+background = "#dc322f"
+foreground = "#fdf6e3"
 timeout = 3
 
 [shortcuts]
@@ -63,5 +63,5 @@ timeout = 3
 	browser = /usr/bin/chromium
 	icon_position = on
 	icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
-	max_icon_size = 75
+	max_icon_size = 100
 
