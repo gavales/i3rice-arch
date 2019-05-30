@@ -29,6 +29,24 @@ msloc="-xoffset ${msX:2} -yoffset ${msY:2}"
 wnloc="-xoffset $(expr $wnX - $brdr) -yoffset $(expr $wnY - $ttlbr)"
 dmenuloc="-x $(expr $wnX - $brdr) -y $(expr $wnY - $ttlbr)"
 
+centre () {
+	rofi -dmenu -monitor ${mon:7} -location 0 -lines 10 -p "${prmt}"
+}
+
+start-button () {
+	rofi -show drun -monitor ${mon:7} -location 0 -lines 10 -p "${prmt}"
+}
+
+dmenu () {
+	dmenu_run $dmenuloc $dmenuthm -w $(expr $wnW + $brdr + $brdr) -h $ttlbr
+}
+
+if [[ ${prmt} == "-run" ]]; then
+	dmenu
+else
+	centre
+fi
+
 #while getopts :dsptmwlxy: opts; do
 #	case $opts in
 #		d)
@@ -60,21 +78,3 @@ dmenuloc="-x $(expr $wnX - $brdr) -y $(expr $wnY - $ttlbr)"
 #			;;
 #	esac
 #done
-
-centre () {
-	rofi -dmenu -monitor ${mon:7} -location 0 -lines 10 -p "${prmt}"
-}
-
-start-button () {
-	rofi -show drun -monitor ${mon:7} -location 0 -lines 10 -p "${prmt}"
-}
-
-dmenu () {
-	dmenu_run $dmenuloc $dmenuthm -w $(expr $wnW + $brdr + $brdr) -h $ttlbr
-}
-
-if [[ ${prmt} == "-run" ]]; then
-	dmenu
-else
-	centre
-fi

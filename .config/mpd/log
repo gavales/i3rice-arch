@@ -27320,3 +27320,7 @@ May 28 19:09 : client: [7] closed
 =======
 >>>>>>> origin/master
 >>>>>>> origin/master
+May 29 21:18 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 29 21:18 : avahi: Service 'Music Player @ IdeacentreAIO' successfully established.
+May 29 21:19 : client: [0] opened from [::1]:42406
+May 29 21:19 : client: [0] closed
