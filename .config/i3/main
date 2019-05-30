@@ -213,8 +213,8 @@ $mod+s				$lch '$term -name MUSIC -e ncmpcpp' $mk1 fl
 $mod+Shift+s		$lch 'spotify && xdotool search --sync --classname spotify set_window --class SPOTIFY' $mk1
 $mod+Ctrl+s			sticky toggle
 
-$mod+d				$exn rofi -show drun
-$mod+Shift+d		$exs/i3menu -run
+$mod+d				$exs/i3menu -s
+$mod+Shift+d		$exs/i3menu -d
 
 #$mod+f				$lch '$term -name MEDIA -e ranger' $mk2
 $mod+f				$lch thunar $mk2

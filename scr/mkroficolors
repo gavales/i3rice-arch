@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+# CREATED: Thu 30 May 22:45:53 GMT 2019
+
+bkd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+bkl=$(xrdb -query | grep '*color8' | awk '{print $NF}')
+grn=$(xrdb -query | grep '*color2' | awk '{print $NF}')
+ylw=$(xrdb -query | grep '*color3' | awk '{print $NF}')
+red=$(xrdb -query | grep '*color9' | awk '{print $NF}')
+wtd=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+wtl=$(xrdb -query | grep '*color15' | awk '{print $NF}')
+blu=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+gnt=$(xrdb -query | grep '*color5' | awk '{print $NF}')
+cyn=$(xrdb -query | grep '*color6' | awk '{print $NF}')
+
+
+echo "* {" > $HOME/.config/rofi/globals.rasi
+echo "accent: $blu;" >> $HOME/.config/rofi/globals.rasi
+echo "bg1: $bkd;" >> $HOME/.config/rofi/globals.rasi
+echo "bg2: $bkl;" >> $HOME/.config/rofi/globals.rasi
+echo "fg1: $wtd;" >> $HOME/.config/rofi/globals.rasi
+echo "fg2: $wtl;" >> $HOME/.config/rofi/globals.rasi
+echo "redish: $red;" >> $HOME/.config/rofi/globals.rasi
+echo "font1: \"Iosevka Oblique 12\";" >> $HOME/.config/rofi/globals.rasi
+echo "}" >> $HOME/.config/rofi/globals.rasi

@@ -6,7 +6,11 @@
 
 ttlbr=24
 brdr=4
-prmt="${1}"
+prmt=""
+lines="15"
+loc="1"
+xoffset="0"
+yoffset="0"
 wnloc=$(xdotool getactivewindow getwindowgeometry | grep 'Position' | awk '{print $2}')
 wngeo=$(xdotool getactivewindow getwindowgeometry | grep 'Geometry' | awk '{print $2}')
 wnX=${wnloc%,*}
@@ -24,57 +28,67 @@ fnt=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
 fnt=${fnt%:*}
 fnt=${fnt##*:}
 
-dmenuthm="-fn "${fnt}:size=11" -nb "$bkd" -nf "$wtl" -sf "$bkd" -sb "$blu""
-msloc="-xoffset ${msX:2} -yoffset ${msY:2}"
-wnloc="-xoffset $(expr $wnX - $brdr) -yoffset $(expr $wnY - $ttlbr)"
-dmenuloc="-x $(expr $wnX - $brdr) -y $(expr $wnY - $ttlbr)"
+dmthm="-fn "${fnt}:size=11" -nb "$bkd" -nf "$wtl" -sf "$bkd" -sb "$blu""
+mslocx="-xoffset ${msX:2}"
+mslocy="-yoffset ${msY:2}"
+wnlocx="-xoffset $(expr $wnX - $brdr) "
+wnlocy="-yoffset $(expr $wnY - $ttlbr)"
+dmloc="-x $(expr $wnX - $brdr) -y $(expr $wnY - $ttlbr)"
 
-centre () {
-	rofi -dmenu -monitor ${mon:7} -location 0 -lines 10 -p "${prmt}"
+menu () {
+	rofi -dmenu -monitor ${mon:7} -location $loc -lines $lines -p "${prmt}" \
+		-width 500 -xoffset $xoffset -yoffset $yoffset
 }
 
 start-button () {
-	rofi -show drun -monitor ${mon:7} -location 0 -lines 10 -p "${prmt}"
+	rofi -show drun -theme bmenu -monitor ${mon:7} -location $loc -lines $lines -width 500 -xoffset $xoffset -yoffset $yoffset
 }
 
 dmenu () {
-	dmenu_run $dmenuloc $dmenuthm -w $(expr $wnW + $brdr + $brdr) -h $ttlbr
+	dmenu_run $dmloc $dmthm -w $(expr $wnW + $brdr + $brdr) -h $ttlbr
 }
 
-if [[ ${prmt} == "-run" ]]; then
-	dmenu
-else
-	centre
-fi
+#if [[ ${prmt} == "-run" ]]; then
+#	dmenu
+#else
+#	centre
+#fi
 
-#while getopts :dsptmwlxy: opts; do
-#	case $opts in
-#		d)
-#			<++>
-#			;;
-#		s)
-#			<++>
-#			;;
-#		p)
-#			<++>
-#			;;
-#		t)
-#			<++>
-#			;;
-#		m)
-#			<++>
-#			;;
-#		w)
-#			<++>
-#			;;
-#		l)
-#			<++>
-#			;;
-#		x)
-#			<++>
-#			;;
-#		y)
-#			<++>
-#			;;
-#	esac
-#done
+while getopts :dsp:t:m:w:l:x:y: opts; do
+	case $opts in
+		d)
+			dmenu
+			exit
+			;;
+		s)
+			start-button
+			exit
+			;;
+		p)
+			prmt=${OPTARG}
+			;;
+		t)
+			xoffset=$(expr $wnX - $brdr)
+			yoffset=$(expr $wnY - $ttlbr)
+			;;
+		m)
+			xoffset=${msX:2}
+			yoffset=${msY:2}
+			;;
+		w)
+			xoffset=$(expr $wnX - $brdr)
+			yoffset=$(expr $wnY - $ttlbr)
+			;;
+		l)
+			loc=${OPTARG}
+			;;
+		x)
+			xoffset=${OPTARG}
+			;;
+		y)
+			yoffset=${OPTARG}
+			;;
+	esac
+done
+
+menu

@@ -135,7 +135,7 @@ margin-bottom = 0
 [module/start]
 type = custom/text
 content = %{T1}%{T-}
-click-left = rofi -show drun -theme dmenu
+click-left = ~/scr/i3menu -s -y 20
 click-middle = ~/scr/xtheme
 click-right = ~/scr/keybindingsmenu launch
 content-background = ${colors.wtd}
@@ -145,7 +145,7 @@ content-padding = 2
 [module/startfvwm]
 type = custom/text
 content = %{T1}%{T-}
-click-left = rofi -show drun -yoffset 50 -xoffset 10
+click-left = ~/scr/i3menu -s -y 50 -x 10
 content-background = ${colors.wtd}
 content-foreground = ${colors.bkd}
 content-padding = 3
