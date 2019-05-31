@@ -4,11 +4,16 @@
 # CREATED: Sat 16 Mar 20:08:40 GMT 2019
 # requires dmenu-manjaro
 
+rofiDir="$HOME/.config/rofi"
+color=blue
+layout="vertical"
 ttlbr=24
 brdr=4
-prmt=""
+prmt=" "
+mode="menu"
 lines="15"
-loc="1"
+loc="0"
+wdth="500"
 xoffset="0"
 yoffset="0"
 wnloc=$(xdotool getactivewindow getwindowgeometry | grep 'Position' | awk '{print $2}')
@@ -23,72 +28,87 @@ mon=$(xdotool getmouselocation | awk '{print $3}')
 
 bkd=$(xrdb -query | grep '*color8' | awk '{print $NF}')
 wtl=$(xrdb -query | grep '*color15' | awk '{print $NF}')
-blu=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+blu=$(xrdb -query | grep '*color9' | awk '{print $NF}')
 fnt=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
 fnt=${fnt%:*}
 fnt=${fnt##*:}
-
 dmthm="-fn "${fnt}:size=11" -nb "$bkd" -nf "$wtl" -sf "$bkd" -sb "$blu""
-mslocx="-xoffset ${msX:2}"
-mslocy="-yoffset ${msY:2}"
-wnlocx="-xoffset $(expr $wnX - $brdr) "
-wnlocy="-yoffset $(expr $wnY - $ttlbr)"
 dmloc="-x $(expr $wnX - $brdr) -y $(expr $wnY - $ttlbr)"
 
 menu () {
-	rofi -dmenu -monitor ${mon:7} -location $loc -lines $lines -p "${prmt}" \
-		-width 500 -xoffset $xoffset -yoffset $yoffset
+	rofi -dmenu -p "${prmt}" -theme $layout -monitor ${mon:7} -location $loc \
+		-lines $lines -width $wdth -xoffset $xoffset -yoffset $yoffset
 }
 
-start-button () {
-	rofi -show drun -theme bmenu -monitor ${mon:7} -location $loc -lines $lines -width 500 -xoffset $xoffset -yoffset $yoffset
+start () {
+	rofi -show drun -p $prmt -theme $layout -monitor ${mon:7} -location $loc \
+		-lines $lines -width $wdth -xoffset $xoffset -yoffset $yoffset
 }
 
 dmenu () {
 	dmenu_run $dmloc $dmthm -w $(expr $wnW + $brdr + $brdr) -h $ttlbr
 }
 
-#if [[ ${prmt} == "-run" ]]; then
-#	dmenu
-#else
-#	centre
-#fi
-
-while getopts :dsp:t:m:w:l:x:y: opts; do
+while getopts :p:l:x:y:c:w:dstm opts; do
 	case $opts in
-		d)
-			dmenu
-			exit
-			;;
-		s)
-			start-button
-			exit
-			;;
 		p)
-			prmt=${OPTARG}
-			;;
-		t)
-			xoffset=$(expr $wnX - $brdr)
-			yoffset=$(expr $wnY - $ttlbr)
-			;;
-		m)
-			xoffset=${msX:2}
-			yoffset=${msY:2}
-			;;
-		w)
-			xoffset=$(expr $wnX - $brdr)
-			yoffset=$(expr $wnY - $ttlbr)
+			prmt="${OPTARG}"
+#			echo $prmt
 			;;
 		l)
-			loc=${OPTARG}
+			loc="${OPTARG}"
+#			echo $loc
 			;;
 		x)
-			xoffset=${OPTARG}
+			xoffset="${OPTARG}"
+#			echo $xoffset
 			;;
 		y)
-			yoffset=${OPTARG}
+			yoffset="${OPTARG}"
+#			echo $yoffset
+			;;
+		c)
+			color="${OPTARG}"
+#			echo $color
+			;;
+		w)
+			wdth="${OPTARG}"
+#			echo $wdth
+			;;
+		d)
+			mode="dmenu"
+			;;
+		s)
+			mode="start"
+			;;
+		t)
+			layout=horizontal
+			loc=1
+			wdth="$(expr $wnW + $brdr)"
+			xoffset="$(expr $wnX - $brdr)"
+			yoffset="$(expr $wnY - $ttlbr)"
+#			echo title-bar-mode
+#			echo $lines
+#			echo $wdth
+#			echo $xoffset
+#			echo $yoffset
+			;;
+		m)
+			layout=vertical
+			loc=1
+			wdth=300
+			xoffset="${msX:2}"
+			yoffset="${msY:2}"
+#			echo mouse-mode
+#			echo $layout
+#			echo $loc
+#			echo $wdth
+#			echo $xoffset
+#			echo $yoffset
 			;;
 	esac
 done
 
-menu
+cat $rofiDir/${color}.rasi > $rofiDir/globals.rasi
+
+$mode

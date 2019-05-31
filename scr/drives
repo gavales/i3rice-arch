@@ -3,16 +3,16 @@
 ignore="grep -v 'sda' | grep -v 'sdb'"
 
 mountd () {
-	chosen=$(lsblk -ro 'name,size,type,mountpoint' | grep -v 'sda' | grep -v 'sdb' | grep -v '/' | grep 'part' | ~/scr/i3menu "Mount which drive?:")
+	chosen=$(lsblk -ro 'name,size,type,mountpoint' | grep -v 'sda' | grep -v 'sdb' | grep -v '/' | grep 'part' | ~/scr/i3menu -p "Mount which drive?:")
 	[[ -z $chosen ]] && exit 1
-	mountpoint=$(ls /run/media/${HOME:6} | ~/scr/i3menu "Which mountpoint?:")
+	mountpoint=$(ls /run/media/${HOME:6} | ~/scr/i3menu -p "Which mountpoint?:")
 	sudo mount /dev/$(echo $chosen | awk '{print $1}') /run/media/${HOME:6}/$mountpoint
 	sudo chmod 0777 /run/media/${HOME:6}/$mountpoint
 	ranger /run/media/${HOME:6}/$mountpoint
 }
 
 unmountd () {
-	chosen=$(lsblk -ro 'name,size,type,mountpoint' | grep -v 'sda' | grep -v 'sdb' | grep '/' | grep 'part' | ~/scr/i3menu "Mount which drive?:")
+	chosen=$(lsblk -ro 'name,size,type,mountpoint' | grep -v 'sda' | grep -v 'sdb' | grep '/' | grep 'part' | ~/scr/i3menu -p "Mount which drive?:")
 	[[ -z $chosen ]] && exit 1
 	sudo umount /dev/$(echo $chosen | awk '{print $1}')
 }

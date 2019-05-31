@@ -1,4 +1,3 @@
-rename unsed.sh_template
 rename oomox-xresources
 rename gnome-shell.css_template
 shell git clone https://github.com/budlabs/youtube.git
@@ -48,3 +47,4 @@ rename doc
 shell git clone https://github.com/StillANixRookie/atompackages
 rename Borderless (2019).webm
 >>>>>>> origin/master
+rename start.rasi

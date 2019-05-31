@@ -1,44 +1,44 @@
 
 
-!rofi.width:				580
+!rofi.width:				400
 !rofi.lines:				15
 !rofi.location:			1
 !rofi.padding:			10
 !rofi.yoffset:			20
 !rofi.xoffset:			0
-!rofi.show-icons:		true
+rofi.show-icons:		true
 !rofi.line-margin:		10
 !rofi.hide-scrollbar:	true
 !
-!rofi.modi:				ssh,window,drun,run
-!rofi.sidebar-mode:		true
-!rofi.terminal:			urxvt
-!rofi.ssh-client:		ssh
-!rofi.ssh-command:		{terminal} -e "{ssh-client} {host}"
-!rofi.opacity:			50
+rofi.modi:				ssh,window,drun,run
+rofi.sidebar-mode:		true
+rofi.terminal:			urxvt
+rofi.ssh-client:		ssh
+rofi.ssh-command:		{terminal} -e "{ssh-client} {host}"
+rofi.opacity:			50
 !rofi.columns:			1
-!rofi.font:				fontname fontsize2
-!rofi.fg:				cblud
-!rofi.bg:				cwhtl
-!rofi.fg-active:			cwhtl
-!rofi.fg-urgent:			cwhtl
-!rofi.hlfg-active:		ccynd
-!rofi.hlfg-urgent:		ccynd
-!rofi.bg-active:			cwhtl
-!rofi.bg-urgent:			cwhtl
-!rofi.hlbg-active:		cwhtd
-!rofi.hlbg-urgent:		cwhtd
-!rofi.bgalt:				cwhtl
-!rofi.hlfg:				cwhtl
-!rofi.hlbg:				cwhtl
-!rofi.bc:				ccynd
-!!State:					'bg',	'fg',	'bgalt',	'hlbg',	'hlfg'
-!rofi.color-normal:		cwhtl,	cblkd,	cwhtl,		cblud,	cblkd
-!!						'background',	'border'
-!rofi.color-window:		cwhtl,			cwhtl
+rofi.font:				fontname fontsize2
+rofi.fg:				cblud
+rofi.bg:				cwhtl
+rofi.fg-active:			cwhtl
+rofi.fg-urgent:			cwhtl
+rofi.hlfg-active:		ccynd
+rofi.hlfg-urgent:		ccynd
+rofi.bg-active:			cwhtl
+rofi.bg-urgent:			cwhtl
+rofi.hlbg-active:		cwhtd
+rofi.hlbg-urgent:		cwhtd
+rofi.bgalt:				cwhtl
+rofi.hlfg:				cwhtl
+rofi.hlbg:				cwhtl
+rofi.bc:				ccynd
+!State:					'bg',	'fg',	'bgalt',	'hlbg',	'hlfg'
+rofi.color-normal:		cwhtl,	cblkd,	cwhtl,		cblud,	cblkd
+!						'background',	'border'
+rofi.color-window:		cwhtl,			cwhtl
 !rofi.bw:				10
-!rofi.levenshtein-sort:	true
-!rofi.case-sensitive:	false
-!rofi.fuzzy:				false
-!rofi.separator-style:	solid
-!rofi.markup-rows:		false
+rofi.levenshtein-sort:	true
+rofi.case-sensitive:	false
+rofi.fuzzy:				false
+rofi.separator-style:	none
+rofi.markup-rows:		false
