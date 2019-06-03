@@ -3,43 +3,60 @@
 # OA: Gavin Vales
 # CREATED: Tue  4 Dec 15:23:43 GMT 2018
 
-app=$1
-mark=$2
+app="$1"
+mark="$2"
 marks=$(i3-msg -t get_marks)
 lastfocus=$(xdotool getactivewindow)
 
-if [[ $app == *"--new-window"* ]]; then
-	if [[ -n $mark ]]; then
-		if [[ ${marks} == *"${mark}"* ]]; then
-			i3-msg [con_mark="$mark"] focus
-			i3-msg focus child
-			i3-msg exec "\"$app\""
-		else
-			i3-msg exec \"$app\"
-			i3-msg focus parent
-			i3-msg mark $mark
-			i3-msg "mark --add _sticky_${mark/_W/}"
-			i3-msg focus child
-		fi
-	else
-		i3-msg exec \"$app\"
-	fi
+lmk3 () {
+	$app &>/dev/null &
+	sleep 1
+	i3-msg layout tabbed
+	i3-msg focus parent
+	i3-msg mark _W3
+	i3-msg "mark --add _sticky_3"
+	i3-msg focus child
+}
+
+lmk1 () {
+	i3-msg [con_mark="_W3"] focus
+	$app &>/dev/null &
+	sleep .5
+	i3-msg split toggle
+	i3-msg layout tabbed
+	i3-msg focus parent
+	i3-msg mark _W1
+	i3-msg "mark --add _sticky_1"
+	i3-msg focus child
+}
+
+lmk2 () {
+	i3-msg [con_mark="_W1"] focus
+	i3-msg split v
+	$app &>/dev/null &
+	sleep .5
+	i3-msg split h
+	i3-msg layout tabbed
+	i3-msg focus parent
+	i3-msg mark _W2
+	i3-msg "mark --add _sticky_2"
+	i3-msg focus child
+}
+
+main () {
+	i3-msg [con_mark=$mark] focus
+	i3-msg focus child
+	$app &>/dev/null &
+}
+
+if [[ $marks == *"$mark"* ]]; then
+	echo "mark $mark exists, launching app" && main
 else
-	if [[ -n $mark ]]; then
-		if [[ ${marks} == *"${mark}"* ]]; then
-			i3-msg [con_mark="$mark"] focus
-			i3-msg focus child
-			i3-msg exec "$app"
-		else
-			i3-msg exec "$app"
-			i3-msg focus parent
-			i3-msg mark $mark
-			i3-msg "mark --add _sticky_${mark/_W/}"
-			i3-msg focus child
-		fi
-	else
-		i3-msg exec "$app"
-	fi
+	case $mark in
+		*3) echo "no W3, making W3" && lmk3 ;;
+		*1) echo "no W1, making W1" && lmk1 ;;
+		*2) echo "no W2, making W2" && lmk2 ;;
+	esac
 fi
 
 if [[ ${3} == 'fl' ]]; then

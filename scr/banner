@@ -34,55 +34,55 @@ help () {
 while getopts :hsbilrmtfkdh: opts; do
 	case "$opts" in
 		s)
-		fnt="-f slant"
-		echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c)"
-		;;
+			fnt="-f slant"
+			echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c)"
+			;;
 		b)
-		fnt="-f banner3"
-		echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c | \
-			sed $'s/\#/\u2588/g')"
-		;;
+			fnt="-f banner3"
+			echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c | \
+				sed $'s/\#/\u2588/g')"
+			;;
 		i)
-		fnt="-f larry3d"
-		echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c )"
-		;;
+			fnt="-f larry3d"
+			echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c )"
+			;;
 		l)
-		fnt="-f letters"
-		echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c )"
-		;;
+			fnt="-f letters"
+			echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c )"
+			;;
 		r)
-		fnt="-f roman"
-		echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c | \
-			sed $'s/\#/\u2588/g')"
-		;;
+			fnt="-f roman"
+			echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c | \
+				sed $'s/\#/\u2588/g')"
+			;;
 		m)
-		fnt="-f smisome1"
-		echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c )"
-		;;
+			fnt="-f smisome1"
+			echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c )"
+			;;
 		t)
-		fnt="-f trek"
-		echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c | \
-			sed $'s/B/\u2588/g;s/8/\u2588/g' | \
-			sed $'s/K/\u258C/g;s/P/\u259B/g' | \
-			sed $'s/d/\u259F/g;s/b/\u2599/g' | \
-			sed $'s/\'/\u2598/g;s/`/\u259D/g' | \
-			sed $'s/\./\u2597/g;s/_/\ /g')"
-		;;
+			fnt="-f trek"
+			echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c | \
+				sed $'s/B/\u2588/g;s/8/\u2588/g' | \
+				sed $'s/K/\u258C/g;s/P/\u259B/g' | \
+				sed $'s/d/\u259F/g;s/b/\u2599/g' | \
+				sed $'s/\'/\u2598/g;s/`/\u259D/g' | \
+				sed $'s/\./\u2597/g;s/_/\ /g')"
+			;;
 		f)
-		fnt="-f speed"
-		echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c )"
-		;;
+			fnt="-f speed"
+			echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c )"
+			;;
 		k)
-		fnt="-f smkeyboard"
-		echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c )"
-		;;
+			fnt="-f smkeyboard"
+			echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c )"
+			;;
 		d)
-		fnt="-f 3-d"
-		echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c | \
-			sed $'s/\*/\u2588/g;s/\//\u2592/g')"
-		;;
+			fnt="-f 3-d"
+			echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c | \
+				sed $'s/\*/\u2588/g;s/\//\u2592/g')"
+			;;
 		h)
-		help
-		;;
+			help
+			;;
 	esac
 done

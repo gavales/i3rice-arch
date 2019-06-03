@@ -10,7 +10,7 @@ main () {
 }
 
 variant () {
-	finaltheme=$(ls ${xfilesDir}/colors | grep "${theme}" | $HOME/scr/i3menu "Variant? ")
+	finaltheme=$(ls ${xfilesDir}/colors | grep "${theme}" | $HOME/scr/i3menu -p "Variant? ")
 	if [[ -z ${finaltheme} ]]; then
 		notify-send "No theme chosen" -i "~/scrpic/theme.png"
 		:
@@ -23,7 +23,7 @@ variant () {
 }
 
 theme () {
-	theme=$(ls ${xfilesDir}/colors | grep -v '_' | $HOME/scr/i3menu "Choose theme ")
+	theme=$(ls ${xfilesDir}/colors | grep -v '_' | $HOME/scr/i3menu -p "Choose theme ")
 	variants=$(ls ${xfilesDir}/colors | grep "${theme}")
 	vrts=$(ls ${xfilesDir}/colors | grep "${theme}" | wc -l)
 	if [[ -z ${theme} ]]; then

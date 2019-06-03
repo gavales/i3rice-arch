@@ -94,7 +94,7 @@ displaymenu(){
       printf '<span background="#222222" foreground="#eeeeee">%s</span> %s\n' \
              "${keys[${i}-bindsym]}" "${keys[${i}-cmd]}"
     done
-  } | rofi -dmenu -location 0 -format i -markup-rows -p "$promptstring")"
+  } | rofi -dmenu -theme vertical -location 0 -format i -markup-rows -p "$promptstring")"
 
   [[ -z $selected ]] && exit 1
 

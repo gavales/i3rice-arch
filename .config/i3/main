@@ -213,7 +213,7 @@ $mod+s				$lch '$term -name MUSIC -e ncmpcpp' $mk1 fl
 $mod+Shift+s		$lch 'spotify && xdotool search --sync --classname spotify set_window --class SPOTIFY' $mk1
 $mod+Ctrl+s			sticky toggle
 
-$mod+d				$exs/i3menu -s -y 20
+$mod+d				$exs/i3menu -s -l 0
 $mod+Shift+d		$exs/i3menu -d
 
 #$mod+f				$lch '$term -name MEDIA -e ranger' $mk2
@@ -393,38 +393,37 @@ $fw [urgent=latest] focus
 
 $fw [title="About Pale Moon"]		 		$flen
 $fw [title="alsamixer"]			 			$flen
-$fw [class="Arandr"]						$flen
-$fw [class="Clipgrab"]						$flen
 $fw [title="File Transfer*"]				$flen
-$fw [class="Galculator"]					$flen
-$fw [class="Lightdm-gtk-greeter-settings"]	$flen
-$fw [class="Manjaro-hello"]		 			$flen
+$fw [title="i3_help"]						$flen
 $fw [title="MuseScore: Play Panel"]	 		$flen
+
+$fw [class="Arandr"]						$flen
+$fw [class="Blueman-manager"]		 		$flen
+$fw [class="Calamares"]						$flen
+$fw [class="Cam"]				 			$flen
+$fw [class="Clipgrab"]						$flen
+$fw [class="Galculator"]					$flen
+$fw [class="GParted"]						$flen
+$fw [class="i3bar"]							$flen
+$fw [class="Lightdm-gtk-greeter-settings"]	$flen
+$fw [class="Lxappearance"]					$flen
+$fw [class="Manjaro-hello"]		 			$flen
+$fw [class="Manjaro Settings Manager"]		$flen
+$fw [class="matplotlib"]					$flen
+$fw [class="Nitrogen"]						$flen
 $fw [class="Oblogout"]						$flen
 $fw [class="octopi"]						$flen
-$fw [class="Pavucontrol"]			 		$flen
-$fw [class="Xfburn"]						$flen
-$fw [class="i3bar"]							$flen
-
-$fw [class="Calamares"]						$flen
-$fw [class="GParted"]						$flen
-$fw [title="i3_help"]						$flen
-$fw [class="Lxappearance"]					$flen
-$fw [class="Manjaro Settings Manager"]		$flen
-$fw [class="Nitrogen"]						$flen
+$fw [class="Pavucontrol"]					$flen,resize set 525 300
 $fw [class="qt5ct"]			 				$flen
 $fw [class="Qtconfig-qt4"]					$flen
-$fw [class="Simple-scan"]					$flen
+$fw [class="Rofi"]							$flen
 $fw [class="(?i)System-config-printer.py"]	$flen
 $fw [class="Skype"]							$flen
+$fw [class="Simple-scan"]					$flen
 $fw [class="Thus"]							$flen
 $fw [class="Timeset-gui"]			 		$flen
 $fw [class="(?i)virtualbox"]				$flen
-$fw [class="matplotlib"]					$flen
-$fw [class="Cam"]				 			$flen
-$fw [class="Blueman-manager"]		 		$flen
-
-$fw [class="Pavucontrol"]	$flen,resize set 525 300
+$fw [class="Xfburn"]						$flen
 
 # //// MARKED
 
@@ -508,10 +507,6 @@ $exn shutter --min_at_startup
 $exn setxkbmap $kb
 $exs/i3listen-toggle
 
-# PROGRAMS
-$exn i3-msg "workspace $ws1; append_layout $home/.config/i3/main.json"
-#$lch $viva $mk3
-#$lch '$brow --new-window --app=https://www.youtube.com/' $mk2
 $ena mpv $home/$scrmus/A\ Tone\ His\ Self.mp3
 $ena notify-send 'i3 (re)loaded!' -i ~/$scrpic/i3white.png
 

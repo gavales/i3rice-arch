@@ -6,9 +6,9 @@
 
 rofiDir="$HOME/.config/rofi"
 color=blue
-layout="vertical"
+theme=vertical
 ttlbr=24
-brdr=4
+brdr=2
 prmt=" "
 mode="menu"
 lines="15"
@@ -36,12 +36,12 @@ dmthm="-fn "${fnt}:size=11" -nb "$bkd" -nf "$wtl" -sf "$bkd" -sb "$blu""
 dmloc="-x $(expr $wnX - $brdr) -y $(expr $wnY - $ttlbr)"
 
 menu () {
-	rofi -dmenu -p "${prmt}" -theme $layout -monitor ${mon:7} -location $loc \
+	rofi -dmenu -p "${prmt}" -theme $theme -monitor ${mon:7} -location $loc \
 		-lines $lines -width $wdth -xoffset $xoffset -yoffset $yoffset
 }
 
 start () {
-	rofi -show drun -p $prmt -theme $layout -monitor ${mon:7} -location $loc \
+	rofi -show drun -p "${prmt}" -theme $theme -monitor ${mon:7} -location $loc \
 		-lines $lines -width $wdth -xoffset $xoffset -yoffset $yoffset
 }
 
@@ -49,31 +49,28 @@ dmenu () {
 	dmenu_run $dmloc $dmthm -w $(expr $wnW + $brdr + $brdr) -h $ttlbr
 }
 
-while getopts :p:l:x:y:c:w:dstm opts; do
+while getopts :p:l:x:y:c:w:o:dstm opts; do
 	case $opts in
 		p)
 			prmt="${OPTARG}"
-#			echo $prmt
 			;;
 		l)
 			loc="${OPTARG}"
-#			echo $loc
 			;;
 		x)
-			xoffset="${OPTARG}"
-#			echo $xoffset
+			xoffset="$(expr $xoffset + $OPTARG)"
 			;;
 		y)
-			yoffset="${OPTARG}"
-#			echo $yoffset
+			yoffset="$(expr $yoffset + $OPTARG)"
 			;;
 		c)
 			color="${OPTARG}"
-#			echo $color
 			;;
 		w)
 			wdth="${OPTARG}"
-#			echo $wdth
+			;;
+		o)
+			theme="${OPTARG}"
 			;;
 		d)
 			mode="dmenu"
@@ -82,29 +79,19 @@ while getopts :p:l:x:y:c:w:dstm opts; do
 			mode="start"
 			;;
 		t)
-			layout=horizontal
+			theme=horizontal
 			loc=1
-			wdth="$(expr $wnW + $brdr)"
+			lines=10
+			wdth="$(expr $wnW + $brdr + $brdr)"
 			xoffset="$(expr $wnX - $brdr)"
 			yoffset="$(expr $wnY - $ttlbr)"
-#			echo title-bar-mode
-#			echo $lines
-#			echo $wdth
-#			echo $xoffset
-#			echo $yoffset
 			;;
 		m)
-			layout=vertical
+			theme=vertical
 			loc=1
-			wdth=300
+#			wdth=300
 			xoffset="${msX:2}"
 			yoffset="${msY:2}"
-#			echo mouse-mode
-#			echo $layout
-#			echo $loc
-#			echo $wdth
-#			echo $xoffset
-#			echo $yoffset
 			;;
 	esac
 done
