@@ -63,7 +63,7 @@ set $t ff
 # //// APPS
 
 set $term		urxvtc
-set $edit		exec --no-startup-id ~/scr/opengvim
+set $edit		exec --no-startup-id $home/scr/opengvim
 set $brow		google-chrome-beta
 set $viva		firefox
 set $gfm		thunar
@@ -83,7 +83,7 @@ client.placeholder		$grn $grn $wht $blk $blk
 # >>>> # BAR
 #bar {
 #	i3bar_command i3bar -t
-#	status_command i3blocks -c ~/$scr/i3blocks.conf
+#	status_command i3blocks -c $home/$scr/i3blocks.conf
 ##	status_command i3blocks
 ##	position top
 #	id bar-1
@@ -221,7 +221,7 @@ $mod+f				$lch thunar $mk2
 $mod+Shift+f		fullscreen toggle
 
 $mod+g				split toggle
-$mod+Shift+g		$lch '$term -name GRIVE -e bash ~/$scr/grivesync' $mk2 fl
+$mod+Shift+g		$lch '$term -name GRIVE -e bash $home/$scr/grivesync' $mk2 fl
 
 $mod+h				$exs/i3viswiz left
 $mod+Shift+h		$exs/i3move left
@@ -278,29 +278,29 @@ floating_modifier	$wni
 
 $win+0				[title="placeholder"] kill
 
-$win+1				$edit ~/.config/i3/main
+$win+1				$edit $home/.config/i3/main
 $win+Shift+1		$exs/i3-sticky-create 1
 
-$win+2				$edit ~/.config/i3/vars
+$win+2				$edit $home/.config/i3/vars
 $win+Shift+2		$exs/i3-sticky-create 2
 
-$win+3				$edit ~/.bashrc
+$win+3				$edit $home/.bashrc
 $win+Shift+3		$exs/i3-sticky-create 3
 
-$win+4				$edit ~/.vimrc
+$win+4				$edit $home/.vimrc
 
-$win+5				$edit ~/.config/ranger/rc.conf
+$win+5				$edit $home/.config/ranger/rc.conf
 
-$win+6				$edit ~/.config/ranger/rifle.conf
+$win+6				$edit $home/.config/ranger/rifle.conf
 
-$win+7				$edit ~/.config/polybar/config
+$win+7				$edit $home/.config/polybar/config
 
 # //// 1st Row
 
 $win+q				floating disable, $mvm1, [con_mark=$mk1] focus, focus child
 
 $win+w				floating disable, $mvm2, [con_mark=$mk2] focus, focus child
-$win+Shift+w		$lch '$term -name LAYOUT_EDITOR -e bash ~/$scr/wsloget' $mk2
+$win+Shift+w		$lch '$term -name LAYOUT_EDITOR -e bash $home/$scr/wsloget' $mk2
 
 $win+e				floating disable, $mvm3, [con_mark=$mk3] focus, focus child
 
@@ -340,7 +340,7 @@ $win+d				move workspace to output $hdm
 
 $win+f				$lch 'gksu thunar' $mk2
 
-$win+g				$lch '$term -name GITREPOUPDATE -e bash ~/$scr/gitcommit' $mk2
+$win+g				$lch '$term -name GITREPOUPDATE -e bash $home/$scr/gitcommit' $mk2
 
 $win+h				focus left
 $win+Shift+h		move left
@@ -359,7 +359,7 @@ $win+Shift+Return	$exn $term -name FILES_ADMIN -e sudo ranger
 
 # //// 3rd Row
 
-#$win+x				$exn "pactl set-sink-mute 0 toggle; ~/$scr/notify_volume"
+#$win+x				$exn "pactl set-sink-mute 0 toggle; $home/$scr/notify_volume"
 $win+x				unmark
 
 $win+c				$lch '$term -name CALENDAR -e vim "+Calendar -view=day"' $mk2
@@ -501,13 +501,13 @@ $exn blueman-applet
 $exn compton
 $ena ff-theme-util
 $ena fix_xcursor
-$exn feh --bg-fill ~/.config/wall.png
+$exn feh --bg-fill $home/.config/wall.png
 $exn mpd
 $exn shutter --min_at_startup
 $exn setxkbmap $kb
 $exs/i3listen-toggle
 
 $ena mpv $home/$scrmus/A\ Tone\ His\ Self.mp3
-$ena notify-send 'i3 (re)loaded!' -i ~/$scrpic/i3white.png
+$ena notify-send 'i3 (re)loaded!' -i $home/$scrpic/i3white.png
 
 # vim:ft=i3

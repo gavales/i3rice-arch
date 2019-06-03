@@ -43,6 +43,19 @@ lmk2 () {
 	i3-msg focus child
 }
 
+lmk4 () {
+	i3-msg [con_mark="_W3"] focus
+	i3-msg split v
+	$app &>/dev/null &
+	sleep .5
+	i3-msg split h
+	i3-msg layout tabbed
+	i3-msg focus parent
+	i3-msg mark _W4
+	i3-msg "mark --add _sticky_4"
+	i3-msg focus child
+}
+
 main () {
 	i3-msg [con_mark=$mark] focus
 	i3-msg focus child
@@ -56,6 +69,7 @@ else
 		*3) echo "no W3, making W3" && lmk3 ;;
 		*1) echo "no W1, making W1" && lmk1 ;;
 		*2) echo "no W2, making W2" && lmk2 ;;
+		*4) echo "no W4, making W4" && lmk4 ;;
 	esac
 fi
 
