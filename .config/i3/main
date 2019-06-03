@@ -63,7 +63,7 @@ set $t ff
 # //// APPS
 
 set $term		urxvtc
-set $edit		exec --no-startup-id $home/scr/opengvim
+set $edit		exec --no-startup-id ~/scr/opengvim
 set $brow		google-chrome-beta
 set $viva		firefox
 set $gfm		thunar
