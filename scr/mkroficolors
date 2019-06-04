@@ -17,6 +17,26 @@ gnt=$(xrdb -query | grep '*color5' | awk '{print $NF}')
 cyn=$(xrdb -query | grep '*color6' | awk '{print $NF}')
 
 
+echo "* {" > $rofiDir/white.rasi
+echo "accent: $wtl;" >> $rofiDir/white.rasi
+echo "bg2: $bkd;" >> $rofiDir/white.rasi
+echo "bg1: $bkl;" >> $rofiDir/white.rasi
+echo "fg2: $wtd;" >> $rofiDir/white.rasi
+echo "fg1: $wtl;" >> $rofiDir/white.rasi
+echo "redish: $red;" >> $rofiDir/white.rasi
+echo "font1: \"Iosevka Oblique 11\";" >> $rofiDir/white.rasi
+echo "}" >> $rofiDir/white.rasi
+
+echo "* {" > $rofiDir/black.rasi
+echo "accent: $bkd;" >> $rofiDir/black.rasi
+echo "fg1: $bkd;" >> $rofiDir/black.rasi
+echo "fg2: $bkl;" >> $rofiDir/black.rasi
+echo "bg1: $wtd;" >> $rofiDir/black.rasi
+echo "bg2: $wtl;" >> $rofiDir/black.rasi
+echo "redish: $red;" >> $rofiDir/black.rasi
+echo "font1: \"Iosevka Oblique 11\";" >> $rofiDir/black.rasi
+echo "}" >> $rofiDir/black.rasi
+
 echo "* {" > $rofiDir/blue.rasi
 echo "accent: $blu;" >> $rofiDir/blue.rasi
 echo "bg1: $bkd;" >> $rofiDir/blue.rasi

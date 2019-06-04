@@ -112,12 +112,12 @@ hi TabLine cterm=none ctermfg=blue ctermbg=black
 hi TabLineSel cterm=none ctermfg=black ctermbg=blue
 hi TabLineFill cterm=none ctermfg=blue ctermbg=black
 
-hi User1 ctermbg=red ctermfg=black
-hi User2 ctermbg=yellow ctermfg=black
-hi User3 ctermbg=green ctermfg=black
-hi User4 ctermbg=grey ctermfg=black
-hi User5 ctermbg=blue ctermfg=black
-hi User6 ctermbg=magenta ctermfg=black
+hi usrred ctermbg=red ctermfg=black
+hi usrylw ctermbg=yellow ctermfg=black
+hi usrgrn ctermbg=green ctermfg=black
+hi usrgry ctermbg=grey ctermfg=black
+hi usrblu ctermbg=blue ctermfg=black
+hi usrgnt ctermbg=magenta ctermfg=black
 
 "hi NonText        Normal
 "hi Directory      Normal
@@ -314,25 +314,19 @@ endfunction
 " //// ACTUAL
 
 set statusline=
-set statusline+=%#Normal#
+set statusline+=%#usrblu#
 set statusline+=\ 
-set statusline+=%#User1#
 set statusline+=\ %{ModeCurrent()}
-set statusline+=%#User2#
 set statusline+=\ %f
 set statusline+=\ 
-set statusline+=%#Normal#
 set statusline+=\ %{ReadOnly()}\ %m\ %w\ 
 set statusline+=%=
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\[%{&fileformat}\]
 set statusline+=\ 
-set statusline+=%#User3#
 set statusline+=\ %Y
 set statusline+=\ 
-set statusline+=%#User5#
 set statusline+=\ %-3(%{FileSize()}%)
-set statusline+=%#User6#
 set statusline+=\ %p%%
 set statusline+=\ L:
 set statusline+=%l/

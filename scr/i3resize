@@ -20,32 +20,32 @@ ysc2=$(expr $yscr / 2)
 
 if [[ $xpos -lt $xsc2 ]] && [[ $ypos -lt $ysc2 ]]; then
 	echo 'grab bottomright'
-	i3-msg resize ${opr} right 	${delta} px or ${delta} ppt
-	i3-msg resize ${opr} down 	${delta} px or ${delta} ppt
+	i3-msg resize ${opr} right	${delta} px or ${delta} ppt
+	i3-msg resize ${opr} down	${delta} px or ${delta} ppt
 elif [[ $xpos -lt $xsc2 ]] && [[ $ypos -gt $ysc2 ]]; then
 	echo 'grab topright'
-	i3-msg resize ${opr} right 	${delta} px or ${delta} ppt
-	i3-msg resize ${opr} up 		${delta} px or ${delta} ppt
+	i3-msg resize ${opr} right	${delta} px or ${delta} ppt
+	i3-msg resize ${opr} up		${delta} px or ${delta} ppt
 elif [[ $(expr $xpos + $width) -lt $xsc2 ]] && [[ $(expr $ypos + $height) -gt $ysc2 ]]; then
 	echo 'grab topleft'
-	i3-msg resize ${opr} right 	${delta} px or ${delta} ppt
-	i3-msg resize ${opr} up 		${delta} px or ${delta} ppt
+	i3-msg resize ${opr} right	${delta} px or ${delta} ppt
+	i3-msg resize ${opr} up		${delta} px or ${delta} ppt
 elif [[ $(expr $xpos + $width) -gt $xsc2 ]] && [[ $(expr $ypos + $height) -gt $ysc2 ]]; then
 	echo 'grab topleft'
-	i3-msg resize ${opr} left ${delta} px or ${delta} ppt
-	i3-msg resize ${opr} up 	${delta} px or ${delta} ppt
+	i3-msg resize ${opr} left	${delta} px or ${delta} ppt
+	i3-msg resize ${opr} up		${delta} px or ${delta} ppt
 elif [[ $xpos -gt $xsc2 ]] && [[ $ypos -lt $ysc2 ]]; then
 	echo 'grab bottomleft'
 	i3-msg resize ${opr} left ${delta} px or ${delta} ppt
 	i3-msg resize ${opr} down ${delta} px or ${delta} ppt
 elif [[ $xpos -gt $xsc2 ]] && [[ $ypos -gt $ysc2 ]]; then
 	echo 'grab topleft'
-	i3-msg resize ${opr} left ${delta} px or ${delta} ppt
-	i3-msg resize ${opr} up 	${delta} px or ${delta} ppt
+	i3-msg resize ${opr} left	${delta} px or ${delta} ppt
+	i3-msg resize ${opr} up		${delta} px or ${delta} ppt
 else
 	echo 'grab bottomright'
-	i3-msg resize ${opr} right 	${delta} px or ${delta} ppt
-	i3-msg resize ${opr} down 	${delta} px or ${delta} ppt
+	i3-msg resize ${opr} right	${delta} px or ${delta} ppt
+	i3-msg resize ${opr} down	${delta} px or ${delta} ppt
 fi
 
 #echo "$width $height"

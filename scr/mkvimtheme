@@ -61,9 +61,9 @@ echo "hi PmenuThumb gui=none guifg=${grn} guibg=${grn}" >> $HOME/.guivimrc
 echo "hi TabLine gui=none guifg=${blu} guibg=${bkd}" >> $HOME/.guivimrc
 echo "hi TabLineSel gui=none guifg=${bkd} guibg=${blu}" >> $HOME/.guivimrc
 echo "hi TabLineFill gui=none guifg=${blu} guibg=${bkd}" >> $HOME/.guivimrc
-echo "hi User1 guibg=${red} guifg=${bkd}" >> $HOME/.guivimrc
-echo "hi User2 guibg=${ylw} guifg=${bkd}" >> $HOME/.guivimrc
-echo "hi User3 guibg=${grn} guifg=${bkd}" >> $HOME/.guivimrc
-echo "hi User4 guibg=${bkl} guifg=${bkd}" >> $HOME/.guivimrc
-echo "hi User5 guibg=${blu} guifg=${bkd}" >> $HOME/.guivimrc
-echo "hi User6 guibg=${gnt} guifg=${bkd}" >> $HOME/.guivimrc
+echo "hi usrred guibg=${red} guifg=${bkd}" >> $HOME/.guivimrc
+echo "hi usrylw guibg=${ylw} guifg=${bkd}" >> $HOME/.guivimrc
+echo "hi usrgrn guibg=${grn} guifg=${bkd}" >> $HOME/.guivimrc
+echo "hi usrgry guibg=${bkl} guifg=${bkd}" >> $HOME/.guivimrc
+echo "hi usrblu guibg=${blu} guifg=${bkd}" >> $HOME/.guivimrc
+echo "hi usrgnt guibg=${gnt} guifg=${bkd}" >> $HOME/.guivimrc

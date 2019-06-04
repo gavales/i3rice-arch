@@ -1,6 +1,6 @@
 # Numix GTK Theme
 
-gtk-color-scheme = "bg_color:#d5cebb\nfg_color:#16534f\nbase_color:#e9e2cf\ntext_color:#16534f\nselected_bg_color:#2aa198\nselected_fg_color:#002b36\ntooltip_bg_color:#2aa198\ntooltip_fg_color:#002b36\ntitlebar_bg_color:#d5cebb\ntitlebar_fg_color:#16534f\nmenubar_bg_color:#d5cebb\nmenubar_fg_color:#16534f\ntoolbar_bg_color:#d5cebb\ntoolbar_fg_color:#16534f\nmenu_bg_color:#d5cebb\nmenu_fg_color:#16534f\npanel_bg_color:#d5cebb\npanel_fg_color:#16534f\nlink_color:#d33682"
+gtk-color-scheme = "bg_color:#28535e\nfg_color:#95c8ec\nbase_color:#143f4a\ntext_color:#95c8ec\nselected_bg_color:#268bd2\nselected_fg_color:#fdf6e3\ntooltip_bg_color:#268bd2\ntooltip_fg_color:#fdf6e3\ntitlebar_bg_color:#28535e\ntitlebar_fg_color:#95c8ec\nmenubar_bg_color:#28535e\nmenubar_fg_color:#95c8ec\ntoolbar_bg_color:#28535e\ntoolbar_fg_color:#95c8ec\nmenu_bg_color:#28535e\nmenu_fg_color:#95c8ec\npanel_bg_color:#28535e\npanel_fg_color:#95c8ec\nlink_color:#d33682"
 
 gtk-icon-sizes = "inkscape-decoration=16,16:gtk-small-toolbar=16,16"
 

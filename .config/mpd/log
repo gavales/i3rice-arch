@@ -27626,3 +27626,86 @@ Jun 04 09:38 : client: [10] opened from [::1]:32836
 Jun 04 09:38 : client: [10] closed
 Jun 04 09:38 : client: [11] opened from [::1]:32838
 Jun 04 09:38 : client: [11] closed
+Jun 04 10:13 : client: [12] opened from [::1]:32982
+Jun 04 10:13 : client: [12] closed
+Jun 04 10:13 : client: [13] opened from [::1]:32984
+Jun 04 10:13 : client: [13] closed
+Jun 04 10:15 : client: [14] opened from [::1]:32998
+Jun 04 10:15 : client: [14] closed
+Jun 04 10:15 : client: [15] opened from [::1]:33000
+Jun 04 10:15 : client: [15] closed
+Jun 04 10:45 : client: [16] opened from [::1]:33668
+Jun 04 10:45 : client: [16] closed
+Jun 04 10:45 : client: [17] opened from [::1]:33676
+Jun 04 10:45 : client: [17] closed
+Jun 04 14:35 : client: [18] opened from [::1]:35100
+Jun 04 14:35 : client: [18] closed
+Jun 04 14:35 : client: [19] opened from [::1]:35102
+Jun 04 14:35 : client: [19] closed
+Jun 04 14:41 : client: [20] opened from [::1]:35120
+Jun 04 14:41 : client: [20] closed
+Jun 04 14:41 : client: [21] opened from [::1]:35122
+Jun 04 14:41 : client: [21] closed
+Jun 04 14:41 : client: [22] opened from [::1]:35126
+Jun 04 14:41 : client: [22] closed
+Jun 04 14:41 : client: [23] opened from [::1]:35128
+Jun 04 14:41 : client: [23] closed
+Jun 04 14:41 : client: [24] opened from [::1]:35204
+Jun 04 14:41 : client: [25] opened from [::1]:35206
+Jun 04 14:41 : client: [25] closed
+Jun 04 14:41 : client: [26] opened from [::1]:35208
+Jun 04 14:41 : client: [26] closed
+Jun 04 14:41 : client: [27] opened from [::1]:35210
+Jun 04 14:41 : client: [27] closed
+Jun 04 14:41 : client: [28] opened from [::1]:35212
+Jun 04 14:41 : client: [28] closed
+Jun 04 14:42 : client: [24] closed
+Jun 04 14:44 : client: [29] opened from [::1]:35316
+Jun 04 14:44 : client: [29] closed
+Jun 04 14:44 : client: [30] opened from [::1]:35318
+Jun 04 14:44 : client: [30] closed
+Jun 04 14:46 : client: [31] opened from [::1]:35350
+Jun 04 14:46 : client: [31] closed
+Jun 04 14:46 : client: [32] opened from [::1]:35352
+Jun 04 14:46 : client: [32] closed
+Jun 04 14:49 : client: [33] opened from [::1]:35362
+Jun 04 14:49 : client: [33] closed
+Jun 04 14:49 : client: [34] opened from [::1]:35364
+Jun 04 14:49 : client: [34] closed
+Jun 04 14:50 : client: [35] opened from [::1]:35368
+Jun 04 14:50 : client: [35] closed
+Jun 04 14:50 : client: [36] opened from [::1]:35370
+Jun 04 14:50 : client: [36] closed
+Jun 04 14:58 : client: [37] opened from [::1]:35394
+Jun 04 14:58 : client: [37] closed
+Jun 04 14:58 : client: [38] opened from [::1]:35396
+Jun 04 14:58 : client: [38] closed
+Jun 04 14:58 : client: [39] opened from [::1]:35400
+Jun 04 14:58 : client: [39] closed
+Jun 04 14:58 : client: [40] opened from [::1]:35402
+Jun 04 14:58 : client: [40] closed
+Jun 04 15:00 : player: played "Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3"
+Jun 04 15:06 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 04 15:06 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 04 15:06 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jun 04 15:07 : client: [0] opened from [::1]:38114
+Jun 04 15:07 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 04 15:07 : client: [0] closed
+Jun 04 15:07 : client: [1] opened from [::1]:38116
+Jun 04 15:07 : client: [1] closed
+Jun 04 15:07 : client: [2] opened from [::1]:38118
+Jun 04 15:07 : client: [2] closed
+Jun 04 15:07 : client: [3] opened from [::1]:38120
+Jun 04 15:07 : client: [3] closed
+Jun 04 15:07 : client: [4] opened from [::1]:38122
+Jun 04 15:07 : client: [4] closed
+Jun 04 15:07 : client: [5] opened from [::1]:38124
+Jun 04 15:07 : client: [5] closed
+Jun 04 15:07 : client: [6] opened from [::1]:38126
+Jun 04 15:07 : client: [6] closed
+Jun 04 15:07 : client: [7] opened from [::1]:38128
+Jun 04 15:07 : client: [7] closed
+Jun 04 15:09 : client: [8] opened from [::1]:38224
+Jun 04 15:09 : client: [8] closed
+Jun 04 15:09 : client: [9] opened from [::1]:38226
+Jun 04 15:09 : client: [9] closed

@@ -135,7 +135,7 @@ margin-bottom = 0
 [module/start]
 type = custom/text
 content = %{T1}%{T-}
-click-left = ~/scr/i3menu -s -y 20 -c red -l 1
+click-left = ~/scr/i3menu -s -y 20 -c white -l 1
 click-middle = ~/scr/xtheme
 click-right = ~/scr/keybindingsmenu launch
 content-background = ${colors.wtd}
