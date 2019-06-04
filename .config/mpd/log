@@ -27576,3 +27576,53 @@ Jun 03 23:46 : client: [122] opened from [::1]:54854
 Jun 03 23:46 : client: [122] closed
 Jun 03 23:46 : client: [123] opened from [::1]:54856
 Jun 03 23:46 : client: [123] closed
+Jun 03 23:49 : player: played "Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3"
+Jun 03 23:50 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 03 23:50 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 03 23:50 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jun 03 23:51 : client: [0] opened from [::1]:50012
+Jun 03 23:51 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 03 23:51 : client: [0] closed
+Jun 03 23:51 : client: [1] opened from [::1]:50014
+Jun 03 23:51 : client: [1] closed
+Jun 03 23:51 : client: [2] opened from [::1]:50016
+Jun 03 23:51 : client: [2] closed
+Jun 03 23:51 : client: [3] opened from [::1]:50018
+Jun 03 23:51 : client: [3] closed
+Jun 03 23:51 : client: [4] opened from [::1]:50020
+Jun 03 23:51 : client: [4] closed
+Jun 03 23:51 : client: [5] opened from [::1]:50022
+Jun 03 23:51 : client: [5] closed
+Jun 03 23:51 : client: [6] opened from [::1]:50024
+Jun 03 23:51 : client: [6] closed
+Jun 03 23:51 : client: [7] opened from [::1]:50026
+Jun 03 23:51 : client: [7] closed
+Jun 04 00:39 : player: played "Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3"
+Jun 04 09:36 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 04 09:36 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 04 09:36 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jun 04 09:38 : client: [0] opened from [::1]:32780
+Jun 04 09:38 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 04 09:38 : client: [0] closed
+Jun 04 09:38 : client: [1] opened from [::1]:32782
+Jun 04 09:38 : client: [1] closed
+Jun 04 09:38 : client: [2] opened from [::1]:32784
+Jun 04 09:38 : client: [2] closed
+Jun 04 09:38 : client: [3] opened from [::1]:32786
+Jun 04 09:38 : client: [3] closed
+Jun 04 09:38 : client: [4] opened from [::1]:32788
+Jun 04 09:38 : client: [4] closed
+Jun 04 09:38 : client: [5] opened from [::1]:32790
+Jun 04 09:38 : client: [5] closed
+Jun 04 09:38 : client: [6] opened from [::1]:32792
+Jun 04 09:38 : client: [6] closed
+Jun 04 09:38 : client: [7] opened from [::1]:32794
+Jun 04 09:38 : client: [7] closed
+Jun 04 09:38 : client: [8] opened from [::1]:32832
+Jun 04 09:38 : client: [8] closed
+Jun 04 09:38 : client: [9] opened from [::1]:32834
+Jun 04 09:38 : client: [9] closed
+Jun 04 09:38 : client: [10] opened from [::1]:32836
+Jun 04 09:38 : client: [10] closed
+Jun 04 09:38 : client: [11] opened from [::1]:32838
+Jun 04 09:38 : client: [11] closed
