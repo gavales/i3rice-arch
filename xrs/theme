@@ -1,19 +1,19 @@
-! grta
+! nikes
 ! light
 ! vim:ft=xdefaults
-#define cwhtd #873f47
-#define cwhtl #1a2937
-#define credd #537592
-#define credl #537592
-#define cgrnd #bcbd82
-#define cgrnl #bcbd82
-#define cylwd #dbc36e
-#define cylwl #dbc36e
-#define cblud #c17b82
-#define cblul #c17b82
-#define cgntd #e6b179
-#define cgntl #e6b179
-#define ccynd #98b2a7
-#define ccynl #98b2a7
-#define cblkd #f0ede7
-#define cblkl #e1dbcf
+#define cblkl #dcdcd3
+#define cblkd #f6f6f4
+#define credd #ff4845
+#define credl #ff4845
+#define cgrnd #47aa12
+#define cgrnl #47aa12
+#define cylwd #ff890a
+#define cylwl #ff890a
+#define cblud #b46b7d
+#define cblul #b46b7d
+#define cgntd #288ad6
+#define cgntl #288ad6
+#define ccynd #6bb4a2
+#define ccynl #6bb4a2
+#define cwhtl #303030
+#define cwhtd #7d404f

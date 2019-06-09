@@ -1,8 +1,8 @@
 ! herbslut
-! light
+! dark
 ! vim:ft=xdefaults
-#define cwhtl #1B1B1B
-#define cwhtd #1d3b52
+#define cblkd #1B1B1B
+#define cblkl #383838
 #define credd #bf6673
 #define credl #bf6673
 #define cgrnd #73bf66
@@ -15,5 +15,5 @@
 #define cgntl #596196
 #define ccynd #3EA290
 #define ccynl #3EA290
-#define cblkl #b4b6b9
-#define cblkd #C8CACC
+#define cwhtd #68a0ca
+#define cwhtl #C8CACC

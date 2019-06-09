@@ -1,80 +1,79 @@
 #!/bin/bash
 
-black="\033[1;30m"
-darkgray="\033[1;30m"
+bkd="\033[1;30m"
+bkl="\033[1;30m"
 red="\033[1;31m"
-lightred="\033[1;31m"
 green="\033[1;32m"
-lightgreen="\033[1;32m"
 brownorange="\033[1;33m"
 yellow="\033[1;33m"
 blue="\033[1;34m"
-lightblue="\033[1;34m"
-purple="\033[1;35m"
-lightpurple="\033[1;35m"
-cyan="\033[1;36m"
-lightcyan="\033[1;36m"
-lightgray="\033[1;37m"
-white="\033[1;37m"
-normal="\033[0m"
+gnt="\033[1;35m"
+cyn="\033[1;36m"
+wtd="\033[1;37m"
+wtl="\033[0m"
 
 cd $HOME
-echo -e "${green}================================================"
-echo -e "${blue}= UPDATE ======================================="
-echo -e "${green}================================================${normal}"
+echo -e "${green}================================================================================"
+echo -e  "${blue}= UPDATE ======================================================================="
+echo -e "${green}================================================================================${wtl}"
 sudo pacman -Syyu
-echo -e "${green}================================================"
-echo -e "${blue}= INSTALLING YOUR PROGRAMS ====================="
-echo -e "${green}================================================${normal}"
-sudo pacman -S rofi otf-font-awesome ttf-font-awesome nautilus evince mupdf pinta redshift playerctl mplayer r tk gcc-fortran newsboat opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-crossref pandoc-citeproc python-pygments python2-pygments biber texlive-most acpi lm_sensors sysstat ntfs-3g libmpdclient lxappearance sxiv ncurses fftw w3m ranger mpd mpc ncmpcpp feh dunst unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl urxvt-perls trash-cli atom python-pywal vim-latexsuite calibre jq wmctrl polybar
+echo -e "${green}================================================================================"
+echo -e  "${blue}= INSTALLING YOUR PROGRAMS ====================================================="
+echo -e "${green}================================================================================${wtl}"
+sudo pacman -S rofi otf-font-awesome ttf-font-awesome nautilus evince mupdf \
+	pinta redshift playerctl mplayer r tk gcc-fortran newsboat opencv \
+	python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 \
+	libreoffice pandoc pandoc-crossref pandoc-citeproc python-pygments \
+	python2-pygments biber texlive-most acpi lm_sensors sysstat ntfs-3g \
+	libmpdclient lxappearance sxiv ncurses fftw w3m ranger mpd mpc ncmpcpp feh \
+	dunst unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl \
+	urxvt-perls trash-cli atom python-pywal vim-latexsuite calibre jq wmctrl \
+	polybar ttf-iosevka vim-runtime gvim neovim
 sudo cpan AnyEvent Linux::FD common::sense
-#echo -e "${green}================================================"
-#echo -e "${blue}= INSTALLING YAOURT ============================"
-#echo -e "${green}================================================${normal}"
-#echo -e "${purple} > PAMAC <" && yaourt -S pamac-aur
-#echo -e "${purple} > i3LOCK-COLOR <" && yaourt -S i3lock-color
-#echo -e "${purple} > VIVALDI <" && yaourt -S vivaldi
-#echo -e "${purple} > THUNAR <" && yaourt -S thunar-gtk2
-#echo -e "${purple} > CHROME BETA <" && yaourt -S google-chrome-beta
-#echo -e "${purple} > CHROME REMOTE DESKTOP <" && yaourt -S chrome-remote-desktop
-#echo -e "${purple} > SPOTIFY <" && yaourt -S spotify
-#echo -e "${purple} > GRIVE <" && yaourt -S grive
-#echo -e "${purple} > CLIPIT <" && yaourt -S clipit
-#echo -e "${purple} > PACTL <" && yaourt -S pulseaudio-ctl
-#echo -e "${purple} > ZATHURA <" && yaourt -S zathura-pdf-mupdf
-#echo -e "${purple} > XBACKLIGHT <" && yaourt -S xorg-xbacklight
-#echo -e "${purple} > LIGHT <" && yaourt -S light
-#echo -e "${purple} > BASHMOUNT <" && yaourt -S bashmount
-#echo -e "${purple} > i3BLOCKS <" && yaourt -S i3blocks-gaps-git
-#echo -e "${purple} > MPRIS-CTL <" && yaourt -S mpris-ctl
-#echo -e "${purple} > FIGLET FONTS <" && yaourt -S figlet-fonts
-#echo -e "${purple} > URXVT-CONFIG-RELOAD <" && yaourt -S urxvt-config-reload-git
-#echo -e "${purple} > FLAT-REMIX-ICONS <" && yaourt -S flat-remix-git
-#echo -e "${purple} > FLAT-REMIX-GNOME-GIT <" && yaourt -S flat-remix-gnome-git
-#echo -e "${purple} > URXVT-RESIZE-FONT <" && yaourt -S urxvt-resize-font-git
-#echo -e "${purple} > i3IPC-PYTHON <" && yaourt -S i3ipc-python
-#echo -e "${purple} > LIVE LATEX PREVIEW <" && yaourt -S vim-live-latex-preview
-echo -e "${green}================================================"
-echo -e "${blue}= CLI-VISUALISER ==============================="
-echo -e "${green}================================================${normal}"
-cd $HOME
-git clone https://github.com/dpayne/cli-visualizer.git
-cd cli-visualiser
-./install.sh
 cd $HOME
 mkdir Drive
-echo -e "${green}================================================"
-echo -e "${blue}= MAKE MATLAB ICON ============================="
-echo -e "${green}================================================${normal}"
-sudo wget "https://apprecs.org/gp/images/app-icons/300/c4/in.pxlcraft.matlabexpo.jpg" -O /usr/share/icons/matlab.png
-sudo wget "https://help.ubuntu.com/community/MATLAB?action=AttachFile&do=get&target=matlab-r2012a.desktop" -O /usr/share/applications/matlab.desktop
-#echo -e "${green}================================================"
-#echo -e "${blue}= GET CONFIGS FROM GITHUB ======================"
-#echo -e "${green}================================================${normal}"
-#git clone https://github.com/StillANixRookie/i3rice-manjaro.git
-echo -e "${green}================================================"
-echo -e "${blue}= FINAL STEPS! ================================="
-echo -e "${green}================================================${normal}"
+echo -e "${green}================================================================================"
+echo -e  "${blue}= GET CONFIGS FROM GITHUB ======================================================"
+echo -e "${green}================================================================================${wtl}"
+git clone https://github.com/StillANixRookie/i3rice-manjaro.git
+echo -e "${green}================================================================================"
+echo -e  "${blue}= FINAL STEPS! ================================================================="
+echo -e "${green}================================================================================${wtl}"
 echo -e ""
-echo -e "${red}    -    OPEN RANGER AND COPY THE NECESSARY FOLDERS AND FILES"
-echo -e "${red}    -    AFTER THAT, ALL YOU NEED TO DO IS EXIT THE CHROOT AND REBOOT"
+echo -e "${red} -	OPEN RANGER AND COPY THE NECESSARY FOLDERS AND FILES"
+echo -e "${red} -	AFTER THAT, ALL YOU NEED TO DO IS EXIT THE CHROOT AND REBOOT"
+echo -e "${gnt} -	SOME AUR APPS I GET TOO:\n\
+	pamac-aur 		\
+	i3lock-color 		\
+	vivaldi 		\n\
+	oni 			\
+	thunar-gtk2 		\
+	google-chrome-beta 	\n\
+	chrome-remote-desktop 	\
+	spotify 		\
+	grive 		\n\
+	clipit 			\
+	pulseaudio-ctl 		\
+	zathura-pdf-mupdf 		\n\
+	xorg-xbacklight 	\
+	light 			\
+	bashmount 		\n\
+	i3blocks-gaps-git 	\
+	mpris-ctl 		\
+	figlet-fonts \n\
+	urxvt-config-reload-git \
+	urxvt-resize-font-git 	\
+	i3ipc-python \n\
+	vim-live-latex-preview"
+#echo -e "${green}================================================================================"
+#echo -e  "${blue}= CLI-VISUALISER ==============================================================="
+#echo -e "${green}================================================================================${wtl}"
+#cd $HOME
+#git clone https://github.com/dpayne/cli-visualizer.git
+#cd cli-visualiser
+#./install.sh
+#echo -e "${green}================================================================================"
+#echo -e  "${blue}= MAKE MATLAB ICON ============================================================="
+#echo -e "${green}================================================================================${wtl}"
+#sudo wget "https://apprecs.org/gp/images/app-icons/300/c4/in.pxlcraft.matlabexpo.jpg" -O /usr/share/icons/matlab.png
+#sudo wget "https://help.ubuntu.com/community/MATLAB?action=AttachFile&do=get&target=matlab-r2012a.desktop" -O /usr/share/applications/matlab.desktop

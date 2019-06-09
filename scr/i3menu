@@ -37,7 +37,8 @@ dmloc="-x $(expr $wnX - $brdr) -y $(expr $wnY - $ttlbr)"
 
 menu () {
 	rofi -dmenu -p "${prmt}" -theme $theme -monitor ${mon:7} -location $loc \
-		-lines $lines -width $wdth -xoffset $xoffset -yoffset $yoffset
+		-lines $lines -width $wdth -xoffset $xoffset -yoffset $yoffset \
+		-markup-rows
 }
 
 start () {
