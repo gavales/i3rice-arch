@@ -1,13 +1,16 @@
-#     dBP   dBBBBb dBBBP  dBBBBP dBBBBb  dBBBBP dBP dBBBB
-#                        dB'.BP     dBP
-#   dBP    dBBBP dBP    dB'.BP dBP dBP dBBBP  dBP dBBBB
-#  dBP      dBP dBP    dB'.BP dBP dBP dBP    dBP dB' BB
-# dBP   dBBBBP dBBBBP dBBBBP dBP dBP dBP    dBP dBBBBBB
+#       ██  ████    ██████    ███████   ████     ██ ████████ ██   ████████ 
+#      ▒▒  █▒▒▒ █  ██▒▒▒▒██  ██▒▒▒▒▒██ ▒██▒██   ▒██▒██▒▒▒▒▒ ▒██  ██▒▒▒▒▒▒██
+#       ██▒    ▒█ ██    ▒▒  ██     ▒▒██▒██▒▒██  ▒██▒██      ▒██ ██      ▒▒ 
+#      ▒██   ███ ▒██       ▒██      ▒██▒██ ▒▒██ ▒██▒███████ ▒██▒██         
+#      ▒██  ▒▒▒ █▒██       ▒██      ▒██▒██  ▒▒██▒██▒██▒▒▒▒  ▒██▒██    █████
+#      ▒██ █   ▒█▒▒██    ██▒▒██     ██ ▒██   ▒▒████▒██      ▒██▒▒██  ▒▒▒▒██
+#      ▒██▒ ████  ▒▒██████  ▒▒███████  ▒██    ▒▒███▒██      ▒██ ▒▒████████ 
+#      ▒▒  ▒▒▒▒    ▒▒▒▒▒▒    ▒▒▒▒▒▒▒   ▒▒      ▒▒▒ ▒▒       ▒▒   ▒▒▒▒▒▒▒▒  
 
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-# >>>> SPECIFIC VARS
-set $font1 Iosevka Medium Oblique
+# >>>> MAIN
+set $font1 Iosevka Semibold Oblique
 set $font2 FontAwesome
 set $font3 monaco
 set $fonts 11
@@ -17,13 +20,18 @@ font pango:$font1,$font2 $fonts
 set $home		/home/gavarch
 set $scr		scr
 set $scrpic		scrpic
+set $scrmus		scrmus
 
-set $primary	eDP1
-set $secondary	VGA1
-set $tertiary	HDMI1
+set $term		urxvtc
+set $browser	google-chrome-beta
+set $brightinc	light -A 10
+set $brightdec	light -U 10
+set $nat		eDP1
+set $vga		VGA1
+set $hdm		HDMI1
 set $kb			us
 
-set $mediaw		500
-set $mediah		306
-set $mediaw2	500
-set $mediah2	400
+set $mediaw		492
+set $mediaw2	492
+set $mediah		302
+set $mediah2	402

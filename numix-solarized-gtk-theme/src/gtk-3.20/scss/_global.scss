@@ -3,22 +3,22 @@
 @import "functions";
 
 // default color scheme
-$bg_color: if($variant == "dark", #615d5a, #615d5a);
-$fg_color: if($variant == "dark", #995941, #995941);
-$base_color: if($variant == "dark", #4d4946, #4d4946);
-$text_color: if($variant == "dark", #995941, #995941);
-$selected_bg_color: #cb9885;
-$selected_fg_color: #f9e4ca;
-$tooltip_bg_color: #cb9885;
-$tooltip_fg_color: #f9e4ca;
+$bg_color: if($variant == "dark", #cececc, #cececc);
+$fg_color: if($variant == "dark", #7d404f, #7d404f);
+$base_color: if($variant == "dark", #e2e2e0, #e2e2e0);
+$text_color: if($variant == "dark", #7d404f, #7d404f);
+$selected_bg_color: #b46b7d;
+$selected_fg_color: #303030;
+$tooltip_bg_color: #b46b7d;
+$tooltip_fg_color: #303030;
 
 $selected_borders_color: if($variant == 'light', darken($selected_bg_color, 30%), darken($selected_bg_color, 20%));
 $borders_color: if($variant == 'light', shade($bg_color, .85), shade($bg_color, .88));
 $borders_edge: if($variant == 'light', transparentize(white, 0.2), transparentize($fg_color, 0.93));
 
 // dark colors
-$dark_bg_color: if($variant == 'dark', #615d5a, #615d5a);
-$dark_fg_color: if($variant == 'dark', #995941, #995941);
+$dark_bg_color: if($variant == 'dark', #cececc, #cececc);
+$dark_fg_color: if($variant == 'dark', #7d404f, #7d404f);
 
 // shadows
 $dark_shadow: #000000;
@@ -32,9 +32,9 @@ $button_border: shade($base_color, .9);
 $entry_border: alpha($dark_shadow, .06);
 
 $scrollbar_bg_color: if($variant == 'light', darken($bg_color, 5%), mix($base_color, $bg_color, .4));
-$scrollbar_slider_color: if($variant == 'dark', shade(#615d5a, .5), shade(#615d5a, .5));
-$scrollbar_slider_hover_color: if($variant == 'dark', shade(#615d5a, .3), shade(#615d5a, .3));
-$scrollbar_slider_active_color: if($variant == 'dark', lighten(#cb9885, 10%), lighten(#cb9885, 10%));
+$scrollbar_slider_color: if($variant == 'dark', shade(#cececc, .5), shade(#cececc, .5));
+$scrollbar_slider_hover_color: if($variant == 'dark', shade(#cececc, .3), shade(#cececc, .3));
+$scrollbar_slider_active_color: if($variant == 'dark', lighten(#b46b7d, 10%), lighten(#b46b7d, 10%));
 
 $switch_disabled_bg_color: #d8d8d8;
 $switch_disabled_border_color: #ccc;
@@ -45,18 +45,18 @@ $switch_fg_color: #8e969e;
 $switch_slider_bg_color: #fbfbfb;
 
 // misc colors used by gtk+
-$info_fg_color: if($variant == 'dark', #995941, #995941);
-$info_bg_color: if($variant == 'dark', #393532, #393532);
-$warning_fg_color: if($variant == 'dark', #7F6647, #7F6647);
-$warning_bg_color: if($variant == 'dark', #bd5e4a, #bd5e4a);
-$question_fg_color: if($variant == 'dark', #7F6647, #7F6647);
-$question_bg_color: if($variant == 'dark', #393532, #393532);
-$error_fg_color: if($variant == 'dark', #bd5e4a, #bd5e4a);
-$error_bg_color: if($variant == 'dark', #393532, #393532);
-$link_color: if($variant == 'dark', #b18270, #b18270);
-$success_color: if($variant == 'dark', #957559, #957559);
-$warning_color: if($variant == 'dark', #bd5e4a, #bd5e4a);
-$error_color: if($variant == 'dark', #bd5e4a, #bd5e4a);
+$info_fg_color: if($variant == 'dark', #7d404f, #7d404f);
+$info_bg_color: if($variant == 'dark', #f6f6f4, #f6f6f4);
+$warning_fg_color: if($variant == 'dark', #ff890a, #ff890a);
+$warning_bg_color: if($variant == 'dark', #ff4845, #ff4845);
+$question_fg_color: if($variant == 'dark', #ff890a, #ff890a);
+$question_bg_color: if($variant == 'dark', #f6f6f4, #f6f6f4);
+$error_fg_color: if($variant == 'dark', #ff4845, #ff4845);
+$error_bg_color: if($variant == 'dark', #f6f6f4, #f6f6f4);
+$link_color: if($variant == 'dark', #288ad6, #288ad6);
+$success_color: if($variant == 'dark', #47aa12, #47aa12);
+$warning_color: if($variant == 'dark', #ff4845, #ff4845);
+$error_color: if($variant == 'dark', #ff4845, #ff4845);
 
 $toolbar_bg_color: $bg_color;
 $toolbar_fg_color: $fg_color;
