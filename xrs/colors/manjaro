@@ -1,16 +1,8 @@
 ! manjaro
 ! dark
 ! vim:ft=xdefaults
-! background:                      #222D31
-! foreground:                      #d8d8d8
-! fading:                          8
-! fadeColor:                       black
-! cursorColor:                     #1ABB9B
-! pointerColorBackground:          #2B2C2B
-! pointerColorForeground:          #16A085
-
 #define cblkd #222D31
-#define cblkl #585858
+#define cblkl #384245
 #define credd #ab4642
 #define credl #ab4642
 #define cgrnd #7E807E
@@ -23,5 +15,5 @@
 #define cgntl #ba8baf
 #define ccynd #1ABB9B
 #define ccynl #1ABB9B
-#define cwhtd #d8d8d8
+#define cwhtd #b2d0db
 #define cwhtl #f8f8f8

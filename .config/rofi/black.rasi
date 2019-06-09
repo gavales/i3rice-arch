@@ -1,9 +1,9 @@
 * {
 accent: #222D31;
 fg1: #222D31;
-fg2: #585858;
-bg1: #d8d8d8;
+fg2: #384245;
+bg1: #b2d0db;
 bg2: #f8f8f8;
 redish: #ab4642;
-font1: "Iosevka Oblique 11";
+font1: "Iosevka Semibold Oblique 12";
 }
