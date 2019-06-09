@@ -39,7 +39,10 @@ set list
 set listchars=tab:│\ 
 autocmd CursorHold,CursorHoldI * update
 autocmd CursorHold,CursorHoldI * redraw!
-
+set noshowmode
+set noruler
+set noshowcmd
+set cmdheight=1
 map <Tab><Tab> <Esc>/>>>><Enter>
 inoremap \ph <++>
 

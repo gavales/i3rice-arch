@@ -7,16 +7,20 @@ red=$(xrdb -query | grep '*color9' | awk '{print $NF}')
 wtd=$(xrdb -query | grep '*color7' | awk '{print $NF}')
 blu=$(xrdb -query | grep '*color4' | awk '{print $NF}')
 
-t="80"
+t="ff"
 
-B="$bkd$t"  # blank
-C="$wtd$t"  # clear ish
-D="$blu$t"  # default
-T="${wtd}ff"  # text
-W="$red$t"  # wrong
-V="$grn$t"  # verifying
+B="${bkd}${t}"  # blank
+C="${wtd}${t}"  # clear ish
+D="${blu}${t}"  # default
+T="${wtd}${t}"  # text
+W="${red}${t}"  # wrong
+V="${grn}${t}"  # verifying
 
 i3lock \
+-f \
+-p default \
+--indpos="100:100" \
+--indicator \
 --image=$HOME/.config/wall.png \
 --insidevercolor=$V \
 --ringvercolor=$V \

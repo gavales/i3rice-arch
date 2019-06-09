@@ -9,45 +9,45 @@ set linespace=0
 "set lines=999 columns=999
 "au GUIEnter * simalt ~x
 
-hi Normal guifg=#fdf6e3 guibg=#002b36
-hi Title gui=bold guifg=#fdf6e3 guibg=#002b36
-hi StatusLineTerm guifg=#002b36 guibg=#859900
-hi StatusLineTermNC guifg=#fdf6e3 guibg=#859900
-hi LineNr gui=none guifg=#268bd2 guibg=#002b36
-hi CursorLineNr gui=bold guifg=#268bd2 guibg=#073642
-hi SpecialKey guifg=#073642 guibg=#002b36
-hi ModeMsg gui=bold guifg=#fdf6e3
-hi Cursor guifg=#002b36 guibg=#dc322f
-hi ColorColumn guifg=#002b36 guibg=#073642
-hi CursorLine gui=none guibg=#073642
-hi Visual guifg=#002b36 guibg=#268bd2
-hi VisualNOS guifg=#002b36 guibg=#268bd2
-hi Type gui=bold guifg=#fdf6e3 guibg=#002b36
-hi Identifier gui=italic guifg=#b58900 guibg=#002b36
-hi Comment gui=italic guifg=#95c8ec guibg=#002b36
-hi Folded gui=italic guifg=#95c8ec guibg=#002b36
-hi Constant gui=italic guifg=#fdf6e3 guibg=#002b36
-hi Special gui=bold guifg=#fdf6e3 guibg=#002b36
-hi Statement gui=bold guifg=#fdf6e3 guibg=#002b36
-hi PreProc gui=none guifg=#268bd2 guibg=#002b36
-hi MatchParen gui=bold guifg=#b58900 guibg=#002b36
-hi Search gui=none guifg=#002b36 guibg=#b58900
-hi Error gui=none guifg=#dc322f guibg=#002b36
-hi EndOfBuffer gui=none guifg=#002b36 guibg=#002b36
-hi SpellBad gui=underline,bold guifg=#dc322f guibg=#002b36
-hi SpellCap gui=underline,bold guifg=#268bd2 guibg=#002b36
-hi SpellRare gui=underline,bold guifg=#d33682 guibg=#002b36
-hi SpellLocal gui=underline,bold guifg=#2aa198 guibg=#002b36
-hi Pmenu gui=none guifg=#268bd2 guibg=#fdf6e3
-hi PmenuSel gui=none guifg=#002b36 guibg=#268bd2
-hi PmenuSbar gui=none guifg=#268bd2 guibg=#002b36
-hi PmenuThumb gui=none guifg=#859900 guibg=#859900
-hi TabLine gui=none guifg=#268bd2 guibg=#002b36
-hi TabLineSel gui=none guifg=#002b36 guibg=#268bd2
-hi TabLineFill gui=none guifg=#268bd2 guibg=#002b36
-hi usrred guibg=#dc322f guifg=#002b36
-hi usrylw guibg=#b58900 guifg=#002b36
-hi usrgrn guibg=#859900 guifg=#002b36
-hi usrgry guibg=#073642 guifg=#002b36
-hi usrblu guibg=#268bd2 guifg=#002b36
-hi usrgnt guibg=#d33682 guifg=#002b36
+hi Normal guifg=#1a2937 guibg=#f0ede7
+hi Title gui=bold guifg=#1a2937 guibg=#f0ede7
+hi StatusLineTerm guifg=#f0ede7 guibg=#bcbd82
+hi StatusLineTermNC guifg=#1a2937 guibg=#bcbd82
+hi LineNr gui=none guifg=#c17b82 guibg=#f0ede7
+hi CursorLineNr gui=bold guifg=#c17b82 guibg=#e1dbcf
+hi SpecialKey guifg=#e1dbcf guibg=#f0ede7
+hi ModeMsg gui=bold guifg=#1a2937
+hi Cursor guifg=#f0ede7 guibg=#537592
+hi ColorColumn guifg=#f0ede7 guibg=#e1dbcf
+hi CursorLine gui=none guibg=#e1dbcf
+hi Visual guifg=#f0ede7 guibg=#c17b82
+hi VisualNOS guifg=#f0ede7 guibg=#c17b82
+hi Type gui=bold guifg=#1a2937 guibg=#f0ede7
+hi Identifier gui=italic guifg=#dbc36e guibg=#f0ede7
+hi Comment gui=italic guifg=#873f47 guibg=#f0ede7
+hi Folded gui=italic guifg=#873f47 guibg=#f0ede7
+hi Constant gui=italic guifg=#1a2937 guibg=#f0ede7
+hi Special gui=bold guifg=#1a2937 guibg=#f0ede7
+hi Statement gui=bold guifg=#1a2937 guibg=#f0ede7
+hi PreProc gui=none guifg=#c17b82 guibg=#f0ede7
+hi MatchParen gui=bold guifg=#dbc36e guibg=#f0ede7
+hi Search gui=none guifg=#f0ede7 guibg=#dbc36e
+hi Error gui=none guifg=#537592 guibg=#f0ede7
+hi EndOfBuffer gui=none guifg=#f0ede7 guibg=#f0ede7
+hi SpellBad gui=underline,bold guifg=#537592 guibg=#f0ede7
+hi SpellCap gui=underline,bold guifg=#c17b82 guibg=#f0ede7
+hi SpellRare gui=underline,bold guifg=#e6b179 guibg=#f0ede7
+hi SpellLocal gui=underline,bold guifg=#98b2a7 guibg=#f0ede7
+hi Pmenu gui=none guifg=#c17b82 guibg=#1a2937
+hi PmenuSel gui=none guifg=#f0ede7 guibg=#c17b82
+hi PmenuSbar gui=none guifg=#c17b82 guibg=#f0ede7
+hi PmenuThumb gui=none guifg=#bcbd82 guibg=#bcbd82
+hi TabLine gui=none guifg=#c17b82 guibg=#f0ede7
+hi TabLineSel gui=none guifg=#f0ede7 guibg=#c17b82
+hi TabLineFill gui=none guifg=#c17b82 guibg=#f0ede7
+hi usrred guibg=#537592 guifg=#f0ede7
+hi usrylw guibg=#dbc36e guifg=#f0ede7
+hi usrgrn guibg=#bcbd82 guifg=#f0ede7
+hi usrgry guibg=#e1dbcf guifg=#f0ede7
+hi usrblu guibg=#c17b82 guifg=#f0ede7
+hi usrgnt guibg=#e6b179 guifg=#f0ede7

@@ -1,4 +1,3 @@
-rename gnome-shell.css_template
 shell git clone https://github.com/budlabs/youtube.git
 shell  git clone https://github.com/budRich/numix-solarized-gtk-theme.git
 shell git clone https://uk.rs-online.com/web/p/radio-frequency-development-kits/7916397/?relevancy-data=636F3D3126696E3D4931384E53656172636847656E65726963266C753D656E266D6D3D6D61746368616C6C7061727469616C26706D3D5E2E2A2426706F3D31333326736E3D592673723D2673743D43415443485F414C4C5F44454641554C542673633D592677633D4E4F4E45267573743D4750532055426C6F78204C45412D3653267374613D4750532055426C6F78204C45412D365326&searchHistory=%7B%22enabled%22%3Atrue%7D
@@ -48,3 +47,4 @@ rename Borderless (2019).webm
 >>>>>>> origin/master
 rename start.rasi
 w
+mkdir old

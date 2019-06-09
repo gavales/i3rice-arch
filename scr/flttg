@@ -6,4 +6,4 @@
 width=$(xdotool getactivewindow getwindowgeometry | sed -n "/Geometry/p" | sed "s/x/\ /g" | awk '{print $2}')
 height=$(xdotool getactivewindow getwindowgeometry | sed -n "/Geometry/p" | sed "s/x/\ /g" | awk '{print $3}')
 
-echo " $width $height"
+echo "$width $height"

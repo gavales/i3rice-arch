@@ -2,31 +2,31 @@
 
 atsynDir="$HOME/.atom/packages/rice-syntax/styles"
 
-blackd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-blackl=$(xrdb -query | grep '*color8' | awk '{print $NF}')
-green=$(xrdb -query | grep '*color2' | awk '{print $NF}')
-yellow=$(xrdb -query | grep '*color3' | awk '{print $NF}')
+bkd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+bkl=$(xrdb -query | grep '*color8' | awk '{print $NF}')
+grn=$(xrdb -query | grep '*color2' | awk '{print $NF}')
+ylw=$(xrdb -query | grep '*color3' | awk '{print $NF}')
 red=$(xrdb -query | grep '*color9' | awk '{print $NF}')
-whited=$(xrdb -query | grep '*color7' | awk '{print $NF}')
-whitel=$(xrdb -query | grep '*color15' | awk '{print $NF}')
-blue=$(xrdb -query | grep '*color4' | awk '{print $NF}')
-magenta=$(xrdb -query | grep '*color5' | awk '{print $NF}')
-cyan=$(xrdb -query | grep '*color6' | awk '{print $NF}')
+wtd=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+wtl=$(xrdb -query | grep '*color15' | awk '{print $NF}')
+blu=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+gnt=$(xrdb -query | grep '*color5' | awk '{print $NF}')
+cyn=$(xrdb -query | grep '*color6' | awk '{print $NF}')
 
 (
 	cd $atsynDir || exit 1
 
 	echo "// These colors are specific to the theme. Do not use in a package!" > colors.less
-	echo "@very-light-gray: $whitel;" >> colors.less
-	echo "@light-gray: $whited;" >> colors.less
-	echo "@gray: $blackl;" >> colors.less
-	echo "@dark-gray: $blackd;" >> colors.less
-	echo "@very-dark-gray: $blackd;" >> colors.less
-	echo "@cyan: $cyan;" >> colors.less
-	echo "@blue: $blue;" >> colors.less
-	echo "@purple: $magenta;" >> colors.less
-	echo "@green: $green;" >> colors.less
+	echo "@very-light-gray: $wtl;" >> colors.less
+	echo "@light-gray: $wtd;" >> colors.less
+	echo "@gray: $bkl;" >> colors.less
+	echo "@dark-gray: $bkd;" >> colors.less
+	echo "@very-dark-gray: $bkd;" >> colors.less
+	echo "@cyan: $cyn;" >> colors.less
+	echo "@blue: $blu;" >> colors.less
+	echo "@purple: $gnt;" >> colors.less
+	echo "@green: $grn;" >> colors.less
 	echo "@red: $red;" >> colors.less
-	echo "@orange: $yellow;" >> colors.less
-	echo "@light-orange: $yellow;" >> colors.less
+	echo "@orange: $ylw;" >> colors.less
+	echo "@light-orange: $ylw;" >> colors.less
 )

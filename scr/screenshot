@@ -5,7 +5,7 @@ picDir="$HOME/pic"
 
 scrotname () {
 	time="`date +%Y-%m-%d_%H:%M:%S`.png"
-	name=$(echo -e "" | $HOME/scr/i3menu -p "Choose scrot name ")
+	name=$(echo -e "" | $HOME/scr/i3menu -p "Choose scrot name " -o horizontal -w 100 -l 1)
 
 	if [[ -z $name ]]; then
 		scrotname=$time
@@ -15,7 +15,7 @@ scrotname () {
 }
 
 confirmscrot () {
-	action=$(echo -e "Save\nNew\nClipboard" | $HOME/scr/i3menu -p "Save? ")
+	action=$(echo -e "Save\nNew\nClipboard" | $HOME/scr/i3menu -p "Save? " -o horizontal -w 100 -l 1)
 	if [[ $action == "Save" ]]; then
 		scrotname
 		mv $picDir/$scrotdir/tmp.png $picDir/$scrotdir/${scrotname}
@@ -30,7 +30,7 @@ confirmscrot () {
 }
 
 tmpscrot () {
-	scrot_type=$(echo -e "Fullscreen\nSelection" | $HOME/scr/i3menu -p "Scrot type? ")
+	scrot_type=$(echo -e "Fullscreen\nSelection" | $HOME/scr/i3menu -p "Scrot type? " -o horizontal -w 100 -l 1)
 
 	if [[ $scrot_type == "Fullscreen" ]]; then
 		sleep .25
