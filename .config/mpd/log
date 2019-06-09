@@ -28136,3 +28136,115 @@ Jun 09 18:36 : client: [47] opened from [::1]:56206
 Jun 09 18:36 : client: [47] closed
 Jun 09 18:36 : client: [48] opened from [::1]:56208
 Jun 09 18:36 : client: [48] closed
+Jun 09 22:29 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 09 22:29 : exception: Failed to decode /home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3
+Jun 09 22:29 : exception: nested: Failed to open '/home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3': No such file or directory
+Jun 09 22:29 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 09 22:29 : player: played "Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3"
+Jun 09 22:29 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jun 09 22:29 : client: [0] opened from [::1]:44692
+Jun 09 22:29 : client: [0] closed
+Jun 09 22:29 : client: [1] opened from [::1]:44694
+Jun 09 22:29 : client: [1] closed
+Jun 09 22:38 : client: [2] opened from [::1]:45862
+Jun 09 22:38 : client: [2] closed
+Jun 09 22:38 : client: [3] opened from [::1]:45864
+Jun 09 22:38 : client: [3] closed
+Jun 09 22:38 : client: [4] opened from [::1]:45896
+Jun 09 22:38 : client: [4] closed
+Jun 09 22:38 : client: [5] opened from [::1]:45898
+Jun 09 22:38 : client: [5] closed
+Jun 09 22:39 : client: [6] opened from [::1]:46204
+Jun 09 22:39 : client: [6] closed
+Jun 09 22:39 : client: [7] opened from [::1]:46206
+Jun 09 22:39 : client: [7] closed
+Jun 09 22:40 : client: [8] opened from [::1]:46334
+Jun 09 22:40 : client: [8] closed
+Jun 09 22:40 : client: [9] opened from [::1]:46336
+Jun 09 22:40 : client: [9] closed
+Jun 09 22:43 : client: [10] opened from [::1]:46416
+Jun 09 22:43 : exception: Failed to decode /home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3
+Jun 09 22:43 : exception: nested: Failed to open '/home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3': No such file or directory
+Jun 09 22:43 : player: played "Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3"
+Jun 09 22:43 : client: [10] closed
+Jun 09 22:43 : client: [11] opened from [::1]:46418
+Jun 09 22:43 : client: [11] closed
+Jun 09 22:43 : client: [12] opened from [::1]:46420
+Jun 09 22:43 : client: [12] closed
+Jun 09 22:43 : client: [13] opened from [::1]:46422
+Jun 09 22:43 : client: [13] closed
+Jun 09 22:43 : client: [14] opened from [::1]:46424
+Jun 09 22:43 : exception: Failed to decode /home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3
+Jun 09 22:43 : exception: nested: Failed to open '/home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3': No such file or directory
+Jun 09 22:43 : player: played "Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3"
+Jun 09 22:43 : client: [14] closed
+Jun 09 22:43 : client: [15] opened from [::1]:46426
+Jun 09 22:43 : client: [15] closed
+Jun 09 22:43 : client: [16] opened from [::1]:46428
+Jun 09 22:43 : client: [16] closed
+Jun 09 22:43 : client: [17] opened from [::1]:46430
+Jun 09 22:43 : client: [17] closed
+Jun 09 22:43 : client: [18] opened from [::1]:46434
+Jun 09 22:43 : exception: Failed to decode /home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3
+Jun 09 22:43 : exception: nested: Failed to open '/home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3': No such file or directory
+Jun 09 22:43 : player: played "Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3"
+Jun 09 22:43 : client: [18] closed
+Jun 09 22:43 : client: [19] opened from [::1]:46436
+Jun 09 22:43 : client: [19] closed
+Jun 09 22:43 : client: [20] opened from [::1]:46438
+Jun 09 22:43 : client: [20] closed
+Jun 09 22:43 : client: [21] opened from [::1]:46440
+Jun 09 22:43 : client: [21] closed
+Jun 09 22:44 : client: [22] opened from [::1]:46442
+Jun 09 22:44 : exception: Failed to decode /home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3
+Jun 09 22:44 : exception: nested: Failed to open '/home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3': No such file or directory
+Jun 09 22:44 : player: played "Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3"
+Jun 09 22:44 : client: [22] closed
+Jun 09 22:44 : client: [23] opened from [::1]:46444
+Jun 09 22:44 : client: [23] closed
+Jun 09 22:44 : client: [24] opened from [::1]:46446
+Jun 09 22:44 : client: [24] closed
+Jun 09 22:44 : client: [25] opened from [::1]:46448
+Jun 09 22:44 : client: [25] closed
+Jun 09 22:44 : client: [26] opened from [::1]:46450
+Jun 09 22:44 : exception: Failed to decode /home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3
+Jun 09 22:44 : exception: nested: Failed to open '/home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3': No such file or directory
+Jun 09 22:44 : player: played "Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3"
+Jun 09 22:44 : exception: Failed to decode /home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3
+Jun 09 22:44 : exception: nested: Failed to open '/home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3': No such file or directory
+Jun 09 22:44 : client: [26] closed
+Jun 09 22:44 : client: [27] opened from [::1]:46452
+Jun 09 22:44 : client: [27] closed
+Jun 09 22:44 : client: [28] opened from [::1]:46454
+Jun 09 22:44 : client: [28] closed
+Jun 09 22:44 : client: [29] opened from [::1]:46456
+Jun 09 22:44 : exception: Failed to decode /home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3
+Jun 09 22:44 : exception: nested: Failed to open '/home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3': No such file or directory
+Jun 09 22:44 : player: played "Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3"
+Jun 09 22:44 : exception: Failed to decode /home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3
+Jun 09 22:44 : exception: nested: Failed to open '/home/gavarch/mus/Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3': No such file or directory
+Jun 09 22:44 : client: [29] closed
+Jun 09 22:44 : client: [30] opened from [::1]:46458
+Jun 09 22:44 : client: [30] closed
+Jun 09 22:44 : client: [31] opened from [::1]:46460
+Jun 09 22:44 : client: [31] closed
+Jun 09 22:44 : client: [32] opened from [::1]:46462
+Jun 09 22:44 : client: [32] closed
+Jun 09 22:44 : client: [33] opened from [::1]:46464
+Jun 09 22:44 : client: [33] closed
+Jun 09 22:44 : client: [34] opened from [::1]:46468
+Jun 09 22:44 : client: [34] closed
+Jun 09 22:44 : client: [35] opened from [::1]:46470
+Jun 09 22:44 : client: [35] closed
+Jun 09 22:49 : client: [36] opened from [::1]:46548
+Jun 09 22:49 : client: [36] closed
+Jun 09 22:49 : client: [37] opened from [::1]:46550
+Jun 09 22:49 : client: [37] closed
+Jun 09 22:49 : client: [38] opened from [::1]:46552
+Jun 09 22:49 : client: [38] closed
+Jun 09 22:49 : client: [39] opened from [::1]:46554
+Jun 09 22:49 : client: [39] closed
+Jun 09 22:50 : client: [40] opened from [::1]:46588
+Jun 09 22:50 : client: [40] closed
+Jun 09 22:50 : client: [41] opened from [::1]:46590
+Jun 09 22:50 : client: [41] closed

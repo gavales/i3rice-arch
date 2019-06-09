@@ -1,19 +1,27 @@
-! nikes
-! light
+! manjaro
+! dark
 ! vim:ft=xdefaults
-#define cblkl #dcdcd3
-#define cblkd #f6f6f4
-#define credd #ff4845
-#define credl #ff4845
-#define cgrnd #47aa12
-#define cgrnl #47aa12
-#define cylwd #ff890a
-#define cylwl #ff890a
-#define cblud #b46b7d
-#define cblul #b46b7d
-#define cgntd #288ad6
-#define cgntl #288ad6
-#define ccynd #6bb4a2
-#define ccynl #6bb4a2
-#define cwhtl #303030
-#define cwhtd #7d404f
+! background:                      #222D31
+! foreground:                      #d8d8d8
+! fading:                          8
+! fadeColor:                       black
+! cursorColor:                     #1ABB9B
+! pointerColorBackground:          #2B2C2B
+! pointerColorForeground:          #16A085
+
+#define cblkd #222D31
+#define cblkl #585858
+#define credd #ab4642
+#define credl #ab4642
+#define cgrnd #7E807E
+#define cgrnl #8D8F8D
+#define cylwd #f7ca88
+#define cylwl #f7ca88
+#define cblud #7cafc2
+#define cblul #7cafc2
+#define cgntd #ba8baf
+#define cgntl #ba8baf
+#define ccynd #1ABB9B
+#define ccynl #1ABB9B
+#define cwhtd #d8d8d8
+#define cwhtl #f8f8f8
