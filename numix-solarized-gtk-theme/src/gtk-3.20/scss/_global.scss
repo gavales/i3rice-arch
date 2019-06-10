@@ -4,12 +4,12 @@
 
 // default color scheme
 $bg_color: if($variant == "dark", #4a5559, #4a5559);
-$fg_color: if($variant == "dark", #b2d0db, #b2d0db);
+$fg_color: if($variant == "dark", #dfc8d9, #dfc8d9);
 $base_color: if($variant == "dark", #364145, #364145);
-$text_color: if($variant == "dark", #b2d0db, #b2d0db);
-$selected_bg_color: #7cafc2;
+$text_color: if($variant == "dark", #dfc8d9, #dfc8d9);
+$selected_bg_color: #ba8baf;
 $selected_fg_color: #f8f8f8;
-$tooltip_bg_color: #7cafc2;
+$tooltip_bg_color: #ba8baf;
 $tooltip_fg_color: #f8f8f8;
 
 $selected_borders_color: if($variant == 'light', darken($selected_bg_color, 30%), darken($selected_bg_color, 20%));
@@ -18,7 +18,7 @@ $borders_edge: if($variant == 'light', transparentize(white, 0.2), transparentiz
 
 // dark colors
 $dark_bg_color: if($variant == 'dark', #4a5559, #4a5559);
-$dark_fg_color: if($variant == 'dark', #b2d0db, #b2d0db);
+$dark_fg_color: if($variant == 'dark', #dfc8d9, #dfc8d9);
 
 // shadows
 $dark_shadow: #000000;
@@ -34,7 +34,7 @@ $entry_border: alpha($dark_shadow, .06);
 $scrollbar_bg_color: if($variant == 'light', darken($bg_color, 5%), mix($base_color, $bg_color, .4));
 $scrollbar_slider_color: if($variant == 'dark', shade(#4a5559, .5), shade(#4a5559, .5));
 $scrollbar_slider_hover_color: if($variant == 'dark', shade(#4a5559, .3), shade(#4a5559, .3));
-$scrollbar_slider_active_color: if($variant == 'dark', lighten(#7cafc2, 10%), lighten(#7cafc2, 10%));
+$scrollbar_slider_active_color: if($variant == 'dark', lighten(#ba8baf, 10%), lighten(#ba8baf, 10%));
 
 $switch_disabled_bg_color: #d8d8d8;
 $switch_disabled_border_color: #ccc;
@@ -45,7 +45,7 @@ $switch_fg_color: #8e969e;
 $switch_slider_bg_color: #fbfbfb;
 
 // misc colors used by gtk+
-$info_fg_color: if($variant == 'dark', #b2d0db, #b2d0db);
+$info_fg_color: if($variant == 'dark', #dfc8d9, #dfc8d9);
 $info_bg_color: if($variant == 'dark', #222D31, #222D31);
 $warning_fg_color: if($variant == 'dark', #f7ca88, #f7ca88);
 $warning_bg_color: if($variant == 'dark', #ab4642, #ab4642);
@@ -53,7 +53,7 @@ $question_fg_color: if($variant == 'dark', #f7ca88, #f7ca88);
 $question_bg_color: if($variant == 'dark', #222D31, #222D31);
 $error_fg_color: if($variant == 'dark', #ab4642, #ab4642);
 $error_bg_color: if($variant == 'dark', #222D31, #222D31);
-$link_color: if($variant == 'dark', #ba8baf, #ba8baf);
+$link_color: if($variant == 'dark', #7cafc2, #7cafc2);
 $success_color: if($variant == 'dark', #7E807E, #7E807E);
 $warning_color: if($variant == 'dark', #ab4642, #ab4642);
 $error_color: if($variant == 'dark', #ab4642, #ab4642);

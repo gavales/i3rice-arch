@@ -11,7 +11,7 @@ main () {
 
 theme () {
 	theme=$(cat ${xfilesDir}/colors/.theme_list | $HOME/scr/i3menu -p \
-		"Choose theme " | awk '{print $NF}')
+		"Choose theme " -w 500 | awk '{print $NF}')
 	echo $theme
 	if [[ -z ${theme} ]]; then
 		notify-send "No theme chosen" -i "~/scrpic/theme.png"

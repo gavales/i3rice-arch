@@ -3,12 +3,12 @@ width = 0
 color = "#222D31"
 
 [urgency_low]
-background = "#7cafc2"
+background = "#ba8baf"
 foreground = "#222D31"
 timeout = 3
 
 [urgency_normal]
-background = "#7cafc2"
+background = "#ba8baf"
 foreground = "#222D31"
 timeout = 3
 

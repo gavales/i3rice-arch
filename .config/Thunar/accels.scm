@@ -21,6 +21,7 @@
 (gtk_accel_path "<Actions>/ThunarStandardView/properties" "<Primary>p")
 (gtk_accel_path "<Actions>/ThunarStandardView/back" "BackSpace")
 ; (gtk_accel_path "<Actions>/ThunarLauncher/open-with-menu" "")
+; (gtk_accel_path "<Actions>/ThunarStandardView/setup-columns" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/sendto-menu" "")
 (gtk_accel_path "<Actions>/ThunarStandardView/delete" "Delete")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/select-by-pattern" "<Primary>s")

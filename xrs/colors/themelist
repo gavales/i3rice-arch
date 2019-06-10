@@ -19,17 +19,17 @@ main () {
 		cyn=$(cat ${i} | grep "ccynd" | awk '{print $NF}')
 		echo "\
 <span foreground=\"#666666\" background=\"$wtl\"> fg </span>\
-<span foreground=\"#666666\" background=\"$wtd\"> cm </span>\
-<span foreground=\"#666666\" background=\"$bkl\"> gr </span>\
 <span foreground=\"#666666\" background=\"$bkd\"> bg </span>\
-<span foreground=\"#666666\" background=\"$red\"> r </span>\
-<span foreground=\"#666666\" background=\"$grn\"> g </span>\
-<span foreground=\"#666666\" background=\"$ylw\"> y </span>\
-<span foreground=\"#666666\" background=\"$blu\"> b </span>\
-<span foreground=\"#666666\" background=\"$gnt\"> m </span>\
-<span foreground=\"#666666\" background=\"$cyn\"> c </span>\
+<span foreground=\"#666666\" background=\"$blu\"> acc </span>\
+<span foreground=\"#666666\" background=\"$wtd\"> com </span>\
+<span foreground=\"#666666\" background=\"$bkl\"> grey </span>\
  $i" >> .theme_list
 	done
 }
 
 main
+#<span foreground=\"#666666\" background=\"$red\"> r </span>\
+#<span foreground=\"#666666\" background=\"$grn\"> g </span>\
+#<span foreground=\"#666666\" background=\"$ylw\"> y </span>\
+#<span foreground=\"#666666\" background=\"$gnt\"> m </span>\
+#<span foreground=\"#666666\" background=\"$cyn\"> c </span>\
