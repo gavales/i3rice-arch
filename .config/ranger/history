@@ -1,6 +1,3 @@
-rename Standard.colors_template
-shell sudo make install
-rename reloadconfsfvwm
 mkdir fvwm
 rename reloadconfs
 shell cp -r ~/plt/tex/article excheatsheet
@@ -48,3 +45,6 @@ rename vertical.rasi
 rename horizontal.rasi
 rename manjaro_light
 rename uni
+rename .nvim
+rename .nvimrc
+shell wget https://raw.githubusercontent.com/onivim/oni/master/extensions/theme-onedark/colors/onedark.json

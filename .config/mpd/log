@@ -28332,3 +28332,154 @@ Jun 09 23:47 : client: [82] opened from [::1]:49238
 Jun 09 23:47 : client: [82] closed
 Jun 09 23:47 : client: [83] opened from [::1]:49240
 Jun 09 23:47 : client: [83] closed
+Jun 09 23:58 : client: [84] opened from [::1]:49600
+Jun 09 23:58 : client: [84] closed
+Jun 09 23:58 : client: [85] opened from [::1]:49602
+Jun 09 23:58 : client: [85] closed
+Jun 09 23:58 : client: [86] opened from [::1]:49616
+Jun 09 23:58 : client: [86] closed
+Jun 09 23:58 : client: [87] opened from [::1]:49618
+Jun 09 23:58 : client: [87] closed
+Jun 09 23:59 : client: [88] opened from [::1]:49624
+Jun 09 23:59 : client: [88] closed
+Jun 09 23:59 : client: [89] opened from [::1]:49626
+Jun 09 23:59 : client: [89] closed
+Jun 09 23:59 : client: [90] opened from [::1]:49628
+Jun 09 23:59 : client: [90] closed
+Jun 09 23:59 : client: [91] opened from [::1]:49630
+Jun 09 23:59 : client: [91] closed
+Jun 09 23:59 : client: [92] opened from [::1]:49632
+Jun 09 23:59 : client: [92] closed
+Jun 09 23:59 : client: [93] opened from [::1]:49634
+Jun 09 23:59 : client: [93] closed
+Jun 09 23:59 : client: [94] opened from [::1]:49636
+Jun 09 23:59 : client: [94] closed
+Jun 09 23:59 : client: [95] opened from [::1]:49638
+Jun 09 23:59 : client: [95] closed
+Jun 09 23:59 : client: [96] opened from [::1]:49640
+Jun 09 23:59 : client: [96] closed
+Jun 09 23:59 : client: [97] opened from [::1]:49642
+Jun 09 23:59 : client: [97] closed
+Jun 09 23:59 : client: [98] opened from [::1]:49644
+Jun 09 23:59 : client: [98] closed
+Jun 09 23:59 : client: [99] opened from [::1]:49646
+Jun 09 23:59 : client: [99] closed
+Jun 09 23:59 : client: [100] opened from [::1]:49652
+Jun 09 23:59 : client: [100] closed
+Jun 09 23:59 : client: [101] opened from [::1]:49654
+Jun 09 23:59 : client: [101] closed
+Jun 10 00:21 : client: [102] opened from [::1]:50940
+Jun 10 00:21 : client: [102] closed
+Jun 10 00:21 : client: [103] opened from [::1]:50942
+Jun 10 00:21 : client: [103] closed
+Jun 10 00:26 : client: [104] opened from [::1]:51162
+Jun 10 00:26 : client: [104] closed
+Jun 10 00:26 : client: [105] opened from [::1]:51166
+Jun 10 00:26 : client: [105] closed
+Jun 10 00:32 : client: [106] opened from [::1]:51196
+Jun 10 00:32 : client: [106] closed
+Jun 10 00:32 : client: [107] opened from [::1]:51198
+Jun 10 00:32 : client: [107] closed
+Jun 10 00:41 : client: [108] opened from [::1]:51366
+Jun 10 00:41 : client: [108] closed
+ALSA lib pcm_dmix.c:1108:(snd_pcm_dmix_open) unable to open slave
+Jun 10 00:41 : exception: Failed to open "mpd alsamixer-output" (alsa)
+Jun 10 00:41 : exception: nested: Failed to open ALSA device "default": No such file or directory
+Jun 10 00:41 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 10 00:41 : client: [109] opened from [::1]:51368
+Jun 10 00:41 : client: [109] closed
+Jun 10 00:41 : client: [110] opened from [::1]:51370
+Jun 10 00:41 : client: [110] closed
+Jun 10 00:41 : client: [111] opened from [::1]:51372
+Jun 10 00:41 : client: [111] closed
+Jun 10 00:41 : client: [112] opened from [::1]:51374
+Jun 10 00:41 : client: [112] closed
+Jun 10 00:41 : client: [113] opened from [::1]:51376
+Jun 10 00:41 : client: [113] closed
+Jun 10 00:41 : client: [114] opened from [::1]:51378
+Jun 10 00:41 : client: [114] closed
+Jun 10 00:41 : client: [115] opened from [::1]:51380
+Jun 10 00:41 : client: [115] closed
+Jun 10 00:41 : client: [116] opened from [::1]:51382
+ALSA lib pcm_dmix.c:1108:(snd_pcm_dmix_open) unable to open slave
+Jun 10 00:41 : exception: Failed to open "mpd alsamixer-output" (alsa)
+Jun 10 00:41 : exception: nested: Failed to open ALSA device "default": No such file or directory
+Jun 10 00:41 : client: [116] closed
+Jun 10 00:41 : client: [117] opened from [::1]:51384
+Jun 10 00:41 : client: [117] closed
+Jun 10 00:41 : client: [118] opened from [::1]:51386
+Jun 10 00:41 : client: [118] closed
+Jun 10 00:41 : client: [119] opened from [::1]:51388
+Jun 10 00:41 : client: [119] closed
+Jun 10 00:42 : client: [120] opened from [::1]:51390
+Jun 10 00:42 : client: [120] closed
+Jun 10 00:42 : client: [121] opened from [::1]:51392
+Jun 10 00:42 : client: [121] closed
+Jun 10 00:42 : client: [122] opened from [::1]:51394
+Jun 10 00:42 : client: [122] closed
+Jun 10 00:42 : client: [123] opened from [::1]:51396
+Jun 10 00:42 : client: [123] closed
+Jun 10 00:42 : client: [124] opened from [::1]:51398
+ALSA lib pcm_dmix.c:1108:(snd_pcm_dmix_open) unable to open slave
+Jun 10 00:42 : exception: Failed to open "mpd alsamixer-output" (alsa)
+Jun 10 00:42 : exception: nested: Failed to open ALSA device "default": No such file or directory
+Jun 10 00:42 : client: [124] closed
+Jun 10 00:42 : client: [125] opened from [::1]:51400
+Jun 10 00:42 : client: [125] closed
+Jun 10 00:42 : client: [126] opened from [::1]:51402
+Jun 10 00:42 : client: [126] closed
+Jun 10 00:42 : client: [127] opened from [::1]:51404
+Jun 10 00:42 : client: [127] closed
+Jun 10 00:42 : client: [128] opened from [::1]:51406
+Jun 10 00:42 : client: [128] closed
+Jun 10 00:42 : client: [129] opened from [::1]:51408
+Jun 10 00:42 : client: [129] closed
+Jun 10 00:42 : client: [130] opened from [::1]:51410
+Jun 10 00:42 : client: [130] closed
+Jun 10 00:42 : client: [131] opened from [::1]:51412
+Jun 10 00:42 : client: [131] closed
+Jun 10 00:45 : client: [132] opened from [::1]:51656
+Jun 10 00:45 : client: [132] closed
+Jun 10 00:45 : client: [133] opened from [::1]:51658
+Jun 10 00:45 : client: [133] closed
+Jun 10 00:45 : client: [134] opened from [::1]:51670
+Jun 10 00:45 : client: [135] opened from [::1]:51672
+Jun 10 00:45 : client: [135] closed
+Jun 10 00:45 : client: [136] opened from [::1]:51674
+Jun 10 00:45 : client: [136] closed
+Jun 10 00:45 : client: [137] opened from [::1]:51676
+Jun 10 00:45 : client: [137] closed
+Jun 10 00:45 : client: [138] opened from [::1]:51678
+Jun 10 00:45 : client: [138] closed
+ALSA lib pcm_dmix.c:1108:(snd_pcm_dmix_open) unable to open slave
+Jun 10 00:46 : exception: Failed to open "mpd alsamixer-output" (alsa)
+Jun 10 00:46 : exception: nested: Failed to open ALSA device "default": No such file or directory
+Jun 10 00:46 : client: [139] opened from [::1]:51724
+Jun 10 00:46 : client: [139] closed
+Jun 10 00:46 : client: [140] opened from [::1]:51728
+Jun 10 00:46 : client: [140] closed
+Jun 10 00:46 : client: [141] opened from [::1]:51730
+Jun 10 00:46 : client: [141] closed
+Jun 10 00:46 : client: [142] opened from [::1]:51732
+Jun 10 00:46 : client: [142] closed
+Jun 10 00:46 : client: [143] opened from [::1]:51738
+Jun 10 00:46 : client: [143] closed
+Jun 10 00:46 : client: [144] opened from [::1]:51740
+Jun 10 00:46 : client: [144] closed
+Jun 10 00:46 : client: [145] opened from [::1]:51742
+Jun 10 00:46 : client: [145] closed
+Jun 10 00:46 : client: [146] opened from [::1]:51744
+Jun 10 00:46 : client: [146] closed
+Jun 10 00:46 : client: [134] closed
+Jun 10 01:06 : client: [147] opened from [::1]:53182
+Jun 10 01:06 : client: [147] closed
+Jun 10 01:06 : client: [148] opened from [::1]:53184
+Jun 10 01:06 : client: [148] closed
+Jun 10 01:07 : client: [149] opened from [::1]:53228
+Jun 10 01:07 : client: [149] closed
+Jun 10 01:07 : client: [150] opened from [::1]:53230
+Jun 10 01:07 : client: [150] closed
+Jun 10 01:07 : client: [151] opened from [::1]:53232
+Jun 10 01:07 : client: [151] closed
+Jun 10 01:07 : client: [152] opened from [::1]:53234
+Jun 10 01:07 : client: [152] closed
