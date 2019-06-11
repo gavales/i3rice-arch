@@ -11,7 +11,7 @@
 " //// GENERAL
 
 filetype plugin on
-execute pathogen#infect()
+"execute pathogen#infect()
 syntax enable
 set encoding=utf-8
 colorscheme koehler

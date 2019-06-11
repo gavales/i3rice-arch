@@ -51,8 +51,8 @@ done
 #else
 bkd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
 bkl=$(xrdb -query | grep '*color8' | awk '{print $NF}')
-wtl=$(xrdb -query | grep '*color7' | awk '{print $NF}')
-wtd=$(xrdb -query | grep '*color15' | awk '{print $NF}')
+wtd=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+wtl=$(xrdb -query | grep '*color15' | awk '{print $NF}')
 #fi
 
 grn=$(xrdb -query | grep '*color2' | awk '{print $NF}')
@@ -158,14 +158,14 @@ wt2="\#${wt2RX}${wt2GX}${wt2BX}"
 bk1="\#${bk1RX}${bk1GX}${bk1BX}"
 bk2="\#${bk2RX}${bk2GX}${bk2BX}"
 
-regex="s/\%\%bkd\%\%/\"${bkd}\"/g;s/\%\%bkl\%\%/\"${bkl}\"/g;s/\%\%wtd\%\%/\"${wtd}\"/g;s/\%\%wtl\%\%/\"${wtl}\"/g;s/\%\%grn\%\%/\"${grn}\"/g;s/\%\%ylw\%\%/\"${ylw}\"/g;s/\%\%red\%\%/\"${red}\"/g;s/\%\%blu\%\%/\"${blu}\"/g;s/\%\%gnt\%\%/\"${gnt}\"/g;s/\%\%cyn\%\%/\"${cyn}\"/g;s/\%\%cynRGB\%\%/\"${cynRGB}\"/g;s/\%\%gntRGB\%\%/\"${gntRGB}\"/g;s/\%\%bluRGB\%\%/\"${bluRGB}\"/g;s/\%\%redRGB\%\%/\"${redRGB}\"/g;s/\%\%ylwRGB\%\%/\"${ylwRGB}\"/g;s/\%\%grnRGB\%\%/\"${grnRGB}\"/g;s/\%\%bklRGB\%\%/\"${bklRGB}\"/g;s/\%\%bkdRGB\%\%/\"${bkdRGB}\"/g;s/\%\%wtlRGB\%\%/\"${wtlRGB}\"/g;s/\%\%wtdRGB\%\%/\"${wtdRGB}\"/g;s/\%\%wt1\%\%/\"${wt1}\"/g;s/\%\%wt2\%\%/\"${wt2}\"/g;s/\%\%bk1\%\%/\"${bk1}\"/g;s/\%\%bk2\%\%/\"${bk2}\"/g"
+regex="s/\%\%bkd\%\%/"${bkd}"/g;s/\%\%bkl\%\%/"${bkl}"/g;s/\%\%wtd\%\%/"${wtd}"/g;s/\%\%wtl\%\%/"${wtl}"/g;s/\%\%grn\%\%/"${grn}"/g;s/\%\%ylw\%\%/"${ylw}"/g;s/\%\%red\%\%/"${red}"/g;s/\%\%blu\%\%/"${blu}"/g;s/\%\%gnt\%\%/"${gnt}"/g;s/\%\%cyn\%\%/"${cyn}"/g;s/\%\%cynRGB\%\%/"${cynRGB}"/g;s/\%\%gntRGB\%\%/"${gntRGB}"/g;s/\%\%bluRGB\%\%/"${bluRGB}"/g;s/\%\%redRGB\%\%/"${redRGB}"/g;s/\%\%ylwRGB\%\%/"${ylwRGB}"/g;s/\%\%grnRGB\%\%/"${grnRGB}"/g;s/\%\%bklRGB\%\%/"${bklRGB}"/g;s/\%\%bkdRGB\%\%/"${bkdRGB}"/g;s/\%\%wtlRGB\%\%/"${wtlRGB}"/g;s/\%\%wtdRGB\%\%/"${wtdRGB}"/g;s/\%\%wt1\%\%/"${wt1}"/g;s/\%\%wt2\%\%/"${wt2}"/g;s/\%\%bk1\%\%/"${bk1}"/g;s/\%\%bk2\%\%/"${bk2}"/g"
 
 main () {
 	cd ${thm} || exit 1
 	templates=$(find . | grep '_template' | sed "s/^\.\///g")
 	for i in ${templates}; do
 #		cat ${i} | sed -e "${regex}" > ${i}
-		cat ${i} | sed -e "${regex};s/\\\"//g" > ${i/_template/}
+		cat ${i} | sed -e "${regex}" > ${i/_template/}
 	done
 	bash $scr
 }

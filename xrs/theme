@@ -1,19 +1,19 @@
-! manjaro
-! dark
+! solarized
+! light
 ! vim:ft=xdefaults
-#define cblkd #222D31
-#define cblkl #384245
-#define credd #ab4642
-#define credl #ab4642
-#define cgrnd #7E807E
-#define cgrnl #8D8F8D
-#define cylwd #f7ca88
-#define cylwl #f7ca88
-#define cblud #ba8baf
-#define cblul #ba8baf
-#define cgntd #7cafc2
-#define cgntl #7cafc2
-#define ccynd #1ABB9B
-#define ccynl #1ABB9B
-#define cwhtd #dfc8d9
-#define cwhtl #f8f8f8
+#define cwhtd #16534f
+#define cwhtl #002b36
+#define credd #dc322f
+#define credl #dc322f
+#define cgrnd #859900
+#define cgrnl #859900
+#define cylwd #b58900
+#define cylwl #b58900
+#define cblud #2aa198
+#define cblul #2aa198
+#define cgntd #d33682
+#define cgntl #d33682
+#define ccynd #268bd2
+#define ccynl #268bd2
+#define cblkd #fdf6e3
+#define cblkl #eee8d5
