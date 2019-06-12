@@ -1,14 +1,3 @@
-rename apple-blur-branch-257840.jpg
-shell convert -trim -transparent white -fuzz 10%% 'BE_FS_CAD_raw.png' 'BE_FS_CAD_raw.png'
-shell convert -trim -transparent white -fuzz 15%% 'BE_FS_CAD_raw.png' 'BE_FS_CAD_raw.png'
-rename apple
-rename Makefile__
-rename Makefile
-rename Makefile_
-shell git clone https://github.com/budRich/numix-solarized-gtk-theme.git
-rename term_
-rename Makefileq
-touch compton.conf
 rename compton.conf__
 rename compton.conf
 rename compton.conf_
@@ -48,3 +37,14 @@ shell git clone https://github.com/StillANixRookie/atompackages.git
 shell git clone https://github.com/StillANixRookie/SeaBUG.git
 shell bash %f
 open_with oni
+rename i3blocks.conf_template
+rename term_rainbow
+rename term_template
+rename term-rainbow
+rename term-rainbow_template
+rename fixedsys.css_template
+rename zathurarc_template
+rename dunst-theme_template
+rename dunst-reload
+rename themer
+rename colors.less_template

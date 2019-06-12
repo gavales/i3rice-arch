@@ -1,0 +1,127 @@
+Jun 11 15:59 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 11 15:59 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 11 15:59 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jun 11 15:59 : client: [0] opened from [::1]:52898
+Jun 11 15:59 : client: [0] closed
+Jun 11 15:59 : client: [1] opened from [::1]:52900
+Jun 11 15:59 : client: [1] closed
+Jun 11 16:52 : client: [2] opened from [::1]:53828
+Jun 11 16:52 : client: [3] opened from [::1]:53830
+Jun 11 16:52 : client: [3] closed
+Jun 11 16:52 : client: [4] opened from [::1]:53832
+Jun 11 16:52 : client: [4] closed
+ALSA lib pcm_dmix.c:1108:(snd_pcm_dmix_open) unable to open slave
+Jun 11 16:52 : exception: Failed to open "mpd alsamixer-output" (alsa)
+Jun 11 16:52 : exception: nested: Failed to open ALSA device "default": No such file or directory
+Jun 11 16:52 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 11 16:52 : client: [5] opened from [::1]:53834
+Jun 11 16:52 : client: [5] closed
+Jun 11 16:52 : client: [6] opened from [::1]:53836
+Jun 11 16:52 : client: [6] closed
+Jun 11 16:53 : client: [2] closed
+Jun 11 16:56 : player: played "Buju Banton/00 Optimistic Soul.mp3"
+ALSA lib pcm_dmix.c:1108:(snd_pcm_dmix_open) unable to open slave
+Jun 11 16:56 : exception: Failed to open "mpd alsamixer-output" (alsa)
+Jun 11 16:56 : exception: nested: Failed to open ALSA device "default": No such file or directory
+Jun 11 17:00 : player: played "Buju Banton/Inna Heights/05 African Pride.mp3"
+ALSA lib pcm_dmix.c:1108:(snd_pcm_dmix_open) unable to open slave
+Jun 11 17:00 : exception: Failed to open "mpd alsamixer-output" (alsa)
+Jun 11 17:00 : exception: nested: Failed to open ALSA device "default": No such file or directory
+Jun 11 17:04 : player: played "Various Artists/Reggae Gold 1997/10 Love Sponge.mp3"
+ALSA lib pcm_dmix.c:1108:(snd_pcm_dmix_open) unable to open slave
+Jun 11 17:04 : exception: Failed to open "mpd alsamixer-output" (alsa)
+Jun 11 17:04 : exception: nested: Failed to open ALSA device "default": No such file or directory
+Jun 11 17:08 : player: played "Buju Banton/'Til Shiloh/02 'Til I'm Laid To Rest.mp3"
+ALSA lib pcm_dmix.c:1108:(snd_pcm_dmix_open) unable to open slave
+Jun 11 17:08 : exception: Failed to open "mpd alsamixer-output" (alsa)
+Jun 11 17:08 : exception: nested: Failed to open ALSA device "default": No such file or directory
+Jun 11 17:13 : player: played "Collection Spirit Of Ragga Dan/Spirit Of Ragga Dancehall/40 Hills & Valley.mp3"
+ALSA lib pcm_dmix.c:1108:(snd_pcm_dmix_open) unable to open slave
+Jun 11 17:13 : exception: Failed to open "mpd alsamixer-output" (alsa)
+Jun 11 17:13 : exception: nested: Failed to open ALSA device "default": No such file or directory
+Jun 11 17:17 : player: played "Buju Banton/00 Untold Stories.mp3"
+ALSA lib pcm_dmix.c:1108:(snd_pcm_dmix_open) unable to open slave
+Jun 11 17:17 : exception: Failed to open "mpd alsamixer-output" (alsa)
+Jun 11 17:17 : exception: nested: Failed to open ALSA device "default": No such file or directory
+Jun 11 17:20 : player: played "Buju Banton/00 Make My Day.mp3"
+ALSA lib pcm_dmix.c:1108:(snd_pcm_dmix_open) unable to open slave
+Jun 11 17:20 : exception: Failed to open "mpd alsamixer-output" (alsa)
+Jun 11 17:20 : exception: nested: Failed to open ALSA device "default": No such file or directory
+Jun 11 17:24 : player: played "Buju Banton/00 Wanna Be Loved.mp3"
+ALSA lib pcm_dmix.c:1108:(snd_pcm_dmix_open) unable to open slave
+Jun 11 17:24 : exception: Failed to open "mpd alsamixer-output" (alsa)
+Jun 11 17:24 : exception: nested: Failed to open ALSA device "default": No such file or directory
+Jun 11 17:28 : player: played "Buju Banton/Til Shiloh/06 Not an Easy Road.mp3"
+ALSA lib pcm_dmix.c:1108:(snd_pcm_dmix_open) unable to open slave
+Jun 11 17:28 : exception: Failed to open "mpd alsamixer-output" (alsa)
+Jun 11 17:28 : exception: nested: Failed to open ALSA device "default": No such file or directory
+Jun 11 17:33 : player: played "Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3"
+ALSA lib pcm_dmix.c:1108:(snd_pcm_dmix_open) unable to open slave
+Jun 11 17:33 : exception: Failed to open "mpd alsamixer-output" (alsa)
+Jun 11 17:33 : exception: nested: Failed to open ALSA device "default": No such file or directory
+Jun 11 17:36 : player: played "Buju Banton/Voice Of Jamaica/02 Red Rose.mp3"
+ALSA lib pcm_dmix.c:1108:(snd_pcm_dmix_open) unable to open slave
+Jun 11 17:36 : exception: Failed to open "mpd alsamixer-output" (alsa)
+Jun 11 17:36 : exception: nested: Failed to open ALSA device "default": No such file or directory
+Jun 11 17:39 : player: played "Buju Banton/00 Have To Get You Tonight.mp3"
+ALSA lib pcm_dmix.c:1108:(snd_pcm_dmix_open) unable to open slave
+Jun 11 17:39 : exception: Failed to open "mpd alsamixer-output" (alsa)
+Jun 11 17:39 : exception: nested: Failed to open ALSA device "default": No such file or directory
+ALSA lib pcm_dmix.c:1108:(snd_pcm_dmix_open) unable to open slave
+Jun 11 17:39 : exception: Failed to open "mpd alsamixer-output" (alsa)
+Jun 11 17:39 : exception: nested: Failed to open ALSA device "default": No such file or directory
+Jun 11 17:43 : player: played "Buju Banton/00 Champion.mp3"
+Jun 12 15:18 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 12 15:18 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jun 12 15:18 : client: [0] opened from [::1]:40962
+Jun 12 15:18 : client: [0] closed
+Jun 12 15:18 : client: [1] opened from [::1]:40964
+Jun 12 15:18 : client: [1] closed
+Jun 12 15:22 : client: [2] opened from [::1]:41110
+Jun 12 15:22 : client: [2] closed
+Jun 12 15:22 : client: [3] opened from [::1]:41112
+Jun 12 15:22 : client: [3] closed
+Jun 12 15:22 : client: [4] opened from [::1]:41114
+Jun 12 15:22 : client: [4] closed
+Jun 12 15:22 : client: [5] opened from [::1]:41116
+Jun 12 15:22 : client: [5] closed
+Jun 12 15:26 : client: [6] opened from [::1]:41150
+Jun 12 15:26 : client: [6] closed
+Jun 12 15:26 : client: [7] opened from [::1]:41152
+Jun 12 15:26 : client: [7] closed
+Jun 12 15:27 : client: [8] opened from [::1]:41208
+Jun 12 15:27 : client: [8] closed
+Jun 12 15:27 : client: [9] opened from [::1]:41210
+Jun 12 15:27 : client: [9] closed
+Jun 12 15:28 : client: [10] opened from [::1]:41214
+Jun 12 15:28 : client: [10] closed
+Jun 12 15:28 : client: [11] opened from [::1]:41216
+Jun 12 15:28 : client: [11] closed
+Jun 12 15:29 : client: [12] opened from [::1]:41220
+Jun 12 15:29 : client: [12] closed
+Jun 12 15:29 : client: [13] opened from [::1]:41222
+Jun 12 15:29 : client: [13] closed
+Jun 12 15:29 : client: [14] opened from [::1]:41230
+Jun 12 15:29 : client: [14] closed
+Jun 12 15:29 : client: [15] opened from [::1]:41232
+Jun 12 15:29 : client: [15] closed
+Jun 12 15:30 : client: [16] opened from [::1]:41250
+Jun 12 15:30 : client: [16] closed
+Jun 12 15:30 : client: [17] opened from [::1]:41252
+Jun 12 15:30 : client: [17] closed
+Jun 12 15:31 : client: [18] opened from [::1]:41258
+Jun 12 15:31 : client: [18] closed
+Jun 12 15:31 : client: [19] opened from [::1]:41260
+Jun 12 15:31 : client: [19] closed
+Jun 12 15:31 : client: [20] opened from [::1]:41262
+Jun 12 15:31 : client: [20] closed
+Jun 12 15:31 : client: [21] opened from [::1]:41264
+Jun 12 15:31 : client: [21] closed
+Jun 12 15:32 : client: [22] opened from [::1]:41268
+Jun 12 15:32 : client: [22] closed
+Jun 12 15:32 : client: [23] opened from [::1]:41270
+Jun 12 15:32 : client: [23] closed
+Jun 12 15:33 : client: [24] opened from [::1]:41300
+Jun 12 15:33 : client: [24] closed
+Jun 12 15:33 : client: [25] opened from [::1]:41302
+Jun 12 15:33 : client: [25] closed

@@ -1,0 +1,9 @@
+* {
+accent: %%bkd%%;
+fg1: %%bkd%%;
+fg2: %%bkl%%;
+bg1: %%wtd%%;
+bg2: %%wtl%%;
+redish: %%red%%;
+font1: "Iosevka Semibold Oblique 12";
+}

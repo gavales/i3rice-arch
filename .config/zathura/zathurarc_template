@@ -1,0 +1,14 @@
+set recolor true
+set window-title-basename true
+set default-bg "%%wtl%%"
+set default-fg "%%bkd%%"
+set font "FixedsysMono 10"
+set inputbar-bg "%%bkd%%"
+set inputbar-fg "%%wtl%%"
+set statusbar-bg "%%bkd%%"
+set statusbar-fg "%%wtl%%"
+set completion-bg "%%bkd%%"
+set completion-fg "%%wtl%%"
+set show-scrollbars false
+set recolor-darkcolor "%%wtd%%"
+set recolor-lightcolor "%%bkd%%"

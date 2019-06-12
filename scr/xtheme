@@ -5,7 +5,7 @@ xfilesDir=$HOME/xrs
 main () {
 	cat ${xfilesDir}/colors/${finaltheme} > ${xfilesDir}/theme
 	$HOME/scr/reloadconfs
-	$HOME/scr/mkgtktheme
+	$HOME/scr/themer
 	$HOME/scr/restartapps
 }
 

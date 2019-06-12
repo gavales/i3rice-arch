@@ -1,0 +1,19 @@
+[frame]
+width = 0
+color = "%%bkd%%"
+
+[urgency_low]
+background = "%%blu%%"
+foreground = "%%bkd%%"
+timeout = 3
+
+[urgency_normal]
+background = "%%blu%%"
+foreground = "%%bkd%%"
+timeout = 3
+
+[urgency_critical]
+background = "%%red%%"
+foreground = "%%bkd%%"
+timeout = 3
+

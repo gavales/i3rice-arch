@@ -3,19 +3,21 @@
 # OA: Gavin Vales
 # CREATED: Tue  7 May 23:07:28 GMT 2019
 
-thm="$HOME/numix-solarized-gtk-theme"
+dir="$HOME/numix-solarized-gtk-theme"
 vrt="$(sed '2q;d' .Xresources | awk '{print $2}')"
 scr="post-build-apply"
 
-echo $thm
+echo $dir
 echo $vrt
 
 help () {
 	echo ""
 	echo "			Options"
 	echo ""
-	echo "-t	-->	full path to theme folder, optional,"
+	echo "-t	-->	full path to target folder, optional,"
 	echo "				DEFAULT = \$HOME/numix-solarized-gtk-theme"
+	echo "-x	-->	bash script to run after theme is made"
+	echo "				DEFAULT = post-build-apply"
 	echo ""
 	echo ""
 	echo "Script to make gtk theme use terminal colours"
@@ -28,8 +30,8 @@ help () {
 while getopts :h:t:x:v:h: opts; do
 	case "$opts" in
 		t)
-			thm="${OPTARG}"
-			echo $thm
+			dir="${OPTARG}"
+			echo $dir
 			;;
 		v)
 			vrt="${OPTARG}"
@@ -161,13 +163,14 @@ bk2="\#${bk2RX}${bk2GX}${bk2BX}"
 regex="s/\%\%bkd\%\%/"${bkd}"/g;s/\%\%bkl\%\%/"${bkl}"/g;s/\%\%wtd\%\%/"${wtd}"/g;s/\%\%wtl\%\%/"${wtl}"/g;s/\%\%grn\%\%/"${grn}"/g;s/\%\%ylw\%\%/"${ylw}"/g;s/\%\%red\%\%/"${red}"/g;s/\%\%blu\%\%/"${blu}"/g;s/\%\%gnt\%\%/"${gnt}"/g;s/\%\%cyn\%\%/"${cyn}"/g;s/\%\%cynRGB\%\%/"${cynRGB}"/g;s/\%\%gntRGB\%\%/"${gntRGB}"/g;s/\%\%bluRGB\%\%/"${bluRGB}"/g;s/\%\%redRGB\%\%/"${redRGB}"/g;s/\%\%ylwRGB\%\%/"${ylwRGB}"/g;s/\%\%grnRGB\%\%/"${grnRGB}"/g;s/\%\%bklRGB\%\%/"${bklRGB}"/g;s/\%\%bkdRGB\%\%/"${bkdRGB}"/g;s/\%\%wtlRGB\%\%/"${wtlRGB}"/g;s/\%\%wtdRGB\%\%/"${wtdRGB}"/g;s/\%\%wt1\%\%/"${wt1}"/g;s/\%\%wt2\%\%/"${wt2}"/g;s/\%\%bk1\%\%/"${bk1}"/g;s/\%\%bk2\%\%/"${bk2}"/g"
 
 main () {
-	cd ${thm} || exit 1
-	templates=$(find . | grep '_template' | sed "s/^\.\///g")
+	cd ${dir} || exit 1
+	templates=$(ls -al | awk '{print $NF}' | grep '_template')
 	for i in ${templates}; do
 #		cat ${i} | sed -e "${regex}" > ${i}
 		cat ${i} | sed -e "${regex}" > ${i/_template/}
 	done
 	bash $scr
+	cd $HOME
 }
 
 main

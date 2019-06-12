@@ -1,9 +1,7 @@
 sw_volume: 62
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
-state: pause
-current: 1
-time: 6.750000
+state: stop
 random: 1
 repeat: 1
 single: 0
@@ -12,17 +10,4 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Renaud Garcia-Fons/Méditerranées/13 Bosphore.mp3
-1:Buju Banton/00 Champion.mp3
-2:Buju Banton/00 Have To Get You Tonight.mp3
-3:Buju Banton/00 Make My Day.mp3
-4:Buju Banton/00 Optimistic Soul.mp3
-5:Buju Banton/00 Untold Stories.mp3
-6:Buju Banton/00 Wanna Be Loved.mp3
-7:Buju Banton/Inna Heights/05 African Pride.mp3
-8:Buju Banton/Voice Of Jamaica/02 Red Rose.mp3
-9:Buju Banton/'Til Shiloh/02 'Til I'm Laid To Rest.mp3
-10:Buju Banton/Til Shiloh/06 Not an Easy Road.mp3
-11:Various Artists/Reggae Gold 1997/10 Love Sponge.mp3
-12:Collection Spirit Of Ragga Dan/Spirit Of Ragga Dancehall/40 Hills & Valley.mp3
 playlist_end

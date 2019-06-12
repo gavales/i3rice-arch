@@ -11,3 +11,5 @@ cat vars > config
 cat main >> config
 
 i3-msg reload
+#killall i3bar
+#i3bar -t --bar_id=bar-1 &>/dev/null &

@@ -1,35 +1,16 @@
 #!/bin/bash
 
-if [[ -z $(cat $HOME/xrs/theme) ]]; then
-	cat $HOME/xrs/colors/gruvbox_light > $HOME/.Xresources
-elif [[ ! -f $HOME/xrs/theme ]]; then
-	cat $HOME/xrs/colors/gruvbox_light > $HOME/.Xresources
-else
-	cat $HOME/xrs/theme > $HOME/.Xresources
-fi
-cat $HOME/xrs/1vars >> $HOME/.Xresources
-cat $HOME/xrs/2colorvars >> $HOME/.Xresources
-cat $HOME/xrs/3rofi >> $HOME/.Xresources
-cat $HOME/xrs/4xft >> $HOME/.Xresources
-cat $HOME/xrs/5xterm >> $HOME/.Xresources
-cat $HOME/xrs/6xcursor >> $HOME/.Xresources
-cat $HOME/xrs/7urxvt >> $HOME/.Xresources
-cat $HOME/xrs/8urxvtext >> $HOME/.Xresources
-xrdb -load $HOME/.Xresources
-kill -1 $(pidof urxvtd)
-$HOME/scr/mkvimtheme
-$HOME/scr/mkblocksconf
-$HOME/scr/mkvistheme
-$HOME/scr/mkatomtheme
-$HOME/scr/mkroficolors
-$HOME/scr/mkfixedsyscss
-$HOME/scr/mkzathrc
+bash $HOME/xrs/xrs-reload
+$HOME/scr/themer -t "$HOME/git/i3rice-arch" -x " "
+$HOME/scr/themer -t "$HOME/.vim/colors" -x " "
+$HOME/scr/themer -t "$HOME/git/atompackages/packages/rice-syntax/styles" -x " "
+$HOME/scr/themer -t "$HOME/scr" -x " "
+$HOME/scr/themer -t "$HOME/.config/vis/colors" -x " "
+$HOME/scr/themer -t "$HOME/.config/rofi" -x " "
+$HOME/scr/themer -t "$HOME/plt/css" -x " "
+$HOME/scr/themer -t "$HOME/.config/zathura" -x " "
+$HOME/scr/themer -t "$HOME/.config/dunst" -x "dunst-reload"
 $HOME/scr/i3concat
-#killall i3bar
-#i3bar -t --bar_id=bar-1 &>/dev/null &
 killall -q polybar
 polybar i3 &>/dev/null &
 $HOME/scr/i3listen-toggle
-#notify-send 'CONFIGS RELOADED' -i $HOME/scrpic/settingswhite.png
-$HOME/scr/mkdunsttheme
-$HOME/scr/mkgtktheme -t "$HOME/.vim/colors" -x " "
