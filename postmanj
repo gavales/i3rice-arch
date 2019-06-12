@@ -57,6 +57,7 @@ echo -e "${gnt} -	SOME AUR APPS I GET TOO:\n\
 	pamac-aur		\
 	gtkrc-reload	\n\
 	ranger-git		\
+	betterlockscreen	\
 	vim-live-latex-preview"
 #echo -e "${green}================================================================================"
 #echo -e  "${blue}= GET CONFIGS FROM GITHUB ======================================================"

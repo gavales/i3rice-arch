@@ -3,9 +3,9 @@
 @import "functions";
 
 // default color scheme
-$bg_color: if($variant == "dark", #d5d2d0, #d5d2d0);
+$bg_color: if($variant == "dark", #d1c7c1, #d1c7c1);
 $fg_color: if($variant == "dark", #161c16, #161c16);
-$base_color: if($variant == "dark", #e9e6e4, #e9e6e4);
+$base_color: if($variant == "dark", #e5dbd5, #e5dbd5);
 $text_color: if($variant == "dark", #161c16, #161c16);
 $selected_bg_color: #DC8E69;
 $selected_fg_color: #783a1c;
@@ -17,7 +17,7 @@ $borders_color: if($variant == 'light', shade($bg_color, .85), shade($bg_color, 
 $borders_edge: if($variant == 'light', transparentize(white, 0.2), transparentize($fg_color, 0.93));
 
 // dark colors
-$dark_bg_color: if($variant == 'dark', #d5d2d0, #d5d2d0);
+$dark_bg_color: if($variant == 'dark', #d1c7c1, #d1c7c1);
 $dark_fg_color: if($variant == 'dark', #161c16, #161c16);
 
 // shadows
@@ -32,8 +32,8 @@ $button_border: shade($base_color, .9);
 $entry_border: alpha($dark_shadow, .06);
 
 $scrollbar_bg_color: if($variant == 'light', darken($bg_color, 5%), mix($base_color, $bg_color, .4));
-$scrollbar_slider_color: if($variant == 'dark', shade(#d5d2d0, .5), shade(#d5d2d0, .5));
-$scrollbar_slider_hover_color: if($variant == 'dark', shade(#d5d2d0, .3), shade(#d5d2d0, .3));
+$scrollbar_slider_color: if($variant == 'dark', shade(#d1c7c1, .5), shade(#d1c7c1, .5));
+$scrollbar_slider_hover_color: if($variant == 'dark', shade(#d1c7c1, .3), shade(#d1c7c1, .3));
 $scrollbar_slider_active_color: if($variant == 'dark', lighten(#DC8E69, 10%), lighten(#DC8E69, 10%));
 
 $switch_disabled_bg_color: #d8d8d8;
@@ -46,13 +46,13 @@ $switch_slider_bg_color: #fbfbfb;
 
 // misc colors used by gtk+
 $info_fg_color: if($variant == 'dark', #161c16, #161c16);
-$info_bg_color: if($variant == 'dark', #fdfaf8, #fdfaf8);
+$info_bg_color: if($variant == 'dark', #f9efe9, #f9efe9);
 $warning_fg_color: if($variant == 'dark', #A5896D, #A5896D);
 $warning_bg_color: if($variant == 'dark', #6F90A7, #6F90A7);
 $question_fg_color: if($variant == 'dark', #A5896D, #A5896D);
-$question_bg_color: if($variant == 'dark', #fdfaf8, #fdfaf8);
+$question_bg_color: if($variant == 'dark', #f9efe9, #f9efe9);
 $error_fg_color: if($variant == 'dark', #6F90A7, #6F90A7);
-$error_bg_color: if($variant == 'dark', #fdfaf8, #fdfaf8);
+$error_bg_color: if($variant == 'dark', #f9efe9, #f9efe9);
 $link_color: if($variant == 'dark', #609AC1, #609AC1);
 $success_color: if($variant == 'dark', #507C88, #507C88);
 $warning_color: if($variant == 'dark', #6F90A7, #6F90A7);

@@ -425,42 +425,43 @@ focus_wrapping force
 workspace_auto_back_and_forth yes
 $fw [class="^.*"] border normal 2
 $fw [urgent=latest] focus
-$fw [workspace="$ws4"] floating enable
-$fw [workspace="$ws5"] floating enable
+$fw [workspace="$ws4"] floating enable,resize set 750 500
+$fw [workspace="$ws5"] floating enable,resize set 750 500
 
 # //// FLOATERS
 
-$fw [title="About Pale Moon"]		 		$flen
-$fw [title="alsamixer"]			 			$flen
+$fw [title="About Pale Moon"]				$flen
+$fw [title="alsamixer"]						$flen
 $fw [title="File Transfer*"]				$flen
 $fw [title="i3_help"]						$flen
-$fw [title="MuseScore: Play Panel"]	 		$flen
+$fw [title="MuseScore: Play Panel"]			$flen
+$fw [title="Select a download location"]	$flen,resize set 750 500
 
 $fw [class="Arandr"]						$flen
-$fw [class="Blueman-manager"]		 		$flen
+$fw [class="Blueman-manager"]				$flen
 $fw [class="Calamares"]						$flen
-$fw [class="Cam"]				 			$flen
+$fw [class="Cam"]							$flen
 $fw [class="Clipgrab"]						$flen
 $fw [class="Galculator"]					$flen
 $fw [class="GParted"]						$flen
 $fw [class="i3bar"]							$flen
 $fw [class="Lightdm-gtk-greeter-settings"]	$flen
 $fw [class="Lxappearance"]					$flen
-$fw [class="Manjaro-hello"]		 			$flen
+$fw [class="Manjaro-hello"]					$flen
 $fw [class="Manjaro Settings Manager"]		$flen
 $fw [class="matplotlib"]					$flen
 $fw [class="Nitrogen"]						$flen
 $fw [class="Oblogout"]						$flen
 $fw [class="octopi"]						$flen
 $fw [class="Pavucontrol"]					$flen,resize set 525 300
-$fw [class="qt5ct"]			 				$flen
+$fw [class="qt5ct"]							$flen
 $fw [class="Qtconfig-qt4"]					$flen
 $fw [class="Rofi"]							$flen
 $fw [class="(?i)System-config-printer.py"]	$flen
 $fw [class="Skype"]							$flen
 $fw [class="Simple-scan"]					$flen
 $fw [class="Thus"]							$flen
-$fw [class="Timeset-gui"]			 		$flen
+$fw [class="Timeset-gui"]					$flen
 $fw [class="(?i)virtualbox"]				$flen
 $fw [class="Xfburn"]						$flen
 

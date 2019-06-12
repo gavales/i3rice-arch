@@ -19,13 +19,13 @@ endif
 
 let g:colors_name='mine'
 
-let s:black           = { "gui": "#fdfaf8", "cterm": "232" }
+let s:black           = { "gui": "#f9efe9", "cterm": "232" }
 let s:medium_gray     = { "gui": "#783a1c", "cterm": "243" }
 let s:white           = { "gui": "#161c16", "cterm": "15"  }
 let s:actual_white    = { "gui": "#161c16", "cterm": "231" }
-let s:subtle_black    = { "gui": "#e9e6e4", "cterm": "236" }
-let s:light_black     = { "gui": "#d5d2d0", "cterm": "235" }
-let s:lighter_black   = { "gui": "#e3e1df", "cterm": "239" }
+let s:subtle_black    = { "gui": "#e5dbd5", "cterm": "236" }
+let s:light_black     = { "gui": "#d1c7c1", "cterm": "235" }
+let s:lighter_black   = { "gui": "#e0d7d1", "cterm": "239" }
 let s:light_gray      = { "gui": "#8c4e30", "cterm": "248" }
 let s:lighter_gray    = { "gui": "#a06244", "cterm": "251" }
 let s:lightest_gray   = { "gui": "#783a1c", "cterm": "255" }
