@@ -17,7 +17,7 @@ case "$1" in
 		;;
 	suspend)
 #		bash ~/scr/lockscreen && $logind suspend
-		betterlockscreen -l && $logind suspend
+		betterlockscreen -s
 		;;
 	hibernate)
 #		bash ~/scr/lockscreen && $logind hibernate

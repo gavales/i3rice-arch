@@ -435,6 +435,8 @@ $fw [title="alsamixer"]						$flen
 $fw [title="File Transfer*"]				$flen
 $fw [title="i3_help"]						$flen
 $fw [title="MuseScore: Play Panel"]			$flen
+$fw [title="Save Image"]					$flen,resize set 750 500
+$fw [title="Open Files"]					$flen,resize set 750 500
 $fw [title="Select a download location"]	$flen,resize set 750 500
 
 $fw [class="Arandr"]						$flen

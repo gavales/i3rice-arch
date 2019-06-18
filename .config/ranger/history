@@ -1,6 +1,3 @@
-shell wget https://github.com/budlabs/youtube/raw/master/letslinux/040-keybindings-rofi-2/keybindingsmenu
-shell  chmod +x %f
-wq
 scout -ftsea 
 mkdir ex
 rename rszath
@@ -48,3 +45,6 @@ search rho
 w
 shell 
 search Rho
+rename (orginalP - mp4) Blood+And+Bone+HD-720p.mp4
+rename Blood and Bones.mp4
+open_with ~/scr
