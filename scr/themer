@@ -37,16 +37,16 @@ guiapply () {
 }
 
 main () {
-	bg0=$(cat ${colsDir}/.current | grep 'background' | awk '{print $NF}')
-	acc=$(cat ${colsDir}/.current | grep 'accent'     | awk '{print $NF}')
-	com=$(cat ${colsDir}/.current | grep 'comment'    | awk '{print $NF}')
-	fg0=$(cat ${colsDir}/.current | grep 'foreground' | awk '{print $NF}')
-	grn=$(cat ${colsDir}/.current | grep 'green'      | awk '{print $NF}')
-	ylw=$(cat ${colsDir}/.current | grep 'yellow'     | awk '{print $NF}')
-	red=$(cat ${colsDir}/.current | grep 'red'        | awk '{print $NF}')
-	blu=$(cat ${colsDir}/.current | grep 'blue'       | awk '{print $NF}')
-	gnt=$(cat ${colsDir}/.current | grep 'magenta'    | awk '{print $NF}')
-	cyn=$(cat ${colsDir}/.current | grep 'cyan'       | awk '{print $NF}')
+	bg0=$(cat ${colsDir}/.current | grep '^background' | awk '{print $NF}')
+	acc=$(cat ${colsDir}/.current | grep '^accent'     | awk '{print $NF}')
+	com=$(cat ${colsDir}/.current | grep '^comment'    | awk '{print $NF}')
+	fg0=$(cat ${colsDir}/.current | grep '^foreground' | awk '{print $NF}')
+	grn=$(cat ${colsDir}/.current | grep '^green'      | awk '{print $NF}')
+	ylw=$(cat ${colsDir}/.current | grep '^yellow'     | awk '{print $NF}')
+	red=$(cat ${colsDir}/.current | grep '^red'        | awk '{print $NF}')
+	blu=$(cat ${colsDir}/.current | grep '^blue'       | awk '{print $NF}')
+	gnt=$(cat ${colsDir}/.current | grep '^magenta'    | awk '{print $NF}')
+	cyn=$(cat ${colsDir}/.current | grep '^cyan'       | awk '{print $NF}')
 
 	[[ -z $grn ]] && grn=$(cat ${defaultThm} | grep 'green'      | awk '{print $NF}')
 	[[ -z $ylw ]] && ylw=$(cat ${defaultThm} | grep 'yellow'     | awk '{print $NF}')
