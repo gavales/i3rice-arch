@@ -1,15 +1,15 @@
 #!/bin/bash
 
-bash $HOME/xrs/xrs-reload
-$HOME/scr/themer -t "$HOME/git/i3rice-arch" -x " "
-$HOME/scr/themer -t "$HOME/.vim/colors" -x " "
-$HOME/scr/themer -t "$HOME/git/atompackages/packages/rice-syntax/styles" -x " "
-$HOME/scr/themer -t "$HOME/scr" -x " "
-$HOME/scr/themer -t "$HOME/.config/vis/colors" -x " "
-$HOME/scr/themer -t "$HOME/.config/rofi" -x " "
-$HOME/scr/themer -t "$HOME/plt/css" -x " "
-$HOME/scr/themer -t "$HOME/.config/zathura" -x " "
-$HOME/scr/themer -t "$HOME/.config/dunst" -x "dunst-reload"
+$HOME/scr/themer -t "$HOME/xrs" -x "xrs-reload" -g
+$HOME/scr/themer -t "$HOME/git/i3rice-arch" -x " " -g
+$HOME/scr/themer -t "$HOME/.vim/colors" -x " " -g
+$HOME/scr/themer -t "$HOME/git/atompackages/packages/rice-syntax/styles" -x " " -g
+$HOME/scr/themer -t "$HOME/scr" -x " " -g
+$HOME/scr/themer -t "$HOME/.config/vis/colors" -x " " -g
+$HOME/scr/themer -t "$HOME/.config/rofi" -x " " -g
+$HOME/scr/themer -t "$HOME/plt/css" -x " " -g
+$HOME/scr/themer -t "$HOME/.config/zathura" -x " " -g
+$HOME/scr/themer -t "$HOME/.config/dunst" -x "dunst-reload" -g
 $HOME/scr/i3concat
 killall -q polybar
 polybar i3 &>/dev/null &

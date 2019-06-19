@@ -9,45 +9,45 @@ set linespace=0
 "set lines=999 columns=999
 "au GUIEnter * simalt ~x
 
-hi Normal guifg=%%wtl%% guibg=%%bkd%%
-hi Title gui=bold guifg=%%wtl%% guibg=%%bkd%%
-hi StatusLineTerm guifg=%%bkd%% guibg=%%grn%%
-hi StatusLineTermNC guifg=%%wtl%% guibg=%%grn%%
-hi LineNr gui=none guifg=%%blu%% guibg=%%bkd%%
-hi CursorLineNr gui=bold guifg=%%blu%% guibg=%%bkl%%
-hi SpecialKey guifg=%%bkl%% guibg=%%bkd%%
-hi ModeMsg gui=bold guifg=%%wtl%%
-hi Cursor guifg=%%bkd%% guibg=%%red%%
-hi ColorColumn guifg=%%bkd%% guibg=%%bkl%%
-hi CursorLine gui=none guibg=%%bkl%%
-hi Visual guifg=%%bkd%% guibg=%%blu%%
-hi VisualNOS guifg=%%bkd%% guibg=%%blu%%
-hi Type gui=bold guifg=%%wtl%% guibg=%%bkd%%
-hi Identifier gui=italic guifg=%%ylw%% guibg=%%bkd%%
-hi Comment gui=italic guifg=%%wtd%% guibg=%%bkd%%
-hi Folded gui=italic guifg=%%wtd%% guibg=%%bkd%%
-hi Constant gui=italic guifg=%%wtl%% guibg=%%bkd%%
-hi Special gui=bold guifg=%%wtl%% guibg=%%bkd%%
-hi Statement gui=bold guifg=%%wtl%% guibg=%%bkd%%
-hi PreProc gui=none guifg=%%blu%% guibg=%%bkd%%
-hi MatchParen gui=bold guifg=%%ylw%% guibg=%%bkd%%
-hi Search gui=none guifg=%%bkd%% guibg=%%ylw%%
-hi Error gui=none guifg=%%red%% guibg=%%bkd%%
-hi EndOfBuffer gui=none guifg=%%bkd%% guibg=%%bkd%%
-hi SpellBad gui=underline,bold guifg=%%red%% guibg=%%bkd%%
-hi SpellCap gui=underline,bold guifg=%%blu%% guibg=%%bkd%%
-hi SpellRare gui=underline,bold guifg=%%gnt%% guibg=%%bkd%%
-hi SpellLocal gui=underline,bold guifg=%%cyn%% guibg=%%bkd%%
-hi Pmenu gui=none guifg=%%blu%% guibg=%%wtl%%
-hi PmenuSel gui=none guifg=%%bkd%% guibg=%%blu%%
-hi PmenuSbar gui=none guifg=%%blu%% guibg=%%bkd%%
+hi Normal guifg=%%fg0%% guibg=%%bg0%%
+hi Title gui=bold guifg=%%fg0%% guibg=%%bg0%%
+hi StatusLineTerm guifg=%%bg0%% guibg=%%grn%%
+hi StatusLineTermNC guifg=%%fg0%% guibg=%%grn%%
+hi LineNr gui=none guifg=%%acc%% guibg=%%bg0%%
+hi CursorLineNr gui=bold guifg=%%acc%% guibg=%%bg1%%
+hi SpecialKey guifg=%%bg1%% guibg=%%bg0%%
+hi ModeMsg gui=bold guifg=%%fg0%%
+hi Cursor guifg=%%bg0%% guibg=%%red%%
+hi ColorColumn guifg=%%bg0%% guibg=%%bg1%%
+hi CursorLine gui=none guibg=%%bg1%%
+hi Visual guifg=%%bg0%% guibg=%%acc%%
+hi VisualNOS guifg=%%bg0%% guibg=%%acc%%
+hi Type gui=bold guifg=%%fg0%% guibg=%%bg0%%
+hi Identifier gui=italic guifg=%%ylw%% guibg=%%bg0%%
+hi Comment gui=italic guifg=%%com%% guibg=%%bg0%%
+hi Folded gui=italic guifg=%%com%% guibg=%%bg0%%
+hi Constant gui=italic guifg=%%fg0%% guibg=%%bg0%%
+hi Special gui=bold guifg=%%fg0%% guibg=%%bg0%%
+hi Statement gui=bold guifg=%%fg0%% guibg=%%bg0%%
+hi PreProc gui=none guifg=%%acc%% guibg=%%bg0%%
+hi MatchParen gui=bold guifg=%%ylw%% guibg=%%bg0%%
+hi Search gui=none guifg=%%bg0%% guibg=%%ylw%%
+hi Error gui=none guifg=%%red%% guibg=%%bg0%%
+hi EndOfBuffer gui=none guifg=%%bg0%% guibg=%%bg0%%
+hi SpellBad gui=underline,bold guifg=%%red%% guibg=%%bg0%%
+hi SpellCap gui=underline,bold guifg=%%acc%% guibg=%%bg0%%
+hi SpellRare gui=underline,bold guifg=%%gnt%% guibg=%%bg0%%
+hi SpellLocal gui=underline,bold guifg=%%cyn%% guibg=%%bg0%%
+hi Pmenu gui=none guifg=%%acc%% guibg=%%fg0%%
+hi PmenuSel gui=none guifg=%%bg0%% guibg=%%acc%%
+hi PmenuSbar gui=none guifg=%%acc%% guibg=%%bg0%%
 hi PmenuThumb gui=none guifg=%%grn%% guibg=%%grn%%
-hi TabLine gui=none guifg=%%blu%% guibg=%%bkd%%
-hi TabLineSel gui=none guifg=%%bkd%% guibg=%%blu%%
-hi TabLineFill gui=none guifg=%%blu%% guibg=%%bkd%%
-hi usrred guibg=%%red%% guifg=%%bkd%%
-hi usrylw guibg=%%ylw%% guifg=%%bkd%%
-hi usrgrn guibg=%%grn%% guifg=%%bkd%%
-hi usrgry guibg=%%bkl%% guifg=%%bkd%%
-hi usrblu guibg=%%blu%% guifg=%%bkd%%
-hi usrgnt guibg=%%gnt%% guifg=%%bkd%%
+hi TabLine gui=none guifg=%%acc%% guibg=%%bg0%%
+hi TabLineSel gui=none guifg=%%bg0%% guibg=%%acc%%
+hi TabLineFill gui=none guifg=%%acc%% guibg=%%bg0%%
+hi usrred guibg=%%red%% guifg=%%bg0%%
+hi usrylw guibg=%%ylw%% guifg=%%bg0%%
+hi usrgrn guibg=%%grn%% guifg=%%bg0%%
+hi usrgry guibg=%%bg1%% guifg=%%bg0%%
+hi usracc guibg=%%acc%% guifg=%%bg0%%
+hi usrgnt guibg=%%gnt%% guifg=%%bg0%%

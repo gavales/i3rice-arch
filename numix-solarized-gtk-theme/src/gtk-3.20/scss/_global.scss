@@ -3,38 +3,38 @@
 @import "functions";
 
 // default color scheme
-$bg_color: if($variant == "dark", #d1c7c1, #d1c7c1);
-$fg_color: if($variant == "dark", #161c16, #161c16);
-$base_color: if($variant == "dark", #e5dbd5, #e5dbd5);
-$text_color: if($variant == "dark", #161c16, #161c16);
-$selected_bg_color: #DC8E69;
-$selected_fg_color: #783a1c;
-$tooltip_bg_color: #DC8E69;
-$tooltip_fg_color: #783a1c;
+$bg_color: if($variant == "dark", #50525e, #50525e);
+$fg_color: if($variant == "dark", #ffa3a3, #ffa3a3);
+$base_color: if($variant == "dark", #3c3e4a, #3c3e4a);
+$text_color: if($variant == "dark", #ffa3a3, #ffa3a3);
+$selected_bg_color: #FF6E67;
+$selected_fg_color: #fffff2;
+$tooltip_bg_color: #FF6E67;
+$tooltip_fg_color: #fffff2;
 
 $selected_borders_color: if($variant == 'light', darken($selected_bg_color, 30%), darken($selected_bg_color, 20%));
 $borders_color: if($variant == 'light', shade($bg_color, .85), shade($bg_color, .88));
 $borders_edge: if($variant == 'light', transparentize(white, 0.2), transparentize($fg_color, 0.93));
 
 // dark colors
-$dark_bg_color: if($variant == 'dark', #d1c7c1, #d1c7c1);
-$dark_fg_color: if($variant == 'dark', #161c16, #161c16);
+$dark_bg_color: if($variant == 'dark', #50525e, #50525e);
+$dark_fg_color: if($variant == 'dark', #ffa3a3, #ffa3a3);
 
 // shadows
-$dark_shadow: #000000;
-$light_shadow: #ffffff;
+$dark_shadow: #282A36;
+$light_shadow: #fffff2;
 
 // white and black
-$black: #000000;
-$white: #ffffff;
+$black: #282A36;
+$white: #fffff2;
 
 $button_border: shade($base_color, .9);
 $entry_border: alpha($dark_shadow, .06);
 
 $scrollbar_bg_color: if($variant == 'light', darken($bg_color, 5%), mix($base_color, $bg_color, .4));
-$scrollbar_slider_color: if($variant == 'dark', shade(#d1c7c1, .5), shade(#d1c7c1, .5));
-$scrollbar_slider_hover_color: if($variant == 'dark', shade(#d1c7c1, .3), shade(#d1c7c1, .3));
-$scrollbar_slider_active_color: if($variant == 'dark', lighten(#DC8E69, 10%), lighten(#DC8E69, 10%));
+$scrollbar_slider_color: if($variant == 'dark', shade(#50525e, .5), shade(#50525e, .5));
+$scrollbar_slider_hover_color: if($variant == 'dark', shade(#50525e, .3), shade(#50525e, .3));
+$scrollbar_slider_active_color: if($variant == 'dark', lighten(#FF6E67, 10%), lighten(#FF6E67, 10%));
 
 $switch_disabled_bg_color: #d8d8d8;
 $switch_disabled_border_color: #ccc;
@@ -45,18 +45,18 @@ $switch_fg_color: #8e969e;
 $switch_slider_bg_color: #fbfbfb;
 
 // misc colors used by gtk+
-$info_fg_color: if($variant == 'dark', #161c16, #161c16);
-$info_bg_color: if($variant == 'dark', #f9efe9, #f9efe9);
-$warning_fg_color: if($variant == 'dark', #A5896D, #A5896D);
-$warning_bg_color: if($variant == 'dark', #6F90A7, #6F90A7);
-$question_fg_color: if($variant == 'dark', #A5896D, #A5896D);
-$question_bg_color: if($variant == 'dark', #f9efe9, #f9efe9);
-$error_fg_color: if($variant == 'dark', #6F90A7, #6F90A7);
-$error_bg_color: if($variant == 'dark', #f9efe9, #f9efe9);
-$link_color: if($variant == 'dark', #609AC1, #609AC1);
-$success_color: if($variant == 'dark', #507C88, #507C88);
-$warning_color: if($variant == 'dark', #6F90A7, #6F90A7);
-$error_color: if($variant == 'dark', #6F90A7, #6F90A7);
+$info_fg_color: if($variant == 'dark', #ffa3a3, #ffa3a3);
+$info_bg_color: if($variant == 'dark', #282A36, #282A36);
+$warning_fg_color: if($variant == 'dark', #cccc00, #cccc00);
+$warning_bg_color: if($variant == 'dark', #BD93F9, #BD93F9);
+$question_fg_color: if($variant == 'dark', #cccc00, #cccc00);
+$question_bg_color: if($variant == 'dark', #282A36, #282A36);
+$error_fg_color: if($variant == 'dark', #BD93F9, #BD93F9);
+$error_bg_color: if($variant == 'dark', #282A36, #282A36);
+$link_color: if($variant == 'dark', #FF92D0, #FF92D0);
+$success_color: if($variant == 'dark', #5AF78E, #5AF78E);
+$warning_color: if($variant == 'dark', #BD93F9, #BD93F9);
+$error_color: if($variant == 'dark', #BD93F9, #BD93F9);
 
 $toolbar_bg_color: $bg_color;
 $toolbar_fg_color: $fg_color;

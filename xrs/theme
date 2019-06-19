@@ -1,19 +1,17 @@
-! redrock1
-! light
-! vim:ft=xdefaults
-#define cwhtl #161c16
-#define cwhtd #783a1c
-#define credd #6F90A7
-#define credl #6F90A7
-#define cgrnd #507C88
-#define cgrnl #507C88
-#define cylwd #A5896D
-#define cylwl #A5896D
-#define cblud #DC8E69
-#define cblul #DC8E69
-#define cgntd #609AC1
-#define cgntl #609AC1
-#define ccynd #60c1b8
-#define ccynl #60c1b8
-#define cblkd #f9efe9
-#define cblkl #e0d7d1
+! colors
+#define cwhtl #fffff2
+#define cwhtd #ffa3a3
+#define credd #BD93F9
+#define credl #BD93F9
+#define cgrnd #5AF78E
+#define cgrnl #5AF78E
+#define cylwd #cccc00
+#define cylwl #cccc00
+#define cblud #FF6E67
+#define cblul #FF6E67
+#define cgntd #FF92D0
+#define cgntl #FF92D0
+#define ccynd #8BE9FD
+#define ccynl #8BE9FD
+#define cblkd #282A36
+#define cblkl #3c3e4a

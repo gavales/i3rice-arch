@@ -1,0 +1,17 @@
+! colors
+#define cwhtl %%fg0%%
+#define cwhtd %%com%%
+#define credd %%red%%
+#define credl %%red%%
+#define cgrnd %%grn%%
+#define cgrnl %%grn%%
+#define cylwd %%ylw%%
+#define cylwl %%ylw%%
+#define cblud %%blu%%
+#define cblul %%blu%%
+#define cgntd %%gnt%%
+#define cgntl %%gnt%%
+#define ccynd %%cyn%%
+#define ccynl %%cyn%%
+#define cblkd %%bg0%%
+#define cblkl %%bg1%%

@@ -3,174 +3,210 @@
 # OA: Gavin Vales
 # CREATED: Tue  7 May 23:07:28 GMT 2019
 
+colsDir=$HOME/themes
+defaultThm=${colsDir}/gruvbox_light
 dir="$HOME/numix-solarized-gtk-theme"
-vrt="$(sed '2q;d' .Xresources | awk '{print $2}')"
+vrt="$(sed '2q;d' ${colsDir}/.current | awk '{print $2}')"
 scr="post-build-apply"
 
-echo $dir
-echo $vrt
-
-help () {
-	echo ""
-	echo "			Options"
-	echo ""
-	echo "-t	-->	full path to target folder, optional,"
-	echo "				DEFAULT = \$HOME/numix-solarized-gtk-theme"
-	echo "-x	-->	bash script to run after theme is made"
-	echo "				DEFAULT = post-build-apply"
-	echo ""
-	echo ""
-	echo "Script to make gtk theme use terminal colours"
-	echo "To make theme template, just cd into the theme's main dir, duplicate the"
-	echo "file(s) with the colors, rename with \"_template\" ending, and run this"
-	echo "script in the theme's main directory, and any other commands that you"
-	echo "need to run"
+updatelist () {
+	cd ${colsDir}
+	bash .themelist
 }
 
-while getopts :h:t:x:v:h: opts; do
-	case "$opts" in
-		t)
-			dir="${OPTARG}"
-			echo $dir
-			;;
-		v)
-			vrt="${OPTARG}"
-			echo $vrt
-			;;
-		x)
-			scr="${OPTARG}"
-			echo $scr
-			;;
-		h) help ;;
-	esac
-done
+list () {
+	ls -l ${colsDir} | grep -v '^total' | awk '{print $NF}'
+}
 
-#if [[ $vrt == "light" ]]; then
-#	wtd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-#	wtl=$(xrdb -query | grep '*color8' | awk '{print $NF}')
-#	bkl=$(xrdb -query | grep '*color7' | awk '{print $NF}')
-#	bkd=$(xrdb -query | grep '*color15' | awk '{print $NF}')
-#else
-bkd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-bkl=$(xrdb -query | grep '*color8' | awk '{print $NF}')
-wtd=$(xrdb -query | grep '*color7' | awk '{print $NF}')
-wtl=$(xrdb -query | grep '*color15' | awk '{print $NF}')
-#fi
-
-grn=$(xrdb -query | grep '*color2' | awk '{print $NF}')
-ylw=$(xrdb -query | grep '*color3' | awk '{print $NF}')
-red=$(xrdb -query | grep '*color9' | awk '{print $NF}')
-blu=$(xrdb -query | grep '*color4' | awk '{print $NF}')
-gnt=$(xrdb -query | grep '*color5' | awk '{print $NF}')
-cyn=$(xrdb -query | grep '*color6' | awk '{print $NF}')
-
-# convert to RGB
-
-wtdR=$((16#${wtd:1:-4}))
-wtdG=$((16#${wtd:3:-2}))
-wtdB=$((16#${wtd:5}))
-wtlR=$((16#${wtd:1:-4}))
-wtlG=$((16#${wtd:3:-2}))
-wtlB=$((16#${wtd:5}))
-bkdR=$((16#${bkd:1:-4}))
-bkdG=$((16#${bkd:3:-2}))
-bkdB=$((16#${bkd:5}))
-bklR=$((16#${bkd:1:-4}))
-bklG=$((16#${bkd:3:-2}))
-bklB=$((16#${bkd:5}))
-redR=$((16#${red:1:-4}))
-redG=$((16#${red:3:-2}))
-redB=$((16#${red:5}))
-ylwR=$((16#${ylw:1:-4}))
-ylwG=$((16#${ylw:3:-2}))
-ylwB=$((16#${ylw:5}))
-bluR=$((16#${blu:1:-4}))
-bluG=$((16#${blu:3:-2}))
-bluB=$((16#${blu:5}))
-grnR=$((16#${grn:1:-4}))
-grnG=$((16#${grn:3:-2}))
-grnB=$((16#${grn:5}))
-cynR=$((16#${cyn:1:-4}))
-cynG=$((16#${cyn:3:-2}))
-cynB=$((16#${cyn:5}))
-gntR=$((16#${gnt:1:-4}))
-gntG=$((16#${gnt:3:-2}))
-gntB=$((16#${gnt:5}))
-
-if [[ $vrt == "light" ]]; then
-	wt1R=$(expr ${wtlR} + 20)
-	wt1G=$(expr ${wtlG} + 20)
-	wt1B=$(expr ${wtlB} + 20)
-	wt2R=$(expr ${wtlR} + 40)
-	wt2G=$(expr ${wtlG} + 40)
-	wt2B=$(expr ${wtlB} + 40)
-	bk1R=$(expr ${bkdR} - 20)
-	bk1G=$(expr ${bkdG} - 20)
-	bk1B=$(expr ${bkdB} - 20)
-	bk2R=$(expr ${bkdR} - 40)
-	bk2G=$(expr ${bkdG} - 40)
-	bk2B=$(expr ${bkdB} - 40)
-else
-	wt1R=$(expr ${wtlR} - 20)
-	wt1G=$(expr ${wtlG} - 20)
-	wt1B=$(expr ${wtlB} - 20)
-	wt2R=$(expr ${wtlR} - 40)
-	wt2G=$(expr ${wtlG} - 40)
-	wt2B=$(expr ${wtlB} - 40)
-	bk1R=$(expr ${bkdR} + 20)
-	bk1G=$(expr ${bkdG} + 20)
-	bk1B=$(expr ${bkdB} + 20)
-	bk2R=$(expr ${bkdR} + 40)
-	bk2G=$(expr ${bkdG} + 40)
-	bk2B=$(expr ${bkdB} + 40)
-fi
-
-wtdRGB="${wtdR}, ${wtdG}, ${wtdB}"
-wt1RGB="${wt1R}, ${wt1G}, ${wt1B}"
-wt2RGB="${wt2R}, ${wt2G}, ${wt2B}"
-wtlRGB="${wtlR}, ${wtlG}, ${wtlB}"
-bkdRGB="${bkdR}, ${bkdG}, ${bkdB}"
-bk1RGB="${bk1R}, ${bk1G}, ${bk1B}"
-bk2RGB="${bk2R}, ${bk2G}, ${bk2B}"
-bklRGB="${bklR}, ${bklG}, ${bklB}"
-grnRGB="${grnR}, ${grnG}, ${grnB}"
-ylwRGB="${ylwR}, ${ylwG}, ${ylwB}"
-redRGB="${redR}, ${redG}, ${redB}"
-bluRGB="${bluR}, ${bluG}, ${bluB}"
-gntRGB="${gntR}, ${gntG}, ${gntB}"
-cynRGB="${cynR}, ${cynG}, ${cynB}"
-
-# variations of foreground and background colors in hex
-
-wt1RX=$(printf '%x\n' ${wt1R})
-wt1GX=$(printf '%x\n' ${wt1G})
-wt1BX=$(printf '%x\n' ${wt1B})
-wt2RX=$(printf '%x\n' ${wt2R})
-wt2GX=$(printf '%x\n' ${wt2G})
-wt2BX=$(printf '%x\n' ${wt2B})
-bk1RX=$(printf '%x\n' ${bk1R})
-bk1GX=$(printf '%x\n' ${bk1G})
-bk1BX=$(printf '%x\n' ${bk1B})
-bk2RX=$(printf '%x\n' ${bk2R})
-bk2GX=$(printf '%x\n' ${bk2G})
-bk2BX=$(printf '%x\n' ${bk2B})
-
-wt1="\#${wt1RX}${wt1GX}${wt1BX}"
-wt2="\#${wt2RX}${wt2GX}${wt2BX}"
-bk1="\#${bk1RX}${bk1GX}${bk1BX}"
-bk2="\#${bk2RX}${bk2GX}${bk2BX}"
-
-regex="s/\%\%bkd\%\%/"${bkd}"/g;s/\%\%bkl\%\%/"${bkl}"/g;s/\%\%wtd\%\%/"${wtd}"/g;s/\%\%wtl\%\%/"${wtl}"/g;s/\%\%grn\%\%/"${grn}"/g;s/\%\%ylw\%\%/"${ylw}"/g;s/\%\%red\%\%/"${red}"/g;s/\%\%blu\%\%/"${blu}"/g;s/\%\%gnt\%\%/"${gnt}"/g;s/\%\%cyn\%\%/"${cyn}"/g;s/\%\%cynRGB\%\%/"${cynRGB}"/g;s/\%\%gntRGB\%\%/"${gntRGB}"/g;s/\%\%bluRGB\%\%/"${bluRGB}"/g;s/\%\%redRGB\%\%/"${redRGB}"/g;s/\%\%ylwRGB\%\%/"${ylwRGB}"/g;s/\%\%grnRGB\%\%/"${grnRGB}"/g;s/\%\%bklRGB\%\%/"${bklRGB}"/g;s/\%\%bkdRGB\%\%/"${bkdRGB}"/g;s/\%\%wtlRGB\%\%/"${wtlRGB}"/g;s/\%\%wtdRGB\%\%/"${wtdRGB}"/g;s/\%\%wt1\%\%/"${wt1}"/g;s/\%\%wt2\%\%/"${wt2}"/g;s/\%\%bk1\%\%/"${bk1}"/g;s/\%\%bk2\%\%/"${bk2}"/g"
+guiapply () {
+	theme=$(cat ${colsDir}/.theme_list | $HOME/scr/i3menu -p \
+		"Choose theme " -w 350 | awk '{print $NF}')
+	echo $theme
+	cd ${colsDir}
+	if [[ -z ${theme} ]]; then
+		notify-send "No theme chosen" -i "~/scrpic/theme.png"
+		:
+	elif [[ ! -f ${colsDir}/${theme} ]]; then
+		notify-send "Theme don't exist" -i "~/scrpic/theme.png"
+		:
+	else
+		notify-send "Theme exists" -i "~/scrpic/themepic.png"
+		finaltheme=${theme}
+		cat ${finaltheme} > .current
+	fi
+}
 
 main () {
+	bg0=$(cat ${colsDir}/.current | grep 'background' | awk '{print $NF}')
+	acc=$(cat ${colsDir}/.current | grep 'accent'     | awk '{print $NF}')
+	com=$(cat ${colsDir}/.current | grep 'comment'    | awk '{print $NF}')
+	fg0=$(cat ${colsDir}/.current | grep 'foreground' | awk '{print $NF}')
+	grn=$(cat ${colsDir}/.current | grep 'green'      | awk '{print $NF}')
+	ylw=$(cat ${colsDir}/.current | grep 'yellow'     | awk '{print $NF}')
+	red=$(cat ${colsDir}/.current | grep 'red'        | awk '{print $NF}')
+	blu=$(cat ${colsDir}/.current | grep 'blue'       | awk '{print $NF}')
+	gnt=$(cat ${colsDir}/.current | grep 'magenta'    | awk '{print $NF}')
+	cyn=$(cat ${colsDir}/.current | grep 'cyan'       | awk '{print $NF}')
+
+	[[ -z $grn ]] && grn=$(cat ${defaultThm} | grep 'green'      | awk '{print $NF}')
+	[[ -z $ylw ]] && ylw=$(cat ${defaultThm} | grep 'yellow'     | awk '{print $NF}')
+	[[ -z $red ]] && red=$(cat ${defaultThm} | grep 'red'        | awk '{print $NF}')
+	[[ -z $blu ]] && blu=$acc
+	[[ -z $gnt ]] && gnt=$(cat ${defaultThm} | grep 'magenta'    | awk '{print $NF}')
+	[[ -z $cyn ]] && cyn=$(cat ${defaultThm} | grep 'cyan'       | awk '{print $NF}')
+
+	# convert to RGB
+	comR=$((16#${com:1:-4})) && comG=$((16#${com:3:-2})) && comB=$((16#${com:5}))
+	accR=$((16#${acc:1:-4})) && accG=$((16#${acc:3:-2})) && accB=$((16#${acc:5}))
+	fg0R=$((16#${com:1:-4})) && fg0G=$((16#${com:3:-2})) && fg0B=$((16#${com:5}))
+	bg0R=$((16#${bg0:1:-4})) && bg0G=$((16#${bg0:3:-2})) && bg0B=$((16#${bg0:5}))
+	redR=$((16#${red:1:-4})) && redG=$((16#${red:3:-2})) && redB=$((16#${red:5}))
+	ylwR=$((16#${ylw:1:-4})) && ylwG=$((16#${ylw:3:-2})) && ylwB=$((16#${ylw:5}))
+	bluR=$((16#${blu:1:-4})) && bluG=$((16#${blu:3:-2})) && bluB=$((16#${blu:5}))
+	grnR=$((16#${grn:1:-4})) && grnG=$((16#${grn:3:-2})) && grnB=$((16#${grn:5}))
+	cynR=$((16#${cyn:1:-4})) && cynG=$((16#${cyn:3:-2})) && cynB=$((16#${cyn:5}))
+	gntR=$((16#${gnt:1:-4})) && gntG=$((16#${gnt:3:-2})) && gntB=$((16#${gnt:5}))
+
+	if [[ $vrt == "light" ]]; then
+		fg1R=$(expr ${fg0R} + 20) && fg1G=$(expr ${fg0G} + 20) && fg1B=$(expr ${fg0B} + 20)
+		fg2R=$(expr ${fg0R} + 40) && fg2G=$(expr ${fg0G} + 40) && fg2B=$(expr ${fg0B} + 40)
+		fg3R=$(expr ${fg0R} + 60) && fg3G=$(expr ${fg0G} + 60) && fg3B=$(expr ${fg0B} + 60)
+		bg1R=$(expr ${bg0R} - 20) && bg1G=$(expr ${bg0G} - 20) && bg1B=$(expr ${bg0B} - 20)
+		bg2R=$(expr ${bg0R} - 40) && bg2G=$(expr ${bg0G} - 40) && bg2B=$(expr ${bg0B} - 40)
+		bg3R=$(expr ${bg0R} - 60) && bg3G=$(expr ${bg0G} - 60) && bg3B=$(expr ${bg0B} - 60)
+	else
+		fg1R=$(expr ${fg0R} - 20) && fg1G=$(expr ${fg0G} - 20) && fg1B=$(expr ${fg0B} - 20)
+		fg2R=$(expr ${fg0R} - 40) && fg2G=$(expr ${fg0G} - 40) && fg2B=$(expr ${fg0B} - 40)
+		fg3R=$(expr ${fg0R} - 60) && fg3G=$(expr ${fg0G} - 60) && fg3B=$(expr ${fg0B} - 60)
+		bg1R=$(expr ${bg0R} + 20) && bg1G=$(expr ${bg0G} + 20) && bg1B=$(expr ${bg0B} + 20)
+		bg2R=$(expr ${bg0R} + 40) && bg2G=$(expr ${bg0G} + 40) && bg2B=$(expr ${bg0B} + 40)
+		bg3R=$(expr ${bg0R} + 60) && bg3G=$(expr ${bg0G} + 60) && bg3B=$(expr ${bg0B} + 60)
+	fi
+
+	comRGB="${comR}, ${comG}, ${comB}"
+	accRGB="${accR}, ${accG}, ${accB}"
+	fg1RGB="${fg1R}, ${fg1G}, ${fg1B}"
+	fg2RGB="${fg2R}, ${fg2G}, ${fg2B}"
+	fg3RGB="${fg3R}, ${fg3G}, ${fg3B}"
+	fg0RGB="${fg0R}, ${fg0G}, ${fg0B}"
+	bg0RGB="${bg0R}, ${bg0G}, ${bg0B}"
+	bg1RGB="${bg1R}, ${bg1G}, ${bg1B}"
+	bg2RGB="${bg2R}, ${bg2G}, ${bg2B}"
+	bg3RGB="${bg3R}, ${bg3G}, ${bg3B}"
+	grnRGB="${grnR}, ${grnG}, ${grnB}"
+	ylwRGB="${ylwR}, ${ylwG}, ${ylwB}"
+	redRGB="${redR}, ${redG}, ${redB}"
+	bluRGB="${bluR}, ${bluG}, ${bluB}"
+	gntRGB="${gntR}, ${gntG}, ${gntB}"
+	cynRGB="${cynR}, ${cynG}, ${cynB}"
+
+	# variations of fg and bg colors in hex
+	fg1RX=$(printf '%x\n' ${fg1R}) && fg1GX=$(printf '%x\n' ${fg1G}) && fg1BX=$(printf '%x\n' ${fg1B})
+	fg2RX=$(printf '%x\n' ${fg2R}) && fg2GX=$(printf '%x\n' ${fg2G}) && fg2BX=$(printf '%x\n' ${fg2B})
+	fg3RX=$(printf '%x\n' ${fg3R}) && fg3GX=$(printf '%x\n' ${fg3G}) && fg3BX=$(printf '%x\n' ${fg3B})
+	bg1RX=$(printf '%x\n' ${bg1R}) && bg1GX=$(printf '%x\n' ${bg1G}) && bg1BX=$(printf '%x\n' ${bg1B})
+	bg2RX=$(printf '%x\n' ${bg2R}) && bg2GX=$(printf '%x\n' ${bg2G}) && bg2BX=$(printf '%x\n' ${bg2B})
+	bg3RX=$(printf '%x\n' ${bg3R}) && bg3GX=$(printf '%x\n' ${bg3G}) && bg3BX=$(printf '%x\n' ${bg3B})
+
+	fg1="\#${fg1RX}${fg1GX}${fg1BX}"
+	fg2="\#${fg2RX}${fg2GX}${fg2BX}"
+	fg3="\#${fg3RX}${fg3GX}${fg3BX}"
+	bg1="\#${bg1RX}${bg1GX}${bg1BX}"
+	bg2="\#${bg2RX}${bg2GX}${bg2BX}"
+	bg3="\#${bg3RX}${bg3GX}${bg3BX}"
+
+	[[ -z $com ]] && com=$fg3 && comRGB=$fg3RGB
+
+	regex="s/\%\%bg0\%\%/"${bg0}"/g;s/\%\%fg0\%\%/"${fg0}"/g;\
+s/\%\%com\%\%/"${com}"/g;s/\%\%acc\%\%/"${acc}"/g;\
+s/\%\%grn\%\%/"${grn}"/g;s/\%\%ylw\%\%/"${ylw}"/g;s/\%\%red\%\%/"${red}"/g;\
+s/\%\%blu\%\%/"${blu}"/g;s/\%\%gnt\%\%/"${gnt}"/g;s/\%\%cyn\%\%/"${cyn}"/g;\
+s/\%\%fg1\%\%/"${fg1}"/g;s/\%\%fg2\%\%/"${fg2}"/g;s/\%\%fg3\%\%/"${fg3}"/g;\
+s/\%\%bg1\%\%/"${bg1}"/g;s/\%\%bg2\%\%/"${bg2}"/g;s/\%\%bg3\%\%/"${bg3}"/g;\
+s/\%\%cynRGB\%\%/"${cynRGB}"/g;s/\%\%gntRGB\%\%/"${gntRGB}"/g;\
+s/\%\%bluRGB\%\%/"${bluRGB}"/g;s/\%\%redRGB\%\%/"${redRGB}"/g;\
+s/\%\%ylwRGB\%\%/"${ylwRGB}"/g;s/\%\%grnRGB\%\%/"${grnRGB}"/g;\
+s/\%\%fg0RGB\%\%/"${fg0RGB}"/g;s/\%\%bg0RGB\%\%/"${bg0RGB}"/g;\
+s/\%\%comRGB\%\%/"${comRGB}"/g;s/\%\%accRGB\%\%/"${accRGB}"/g;\
+s/\%\%fg1RGB\%\%/"${fg1RGB}"/g;s/\%\%fg2RGB\%\%/"${fg2RGB}"/g;\
+s/\%\%fg3RGB\%\%/"${fg3RGB}"/g;s/\%\%bg1RGB\%\%/"${bg1RGB}"/g;\
+s/\%\%bg2RGB\%\%/"${bg2RGB}"/g;s/\%\%bg3RGB\%\%/"${bg3RGB}"/g"
+
 	cd ${dir} || exit 1
 	templates=$(ls -al | awk '{print $NF}' | grep '_template')
 	for i in ${templates}; do
-#		cat ${i} | sed -e "${regex}" > ${i}
 		cat ${i} | sed -e "${regex}" > ${i/_template/}
 	done
 	bash $scr
 	cd $HOME
 }
 
-main
+help () {
+	echo "Script to make any config use terminal colours"
+	echo ""
+	echo "		Options"
+	echo ""
+	echo "-h --> display help"
+	echo ""
+	echo "-u --> update theme list for -a"
+	echo ""
+	echo "-a --> change current theme (.current located in theme directory)"
+	echo ""
+	echo "-g --> generate new config from template"
+	echo ""
+	echo "-l --> list available themes in theme directory"
+	echo ""
+	echo "-t --> full path to target folder, optional,"
+	echo "			DEFAULT = \$HOME/numix-solarized-gtk-theme"
+	echo "-x --> bash script to run after theme is made"
+	echo "			DEFAULT = post-build-apply"
+	echo "	-t and -x used in conjunction with -g"
+	echo ""
+	echo "To make theme template, just cd into the theme's main dir, duplicate the"
+	echo "file(s) with the colors, rename with \"_template\" ending, replace"
+	echo "colours with:"
+	echo "		%%bg0%% == background"
+	echo "		%%acc%% == accent"
+	echo "		%%com%% == comment"
+	echo "		%%fg0%% == foreground"
+	echo "		%%grn%% == green"
+	echo "		%%ylw%% == yellow"
+	echo "		%%red%% == red"
+	echo "		%%blu%% == blue"
+	echo "		%%gnt%% == magenta"
+	echo "		%%cyn%% == cyan"
+	echo "	add RGB after colour name to get RGB in "R, G, B" form"
+	echo "		eg. %%bg0RGB%%"
+	echo "and run this script in the theme's main directory, and any other"
+	echo "commands that you need to run"
+}
+
+while getopts :t:x:galuh opts; do
+	case "$opts" in
+		t)
+			dir="${OPTARG}"
+			echo $dir
+			;;
+		x)
+			scr="${OPTARG}"
+			echo $scr
+			;;
+		g)
+			main
+			exit
+			;;
+		a)
+			guiapply
+			exit
+			;;
+		l)
+			list && exit
+			;;
+		u)
+			updatelist && exit
+			;;
+		h)
+			help && exit
+			;;
+	esac
+done

@@ -1,19 +1,19 @@
 [frame]
 width = 0
-color = "%%bkd%%"
+color = "%%bg0%%"
 
 [urgency_low]
-background = "%%blu%%"
-foreground = "%%bkd%%"
+background = "%%acc%%"
+foreground = "%%bg0%%"
 timeout = 3
 
 [urgency_normal]
-background = "%%blu%%"
-foreground = "%%bkd%%"
+background = "%%acc%%"
+foreground = "%%bg0%%"
 timeout = 3
 
 [urgency_critical]
 background = "%%red%%"
-foreground = "%%bkd%%"
+foreground = "%%bg0%%"
 timeout = 3
 
