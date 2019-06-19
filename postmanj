@@ -20,7 +20,7 @@ sudo pacman -Syyu
 echo -e "${green}================================================================================"
 echo -e  "${blue}= INSTALLING YOUR PROGRAMS ====================================================="
 echo -e "${green}================================================================================${wtl}"
-sudo pacman -S rofi otf-font-awesome ttf-font-awesome nautilus evince mupdf pinta redshift playerctl mplayer r tk gcc-fortran newsboat opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-crossref pandoc-citeproc python-pygments python2-pygments biber texlive-most acpi lm_sensors sysstat ntfs-3g libmpdclient lxappearance sxiv ncurses fftw w3m mpd mpc ncmpcpp feh dunst unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl urxvt-perls trash-cli atom python-pywal vim-latexsuite calibre jq wmctrl polybar vim-runtime gvim neovim xclip xsel firefox
+sudo pacman -S rofi otf-font-awesome ttf-font-awesome nautilus evince mupdf pinta redshift playerctl mplayer r tk gcc-fortran newsboat opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-crossref pandoc-citeproc python-pygments python2-pygments biber texlive-most acpi lm_sensors sysstat ntfs-3g libmpdclient lxappearance sxiv ncurses fftw w3m mpd mpc ncmpcpp feh dunst unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl urxvt-perls trash-cli atom python-pywal vim-latexsuite calibre jq wmctrl polybar vim-runtime gvim neovim xclip xsel firefox maim
 #	ranger \
 sudo cpan AnyEvent Linux::FD common::sense
 cd $HOME

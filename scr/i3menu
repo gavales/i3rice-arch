@@ -16,6 +16,7 @@ loc="0"
 wdth="500"
 xoffset="0"
 yoffset="0"
+fs=" "
 wnloc=$(xdotool getactivewindow getwindowgeometry | grep 'Position' | awk '{print $2}')
 wngeo=$(xdotool getactivewindow getwindowgeometry | grep 'Geometry' | awk '{print $2}')
 wnX=${wnloc%,*}
@@ -36,13 +37,13 @@ dmthm="-fn "${fnt}:size=11" -nb "$bkd" -nf "$wtl" -sf "$bkd" -sb "$blu""
 dmloc="-x $(expr $wnX - $brdr) -y $(expr $wnY - $ttlbr)"
 
 menu () {
-	rofi -dmenu -p "${prmt}" -theme $theme -monitor ${mon:7} -location $loc \
+	rofi -dmenu -p "${prmt}" $fs -theme $theme -monitor ${mon:7} -location $loc \
 		-lines $lines -width $wdth -xoffset $xoffset -yoffset $yoffset \
 		-markup-rows
 }
 
 start () {
-	rofi -show drun -p "${prmt}" -theme $theme -monitor ${mon:7} -location $loc \
+	rofi -show drun -p "${prmt}" $fs -theme $theme -monitor ${mon:7} -location $loc \
 		-lines $lines -width $wdth -xoffset $xoffset -yoffset $yoffset
 }
 
@@ -50,7 +51,7 @@ dmenu () {
 	dmenu_run $dmloc $dmthm -w $(expr $wnW + $brdr + $brdr) -h $ttlbr
 }
 
-while getopts :p:l:x:y:c:w:o:dstm opts; do
+while getopts :p:l:x:y:c:w:o:dstmf opts; do
 	case $opts in
 		p)
 			prmt="${OPTARG}"
@@ -93,6 +94,11 @@ while getopts :p:l:x:y:c:w:o:dstm opts; do
 #			wdth=300
 			xoffset="${msX:2}"
 			yoffset="${msY:2}"
+			;;
+		f)
+			theme=vertical
+			loc=0
+			fs="-fullscreen"
 			;;
 	esac
 done
