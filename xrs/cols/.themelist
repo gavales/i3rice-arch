@@ -5,7 +5,7 @@
 
 main () {
 	rm .theme_list
-	thms=$(ls -l | grep -v "^total" | grep -v "themelist" | awk '{print $NF}')
+	thms=$(ls -l | grep -v "^total" | awk '{print $NF}')
 	for i in $thms; do
 		wtl=$(cat ${i} | grep "cwhtl" | awk '{print $NF}')
 		wtd=$(cat ${i} | grep "cwhtd" | awk '{print $NF}')

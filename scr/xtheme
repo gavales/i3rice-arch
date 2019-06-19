@@ -1,22 +1,23 @@
 #!/usr/bin/env bash
 
 xfilesDir=$HOME/xrs
+colsDir=${xfilesDir}/cols
 
 main () {
-	cat ${xfilesDir}/colors/${finaltheme} > ${xfilesDir}/theme
+	cat ${colsDir}/${finaltheme} > ${xfilesDir}/theme
 	$HOME/scr/reloadconfs
 	$HOME/scr/themer
 	$HOME/scr/restartapps
 }
 
 theme () {
-	theme=$(cat ${xfilesDir}/colors/.theme_list | $HOME/scr/i3menu -p \
+	theme=$(cat ${colsDir}/.theme_list | $HOME/scr/i3menu -p \
 		"Choose theme " -w 750 | awk '{print $NF}')
 	echo $theme
 	if [[ -z ${theme} ]]; then
 		notify-send "No theme chosen" -i "~/scrpic/theme.png"
 		:
-	elif [[ ! -f ${xfilesDir}/colors/${theme} ]]; then
+	elif [[ ! -f ${colsDir}/${theme} ]]; then
 		notify-send "Theme don't exist" -i "~/scrpic/theme.png"
 		:
 	else
