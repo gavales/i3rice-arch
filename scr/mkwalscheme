@@ -14,6 +14,7 @@ feh --bg-scale "${1}"
 
 cd $thmDir
 
+echo "wallpaper   ${1}" > .current
 name=${1/%.*}
 name=${name/%(*}
 name=${name/1920x1080/}
@@ -32,7 +33,7 @@ name=${name/ /}
 name=${name/ /}
 name=${name/ /}
 name=${name/ /}
-echo "name        ${name}" > .current
+echo "name        ${name}" >> .current
 cat $HOME/.cache/wal/colors-kitty.conf | grep 'color' | \
 sed "/color10/d;/color11/d;\
 /color12/d;/color13/d;\

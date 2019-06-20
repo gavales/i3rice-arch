@@ -39,6 +39,7 @@ guiapply () {
 
 main () {
 	nme=$(cat ${colsDir}/.current | grep '^name'       | awk '{print $NF}')
+	wpr=$(cat ${colsDir}/.current | sed -e "/wallpaper/!d;s/wallpaper\ \ \ //g")
 	fnt=$(cat ${colsDir}/.current | grep '^font'       | awk '{print $NF}')
 	sze=$(cat ${colsDir}/.current | grep '^size'       | awk '{print $NF}')
 	bg0=$(cat ${colsDir}/.current | grep '^background' | awk '{print $NF}')
@@ -53,6 +54,9 @@ main () {
 	cyn=$(cat ${colsDir}/.current | grep '^cyan'       | awk '{print $NF}')
 
 	[[ -z $nme ]] && nme=$(cat ${defaultThm} | grep '^name'      | awk '{print $NF}')
+	[[ -n $wpr ]] && \
+		rm -f "$HOME/.config/wall.png" && cp "${wpr}" "$HOME/.config/wall.png" && \
+		feh --bg-scale "${wpr}"
 	[[ -z $fnt ]] && fnt=$(cat ${defaultThm} | grep '^font'      | awk '{print $NF}')
 	[[ -z $sze ]] && sze=$(cat ${defaultThm} | grep '^size'      | awk '{print $NF}')
 	[[ -z $grn ]] && grn=$(cat ${defaultThm} | grep '^green'     | awk '{print $NF}')
@@ -128,6 +132,7 @@ main () {
 	[[ -z $com ]] && com=$fg3 && comRGB=$fg3RGB
 
 	echo $nme
+	echo $wpr
 	echo $fnt
 	echo $sze
 	echo $bg0

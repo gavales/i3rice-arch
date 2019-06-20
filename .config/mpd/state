@@ -1,7 +1,9 @@
 sw_volume: 62
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
-state: stop
+state: pause
+current: 6
+time: 11.701000
 random: 1
 repeat: 1
 single: 0
@@ -10,4 +12,19 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
+0:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/01 - Mambo de Machaguay.mp3
+1:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/02 - Salsa 73.mp3
+2:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/03 - La Cumbia del Pacurro.mp3
+3:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/04 - Para Chachita.mp3
+4:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/05 - Piraña.mp3
+5:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/06 - Meshkalina.mp3
+6:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/07 - El Chacarero.mp3
+7:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/08 - Sueño de Amor.mp3
+8:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/09 - Bailando en la Campiña.mp3
+9:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/10 - Trinan las Golondrinas.mp3
+10:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/11 - Me Siento Felíz.mp3
+11:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/12 - Toro Mata.mp3
+12:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/13 - El Zambito Rumbero.mp3
+13:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/14 - La Gallina.mp3
+14:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/15 - Los Fabulosos en Onda.mp3
 playlist_end
