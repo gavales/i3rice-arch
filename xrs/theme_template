@@ -1,4 +1,4 @@
-! colors
+! %%name%%
 #define cwhtl %%fg0%%
 #define cwhtd %%com%%
 #define credd %%red%%
@@ -7,8 +7,8 @@
 #define cgrnl %%grn%%
 #define cylwd %%ylw%%
 #define cylwl %%ylw%%
-#define cblud %%blu%%
-#define cblul %%blu%%
+#define cblud %%acc%%
+#define cblul %%acc%%
 #define cgntd %%gnt%%
 #define cgntl %%gnt%%
 #define ccynd %%cyn%%

@@ -3,8 +3,7 @@
 # OA: Gavin Vales
 # CREATED: Sun 16 Dec 18:22:14 GMT 2018
 
-xfilesDir=$HOME/xrs
-xresDir=$HOME/git/i3rice-arch
+thmDir=$HOME/themes
 
 feh --bg-scale "${1}"
 wal -q -i "${1}"
@@ -13,9 +12,34 @@ rm "$HOME/.config/wall.png"
 cp "${1}" "$HOME/.config/wall.png"
 feh --bg-scale "${1}"
 
-cd $xresDir
+cd $thmDir
 
-cat $HOME/.cache/wal/colors-kitty.conf | grep 'color' | sed "s/color10/\#define\ cgrnl/g;s/color11/\#define\ cylwl/g;s/color12/\#define\ cblul/g;s/color13/\#define\ cgntl/g;s/color14/\#define\ ccynl/g;s/color15/\#define\ cwhtl/g;s/color0/\#define\ cblkd/g;s/color1/\#define\ credd/g;s/color2/\#define\ cgrnd/g;s/color3/\#define\ cylwd/g;s/color4/\#define\ cblud/g;s/color5/\#define\ cgntd/g;s/color6/\#define\ ccynd/g;s/color7/\#define\ cwhtd/g;s/color8/\#define\ cblkl/g;s/color9/\#define\ credl/g" > $xfilesDir/theme
+name=${1/.jpg/}
+name=${name/.png/}
+name=${name/ /}
+name=${name/ /}
+name=${name/ /}
+name=${name/ /}
+name=${name/ /}
+name=${name/ /}
+name=${name/ /}
+name=${name/ /}
+name=${name/ /}
+name=${name/ /}
+name=${name/ /}
+name=${name/ /}
+name=${name/ /}
+echo "name ${name}" > .current
+cat $HOME/.cache/wal/colors-kitty.conf | grep 'color' | \
+sed "/color10/d;/color11/d;\
+/color12/d;/color13/d;\
+/color14/d;/color9/d;/color8/d;\
+s/color15/foreground/g;\
+s/color0/background/g;s/color1/red/g;\
+s/color2/green/g;s/color3/yellow/g;\
+s/color4/accent/g;s/color5/magenta/g;\
+s/color6/cyan/g;s/color7/comment/g" \
+>> .current
 
 $HOME/scr/reloadconfs &>/dev/null &
-$HOME/scr/themer &>/dev/null &
+$HOME/scr/themer -g &>/dev/null &

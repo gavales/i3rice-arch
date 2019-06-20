@@ -3,7 +3,29 @@
 # OA: Gavin Vales
 # CREATED: Tue 11 Jun 14:48:08 BST 2019
 
-cat $HOME/xrs/theme > $HOME/.Xresources
+check=$(cat $HOME/xrs/theme | grep '%')
+
+if [[ -z $check ]]; then
+	cat $HOME/xrs/theme > $HOME/.Xresources
+else
+	echo "! emacs" > $HOME/.Xresources
+	echo "#define cwhtd #382f4a" >> $HOME/.Xresources
+	echo "#define cwhtl #262626" >> $HOME/.Xresources
+	echo "#define credd #b14b1d" >> $HOME/.Xresources
+	echo "#define credl #b14b1d" >> $HOME/.Xresources
+	echo "#define cgrnd #699961" >> $HOME/.Xresources
+	echo "#define cgrnl #699961" >> $HOME/.Xresources
+	echo "#define cylwd #b1951d" >> $HOME/.Xresources
+	echo "#define cylwl #b1951d" >> $HOME/.Xresources
+	echo "#define cblud #5d4d7a" >> $HOME/.Xresources
+	echo "#define cblul #5d4d7a" >> $HOME/.Xresources
+	echo "#define cgntd #0059b2" >> $HOME/.Xresources
+	echo "#define cgntl #0059b2" >> $HOME/.Xresources
+	echo "#define ccynd #619991" >> $HOME/.Xresources
+	echo "#define ccynl #619991" >> $HOME/.Xresources
+	echo "#define cblkd #d4d4d4" >> $HOME/.Xresources
+	echo "#define cblkl #c0c0c0" >> $HOME/.Xresources
+fi
 cat $HOME/xrs/1vars >> $HOME/.Xresources
 cat $HOME/xrs/2colorvars >> $HOME/.Xresources
 cat $HOME/xrs/3rofi >> $HOME/.Xresources

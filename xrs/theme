@@ -1,17 +1,17 @@
-! colors
-#define cwhtl #000000
-#define cwhtd #3c3c3c
-#define credd #cc241d
-#define credl #cc241d
-#define cgrnd #98971a
-#define cgrnl #98971a
-#define cylwd #d79921
-#define cylwl #d79921
-#define cblud #666666
-#define cblul #666666
-#define cgntd #b16286
-#define cgntl #b16286
-#define ccynd #458588
-#define ccynl #458588
-#define cblkd #ffffff
-#define cblkl #ebebeb
+! LongLake,China1920x1080
+#define cwhtl #c5d1dd
+#define cwhtd #c5d1dd
+#define credd #2C6A9F
+#define credl #2C6A9F
+#define cgrnd #537294
+#define cgrnl #537294
+#define cylwd #358AB9
+#define cylwl #358AB9
+#define cblud #5A8AB4
+#define cblul #5A8AB4
+#define cgntd #649ACA
+#define cgntl #649ACA
+#define ccynd #A9B0BC
+#define ccynl #A9B0BC
+#define cblkd #0c1216
+#define cblkl #20262a

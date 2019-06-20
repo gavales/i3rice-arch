@@ -1,5 +1,4 @@
-! grayscale
-! light
+name       grayscale
 foreground #000000
 accent     #666666
 background #ffffff

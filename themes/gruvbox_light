@@ -1,5 +1,6 @@
-! gruvbox
-! light
+name       gruvbox_light
+font       Iosevka
+size       14
 comment    #406341
 foreground #282828
 red        #cc241d

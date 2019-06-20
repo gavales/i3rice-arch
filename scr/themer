@@ -6,7 +6,8 @@
 colsDir=$HOME/themes
 defaultThm=${colsDir}/gruvbox_light
 dir="$HOME/numix-solarized-gtk-theme"
-vrt="$(sed '2q;d' ${colsDir}/.current | awk '{print $2}')"
+#vrt="$(sed '2q;d' ${colsDir}/.current | awk '{print $2}')"
+vrt="light"
 scr="post-build-apply"
 
 updatelist () {
@@ -37,6 +38,9 @@ guiapply () {
 }
 
 main () {
+	nme=$(cat ${colsDir}/.current | grep '^name'       | awk '{print $NF}')
+	fnt=$(cat ${colsDir}/.current | grep '^font'       | awk '{print $NF}')
+	sze=$(cat ${colsDir}/.current | grep '^size'       | awk '{print $NF}')
 	bg0=$(cat ${colsDir}/.current | grep '^background' | awk '{print $NF}')
 	acc=$(cat ${colsDir}/.current | grep '^accent'     | awk '{print $NF}')
 	com=$(cat ${colsDir}/.current | grep '^comment'    | awk '{print $NF}')
@@ -48,13 +52,16 @@ main () {
 	gnt=$(cat ${colsDir}/.current | grep '^magenta'    | awk '{print $NF}')
 	cyn=$(cat ${colsDir}/.current | grep '^cyan'       | awk '{print $NF}')
 
-	[[ -z $grn ]] && grn=$(cat ${defaultThm} | grep 'green'      | awk '{print $NF}')
-	[[ -z $ylw ]] && ylw=$(cat ${defaultThm} | grep 'yellow'     | awk '{print $NF}')
-	[[ -z $red ]] && red=$(cat ${defaultThm} | grep 'red'        | awk '{print $NF}')
+	[[ -z $nme ]] && nme=$(cat ${defaultThm} | grep '^name'      | awk '{print $NF}')
+	[[ -z $fnt ]] && fnt=$(cat ${defaultThm} | grep '^font'      | awk '{print $NF}')
+	[[ -z $sze ]] && sze=$(cat ${defaultThm} | grep '^size'      | awk '{print $NF}')
+	[[ -z $grn ]] && grn=$(cat ${defaultThm} | grep '^green'     | awk '{print $NF}')
+	[[ -z $ylw ]] && ylw=$(cat ${defaultThm} | grep '^yellow'    | awk '{print $NF}')
+	[[ -z $red ]] && red=$(cat ${defaultThm} | grep '^red'       | awk '{print $NF}')
 	[[ -z $blu ]] && blu=$acc
-	[[ -z $gnt ]] && gnt=$(cat ${defaultThm} | grep 'magenta'    | awk '{print $NF}')
-	[[ -z $cyn ]] && cyn=$(cat ${defaultThm} | grep 'cyan'       | awk '{print $NF}')
-
+	[[ -z $gnt ]] && gnt=$(cat ${defaultThm} | grep '^magenta'   | awk '{print $NF}')
+	[[ -z $cyn ]] && cyn=$(cat ${defaultThm} | grep '^cyan'      | awk '{print $NF}')
+                                                                
 	# convert to RGB
 	comR=$((16#${com:1:-4})) && comG=$((16#${com:3:-2})) && comB=$((16#${com:5}))
 	accR=$((16#${acc:1:-4})) && accG=$((16#${acc:3:-2})) && accB=$((16#${acc:5}))
@@ -66,6 +73,9 @@ main () {
 	grnR=$((16#${grn:1:-4})) && grnG=$((16#${grn:3:-2})) && grnB=$((16#${grn:5}))
 	cynR=$((16#${cyn:1:-4})) && cynG=$((16#${cyn:3:-2})) && cynB=$((16#${cyn:5}))
 	gntR=$((16#${gnt:1:-4})) && gntG=$((16#${gnt:3:-2})) && gntB=$((16#${gnt:5}))
+
+	[[ $bg0R -le 127 ]] || [[ $bg0G -le 127 ]] || [[ $bg0B -le 127 ]] && \
+		vrt=dark
 
 	if [[ $vrt == "light" ]]; then
 		fg1R=$(expr ${fg0R} + 20) && fg1G=$(expr ${fg0G} + 20) && fg1B=$(expr ${fg0B} + 20)
@@ -117,7 +127,22 @@ main () {
 
 	[[ -z $com ]] && com=$fg3 && comRGB=$fg3RGB
 
-	regex="s/\%\%bg0\%\%/"${bg0}"/g;s/\%\%fg0\%\%/"${fg0}"/g;\
+	echo $nme
+	echo $fnt
+	echo $sze
+	echo $bg0
+	echo $acc
+	echo $com
+	echo $fg0
+	echo $grn
+	echo $ylw
+	echo $red
+	echo $blu
+	echo $gnt
+	echo $cyn
+
+	regex="s/\%\%name\%\%/"${nme}"/g;s/\%\%font\%\%/"${fnt}"/g;s/\%\%fontsize\%\%/"${sze}"/g;\
+s/\%\%bg0\%\%/"${bg0}"/g;s/\%\%fg0\%\%/"${fg0}"/g;\
 s/\%\%com\%\%/"${com}"/g;s/\%\%acc\%\%/"${acc}"/g;\
 s/\%\%grn\%\%/"${grn}"/g;s/\%\%ylw\%\%/"${ylw}"/g;s/\%\%red\%\%/"${red}"/g;\
 s/\%\%blu\%\%/"${blu}"/g;s/\%\%gnt\%\%/"${gnt}"/g;s/\%\%cyn\%\%/"${cyn}"/g;\
@@ -181,7 +206,7 @@ help () {
 	echo "commands that you need to run"
 }
 
-while getopts :t:x:galuh opts; do
+while getopts :t:x:c:galuh opts; do
 	case "$opts" in
 		t)
 			dir="${OPTARG}"
@@ -190,6 +215,21 @@ while getopts :t:x:galuh opts; do
 		x)
 			scr="${OPTARG}"
 			echo $scr
+			;;
+		c)
+			theme=${OPTARG}
+			if [[ -z ${theme} ]]; then
+				echo "No theme chosen"
+				:
+			elif [[ ! -f ${colsDir}/${theme} ]]; then
+				echo "Theme don't exist"
+				:
+			else
+				echo "Theme exists"
+				finaltheme=${theme}
+				cat ${finaltheme} > .current
+			fi
+			exit
 			;;
 		g)
 			main

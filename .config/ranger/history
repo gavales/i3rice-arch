@@ -1,8 +1,3 @@
-scout -ftsea 
-mkdir ex
-rename rszath
-rename restartapps
-<<<<<<< HEAD
 mkdir themes
 =======
 rename doc
@@ -48,3 +43,8 @@ search Rho
 rename (orginalP - mp4) Blood+And+Bone+HD-720p.mp4
 rename Blood and Bones.mp4
 open_with ~/scr
+rename theme_template
+rename themes
+rename test
+rename grayscale
+rename 1vars_template

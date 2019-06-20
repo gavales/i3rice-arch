@@ -1,16 +1,16 @@
 #!/bin/bash
 
 $HOME/scr/themer -t "$HOME/xrs" -x "xrs-reload" -g
+$HOME/scr/i3concat
+killall -q polybar
+polybar i3 &>/dev/null &
 $HOME/scr/themer -t "$HOME/git/i3rice-arch" -x " " -g
 $HOME/scr/themer -t "$HOME/.vim/colors" -x " " -g
 $HOME/scr/themer -t "$HOME/git/atompackages/packages/rice-syntax/styles" -x " " -g
-$HOME/scr/themer -t "$HOME/scr" -x " " -g
+$HOME/scr/themer -t "$HOME/scr/.unused" -x " " -g
 $HOME/scr/themer -t "$HOME/.config/vis/colors" -x " " -g
 $HOME/scr/themer -t "$HOME/.config/rofi" -x " " -g
 $HOME/scr/themer -t "$HOME/plt/css" -x " " -g
 $HOME/scr/themer -t "$HOME/.config/zathura" -x " " -g
 $HOME/scr/themer -t "$HOME/.config/dunst" -x "dunst-reload" -g
-$HOME/scr/i3concat
-killall -q polybar
-polybar i3 &>/dev/null &
 $HOME/scr/i3listen-toggle
