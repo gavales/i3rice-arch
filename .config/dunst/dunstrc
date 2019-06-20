@@ -13,7 +13,7 @@ foreground = "#090D10"
 timeout = 3
 
 [urgency_critical]
-background = "#525958"
+background = "#cc241d"
 foreground = "#090D10"
 timeout = 3
 

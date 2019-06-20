@@ -16,7 +16,7 @@ updatelist () {
 }
 
 list () {
-	ls -l ${colsDir} | grep -v '^total' | awk '{print $NF}'
+	ls ${colsDir} | grep -v '^total' | awk '{print $NF}'
 }
 
 guiapply () {
@@ -39,7 +39,8 @@ guiapply () {
 
 main () {
 	nme=$(cat ${colsDir}/.current | grep '^name'       | awk '{print $NF}')
-	wpr=$(cat ${colsDir}/.current | sed -e "/wallpaper/!d;s/wallpaper\ \ \ //g")
+	wpr=$(cat ${colsDir}/.current | sed "/wallpaper/!d")
+	wpr=/${wpr#*/}
 	fnt=$(cat ${colsDir}/.current | grep '^font'       | awk '{print $NF}')
 	sze=$(cat ${colsDir}/.current | grep '^size'       | awk '{print $NF}')
 	bg0=$(cat ${colsDir}/.current | grep '^background' | awk '{print $NF}')
@@ -54,7 +55,7 @@ main () {
 	cyn=$(cat ${colsDir}/.current | grep '^cyan'       | awk '{print $NF}')
 
 	[[ -z $nme ]] && nme=$(cat ${defaultThm} | grep '^name'      | awk '{print $NF}')
-	[[ -n $wpr ]] && \
+	[[ $wpr == "/" ]] || \
 		rm -f "$HOME/.config/wall.png" && cp "${wpr}" "$HOME/.config/wall.png" && \
 		feh --bg-scale "${wpr}"
 	[[ -z $fnt ]] && fnt=$(cat ${defaultThm} | grep '^font'      | awk '{print $NF}')
@@ -69,7 +70,7 @@ main () {
 	# convert to RGB
 	comR=$((16#${com:1:-4})) && comG=$((16#${com:3:-2})) && comB=$((16#${com:5}))
 	accR=$((16#${acc:1:-4})) && accG=$((16#${acc:3:-2})) && accB=$((16#${acc:5}))
-	fg0R=$((16#${com:1:-4})) && fg0G=$((16#${com:3:-2})) && fg0B=$((16#${com:5}))
+	fg0R=$((16#${fg0:1:-4})) && fg0G=$((16#${fg0:3:-2})) && fg0B=$((16#${fg0:5}))
 	bg0R=$((16#${bg0:1:-4})) && bg0G=$((16#${bg0:3:-2})) && bg0B=$((16#${bg0:5}))
 	redR=$((16#${red:1:-4})) && redG=$((16#${red:3:-2})) && redB=$((16#${red:5}))
 	ylwR=$((16#${ylw:1:-4})) && ylwG=$((16#${ylw:3:-2})) && ylwB=$((16#${ylw:5}))
@@ -79,7 +80,7 @@ main () {
 	gntR=$((16#${gnt:1:-4})) && gntG=$((16#${gnt:3:-2})) && gntB=$((16#${gnt:5}))
 
 	[[ $bg0R -le 127 ]] || [[ $bg0G -le 127 ]] || [[ $bg0B -le 127 ]] && \
-		vrt=dark
+		echo "theme is dark" && vrt=dark
 
 	if [[ $vrt == "light" ]]; then
 		fg1R=$(expr ${fg0R} + 20) && fg1G=$(expr ${fg0G} + 20) && fg1B=$(expr ${fg0B} + 20)
@@ -122,23 +123,29 @@ main () {
 	bg2RX=$(printf '%x\n' ${bg2R}) && bg2GX=$(printf '%x\n' ${bg2G}) && bg2BX=$(printf '%x\n' ${bg2B})
 	bg3RX=$(printf '%x\n' ${bg3R}) && bg3GX=$(printf '%x\n' ${bg3G}) && bg3BX=$(printf '%x\n' ${bg3B})
 
-	fg1="\#${fg1RX}${fg1GX}${fg1BX}"
-	fg2="\#${fg2RX}${fg2GX}${fg2BX}"
-	fg3="\#${fg3RX}${fg3GX}${fg3BX}"
-	bg1="\#${bg1RX}${bg1GX}${bg1BX}"
-	bg2="\#${bg2RX}${bg2GX}${bg2BX}"
-	bg3="\#${bg3RX}${bg3GX}${bg3BX}"
+	fg1="#${fg1RX}${fg1GX}${fg1BX}"
+	fg2="#${fg2RX}${fg2GX}${fg2BX}"
+	fg3="#${fg3RX}${fg3GX}${fg3BX}"
+	bg1="#${bg1RX}${bg1GX}${bg1BX}"
+	bg2="#${bg2RX}${bg2GX}${bg2BX}"
+	bg3="#${bg3RX}${bg3GX}${bg3BX}"
 
-	[[ -z $com ]] && com=$fg3 && comRGB=$fg3RGB
+	[[ ${#com} -gt 6 ]] || [[ ${#com} == 0 ]] && com=$fg3 && comRGB=$fg3RGB
 
 	echo $nme
 	echo $wpr
 	echo $fnt
 	echo $sze
+	echo $fg0
 	echo $bg0
 	echo $acc
 	echo $com
-	echo $fg0
+	echo $fg1
+	echo $fg2
+	echo $fg3
+	echo $bg1
+	echo $bg2
+	echo $bg3
 	echo $grn
 	echo $ylw
 	echo $red
@@ -182,7 +189,9 @@ help () {
 	echo ""
 	echo "-a --> change current theme (.current located in theme directory)"
 	echo ""
-	echo "-g --> generate new config from template"
+	echo "-c --> terminal version of -a"
+	echo ""
+	echo "-g --> apply current theme using _templates"
 	echo ""
 	echo "-l --> list available themes in theme directory"
 	echo ""
@@ -215,11 +224,11 @@ while getopts :t:x:c:galuh opts; do
 	case "$opts" in
 		t)
 			dir="${OPTARG}"
-			echo $dir
+#			echo $dir
 			;;
 		x)
 			scr="${OPTARG}"
-			echo $scr
+#			echo $scr
 			;;
 		c)
 			theme=${OPTARG}
@@ -231,8 +240,7 @@ while getopts :t:x:c:galuh opts; do
 				:
 			else
 				echo "Theme exists"
-				finaltheme=${theme}
-				cat ${finaltheme} > .current
+				cat ${colsDir}/${theme} > .current
 			fi
 			exit
 			;;

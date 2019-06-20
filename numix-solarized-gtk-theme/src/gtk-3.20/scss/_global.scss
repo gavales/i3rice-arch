@@ -4,9 +4,9 @@
 
 // default color scheme
 $bg_color: if($variant == "dark", #313538, #313538);
-$fg_color: if($variant == "dark", #f3bdab, #f3bdab);
+$fg_color: if($variant == "dark", #b7816f, #b7816f);
 $base_color: if($variant == "dark", #1d2124, #1d2124);
-$text_color: if($variant == "dark", #f3bdab, #f3bdab);
+$text_color: if($variant == "dark", #b7816f, #b7816f);
 $selected_bg_color: #EE6653;
 $selected_fg_color: #f3bdab;
 $tooltip_bg_color: #EE6653;
@@ -18,7 +18,7 @@ $borders_edge: if($variant == 'light', transparentize(white, 0.2), transparentiz
 
 // dark colors
 $dark_bg_color: if($variant == 'dark', #313538, #313538);
-$dark_fg_color: if($variant == 'dark', #f3bdab, #f3bdab);
+$dark_fg_color: if($variant == 'dark', #b7816f, #b7816f);
 
 // shadows
 $dark_shadow: #090D10;
@@ -45,18 +45,18 @@ $switch_fg_color: #8e969e;
 $switch_slider_bg_color: #fbfbfb;
 
 // misc colors used by gtk+
-$info_fg_color: if($variant == 'dark', #f3bdab, #f3bdab);
+$info_fg_color: if($variant == 'dark', #b7816f, #b7816f);
 $info_bg_color: if($variant == 'dark', #090D10, #090D10);
-$warning_fg_color: if($variant == 'dark', #E65735, #E65735);
-$warning_bg_color: if($variant == 'dark', #525958, #525958);
-$question_fg_color: if($variant == 'dark', #E65735, #E65735);
+$warning_fg_color: if($variant == 'dark', #d79921, #d79921);
+$warning_bg_color: if($variant == 'dark', #cc241d, #cc241d);
+$question_fg_color: if($variant == 'dark', #d79921, #d79921);
 $question_bg_color: if($variant == 'dark', #090D10, #090D10);
-$error_fg_color: if($variant == 'dark', #525958, #525958);
+$error_fg_color: if($variant == 'dark', #cc241d, #cc241d);
 $error_bg_color: if($variant == 'dark', #090D10, #090D10);
-$link_color: if($variant == 'dark', #7C8476, #7C8476);
-$success_color: if($variant == 'dark', #B03632, #B03632);
-$warning_color: if($variant == 'dark', #525958, #525958);
-$error_color: if($variant == 'dark', #525958, #525958);
+$link_color: if($variant == 'dark', #b16286, #b16286);
+$success_color: if($variant == 'dark', #98971a, #98971a);
+$warning_color: if($variant == 'dark', #cc241d, #cc241d);
+$error_color: if($variant == 'dark', #cc241d, #cc241d);
 
 $toolbar_bg_color: $bg_color;
 $toolbar_fg_color: $fg_color;
