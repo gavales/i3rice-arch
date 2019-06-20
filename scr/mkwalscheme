@@ -14,8 +14,12 @@ feh --bg-scale "${1}"
 
 cd $thmDir
 
-name=${1/.jpg/}
-name=${name/.png/}
+name=${1/%.*}
+name=${name/%(*}
+name=${name/1920x1080/}
+name=${name/,/}
+name=${name/,/}
+name=${name/,/}
 name=${name/ /}
 name=${name/ /}
 name=${name/ /}
@@ -28,17 +32,20 @@ name=${name/ /}
 name=${name/ /}
 name=${name/ /}
 name=${name/ /}
-name=${name/ /}
-echo "name ${name}" > .current
+echo "name        ${name}" > .current
 cat $HOME/.cache/wal/colors-kitty.conf | grep 'color' | \
 sed "/color10/d;/color11/d;\
 /color12/d;/color13/d;\
 /color14/d;/color9/d;/color8/d;\
-s/color15/foreground/g;\
-s/color0/background/g;s/color1/red/g;\
-s/color2/green/g;s/color3/yellow/g;\
-s/color4/accent/g;s/color5/magenta/g;\
-s/color6/cyan/g;s/color7/comment/g" \
+s/color15\ \ \ \ \ /foreground\ /g;\
+s/color0\ \ \ \ \ /background/g;\
+s/color1\ \ \ \ \ /red\ \ \ \ \ \ \ /g;\
+s/color2\ \ \ \ \ /green\ \ \ \ \ /g;\
+s/color3\ \ \ \ \ /yellow\ \ \ \ /g;\
+s/color4\ \ \ \ \ /accent\ \ \ \ /g;\
+s/color5\ \ \ \ \ /magenta\ \ \ /g;\
+s/color6\ \ \ \ \ /cyan\ \ \ \ \ \ /g;\
+s/color7\ \ \ \ \ /comment\ \ \ /g" \
 >> .current
 
 $HOME/scr/reloadconfs &>/dev/null &

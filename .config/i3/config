@@ -110,7 +110,7 @@ set $brightdec	light -U 10
 # >>>> DECORATIONS
 # COLORS
 # class					brdr bkgr text indi chlb
-client.focused			$blu $blu $blk $blu $gry
+client.focused			$blu $blu $blk $blu $blu
 client.focused_inactive	$gry $gry $blu $gry $gry
 client.unfocused		$gry $gry $wht $gry $gry
 client.urgent			$red $red $wht $red $gry

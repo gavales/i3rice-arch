@@ -1,9 +1,9 @@
 * {
-accent: #c5d1dd;
-bg2: #0c1216;
-bg1: #20262a;
-fg2: #b1bdc9;
-fg1: #c5d1dd;
-redish: #2C6A9F;
+accent: #bdccc0;
+bg2: #090B0C;
+bg1: #1d1f20;
+fg2: #a9b8ac;
+fg1: #bdccc0;
+redish: #C19363;
 font1: "Iosevka Semibold Oblique 12";
 }

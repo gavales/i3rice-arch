@@ -5,6 +5,7 @@
 <span foreground="#666666" background="#000000"> fg </span><span foreground="#666666" background="#ffffff"> bg </span><span foreground="#666666" background="#666666"> acc </span> grayscale
 <span foreground="#666666" background="#ebdbb2"> fg </span><span foreground="#666666" background="#282828"> bg </span><span foreground="#666666" background="#689d6a"> acc </span> gruvbox
 <span foreground="#666666" background="#282828"> fg </span><span foreground="#666666" background="#fbf1c7"> bg </span><span foreground="#666666" background="#689d6a"> acc </span> gruvbox_light
+<span foreground="#666666" background="#cdd0da"> fg </span><span foreground="#666666" background="#121019"> bg </span><span foreground="#666666" background="#E19895"> acc </span> lisbon
 <span foreground="#666666" background="#f8f8f8"> fg </span><span foreground="#666666" background="#222D31"> bg </span><span foreground="#666666" background="#1ABB9B"> acc </span> manjaro
 <span foreground="#666666" background="#303030"> fg </span><span foreground="#666666" background="#f6f6f4"> bg </span><span foreground="#666666" background="#b46b7d"> acc </span> nikes
 <span foreground="#666666" background="#161c16"> fg </span><span foreground="#666666" background="#f9efe9"> bg </span><span foreground="#666666" background="#DC8E69"> acc </span> redrock1
