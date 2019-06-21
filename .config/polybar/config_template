@@ -1,0 +1,445 @@
+;      ███████    ███████   ██       ██    ██ ██████       ██     ███████  
+;     ▒██▒▒▒▒██  ██▒▒▒▒▒██ ▒██      ▒▒██  ██ ▒█▒▒▒▒██     ████   ▒██▒▒▒▒██ 
+;     ▒██   ▒██ ██     ▒▒██▒██       ▒▒████  ▒█   ▒██    ██▒▒██  ▒██   ▒██ 
+;     ▒███████ ▒██      ▒██▒██        ▒▒██   ▒██████    ██  ▒▒██ ▒███████  
+;     ▒██▒▒▒▒  ▒██      ▒██▒██         ▒██   ▒█▒▒▒▒ ██ ██████████▒██▒▒▒██  
+;     ▒██      ▒▒██     ██ ▒██         ▒██   ▒█    ▒██▒██▒▒▒▒▒▒██▒██  ▒▒██ 
+;     ▒██       ▒▒███████  ▒████████   ▒██   ▒███████ ▒██     ▒██▒██   ▒▒██
+;     ▒▒         ▒▒▒▒▒▒▒   ▒▒▒▒▒▒▒▒    ▒▒    ▒▒▒▒▒▒▒  ▒▒      ▒▒ ▒▒     ▒▒ 
+
+[colors]
+bkd = ${xrdb:color8}
+tr = #000000ff
+bkl = ${xrdb:color8}
+wtd = ${xrdb:color15}
+ylw = ${xrdb:color3}
+gnt = ${xrdb:color5}
+red = ${xrdb:color1}
+blu = ${xrdb:color4}
+grn = ${xrdb:color2}
+cyn = ${xrdb:color6}
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+[bar/i3]
+;monitor = ${env:MONITOR:HDMI-1}
+;bottom = true
+override-redirect = true
+height = 20
+width = 100%
+radius = 0.0
+fixed-center = false
+enable-ipc = true
+
+background = ${colors.blu}
+foreground = ${colors.bkd}
+
+line-size = 0
+line-color = ${colors.blu}
+
+border-size = 0
+border-color = ${colors.blu}
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = %%guifont%%:style=Semibold Oblique:size=12;3
+font-1 = FontAwesome5Free:style=Solid:size=14;3
+font-2 = FontAwesome5Brands:style=Solid:size=12;3
+
+tray-position = right
+tray-padding = 2
+
+;wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+modules-left = start td wintitle ws xkeyboard
+modules-center = 
+modules-right = media disk memory cpu temperature nm backlight pulseaudio battery
+
+[bar/fvwm]
+;monitor = ${env:MONITOR:HDMI-1}
+;bottom = true
+;override-redirect = true
+height = 40
+width = 100%
+radius = 0.0
+fixed-center = false
+enable-ipc = true
+
+background = ${colors.tr}
+foreground = ${colors.bkd}
+
+line-size = 0
+line-color = ${colors.blu}
+
+border-size = 10
+border-color = ${colors.tr}
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = Iosevka:style=Semibold Oblique:size=12;3
+font-1 = FontAwesome5Free:style=Solid:size=14;3
+font-2 = FontAwesome5Brands:style=Solid:size=12;3
+
+tray-position = right
+tray-padding = 2
+tray-background = ${colors.blu}
+tray-foreground = ${colors.bkd}
+
+;wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+modules-left = startfvwm fvwmtd xkeyboard wintitle
+modules-center = 
+modules-right = media disk memory cpu temperature nm backlight pulseaudio battery
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+[module/start]
+type = custom/text
+content = %{T1}%{T-}
+click-left = ~/scr/i3menu -s -y 20 -c white -l 1
+click-middle = ~/scr/xtheme
+click-right = ~/scr/keybindingsmenu launch
+content-background = ${colors.wtd}
+content-foreground = ${colors.bkd}
+content-padding = 2
+
+[module/startfvwm]
+type = custom/text
+content = %{T1}%{T-}
+click-left = ~/scr/i3menu -s -y 50 -x 10 -c white -l 1
+content-background = ${colors.wtd}
+content-foreground = ${colors.bkd}
+content-padding = 3
+
+[module/kill]
+type = custom/text
+content = %{T1}%{T-}
+click-left = i3-msg kill
+content-background = ${colors.bkd}
+content-foreground = ${colors.wtd}
+content-padding = 1
+
+[module/min]
+type = custom/text
+content = %{T1}%{T-}
+click-left = i3-msg "floating disable, move to mark _W2"
+content-background = ${colors.bkd}
+content-foreground = ${colors.wtd}
+content-padding = 1
+
+[module/max]
+type = custom/text
+content = %{T1}%{T-}
+click-left = i3-msg floating enable
+content-background = ${colors.bkd}
+content-foreground = ${colors.wtd}
+content-padding = 1
+
+[module/shot]
+type = custom/script
+exec = echo %{T1}%{T-}
+click-left = ~/scr/screenshot
+format-background = ${colors.blu}
+format-foreground = ${colors.bkd}
+format-padding = 1
+interval = 1
+
+[module/td]
+type = custom/script
+exec = bash ~/scr/pb/td
+format-background = ${colors.wtd}
+format-foreground = ${colors.bkd}
+format-padding = 1
+interval = 1
+
+[module/fvwmtd]
+type = custom/script
+exec = bash ~/scr/pb/td
+format-background = ${colors.bkd}
+format-foreground = ${colors.wtd}
+format-padding = 1
+interval = 1
+
+[module/ws]
+type = custom/ipc
+hook-0 = ~/scr/pb/ws
+initial = 1
+click-left = i3-msg workspace back_and_forth
+scroll-up = i3-msg workspace prev
+scroll-down = i3-msg workspace next
+format-background = ${colors.blu}
+format-foreground = ${colors.bkd}
+format-padding = 1
+;format-background = ${colors.bkd}
+;format-foreground = ${colors.blu}
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:40:...%
+format-background = ${colors.bkd}
+format-foreground = ${colors.wtd}
+format-padding = 2
+
+[module/wintitle]
+type = custom/ipc
+hook-0 = ~/scr/pb/wintitle
+initial = 1
+click-left = polybar-msg cmd hide
+format-background = ${colors.bkd}
+format-foreground = ${colors.wtd}
+format-padding = 1
+
+[module/media]
+type = custom/ipc
+hook-0 = ~/scr/pb/media
+initial = 1
+click-left = ~/scr/i3media togg
+click-right = ~/scr/i3media stop
+scroll-up = ~/scr/i3media next
+scroll-down = ~/scr/i3media prev
+format-background = ${colors.blu}
+format-foreground = ${colors.bkd}
+format-padding = 2
+
+[module/disk]
+type = custom/script
+exec = bash ~/scr/pb/disk
+format-background = ${colors.blu}
+format-foreground = ${colors.bkd}
+format-padding = 1
+interval = 60
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "%{T1} %{T-}"
+format-prefix-foreground = ${colors.bkd}
+format-background = ${colors.blu}
+format-foreground = ${colors.bkd}
+format-underline = ${colors.bkd}
+format-padding = 1
+label = %percentage_used%
+
+[module/cpu]
+type = internal/cpu
+label = %{T1} %{T-}%percentage%
+format = <label>
+interval = 2
+format-background = ${colors.blu}
+format-foreground = ${colors.bkd}
+format-padding = 1
+;format-prefix = %{T1} %{T-}
+;format-prefix = CPU
+;format-prefix-foreground = ${colors.bkd}
+;format-underline = ${colors.ylw}
+
+[module/temperature]
+format-background = ${colors.blu}
+format-foreground = ${colors.bkd}
+format-padding = 1
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+format = <ramp> <label>
+format-underline = ${colors.red}
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+format-warn-background = ${colors.blu}
+format-warn-foreground = ${colors.bkd}
+format-warn-padding = 1
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.ylw}
+ramp-0 = %{T1}%{T-}
+ramp-1 = %{T1}%{T-}
+ramp-2 = %{T1}%{T-}
+ramp-foreground = ${colors.bkd}
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+format-prefix = %{T1} %{T-}
+format-background = ${colors.blu}
+format-foreground = ${colors.bkd}
+format-padding = 1
+format-prefix-foreground = ${colors.bkd}
+;format-prefix-underline = ${colors.gnt}
+label-layout = %layout%
+;label-layout-underline = ${colors.gnt}
+label-indicator-padding = 1
+label-indicator-margin = 1
+label-indicator-background = ${colors.gnt}
+;label-indicator-underline = ${colors.gnt}
+
+[module/nm]
+type = custom/ipc
+hook-0 = echo "%{T1} %{T-}"
+hook-1 = echo "%{T1} %{T-}"
+initial = 1
+click-left = ~/scr/nightmodetog
+scroll-up = "light -A 10 && polybar-msg hook backlight 1"
+scroll-down = "light -U 10 && polybar-msg hook backlight 1"
+format-background = ${colors.wtd}
+format-foreground = ${colors.bkd}
+format-padding = 0
+
+[module/backlight]
+type = custom/ipc
+hook-0 = ~/scr/pb/brightness
+initial = 1
+click-left = ~/scr/nightmodetog
+scroll-up = "light -A 10 && polybar-msg hook backlight 1"
+scroll-down = "light -U 10 && polybar-msg hook backlight 1"
+format-background = ${colors.wtd}
+format-foreground = ${colors.bkd}
+format-padding = 1
+
+[module/pulseaudio]
+type = internal/pulseaudio
+format-volume = <label-volume>
+label-volume-padding = 1
+label-volume = %{T1}%{T-} %percentage%
+;label-volume-foreground = ${root.foreground}
+label-volume-background = ${colors.wtd}
+label-volume-foreground = ${colors.bkd}
+label-muted = %{T1}%{T-} --
+label-muted-foreground = ${colors.wtd}
+label-muted-background = ${colors.bkd}
+label-muted-padding = 1
+bar-volume-width = 10
+bar-volume-foreground-0 = ${colors.cyn}
+bar-volume-foreground-1 = ${colors.cyn}
+bar-volume-foreground-2 = ${colors.cyn}
+bar-volume-foreground-3 = ${colors.cyn}
+bar-volume-foreground-4 = ${colors.cyn}
+bar-volume-foreground-5 = ${colors.ylw}
+bar-volume-foreground-6 = ${colors.red}
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 0
+bar-volume-fill = =
+bar-volume-fill-font = 0
+bar-volume-empty = -
+bar-volume-empty-font = 0
+bar-volume-empty-foreground = ${colors.wtd}
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 100
+format-padding = 1
+label-charging-padding = 1
+label-discharging-padding = 1
+format-full-padding = 1
+format-full-prefix-padding = 1
+format-full-foreground = ${colors.bkd}
+format-full-background = ${colors.wtd}
+format-full-prefix-foreground = ${colors.bkd}
+format-full-prefix-background = ${colors.wtd}
+label-charging-background = ${colors.wtd}
+label-charging-foreground = ${colors.bkd}
+label-discharging-background = ${colors.wtd}
+label-discharging-foreground = ${colors.bkd}
+format-discharging-padding = 1
+format-discharging-prefix-padding = 1
+format-discharging-foreground = ${colors.bkd}
+format-discharging-background = ${colors.wtd}
+format-discharging-prefix-foreground = ${colors.bkd}
+format-discharging-prefix-background = ${colors.wtd}
+format-charging-padding-foreground = ${colors.bkd}
+format-charging-padding-background = ${colors.wtd}
+format-discharging-padding-foreground = ${colors.bkd}
+format-discharging-padding-background = ${colors.wtd}
+format-charging = <animation-charging><label-charging>
+format-charging-underline = ${colors.bkd}
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-underline = ${self.format-charging-underline}
+format-full-prefix = "%{T1}%{T-}"
+format-full-underline = ${self.format-charging-underline}
+ramp-capacity-0 = %{T1}%{T-}
+ramp-capacity-1 = %{T1}%{T-}
+ramp-capacity-2 = %{T1}%{T-}
+ramp-capacity-3 = %{T1}%{T-}
+ramp-capacity-4 = %{T1}%{T-}
+ramp-capacity-foreground = ${colors.bkd}
+ramp-capacity-background = ${colors.wtd}
+animation-charging-0 = %{T1}%{T-}
+animation-charging-1 = %{T1}%{T-}
+animation-charging-2 = %{T1}%{T-}
+animation-charging-3 = %{T1}%{T-}
+animation-charging-4 = %{T1}%{T-}
+animation-charging-foreground = ${colors.bkd}
+animation-charging-background = ${colors.wtd}
+animation-charging-framerate = 500
+
+; vim:ft=dosini
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open = %{T1} %{T-}
+label-open-foreground = ${colors.bkd}
+label-close = %{T1} %{T-} cancel
+label-close-foreground = ${colors.bkd}
+label-separator = |
+label-separator-foreground = ${colors.bkd}
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = sudo reboot
+
+menu-2-0 = power off
+menu-2-0-exec = sudo poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
+
+; vim:ft=dosini

@@ -10,10 +10,10 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # >>>> MAIN
-set $font1 Iosevka
+set $font1 %%guifont%%
 set $font2 FontAwesome
 set $font3 monaco
-set $fonts 11
+set $fonts %%fontsize%%
 
 font pango:$font1,$font2 $fonts
 

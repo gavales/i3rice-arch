@@ -22,7 +22,7 @@ list () {
 guiapply () {
 	theme=$(cat ${colsDir}/.theme_list | $HOME/scr/i3menu -p \
 		"Choose theme " -w 350 | awk '{print $NF}')
-	echo $theme
+#	echo $theme
 	cd ${colsDir}
 	if [[ -z ${theme} ]]; then
 		notify-send "No theme chosen" -i "~/scrpic/theme.png"
@@ -42,6 +42,7 @@ main () {
 	wpr=$(cat ${colsDir}/.current | sed "/wallpaper/!d")
 	wpr=/${wpr#*/}
 	fnt=$(cat ${colsDir}/.current | grep '^font'       | awk '{print $NF}')
+	gft=$(cat ${colsDir}/.current | grep '^guifont'    | awk '{print $NF}')
 	sze=$(cat ${colsDir}/.current | grep '^size'       | awk '{print $NF}')
 	bg0=$(cat ${colsDir}/.current | grep '^background' | awk '{print $NF}')
 	acc=$(cat ${colsDir}/.current | grep '^accent'     | awk '{print $NF}')
@@ -55,10 +56,8 @@ main () {
 	cyn=$(cat ${colsDir}/.current | grep '^cyan'       | awk '{print $NF}')
 
 	[[ -z $nme ]] && nme=$(cat ${defaultThm} | grep '^name'      | awk '{print $NF}')
-	[[ $wpr == "/" ]] || \
-		rm -f "$HOME/.config/wall.png" && cp "${wpr}" "$HOME/.config/wall.png" && \
-		feh --bg-scale "${wpr}"
 	[[ -z $fnt ]] && fnt=$(cat ${defaultThm} | grep '^font'      | awk '{print $NF}')
+	[[ -z $gft ]] && gft=$(cat ${defaultThm} | grep '^guifont'   | awk '{print $NF}')
 	[[ -z $sze ]] && sze=$(cat ${defaultThm} | grep '^size'      | awk '{print $NF}')
 	[[ -z $grn ]] && grn=$(cat ${defaultThm} | grep '^green'     | awk '{print $NF}')
 	[[ -z $ylw ]] && ylw=$(cat ${defaultThm} | grep '^yellow'    | awk '{print $NF}')
@@ -67,6 +66,14 @@ main () {
 	[[ -z $gnt ]] && gnt=$(cat ${defaultThm} | grep '^magenta'   | awk '{print $NF}')
 	[[ -z $cyn ]] && cyn=$(cat ${defaultThm} | grep '^cyan'      | awk '{print $NF}')
                                                                 
+	if [[ $wpr == "/" ]]; then
+		hsetroot -solid "$acc" &
+	else
+		rm -f "$HOME/.config/wall.png"
+		cp "${wpr}" "$HOME/.config/wall.png"
+		feh --bg-scale "${wpr}"
+	fi
+
 	# convert to RGB
 	comR=$((16#${com:1:-4})) && comG=$((16#${com:3:-2})) && comB=$((16#${com:5}))
 	accR=$((16#${acc:1:-4})) && accG=$((16#${acc:3:-2})) && accB=$((16#${acc:5}))
@@ -80,7 +87,7 @@ main () {
 	gntR=$((16#${gnt:1:-4})) && gntG=$((16#${gnt:3:-2})) && gntB=$((16#${gnt:5}))
 
 	[[ $bg0R -le 127 ]] || [[ $bg0G -le 127 ]] || [[ $bg0B -le 127 ]] && \
-		echo "theme is dark" && vrt=dark
+		vrt=dark && echo "theme is $vrt"
 
 	if [[ $vrt == "light" ]]; then
 		fg1R=$(expr ${fg0R} + 20) && fg1G=$(expr ${fg0G} + 20) && fg1B=$(expr ${fg0B} + 20)
@@ -132,28 +139,30 @@ main () {
 
 	[[ ${#com} -gt 6 ]] || [[ ${#com} == 0 ]] && com=$fg3 && comRGB=$fg3RGB
 
-	echo $nme
-	echo $wpr
-	echo $fnt
-	echo $sze
-	echo $fg0
-	echo $bg0
-	echo $acc
-	echo $com
-	echo $fg1
-	echo $fg2
-	echo $fg3
-	echo $bg1
-	echo $bg2
-	echo $bg3
-	echo $grn
-	echo $ylw
-	echo $red
-	echo $blu
-	echo $gnt
-	echo $cyn
+#	echo $nme
+#	echo $wpr
+#	echo $fnt
+#	echo $gft
+#	echo $sze
+#	echo $fg0
+#	echo $bg0
+#	echo $acc
+#	echo $com
+#	echo $fg1
+#	echo $fg2
+#	echo $fg3
+#	echo $bg1
+#	echo $bg2
+#	echo $bg3
+#	echo $grn
+#	echo $ylw
+#	echo $red
+#	echo $blu
+#	echo $gnt
+#	echo $cyn
 
-	regex="s/\%\%name\%\%/"${nme}"/g;s/\%\%font\%\%/"${fnt}"/g;s/\%\%fontsize\%\%/"${sze}"/g;\
+	regex="s/\%\%name\%\%/"${nme}"/g;s/\%\%guifont\%\%/"${gft}"/g;\
+s/\%\%font\%\%/"${fnt}"/g;s/\%\%fontsize\%\%/"${sze}"/g;\
 s/\%\%bg0\%\%/"${bg0}"/g;s/\%\%fg0\%\%/"${fg0}"/g;\
 s/\%\%com\%\%/"${com}"/g;s/\%\%acc\%\%/"${acc}"/g;\
 s/\%\%grn\%\%/"${grn}"/g;s/\%\%ylw\%\%/"${ylw}"/g;s/\%\%red\%\%/"${red}"/g;\

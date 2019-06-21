@@ -1,6 +1,7 @@
 name       gruvbox_light
 font       Iosevka
-size       14
+guifont    Iosevka
+size       11
 comment    #406341
 foreground #282828
 red        #cc241d

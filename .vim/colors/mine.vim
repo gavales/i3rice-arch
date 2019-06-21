@@ -19,33 +19,33 @@ endif
 
 let g:colors_name='mine'
 
-let s:black           = { "gui": "#090D10", "cterm": "232" }
-let s:medium_gray     = { "gui": "#b7816f", "cterm": "243" }
-let s:white           = { "gui": "#f3bdab", "cterm": "15"  }
-let s:actual_white    = { "gui": "#f3bdab", "cterm": "231" }
+let s:black           = { "gui": "#121019", "cterm": "232" }
+let s:medium_gray     = { "gui": "#91949e", "cterm": "243" }
+let s:white           = { "gui": "#cdd0da", "cterm": "15"  }
+let s:actual_white    = { "gui": "#cdd0da", "cterm": "231" }
 let s:subtle_black    = { "gui": "%%bk1%%", "cterm": "236" }
 let s:light_black     = { "gui": "%%bk2%%", "cterm": "235" }
-let s:lighter_black   = { "gui": "#1d2124", "cterm": "239" }
+let s:lighter_black   = { "gui": "#26242d", "cterm": "239" }
 let s:light_gray      = { "gui": "%%wt1%%", "cterm": "248" }
 let s:lighter_gray    = { "gui": "%%wt2%%", "cterm": "251" }
-let s:lightest_gray   = { "gui": "#b7816f", "cterm": "255" }
-let s:pink            = { "gui": "#cc241d", "cterm": "9"   }
-let s:dark_red        = { "gui": "#cc241d", "cterm": "1"   }
-let s:light_red       = { "gui": "#cc241d", "cterm": "1"   }
-let s:orange          = { "gui": "#cc241d", "cterm": "167" }
-let s:darker_blue     = { "gui": "#EE6653", "cterm": "18"  }
-let s:dark_blue       = { "gui": "#EE6653", "cterm": "32"   }
-let s:blue            = { "gui": "#EE6653", "cterm": "12"  }
-let s:light_blue      = { "gui": "#EE6653", "cterm": "153" }
-let s:dark_cyan       = { "gui": "#458588", "cterm": "6"   }
-let s:light_cyan      = { "gui": "#458588", "cterm": "14"  }
-let s:dark_green      = { "gui": "#98971a", "cterm": "2"   }
-let s:light_green     = { "gui": "#98971a", "cterm": "10"  }
-let s:dark_purple     = { "gui": "#b16286", "cterm": "134" }
-let s:light_purple    = { "gui": "#b16286", "cterm": "140" }
-let s:yellow          = { "gui": "#d79921", "cterm": "11"  }
-let s:light_yellow    = { "gui": "#d79921", "cterm": "228"   }
-let s:dark_yellow     = { "gui": "#d79921", "cterm": "3"   }
+let s:lightest_gray   = { "gui": "#91949e", "cterm": "255" }
+let s:pink            = { "gui": "#9396AD", "cterm": "9"   }
+let s:dark_red        = { "gui": "#9396AD", "cterm": "1"   }
+let s:light_red       = { "gui": "#9396AD", "cterm": "1"   }
+let s:orange          = { "gui": "#9396AD", "cterm": "167" }
+let s:darker_blue     = { "gui": "#E19895", "cterm": "18"  }
+let s:dark_blue       = { "gui": "#E19895", "cterm": "32"   }
+let s:blue            = { "gui": "#E19895", "cterm": "12"  }
+let s:light_blue      = { "gui": "#E19895", "cterm": "153" }
+let s:dark_cyan       = { "gui": "#F2ACAD", "cterm": "6"   }
+let s:light_cyan      = { "gui": "#F2ACAD", "cterm": "14"  }
+let s:dark_green      = { "gui": "#AB9AA6", "cterm": "2"   }
+let s:light_green     = { "gui": "#AB9AA6", "cterm": "10"  }
+let s:dark_purple     = { "gui": "#CDADB3", "cterm": "134" }
+let s:light_purple    = { "gui": "#CDADB3", "cterm": "140" }
+let s:yellow          = { "gui": "#B1A7B2", "cterm": "11"  }
+let s:light_yellow    = { "gui": "#B1A7B2", "cterm": "228"   }
+let s:dark_yellow     = { "gui": "#B1A7B2", "cterm": "3"   }
 
 let s:background = &background
 

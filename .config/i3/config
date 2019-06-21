@@ -10,7 +10,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # >>>> MAIN
-set $font1 Iosevka Semibold Oblique
+set $font1 Iosevka
 set $font2 FontAwesome
 set $font3 monaco
 set $fonts 11
@@ -318,7 +318,7 @@ $win+0				[title="placeholder"] kill
 $win+1				$edit $home/.config/i3/main
 $win+Shift+1		$exs/i3-sticky-create 1
 
-$win+2				$edit $home/.config/i3/vars
+$win+2				$edit $home/.config/i3/vars_template
 $win+Shift+2		$exs/i3-sticky-create 2
 
 $win+3				$edit $home/.bashrc
@@ -330,7 +330,7 @@ $win+5				$edit $home/.config/ranger/rc.conf
 
 $win+6				$edit $home/.config/ranger/rifle.conf
 
-$win+7				$edit $home/.config/polybar/config
+$win+7				$edit $home/.config/polybar/config_template
 
 # //// 1st Row
 
