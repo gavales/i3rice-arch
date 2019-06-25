@@ -1,9 +1,15 @@
 #!/usr/bin/env bash
 
-reloadinst () {
-	pdf=$(ps -fp $(pgrep -d, -x zathura) -o command | sed -e '/COMMAND/d;s/zathura //g')
-	len=$(ps -fp $(pgrep -d, -x zathura) -o command | sed -e '/COMMAND/d;s/zathura //g' | grep -c ".pdf")
+main () {
+	pdf=$(ps -fp $(pgrep -d, -x zathura) -o command | \
+		sed -e '/COMMAND/d;s/zathura //g;s/-- //g')
+
+	len=$(ps -fp $(pgrep -d, -x zathura) -o command | \
+		sed -e '/COMMAND/d;s/zathura //g;s/-- //g' | \
+		grep -c ".pdf")
+
 	pids=$(pidof zathura)
+
 	if [[ -n $pids ]]; then
 		if [[ $len == 1 ]]; then
 			killall zathura
@@ -21,4 +27,4 @@ reloadinst () {
 	echo $len
 }
 
-reloadinst
+main

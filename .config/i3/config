@@ -278,6 +278,7 @@ $mod+apostrophe		$exn redshift -x
 
 $mod+Return			$exn $term -name URXVTC
 $mod+Shift+Return	$exn $term -name FILES -e ranger
+$mod+Control+Return	$lch $term $mk4
 
 # //// 3rd Row
 
