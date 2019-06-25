@@ -1,11 +1,14 @@
-name       LisbonPortugal
-wallpaper  /home/gavarch/pic/walls/favs/Lisbon, Portugal 1920x1080 (2).jpg
-background #121019
-red        #9396AD
-green      #AB9AA6
-yellow     #B1A7B2
-accent     #E19895
-magenta    #CDADB3
-cyan       #F2ACAD
-comment    #cdd0da
-foreground #cdd0da
+name       gruvbox_light
+font       Iosevka
+guifont    Iosevka
+size       11
+comment    #406341
+foreground #282828
+red        #cc241d
+green      #98971a
+yellow     #d79921
+blue       #689d6a
+accent     #689d6a
+magenta    #b16286
+cyan       #458588
+background #fbf1c7

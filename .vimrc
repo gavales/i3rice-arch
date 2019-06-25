@@ -33,8 +33,8 @@ set shiftwidth=4
 set incsearch
 set cursorline
 set colorcolumn=81
-set conceallevel=2
-set concealcursor=nic
+"set conceallevel=2
+"set concealcursor=nic
 set list
 set listchars=tab:│\ 
 autocmd CursorHold,CursorHoldI * update

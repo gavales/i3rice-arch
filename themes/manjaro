@@ -1,11 +1,11 @@
 name       manjaro
 background #222D31
+accent     #1ABB9B
+comment    #a6f3e4
+foreground #f8f8f8
 red        #ab4642
 green      #7E807E
 yellow     #f7ca88
 blue       #1ABB9B
-accent     #1ABB9B
 magenta    #ba8baf
 cyan       #7cafc2
-comment    #a6f3e4
-foreground #f8f8f8

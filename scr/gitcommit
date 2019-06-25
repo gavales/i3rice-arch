@@ -2,7 +2,7 @@
 
 cd
 
-repo="$(cat $HOME/scr/githubrepos | ~/scr/i3menu -p "Update which repo?")"
+repo="$(ls $HOME/git | ~/scr/i3menu -p "Update which repo?")"
 
 if [[ -z $repo ]]; then
 	:

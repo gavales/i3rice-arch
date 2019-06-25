@@ -34,8 +34,9 @@ fi
 whichcss=$(cat $file | grep '#cssfile' | awk '{print $NF}')
 if [[ -n $whichcss ]]; then
 	css=$(cat $file | grep '#cssfile' | awk '{print $NF}')
+	style="-c ${cssDIR}/${css}.css"
 elif [[ -z $whichcss ]]; then
-	css=manuscript
+	style=""
 fi
 
 # WHICH LATEX ENGINE
@@ -48,7 +49,6 @@ fi
 
 crossref="-F pandoc-crossref --metadata-file ${settings}"
 citeproc="--bibliography ${bib} -F pandoc-citeproc"
-style="-c ${cssDIR}/${css}.css"
 wordtemplate="--reference-doc ${wordtempDIR}/${wordtemp}.docx"
 nsec="--number-sections"
 

@@ -137,8 +137,9 @@ main () {
 	bg2="#${bg2RX}${bg2GX}${bg2BX}"
 	bg3="#${bg3RX}${bg3GX}${bg3BX}"
 
-	[[ ${#com} -gt 6 ]] || [[ ${#com} == 0 ]] && com=$fg3 && comRGB=$fg3RGB
-
+	[[ ${#com} == 0 ]] && com=$fg3 && comRGB=$fg3RGB
+	[[ ${#com} -gt 7 ]] && com=$fg3 && comRGB=$fg3RGB
+#[[ ${#com} -gt 6 ]] || 
 #	echo $nme
 #	echo $wpr
 #	echo $fnt
@@ -147,7 +148,7 @@ main () {
 #	echo $fg0
 #	echo $bg0
 #	echo $acc
-#	echo $com
+	echo $com
 #	echo $fg1
 #	echo $fg2
 #	echo $fg3
