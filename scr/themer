@@ -107,14 +107,14 @@ main () {
 
 	comRGB="${comR}, ${comG}, ${comB}"
 	accRGB="${accR}, ${accG}, ${accB}"
-	fg1RGB="${fg1R}, ${fg1G}, ${fg1B}"
-	fg2RGB="${fg2R}, ${fg2G}, ${fg2B}"
-	fg3RGB="${fg3R}, ${fg3G}, ${fg3B}"
 	fg0RGB="${fg0R}, ${fg0G}, ${fg0B}"
 	bg0RGB="${bg0R}, ${bg0G}, ${bg0B}"
-	bg1RGB="${bg1R}, ${bg1G}, ${bg1B}"
-	bg2RGB="${bg2R}, ${bg2G}, ${bg2B}"
-	bg3RGB="${bg3R}, ${bg3G}, ${bg3B}"
+	fg1RGB="${fg1R/-/}, ${fg1G/-/}, ${fg1B/-/}"
+	fg2RGB="${fg2R/-/}, ${fg2G/-/}, ${fg2B/-/}"
+	fg3RGB="${fg3R/-/}, ${fg3G/-/}, ${fg3B/-/}"
+	bg1RGB="${bg1R/-/}, ${bg1G/-/}, ${bg1B/-/}"
+	bg2RGB="${bg2R/-/}, ${bg2G/-/}, ${bg2B/-/}"
+	bg3RGB="${bg3R/-/}, ${bg3G/-/}, ${bg3B/-/}"
 	grnRGB="${grnR}, ${grnG}, ${grnB}"
 	ylwRGB="${ylwR}, ${ylwG}, ${ylwB}"
 	redRGB="${redR}, ${redG}, ${redB}"
@@ -123,12 +123,12 @@ main () {
 	cynRGB="${cynR}, ${cynG}, ${cynB}"
 
 	# variations of fg and bg colors in hex
-	fg1RX=$(printf '%x\n' ${fg1R}) && fg1GX=$(printf '%x\n' ${fg1G}) && fg1BX=$(printf '%x\n' ${fg1B})
-	fg2RX=$(printf '%x\n' ${fg2R}) && fg2GX=$(printf '%x\n' ${fg2G}) && fg2BX=$(printf '%x\n' ${fg2B})
-	fg3RX=$(printf '%x\n' ${fg3R}) && fg3GX=$(printf '%x\n' ${fg3G}) && fg3BX=$(printf '%x\n' ${fg3B})
-	bg1RX=$(printf '%x\n' ${bg1R}) && bg1GX=$(printf '%x\n' ${bg1G}) && bg1BX=$(printf '%x\n' ${bg1B})
-	bg2RX=$(printf '%x\n' ${bg2R}) && bg2GX=$(printf '%x\n' ${bg2G}) && bg2BX=$(printf '%x\n' ${bg2B})
-	bg3RX=$(printf '%x\n' ${bg3R}) && bg3GX=$(printf '%x\n' ${bg3G}) && bg3BX=$(printf '%x\n' ${bg3B})
+	fg1RX=$(printf '%x\n' ${fg1R/-/}) && fg1GX=$(printf '%x\n' ${fg1G/-/}) && fg1BX=$(printf '%x\n' ${fg1B/-/})
+	fg2RX=$(printf '%x\n' ${fg2R/-/}) && fg2GX=$(printf '%x\n' ${fg2G/-/}) && fg2BX=$(printf '%x\n' ${fg2B/-/})
+	fg3RX=$(printf '%x\n' ${fg3R/-/}) && fg3GX=$(printf '%x\n' ${fg3G/-/}) && fg3BX=$(printf '%x\n' ${fg3B/-/})
+	bg1RX=$(printf '%x\n' ${bg1R/-/}) && bg1GX=$(printf '%x\n' ${bg1G/-/}) && bg1BX=$(printf '%x\n' ${bg1B/-/})
+	bg2RX=$(printf '%x\n' ${bg2R/-/}) && bg2GX=$(printf '%x\n' ${bg2G/-/}) && bg2BX=$(printf '%x\n' ${bg2B/-/})
+	bg3RX=$(printf '%x\n' ${bg3R/-/}) && bg3GX=$(printf '%x\n' ${bg3G/-/}) && bg3BX=$(printf '%x\n' ${bg3B/-/})
 
 	fg1="#${fg1RX}${fg1GX}${fg1BX}"
 	fg2="#${fg2RX}${fg2GX}${fg2BX}"
@@ -138,7 +138,7 @@ main () {
 	bg3="#${bg3RX}${bg3GX}${bg3BX}"
 
 	[[ ${#com} == 0 ]] && com=$fg3 && comRGB=$fg3RGB
-	[[ ${#com} -gt 7 ]] && com=$fg3 && comRGB=$fg3RGB
+#	[[ ${#com} -gt 7 ]] && com=$fg3 && comRGB=$fg3RGB
 #[[ ${#com} -gt 6 ]] || 
 #	echo $nme
 #	echo $wpr
@@ -148,7 +148,13 @@ main () {
 #	echo $fg0
 #	echo $bg0
 #	echo $acc
-	echo $com
+#	echo $com
+#	echo $fg1RGB
+#	echo $fg2RGB
+#	echo $fg3RGB
+#	echo $bg1RGB
+#	echo $bg2RGB
+#	echo $bg3RGB
 #	echo $fg1
 #	echo $fg2
 #	echo $fg3

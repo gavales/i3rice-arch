@@ -1,17 +1,17 @@
-! solarized
-#define cwhtl #fdf6e3
-#define cwhtd #95c8ec
-#define credd #dc322f
-#define credl #dc322f
-#define cgrnd #859900
-#define cgrnl #859900
-#define cylwd #b58900
-#define cylwl #b58900
-#define cblud #268bd2
-#define cblul #268bd2
-#define cgntd #d33682
-#define cgntl #d33682
-#define ccynd #2aa198
-#define ccynl #2aa198
-#define cblkd #002b36
-#define cblkl #143f4a
+! gruvbox_light
+#define cwhtl #282828
+#define cwhtd #406341
+#define credd #cc241d
+#define credl #cc241d
+#define cgrnd #98971a
+#define cgrnl #98971a
+#define cylwd #d79921
+#define cylwl #d79921
+#define cblud #689d6a
+#define cblul #689d6a
+#define cgntd #b16286
+#define cgntl #b16286
+#define ccynd #458588
+#define ccynl #458588
+#define cblkd #fbf1c7
+#define cblkl #e7ddb3

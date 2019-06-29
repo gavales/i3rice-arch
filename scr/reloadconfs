@@ -15,4 +15,5 @@ $HOME/scr/themer -t "$HOME/.config/rofi" -x " " -g
 $HOME/scr/themer -t "$HOME/plt/css" -x " " -g
 $HOME/scr/themer -t "$HOME/.config/zathura" -x "reloadinst" -g
 $HOME/scr/themer -t "$HOME/.config/dunst" -x "dunst-reload" -g
+$HOME/scr/themer -t "$HOME/.config/qutebrowser" -x " " -g
 $HOME/scr/i3listen-toggle

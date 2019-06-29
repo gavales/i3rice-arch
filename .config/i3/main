@@ -296,6 +296,8 @@ $win+6				$edit $home/.config/ranger/rifle.conf
 
 $win+7				$edit $home/.config/polybar/config_template
 
+$win+8				$edit $home/.config/qutebrowser/config.py_template
+
 # //// 1st Row
 
 $win+q				floating disable, $mvm1, [con_mark=$mk1] focus, focus child

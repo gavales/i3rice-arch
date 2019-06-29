@@ -5,5 +5,5 @@ bg2: %%bg1%%;
 fg1: %%fg1%%;
 fg2: %%fg0%%;
 redish: %%red%%;
-font1: "Iosevka Semibold Oblique 12";
+font1: "%%font%% Oblique 12";
 }

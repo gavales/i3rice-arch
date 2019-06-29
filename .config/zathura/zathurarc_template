@@ -2,7 +2,7 @@ set recolor true
 set window-title-basename true
 set default-bg "%%fg0%%"
 set default-fg "%%bg0%%"
-set font "FixedsysMono 10"
+set font "%%guifont%% %%fontsize%%"
 set inputbar-bg "%%bg0%%"
 set inputbar-fg "%%fg0%%"
 set statusbar-bg "%%bg0%%"

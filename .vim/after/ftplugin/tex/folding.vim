@@ -2,20 +2,20 @@ function! Folds()
 	let thisline = getline(v:lnum)
 	if match(thisline, '^\\section{') >= 0
 		return ">1"
-"	elseif match(thisline, '^\\subsection{') >= 0
-"		return ">2"
-"	elseif match(thisline, '^\\subsubsection{') >= 0
-"		return ">3"
+	elseif match(thisline, '^\\subsection{') >= 0
+		return ">2"
+	elseif match(thisline, '^\\subsubsection{') >= 0
+		return ">3"
 	elseif match(thisline, '\\column{') >= 0
 		return ">0"
 	elseif match(thisline, '\\block{') >= 0
 		return ">1"
 	elseif match(thisline, '^\\section\*{') >= 0
 		return ">1"
-"	elseif match(thisline, '^\\subsection\*{') >= 0
-"		return ">2"
-"	elseif match(thisline, '^\\subsubsection\*{') >= 0
-"		return ">3"
+	elseif match(thisline, '^\\subsection\*{') >= 0
+		return ">2"
+	elseif match(thisline, '^\\subsubsection\*{') >= 0
+		return ">3"
 	elseif match(thisline, '^\\documentclass') >= 0
 		return ">1"
 	elseif match(thisline, '^\\begin{document}') >= 0
@@ -59,11 +59,11 @@ function FoldText()
 	let foldline = substitute(foldline, '////', " ~~> ", "")
 	let foldline = substitute(foldline, '\\documentclass', "==> Preamble:", "")
 	let foldline = substitute(foldline, '\\section{', "==> ", "")
-"	let foldline = substitute(foldline, '\\subsection{', "~~~~~> ", "")
-"	let foldline = substitute(foldline, '\\subsubsection{', "--------> ", "")
+	let foldline = substitute(foldline, '\\subsection{', "~~~~~> ", "")
+	let foldline = substitute(foldline, '\\subsubsection{', "--------> ", "")
 	let foldline = substitute(foldline, '\\section\*{', "==* ", "")
-"	let foldline = substitute(foldline, '\\subsection\*{', "~~~~~* ", "")
-"	let foldline = substitute(foldline, '\\subsubsection\*{', "--------* ", "")
+	let foldline = substitute(foldline, '\\subsection\*{', "~~~~~* ", "")
+	let foldline = substitute(foldline, '\\subsubsection\*{', "--------* ", "")
 	let foldline = substitute(foldline, '\\block{', "==> ", "")
 	let foldline = substitute(foldline, '\\column{', "Column: ", "")
 	let foldline = substitute(foldline, '\[', " ", "")

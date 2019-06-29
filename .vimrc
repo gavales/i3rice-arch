@@ -75,52 +75,52 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
-hi Normal ctermfg=white ctermbg=none
-hi Title cterm=bold ctermfg=white ctermbg=none
-hi StatusLineTerm ctermfg=black ctermbg=green
-hi StatusLineTermNC ctermfg=white ctermbg=green
-hi LineNr cterm=none ctermfg=blue ctermbg=black
-hi CursorLineNr cterm=bold ctermfg=blue ctermbg=DarkGray
-hi SpecialKey ctermfg=DarkGray ctermbg=none
-hi ModeMsg cterm=bold ctermfg=white
-hi Cursor ctermfg=black ctermbg=red
-hi ColorColumn cterm=none ctermbg=DarkGray
-hi CursorLine cterm=none ctermbg=DarkGray
-hi Visual ctermfg=blue ctermbg=black
-hi VisualNOS ctermfg=blue ctermbg=black
+hi Normal			ctermfg=white		ctermbg=none
+hi Title			cterm=bold			ctermfg=white ctermbg=none
+hi StatusLineTerm	ctermfg=black		ctermbg=green
+hi StatusLineTermNC	ctermfg=white		ctermbg=green
+hi LineNr			cterm=none			ctermfg=blue ctermbg=black
+hi CursorLineNr		cterm=bold			ctermfg=blue ctermbg=DarkGray
+hi SpecialKey		ctermfg=DarkGray	ctermbg=none
+hi ModeMsg			cterm=bold			ctermfg=white
+hi Cursor			ctermfg=black		ctermbg=red
+hi ColorColumn		cterm=none			ctermbg=DarkGray
+hi CursorLine		cterm=none			ctermbg=DarkGray
+hi Visual			ctermfg=blue		ctermbg=black
+hi VisualNOS		ctermfg=blue		ctermbg=black
 
-hi Type cterm=bold ctermfg=white ctermbg=black
-hi Identifier cterm=italic ctermfg=yellow ctermbg=black
-hi Comment cterm=italic ctermfg=Gray ctermbg=black
-hi Folded cterm=italic ctermfg=white ctermbg=black
-hi Constant cterm=italic ctermfg=white ctermbg=black
-hi Special cterm=bold ctermfg=white ctermbg=black
-hi Statement cterm=bold ctermfg=white ctermbg=black
-hi PreProc cterm=bold ctermfg=blue ctermbg=black
-hi MatchParen cterm=bold ctermfg=yellow ctermbg=black
-hi Search cterm=none ctermfg=black ctermbg=yellow
-hi Error cterm=none ctermfg=red ctermbg=black
-hi EndOfBuffer cterm=none ctermfg=black ctermbg=black
+hi Type			cterm=bold		ctermfg=white	ctermbg=black
+hi Identifier	cterm=italic	ctermfg=yellow	ctermbg=black
+hi Comment		cterm=italic	ctermfg=Gray	ctermbg=black
+hi Folded		cterm=italic	ctermfg=white	ctermbg=black
+hi Constant		cterm=italic	ctermfg=white	ctermbg=black
+hi Special		cterm=bold		ctermfg=white	ctermbg=black
+hi Statement	cterm=bold		ctermfg=white	ctermbg=black
+hi PreProc		cterm=bold		ctermfg=blue	ctermbg=black
+hi MatchParen	cterm=bold		ctermfg=yellow	ctermbg=black
+hi Search		cterm=none		ctermfg=black	ctermbg=yellow
+hi Error		cterm=none		ctermfg=red		ctermbg=black
+hi EndOfBuffer	cterm=none		ctermfg=black	ctermbg=black
 
-hi SpellBad cterm=underline,bold ctermfg=red ctermbg=none
-hi SpellCap cterm=underline,bold ctermfg=blue ctermbg=none
-hi SpellRare cterm=underline,bold ctermfg=magenta ctermbg=none
-hi SpellLocal cterm=underline,bold ctermfg=cyan ctermbg=none
+hi SpellBad		cterm=underline,bold ctermfg=red		ctermbg=none
+hi SpellCap		cterm=underline,bold ctermfg=blue		ctermbg=none
+hi SpellRare	cterm=underline,bold ctermfg=magenta	ctermbg=none
+hi SpellLocal	cterm=underline,bold ctermfg=cyan		ctermbg=none
 
-hi Pmenu cterm=none ctermfg=blue ctermbg=white
-hi PmenuSel cterm=none ctermfg=black ctermbg=blue
-hi PmenuSbar cterm=none ctermfg=blue ctermbg=black
-hi PmenuThumb cterm=none ctermfg=green ctermbg=green
-hi TabLine cterm=none ctermfg=blue ctermbg=black
-hi TabLineSel cterm=none ctermfg=black ctermbg=blue
-hi TabLineFill cterm=none ctermfg=blue ctermbg=black
+hi Pmenu		cterm=none ctermfg=blue		ctermbg=white
+hi PmenuSel		cterm=none ctermfg=black	ctermbg=blue
+hi PmenuSbar	cterm=none ctermfg=blue		ctermbg=black
+hi PmenuThumb	cterm=none ctermfg=green	ctermbg=green
+hi TabLine		cterm=none ctermfg=blue		ctermbg=black
+hi TabLineSel	cterm=none ctermfg=black	ctermbg=blue
+hi TabLineFill	cterm=none ctermfg=blue		ctermbg=black
 
-hi usrred ctermbg=red ctermfg=black
-hi usrylw ctermbg=yellow ctermfg=black
-hi usrgrn ctermbg=green ctermfg=black
-hi usrgry ctermbg=grey ctermfg=black
-hi usrblu ctermbg=blue ctermfg=black
-hi usrgnt ctermbg=magenta ctermfg=black
+hi usrred		ctermbg=red		ctermfg=black
+hi usrylw		ctermbg=yellow	ctermfg=black
+hi usrgrn		ctermbg=green	ctermfg=black
+hi usrgry		ctermbg=grey	ctermfg=black
+hi usrblu		ctermbg=blue	ctermfg=black
+hi usrgnt		ctermbg=magenta	ctermfg=black
 
 "hi NonText        Normal
 "hi Directory      Normal

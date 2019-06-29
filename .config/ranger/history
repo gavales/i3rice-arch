@@ -1,6 +1,3 @@
-rename uni
-rename .nvim
-rename .nvimrc
 shell wget https://raw.githubusercontent.com/onivim/oni/master/extensions/theme-onedark/colors/onedark.json
 mkdir neovim
 rename nvim
@@ -48,3 +45,6 @@ mkdir css
 rename styles.scss
 rename index.md
 rename reloadinst
+q
+rename config.py_
+rename config.py_template

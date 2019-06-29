@@ -49,5 +49,5 @@ hi usrred guibg=%%red%% guifg=%%bg0%%
 hi usrylw guibg=%%ylw%% guifg=%%bg0%%
 hi usrgrn guibg=%%grn%% guifg=%%bg0%%
 hi usrgry guibg=%%bg1%% guifg=%%bg0%%
-hi usracc guibg=%%acc%% guifg=%%bg0%%
+hi usrblu guibg=%%acc%% guifg=%%bg0%%
 hi usrgnt guibg=%%gnt%% guifg=%%bg0%%
