@@ -16,6 +16,7 @@ main () {
 			zathura "${pdf}" &
 		else
 			killall zathura
+			IFS=$'\n'
 			for i in $pdf; do
 				zathura "$i" &
 			done

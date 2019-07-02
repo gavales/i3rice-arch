@@ -1,3 +1,6 @@
+rename uni
+rename .nvim
+rename .nvimrc
 shell wget https://raw.githubusercontent.com/onivim/oni/master/extensions/theme-onedark/colors/onedark.json
 mkdir neovim
 rename nvim
@@ -19,7 +22,6 @@ rename dunst-reload
 rename themer
 rename colors.less_template
 search rho
-w
 shell 
 search Rho
 rename (orginalP - mp4) Blood+And+Bone+HD-720p.mp4
@@ -45,6 +47,4 @@ mkdir css
 rename styles.scss
 rename index.md
 rename reloadinst
-q
-rename config.py_
-rename config.py_template
+w

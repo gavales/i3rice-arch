@@ -2,7 +2,7 @@ set recolor true
 set window-title-basename true
 set default-bg "#282828"
 set default-fg "#fbf1c7"
-set font "Iosevka 11"
+set font "CMUTypewriterText 12"
 set inputbar-bg "#fbf1c7"
 set inputbar-fg "#282828"
 set statusbar-bg "#fbf1c7"

@@ -15,7 +15,7 @@ URxvt*background:			cblkd
 URxvt*foreground:			cwhtl
 URxvt*saveLines:			5000
 URxvt*useColor:				true
-URxvt*internalBorder:		1
+URxvt*internalBorder:		0
 URxvt*letterSpace:			1
 URxvt*lineSpace:			3
 
