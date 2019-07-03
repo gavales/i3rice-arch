@@ -3,18 +3,18 @@
 
 # >>>> COLORS
 # //// completion
-c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 %%blu%%, stop:1 %%blu%%)'
-c.colors.completion.category.border.bottom = '%%blu%%'
-c.colors.completion.category.border.top = '%%blu%%'
-c.colors.completion.category.fg = '%%fg0%%'
+c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 %%acc%%, stop:1 %%acc%%)'
+c.colors.completion.category.border.bottom = '%%acc%%'
+c.colors.completion.category.border.top = '%%acc%%'
+c.colors.completion.category.fg = '%%bg0%%'
 c.colors.completion.even.bg = '%%bg1%%'
-c.colors.completion.odd.bg = '%%bg2%%'
-c.colors.completion.fg = ['%%fg0%%', '%%fg0%%', '%%fg0%%']
-c.colors.completion.item.selected.bg = '%%ylw%%'
+c.colors.completion.odd.bg = '%%bg1%%'
+c.colors.completion.fg = ['%%acc%%', '%%fg0%%', '%%bg3%%']
+c.colors.completion.item.selected.bg = '%%acc%%'
 c.colors.completion.item.selected.fg = '%%bg1%%'
 c.colors.completion.item.selected.border.bottom = '%%grn%%'
 c.colors.completion.item.selected.border.top = '%%grn%%'
-c.colors.completion.match.fg = '%%blu%%'
+c.colors.completion.match.fg = '%%acc%%'
 c.colors.completion.scrollbar.bg = '%%bg1%%'
 c.colors.completion.scrollbar.fg = '%%fg0%%'
 
@@ -22,7 +22,7 @@ c.colors.completion.scrollbar.fg = '%%fg0%%'
 c.colors.downloads.bar.bg = '%%bg1%%'
 c.colors.downloads.error.bg = '%%red%%'
 c.colors.downloads.error.fg = '%%fg0%%'
-c.colors.downloads.start.bg = '%%blu%%'
+c.colors.downloads.start.bg = '%%acc%%'
 c.colors.downloads.start.fg = '%%fg0%%'
 c.colors.downloads.stop.bg = '%%grn%%'
 c.colors.downloads.stop.fg = '%%fg0%%'
@@ -43,34 +43,34 @@ c.colors.messages.error.border = '%%red%%'
 c.colors.messages.error.fg = '%%fg0%%'
 
 # //// info
-c.colors.messages.info.bg = '%%bg1%%'
-c.colors.messages.info.border = '%%bg1%%'
-c.colors.messages.info.fg = '%%fg0%%'
+c.colors.messages.info.bg = '%%fg0%%'
+c.colors.messages.info.border = '%%fg0%%'
+c.colors.messages.info.fg = '%%bg1%%'
 
 # //// warning
 c.colors.messages.warning.bg = '%%ylw%%'
 c.colors.messages.warning.border = '%%ylw%%'
-c.colors.messages.warning.fg = '%%fg0%%'
+c.colors.messages.warning.fg = '%%bg1%%'
 
 # //// prompts
 c.colors.prompts.bg = '%%bg1%%'
 c.colors.prompts.border = '1px solid %%bg1%%'
 c.colors.prompts.fg = '%%fg0%%'
-c.colors.prompts.selected.bg = '%%blu%%'
+c.colors.prompts.selected.bg = '%%acc%%'
 
 # //// statusbar
-c.colors.statusbar.caret.bg = '%%gnt%%'
-c.colors.statusbar.caret.fg = '%%fg0%%'
-c.colors.statusbar.caret.selection.bg = '%%gnt%%'
-c.colors.statusbar.caret.selection.fg = '%%fg0%%'
-c.colors.statusbar.command.bg = '%%bg1%%'
+c.colors.statusbar.caret.fg = '%%gnt%%'
+c.colors.statusbar.caret.bg = '%%bg1%%'
+c.colors.statusbar.caret.selection.fg = '%%gnt%%'
+c.colors.statusbar.caret.selection.bg = '%%bg1%%'
 c.colors.statusbar.command.fg = '%%fg0%%'
+c.colors.statusbar.command.bg = '%%bg1%%'
 c.colors.statusbar.command.private.bg = '%%bg3%%'
 c.colors.statusbar.command.private.fg = '%%fg0%%'
-c.colors.statusbar.insert.bg = '%%grn%%'
-c.colors.statusbar.insert.fg = '%%fg0%%'
-c.colors.statusbar.normal.bg = '%%blu%%'
-c.colors.statusbar.normal.fg = '%%fg0%%'
+c.colors.statusbar.insert.fg = '%%grn%%'
+c.colors.statusbar.insert.bg = '%%bg1%%'
+c.colors.statusbar.normal.fg = '%%acc%%'
+c.colors.statusbar.normal.bg = '%%bg1%%'
 c.colors.statusbar.passthrough.bg = '%%bg1%%'
 c.colors.statusbar.passthrough.fg = '%%fg0%%'
 c.colors.statusbar.private.bg = '%%bg3%%'
@@ -78,25 +78,25 @@ c.colors.statusbar.private.fg = '%%fg0%%'
 c.colors.statusbar.progress.bg = '%%fg0%%'
 c.colors.statusbar.url.error.fg = '%%red%%'
 c.colors.statusbar.url.fg = '%%fg0%%'
-c.colors.statusbar.url.hover.fg = '%%blu%%'
+c.colors.statusbar.url.hover.fg = '%%acc%%'
 c.colors.statusbar.url.success.http.fg = '%%fg0%%'
 c.colors.statusbar.url.success.https.fg = '%%fg0%%'
 c.colors.statusbar.url.warn.fg = '%%ylw%%'
 
 # //// tabs
-c.colors.tabs.bar.bg = '%%bg2%%'
-c.colors.tabs.even.bg = '%%bg2%%'
+c.colors.tabs.bar.bg = '%%bg1%%'
+c.colors.tabs.even.bg = '%%bg1%%'
 c.colors.tabs.even.fg = '%%fg0%%'
-c.colors.tabs.odd.bg = '%%bg3%%'
+c.colors.tabs.odd.bg = '%%bg1%%'
 c.colors.tabs.odd.fg = '%%fg0%%'
 c.colors.tabs.indicator.error = '%%red%%'
-c.colors.tabs.indicator.start = '%%blu%%'
+c.colors.tabs.indicator.start = '%%acc%%'
 c.colors.tabs.indicator.stop = '%%grn%%'
 c.colors.tabs.indicator.system = 'rgb' # rgb, hsv, hsl, none
-c.colors.tabs.selected.even.bg = '%%blu%%'
-c.colors.tabs.selected.even.fg = '%%fg0%%'
-c.colors.tabs.selected.odd.bg = '%%blu%%'
-c.colors.tabs.selected.odd.fg = '%%fg0%%'
+c.colors.tabs.selected.even.bg = '%%acc%%'
+c.colors.tabs.selected.even.fg = '%%bg1%%'
+c.colors.tabs.selected.odd.bg = '%%acc%%'
+c.colors.tabs.selected.odd.fg = '%%bg1%%'
 
 # >>>> SETTINGS
 # //// misc
@@ -266,10 +266,11 @@ c.prompt.radius = 8
 # //// qt
 c.qt.args = []
 c.qt.force_platform = None
-c.qt.force_software_rendering = 'none' # software-opengl, qt-quick, chromium, none
-c.qt.highdpi = False
+c.qt.force_software_rendering = 'chromium' # software-opengl, qt-quick, chromium, none
+c.qt.highdpi = True
 c.qt.low_end_device_mode = 'auto' # always, auto, never
-c.qt.process_model = 'process-per-site-instance' # process-per-site-instance, process-per-site, single-process
+c.qt.process_model = 'process-per-site-instance'
+	# process-per-site-instance, process-per-site, single-process
 
 # //// scrollbar
 c.scrolling.bar = 'when-searching' # always, never, when-searching
@@ -285,29 +286,30 @@ c.session.lazy_restore = True
 
 # //// statusbar
 c.statusbar.hide = False
-c.statusbar.padding = {'top': 1, 'bottom': 1, 'left': 0, 'right': 0}
-c.statusbar.position = 'top'
+c.statusbar.padding = {'top': 1, 'bottom': 1, 'left': 1, 'right': 1}
+c.statusbar.position = 'bottom'
 c.statusbar.widgets = ['keypress', 'url', 'scroll', 'history', 'tabs', 'progress']
 	# url, scroll, scroll_raw, history, tabs, keypress, progress
 
 # //// url
 c.url.auto_search = 'naive' # naive, dns, never
-c.url.default_page = 'https://start.duckduckgo.com/'
+c.url.default_page = 'https://www.google.com/'
 c.url.incdec_segments = ['path', 'query'] # host, port, path, query, anchor
 c.url.open_base_url = True
 c.url.searchengines = {
 	'DEFAULT': 'https://google.com/search?q={}',
 	'ddg': 'https://duckduckgo.com/?q={}',
 	'yt': 'https://youtube.com/search?q={}',
+	'r': 'https://reddit.com/r/{}',
 	'ws': 'http://watch-series.co/search.html?keyword={}'
 	}
-c.url.start_pages = ['https://start.duckduckgo.com']
+c.url.start_pages = ['https://www.google.com']
 c.url.yank_ignored_parameters = [
 	'ref', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'
 	]
 
 # //// window
-c.window.hide_decoration = True
+c.window.hide_decoration = False
 c.window.title_format = '{perc}{title}{title_sep}qutebrowser'
 
 # //// zoom
@@ -325,7 +327,7 @@ c.tabs.close_mouse_button = 'middle'
 c.tabs.close_mouse_button_on_bar = 'new-tab' # new-tab, close-current, close-last, ignore
 c.tabs.favicons.scale = 1.0
 c.tabs.favicons.show = 'always' # always, never, pinned
-c.tabs.indicator.padding = {'top': 2, 'bottom': 2, 'left': 0, 'right': 4}
+c.tabs.indicator.padding = {'top': 2, 'bottom': 2, 'left': 2, 'right': 2}
 c.tabs.indicator.width = 3
 c.tabs.last_close = 'close' # ignore, blank, startpage, default-page, close
 c.tabs.max_width = -1
@@ -335,10 +337,10 @@ c.tabs.mousewheel_switching = True
 c.tabs.new_position.related = 'next' # prev, next, first, last
 c.tabs.new_position.stacking = True
 c.tabs.new_position.unrelated = 'last' # prev, next, first, last
-c.tabs.padding = {'top': 0, 'bottom': 0, 'left': 5, 'right': 5}
+c.tabs.padding = {'top': 2, 'bottom': 2, 'left': 2, 'right': 2}
 c.tabs.pinned.frozen = True
 c.tabs.pinned.shrink = True
-c.tabs.position = 'top'
+c.tabs.position = 'bottom'
 c.tabs.select_on_remove = 'next' # prev, next, last-used
 c.tabs.show = 'always' # always, never, multiple, switching
 c.tabs.show_switching_delay = 800
@@ -365,7 +367,8 @@ c.new_instance_open_target = 'tab' # tab, tab-bg, tab-silent, tab-bg-silent, win
 c.new_instance_open_target_window = 'last-focused' # first-opened, last-opened, last-focused, last-visible
 
 # >>>> FONTS
-c.fonts.monospace = '"%%guifont%%", "xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
+c.fonts.monospace = '%%guifont%%'
+# , "xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
 c.fonts.completion.category      = 'bold %%fontsize%%pt monospace'
 c.fonts.completion.entry         = '%%fontsize%%pt monospace'
 c.fonts.debug_console            = '%%fontsize%%pt monospace'
@@ -378,16 +381,16 @@ c.fonts.messages.warning         = 'italic %%fontsize%%pt monospace'
 c.fonts.prompts                  = '%%fontsize%%pt sans-serif'
 c.fonts.statusbar                = 'bold %%fontsize%%pt monospace'
 c.fonts.tabs                     = 'bold %%fontsize%%pt monospace'
-c.fonts.web.family.cursive       = 'Arial'
-c.fonts.web.family.fantasy       = 'Arial'
-c.fonts.web.family.fixed         = 'Arial'
-c.fonts.web.family.sans_serif    = 'Arial'
-c.fonts.web.family.serif         = 'Garamond'
-c.fonts.web.family.standard      = 'Arial'
-c.fonts.web.size.default         = 16
-c.fonts.web.size.default_fixed   = 13
-c.fonts.web.size.minimum         = 0
-c.fonts.web.size.minimum_logical = 6
+#c.fonts.web.family.cursive       = 'Arial'
+#c.fonts.web.family.fantasy       = 'Arial'
+#c.fonts.web.family.fixed         = 'Arial'
+#c.fonts.web.family.sans_serif    = 'Arial'
+#c.fonts.web.family.serif         = 'Garamond'
+#c.fonts.web.family.standard      = 'Arial'
+#c.fonts.web.size.default         = 16
+#c.fonts.web.size.default_fixed   = 13
+#c.fonts.web.size.minimum         = 0
+#c.fonts.web.size.minimum_logical = 6
 
 # >>>> BINDINGS
 # //// Normal

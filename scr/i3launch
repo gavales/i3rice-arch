@@ -9,57 +9,57 @@ marks=$(i3-msg -t get_marks)
 lastfocus=$(xdotool getactivewindow)
 
 lmk3 () {
-	$app &>/dev/null &
-	sleep 1
-	i3-msg split h
-	i3-msg layout tabbed
-	i3-msg focus parent
-	i3-msg mark _W3
-	i3-msg "mark --add _sticky_3"
+	$app &>/dev/null && \
+	sleep 1 && \
+	i3-msg split h && \
+	i3-msg layout tabbed && \
+	i3-msg focus parent && \
+	i3-msg mark _W3 && \
+	i3-msg "mark --add _sticky_3" && \
 	i3-msg focus child
 }
 
 lmk1 () {
 	i3-msg [con_mark="_W3"] focus
-	$app &>/dev/null &
-	sleep .5
-	i3-msg split toggle
-	i3-msg layout tabbed
-	i3-msg focus parent
-	i3-msg mark _W1
-	i3-msg "mark --add _sticky_1"
-	i3-msg focus child
+	$app &>/dev/null && \
+	sleep .5 && \
+	i3-msg split toggle && \
+	i3-msg layout tabbed && \
+	i3-msg focus parent && \
+	i3-msg mark _W1 && \
+	i3-msg "mark --add _sticky_1" && \
+	i3-msg focus child && \
 	i3-msg [con_mark="_W1"] resize set 492 402
 }
 
 lmk2 () {
 	i3-msg [con_mark="_W1"] focus
 	i3-msg split v
-	$app &>/dev/null &
-	sleep .5
-	i3-msg split h
-	i3-msg layout tabbed
-	i3-msg focus parent
-	i3-msg mark _W2
-	i3-msg "mark --add _sticky_2"
-	i3-msg focus child
+	$app &>/dev/null && \
+	sleep .5 && \
+	i3-msg split h && \
+	i3-msg layout tabbed && \
+	i3-msg focus parent && \
+	i3-msg mark _W2 && \
+	i3-msg "mark --add _sticky_2" && \
+	i3-msg focus child && \
 	i3-msg [con_mark="_W1"] resize set 492 402
 }
 
 lmk4 () {
 	i3-msg [con_mark="_W3"] focus
 	i3-msg split v
-	$app &>/dev/null &
-	sleep .5
-	i3-msg split h
-	i3-msg layout tabbed
-	i3-msg focus parent
-	i3-msg mark _W4
-	i3-msg "mark --add _sticky_4"
-	i3-msg move up
-	i3-msg move up
-	i3-msg focus child
-	i3-msg resize set height 150
+	$app &>/dev/null && \
+	sleep .5 && \
+	i3-msg split h && \
+	i3-msg layout tabbed && \
+	i3-msg focus parent && \
+	i3-msg mark _W4 && \
+	i3-msg "mark --add _sticky_4" && \
+	i3-msg move up && \
+	i3-msg move up && \
+	i3-msg focus child && \
+	i3-msg resize set height 150 && \
 	i3-msg [con_mark="_W3"] split h
 }
 
@@ -73,10 +73,10 @@ if [[ $marks == *"$mark"* ]]; then
 	echo "mark $mark exists, launching app" && main
 else
 	case $mark in
-		*3) echo "no W3, making W3" && lmk3 ;;
-		*1) echo "no W1, making W1" && lmk1 ;;
-		*2) echo "no W2, making W2" && lmk2 ;;
-		*4) echo "no W4, making W4" && lmk4 ;;
+		*3) echo "no $mark, making $mark" && lmk3 ;;
+		*1) echo "no $mark, making $mark" && lmk1 ;;
+		*2) echo "no $mark, making $mark" && lmk2 ;;
+		*4) echo "no $mark, making $mark" && lmk4 ;;
 	esac
 fi
 

@@ -77,12 +77,10 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 
 hi Normal			ctermfg=white		ctermbg=none
 hi Title			cterm=bold			ctermfg=white ctermbg=none
-hi StatusLineTerm	ctermfg=black		ctermbg=green
-hi StatusLineTermNC	ctermfg=white		ctermbg=green
 hi LineNr			cterm=none			ctermfg=blue ctermbg=black
 hi CursorLineNr		cterm=bold			ctermfg=blue ctermbg=DarkGray
 hi SpecialKey		ctermfg=DarkGray	ctermbg=none
-hi ModeMsg			cterm=bold			ctermfg=white
+hi ModeMsg			cterm=bold			ctermfg=black	ctermbg=blue
 hi Cursor			ctermfg=black		ctermbg=red
 hi ColorColumn		cterm=none			ctermbg=DarkGray
 hi CursorLine		cterm=none			ctermbg=DarkGray
@@ -107,6 +105,13 @@ hi SpellCap		cterm=underline,bold ctermfg=blue		ctermbg=none
 hi SpellRare	cterm=underline,bold ctermfg=magenta	ctermbg=none
 hi SpellLocal	cterm=underline,bold ctermfg=cyan		ctermbg=none
 
+hi StatusLine		ctermfg=black	ctermbg=blue
+hi StatusLineNC		ctermfg=black	ctermbg=blue
+hi StatusLineTerm	ctermfg=black	ctermbg=blue
+hi StatusLineTermNC	ctermfg=black	ctermbg=blue
+hi ToolbarLine		ctermfg=black	ctermbg=blue
+hi ToolbarButton	ctermfg=black	ctermbg=blue
+
 hi Pmenu		cterm=none ctermfg=blue		ctermbg=white
 hi PmenuSel		cterm=none ctermfg=black	ctermbg=blue
 hi PmenuSbar	cterm=none ctermfg=blue		ctermbg=black
@@ -128,8 +133,6 @@ hi usrgnt		ctermbg=magenta	ctermfg=black
 "hi IncSearch      Normal
 "hi MoreMsg        Normal
 "hi Question       Normal
-"hi StatusLine     Normal
-"hi StatusLineNC   Normal
 "hi VertSplit      Normal
 "hi WarningMsg     Normal
 "hi WildMenu       Normal
@@ -140,8 +143,6 @@ hi usrgnt		ctermbg=magenta	ctermfg=black
 "hi DiffText       Normal
 "hi SignColumn     Normal
 "hi Conceal        Normal
-"hi ToolbarLine    Normal
-"hi ToolbarButton  Normal
 "hi Underlined     Normal
 "hi Ignore         Normal
 "hi Todo           Normal

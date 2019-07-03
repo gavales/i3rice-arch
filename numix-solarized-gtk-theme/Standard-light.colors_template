@@ -1,8 +1,8 @@
 @THEME@ Standard
 
-@BG_COLOR_DARK@ %%bg2%%
+@BG_COLOR_DARK@ %%bg0%%
 @FG_COLOR_DARK@ %%com%%
-@BASE_COLOR_DARK@ %%bg1%%
+@BASE_COLOR_DARK@ %%bg0%%
 @TEXT_COLOR_DARK@ %%com%%
 @SELECTED_BG_COLOR@ %%acc%%
 @SELECTED_FG_COLOR@ %%fg0%%
