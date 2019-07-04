@@ -310,7 +310,7 @@ c.url.yank_ignored_parameters = [
 
 # //// window
 c.window.hide_decoration = False
-c.window.title_format = '{perc}{title}{title_sep}qutebrowser'
+c.window.title_format = '{perc}{title}{title_sep}'
 
 # //// zoom
 c.zoom.default = '100%'

@@ -30,7 +30,7 @@ screenchange-reload = true
 ;monitor = ${env:MONITOR:HDMI-1}
 ;bottom = true
 override-redirect = true
-height = 20
+height = 21
 width = 100%
 radius = 0.0
 fixed-center = false
@@ -52,8 +52,8 @@ module-margin-left = 0
 module-margin-right = 0
 
 font-0 = CMUTypewriterText:style=Semibold Oblique:size=12;3
-font-1 = FontAwesome5Free:style=Solid:size=14;3
-font-2 = FontAwesome5Brands:style=Solid:size=12;3
+font-1 = FontAwesome5Free:style=Solid:size=15;3
+font-2 = FontAwesome5Brands:style=Solid:size=15;3
 
 tray-position = right
 tray-padding = 2

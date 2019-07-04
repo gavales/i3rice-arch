@@ -3,52 +3,52 @@
 # OA: Gavin Vales
 # CREATED: Tue 29 Jan 11:32:27 GMT 2019
 
-opr=${1}
-delta=${2}
+OP=${1}
+NSZE=${2}
 
-width=$(xdotool getactivewindow getwindowgeometry | grep 'Geometry:' | sed 's/x/\ /g' | awk '{print $2}')
-height=$(xdotool getactivewindow getwindowgeometry | grep 'Geometry:' | sed 's/x/\ /g' | awk '{print $3}')
+WDTH=$(xdotool getactivewindow getwindowgeometry | grep 'Geometry:' | sed 's/x/\ /g' | awk '{print $2}')
+HGHT=$(xdotool getactivewindow getwindowgeometry | grep 'Geometry:' | sed 's/x/\ /g' | awk '{print $3}')
 
-xpos=$(xdotool getactivewindow getwindowgeometry | grep 'Position:' | sed 's/,/\ /g' | awk '{print $2}')
-ypos=$(xdotool getactivewindow getwindowgeometry | grep 'Position:' | sed 's/,/\ /g' | awk '{print $3}')
+XP=$(xdotool getactivewindow getwindowgeometry | grep 'Position:' | sed 's/,/\ /g' | awk '{print $2}')
+YP=$(xdotool getactivewindow getwindowgeometry | grep 'Position:' | sed 's/,/\ /g' | awk '{print $3}')
 
-xscr=$(xdotool getdisplaygeometry | awk '{print $1}')
-yscr=$(xdotool getdisplaygeometry | awk '{print $2}')
+XM=$(xdotool getdisplaygeometry | awk '{print $1}')
+YM=$(xdotool getdisplaygeometry | awk '{print $2}')
 
-xsc2=$(expr $xscr / 2)
-ysc2=$(expr $yscr / 2)
+XM2=$(expr $XM / 2)
+YM2=$(expr $YM / 2)
 
-if [[ $xpos -lt $xsc2 ]] && [[ $ypos -lt $ysc2 ]]; then
+if [[ $XP -lt $XM2 ]] && [[ $YP -lt $YM2 ]]; then
 	echo 'grab bottomright'
-	i3-msg resize ${opr} right	${delta} px or ${delta} ppt
-	i3-msg resize ${opr} down	${delta} px or ${delta} ppt
-elif [[ $xpos -lt $xsc2 ]] && [[ $ypos -gt $ysc2 ]]; then
+	i3-msg resize ${OP} right	${NSZE} px or ${NSZE} ppt
+	i3-msg resize ${OP} down	${NSZE} px or ${NSZE} ppt
+elif [[ $XP -lt $XM2 ]] && [[ $YP -gt $YM2 ]]; then
 	echo 'grab topright'
-	i3-msg resize ${opr} right	${delta} px or ${delta} ppt
-	i3-msg resize ${opr} up		${delta} px or ${delta} ppt
-elif [[ $(expr $xpos + $width) -lt $xsc2 ]] && [[ $(expr $ypos + $height) -gt $ysc2 ]]; then
+	i3-msg resize ${OP} right	${NSZE} px or ${NSZE} ppt
+	i3-msg resize ${OP} up		${NSZE} px or ${NSZE} ppt
+elif [[ $(expr $XP + $WDTH) -lt $XM2 ]] && [[ $(expr $YP + $HGHT) -gt $YM2 ]]; then
 	echo 'grab topleft'
-	i3-msg resize ${opr} right	${delta} px or ${delta} ppt
-	i3-msg resize ${opr} up		${delta} px or ${delta} ppt
-elif [[ $(expr $xpos + $width) -gt $xsc2 ]] && [[ $(expr $ypos + $height) -gt $ysc2 ]]; then
+	i3-msg resize ${OP} right	${NSZE} px or ${NSZE} ppt
+	i3-msg resize ${OP} up		${NSZE} px or ${NSZE} ppt
+elif [[ $(expr $XP + $WDTH) -gt $XM2 ]] && [[ $(expr $YP + $HGHT) -gt $YM2 ]]; then
 	echo 'grab topleft'
-	i3-msg resize ${opr} left	${delta} px or ${delta} ppt
-	i3-msg resize ${opr} up		${delta} px or ${delta} ppt
-elif [[ $xpos -gt $xsc2 ]] && [[ $ypos -lt $ysc2 ]]; then
+	i3-msg resize ${OP} left	${NSZE} px or ${NSZE} ppt
+	i3-msg resize ${OP} up		${NSZE} px or ${NSZE} ppt
+elif [[ $XP -gt $XM2 ]] && [[ $YP -lt $YM2 ]]; then
 	echo 'grab bottomleft'
-	i3-msg resize ${opr} left ${delta} px or ${delta} ppt
-	i3-msg resize ${opr} down ${delta} px or ${delta} ppt
-elif [[ $xpos -gt $xsc2 ]] && [[ $ypos -gt $ysc2 ]]; then
+	i3-msg resize ${OP} left ${NSZE} px or ${NSZE} ppt
+	i3-msg resize ${OP} down ${NSZE} px or ${NSZE} ppt
+elif [[ $XP -gt $XM2 ]] && [[ $YP -gt $YM2 ]]; then
 	echo 'grab topleft'
-	i3-msg resize ${opr} left	${delta} px or ${delta} ppt
-	i3-msg resize ${opr} up		${delta} px or ${delta} ppt
+	i3-msg resize ${OP} left	${NSZE} px or ${NSZE} ppt
+	i3-msg resize ${OP} up		${NSZE} px or ${NSZE} ppt
 else
 	echo 'grab bottomright'
-	i3-msg resize ${opr} right	${delta} px or ${delta} ppt
-	i3-msg resize ${opr} down	${delta} px or ${delta} ppt
+	i3-msg resize ${OP} right	${NSZE} px or ${NSZE} ppt
+	i3-msg resize ${OP} down	${NSZE} px or ${NSZE} ppt
 fi
 
-#echo "$width $height"
-#echo "$xpos $ypos"
-#echo "$xscr $yscr"
-#echo "$xsc2 $ysc2"
+#echo "$WDTH $HGHT"
+#echo "$XP $YP"
+#echo "$XM $YM"
+#echo "$XM2 $YM2"

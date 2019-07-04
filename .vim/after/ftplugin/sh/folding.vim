@@ -40,11 +40,5 @@ function FoldText()
 "    let foldline = substitute(foldline, 'opts; do$', "W", "")
     let text = foldline.foldsize.'line     '
     let fillcharcount = windowwidth - strdisplaywidth(text)
-    return foldline.'  '.repeat(".",fillcharcount).'  ('.foldsize.' lines)'
+    return foldline.'  '.repeat(" ",fillcharcount).'  ('.foldsize.' lines)'
 endfunction
-
-setlocal spell spelllang=en_gb
-setlocal nonumber norelativenumber laststatus=0
-setlocal textwidth=80
-autocmd FileType markdown nnoremap \c :w !bash ~/scr/cmkd <C-r>%<Enter><Enter>
-"autocmd VimEnter * Goyo"

@@ -114,8 +114,8 @@ client.focused			$blu $blu $blk $blu $gry
 client.focused_inactive	$gry $gry $blu $gry $gry
 client.unfocused		$gry $gry $wht $gry $gry
 client.urgent			$red $red $wht $red $gry
-client.placeholder		$grn $blk $wht $blk $blk
-#client.background		$blk
+client.placeholder		$blk $blk $wht $blk $blk
+client.background		$blk
 
 # >>>> # BAR
 #bar {
@@ -491,7 +491,7 @@ $fw [title="_popout="]					$mvm2,$tf "ytchat"
 $fw [title="^localhost:8090$"]			$mvm2,$tf "mdpreview"
 $fw [class="Shutter"]					$mvm2,$tf "snip-tool"
 
-$fw [class="Gvim"]						$mvm3
+#$fw [class="Gvim"]						$mvm3
 $fw [class="Pamac-manager"]				$mvm3,$tf "software"
 $fw [title="Google Chrome$"]			$mvm3,$tf "chrome"
 

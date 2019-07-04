@@ -5,4 +5,11 @@
 
 file=${1}
 checkactive="$(xdotool search --class Gvim)"
-gvim "${file}" &>/dev/null &
+$HOME/scr/i3launch "gvim "${file}"" _W3
+
+#checkactive="$(xdotool search --class Gvim)"
+#if [[ -z $checkactive ]]; then
+#	gvim --servername GVIM "${file}" &>/dev/null &
+#else
+#	gvim --servername GVIM --remote-tab "${file}" &>/dev/null &
+#fi

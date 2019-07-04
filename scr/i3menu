@@ -6,17 +6,17 @@
 
 # >>>> vars
 rofiDir="$HOME/.config/rofi"
-color=blue
-theme=vertical
-ttlbr=24
-brdr=2
-prmt=" "
-mode="menu"
-lines="15"
-loc="0"
-wdth="500"
-xoffset="0"
-yoffset="0"
+COLOR=blue
+THM=vertical
+TTLBR=25
+BRDR=2
+PRMT=" "
+MODE="menu"
+LNS="15"
+LOC="0"
+WDTH="500"
+XOFFSET="0"
+YOFFSET="0"
 fs=" "
 wnloc=$(xdotool getactivewindow getwindowgeometry | grep 'Position' | awk '{print $2}')
 wngeo=$(xdotool getactivewindow getwindowgeometry | grep 'Geometry' | awk '{print $2}')
@@ -36,19 +36,19 @@ fnt=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
 fnt=${fnt%:*}
 fnt=${fnt##*:}
 dmthm="-fn "${fnt}:size=11" -nb "$bkd" -nf "$wtl" -sf "$bkd" -sb "$blu""
-dmloc="-x $(expr $wnX - $brdr) -y $(expr $wnY - $ttlbr)"
+dmloc="-x $(expr $wnX - $BRDR) -y $(expr $wnY - $TTLBR)"
 
 menu () {
-	rofi -dmenu -p "${prmt}" $fs -theme $theme -monitor ${mon:7} -location $loc \
-		-lines $lines -width $wdth -xoffset $xoffset -yoffset $yoffset \
+	rofi -dmenu -p "${PRMT}" $fs -theme $THM -monitor ${mon:7} -location $LOC \
+		-lines $LNS -width $WDTH -xoffset $XOFFSET -yoffset $YOFFSET \
 		-markup-rows
 }
 start () {
-	rofi -show drun -p "${prmt}" $fs -theme $theme -monitor ${mon:7} -location $loc \
-		-lines $lines -width $wdth -xoffset $xoffset -yoffset $yoffset
+	rofi -show drun -p "${PRMT}" $fs -theme $THM -monitor ${mon:7} -location $LOC \
+		-lines $LNS -width $WDTH -xoffset $XOFFSET -yoffset $YOFFSET
 }
 dmenu () {
-	dmenu_run $dmloc $dmthm -w $(expr $wnW + $brdr + $brdr) -h $ttlbr
+	dmenu_run $dmloc $dmthm -w $(expr $wnW + $BRDR + $BRDR) -h $TTLBR
 }
 help () {
 	echo "	-h  --  echo this help"
@@ -69,50 +69,50 @@ help () {
 while getopts :p:l:x:y:c:w:o:dstmfh opts; do
 	case $opts in
 		p)
-			prmt="${OPTARG}"
+			PRMT="${OPTARG}"
 			;;
 		l)
-			loc="${OPTARG}"
+			LOC="${OPTARG}"
 			;;
 		x)
-			xoffset="$(expr $xoffset + $OPTARG)"
+			XOFFSET="$(expr $XOFFSET + $OPTARG)"
 			;;
 		y)
-			yoffset="$(expr $yoffset + $OPTARG)"
+			YOFFSET="$(expr $YOFFSET + $OPTARG)"
 			;;
 		c)
-			color="${OPTARG}"
+			COLOR="${OPTARG}"
 			;;
 		w)
-			wdth="${OPTARG}"
+			WDTH="${OPTARG}"
 			;;
 		o)
-			theme="${OPTARG}"
+			THM="${OPTARG}"
 			;;
 		d)
-			mode="dmenu"
+			MODE="dmenu"
 			;;
 		s)
-			mode="start"
+			MODE="start"
 			;;
 		t)
-			theme=horizontal
-			loc=1
-			lines=10
-			wdth="$(expr $wnW + $brdr + $brdr)"
-			xoffset="$(expr $wnX - $brdr - $brdr)"
-			yoffset="$(expr $wnY - $ttlbr)"
+			THM=horizontal
+			LOC=1
+			LNS=10
+			WDTH="$(expr $wnW + $BRDR + $BRDR)"
+			XOFFSET="$(expr $wnX - $BRDR - $BRDR)"
+			YOFFSET="$(expr $wnY - $TTLBR)"
 			;;
 		m)
-			theme=vertical
-			loc=1
-			wdth=300
-			xoffset="${msX:2}"
-			yoffset="${msY:2}"
+			THM=vertical
+			LOC=1
+			WDTH=300
+			XOFFSET="${msX:2}"
+			YOFFSET="${msY:2}"
 			;;
 		f)
-			theme=vertical
-			loc=0
+			THM=vertical
+			LOC=0
 			fs="-fullscreen"
 			;;
 		h)
@@ -121,6 +121,6 @@ while getopts :p:l:x:y:c:w:o:dstmfh opts; do
 	esac
 done
 
-cat $rofiDir/${color}.rasi > $rofiDir/globals.rasi
+cat $rofiDir/${COLOR}.rasi > $rofiDir/globals.rasi
 
-$mode
+$MODE
