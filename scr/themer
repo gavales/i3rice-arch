@@ -4,7 +4,7 @@
 # CREATED: Tue  7 May 23:07:28 GMT 2019
 
 colsDir=$HOME/themes
-defaultThm=${colsDir}/gruvbox_light
+defThm=${colsDir}/gruvbox_light
 dir="$HOME/numix-solarized-gtk-theme"
 #vrt="$(sed '2q;d' ${colsDir}/.current | awk '{print $2}')"
 vrt="light"
@@ -55,19 +55,19 @@ main () {
 	gnt=$(cat ${colsDir}/.current | grep '^magenta'    | awk '{print $NF}')
 	cyn=$(cat ${colsDir}/.current | grep '^cyan'       | awk '{print $NF}')
 
-	[[ -z $nme ]] && nme=$(cat ${defaultThm} | grep '^name'      | awk '{print $NF}')
-	[[ -z $fnt ]] && fnt=$(cat ${defaultThm} | grep '^font'      | awk '{print $NF}')
-	[[ -z $gft ]] && gft=$(cat ${defaultThm} | grep '^guifont'   | awk '{print $NF}')
-	[[ -z $sze ]] && sze=$(cat ${defaultThm} | grep '^size'      | awk '{print $NF}')
-	[[ -z $grn ]] && grn=$(cat ${defaultThm} | grep '^green'     | awk '{print $NF}')
-	[[ -z $ylw ]] && ylw=$(cat ${defaultThm} | grep '^yellow'    | awk '{print $NF}')
-	[[ -z $red ]] && red=$(cat ${defaultThm} | grep '^red'       | awk '{print $NF}')
-	[[ -z $blu ]] && blu=$acc
-	[[ -z $gnt ]] && gnt=$(cat ${defaultThm} | grep '^magenta'   | awk '{print $NF}')
-	[[ -z $cyn ]] && cyn=$(cat ${defaultThm} | grep '^cyan'      | awk '{print $NF}')
+	[[ -z $nme ]] && nme=$(cat ${defThm} | grep '^name'    | awk '{print $NF}')
+	[[ -z $fnt ]] && fnt=$(cat ${defThm} | grep '^font'    | awk '{print $NF}')
+	[[ -z $gft ]] && gft=$(cat ${defThm} | grep '^guifont' | awk '{print $NF}')
+	[[ -z $sze ]] && sze=$(cat ${defThm} | grep '^size'    | awk '{print $NF}')
+	[[ -z $grn ]] && grn=$(cat ${defThm} | grep '^green'   | awk '{print $NF}')
+	[[ -z $ylw ]] && ylw=$(cat ${defThm} | grep '^yellow'  | awk '{print $NF}')
+	[[ -z $red ]] && red=$(cat ${defThm} | grep '^red'     | awk '{print $NF}')
+	[[ -z $blu ]] && blu=$(cat ${defThm} | grep '^blue'    | awk '{print $NF}')
+	[[ -z $gnt ]] && gnt=$(cat ${defThm} | grep '^magenta' | awk '{print $NF}')
+	[[ -z $cyn ]] && cyn=$(cat ${defThm} | grep '^cyan'    | awk '{print $NF}')
                                                                 
 	if [[ $wpr == "/" ]]; then
-		hsetroot -solid "$acc" &
+		hsetroot -solid "$bg1" &
 	else
 		rm -f "$HOME/.config/wall.png"
 		cp "${wpr}" "$HOME/.config/wall.png"

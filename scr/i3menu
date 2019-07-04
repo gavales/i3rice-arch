@@ -8,7 +8,7 @@
 rofiDir="$HOME/.config/rofi"
 COLOR=blue
 THM=vertical
-TTLBR=25
+TTLBR=26
 BRDR=2
 PRMT=" "
 MODE="menu"
@@ -60,13 +60,14 @@ help () {
 	echo "	            .config/rofi"
 	echo "	-w  --  rofi width"
 	echo "	-o  --  vertical or horizontal (like dmenu)"
+	echo "	-r  --  number of vertical rows"
 	echo "	-d  --  dmenu mode"
 	echo "	-s  --  application menu mode"
 	echo "	-t  --  spawn on i3wm title-bar"
 	echo "	-m  --  spawn at mouse location"
 	echo "	-f  --  fullscreen mode, working on this"
 }
-while getopts :p:l:x:y:c:w:o:dstmfh opts; do
+while getopts :p:l:x:y:c:w:o:r:dstmfh opts; do
 	case $opts in
 		p)
 			PRMT="${OPTARG}"
@@ -88,6 +89,9 @@ while getopts :p:l:x:y:c:w:o:dstmfh opts; do
 			;;
 		o)
 			THM="${OPTARG}"
+			;;
+		r)
+			LNS="${OPTARG}"
 			;;
 		d)
 			MODE="dmenu"

@@ -1,0 +1,11 @@
+bg	set wallpaper
+cd	change directory
+cw	rename
+cW	bulkrename
+dd	move to specified directory (using mv)
+dD	delete
+mk	new directory
+pp	paste
+to	touch file
+yp	copy path
+yy	copy to specified directory (using cp)

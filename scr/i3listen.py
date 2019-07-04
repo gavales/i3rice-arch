@@ -52,7 +52,7 @@ def windownotify(i3, event):
 	if event.container.window_class == 'Thunar':
 		if event.container.focused == True:
 			if event.change == 'title':
-				call('bash /home/gavarch/scr/thunarview'.split(' '))
+				call('bash /home/gavarch/scr/thunar/thunarview'.split(' '))
 
 #def set_floating(i3, event):
 #	if event.container.window_class != 'URxvt':

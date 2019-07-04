@@ -1,6 +1,3 @@
-shell git clone https://github.com/StillANixRookie/atompackages.git
-shell git clone https://github.com/StillANixRookie/SeaBUG.git
-shell bash %f
 open_with oni
 rename i3blocks.conf_template
 rename term_rainbow
@@ -48,3 +45,6 @@ she
 shell bash ~/scr/rangerbulkrename %s
 shell bash ~/scr/rangerbulkrename "%s"
 touch test
+rename thunarcommands
+shell cat %f > thunarcommands
+mkdir thunar

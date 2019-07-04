@@ -3,9 +3,7 @@
 $HOME/scr/themer -t "$HOME/xrs" -x "xrs-reload" -g
 $HOME/scr/themer -t "$HOME/.config/i3" -x " " -g
 $HOME/scr/i3concat
-$HOME/scr/themer -t "$HOME/.config/polybar" -x " " -g
-killall -q polybar
-polybar i3 &>/dev/null &
+$HOME/scr/themer -t "$HOME/.config/polybar" -x "pb-reload" -g
 $HOME/scr/themer -t "$HOME/git/i3rice-arch" -x " " -g
 $HOME/scr/themer -t "$HOME/.vim/colors" -x " " -g
 $HOME/scr/themer -t "$HOME/git/atompackages/packages/rice-syntax/styles" -x " " -g
