@@ -5182,3 +5182,97 @@ Jul 04 15:56 : client: [709] opened from [::1]:37084
 Jul 04 15:56 : client: [709] closed
 Jul 04 15:56 : client: [710] opened from [::1]:37086
 Jul 04 15:56 : client: [710] closed
+Jul 04 16:20 : client: [711] opened from [::1]:37376
+Jul 04 16:20 : client: [711] closed
+Jul 04 16:20 : client: [712] opened from [::1]:37378
+Jul 04 16:20 : client: [712] closed
+Jul 04 16:50 : client: [713] opened from [::1]:39516
+Jul 04 16:50 : client: [713] closed
+Jul 04 16:50 : client: [714] opened from [::1]:39518
+Jul 04 16:50 : client: [714] closed
+Jul 04 16:52 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jul 04 16:52 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jul 04 16:52 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jul 04 16:52 : client: [715] opened from [::1]:39606
+Jul 04 16:52 : client: [715] closed
+Jul 04 16:52 : client: [716] opened from [::1]:39608
+Jul 04 16:52 : client: [716] closed
+Jul 04 16:53 : player: played "Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/07 - El Chacarero.mp3"
+Jul 04 16:53 : player: played "Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/07 - El Chacarero.mp3"
+Jul 04 16:55 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jul 04 16:55 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jul 04 16:55 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jul 04 16:55 : client: [0] opened from [::1]:34264
+Jul 04 16:55 : client: [0] closed
+Jul 04 16:55 : client: [1] opened from [::1]:34266
+Jul 04 16:55 : client: [1] closed
+Jul 04 16:55 : client: [2] opened from [::1]:34268
+Jul 04 16:55 : client: [3] opened from [::1]:34270
+Jul 04 16:55 : client: [2] closed
+Jul 04 16:55 : client: [3] closed
+Jul 04 16:55 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jul 04 16:55 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jul 04 16:55 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jul 04 16:55 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jul 04 16:56 : client: [4] opened from [::1]:34450
+Jul 04 16:56 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jul 04 16:56 : client: [4] closed
+Jul 04 16:56 : client: [5] opened from [::1]:34452
+Jul 04 16:56 : client: [5] closed
+Jul 04 16:56 : client: [6] opened from [::1]:34454
+Jul 04 16:56 : client: [6] closed
+Jul 04 16:56 : client: [7] opened from [::1]:34456
+Jul 04 16:56 : client: [7] closed
+Jul 04 16:56 : client: [8] opened from [::1]:34458
+Jul 04 16:56 : client: [8] closed
+Jul 04 16:56 : client: [9] opened from [::1]:34460
+Jul 04 16:56 : client: [9] closed
+Jul 04 16:56 : client: [10] opened from [::1]:34462
+Jul 04 16:56 : client: [10] closed
+Jul 04 16:56 : client: [11] opened from [::1]:34464
+Jul 04 16:56 : client: [11] closed
+Jul 04 16:56 : client: [12] opened from [::1]:34486
+Jul 04 16:56 : client: [12] closed
+Jul 04 16:56 : client: [13] opened from [::1]:34488
+Jul 04 16:56 : client: [13] closed
+Jul 04 16:56 : client: [14] opened from [::1]:34594
+Jul 04 16:56 : client: [14] closed
+Jul 04 16:56 : client: [15] opened from [::1]:34596
+Jul 04 16:56 : client: [15] closed
+Jul 04 16:58 : client: [16] opened from [::1]:34646
+Jul 04 16:58 : client: [16] closed
+Jul 04 16:58 : client: [17] opened from [::1]:34648
+Jul 04 16:58 : client: [17] closed
+Jul 04 16:58 : client: [18] opened from [::1]:34656
+Jul 04 16:58 : client: [18] closed
+Jul 04 16:58 : client: [19] opened from [::1]:34658
+Jul 04 16:58 : client: [19] closed
+Jul 04 16:58 : client: [20] opened from [::1]:34664
+Jul 04 16:58 : client: [20] closed
+Jul 04 16:58 : client: [21] opened from [::1]:34666
+Jul 04 16:58 : client: [21] closed
+Jul 04 16:59 : client: [22] opened from [::1]:34670
+Jul 04 16:59 : client: [22] closed
+Jul 04 16:59 : client: [23] opened from [::1]:34672
+Jul 04 16:59 : client: [23] closed
+Jul 04 16:59 : player: played "Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/07 - El Chacarero.mp3"
+Jul 04 16:59 : player: played "Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/07 - El Chacarero.mp3"
+Jul 04 17:00 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jul 04 17:00 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jul 04 17:00 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jul 04 17:00 : client: [0] opened from [::1]:51698
+Jul 04 17:00 : client: [0] closed
+Jul 04 17:00 : client: [1] opened from [::1]:51700
+Jul 04 17:00 : client: [1] closed
+Jul 04 17:02 : client: [2] opened from [::1]:51888
+Jul 04 17:02 : client: [2] closed
+Jul 04 17:02 : client: [3] opened from [::1]:51890
+Jul 04 17:02 : client: [3] closed
+Jul 04 17:02 : client: [4] opened from [::1]:51900
+Jul 04 17:02 : client: [4] closed
+Jul 04 17:02 : client: [5] opened from [::1]:51902
+Jul 04 17:02 : client: [5] closed
+Jul 04 17:05 : client: [6] opened from [::1]:51958
+Jul 04 17:05 : client: [6] closed
+Jul 04 17:05 : client: [7] opened from [::1]:51960
+Jul 04 17:05 : client: [7] closed
