@@ -1,0 +1,11 @@
+#!/bin/bash
+
+DST=$($HOME/scr/i3menu -t -c black -o vertical -p "move to ")
+
+echo "${1}" > files
+sed -e "s/'\ '/\n/g;s/'//g" -i files
+IFS=$'\n'
+for i in $(cat files); do
+	mv "$i" "${DST/'~'/~}"
+done
+rm files

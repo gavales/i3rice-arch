@@ -1,0 +1,9 @@
+#!/bin/bash
+
+wpp="${1/\'/}"
+wpp="${wpp/\'/}"
+wll="$HOME/.config/wall.png"
+
+#rm "${wll}"
+cp "${wpp}" "${wll}"
+feh --bg-scale "${wll}"

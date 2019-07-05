@@ -1,0 +1,4 @@
+#!/bin/bash
+
+FLS="${1}"
+xclip -i "$(echo $FLS | sed -e "s/'//g")"

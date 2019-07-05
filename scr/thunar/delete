@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "${1}" > files
+sed -e "s/'\ '/\n/g;s/'//g" -i files
+IFS=$'\n'
+for i in $(cat files); do
+	rm -rf "$i"
+done
+rm files

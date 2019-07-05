@@ -1,0 +1,4 @@
+#!/bin/bash
+
+FLS=$($HOME/scr/i3menu -t -c black -p "mkdir ")
+mkdir $FLS

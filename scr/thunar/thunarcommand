@@ -4,9 +4,8 @@
 # CREATED: Thu  4 Jul 23:35:23 BST 2019
 
 SCR="$HOME/scr/thunar"
-FLS=$1
-COM=$(cat $HOME/scr/thunar/thunarcommands | $HOME/scr/i3menu -t -c black -r 20 \
-	-o vertical \
-	-p ": " | awk '{print $1}')
-notify-send "$COM $FLS"
-#bash ${SCR}/${COM} ${FLS}
+FLS="$1"
+COM=$(ls -l $SCR | sed -e "/thunarcomand/d;/thunarview/d;/total/d" | \
+	awk '{print $NF}' | \
+	$HOME/scr/i3menu -t -c black -r 20 -o vertical -p ": ")
+bash ${SCR}/${COM} "${FLS}"

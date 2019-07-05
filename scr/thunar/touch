@@ -1,0 +1,4 @@
+#!/bin/bash
+
+FLS=$($HOME/scr/i3menu -t -c black -p "touch ")
+touch $FLS
