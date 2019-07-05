@@ -1,17 +1,17 @@
-! scarletibis
-#define cwhtl #f3bdab
-#define cwhtd #f9c5be
-#define credd #525958
-#define credl #525958
-#define cgrnd #B03632
-#define cgrnl #B03632
-#define cylwd #E65735
-#define cylwl #E65735
-#define cblud #EE6653
-#define cblul #EE6653
-#define cgntd #7C8476
-#define cgntl #7C8476
-#define ccynd #B0876C
-#define ccynl #B0876C
-#define cblkd #090D10
-#define cblkl #1d2124
+! grayscale
+#define cwhtl #FFEEDD
+#define cwhtd #c3b2a1
+#define credd #EE5555
+#define credl #EE5555
+#define cgrnd #BBCC66
+#define cgrnl #BBCC66
+#define cylwd #FFBB66
+#define cylwl #FFBB66
+#define cblud #AA99CC
+#define cblul #AA99CC
+#define cgntd #CC6688
+#define cgntl #CC6688
+#define ccynd #CC99BB
+#define ccynl #CC99BB
+#define cblkd #554466
+#define cblkl #69587a

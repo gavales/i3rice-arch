@@ -51,7 +51,7 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = CMUTypewriterText:style=Semibold Oblique:size=12;3
+font-0 = monaco:style=Semibold Oblique:size=12;3
 font-1 = FontAwesome5Free:style=Solid:size=15;3
 font-2 = FontAwesome5Brands:style=Solid:size=15;3
 

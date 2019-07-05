@@ -1,21 +1,3 @@
-rename i3blocks.conf_template
-rename term_rainbow
-rename term_template
-rename term-rainbow
-rename term-rainbow_template
-rename fixedsys.css_template
-rename zathurarc_template
-rename dunst-theme_template
-rename dunst-reload
-rename themer
-rename colors.less_template
-search rho
-shell 
-search Rho
-rename (orginalP - mp4) Blood+And+Bone+HD-720p.mp4
-rename Blood and Bones.mp4
-open_with ~/scr
-rename theme_template
 rename themes
 rename test
 rename grayscale
@@ -47,4 +29,22 @@ touch test
 rename thunarcommands
 shell cat %f > thunarcommands
 mkdir thunar
-rename colour3.png
+shell touch bg cd cw cW dd dD mk pp to yp yy
+shell chmod +x %s
+shell chmod +x "%s"
+shell echo -e "#!/bin/bash\n" bg cd cw cW dd dD mk pp to yp yy
+shell echo -e "#!/bin/bash\n" > bg cd cw cW dd dD mk pp to yp yy
+shell echo -e "#!/bin/bash\n" >> bg cd cw cW dd dD mk pp to yp yy
+shell echo -e "#\!/bin/bash\n" >> bg cd cw cW dd dD mk pp to yp yy
+shell echo -e "kk#\!/bin/bash\n" >> bg cd cw cW dd dD mk pp to yp yy
+
+rename cD
+rename delete
+rename mkdir
+rename rename
+rename bulkrename
+rename set-wallpaper
+rename new-window
+rename touch
+rename copy-path
+rename purpgang

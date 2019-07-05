@@ -1,10 +1,11 @@
-name       grayscale
+name       purpgang
 font       monaco
 guifont    monaco
 size       12
 foreground #FFEEDD
 #accent     #223344
 accent     #AA99CC
+comment    #AA99CC
 background #554466
 red        #EE5555
 green      #BBCC66
