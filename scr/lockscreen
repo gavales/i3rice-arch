@@ -17,34 +17,33 @@ W="${red}${t}"  # wrong
 V="${grn}${t}"  # verifying
 
 i3lock \
--f \
--p default \
---indpos="100:100" \
---indicator \
---image=$HOME/.config/wall.png \
---insidevercolor=$V \
---ringvercolor=$V \
-\
---insidewrongcolor=$W \
---ringwrongcolor=$W \
-\
---insidecolor=$D \
---ringcolor=$D \
---linecolor=$D \
---separatorcolor=$D \
-\
---verifcolor=$V \
---wrongcolor=$W \
---timecolor=$T \
---datecolor=$T \
---layoutcolor=$T \
---keyhlcolor=$W \
---bshlcolor=$W \
-\
---screen 0 \
---blur 5 \
---clock \
---indicator \
---timestr="%H:%M:%S" \
---datestr="%A, %m %Y" \
---keylayout 2 \
+	-f \
+	-p default \
+	--indicator \
+	--image=$HOME/.config/wall.png \
+	--insidevercolor=$V \
+	--ringvercolor=$V \
+	\
+	--insidewrongcolor=$W \
+	--ringwrongcolor=$W \
+	\
+	--insidecolor=$D \
+	--ringcolor=$D \
+	--linecolor=$D \
+	--separatorcolor=$D \
+	\
+	--verifcolor=$V \
+	--wrongcolor=$W \
+	--timecolor=$T \
+	--datecolor=$T \
+	--layoutcolor=$T \
+	--keyhlcolor=$W \
+	--bshlcolor=$W \
+	\
+	--screen 0 \
+	--blur 5 \
+	--clock \
+	--indicator \
+	--timestr="%H:%M:%S" \
+	--datestr="%A, %m %Y" \
+	--keylayout 2 \

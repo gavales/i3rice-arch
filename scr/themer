@@ -38,32 +38,32 @@ guiapply () {
 }
 
 main () {
-	nme=$(cat ${colsDir}/.current | grep '^name'       | awk '{print $NF}')
-	wpr=$(cat ${colsDir}/.current | grep '^wallpaper'  | sed 's/[^ ]* *//')
-	fnt=$(cat ${colsDir}/.current | grep '^font'       | awk '{print $NF}')
-	gft=$(cat ${colsDir}/.current | grep '^guifont'    | awk '{print $NF}')
-	sze=$(cat ${colsDir}/.current | grep '^size'       | awk '{print $NF}')
-	bg0=$(cat ${colsDir}/.current | grep '^background' | awk '{print $NF}')
-	acc=$(cat ${colsDir}/.current | grep '^accent'     | awk '{print $NF}')
-	com=$(cat ${colsDir}/.current | grep '^comment'    | awk '{print $NF}')
-	fg0=$(cat ${colsDir}/.current | grep '^foreground' | awk '{print $NF}')
-	grn=$(cat ${colsDir}/.current | grep '^green'      | awk '{print $NF}')
-	ylw=$(cat ${colsDir}/.current | grep '^yellow'     | awk '{print $NF}')
-	red=$(cat ${colsDir}/.current | grep '^red'        | awk '{print $NF}')
-	blu=$(cat ${colsDir}/.current | grep '^blue'       | awk '{print $NF}')
-	gnt=$(cat ${colsDir}/.current | grep '^magenta'    | awk '{print $NF}')
-	cyn=$(cat ${colsDir}/.current | grep '^cyan'       | awk '{print $NF}')
+	nme=$(cat ${colsDir}/.current | sed '/^name/!d;s/[^ ]* *//')
+	wpr=$(cat ${colsDir}/.current | sed '/^wallpaper/!d;s/[^ ]* *//')
+	fnt=$(cat ${colsDir}/.current | sed '/^font/!d;s/[^ ]* *//')
+	gft=$(cat ${colsDir}/.current | sed '/^guifont/!d;s/[^ ]* *//')
+	sze=$(cat ${colsDir}/.current | sed '/^size/!d;s/[^ ]* *//')
+	bg0=$(cat ${colsDir}/.current | sed '/^background/!d;s/[^ ]* *//')
+	acc=$(cat ${colsDir}/.current | sed '/^accent/!d;s/[^ ]* *//')
+	com=$(cat ${colsDir}/.current | sed '/^comment/!d;s/[^ ]* *//')
+	fg0=$(cat ${colsDir}/.current | sed '/^foreground/!d;s/[^ ]* *//')
+	grn=$(cat ${colsDir}/.current | sed '/^green/!d;s/[^ ]* *//')
+	ylw=$(cat ${colsDir}/.current | sed '/^yellow/!d;s/[^ ]* *//')
+	red=$(cat ${colsDir}/.current | sed '/^red/!d;s/[^ ]* *//')
+	blu=$(cat ${colsDir}/.current | sed '/^blue/!d;s/[^ ]* *//')
+	gnt=$(cat ${colsDir}/.current | sed '/^magenta/!d;s/[^ ]* *//')
+	cyn=$(cat ${colsDir}/.current | sed '/^cyan/!d;s/[^ ]* *//')
 
-	[[ -z $nme ]] && nme=$(cat ${defThm} | grep '^name'    | awk '{print $NF}')
-	[[ -z $fnt ]] && fnt=$(cat ${defThm} | grep '^font'    | awk '{print $NF}')
-	[[ -z $gft ]] && gft=$(cat ${defThm} | grep '^guifont' | awk '{print $NF}')
-	[[ -z $sze ]] && sze=$(cat ${defThm} | grep '^size'    | awk '{print $NF}')
-	[[ -z $grn ]] && grn=$(cat ${defThm} | grep '^green'   | awk '{print $NF}')
-	[[ -z $ylw ]] && ylw=$(cat ${defThm} | grep '^yellow'  | awk '{print $NF}')
-	[[ -z $red ]] && red=$(cat ${defThm} | grep '^red'     | awk '{print $NF}')
-	[[ -z $blu ]] && blu=$(cat ${defThm} | grep '^blue'    | awk '{print $NF}')
-	[[ -z $gnt ]] && gnt=$(cat ${defThm} | grep '^magenta' | awk '{print $NF}')
-	[[ -z $cyn ]] && cyn=$(cat ${defThm} | grep '^cyan'    | awk '{print $NF}')
+	[[ -z $nme ]] && nme=$(cat ${defThm} | sed '/^name/!d;s/[^ ]* *//')
+	[[ -z $fnt ]] && fnt=$(cat ${defThm} | sed '/^font/!d;s/[^ ]* *//')
+	[[ -z $gft ]] && gft=$(cat ${defThm} | sed '/^guifont/!d;s/[^ ]* *//')
+	[[ -z $sze ]] && sze=$(cat ${defThm} | sed '/^size/!d;s/[^ ]* *//')
+	[[ -z $grn ]] && grn=$(cat ${defThm} | sed '/^green/!d;s/[^ ]* *//')
+	[[ -z $ylw ]] && ylw=$(cat ${defThm} | sed '/^yellow/!d;s/[^ ]* *//')
+	[[ -z $red ]] && red=$(cat ${defThm} | sed '/^red/!d;s/[^ ]* *//')
+	[[ -z $blu ]] && blu=$(cat ${defThm} | sed '/^blue/!d;s/[^ ]* *//')
+	[[ -z $gnt ]] && gnt=$(cat ${defThm} | sed '/^magenta/!d;s/[^ ]* *//')
+	[[ -z $cyn ]] && cyn=$(cat ${defThm} | sed '/^cyan/!d;s/[^ ]* *//')
 
 	# convert to RGB
 	comR=$((16#${com:1:-4})) && comG=$((16#${com:3:-2})) && comB=$((16#${com:5}))
@@ -135,8 +135,8 @@ main () {
 #	[[ ${#com} -gt 7 ]] && com=$fg3 && comRGB=$fg3RGB
 #[[ ${#com} -gt 6 ]] || 
 #	echo $nme
-#	echo $wpr
-#	echo $fnt
+	echo $wpr
+	echo $fnt
 #	echo $gft
 #	echo $sze
 #	echo $fg0

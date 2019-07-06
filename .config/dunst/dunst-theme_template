@@ -1,14 +1,14 @@
 [frame]
-width = 0
+width = 5
 color = "%%bg0%%"
 
 [urgency_low]
-background = "%%acc%%"
+background = "%%cyn%%"
 foreground = "%%bg0%%"
 timeout = 3
 
 [urgency_normal]
-background = "%%acc%%"
+background = "%%cyn%%"
 foreground = "%%bg0%%"
 timeout = 3
 

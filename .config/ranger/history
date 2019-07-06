@@ -1,4 +1,3 @@
-mkdir unused
 rename .unused
 search lisbon
 rename .gtkrc-2.0_template
@@ -48,3 +47,4 @@ shell convert %f -fill red -opaque white red.png
 shell convert %f -fuzz 50%-fill red -opaque white red.png
 shell convert %f -fuzz 50%% -fill red -opaque white red.png
 shell convert %f -fuzz 50%% -fill redh -opaque white red.png
+rename tint2rc_template

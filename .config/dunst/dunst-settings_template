@@ -1,28 +1,9 @@
-[frame]
-width = 5
-color = "#f9efe9"
-
-[urgency_low]
-background = "#60c1b8"
-foreground = "#f9efe9"
-timeout = 3
-
-[urgency_normal]
-background = "#60c1b8"
-foreground = "#f9efe9"
-timeout = 3
-
-[urgency_critical]
-background = "#6F90A7"
-foreground = "#f9efe9"
-timeout = 3
-
 [shortcuts]
 	close = ctrl+space
 	close_all = ctrl+shift+space
 
 [global]
-	font = CMUTypewriterText 12
+	font = %%guifont%% %%fontsize%%
 	
 	allow_markup = yes
 	

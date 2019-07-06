@@ -15,7 +15,7 @@ MODE="menu"
 LNS="15"
 LOC="0"
 WDTH="500"
-HGTH="50%"
+HGTH=" "
 XOFFSET="0"
 YOFFSET="0"
 fs=" "
@@ -45,12 +45,12 @@ dmloc="-x $(expr $wnX - $BRDR) -y $(expr $wnY - $TTLBR)"
 menu () {
 	rofi -dmenu -p "${PRMT}" $fs -theme $THM -monitor ${mon:7} -location $LOC \
 		-lines $LNS -width $WDTH -xoffset $XOFFSET -yoffset $YOFFSET \
-		-theme-str "#window { height: $HGTH; }" -markup-rows
+		-theme-str "#window { $HGTH }" -markup-rows
 }
 start () {
 	rofi -show drun -p "${PRMT}" $fs -theme $THM -monitor ${mon:7} -location $LOC \
 		-lines $LNS -width $WDTH -xoffset $XOFFSET -yoffset $YOFFSET \
-		-theme-str "#window { height: $HGTH; }"
+		-theme-str "#window { $HGTH }"
 }
 dmenu () {
 	dmenu_run $dmloc $dmthm -w $(expr $wnW + $BRDR + $BRDR) -h $TTLBR
@@ -64,15 +64,17 @@ help () {
 	echo "	-c  --  accent color, comes in the form of the variable files in"
 	echo "	            .config/rofi"
 	echo "	-w  --  rofi width"
+	echo "	-g  --  rofi height (XX% of screen)"
 	echo "	-o  --  vertical or horizontal (like dmenu)"
 	echo "	-r  --  number of vertical rows"
+	echo "	-e  --  fill active window"
 	echo "	-d  --  dmenu mode"
 	echo "	-s  --  application menu mode"
 	echo "	-t  --  spawn on i3wm title-bar"
 	echo "	-m  --  spawn at mouse location"
 	echo "	-f  --  fullscreen mode, working on this"
 }
-while getopts :p:l:x:y:g:c:w:o:r:dstmfh opts; do
+while getopts :p:l:x:y:g:c:w:o:r:edstmfh opts; do
 	case $opts in
 		p)
 			PRMT="${OPTARG}"
@@ -93,13 +95,23 @@ while getopts :p:l:x:y:g:c:w:o:r:dstmfh opts; do
 			WDTH="${OPTARG}"
 			;;
 		g)
-			HGTH="${OPTARG}"
+			HGTH="height: ${OPTARG};"
 			;;
 		o)
 			THM="${OPTARG}"
 			;;
 		r)
 			LNS="${OPTARG}"
+			;;
+		e)
+			[[ $THM == "vertical" ]] \
+			&& HGTH=$(echo "((${wnH}*100)/$scH)+((($TTLBR+$TTLBR/2)*100)/$scH)" | bc) \
+			&& HGTH="height: ${HGTH}%;"
+			LOC=1
+			[[ $THM == "horizontal" ]] && LNS="15"
+			WDTH="$(expr $wnW + $BRDR + $BRDR)"
+			XOFFSET="$(expr $wnX - $BRDR - $BRDR)"
+			YOFFSET="$(expr $wnY - $TTLBR)"
 			;;
 		d)
 			MODE="dmenu"
@@ -109,12 +121,8 @@ while getopts :p:l:x:y:g:c:w:o:r:dstmfh opts; do
 			;;
 		t)
 			LOC=1
+			[[ $THM == "horizontal" ]] && LNS="15"
 			WDTH="$(expr $wnW + $BRDR + $BRDR)"
-			[[ $THM == "vertical" ]] \
-			&& HGTH=$(echo "((${wnH}*100)/$scH)+((($TTLBR+$TTLBR/2)*100)/$scH)" | bc) \
-			&& HGTH="${HGTH}%"
-			[[ $THM == "horizontal" ]] && HGTH="0%"
-			echo $HGTH
 			XOFFSET="$(expr $wnX - $BRDR - $BRDR)"
 			YOFFSET="$(expr $wnY - $TTLBR)"
 			;;

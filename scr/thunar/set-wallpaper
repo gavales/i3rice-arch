@@ -4,6 +4,9 @@ wpp="${1/\'/}"
 wpp="${wpp/\'/}"
 wll="$HOME/.config/wall.png"
 
-#rm "${wll}"
-cp "${wpp}" "${wll}"
-feh --bg-scale "${wll}"
+##rm "${wll}"
+#cp "${wpp}" "${wll}"
+#feh --bg-scale "${wll}"
+
+$HOME/scr/i3wallpaper "$wpp"
+notify-send "${wpp}"
