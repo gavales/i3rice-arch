@@ -1,19 +1,19 @@
 [frame]
 width = 0
-color = "#554466"
+color = "#f9efe9"
 
 [urgency_low]
-background = "#AA99CC"
-foreground = "#554466"
+background = "#DC8E69"
+foreground = "#f9efe9"
 timeout = 3
 
 [urgency_normal]
-background = "#AA99CC"
-foreground = "#554466"
+background = "#DC8E69"
+foreground = "#f9efe9"
 timeout = 3
 
 [urgency_critical]
-background = "#EE5555"
-foreground = "#554466"
+background = "#6F90A7"
+foreground = "#f9efe9"
 timeout = 3
 

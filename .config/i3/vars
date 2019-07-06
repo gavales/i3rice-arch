@@ -10,7 +10,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # >>>> MAIN
-set $font1 monaco
+set $font1 CMUTypewriterText
 set $font2 FontAwesome
 set $font3 monaco
 set $fonts 12

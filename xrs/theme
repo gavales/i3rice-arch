@@ -1,17 +1,17 @@
-! grayscale
-#define cwhtl #FFEEDD
-#define cwhtd #c3b2a1
-#define credd #EE5555
-#define credl #EE5555
-#define cgrnd #BBCC66
-#define cgrnl #BBCC66
-#define cylwd #FFBB66
-#define cylwl #FFBB66
-#define cblud #AA99CC
-#define cblul #AA99CC
-#define cgntd #CC6688
-#define cgntl #CC6688
-#define ccynd #CC99BB
-#define ccynl #CC99BB
-#define cblkd #554466
-#define cblkl #69587a
+! redrock1
+#define cwhtl #161c16
+#define cwhtd #783a1c
+#define credd #6F90A7
+#define credl #6F90A7
+#define cgrnd #507C88
+#define cgrnl #507C88
+#define cylwd #A5896D
+#define cylwl #A5896D
+#define cblud #DC8E69
+#define cblul #DC8E69
+#define cgntd #609AC1
+#define cgntl #609AC1
+#define ccynd #60c1b8
+#define ccynl #60c1b8
+#define cblkd #f9efe9
+#define cblkl #e5dbd5

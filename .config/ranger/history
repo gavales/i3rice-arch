@@ -1,8 +1,3 @@
-rename themes
-rename test
-rename grayscale
-rename 1vars_template
-rename blaque_magick
 mkdir unused
 rename .unused
 search lisbon
@@ -48,3 +43,8 @@ rename new-window
 rename touch
 rename copy-path
 rename purpgang
+shell convert %f -fill red -opaque white red
+shell convert %f -fill red -opaque white red.png
+shell convert %f -fuzz 50%-fill red -opaque white red.png
+shell convert %f -fuzz 50%% -fill red -opaque white red.png
+shell convert %f -fuzz 50%% -fill redh -opaque white red.png

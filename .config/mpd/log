@@ -5360,3 +5360,84 @@ Jul 05 20:22 : client: [48] opened from [::1]:55466
 Jul 05 20:22 : client: [48] closed
 Jul 05 20:22 : client: [49] opened from [::1]:55468
 Jul 05 20:22 : client: [49] closed
+Jul 05 22:43 : client: [50] opened from [::1]:55908
+Jul 05 22:43 : client: [50] closed
+Jul 05 22:43 : client: [51] opened from [::1]:55910
+Jul 05 22:43 : client: [51] closed
+Jul 06 00:37 : client: [52] opened from [::1]:56836
+Jul 06 00:37 : client: [52] closed
+Jul 06 00:37 : client: [53] opened from [::1]:56838
+Jul 06 00:37 : client: [53] closed
+Jul 06 00:37 : client: [54] opened from [::1]:56840
+Jul 06 00:37 : client: [54] closed
+Jul 06 00:37 : client: [55] opened from [::1]:56842
+Jul 06 00:37 : client: [55] closed
+Jul 06 00:38 : client: [56] opened from [::1]:56860
+Jul 06 00:38 : client: [56] closed
+Jul 06 00:38 : client: [57] opened from [::1]:56862
+Jul 06 00:38 : client: [57] closed
+Jul 06 00:39 : client: [58] opened from [::1]:56864
+Jul 06 00:39 : client: [58] closed
+Jul 06 00:39 : client: [59] opened from [::1]:56866
+Jul 06 00:39 : client: [59] closed
+Jul 06 00:49 : client: [60] opened from [::1]:57304
+Jul 06 00:49 : client: [60] closed
+Jul 06 00:49 : client: [61] opened from [::1]:57310
+Jul 06 00:49 : client: [61] closed
+Jul 06 00:54 : client: [62] opened from [::1]:57424
+Jul 06 00:54 : client: [62] closed
+Jul 06 00:54 : client: [63] opened from [::1]:57426
+Jul 06 00:54 : client: [63] closed
+Jul 06 00:55 : client: [64] opened from [::1]:57472
+Jul 06 00:55 : client: [64] closed
+Jul 06 00:55 : client: [65] opened from [::1]:57474
+Jul 06 00:55 : client: [65] closed
+Jul 06 01:01 : client: [66] opened from [::1]:57612
+Jul 06 01:01 : client: [66] closed
+Jul 06 01:01 : client: [67] opened from [::1]:57614
+Jul 06 01:01 : client: [67] closed
+Jul 06 01:01 : client: [68] opened from [::1]:57622
+Jul 06 01:01 : client: [68] closed
+Jul 06 01:01 : client: [69] opened from [::1]:57624
+Jul 06 01:01 : client: [69] closed
+Jul 06 01:02 : client: [70] opened from [::1]:57626
+Jul 06 01:02 : client: [70] closed
+Jul 06 01:02 : client: [71] opened from [::1]:57628
+Jul 06 01:02 : client: [71] closed
+Jul 06 01:19 : client: [72] opened from [::1]:57752
+Jul 06 01:19 : client: [72] closed
+Jul 06 01:19 : client: [73] opened from [::1]:57754
+Jul 06 01:19 : client: [73] closed
+Jul 06 01:22 : client: [74] opened from [::1]:57772
+Jul 06 01:22 : client: [74] closed
+Jul 06 01:22 : client: [75] opened from [::1]:57774
+Jul 06 01:22 : client: [75] closed
+Jul 06 01:30 : client: [76] opened from [::1]:57788
+Jul 06 01:30 : client: [76] closed
+Jul 06 01:30 : client: [77] opened from [::1]:57790
+Jul 06 01:30 : client: [77] closed
+Jul 06 01:50 : client: [78] opened from [::1]:58238
+Jul 06 01:50 : client: [78] closed
+Jul 06 01:50 : client: [79] opened from [::1]:58240
+Jul 06 01:50 : client: [79] closed
+Jul 06 02:37 : client: [80] opened from [::1]:58624
+Jul 06 02:37 : client: [80] closed
+Jul 06 02:37 : client: [81] opened from [::1]:58626
+Jul 06 02:37 : client: [81] closed
+Jul 06 02:42 : client: [82] opened from [::1]:58662
+Jul 06 02:42 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jul 06 02:42 : client: [82] closed
+Jul 06 02:42 : client: [83] opened from [::1]:58664
+Jul 06 02:42 : client: [83] closed
+Jul 06 02:42 : client: [84] opened from [::1]:58666
+Jul 06 02:42 : client: [84] closed
+Jul 06 02:42 : client: [85] opened from [::1]:58668
+Jul 06 02:42 : client: [85] closed
+Jul 06 02:42 : client: [86] opened from [::1]:58670
+Jul 06 02:42 : client: [86] closed
+Jul 06 02:42 : client: [87] opened from [::1]:58672
+Jul 06 02:42 : client: [87] closed
+Jul 06 02:42 : client: [88] opened from [::1]:58674
+Jul 06 02:42 : client: [88] closed
+Jul 06 02:42 : client: [89] opened from [::1]:58676
+Jul 06 02:42 : client: [89] closed

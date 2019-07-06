@@ -15,6 +15,7 @@ MODE="menu"
 LNS="15"
 LOC="0"
 WDTH="500"
+HGTH="50%"
 XOFFSET="0"
 YOFFSET="0"
 fs=" "
@@ -24,6 +25,9 @@ wnX=${wnloc%,*}
 wnY=${wnloc#*,}
 wnW=${wngeo%x*}
 wnH=${wngeo#*x}
+sc=$(xdpyinfo | grep dimensions | awk '{print $2}')
+scW=${sc%x*}
+scH=${sc#*x}
 msX=$(xdotool getmouselocation | awk '{print $1}')
 msY=$(xdotool getmouselocation | awk '{print $2}')
 mon=$(xdotool getmouselocation | awk '{print $3}')
@@ -41,11 +45,12 @@ dmloc="-x $(expr $wnX - $BRDR) -y $(expr $wnY - $TTLBR)"
 menu () {
 	rofi -dmenu -p "${PRMT}" $fs -theme $THM -monitor ${mon:7} -location $LOC \
 		-lines $LNS -width $WDTH -xoffset $XOFFSET -yoffset $YOFFSET \
-		-markup-rows
+		-theme-str "#window { height: $HGTH; }" -markup-rows
 }
 start () {
 	rofi -show drun -p "${PRMT}" $fs -theme $THM -monitor ${mon:7} -location $LOC \
-		-lines $LNS -width $WDTH -xoffset $XOFFSET -yoffset $YOFFSET
+		-lines $LNS -width $WDTH -xoffset $XOFFSET -yoffset $YOFFSET \
+		-theme-str "#window { height: $HGTH; }"
 }
 dmenu () {
 	dmenu_run $dmloc $dmthm -w $(expr $wnW + $BRDR + $BRDR) -h $TTLBR
@@ -67,7 +72,7 @@ help () {
 	echo "	-m  --  spawn at mouse location"
 	echo "	-f  --  fullscreen mode, working on this"
 }
-while getopts :p:l:x:y:c:w:o:r:dstmfh opts; do
+while getopts :p:l:x:y:g:c:w:o:r:dstmfh opts; do
 	case $opts in
 		p)
 			PRMT="${OPTARG}"
@@ -87,6 +92,9 @@ while getopts :p:l:x:y:c:w:o:r:dstmfh opts; do
 		w)
 			WDTH="${OPTARG}"
 			;;
+		g)
+			HGTH="${OPTARG}"
+			;;
 		o)
 			THM="${OPTARG}"
 			;;
@@ -100,10 +108,12 @@ while getopts :p:l:x:y:c:w:o:r:dstmfh opts; do
 			MODE="start"
 			;;
 		t)
-			THM=horizontal
 			LOC=1
-			LNS=10
 			WDTH="$(expr $wnW + $BRDR + $BRDR)"
+			[[ $THM == "vertical" ]] \
+			&& HGTH=$(echo "((${wnH}*100)/$scH)+((($TTLBR+$TTLBR/2)*100)/$scH)" | bc) \
+			&& HGTH="${HGTH}%"
+			echo $HGTH
 			XOFFSET="$(expr $wnX - $BRDR - $BRDR)"
 			YOFFSET="$(expr $wnY - $TTLBR)"
 			;;

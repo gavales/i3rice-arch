@@ -39,8 +39,7 @@ guiapply () {
 
 main () {
 	nme=$(cat ${colsDir}/.current | grep '^name'       | awk '{print $NF}')
-	wpr=$(cat ${colsDir}/.current | sed "/wallpaper/!d")
-	wpr=/${wpr#*/}
+	wpr=$(cat ${colsDir}/.current | grep '^wallpaper'  | sed 's/[^ ]* *//')
 	fnt=$(cat ${colsDir}/.current | grep '^font'       | awk '{print $NF}')
 	gft=$(cat ${colsDir}/.current | grep '^guifont'    | awk '{print $NF}')
 	sze=$(cat ${colsDir}/.current | grep '^size'       | awk '{print $NF}')
@@ -65,14 +64,6 @@ main () {
 	[[ -z $blu ]] && blu=$(cat ${defThm} | grep '^blue'    | awk '{print $NF}')
 	[[ -z $gnt ]] && gnt=$(cat ${defThm} | grep '^magenta' | awk '{print $NF}')
 	[[ -z $cyn ]] && cyn=$(cat ${defThm} | grep '^cyan'    | awk '{print $NF}')
-                                                                
-	if [[ $wpr == "/" ]]; then
-		hsetroot -solid "$bg1" &
-	else
-		rm -f "$HOME/.config/wall.png"
-		cp "${wpr}" "$HOME/.config/wall.png"
-		feh --bg-scale "${wpr}"
-	fi
 
 	# convert to RGB
 	comR=$((16#${com:1:-4})) && comG=$((16#${com:3:-2})) && comB=$((16#${com:5}))
@@ -138,6 +129,9 @@ main () {
 	bg3="#${bg3RX}${bg3GX}${bg3BX}"
 
 	[[ ${#com} == 0 ]] && com=$fg3 && comRGB=$fg3RGB
+	[[ -z $wpr ]] && wpr="$acc"
+	$HOME/scr/i3wallpaper "$wpr"
+
 #	[[ ${#com} -gt 7 ]] && com=$fg3 && comRGB=$fg3RGB
 #[[ ${#com} -gt 6 ]] || 
 #	echo $nme

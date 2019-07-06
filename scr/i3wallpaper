@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+# CREATED: Sat  6 Jul 00:50:41 BST 2019
+
+WPP=${1}
+WHT="$HOME/pic/white.jpg"
+
+colour () {
+	convert $WHT -fill "$WPP" -draw 'color 0,0 replace' $HOME/.config/wall.png
+	feh --bg-scale $HOME/.config/wall.png
+}
+
+picture () {
+	rm $HOME/.config/wall.png
+	cp "$WPP" $HOME/.config/wall.png
+	feh --bg-scale $HOME/.config/wall.png
+}
+
+if [[ $WPP =~ "#" ]]; then
+	colour
+else
+	picture
+fi

@@ -1,14 +1,12 @@
-name       grayscale
-font       monaco
-guifont    monaco
-size       12
-foreground #FFEEDD
-#accent     #223344
-accent     #AA99CC
-background #554466
-red        #EE5555
-green      #BBCC66
-yellow     #FFBB66
-blue       #AA99CC
-magenta    #CC6688
-cyan       #CC99BB
+wallpaper  /home/gavarch/pic/walls/favs/Red Rock-Secret Mountain Wilderness 1920x1080.jpg
+name       redrock1
+foreground #161c16
+comment    #783a1c
+red        #6F90A7
+green      #507C88
+yellow     #A5896D
+blue       #DC8E69
+accent     #DC8E69
+magenta    #609AC1
+cyan       #60c1b8
+background #f9efe9

@@ -110,11 +110,11 @@ client.background		$blk
 
 $mod+Home		$exs/keybindingsmenu
 
-$mlw+button1		$mvm3, [con_mark=$mk3] focus, focus child
+$mlw+button1		floating disable, $mvm3, [con_mark=$mk3] focus, focus child
                                                 
 $mlw+button2		kill
 
-$mlw+button3		$mvm2
+$mlw+button3		floating disable, $mvm2
 
 $mlw+button4		focus left
 $mlw+Shift+button4	move left
