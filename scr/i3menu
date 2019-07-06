@@ -113,6 +113,7 @@ while getopts :p:l:x:y:g:c:w:o:r:dstmfh opts; do
 			[[ $THM == "vertical" ]] \
 			&& HGTH=$(echo "((${wnH}*100)/$scH)+((($TTLBR+$TTLBR/2)*100)/$scH)" | bc) \
 			&& HGTH="${HGTH}%"
+			[[ $THM == "horizontal" ]] && HGTH="0%"
 			echo $HGTH
 			XOFFSET="$(expr $wnX - $BRDR - $BRDR)"
 			YOFFSET="$(expr $wnY - $TTLBR)"
