@@ -1,0 +1,17 @@
+#!/bin/bash
+
+LSF=$(xdotool getactivewindow)
+MPV=$(xdotool search --class mpv)
+VID="$(ps -fp $(pgrep -d, -x mpv) -o command | \
+	sed -e '/COMMAND/d;s/mpv --input-file=\/home\/gavarch\/mp_fifo //g')"
+
+main () {
+	i3-msg [id="$MPV"] kill
+	bash $HOME/scr/mppipe "$VID"
+#	echo "$VID"
+#	i3-msg [id="$MPV"] focus
+#	xdotool key ctrl+r
+#	i3-msg [id="$LSF"] focus
+}
+
+[[ -n $MPV ]] && main

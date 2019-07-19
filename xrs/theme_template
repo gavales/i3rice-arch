@@ -1,6 +1,6 @@
 ! %%name%%
 #define cwhtl %%fg0%%
-#define cwhtd %%com%%
+#define cwhtd %%acb%%
 #define credd %%red%%
 #define credl %%red%%
 #define cgrnd %%grn%%

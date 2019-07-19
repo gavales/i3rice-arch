@@ -16,10 +16,14 @@ def windownotify(i3, event):
 		call('polybar-msg hook wintitle 1'.split(' '))
 		call('polybar-msg hook media 1'.split(' '))
 
-	if event.container.fullscreen_mode == 0:
-		call('polybar-msg cmd show'.split(' '))
-	else:
-		call('polybar-msg cmd hide'.split(' '))
+#	if event.container.fullscreen_mode == 0:
+#		call('polybar-msg cmd show'.split(' '))
+#	else:
+#		call('polybar-msg cmd hide'.split(' '))
+
+	if event.container.window_class == 'mpv':
+		if event.change == 'title':
+			call('polybar-msg hook media 1'.split(' '))
 
 	if event.change == "close":
 		if event.container.window_class == 'mpv':

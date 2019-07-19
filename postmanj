@@ -13,65 +13,63 @@ wtd="\033[1;37m"
 wtl="\033[0m"
 
 cd $HOME
-echo -e "${green}================================================================================"
-echo -e  "${blue}= UPDATE ======================================================================="
-echo -e "${green}================================================================================${wtl}"
-sudo pacman -Syyu
-echo -e "${green}================================================================================"
-echo -e  "${blue}= INSTALLING YOUR PROGRAMS ====================================================="
-echo -e "${green}================================================================================${wtl}"
-sudo pacman -S rofi otf-font-awesome ttf-font-awesome nautilus evince mupdf pinta redshift playerctl mplayer r tk gcc-fortran newsboat opencv python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 libreoffice pandoc pandoc-crossref pandoc-citeproc python-pygments python2-pygments biber texlive-most acpi lm_sensors sysstat ntfs-3g libmpdclient lxappearance sxiv ncurses fftw w3m mpd mpc ncmpcpp feh dunst unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl urxvt-perls trash-cli atom python-pywal vim-latexsuite calibre jq wmctrl polybar vim-runtime gvim neovim xclip xsel firefox maim hsetroot
-#	ranger \
-sudo cpan AnyEvent Linux::FD common::sense
-cd $HOME
-mkdir Drive
-echo -e "${green}================================================================================"
-echo -e  "${blue}= FINAL STEPS! ================================================================="
-echo -e "${green}================================================================================${wtl}"
-echo -e ""
-echo -e "${red} -	OPEN RANGER AND COPY THE NECESSARY FOLDERS AND FILES"
-echo -e "${red} -	AFTER THAT, ALL YOU NEED TO DO IS EXIT THE CHROOT AND REBOOT"
-echo -e "${gnt} -	SOME AUR APPS I GET TOO:\n\
-	slack-desktop		\
-	i3lock-color		\
-	vivaldi		\n\
-	oni			\
-	thunar-gtk2		\
-	google-chrome-beta	\n\
-	chrome-remote-desktop	\
-	spotify		\
-	grive		\n\
-	clipit			\
-	pulseaudio-ctl		\
-	zathura-pdf-mupdf		\n\
-	xorg-xbacklight	\
-	light			\
-	bashmount		\n\
-	i3blocks-gaps-git	\
-	mpris-ctl		\
-	figlet-fonts \n\
-	urxvt-config-reload-git \
-	urxvt-resize-font-git	\
-	i3ipc-python \n\
-	cli-visualizer	\
-	pamac-aur		\
-	gtkrc-reload	\n\
-	ranger-git		\
-	betterlockscreen	\
-	vim-live-latex-preview"
-#echo -e "${green}================================================================================"
-#echo -e  "${blue}= GET CONFIGS FROM GITHUB ======================================================"
-#echo -e "${green}================================================================================${wtl}"
-#git clone https://github.com/StillANixRookie/i3rice-manjaro.git
-#echo -e "${green}================================================================================"
-#echo -e  "${blue}= CLI-VISUALISER ==============================================================="
-#echo -e "${green}================================================================================${wtl}"
+cat << 'EOB'
+
+
+
+
+
+    ================================================================================
+    ==================================== UPDATE ====================================
+    ================================================================================
+EOB
+#sudo pacman -Syyu
+cat << 'EOB'
+
+
+
+
+
+    ================================================================================
+    ============================ INSTALLING YOUR PROGRAMS ==========================
+    ================================================================================
+EOB
+#sudo pacman -S rofi otf-font-awesome ttf-font-awesome nautilus evince mupdf \
+#    pinta redshift playerctl mplayer r tk gcc-fortran newsboat opencv \
+#    python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 \
+#    libreoffice pandoc pandoc-crossref pandoc-citeproc python-pygments \
+#    python2-pygments biber texlive-most acpi lm_sensors sysstat ntfs-3g \
+#    libmpdclient lxappearance sxiv ncurses fftw w3m mpd mpc ncmpcpp feh dunst \
+#    unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl urxvt-perls \
+#    trash-cli atom python-pywal vim-latexsuite calibre jq wmctrl polybar \
+#    vim-runtime gvim neovim xclip xsel firefox maim hsetroot
+#sudo cpan AnyEvent Linux::FD common::sense
 #cd $HOME
-#git clone https://github.com/dpayne/cli-visualizer.git
-#cd cli-visualiser
-#./install.sh
-#echo -e "${green}================================================================================"
-#echo -e  "${blue}= MAKE MATLAB ICON ============================================================="
-#echo -e "${green}================================================================================${wtl}"
-#sudo wget "https://apprecs.org/gp/images/app-icons/300/c4/in.pxlcraft.matlabexpo.jpg" -O /usr/share/icons/matlab.png
-#sudo wget "https://help.ubuntu.com/community/MATLAB?action=AttachFile&do=get&target=matlab-r2012a.desktop" -O /usr/share/applications/matlab.desktop
+#mkdir Drive
+cat << 'EOB'
+
+
+
+
+
+    ================================================================================
+    ================================= FINAL STEPS! =================================
+    ================================================================================
+    
+    - GET CONFIGS FROM GITHUB:
+        git clone https://github.com/StillANixRookie/i3rice-arch.git
+    - OPEN RANGER OR OTHER FILE MANAGER AND COPY SYMLINKS OF THE NECESSARY
+        FOLDERS AND FILES
+    - SOME AUR APPS I GET TOO:
+    	slack-desktop           i3lock-color          vivaldi
+    	oni                     thunar-gtk2           google-chrome-beta
+    	chrome-remote-desktop   spotify               grive
+    	clipit                  pulseaudio-ctl        zathura-pdf-mupdf
+    	xorg-xbacklight         light                 bashmount
+    	i3blocks-gaps-git       mpris-ctl             figlet-fonts
+    	urxvt-config-reload-git urxvt-resize-font-git i3ipc-python
+    	cli-visualizer          pamac-aur             gtkrc-reload
+    	ranger-git              betterlockscreen      vim-live-latex-preview
+    	hideit.sh-git
+
+EOB

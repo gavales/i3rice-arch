@@ -20,7 +20,7 @@ endif
 let g:colors_name='mine'
 
 let s:black           = { "gui": "%%bg0%%", "cterm": "232" }
-let s:medium_gray     = { "gui": "%%com%%", "cterm": "243" }
+let s:medium_gray     = { "gui": "%%acb%%", "cterm": "243" }
 let s:white           = { "gui": "%%fg0%%", "cterm": "15"  }
 let s:actual_white    = { "gui": "%%fg0%%", "cterm": "231" }
 let s:subtle_black    = { "gui": "%%bg1%%", "cterm": "236" }
@@ -28,7 +28,7 @@ let s:light_black     = { "gui": "%%bg2%%", "cterm": "235" }
 let s:lighter_black   = { "gui": "%%bg1%%", "cterm": "239" }
 let s:light_gray      = { "gui": "%%fg1%%", "cterm": "248" }
 let s:lighter_gray    = { "gui": "%%fg2%%", "cterm": "251" }
-let s:lightest_gray   = { "gui": "%%com%%", "cterm": "255" }
+let s:lightest_gray   = { "gui": "%%acb%%", "cterm": "255" }
 let s:pink            = { "gui": "%%red%%", "cterm": "9"   }
 let s:dark_red        = { "gui": "%%red%%", "cterm": "1"   }
 let s:light_red       = { "gui": "%%red%%", "cterm": "1"   }

@@ -1,13 +1,13 @@
 @THEME@ Standard
 
 @BG_COLOR_DARK@ %%bg1%%
-@FG_COLOR_DARK@ %%com%%
+@FG_COLOR_DARK@ %%acf%%
 @BASE_COLOR_DARK@ %%bg1%%
-@TEXT_COLOR_DARK@ %%com%%
+@TEXT_COLOR_DARK@ %%acf%%
 @SELECTED_BG_COLOR@ %%acc%%
 @SELECTED_FG_COLOR@ %%fg0%%
 @ICON_SELECTED@ %%acc%%
-@INFO_FG_COLOR_DARK@ %%com%%
+@INFO_FG_COLOR_DARK@ %%acf%%
 @INFO_BG_COLOR_DARK@ %%bg1%%
 @WARNING_BG_COLOR_DARK@ %%ylw%%
 @WARNING_FG_COLOR_DARK@ %%fg0%%

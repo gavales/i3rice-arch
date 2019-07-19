@@ -10,7 +10,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # >>>> MAIN
-set $font1 CMUTypewriterText
+set $font1 CMU Typewriter Text
 set $font2 FontAwesome
 set $font3 monaco
 set $fonts 12
@@ -34,4 +34,4 @@ set $kb			us
 set $mediaw		492
 set $mediaw2	492
 set $mediah		302
-set $mediah2	402
+set $mediah2	392

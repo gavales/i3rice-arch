@@ -10,7 +10,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # >>>> MAIN
-set $font1 CMUTypewriterText
+set $font1 CMU Typewriter Text
 set $font2 FontAwesome
 set $font3 monaco
 set $fonts 12
@@ -34,7 +34,7 @@ set $kb			us
 set $mediaw		492
 set $mediaw2	492
 set $mediah		302
-set $mediah2	402
+set $mediah2	392
 # >>>> MAIN VARS
 # //// i3
 
@@ -94,7 +94,7 @@ set_from_resource $blu	color4
 set_from_resource $gnt	color5
 set_from_resource $cyn	color6
 set_from_resource $wht	color15
-set_from_resource $gry	color8
+set_from_resource $gry	color7
 set $t ff
 
 # //// APPS
@@ -110,10 +110,10 @@ set $brightdec	light -U 10
 # >>>> DECORATIONS
 # COLORS
 # class					brdr bkgr text indi chlb
-client.focused			$blu $blu $blk $blu $gry
-client.focused_inactive	$gry $gry $blu $gry $gry
-client.unfocused		$gry $gry $wht $gry $gry
-client.urgent			$red $red $wht $red $gry
+client.focused			$blu $gry $wht $gry $blu
+client.focused_inactive	$blu $blu $wht $blu $blu
+client.unfocused		$blu $blu $blk $blu $blu
+client.urgent			$red $red $wht $red $red
 client.placeholder		$blk $blk $wht $blk $blk
 client.background		$blk
 
@@ -175,7 +175,7 @@ mode "SHUTDOWN" {
 }
 
 $mod+space			focus mode_toggle
-$mod+Shift+space	floating toggle
+$mod+Shift+space	$exs/i3flttg
 
 $mod+Ctrl+Right		workspace next
 
@@ -276,8 +276,8 @@ $mod+semicolon		$exs/nightmodetog
 
 $mod+apostrophe		$exn redshift -x
 
-$mod+Return			$exn $term -name URXVTC
-$mod+Shift+Return	$exn $term -name FILES -e ranger
+$mod+Return			$lch '$term -name URXVTC'
+$mod+Shift+Return	$lch '$term -name FILES -e ranger'
 $mod+Control+Return	$lch $term $mk4
 
 # //// 3rd Row
@@ -314,7 +314,7 @@ floating_modifier	$wni
 
 # //// Numbers
 
-$win+0				[title="placeholder"] kill
+#$win+0				$exs/i3flttg
 
 $win+1				$edit $home/.config/i3/main
 $win+Shift+1		$exs/i3-sticky-create 1
@@ -353,13 +353,13 @@ $win+y				[con_mark=$mk1] resize shrink width 5 px or 5 ppt, resize shrink heigh
 $win+Shift+y		gaps inner current set 0; gaps outer current set 0
 
 $win+u				[con_mark=$mk1] resize set $mediaw2 $mediah2
-$win+Shift+u		gaps inner current minus 5; gaps outer current minus 10
+$win+Shift+u		gaps inner current minus 0; gaps outer current minus 10
 
 $win+i				[con_mark=$mk1] resize set $mediaw $mediah
-$win+Shift+i		gaps inner current plus 5; gaps outer current plus 10
+$win+Shift+i		gaps inner current plus 0; gaps outer current plus 10
 
 $win+o				[con_mark=$mk1] resize grow width 5 px or 5 ppt, resize grow height 5 px or 5 ppt
-$win+Shift+o		gaps inner current set 10; gaps outer current set 20
+$win+Shift+o		gaps inner current set 0; gaps outer current set 20
 
 $win+p				[con_mark=$mk1] resize set 45 ppt 20 ppt
 
@@ -420,13 +420,13 @@ $win+period			$exs/i3brightness inc
 # >>>> FOR_WINDOW
 # //// GLOBAL
 
-new_window normal 2
+new_window normal 1
 #new_float pixel 2
-hide_edge_borders both
+#hide_edge_borders both
 #focus_follows_mouse no
 focus_wrapping force
 workspace_auto_back_and_forth yes
-$fw [class="^.*"] border normal 2
+$fw [class="^.*"] border normal 1
 $fw [urgent=latest] focus
 $fw [workspace="$ws4"] floating enable,resize set 750 500
 $fw [workspace="$ws5"] floating enable,resize set 750 500

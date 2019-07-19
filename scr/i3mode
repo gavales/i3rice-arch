@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+# CREATED: Fri  5 Apr 00:04:13 GMT 2019
+
+notify-send "$(i3-msg -t subscribe -m '["mode"]' | \
+	sed -e "s/ .*//;s/^{\"change\":\"//g;s/\",$//g")"

@@ -1,0 +1,23 @@
+#vim:ft=xdefaults
+LisbonPortugal
+wallpaper    /home/gavarch/pic/walls/favs/Lisbon, Portugal 1920x1080 (2).jpg
+font         CMUTypewriterText
+guifont      CMU Typewriter Text
+fontsize     12
+fg0          #cdd0da : 205, 208, 218
+fg1          #b9bcc6 : 185, 188, 198
+fg2          #a5a8b2 : 165, 168, 178
+fg3          #91949e : 145, 148, 158
+bg0          #121019 : 18, 16, 25
+bg1          #26242d : 38, 36, 45
+bg2          #3a3841 : 58, 56, 65
+bg3          #4e4c55 : 78, 76, 85
+accent       #E19895 : 225, 152, 149
+accent light #ffe8e5 : 255, 232, 229
+accent dark  #a55c59 : 165, 92, 89
+green        #AB9AA6 : 171, 154, 166
+yellow       #B1A7B2 : 177, 167, 178
+red          #9396AD : 147, 150, 173
+blue         #689d6a : 104, 157, 106
+cyan         #F2ACAD : 242, 172, 173
+magenta      #CDADB3 : 205, 173, 179

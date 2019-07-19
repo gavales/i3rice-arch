@@ -37,6 +37,38 @@ guiapply () {
 	fi
 }
 
+printcurrenttheme () {
+	echo "#vim:ft=xdefaults
+$nme
+wallpaper $wpr
+font      $fnt
+guifont   $gft
+fontsize  $sze
+fg0       $fg0 : $fg0RGB
+fg1       $fg1 : $fg1RGB
+fg2       $fg2 : $fg2RGB
+fg3       $fg3 : $fg3RGB
+bg0       $bg0 : $bg0RGB
+bg1       $bg1 : $bg1RGB
+bg2       $bg2 : $bg2RGB
+bg3       $bg3 : $bg3RGB
+accent    $acc : $accRGB
+accentf   $acf : $acfRGB
+accentb   $acb : $acbRGB
+green     $grn : $grnRGB
+yellow    $ylw : $ylwRGB
+red       $red : $redRGB
+blue      $blu : $bluRGB
+cyan      $cyn : $cynRGB
+magenta   $gnt : $gntRGB" > ${colsDir}/.allvars
+#accentl2  $al2 : $al2RGB
+#accentd2  $ad2 : $ad2RGB
+}
+
+getvar () {
+	cat ${colsDir}/.allvars | sed "/^$1/!d;s/[^ ]* *//"
+}
+
 main () {
 	nme=$(cat ${colsDir}/.current | sed '/^name/!d;s/[^ ]* *//')
 	wpr=$(cat ${colsDir}/.current | sed '/^wallpaper/!d;s/[^ ]* *//')
@@ -45,7 +77,6 @@ main () {
 	sze=$(cat ${colsDir}/.current | sed '/^size/!d;s/[^ ]* *//')
 	bg0=$(cat ${colsDir}/.current | sed '/^background/!d;s/[^ ]* *//')
 	acc=$(cat ${colsDir}/.current | sed '/^accent/!d;s/[^ ]* *//')
-	com=$(cat ${colsDir}/.current | sed '/^comment/!d;s/[^ ]* *//')
 	fg0=$(cat ${colsDir}/.current | sed '/^foreground/!d;s/[^ ]* *//')
 	grn=$(cat ${colsDir}/.current | sed '/^green/!d;s/[^ ]* *//')
 	ylw=$(cat ${colsDir}/.current | sed '/^yellow/!d;s/[^ ]* *//')
@@ -54,7 +85,7 @@ main () {
 	gnt=$(cat ${colsDir}/.current | sed '/^magenta/!d;s/[^ ]* *//')
 	cyn=$(cat ${colsDir}/.current | sed '/^cyan/!d;s/[^ ]* *//')
 
-	[[ -z $nme ]] && nme=$(cat ${defThm} | sed '/^name/!d;s/[^ ]* *//')
+	[[ -z $nme ]] && nme="unnamed"
 	[[ -z $fnt ]] && fnt=$(cat ${defThm} | sed '/^font/!d;s/[^ ]* *//')
 	[[ -z $gft ]] && gft=$(cat ${defThm} | sed '/^guifont/!d;s/[^ ]* *//')
 	[[ -z $sze ]] && sze=$(cat ${defThm} | sed '/^size/!d;s/[^ ]* *//')
@@ -66,7 +97,6 @@ main () {
 	[[ -z $cyn ]] && cyn=$(cat ${defThm} | sed '/^cyan/!d;s/[^ ]* *//')
 
 	# convert to RGB
-	comR=$((16#${com:1:-4})) && comG=$((16#${com:3:-2})) && comB=$((16#${com:5}))
 	accR=$((16#${acc:1:-4})) && accG=$((16#${acc:3:-2})) && accB=$((16#${acc:5}))
 	fg0R=$((16#${fg0:1:-4})) && fg0G=$((16#${fg0:3:-2})) && fg0B=$((16#${fg0:5}))
 	bg0R=$((16#${bg0:1:-4})) && bg0G=$((16#${bg0:3:-2})) && bg0B=$((16#${bg0:5}))
@@ -87,6 +117,8 @@ main () {
 		bg1R=$(expr ${bg0R} - 20) && bg1G=$(expr ${bg0G} - 20) && bg1B=$(expr ${bg0B} - 20)
 		bg2R=$(expr ${bg0R} - 40) && bg2G=$(expr ${bg0G} - 40) && bg2B=$(expr ${bg0B} - 40)
 		bg3R=$(expr ${bg0R} - 60) && bg3G=$(expr ${bg0G} - 60) && bg3B=$(expr ${bg0B} - 60)
+		acfR=$(expr ${accR} - 80) && acfG=$(expr ${accG} - 80) && acfB=$(expr ${accB} - 80)
+		acbR=$(expr ${accR} + 60) && acbG=$(expr ${accG} + 60) && acbB=$(expr ${accB} + 60)
 	else
 		fg1R=$(expr ${fg0R} - 20) && fg1G=$(expr ${fg0G} - 20) && fg1B=$(expr ${fg0B} - 20)
 		fg2R=$(expr ${fg0R} - 40) && fg2G=$(expr ${fg0G} - 40) && fg2B=$(expr ${fg0B} - 40)
@@ -94,10 +126,19 @@ main () {
 		bg1R=$(expr ${bg0R} + 20) && bg1G=$(expr ${bg0G} + 20) && bg1B=$(expr ${bg0B} + 20)
 		bg2R=$(expr ${bg0R} + 40) && bg2G=$(expr ${bg0G} + 40) && bg2B=$(expr ${bg0B} + 40)
 		bg3R=$(expr ${bg0R} + 60) && bg3G=$(expr ${bg0G} + 60) && bg3B=$(expr ${bg0B} + 60)
+		acfR=$(expr ${accR} + 80) && acfG=$(expr ${accG} + 80) && acfB=$(expr ${accB} + 80)
+		acbR=$(expr ${accR} - 60) && acbG=$(expr ${accG} - 60) && acbB=$(expr ${accB} - 60)
 	fi
-
-	comRGB="${comR}, ${comG}, ${comB}"
+	[[ ${acfR} -gt 255 ]] && acfR=255
+	[[ ${acfB} -gt 255 ]] && acfG=255
+	[[ ${acfG} -gt 255 ]] && acfB=255
+	[[ ${acbR} -gt 255 ]] && acbR=255
+	[[ ${acbG} -gt 255 ]] && acbG=255
+	[[ ${acbB} -gt 255 ]] && acbB=255
 	accRGB="${accR}, ${accG}, ${accB}"
+	acfRGB="${acfR}, ${acfG}, ${acfB}"
+	acbRGB="${acbR}, ${acbG}, ${acbB}"
+
 	fg0RGB="${fg0R}, ${fg0G}, ${fg0B}"
 	bg0RGB="${bg0R}, ${bg0G}, ${bg0B}"
 	fg1RGB="${fg1R/-/}, ${fg1G/-/}, ${fg1B/-/}"
@@ -113,13 +154,15 @@ main () {
 	gntRGB="${gntR}, ${gntG}, ${gntB}"
 	cynRGB="${cynR}, ${cynG}, ${cynB}"
 
-	# variations of fg and bg colors in hex
+	# variations of fg, bg, accent colors in hex
 	fg1RX=$(printf '%x\n' ${fg1R/-/}) && fg1GX=$(printf '%x\n' ${fg1G/-/}) && fg1BX=$(printf '%x\n' ${fg1B/-/})
 	fg2RX=$(printf '%x\n' ${fg2R/-/}) && fg2GX=$(printf '%x\n' ${fg2G/-/}) && fg2BX=$(printf '%x\n' ${fg2B/-/})
 	fg3RX=$(printf '%x\n' ${fg3R/-/}) && fg3GX=$(printf '%x\n' ${fg3G/-/}) && fg3BX=$(printf '%x\n' ${fg3B/-/})
 	bg1RX=$(printf '%x\n' ${bg1R/-/}) && bg1GX=$(printf '%x\n' ${bg1G/-/}) && bg1BX=$(printf '%x\n' ${bg1B/-/})
 	bg2RX=$(printf '%x\n' ${bg2R/-/}) && bg2GX=$(printf '%x\n' ${bg2G/-/}) && bg2BX=$(printf '%x\n' ${bg2B/-/})
 	bg3RX=$(printf '%x\n' ${bg3R/-/}) && bg3GX=$(printf '%x\n' ${bg3G/-/}) && bg3BX=$(printf '%x\n' ${bg3B/-/})
+	acfRX=$(printf '%x\n' ${acfR/-/}) && acfGX=$(printf '%x\n' ${acfG/-/}) && acfBX=$(printf '%x\n' ${acfB/-/})
+	acbRX=$(printf '%x\n' ${acbR/-/}) && acbGX=$(printf '%x\n' ${acbG/-/}) && acbBX=$(printf '%x\n' ${acbB/-/})
 
 	fg1="#${fg1RX}${fg1GX}${fg1BX}"
 	fg2="#${fg2RX}${fg2GX}${fg2BX}"
@@ -127,45 +170,17 @@ main () {
 	bg1="#${bg1RX}${bg1GX}${bg1BX}"
 	bg2="#${bg2RX}${bg2GX}${bg2BX}"
 	bg3="#${bg3RX}${bg3GX}${bg3BX}"
+	acf="#${acfRX}${acfGX}${acfBX}"
+	acb="#${acbRX}${acbGX}${acbBX}"
 
-	[[ ${#com} == 0 ]] && com=$fg3 && comRGB=$fg3RGB
 	[[ -z $wpr ]] && wpr="$acc"
 	$HOME/scr/i3wallpaper "$wpr"
-
-#	[[ ${#com} -gt 7 ]] && com=$fg3 && comRGB=$fg3RGB
-#[[ ${#com} -gt 6 ]] || 
-#	echo $nme
-	echo $wpr
-	echo $fnt
-#	echo $gft
-#	echo $sze
-#	echo $fg0
-#	echo $bg0
-#	echo $acc
-#	echo $com
-#	echo $fg1RGB
-#	echo $fg2RGB
-#	echo $fg3RGB
-#	echo $bg1RGB
-#	echo $bg2RGB
-#	echo $bg3RGB
-#	echo $fg1
-#	echo $fg2
-#	echo $fg3
-#	echo $bg1
-#	echo $bg2
-#	echo $bg3
-#	echo $grn
-#	echo $ylw
-#	echo $red
-#	echo $blu
-#	echo $gnt
-#	echo $cyn
 
 	regex="s/\%\%name\%\%/"${nme}"/g;s/\%\%guifont\%\%/"${gft}"/g;\
 s/\%\%font\%\%/"${fnt}"/g;s/\%\%fontsize\%\%/"${sze}"/g;\
 s/\%\%bg0\%\%/"${bg0}"/g;s/\%\%fg0\%\%/"${fg0}"/g;\
-s/\%\%com\%\%/"${com}"/g;s/\%\%acc\%\%/"${acc}"/g;\
+s/\%\%acc\%\%/"${acc}"/g;\
+s/\%\%acf\%\%/"${acf}"/g;s/\%\%acb\%\%/"${acb}"/g;\
 s/\%\%grn\%\%/"${grn}"/g;s/\%\%ylw\%\%/"${ylw}"/g;s/\%\%red\%\%/"${red}"/g;\
 s/\%\%blu\%\%/"${blu}"/g;s/\%\%gnt\%\%/"${gnt}"/g;s/\%\%cyn\%\%/"${cyn}"/g;\
 s/\%\%fg1\%\%/"${fg1}"/g;s/\%\%fg2\%\%/"${fg2}"/g;s/\%\%fg3\%\%/"${fg3}"/g;\
@@ -185,52 +200,73 @@ s/\%\%bg2RGB\%\%/"${bg2RGB}"/g;s/\%\%bg3RGB\%\%/"${bg3RGB}"/g"
 		cat ${i} | sed -e "${regex}" > ${i/_template/}
 	done
 	bash $scr
+	printcurrenttheme
 	cd $HOME
 }
 
 help () {
-	echo "Script to make any config use terminal colours"
-	echo ""
-	echo "		Options"
-	echo ""
-	echo "-h --> display help"
-	echo ""
-	echo "-u --> update theme list for -a"
-	echo ""
-	echo "-a --> change current theme (.current located in theme directory)"
-	echo ""
-	echo "-c --> terminal version of -a"
-	echo ""
-	echo "-g --> apply current theme using _templates"
-	echo ""
-	echo "-l --> list available themes in theme directory"
-	echo ""
-	echo "-t --> full path to target folder, optional,"
-	echo "			DEFAULT = \$HOME/numix-solarized-gtk-theme"
-	echo "-x --> bash script to run after theme is made"
-	echo "			DEFAULT = post-build-apply"
-	echo "	-t and -x used in conjunction with -g"
-	echo ""
-	echo "To make theme template, just cd into the theme's main dir, duplicate the"
-	echo "file(s) with the colors, rename with \"_template\" ending, replace"
-	echo "colours with:"
-	echo "		%%bg0%% == background"
-	echo "		%%acc%% == accent"
-	echo "		%%com%% == comment"
-	echo "		%%fg0%% == foreground"
-	echo "		%%grn%% == green"
-	echo "		%%ylw%% == yellow"
-	echo "		%%red%% == red"
-	echo "		%%blu%% == blue"
-	echo "		%%gnt%% == magenta"
-	echo "		%%cyn%% == cyan"
-	echo "	add RGB after colour name to get RGB in "R, G, B" form"
-	echo "		eg. %%bg0RGB%%"
-	echo "and run this script in the theme's main directory, and any other"
-	echo "commands that you need to run"
+cat << 'EOB'
+Script to make any config use terminal colours
+
+		Options
+	-h --> display help
+	
+	-u --> update theme list for -a
+	
+	-a --> change current theme (.current located in theme directory)
+	
+	-v --> get variables from current theme, all located in .allvars in the
+		theme directory
+	-c --> terminal version of -a
+	
+	-g --> apply current theme using _templates
+	
+	-l --> list available themes in theme directory
+	
+	-t --> full path to target folder, optional,
+		DEFAULT = \$HOME/numix-solarized-gtk-theme
+	-x --> bash script to run after theme is made
+		DEFAULT = post-build-apply
+	-t and -x used in conjunction with -g
+	
+To make theme template, just cd into the theme's main dir, duplicate the
+file(s) with the colors, rename with \"_template\" ending, replace
+colours with:
+	%%name%%      == name of theme
+	%%wallpaper%% == wallpaper
+	%%font%%      == font (I use this one for terminal)
+	%%guifont%%   == guifont (I use this one for gui applications)
+	%%fontsize%%  == fontsize (I use this one for terminal and guifont)
+
+	%%bg3%%       == background ^
+	%%bg2%%       == background │
+	%%bg1%%       == background │ getting lighter if theme is dark
+	%%bg0%%       == background │
+
+	%%fg0%%       == foreground │
+	%%fg1%%       == foreground │ getting darker if theme is dark
+	%%fg2%%       == foreground │
+	%%fg3%%       == foreground v
+
+	%%acc%%       == accent
+	%%acf%%       == accent (closer to foreground)
+	%%acb%%       == accent (closer to background)
+
+	%%grn%%       == green
+	%%ylw%%       == yellow
+	%%red%%       == red
+	%%blu%%       == blue
+	%%gnt%%       == magenta
+	%%cyn%%       == cyan
+    add RGB after colour name to get RGB in "R, G, B" form
+        eg. %%bg0RGB%%
+and run this script in the theme's main directory, and any other
+commands that you need to run
+
+EOB
 }
 
-while getopts :t:x:c:galuh opts; do
+while getopts :t:x:c:v:galuh opts; do
 	case "$opts" in
 		t)
 			dir="${OPTARG}"
@@ -267,6 +303,9 @@ while getopts :t:x:c:galuh opts; do
 			;;
 		u)
 			updatelist && exit
+			;;
+		v)
+			getvar ${OPTARG}
 			;;
 		h)
 			help && exit

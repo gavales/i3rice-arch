@@ -30,10 +30,10 @@ c.colors.downloads.system.bg = 'rgb' # rgb, hsv, hsl, none
 c.colors.downloads.system.fg = 'rgb' # rgb, hsv, hsl, none
 
 # //// hints
-c.colors.hints.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(%%ylwRGB%% 0.8), stop:1 rgba(%%ylwRGB%% 0.8))'
+c.colors.hints.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(%%ylwRGB%%, 0.8), stop:1 rgba(%%ylwRGB%%, 0.8))'
 c.colors.hints.fg = '%%fg0%%'
 c.colors.hints.match.fg = '%%grn%%'
-c.colors.keyhint.bg = 'rgba(%%ylwRGB%% 80%)'
+c.colors.keyhint.bg = 'rgba(%%ylwRGB%%, 80%)'
 c.colors.keyhint.fg = '%%fg0%%'
 c.colors.keyhint.suffix.fg = '%%bg1%%'
 

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: Mon 21 Jan 13:27:00 GMT 2019
+
+GEO=$(xdotool getactivewindow getwindowgeometry | grep Geometry | awk '{print $2}')
+HGT=${GEO#*x}
+WDT=${GEO%x*}
+POS=$(xdotool getactivewindow getwindowgeometry | grep Position | awk '{print $2}')
+YP=${GEO#*,}
+XP=${GEO%,*}
+ID=$(xdotool getactivewindow)
+FLT=$(xprop -id $ID | grep I3_FLOATING_WINDOW)
+if [[ -n $FLT ]]; then
+	notify-send "window is floating, changed to tiled"
+	i3-msg floating disable
+else
+	notify-send "window is tiled, changed to floating"
+	i3-msg floating enable
+	i3-msg resize set $WDT $HGT
+fi

@@ -3,13 +3,20 @@
 # OA: Gavin Vales
 # CREATED: Tue  4 Dec 15:23:43 GMT 2018
 
-app="$1"
-mark="$2"
-marks=$(i3-msg -t get_marks)
-lastfocus=$(xdotool getactivewindow)
+APP="$1"
+MRK="$2"
+MKS=$(i3-msg -t get_marks)
+LF=$(xdotool getactivewindow)
+POS=$(xdotool getactivewindow getwindowgeometry | grep Position | awk '{print $2}')
+YP=${GEO#*,}
+XP=${GEO%,*}
+GEO=$(xdotool getactivewindow getwindowgeometry | grep Geometry | awk '{print $2}')
+HGT=${GEO#*x}
+WDT=${GEO%x*}
+WSP=$(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2)
 
 lmk3 () {
-	$app &>/dev/null &
+	$APP &>/dev/null &
 	sleep 1
 	i3-msg split h
 	i3-msg layout tabbed
@@ -21,7 +28,7 @@ lmk3 () {
 
 lmk1 () {
 	i3-msg [con_mark="_W3"] focus
-	$app &>/dev/null &
+	$APP &>/dev/null &
 	sleep .5
 	i3-msg split toggle
 	i3-msg layout tabbed
@@ -35,7 +42,7 @@ lmk1 () {
 lmk2 () {
 	i3-msg [con_mark="_W1"] focus
 	i3-msg split v
-	$app &>/dev/null &
+	$APP &>/dev/null &
 	sleep .5
 	i3-msg split h
 	i3-msg layout tabbed
@@ -49,7 +56,7 @@ lmk2 () {
 lmk4 () {
 	i3-msg [con_mark="_W3"] focus
 	i3-msg split v
-	$app &>/dev/null &
+	$APP &>/dev/null &
 	sleep .5
 	i3-msg split h
 	i3-msg layout tabbed
@@ -64,25 +71,27 @@ lmk4 () {
 }
 
 main () {
-	i3-msg [con_mark=$mark] focus
+	i3-msg [con_mark=$MRK] focus
 	i3-msg focus child
-	$app &>/dev/null &
+	$APP &>/dev/null &
 }
 
-if [[ $marks == *"$mark"* ]]; then
-	echo "mark $mark exists, launching app" && main
+if [[ -z $MRK ]]; then
+	$APP &>/dev/null &
+elif [[ $MKS == *"$MRK"* ]]; then
+	echo "mark $MRK exists, launching APP" && main
 else
-	case $mark in
-		*3) echo "no $mark, making $mark" && lmk3 ;;
-		*1) echo "no $mark, making $mark" && lmk1 ;;
-		*2) echo "no $mark, making $mark" && lmk2 ;;
-		*4) echo "no $mark, making $mark" && lmk4 ;;
+	case $MRK in
+		*3) echo "no $MRK, making $MRK" && lmk3 ;;
+		*1) echo "no $MRK, making $MRK" && lmk1 ;;
+		*2) echo "no $MRK, making $MRK" && lmk2 ;;
+		*4) echo "no $MRK, making $MRK" && lmk4 ;;
 	esac
 fi
 
 if [[ ${3} == 'fl' ]]; then
 	sleep .5
-	i3-msg [id="$lastfocus"] focus
+	i3-msg [id="$LF"] focus
 fi
 
-echo $marks
+echo $MKS

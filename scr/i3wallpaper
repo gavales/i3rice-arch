@@ -4,7 +4,7 @@
 # CREATED: Sat  6 Jul 00:50:41 BST 2019
 
 WPP=${1}
-WHT="$HOME/pic/white.jpg"
+WHT="$HOME/scrpic/white.jpg"
 
 colour () {
 	convert $WHT -fill "$WPP" -draw 'color 0,0 replace' $HOME/.config/wall.png

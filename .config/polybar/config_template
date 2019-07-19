@@ -30,7 +30,7 @@ screenchange-reload = true
 ;monitor = ${env:MONITOR:HDMI-1}
 ;bottom = true
 override-redirect = true
-height = 21
+height = 26
 width = 100%
 radius = 0.0
 fixed-center = false
@@ -57,6 +57,9 @@ font-2 = FontAwesome5Brands:style=Solid:size=15;3
 
 tray-position = right
 tray-padding = 2
+tray-maxsize = 16
+tray-transparent = true
+tray-background = ${colors.tr}
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -72,7 +75,7 @@ tray-padding = 2
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-modules-left = start td wintitle ws xkeyboard
+modules-left = start td ws xkeyboard
 modules-center = 
 modules-right = media disk memory cpu temperature nm backlight pulseaudio battery
 
@@ -101,7 +104,7 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = Iosevka:style=Semibold Oblique:size=12;3
+font-0 = %%guifont%%:style=Semibold Oblique:size=12;3
 font-1 = FontAwesome5Free:style=Solid:size=14;3
 font-2 = FontAwesome5Brands:style=Solid:size=12;3
 
@@ -135,7 +138,7 @@ margin-bottom = 0
 [module/start]
 type = custom/text
 content = %{T1}%{T-}
-click-left = ~/scr/i3menu -s -y 20 -c white -l 1
+click-left = ~/scr/i3menu -s -c white -l 1
 click-middle = ~/scr/xtheme
 click-right = ~/scr/keybindingsmenu launch
 content-background = ${colors.wtd}
@@ -209,8 +212,7 @@ scroll-down = i3-msg workspace next
 format-background = ${colors.blu}
 format-foreground = ${colors.bkd}
 format-padding = 1
-;format-background = ${colors.bkd}
-;format-foreground = ${colors.blu}
+
 
 [module/xwindow]
 type = internal/xwindow

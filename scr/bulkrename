@@ -8,8 +8,9 @@ NEWNME="$HOME/.bulkrenamenew"
 OLDNME="$HOME/.bulkrenameold"
 FINCMD="$HOME/.finalcommands"
 FILES="${1}"
-echo $FILES > $OLDNME
+echo "$FILES" > $OLDNME
 sed -e "s/^'//g;s/'$//g;s/'\ '/\n/g" -i $OLDNME
+sed -e "s/\`/\\\`/g;s/\\\''//g" -i $OLDNME
 cat $OLDNME > $NEWNME
 $EDITOR $NEWNME
 sed -e "s/$/\"/g;s/^/\"/g" -i $NEWNME
@@ -17,8 +18,10 @@ sed -e "s/$/\"/g;s/^/mv\ \"/g" -i $OLDNME
 paste $OLDNME $NEWNME > $FINCMD
 confirm () {
 	cat $FINCMD | $HOME/scr/i3menu -t -c white -o vertical \
+		-r $(cat $FINCMD | wc -l) \
 		-p "FINALCOMMANDS [<Esc> to confirm] "
 	confirm=$(echo -e "Yes\nNo" | $HOME/scr/i3menu -t -c magenta \
+		-o horizontal \
 		-p "CONFIRM RENAME? ")
 	[[ $confirm == "Yes" ]] && source $FINCMD
 }

@@ -17,18 +17,21 @@ fnt="-f 3-d"
 help () {
 	echo -e "${blu}\n$(figlet $fnt -c "HELP"| \
 		sed $'s/\*/\u2588/g;s/\//\u2592/g')${nrm}"
-	echo ""
-	echo ""
-	echo "				c -- centre"
-	echo "				s -- slant"
-	echo "				b -- banner3"
-	echo "				i -- larry3d"
-	echo "				l -- letters"
-	echo "				r -- roman"
-	echo "				m -- smisome1"
-	echo "				t -- trek"
-	echo "				f -- speed"
-	echo "				k -- smkeyboard"
+cat << 'EOB'
+
+
+				c -- centre
+				s -- slant
+				b -- banner3
+				i -- larry3d
+				l -- letters
+				r -- roman
+				m -- smisome1
+				t -- trek
+				f -- speed
+				k -- smkeyboard
+
+EOB
 }
 
 while getopts :hsbilrmtfkdh: opts; do

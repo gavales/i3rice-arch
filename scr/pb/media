@@ -9,7 +9,10 @@ clr=$(xrdb -query | grep '*color7' | awk '{print $NF}')
 
 if [[ -n $mpv ]]; then
 	mpvtitle="$(xdotool getwindowname $(xdotool search --class mpv))"
-	echo "%{T1}%{T-} ${mpvtitle:0:-6}"
+	mpvlen=$(expr ${#mpvtitle} - 38)
+	mpvtitle=${mpvtitle%.*}
+	[[ ${#mpvtitle} -ge 35 ]] && mpvtitle=${mpvtitle:0:-${mpvlen}} && mpvtitle="${mpvtitle}..."
+	echo "%{T1}%{T-} ${mpvtitle}"
 elif [[ -n $mpris ]]; then
 	$blocksDir/mpgui
 else

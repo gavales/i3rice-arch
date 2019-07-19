@@ -8,8 +8,11 @@
 rofiDir="$HOME/.config/rofi"
 COLOR=blue
 THM=vertical
+_TTLBR=26
 TTLBR=26
-BRDR=2
+_BRDR=2
+i3BRDR=$(i3-msg -t get_config | grep '$fw \[class="^.*"\] border' | awk '{print $NF}')
+[[ -n ${i3BRDR} ]] && BRDR=${i3BRDR} || BRDR=${_BRDR}
 PRMT=" "
 MODE="menu"
 LNS="15"
@@ -56,23 +59,26 @@ dmenu () {
 	dmenu_run $dmloc $dmthm -w $(expr $wnW + $BRDR + $BRDR) -h $TTLBR
 }
 help () {
-	echo "	-h  --  echo this help"
-	echo "	-p  --  prompt"
-	echo "	-l  --  rofi location"
-	echo "	-x  --  horizontal X position"
-	echo "	-y  --  vertical X position"
-	echo "	-c  --  accent color, comes in the form of the variable files in"
-	echo "	            .config/rofi"
-	echo "	-w  --  rofi width"
-	echo "	-g  --  rofi height (XX% of screen)"
-	echo "	-o  --  vertical or horizontal (like dmenu)"
-	echo "	-r  --  number of vertical rows"
-	echo "	-e  --  fill active window"
-	echo "	-d  --  dmenu mode"
-	echo "	-s  --  application menu mode"
-	echo "	-t  --  spawn on i3wm title-bar"
-	echo "	-m  --  spawn at mouse location"
-	echo "	-f  --  fullscreen mode, working on this"
+cat << 'EOB'
+	-h  --  echo this help
+	-p  --  prompt
+	-l  --  rofi location
+	-x  --  horizontal X position
+	-y  --  vertical X position
+	-c  --  accent color, comes in the form of the variable files in
+			.config/rofi
+	-w  --  rofi width
+	-g  --  rofi height (XX% of screen)
+	-o  --  vertical or horizontal (like dmenu)
+	-r  --  number of vertical rows
+	-e  --  fill active window
+	-d  --  dmenu mode
+	-s  --  application menu mode
+	-t  --  spawn on i3wm title-bar
+	-m  --  spawn at mouse location
+	-f  --  fullscreen mode, working on this
+
+EOB
 }
 while getopts :p:l:x:y:g:c:w:o:r:edstmfh opts; do
 	case $opts in
@@ -105,8 +111,9 @@ while getopts :p:l:x:y:g:c:w:o:r:edstmfh opts; do
 			;;
 		e)
 			[[ $THM == "vertical" ]] \
-			&& HGTH=$(echo "((${wnH}*100)/$scH)+((($TTLBR+$TTLBR/2)*100)/$scH)" | bc) \
-			&& HGTH="height: ${HGTH}%;"
+				&& HGTH=$(echo \
+				"((${wnH}*100)/$scH)+((($TTLBR+$TTLBR/2)*100)/$scH)" | bc) \
+				&& HGTH="height: ${HGTH}%;"
 			LOC=1
 			[[ $THM == "horizontal" ]] && LNS="15"
 			WDTH="$(expr $wnW + $BRDR + $BRDR)"
@@ -118,6 +125,7 @@ while getopts :p:l:x:y:g:c:w:o:r:edstmfh opts; do
 			;;
 		s)
 			MODE="start"
+			LNS=15
 			;;
 		t)
 			LOC=1

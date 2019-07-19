@@ -3,7 +3,7 @@
 	close_all = ctrl+shift+space
 
 [global]
-	font = CMUTypewriterText 12
+	font = CMU Typewriter Text 12
 	
 	allow_markup = yes
 	
