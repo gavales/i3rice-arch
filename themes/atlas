@@ -1,11 +1,7 @@
 name       atlas
-font       CMUTypewriterText
-guifont    CMUTypewriterText
-size       12
 foreground #fafaf8
 accent     #ff5a67
 background #002635
-#comment    #406341
 red        #f08e48
 green      #7fc06e
 yellow     #ffcc1b

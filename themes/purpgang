@@ -1,11 +1,7 @@
 name       purpgang
-font       monaco
-guifont    monaco
-size       12
+wallpaper  /home/gavarch/pic/walls/urban/rbn1.jpg
 foreground #FFEEDD
-#accent     #223344
 accent     #AA99CC
-comment    #d6cde6
 background #554466
 red        #EE5555
 green      #BBCC66

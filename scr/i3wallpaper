@@ -3,22 +3,65 @@
 # OA: Gavin Vales
 # CREATED: Sat  6 Jul 00:50:41 BST 2019
 
-WPP=${1}
 WHT="$HOME/scrpic/white.jpg"
+WALL="$HOME/.config/wall"
+CWALL="$HOME/.currentwall"
+
+MONDIM=$(xdpyinfo | grep dimensions: | awk '{print $2}')
+MX=${MONDIM%x*}
+MY=${MONDIM#*x}
+
+help () {
+cat << 'EOB'
+    -h -- print this help
+    -w -- wallpaper to set. Can be picture or hex color (requires white.jpg in 
+              ~/scrpic/white.jpg)
+    -t -- color to tint wallpaper with
+EOB
+}
+
+tint () {
+	convert $WALL -fill "${TNT}" -tint 100 $WALL
+	feh --bg-scale $WALL
+}
 
 colour () {
-	convert $WHT -fill "$WPP" -draw 'color 0,0 replace' $HOME/.config/wall.png
-	feh --bg-scale $HOME/.config/wall.png
+	convert $WHT -fill $WALL -draw 'color 0,0 replace' $WALL
+	feh --bg-scale $WALL
 }
 
 picture () {
-	rm $HOME/.config/wall.png
-	cp "$WPP" $HOME/.config/wall.png
-	feh --bg-scale $HOME/.config/wall.png
+#	rm $WALL
+#	cp "$WPP" $WALL
+	feh --bg-scale $WALL
 }
 
+while getopts :w:t:h opts; do
+	case $opts in
+		w) WPP="${OPTARG}" ;;
+		t) TNT="${OPTARG}" ;;
+		h) help && exit ;;
+	esac
+done
+
+CWALLSTR="$WPP $TNT"
+[[ $CWALLSTR == "$(cat $CWALL)" ]] && echo "WALLPAPER ALREADY SET" && exit
+
+convert "$WPP" \
+	-resize "${MX}x${MY}^" \
+	-gravity center \
+	-extent "${MX}x${MY}" \
+	"$WALL"
+
 if [[ $WPP =~ "#" ]]; then
+	echo "SETTING DESKTOP COLOR TO $WPP"
 	colour
+elif [[ -n $TNT ]]; then
+	echo "TINTING WALLPAPER $WPP TO COLOR $TNT"
+	tint
 else
+	echo "SETTING WALLPAPER TO $WPP"
 	picture
 fi
+
+echo "$WPP $TNT" > $CWALL

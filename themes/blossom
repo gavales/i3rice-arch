@@ -1,11 +1,10 @@
 wallpaper  /home/gavarch/pic/walls/nature/nat13.jpg
 name       blossom
 background #17101e
+accent     #FA6496
+foreground #f5cce1
 red        #A74755
 green      #E94F6E
 yellow     #EC468E
-accent     #FA6496
 magenta    #80908E
 cyan       #EB9CAB
-comment    #fc9dbd
-foreground #f5cce1

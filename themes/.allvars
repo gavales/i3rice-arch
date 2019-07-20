@@ -1,23 +1,23 @@
-#vim:ft=xdefaults
-LisbonPortugal
-wallpaper    /home/gavarch/pic/walls/favs/Lisbon, Portugal 1920x1080 (2).jpg
-font         CMUTypewriterText
-guifont      CMU Typewriter Text
-fontsize     12
-fg0          #cdd0da : 205, 208, 218
-fg1          #b9bcc6 : 185, 188, 198
-fg2          #a5a8b2 : 165, 168, 178
-fg3          #91949e : 145, 148, 158
-bg0          #121019 : 18, 16, 25
-bg1          #26242d : 38, 36, 45
-bg2          #3a3841 : 58, 56, 65
-bg3          #4e4c55 : 78, 76, 85
-accent       #E19895 : 225, 152, 149
-accent light #ffe8e5 : 255, 232, 229
-accent dark  #a55c59 : 165, 92, 89
-green        #AB9AA6 : 171, 154, 166
-yellow       #B1A7B2 : 177, 167, 178
-red          #9396AD : 147, 150, 173
-blue         #689d6a : 104, 157, 106
-cyan         #F2ACAD : 242, 172, 173
-magenta      #CDADB3 : 205, 173, 179
+		gruvbox_light
+wallpaper /home/gavarch/pic/walls/favs/aks-voidX-exodus.png
+font      CMUTypewriterText
+guifont   CMU Typewriter Text
+fontsize  12
+fg3       #646464 : rgb(100, 100, 100)
+fg2       #505050 : rgb(80, 80, 80)
+fg1       #3c3c3c : rgb(60, 60, 60)
+fg0       #282828 : rgb(40, 40, 40)
+accentf   #3c4d3c : rgb(60, 77, 60)
+accent    #689d6a : rgb(104, 157, 106)
+accentb   #c7d2a5 : rgb(199, 210, 165)
+bg0       #fbf1c7 : rgb(251, 241, 199)
+bg1       #e7ddb3 : rgb(231, 221, 179)
+bg2       #d3c99f : rgb(211, 201, 159)
+bg3       #bfb58b : rgb(191, 181, 139)
+green     #98971a : rgb(152, 151, 26)
+yellow    #d79921 : rgb(215, 153, 33)
+red       #cc241d : rgb(204, 36, 29)
+blue      #689d6a : rgb(104, 157, 106)
+cyan      #458588 : rgb(69, 133, 136)
+magenta   #b16286 : rgb(177, 98, 134)
+

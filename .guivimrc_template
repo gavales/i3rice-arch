@@ -26,8 +26,8 @@ hi ModeMsg gui=bold guifg=%%fg0%%
 hi Cursor guifg=%%bg0%% guibg=%%red%%
 hi ColorColumn guifg=%%bg0%% guibg=%%bg1%%
 hi CursorLine gui=none guibg=%%bg1%%
-hi Visual guifg=%%bg0%% guibg=%%acc%%
-hi VisualNOS guifg=%%bg0%% guibg=%%acc%%
+hi Visual guifg=%%fg0%% guibg=%%acb%%
+hi VisualNOS guifg=%%fg0%% guibg=%%acb%%
 hi Type gui=bold guifg=%%fg0%% guibg=%%bg0%%
 hi Identifier gui=italic guifg=%%ylw%% guibg=%%bg0%%
 hi Comment gui=italic guifg=%%acb%% guibg=%%bg0%%

@@ -1,14 +1,14 @@
 name       gruvbox_light
+wallpaper  /home/gavarch/pic/walls/favs/aks-voidX-exodus.png
 font       CMUTypewriterText
 guifont    CMU Typewriter Text
 size       12
-comment    #406341
+background #fbf1c7
 foreground #282828
+accent     #689d6a
 red        #cc241d
 green      #98971a
 yellow     #d79921
 blue       #689d6a
-accent     #689d6a
 magenta    #b16286
 cyan       #458588
-background #fbf1c7

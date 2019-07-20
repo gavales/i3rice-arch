@@ -1,0 +1,23 @@
+		<b><big>gruvbox_light</big></b>
+<b>wallpaper </b>/home/gavarch/pic/walls/favs/aks-voidX-exodus.png
+<b>font      </b>CMUTypewriterText
+<b>guifont   </b>CMU Typewriter Text
+<b>fontsize  </b>12
+<span foreground="#fbf1c7" background="#646464"><b> fg3       </b>#646464 : rgb(100, 100, 100) </span>
+<span foreground="#fbf1c7" background="#505050"><b> fg2       </b>#505050 : rgb(80, 80, 80) </span>
+<span foreground="#fbf1c7" background="#3c3c3c"><b> fg1       </b>#3c3c3c : rgb(60, 60, 60) </span>
+<span foreground="#fbf1c7" background="#282828"><b> fg0       </b>#282828 : rgb(40, 40, 40) </span>
+<span foreground="#fbf1c7" background="#3c4d3c"><b> accentf   </b>#3c4d3c : rgb(60, 77, 60) </span>
+<span foreground="#282828" background="#689d6a"><b> accent    </b>#689d6a : rgb(104, 157, 106) </span>
+<span foreground="#282828" background="#c7d2a5"><b> accentb   </b>#c7d2a5 : rgb(199, 210, 165) </span>
+<span foreground="#282828" background="#fbf1c7"><b> bg0       </b>#fbf1c7 : rgb(251, 241, 199) </span>
+<span foreground="#282828" background="#e7ddb3"><b> bg1       </b>#e7ddb3 : rgb(231, 221, 179) </span>
+<span foreground="#282828" background="#d3c99f"><b> bg2       </b>#d3c99f : rgb(211, 201, 159) </span>
+<span foreground="#282828" background="#bfb58b"><b> bg3       </b>#bfb58b : rgb(191, 181, 139) </span>
+<span foreground="#282828" background="#98971a"><b> green     </b>#98971a : rgb(152, 151, 26) </span>
+<span foreground="#282828" background="#d79921"><b> yellow    </b>#d79921 : rgb(215, 153, 33) </span>
+<span foreground="#282828" background="#cc241d"><b> red       </b>#cc241d : rgb(204, 36, 29) </span>
+<span foreground="#282828" background="#689d6a"><b> blue      </b>#689d6a : rgb(104, 157, 106) </span>
+<span foreground="#282828" background="#458588"><b> cyan      </b>#458588 : rgb(69, 133, 136) </span>
+<span foreground="#282828" background="#b16286"><b> magenta   </b>#b16286 : rgb(177, 98, 134) </span>
+

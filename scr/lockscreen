@@ -4,23 +4,42 @@ bkd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
 grn=$(xrdb -query | grep '*color2' | awk '{print $NF}')
 ylw=$(xrdb -query | grep '*color3' | awk '{print $NF}')
 red=$(xrdb -query | grep '*color9' | awk '{print $NF}')
-wtd=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+wtd=$(xrdb -query | grep '*color15' | awk '{print $NF}')
 blu=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+SCR=$(xdpyinfo | grep 'name of display:' | awk '{print $2}')
+SCR=${SCR/:/}
+RES=$(xdpyinfo  | grep 'dimensions:' | awk '{print $2}')
+FNT=$(xrdb -query | grep URxvt.font)
+FNT=${FNT%:*}
+FNT=${FNT##*:}
+XP=1
+YP=90
+XRES=${RES%x*}
+YRES=${RES#*x}
+X=$(echo "(${XRES}*${XP})/100" | bc)
+Y=$(echo "(${YRES}*${YP})/100" | bc)
 
 t="ff"
 
 B="${bkd}${t}"  # blank
 C="${wtd}${t}"  # clear ish
-D="${blu}${t}"  # default
+D="${blu}00"  # default
 T="${wtd}${t}"  # text
 W="${red}${t}"  # wrong
 V="${grn}${t}"  # verifying
 
+#--indicator \
 i3lock \
 	-f \
 	-p default \
-	--indicator \
-	--image=$HOME/.config/wall.png \
+	--bar-indicator \
+	--bar-width=5 \
+	--bar-color=$D \
+	--bar-direction=0 \
+	--bar-max-height=150 \
+	--bar-orientation=horizontal \
+	--indpos="$X:$Y" \
+	--image=$HOME/.config/wall \
 	--insidevercolor=$V \
 	--ringvercolor=$V \
 	\
@@ -40,10 +59,26 @@ i3lock \
 	--keyhlcolor=$W \
 	--bshlcolor=$W \
 	\
-	--screen 0 \
+	--verif-align=1 \
+	--wrong-align=1 \
+	--time-align=1 \
+	--date-align=1 \
+	--layout-align=1 \
+	--verif-font=$FNT \
+	--wrong-font=$FNT \
+	--time-font=$FNT \
+	--date-font=$FNT \
+	--layout-font=$FNT \
+	--verifsize=75 \
+	--wrongsize=75 \
+	--timesize=75 \
+	--datesize=30 \
+	--layoutsize=25 \
+	\
+	--radius 120 \
+	--screen $SCR \
 	--blur 5 \
 	--clock \
-	--indicator \
 	--timestr="%H:%M:%S" \
 	--datestr="%A, %m %Y" \
-	--keylayout 2 \
+	--keylayout 2 &>/dev/null &

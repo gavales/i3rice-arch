@@ -84,8 +84,8 @@ hi ModeMsg			cterm=bold			ctermfg=black	ctermbg=blue
 hi Cursor			ctermfg=black		ctermbg=red
 hi ColorColumn		cterm=none			ctermbg=DarkGray
 hi CursorLine		cterm=none			ctermbg=DarkGray
-hi Visual			ctermfg=blue		ctermbg=black
-hi VisualNOS		ctermfg=blue		ctermbg=black
+hi Visual			ctermfg=Gray		ctermbg=white
+hi VisualNOS		ctermfg=Gray		ctermbg=white
 
 hi Type			cterm=bold		ctermfg=white	ctermbg=black
 hi Identifier	cterm=italic	ctermfg=yellow	ctermbg=black

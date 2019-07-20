@@ -5,16 +5,17 @@
 
 thmDir=$HOME/themes
 
-feh --bg-scale "${1}"
+#feh --bg-scale "${1}"
 wal -q -i "${1}"
+WALL="${1}"
 
-rm "$HOME/.config/wall.png"
-cp "${1}" "$HOME/.config/wall.png"
-feh --bg-scale "${1}"
+#rm "$HOME/.config/wall.png"
+#cp "${1}" "$HOME/.config/wall.png"
+#feh --bg-scale "${1}"
 
 cd $thmDir
 
-echo "wallpaper   ${1}" > .current
+echo "wallpaper   "${WALL}"" > .current
 name=${1/%.*}
 name=${name/%(*}
 name=${name/1920x1080/}
@@ -33,6 +34,7 @@ name=${name/ /}
 name=${name/ /}
 name=${name/ /}
 name=${name/ /}
+name=${name##*/}
 echo "name        ${name}" >> .current
 cat $HOME/.cache/wal/colors-kitty.conf | grep 'color' | \
 sed "/color10/d;/color11/d;\
@@ -46,7 +48,7 @@ s/color3\ \ \ \ \ /yellow\ \ \ \ /g;\
 s/color4\ \ \ \ \ /accent\ \ \ \ /g;\
 s/color5\ \ \ \ \ /magenta\ \ \ /g;\
 s/color6\ \ \ \ \ /cyan\ \ \ \ \ \ /g;\
-s/color7\ \ \ \ \ /comment\ \ \ /g" \
+/color7/d" \
 >> .current
 
 $HOME/scr/reloadconfs &>/dev/null &

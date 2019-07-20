@@ -17,14 +17,14 @@ autofit-larger=30%x30%
 
 # >>>> OTHER SETTINGS
 save-position-on-quit=yes
-sub-font="%%font%% Italic"
+sub-font="%%guifont%% Italic"
 sub-color="%%bg1%%"
 sub-border-color="%%fg0%%"
 sub-border-size=3.2
 sub-shadow-offset=1
 sub-shadow-color="%%acc%%"
 sub-spacing=0.5
-osd-font="%%font%%"
+osd-font="%%guifont%%"
 osd-color='%%bg1%%'
 #osd-back-color='%%fg0%%'
 osd-border-color='%%fg0%%'

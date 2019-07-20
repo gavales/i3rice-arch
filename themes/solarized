@@ -1,12 +1,11 @@
 name       solarized
-wallpaper  /home/gavarch/pic/walls/colorful/colour3.png
+wallpaper  /home/gavarch/pic/walls/space/Cel_Obs/6.jpg
 background #002b36
+foreground #fdf6e3
+accent     #268bd2
 red        #dc322f
 green      #859900
 yellow     #b58900
 blue       #268bd2
-accent     #268bd2
 magenta    #d33682
 cyan       #2aa198
-comment    #95c8ec
-foreground #fdf6e3

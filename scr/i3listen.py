@@ -16,10 +16,9 @@ def windownotify(i3, event):
 		call('polybar-msg hook wintitle 1'.split(' '))
 		call('polybar-msg hook media 1'.split(' '))
 
-#	if event.container.fullscreen_mode == 0:
-#		call('polybar-msg cmd show'.split(' '))
-#	else:
-#		call('polybar-msg cmd hide'.split(' '))
+	if event.container.window_class == 'Spotify':
+		if event.change == 'title':
+			call('polybar-msg hook media 1'.split(' '))
 
 	if event.container.window_class == 'mpv':
 		if event.change == 'title':
@@ -58,12 +57,16 @@ def windownotify(i3, event):
 			if event.change == 'title':
 				call('bash /home/gavarch/scr/thunar/thunarview'.split(' '))
 
+i3.on('window', windownotify)
+i3.on('workspace', wsnotify)
+
+i3.main()
 #def set_floating(i3, event):
 #	if event.container.window_class != 'URxvt':
 #		event.container.command('floating enable, border normal 2')
 #
 #i3.on('window::new', set_floating)
-i3.on('window', windownotify)
-i3.on('workspace', wsnotify)
-
-i3.main()
+#	if event.container.fullscreen_mode == 0:
+#		call('polybar-msg cmd show'.split(' '))
+#	else:
+#		call('polybar-msg cmd hide'.split(' '))

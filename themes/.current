@@ -1,11 +1,14 @@
-name       LisbonPortugal
-wallpaper  /home/gavarch/pic/walls/favs/Lisbon, Portugal 1920x1080 (2).jpg
-background #121019
-red        #9396AD
-green      #AB9AA6
-yellow     #B1A7B2
-accent     #E19895
-magenta    #CDADB3
-cyan       #F2ACAD
-comment    #eec3cc
-foreground #cdd0da
+name       gruvbox_light
+wallpaper  /home/gavarch/pic/walls/favs/aks-voidX-exodus.png
+font       CMUTypewriterText
+guifont    CMU Typewriter Text
+size       12
+background #fbf1c7
+foreground #282828
+accent     #689d6a
+red        #cc241d
+green      #98971a
+yellow     #d79921
+blue       #689d6a
+magenta    #b16286
+cyan       #458588

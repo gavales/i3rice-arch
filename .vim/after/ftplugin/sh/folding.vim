@@ -12,13 +12,13 @@ function! Folds()
 		return ">1"
 	elseif match(thisline, '^case') >= 0
 		return ">1"
-	elseif match(thisline, '^}') >= 0
+	elseif match(thisline, '^}$') >= 0
 		return ">0"
-	elseif match(thisline, '^done') >= 0
+	elseif match(thisline, '^done$') >= 0
 		return ">0"
-	elseif match(thisline, '^esac') >= 0
+	elseif match(thisline, '^esac$') >= 0
 		return ">0"
-	elseif match(thisline, '^fi') >= 0
+	elseif match(thisline, '^fi$') >= 0
 		return ">0"
 	else
 		return "="

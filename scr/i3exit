@@ -15,10 +15,10 @@ case "$1" in
 		dm-tool switch-to-greeter
 		;;
 	suspend)
-		bash ~/scr/lockscreen && $logind suspend
+		bash ~/scr/lockscreen && sleep 0.5 && $logind suspend
 		;;
 	hibernate)
-		bash ~/scr/lockscreen && $logind hibernate
+		bash ~/scr/lockscreen && sleep 0.5 && $logind hibernate
 		;;
 	reboot)
 		$logind reboot

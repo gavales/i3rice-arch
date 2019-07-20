@@ -1,11 +1,11 @@
 name       dracula
+wallpaper  /home/gavarch/pic/walls/favs/dracula.png
 background #282A36
-red        #BD93F9
+accent     #FF6E67
+foreground #fffff2
+blue       #BD93F9
 green      #5AF78E
 yellow     #cccc00
-blue       #FF6E67
-accent     #FF6E67
+red        #FF6E67
 magenta    #FF92D0
 cyan       #8BE9FD
-comment    #ffa3a3
-foreground #fffff2

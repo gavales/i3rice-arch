@@ -8,16 +8,27 @@
 ;     ▒▒         ▒▒▒▒▒▒▒   ▒▒▒▒▒▒▒▒    ▒▒    ▒▒▒▒▒▒▒  ▒▒      ▒▒ ▒▒     ▒▒ 
 
 [colors]
-bkd = ${xrdb:color8}
 tr = #000000ff
-bkl = ${xrdb:color8}
-wtd = ${xrdb:color15}
-ylw = ${xrdb:color3}
-gnt = ${xrdb:color5}
-red = ${xrdb:color1}
-blu = ${xrdb:color4}
-grn = ${xrdb:color2}
-cyn = ${xrdb:color6}
+
+;acc = ${xrdb:color4}
+;bg0 = ${xrdb:color8}
+;bg1 = ${xrdb:color8}
+;fg0 = ${xrdb:color15}
+;ylw = ${xrdb:color3}
+;gnt = ${xrdb:color5}
+;red = ${xrdb:color1}
+;grn = ${xrdb:color2}
+;cyn = ${xrdb:color6}
+
+acc = #99@@acc@@
+bg0 =   #@@bg0@@
+acb = #99@@acb@@
+fg0 =   #@@fg0@@
+ylw = #99@@ylw@@
+gnt = #99@@gnt@@
+red = #99@@red@@
+grn = #99@@grn@@
+cyn = #99@@cyn@@
 
 [settings]
 screenchange-reload = true
@@ -30,20 +41,20 @@ screenchange-reload = true
 ;monitor = ${env:MONITOR:HDMI-1}
 ;bottom = true
 override-redirect = true
-height = 26
+height = 40
 width = 100%
 radius = 0.0
 fixed-center = false
 enable-ipc = true
 
-background = ${colors.blu}
-foreground = ${colors.bkd}
+background = ${colors.tr}
+foreground = ${colors.bg0}
 
 line-size = 0
-line-color = ${colors.blu}
+line-color = ${colors.acc}
 
-border-size = 0
-border-color = ${colors.blu}
+border-size = 2
+border-color = ${colors.tr}
 
 padding-left = 0
 padding-right = 0
@@ -59,7 +70,7 @@ tray-position = right
 tray-padding = 2
 tray-maxsize = 16
 tray-transparent = true
-tray-background = ${colors.tr}
+tray-background = ${colors.acc}
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -90,10 +101,10 @@ fixed-center = false
 enable-ipc = true
 
 background = ${colors.tr}
-foreground = ${colors.bkd}
+foreground = ${colors.bg0}
 
 line-size = 0
-line-color = ${colors.blu}
+line-color = ${colors.acc}
 
 border-size = 10
 border-color = ${colors.tr}
@@ -110,8 +121,8 @@ font-2 = FontAwesome5Brands:style=Solid:size=12;3
 
 tray-position = right
 tray-padding = 2
-tray-background = ${colors.blu}
-tray-foreground = ${colors.bkd}
+tray-background = ${colors.acc}
+tray-foreground = ${colors.bg0}
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -141,64 +152,64 @@ content = %{T1}%{T-}
 click-left = ~/scr/i3menu -s -c white -l 1
 click-middle = ~/scr/xtheme
 click-right = ~/scr/keybindingsmenu launch
-content-background = ${colors.wtd}
-content-foreground = ${colors.bkd}
+content-background = ${colors.fg0}
+content-foreground = ${colors.bg0}
 content-padding = 2
 
 [module/startfvwm]
 type = custom/text
 content = %{T1}%{T-}
 click-left = ~/scr/i3menu -s -y 50 -x 10 -c white -l 1
-content-background = ${colors.wtd}
-content-foreground = ${colors.bkd}
+content-background = ${colors.fg0}
+content-foreground = ${colors.bg0}
 content-padding = 3
 
 [module/kill]
 type = custom/text
 content = %{T1}%{T-}
 click-left = i3-msg kill
-content-background = ${colors.bkd}
-content-foreground = ${colors.wtd}
+content-background = ${colors.bg0}
+content-foreground = ${colors.fg0}
 content-padding = 1
 
 [module/min]
 type = custom/text
 content = %{T1}%{T-}
 click-left = i3-msg "floating disable, move to mark _W2"
-content-background = ${colors.bkd}
-content-foreground = ${colors.wtd}
+content-background = ${colors.bg0}
+content-foreground = ${colors.fg0}
 content-padding = 1
 
 [module/max]
 type = custom/text
 content = %{T1}%{T-}
 click-left = i3-msg floating enable
-content-background = ${colors.bkd}
-content-foreground = ${colors.wtd}
+content-background = ${colors.bg0}
+content-foreground = ${colors.fg0}
 content-padding = 1
 
 [module/shot]
 type = custom/script
 exec = echo %{T1}%{T-}
 click-left = ~/scr/screenshot
-format-background = ${colors.blu}
-format-foreground = ${colors.bkd}
+format-background = ${colors.acc}
+format-foreground = ${colors.bg0}
 format-padding = 1
 interval = 1
 
 [module/td]
 type = custom/script
 exec = bash ~/scr/pb/td
-format-background = ${colors.wtd}
-format-foreground = ${colors.bkd}
+format-background = ${colors.fg0}
+format-foreground = ${colors.bg0}
 format-padding = 1
 interval = 1
 
 [module/fvwmtd]
 type = custom/script
 exec = bash ~/scr/pb/td
-format-background = ${colors.bkd}
-format-foreground = ${colors.wtd}
+format-background = ${colors.bg0}
+format-foreground = ${colors.fg0}
 format-padding = 1
 interval = 1
 
@@ -209,16 +220,16 @@ initial = 1
 click-left = i3-msg workspace back_and_forth
 scroll-up = i3-msg workspace prev
 scroll-down = i3-msg workspace next
-format-background = ${colors.blu}
-format-foreground = ${colors.bkd}
+format-background = ${colors.acc}
+format-foreground = ${colors.bg0}
 format-padding = 1
 
 
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:40:...%
-format-background = ${colors.bkd}
-format-foreground = ${colors.wtd}
+format-background = ${colors.bg0}
+format-foreground = ${colors.fg0}
 format-padding = 2
 
 [module/wintitle]
@@ -226,8 +237,8 @@ type = custom/ipc
 hook-0 = ~/scr/pb/wintitle
 initial = 1
 click-left = polybar-msg cmd hide
-format-background = ${colors.bkd}
-format-foreground = ${colors.wtd}
+format-background = ${colors.bg0}
+format-foreground = ${colors.fg0}
 format-padding = 1
 
 [module/media]
@@ -238,15 +249,15 @@ click-left = ~/scr/i3media togg
 click-right = ~/scr/i3media stop
 scroll-up = ~/scr/i3media next
 scroll-down = ~/scr/i3media prev
-format-background = ${colors.blu}
-format-foreground = ${colors.bkd}
+format-background = ${colors.acc}
+format-foreground = ${colors.bg0}
 format-padding = 2
 
 [module/disk]
 type = custom/script
 exec = bash ~/scr/pb/disk
-format-background = ${colors.blu}
-format-foreground = ${colors.bkd}
+format-background = ${colors.acc}
+format-foreground = ${colors.bg0}
 format-padding = 1
 interval = 60
 
@@ -254,10 +265,10 @@ interval = 60
 type = internal/memory
 interval = 2
 format-prefix = "%{T1} %{T-}"
-format-prefix-foreground = ${colors.bkd}
-format-background = ${colors.blu}
-format-foreground = ${colors.bkd}
-format-underline = ${colors.bkd}
+format-prefix-foreground = ${colors.bg0}
+format-background = ${colors.acc}
+format-foreground = ${colors.bg0}
+format-underline = ${colors.bg0}
 format-padding = 1
 label = %percentage_used%
 
@@ -266,17 +277,17 @@ type = internal/cpu
 label = %{T1} %{T-}%percentage%
 format = <label>
 interval = 2
-format-background = ${colors.blu}
-format-foreground = ${colors.bkd}
+format-background = ${colors.acc}
+format-foreground = ${colors.bg0}
 format-padding = 1
 ;format-prefix = %{T1} %{T-}
 ;format-prefix = CPU
-;format-prefix-foreground = ${colors.bkd}
+;format-prefix-foreground = ${colors.bg0}
 ;format-underline = ${colors.ylw}
 
 [module/temperature]
-format-background = ${colors.blu}
-format-foreground = ${colors.bkd}
+format-background = ${colors.acc}
+format-foreground = ${colors.bg0}
 format-padding = 1
 type = internal/temperature
 thermal-zone = 0
@@ -285,8 +296,8 @@ format = <ramp> <label>
 format-underline = ${colors.red}
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
-format-warn-background = ${colors.blu}
-format-warn-foreground = ${colors.bkd}
+format-warn-background = ${colors.acc}
+format-warn-foreground = ${colors.bg0}
 format-warn-padding = 1
 label = %temperature-c%
 label-warn = %temperature-c%
@@ -294,16 +305,16 @@ label-warn-foreground = ${colors.ylw}
 ramp-0 = %{T1}%{T-}
 ramp-1 = %{T1}%{T-}
 ramp-2 = %{T1}%{T-}
-ramp-foreground = ${colors.bkd}
+ramp-foreground = ${colors.bg0}
 
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
 format-prefix = %{T1} %{T-}
-format-background = ${colors.blu}
-format-foreground = ${colors.bkd}
+format-background = ${colors.acc}
+format-foreground = ${colors.bg0}
 format-padding = 1
-format-prefix-foreground = ${colors.bkd}
+format-prefix-foreground = ${colors.bg0}
 ;format-prefix-underline = ${colors.gnt}
 label-layout = %layout%
 ;label-layout-underline = ${colors.gnt}
@@ -320,8 +331,8 @@ initial = 1
 click-left = ~/scr/nightmodetog
 scroll-up = "light -A 10 && polybar-msg hook backlight 1"
 scroll-down = "light -U 10 && polybar-msg hook backlight 1"
-format-background = ${colors.wtd}
-format-foreground = ${colors.bkd}
+format-background = ${colors.fg0}
+format-foreground = ${colors.bg0}
 format-padding = 0
 
 [module/backlight]
@@ -331,8 +342,8 @@ initial = 1
 click-left = ~/scr/nightmodetog
 scroll-up = "light -A 10 && polybar-msg hook backlight 1"
 scroll-down = "light -U 10 && polybar-msg hook backlight 1"
-format-background = ${colors.wtd}
-format-foreground = ${colors.bkd}
+format-background = ${colors.fg0}
+format-foreground = ${colors.bg0}
 format-padding = 1
 
 [module/pulseaudio]
@@ -341,11 +352,11 @@ format-volume = <label-volume>
 label-volume-padding = 1
 label-volume = %{T1}%{T-} %percentage%
 ;label-volume-foreground = ${root.foreground}
-label-volume-background = ${colors.wtd}
-label-volume-foreground = ${colors.bkd}
+label-volume-background = ${colors.fg0}
+label-volume-foreground = ${colors.bg0}
 label-muted = %{T1}%{T-} --
-label-muted-foreground = ${colors.wtd}
-label-muted-background = ${colors.bkd}
+label-muted-foreground = ${colors.fg0}
+label-muted-background = ${colors.bg0}
 label-muted-padding = 1
 bar-volume-width = 10
 bar-volume-foreground-0 = ${colors.cyn}
@@ -362,7 +373,7 @@ bar-volume-fill = =
 bar-volume-fill-font = 0
 bar-volume-empty = -
 bar-volume-empty-font = 0
-bar-volume-empty-foreground = ${colors.wtd}
+bar-volume-empty-foreground = ${colors.fg0}
 
 [module/battery]
 type = internal/battery
@@ -374,26 +385,26 @@ label-charging-padding = 1
 label-discharging-padding = 1
 format-full-padding = 1
 format-full-prefix-padding = 1
-format-full-foreground = ${colors.bkd}
-format-full-background = ${colors.wtd}
-format-full-prefix-foreground = ${colors.bkd}
-format-full-prefix-background = ${colors.wtd}
-label-charging-background = ${colors.wtd}
-label-charging-foreground = ${colors.bkd}
-label-discharging-background = ${colors.wtd}
-label-discharging-foreground = ${colors.bkd}
+format-full-foreground = ${colors.bg0}
+format-full-background = ${colors.fg0}
+format-full-prefix-foreground = ${colors.bg0}
+format-full-prefix-background = ${colors.fg0}
+label-charging-background = ${colors.fg0}
+label-charging-foreground = ${colors.bg0}
+label-discharging-background = ${colors.fg0}
+label-discharging-foreground = ${colors.bg0}
 format-discharging-padding = 1
 format-discharging-prefix-padding = 1
-format-discharging-foreground = ${colors.bkd}
-format-discharging-background = ${colors.wtd}
-format-discharging-prefix-foreground = ${colors.bkd}
-format-discharging-prefix-background = ${colors.wtd}
-format-charging-padding-foreground = ${colors.bkd}
-format-charging-padding-background = ${colors.wtd}
-format-discharging-padding-foreground = ${colors.bkd}
-format-discharging-padding-background = ${colors.wtd}
+format-discharging-foreground = ${colors.bg0}
+format-discharging-background = ${colors.fg0}
+format-discharging-prefix-foreground = ${colors.bg0}
+format-discharging-prefix-background = ${colors.fg0}
+format-charging-padding-foreground = ${colors.bg0}
+format-charging-padding-background = ${colors.fg0}
+format-discharging-padding-foreground = ${colors.bg0}
+format-discharging-padding-background = ${colors.fg0}
 format-charging = <animation-charging><label-charging>
-format-charging-underline = ${colors.bkd}
+format-charging-underline = ${colors.bg0}
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 format-full-prefix = "%{T1}%{T-}"
@@ -403,15 +414,15 @@ ramp-capacity-1 = %{T1}%{T-}
 ramp-capacity-2 = %{T1}%{T-}
 ramp-capacity-3 = %{T1}%{T-}
 ramp-capacity-4 = %{T1}%{T-}
-ramp-capacity-foreground = ${colors.bkd}
-ramp-capacity-background = ${colors.wtd}
+ramp-capacity-foreground = ${colors.bg0}
+ramp-capacity-background = ${colors.fg0}
 animation-charging-0 = %{T1}%{T-}
 animation-charging-1 = %{T1}%{T-}
 animation-charging-2 = %{T1}%{T-}
 animation-charging-3 = %{T1}%{T-}
 animation-charging-4 = %{T1}%{T-}
-animation-charging-foreground = ${colors.bkd}
-animation-charging-background = ${colors.wtd}
+animation-charging-foreground = ${colors.bg0}
+animation-charging-background = ${colors.fg0}
 animation-charging-framerate = 500
 
 ; vim:ft=dosini
@@ -423,11 +434,11 @@ expand-right = true
 format-spacing = 1
 
 label-open = %{T1} %{T-}
-label-open-foreground = ${colors.bkd}
+label-open-foreground = ${colors.bg0}
 label-close = %{T1} %{T-} cancel
-label-close-foreground = ${colors.bkd}
+label-close-foreground = ${colors.bg0}
 label-separator = |
-label-separator-foreground = ${colors.bkd}
+label-separator-foreground = ${colors.bg0}
 
 menu-0-0 = reboot
 menu-0-0-exec = menu-open-1

@@ -7323,3 +7323,224 @@ Jul 19 01:38 : client: [480] opened from [::1]:54120
 Jul 19 01:38 : client: [480] closed
 Jul 19 01:38 : client: [481] opened from [::1]:54122
 Jul 19 01:38 : client: [481] closed
+Jul 19 01:39 : client: [482] opened from [::1]:54140
+Jul 19 01:39 : client: [482] closed
+Jul 19 01:39 : client: [483] opened from [::1]:54142
+Jul 19 01:39 : client: [483] closed
+Jul 19 01:39 : client: [484] opened from [::1]:54144
+Jul 19 01:39 : client: [484] closed
+Jul 19 01:39 : client: [485] opened from [::1]:54146
+Jul 19 01:39 : client: [485] closed
+Jul 19 01:39 : client: [486] opened from [::1]:54148
+Jul 19 01:39 : client: [486] closed
+Jul 19 01:39 : client: [487] opened from [::1]:54150
+Jul 19 01:39 : client: [487] closed
+Jul 19 01:39 : client: [488] opened from [::1]:54152
+Jul 19 01:39 : client: [488] closed
+Jul 19 01:39 : client: [489] opened from [::1]:54154
+Jul 19 01:39 : client: [489] closed
+Jul 19 01:40 : client: [490] opened from [::1]:54160
+Jul 19 01:40 : client: [490] closed
+Jul 19 01:40 : client: [491] opened from [::1]:54162
+Jul 19 01:40 : client: [491] closed
+Jul 19 01:40 : client: [492] opened from [::1]:54164
+Jul 19 01:40 : client: [492] closed
+Jul 19 01:40 : client: [493] opened from [::1]:54166
+Jul 19 01:40 : client: [493] closed
+Jul 19 01:40 : client: [494] opened from [::1]:54168
+Jul 19 01:40 : client: [494] closed
+Jul 19 01:40 : client: [495] opened from [::1]:54170
+Jul 19 01:40 : client: [495] closed
+Jul 19 01:40 : client: [496] opened from [::1]:54172
+Jul 19 01:40 : client: [496] closed
+Jul 19 01:40 : client: [497] opened from [::1]:54174
+Jul 19 01:40 : client: [497] closed
+Jul 19 01:41 : client: [498] opened from [::1]:54176
+Jul 19 01:41 : client: [498] closed
+Jul 19 01:41 : client: [499] opened from [::1]:54178
+Jul 19 01:41 : client: [499] closed
+Jul 19 01:41 : client: [500] opened from [::1]:54180
+Jul 19 01:41 : client: [500] closed
+Jul 19 01:41 : client: [501] opened from [::1]:54182
+Jul 19 01:41 : client: [501] closed
+Jul 19 01:41 : client: [502] opened from [::1]:54184
+Jul 19 01:41 : client: [502] closed
+Jul 19 01:41 : client: [503] opened from [::1]:54186
+Jul 19 01:41 : client: [503] closed
+Jul 19 01:42 : client: [504] opened from [::1]:54188
+Jul 19 01:42 : client: [504] closed
+Jul 19 01:42 : client: [505] opened from [::1]:54190
+Jul 19 01:42 : client: [505] closed
+Jul 19 01:42 : client: [506] opened from [::1]:54194
+Jul 19 01:42 : client: [506] closed
+Jul 19 01:42 : client: [507] opened from [::1]:54196
+Jul 19 01:42 : client: [507] closed
+Jul 19 01:42 : client: [508] opened from [::1]:54200
+Jul 19 01:42 : client: [508] closed
+Jul 19 01:42 : client: [509] opened from [::1]:54202
+Jul 19 01:42 : client: [509] closed
+Jul 19 01:42 : client: [510] opened from [::1]:54204
+Jul 19 01:42 : client: [510] closed
+Jul 19 01:42 : client: [511] opened from [::1]:54206
+Jul 19 01:42 : client: [511] closed
+Jul 19 01:43 : client: [512] opened from [::1]:54216
+Jul 19 01:43 : client: [512] closed
+Jul 19 01:43 : client: [513] opened from [::1]:54218
+Jul 19 01:43 : client: [513] closed
+Jul 19 13:31 : client: [514] opened from [::1]:54286
+Jul 19 13:31 : client: [514] closed
+Jul 19 13:31 : client: [515] opened from [::1]:54288
+Jul 19 13:31 : client: [515] closed
+Jul 19 18:21 : client: [516] opened from [::1]:56178
+Jul 19 18:21 : client: [516] closed
+Jul 19 18:21 : client: [517] opened from [::1]:56180
+Jul 19 18:21 : client: [517] closed
+Jul 19 18:21 : client: [518] opened from [::1]:56182
+Jul 19 18:21 : client: [518] closed
+Jul 19 18:21 : client: [519] opened from [::1]:56184
+Jul 19 18:21 : client: [519] closed
+Jul 19 18:21 : client: [520] opened from [::1]:56186
+Jul 19 18:21 : client: [520] closed
+Jul 19 18:21 : client: [521] opened from [::1]:56188
+Jul 19 18:21 : client: [521] closed
+Jul 20 00:11 : player: played "Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/07 - El Chacarero.mp3"
+Jul 20 00:12 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jul 20 00:12 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jul 20 00:12 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jul 20 00:12 : client: [0] opened from [::1]:54384
+Jul 20 00:12 : client: [0] closed
+Jul 20 00:12 : client: [1] opened from [::1]:54386
+Jul 20 00:12 : client: [1] closed
+Jul 20 00:12 : client: [2] opened from [::1]:54392
+Jul 20 00:12 : client: [2] closed
+Jul 20 00:12 : client: [3] opened from [::1]:54394
+Jul 20 00:12 : client: [3] closed
+Jul 20 00:12 : client: [4] opened from [::1]:54520
+Jul 20 00:12 : client: [4] closed
+Jul 20 00:12 : client: [5] opened from [::1]:54522
+Jul 20 00:12 : client: [5] closed
+Jul 20 00:12 : client: [6] opened from [::1]:54588
+Jul 20 00:12 : client: [6] closed
+Jul 20 00:12 : client: [7] opened from [::1]:54590
+Jul 20 00:12 : client: [7] closed
+Jul 20 00:12 : client: [8] opened from [::1]:54594
+Jul 20 00:12 : client: [8] closed
+Jul 20 00:12 : client: [9] opened from [::1]:54596
+Jul 20 00:12 : client: [9] closed
+Jul 20 00:12 : client: [10] opened from [::1]:54632
+Jul 20 00:12 : client: [10] closed
+Jul 20 00:12 : client: [11] opened from [::1]:54634
+Jul 20 00:12 : client: [11] closed
+Jul 20 00:12 : client: [12] opened from [::1]:54648
+Jul 20 00:12 : client: [12] closed
+Jul 20 00:12 : client: [13] opened from [::1]:54650
+Jul 20 00:12 : client: [13] closed
+Jul 20 00:14 : client: [14] opened from [::1]:54738
+Jul 20 00:14 : client: [14] closed
+Jul 20 00:14 : client: [15] opened from [::1]:54740
+Jul 20 00:14 : client: [15] closed
+Jul 20 00:14 : client: [16] opened from [::1]:54742
+Jul 20 00:14 : client: [16] closed
+Jul 20 00:14 : client: [17] opened from [::1]:54744
+Jul 20 00:14 : client: [17] closed
+Jul 20 00:14 : client: [18] opened from [::1]:54812
+Jul 20 00:14 : client: [18] closed
+Jul 20 00:14 : client: [19] opened from [::1]:54814
+Jul 20 00:14 : client: [19] closed
+Jul 20 00:14 : client: [20] opened from [::1]:54816
+Jul 20 00:14 : client: [20] closed
+Jul 20 00:14 : client: [21] opened from [::1]:54818
+Jul 20 00:14 : client: [21] closed
+Jul 20 00:14 : client: [22] opened from [::1]:54824
+Jul 20 00:14 : client: [22] closed
+Jul 20 00:14 : client: [23] opened from [::1]:54826
+Jul 20 00:14 : client: [23] closed
+Jul 20 00:14 : client: [24] opened from [::1]:54828
+Jul 20 00:14 : client: [24] closed
+Jul 20 00:14 : client: [25] opened from [::1]:54830
+Jul 20 00:14 : client: [25] closed
+Jul 20 00:15 : client: [26] opened from [::1]:54850
+Jul 20 00:15 : client: [26] closed
+Jul 20 00:15 : client: [27] opened from [::1]:54852
+Jul 20 00:15 : client: [27] closed
+Jul 20 00:15 : client: [28] opened from [::1]:54860
+Jul 20 00:15 : client: [28] closed
+Jul 20 00:15 : client: [29] opened from [::1]:54862
+Jul 20 00:15 : client: [29] closed
+Jul 20 00:15 : client: [30] opened from [::1]:54864
+Jul 20 00:15 : client: [30] closed
+Jul 20 00:15 : client: [31] opened from [::1]:54866
+Jul 20 00:15 : client: [31] closed
+Jul 20 00:15 : client: [32] opened from [::1]:54870
+Jul 20 00:15 : client: [32] closed
+Jul 20 00:15 : client: [33] opened from [::1]:54874
+Jul 20 00:15 : client: [33] closed
+Jul 20 00:15 : client: [34] opened from [::1]:54896
+Jul 20 00:15 : client: [34] closed
+Jul 20 00:15 : client: [35] opened from [::1]:54900
+Jul 20 00:15 : client: [35] closed
+Jul 20 00:15 : client: [36] opened from [::1]:54976
+Jul 20 00:15 : client: [36] closed
+Jul 20 00:15 : client: [37] opened from [::1]:54978
+Jul 20 00:15 : client: [37] closed
+Jul 20 00:16 : client: [38] opened from [::1]:55024
+Jul 20 00:16 : client: [38] closed
+Jul 20 00:16 : client: [39] opened from [::1]:55026
+Jul 20 00:16 : client: [39] closed
+Jul 20 00:16 : client: [40] opened from [::1]:55098
+Jul 20 00:16 : client: [40] closed
+Jul 20 00:16 : client: [41] opened from [::1]:55100
+Jul 20 00:16 : client: [41] closed
+Jul 20 00:16 : client: [42] opened from [::1]:55102
+Jul 20 00:16 : client: [42] closed
+Jul 20 00:16 : client: [43] opened from [::1]:55104
+Jul 20 00:16 : client: [43] closed
+Jul 20 00:17 : client: [44] opened from [::1]:55156
+Jul 20 00:17 : client: [44] closed
+Jul 20 00:17 : client: [45] opened from [::1]:55158
+Jul 20 00:17 : client: [45] closed
+Jul 20 00:17 : client: [46] opened from [::1]:55160
+Jul 20 00:17 : client: [46] closed
+Jul 20 00:17 : client: [47] opened from [::1]:55162
+Jul 20 00:17 : client: [47] closed
+Jul 20 00:20 : client: [48] opened from [::1]:55286
+Jul 20 00:20 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jul 20 00:20 : client: [48] closed
+Jul 20 00:20 : client: [49] opened from [::1]:55288
+Jul 20 00:20 : client: [49] closed
+Jul 20 00:20 : client: [50] opened from [::1]:55290
+Jul 20 00:20 : client: [50] closed
+Jul 20 00:20 : client: [51] opened from [::1]:55292
+Jul 20 00:20 : client: [51] closed
+Jul 20 00:20 : client: [52] opened from [::1]:55294
+Jul 20 00:20 : client: [52] closed
+Jul 20 00:20 : client: [53] opened from [::1]:55296
+Jul 20 00:20 : client: [53] closed
+Jul 20 00:20 : client: [54] opened from [::1]:55298
+Jul 20 00:20 : client: [54] closed
+Jul 20 00:20 : client: [55] opened from [::1]:55300
+Jul 20 00:20 : client: [55] closed
+Jul 20 00:20 : client: [56] opened from [::1]:55302
+Jul 20 00:20 : client: [56] closed
+Jul 20 00:20 : client: [57] opened from [::1]:55304
+Jul 20 00:20 : client: [57] closed
+Jul 20 00:20 : client: [58] opened from [::1]:55306
+Jul 20 00:20 : client: [58] closed
+Jul 20 00:20 : client: [59] opened from [::1]:55308
+Jul 20 00:20 : client: [59] closed
+Jul 20 00:20 : client: [60] opened from [::1]:55310
+Jul 20 00:20 : client: [60] closed
+Jul 20 00:20 : client: [61] opened from [::1]:55312
+Jul 20 00:20 : client: [61] closed
+Jul 20 00:20 : client: [62] opened from [::1]:55314
+Jul 20 00:20 : client: [62] closed
+Jul 20 00:20 : client: [63] opened from [::1]:55316
+Jul 20 00:20 : client: [63] closed
+Jul 20 20:07 : client: [64] opened from [::1]:57612
+Jul 20 20:07 : client: [64] closed
+Jul 20 20:07 : client: [65] opened from [::1]:57614
+Jul 20 20:07 : client: [65] closed
+Jul 20 20:07 : client: [66] opened from [::1]:57616
+Jul 20 20:07 : client: [66] closed
+Jul 20 20:07 : client: [67] opened from [::1]:57618
+Jul 20 20:07 : client: [67] closed
