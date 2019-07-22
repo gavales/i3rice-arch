@@ -3,9 +3,12 @@
 # OA: Gavin Vales
 # CREATED: Sat  6 Jul 00:50:41 BST 2019
 
-WHT="$HOME/scrpic/white.jpg"
-WALL="$HOME/.config/wall"
-CWALL="$HOME/.currentwall"
+WDIR="$HOME/pic/walls"
+WHTE="${WDIR}/white.jpg"
+NORM="${WDIR}/normal"
+CURR="${WDIR}/current"
+HIST="${WDIR}/.history"
+#BLUR="${WDIR}/blur"
 
 MONDIM=$(xdpyinfo | grep dimensions: | awk '{print $2}')
 MX=${MONDIM%x*}
@@ -15,53 +18,106 @@ help () {
 cat << 'EOB'
     -h -- print this help
     -w -- wallpaper to set. Can be picture or hex color (requires white.jpg in 
-              ~/scrpic/white.jpg)
+              i3wallpaper's directory)
     -t -- color to tint wallpaper with
+    -a -- add walls contained in specified dir to i3wallpaper's directory
 EOB
 }
 
+add-wall () {
+#	SRC="${SRC#*/}"
+#	TRG="${i#*/}"
+	SRC="$1"
+	TRG="${1##*/}"
+	TRG="${TRG%.*}"
+	TRG="${TRG/1920x1080/}"
+	TRG="${TRG/,/}"
+	TRG="${TRG/,/}"
+	TRG="${TRG/,/}"
+	TRG="${TRG/ /}"
+	TRG="${TRG/ /}"
+	TRG="${TRG/ /}"
+	TRG="${TRG/ /}"
+	TRG="${TRG/ /}"
+	echo "
+	TRG=$TRG
+	SRC=$SRC"
+	convert "${SRC}" -resize "${MX}x${MY}^" -gravity center -extent "${MX}x${MY}" "${NORM}/${TRG}"
+	WPP="$TRG"
+}
+
+add () {
+	cd "$1"
+	IFS=$'\n'
+	for i in $(find -type f); do
+		SRC="$i"
+		SRC="${SRC#*/}"
+		TRG="${i#*/}"
+		TRG="${TRG%.*}"
+		echo "
+		TRG=$TRG
+		SRC=$SRC"
+		convert "${SRC}" -resize "${MX}x${MY}^" -gravity center -extent "${MX}x${MY}" "${NORM}/${TRG}"
+	done
+#	DIR="$1"
+##	pics=$(ls -l $DIR)
+##	echo $pics
+#	IFS=$'\n'
+#	for i in $(ls $DIR); do
+#	done
+}
+
 tint () {
-	convert $WALL -fill "${TNT}" -tint 100 $WALL
-	feh --bg-scale $WALL
+	convert "$CURR" -fill "${TNT}" -tint 100 "$CURR"
+#	feh --bg-center $CURR
 }
 
 colour () {
-	convert $WHT -fill $WALL -draw 'color 0,0 replace' $WALL
-	feh --bg-scale $WALL
+	convert $WHTE -fill $WPP -draw 'color 0,0 replace' $CURR
+	set-wall
+#	feh --bg-center $CURR
 }
 
-picture () {
-#	rm $WALL
-#	cp "$WPP" $WALL
-	feh --bg-scale $WALL
+change-current () {
+	rm $CURR
+	cp "${NORM}/${WPP}" $CURR
 }
 
-while getopts :w:t:h opts; do
+set-wall () {
+	feh --bg-center $CURR
+}
+
+while getopts :w:t:a:h opts; do
 	case $opts in
 		w) WPP="${OPTARG}" ;;
 		t) TNT="${OPTARG}" ;;
+		a) ADD="${OPTARG}" ;;
 		h) help && exit ;;
 	esac
 done
 
-CWALLSTR="$WPP $TNT"
-[[ $CWALLSTR == "$(cat $CWALL)" ]] && echo "WALLPAPER ALREADY SET" && exit
+#CWALLSTR="$WPP $TNT"
+#[[ $CWALLSTR == "$(cat $CWALLFILE)" ]] && echo "WALLPAPER ALREADY SET" && exit
 
-convert "$WPP" \
-	-resize "${MX}x${MY}^" \
-	-gravity center \
-	-extent "${MX}x${MY}" \
-	"$WALL"
+#WPPDIM=$(identify "/home/gavarch/pic/walls/weeb/weeb12.jpg" | awk '{print $3}')
+#[[ $MONDIM == "$WPPDIM" ]] && rm $WALL && cp "$WPP" $WALL ||
+#	convert "$WPP" -resize "${MX}x${MY}^" -gravity center -extent "${MX}x${MY}" "$WALL"
 
-if [[ $WPP =~ "#" ]]; then
-	echo "SETTING DESKTOP COLOR TO $WPP"
-	colour
-elif [[ -n $TNT ]]; then
-	echo "TINTING WALLPAPER $WPP TO COLOR $TNT"
-	tint
-else
-	echo "SETTING WALLPAPER TO $WPP"
-	picture
-fi
+[[ -n $ADD ]] && add "$ADD" && exit
 
-echo "$WPP $TNT" > $CWALL
+[[ $WPP == "RANDOM" ]] \
+	&& echo "SETTING RANDOM WALLPAPER" && WPP=$(ls $NORM | shuf -n 1)
+
+[[ $WPP =~ "#" ]] && echo "SETTING DESKTOP COLOR TO $WPP" && colour && exit
+
+[[ ! -f $NORM/$WPP ]] && echo "WALLPAPER NOT IN WALLS DIRECTORY" && add-wall "$WPP"
+
+change-current
+
+[[ -n $TNT ]] && echo "TINTING WALLPAPER $WPP TO COLOR $TNT" && tint
+
+echo "SETTING WALLPAPER TO $WPP"
+set-wall
+
+#echo $WPP
+#[[ -f $NORM/$WPP ]] && [[ ! $WPP =~ "$(ls $NORM)" ]] && echo "$WPP" >> $HIST

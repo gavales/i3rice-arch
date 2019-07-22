@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+# CREATED: Mon 22 Jul 19:53:50 BST 2019
+
+CLDIR=$HOME/doc/personal/coverletters
+PLT=$HOME/plt/tex/coverletter/coverletter.tex
+[[ -n $1 ]] && TIT="$1" || \
+	TIT="$($HOME/scr/i3menu -p "Enter title of Cover Letter... " -c yellow -e)"
+EDITOR="gvim -f"
+
+#while getopts :t: opts; do
+#	case $opts in
+#		t)
+#			TIT="$OPTARG"
+#			;;
+#	esac
+#done
+
+FLD="$(echo ${TIT} | sed 's/\ //g')"
+#TIT="$(echo $TIT | sed 's/\ /\\\ /g')"
+echo $FLD
+echo $TIT
+
+[[ ! -f $CLDIR ]] && mkdir $CLDIR
+cd $CLDIR
+[[ ! -f $CLDIR ]] && mkdir $FLD
+cd $FLD
+cp $PLT ${FLD}.tex
+sed -e "s/TITLE/$TIT/g" -i ${FLD}.tex
+#touch maintext.tex
+$EDITOR maintext.tex
+$HOME/scr/clatex ${FLD}.tex

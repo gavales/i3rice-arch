@@ -20,15 +20,15 @@ tr = #000000ff
 ;grn = ${xrdb:color2}
 ;cyn = ${xrdb:color6}
 
-acc = #99689d6a
-bg0 =   #fbf1c7
-acb = #99c7d2a5
-fg0 =   #282828
-ylw = #99d79921
-gnt = #99b16286
-red = #99cc241d
-grn = #9998971a
-cyn = #99458588
+acc = #99DC8E69
+bg0 =   #f9efe9
+acb = #99eabea8
+fg0 =   #161c16
+ylw = #99A5896D
+gnt = #99609AC1
+red = #99DC8E69
+grn = #99507C88
+cyn = #9960c1b8
 
 [settings]
 screenchange-reload = true

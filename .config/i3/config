@@ -546,7 +546,7 @@ $exn blueman-applet
 $exn compton
 $ena ff-theme-util
 $ena fix_xcursor
-$exn feh --bg-scale $home/.config/wall
+$exn feh --bg-center $home/pic/walls/current
 $exn mpd
 $exn shutter --min_at_startup
 $exn setxkbmap $kb

@@ -1,12 +1,3 @@
-rename Rebuild of Evangelion
-rename (2005) Serenity
-rename Serenity (2005).mkv
-open_with 4
-rename (2009) Blood and Bone.mp4
-rename (2005) Serenity.mkv
-mkdir EVA
-rename (1997) Neon Genesis Evangelion: Death & Rebirth.mkv
-rename (1997) The End of Evangelion.mkv
 rename Season 4 (Garlic Jr., Trunks and Androids Sagas)
 
 shell cp -r ~/plt/tex/article UNIMARKS
@@ -48,3 +39,12 @@ rename (720P - mp4) Tactical+Force.mov
 rename (2011) Tactical+Force.mov
 rename (2011) Tactical Force.mov
 open_with vim
+rename pics
+mkdir walls
+mkdir blur
+normal
+mkdir normal
+shell identify %f
+rename LisbonPortugal1920x1080.jpg
+rename KatsuraRiverJapan 1920x1080.jpg
+rename blossom

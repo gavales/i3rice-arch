@@ -10,5 +10,5 @@ set statusbar-fg "%%fg0%%"
 set completion-bg "%%bg0%%"
 set completion-fg "%%fg0%%"
 set show-scrollbars false
-set recolor-darkcolor "%%acb%%"
+set recolor-darkcolor "%%acf%%"
 set recolor-lightcolor "%%bg0%%"

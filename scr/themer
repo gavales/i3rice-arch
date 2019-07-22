@@ -37,51 +37,52 @@ guiapply () {
 }
 
 printcurrenttheme () {
-	echo "		$nme
+	echo "$nme
 wallpaper $wpr
 font      $fnt
 guifont   $gft
 fontsize  $sze
-fg3       $fg3 : rgb($fg3RGB)
-fg2       $fg2 : rgb($fg2RGB)
-fg1       $fg1 : rgb($fg1RGB)
-fg0       $fg0 : rgb($fg0RGB)
-accentf   $acf : rgb($acfRGB)
-accent    $acc : rgb($accRGB)
-accentb   $acb : rgb($acbRGB)
-bg0       $bg0 : rgb($bg0RGB)
-bg1       $bg1 : rgb($bg1RGB)
-bg2       $bg2 : rgb($bg2RGB)
-bg3       $bg3 : rgb($bg3RGB)
-green     $grn : rgb($grnRGB)
-yellow    $ylw : rgb($ylwRGB)
-red       $red : rgb($redRGB)
-blue      $blu : rgb($bluRGB)
-cyan      $cyn : rgb($cynRGB)
-magenta   $gnt : rgb($gntRGB)
+fg3       rgb($fg3RGB)	$fg3
+fg2       rgb($fg2RGB)	$fg2
+fg1       rgb($fg1RGB)	$fg1
+fg0       rgb($fg0RGB)	$fg0
+accentf   rgb($acfRGB)	$acf
+accent    rgb($accRGB)	$acc
+accentb   rgb($acbRGB)	$acb
+bg0       rgb($bg0RGB)	$bg0
+bg1       rgb($bg1RGB)	$bg1
+bg2       rgb($bg2RGB)	$bg2
+bg3       rgb($bg3RGB)	$bg3
+green     rgb($grnRGB)	$grn
+yellow    rgb($ylwRGB)	$ylw
+red       rgb($redRGB)	$red
+blue      rgb($bluRGB)	$blu
+cyan      rgb($cynRGB)	$cyn
+magenta   rgb($gntRGB)	$gnt
 " > ${colsDir}/.allvars
-	echo "		<b><big>$nme</big></b>
-<b>wallpaper </b>$wpr
-<b>font      </b>$fnt
-<b>guifont   </b>$gft
-<b>fontsize  </b>$sze
-<span foreground=\"$bg0\" background=\"$fg3\"><b> fg3       </b>$fg3 : rgb($fg3RGB) </span>
-<span foreground=\"$bg0\" background=\"$fg2\"><b> fg2       </b>$fg2 : rgb($fg2RGB) </span>
-<span foreground=\"$bg0\" background=\"$fg1\"><b> fg1       </b>$fg1 : rgb($fg1RGB) </span>
-<span foreground=\"$bg0\" background=\"$fg0\"><b> fg0       </b>$fg0 : rgb($fg0RGB) </span>
-<span foreground=\"$bg0\" background=\"$acf\"><b> accentf   </b>$acf : rgb($acfRGB) </span>
-<span foreground=\"$fg0\" background=\"$acc\"><b> accent    </b>$acc : rgb($accRGB) </span>
-<span foreground=\"$fg0\" background=\"$acb\"><b> accentb   </b>$acb : rgb($acbRGB) </span>
-<span foreground=\"$fg0\" background=\"$bg0\"><b> bg0       </b>$bg0 : rgb($bg0RGB) </span>
-<span foreground=\"$fg0\" background=\"$bg1\"><b> bg1       </b>$bg1 : rgb($bg1RGB) </span>
-<span foreground=\"$fg0\" background=\"$bg2\"><b> bg2       </b>$bg2 : rgb($bg2RGB) </span>
-<span foreground=\"$fg0\" background=\"$bg3\"><b> bg3       </b>$bg3 : rgb($bg3RGB) </span>
-<span foreground=\"$fg0\" background=\"$grn\"><b> green     </b>$grn : rgb($grnRGB) </span>
-<span foreground=\"$fg0\" background=\"$ylw\"><b> yellow    </b>$ylw : rgb($ylwRGB) </span>
-<span foreground=\"$fg0\" background=\"$red\"><b> red       </b>$red : rgb($redRGB) </span>
-<span foreground=\"$fg0\" background=\"$blu\"><b> blue      </b>$blu : rgb($bluRGB) </span>
-<span foreground=\"$fg0\" background=\"$cyn\"><b> cyan      </b>$cyn : rgb($cynRGB) </span>
-<span foreground=\"$fg0\" background=\"$gnt\"><b> magenta   </b>$gnt : rgb($gntRGB) </span>
+	echo "
+              <b><big>$nme</big></b>
+<b>wallpaper  </b>$wpr
+<b>font       </b>$fnt
+<b>guifont    </b>$gft
+<b>fontsize   </b>$sze
+<span foreground=\"$bg0\" background=\"$fg3\"><b> fg3       </b>rgb($fg3RGB)	$fg3 </span>
+<span foreground=\"$bg0\" background=\"$fg2\"><b> fg2       </b>rgb($fg2RGB)	$fg2 </span>
+<span foreground=\"$bg0\" background=\"$fg1\"><b> fg1       </b>rgb($fg1RGB)	$fg1 </span>
+<span foreground=\"$bg0\" background=\"$fg0\"><b> fg0       </b>rgb($fg0RGB)	$fg0 </span>
+<span foreground=\"$bg0\" background=\"$acf\"><b> accentf   </b>rgb($acfRGB)	$acf </span>
+<span foreground=\"$fg0\" background=\"$acc\"><b> accent    </b>rgb($accRGB)	$acc </span>
+<span foreground=\"$fg0\" background=\"$acb\"><b> accentb   </b>rgb($acbRGB)	$acb </span>
+<span foreground=\"$fg0\" background=\"$bg0\"><b> bg0       </b>rgb($bg0RGB)	$bg0 </span>
+<span foreground=\"$fg0\" background=\"$bg1\"><b> bg1       </b>rgb($bg1RGB)	$bg1 </span>
+<span foreground=\"$fg0\" background=\"$bg2\"><b> bg2       </b>rgb($bg2RGB)	$bg2 </span>
+<span foreground=\"$fg0\" background=\"$bg3\"><b> bg3       </b>rgb($bg3RGB)	$bg3 </span>
+<span foreground=\"$fg0\" background=\"$grn\"><b> green     </b>rgb($grnRGB)	$grn </span>
+<span foreground=\"$fg0\" background=\"$ylw\"><b> yellow    </b>rgb($ylwRGB)	$ylw </span>
+<span foreground=\"$fg0\" background=\"$red\"><b> red       </b>rgb($redRGB)	$red </span>
+<span foreground=\"$fg0\" background=\"$blu\"><b> blue      </b>rgb($bluRGB)	$blu </span>
+<span foreground=\"$fg0\" background=\"$cyn\"><b> cyan      </b>rgb($cynRGB)	$cyn </span>
+<span foreground=\"$fg0\" background=\"$gnt\"><b> magenta   </b>rgb($gntRGB)	$gnt </span>
 " > ${colsDir}/.allvarsrofi
 #accentl2  $al2 : $al2RGB
 #accentd2  $ad2 : $ad2RGB
@@ -108,8 +109,8 @@ main () {
 	blu=$(cat ${colsDir}/.current | sed '/^blue/!d;s/[^ ]* *//')
 	gnt=$(cat ${colsDir}/.current | sed '/^magenta/!d;s/[^ ]* *//')
 	cyn=$(cat ${colsDir}/.current | sed '/^cyan/!d;s/[^ ]* *//')
-	acf=$($HOME/scr/colmix -c "33:${acc} 66:${fg0}" | grep '#')
-	acb=$($HOME/scr/colmix -c "33:${acc} 66:${bg0}" | grep '#')
+	acf=$($HOME/scr/colmix -c "50:${acc} 50:${fg0}" | grep '#')
+	acb=$($HOME/scr/colmix -c "50:${acc} 50:${bg0}" | grep '#')
 
 	[[ -z $nme ]] && nme="unnamed"
 	[[ -z $fnt ]] && fnt=$(cat ${defThm} | sed '/^font/!d;s/[^ ]* *//')
@@ -206,7 +207,7 @@ main () {
 	bg3="#${bg3RX}${bg3GX}${bg3BX}"
 
 	[[ -z $wpr ]] && wpr="$acc"
-	$HOME/scr/i3wallpaper -w "$wpr" -t "$acc"
+#	$HOME/scr/i3wallpaper -w "$wpr" -t "$acc"
 
 	regex="s/\%\%name\%\%/"${nme}"/g;s/\%\%guifont\%\%/"${gft}"/g;\
 s/\%\%font\%\%/"${fnt}"/g;s/\%\%fontsize\%\%/"${sze}"/g;\

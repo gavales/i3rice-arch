@@ -6,7 +6,7 @@
 thmDir=$HOME/themes
 
 #feh --bg-scale "${1}"
-wal -q -i "${1}"
+wal -q -e -n -s -t -i "${1}"
 WALL="${1}"
 
 #rm "$HOME/.config/wall.png"
@@ -15,7 +15,6 @@ WALL="${1}"
 
 cd $thmDir
 
-echo "wallpaper   "${WALL}"" > .current
 name=${1/%.*}
 name=${name/%(*}
 name=${name/1920x1080/}
@@ -35,7 +34,8 @@ name=${name/ /}
 name=${name/ /}
 name=${name/ /}
 name=${name##*/}
-echo "name        ${name}" >> .current
+echo "name        ${name}" > .current
+echo "wallpaper   ${WALL}" >> .current
 cat $HOME/.cache/wal/colors-kitty.conf | grep 'color' | \
 sed "/color10/d;/color11/d;\
 /color12/d;/color13/d;\
@@ -52,4 +52,7 @@ s/color6\ \ \ \ \ /cyan\ \ \ \ \ \ /g;\
 >> .current
 
 $HOME/scr/reloadconfs &>/dev/null &
+$HOME/scr/i3wallpaper \
+	-w "$(cat $HOME/themes/.allvars | head -n1)"
+#	-t "$(cat $HOME/themes/.allvars | sed '/^accent\ /!d;s/[^ ]* *//' | awk '{print $NF}')"
 $HOME/scr/themer -g &>/dev/null &

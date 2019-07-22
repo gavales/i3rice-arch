@@ -1,23 +1,23 @@
-		gruvbox_light
-wallpaper /home/gavarch/pic/walls/favs/aks-voidX-exodus.png
+redrock1
+wallpaper RedRock-SecretMountainWilderness
 font      CMUTypewriterText
 guifont   CMU Typewriter Text
 fontsize  12
-fg3       #646464 : rgb(100, 100, 100)
-fg2       #505050 : rgb(80, 80, 80)
-fg1       #3c3c3c : rgb(60, 60, 60)
-fg0       #282828 : rgb(40, 40, 40)
-accentf   #3c4d3c : rgb(60, 77, 60)
-accent    #689d6a : rgb(104, 157, 106)
-accentb   #c7d2a5 : rgb(199, 210, 165)
-bg0       #fbf1c7 : rgb(251, 241, 199)
-bg1       #e7ddb3 : rgb(231, 221, 179)
-bg2       #d3c99f : rgb(211, 201, 159)
-bg3       #bfb58b : rgb(191, 181, 139)
-green     #98971a : rgb(152, 151, 26)
-yellow    #d79921 : rgb(215, 153, 33)
-red       #cc241d : rgb(204, 36, 29)
-blue      #689d6a : rgb(104, 157, 106)
-cyan      #458588 : rgb(69, 133, 136)
-magenta   #b16286 : rgb(177, 98, 134)
+fg3       rgb(82, 88, 82)	#525852
+fg2       rgb(62, 68, 62)	#3e443e
+fg1       rgb(42, 48, 42)	#2a302a
+fg0       rgb(22, 28, 22)	#161c16
+accentf   rgb(121, 85, 63)	#79553f
+accent    rgb(220, 142, 105)	#DC8E69
+accentb   rgb(234, 190, 168)	#eabea8
+bg0       rgb(249, 239, 233)	#f9efe9
+bg1       rgb(229, 219, 213)	#e5dbd5
+bg2       rgb(209, 199, 193)	#d1c7c1
+bg3       rgb(189, 179, 173)	#bdb3ad
+green     rgb(80, 124, 136)	#507C88
+yellow    rgb(165, 137, 109)	#A5896D
+red       rgb(220, 142, 105)	#DC8E69
+blue      rgb(111, 144, 167)	#6F90A7
+cyan      rgb(96, 193, 184)	#60c1b8
+magenta   rgb(96, 154, 193)	#609AC1
 

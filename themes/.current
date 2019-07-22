@@ -1,14 +1,11 @@
-name       gruvbox_light
-wallpaper  /home/gavarch/pic/walls/favs/aks-voidX-exodus.png
-font       CMUTypewriterText
-guifont    CMU Typewriter Text
-size       12
-background #fbf1c7
-foreground #282828
-accent     #689d6a
-red        #cc241d
-green      #98971a
-yellow     #d79921
-blue       #689d6a
-magenta    #b16286
-cyan       #458588
+name       redrock1
+wallpaper  RedRock-SecretMountainWilderness
+foreground #161c16
+accent     #DC8E69
+background #f9efe9
+blue       #6F90A7
+green      #507C88
+yellow     #A5896D
+red        #DC8E69
+magenta    #609AC1
+cyan       #60c1b8

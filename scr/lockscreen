@@ -39,7 +39,7 @@ i3lock \
 	--bar-max-height=150 \
 	--bar-orientation=horizontal \
 	--indpos="$X:$Y" \
-	--image=$HOME/.config/wall \
+	--image=$HOME/pic/walls/current \
 	--insidevercolor=$V \
 	--ringvercolor=$V \
 	\
