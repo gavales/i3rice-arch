@@ -6,10 +6,11 @@
 WDIR="$HOME/pic/walls"
 WHTE="${WDIR}/white.jpg"
 NORM="${WDIR}/normal"
+BLUR="${WDIR}/blur"
+NWFD="$NORM"
 CURR="${WDIR}/current"
+CRLN="$(readlink -f ${WDIR}/current)"
 HIST="${WDIR}/.history"
-#BLUR="${WDIR}/blur"
-
 MONDIM=$(xdpyinfo | grep dimensions: | awk '{print $2}')
 MX=${MONDIM%x*}
 MY=${MONDIM#*x}
@@ -43,6 +44,7 @@ add-wall () {
 	TRG=$TRG
 	SRC=$SRC"
 	convert "${SRC}" -resize "${MX}x${MY}^" -gravity center -extent "${MX}x${MY}" "${NORM}/${TRG}"
+	convert "${NORM}/${TRG}" -blur 0x4 "${BLUR}/${TRG}"
 	WPP="$TRG"
 }
 
@@ -57,14 +59,12 @@ add () {
 		echo "
 		TRG=$TRG
 		SRC=$SRC"
-		convert "${SRC}" -resize "${MX}x${MY}^" -gravity center -extent "${MX}x${MY}" "${NORM}/${TRG}"
+		convert "${SRC}" \
+			-resize "${MX}x${MY}^" \
+			-gravity center \
+			-extent "${MX}x${MY}" "${NORM}/${TRG}"
+		convert "${NORM}/${TRG}" -blur 0x4 "${BLUR}/${TRG}"
 	done
-#	DIR="$1"
-##	pics=$(ls -l $DIR)
-##	echo $pics
-#	IFS=$'\n'
-#	for i in $(ls $DIR); do
-#	done
 }
 
 tint () {
@@ -73,51 +73,51 @@ tint () {
 }
 
 colour () {
-	convert $WHTE -fill $WPP -draw 'color 0,0 replace' $CURR
+	convert $WHTE -fill $WPP -draw 'color 0,0 replace' colour
+	ln -sf colour $CURR
 	set-wall
-#	feh --bg-center $CURR
 }
 
 change-current () {
-	rm $CURR
-	cp "${NORM}/${WPP}" $CURR
+	ln -sf "${NWFD}/${WPP}" $CURR
+	CRLN="$(readlink -f ${WDIR}/current)"
 }
 
 set-wall () {
 	feh --bg-center $CURR
 }
 
-while getopts :w:t:a:h opts; do
+while getopts :w:t:a:bh opts; do
 	case $opts in
 		w) WPP="${OPTARG}" ;;
 		t) TNT="${OPTARG}" ;;
 		a) ADD="${OPTARG}" ;;
+		b) BLURT=TRUE ;;
 		h) help && exit ;;
 	esac
 done
 
-#CWALLSTR="$WPP $TNT"
-#[[ $CWALLSTR == "$(cat $CWALLFILE)" ]] && echo "WALLPAPER ALREADY SET" && exit
-
-#WPPDIM=$(identify "/home/gavarch/pic/walls/weeb/weeb12.jpg" | awk '{print $3}')
-#[[ $MONDIM == "$WPPDIM" ]] && rm $WALL && cp "$WPP" $WALL ||
-#	convert "$WPP" -resize "${MX}x${MY}^" -gravity center -extent "${MX}x${MY}" "$WALL"
-
 [[ -n $ADD ]] && add "$ADD" && exit
 
-[[ $WPP == "RANDOM" ]] \
-	&& echo "SETTING RANDOM WALLPAPER" && WPP=$(ls $NORM | shuf -n 1)
-
-[[ $WPP =~ "#" ]] && echo "SETTING DESKTOP COLOR TO $WPP" && colour && exit
-
-[[ ! -f $NORM/$WPP ]] && echo "WALLPAPER NOT IN WALLS DIRECTORY" && add-wall "$WPP"
-
-change-current
+if [[ -n $WPP ]]; then
+	[[ $WPP =~ "#" ]] \
+		&& echo "SETTING DESKTOP COLOR TO $WPP" && colour && exit
+	[[ $WPP == "RANDOM" ]] \
+		&& echo "SETTING RANDOM WALLPAPER" && WPP=$(ls $NORM | shuf -n 1)
+	[[ ! -f $NORM/$WPP ]] \
+		&& echo "WALLPAPER NOT IN WALLS DIRECTORY" && add-wall "$WPP"
+	change-current
+fi
 
 [[ -n $TNT ]] && echo "TINTING WALLPAPER $WPP TO COLOR $TNT" && tint
+[[ $BLURT == "TRUE" ]] && {
+	CRFD=${CRLN%/*}
+	CRFD=${CRFD##*/}
+	[[ ${CRFD} == "normal" ]] \
+		&& ln -sf  ${CRLN/normal/blur} $CURR && NWFD="$BLUR" \
+		|| ln -sf  ${CRLN/blur/normal} $CURR
+	echo $CRFD
+}
+echo "SETTING WALLPAPER TO $CRLN"
 
-echo "SETTING WALLPAPER TO $WPP"
 set-wall
-
-#echo $WPP
-#[[ -f $NORM/$WPP ]] && [[ ! $WPP =~ "$(ls $NORM)" ]] && echo "$WPP" >> $HIST
