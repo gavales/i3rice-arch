@@ -1,23 +1,23 @@
-redrock1
-wallpaper RedRock-SecretMountainWilderness
+hidden-beach
+wallpaper /home/gavarch/pic/walls/normal/hidden-beach
 font      CMUTypewriterText
 guifont   CMU Typewriter Text
 fontsize  12
-fg3       rgb(82, 88, 82)	#525852
-fg2       rgb(62, 68, 62)	#3e443e
-fg1       rgb(42, 48, 42)	#2a302a
-fg0       rgb(22, 28, 22)	#161c16
-accentf   rgb(121, 85, 63)	#79553f
-accent    rgb(220, 142, 105)	#DC8E69
-accentb   rgb(234, 190, 168)	#eabea8
-bg0       rgb(249, 239, 233)	#f9efe9
-bg1       rgb(229, 219, 213)	#e5dbd5
-bg2       rgb(209, 199, 193)	#d1c7c1
-bg3       rgb(189, 179, 173)	#bdb3ad
-green     rgb(80, 124, 136)	#507C88
-yellow    rgb(165, 137, 109)	#A5896D
-red       rgb(220, 142, 105)	#DC8E69
-blue      rgb(111, 144, 167)	#6F90A7
-cyan      rgb(96, 193, 184)	#60c1b8
-magenta   rgb(96, 154, 193)	#609AC1
+fg3       rgb(168, 173, 176)	#a8adb0
+fg2       rgb(188, 193, 196)	#bcc1c4
+fg1       rgb(208, 213, 216)	#d0d5d8
+fg0       rgb(228, 233, 236)	#e4e9ec
+accentf   rgb(187, 207, 213)	#bbcfd5
+accent    rgb(147, 182, 191)	#93B6BF
+accentb   rgb(82, 101, 107)	#52656b
+bg0       rgb(18, 20, 25)	#121419
+bg1       rgb(38, 40, 45)	#26282d
+bg2       rgb(58, 60, 65)	#3a3c41
+bg3       rgb(78, 80, 85)	#4e5055
+green     rgb(100, 162, 177)	#64A2B1
+yellow    rgb(122, 181, 193)	#7AB5C1
+red       rgb(77, 149, 169)	#4D95A9
+blue      rgb(69, 133, 136)	#458588
+cyan      rgb(204, 221, 227)	#CCDDE3
+magenta   rgb(202, 212, 215)	#CAD4D7
 

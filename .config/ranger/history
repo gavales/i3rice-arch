@@ -1,50 +1,50 @@
-rename launchwatch.jpg
-rename ocean-mountain.jpg
-rename snow-flying.jpg
-rename lonely-starship.jpg
-rename walker.png
-rename pink-forest.jpg
-rename relax.jpg
-rename nmsposter.jpg
-rename mountain-monolith.jpg
-rename purplebrick.png
-rename nmswallpaper.jpg
-rename fourleggedwalker.png
-rename POV.jpg
-rename paleoforest.jpg
-rename 3.jpg
-rename crumbles.jpg
-rename EVA01.jpg
-rename triangle.jpg
-rename ice.jpg
-rename icebreath.jpg
-rename brokenlandscape.jpg
-rename lonely-nightfury.jpg
-rename brokenlandscape-closeup.jpg
-rename hiccup-toothless.jpg
-rename iceberg.jpg
-rename hiccup-astrid.jpg
-rename goliath.jpg
-rename alphabreath.jpg
-rename blue-pink.jpg
-rename logo.jpg
-rename serenity.png
-rename raibow.jpg
-rename solarized-triangle.png
-rename solarized-lines.png
-rename co.jpg
-rename cah.jpg
-rename gotg-conquest.jpg
-rename gotg-ironman.jpg
-rename gotg-back.jpg
-rename gotg-OG.jpg
-rename gotg-star-lord.png
-rename gotg-rocket.png
-rename gotg-lord.png
-rename gotg-poster.jpg
-rename nova.jpg
-rename nova-overflow.jpg
-rename nova-nonprime.jpg
-rename nova-rider.jpg
-rename nova-rest.jpg
-rename nova-v-drax.jpg
+mkdir Saga
+shell git clone https://github.com/StillANixRookie/mpv-reload.git
+mkdir scripts
+mkdir lua-settings
+touch reload.conf
+shell wget https://raw.githubusercontent.com/budlabs/i3ass/next/src/i3list
+shell chmod +x %f
+rename nml27.jpg
+rename nomansky
+rename frfl
+rename xpns
+rename weeb
+rename nms
+rename ntr
+rename grad
+rename comix
+rename cmx
+shell unzip 'Photos(1).zip' -d 'Photos(1)'
+shell unzip 'Photos.zip' -d 'Photos'
+rename (2019) Avengement.mov
+rename (2018) Accident Man.mov
+rename (2009) Black Dynamite.mov
+rename (2000) Crouching Tiger Hidden Dragon.mov
+shell convert  %f  -fill "#002b36"  -tint 100 tint_darker.png
+shell convert  %f  -fill "#002b36"  -tint 200 tint_darker.png
+shell convert  %f  -fill "#689d6a"  -tint 200 tint_darker.png
+shell convert  %f  -fill "#689d6a"  -tint 100 tint_darker.png
+shell convert  %f  -fill "#fbf1c7"  -tint 100 tint_darker.png
+rename (720P - mp4) Tactical+Force.mov
+rename (2011) Tactical+Force.mov
+rename (2011) Tactical Force.mov
+open_with vim
+rename pics
+mkdir walls
+normal
+mkdir normal
+shell identify %f
+rename LisbonPortugal1920x1080.jpg
+rename KatsuraRiverJapan 1920x1080.jpg
+rename blossom
+mkdir Apes
+rename (1968) Planet Of The Apes
+rename (1970) Beneath The Planet Of The Apes
+rename (1972) Conquest Of The Planet Of The Apes.mp4
+rename (1973) Battle For The Planet Of The Apes.mp4
+open_with 2
+mkdir blur
+rename current
+shell feh --bg-center %f
+shell convert "%s" -blur 0x4 "%s"

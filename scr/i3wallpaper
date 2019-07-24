@@ -22,6 +22,8 @@ cat << 'EOB'
               i3wallpaper's directory)
     -t -- color to tint wallpaper with
     -a -- add walls contained in specified dir to i3wallpaper's directory
+    -l -- open wallpapers in i3wallpaper's directory in sxiv
+    -b -- toggle blur
 EOB
 }
 
@@ -85,13 +87,20 @@ change-current () {
 
 set-wall () {
 	feh --bg-center $CURR
+	echo "SETTING WALLPAPER TO $CRLN"
 }
 
-while getopts :w:t:a:bh opts; do
+list () {
+	cd $NORM
+	$HOME/scr/openimage "$(ls | head -n 1)"
+}
+
+while getopts :w:t:a:lbh opts; do
 	case $opts in
 		w) WPP="${OPTARG}" ;;
 		t) TNT="${OPTARG}" ;;
 		a) ADD="${OPTARG}" ;;
+		l) list && exit ;;
 		b) BLURT=TRUE ;;
 		h) help && exit ;;
 	esac
@@ -114,10 +123,9 @@ fi
 	CRFD=${CRLN%/*}
 	CRFD=${CRFD##*/}
 	[[ ${CRFD} == "normal" ]] \
-		&& ln -sf  ${CRLN/normal/blur} $CURR && NWFD="$BLUR" \
-		|| ln -sf  ${CRLN/blur/normal} $CURR
+		&& ln -sf  ${CRLN/\/normal\//\/blur\/} $CURR && NWFD="$BLUR" \
+		|| ln -sf  ${CRLN/\/blur\//\/normal\/} $CURR
 	echo $CRFD
 }
-echo "SETTING WALLPAPER TO $CRLN"
 
 set-wall

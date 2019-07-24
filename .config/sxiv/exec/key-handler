@@ -9,6 +9,6 @@ do
         "C-c")
                 echo -n "$file" | xclip -selection clipboard ;;
         "C-w")
-                feh --bg-scale "$file" ;;
+                i3wallpaper -w  "$file" ;;
         esac
 done

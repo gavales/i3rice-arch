@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+IMG=$(readlink -f ~/pic/walls/current)
 bkd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
 grn=$(xrdb -query | grep '*color2' | awk '{print $NF}')
 ylw=$(xrdb -query | grep '*color3' | awk '{print $NF}')
@@ -39,7 +40,7 @@ i3lock \
 	--bar-max-height=150 \
 	--bar-orientation=horizontal \
 	--indpos="$X:$Y" \
-	--image=$HOME/pic/walls/current \
+	--image=${IMG/\/normal\//\/blur\/} \
 	--insidevercolor=$V \
 	--ringvercolor=$V \
 	\
