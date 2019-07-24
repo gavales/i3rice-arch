@@ -1,24 +1,24 @@
 
-              <b><big>hidden-beach</big></b>
-<b>wallpaper  </b>/home/gavarch/pic/walls/normal/hidden-beach
+              <b><big>purpgang</big></b>
+<b>wallpaper  </b>bike
 <b>font       </b>CMUTypewriterText
 <b>guifont    </b>CMU Typewriter Text
 <b>fontsize   </b>12
-<span foreground="#121419" background="#a8adb0"><b> fg3       </b>rgb(168, 173, 176)	#a8adb0 </span>
-<span foreground="#121419" background="#bcc1c4"><b> fg2       </b>rgb(188, 193, 196)	#bcc1c4 </span>
-<span foreground="#121419" background="#d0d5d8"><b> fg1       </b>rgb(208, 213, 216)	#d0d5d8 </span>
-<span foreground="#121419" background="#e4e9ec"><b> fg0       </b>rgb(228, 233, 236)	#e4e9ec </span>
-<span foreground="#121419" background="#bbcfd5"><b> accentf   </b>rgb(187, 207, 213)	#bbcfd5 </span>
-<span foreground="#e4e9ec" background="#93B6BF"><b> accent    </b>rgb(147, 182, 191)	#93B6BF </span>
-<span foreground="#e4e9ec" background="#52656b"><b> accentb   </b>rgb(82, 101, 107)	#52656b </span>
-<span foreground="#e4e9ec" background="#121419"><b> bg0       </b>rgb(18, 20, 25)	#121419 </span>
-<span foreground="#e4e9ec" background="#26282d"><b> bg1       </b>rgb(38, 40, 45)	#26282d </span>
-<span foreground="#e4e9ec" background="#3a3c41"><b> bg2       </b>rgb(58, 60, 65)	#3a3c41 </span>
-<span foreground="#e4e9ec" background="#4e5055"><b> bg3       </b>rgb(78, 80, 85)	#4e5055 </span>
-<span foreground="#e4e9ec" background="#64A2B1"><b> green     </b>rgb(100, 162, 177)	#64A2B1 </span>
-<span foreground="#e4e9ec" background="#7AB5C1"><b> yellow    </b>rgb(122, 181, 193)	#7AB5C1 </span>
-<span foreground="#e4e9ec" background="#4D95A9"><b> red       </b>rgb(77, 149, 169)	#4D95A9 </span>
-<span foreground="#e4e9ec" background="#458588"><b> blue      </b>rgb(69, 133, 136)	#458588 </span>
-<span foreground="#e4e9ec" background="#CCDDE3"><b> cyan      </b>rgb(204, 221, 227)	#CCDDE3 </span>
-<span foreground="#e4e9ec" background="#CAD4D7"><b> magenta   </b>rgb(202, 212, 215)	#CAD4D7 </span>
+<span foreground="#554466" background="#c3b2a1"><b> fg3       </b>rgb(195, 178, 161)	#c3b2a1 </span>
+<span foreground="#554466" background="#d7c6b5"><b> fg2       </b>rgb(215, 198, 181)	#d7c6b5 </span>
+<span foreground="#554466" background="#ebdac9"><b> fg1       </b>rgb(235, 218, 201)	#ebdac9 </span>
+<span foreground="#554466" background="#FFEEDD"><b> fg0       </b>rgb(255, 238, 221)	#FFEEDD </span>
+<span foreground="#554466" background="#d4c3d4"><b> accentf   </b>rgb(212, 195, 212)	#d4c3d4 </span>
+<span foreground="#FFEEDD" background="#AA99CC"><b> accent    </b>rgb(170, 153, 204)	#AA99CC </span>
+<span foreground="#FFEEDD" background="#7f6e99"><b> accentb   </b>rgb(127, 110, 153)	#7f6e99 </span>
+<span foreground="#FFEEDD" background="#554466"><b> bg0       </b>rgb(85, 68, 102)	#554466 </span>
+<span foreground="#FFEEDD" background="#69587a"><b> bg1       </b>rgb(105, 88, 122)	#69587a </span>
+<span foreground="#FFEEDD" background="#7d6c8e"><b> bg2       </b>rgb(125, 108, 142)	#7d6c8e </span>
+<span foreground="#FFEEDD" background="#9180a2"><b> bg3       </b>rgb(145, 128, 162)	#9180a2 </span>
+<span foreground="#FFEEDD" background="#BBCC66"><b> green     </b>rgb(187, 204, 102)	#BBCC66 </span>
+<span foreground="#FFEEDD" background="#FFBB66"><b> yellow    </b>rgb(255, 187, 102)	#FFBB66 </span>
+<span foreground="#FFEEDD" background="#EE5555"><b> red       </b>rgb(238, 85, 85)	#EE5555 </span>
+<span foreground="#FFEEDD" background="#AA99CC"><b> blue      </b>rgb(170, 153, 204)	#AA99CC </span>
+<span foreground="#FFEEDD" background="#CC99BB"><b> cyan      </b>rgb(204, 153, 187)	#CC99BB </span>
+<span foreground="#FFEEDD" background="#CC6688"><b> magenta   </b>rgb(204, 102, 136)	#CC6688 </span>
 

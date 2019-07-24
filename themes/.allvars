@@ -1,23 +1,23 @@
-hidden-beach
-wallpaper /home/gavarch/pic/walls/normal/hidden-beach
+purpgang
+wallpaper bike
 font      CMUTypewriterText
 guifont   CMU Typewriter Text
 fontsize  12
-fg3       rgb(168, 173, 176)	#a8adb0
-fg2       rgb(188, 193, 196)	#bcc1c4
-fg1       rgb(208, 213, 216)	#d0d5d8
-fg0       rgb(228, 233, 236)	#e4e9ec
-accentf   rgb(187, 207, 213)	#bbcfd5
-accent    rgb(147, 182, 191)	#93B6BF
-accentb   rgb(82, 101, 107)	#52656b
-bg0       rgb(18, 20, 25)	#121419
-bg1       rgb(38, 40, 45)	#26282d
-bg2       rgb(58, 60, 65)	#3a3c41
-bg3       rgb(78, 80, 85)	#4e5055
-green     rgb(100, 162, 177)	#64A2B1
-yellow    rgb(122, 181, 193)	#7AB5C1
-red       rgb(77, 149, 169)	#4D95A9
-blue      rgb(69, 133, 136)	#458588
-cyan      rgb(204, 221, 227)	#CCDDE3
-magenta   rgb(202, 212, 215)	#CAD4D7
+fg3       rgb(195, 178, 161)	#c3b2a1
+fg2       rgb(215, 198, 181)	#d7c6b5
+fg1       rgb(235, 218, 201)	#ebdac9
+fg0       rgb(255, 238, 221)	#FFEEDD
+accentf   rgb(212, 195, 212)	#d4c3d4
+accent    rgb(170, 153, 204)	#AA99CC
+accentb   rgb(127, 110, 153)	#7f6e99
+bg0       rgb(85, 68, 102)	#554466
+bg1       rgb(105, 88, 122)	#69587a
+bg2       rgb(125, 108, 142)	#7d6c8e
+bg3       rgb(145, 128, 162)	#9180a2
+green     rgb(187, 204, 102)	#BBCC66
+yellow    rgb(255, 187, 102)	#FFBB66
+red       rgb(238, 85, 85)	#EE5555
+blue      rgb(170, 153, 204)	#AA99CC
+cyan      rgb(204, 153, 187)	#CC99BB
+magenta   rgb(204, 102, 136)	#CC6688
 
