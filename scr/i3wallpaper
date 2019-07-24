@@ -95,6 +95,12 @@ list () {
 	$HOME/scr/openimage "$(ls | head -n 1)"
 }
 
+history () {
+	[[ ! -f $HIST ]] && touch $HIST
+	sed -e "/"${1}"/d" -i $HIST
+	echo -e "${1}\n$(cat $HIST)" > $HIST
+}
+
 while getopts :w:t:a:lbh opts; do
 	case $opts in
 		w) WPP="${OPTARG}" ;;
@@ -113,6 +119,18 @@ if [[ -n $WPP ]]; then
 		&& echo "SETTING DESKTOP COLOR TO $WPP" && colour && exit
 	[[ $WPP == "RANDOM" ]] \
 		&& echo "SETTING RANDOM WALLPAPER" && WPP=$(ls $NORM | shuf -n 1)
+	[[ $WPP == "PREV" ]] \
+		&& echo "SETTING PREVIOUS WALLPAPER IN HISTORY" \
+		&& {
+			WPP="$(sed -n "/"${CRLN##*/}"/{g;1!p;};h" $HIST)"
+			[[ -z $WPP ]] && WPP="$(tail -n 1 $HIST)"
+		}
+	[[ $WPP == "NEXT" ]] \
+		&& echo "SETTING NEXT WALLPAPER IN HISTORY" \
+		&& {
+			WPP="$(sed -n "/"${CRLN##*/}"/{n;p;}" $HIST)"
+			[[ -z $WPP ]] && WPP="$(head -n 1 $HIST)"
+		}
 	[[ ! -f $NORM/$WPP ]] \
 		&& echo "WALLPAPER NOT IN WALLS DIRECTORY" && add-wall "$WPP"
 	change-current
@@ -125,7 +143,8 @@ fi
 	[[ ${CRFD} == "normal" ]] \
 		&& ln -sf  ${CRLN/\/normal\//\/blur\/} $CURR && NWFD="$BLUR" \
 		|| ln -sf  ${CRLN/\/blur\//\/normal\/} $CURR
-	echo $CRFD
+	echo "TOGGLING BLUR"
 }
 
 set-wall
+history ${CRLN##*/}
