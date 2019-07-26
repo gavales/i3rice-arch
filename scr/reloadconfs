@@ -3,7 +3,7 @@
 $HOME/scr/themer -t "$HOME/xrs"                 -x "xrs-reload"   -g
 $HOME/scr/i3wallpaper \
 	-w "$(cat $HOME/themes/.allvars | sed '/^wallpaper/!d;s/[^ ]* *//')" \
-	-t "$(cat $HOME/themes/.allvars | sed '/^bg0\ /!d;s/[^ ]* *//' | awk '{print $NF}')"
+	-t "$(cat $HOME/themes/.allvars | sed '/^accent\ /!d;s/[^ ]* *//' | awk '{print $NF}')"
 $HOME/scr/themer -t "$HOME/.config/i3"          -x "i3concat"     -g
 $HOME/scr/themer -t "$HOME/.config/polybar"     -x "pb-reload"    -g
 $HOME/scr/themer -t "$HOME/.config/rofi"        -x " "            -g

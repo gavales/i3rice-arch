@@ -1,40 +1,3 @@
-#       ██  ████    ██████    ███████   ████     ██ ████████ ██   ████████ 
-#      ▒▒  █▒▒▒ █  ██▒▒▒▒██  ██▒▒▒▒▒██ ▒██▒██   ▒██▒██▒▒▒▒▒ ▒██  ██▒▒▒▒▒▒██
-#       ██▒    ▒█ ██    ▒▒  ██     ▒▒██▒██▒▒██  ▒██▒██      ▒██ ██      ▒▒ 
-#      ▒██   ███ ▒██       ▒██      ▒██▒██ ▒▒██ ▒██▒███████ ▒██▒██         
-#      ▒██  ▒▒▒ █▒██       ▒██      ▒██▒██  ▒▒██▒██▒██▒▒▒▒  ▒██▒██    █████
-#      ▒██ █   ▒█▒▒██    ██▒▒██     ██ ▒██   ▒▒████▒██      ▒██▒▒██  ▒▒▒▒██
-#      ▒██▒ ████  ▒▒██████  ▒▒███████  ▒██    ▒▒███▒██      ▒██ ▒▒████████ 
-#      ▒▒  ▒▒▒▒    ▒▒▒▒▒▒    ▒▒▒▒▒▒▒   ▒▒      ▒▒▒ ▒▒       ▒▒   ▒▒▒▒▒▒▒▒  
-
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
-
-# >>>> MAIN
-set $font1 CMU Typewriter Text
-set $font2 FontAwesome
-set $font3 monaco
-set $fonts 12
-
-font pango:$font1,$font2 $fonts
-
-set $home		/home/gavarch
-set $scr		scr
-set $scrpic		scrpic
-set $scrmus		scrmus
-
-set $term		urxvtc
-set $browser	google-chrome-beta
-set $brightinc	light -A 10
-set $brightdec	light -U 10
-set $nat		eDP1
-set $vga		VGA1
-set $hdm		HDMI1
-set $kb			us
-
-set $mediaw		492
-set $mediaw2	492
-set $mediah		302
-set $mediah2	392
 # >>>> MAIN VARS
 # //// i3
 
@@ -86,22 +49,22 @@ set $ws10 10
 
 # //// COLORS
 
-set $bg3	#c1baa7
-set $bg2	#d5cebb
-set $bg1	#e9e2cf
-set $bg0	#fdf6e3
-set $acb	#93cbbd
-set $acc	#2aa198
-set $acf	#156567
-set $fg0	#002b36
-set $fg1	#143f4a
-set $fg2	#28535e
-set $fg3	#3c6772
-set $red	#dc322f
-set $grn	#859900
-set $ylw	#b58900
-set $gnt	#d33682
-set $cyn	#268bd2
+set $bg3	%%bg3%%
+set $bg2	%%bg2%%
+set $bg1	%%bg1%%
+set $bg0	%%bg0%%
+set $acb	%%acb%%
+set $acc	%%acc%%
+set $acf	%%acf%%
+set $fg0	%%fg0%%
+set $fg1	%%fg1%%
+set $fg2	%%fg2%%
+set $fg3	%%fg3%%
+set $red	%%red%%
+set $grn	%%grn%%
+set $ylw	%%ylw%%
+set $gnt	%%gnt%%
+set $cyn	%%cyn%%
 set $t ff
 
 # //// APPS

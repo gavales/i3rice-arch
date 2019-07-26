@@ -1,10 +1,3 @@
-mkdir Saga
-shell git clone https://github.com/StillANixRookie/mpv-reload.git
-mkdir scripts
-mkdir lua-settings
-touch reload.conf
-shell wget https://raw.githubusercontent.com/budlabs/i3ass/next/src/i3list
-shell chmod +x %f
 rename nml27.jpg
 rename nomansky
 rename frfl
@@ -34,7 +27,6 @@ rename pics
 mkdir walls
 normal
 mkdir normal
-shell identify %f
 rename LisbonPortugal1920x1080.jpg
 rename KatsuraRiverJapan 1920x1080.jpg
 rename blossom
@@ -45,6 +37,14 @@ rename (1972) Conquest Of The Planet Of The Apes.mp4
 rename (1973) Battle For The Planet Of The Apes.mp4
 open_with 2
 mkdir blur
-rename current
 shell feh --bg-center %f
 shell convert "%s" -blur 0x4 "%s"
+shell identify %f
+delete][]]]
+rename relax
+mkdir .layouts
+rename main_template
+touch test
+rename current
+rename .oldcurrent
+w

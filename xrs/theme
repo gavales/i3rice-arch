@@ -1,17 +1,17 @@
-! purpgang
-#define cwhtl #FFEEDD
-#define cwhtd #7f6e99
-#define credd #EE5555
-#define credl #EE5555
-#define cgrnd #BBCC66
-#define cgrnl #BBCC66
-#define cylwd #FFBB66
-#define cylwl #FFBB66
-#define cblud #AA99CC
-#define cblul #AA99CC
-#define cgntd #CC6688
-#define cgntl #CC6688
-#define ccynd #CC99BB
-#define ccynl #CC99BB
-#define cblkd #554466
-#define cblkl #69587a
+! solarized_light
+#define cwhtl #002b36
+#define cwhtd #93cbbd
+#define credd #dc322f
+#define credl #dc322f
+#define cgrnd #859900
+#define cgrnl #859900
+#define cylwd #b58900
+#define cylwl #b58900
+#define cblud #2aa198
+#define cblul #2aa198
+#define cgntd #d33682
+#define cgntl #d33682
+#define ccynd #268bd2
+#define ccynl #268bd2
+#define cblkd #fdf6e3
+#define cblkl #e9e2cf

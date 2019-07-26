@@ -49,15 +49,22 @@ set $ws10 10
 
 # //// COLORS
 
-set_from_resource $blk	color0
-set_from_resource $red	color1
-set_from_resource $grn	color2
-set_from_resource $ylw	color3
-set_from_resource $blu	color4
-set_from_resource $gnt	color5
-set_from_resource $cyn	color6
-set_from_resource $wht	color15
-set_from_resource $gry	color7
+set $bg3	#c1baa7
+set $bg2	#d5cebb
+set $bg1	#e9e2cf
+set $bg0	#fdf6e3
+set $acb	#93cbbd
+set $acc	#2aa198
+set $acf	#156567
+set $fg0	#002b36
+set $fg1	#143f4a
+set $fg2	#28535e
+set $fg3	#3c6772
+set $red	#dc322f
+set $grn	#859900
+set $ylw	#b58900
+set $gnt	#d33682
+set $cyn	#268bd2
 set $t ff
 
 # //// APPS
@@ -73,12 +80,12 @@ set $brightdec	light -U 10
 # >>>> DECORATIONS
 # COLORS
 # class					brdr bkgr text indi chlb
-client.focused			$blu $gry $wht $gry $blu
-client.focused_inactive	$blu $blu $wht $blu $blu
-client.unfocused		$blu $blu $blk $blu $blu
-client.urgent			$red $red $wht $red $red
-client.placeholder		$blk $blk $wht $blk $blk
-client.background		$blk
+client.focused			$acc $acb $fg0 $acb $acc
+client.focused_inactive	$acc $acc $fg0 $acc $acc
+client.unfocused		$acc $acc $bg0 $acc $acc
+client.urgent			$red $red $fg0 $red $red
+client.placeholder		$bg0 $bg0 $fg0 $bg0 $bg0
+client.background		$bg0
 
 # >>>> # BAR
 #bar {
@@ -95,13 +102,13 @@ client.background		$blk
 #	font pango:$font1,$font2 $fonts
 #
 #	colors {
-#	background $blu
+#	background $acc
 ##						brdr bkgr text
-#	focused_workspace	$blu $blu $blk
-#	active_workspace	$blu $blu $wht
-#	inactive_workspace	$blu $blu $wht
-#	binding_mode		$ylw $ylw $blk
-#	urgent_workspace	$red $red $blk
+#	focused_workspace	$acc $acc $bg0
+#	active_workspace	$acc $acc $fg0
+#	inactive_workspace	$acc $acc $fg0
+#	binding_mode		$ylw $ylw $bg0
+#	urgent_workspace	$red $red $bg0
 #	}
 #}
 
@@ -398,6 +405,7 @@ $fw [workspace="$ws5"] floating enable,resize set 750 500
 
 $fw [title="About Pale Moon"]				$flen
 $fw [title="alsamixer"]						$flen
+$fw [title="^Colour picker$"]				$flen,resize set 697 276
 $fw [title="File Transfer*"]				$flen
 $fw [title="i3_help"]						$flen
 $fw [title="MuseScore: Play Panel"]			$flen

@@ -8,9 +8,9 @@ function! Folds()
 		return ">1"
 	elseif match(thisline, '^for ') >= 0
 		return ">1"
-	elseif match(thisline, '{$') >= 0
-		return ">1"
 	elseif match(thisline, '^case') >= 0
+		return ">1"
+	elseif match(thisline, '{$') >= 0
 		return ">1"
 	elseif match(thisline, '^}$') >= 0
 		return ">0"

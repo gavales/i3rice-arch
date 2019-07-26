@@ -7548,3 +7548,159 @@ Jul 23 00:55 : client: [68] opened from [::1]:35988
 Jul 23 00:55 : client: [68] closed
 Jul 23 00:55 : client: [69] opened from [::1]:35990
 Jul 23 00:55 : client: [69] closed
+Jul 25 20:11 : player: played "Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/07 - El Chacarero.mp3"
+Jul 25 20:11 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jul 25 20:11 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jul 25 20:11 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jul 25 20:11 : client: [0] opened from [::1]:53884
+Jul 25 20:11 : client: [0] closed
+Jul 25 20:11 : client: [1] opened from [::1]:53886
+Jul 25 20:11 : client: [1] closed
+Jul 25 20:11 : client: [2] opened from [::1]:53890
+Jul 25 20:11 : client: [2] closed
+Jul 25 20:11 : client: [3] opened from [::1]:53892
+Jul 25 20:11 : client: [3] closed
+Jul 25 20:12 : client: [4] opened from [::1]:53914
+Jul 25 20:12 : client: [4] closed
+Jul 25 20:12 : client: [5] opened from [::1]:53924
+Jul 25 20:12 : client: [5] closed
+Jul 25 20:12 : client: [6] opened from [::1]:53982
+Jul 25 20:12 : client: [6] closed
+Jul 25 20:12 : client: [7] opened from [::1]:53992
+Jul 25 20:12 : client: [7] closed
+Jul 25 20:12 : client: [8] opened from [::1]:54044
+Jul 25 20:12 : client: [8] closed
+Jul 25 20:12 : client: [9] opened from [::1]:54046
+Jul 25 20:12 : client: [9] closed
+Jul 25 20:12 : client: [10] opened from [::1]:54052
+Jul 25 20:12 : client: [10] closed
+Jul 25 20:12 : client: [11] opened from [::1]:54054
+Jul 25 20:12 : client: [11] closed
+Jul 26 11:57 : client: [12] opened from [::1]:54428
+Jul 26 11:57 : client: [12] closed
+Jul 26 11:57 : client: [13] opened from [::1]:54430
+Jul 26 11:57 : client: [13] closed
+Jul 26 11:57 : client: [14] opened from [::1]:54446
+Jul 26 11:57 : client: [14] closed
+Jul 26 11:57 : client: [15] opened from [::1]:54448
+Jul 26 11:57 : client: [15] closed
+Jul 26 11:57 : client: [16] opened from [::1]:54468
+Jul 26 11:57 : client: [16] closed
+Jul 26 11:57 : client: [17] opened from [::1]:54470
+Jul 26 11:57 : client: [17] closed
+Jul 26 11:57 : client: [18] opened from [::1]:54472
+Jul 26 11:57 : client: [18] closed
+Jul 26 11:57 : client: [19] opened from [::1]:54474
+Jul 26 11:57 : client: [19] closed
+Jul 26 11:57 : client: [20] opened from [::1]:54478
+Jul 26 11:57 : client: [20] closed
+Jul 26 11:57 : client: [21] opened from [::1]:54480
+Jul 26 11:57 : client: [21] closed
+Jul 26 11:57 : client: [22] opened from [::1]:54508
+Jul 26 11:57 : client: [22] closed
+Jul 26 11:57 : client: [23] opened from [::1]:54510
+Jul 26 11:57 : client: [23] closed
+Jul 26 11:58 : client: [24] opened from [::1]:54604
+Jul 26 11:58 : client: [24] closed
+Jul 26 11:58 : client: [25] opened from [::1]:54606
+Jul 26 11:58 : client: [25] closed
+Jul 26 11:58 : client: [26] opened from [::1]:54614
+Jul 26 11:58 : client: [26] closed
+Jul 26 11:58 : client: [27] opened from [::1]:54616
+Jul 26 11:58 : client: [27] closed
+Jul 26 11:58 : client: [28] opened from [::1]:54674
+Jul 26 11:58 : client: [28] closed
+Jul 26 11:58 : client: [29] opened from [::1]:54676
+Jul 26 11:58 : client: [29] closed
+Jul 26 11:58 : client: [30] opened from [::1]:54686
+Jul 26 11:58 : client: [30] closed
+Jul 26 11:58 : client: [31] opened from [::1]:54688
+Jul 26 11:58 : client: [31] closed
+Jul 26 11:58 : client: [32] opened from [::1]:54690
+Jul 26 11:58 : client: [32] closed
+Jul 26 11:58 : client: [33] opened from [::1]:54692
+Jul 26 11:58 : client: [33] closed
+Jul 26 11:58 : client: [34] opened from [::1]:54706
+Jul 26 11:58 : client: [34] closed
+Jul 26 11:58 : client: [35] opened from [::1]:54708
+Jul 26 11:58 : client: [35] closed
+Jul 26 11:58 : client: [36] opened from [::1]:54710
+Jul 26 11:58 : client: [36] closed
+Jul 26 11:58 : client: [37] opened from [::1]:54712
+Jul 26 11:58 : client: [37] closed
+Jul 26 11:59 : client: [38] opened from [::1]:54716
+Jul 26 11:59 : client: [38] closed
+Jul 26 11:59 : client: [39] opened from [::1]:54718
+Jul 26 11:59 : client: [39] closed
+Jul 26 11:59 : client: [40] opened from [::1]:54720
+Jul 26 11:59 : client: [40] closed
+Jul 26 11:59 : client: [41] opened from [::1]:54722
+Jul 26 11:59 : client: [41] closed
+Jul 26 11:59 : client: [42] opened from [::1]:54724
+Jul 26 11:59 : client: [42] closed
+Jul 26 11:59 : client: [43] opened from [::1]:54726
+Jul 26 11:59 : client: [43] closed
+Jul 26 11:59 : client: [44] opened from [::1]:54728
+Jul 26 11:59 : client: [44] closed
+Jul 26 11:59 : client: [45] opened from [::1]:54730
+Jul 26 11:59 : client: [45] closed
+Jul 26 11:59 : client: [46] opened from [::1]:54736
+Jul 26 11:59 : client: [46] closed
+Jul 26 11:59 : client: [47] opened from [::1]:54738
+Jul 26 11:59 : client: [47] closed
+Jul 26 12:00 : client: [48] opened from [::1]:54740
+Jul 26 12:00 : client: [48] closed
+Jul 26 12:00 : client: [49] opened from [::1]:54742
+Jul 26 12:00 : client: [49] closed
+Jul 26 12:01 : client: [50] opened from [::1]:54756
+Jul 26 12:01 : client: [50] closed
+Jul 26 12:01 : client: [51] opened from [::1]:54758
+Jul 26 12:01 : client: [51] closed
+Jul 26 12:01 : client: [52] opened from [::1]:54766
+Jul 26 12:01 : client: [52] closed
+Jul 26 12:01 : client: [53] opened from [::1]:54768
+Jul 26 12:01 : client: [53] closed
+Jul 26 12:02 : client: [54] opened from [::1]:54770
+Jul 26 12:02 : client: [54] closed
+Jul 26 12:02 : client: [55] opened from [::1]:54772
+Jul 26 12:02 : client: [55] closed
+Jul 26 12:09 : client: [56] opened from [::1]:54788
+Jul 26 12:09 : client: [56] closed
+Jul 26 12:09 : client: [57] opened from [::1]:54790
+Jul 26 12:09 : client: [57] closed
+Jul 26 12:09 : client: [58] opened from [::1]:54792
+Jul 26 12:09 : client: [58] closed
+Jul 26 12:09 : client: [59] opened from [::1]:54794
+Jul 26 12:09 : client: [59] closed
+Jul 26 12:12 : client: [60] opened from [::1]:54798
+Jul 26 12:12 : client: [60] closed
+Jul 26 12:12 : client: [61] opened from [::1]:54800
+Jul 26 12:12 : client: [61] closed
+Jul 26 12:12 : client: [62] opened from [::1]:54804
+Jul 26 12:12 : client: [62] closed
+Jul 26 12:12 : client: [63] opened from [::1]:54806
+Jul 26 12:12 : client: [63] closed
+Jul 26 12:20 : client: [64] opened from [::1]:54822
+Jul 26 12:20 : client: [64] closed
+Jul 26 12:20 : client: [65] opened from [::1]:54824
+Jul 26 12:20 : client: [65] closed
+Jul 26 12:30 : client: [66] opened from [::1]:54838
+Jul 26 12:30 : client: [66] closed
+Jul 26 12:30 : client: [67] opened from [::1]:54840
+Jul 26 12:30 : client: [67] closed
+Jul 26 12:31 : client: [68] opened from [::1]:54844
+Jul 26 12:31 : client: [68] closed
+Jul 26 12:31 : client: [69] opened from [::1]:54846
+Jul 26 12:31 : client: [69] closed
+Jul 26 12:32 : client: [70] opened from [::1]:54850
+Jul 26 12:32 : client: [70] closed
+Jul 26 12:32 : client: [71] opened from [::1]:54852
+Jul 26 12:32 : client: [71] closed
+Jul 26 12:32 : client: [72] opened from [::1]:54854
+Jul 26 12:32 : client: [72] closed
+Jul 26 12:32 : client: [73] opened from [::1]:54856
+Jul 26 12:32 : client: [73] closed
+Jul 26 12:35 : client: [74] opened from [::1]:54860
+Jul 26 12:35 : client: [74] closed
+Jul 26 12:35 : client: [75] opened from [::1]:54862
+Jul 26 12:35 : client: [75] closed

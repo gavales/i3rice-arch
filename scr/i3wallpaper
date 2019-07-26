@@ -4,9 +4,10 @@
 # CREATED: Sat  6 Jul 00:50:41 BST 2019
 
 WDIR="$HOME/pic/walls"
-WHTE="${WDIR}/white.jpg"
+WHT="${WDIR}/white.jpg"
 NORM="${WDIR}/normal"
 BLUR="${WDIR}/blur"
+COLS="${WDIR}/cols"
 NWFD="$NORM"
 CURR="${WDIR}/current"
 CRLN="$(readlink -f ${WDIR}/current)"
@@ -28,8 +29,6 @@ EOB
 }
 
 add-wall () {
-#	SRC="${SRC#*/}"
-#	TRG="${i#*/}"
 	SRC="$1"
 	TRG="${1##*/}"
 	TRG="${TRG%.*}"
@@ -59,24 +58,32 @@ add () {
 		TRG="${i#*/}"
 		TRG="${TRG%.*}"
 		echo "
-		TRG=$TRG
-		SRC=$SRC"
-		convert "${SRC}" \
+	TRG=$TRG
+	SRC=$SRC"
+		[[ ! -f ${NORM}/${TRG} ]] && convert "${SRC}" \
 			-resize "${MX}x${MY}^" \
 			-gravity center \
 			-extent "${MX}x${MY}" "${NORM}/${TRG}"
-		convert "${NORM}/${TRG}" -blur 0x4 "${BLUR}/${TRG}"
+		[[ ! -f ${BLUR}/${TRG} ]] && convert "${NORM}/${TRG}" \
+			-blur 0x4 "${BLUR}/${TRG}"
 	done
 }
 
 tint () {
-	convert "$CURR" -fill "${TNT}" -tint 100 "$CURR"
-#	feh --bg-center $CURR
+	CRTNT="${NORM}/${CRLN##*/}-${TNT/\#/}"
+	[[ ! -f $CRTNT ]] && {
+		convert "$CURR" -fill "${TNT}" -tint 100 "$CRTNT"
+		convert "${CRTNT}" -blur 0x4 "${CRTNT/normal/blur}"
+	}
+	ln -sf "$CRTNT" $CURR
+	CRLN=$(readlink -f $CURR)
 }
 
 colour () {
-	convert $WHTE -fill $WPP -draw 'color 0,0 replace' colour
-	ln -sf colour $CURR
+	[[ ! -f ${COLS}/${WPP/\#/} ]] && \
+		convert $WHT -fill $WPP \
+		-draw 'color 0,0 replace' "${COLS}/${WPP/\#/}"
+	ln -sf "${COLS}/${WPP/\#/}" $CURR
 	set-wall
 }
 
@@ -87,7 +94,7 @@ change-current () {
 
 set-wall () {
 	feh --bg-center $CURR
-	echo "SETTING WALLPAPER TO $CRLN"
+	echo "SETTING WALLPAPER TO ${CRLN##*/}"
 }
 
 list () {
@@ -103,12 +110,12 @@ history () {
 
 while getopts :w:t:a:lbh opts; do
 	case $opts in
-		w) WPP="${OPTARG}" ;;
+		w) WPP="${OPTARG}" WPPACTUAL="${OPTARG}" ;;
 		t) TNT="${OPTARG}" ;;
 		a) ADD="${OPTARG}" ;;
-		l) list && exit ;;
-		b) BLURT=TRUE ;;
-		h) help && exit ;;
+		l) list && exit    ;;
+		b) BLURT=TRUE      ;;
+		h) help && exit    ;;
 	esac
 done
 
@@ -134,7 +141,6 @@ if [[ -n $WPP ]]; then
 	change-current
 fi
 
-[[ -n $TNT ]] && echo "TINTING WALLPAPER $WPP TO COLOR $TNT" && tint
 [[ $BLURT == "TRUE" ]] && {
 	CRFD=${CRLN%/*}
 	CRFD=${CRFD##*/}
@@ -144,5 +150,6 @@ fi
 	echo "TOGGLING BLUR"
 }
 
+[[ -n $TNT ]] && echo "TINTING WALLPAPER $WPP TO COLOR $TNT" && tint
 set-wall
-history ${CRLN##*/}
+[[ $WPPACTUAL != "NEXT" ]] && history ${CRLN##*/}

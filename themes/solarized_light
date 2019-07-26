@@ -1,11 +1,12 @@
+# vim:ft=perl
 name       solarized_light
-wallpaper  moonwalk
+wallpaper  flowy-hair
 foreground #002b36
 background #fdf6e3
 accent     #2aa198
 red        #dc322f
 green      #859900
 yellow     #b58900
-blue       #268bd2
+blue       #2aa198
 magenta    #d33682
-cyan       #2aa198
+cyan       #268bd2

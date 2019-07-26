@@ -3,7 +3,11 @@
 echo "${1}" > files
 sed -e "s/'\ '/\n/g;s/'//g" -i files
 IFS=$'\n'
-for i in $(cat files); do
-	rm -rf "$i"
-done
+ANS=$(cat files | $HOME/scr/i3menu -t -o vertical -r $(cat files | wc -l) -c red \
+	-p "DELETE THESE FILES??? [ESC=NO; RETURN=YES]")
+[[ -n $ANS ]] && {
+	for i in $(cat files); do
+		rm -rf "$i"
+	done
+	}
 rm files

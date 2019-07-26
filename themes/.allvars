@@ -1,23 +1,23 @@
-purpgang
-wallpaper bike
+solarized_light
+wallpaper flowy-hair
 font      CMUTypewriterText
 guifont   CMU Typewriter Text
 fontsize  12
-fg3       rgb(195, 178, 161)	#c3b2a1
-fg2       rgb(215, 198, 181)	#d7c6b5
-fg1       rgb(235, 218, 201)	#ebdac9
-fg0       rgb(255, 238, 221)	#FFEEDD
-accentf   rgb(212, 195, 212)	#d4c3d4
-accent    rgb(170, 153, 204)	#AA99CC
-accentb   rgb(127, 110, 153)	#7f6e99
-bg0       rgb(85, 68, 102)	#554466
-bg1       rgb(105, 88, 122)	#69587a
-bg2       rgb(125, 108, 142)	#7d6c8e
-bg3       rgb(145, 128, 162)	#9180a2
-green     rgb(187, 204, 102)	#BBCC66
-yellow    rgb(255, 187, 102)	#FFBB66
-red       rgb(238, 85, 85)	#EE5555
-blue      rgb(170, 153, 204)	#AA99CC
-cyan      rgb(204, 153, 187)	#CC99BB
-magenta   rgb(204, 102, 136)	#CC6688
+fg3       rgb(60, 103, 114)	#3c6772
+fg2       rgb(40, 83, 94)	#28535e
+fg1       rgb(20, 63, 74)	#143f4a
+fg0       rgb(0, 43, 54)	#002b36
+accentf   rgb(21, 101, 103)	#156567
+accent    rgb(42, 161, 152)	#2aa198
+accentb   rgb(147, 203, 189)	#93cbbd
+bg0       rgb(253, 246, 227)	#fdf6e3
+bg1       rgb(233, 226, 207)	#e9e2cf
+bg2       rgb(213, 206, 187)	#d5cebb
+bg3       rgb(193, 186, 167)	#c1baa7
+green     rgb(133, 153, 0)	#859900
+yellow    rgb(181, 137, 0)	#b58900
+red       rgb(220, 50, 47)	#dc322f
+blue      rgb(42, 161, 152)	#2aa198
+cyan      rgb(38, 139, 210)	#268bd2
+magenta   rgb(211, 54, 130)	#d33682
 
