@@ -1,8 +1,3 @@
-rename nml27.jpg
-rename nomansky
-rename frfl
-rename xpns
-rename weeb
 rename nms
 rename ntr
 rename grad
@@ -39,7 +34,6 @@ open_with 2
 mkdir blur
 shell feh --bg-center %f
 shell convert "%s" -blur 0x4 "%s"
-shell identify %f
 delete][]]]
 rename relax
 mkdir .layouts
@@ -48,3 +42,9 @@ touch test
 rename current
 rename .oldcurrent
 w
+mkdir dtp
+shell git clone https://github.com/ashinkarov/i3-extras.git
+shell unzip 'Heathrow SJT - Security Officer Reports-2019-Jul-27.zip' -d 'Heathrow SJT - Security Officer Reports-2019-Jul-27'
+shell identify %f
+shell readlink -f %f
+shell git clone https://github.com/resloved/i3.git

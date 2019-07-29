@@ -1,0 +1,39 @@
+name      gruvbox_light
+wallpaper SawtoothNationalRecreationAreaUSA
+font      CMUTypewriterText
+guifont   CMU Typewriter Text
+size      12
+bg0       #fbf1c7
+fg0       #282828
+acc       #918c77
+red       #cc241d
+grn       #98971a
+ylw       #d79921
+gnt       #b16286
+blu       #458588
+cyn       #689d6a
+fg1       #3c3c3c
+fg2       #505050
+fg3       #646464
+bg1       #e7ddb3
+bg2       #d3c99f
+bg3       #bfb58b
+acf       #5c5a4f
+acb       #c5be9e
+fg0RGB    40, 40, 40
+fg1RGB    60, 60, 60
+fg2RGB    80, 80, 80
+fg3RGB    100, 100, 100
+bg0RGB    251, 241, 199
+bg1RGB    231, 221, 179
+bg2RGB    211, 201, 159
+bg3RGB    191, 181, 139
+accRGB    145, 140, 119
+acfRGB    92, 90, 79
+acbRGB    197, 190, 158
+redRGB    204, 36, 29
+grnRGB    152, 151, 26
+ylwRGB    215, 153, 33
+gntRGB    177, 98, 134
+bluRGB    69, 133, 136
+cynRGB    104, 157, 106

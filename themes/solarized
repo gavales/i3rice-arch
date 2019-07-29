@@ -1,12 +1,12 @@
 # vim:ft=perl
-name       solarized
-wallpaper  flowy-hair
-background #002b36
-foreground #fdf6e3
-accent     #268bd2
-red        #dc322f
-green      #859900
-yellow     #b58900
-blue       #268bd2
-magenta    #d33682
-cyan       #2aa198
+name      solarized
+wallpaper nebula-blu hint
+bg0       #002b36
+fg0       #fdf6e3
+acc       #d33682
+red       #dc322f
+grn       #859900
+ylw       #b58900
+blu       #d33682
+gnt       #268bd2
+cyn       #2aa198

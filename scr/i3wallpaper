@@ -4,17 +4,21 @@
 # CREATED: Sat  6 Jul 00:50:41 BST 2019
 
 WDIR="$HOME/pic/walls"
-WHT="${WDIR}/white.jpg"
 NORM="${WDIR}/normal"
 BLUR="${WDIR}/blur"
 COLS="${WDIR}/cols"
+[[ -d $WDIR ]] || {
+	mkdir $WDIR
+	mkdir $NORM
+	mkdir $BLUR
+	mkdir $COLS
+}
 NWFD="$NORM"
 CURR="${WDIR}/current"
-CRLN="$(readlink -f ${WDIR}/current)"
-HIST="${WDIR}/.history"
+WHT="${WDIR}/white.jpg"
+CRLN="$(readlink -f ${WDIR}/current)" HIST="${WDIR}/.history"
 MONDIM=$(xdpyinfo | grep dimensions: | awk '{print $2}')
-MX=${MONDIM%x*}
-MY=${MONDIM#*x}
+MX=${MONDIM%x*} MY=${MONDIM#*x}
 
 help () {
 cat << 'EOB'
@@ -27,7 +31,6 @@ cat << 'EOB'
     -b -- toggle blur
 EOB
 }
-
 add-wall () {
 	SRC="$1"
 	TRG="${1##*/}"
@@ -48,7 +51,6 @@ add-wall () {
 	convert "${NORM}/${TRG}" -blur 0x4 "${BLUR}/${TRG}"
 	WPP="$TRG"
 }
-
 add () {
 	cd "$1"
 	IFS=$'\n'
@@ -57,9 +59,17 @@ add () {
 		SRC="${SRC#*/}"
 		TRG="${i#*/}"
 		TRG="${TRG%.*}"
+		TRG="${TRG/1920x1080/}"
+		TRG="${TRG/,/}"
+		TRG="${TRG/,/}"
+		TRG="${TRG/,/}"
+		TRG="${TRG/ /}"
+		TRG="${TRG/ /}"
+		TRG="${TRG/ /}"
+		TRG="${TRG/ /}"
+		TRG="${TRG/ /}"
 		echo "
-	TRG=$TRG
-	SRC=$SRC"
+    ${1}/$SRC --> $TRG"
 		[[ ! -f ${NORM}/${TRG} ]] && convert "${SRC}" \
 			-resize "${MX}x${MY}^" \
 			-gravity center \
@@ -68,17 +78,15 @@ add () {
 			-blur 0x4 "${BLUR}/${TRG}"
 	done
 }
-
 tint () {
 	CRTNT="${NORM}/${CRLN##*/}-${TNT/\#/}"
 	[[ ! -f $CRTNT ]] && {
 		convert "$CURR" -fill "${TNT}" -tint 100 "$CRTNT"
 		convert "${CRTNT}" -blur 0x4 "${CRTNT/normal/blur}"
-	}
+		}
 	ln -sf "$CRTNT" $CURR
 	CRLN=$(readlink -f $CURR)
 }
-
 colour () {
 	[[ ! -f ${COLS}/${WPP/\#/} ]] && \
 		convert $WHT -fill $WPP \
@@ -86,58 +94,60 @@ colour () {
 	ln -sf "${COLS}/${WPP/\#/}" $CURR
 	set-wall
 }
-
 change-current () {
 	ln -sf "${NWFD}/${WPP}" $CURR
 	CRLN="$(readlink -f ${WDIR}/current)"
 }
-
 set-wall () {
 	feh --bg-center $CURR
-	echo "SETTING WALLPAPER TO ${CRLN##*/}"
+	echo "${CRLN##*/}"
 }
-
 list () {
 	cd $NORM
 	$HOME/scr/openimage "$(ls | head -n 1)"
 }
-
 history () {
 	[[ ! -f $HIST ]] && touch $HIST
 	sed -e "/"${1}"/d" -i $HIST
 	echo -e "${1}\n$(cat $HIST)" > $HIST
+	echo "Added current wall to history"
+}
+delete () {
+	rm -rf ${NORM}/${1}
+	rm -rf ${BLUR}/${1}
+	[[ ! -f ${NORM}/${1} ]] && echo "Deleted ${NORM}/${1}"
+	[[ ! -f ${BLUR}/${1} ]] && echo "Deleted ${BLUR}/${1}"
 }
 
-while getopts :w:t:a:lbh opts; do
+while getopts :w:t:a:d:lbh opts; do
 	case $opts in
 		w) WPP="${OPTARG}" WPPACTUAL="${OPTARG}" ;;
-		t) TNT="${OPTARG}" ;;
-		a) ADD="${OPTARG}" ;;
-		l) list && exit    ;;
-		b) BLURT=TRUE      ;;
-		h) help && exit    ;;
+		t) TNT="${OPTARG}"             ;;
+		a) ADD="${OPTARG}"             ;;
+		d) delete "${OPTARG}" && exit  ;;
+		l) list && exit                ;;
+		b) BLURT=TRUE                  ;;
+		h) help && exit                ;;
 	esac
 done
 
 [[ -n $ADD ]] && add "$ADD" && exit
 
 if [[ -n $WPP ]]; then
-	[[ $WPP =~ "#" ]] \
-		&& echo "SETTING DESKTOP COLOR TO $WPP" && colour && exit
-	[[ $WPP == "RANDOM" ]] \
-		&& echo "SETTING RANDOM WALLPAPER" && WPP=$(ls $NORM | shuf -n 1)
+	[[ $WPP =~ "#" ]]      && echo "Background colour is" && colour && exit
+	[[ $WPP == "RANDOM" ]] && echo "Random wallpaper is"  && WPP=$(ls $NORM | shuf -n 1)
 	[[ $WPP == "PREV" ]] && {
-			echo "SETTING PREVIOUS WALLPAPER IN HISTORY"
-			WPP="$(sed -n "/"${CRLN##*/}"/{g;1!p;};h" $HIST)"
-			[[ -z $WPP ]] && WPP="$(tail -n 1 $HIST)"
+		echo "Previous wallpaper is"
+		WPP="$(sed -n "/"${CRLN##*/}"/{g;1!p;};h" $HIST)"
+		[[ -z $WPP ]] && WPP="$(tail -n 1 $HIST)"
 		}
 	[[ $WPP == "NEXT" ]] && {
-			echo "SETTING NEXT WALLPAPER IN HISTORY" 
-			WPP="$(sed -n "/"${CRLN##*/}"/{n;p;}" $HIST)"
-			[[ -z $WPP ]] && WPP="$(head -n 1 $HIST)"
+		echo "Next wallpaper is" 
+		WPP="$(sed -n "/"${CRLN##*/}"/{n;p;}" $HIST)"
+		[[ -z $WPP ]] && WPP="$(head -n 1 $HIST)"
 		}
 	[[ ! -f $NORM/$WPP ]] \
-		&& echo "WALLPAPER NOT IN WALLS DIRECTORY" && add-wall "$WPP"
+		&& echo "${WPP##*/} not in walls directory, adding ${WPP##*/}" && add-wall "$WPP"
 	change-current
 fi
 
@@ -147,9 +157,15 @@ fi
 	[[ ${CRFD} == "normal" ]] \
 		&& ln -sf  ${CRLN/\/normal\//\/blur\/} $CURR && NWFD="$BLUR" \
 		|| ln -sf  ${CRLN/\/blur\//\/normal\/} $CURR
-	echo "TOGGLING BLUR"
+	echo "Blur toggled."
 }
 
-[[ -n $TNT ]] && echo "TINTING WALLPAPER $WPP TO COLOR $TNT" && tint
+[[ -n $TNT ]] && echo "Tint colour = $TNT" && tint
 set-wall
-[[ $WPPACTUAL != "NEXT" ]] && history ${CRLN##*/}
+if [[ $WPPACTUAL == "NEXT" ]]; then
+	:
+elif [[ $WPPACTUAL == "PREV" ]]; then
+	:
+else
+	history ${CRLN##*/}
+fi

@@ -86,7 +86,7 @@ tray-background = %%acc%%
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-modules-left = start td ws xkeyboard wall
+modules-left = start td ws xkeyboard wall wallprev wallnext
 modules-center = 
 modules-right = media disk memory cpu temperature nm backlight pulseaudio battery
 
@@ -201,8 +201,24 @@ type = custom/text
 content = %{T1}%{T-}
 click-left  = ~/scr/i3wallpaper -b
 click-right = ~/scr/i3wallpaper -w RANDOM
-scroll-up   = ~/scr/i3wallpaper -w PREV
-scroll-down = ~/scr/i3wallpaper -w NEXT
+content-background = ${colors.acc}
+content-foreground = ${colors.bg0}
+content-padding = 1
+interval = 1
+
+[module/wallnext]
+type = custom/text
+content = %{T1}%{T-}
+click-left = ~/scr/i3wallpaper -w NEXT
+content-background = ${colors.acc}
+content-foreground = ${colors.bg0}
+content-padding = 1
+interval = 1
+
+[module/wallprev]
+type = custom/text
+content = %{T1}%{T-}
+click-left = ~/scr/i3wallpaper -w PREV
 content-background = ${colors.acc}
 content-foreground = ${colors.bg0}
 content-padding = 1

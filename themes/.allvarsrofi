@@ -1,24 +1,24 @@
 
-              <b><big>solarized_light</big></b>
-<b>wallpaper  </b>flowy-hair
+              <b><big>gruvbox_light</big></b>
+<b>wallpaper  </b>SawtoothNationalRecreationAreaUSA
 <b>font       </b>CMUTypewriterText
 <b>guifont    </b>CMU Typewriter Text
 <b>fontsize   </b>12
-<span foreground="#fdf6e3" background="#3c6772"><b> fg3       </b>rgb(60, 103, 114)	#3c6772 </span>
-<span foreground="#fdf6e3" background="#28535e"><b> fg2       </b>rgb(40, 83, 94)	#28535e </span>
-<span foreground="#fdf6e3" background="#143f4a"><b> fg1       </b>rgb(20, 63, 74)	#143f4a </span>
-<span foreground="#fdf6e3" background="#002b36"><b> fg0       </b>rgb(0, 43, 54)	#002b36 </span>
-<span foreground="#fdf6e3" background="#156567"><b> accentf   </b>rgb(21, 101, 103)	#156567 </span>
-<span foreground="#002b36" background="#2aa198"><b> accent    </b>rgb(42, 161, 152)	#2aa198 </span>
-<span foreground="#002b36" background="#93cbbd"><b> accentb   </b>rgb(147, 203, 189)	#93cbbd </span>
-<span foreground="#002b36" background="#fdf6e3"><b> bg0       </b>rgb(253, 246, 227)	#fdf6e3 </span>
-<span foreground="#002b36" background="#e9e2cf"><b> bg1       </b>rgb(233, 226, 207)	#e9e2cf </span>
-<span foreground="#002b36" background="#d5cebb"><b> bg2       </b>rgb(213, 206, 187)	#d5cebb </span>
-<span foreground="#002b36" background="#c1baa7"><b> bg3       </b>rgb(193, 186, 167)	#c1baa7 </span>
-<span foreground="#002b36" background="#859900"><b> green     </b>rgb(133, 153, 0)	#859900 </span>
-<span foreground="#002b36" background="#b58900"><b> yellow    </b>rgb(181, 137, 0)	#b58900 </span>
-<span foreground="#002b36" background="#dc322f"><b> red       </b>rgb(220, 50, 47)	#dc322f </span>
-<span foreground="#002b36" background="#2aa198"><b> blue      </b>rgb(42, 161, 152)	#2aa198 </span>
-<span foreground="#002b36" background="#268bd2"><b> cyan      </b>rgb(38, 139, 210)	#268bd2 </span>
-<span foreground="#002b36" background="#d33682"><b> magenta   </b>rgb(211, 54, 130)	#d33682 </span>
+<span foreground="#fbf1c7" background="#646464"><b> fg3       </b>rgb(100, 100, 100)	#646464 </span>
+<span foreground="#fbf1c7" background="#505050"><b> fg2       </b>rgb(80, 80, 80)	#505050 </span>
+<span foreground="#fbf1c7" background="#3c3c3c"><b> fg1       </b>rgb(60, 60, 60)	#3c3c3c </span>
+<span foreground="#fbf1c7" background="#282828"><b> fg0       </b>rgb(40, 40, 40)	#282828 </span>
+<span foreground="#fbf1c7" background="#5c5a4f"><b> accentf   </b>rgb(92, 90, 79)	#5c5a4f </span>
+<span foreground="#282828" background="#918c77"><b> accent    </b>rgb(145, 140, 119)	#918c77 </span>
+<span foreground="#282828" background="#c5be9e"><b> accentb   </b>rgb(197, 190, 158)	#c5be9e </span>
+<span foreground="#282828" background="#fbf1c7"><b> bg0       </b>rgb(251, 241, 199)	#fbf1c7 </span>
+<span foreground="#282828" background="#e7ddb3"><b> bg1       </b>rgb(231, 221, 179)	#e7ddb3 </span>
+<span foreground="#282828" background="#d3c99f"><b> bg2       </b>rgb(211, 201, 159)	#d3c99f </span>
+<span foreground="#282828" background="#bfb58b"><b> bg3       </b>rgb(191, 181, 139)	#bfb58b </span>
+<span foreground="#282828" background="#98971a"><b> green     </b>rgb(152, 151, 26)	#98971a </span>
+<span foreground="#282828" background="#d79921"><b> yellow    </b>rgb(215, 153, 33)	#d79921 </span>
+<span foreground="#282828" background="#cc241d"><b> red       </b>rgb(204, 36, 29)	#cc241d </span>
+<span foreground="#282828" background="#458588"><b> blue      </b>rgb(69, 133, 136)	#458588 </span>
+<span foreground="#282828" background="#689d6a"><b> cyan      </b>rgb(104, 157, 106)	#689d6a </span>
+<span foreground="#282828" background="#b16286"><b> magenta   </b>rgb(177, 98, 134)	#b16286 </span>
 

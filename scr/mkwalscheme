@@ -4,6 +4,7 @@
 # CREATED: Sun 16 Dec 18:22:14 GMT 2018
 
 thmDir=$HOME/themes
+TRG=pywal
 
 #feh --bg-scale "${1}"
 wal -q -e -n -s -t -i "${1}"
@@ -34,8 +35,8 @@ name=${name/ /}
 name=${name/ /}
 name=${name/ /}
 name=${name##*/}
-echo "name        ${name}" > .current
-echo "wallpaper   ${WALL}" >> .current
+echo "name        ${name}" > $TRG
+echo "wallpaper   ${WALL}" >> $TRG
 cat $HOME/.cache/wal/colors-kitty.conf | grep 'color' | \
 sed "/color10/d;/color11/d;\
 /color12/d;/color13/d;\
@@ -49,8 +50,9 @@ s/color4\ \ \ \ \ /accent\ \ \ \ /g;\
 s/color5\ \ \ \ \ /magenta\ \ \ /g;\
 s/color6\ \ \ \ \ /cyan\ \ \ \ \ \ /g;\
 /color7/d" \
->> .current
+>> $TRG
 
+$HOME/scr/themer -c pywal &>/dev/null &
 $HOME/scr/reloadconfs &>/dev/null &
 $HOME/scr/i3wallpaper \
 	-w "$(cat $HOME/themes/.allvars | head -n1)"

@@ -6,7 +6,7 @@
 colsDir=$HOME/themes
 defThm=${colsDir}/gruvbox_light
 dir="$HOME/numix-solarized-gtk-theme"
-vrt="light" #vrt="$(sed '2q;d' ${colsDir}/.current | awk '{print $2}')"
+vrt="light"
 scr="post-build-apply"
 
 updatelist () {
@@ -21,7 +21,6 @@ list () {
 guiapply () {
 	theme=$(cat ${colsDir}/.theme_list | $HOME/scr/i3menu -p \
 		"Choose theme " -w 350 -r $(cat ${colsDir}/.theme_list | wc -l) | awk '{print $NF}')
-#	echo $theme
 	cd ${colsDir}
 	if [[ -z ${theme} ]]; then
 		notify-send "No theme chosen" -i "~/scrpic/theme.png"
@@ -83,28 +82,20 @@ magenta   rgb($gntRGB)	$gnt
 <span foreground=\"$bg0\" background=\"$fg2\"><b> fg2       </b>rgb($fg2RGB)	$fg2 </span>
 <span foreground=\"$bg0\" background=\"$fg1\"><b> fg1       </b>rgb($fg1RGB)	$fg1 </span>
 <span foreground=\"$bg0\" background=\"$fg0\"><b> fg0       </b>rgb($fg0RGB)	$fg0 </span>
-<span foreground=\"$bg0\" background=\"$acf\"><b> accentf   </b>rgb($acfRGB)	$acf </span>
-<span foreground=\"$fg0\" background=\"$acc\"><b> accent    </b>rgb($accRGB)	$acc </span>
-<span foreground=\"$fg0\" background=\"$acb\"><b> accentb   </b>rgb($acbRGB)	$acb </span>
+<span foreground=\"$bg0\" background=\"$acf\"><b> acf       </b>rgb($acfRGB)	$acf </span>
+<span foreground=\"$fg0\" background=\"$acc\"><b> acc       </b>rgb($accRGB)	$acc </span>
+<span foreground=\"$fg0\" background=\"$acb\"><b> acb       </b>rgb($acbRGB)	$acb </span>
 <span foreground=\"$fg0\" background=\"$bg0\"><b> bg0       </b>rgb($bg0RGB)	$bg0 </span>
 <span foreground=\"$fg0\" background=\"$bg1\"><b> bg1       </b>rgb($bg1RGB)	$bg1 </span>
 <span foreground=\"$fg0\" background=\"$bg2\"><b> bg2       </b>rgb($bg2RGB)	$bg2 </span>
 <span foreground=\"$fg0\" background=\"$bg3\"><b> bg3       </b>rgb($bg3RGB)	$bg3 </span>
-<span foreground=\"$fg0\" background=\"$grn\"><b> green     </b>rgb($grnRGB)	$grn </span>
-<span foreground=\"$fg0\" background=\"$ylw\"><b> yellow    </b>rgb($ylwRGB)	$ylw </span>
+<span foreground=\"$fg0\" background=\"$grn\"><b> grn       </b>rgb($grnRGB)	$grn </span>
+<span foreground=\"$fg0\" background=\"$ylw\"><b> ylw       </b>rgb($ylwRGB)	$ylw </span>
 <span foreground=\"$fg0\" background=\"$red\"><b> red       </b>rgb($redRGB)	$red </span>
-<span foreground=\"$fg0\" background=\"$blu\"><b> blue      </b>rgb($bluRGB)	$blu </span>
-<span foreground=\"$fg0\" background=\"$cyn\"><b> cyan      </b>rgb($cynRGB)	$cyn </span>
-<span foreground=\"$fg0\" background=\"$gnt\"><b> magenta   </b>rgb($gntRGB)	$gnt </span>
+<span foreground=\"$fg0\" background=\"$blu\"><b> blu       </b>rgb($bluRGB)	$blu </span>
+<span foreground=\"$fg0\" background=\"$cyn\"><b> cyn       </b>rgb($cynRGB)	$cyn </span>
+<span foreground=\"$fg0\" background=\"$gnt\"><b> gnt       </b>rgb($gntRGB)	$gnt </span>
 " > ${colsDir}/.allvarsrofi
-#accentl2  $al2 : $al2RGB
-#accentd2  $ad2 : $ad2RGB
-}
-
-getvar () {
-	[[ -n $1 ]] && cat ${colsDir}/.allvars | sed "/^$1/!d;s/[^ ]* *//" \
-		|| cat ${colsDir}/.allvarsrofi | \
-		$HOME/scr/i3menu -r $(cat ${colsDir}/.allvarsrofi | wc -l)
 }
 
 main () {
@@ -113,28 +104,28 @@ main () {
 	fnt=$(cat ${colsDir}/.current | sed '/^font/!d;s/[^ ]* *//')
 	gft=$(cat ${colsDir}/.current | sed '/^guifont/!d;s/[^ ]* *//')
 	sze=$(cat ${colsDir}/.current | sed '/^size/!d;s/[^ ]* *//')
-	bg0=$(cat ${colsDir}/.current | sed '/^background/!d;s/[^ ]* *//')
-	acc=$(cat ${colsDir}/.current | sed '/^accent/!d;s/[^ ]* *//')
-	fg0=$(cat ${colsDir}/.current | sed '/^foreground/!d;s/[^ ]* *//')
-	grn=$(cat ${colsDir}/.current | sed '/^green/!d;s/[^ ]* *//')
-	ylw=$(cat ${colsDir}/.current | sed '/^yellow/!d;s/[^ ]* *//')
-	red=$(cat ${colsDir}/.current | sed '/^red/!d;s/[^ ]* *//')
-	blu=$(cat ${colsDir}/.current | sed '/^blue/!d;s/[^ ]* *//')
-	gnt=$(cat ${colsDir}/.current | sed '/^magenta/!d;s/[^ ]* *//')
-	cyn=$(cat ${colsDir}/.current | sed '/^cyan/!d;s/[^ ]* *//')
+	bg0=$(cat ${colsDir}/.current | sed '/^bg0/!d;s/[^ ]* *//')
+	fg0=$(cat ${colsDir}/.current | sed '/^fg0/!d;s/[^ ]* *//')
+	acc=$(cat ${colsDir}/.current | sed '/^acc/!d;s/[^ ]* *//')
 	acf=$($HOME/scr/colmix -c "50:${acc} 50:${fg0}" | grep '#')
 	acb=$($HOME/scr/colmix -c "50:${acc} 50:${bg0}" | grep '#')
+	grn=$(cat ${colsDir}/.current | sed '/^grn/!d;s/[^ ]* *//')
+	ylw=$(cat ${colsDir}/.current | sed '/^ylw/!d;s/[^ ]* *//')
+	red=$(cat ${colsDir}/.current | sed '/^red/!d;s/[^ ]* *//')
+	blu=$(cat ${colsDir}/.current | sed '/^blu/!d;s/[^ ]* *//')
+	gnt=$(cat ${colsDir}/.current | sed '/^gnt/!d;s/[^ ]* *//')
+	cyn=$(cat ${colsDir}/.current | sed '/^cyn/!d;s/[^ ]* *//')
 
 	[[ -z $nme ]] && nme="unnamed"
 	[[ -z $fnt ]] && fnt=$(cat ${defThm} | sed '/^font/!d;s/[^ ]* *//')
 	[[ -z $gft ]] && gft=$(cat ${defThm} | sed '/^guifont/!d;s/[^ ]* *//')
 	[[ -z $sze ]] && sze=$(cat ${defThm} | sed '/^size/!d;s/[^ ]* *//')
-	[[ -z $grn ]] && grn=$(cat ${defThm} | sed '/^green/!d;s/[^ ]* *//')
-	[[ -z $ylw ]] && ylw=$(cat ${defThm} | sed '/^yellow/!d;s/[^ ]* *//')
+	[[ -z $grn ]] && grn=$(cat ${defThm} | sed '/^grn/!d;s/[^ ]* *//')
+	[[ -z $ylw ]] && ylw=$(cat ${defThm} | sed '/^ylw/!d;s/[^ ]* *//')
 	[[ -z $red ]] && red=$(cat ${defThm} | sed '/^red/!d;s/[^ ]* *//')
-	[[ -z $blu ]] && blu=$(cat ${defThm} | sed '/^blue/!d;s/[^ ]* *//')
-	[[ -z $gnt ]] && gnt=$(cat ${defThm} | sed '/^magenta/!d;s/[^ ]* *//')
-	[[ -z $cyn ]] && cyn=$(cat ${defThm} | sed '/^cyan/!d;s/[^ ]* *//')
+	[[ -z $blu ]] && blu=$(cat ${defThm} | sed '/^blu/!d;s/[^ ]* *//')
+	[[ -z $gnt ]] && gnt=$(cat ${defThm} | sed '/^gnt/!d;s/[^ ]* *//')
+	[[ -z $cyn ]] && cyn=$(cat ${defThm} | sed '/^cyn/!d;s/[^ ]* *//')
 
 	# convert to RGB
 	accR=$((16#${acc:1:-4})) && accG=$((16#${acc:3:-2})) && accB=$((16#${acc:5}))
@@ -153,19 +144,19 @@ main () {
 		vrt=dark && echo "theme is $vrt"
 
 	if [[ $vrt == "light" ]]; then
-		fg1R=$(expr ${fg0R} + 20) && fg1G=$(expr ${fg0G} + 20) && fg1B=$(expr ${fg0B} + 20)
-		fg2R=$(expr ${fg0R} + 40) && fg2G=$(expr ${fg0G} + 40) && fg2B=$(expr ${fg0B} + 40)
-		fg3R=$(expr ${fg0R} + 60) && fg3G=$(expr ${fg0G} + 60) && fg3B=$(expr ${fg0B} + 60)
-		bg1R=$(expr ${bg0R} - 20) && bg1G=$(expr ${bg0G} - 20) && bg1B=$(expr ${bg0B} - 20)
-		bg2R=$(expr ${bg0R} - 40) && bg2G=$(expr ${bg0G} - 40) && bg2B=$(expr ${bg0B} - 40)
-		bg3R=$(expr ${bg0R} - 60) && bg3G=$(expr ${bg0G} - 60) && bg3B=$(expr ${bg0B} - 60)
+		fg1R=$(expr ${fg0R} + 20) fg1G=$(expr ${fg0G} + 20) fg1B=$(expr ${fg0B} + 20)
+		fg2R=$(expr ${fg0R} + 40) fg2G=$(expr ${fg0G} + 40) fg2B=$(expr ${fg0B} + 40)
+		fg3R=$(expr ${fg0R} + 60) fg3G=$(expr ${fg0G} + 60) fg3B=$(expr ${fg0B} + 60)
+		bg1R=$(expr ${bg0R} - 20) bg1G=$(expr ${bg0G} - 20) bg1B=$(expr ${bg0B} - 20)
+		bg2R=$(expr ${bg0R} - 40) bg2G=$(expr ${bg0G} - 40) bg2B=$(expr ${bg0B} - 40)
+		bg3R=$(expr ${bg0R} - 60) bg3G=$(expr ${bg0G} - 60) bg3B=$(expr ${bg0B} - 60)
 	else
-		fg1R=$(expr ${fg0R} - 20) && fg1G=$(expr ${fg0G} - 20) && fg1B=$(expr ${fg0B} - 20)
-		fg2R=$(expr ${fg0R} - 40) && fg2G=$(expr ${fg0G} - 40) && fg2B=$(expr ${fg0B} - 40)
-		fg3R=$(expr ${fg0R} - 60) && fg3G=$(expr ${fg0G} - 60) && fg3B=$(expr ${fg0B} - 60)
-		bg1R=$(expr ${bg0R} + 20) && bg1G=$(expr ${bg0G} + 20) && bg1B=$(expr ${bg0B} + 20)
-		bg2R=$(expr ${bg0R} + 40) && bg2G=$(expr ${bg0G} + 40) && bg2B=$(expr ${bg0B} + 40)
-		bg3R=$(expr ${bg0R} + 60) && bg3G=$(expr ${bg0G} + 60) && bg3B=$(expr ${bg0B} + 60)
+		fg1R=$(expr ${fg0R} - 20) fg1G=$(expr ${fg0G} - 20) fg1B=$(expr ${fg0B} - 20)
+		fg2R=$(expr ${fg0R} - 40) fg2G=$(expr ${fg0G} - 40) fg2B=$(expr ${fg0B} - 40)
+		fg3R=$(expr ${fg0R} - 60) fg3G=$(expr ${fg0G} - 60) fg3B=$(expr ${fg0B} - 60)
+		bg1R=$(expr ${bg0R} + 20) bg1G=$(expr ${bg0G} + 20) bg1B=$(expr ${bg0B} + 20)
+		bg2R=$(expr ${bg0R} + 40) bg2G=$(expr ${bg0G} + 40) bg2B=$(expr ${bg0B} + 40)
+		bg3R=$(expr ${bg0R} + 60) bg3G=$(expr ${bg0G} + 60) bg3B=$(expr ${bg0B} + 60)
 	fi
 	accRGB="${accR}, ${accG}, ${accB}"
 	acfRGB="${acfR}, ${acfG}, ${acfB}"
@@ -193,24 +184,24 @@ main () {
 	bg1RX=$(printf '%x\n' ${bg1R/-/}) && bg1GX=$(printf '%x\n' ${bg1G/-/}) && bg1BX=$(printf '%x\n' ${bg1B/-/})
 	bg2RX=$(printf '%x\n' ${bg2R/-/}) && bg2GX=$(printf '%x\n' ${bg2G/-/}) && bg2BX=$(printf '%x\n' ${bg2B/-/})
 	bg3RX=$(printf '%x\n' ${bg3R/-/}) && bg3GX=$(printf '%x\n' ${bg3G/-/}) && bg3BX=$(printf '%x\n' ${bg3B/-/})
-[[ ${#fg1RX} == 1 ]] && fg1RX="0$fg1RX"
-[[ ${#fg1GX} == 1 ]] && fg1GX="0$fg1GX"
-[[ ${#fg1BX} == 1 ]] && fg1BX="0$fg1BX"
-[[ ${#fg2RX} == 1 ]] && fg2RX="0$fg2RX"
-[[ ${#fg2GX} == 1 ]] && fg2GX="0$fg2GX"
-[[ ${#fg2BX} == 1 ]] && fg2BX="0$fg2BX"
-[[ ${#fg3RX} == 1 ]] && fg3RX="0$fg3RX"
-[[ ${#fg3GX} == 1 ]] && fg3GX="0$fg3GX"
-[[ ${#fg3BX} == 1 ]] && fg3BX="0$fg3BX"
-[[ ${#bg1RX} == 1 ]] && bg1RX="0$bg1RX"
-[[ ${#bg1GX} == 1 ]] && bg1GX="0$bg1GX"
-[[ ${#bg1BX} == 1 ]] && bg1BX="0$bg1BX"
-[[ ${#bg2RX} == 1 ]] && bg2RX="0$bg2RX"
-[[ ${#bg2GX} == 1 ]] && bg2GX="0$bg2GX"
-[[ ${#bg2BX} == 1 ]] && bg2BX="0$bg2BX"
-[[ ${#bg3RX} == 1 ]] && bg3RX="0$bg3RX"
-[[ ${#bg3GX} == 1 ]] && bg3GX="0$bg3GX"
-[[ ${#bg3BX} == 1 ]] && bg3BX="0$bg3BX"
+	[[ ${#fg1RX} == 1 ]] && fg1RX="0$fg1RX"
+	[[ ${#fg1GX} == 1 ]] && fg1GX="0$fg1GX"
+	[[ ${#fg1BX} == 1 ]] && fg1BX="0$fg1BX"
+	[[ ${#fg2RX} == 1 ]] && fg2RX="0$fg2RX"
+	[[ ${#fg2GX} == 1 ]] && fg2GX="0$fg2GX"
+	[[ ${#fg2BX} == 1 ]] && fg2BX="0$fg2BX"
+	[[ ${#fg3RX} == 1 ]] && fg3RX="0$fg3RX"
+	[[ ${#fg3GX} == 1 ]] && fg3GX="0$fg3GX"
+	[[ ${#fg3BX} == 1 ]] && fg3BX="0$fg3BX"
+	[[ ${#bg1RX} == 1 ]] && bg1RX="0$bg1RX"
+	[[ ${#bg1GX} == 1 ]] && bg1GX="0$bg1GX"
+	[[ ${#bg1BX} == 1 ]] && bg1BX="0$bg1BX"
+	[[ ${#bg2RX} == 1 ]] && bg2RX="0$bg2RX"
+	[[ ${#bg2GX} == 1 ]] && bg2GX="0$bg2GX"
+	[[ ${#bg2BX} == 1 ]] && bg2BX="0$bg2BX"
+	[[ ${#bg3RX} == 1 ]] && bg3RX="0$bg3RX"
+	[[ ${#bg3GX} == 1 ]] && bg3GX="0$bg3GX"
+	[[ ${#bg3BX} == 1 ]] && bg3BX="0$bg3BX"
 
 	fg1="#${fg1RX}${fg1GX}${fg1BX}"
 	fg2="#${fg2RX}${fg2GX}${fg2BX}"
@@ -220,7 +211,6 @@ main () {
 	bg3="#${bg3RX}${bg3GX}${bg3BX}"
 
 	[[ -z $wpr ]] && wpr="$acc"
-#	$HOME/scr/i3wallpaper -w "$wpr" -t "$acc"
 
 	regex="s/\%\%name\%\%/"${nme}"/g;s/\%\%guifont\%\%/"${gft}"/g;\
 s/\%\%font\%\%/"${fnt}"/g;s/\%\%fontsize\%\%/"${sze}"/g;\
@@ -246,13 +236,19 @@ s/\%\%fg3RGB\%\%/"${fg3RGB}"/g;s/\%\%bg1RGB\%\%/"${bg1RGB}"/g;\
 s/\%\%bg2RGB\%\%/"${bg2RGB}"/g;s/\%\%bg3RGB\%\%/"${bg3RGB}"/g"
 
 	cd ${dir} || exit 1
-	templates=$(ls -al | awk '{print $NF}' | grep '_template')
+	templates=$(ls -al | awk '{print $NF}' | grep 'template_')
 	for i in ${templates}; do
-		cat ${i} | sed -e "${regex}" > ${i/_template/}
+		cat ${i} | sed -e "${regex}" > ${i/template_/}
 	done
 	bash $scr
 	printcurrenttheme
 	cd
+}
+
+getvar () {
+	[[ -n $1 ]] && cat ${colsDir}/.allvars | sed "/^$1/!d;s/[^ ]* *//" \
+		|| cat ${colsDir}/.allvarsrofi | \
+		$HOME/scr/i3menu -r $(cat ${colsDir}/.allvarsrofi | wc -l)
 }
 
 help () {

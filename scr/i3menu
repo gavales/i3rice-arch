@@ -5,58 +5,40 @@
 # requires dmenu-manjaro
 
 # >>>> vars
-rofiDir="$HOME/.config/rofi"
-COLOR=blue
-THM=vertical
-_TTLBR=26
-TTLBR=26
-_BRDR=2
 i3BRDR=$(i3-msg -t get_config | grep '$fw \[class="^.*"\] border' | awk '{print $NF}')
 [[ -n ${i3BRDR} ]] && BRDR=${i3BRDR} || BRDR=${_BRDR}
-PRMT=" "
-MODE="menu"
-LNS="15"
-LOC="0"
-WDTH="500"
-HGTH=" "
-XOFFSET="0"
-YOFFSET="0"
-fs=" "
+rofiDir="$HOME/.config/rofi"
+COLOR=blue THM=vertical _TTLBR=26 TTLBR=26 _BRDR=2 PRMT=" " MODE="menu"
+LNS="15" LOC="0" WDTH="500" HGTH=" " XOFFSET="0" YOFFSET="0" fs=" "
 wnloc=$(xdotool getactivewindow getwindowgeometry | grep 'Position' | awk '{print $2}')
 wngeo=$(xdotool getactivewindow getwindowgeometry | grep 'Geometry' | awk '{print $2}')
-wnX=${wnloc%,*}
-wnY=${wnloc#*,}
-wnW=${wngeo%x*}
-wnH=${wngeo#*x}
-sc=$(xdpyinfo | grep dimensions | awk '{print $2}')
-scW=${sc%x*}
-scH=${sc#*x}
+wnX=${wnloc%,*} wnY=${wnloc#*,} wnW=${wngeo%x*} wnH=${wngeo#*x}
+sc=$(xdpyinfo | grep dimensions | awk '{print $2}') scW=${sc%x*} scH=${sc#*x}
 msX=$(xdotool getmouselocation | awk '{print $1}')
 msY=$(xdotool getmouselocation | awk '{print $2}')
 mon=$(xdotool getmouselocation | awk '{print $3}')
 
-# >>>> dmenu colors
-bkd=$(xrdb -query | grep '*color8' | awk '{print $NF}')
-wtl=$(xrdb -query | grep '*color15' | awk '{print $NF}')
-blu=$(xrdb -query | grep '*color9' | awk '{print $NF}')
+# >>>> dmenu
+bg0=$(xrdb -query | grep '*color8' | awk '{print $NF}')
+fg0=$(xrdb -query | grep '*color15' | awk '{print $NF}')
+acc=$(xrdb -query | grep '*color9' | awk '{print $NF}')
 fnt=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
-fnt=${fnt%:*}
-fnt=${fnt##*:}
-dmthm="-fn "${fnt}:size=11" -nb "$bkd" -nf "$wtl" -sf "$bkd" -sb "$blu""
-dmloc="-x $(expr $wnX - $BRDR) -y $(expr $wnY - $TTLBR)"
-
+fnt=${fnt%:*} fnt=${fnt##*:}
+dmthm="-fn "${fnt}:size=11" -nb "$bg0" -nf "$fg0" -sf "$bg0" -sb "$acc""
+dmloc="-x $(expr $wnX - $BRDR - $BRDR) -y $(expr $wnY - $TTLBR)"
+dmenu () { dmenu_run $dmloc $dmthm -w $(expr $wnW + $BRDR + $BRDR) -h $TTLBR ; }
 menu () {
 	rofi -dmenu -p "${PRMT}" $fs -theme $THM -monitor ${mon:7} -location $LOC \
 		-lines $LNS -width $WDTH -xoffset $XOFFSET -yoffset $YOFFSET \
-		-theme-str "#window { $HGTH }" -markup-rows
+		-theme-str "#window { $HGTH }" \
+		-theme-str "#horibox { children: [ prompt, entry, listview ]; }" \
+		-markup-rows
 }
 start () {
 	rofi -show drun -p "${PRMT}" $fs -theme $THM -monitor ${mon:7} -location $LOC \
 		-lines $LNS -width $WDTH -xoffset $XOFFSET -yoffset $YOFFSET \
-		-theme-str "#window { $HGTH }"
-}
-dmenu () {
-	dmenu_run $dmloc $dmthm -w $(expr $wnW + $BRDR + $BRDR) -h $TTLBR
+		-theme-str "#window { $HGTH }" \
+		-theme-str "#horibox { children: [ prompt, entry, listview ]; }"
 }
 help () {
 cat << 'EOB'
@@ -80,78 +62,35 @@ cat << 'EOB'
 
 EOB
 }
-while getopts :p:l:x:y:g:c:w:o:r:edstmfh opts; do
+while getopts :p:P:l:x:y:g:c:w:o:r:edstmfh opts; do
 	case $opts in
-		p)
-			PRMT="${OPTARG}"
-			;;
-		l)
-			LOC="${OPTARG}"
-			;;
-		x)
-			XOFFSET="$(expr $XOFFSET + $OPTARG)"
-			;;
-		y)
-			YOFFSET="$(expr $YOFFSET + $OPTARG)"
-			;;
-		c)
-			COLOR="${OPTARG}"
-			;;
-		w)
-			WDTH="${OPTARG}"
-			;;
-		g)
-			HGTH="height: ${OPTARG};"
-			;;
-		o)
-			THM="${OPTARG}"
-			;;
-		r)
-			LNS="${OPTARG}"
-			;;
-		e)
-			[[ $THM == "vertical" ]] \
+		p) PRMT="${OPTARG}" ;;
+		P) PRTSTR="${OPTARG}" ;;
+		l) LOC="${OPTARG}" ;;
+		x) XOFFSET="$(expr $XOFFSET + $OPTARG)" ;;
+		y) YOFFSET="$(expr $YOFFSET + $OPTARG)" ;;
+		c) COLOR="${OPTARG}" ;;
+		w) WDTH="${OPTARG}" ;;
+		g) HGTH="height: ${OPTARG};" ;;
+		o) THM="${OPTARG}" ;;
+		r) LNS="${OPTARG}" ;;
+		e) [[ $THM == "vertical" ]] \
 				&& HGTH=$(echo \
 				"((${wnH}*100)/$scH)+((($TTLBR+$TTLBR/2)*100)/$scH)" | bc) \
 				&& HGTH="height: ${HGTH}%;"
-			LOC=1
 			[[ $THM == "horizontal" ]] && LNS="15"
-			WDTH="$(expr $wnW + $BRDR + $BRDR)"
-			XOFFSET="$(expr $wnX - $BRDR - $BRDR)"
-			YOFFSET="$(expr $wnY - $TTLBR)"
-			;;
-		d)
-			MODE="dmenu"
-			;;
-		s)
-			MODE="start"
-			LNS=15
-			;;
-		t)
-			LOC=1
-			[[ $THM == "horizontal" ]] && LNS="15"
-			WDTH="$(expr $wnW + $BRDR + $BRDR)"
-			XOFFSET="$(expr $wnX - $BRDR - $BRDR)"
-			YOFFSET="$(expr $wnY - $TTLBR)"
-			;;
-		m)
-			THM=vertical
-			LOC=1
-			WDTH=300
-			XOFFSET="${msX:2}"
-			YOFFSET="${msY:2}"
-			;;
-		f)
-			THM=vertical
-			LOC=0
-			fs="-fullscreen"
-			;;
-		h)
-			help && exit
-			;;
+			LOC=1 WDTH="$(expr $wnW + $BRDR + $BRDR)"
+			XOFFSET="$(expr $wnX - $BRDR - $BRDR)" YOFFSET="$(expr $wnY - $TTLBR)" ;;
+		d) MODE="dmenu" ;;
+		s) MODE="start" && LNS=15 ;;
+		t) [[ $THM == "horizontal" ]] && LNS="15"
+			LOC=1 WDTH="$(expr $wnW + $BRDR + $BRDR)"
+			XOFFSET="$(expr $wnX - $BRDR - $BRDR)" YOFFSET="$(expr $wnY - $TTLBR)" ;;
+		m) THM=vertical LOC=1 WDTH=300 XOFFSET="${msX:2}" YOFFSET="${msY:2}" ;;
+		f) THM=vertical LOC=0 fs="-fullscreen" ;;
+		h) help && exit ;;
 	esac
 done
 
 cat $rofiDir/${COLOR}.rasi > $rofiDir/globals.rasi
-
 $MODE

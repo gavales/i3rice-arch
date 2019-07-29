@@ -7,25 +7,24 @@ main () {
 	rm .theme_list
 	thms=$(ls -l | grep -v "^total" | awk '{print $NF}')
 	for i in $thms; do
-		fg0=$(cat ${i} | grep "foreground" | awk '{print $NF}')
-		com=$(cat ${i} | grep "comment" | awk '{print $NF}')
-		acc=$(cat ${i} | grep "accent" | awk '{print $NF}')
-		bg0=$(cat ${i} | grep "background" | awk '{print $NF}')
-		red=$(cat ${i} | grep "redd" | awk '{print $NF}')
-		grn=$(cat ${i} | grep "green" | awk '{print $NF}')
-		ylw=$(cat ${i} | grep "yellow" | awk '{print $NF}')
-		blu=$(cat ${i} | grep "blue" | awk '{print $NF}')
-		gnt=$(cat ${i} | grep "magenta" | awk '{print $NF}')
-		cyn=$(cat ${i} | grep "cyan" | awk '{print $NF}')
+		fg0=$(cat ${i} | grep "fg0" | awk '{print $NF}')
+		acc=$(cat ${i} | grep "acc" | awk '{print $NF}')
+		bg0=$(cat ${i} | grep "bg0" | awk '{print $NF}')
 		echo "\
-<span foreground=\"#666666\" background=\"$fg0\"> fg </span>\
-<span foreground=\"#666666\" background=\"$bg0\"> bg </span>\
-<span foreground=\"#666666\" background=\"$acc\"> acc </span>\
+<span foreground=\"$bg0\" background=\"$fg0\"> fg </span>\
+<span foreground=\"$fg0\" background=\"$bg0\"> bg </span>\
+<span foreground=\"$fg0\" background=\"$acc\"> acc </span>\
  $i" >> .theme_list
 	done
 }
 
 main
+#red=$(cat ${i} | grep "red" | awk '{print $NF}')
+#grn=$(cat ${i} | grep "grn" | awk '{print $NF}')
+#ylw=$(cat ${i} | grep "ylw" | awk '{print $NF}')
+#blu=$(cat ${i} | grep "blu" | awk '{print $NF}')
+#gnt=$(cat ${i} | grep "gnt" | awk '{print $NF}')
+#cyn=$(cat ${i} | grep "cyn" | awk '{print $NF}')
 #<span foreground=\"#666666\" background=\"$com\"> com </span>\
 #<span foreground=\"#666666\" background=\"$bkl\"> grey </span>\
 #<span foreground=\"#666666\" background=\"$red\"> r </span>\

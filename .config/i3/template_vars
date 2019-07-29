@@ -17,21 +17,21 @@ set $fonts %%fontsize%%
 
 font pango:$font1,$font2 $fonts
 
-set $home		/home/gavarch
-set $scr		scr
-set $scrpic		scrpic
-set $scrmus		scrmus
+set $home      /home/gavarch
+set $scr       scr
+set $scrpic    scrpic
+set $scrmus    scrmus
 
-set $term		urxvtc
-set $browser	google-chrome-beta
-set $brightinc	light -A 10
-set $brightdec	light -U 10
-set $nat		eDP1
-set $vga		VGA1
-set $hdm		HDMI1
-set $kb			us
+set $term      urxvtc
+set $browser   google-chrome-beta
+set $brightinc light -A 10
+set $brightdec light -U 10
+set $nat       eDP1
+set $vga       VGA1
+set $hdm       HDMI1
+set $kb        us
 
-set $mediaw		492
-set $mediaw2	492
-set $mediah		302
-set $mediah2	392
+set $mediaw    492
+set $mediaw2   492
+set $mediah    302
+set $mediah2   392

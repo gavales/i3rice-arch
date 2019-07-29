@@ -1,12 +1,6 @@
 # vim:ft=perl
-name       scarletibis
-wallpaper  scarletibis
-background #090D10
-foreground #f3bdab
-accent     #EE6653
-blue       #EE6653
-red        #525958
-green      #B03632
-yellow     #E65735
-magenta    #7C8476
-cyan       #B0876C
+name      scarletibis
+wallpaper scarletibis
+bg0       #090D10
+fg0       #f3bdab
+acc       #EE6653

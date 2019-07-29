@@ -1,15 +1,16 @@
 # vim:ft=perl
-name       gruvbox_light
-wallpaper  RANDOM
-font       CMUTypewriterText
-guifont    CMU Typewriter Text
-size       12
-background #fbf1c7
-foreground #282828
-accent     #689d6a
-red        #cc241d
-green      #98971a
-yellow     #d79921
-magenta    #b16286
-blue       #458588
-cyan       #689d6a
+name      gruvbox_light
+wallpaper SawtoothNationalRecreationAreaUSA
+font      CMUTypewriterText
+guifont   CMU Typewriter Text
+size      12
+bg0       #fbf1c7
+fg0       #282828
+acc       #918c77
+#acc       #689d6a
+red       #cc241d
+grn       #98971a
+ylw       #d79921
+gnt       #b16286
+blu       #458588
+cyn       #689d6a

@@ -28,8 +28,8 @@ set mouse=a
 vnoremap <C-c> "+y
 map <C-p> "+P
 set smartindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set incsearch
 set cursorline
 set colorcolumn=81
