@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+# CREATED: Sun  9 Jun 17:44:48 GMT 2019
+
+main () {
+	rm .theme_list
+	thms=$(ls -l | grep -v "^total" | awk '{print $NF}')
+	for i in $thms; do
+		fg0=$(cat ${i} | sed '/^fg0/!d;s/[^ ]* *//')
+		acc=$(cat ${i} | sed '/^acc/!d;s/[^ ]* *//')
+		bg0=$(cat ${i} | sed '/^bg0/!d;s/[^ ]* *//')
+		echo "\
+<span foreground=\"$bg0\" background=\"$fg0\"> fg </span>\
+<span foreground=\"$fg0\" background=\"$bg0\"> bg </span>\
+<span foreground=\"$fg0\" background=\"$acc\"> acc </span>\
+ $i" >> .theme_list
+	done
+}
+
+main

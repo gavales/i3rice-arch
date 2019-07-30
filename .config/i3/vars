@@ -13,7 +13,7 @@
 set $font1 CMU Typewriter Text
 set $font2 FontAwesome
 set $font3 monaco
-set $fonts %%fontsize%%
+set $fonts 12
 
 font pango:$font1,$font2 $fonts
 

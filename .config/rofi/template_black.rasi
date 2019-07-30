@@ -5,5 +5,5 @@ fg2:    %%bg1%%;
 bg1:    %%fg1%%;
 bg2:    %%fg0%%;
 redish: %%red%%;
-font1: "%%font%% Oblique 12";
+font1: "%%font%% Oblique %%size%%";
 }

@@ -1,11 +1,3 @@
-rename nms
-rename ntr
-rename grad
-rename comix
-rename cmx
-shell unzip 'Photos(1).zip' -d 'Photos(1)'
-shell unzip 'Photos.zip' -d 'Photos'
-rename (2019) Avengement.mov
 rename (2018) Accident Man.mov
 rename (2009) Black Dynamite.mov
 rename (2000) Crouching Tiger Hidden Dragon.mov
@@ -48,3 +40,11 @@ shell unzip 'Heathrow SJT - Security Officer Reports-2019-Jul-27.zip' -d 'Heathr
 shell identify %f
 shell readlink -f %f
 shell git clone https://github.com/resloved/i3.git
+rename mpv.conf_old
+rename config_old
+rename themer_old
+rename themer
+rename gruvbox_light_
+rename gruvbox_light
+open_with 
+open_with xterm -e vim

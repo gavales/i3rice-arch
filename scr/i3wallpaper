@@ -7,16 +7,11 @@ WDIR="$HOME/pic/walls"
 NORM="${WDIR}/normal"
 BLUR="${WDIR}/blur"
 COLS="${WDIR}/cols"
-[[ -d $WDIR ]] || {
-	mkdir $WDIR
-	mkdir $NORM
-	mkdir $BLUR
-	mkdir $COLS
-}
+[[ -d $WDIR ]] || { mkdir $WDIR && mkdir $NORM && mkdir $BLUR && mkdir $COLS ; }
 NWFD="$NORM"
 CURR="${WDIR}/current"
 WHT="${WDIR}/white.jpg"
-CRLN="$(readlink -f ${WDIR}/current)" HIST="${WDIR}/.history"
+CRLN="$(readlink -f $CURR)" HIST="${WDIR}/.history"
 MONDIM=$(xdpyinfo | grep dimensions: | awk '{print $2}')
 MX=${MONDIM%x*} MY=${MONDIM#*x}
 
@@ -80,7 +75,7 @@ add () {
 }
 tint () {
 	CRTNT="${NORM}/${CRLN##*/}-${TNT/\#/}"
-	[[ ! -f $CRTNT ]] && {
+	[[ -f $CRTNT ]] || {
 		convert "$CURR" -fill "${TNT}" -tint 100 "$CRTNT"
 		convert "${CRTNT}" -blur 0x4 "${CRTNT/normal/blur}"
 		}
@@ -96,7 +91,7 @@ colour () {
 }
 change-current () {
 	ln -sf "${NWFD}/${WPP}" $CURR
-	CRLN="$(readlink -f ${WDIR}/current)"
+	CRLN="$(readlink -f $CURR)"
 }
 set-wall () {
 	feh --bg-center $CURR

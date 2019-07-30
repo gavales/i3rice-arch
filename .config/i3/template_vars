@@ -13,7 +13,7 @@
 set $font1 %%guifont%%
 set $font2 FontAwesome
 set $font3 monaco
-set $fonts %%fontsize%%
+set $fonts %%size%%
 
 font pango:$font1,$font2 $fonts
 

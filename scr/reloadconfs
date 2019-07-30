@@ -1,21 +1,20 @@
 #!/bin/bash
-
-$HOME/scr/themer -t "$HOME/xrs"                 -x "xrs-reload"   -g
-$HOME/scr/i3wallpaper \
-	-w "$(cat $HOME/themes/.allvars | sed '/^wallpaper/!d;s/[^ ]* *//')" \
-	-t "$(cat $HOME/themes/.allvars | sed '/^accent\ /!d;s/[^ ]* *//' | awk '{print $NF}')"
-$HOME/scr/themer -t "$HOME/.config/i3"          -x "i3concat"     -g
-$HOME/scr/themer -t "$HOME/.config/polybar"     -x "pb-reload"    -g
-$HOME/scr/themer -t "$HOME/.config/rofi"        -x " "            -g
-$HOME/scr/themer -t "$HOME/.config/vis/colors"  -x " "            -g
-$HOME/scr/themer -t "$HOME/.config/mpv"         -x " "            -g
-$HOME/scr/themer -t "$HOME/.config/zathura"     -x "reloadinst"   -g
-$HOME/scr/themer -t "$HOME/.config/dunst"       -x "dunst-reload" -g
-$HOME/scr/themer -t "$HOME/.config/qutebrowser" -x " "            -g
-$HOME/scr/themer -t "$HOME/git/i3rice-arch"     -x " "            -g
-$HOME/scr/themer -t "$HOME/.vim/colors"         -x " "            -g
-$HOME/scr/themer -t "$HOME/scr/.unused"         -x " "            -g
-$HOME/scr/themer -t "$HOME/plt/css"             -x " "            -g
+WPP=$($HOME/scr/themer -v wallpaper)
+[[ -n $WPP ]] || WPP=$($HOME/scr/themer -v acc)
+$HOME/scr/i3wallpaper -w "$WPP" -t "$($HOME/scr/themer -v acc | grep '#')"
+$HOME/scr/themer -x xrs-reload   -a $HOME/xrs
+$HOME/scr/themer -x i3concat     -a $HOME/.config/i3
+$HOME/scr/themer -x pb-reload    -a $HOME/.config/polybar
+$HOME/scr/themer -x reloadinst   -a $HOME/.config/zathura
+$HOME/scr/themer -x dunst-reload -a $HOME/.config/dunst
+$HOME/scr/themer -a $HOME/git/i3rice-arch
+$HOME/scr/themer -a $HOME/.vim/colors
+$HOME/scr/themer -a $HOME/.config/rofi
+$HOME/scr/themer -a $HOME/.config/vis/colors
+$HOME/scr/themer -a $HOME/.config/mpv
+$HOME/scr/themer -a $HOME/.config/qutebrowser
+$HOME/scr/themer -a $HOME/scr/.unused
+$HOME/scr/themer -a $HOME/plt/css
 $HOME/scr/i3listen-toggle
-#$HOME/scr/themer -t "$HOME/.config/tint2" -x " " -g
-#$HOME/scr/themer -t "$HOME/git/atompackages/packages/rice-syntax/styles" -x " " -g
+#$HOME/scr/themer -a $HOME/.config/tint2
+#$HOME/scr/themer -a $HOME/git/atompackages/packages/rice-syntax/styles

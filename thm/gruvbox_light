@@ -6,11 +6,12 @@ guifont   CMU Typewriter Text
 size      12
 bg0       #fbf1c7
 fg0       #282828
-acc       #918c77
-#acc       #689d6a
+#acc       #918c77
+acc       #689d6a
 red       #cc241d
 grn       #98971a
 ylw       #d79921
 gnt       #b16286
 blu       #458588
 cyn       #689d6a
+orange    #d65d0e
