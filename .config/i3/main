@@ -49,17 +49,17 @@ set $ws10 10
 
 # //// COLORS
 
-set $bg3 #b79355
-set $bg2 #cba769
-set $bg1 #dfbb7d
-set $bg0 #f3cf91
-set $acb #b9825d
-set $acc #80362B
-set $acf #5b332a
-set $fg0 #37302A
-set $fg1 #4b443e
-set $fg2 #5f5852
-set $fg3 #736c66
+set $bg3 #646464
+set $bg2 #505050
+set $bg1 #3c3c3c
+set $bg0 #282828
+set $acb #365658
+set $acc #458588
+set $acf #97af9d
+set $fg0 #ebdbb2
+set $fg1 #d7c79e
+set $fg2 #c3b38a
+set $fg3 #af9f76
 set $red #cc241d
 set $grn #98971a
 set $ylw #d79921

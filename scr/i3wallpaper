@@ -32,22 +32,23 @@ cat << 'EOB'
 	i3wallpaper                ┼ Create [walls/(normal|blur)]
 	                           │   directory in [~/pic]
 	i3wallpaper -h             ┼ Print this help
-	i3wallpaper -w [WALLPAPER] ┼ Wallpaper to set. 
-	i3wallpaper -t [HEX COLOR] ┼ Color to tint wallpaper with
+	i3wallpaper -w [PATH|PREV| ┼ Wallpaper to set. 
+	               NEXT|RANDOM]│
+	i3wallpaper -t [HEX COLOR] ┼ Tint color of wallpaper
 	i3wallpaper -a [DIRECTORY] ┼ Add walls from [DIRECTORY]
 	i3wallpaper -l             ┼ View available wallpapers in sxiv
 	i3wallpaper -b             ┼ Toggle blur
 
-	[DIRECTORY] can be a PATH to a picture,
-	the name of a picture in [walls/normal],
-	hex color (requires white.jpg in
-	[walls]), or [RANDOM|PREV|NEXT] for
-	random wallpaper in [walls/normal], next
-	wallpaper in history, previous wallpaper
-	in history, respectively.
+	[DIRECTORY] ┼ is a path to a directory containing pictures.
+	[HEX COLOR] ┼ Hexadecimal color. Eg. #002b36
+	[PATH]      ┼ is a path to a picture.
+	[PREV]      ┼ previous wallpaper in history.
+	[NEXT]      ┼ next wallpaper in history.
+	[RANDOM]    ┼ random wallpaper in [walls/normal].
 
 EOB
 }
+
 add-wall () {
 	SRC="$1"
 	TRG="${1##*/}"
@@ -68,6 +69,7 @@ add-wall () {
 	convert "${NORM}/${TRG}" -blur 0x4 "${BLUR}/${TRG}"
 	WPP="$TRG"
 }
+
 add () {
 	cd "$1"
 	IFS=$'\n'
@@ -95,6 +97,7 @@ add () {
 			-blur 0x4 "${BLUR}/${TRG}"
 	done
 }
+
 tint () {
 	CRTNT="${NORM}/${CRLN##*/}-${TNT/\#/}"
 	[[ -f $CRTNT ]] || {
@@ -104,6 +107,7 @@ tint () {
 	ln -sf "$CRTNT" $CURR
 	CRLN=$(readlink -f $CURR)
 }
+
 colour () {
 	[[ ! -f ${COLS}/${WPP/\#/} ]] && \
 		convert $WHT -fill $WPP \
@@ -111,24 +115,29 @@ colour () {
 	ln -sf "${COLS}/${WPP/\#/}" $CURR
 	set-wall
 }
+
 change-current () {
 	ln -sf "${NWFD}/${WPP}" $CURR
 	CRLN="$(readlink -f $CURR)"
 }
+
 set-wall () {
 	feh --bg-center $CURR
 	echo "${CRLN##*/}"
 }
+
 list () {
 	cd $NORM
 	$HOME/scr/openimage "$(ls | head -n 1)"
 }
+
 history () {
 	[[ ! -f $HIST ]] && touch $HIST
 	sed -e "/"${1}"/d" -i $HIST
 	echo -e "${1}\n$(cat $HIST)" > $HIST
 	echo "Added current wall to history"
 }
+
 delete () {
 	rm -rf ${NORM}/${1}
 	rm -rf ${BLUR}/${1}

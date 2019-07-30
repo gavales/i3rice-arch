@@ -20,10 +20,10 @@ tr = #000000ff
 ;grn = ${xrdb:color2}
 ;cyn = ${xrdb:color6}
 
-acc = #9980362B
-bg0 =   #f3cf91
-acb = #99b9825d
-fg0 =   #37302A
+acc = #99458588
+bg0 =   #282828
+acb = #99365658
+fg0 =   #ebdbb2
 ylw = #99d79921
 gnt = #99b16286
 red = #99cc241d
@@ -70,7 +70,7 @@ tray-position = right
 tray-padding = 2
 tray-maxsize = 16
 tray-transparent = true
-tray-background = #80362B
+tray-background = #458588
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -121,7 +121,7 @@ font-2 = FontAwesome5Brands:style=Solid:size=12;3
 
 tray-position = right
 tray-padding = 2
-tray-background = #80362B
+tray-background = #458588
 
 ;wm-restack = bspwm
 ;wm-restack = i3

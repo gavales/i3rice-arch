@@ -1,41 +1,41 @@
-name      TheAltiplanoArgentina
-wallpaper TheAltiplanoArgentina
-bg0       #f3cf91
-acc       #80362B
-fg0       #37302A
-font      CMUTypewriterText
-guifont   CMU Typewriter Text
-size      12
+name      gruvbox
+wallpaper Galápagossealion
+bg0       #282828
+fg0       #ebdbb2
+acc       #458588
 red       #cc241d
 grn       #98971a
 ylw       #d79921
-gnt       #b16286
 blu       #458588
+gnt       #b16286
 cyn       #689d6a
+font      CMUTypewriterText
+guifont   CMU Typewriter Text
+size      12
 orange    #d65d0e
-fg3       #736c66
-fg2       #5f5852
-fg1       #4b443e
-acf       #5b332a
-acb       #b9825d
-bg1       #dfbb7d
-bg2       #cba769
-bg3       #b79355
-fg0RGB    55, 48, 42
-fg1RGB    75, 68, 62
-fg2RGB    95, 88, 82
-fg3RGB    115, 108, 102
-bg0RGB    243, 207, 145
-bg1RGB    223, 187, 125
-bg2RGB    203, 167, 105
-bg3RGB    183, 147, 85
-accRGB    128, 54, 43
-acfRGB    91, 51, 42
-acbRGB    185, 130, 93
+fg3       #af9f76
+fg2       #c3b38a
+fg1       #d7c79e
+acf       #97af9d
+acb       #365658
+bg1       #3c3c3c
+bg2       #505050
+bg3       #646464
+fg0RGB    235, 219, 178
+fg1RGB    215, 199, 158
+fg2RGB    195, 179, 138
+fg3RGB    175, 159, 118
+bg0RGB    40, 40, 40
+bg1RGB    60, 60, 60
+bg2RGB    80, 80, 80
+bg3RGB    100, 100, 100
+accRGB    69, 133, 136
+acfRGB    151, 175, 157
+acbRGB    54, 86, 88
 redRGB    204, 36, 29
 grnRGB    152, 151, 26
 ylwRGB    215, 153, 33
-gntRGB    177, 98, 134
 bluRGB    69, 133, 136
+gntRGB    177, 98, 134
 cynRGB    104, 157, 106
 orangeRGB    214, 93, 14

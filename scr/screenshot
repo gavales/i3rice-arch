@@ -1,54 +1,53 @@
 #!/usr/bin/env bash
 
-scrotdir=scrots
-picDir="$HOME/pic"
+
+SCRD=$HOME/pic/scrots
+TMP=${SCRD}/tmp.png
+[[ -d $SCRD ]] || mkdir $SCRD
 
 scrotname () {
-	time="`date +%Y-%m-%d_%H:%M:%S`.png"
-	name=$(echo -e "" | $HOME/scr/i3menu -p "Choose scrot name " -o horizontal -w 100 -l 1)
-
-	if [[ -z $name ]]; then
-		scrotname=$time
-	else
-		scrotname="${name}.png"
-	fi
+	TME="`date +%Y-%m-%d_%H:%M:%S`.png"
+	NME=$(echo -e "" | $HOME/scr/i3menu -p "Choose scrot name " \
+		-o horizontal -w 100 -l 1)
+	[[ -z $NME ]] && SCRNME=$TME || SCRNME="$NME.png"
 }
 
 confirmscrot () {
-	action=$(echo -e "Save\nNew\nClipboard" | $HOME/scr/i3menu -p "Save? " -o horizontal -w 100 -l 1)
-	if [[ $action == "Save" ]]; then
+	ACT=$(echo -e "Save\nNew\nClipboard" | $HOME/scr/i3menu -p "Save? " \
+		-o horizontal -w 100 -l 1)
+	if [[ $ACT == "Save" ]]; then
 		scrotname
-		mv $picDir/$scrotdir/tmp.png $picDir/$scrotdir/${scrotname}
-		notify-send "${scrotname} saved to $picDir/${scrotdir}" -i $picDir/${scrotdir}/${scrotname}
-	elif [[ $action == "New" ]]; then
+		mv $TMP $SCRD/${SCRNME}
+		notify-send "${SCRNME} saved to $SCRD" -i ${SCRD}/${SCRNME}
+	elif [[ $ACT == "New" ]]; then
 		tmpscrot
-	elif [[ $action == "Clipboard" ]]; then
+	elif [[ $ACT == "Clipboard" ]]; then
 		clipboard
 	else
-		rm $picDir/${scrotdir}/tmp.png
+		rm $TMP
 	fi
 }
 
 tmpscrot () {
-	scrot_type=$(echo -e "Fullscreen\nSelection" | $HOME/scr/i3menu -p "Scrot type? " -o horizontal -w 100 -l 1)
-
-	if [[ $scrot_type == "Fullscreen" ]]; then
+	SCRTPE=$(echo -e "Fullscreen\nSelection" | \
+		$HOME/scr/i3menu -p "Scrot type? " -o horizontal -w 100 -l 1)
+	if [[ $SCRTPE == "Fullscreen" ]]; then
 		sleep .25
-		maim --hidecursor $picDir/${scrotdir}/tmp.png
-	elif [[ $scrot_type == "Selection" ]]; then
-		maim --select --hidecursor $picDir/${scrotdir}/tmp.png
+		maim --hidecursor $TMP
+	elif [[ $SCRTPE == "Selection" ]]; then
+		maim --select --hidecursor $TMP
 	else
 		:
 	fi
 
-	sxiv $picDir/${scrotdir}/tmp.png 
-	[[ -n $scrot_type ]] && confirmscrot
+	sxiv $TMP 
+	[[ -n $SCRTPE ]] && confirmscrot
 }
 
 clipboard () {
-	xclip -selection clipboard -t image/png -i $picDir/${scrotdir}/tmp.png
-	notify-send "Copied scrot to Clipboard" -i $picDir/${scrotdir}/tmp.png
-	rm $picDir/${scrotdir}/tmp.png
+	xclip -selection clipboard -t image/png -i $TMP
+	notify-send "Copied scrot to Clipboard" -i $TMP
+	rm $TMP
 }
 
 tmpscrot

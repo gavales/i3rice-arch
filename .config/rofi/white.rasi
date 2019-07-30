@@ -1,9 +1,9 @@
 * {
-accent: #37302A;
-bg2:    #f3cf91;
-bg1:    #dfbb7d;
-fg2:    #4b443e;
-fg1:    #37302A;
+accent: #ebdbb2;
+bg2:    #282828;
+bg1:    #3c3c3c;
+fg2:    #d7c79e;
+fg1:    #ebdbb2;
 redish: #cc241d;
 font1: "CMUTypewriterText Oblique 12";
 }

@@ -2,11 +2,11 @@
 
 # Scrots
 
-![Scrot 1](ws1.png "Scrot 1")
+![Theme 1](thm1.png "Theme 1")
 
-![Scrot 2](ws2.png "Scrot 2")
+![Theme 2](thm2.png "Theme 2")
 
-![Scrot 3](ws3.png "Scrot 3")
+![Theme 3](thm3.png "Theme 3")
 
 # Main Install
 
@@ -84,3 +84,11 @@ Now you should just have to exit the chroot, ```umount -R``` your arch drive, an
 + ```cd /home/gavarch```
 + ```wget https://raw.githubusercontent.com/StillANixRookie/i3rice-arch/master/postarch```
 + ```bash postarch```
+# Walls
+
+![Wall 1](wall1.png "Wall 1")
+
+![Wall 2](wall2.png "Wall 2")
+
+![Wall 3](wall3.png "Wall 3")
+
