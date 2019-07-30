@@ -17,13 +17,35 @@ MX=${MONDIM%x*} MY=${MONDIM#*x}
 
 help () {
 cat << 'EOB'
-    -h -- print this help
-    -w -- wallpaper to set. Can be picture or hex color (requires white.jpg in 
-              i3wallpaper's directory)
-    -t -- color to tint wallpaper with
-    -a -- add walls contained in specified dir to i3wallpaper's directory
-    -l -- open wallpapers in i3wallpaper's directory in sxiv
-    -b -- toggle blur
+  ██  ████                        ██  ██
+ ▒▒  █▒▒▒ █                      ▒██ ▒██ ██████            ██████
+  ██▒    ▒█ ███     ██  ██████   ▒██ ▒██▒██▒▒▒██  ██████  ▒██▒▒▒██  █████  ██████
+ ▒██   ███ ▒▒██  █ ▒██ ▒▒▒▒▒▒██  ▒██ ▒██▒██  ▒██ ▒▒▒▒▒▒██ ▒██  ▒██ ██▒▒▒██▒▒██▒▒█
+ ▒██  ▒▒▒ █ ▒██ ███▒██  ███████  ▒██ ▒██▒██████   ███████ ▒██████ ▒███████ ▒██ ▒
+ ▒██ █   ▒█ ▒████▒████ ██▒▒▒▒██  ▒██ ▒██▒██▒▒▒   ██▒▒▒▒██ ▒██▒▒▒  ▒██▒▒▒▒  ▒██
+ ▒██▒ ████  ███▒ ▒▒▒██▒▒████████ ███ ███▒██     ▒▒████████▒██     ▒▒██████▒███
+ ▒▒  ▒▒▒▒  ▒▒▒    ▒▒▒  ▒▒▒▒▒▒▒▒ ▒▒▒ ▒▒▒ ▒▒       ▒▒▒▒▒▒▒▒ ▒▒       ▒▒▒▒▒▒ ▒▒▒
+		-- A script to set wallpaper, with other features.
+
+	Usage
+	-----
+	i3wallpaper                ┼ Create [walls/(normal|blur)]
+	                           │   directory in [~/pic]
+	i3wallpaper -h             ┼ Print this help
+	i3wallpaper -w [WALLPAPER] ┼ Wallpaper to set. 
+	i3wallpaper -t [HEX COLOR] ┼ Color to tint wallpaper with
+	i3wallpaper -a [DIRECTORY] ┼ Add walls from [DIRECTORY]
+	i3wallpaper -l             ┼ View available wallpapers in sxiv
+	i3wallpaper -b             ┼ Toggle blur
+
+	[DIRECTORY] can be a PATH to a picture,
+	the name of a picture in [walls/normal],
+	hex color (requires white.jpg in
+	[walls]), or [RANDOM|PREV|NEXT] for
+	random wallpaper in [walls/normal], next
+	wallpaper in history, previous wallpaper
+	in history, respectively.
+
 EOB
 }
 add-wall () {

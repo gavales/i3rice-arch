@@ -42,23 +42,37 @@ start () {
 }
 help () {
 cat << 'EOB'
-	-h  --  echo this help
-	-p  --  prompt
-	-l  --  rofi location
-	-x  --  horizontal X position
-	-y  --  vertical X position
-	-c  --  accent color, comes in the form of the variable files in
-			.config/rofi
-	-w  --  rofi width
-	-g  --  rofi height (XX% of screen)
-	-o  --  vertical or horizontal (like dmenu)
-	-r  --  number of vertical rows
-	-e  --  fill active window
-	-d  --  dmenu mode
-	-s  --  application menu mode
-	-t  --  spawn on i3wm title-bar
-	-m  --  spawn at mouse location
-	-f  --  fullscreen mode, working on this
+	 ██  ████
+	▒▒  █▒▒▒ █
+	 ██▒    ▒█ ██████████   █████  ███████  ██   ██
+	▒██   ███ ▒▒██▒▒██▒▒██ ██▒▒▒██▒▒██▒▒▒██▒██  ▒██
+	▒██  ▒▒▒ █ ▒██ ▒██ ▒██▒███████ ▒██  ▒██▒██  ▒██
+	▒██ █   ▒█ ▒██ ▒██ ▒██▒██▒▒▒▒  ▒██  ▒██▒██  ▒██
+	▒██▒ ████  ███ ▒██ ▒██▒▒██████ ███  ▒██▒▒██████
+	▒▒  ▒▒▒▒  ▒▒▒  ▒▒  ▒▒  ▒▒▒▒▒▒ ▒▒▒   ▒▒  ▒▒▒▒▒▒
+		-- Rofi wrapper script
+
+	Usage
+	-----
+	i3menu -h                       ┼ Print this help
+	i3menu -e                       ┼ Fill active window
+	i3menu -d                       ┼ Dmenu mode
+	i3menu -s                       ┼ Application menu mode
+	i3menu -t                       ┼ Spawn on i3wm title-bar
+	i3menu -m                       ┼ Spawn at mouse location
+	i3menu -f                       ┼ Fullscreen mode, working on this
+	i3menu -c [COLOR]               ┼ Accent color, comes in the form
+	                                │   of the variable files in .config/rofi
+	i3menu -p [PROMPT]              ┼ Prompt
+	i3menu -l [LOCATION]            ┼ Rofi location:  1 2 3
+	                                │                 8 0 4
+	                                │                 7 6 5
+	i3menu -x [INTEGER]             ┼ Horizontal Offset
+	i3menu -y [INTEGER]             ┼ Vertical Offset
+	i3menu -w [INTEGER]             ┼ Rofi width
+	i3menu -g [INTEGER<=100]        ┼ Rofi height (XX% of screen)
+	i3menu -o [vertical|horizontal] ┼ Vertical or horizontal (like dmenu)
+	i3menu -r [INTEGER]             ┼ Number of vertical rows
 
 EOB
 }

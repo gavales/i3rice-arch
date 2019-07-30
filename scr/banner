@@ -11,81 +11,51 @@ cyn="\033[1;36m"
 wtd="\033[1;37m"
 nrm="\033[0m"
 
-txt=$2
-#ops=$2
+txt=$1
 fnt="-f 3-d"
+
 help () {
-	echo -e "${blu}\n$(figlet $fnt -c "HELP"| \
+	echo -e "${blu}\n$(figlet $fnt -c "banner"| \
 		sed $'s/\*/\u2588/g;s/\//\u2592/g')${nrm}"
 cat << 'EOB'
+		-- Simple figlet wrapper
 
-
-				c -- centre
-				s -- slant
-				b -- banner3
-				i -- larry3d
-				l -- letters
-				r -- roman
-				m -- smisome1
-				t -- trek
-				f -- speed
-				k -- smkeyboard
+	Usage
+	-----
+	banner -h ┼ print this help
+	banner -c ┼ centre
 
 EOB
 }
 
-while getopts :hsbilrmtfkdh: opts; do
+while getopts :-ch opts; do
 	case "$opts" in
-		s)
-			fnt="-f slant"
-			echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c)"
-			;;
-		b)
-			fnt="-f banner3"
-			echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c | \
-				sed $'s/\#/\u2588/g')"
-			;;
-		i)
-			fnt="-f larry3d"
-			echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c )"
-			;;
-		l)
-			fnt="-f letters"
-			echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c )"
-			;;
-		r)
-			fnt="-f roman"
-			echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c | \
-				sed $'s/\#/\u2588/g')"
-			;;
-		m)
-			fnt="-f smisome1"
-			echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c )"
-			;;
-		t)
-			fnt="-f trek"
-			echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c | \
-				sed $'s/B/\u2588/g;s/8/\u2588/g' | \
-				sed $'s/K/\u258C/g;s/P/\u259B/g' | \
-				sed $'s/d/\u259F/g;s/b/\u2599/g' | \
-				sed $'s/\'/\u2598/g;s/`/\u259D/g' | \
-				sed $'s/\./\u2597/g;s/_/\ /g')"
-			;;
-		f)
-			fnt="-f speed"
-			echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c )"
-			;;
-		k)
-			fnt="-f smkeyboard"
-			echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c )"
-			;;
-		d)
-			fnt="-f 3-d"
-			echo -e "${gnt}$(echo -e "$txt" | figlet ${fnt} -c | \
-				sed $'s/\*/\u2588/g;s/\//\u2592/g')"
-			;;
-		h)
-			help
-			;;
+		-) :            ;;
+		c) fnt+=" -c"   ;;
+		h) help && exit ;;
 	esac
 done
+
+[[ -n $txt ]] && echo -e "${blu}\n$(echo -e "$txt" | figlet ${fnt} | \
+	sed $'s/\*/\u2588/g;s/\//\u2592/g')"
+
+# >>>> unused
+#	banner -s ┼ slant
+#	banner -b ┼ banner3
+#	banner -i ┼ larry3d
+#	banner -l ┼ letters
+#	banner -r ┼ roman
+#	banner -m ┼ smisome1
+#	banner -t ┼ trek
+#	banner -f ┼ speed
+#	banner -k ┼ smkeyboard
+#		s) fnt="${fnt/3-d/slant}"                                                 ;;
+#		b) fnt="${fnt/3-d/banner3}" regex=" | sed $'s/\#/\u2588/g'"               ;;
+#		i) fnt="${fnt/3-d/larry3d}"                                               ;;
+#		l) fnt="${fnt/3-d/letters}"                                               ;;
+#		r) fnt="${fnt/3-d/roman}"   regex=" | sed $'s/\#/\u2588/g'"               ;;
+#		m) fnt="${fnt/3-d/smisome1}"                                              ;;
+#		t) fnt="${fnt/3-d/trek}"                                                  ;;
+#		f) fnt="${fnt/3-d/speed}"                                                 ;;
+#		k) fnt="${fnt/3-d/smkeyboard}"                                            ;;
+#		d) fnt="${fnt}"             regex=" | sed $'s/\*/\u2588/g;s/\//\u2592/g'" ;;

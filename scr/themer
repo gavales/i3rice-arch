@@ -192,22 +192,30 @@ getvar () {
 
 help () {
 cat << 'EOB'
-		themer -- A script to change theme of configs
+	   ██   ██
+	  ▒██  ▒██
+	 ██████▒██       █████  ██████████   █████  ██████
+	▒▒▒██▒ ▒██████  ██▒▒▒██▒▒██▒▒██▒▒██ ██▒▒▒██▒▒██▒▒█
+	  ▒██  ▒██▒▒▒██▒███████ ▒██ ▒██ ▒██▒███████ ▒██ ▒
+	  ▒██  ▒██  ▒██▒██▒▒▒▒  ▒██ ▒██ ▒██▒██▒▒▒▒  ▒██
+	  ▒▒██ ▒██  ▒██▒▒██████ ███ ▒██ ▒██▒▒██████▒███
+	  ▒▒  ▒▒   ▒▒  ▒▒▒▒▒▒ ▒▒▒  ▒▒  ▒▒  ▒▒▒▒▒▒ ▒▒▒
+		-- A script to change theme of configs
 		          using a theme file.
 
 	Usage
 	-----
-	themer                ├ Produce [~/thm] to place themes
+	themer                ┼ Produce [~/thm] to place themes
 	                      │   in, and example gruvbox_light theme.
-	themer -a [DIRECTORY] ├ Apply current theme to given directory.
-	themer -x [SCRIPT]    ├ Bash script to run after theme is made.
+	themer -a [DIRECTORY] ┼ Apply current theme to given directory.
+	themer -x [SCRIPT]    ┼ Bash script to run after theme is made.
 	                      │   Specify before -a.
-	themer -c [THEME]     ├ Change current theme. Call themer -c ""
+	themer -c [THEME]     ┼ Change current theme. Call themer -c ""
 	                      │   for a rofi menu of all themes.
-	themer -v [VAR]       ├ Get variables from current theme.
-	themer -h             ├ Display this help.
-	themer -l             ├ List available themes in theme directory.
-	themer -u             ├ Update rofi theme list for -c.
+	themer -v [VAR]       ┼ Get variables from current theme.
+	themer -h             ┼ Display this help.
+	themer -l             ┼ List available themes in theme directory.
+	themer -u             ┼ Update rofi theme list for -c.
 
 	Making Themes
 	-------------

@@ -14,7 +14,7 @@ case "$file" in
 		mkdir "${file/.tar.xz/}"
 		tar -xJf "${file}" -C "${file/.tar.xz/}"
 		;;
-	*\.zip) unzip "${file}" -d "${file:0:-4}" ;;
-	*\.gz) gunzip "${file}" -d "${file:0:-3}" ;;
+	*\.zip) unzip "${file}" -d "${file%.*}" ;;
+	*\.gz) gunzip "${file}" -d "${file%.*}" ;;
 	*\.rar) unrar x "${file}" ;;
 esac

@@ -5,10 +5,14 @@
 
 help () {
 cat << 'EOB'
-             SCRIPT TO MIX 2 HEX COLORS
-    -h -- print this help
-    -c -- colors to mix: in the form XX:#COLOR1 XX:#COLOR2
-              where XX are ratios to mix the hex colors
+		colmix -- Script to mix 2 hex colors
+
+	Usage
+	-----
+	colmix -h                         ┼ Print this help
+	colmix -c [XX:#COLOR1 XX:#COLOR2] ┼ Colors to mix, in the form 
+                                    │   where XX are ratios to
+	                                  │   mix the hex colors.
 EOB
 }
 
