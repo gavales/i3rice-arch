@@ -1,6 +1,7 @@
 # vim:ft=perl
 name      gruvbox
 wallpaper Galápagossealion
+tint      acc
 bg0       #282828
 fg0       #ebdbb2
 acc       #458588

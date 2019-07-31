@@ -3,6 +3,9 @@
 # OA: Gavin Vales
 # CREATED: Sat  6 Jul 00:50:41 BST 2019
 
+# COMMAND TO UPDATE BLUR OF BLURS
+# for i in $(ls); do convert "${i}" -blur 0x8 "${PWD/normal/blur}/${i}"; echo "$i"; done
+
 WDIR="$HOME/pic/walls"
 NORM="${WDIR}/normal"
 BLUR="${WDIR}/blur"
@@ -14,40 +17,6 @@ WHT="${WDIR}/white.jpg"
 CRLN="$(readlink -f $CURR)" HIST="${WDIR}/.history"
 MONDIM=$(xdpyinfo | grep dimensions: | awk '{print $2}')
 MX=${MONDIM%x*} MY=${MONDIM#*x}
-
-help () {
-cat << 'EOB'
-  ██  ████                        ██  ██
- ▒▒  █▒▒▒ █                      ▒██ ▒██ ██████            ██████
-  ██▒    ▒█ ███     ██  ██████   ▒██ ▒██▒██▒▒▒██  ██████  ▒██▒▒▒██  █████  ██████
- ▒██   ███ ▒▒██  █ ▒██ ▒▒▒▒▒▒██  ▒██ ▒██▒██  ▒██ ▒▒▒▒▒▒██ ▒██  ▒██ ██▒▒▒██▒▒██▒▒█
- ▒██  ▒▒▒ █ ▒██ ███▒██  ███████  ▒██ ▒██▒██████   ███████ ▒██████ ▒███████ ▒██ ▒
- ▒██ █   ▒█ ▒████▒████ ██▒▒▒▒██  ▒██ ▒██▒██▒▒▒   ██▒▒▒▒██ ▒██▒▒▒  ▒██▒▒▒▒  ▒██
- ▒██▒ ████  ███▒ ▒▒▒██▒▒████████ ███ ███▒██     ▒▒████████▒██     ▒▒██████▒███
- ▒▒  ▒▒▒▒  ▒▒▒    ▒▒▒  ▒▒▒▒▒▒▒▒ ▒▒▒ ▒▒▒ ▒▒       ▒▒▒▒▒▒▒▒ ▒▒       ▒▒▒▒▒▒ ▒▒▒
- 	-- A script to set wallpaper, with other features.
-
- Usage
- -----
- i3wallpaper                ┼ Create [walls/(normal|blur)]
-                            │   directory in [~/pic]
- i3wallpaper -h             ┼ Print this help
- i3wallpaper -w [PATH|PREV| ┼ Wallpaper to set. 
-                NEXT|RANDOM]│
- i3wallpaper -t [HEX COLOR] ┼ Tint color of wallpaper
- i3wallpaper -a [DIRECTORY] ┼ Add walls from [DIRECTORY]
- i3wallpaper -l             ┼ View available wallpapers in sxiv
- i3wallpaper -b             ┼ Toggle blur
- 
- [DIRECTORY] ┼ is a path to a directory containing pictures.
- [HEX COLOR] ┼ Hexadecimal color. Eg. #002b36
- [PATH]      ┼ is a path to a picture.
- [PREV]      ┼ previous wallpaper in history.
- [NEXT]      ┼ next wallpaper in history.
- [RANDOM]    ┼ random wallpaper in [walls/normal].
-
-EOB
-}
 
 add-wall () {
 	SRC="$1"
@@ -66,7 +35,7 @@ add-wall () {
 	TRG=$TRG
 	SRC=$SRC"
 	convert "${SRC}" -resize "${MX}x${MY}^" -gravity center -extent "${MX}x${MY}" "${NORM}/${TRG}"
-	convert "${NORM}/${TRG}" -blur 0x4 "${BLUR}/${TRG}"
+	convert "${NORM}/${TRG}" -blur 0x8 "${BLUR}/${TRG}"
 	WPP="$TRG"
 }
 
@@ -94,7 +63,7 @@ add () {
 			-gravity center \
 			-extent "${MX}x${MY}" "${NORM}/${TRG}"
 		[[ ! -f ${BLUR}/${TRG} ]] && convert "${NORM}/${TRG}" \
-			-blur 0x4 "${BLUR}/${TRG}"
+			-blur 0x8 "${BLUR}/${TRG}"
 	done
 }
 
@@ -143,6 +112,52 @@ delete () {
 	rm -rf ${BLUR}/${1}
 	[[ ! -f ${NORM}/${1} ]] && echo "Deleted ${NORM}/${1}"
 	[[ ! -f ${BLUR}/${1} ]] && echo "Deleted ${BLUR}/${1}"
+}
+
+help () {
+cat << 'EOB'
+  ██ ██████                       ██  ██
+ ▒▒ ▒█▒▒▒▒█                      ▒██ ▒██
+  ██▒    ▒█ ███     ██  ██████   ▒██ ▒██
+ ▒██   ████▒▒██  █ ▒██ ▒▒▒▒▒▒██  ▒██ ▒██
+ ▒██  ▒▒▒▒█ ▒██ ███▒██  ███████  ▒██ ▒██  ████████
+ ▒██ █   ▒█ ▒████▒████ ██▒▒▒▒██  ▒██ ▒██ ▒▒▒▒▒▒▒▒
+ ▒██▒██████ ███▒ ▒▒▒██▒▒████████ ███ ███
+ ▒▒ ▒▒▒▒▒▒ ▒▒▒    ▒▒▒  ▒▒▒▒▒▒▒▒ ▒▒▒ ▒▒▒
+
+         ██████            ██████
+        ▒██▒▒▒██  ██████  ▒██▒▒▒██  █████  ██████
+        ▒██  ▒██ ▒▒▒▒▒▒██ ▒██  ▒██ ██▒▒▒██▒▒██▒▒█
+        ▒██████   ███████ ▒██████ ▒███████ ▒██ ▒
+        ▒██▒▒▒   ██▒▒▒▒██ ▒██▒▒▒  ▒██▒▒▒▒  ▒██
+        ▒██     ▒▒████████▒██     ▒▒██████▒███
+        ▒▒       ▒▒▒▒▒▒▒▒ ▒▒       ▒▒▒▒▒▒ ▒▒▒
+ 	-- A script to set wallpaper, with other features.
+
+ Usage
+ -----
+ i3wallpaper                ┼ Create [walls/(normal|blur)]
+                            │   directory in [~/pic]
+ i3wallpaper -h             ┼ Print this help
+ i3wallpaper -w [PATH|PREV| ┼ Wallpaper to set 
+                NEXT|RANDOM │
+                   NAME]    │
+ i3wallpaper -t [HEX COLOR] ┼ Tint color of wallpaper
+ i3wallpaper -a [DIRECTORY] ┼ Add walls from [DIRECTORY]
+ i3wallpaper -l             ┼ View available wallpapers in
+                            │   sxiv
+ i3wallpaper -b             ┼ Toggle blur
+ i3wallpaper -d             ┼ Toggle blur
+ 
+ [DIRECTORY] ┼ is a path to a directory containing pictures
+ [HEX COLOR] ┼ Hexadecimal color Eg. #002b36
+ [PATH]      ┼ is a path to a picture
+ [PREV]      ┼ previous wallpaper in history
+ [NEXT]      ┼ next wallpaper in history
+ [NAME]      ┼ name of wallpaper stored in [walls/normale]
+ [RANDOM]    ┼ random wallpaper in [walls/normal]
+
+EOB
 }
 
 while getopts :w:t:a:d:lbh opts; do

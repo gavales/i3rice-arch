@@ -1,7 +1,9 @@
 #!/bin/bash
 WPP=$($HOME/scr/themer -v wallpaper)
-[[ -n $WPP ]] || WPP=$($HOME/scr/themer -v acc)
-$HOME/scr/i3wallpaper -w "$WPP" -t "$($HOME/scr/themer -v acc | grep '#')"
+TNT="-t $($HOME/scr/themer -v "tint ")"
+[[ -n $WPP ]] || WPP=$($HOME/scr/themer -v "acc ")
+[[ -n $TNT ]] || TNT=" "
+$HOME/scr/i3wallpaper -w "$WPP" $TNT
 $HOME/scr/themer -x xrs-reload   -a $HOME/xrs
 $HOME/scr/themer -x i3concat     -a $HOME/.config/i3
 $HOME/scr/themer -x pb-reload    -a $HOME/.config/polybar

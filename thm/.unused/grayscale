@@ -1,5 +1,5 @@
-name       grayscale
-wallpaper  VictoriaAustralia
-foreground #000000
-accent     #666666
-background #ffffff
+name      grayscale
+wallpaper VictoriaAustralia
+fg0       #000000
+acc       #666666
+bg0       #ffffff
