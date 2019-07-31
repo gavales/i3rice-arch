@@ -1,7 +1,7 @@
 # vim:ft=perl
 name      TheAltiplanoArgentina
 wallpaper TheAltiplanoArgentina
-tint      fg0
+tint      $fg0
 bg0       #f3cf91
 acc       #80362B
 fg0       #37302A

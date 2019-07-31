@@ -4,9 +4,12 @@ wallpaper SawtoothNationalRecreationAreaUSA
 font      CMUTypewriterText
 guifont   CMU Typewriter Text
 size      12
+gtk       Standard-light
+gtk-icon  DamaDamas
+cursor    Bibata_Dark_Red
+ylwblu    mix 50:$ylw 50:$blu
 bg0       #fbf1c7
 fg0       #282828
-#acc       #918c77
 acc       #689d6a
 red       #cc241d
 grn       #98971a

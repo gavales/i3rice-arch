@@ -1,7 +1,7 @@
 # vim:ft=perl
 name      solarized_light
 wallpaper flowy-hair
-tint      acc
+tint      $acc
 fg0       #002b36
 bg0       #fdf6e3
 acc       #2aa198

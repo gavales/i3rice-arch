@@ -1,7 +1,7 @@
 # vim:ft=perl
 name      blossom
 wallpaper blossom
-tint      bg0
+tint      $bg0
 bg0       #17101e
 acc       #FA6496
 fg0       #f5cce1

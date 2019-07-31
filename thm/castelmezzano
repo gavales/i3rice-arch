@@ -1,7 +1,7 @@
 # vim:ft=perl
 name      CastelmezzanoItaly
 wallpaper Teens-1
-tint      acc
+tint      $acc
 fg0       #0d090c
 bg0       #e5c7c7
 acc       #9D758A

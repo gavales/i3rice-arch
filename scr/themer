@@ -126,9 +126,14 @@ change-current () {
 	for i in $(cat $ALL); do
 		var=$(echo $i | awk '{print $1}')
 		val=$(echo $i | sed "/^"$var"/!d;s/[^ ]* *//")
-		sed -e "s/\ "$var"/\ "$val"/g" -i $ALL
-#		nvar=$(cat $ALL | grep -c " ${var}")
-#		[[ $nvar -ge 1 ]] && sed -e "s/\ "$var"/\ "$val"/g" -i $ALL
+		sed -e "s/\$"$var"/"$val"/g" -i $ALL
+	done
+	for i in $(cat $ALL); do
+		var=$(echo $i | awk '{print $1}')
+		val=$(echo $i | sed "/^"$var"/!d;s/[^ ]* *//")
+		[[ $val =~ "mix" ]] && \
+			mix=$($HOME/scr/colmix -c "${val/mix /}" | grep '#') && \
+			sed "s/"$val"/"$mix"/g" -i $ALL
 	done
 	variations
 	for i in $( cat $ALL | grep '#' | sed -e "/^fg/d;/^bg/d;/^ac/d"); do
@@ -252,6 +257,11 @@ cat << 'EOB'
  Use @@color@@ instead of %%color%% to get
  hex color without '#'. Useful for #AARRGGBB
  colors.
+ You can also reference variables with a '$'
+ in front of the variable name, and mix colours
+ eg.  {variable}  mix XX:#HEX XX:#HEX
+ where XX are required mix ratios, and #HEX are
+ actual colours, or variables.
  
  ┌┈┈┈┈ MAIN VARIABLES ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┐
  │%%name%%      Name of theme                  │▒▒

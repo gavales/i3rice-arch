@@ -1,7 +1,7 @@
 # vim:ft=perl
 name      dracula
 wallpaper dracula
-tint      acc
+tint      $acc
 bg0       #282A36
 acc       #FF6E67
 fg0       #fffff2

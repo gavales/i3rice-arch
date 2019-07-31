@@ -1,6 +1,6 @@
 # vim:ft=perl
 name      nikes
-tint      acc
+tint      $acc
 bg0       #f6f6f4
 fg0       #303030
 acc       #b46b7d

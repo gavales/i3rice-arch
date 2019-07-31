@@ -1,7 +1,7 @@
 # vim:ft=perl
 name      redrock1
 wallpaper RedRock-SecretMountainWilderness
-tint      acc
+tint      $acc
 fg0       #161c16
 acc       #DC8E69
 bg0       #f9efe9

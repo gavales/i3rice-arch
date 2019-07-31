@@ -1,7 +1,7 @@
 # vim:ft=perl
 name      atlas
 wallpaper waterfall-fog-mountains
-tint      acc
+tint      $acc
 fg0       #fafaf8
 acc       #14747e
 bg0       #002635
