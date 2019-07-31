@@ -1,23 +1,25 @@
-              <b><big>gruvbox_light</big></b>
-wallpaper SawtoothNationalRecreationAreaUSA
+              <b><big>atlas</big></b>
+wallpaper waterfall-fog-mountains
 font      CMUTypewriterText
 guifont   CMU Typewriter Text
 size      12
-<span foreground="#282828" background="#fbf1c7"><b>bg0	</b>rgb(251, 241, 199)	#fbf1c7 </span>
-<span foreground="#282828" background="#282828"><b>fg0	</b>rgb(40, 40, 40)	#282828 </span>
-<span foreground="#282828" background="#689d6a"><b>acc	</b>rgb(104, 157, 106)	#689d6a </span>
-<span foreground="#282828" background="#cc241d"><b>red	</b>rgb(204, 36, 29)	#cc241d </span>
-<span foreground="#282828" background="#98971a"><b>grn	</b>rgb(152, 151, 26)	#98971a </span>
-<span foreground="#282828" background="#d79921"><b>ylw	</b>rgb(215, 153, 33)	#d79921 </span>
-<span foreground="#282828" background="#b16286"><b>gnt	</b>rgb(177, 98, 134)	#b16286 </span>
-<span foreground="#282828" background="#458588"><b>blu	</b>rgb(69, 133, 136)	#458588 </span>
-<span foreground="#282828" background="#689d6a"><b>cyn	</b>rgb(104, 157, 106)	#689d6a </span>
-<span foreground="#282828" background="#d65d0e"><b>orange	</b>rgb(214, 93, 14)	#d65d0e </span>
-<span foreground="#282828" background="#646464"><b>fg3	</b>rgb(100, 100, 100)	#646464 </span>
-<span foreground="#282828" background="#505050"><b>fg2	</b>rgb(80, 80, 80)	#505050 </span>
-<span foreground="#282828" background="#3c3c3c"><b>fg1	</b>rgb(60, 60, 60)	#3c3c3c </span>
-<span foreground="#282828" background="#486249"><b>acf	</b>rgb(72, 98, 73)	#486249 </span>
-<span foreground="#282828" background="#b1c698"><b>acb	</b>rgb(177, 198, 152)	#b1c698 </span>
-<span foreground="#282828" background="#e7ddb3"><b>bg1	</b>rgb(231, 221, 179)	#e7ddb3 </span>
-<span foreground="#282828" background="#d3c99f"><b>bg2	</b>rgb(211, 201, 159)	#d3c99f </span>
-<span foreground="#282828" background="#bfb58b"><b>bg3	</b>rgb(191, 181, 139)	#bfb58b </span>
+<span foreground="#fafaf8" background="#14747e"><b>tint	</b>rgb(20, 116, 126)	#14747e </span>
+<span foreground="#fafaf8" background="#fafaf8"><b>fg0	</b>rgb(250, 250, 248)	#fafaf8 </span>
+<span foreground="#fafaf8" background="#14747e"><b>acc	</b>rgb(20, 116, 126)	#14747e </span>
+<span foreground="#fafaf8" background="#14747e #14747e #14747e #14747e #14747e #14747e "><b>dummy	</b>rgb(20, 116, 126)	#14747e #14747e #14747e #14747e #14747e #14747e  </span>
+<span foreground="#fafaf8" background="#002635"><b>bg0	</b>rgb(0, 38, 53)	#002635 </span>
+<span foreground="#fafaf8" background="#f08e48"><b>red	</b>rgb(240, 142, 72)	#f08e48 </span>
+<span foreground="#fafaf8" background="#7fc06e"><b>grn	</b>rgb(127, 192, 110)	#7fc06e </span>
+<span foreground="#fafaf8" background="#ffcc1b"><b>ylw	</b>rgb(255, 204, 27)	#ffcc1b </span>
+<span foreground="#fafaf8" background="#14747e"><b>blu	</b>rgb(20, 116, 126)	#14747e </span>
+<span foreground="#fafaf8" background="#9a70a4"><b>gnt	</b>rgb(154, 112, 164)	#9a70a4 </span>
+<span foreground="#fafaf8" background="#5dd7b9"><b>cyn	</b>rgb(93, 215, 185)	#5dd7b9 </span>
+<span foreground="#fafaf8" background="#d65d0e"><b>orange	</b>rgb(214, 93, 14)	#d65d0e </span>
+<span foreground="#fafaf8" background="#bebebc"><b>fg3	</b>rgb(190, 190, 188)	#bebebc </span>
+<span foreground="#fafaf8" background="#d2d2d0"><b>fg2	</b>rgb(210, 210, 208)	#d2d2d0 </span>
+<span foreground="#fafaf8" background="#e6e6e4"><b>fg1	</b>rgb(230, 230, 228)	#e6e6e4 </span>
+<span foreground="#fafaf8" background="#87b7bb"><b>acf	</b>rgb(135, 183, 187)	#87b7bb </span>
+<span foreground="#fafaf8" background="#0a4d59"><b>acb	</b>rgb(10, 77, 89)	#0a4d59 </span>
+<span foreground="#fafaf8" background="#143a49"><b>bg1	</b>rgb(20, 58, 73)	#143a49 </span>
+<span foreground="#fafaf8" background="#284e5d"><b>bg2	</b>rgb(40, 78, 93)	#284e5d </span>
+<span foreground="#fafaf8" background="#3c6271"><b>bg3	</b>rgb(60, 98, 113)	#3c6271 </span>

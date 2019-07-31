@@ -126,10 +126,9 @@ change-current () {
 	for i in $(cat $ALL); do
 		var=$(echo $i | awk '{print $1}')
 		val=$(echo $i | sed "/^"$var"/!d;s/[^ ]* *//")
-		ifvar=$(cat $ALL | grep "^${val}")
-		[[ -n $ifvar ]] \
-			&& valvar=$(cat $ALL | sed -n "/^${val}/p" | sed -e "s/[^ ]* *//") \
-			&& sed -e "s/\ "${val}"/\ "${valvar}"/g" -i $ALL
+		sed -e "s/\ "$var"/\ "$val"/g" -i $ALL
+#		nvar=$(cat $ALL | grep -c " ${var}")
+#		[[ $nvar -ge 1 ]] && sed -e "s/\ "$var"/\ "$val"/g" -i $ALL
 	done
 	variations
 	for i in $( cat $ALL | grep '#' | sed -e "/^fg/d;/^bg/d;/^ac/d"); do

@@ -35,7 +35,6 @@ mkdir dtp
 shell git clone https://github.com/ashinkarov/i3-extras.git
 shell unzip 'Heathrow SJT - Security Officer Reports-2019-Jul-27.zip' -d 'Heathrow SJT - Security Officer Reports-2019-Jul-27'
 shell identify %f
-shell readlink -f %f
 shell git clone https://github.com/resloved/i3.git
 rename mpv.conf_old
 rename config_old
@@ -48,3 +47,4 @@ rename gruvbox_light_
 rename gruvbox_light
 rename openvideo
 rename openvid
+shell readlink -f %f
