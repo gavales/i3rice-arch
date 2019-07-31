@@ -30,8 +30,7 @@ exit
 [[ -f $DEF ]] || create_def
 
 vrt=light
-CUR=${TDR}/.current ALL=${TDR}/.allvars VAR=${TDR}/.vars
-ALR=${TDR}/.allvarsrofi RGX=${TDR}/.regex
+CUR=${TDR}/.current ALL=${TDR}/.allvars ALR=${TDR}/.allvarsrofi RGX=${TDR}/.regex
 
 variations () {
 	bg0=$(cat ${ALL} | sed '/^bg0/!d;s/[^ ]* *//')
