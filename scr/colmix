@@ -5,49 +5,74 @@
 
 help () {
 cat << 'EOB'
-		colmix -- Script to mix 2 hex colors
+                     ██             ██
+                    ▒██            ▒▒
+    █████   ██████  ▒██ ██████████  ██ ██   ██
+   ██▒▒▒██ ██▒▒▒▒██ ▒██▒▒██▒▒██▒▒██▒██▒▒██ ██
+  ▒██  ▒▒ ▒██   ▒██ ▒██ ▒██ ▒██ ▒██▒██ ▒▒███
+  ▒██   ██▒██   ▒██ ▒██ ▒██ ▒██ ▒██▒██  ██▒██
+  ▒▒█████ ▒▒██████  ███ ███ ▒██ ▒██▒██ ██ ▒▒██
+   ▒▒▒▒▒   ▒▒▒▒▒▒  ▒▒▒ ▒▒▒  ▒▒  ▒▒ ▒▒ ▒▒   ▒▒
+ 	-- Script to mix 2 hex colors
+ 
+ Usage
+ -----
+ colmix -h                     ┼ Print this help
+ colmix -x [XX:#COL1 XX:#COL2] ┼ Print final color in hex
+ colmix -r [XX:#COL1 XX:#COL2] ┼ Print final color in rgb 
 
-	Usage
-	-----
-	colmix -h                         ┼ Print this help
-	colmix -c [XX:#COLOR1 XX:#COLOR2] ┼ Colors to mix, in the form 
-                                    │   where XX are ratios to
-	                                  │   mix the hex colors.
+ Input only hex color.
+ XX are required ratios to mix the colors.
 EOB
 }
 
-while getopts :c:h opts; do
+print-hex () {
+	COL1F="${1% *}" COL2F="${1#* }"
+	RAT1="${COL1F%:*}" RAT2="${COL2F%:*}"
+	COL1="${COL1F#*:}" COL2="${COL2F#*:}"
+
+# CONVERT TO RGB
+	CL1R=$((16#${COL1:1:-4})) CL1G=$((16#${COL1:3:-2})) CL1B=$((16#${COL1:5}))
+	CL2R=$((16#${COL2:1:-4})) CL2G=$((16#${COL2:3:-2})) CL2B=$((16#${COL2:5}))
+
+# GET FINAL COLOR IN RGB
+	CL3R=$(echo "scale=0; ((${CL1R}*${RAT1})/100)+((${CL2R}*${RAT2})/100)" | bc)
+	CL3G=$(echo "scale=0; ((${CL1G}*${RAT1})/100)+((${CL2G}*${RAT2})/100)" | bc)
+	CL3B=$(echo "scale=0; ((${CL1B}*${RAT1})/100)+((${CL2B}*${RAT2})/100)" | bc)
+
+# GET HEX OF FINAL COLOR
+	CL3RX=$(printf '%x\n' ${CL3R})
+	CL3GX=$(printf '%x\n' ${CL3G})
+	CL3BX=$(printf '%x\n' ${CL3B})
+	[[ ${#CL3RX} == 1 ]] && CL3RX="0$CL3RX"
+	[[ ${#CL3GX} == 1 ]] && CL3GX="0$CL3GX"
+	[[ ${#CL3BX} == 1 ]] && CL3BX="0$CL3BX"
+	COL3="#${CL3RX}${CL3GX}${CL3BX}"
+
+	echo "$COL3"
+}
+
+print-rgb () {
+	COL1F="${1% *}" COL2F="${1#* }"
+	RAT1="${COL1F%:*}" RAT2="${COL2F%:*}"
+	COL1="${COL1F#*:}" COL2="${COL2F#*:}"
+
+# CONVERT TO RGB
+	CL1R=$((16#${COL1:1:-4})) CL1G=$((16#${COL1:3:-2})) CL1B=$((16#${COL1:5}))
+	CL2R=$((16#${COL2:1:-4})) CL2G=$((16#${COL2:3:-2})) CL2B=$((16#${COL2:5}))
+
+# GET FINAL COLOR IN RGB
+	CL3R=$(echo "scale=0; ((${CL1R}*${RAT1})/100)+((${CL2R}*${RAT2})/100)" | bc)
+	CL3G=$(echo "scale=0; ((${CL1G}*${RAT1})/100)+((${CL2G}*${RAT2})/100)" | bc)
+	CL3B=$(echo "scale=0; ((${CL1B}*${RAT1})/100)+((${CL2B}*${RAT2})/100)" | bc)
+
+	echo "$CL3R, $CL3G, $CL3B"
+}
+
+while getopts :x:r:h opts; do
 	case $opts in
-		c) COLS="${OPTARG}" ;;
+		x) print-hex "${OPTARG}" && exit ;;
+		r) print-rgb "${OPTARG}" && exit ;;
 		h) help && exit ;;
 	esac
 done
-
-COL1F="${COLS% *}"
-COL2F="${COLS#* }"
-RAT1="${COL1F%:*}"
-RAT2="${COL2F%:*}"
-COL1="${COL1F#*:}"
-COL2="${COL2F#*:}"
-
-# CONVERT TO RGB
-CL1R=$((16#${COL1:1:-4})) && CL1G=$((16#${COL1:3:-2})) && CL1B=$((16#${COL1:5}))
-CL2R=$((16#${COL2:1:-4})) && CL2G=$((16#${COL2:3:-2})) && CL2B=$((16#${COL2:5}))
-# "((${wnH}*100)/$scH)+((($TTLBR+$TTLBR/2)*100)/$scH)" | bc
-
-# GET FINAL COLOR IN RGB
-CL3R=$(echo "scale=0; ((${CL1R}*${RAT1})/100)+((${CL2R}*${RAT2})/100)" | bc)
-CL3G=$(echo "scale=0; ((${CL1G}*${RAT1})/100)+((${CL2G}*${RAT2})/100)" | bc)
-CL3B=$(echo "scale=0; ((${CL1B}*${RAT1})/100)+((${CL2B}*${RAT2})/100)" | bc)
-
-# GET HEX OF FINAL COLOR
-CL3RX=$(printf '%x\n' ${CL3R})
-CL3GX=$(printf '%x\n' ${CL3G})
-CL3BX=$(printf '%x\n' ${CL3B})
-[[ ${#CL3RX} == 1 ]] && CL3RX="0$CL3RX"
-[[ ${#CL3GX} == 1 ]] && CL3GX="0$CL3GX"
-[[ ${#CL3BX} == 1 ]] && CL3BX="0$CL3BX"
-COL3="#${CL3RX}${CL3GX}${CL3BX}"
-
-echo "$CL3R, $CL3G, $CL3B
-$COL3"

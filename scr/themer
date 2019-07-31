@@ -40,10 +40,10 @@ variations () {
 	bg0R=$((16#${bg0:1:-4})) bg0G=$((16#${bg0:3:-2})) bg0B=$((16#${bg0:5}))
 	fg0R=$((16#${fg0:1:-4})) fg0G=$((16#${fg0:3:-2})) fg0B=$((16#${fg0:5}))
 	accR=$((16#${acc:1:-4})) accG=$((16#${acc:3:-2})) accB=$((16#${acc:5}))
-	acf=$($HOME/scr/colmix -c "50:${acc} 50:${fg0}" | grep '#')
-	acb=$($HOME/scr/colmix -c "50:${acc} 50:${bg0}" | grep '#')
-	acfRGB=$($HOME/scr/colmix -c "50:${acc} 50:${fg0}" | grep -v '#')
-	acbRGB=$($HOME/scr/colmix -c "50:${acc} 50:${bg0}" | grep -v '#')
+	acf=$($HOME/scr/colmix -x "50:${acc} 50:${fg0}")
+	acb=$($HOME/scr/colmix -x "50:${acc} 50:${bg0}")
+	acfRGB=$($HOME/scr/colmix -r "50:${acc} 50:${fg0}")
+	acbRGB=$($HOME/scr/colmix -r "50:${acc} 50:${bg0}")
 
 	[[ $bg0R -le 127 ]] || [[ $bg0G -le 127 ]] || [[ $bg0B -le 127 ]] && vrt=dark
 	if [[ $vrt == "light" ]]; then
@@ -132,7 +132,7 @@ change-current () {
 		var=$(echo $i | awk '{print $1}')
 		val=$(echo $i | sed "/^"$var"/!d;s/[^ ]* *//")
 		[[ $val =~ "mix" ]] && \
-			mix=$($HOME/scr/colmix -c "${val/mix /}" | grep '#') && \
+			mix=$($HOME/scr/colmix -x "${val/mix /}") && \
 			sed "s/"$val"/"$mix"/g" -i $ALL
 	done
 	variations
