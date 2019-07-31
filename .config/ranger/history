@@ -1,6 +1,3 @@
-rename (2018) Accident Man.mov
-rename (2009) Black Dynamite.mov
-rename (2000) Crouching Tiger Hidden Dragon.mov
 shell convert  %f  -fill "#002b36"  -tint 100 tint_darker.png
 shell convert  %f  -fill "#002b36"  -tint 200 tint_darker.png
 shell convert  %f  -fill "#689d6a"  -tint 200 tint_darker.png
@@ -38,13 +35,16 @@ mkdir dtp
 shell git clone https://github.com/ashinkarov/i3-extras.git
 shell unzip 'Heathrow SJT - Security Officer Reports-2019-Jul-27.zip' -d 'Heathrow SJT - Security Officer Reports-2019-Jul-27'
 shell identify %f
-shell readlink -f %f
 shell git clone https://github.com/resloved/i3.git
-rename mpv.conf_old
-rename config_old
-rename themer_old
-rename themer
+rename default
 rename gruvbox_light_
 rename gruvbox_light
-open_with 
-open_with xterm -e vim
+rename altiplano
+rename thm
+rename walls_
+rename walls
+shell git clone https://github.com/StillANixRookie/numix-solarized-gtk-theme.git
+rename numix-solarized-gtk-theme
+shell readlink -f %f
+mkdir scrots
+s

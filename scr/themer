@@ -230,7 +230,9 @@ cat << 'EOB'
 	main dir, duplicate the file(s) with the colors,
 	rename with "template_" prefix, and replace all
 	colors or other things with the variables in your
-	theme file. Run themer -x [SCRIPT] -a [DIRECTORY]
+	theme file. Run themer -c [THEME] to generate
+	all variables, and then
+	themer -x [SCRIPT] -a [DIRECTORY]
 	appropriately to apply the theme.
 	Add RGB after colour name to get its RGB in
 	"R, G, B" form eg. %%bg0RGB%%.
@@ -245,10 +247,10 @@ cat << 'EOB'
 	│%%guifont%%   Guifont                        │▒▒
 	│%%size%%      Font size                      │▒▒
 	├┈┈┈┈ COLORS ┈┈┈┈┈┈┈┈┈┬┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤▒▒
-	│%%bg3%% A background │ %%acc%% accent        │▒▒
-	│%%bg2%% │ (gets      │ %%acf%% 50%acc+50%fg0 │▒▒
-	│%%bg1%% │ lighter    │ %%acb%% 50%acc+50%bg0 │▒▒
-	│%%bg0%% │ if dark)   ├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤▒▒
+	│%%bg0%% │ background │ %%acc%% accent        │▒▒
+	│%%bg1%% │ (gets      │ %%acf%% 50%acc+50%fg0 │▒▒
+	│%%bg2%% │ lighter    │ %%acb%% 50%acc+50%bg0 │▒▒
+	│%%bg3%% V if dark)   ├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤▒▒
 	├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤ %%red%% red           │▒▒
 	├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤ %%grn%% green         │▒▒
 	│%%fg0%% │ foreground │ %%ylw%% yellow        │▒▒
@@ -257,6 +259,7 @@ cat << 'EOB'
 	│%%fg3%% V if light)  │ %%gnt%% magenta       │▒▒
 	└┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┴┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┘▒▒
 	  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
 EOB
 }
 
