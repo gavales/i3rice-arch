@@ -35,16 +35,16 @@ mkdir dtp
 shell git clone https://github.com/ashinkarov/i3-extras.git
 shell unzip 'Heathrow SJT - Security Officer Reports-2019-Jul-27.zip' -d 'Heathrow SJT - Security Officer Reports-2019-Jul-27'
 shell identify %f
+shell readlink -f %f
 shell git clone https://github.com/resloved/i3.git
-rename default
+rename mpv.conf_old
+rename config_old
+rename themer_old
+rename themer
+open_with 
+open_with xterm -e vim
+rename 130 - The Greatest Showdown of All Time! The Ultimate Survival Battle!!.mkv
 rename gruvbox_light_
 rename gruvbox_light
-rename altiplano
-rename thm
-rename walls_
-rename walls
-shell git clone https://github.com/StillANixRookie/numix-solarized-gtk-theme.git
-rename numix-solarized-gtk-theme
-shell readlink -f %f
-mkdir scrots
-s
+rename openvideo
+rename openvid

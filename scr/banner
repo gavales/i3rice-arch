@@ -15,15 +15,15 @@ txt=$1
 fnt="-f 3-d"
 
 help () {
-	echo -e "${blu}\n$(figlet $fnt -c "banner"| \
+	echo -e "${blu}\n$(figlet $fnt " banner"| \
 		sed $'s/\*/\u2588/g;s/\//\u2592/g')${nrm}"
 cat << 'EOB'
-		-- Simple figlet wrapper
-
-	Usage
-	-----
-	banner -h ┼ print this help
-	banner -c ┼ centre
+ 	-- Simple figlet wrapper
+ 
+ Usage
+ -----
+ banner -h ┼ print this help
+ banner -c ┼ centre
 
 EOB
 }
@@ -36,7 +36,7 @@ while getopts :-ch opts; do
 	esac
 done
 
-[[ -n $txt ]] && echo -e "${blu}\n$(echo -e "$txt" | figlet ${fnt} | \
+[[ -n $txt ]] && echo -e "${blu}\n$(echo -e " $txt" | figlet ${fnt} | \
 	sed $'s/\*/\u2588/g;s/\//\u2592/g')"
 
 # >>>> unused

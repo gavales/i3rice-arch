@@ -27,6 +27,7 @@ fnt=${fnt%:*} fnt=${fnt##*:}
 dmthm="-fn "${fnt}:size=11" -nb "$bg0" -nf "$fg0" -sf "$bg0" -sb "$acc""
 dmloc="-x $(expr $wnX - $BRDR - $BRDR) -y $(expr $wnY - $TTLBR)"
 dmenu () { dmenu_run $dmloc $dmthm -w $(expr $wnW + $BRDR + $BRDR) -h $TTLBR ; }
+
 menu () {
 	rofi -dmenu -p "${PRMT}" $fs -theme $THM -monitor ${mon:7} -location $LOC \
 		-lines $LNS -width $WDTH -xoffset $XOFFSET -yoffset $YOFFSET \
@@ -34,48 +35,53 @@ menu () {
 		-theme-str "#horibox { children: [ prompt, entry, listview ]; }" \
 		-markup-rows
 }
+
 start () {
 	rofi -show drun -p "${PRMT}" $fs -theme $THM -monitor ${mon:7} -location $LOC \
 		-lines $LNS -width $WDTH -xoffset $XOFFSET -yoffset $YOFFSET \
 		-theme-str "#window { $HGTH }" \
 		-theme-str "#horibox { children: [ prompt, entry, listview ]; }"
 }
+
 help () {
 cat << 'EOB'
-	 ██  ████
-	▒▒  █▒▒▒ █
-	 ██▒    ▒█ ██████████   █████  ███████  ██   ██
-	▒██   ███ ▒▒██▒▒██▒▒██ ██▒▒▒██▒▒██▒▒▒██▒██  ▒██
-	▒██  ▒▒▒ █ ▒██ ▒██ ▒██▒███████ ▒██  ▒██▒██  ▒██
-	▒██ █   ▒█ ▒██ ▒██ ▒██▒██▒▒▒▒  ▒██  ▒██▒██  ▒██
-	▒██▒ ████  ███ ▒██ ▒██▒▒██████ ███  ▒██▒▒██████
-	▒▒  ▒▒▒▒  ▒▒▒  ▒▒  ▒▒  ▒▒▒▒▒▒ ▒▒▒   ▒▒  ▒▒▒▒▒▒
-		-- Rofi wrapper script
-
-	Usage
-	-----
-	i3menu -h                       ┼ Print this help
-	i3menu -e                       ┼ Fill active window
-	i3menu -d                       ┼ Dmenu mode
-	i3menu -s                       ┼ Application menu mode
-	i3menu -t                       ┼ Spawn on i3wm title-bar
-	i3menu -m                       ┼ Spawn at mouse location
-	i3menu -f                       ┼ Fullscreen mode, working on this
-	i3menu -c [COLOR]               ┼ Accent color, comes in the form
-	                                │   of the variable files in .config/rofi
-	i3menu -p [PROMPT]              ┼ Prompt
-	i3menu -l [LOCATION]            ┼ Rofi location:  1 2 3
-	                                │                 8 0 4
-	                                │                 7 6 5
-	i3menu -x [INTEGER]             ┼ Horizontal Offset
-	i3menu -y [INTEGER]             ┼ Vertical Offset
-	i3menu -w [INTEGER]             ┼ Rofi width
-	i3menu -g [INTEGER<=100]        ┼ Rofi height (XX% of screen)
-	i3menu -o [vertical|horizontal] ┼ Vertical or horizontal (like dmenu)
-	i3menu -r [INTEGER]             ┼ Number of vertical rows
+  ██  ████
+ ▒▒  █▒▒▒ █
+  ██▒    ▒█ ██████████   █████  ███████  ██   ██
+ ▒██   ███ ▒▒██▒▒██▒▒██ ██▒▒▒██▒▒██▒▒▒██▒██  ▒██
+ ▒██  ▒▒▒ █ ▒██ ▒██ ▒██▒███████ ▒██  ▒██▒██  ▒██
+ ▒██ █   ▒█ ▒██ ▒██ ▒██▒██▒▒▒▒  ▒██  ▒██▒██  ▒██
+ ▒██▒ ████  ███ ▒██ ▒██▒▒██████ ███  ▒██▒▒██████
+ ▒▒  ▒▒▒▒  ▒▒▒  ▒▒  ▒▒  ▒▒▒▒▒▒ ▒▒▒   ▒▒  ▒▒▒▒▒▒
+ 	-- Rofi wrapper script
+ 
+ Usage
+ -----
+ i3menu -h                ┼ Print this help
+ i3menu -e                ┼ Fill active window
+ i3menu -d                ┼ Dmenu mode
+ i3menu -s                ┼ Application menu mode
+ i3menu -t                ┼ Spawn on i3wm title-bar
+ i3menu -m                ┼ Spawn at mouse location
+ i3menu -f                ┼ Fullscreen mode, working on this
+ i3menu -c [COLOR]        ┼ Accent color; the name of one of
+                          │   in the variable files in
+                          │   .config/rofi
+ i3menu -p [PROMPT]       ┼ Prompt
+ i3menu -l [LOCATION]     ┼ Rofi location:  1 2 3
+                          │                 8 0 4
+                          │                 7 6 5
+ i3menu -x [INTEGER]      ┼ Horizontal Offset
+ i3menu -y [INTEGER]      ┼ Vertical Offset
+ i3menu -w [INTEGER]      ┼ Rofi width
+ i3menu -g [INTEGER<=100] ┼ Rofi height (XX% of screen)
+ i3menu -o [vertical|     ┼ Vertical or horizontal
+           horizontal]    │   (like dmenu)
+ i3menu -r [INTEGER]      ┼ Number of vertical rows
 
 EOB
 }
+
 while getopts :p:P:l:x:y:g:c:w:o:r:edstmfh opts; do
 	case $opts in
 		p) PRMT="${OPTARG}" ;;

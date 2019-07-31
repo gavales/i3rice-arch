@@ -25,26 +25,26 @@ cat << 'EOB'
  ▒██ █   ▒█ ▒████▒████ ██▒▒▒▒██  ▒██ ▒██▒██▒▒▒   ██▒▒▒▒██ ▒██▒▒▒  ▒██▒▒▒▒  ▒██
  ▒██▒ ████  ███▒ ▒▒▒██▒▒████████ ███ ███▒██     ▒▒████████▒██     ▒▒██████▒███
  ▒▒  ▒▒▒▒  ▒▒▒    ▒▒▒  ▒▒▒▒▒▒▒▒ ▒▒▒ ▒▒▒ ▒▒       ▒▒▒▒▒▒▒▒ ▒▒       ▒▒▒▒▒▒ ▒▒▒
-		-- A script to set wallpaper, with other features.
+ 	-- A script to set wallpaper, with other features.
 
-	Usage
-	-----
-	i3wallpaper                ┼ Create [walls/(normal|blur)]
-	                           │   directory in [~/pic]
-	i3wallpaper -h             ┼ Print this help
-	i3wallpaper -w [PATH|PREV| ┼ Wallpaper to set. 
-	               NEXT|RANDOM]│
-	i3wallpaper -t [HEX COLOR] ┼ Tint color of wallpaper
-	i3wallpaper -a [DIRECTORY] ┼ Add walls from [DIRECTORY]
-	i3wallpaper -l             ┼ View available wallpapers in sxiv
-	i3wallpaper -b             ┼ Toggle blur
-
-	[DIRECTORY] ┼ is a path to a directory containing pictures.
-	[HEX COLOR] ┼ Hexadecimal color. Eg. #002b36
-	[PATH]      ┼ is a path to a picture.
-	[PREV]      ┼ previous wallpaper in history.
-	[NEXT]      ┼ next wallpaper in history.
-	[RANDOM]    ┼ random wallpaper in [walls/normal].
+ Usage
+ -----
+ i3wallpaper                ┼ Create [walls/(normal|blur)]
+                            │   directory in [~/pic]
+ i3wallpaper -h             ┼ Print this help
+ i3wallpaper -w [PATH|PREV| ┼ Wallpaper to set. 
+                NEXT|RANDOM]│
+ i3wallpaper -t [HEX COLOR] ┼ Tint color of wallpaper
+ i3wallpaper -a [DIRECTORY] ┼ Add walls from [DIRECTORY]
+ i3wallpaper -l             ┼ View available wallpapers in sxiv
+ i3wallpaper -b             ┼ Toggle blur
+ 
+ [DIRECTORY] ┼ is a path to a directory containing pictures.
+ [HEX COLOR] ┼ Hexadecimal color. Eg. #002b36
+ [PATH]      ┼ is a path to a picture.
+ [PREV]      ┼ previous wallpaper in history.
+ [NEXT]      ┼ next wallpaper in history.
+ [RANDOM]    ┼ random wallpaper in [walls/normal].
 
 EOB
 }

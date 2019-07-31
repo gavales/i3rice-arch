@@ -4,24 +4,31 @@
 # CREATED: Mon 29 Jul 19:21:39 BST 2019
 
 TDR=$HOME/thm DEF=${TDR}/gruvbox_light
-gruvbox_light="# vim:ft=perl\n
-name      gruvbox_light\n
-wallpaper SawtoothNationalRecreationAreaUSA\n
-font      CMUTypewriterText\n
-guifont   CMU Typewriter Text\n
-size      12\n
-bg0       #fbf1c7\n
-fg0       #282828\n
-acc       #918c77\n
-#acc       #689d6a\n
-red       #cc241d\n
-grn       #98971a\n
-ylw       #d79921\n
-gnt       #b16286\n
-blu       #458588\n
-cyn       #689d6a"
+
+create_def () {
+cat > $DEF << 'EOB'
+# vim:ft=perl
+name      gruvbox_light
+font      monospace
+guifont   Noto Sans
+size      12
+bg0       #fbf1c7
+fg0       #282828
+#acc       #918c77
+acc       #689d6a
+red       #cc241d
+grn       #98971a
+ylw       #d79921
+gnt       #b16286
+blu       #458588
+cyn       #689d6a
+rng       #d65d0e
+EOB
+exit
+}
+
 [[ -d $TDR ]] || mkdir $TDR
-[[ -f $DEF ]] || echo -e $gruvbox_light > $DEF && sed "s/^\ //g" -i $DEF
+[[ -f $DEF ]] || create_def
 
 vrt=light
 CUR=${TDR}/.current ALL=${TDR}/.allvars ALR=${TDR}/.allvarsrofi RGX=${TDR}/.regex
@@ -192,73 +199,73 @@ getvar () {
 
 help () {
 cat << 'EOB'
-	   ██   ██
-	  ▒██  ▒██
-	 ██████▒██       █████  ██████████   █████  ██████
-	▒▒▒██▒ ▒██████  ██▒▒▒██▒▒██▒▒██▒▒██ ██▒▒▒██▒▒██▒▒█
-	  ▒██  ▒██▒▒▒██▒███████ ▒██ ▒██ ▒██▒███████ ▒██ ▒
-	  ▒██  ▒██  ▒██▒██▒▒▒▒  ▒██ ▒██ ▒██▒██▒▒▒▒  ▒██
-	  ▒▒██ ▒██  ▒██▒▒██████ ███ ▒██ ▒██▒▒██████▒███
-	  ▒▒  ▒▒   ▒▒  ▒▒▒▒▒▒ ▒▒▒  ▒▒  ▒▒  ▒▒▒▒▒▒ ▒▒▒
-		-- A script to change theme of configs
-		          using a theme file.
+    ██   ██
+   ▒██  ▒██
+  ██████▒██       █████  ██████████   █████  ██████
+ ▒▒▒██▒ ▒██████  ██▒▒▒██▒▒██▒▒██▒▒██ ██▒▒▒██▒▒██▒▒█
+   ▒██  ▒██▒▒▒██▒███████ ▒██ ▒██ ▒██▒███████ ▒██ ▒
+   ▒██  ▒██  ▒██▒██▒▒▒▒  ▒██ ▒██ ▒██▒██▒▒▒▒  ▒██
+   ▒▒██ ▒██  ▒██▒▒██████ ███ ▒██ ▒██▒▒██████▒███
+   ▒▒  ▒▒   ▒▒  ▒▒▒▒▒▒ ▒▒▒  ▒▒  ▒▒  ▒▒▒▒▒▒ ▒▒▒
+ 	-- A script to change theme of configs
+ 	          using a theme file.
 
-    Usage
-    -----
-    themer                ┼ Produce [~/thm] to place themes
-                          │   in, and example gruvbox_light theme.
-    themer -a [DIRECTORY] ┼ Apply current theme to given directory.
-    themer -x [SCRIPT]    ┼ Bash script to run after theme is made.
-                          │   Specify before -a.
-    themer -c [THEME]     ┼ Change current theme. Call themer -c ""
-                          │   for a rofi menu of all themes.
-    themer -v [VAR]       ┼ Get variables from current theme.
-    themer -h             ┼ Display this help.
-    themer -l             ┼ List available themes in theme directory.
-    themer -u             ┼ Update rofi theme list for -c.
+ Usage
+ -----
+ themer                ┼ Produce [~/thm] to place themes
+                       │   in, and example gruvbox_light theme.
+ themer -a [DIRECTORY] ┼ Apply current theme to given directory.
+ themer -x [SCRIPT]    ┼ Bash script to run after theme is made.
+                       │   Specify before -a.
+ themer -c [THEME]     ┼ Change current theme. Call themer -c ""
+                       │   for a rofi menu of all themes.
+ themer -v [VAR]       ┼ Get variables from current theme.
+ themer -h             ┼ Display this help.
+ themer -l             ┼ List available themes in theme directory.
+ themer -u             ┼ Update rofi theme list for -c.
 
-	Making Themes
-	-------------
-	Make a theme file like the default one. The
-	variables I use are shown below, but you can
-	use your own. You need at least a name, bg0
-	[background], fg0 [foreground] and acc [accent].
-	The rest of the variables can be taken from the
-	default gruvbox_light theme.
-
-	To make theme template, just cd into the theme's
-	main dir, duplicate the file(s) with the colors,
-	rename with "template_" prefix, and replace all
-	colors or other things with the variables in your
-	theme file. Run themer -c [THEME] to generate
-	all variables, and then
-	themer -x [SCRIPT] -a [DIRECTORY]
-	appropriately to apply the theme.
-	Add RGB after colour name to get its RGB in
-	"R, G, B" form eg. %%bg0RGB%%.
-	Use @@color@@ instead of %%color%% to get
-	hex color without '#'. Useful for #AARRGGBB
-	colors.
-
-	┌┈┈┈┈ MAIN VARIABLES ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┐
-	│%%name%%      Name of theme                  │▒▒
-	│%%wallpaper%% Wallpaper                      │▒▒
-	│%%font%%      Terminal font                  │▒▒
-	│%%guifont%%   Guifont                        │▒▒
-	│%%size%%      Font size                      │▒▒
-	├┈┈┈┈ COLORS ┈┈┈┈┈┈┈┈┈┬┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤▒▒
-	│%%bg0%% │ background │ %%acc%% accent        │▒▒
-	│%%bg1%% │ (gets      │ %%acf%% 50%acc+50%fg0 │▒▒
-	│%%bg2%% │ lighter    │ %%acb%% 50%acc+50%bg0 │▒▒
-	│%%bg3%% V if dark)   ├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤▒▒
-	├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤ %%red%% red           │▒▒
-	├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤ %%grn%% green         │▒▒
-	│%%fg0%% │ foreground │ %%ylw%% yellow        │▒▒
-	│%%fg1%% │ (gets      │ %%blu%% blue          │▒▒
-	│%%fg2%% │ darker     │ %%cyn%% cyan          │▒▒
-	│%%fg3%% V if light)  │ %%gnt%% magenta       │▒▒
-	└┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┴┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┘▒▒
-	  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+ Making Themes
+ -------------
+ Make a theme file like the default one. The
+ variables I use are shown below, but you can
+ use your own. You need at least a name, bg0
+ [background], fg0 [foreground] and acc [accent].
+ The rest of the variables can be taken from the
+ default gruvbox_light theme.
+ 
+ To make theme template, just cd into the theme's
+ main dir, duplicate the file(s) with the colors,
+ rename with "template_" prefix, and replace all
+ colors or other things with the variables in your
+ theme file. Run `themer -c [THEME]` to generate
+ all variables, including fg0, bg0, and acc
+ variations, and then `themer -x [SCRIPT]
+ -a [DIRECTORY]` appropriately to apply the theme.
+ Add RGB after colour name to get its RGB in
+ "R, G, B" form eg. %%bg0RGB%%.
+ Use @@color@@ instead of %%color%% to get
+ hex color without '#'. Useful for #AARRGGBB
+ colors.
+ 
+ ┌┈┈┈┈ MAIN VARIABLES ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┐
+ │%%name%%      Name of theme                  │▒▒
+ │%%wallpaper%% Wallpaper                      │▒▒
+ │%%font%%      Terminal font                  │▒▒
+ │%%guifont%%   Guifont                        │▒▒
+ │%%size%%      Font size                      │▒▒
+ ├┈┈┈┈ COLORS ┈┈┈┈┈┈┈┈┈┬┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤▒▒
+ │%%bg0%% │ background │ %%acc%% accent        │▒▒
+ │%%bg1%% │ (gets      │ %%acf%% 50%acc+50%fg0 │▒▒
+ │%%bg2%% │ lighter    │ %%acb%% 50%acc+50%bg0 │▒▒
+ │%%bg3%% V if dark)   ├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤▒▒
+ ├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤ %%red%% red           │▒▒
+ ├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤ %%grn%% green         │▒▒
+ │%%fg0%% │ foreground │ %%ylw%% yellow        │▒▒
+ │%%fg1%% │ (gets      │ %%blu%% blue          │▒▒
+ │%%fg2%% │ darker     │ %%cyn%% cyan          │▒▒
+ │%%fg3%% V if light)  │ %%gnt%% magenta       │▒▒
+ └┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┴┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┘▒▒
+   ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 
 EOB
 }
