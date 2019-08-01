@@ -1,15 +1,25 @@
 #!/bin/bash
 
-# OA: Gavin Vales
-# CREATED: Sun  9 Jun 17:44:48 GMT 2019
-
+DEF=gruvbox_light
 main () {
 	rm .theme_list
 	thms=$(ls -l | grep -v "^total" | awk '{print $NF}')
 	for i in $thms; do
-		fg0=$(cat ${i} | sed '/^fg0/!d;s/[^ ]* *//')
-		acc=$(cat ${i} | sed '/^acc/!d;s/[^ ]* *//')
-		bg0=$(cat ${i} | sed '/^bg0/!d;s/[^ ]* *//')
+		ffg0=$(cat ${i} | sed '/^fg0/!d;s/[^ ]* *//')
+		facc=$(cat ${i} | sed '/^acc/!d;s/[^ ]* *//')
+		fbg0=$(cat ${i} | sed '/^bg0/!d;s/[^ ]* *//')
+		[[ $ffg0 =~ "$" ]] && fg0=$(cat $i | sed "/^"${ffg0/$/}"/!d;s/[^ ]* *//") \
+			|| fg0=$ffg0
+		[[ $facc =~ "$" ]] && acc=$(cat $i | sed "/^"${facc/$/}"/!d;s/[^ ]* *//") \
+			|| acc=$facc
+		[[ $fbg0 =~ "$" ]] && bg0=$(cat $i | sed "/^"${fbg0/$/}"/!d;s/[^ ]* *//") \
+			|| bg0=$fbg0
+		[[ -z $fg0 ]] && fg0=$(cat $DEF | sed "/^"${ffg0/\$/}"/!d;s/[^ ]* *//") \
+			|| fg0=$ffg0
+		[[ -z $acc ]] && acc=$(cat $DEF | sed "/^"${facc/\$/}"/!d;s/[^ ]* *//") \
+			|| acc=$facc
+		[[ -z $bg0 ]] && bg0=$(cat $DEF | sed "/^"${fbg0/\$/}"/!d;s/[^ ]* *//") \
+			|| bg0=$fbg0
 		echo "\
 <span foreground=\"$bg0\" background=\"$fg0\"> fg </span>\
 <span foreground=\"$fg0\" background=\"$bg0\"> bg </span>\
