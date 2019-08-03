@@ -1,31 +1,21 @@
 #!/usr/bin/env bash
 
 IMG=$(readlink -f ~/pic/walls/current)
-bkd=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-grn=$(xrdb -query | grep '*color2' | awk '{print $NF}')
-ylw=$(xrdb -query | grep '*color3' | awk '{print $NF}')
-red=$(xrdb -query | grep '*color9' | awk '{print $NF}')
-wtd=$(xrdb -query | grep '*color15' | awk '{print $NF}')
-blu=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+bg0=$($HOME/scr/themer -v "bg0 ") fg0=$($HOME/scr/themer -v "fg0 ")
+acc=$($HOME/scr/themer -v "acc ") grn=$($HOME/scr/themer -v "grn ")
+ylw=$($HOME/scr/themer -v "ylw ") red=$($HOME/scr/themer -v "red ")
 SCR=$(xdpyinfo | grep 'name of display:' | awk '{print $2}')
 SCR=${SCR/:/}
 RES=$(xdpyinfo  | grep 'dimensions:' | awk '{print $2}')
-FNT=$(xrdb -query | grep URxvt.font)
-FNT=${FNT%:*}
-FNT=${FNT##*:}
-XP=1
-YP=90
-XRES=${RES%x*}
-YRES=${RES#*x}
-X=$(echo "(${XRES}*${XP})/100" | bc)
-Y=$(echo "(${YRES}*${YP})/100" | bc)
-
+FNT=$($HOME/scr/themer -v "font ")
+XP=1 YP=90 XRES=${RES%x*} YRES=${RES#*x}
+X=$(echo "(${XRES}*${XP})/100" | bc) Y=$(echo "(${YRES}*${YP})/100" | bc)
 t="ff"
 
-B="${bkd}${t}"  # blank
-C="${wtd}${t}"  # clear ish
-D="${blu}00"  # default
-T="${wtd}${t}"  # text
+B="${bg0}${t}"  # blank
+C="${fg0}${t}"  # clear ish
+D="${acc}00"    # default
+T="${fg0}${t}"  # text
 W="${red}${t}"  # wrong
 V="${grn}${t}"  # verifying
 

@@ -1,0 +1,34 @@
+conky.config = {
+	alignment = 'top_left',
+	background = true,
+	color2 = '@@acc@@',
+	color3 = '@@bg1@@',
+	cpu_avg_samples = 2,
+	default_color = '@@fg1@@',
+	double_buffer = true,
+	font = '%%guifont%%:bold:size=%%size%%',
+	gap_x = 25,
+	gap_y = 13,
+	minimum_width = 200,
+	no_buffers = true,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = true,
+	update_interval = 1.0,
+	use_xft = true,
+}
+conky.text = [[
+${voffset 25}$color2${font %%guifont%%:bold:size=60}${time %R} \
+${voffset -25}$color3${font %%guifont%%:bold:oblique:size=20}  $alignr${time %A}
+${voffset -10}$color3${font %%guifont%%:bold:oblique:size=20}  $alignr${time %e %b %Y}
+
+${voffset 20}${goto 40}${color}CPU${font %%guifont%%:bold:size=%%size%%}$alignr$cpu%
+${voffset 5}${goto 40}$font$color2${top name 1}$alignr$color${top cpu 1}%
+${goto 40}$color2${top name 2}$alignr$color${top cpu 2}%
+${goto 40}$color2${top name 3}$alignr$color${top cpu 3}%
+${goto 40}$color2${top name 4}$alignr$color${top cpu 4}%
+${goto 40}$color2${top name 5}$alignr$color${top cpu 5}%
+
+${voffset 1}${color2}${font %%guifont%%:bold:oblique:size=50}Notes
+${voffset -25}${color}${font %%guifont%%:bold:size=16}${exec cat $HOME/todo}
+]]

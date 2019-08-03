@@ -3,6 +3,7 @@ wallpaper Galápagossealion
 font      CMUTypewriterText
 guifont   CMU Typewriter Text
 size      12
+rofifsize 14
 gtk       Standard-light
 gtk-icon  DamaDamas
 cursor    Bibata_Dark_Red
@@ -16,7 +17,6 @@ cursor    Bibata_Dark_Red
 <span foreground="#ebdbb2" background="#458588"><b>blu	</b>rgb(69, 133, 136)	#458588 </span>
 <span foreground="#ebdbb2" background="#b16286"><b>gnt	</b>rgb(177, 98, 134)	#b16286 </span>
 <span foreground="#ebdbb2" background="#689d6a"><b>cyn	</b>rgb(104, 157, 106)	#689d6a </span>
-<span foreground="#ebdbb2" background="#8d8e54"><b>ylwblu	</b>rgb(141, 142, 84)	#8d8e54 </span>
 <span foreground="#ebdbb2" background="#d65d0e"><b>orange	</b>rgb(214, 93, 14)	#d65d0e </span>
 <span foreground="#ebdbb2" background="#af9f76"><b>fg3	</b>rgb(175, 159, 118)	#af9f76 </span>
 <span foreground="#ebdbb2" background="#c3b38a"><b>fg2	</b>rgb(195, 179, 138)	#c3b38a </span>

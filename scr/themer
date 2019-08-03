@@ -113,6 +113,15 @@ hex-rgb () {
 	echo "$rgbR, $rgbG, $rgbB"
 }
 
+parse-vars () {
+	for i in $(cat $ALL); do
+		var=$(echo $i | awk '{print $1}')
+		val=$(echo $i | sed "/^"$var"/!d;s/[^ ]* *//")
+		cnt=$(cat $ALL | grep -c "\$$var")
+		[[ $cnt -gt 0 ]] && sed -e "s/\$"$var"/"$val"/g" -i $ALL
+	done
+}
+
 change-current () {
 	[[ -z $1 ]] && gui-change || ln -sf ${1} $CUR
 	cat $CUR | sed '/^#/d' > $ALL
@@ -122,11 +131,7 @@ change-current () {
 		XTS=$(cat $ALL | grep "^${var}")
 		[[ -n $XTS ]] || echo $i >> $ALL
 	done
-	for i in $(cat $ALL); do
-		var=$(echo $i | awk '{print $1}')
-		val=$(echo $i | sed "/^"$var"/!d;s/[^ ]* *//")
-		sed -e "s/\$"$var"/"$val"/g" -i $ALL
-	done
+	parse-vars
 	for i in $(cat $ALL); do
 		var=$(echo $i | awk '{print $1}')
 		val=$(echo $i | sed "/^"$var"/!d;s/[^ ]* *//")
@@ -139,6 +144,7 @@ change-current () {
 		var=$(echo $i | awk '{print $1}') hex=$(echo $i | awk '{print $2}')
 		echo "${var}RGB    $(hex-rgb "$hex")" >> $ALL
 	done
+	parse-vars
 	create-regex
 	create-rofi-list
 }

@@ -1,12 +1,12 @@
 # vim:ft=perl
 name      solarized
-wallpaper nebula-indian
+wallpaper nebula-turquoise
 bg0       #002b36
 fg0       #fdf6e3
-acc       $orange
+acc       $blu
 red       #dc322f
 grn       #859900
 ylw       #b58900
-blu       #d33682
-gnt       #268bd2
+blu       #268bd2
+gnt       #d33682
 cyn       #2aa198

@@ -4,7 +4,7 @@
 # CREATED: Sat  6 Jul 00:50:41 BST 2019
 
 # COMMAND TO UPDATE BLUR OF BLURS
-# for i in $(ls); do convert "${i}" -blur 0x8 "${PWD/normal/blur}/${i}"; echo "$i"; done
+# for i in $(ls); do convert "${i}" -blur $blr "${PWD/normal/blur}/${i}"; echo "$i"; done
 
 WDIR="$HOME/pic/walls"
 NORM="${WDIR}/normal"
@@ -17,6 +17,7 @@ WHT="${WDIR}/white.jpg"
 CRLN="$(readlink -f $CURR)" HIST="${WDIR}/.history"
 MONDIM=$(xdpyinfo | grep dimensions: | awk '{print $2}')
 MX=${MONDIM%x*} MY=${MONDIM#*x}
+blr=0x16
 
 add-wall () {
 	SRC="$1"
@@ -35,7 +36,7 @@ add-wall () {
 	TRG=$TRG
 	SRC=$SRC"
 	convert "${SRC}" -resize "${MX}x${MY}^" -gravity center -extent "${MX}x${MY}" "${NORM}/${TRG}"
-	convert "${NORM}/${TRG}" -blur 0x8 "${BLUR}/${TRG}"
+	convert "${NORM}/${TRG}" -blur $blr "${BLUR}/${TRG}"
 	WPP="$TRG"
 }
 
@@ -63,7 +64,7 @@ add () {
 			-gravity center \
 			-extent "${MX}x${MY}" "${NORM}/${TRG}"
 		[[ ! -f ${BLUR}/${TRG} ]] && convert "${NORM}/${TRG}" \
-			-blur 0x8 "${BLUR}/${TRG}"
+			-blur $blr "${BLUR}/${TRG}"
 	done
 }
 

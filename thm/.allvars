@@ -13,10 +13,10 @@ cyn       #689d6a
 font      CMUTypewriterText
 guifont   CMU Typewriter Text
 size      12
+rofifsize 14
 gtk       Standard-light
 gtk-icon  DamaDamas
 cursor    Bibata_Dark_Red
-ylwblu    #8d8e54
 orange    #d65d0e
 fg3       #af9f76
 fg2       #c3b38a
@@ -44,5 +44,4 @@ ylwRGB    215, 153, 33
 bluRGB    69, 133, 136
 gntRGB    177, 98, 134
 cynRGB    104, 157, 106
-ylwbluRGB    141, 142, 84
 orangeRGB    214, 93, 14

@@ -5,6 +5,7 @@
 <span foreground="#e5c7c7" background="#0d090c"> fg </span><span foreground="#0d090c" background="#e5c7c7"> bg </span><span foreground="#0d090c" background="#9D758A"> acc </span> castelmezzano
 <span foreground="#282A36" background="#fffff2"> fg </span><span foreground="#fffff2" background="#282A36"> bg </span><span foreground="#fffff2" background="#FF6E67"> acc </span> dracula
 <span foreground="#ffffde" background="#282A36"> fg </span><span foreground="#282A36" background="#ffffde"> bg </span><span foreground="#282A36" background="#FF6E67"> acc </span> dracula_light
+<span foreground="#323F4E" background="#F8F8F2"> fg </span><span foreground="#F8F8F2" background="#323F4E"> bg </span><span foreground="#F8F8F2" background="$blu"> acc </span> ephemeral
 <span foreground="#282828" background="#ebdbb2"> fg </span><span foreground="#ebdbb2" background="#282828"> bg </span><span foreground="#ebdbb2" background="#458588"> acc </span> gruvbox
 <span foreground="#fbf1c7" background="#282828"> fg </span><span foreground="#282828" background="#fbf1c7"> bg </span><span foreground="#282828" background="#689d6a"> acc </span> gruvbox_light
 <span foreground="#222D31" background="#f8f8f8"> fg </span><span foreground="#f8f8f8" background="#222D31"> bg </span><span foreground="#f8f8f8" background="#1ABB9B"> acc </span> manjaro

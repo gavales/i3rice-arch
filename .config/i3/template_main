@@ -505,6 +505,7 @@ workspace $ws5 gaps outer 40
 # >>>> STARTUP
 # DAEMONS
 $exn urxvtd -q -o -f
+$exn xautolock -corners 0-0- -cornersize 30 -time 1 -locker $HOME/scr/lockscreen
 $exn polybar i3
 $exn /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 $exn nm-applet
@@ -513,6 +514,7 @@ $exn pamac-tray
 $exn clipit
 $exn blueman-applet
 $exn compton
+$exn conky
 $ena ff-theme-util
 $ena fix_xcursor
 $exn feh --bg-center $home/pic/walls/current
