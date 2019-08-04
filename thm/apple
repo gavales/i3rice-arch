@@ -1,6 +1,7 @@
 # vim:ft=perl
 name      apple
 wallpaper forest-fog-mist-pine
+conky_loc top_right
 tint      $acc
 acc       #b44a70
 bg0       #31121f

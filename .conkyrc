@@ -1,10 +1,10 @@
 conky.config = {
 	alignment = 'top_left',
 	background = true,
-	color2 = '458588',
-	color3 = '3c3c3c',
+	color2 = '6498EF',
+	color3 = 'F8F8F2',
 	cpu_avg_samples = 2,
-	default_color = 'd7c79e',
+	default_color = 'F8F8F2',
 	double_buffer = true,
 	font = 'CMU Typewriter Text:bold:size=12',
 	gap_x = 25,
@@ -22,7 +22,7 @@ ${voffset 25}$color2${font CMU Typewriter Text:bold:size=60}${time %R} \
 ${voffset -25}$color3${font CMU Typewriter Text:bold:oblique:size=20}  $alignr${time %A}
 ${voffset -10}$color3${font CMU Typewriter Text:bold:oblique:size=20}  $alignr${time %e %b %Y}
 
-${voffset 20}${goto 40}${color}CPU${font CMU Typewriter Text:bold:size=12}$alignr$cpu%
+${voffset -5}${goto 40}${color}CPU${font CMU Typewriter Text:bold:size=12}$alignr$cpu%
 ${voffset 5}${goto 40}$font$color2${top name 1}$alignr$color${top cpu 1}%
 ${goto 40}$color2${top name 2}$alignr$color${top cpu 2}%
 ${goto 40}$color2${top name 3}$alignr$color${top cpu 3}%
@@ -30,5 +30,5 @@ ${goto 40}$color2${top name 4}$alignr$color${top cpu 4}%
 ${goto 40}$color2${top name 5}$alignr$color${top cpu 5}%
 
 ${voffset 1}${color2}${font CMU Typewriter Text:bold:oblique:size=50}Notes
-${voffset -15}${color}${font CMU Typewriter Text:bold:size=16}${exec cat $HOME/todo}
+${voffset -25}${color}${font CMU Typewriter Text:bold:size=12}${exec cat $HOME/todo}
 ]]

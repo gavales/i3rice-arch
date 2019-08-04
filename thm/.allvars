@@ -1,15 +1,21 @@
-name      gruvbox
-wallpaper Galápagossealion
-tint      #458588
-bg0       #282828
-fg0       #ebdbb2
-acc       #458588
-red       #cc241d
-grn       #98971a
-ylw       #d79921
-blu       #458588
-gnt       #b16286
-cyn       #689d6a
+name      apple
+wallpaper forest-fog-mist-pine
+tint      #6498EF
+bg0       #323F4E
+fg0       #F8F8F2
+acc       #6498EF
+red       #EE4F84
+grn       #53E2AE
+ylw       #F1FF52
+blu       #6498EF
+gnt       #985EFF
+cyn       #24D1E7
+redlgt    #F48FB1
+grnlgt    #A1EFD3
+ylwlgt    #F1FA8C
+blulgt    #92B6F4
+gntlgt    #BD99FF
+cynlgt    #87DFEB
 font      CMUTypewriterText
 guifont   CMU Typewriter Text
 size      12
@@ -17,31 +23,38 @@ rofifsize 14
 gtk       Standard-light
 gtk-icon  DamaDamas
 cursor    Bibata_Dark_Red
+conky_loc top_left
 orange    #d65d0e
-fg3       #af9f76
-fg2       #c3b38a
-fg1       #d7c79e
-acf       #97af9d
-acb       #365658
-bg1       #3c3c3c
-bg2       #505050
-bg3       #646464
-fg0RGB    235, 219, 178
-fg1RGB    215, 199, 158
-fg2RGB    195, 179, 138
-fg3RGB    175, 159, 118
-bg0RGB    40, 40, 40
-bg1RGB    60, 60, 60
-bg2RGB    80, 80, 80
-bg3RGB    100, 100, 100
-accRGB    69, 133, 136
-acfRGB    151, 175, 157
-acbRGB    54, 86, 88
-tintRGB    69, 133, 136
-redRGB    204, 36, 29
-grnRGB    152, 151, 26
-ylwRGB    215, 153, 33
-bluRGB    69, 133, 136
-gntRGB    177, 98, 134
-cynRGB    104, 157, 106
+fg3       #bcbcb6
+fg2       #d0d0ca
+fg1       #e4e4de
+acf       #aec8f0
+acb       #4b6b9e
+bg1       #465362
+bg2       #5a6776
+bg3       #6e7b8a
+fg0RGB    248, 248, 242
+fg1RGB    228, 228, 222
+fg2RGB    208, 208, 202
+fg3RGB    188, 188, 182
+bg0RGB    50, 63, 78
+bg1RGB    70, 83, 98
+bg2RGB    90, 103, 118
+bg3RGB    110, 123, 138
+accRGB    100, 152, 239
+acfRGB    174, 200, 240
+acbRGB    75, 107, 158
+tintRGB    100, 152, 239
+redRGB    238, 79, 132
+grnRGB    83, 226, 174
+ylwRGB    241, 255, 82
+bluRGB    100, 152, 239
+gntRGB    152, 94, 255
+cynRGB    36, 209, 231
+redlgtRGB    244, 143, 177
+grnlgtRGB    161, 239, 211
+ylwlgtRGB    241, 250, 140
+blulgtRGB    146, 182, 244
+gntlgtRGB    189, 153, 255
+cynlgtRGB    135, 223, 235
 orangeRGB    214, 93, 14

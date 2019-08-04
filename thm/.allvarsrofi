@@ -1,5 +1,5 @@
-              <b><big>gruvbox</big></b>
-wallpaper Galápagossealion
+              <b><big>apple</big></b>
+wallpaper forest-fog-mist-pine
 font      CMUTypewriterText
 guifont   CMU Typewriter Text
 size      12
@@ -7,22 +7,29 @@ rofifsize 14
 gtk       Standard-light
 gtk-icon  DamaDamas
 cursor    Bibata_Dark_Red
-<span foreground="#ebdbb2" background="#458588"><b>tint	</b>rgb(69, 133, 136)	#458588 </span>
-<span foreground="#ebdbb2" background="#282828"><b>bg0	</b>rgb(40, 40, 40)	#282828 </span>
-<span foreground="#ebdbb2" background="#ebdbb2"><b>fg0	</b>rgb(235, 219, 178)	#ebdbb2 </span>
-<span foreground="#ebdbb2" background="#458588"><b>acc	</b>rgb(69, 133, 136)	#458588 </span>
-<span foreground="#ebdbb2" background="#cc241d"><b>red	</b>rgb(204, 36, 29)	#cc241d </span>
-<span foreground="#ebdbb2" background="#98971a"><b>grn	</b>rgb(152, 151, 26)	#98971a </span>
-<span foreground="#ebdbb2" background="#d79921"><b>ylw	</b>rgb(215, 153, 33)	#d79921 </span>
-<span foreground="#ebdbb2" background="#458588"><b>blu	</b>rgb(69, 133, 136)	#458588 </span>
-<span foreground="#ebdbb2" background="#b16286"><b>gnt	</b>rgb(177, 98, 134)	#b16286 </span>
-<span foreground="#ebdbb2" background="#689d6a"><b>cyn	</b>rgb(104, 157, 106)	#689d6a </span>
-<span foreground="#ebdbb2" background="#d65d0e"><b>orange	</b>rgb(214, 93, 14)	#d65d0e </span>
-<span foreground="#ebdbb2" background="#af9f76"><b>fg3	</b>rgb(175, 159, 118)	#af9f76 </span>
-<span foreground="#ebdbb2" background="#c3b38a"><b>fg2	</b>rgb(195, 179, 138)	#c3b38a </span>
-<span foreground="#ebdbb2" background="#d7c79e"><b>fg1	</b>rgb(215, 199, 158)	#d7c79e </span>
-<span foreground="#ebdbb2" background="#97af9d"><b>acf	</b>rgb(151, 175, 157)	#97af9d </span>
-<span foreground="#ebdbb2" background="#365658"><b>acb	</b>rgb(54, 86, 88)	#365658 </span>
-<span foreground="#ebdbb2" background="#3c3c3c"><b>bg1	</b>rgb(60, 60, 60)	#3c3c3c </span>
-<span foreground="#ebdbb2" background="#505050"><b>bg2	</b>rgb(80, 80, 80)	#505050 </span>
-<span foreground="#ebdbb2" background="#646464"><b>bg3	</b>rgb(100, 100, 100)	#646464 </span>
+conky_loc top_left
+<span foreground="#F8F8F2" background="#6498EF"><b>tint	</b>rgb(100, 152, 239)	#6498EF </span>
+<span foreground="#F8F8F2" background="#323F4E"><b>bg0	</b>rgb(50, 63, 78)	#323F4E </span>
+<span foreground="#F8F8F2" background="#F8F8F2"><b>fg0	</b>rgb(248, 248, 242)	#F8F8F2 </span>
+<span foreground="#F8F8F2" background="#6498EF"><b>acc	</b>rgb(100, 152, 239)	#6498EF </span>
+<span foreground="#F8F8F2" background="#EE4F84"><b>red	</b>rgb(238, 79, 132)	#EE4F84 </span>
+<span foreground="#F8F8F2" background="#53E2AE"><b>grn	</b>rgb(83, 226, 174)	#53E2AE </span>
+<span foreground="#F8F8F2" background="#F1FF52"><b>ylw	</b>rgb(241, 255, 82)	#F1FF52 </span>
+<span foreground="#F8F8F2" background="#6498EF"><b>blu	</b>rgb(100, 152, 239)	#6498EF </span>
+<span foreground="#F8F8F2" background="#985EFF"><b>gnt	</b>rgb(152, 94, 255)	#985EFF </span>
+<span foreground="#F8F8F2" background="#24D1E7"><b>cyn	</b>rgb(36, 209, 231)	#24D1E7 </span>
+<span foreground="#F8F8F2" background="#F48FB1"><b>redlgt	</b>rgb(244, 143, 177)	#F48FB1 </span>
+<span foreground="#F8F8F2" background="#A1EFD3"><b>grnlgt	</b>rgb(161, 239, 211)	#A1EFD3 </span>
+<span foreground="#F8F8F2" background="#F1FA8C"><b>ylwlgt	</b>rgb(241, 250, 140)	#F1FA8C </span>
+<span foreground="#F8F8F2" background="#92B6F4"><b>blulgt	</b>rgb(146, 182, 244)	#92B6F4 </span>
+<span foreground="#F8F8F2" background="#BD99FF"><b>gntlgt	</b>rgb(189, 153, 255)	#BD99FF </span>
+<span foreground="#F8F8F2" background="#87DFEB"><b>cynlgt	</b>rgb(135, 223, 235)	#87DFEB </span>
+<span foreground="#F8F8F2" background="#d65d0e"><b>orange	</b>rgb(214, 93, 14)	#d65d0e </span>
+<span foreground="#F8F8F2" background="#bcbcb6"><b>fg3	</b>rgb(188, 188, 182)	#bcbcb6 </span>
+<span foreground="#F8F8F2" background="#d0d0ca"><b>fg2	</b>rgb(208, 208, 202)	#d0d0ca </span>
+<span foreground="#F8F8F2" background="#e4e4de"><b>fg1	</b>rgb(228, 228, 222)	#e4e4de </span>
+<span foreground="#F8F8F2" background="#aec8f0"><b>acf	</b>rgb(174, 200, 240)	#aec8f0 </span>
+<span foreground="#F8F8F2" background="#4b6b9e"><b>acb	</b>rgb(75, 107, 158)	#4b6b9e </span>
+<span foreground="#F8F8F2" background="#465362"><b>bg1	</b>rgb(70, 83, 98)	#465362 </span>
+<span foreground="#F8F8F2" background="#5a6776"><b>bg2	</b>rgb(90, 103, 118)	#5a6776 </span>
+<span foreground="#F8F8F2" background="#6e7b8a"><b>bg3	</b>rgb(110, 123, 138)	#6e7b8a </span>
