@@ -8,15 +8,12 @@ main () {
 		ffg0=$(cat ${i} | sed '/^fg0/!d;s/[^ ]* *//')
 		facc=$(cat ${i} | sed '/^acc/!d;s/[^ ]* *//')
 		fbg0=$(cat ${i} | sed '/^bg0/!d;s/[^ ]* *//')
-		[[ $ffg0 =~ "$" ]] && fg0=$(cat $i | sed "/^"${ffg0/\$/}\ "/!d;s/[^ ]* *//") \
-			|| fg0=$ffg0
-		[[ $facc =~ "$" ]] && acc=$(cat $i | sed "/^"${facc/\$/}\ "/!d;s/[^ ]* *//") \
-			|| acc=$facc
-		[[ $fbg0 =~ "$" ]] && bg0=$(cat $i | sed "/^"${fbg0/\$/}\ "/!d;s/[^ ]* *//") \
-			|| bg0=$fbg0
-		[[ $fg0 =~ "$" ]] && fg0=$(cat $DEF | sed "/^"${ffg0/\$/}\ "/!d;s/[^ ]* *//")
-		[[ $acc =~ "$" ]] && acc=$(cat $DEF | sed "/^"${facc/\$/}\ "/!d;s/[^ ]* *//")
-		[[ $bg0 =~ "$" ]] && bg0=$(cat $DEF | sed "/^"${fbg0/\$/}\ "/!d;s/[^ ]* *//")
+		[[ $ffg0 =~ "$" ]] && fg0=$(cat $i | sed "/^"${ffg0/\$/}\ "/!d;s/[^ ]* *//") || fg0=$ffg0
+		[[ $facc =~ "$" ]] && acc=$(cat $i | sed "/^"${facc/\$/}\ "/!d;s/[^ ]* *//") || acc=$facc
+		[[ $fbg0 =~ "$" ]] && bg0=$(cat $i | sed "/^"${fbg0/\$/}\ "/!d;s/[^ ]* *//") || bg0=$fbg0
+		[[ $fg0 =~ "$" ]] && fg0=$(cat $DEF | sed "/^"${fg0/\$/}\ "/!d;s/[^ ]* *//")
+		[[ $acc =~ "$" ]] && acc=$(cat $DEF | sed "/^"${acc/\$/}\ "/!d;s/[^ ]* *//")
+		[[ $bg0 =~ "$" ]] && bg0=$(cat $DEF | sed "/^"${bg0/\$/}\ "/!d;s/[^ ]* *//")
 		echo "<span background=\"$fg0\">   </span><span background=\"$bg0\">   </span>\
 <span background=\"$acc\">   </span> $i" >> .theme_list
 	done

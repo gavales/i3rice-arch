@@ -1,22 +1,24 @@
 #!/bin/bash
-WPP=$($HOME/scr/themer -v wallpaper)
-TNT="-t $($HOME/scr/themer -v "tint ")"
-[[ -n $WPP ]] || WPP=$($HOME/scr/themer -v "acc ")
+TMR="$HOME/scr/themer"
+WPP=$($TMR -v wallpaper)
+TNT="-t $($TMR -v "tint ")"
+[[ -n $WPP ]] || WPP=$($TMR -v "acc ")
 [[ -n $TNT ]] || TNT=" "
 $HOME/scr/i3wallpaper -w "$WPP" $TNT
-$HOME/scr/themer -x xrs-reload   -a $HOME/xrs
-$HOME/scr/themer -x i3concat     -a $HOME/.config/i3
-$HOME/scr/themer -x pb-reload    -a $HOME/.config/polybar
-$HOME/scr/themer -x reloadinst   -a $HOME/.config/zathura
-$HOME/scr/themer -x dunst-reload -a $HOME/.config/dunst
-$HOME/scr/themer -a $HOME/git/i3rice-arch
-$HOME/scr/themer -a $HOME/.vim/colors
-$HOME/scr/themer -a $HOME/.config/rofi
-$HOME/scr/themer -a $HOME/.config/vis/colors
-$HOME/scr/themer -a $HOME/.config/mpv
-$HOME/scr/themer -a $HOME/.config/qutebrowser
-$HOME/scr/themer -a $HOME/scr/.unused
-$HOME/scr/themer -a $HOME/plt/css
+$TMR -x xrs-reload   -a $HOME/xrs
+$TMR -x i3concat     -a $HOME/.config/i3
+$TMR -x pb-reload    -a $HOME/.config/polybar
+$TMR -x reloadinst   -a $HOME/.config/zathura
+$TMR -x dunst-reload -a $HOME/.config/dunst
+$TMR -x reload       -a $HOME/.conky
+$TMR -a $HOME/git/i3rice-arch
+$TMR -a $HOME/.vim/colors
+$TMR -a $HOME/.config/rofi
+$TMR -a $HOME/.config/vis/colors
+$TMR -a $HOME/.config/mpv
+$TMR -a $HOME/.config/qutebrowser
+$TMR -a $HOME/scr/.unused
+$TMR -a $HOME/plt/css
 $HOME/scr/i3listen-toggle
-#$HOME/scr/themer -a $HOME/.config/tint2
-#$HOME/scr/themer -a $HOME/git/atompackages/packages/rice-syntax/styles
+#$TMR -a $HOME/.config/tint2
+#$TMR -a $HOME/git/atompackages/packages/rice-syntax/styles

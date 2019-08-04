@@ -1,0 +1,5 @@
+#!/bin/bash
+
+killall conky
+conky -c $HOME/.conky/system
+conky -c $HOME/.conky/notes

@@ -1,5 +1,5 @@
 conky.config = {
-	alignment = '%%conky_loc%%',
+	alignment = '%%conky_loc1%%',
 	background = true,
 	color2 = '@@acc@@',
 	color3 = '@@fg0@@',
@@ -22,13 +22,15 @@ ${voffset 25}$color2${font %%guifont%%:bold:size=60}${time %R} \
 ${voffset -25}$color3${font %%guifont%%:bold:oblique:size=20}  $alignr${time %A}
 ${voffset -10}$color3${font %%guifont%%:bold:oblique:size=20}  $alignr${time %e %b %Y}
 
-${voffset -5}${goto 40}${color}CPU${font %%guifont%%:bold:size=%%size%%}$alignr$cpu%
-${voffset 5}${goto 40}$font$color2${top name 1}$alignr$color${top cpu 1}%
-${goto 40}$color2${top name 2}$alignr$color${top cpu 2}%
-${goto 40}$color2${top name 3}$alignr$color${top cpu 3}%
-${goto 40}$color2${top name 4}$alignr$color${top cpu 4}%
-${goto 40}$color2${top name 5}$alignr$color${top cpu 5}%
+${voffset -5}${color}CPU${font %%guifont%%:bold:size=16}$alignr$cpu%
+${voffset 5}${font %%guifont%%:bold:size=16}$color2${top name 1}$alignr$color${top cpu 1}%
+$color2${top name 2}$alignr$color${top cpu 2}%
+$color2${top name 3}$alignr$color${top cpu 3}%
+$color2${top name 4}$alignr$color${top cpu 4}%
+$color2${top name 5}$alignr$color${top cpu 5}%
 
-${voffset 1}${color2}${font %%guifont%%:bold:oblique:size=50}Notes
-${voffset -25}${color}${font %%guifont%%:bold:size=12}${exec cat $HOME/todo}
+${voffset 1}${color2}${font %%guifont%%:bold:oblique:size=50}Weather
+${voffset -50}${color}${font %%guifont%%:bold:size=16}
+${exec curl -s wttr.in | sed -n '3,7{s/\d27\[[0-9;]*m//g;s/^..//;s/ *$//;p}'}
+
 ]]

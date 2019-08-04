@@ -186,7 +186,7 @@ apply-current () {
 	for i in ${templates}; do
 		cat ${i} | sed -e "${regex}" > ${i/template_/}
 	done
-	[[ -n $scr ]] && echo "Executing $scr in $1" && bash $scr
+	[[ -n $scr ]] && echo "Executing $scr in $1" && bash $scr &>/dev/null &
 	cd
 }
 

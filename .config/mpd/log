@@ -18081,3 +18081,663 @@ Aug 03 20:29 : client: [202] opened from [::1]:44100
 Aug 03 20:29 : client: [202] closed
 Aug 03 20:29 : client: [203] opened from [::1]:44102
 Aug 03 20:29 : client: [203] closed
+Aug 04 14:41 : player: played "Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/07 - El Chacarero.mp3"
+Aug 04 14:41 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 04 14:41 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 04 14:41 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Aug 04 14:42 : client: [0] opened from [::1]:59648
+Aug 04 14:42 : client: [0] closed
+Aug 04 14:42 : client: [1] opened from [::1]:59650
+Aug 04 14:42 : client: [1] closed
+Aug 04 14:42 : client: [2] opened from [::1]:59672
+Aug 04 14:42 : client: [2] closed
+Aug 04 14:42 : client: [3] opened from [::1]:59674
+Aug 04 14:42 : client: [3] closed
+Aug 04 14:42 : client: [4] opened from [::1]:59750
+Aug 04 14:42 : client: [4] closed
+Aug 04 14:42 : client: [5] opened from [::1]:59752
+Aug 04 14:42 : client: [5] closed
+Aug 04 14:42 : client: [6] opened from [::1]:59758
+Aug 04 14:42 : client: [6] closed
+Aug 04 14:42 : client: [7] opened from [::1]:59760
+Aug 04 14:42 : client: [7] closed
+Aug 04 14:43 : client: [8] opened from [::1]:59816
+Aug 04 14:43 : client: [8] closed
+Aug 04 14:43 : client: [9] opened from [::1]:59818
+Aug 04 14:43 : client: [9] closed
+Aug 04 14:43 : client: [10] opened from [::1]:59826
+Aug 04 14:43 : client: [10] closed
+Aug 04 14:43 : client: [11] opened from [::1]:59828
+Aug 04 14:43 : client: [11] closed
+Aug 04 14:43 : client: [12] opened from [::1]:59842
+Aug 04 14:43 : client: [12] closed
+Aug 04 14:43 : client: [13] opened from [::1]:59844
+Aug 04 14:43 : client: [13] closed
+Aug 04 14:43 : client: [14] opened from [::1]:59864
+Aug 04 14:43 : client: [14] closed
+Aug 04 14:43 : client: [15] opened from [::1]:59866
+Aug 04 14:43 : client: [15] closed
+Aug 04 14:43 : client: [16] opened from [::1]:59888
+Aug 04 14:43 : client: [16] closed
+Aug 04 14:43 : client: [17] opened from [::1]:59890
+Aug 04 14:43 : client: [17] closed
+Aug 04 14:45 : client: [18] opened from [::1]:59900
+Aug 04 14:45 : client: [18] closed
+Aug 04 14:45 : client: [19] opened from [::1]:59902
+Aug 04 14:45 : client: [19] closed
+Aug 04 14:45 : client: [20] opened from [::1]:59904
+Aug 04 14:45 : client: [20] closed
+Aug 04 14:45 : client: [21] opened from [::1]:59906
+Aug 04 14:45 : client: [21] closed
+Aug 04 14:47 : client: [22] opened from [::1]:59912
+Aug 04 14:47 : client: [22] closed
+Aug 04 14:47 : client: [23] opened from [::1]:59914
+Aug 04 14:47 : client: [23] closed
+Aug 04 14:47 : client: [24] opened from [::1]:59918
+Aug 04 14:47 : client: [24] closed
+Aug 04 14:47 : client: [25] opened from [::1]:59920
+Aug 04 14:47 : client: [25] closed
+Aug 04 14:56 : client: [26] opened from [::1]:59940
+Aug 04 14:56 : client: [26] closed
+Aug 04 14:56 : client: [27] opened from [::1]:59942
+Aug 04 14:56 : client: [27] closed
+Aug 04 14:56 : client: [28] opened from [::1]:59948
+Aug 04 14:56 : client: [28] closed
+Aug 04 14:56 : client: [29] opened from [::1]:59950
+Aug 04 14:56 : client: [29] closed
+Aug 04 14:56 : client: [30] opened from [::1]:59954
+Aug 04 14:56 : client: [30] closed
+Aug 04 14:56 : client: [31] opened from [::1]:59956
+Aug 04 14:56 : client: [31] closed
+Aug 04 15:01 : client: [32] opened from [::1]:59966
+Aug 04 15:01 : client: [32] closed
+Aug 04 15:01 : client: [33] opened from [::1]:59968
+Aug 04 15:01 : client: [33] closed
+Aug 04 15:01 : client: [34] opened from [::1]:59970
+Aug 04 15:01 : client: [34] closed
+Aug 04 15:01 : client: [35] opened from [::1]:59972
+Aug 04 15:01 : client: [35] closed
+Aug 04 15:16 : client: [36] opened from [::1]:59994
+Aug 04 15:16 : client: [36] closed
+Aug 04 15:16 : client: [37] opened from [::1]:59996
+Aug 04 15:16 : client: [37] closed
+Aug 04 15:26 : client: [38] opened from [::1]:60014
+Aug 04 15:26 : client: [38] closed
+Aug 04 15:26 : client: [39] opened from [::1]:60016
+Aug 04 15:26 : client: [39] closed
+Aug 04 15:26 : client: [40] opened from [::1]:60018
+Aug 04 15:26 : client: [40] closed
+Aug 04 15:26 : client: [41] opened from [::1]:60020
+Aug 04 15:26 : client: [41] closed
+Aug 04 15:28 : client: [42] opened from [::1]:60024
+Aug 04 15:28 : client: [42] closed
+Aug 04 15:28 : client: [43] opened from [::1]:60026
+Aug 04 15:28 : client: [43] closed
+Aug 04 15:28 : client: [44] opened from [::1]:60028
+Aug 04 15:28 : client: [44] closed
+Aug 04 15:28 : client: [45] opened from [::1]:60030
+Aug 04 15:28 : client: [45] closed
+Aug 04 15:30 : client: [46] opened from [::1]:60040
+Aug 04 15:30 : client: [46] closed
+Aug 04 15:30 : client: [47] opened from [::1]:60042
+Aug 04 15:30 : client: [47] closed
+Aug 04 15:30 : client: [48] opened from [::1]:60058
+Aug 04 15:30 : client: [48] closed
+Aug 04 15:30 : client: [49] opened from [::1]:60060
+Aug 04 15:30 : client: [49] closed
+Aug 04 15:30 : client: [50] opened from [::1]:60084
+Aug 04 15:30 : client: [50] closed
+Aug 04 15:30 : client: [51] opened from [::1]:60086
+Aug 04 15:30 : client: [51] closed
+Aug 04 15:30 : client: [52] opened from [::1]:60100
+Aug 04 15:30 : client: [52] closed
+Aug 04 15:30 : client: [53] opened from [::1]:60104
+Aug 04 15:30 : client: [53] closed
+Aug 04 15:30 : client: [54] opened from [::1]:60108
+Aug 04 15:30 : client: [54] closed
+Aug 04 15:30 : client: [55] opened from [::1]:60110
+Aug 04 15:30 : client: [55] closed
+Aug 04 15:31 : client: [56] opened from [::1]:60112
+Aug 04 15:31 : client: [56] closed
+Aug 04 15:31 : client: [57] opened from [::1]:60114
+Aug 04 15:31 : client: [57] closed
+Aug 04 15:31 : client: [58] opened from [::1]:60130
+Aug 04 15:31 : client: [58] closed
+Aug 04 15:31 : client: [59] opened from [::1]:60132
+Aug 04 15:31 : client: [59] closed
+Aug 04 15:32 : client: [60] opened from [::1]:60238
+Aug 04 15:32 : client: [60] closed
+Aug 04 15:32 : client: [61] opened from [::1]:60240
+Aug 04 15:32 : client: [61] closed
+Aug 04 15:32 : client: [62] opened from [::1]:60258
+Aug 04 15:32 : client: [62] closed
+Aug 04 15:32 : client: [63] opened from [::1]:60260
+Aug 04 15:32 : client: [63] closed
+Aug 04 15:32 : client: [64] opened from [::1]:60280
+Aug 04 15:32 : client: [64] closed
+Aug 04 15:32 : client: [65] opened from [::1]:60282
+Aug 04 15:32 : client: [65] closed
+Aug 04 15:33 : client: [66] opened from [::1]:60284
+Aug 04 15:33 : client: [66] closed
+Aug 04 15:33 : client: [67] opened from [::1]:60286
+Aug 04 15:33 : client: [67] closed
+Aug 04 15:33 : client: [68] opened from [::1]:60300
+Aug 04 15:33 : client: [68] closed
+Aug 04 15:33 : client: [69] opened from [::1]:60302
+Aug 04 15:33 : client: [69] closed
+Aug 04 15:37 : client: [70] opened from [::1]:60440
+Aug 04 15:37 : client: [70] closed
+Aug 04 15:37 : client: [71] opened from [::1]:60444
+Aug 04 15:37 : client: [71] closed
+Aug 04 15:37 : client: [72] opened from [::1]:60456
+Aug 04 15:37 : client: [72] closed
+Aug 04 15:37 : client: [73] opened from [::1]:60458
+Aug 04 15:37 : client: [73] closed
+Aug 04 15:37 : client: [74] opened from [::1]:60532
+Aug 04 15:37 : client: [74] closed
+Aug 04 15:37 : client: [75] opened from [::1]:60536
+Aug 04 15:37 : client: [75] closed
+Aug 04 15:37 : client: [76] opened from [::1]:60568
+Aug 04 15:37 : client: [76] closed
+Aug 04 15:37 : client: [77] opened from [::1]:60570
+Aug 04 15:37 : client: [77] closed
+Aug 04 15:37 : client: [78] opened from [::1]:60586
+Aug 04 15:37 : client: [78] closed
+Aug 04 15:37 : client: [79] opened from [::1]:60588
+Aug 04 15:37 : client: [79] closed
+Aug 04 15:37 : client: [80] opened from [::1]:60606
+Aug 04 15:37 : client: [80] closed
+Aug 04 15:37 : client: [81] opened from [::1]:60608
+Aug 04 15:37 : client: [81] closed
+Aug 04 15:38 : client: [82] opened from [::1]:60686
+Aug 04 15:38 : client: [82] closed
+Aug 04 15:38 : client: [83] opened from [::1]:60688
+Aug 04 15:38 : client: [83] closed
+Aug 04 15:38 : client: [84] opened from [::1]:60690
+Aug 04 15:38 : client: [84] closed
+Aug 04 15:38 : client: [85] opened from [::1]:60692
+Aug 04 15:38 : client: [85] closed
+Aug 04 15:38 : client: [86] opened from [::1]:60696
+Aug 04 15:38 : client: [86] closed
+Aug 04 15:38 : client: [87] opened from [::1]:60698
+Aug 04 15:38 : client: [87] closed
+Aug 04 15:38 : client: [88] opened from [::1]:60730
+Aug 04 15:38 : client: [88] closed
+Aug 04 15:38 : client: [89] opened from [::1]:60732
+Aug 04 15:38 : client: [89] closed
+Aug 04 15:38 : client: [90] opened from [::1]:60740
+Aug 04 15:38 : client: [90] closed
+Aug 04 15:38 : client: [91] opened from [::1]:60742
+Aug 04 15:38 : client: [91] closed
+Aug 04 15:38 : client: [92] opened from [::1]:60754
+Aug 04 15:38 : client: [92] closed
+Aug 04 15:38 : client: [93] opened from [::1]:60756
+Aug 04 15:38 : client: [93] closed
+Aug 04 15:38 : client: [94] opened from [::1]:60762
+Aug 04 15:38 : client: [94] closed
+Aug 04 15:38 : client: [95] opened from [::1]:60764
+Aug 04 15:38 : client: [95] closed
+Aug 04 15:38 : client: [96] opened from [::1]:60768
+Aug 04 15:38 : client: [96] closed
+Aug 04 15:38 : client: [97] opened from [::1]:60770
+Aug 04 15:38 : client: [97] closed
+Aug 04 15:38 : client: [98] opened from [::1]:60774
+Aug 04 15:38 : client: [98] closed
+Aug 04 15:38 : client: [99] opened from [::1]:60776
+Aug 04 15:38 : client: [99] closed
+Aug 04 15:38 : client: [100] opened from [::1]:60778
+Aug 04 15:38 : client: [100] closed
+Aug 04 15:38 : client: [101] opened from [::1]:60780
+Aug 04 15:38 : client: [101] closed
+Aug 04 15:56 : client: [102] opened from [::1]:60854
+Aug 04 15:56 : client: [102] closed
+Aug 04 15:56 : client: [103] opened from [::1]:60856
+Aug 04 15:56 : client: [103] closed
+Aug 04 17:01 : client: [104] opened from [::1]:33622
+Aug 04 17:01 : client: [104] closed
+Aug 04 17:01 : client: [105] opened from [::1]:33624
+Aug 04 17:01 : client: [105] closed
+Aug 04 17:02 : client: [106] opened from [::1]:33626
+Aug 04 17:02 : client: [106] closed
+Aug 04 17:02 : client: [107] opened from [::1]:33628
+Aug 04 17:02 : client: [107] closed
+Aug 04 17:11 : client: [108] opened from [::1]:33646
+Aug 04 17:11 : client: [108] closed
+Aug 04 17:11 : client: [109] opened from [::1]:33648
+Aug 04 17:11 : client: [109] closed
+Aug 04 17:11 : client: [110] opened from [::1]:33652
+Aug 04 17:11 : client: [110] closed
+Aug 04 17:11 : client: [111] opened from [::1]:33654
+Aug 04 17:11 : client: [111] closed
+Aug 04 17:12 : client: [112] opened from [::1]:33674
+Aug 04 17:12 : client: [112] closed
+Aug 04 17:12 : client: [113] opened from [::1]:33678
+Aug 04 17:12 : client: [113] closed
+Aug 04 17:13 : client: [114] opened from [::1]:33696
+Aug 04 17:13 : client: [114] closed
+Aug 04 17:13 : client: [115] opened from [::1]:33698
+Aug 04 17:13 : client: [115] closed
+Aug 04 17:32 : client: [116] opened from [::1]:33728
+Aug 04 17:32 : client: [116] closed
+Aug 04 17:32 : client: [117] opened from [::1]:33730
+Aug 04 17:32 : client: [117] closed
+Aug 04 17:33 : client: [118] opened from [::1]:33732
+Aug 04 17:33 : client: [118] closed
+Aug 04 17:33 : client: [119] opened from [::1]:33734
+Aug 04 17:33 : client: [119] closed
+Aug 04 17:36 : client: [120] opened from [::1]:33740
+Aug 04 17:36 : client: [120] closed
+Aug 04 17:36 : client: [121] opened from [::1]:33742
+Aug 04 17:36 : client: [121] closed
+Aug 04 17:36 : client: [122] opened from [::1]:33744
+Aug 04 17:36 : client: [122] closed
+Aug 04 17:36 : client: [123] opened from [::1]:33746
+Aug 04 17:36 : client: [123] closed
+Aug 04 17:38 : client: [124] opened from [::1]:33762
+Aug 04 17:38 : client: [124] closed
+Aug 04 17:38 : client: [125] opened from [::1]:33764
+Aug 04 17:38 : client: [125] closed
+Aug 04 17:38 : client: [126] opened from [::1]:33784
+Aug 04 17:38 : client: [126] closed
+Aug 04 17:38 : client: [127] opened from [::1]:33788
+Aug 04 17:38 : client: [127] closed
+Aug 04 17:39 : client: [128] opened from [::1]:33910
+Aug 04 17:39 : client: [128] closed
+Aug 04 17:39 : client: [129] opened from [::1]:33912
+Aug 04 17:39 : client: [129] closed
+Aug 04 17:40 : client: [130] opened from [::1]:33920
+Aug 04 17:40 : client: [130] closed
+Aug 04 17:40 : client: [131] opened from [::1]:33922
+Aug 04 17:40 : client: [131] closed
+Aug 04 17:40 : client: [132] opened from [::1]:33924
+Aug 04 17:40 : client: [132] closed
+Aug 04 17:40 : client: [133] opened from [::1]:33926
+Aug 04 17:40 : client: [133] closed
+Aug 04 17:40 : client: [134] opened from [::1]:33928
+Aug 04 17:40 : client: [134] closed
+Aug 04 17:40 : client: [135] opened from [::1]:33930
+Aug 04 17:40 : client: [135] closed
+Aug 04 17:46 : client: [136] opened from [::1]:33950
+Aug 04 17:46 : client: [136] closed
+Aug 04 17:46 : client: [137] opened from [::1]:33952
+Aug 04 17:46 : client: [137] closed
+Aug 04 17:46 : client: [138] opened from [::1]:33954
+Aug 04 17:46 : client: [138] closed
+Aug 04 17:46 : client: [139] opened from [::1]:33956
+Aug 04 17:46 : client: [139] closed
+Aug 04 17:50 : client: [140] opened from [::1]:33972
+Aug 04 17:50 : client: [140] closed
+Aug 04 17:50 : client: [141] opened from [::1]:33974
+Aug 04 17:50 : client: [141] closed
+Aug 04 17:52 : client: [142] opened from [::1]:33980
+Aug 04 17:52 : client: [142] closed
+Aug 04 17:52 : client: [143] opened from [::1]:33982
+Aug 04 17:52 : client: [143] closed
+Aug 04 17:52 : client: [144] opened from [::1]:33984
+Aug 04 17:52 : client: [144] closed
+Aug 04 17:52 : client: [145] opened from [::1]:33986
+Aug 04 17:52 : client: [145] closed
+Aug 04 17:53 : client: [146] opened from [::1]:33988
+Aug 04 17:53 : client: [146] closed
+Aug 04 17:53 : client: [147] opened from [::1]:33990
+Aug 04 17:53 : client: [147] closed
+Aug 04 17:53 : client: [148] opened from [::1]:34002
+Aug 04 17:53 : client: [148] closed
+Aug 04 17:53 : client: [149] opened from [::1]:34004
+Aug 04 17:53 : client: [149] closed
+Aug 04 17:53 : client: [150] opened from [::1]:34042
+Aug 04 17:53 : client: [150] closed
+Aug 04 17:53 : client: [151] opened from [::1]:34046
+Aug 04 17:53 : client: [151] closed
+Aug 04 17:53 : client: [152] opened from [::1]:34062
+Aug 04 17:53 : client: [152] closed
+Aug 04 17:53 : client: [153] opened from [::1]:34064
+Aug 04 17:53 : client: [153] closed
+Aug 04 17:53 : client: [154] opened from [::1]:34066
+Aug 04 17:53 : client: [154] closed
+Aug 04 17:53 : client: [155] opened from [::1]:34068
+Aug 04 17:53 : client: [155] closed
+Aug 04 17:53 : client: [156] opened from [::1]:34164
+Aug 04 17:53 : client: [156] closed
+Aug 04 17:53 : client: [157] opened from [::1]:34166
+Aug 04 17:53 : client: [157] closed
+Aug 04 17:53 : client: [158] opened from [::1]:34188
+Aug 04 17:53 : client: [158] closed
+Aug 04 17:53 : client: [159] opened from [::1]:34190
+Aug 04 17:53 : client: [159] closed
+Aug 04 17:54 : client: [160] opened from [::1]:34260
+Aug 04 17:54 : client: [160] closed
+Aug 04 17:54 : client: [161] opened from [::1]:34262
+Aug 04 17:54 : client: [161] closed
+Aug 04 17:54 : client: [162] opened from [::1]:34288
+Aug 04 17:54 : client: [162] closed
+Aug 04 17:54 : client: [163] opened from [::1]:34290
+Aug 04 17:54 : client: [163] closed
+Aug 04 17:55 : client: [164] opened from [::1]:34316
+Aug 04 17:55 : client: [164] closed
+Aug 04 17:55 : client: [165] opened from [::1]:34318
+Aug 04 17:55 : client: [165] closed
+Aug 04 17:57 : client: [166] opened from [::1]:34374
+Aug 04 17:57 : client: [166] closed
+Aug 04 17:57 : client: [167] opened from [::1]:34376
+Aug 04 17:57 : client: [167] closed
+Aug 04 17:57 : client: [168] opened from [::1]:34412
+Aug 04 17:57 : client: [168] closed
+Aug 04 17:57 : client: [169] opened from [::1]:34414
+Aug 04 17:57 : client: [169] closed
+Aug 04 17:57 : client: [170] opened from [::1]:34416
+Aug 04 17:57 : client: [170] closed
+Aug 04 17:57 : client: [171] opened from [::1]:34418
+Aug 04 17:57 : client: [171] closed
+Aug 04 17:57 : client: [172] opened from [::1]:34420
+Aug 04 17:57 : client: [172] closed
+Aug 04 17:57 : client: [173] opened from [::1]:34422
+Aug 04 17:57 : client: [173] closed
+Aug 04 17:57 : client: [174] opened from [::1]:34424
+Aug 04 17:57 : client: [174] closed
+Aug 04 17:57 : client: [175] opened from [::1]:34426
+Aug 04 17:57 : client: [175] closed
+Aug 04 17:59 : client: [176] opened from [::1]:34428
+Aug 04 17:59 : client: [176] closed
+Aug 04 17:59 : client: [177] opened from [::1]:34430
+Aug 04 17:59 : client: [177] closed
+Aug 04 18:02 : client: [178] opened from [::1]:34442
+Aug 04 18:02 : client: [178] closed
+Aug 04 18:02 : client: [179] opened from [::1]:34444
+Aug 04 18:02 : client: [179] closed
+Aug 04 18:02 : client: [180] opened from [::1]:34458
+Aug 04 18:02 : client: [180] closed
+Aug 04 18:02 : client: [181] opened from [::1]:34460
+Aug 04 18:02 : client: [181] closed
+Aug 04 18:02 : client: [182] opened from [::1]:34486
+Aug 04 18:02 : client: [182] closed
+Aug 04 18:02 : client: [183] opened from [::1]:34488
+Aug 04 18:02 : client: [183] closed
+Aug 04 18:02 : client: [184] opened from [::1]:34490
+Aug 04 18:02 : client: [184] closed
+Aug 04 18:02 : client: [185] opened from [::1]:34492
+Aug 04 18:02 : client: [185] closed
+Aug 04 18:04 : client: [186] opened from [::1]:34494
+Aug 04 18:04 : client: [186] closed
+Aug 04 18:04 : client: [187] opened from [::1]:34496
+Aug 04 18:04 : client: [187] closed
+Aug 04 18:04 : client: [188] opened from [::1]:34498
+Aug 04 18:04 : client: [188] closed
+Aug 04 18:04 : client: [189] opened from [::1]:34502
+Aug 04 18:04 : client: [189] closed
+Aug 04 18:04 : client: [190] opened from [::1]:34504
+Aug 04 18:04 : client: [190] closed
+Aug 04 18:04 : client: [191] opened from [::1]:34506
+Aug 04 18:04 : client: [191] closed
+Aug 04 18:05 : client: [192] opened from [::1]:34516
+Aug 04 18:05 : client: [192] closed
+Aug 04 18:05 : client: [193] opened from [::1]:34518
+Aug 04 18:05 : client: [193] closed
+Aug 04 18:06 : client: [194] opened from [::1]:34526
+Aug 04 18:06 : client: [194] closed
+Aug 04 18:06 : client: [195] opened from [::1]:34528
+Aug 04 18:06 : client: [195] closed
+Aug 04 18:06 : client: [196] opened from [::1]:34536
+Aug 04 18:06 : client: [196] closed
+Aug 04 18:06 : client: [197] opened from [::1]:34538
+Aug 04 18:06 : client: [197] closed
+Aug 04 18:06 : client: [198] opened from [::1]:34540
+Aug 04 18:06 : client: [198] closed
+Aug 04 18:06 : client: [199] opened from [::1]:34542
+Aug 04 18:06 : client: [199] closed
+Aug 04 18:06 : client: [200] opened from [::1]:34558
+Aug 04 18:06 : client: [200] closed
+Aug 04 18:06 : client: [201] opened from [::1]:34560
+Aug 04 18:06 : client: [201] closed
+Aug 04 18:09 : client: [202] opened from [::1]:34674
+Aug 04 18:09 : client: [202] closed
+Aug 04 18:09 : client: [203] opened from [::1]:34676
+Aug 04 18:09 : client: [203] closed
+Aug 04 18:09 : client: [204] opened from [::1]:34678
+Aug 04 18:09 : client: [204] closed
+Aug 04 18:09 : client: [205] opened from [::1]:34680
+Aug 04 18:09 : client: [205] closed
+Aug 04 18:09 : client: [206] opened from [::1]:34708
+Aug 04 18:09 : client: [206] closed
+Aug 04 18:09 : client: [207] opened from [::1]:34710
+Aug 04 18:09 : client: [207] closed
+Aug 04 18:12 : client: [208] opened from [::1]:34746
+Aug 04 18:12 : client: [208] closed
+Aug 04 18:12 : client: [209] opened from [::1]:34748
+Aug 04 18:12 : client: [209] closed
+Aug 04 18:13 : client: [210] opened from [::1]:34806
+Aug 04 18:13 : client: [210] closed
+Aug 04 18:13 : client: [211] opened from [::1]:34808
+Aug 04 18:13 : client: [211] closed
+Aug 04 18:17 : client: [212] opened from [::1]:35308
+Aug 04 18:17 : client: [212] closed
+Aug 04 18:17 : client: [213] opened from [::1]:35310
+Aug 04 18:17 : client: [213] closed
+Aug 04 18:18 : client: [214] opened from [::1]:35422
+Aug 04 18:18 : client: [214] closed
+Aug 04 18:18 : client: [215] opened from [::1]:35424
+Aug 04 18:18 : client: [215] closed
+Aug 04 18:18 : client: [216] opened from [::1]:35498
+Aug 04 18:18 : client: [216] closed
+Aug 04 18:18 : client: [217] opened from [::1]:35500
+Aug 04 18:18 : client: [217] closed
+Aug 04 18:18 : client: [218] opened from [::1]:35538
+Aug 04 18:18 : client: [218] closed
+Aug 04 18:18 : client: [219] opened from [::1]:35542
+Aug 04 18:18 : client: [219] closed
+Aug 04 18:24 : client: [220] opened from [::1]:36368
+Aug 04 18:24 : client: [220] closed
+Aug 04 18:24 : client: [221] opened from [::1]:36370
+Aug 04 18:24 : client: [221] closed
+Aug 04 18:25 : client: [222] opened from [::1]:36386
+Aug 04 18:25 : client: [222] closed
+Aug 04 18:25 : client: [223] opened from [::1]:36388
+Aug 04 18:25 : client: [223] closed
+Aug 04 18:26 : client: [224] opened from [::1]:36540
+Aug 04 18:26 : client: [224] closed
+Aug 04 18:26 : client: [225] opened from [::1]:36542
+Aug 04 18:26 : client: [225] closed
+Aug 04 18:27 : client: [226] opened from [::1]:36708
+Aug 04 18:27 : client: [226] closed
+Aug 04 18:27 : client: [227] opened from [::1]:36710
+Aug 04 18:27 : client: [227] closed
+Aug 04 18:27 : client: [228] opened from [::1]:36714
+Aug 04 18:27 : client: [228] closed
+Aug 04 18:27 : client: [229] opened from [::1]:36716
+Aug 04 18:27 : client: [229] closed
+Aug 04 18:27 : client: [230] opened from [::1]:36764
+Aug 04 18:27 : client: [230] closed
+Aug 04 18:28 : client: [231] opened from [::1]:36766
+Aug 04 18:28 : client: [231] closed
+Aug 04 18:28 : client: [232] opened from [::1]:36858
+Aug 04 18:28 : client: [232] closed
+Aug 04 18:28 : client: [233] opened from [::1]:36860
+Aug 04 18:28 : client: [233] closed
+Aug 04 18:29 : client: [234] opened from [::1]:36932
+Aug 04 18:29 : client: [234] closed
+Aug 04 18:29 : client: [235] opened from [::1]:36934
+Aug 04 18:29 : client: [235] closed
+Aug 04 18:29 : client: [236] opened from [::1]:36944
+Aug 04 18:29 : client: [236] closed
+Aug 04 18:29 : client: [237] opened from [::1]:36946
+Aug 04 18:29 : client: [237] closed
+Aug 04 18:29 : client: [238] opened from [::1]:37002
+Aug 04 18:29 : client: [238] closed
+Aug 04 18:29 : client: [239] opened from [::1]:37004
+Aug 04 18:29 : client: [239] closed
+Aug 04 18:29 : client: [240] opened from [::1]:37008
+Aug 04 18:29 : client: [240] closed
+Aug 04 18:29 : client: [241] opened from [::1]:37010
+Aug 04 18:29 : client: [241] closed
+Aug 04 18:30 : client: [242] opened from [::1]:37050
+Aug 04 18:30 : client: [242] closed
+Aug 04 18:30 : client: [243] opened from [::1]:37052
+Aug 04 18:30 : client: [243] closed
+Aug 04 18:30 : client: [244] opened from [::1]:37060
+Aug 04 18:30 : client: [244] closed
+Aug 04 18:30 : client: [245] opened from [::1]:37062
+Aug 04 18:30 : client: [245] closed
+Aug 04 18:30 : client: [246] opened from [::1]:37066
+Aug 04 18:30 : client: [246] closed
+Aug 04 18:30 : client: [247] opened from [::1]:37068
+Aug 04 18:30 : client: [247] closed
+Aug 04 18:30 : client: [248] opened from [::1]:37072
+Aug 04 18:30 : client: [248] closed
+Aug 04 18:30 : client: [249] opened from [::1]:37074
+Aug 04 18:30 : client: [249] closed
+Aug 04 18:30 : client: [250] opened from [::1]:37078
+Aug 04 18:30 : client: [250] closed
+Aug 04 18:30 : client: [251] opened from [::1]:37080
+Aug 04 18:30 : client: [251] closed
+Aug 04 18:30 : client: [252] opened from [::1]:37108
+Aug 04 18:30 : client: [252] closed
+Aug 04 18:30 : client: [253] opened from [::1]:37110
+Aug 04 18:30 : client: [253] closed
+Aug 04 18:30 : client: [254] opened from [::1]:37168
+Aug 04 18:30 : client: [254] closed
+Aug 04 18:30 : client: [255] opened from [::1]:37170
+Aug 04 18:30 : client: [255] closed
+Aug 04 18:32 : client: [256] opened from [::1]:37356
+Aug 04 18:32 : client: [256] closed
+Aug 04 18:32 : client: [257] opened from [::1]:37358
+Aug 04 18:32 : client: [257] closed
+Aug 04 18:32 : client: [258] opened from [::1]:37398
+Aug 04 18:32 : client: [258] closed
+Aug 04 18:32 : client: [259] opened from [::1]:37400
+Aug 04 18:32 : client: [259] closed
+Aug 04 18:33 : client: [260] opened from [::1]:37448
+Aug 04 18:33 : client: [260] closed
+Aug 04 18:33 : client: [261] opened from [::1]:37450
+Aug 04 18:33 : client: [261] closed
+Aug 04 18:34 : client: [262] opened from [::1]:37490
+Aug 04 18:34 : client: [262] closed
+Aug 04 18:34 : client: [263] opened from [::1]:37492
+Aug 04 18:34 : client: [263] closed
+Aug 04 18:34 : client: [264] opened from [::1]:37514
+Aug 04 18:34 : client: [264] closed
+Aug 04 18:34 : client: [265] opened from [::1]:37516
+Aug 04 18:34 : client: [265] closed
+Aug 04 18:34 : client: [266] opened from [::1]:37554
+Aug 04 18:34 : client: [266] closed
+Aug 04 18:34 : client: [267] opened from [::1]:37556
+Aug 04 18:34 : client: [267] closed
+Aug 04 18:35 : client: [268] opened from [::1]:37624
+Aug 04 18:35 : client: [268] closed
+Aug 04 18:35 : client: [269] opened from [::1]:37626
+Aug 04 18:35 : client: [269] closed
+Aug 04 18:35 : client: [270] opened from [::1]:37662
+Aug 04 18:35 : client: [270] closed
+Aug 04 18:35 : client: [271] opened from [::1]:37664
+Aug 04 18:35 : client: [271] closed
+Aug 04 18:35 : client: [272] opened from [::1]:37696
+Aug 04 18:35 : client: [272] closed
+Aug 04 18:35 : client: [273] opened from [::1]:37698
+Aug 04 18:35 : client: [273] closed
+Aug 04 18:36 : client: [274] opened from [::1]:37786
+Aug 04 18:36 : client: [274] closed
+Aug 04 18:36 : client: [275] opened from [::1]:37788
+Aug 04 18:36 : client: [275] closed
+Aug 04 18:37 : client: [276] opened from [::1]:37868
+Aug 04 18:37 : client: [276] closed
+Aug 04 18:37 : client: [277] opened from [::1]:37870
+Aug 04 18:37 : client: [277] closed
+Aug 04 18:37 : client: [278] opened from [::1]:37916
+Aug 04 18:37 : client: [278] closed
+Aug 04 18:37 : client: [279] opened from [::1]:37918
+Aug 04 18:37 : client: [279] closed
+Aug 04 18:37 : client: [280] opened from [::1]:37962
+Aug 04 18:37 : client: [280] closed
+Aug 04 18:37 : client: [281] opened from [::1]:37964
+Aug 04 18:37 : client: [281] closed
+Aug 04 18:38 : client: [282] opened from [::1]:38010
+Aug 04 18:38 : client: [282] closed
+Aug 04 18:38 : client: [283] opened from [::1]:38012
+Aug 04 18:38 : client: [283] closed
+Aug 04 18:38 : client: [284] opened from [::1]:38038
+Aug 04 18:38 : client: [284] closed
+Aug 04 18:38 : client: [285] opened from [::1]:38040
+Aug 04 18:38 : client: [285] closed
+Aug 04 18:38 : client: [286] opened from [::1]:38068
+Aug 04 18:38 : client: [286] closed
+Aug 04 18:38 : client: [287] opened from [::1]:38070
+Aug 04 18:38 : client: [287] closed
+Aug 04 18:39 : client: [288] opened from [::1]:38136
+Aug 04 18:39 : client: [288] closed
+Aug 04 18:39 : client: [289] opened from [::1]:38138
+Aug 04 18:39 : client: [289] closed
+Aug 04 18:39 : client: [290] opened from [::1]:38196
+Aug 04 18:39 : client: [290] closed
+Aug 04 18:39 : client: [291] opened from [::1]:38198
+Aug 04 18:39 : client: [291] closed
+Aug 04 18:40 : client: [292] opened from [::1]:38336
+Aug 04 18:40 : client: [292] closed
+Aug 04 18:40 : client: [293] opened from [::1]:38338
+Aug 04 18:40 : client: [293] closed
+Aug 04 18:41 : client: [294] opened from [::1]:38404
+Aug 04 18:41 : client: [294] closed
+Aug 04 18:41 : client: [295] opened from [::1]:38406
+Aug 04 18:41 : client: [295] closed
+Aug 04 18:42 : client: [296] opened from [::1]:38498
+Aug 04 18:42 : client: [296] closed
+Aug 04 18:42 : client: [297] opened from [::1]:38500
+Aug 04 18:42 : client: [297] closed
+Aug 04 18:45 : client: [298] opened from [::1]:38894
+Aug 04 18:45 : client: [298] closed
+Aug 04 18:45 : client: [299] opened from [::1]:38896
+Aug 04 18:45 : client: [299] closed
+Aug 04 18:45 : client: [300] opened from [::1]:38986
+Aug 04 18:45 : client: [300] closed
+Aug 04 18:45 : client: [301] opened from [::1]:38988
+Aug 04 18:45 : client: [301] closed
+Aug 04 18:47 : client: [302] opened from [::1]:39132
+Aug 04 18:47 : client: [302] closed
+Aug 04 18:47 : client: [303] opened from [::1]:39134
+Aug 04 18:47 : client: [303] closed
+Aug 04 18:48 : client: [304] opened from [::1]:39254
+Aug 04 18:48 : client: [304] closed
+Aug 04 18:48 : client: [305] opened from [::1]:39256
+Aug 04 18:48 : client: [305] closed
+Aug 04 18:48 : client: [306] opened from [::1]:39356
+Aug 04 18:48 : client: [306] closed
+Aug 04 18:48 : client: [307] opened from [::1]:39358
+Aug 04 18:48 : client: [307] closed
+Aug 04 18:49 : client: [308] opened from [::1]:39432
+Aug 04 18:49 : client: [308] closed
+Aug 04 18:49 : client: [309] opened from [::1]:39434
+Aug 04 18:49 : client: [309] closed
+Aug 04 18:49 : client: [310] opened from [::1]:39498
+Aug 04 18:49 : client: [310] closed
+Aug 04 18:49 : client: [311] opened from [::1]:39500
+Aug 04 18:49 : client: [311] closed
+Aug 04 18:50 : client: [312] opened from [::1]:39604
+Aug 04 18:50 : client: [312] closed
+Aug 04 18:50 : client: [313] opened from [::1]:39606
+Aug 04 18:50 : client: [313] closed
+Aug 04 18:51 : client: [314] opened from [::1]:39660
+Aug 04 18:51 : client: [314] closed
+Aug 04 18:51 : client: [315] opened from [::1]:39662
+Aug 04 18:51 : client: [315] closed
+Aug 04 18:51 : client: [316] opened from [::1]:39714
+Aug 04 18:51 : client: [316] closed
+Aug 04 18:51 : client: [317] opened from [::1]:39716
+Aug 04 18:51 : client: [317] closed
+Aug 04 18:53 : client: [318] opened from [::1]:39900
+Aug 04 18:53 : client: [318] closed
+Aug 04 18:53 : client: [319] opened from [::1]:39902
+Aug 04 18:53 : client: [319] closed
+Aug 04 18:53 : client: [320] opened from [::1]:39932
+Aug 04 18:53 : client: [320] closed
+Aug 04 18:53 : client: [321] opened from [::1]:39934
+Aug 04 18:53 : client: [321] closed
+Aug 04 18:53 : client: [322] opened from [::1]:39994
+Aug 04 18:53 : client: [322] closed
+Aug 04 18:53 : client: [323] opened from [::1]:39996
+Aug 04 18:53 : client: [323] closed
+Aug 04 18:54 : client: [324] opened from [::1]:40014
+Aug 04 18:54 : client: [324] closed
+Aug 04 18:54 : client: [325] opened from [::1]:40016
+Aug 04 18:54 : client: [325] closed
+Aug 04 18:54 : client: [326] opened from [::1]:40026
+Aug 04 18:54 : client: [326] closed
+Aug 04 18:54 : client: [327] opened from [::1]:40028
+Aug 04 18:54 : client: [327] closed
