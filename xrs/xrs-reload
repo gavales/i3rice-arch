@@ -3,36 +3,40 @@
 # OA: Gavin Vales
 # CREATED: Tue 11 Jun 14:48:08 BST 2019
 
-check=$(cat $HOME/xrs/theme | grep '%')
+XDIR=$HOME/xrs
+XRS=$HOME/.Xresources
+check=$(cat $XDIR/theme.Xresources | grep '%')
 
 if [[ -z $check ]]; then
-	cat $HOME/xrs/theme > $HOME/.Xresources
+	cat $XDIR/theme.Xresources > $XRS
 else
-	echo "! emacs" > $HOME/.Xresources
-	echo "#define cwhtd #382f4a" >> $HOME/.Xresources
-	echo "#define cwhtl #262626" >> $HOME/.Xresources
-	echo "#define credd #b14b1d" >> $HOME/.Xresources
-	echo "#define credl #b14b1d" >> $HOME/.Xresources
-	echo "#define cgrnd #699961" >> $HOME/.Xresources
-	echo "#define cgrnl #699961" >> $HOME/.Xresources
-	echo "#define cylwd #b1951d" >> $HOME/.Xresources
-	echo "#define cylwl #b1951d" >> $HOME/.Xresources
-	echo "#define cblud #5d4d7a" >> $HOME/.Xresources
-	echo "#define cblul #5d4d7a" >> $HOME/.Xresources
-	echo "#define cgntd #0059b2" >> $HOME/.Xresources
-	echo "#define cgntl #0059b2" >> $HOME/.Xresources
-	echo "#define ccynd #619991" >> $HOME/.Xresources
-	echo "#define ccynl #619991" >> $HOME/.Xresources
-	echo "#define cblkd #d4d4d4" >> $HOME/.Xresources
-	echo "#define cblkl #c0c0c0" >> $HOME/.Xresources
+	cat > $XRS << 'EOB'
+! emacs
+#define cwhtd #382f4a
+#define cwhtl #262626
+#define credd #b14b1d
+#define credl #b14b1d
+#define cgrnd #699961
+#define cgrnl #699961
+#define cylwd #b1951d
+#define cylwl #b1951d
+#define cblud #5d4d7a
+#define cblul #5d4d7a
+#define cgntd #0059b2
+#define cgntl #0059b2
+#define ccynd #619991
+#define ccynl #619991
+#define cblkd #d4d4d4
+#define cblkl #c0c0c0
+EOB
 fi
-cat $HOME/xrs/1vars >> $HOME/.Xresources
-cat $HOME/xrs/2colorvars >> $HOME/.Xresources
-cat $HOME/xrs/3rofi >> $HOME/.Xresources
-cat $HOME/xrs/4xft >> $HOME/.Xresources
-cat $HOME/xrs/5xterm >> $HOME/.Xresources
-cat $HOME/xrs/6xcursor >> $HOME/.Xresources
-cat $HOME/xrs/7urxvt >> $HOME/.Xresources
-cat $HOME/xrs/8urxvtext >> $HOME/.Xresources
-xrdb -load $HOME/.Xresources
+cat $XDIR/1vars.Xresources      >> $XRS
+cat $XDIR/2colorvars.Xresources >> $XRS
+cat $XDIR/3rofi.Xresources      >> $XRS
+cat $XDIR/4xft.Xresources       >> $XRS
+cat $XDIR/5xterm.Xresources     >> $XRS
+cat $XDIR/6xcursor.Xresources   >> $XRS
+cat $XDIR/7urxvt.Xresources     >> $XRS
+cat $XDIR/8urxvtext.Xresources  >> $XRS
+xrdb -load $XRS
 kill -1 $(pidof urxvtd)

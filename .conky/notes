@@ -18,7 +18,7 @@ conky.config = {
 	use_xft = true,
 }
 conky.text = [[
-${voffset 1}${color2}${font CMU Typewriter Text:bold:oblique:size=50}Notes
-${voffset -25}${color}${font CMU Typewriter Text:bold:size=16}
-${exec cat $HOME/notes | sed '/./{H;$!d};x;/+ TODO/!d'}
+${voffset 1}${color2}${font CMU Typewriter Text:bold:oblique:size=50}Watchlist
+${voffset -75}${color}${font CMU Typewriter Text:bold:size=16}
+${exec cat $HOME/dtp/WATCHLIST}
 ]]

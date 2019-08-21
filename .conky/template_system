@@ -30,7 +30,15 @@ $color2${top name 4}$alignr$color${top cpu 4}%
 $color2${top name 5}$alignr$color${top cpu 5}%
 
 ${voffset 1}${color2}${font %%guifont%%:bold:oblique:size=50}Weather
-${voffset -50}${color}${font %%guifont%%:bold:size=16}
+${voffset -75}${color}${font %%guifont%%:bold:size=16}
 ${exec curl -s wttr.in | sed -n '3,7{s/\d27\[[0-9;]*m//g;s/^..//;s/ *$//;p}'}
+
+${voffset 1}${color2}${font %%guifont%%:bold:oblique:size=50}TODO
+${voffset -75}${color}${font %%guifont%%:bold:size=16}
+${exec cat $HOME/dtp/TODO}
+
+${voffset 1}${color2}${font %%guifont%%:bold:oblique:size=50}Notes
+${voffset -75}${color}${font %%guifont%%:bold:size=16}
+${exec cat $HOME/dtp/NOTES}
 
 ]]

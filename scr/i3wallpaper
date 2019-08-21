@@ -6,17 +6,24 @@
 # COMMAND TO UPDATE BLUR OF BLURS
 # for i in $(ls); do convert "${i}" -blur $blr "${PWD/normal/blur}/${i}"; echo "$i"; done
 
-WDIR="$HOME/pic/walls"
+[[ -f $HOME/.config/user-dirs.dirs ]] && source $HOME/.config/user-dirs.dirs \
+	&& WDIR="$XDG_PICTURES_DIR/i3wallpaper"
 NORM="${WDIR}/normal"
 BLUR="${WDIR}/blur"
 COLS="${WDIR}/cols"
-[[ -d $WDIR ]] || { mkdir $WDIR && mkdir $NORM && mkdir $BLUR && mkdir $COLS ; }
+[[ -d $WDIR ]] || {
+	mkdir $WDIR && \
+	mkdir $NORM && \
+	mkdir $BLUR && \
+	mkdir $COLS
+}
 NWFD="$NORM"
 CURR="${WDIR}/current"
 WHT="${WDIR}/white.jpg"
 CRLN="$(readlink -f $CURR)" HIST="${WDIR}/.history"
 MONDIM=$(xdpyinfo | grep dimensions: | awk '{print $2}')
-MX=${MONDIM%x*} MY=${MONDIM#*x}
+MX=${MONDIM%x*}
+MY=${MONDIM#*x}
 blr=0x16
 
 add-wall () {
@@ -137,26 +144,28 @@ cat << 'EOB'
 
  Usage
  -----
- i3wallpaper                ┼ Create [walls/(normal|blur)]
-                            │   directory in [~/pic]
+ i3wallpaper                ┼ Create default directories:
+                            │   WALL_DIR/(normal|blur|cols)
  i3wallpaper -h             ┼ Print this help
  i3wallpaper -w [PATH|PREV| ┼ Wallpaper to set 
                 NEXT|RANDOM │
                    NAME]    │
  i3wallpaper -t [HEX COLOR] ┼ Tint color of wallpaper
- i3wallpaper -a [DIRECTORY] ┼ Add walls from [DIRECTORY]
- i3wallpaper -l             ┼ View available wallpapers in
-                            │   sxiv
+ i3wallpaper -a [DIRECTORY] ┼ Add walls from DIRECTORY
+ i3wallpaper -l             ┼ List available wallpapers
  i3wallpaper -b             ┼ Toggle blur
- i3wallpaper -d             ┼ Toggle blur
+ i3wallpaper -d             ┼ Remove wallpaper from
+                            │   WALL_DIR/(normal|blur)
  
- [DIRECTORY] ┼ is a path to a directory containing pictures
- [HEX COLOR] ┼ Hexadecimal color Eg. #002b36
- [PATH]      ┼ is a path to a picture
- [PREV]      ┼ previous wallpaper in history
- [NEXT]      ┼ next wallpaper in history
- [NAME]      ┼ name of wallpaper stored in [walls/normale]
- [RANDOM]    ┼ random wallpaper in [walls/normal]
+ WALL_DIR  ┼ Default i3wallpaper folder:
+           │   $XDG_PICTURES_DIR/i3wallpaper
+ DIRECTORY ┼ is a path to a directory containing pictures
+ HEX COLOR ┼ Hexadecimal color Eg. #002b36
+ PATH      ┼ is a path to a picture
+ PREV      ┼ previous wallpaper in history
+ NEXT      ┼ next wallpaper in history
+ NAME      ┼ name of wallpaper stored in WALL_DIR/normal
+ RANDOM    ┼ random wallpaper in WALL_DIR/normal
 
 EOB
 }
@@ -191,6 +200,8 @@ if [[ -n $WPP ]]; then
 	[[ ! -f $NORM/$WPP ]] \
 		&& echo "${WPP##*/} not in walls directory, adding ${WPP##*/}" && add-wall "$WPP"
 	change-current
+	[[ ! -f "$WPP" ]] && help \
+		&& echo "Wallpaper doesn't exist"
 fi
 
 [[ $BLURT == "TRUE" ]] && {

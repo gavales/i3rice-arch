@@ -401,6 +401,10 @@ $win+Shift+k        move up
 $win+l              focus right
 $win+Shift+l        move right
 
+$win+semicolon      $exs/noter -t NOTES
+
+$win+apostrophe     $exs/noter -t TODO
+
 $win+Return         $exn xterm
 $win+Shift+Return   $exn $term -name FILES_ADMIN -e sudo ranger
 
@@ -543,7 +547,6 @@ workspace $ws5 gaps outer 40
 # DAEMONS
 $exn urxvtd -q -o -f
 $exn xautolock -corners 0-0- -cornersize 30 -time 1 -locker $HOME/scr/lockscreen
-$exn polybar i3
 $exn /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 $exn nm-applet
 $exn xfce4-power-manager
@@ -551,14 +554,16 @@ $exn pamac-tray
 $exn clipit
 $exn blueman-applet
 $exn compton
-$exn conky
 $ena ff-theme-util
 $ena fix_xcursor
-$exn feh --bg-center $home/pic/walls/current
 $exn mpd
 $exn shutter --min_at_startup
 $exn setxkbmap $kb
-$exs/i3listen-toggle
+$exs/reloadconfs
+#$exn polybar i3
+#$exn conky
+#$exn feh --bg-center $home/pic/walls/current
+#$exs/i3listen-toggle
 
 $ena mpv $home/$scrmus/A\ Tone\ His\ Self.mp3
 $ena notify-send 'i3 (re)loaded!' -i $home/$scrpic/i3white.png

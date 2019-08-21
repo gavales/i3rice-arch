@@ -4,8 +4,8 @@ blr=$(light -G)
 declare -i bl=$(printf "%.0f" $blr)
 
 case $1 in
-	inc) light -A 10 ;;
-	dec) light -U 10 ;;
+	inc) light -A 5 ;;
+	dec) light -U 5 ;;
 esac
 
 if [[ $bl -ge 100 ]]; then

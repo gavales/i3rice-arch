@@ -1,0 +1,71 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+# CREATED: Wed  7 Aug 14:04:15 BST 2019
+
+source $HOME/.config/user-dirs.dirs
+NOTEDIR=$XDG_DESKTOP_DIR
+DEFNOTES="NOTES\nWATCHLIST\nTODO"
+[[ -d $NOTEDIR ]] || mkdir $NOTEDIR
+IFS=$'\n'
+for i in $(echo -e $DEFNOTES); do
+	[[ -f $NOTEDIR/${i} ]] || touch "$NOTEDIR/${i}"
+done
+
+DELETE () { sed "/${i}/d" -i ${TYPE} ; }
+LIST () { ls $NOTEDIR ; }
+LIST-NOTES () { cat $HOME/$1 || echo "$1 doesn't exist." ; }
+
+CREATE () {
+	[[ -z ${TYPE} ]] || {
+		[[ -f ${TYPE} ]] || touch ${TYPE}
+		[[ -z ${NTRY} ]] && NTRY="$($HOME/scr/i3menu -o horizontal -w 800 -r 0 -c green)"
+		[[ -z ${NTRY} ]] || echo -e "${NTRY}" >> ${TYPE}
+	}
+}
+
+help () {
+	cat << 'EOB'
+                       ██
+                      ▒██
+   ███████   ██████  ██████  █████  ██████
+  ▒▒██▒▒▒██ ██▒▒▒▒██▒▒▒██▒  ██▒▒▒██▒▒██▒▒█
+   ▒██  ▒██▒██   ▒██  ▒██  ▒███████ ▒██ ▒
+   ▒██  ▒██▒██   ▒██  ▒██  ▒██▒▒▒▒  ▒██
+   ███  ▒██▒▒██████   ▒▒██ ▒▒██████▒███
+  ▒▒▒   ▒▒  ▒▒▒▒▒▒     ▒▒   ▒▒▒▒▒▒ ▒▒▒
+
+ Usage
+ -----
+
+ noter                ┼ Create defaults:
+                      │   NOTE_DIR = $HOME/Desktop
+                      │   NOTE_TYPE = OTHER|NOTES|
+                      │     WATCHLIST|TODO
+ noter -h             ┼ Print this help
+ noter -t [NOTE_TYPE] ┼ Type of note to create,
+                      │   one of the files in the
+                      │   NOTE_DIR
+ noter -e [ENTRY]     ┼ Entry to add to the note
+ noter -d [ENTRY]     ┼ Delete entry in note file
+ noter -g [NOTE_TYPE] ┼ List all entries in note file
+ noter -l             ┼ List all note files
+ noter -D [NOTE_TYPE] ┼ Delete NOTE_TYPE in
+                      │   NOTE_DIR
+
+EOB
+}
+
+while getopts :e:t:d:D:g:hl opts; do
+	case $opts in
+		h) help && exit                                  ;;
+		t) TYPE="${NOTEDIR}/${OPTARG}"                   ;;
+		e) NTRY="$(echo ${OPTARG} | sed "s/_/\n\ \ /g")" ;;
+		d) DELETE "${OPTARG}" && exit                    ;;
+		D) rm -rf "$NOTEDIR/$OPTARG" && exit             ;;
+		g) LIST-NOTES "${OPTARG}" && exit                ;;
+		l) LIST && exit                                  ;;
+	esac
+done
+
+CREATE
