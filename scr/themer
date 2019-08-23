@@ -217,6 +217,21 @@ getvar () {
 		|| cat $ALR | $HOME/scr/i3menu -r $(cat $ALR | wc -l) -w 400
 }
 
+newtheme () {
+	NTHM="${TDR}/${1}"
+	echo "# vim:ft=perl" > $NTHM
+	echo "Enter accent colour..."
+	read ACC
+	echo "Enter background colour..."
+	read BG0
+	echo "Enter foreground colour..."
+	read FG0
+	echo "acc       $ACC" >> $NTHM
+	echo "bg0       $BG0" >> $NTHM
+	echo "fg0       $FG0" >> $NTHM
+	echo "Theme ${NTHM##*/} created"
+}
+
 help () {
 cat << 'EOB'
     ██   ██
@@ -295,11 +310,12 @@ cat << 'EOB'
 EOB
 }
 
-while getopts :c:x:a:v:ulh opts; do
+while getopts :c:x:a:v:n:ulh opts; do
 	case $opts in
 		h) help                    && exit ;;
 		u) updatelist              && exit ;;
 		v) getvar "${OPTARG}"      && exit ;;
+		n) newtheme "${OPTARG}"    && exit ;;
 		l) list                    && exit ;;
 		c) change-current $OPTARG  && exit ;;
 		x) scr="$OPTARG"                   ;;
