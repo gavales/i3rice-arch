@@ -10,10 +10,10 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # >>>> MAIN
-set $font1 CMU Typewriter Text
+set $font1 Luxi Mono
 set $font2 FontAwesome
 set $font3 monaco
-set $fonts 12
+set $fonts 11
 
 font pango:$font1,$font2 $fonts
 

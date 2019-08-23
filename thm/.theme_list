@@ -1,18 +1,19 @@
-fg bg acc name
-<span background="#f3cf91">   </span><span background="#37302A">   </span><span background="#80362B">   </span> altiplano
-<span background="#fcf7f9">   </span><span background="#31121f">   </span><span background="#b44a70">   </span> apple
-<span background="#fafaf8">   </span><span background="#002635">   </span><span background="#14747e">   </span> atlas
-<span background="#f5cce1">   </span><span background="#17101e">   </span><span background="#FA6496">   </span> blossom
-<span background="#e5c7c7">   </span><span background="#0d090c">   </span><span background="#9D758A">   </span> castelmezzano
-<span background="#fffff2">   </span><span background="#282A36">   </span><span background="#FF6E67">   </span> dracula
-<span background="#282A36">   </span><span background="#ffffde">   </span><span background="#FF6E67">   </span> dracula_light
-<span background="#F8F8F2">   </span><span background="#323F4E">   </span><span background="#6498EF">   </span> ephemeral
-<span background="#ebdbb2">   </span><span background="#282828">   </span><span background="#458588">   </span> gruvbox
-<span background="#282828">   </span><span background="#fbf1c7">   </span><span background="#689d6a">   </span> gruvbox_light
-<span background="#f8f8f8">   </span><span background="#222D31">   </span><span background="#1ABB9B">   </span> manjaro
-<span background="#303030">   </span><span background="#f6f6f4">   </span><span background="#b46b7d">   </span> nikes
-<span background="#ccc5b9">   </span><span background="#100e16">   </span><span background="#9C8974">   </span> pywal
-<span background="#161c16">   </span><span background="#f9efe9">   </span><span background="#DC8E69">   </span> redrock1
-<span background="#f3bdab">   </span><span background="#090D10">   </span><span background="#EE6653">   </span> scarletibis
-<span background="#fdf6e3">   </span><span background="#002b36">   </span><span background="#268bd2">   </span> solarized
-<span background="#002b36">   </span><span background="#fdf6e3">   </span><span background="#2aa198">   </span> solarized_light
+
+<span background="#80362B">   </span> <span foreground="#f3cf91" background="#37302A"> altiplano </span>
+<span background="#b44a70">   </span> <span foreground="#fcf7f9" background="#31121f"> apple </span>
+<span background="#14747e">   </span> <span foreground="#fafaf8" background="#002635"> atlas </span>
+<span background="#FA6496">   </span> <span foreground="#f5cce1" background="#17101e"> blossom </span>
+<span background="#9D758A">   </span> <span foreground="#e5c7c7" background="#0d090c"> castelmezzano </span>
+<span background="#FF6E67">   </span> <span foreground="#fffff2" background="#282A36"> dracula </span>
+<span background="#FF6E67">   </span> <span foreground="#282A36" background="#ffffde"> dracula_light </span>
+<span background="#6498EF">   </span> <span foreground="#F8F8F2" background="#323F4E"> ephemeral </span>
+<span background="#458588">   </span> <span foreground="#ebdbb2" background="#282828"> gruvbox </span>
+<span background="#689d6a">   </span> <span foreground="#282828" background="#fbf1c7"> gruvbox_light </span>
+<span background="#356584">   </span> <span foreground="#47413E" background="#CDCBCD"> i3 </span>
+<span background="#1ABB9B">   </span> <span foreground="#f8f8f8" background="#222D31"> manjaro </span>
+<span background="#b46b7d">   </span> <span foreground="#303030" background="#f6f6f4"> nikes </span>
+<span background="#9C8974">   </span> <span foreground="#ccc5b9" background="#100e16"> pywal </span>
+<span background="#DC8E69">   </span> <span foreground="#161c16" background="#f9efe9"> redrock1 </span>
+<span background="#EE6653">   </span> <span foreground="#f3bdab" background="#090D10"> scarletibis </span>
+<span background="#268bd2">   </span> <span foreground="#fdf6e3" background="#002b36"> solarized </span>
+<span background="#2aa198">   </span> <span foreground="#002b36" background="#fdf6e3"> solarized_light </span>

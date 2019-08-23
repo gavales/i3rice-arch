@@ -1,49 +1,48 @@
-name      atlas
-wallpaper waterfall-fog-mountains
-tint      #14747e
-fg0       #fafaf8
-acc       #14747e
-bg0       #002635
-red       #f08e48
-grn       #7fc06e
-ylw       #ffcc1b
-blu       #14747e
-gnt       #9a70a4
-cyn       #5dd7b9
-font      CMUTypewriterText
-guifont   CMU Typewriter Text
-size      12
+name      i3
+wallpaper SawtoothNationalRecreationAreaUSA
+acc       #356584
+fg0       #CDCBCD
+bg0       #282423
+guifont   Luxi Mono
+font      LuxiMono
+polyfont  CMU Typewriter Text
+size      11
 rofifsize 14
 gtk       Standard-light
 gtk-icon  DamaDamas
 cursor    Bibata_Dark_Red
 conky_loc1 top_left
 conky_loc2 bottom_right
+red       #cc241d
+grn       #98971a
+ylw       #d79921
+gnt       #b16286
+blu       #458588
+cyn       #689d6a
 orange    #d65d0e
-fg3       #bebebc
-fg2       #d2d2d0
-fg1       #e6e6e4
-acf       #87b7bb
-acb       #0a4d59
-bg1       #143a49
-bg2       #284e5d
-bg3       #3c6271
-fg0RGB    250, 250, 248
-fg1RGB    230, 230, 228
-fg2RGB    210, 210, 208
-fg3RGB    190, 190, 188
-bg0RGB    0, 38, 53
-bg1RGB    20, 58, 73
-bg2RGB    40, 78, 93
-bg3RGB    60, 98, 113
-accRGB    20, 116, 126
-acfRGB    135, 183, 187
-acbRGB    10, 77, 89
-tintRGB    20, 116, 126
-redRGB    240, 142, 72
-grnRGB    127, 192, 110
-ylwRGB    255, 204, 27
-bluRGB    20, 116, 126
-gntRGB    154, 112, 164
-cynRGB    93, 215, 185
+fg3       #918f91
+fg2       #a5a3a5
+fg1       #b9b7b9
+acf       #8097a8
+acb       #2e4453
+bg1       #3c3837
+bg2       #504c4b
+bg3       #64605f
+fg0RGB    205, 203, 205
+fg1RGB    185, 183, 185
+fg2RGB    165, 163, 165
+fg3RGB    145, 143, 145
+bg0RGB    40, 36, 35
+bg1RGB    60, 56, 55
+bg2RGB    80, 76, 75
+bg3RGB    100, 96, 95
+accRGB    53, 101, 132
+acfRGB    128, 151, 168
+acbRGB    46, 68, 83
+redRGB    204, 36, 29
+grnRGB    152, 151, 26
+ylwRGB    215, 153, 33
+gntRGB    177, 98, 134
+bluRGB    69, 133, 136
+cynRGB    104, 157, 106
 orangeRGB    214, 93, 14

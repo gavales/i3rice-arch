@@ -1,12 +1,12 @@
 conky.config = {
 	alignment = 'bottom_right',
 	background = true,
-	color2 = '14747e',
-	color3 = 'fafaf8',
+	color2 = '356584',
+	color3 = 'CDCBCD',
 	cpu_avg_samples = 2,
-	default_color = 'fafaf8',
+	default_color = 'CDCBCD',
 	double_buffer = true,
-	font = 'CMU Typewriter Text:bold:size=12',
+	font = 'Luxi Mono:bold:size=11',
 	gap_x = 25,
 	gap_y = 13,
 	minimum_width = 300,
@@ -18,7 +18,7 @@ conky.config = {
 	use_xft = true,
 }
 conky.text = [[
-${voffset 1}${color2}${font CMU Typewriter Text:bold:oblique:size=50}Watchlist
-${voffset -75}${color}${font CMU Typewriter Text:bold:size=16}
+${voffset 1}${color2}${font Luxi Mono:bold:oblique:size=50}Watchlist
+${voffset -75}${color}${font Luxi Mono:bold:size=16}
 ${exec cat $HOME/dtp/WATCHLIST}
 ]]

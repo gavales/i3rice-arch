@@ -5,11 +5,11 @@
 # requires dmenu-manjaro
 
 # >>>> vars
-i3BRDR=$(i3-msg -t get_config | grep '$fw \[class="^.*"\] border' | awk '{print $NF}')
-[[ -n ${i3BRDR} ]] && BRDR=${i3BRDR} || BRDR=${_BRDR}
 rofiDir="$HOME/.config/rofi"
-COLOR=blue THM=vertical _TTLBR=26 TTLBR=26 _BRDR=2 PRMT=" " MODE="menu"
-LNS="15" LOC="0" WDTH="500" HGTH=" " XOFFSET="0" YOFFSET="0" fs=" "
+COLOR=blue THM=vertical TTLBR=26 BRDR=2 PRMT=" " MODE="menu"
+LNS="-no-fixed-num-lines"
+SLNS="-lines 15" LOC="2" WDTH="500"
+HGTH=" " XOFFSET="0" YOFFSET="0" fs=" "
 wnloc=$(xdotool getactivewindow getwindowgeometry | grep 'Position' | awk '{print $2}')
 wngeo=$(xdotool getactivewindow getwindowgeometry | grep 'Geometry' | awk '{print $2}')
 wnX=${wnloc%,*} wnY=${wnloc#*,} wnW=${wngeo%x*} wnH=${wngeo#*x}
@@ -30,17 +30,14 @@ dmenu () { dmenu_run $dmloc $dmthm -w $(expr $wnW + $BRDR + $BRDR) -h $TTLBR ; }
 
 menu () {
 	rofi -dmenu -p "${PRMT}" $fs -theme $THM -monitor ${mon:7} -location $LOC \
-		-lines $LNS -width $WDTH -xoffset $XOFFSET -yoffset $YOFFSET \
-		-theme-str "#window { $HGTH }" \
-		-theme-str "#horibox { children: [ prompt, entry, listview ]; }" \
-		-markup-rows
+		$LNS -width $WDTH -xoffset $XOFFSET -yoffset $YOFFSET \
+		-theme-str "#window { $HGTH }" -markup-rows
 }
 
 start () {
 	rofi -show drun -p "${PRMT}" $fs -theme $THM -monitor ${mon:7} -location $LOC \
-		-lines $LNS -width $WDTH -xoffset $XOFFSET -yoffset $YOFFSET \
-		-theme-str "#window { $HGTH }" \
-		-theme-str "#horibox { children: [ prompt, entry, listview ]; }"
+		$SLNS -width $WDTH -xoffset $XOFFSET -yoffset $YOFFSET \
+		-theme-str "#window { $HGTH }"
 }
 
 help () {
@@ -93,7 +90,7 @@ while getopts :p:P:l:x:y:g:c:w:o:r:edstmfh opts; do
 		w) WDTH="${OPTARG}" ;;
 		g) HGTH="height: ${OPTARG};" ;;
 		o) THM="${OPTARG}" ;;
-		r) LNS="${OPTARG}" ;;
+		r) LNS="-lines ${OPTARG}" SLNS="-lines ${OPTARG}" ;;
 		e) [[ $THM == "vertical" ]] \
 				&& HGTH=$(echo \
 				"((${wnH}*100)/$scH)+((($TTLBR+$TTLBR/2)*100)/$scH)" | bc) \
@@ -102,7 +99,7 @@ while getopts :p:P:l:x:y:g:c:w:o:r:edstmfh opts; do
 			LOC=1 WDTH="$(expr $wnW + $BRDR + $BRDR)"
 			XOFFSET="$(expr $wnX - $BRDR - $BRDR)" YOFFSET="$(expr $wnY - $TTLBR)" ;;
 		d) MODE="dmenu" ;;
-		s) MODE="start" && LNS=15 ;;
+		s) MODE="start" ;;
 		t) [[ $THM == "horizontal" ]] && LNS="15"
 			LOC=1 WDTH="$(expr $wnW + $BRDR + $BRDR)"
 			XOFFSET="$(expr $wnX - $BRDR - $BRDR)" YOFFSET="$(expr $wnY - $TTLBR)" ;;

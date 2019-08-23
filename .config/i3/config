@@ -10,10 +10,10 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # >>>> MAIN
-set $font1 CMU Typewriter Text
+set $font1 Luxi Mono
 set $font2 FontAwesome
 set $font3 monaco
-set $fonts 12
+set $fonts 11
 
 font pango:$font1,$font2 $fonts
 
@@ -86,22 +86,22 @@ set $ws10 10
 
 # //// COLORS
 
-set $bg3 #3c6271
-set $bg2 #284e5d
-set $bg1 #143a49
-set $bg0 #002635
-set $acb #0a4d59
-set $acc #14747e
-set $acf #87b7bb
-set $fg0 #fafaf8
-set $fg1 #e6e6e4
-set $fg2 #d2d2d0
-set $fg3 #bebebc
-set $red #f08e48
-set $grn #7fc06e
-set $ylw #ffcc1b
-set $gnt #9a70a4
-set $cyn #5dd7b9
+set $bg3 #64605f
+set $bg2 #504c4b
+set $bg1 #3c3837
+set $bg0 #282423
+set $acb #2e4453
+set $acc #356584
+set $acf #8097a8
+set $fg0 #CDCBCD
+set $fg1 #b9b7b9
+set $fg2 #a5a3a5
+set $fg3 #918f91
+set $red #cc241d
+set $grn #98971a
+set $ylw #d79921
+set $gnt #b16286
+set $cyn #689d6a
 set $t   ff
 
 # //// APPS

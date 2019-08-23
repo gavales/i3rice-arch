@@ -2,7 +2,7 @@
 
 DEF=gruvbox_light
 main () {
-	echo "fg bg acc name" > .theme_list
+	echo "" > .theme_list
 	thms=$(ls -l | grep -v "^total" | awk '{print $NF}')
 	for i in $thms; do
 		ffg0=$(cat ${i} | sed '/^fg0/!d;s/[^ ]* *//')
@@ -14,8 +14,8 @@ main () {
 		[[ $fg0 =~ "$" ]] && fg0=$(cat $DEF | sed "/^"${fg0/\$/}\ "/!d;s/[^ ]* *//")
 		[[ $acc =~ "$" ]] && acc=$(cat $DEF | sed "/^"${acc/\$/}\ "/!d;s/[^ ]* *//")
 		[[ $bg0 =~ "$" ]] && bg0=$(cat $DEF | sed "/^"${bg0/\$/}\ "/!d;s/[^ ]* *//")
-		echo "<span background=\"$fg0\">   </span><span background=\"$bg0\">   </span>\
-<span background=\"$acc\">   </span> $i" >> .theme_list
+		echo "<span background=\"$acc\">   </span> \
+<span foreground=\"$fg0\" background=\"$bg0\"> $i </span>" >> .theme_list
 	done
 }
 

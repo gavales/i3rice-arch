@@ -195,15 +195,19 @@ updatelist () { cd ${TDR} && bash .themelist ; }
 list () { ls ${TDR} | grep -v '^total' | awk '{print $NF}' ; }
 
 gui-change () {
-	THM=$(cat ${TDR}/.theme_list | $HOME/scr/i3menu -p \
-		"Choose theme " -w 350 -r $(cat ${TDR}/.theme_list | wc -l) | awk '{print $NF}')
+	THM=$(cat ${TDR}/.theme_list | $HOME/scr/i3menu -p "Choose theme " \
+		-w 350 -r $(cat ${TDR}/.theme_list | wc -l))
+	THM=${THM% *}
+	THM=${THM##* }
+	echo $THM
+	notify-send "Chosen theme is $THM" -i "~/scrpic/theme.png"
 	cd ${TDR}
 	if [[ -z ${THM} ]]; then
-		notify-send "No theme chosen"   -i "~/scrpic/theme.png" && exit
+		notify-send "No theme chosen"    -i "~/scrpic/theme.png" && exit
 	elif [[ ! -f ${THM} ]]; then
-		notify-send "Theme don't exist" -i "~/scrpic/theme.png" && exit
+		notify-send "Theme don't exist"  -i "~/scrpic/theme.png" && exit
 	else
-		notify-send "Theme exists"      -i "~/scrpic/themepic.png"
+		notify-send "Theme exists"       -i "~/scrpic/themepic.png"
 		ln -sf ${THM} ${CUR}
 	fi
 }

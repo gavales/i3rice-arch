@@ -1,5 +1,6 @@
 #!/bin/bash
 
 killall conky
-conky -c $HOME/.conky/system
-conky -c $HOME/.conky/notes
+for i in $(ls | grep -v reload | grep -v ^template_); do
+	conky -c $i
+done

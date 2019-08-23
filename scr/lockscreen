@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+PID=$(pidof i3lock)
 IMG=$(readlink -f ~/pic/i3wallpaper/current)
 bg0=$($HOME/scr/themer -v "bg0 ") fg0=$($HOME/scr/themer -v "fg0 ")
 acc=$($HOME/scr/themer -v "acc ") grn=$($HOME/scr/themer -v "grn ")
@@ -20,6 +21,7 @@ W="${red}${t}"  # wrong
 V="${grn}${t}"  # verifying
 
 #--indicator \
+[[ -z $PID ]] && \
 i3lock \
 	-f \
 	-p default \

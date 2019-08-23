@@ -1,9 +1,9 @@
 #!/bin/bash
 TMR="$HOME/scr/themer"
 WPP=$($TMR -v wallpaper)
-TNT="-t $($TMR -v "tint ")"
+TNT="$($TMR -v "tint ")"
 [[ -n $WPP ]] || WPP=$($TMR -v "acc ")
-[[ -n $TNT ]] || TNT=" "
+[[ -n $TNT ]] && TINT="-t $TNT" || TINT=" "
 $HOME/scr/i3wallpaper -w "$WPP" $TNT
 $TMR -x xrs-reload   -a $HOME/xrs
 $TMR -x i3concat     -a $HOME/.config/i3
