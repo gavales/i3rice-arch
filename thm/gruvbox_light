@@ -1,11 +1,13 @@
 # vim:ft=perl
 name      gruvbox_light
-wallpaper SawtoothNationalRecreationAreaUSA
+wallpaper sawtooth
 guifont   Luxi Mono
 font      LuxiMono
 polyfont  CMU Typewriter Text
 #font      CMUTypewriterText
 #guifont   CMU Typewriter Text
+ltimex    1
+ltimey    90
 size      11
 rofifsize 14
 gtk       Standard-light

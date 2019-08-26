@@ -1,8 +1,11 @@
 name      i3
-wallpaper SawtoothNationalRecreationAreaUSA
+wallpaper i3-manjaro
+tint      #356584
+ltimex    41
+ltimey    69
 acc       #356584
 fg0       #CDCBCD
-bg0       #282423
+bg0       #302f30
 guifont   Luxi Mono
 font      LuxiMono
 polyfont  CMU Typewriter Text
@@ -24,21 +27,22 @@ fg3       #918f91
 fg2       #a5a3a5
 fg1       #b9b7b9
 acf       #8097a8
-acb       #2e4453
-bg1       #3c3837
-bg2       #504c4b
-bg3       #64605f
+acb       #32495a
+bg1       #444344
+bg2       #585758
+bg3       #6c6b6c
 fg0RGB    205, 203, 205
 fg1RGB    185, 183, 185
 fg2RGB    165, 163, 165
 fg3RGB    145, 143, 145
-bg0RGB    40, 36, 35
-bg1RGB    60, 56, 55
-bg2RGB    80, 76, 75
-bg3RGB    100, 96, 95
+bg0RGB    48, 47, 48
+bg1RGB    68, 67, 68
+bg2RGB    88, 87, 88
+bg3RGB    108, 107, 108
 accRGB    53, 101, 132
 acfRGB    128, 151, 168
-acbRGB    46, 68, 83
+acbRGB    50, 73, 90
+tintRGB    53, 101, 132
 redRGB    204, 36, 29
 grnRGB    152, 151, 26
 ylwRGB    215, 153, 33

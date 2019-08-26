@@ -9,7 +9,7 @@ SCR=$(xdpyinfo | grep 'name of display:' | awk '{print $2}')
 SCR=${SCR/:/}
 RES=$(xdpyinfo  | grep 'dimensions:' | awk '{print $2}')
 FNT=$($HOME/scr/themer -v "font ")
-XP=41 YP=69
+XP=%%ltimex%% YP=%%ltimey%%
 XRES=${RES%x*} YRES=${RES#*x}
 X=$(echo "(${XRES}*${XP})/100" | bc) Y=$(echo "(${YRES}*${YP})/100" | bc)
 t="ff"

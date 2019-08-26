@@ -1,6 +1,6 @@
 
 
-URxvt.font:                 xft:fontname:size=fontsize
+URxvt.font:                 xft:fontname:size=fontsize, xft:FontAwesome:size=9
 
 URxvt*fading:               0
 URxvt*depth:                0

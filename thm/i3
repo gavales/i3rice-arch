@@ -1,7 +1,10 @@
 # vim:ft=perl
 name      i3
-wallpaper SawtoothNationalRecreationAreaUSA
-#tint      $acc
+wallpaper i3-manjaro
+tint      $acc
+ltimex    41
+ltimey    69
 acc       #356584
 fg0       #CDCBCD
-bg0       #282423
+#bg0       #282423
+bg0       #302f30

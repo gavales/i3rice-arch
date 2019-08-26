@@ -1,5 +1,7 @@
               <b><big>i3</big></b>
-wallpaper SawtoothNationalRecreationAreaUSA
+wallpaper i3-manjaro
+ltimex    41
+ltimey    69
 guifont   Luxi Mono
 font      LuxiMono
 polyfont  CMU Typewriter Text
@@ -10,9 +12,10 @@ gtk-icon  DamaDamas
 cursor    Bibata_Dark_Red
 conky_loc1 top_left
 conky_loc2 bottom_right
+<span foreground="#CDCBCD" background="#356584"><b>tint	</b>rgb(53, 101, 132)	#356584 </span>
 <span foreground="#CDCBCD" background="#356584"><b>acc	</b>rgb(53, 101, 132)	#356584 </span>
 <span foreground="#CDCBCD" background="#CDCBCD"><b>fg0	</b>rgb(205, 203, 205)	#CDCBCD </span>
-<span foreground="#CDCBCD" background="#282423"><b>bg0	</b>rgb(40, 36, 35)	#282423 </span>
+<span foreground="#CDCBCD" background="#302f30"><b>bg0	</b>rgb(48, 47, 48)	#302f30 </span>
 <span foreground="#CDCBCD" background="#cc241d"><b>red	</b>rgb(204, 36, 29)	#cc241d </span>
 <span foreground="#CDCBCD" background="#98971a"><b>grn	</b>rgb(152, 151, 26)	#98971a </span>
 <span foreground="#CDCBCD" background="#d79921"><b>ylw	</b>rgb(215, 153, 33)	#d79921 </span>
@@ -24,7 +27,7 @@ conky_loc2 bottom_right
 <span foreground="#CDCBCD" background="#a5a3a5"><b>fg2	</b>rgb(165, 163, 165)	#a5a3a5 </span>
 <span foreground="#CDCBCD" background="#b9b7b9"><b>fg1	</b>rgb(185, 183, 185)	#b9b7b9 </span>
 <span foreground="#CDCBCD" background="#8097a8"><b>acf	</b>rgb(128, 151, 168)	#8097a8 </span>
-<span foreground="#CDCBCD" background="#2e4453"><b>acb	</b>rgb(46, 68, 83)	#2e4453 </span>
-<span foreground="#CDCBCD" background="#3c3837"><b>bg1	</b>rgb(60, 56, 55)	#3c3837 </span>
-<span foreground="#CDCBCD" background="#504c4b"><b>bg2	</b>rgb(80, 76, 75)	#504c4b </span>
-<span foreground="#CDCBCD" background="#64605f"><b>bg3	</b>rgb(100, 96, 95)	#64605f </span>
+<span foreground="#CDCBCD" background="#32495a"><b>acb	</b>rgb(50, 73, 90)	#32495a </span>
+<span foreground="#CDCBCD" background="#444344"><b>bg1	</b>rgb(68, 67, 68)	#444344 </span>
+<span foreground="#CDCBCD" background="#585758"><b>bg2	</b>rgb(88, 87, 88)	#585758 </span>
+<span foreground="#CDCBCD" background="#6c6b6c"><b>bg3	</b>rgb(108, 107, 108)	#6c6b6c </span>

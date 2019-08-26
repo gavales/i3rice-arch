@@ -101,6 +101,7 @@ change-current () {
 
 set-wall () {
 	feh --bg-center $CURR
+	polybar-msg hook i3wallpaper 1
 	echo "${CRLN##*/}"
 }
 
@@ -126,7 +127,11 @@ delete () {
 
 rename () {
 	NWNM="$1"
-	[[ -n $NWNM ]] && mv "$CRLN" "${CRLN%/*}/${NWNM}"
+	[[ -n $1 ]] && {
+#		notify-send $1
+		cd $NORM && mv "${CRLN##*/}" "${1}"
+		cd $BLUR && mv "${CRLN##*/}" "${1}"
+		}
 }
 
 help () {
@@ -156,11 +161,12 @@ cat << 'EOB'
  i3wallpaper -h             ┼ Print this help
  i3wallpaper -w [PATH|PREV| ┼ Wallpaper to set 
                 NEXT|RANDOM │
-                   NAME]    │
+                  |NAME]    │
  i3wallpaper -t [HEX COLOR] ┼ Tint color of wallpaper
  i3wallpaper -a [DIRECTORY] ┼ Add walls from DIRECTORY
  i3wallpaper -l             ┼ List available wallpapers
  i3wallpaper -b             ┼ Toggle blur
+ i3wallpaper -r [NAME]      ┼ Rename current wallpaper
  i3wallpaper -d             ┼ Remove wallpaper from
                             │   WALL_DIR/(normal|blur)
  
@@ -183,7 +189,7 @@ while getopts :w:t:a:d:r:lbh opts; do
 		t) TNT="${OPTARG}"             ;;
 		a) ADD="${OPTARG}"             ;;
 		d) delete "${OPTARG}" && exit  ;;
-		d) rename "${OPTARG}" && exit  ;;
+		r) rename "${OPTARG}" && exit  ;;
 		l) list && exit                ;;
 		b) BLURT=TRUE                  ;;
 		h) help && exit                ;;

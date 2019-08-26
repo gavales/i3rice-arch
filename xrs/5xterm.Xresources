@@ -1,9 +1,9 @@
 
 
-XTerm*background:			cwhtl
-XTerm*foreground:			cblkl
-! XTerm*pointerColor:		ccynd
-XTerm*faceName:				fontname
-XTerm*faceSize:				16
-! XTerm*reverseVideo:		on
-XTerm*selectToClipboard:	true
+XTerm*background:        cwhtl
+XTerm*foreground:        cblkl
+! XTerm*pointerColor:    ccynd
+XTerm*faceName:          fontname
+XTerm*faceSize:          16
+! XTerm*reverseVideo:    on
+XTerm*selectToClipboard: true

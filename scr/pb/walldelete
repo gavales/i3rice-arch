@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+
+CONFIRM=$(echo -e "Yes\nNo" | $HOME/scr/i3menu -y 0 -m -c red)
+
+[[ $CONFIRM == "YES" ]] && $HOME/scr/i3wallpaper -d ""
+
+$HOME/scr/i3wallpaper -w NEXT
+polybar-msg hook i3wallpaper 1

@@ -2,7 +2,9 @@
 
 # OA: Gavin Vales
 
-i3wall=$HOME/scr/i3wallpaper
-NAME=$(~/scr/i3menu -r 1 -c white)
+NAME=$(echo "" | $HOME/scr/i3menu -m -L 0 -x 65 -y -10 -c black)
 
-$i3wall -r "$NAME"
+$HOME/scr/i3wallpaper -r "$NAME"
+$HOME/scr/i3wallpaper -w "$NAME"
+
+polybar-msg hook i3wallpaper 1

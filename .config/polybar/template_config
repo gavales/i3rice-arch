@@ -23,6 +23,7 @@ tr = #000000ff
 acc = #@@acc@@
 bg0 = #@@bg0@@
 acb = #@@acb@@
+acf = #@@acf@@
 fg0 = #@@fg0@@
 ylw = #@@ylw@@
 gnt = #@@gnt@@
@@ -62,7 +63,7 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = %%polyfont%%:style=Semibold Oblique:size=12;3
+font-0 = %%polyfont%%:style=Bold Oblique:size=12;3
 font-1 = FontAwesome5Free:style=Solid:size=15;3
 font-2 = FontAwesome5Brands:style=Solid:size=15;3
 
@@ -86,7 +87,7 @@ tray-background = %%acc%%
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-modules-left = start td ws xkeyboard
+modules-left = start td ws i3 xkeyboard i3wallpaper
 modules-center = 
 modules-right = media disk memory cpu temperature nm backlight pulseaudio battery
 
@@ -151,7 +152,7 @@ content = %{T1}%{T-}
 click-left = ~/scr/i3menu -s -c white -l 1
 click-middle = ~/scr/xtheme
 click-right = ~/scr/keybindingsmenu launch
-content-background = ${colors.fg0}
+content-background = ${colors.acf}
 content-foreground = ${colors.bg0}
 content-padding = 2
 
@@ -159,7 +160,7 @@ content-padding = 2
 type = custom/text
 content = %{T1}%{T-}
 click-left = ~/scr/i3menu -s -y 50 -x 10 -c white -l 1
-content-background = ${colors.fg0}
+content-background = ${colors.acf}
 content-foreground = ${colors.bg0}
 content-padding = 3
 
@@ -208,7 +209,7 @@ format-padding = 1
 [module/td]
 type = custom/script
 exec = bash ~/scr/pb/td
-format-background = ${colors.fg0}
+format-background = ${colors.acf}
 format-foreground = ${colors.bg0}
 format-padding = 1
 interval = 1
@@ -339,7 +340,7 @@ initial = 1
 click-left = ~/scr/nightmodetog
 scroll-up = "light -A 10 && polybar-msg hook backlight 1"
 scroll-down = "light -U 10 && polybar-msg hook backlight 1"
-format-background = ${colors.fg0}
+format-background = ${colors.acf}
 format-foreground = ${colors.bg0}
 format-padding = 0
 
@@ -350,7 +351,7 @@ initial = 1
 click-left = ~/scr/nightmodetog
 scroll-up   = "light -A 2 && polybar-msg hook backlight 1"
 scroll-down = "light -U 2 && polybar-msg hook backlight 1"
-format-background = ${colors.fg0}
+format-background = ${colors.acf}
 format-foreground = ${colors.bg0}
 format-padding = 1
 
@@ -360,7 +361,7 @@ format-volume = <label-volume>
 label-volume-padding = 1
 label-volume = %{T1}%{T-} %percentage%
 ;label-volume-foreground = ${root.foreground}
-label-volume-background = ${colors.fg0}
+label-volume-background = ${colors.acf}
 label-volume-foreground = ${colors.bg0}
 label-muted = %{T1}%{T-} --
 label-muted-foreground = ${colors.fg0}
@@ -394,23 +395,23 @@ label-discharging-padding = 1
 format-full-padding = 1
 format-full-prefix-padding = 1
 format-full-foreground = ${colors.bg0}
-format-full-background = ${colors.fg0}
+format-full-background = ${colors.acf}
 format-full-prefix-foreground = ${colors.bg0}
-format-full-prefix-background = ${colors.fg0}
-label-charging-background = ${colors.fg0}
+format-full-prefix-background = ${colors.acf}
 label-charging-foreground = ${colors.bg0}
-label-discharging-background = ${colors.fg0}
+label-charging-background = ${colors.acf}
 label-discharging-foreground = ${colors.bg0}
+label-discharging-background = ${colors.acf}
 format-discharging-padding = 1
 format-discharging-prefix-padding = 1
 format-discharging-foreground = ${colors.bg0}
-format-discharging-background = ${colors.fg0}
+format-discharging-background = ${colors.acf}
 format-discharging-prefix-foreground = ${colors.bg0}
-format-discharging-prefix-background = ${colors.fg0}
+format-discharging-prefix-background = ${colors.acf}
 format-charging-padding-foreground = ${colors.bg0}
-format-charging-padding-background = ${colors.fg0}
+format-charging-padding-background = ${colors.acf}
 format-discharging-padding-foreground = ${colors.bg0}
-format-discharging-padding-background = ${colors.fg0}
+format-discharging-padding-background = ${colors.acf}
 format-charging = <animation-charging><label-charging>
 format-charging-underline = ${colors.bg0}
 format-discharging = <ramp-capacity> <label-discharging>
@@ -423,14 +424,51 @@ ramp-capacity-2 = %{T1}%{T-}
 ramp-capacity-3 = %{T1}%{T-}
 ramp-capacity-4 = %{T1}%{T-}
 ramp-capacity-foreground = ${colors.bg0}
-ramp-capacity-background = ${colors.fg0}
+ramp-capacity-background = ${colors.acf}
 animation-charging-0 = %{T1}%{T-}
 animation-charging-1 = %{T1}%{T-}
 animation-charging-2 = %{T1}%{T-}
 animation-charging-3 = %{T1}%{T-}
 animation-charging-4 = %{T1}%{T-}
 animation-charging-foreground = ${colors.bg0}
-animation-charging-background = ${colors.fg0}
+animation-charging-background = ${colors.acf}
 animation-charging-framerate = 500
+
+[module/bspwm]
+type = internal/bspwm
+label-focused            = %index%
+label-focused-background = ${colors.acc}
+label-focused-underline  = ${colors.acc}
+label-focused-padding    = 1
+label-occupied           = %index%
+label-occupied-padding   = 1
+label-urgent             = %index%!
+label-urgent-background  = ${colors.red}
+label-urgent-padding     = 1
+label-empty              = %index%
+label-empty-foreground   = ${colors.fg0}
+label-empty-padding      = 1
+
+[module/i3]
+type = internal/i3
+format = <label-mode>
+index-sort = true
+wrapping-scroll = false
+label-mode-padding       = 1
+label-mode-foreground    = ${colors.bg0}
+label-mode-background    = ${colors.ylw}
+label-focused            = %index%
+label-focused-background = ${module/bspwm.label-focused-background}
+label-focused-underline  = ${module/bspwm.label-focused-underline}
+label-focused-padding    = ${module/bspwm.label-focused-padding}
+label-unfocused          = %index%
+label-unfocused-padding  = ${module/bspwm.label-occupied-padding}
+label-visible            = %index%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline  = ${self.label-focused-underline}
+label-visible-padding    = ${self.label-focused-padding}
+label-urgent             = %index%
+label-urgent-background  = ${module/bspwm.label-urgent-background}
+label-urgent-padding     = ${module/bspwm.label-urgent-padding}
 
 ; vim:ft=dosini

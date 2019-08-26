@@ -19,16 +19,16 @@ endif
 
 let g:colors_name='mine'
 
-let s:black           = { "gui": "#282423", "cterm": "232" }
-let s:medium_gray     = { "gui": "#2e4453", "cterm": "243" }
+let s:black           = { "gui": "#302f30", "cterm": "232" }
+let s:medium_gray     = { "gui": "#32495a", "cterm": "243" }
 let s:white           = { "gui": "#CDCBCD", "cterm": "15"  }
 let s:actual_white    = { "gui": "#CDCBCD", "cterm": "231" }
-let s:subtle_black    = { "gui": "#3c3837", "cterm": "236" }
-let s:light_black     = { "gui": "#504c4b", "cterm": "235" }
-let s:lighter_black   = { "gui": "#3c3837", "cterm": "239" }
+let s:subtle_black    = { "gui": "#444344", "cterm": "236" }
+let s:light_black     = { "gui": "#585758", "cterm": "235" }
+let s:lighter_black   = { "gui": "#444344", "cterm": "239" }
 let s:light_gray      = { "gui": "#b9b7b9", "cterm": "248" }
 let s:lighter_gray    = { "gui": "#a5a3a5", "cterm": "251" }
-let s:lightest_gray   = { "gui": "#2e4453", "cterm": "255" }
+let s:lightest_gray   = { "gui": "#32495a", "cterm": "255" }
 let s:pink            = { "gui": "#cc241d", "cterm": "9"   }
 let s:dark_red        = { "gui": "#cc241d", "cterm": "1"   }
 let s:light_red       = { "gui": "#cc241d", "cterm": "1"   }

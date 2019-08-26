@@ -1,6 +1,6 @@
 #!/bin/bash
 
 killall conky
-for i in $(ls | grep -v reload | grep -v ^template_); do
-	conky -c $i
+for i in $(ls | grep ^template_); do
+	conky -c ${i/template_/} &>/dev/null &
 done

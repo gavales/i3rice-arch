@@ -1,10 +1,10 @@
 #!/bin/bash
 TMR="$HOME/scr/themer"
 WPP=$($TMR -v wallpaper)
-TNT="$($TMR -v "tint ")"
+TNT="$($TMR -v 'tint ')"
 [[ -n $WPP ]] || WPP=$($TMR -v "acc ")
 [[ -n $TNT ]] && TINT="-t $TNT" || TINT=" "
-$HOME/scr/i3wallpaper -w "$WPP" $TNT
+$HOME/scr/i3wallpaper -w "$WPP" $TINT
 $TMR -x xrs-reload   -a $HOME/xrs
 $TMR -x i3concat     -a $HOME/.config/i3
 $TMR -x pb-reload    -a $HOME/.config/polybar
@@ -17,6 +17,7 @@ $TMR -a $HOME/.config/rofi
 $TMR -a $HOME/.config/vis/colors
 $TMR -a $HOME/.config/mpv
 $TMR -a $HOME/.config/qutebrowser
+$TMR -a $HOME/scr
 $TMR -a $HOME/scr/.unused
 $TMR -a $HOME/plt/css
 $HOME/scr/i3listen-toggle

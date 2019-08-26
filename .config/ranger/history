@@ -1,12 +1,3 @@
-shell convert  %f  -fill "#002b36"  -tint 200 tint_darker.png
-shell convert  %f  -fill "#689d6a"  -tint 200 tint_darker.png
-shell convert  %f  -fill "#689d6a"  -tint 100 tint_darker.png
-shell convert  %f  -fill "#fbf1c7"  -tint 100 tint_darker.png
-rename (720P - mp4) Tactical+Force.mov
-rename (2011) Tactical+Force.mov
-rename (2011) Tactical Force.mov
-rename pics
-mkdir walls
 normal
 mkdir normal
 rename LisbonPortugal1920x1080.jpg
@@ -48,3 +39,12 @@ rename openvid
 shell readlink -f %f
 rename 
 open_with vim
+rename i3menu_old
+rename i3menu
+rename walldelete
+open_with gvim
+open_with ~/scropengvim
+open_with ~/scr/opengvim
+rename template_lockscreen_
+rename template_lockscreen
+rename manjaro-mountain.png
