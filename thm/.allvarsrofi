@@ -6,7 +6,8 @@ guifont   Luxi Mono
 font      LuxiMono
 polyfont  CMU Typewriter Text
 size      11
-rofifsize 14
+rxvtsize  12
+rofifsize 13
 gtk       Standard-light
 gtk-icon  DamaDamas
 cursor    Bibata_Dark_Red

@@ -49,9 +49,17 @@ add-wall () {
 }
 
 add () {
+	[[ -d $1 ]] || {
+		echo "Directory doesn't exist."
+		exit
+		}
 	cd "$1"
+	count=0
+	total=$(ls | wc -l)
+	echo -ne "Adding...\n"
 	IFS=$'\n'
 	for i in $(find -type f); do
+		count=$((count + 1))
 		SRC="$i"
 		SRC="${SRC#*/}"
 		TRG="${i#*/}"
@@ -65,8 +73,7 @@ add () {
 		TRG="${TRG/ /}"
 		TRG="${TRG/ /}"
 		TRG="${TRG/ /}"
-		echo "
-    ${1}/$SRC --> $TRG"
+		echo -ne "\r${count}/${total} $TRG\r"
 		[[ ! -f ${NORM}/${TRG} ]] && convert "${SRC}" \
 			-resize "${MX}x${MY}^" \
 			-gravity center \
@@ -187,7 +194,7 @@ while getopts :w:t:a:d:r:lbh opts; do
 	case $opts in
 		w) WPP="${OPTARG}" WPPACTUAL="${OPTARG}" ;;
 		t) TNT="${OPTARG}"             ;;
-		a) ADD="${OPTARG}"             ;;
+		a) add "${OPTARG}" && exit     ;;
 		d) delete "${OPTARG}" && exit  ;;
 		r) rename "${OPTARG}" && exit  ;;
 		l) list && exit                ;;
@@ -195,8 +202,6 @@ while getopts :w:t:a:d:r:lbh opts; do
 		h) help && exit                ;;
 	esac
 done
-
-[[ -n $ADD ]] && add "$ADD" && exit
 
 if [[ -n $WPP ]]; then
 	[[ $WPP =~ "#" ]]      && echo "Background colour is" && colour && exit

@@ -1,5 +1,5 @@
 
 
-#define fontname %%font%%
-#define fontsize 15
-#define fontsize2 15
+#define fontname  %%font%%
+#define fontsize  %%rxvtsize%%
+#define fontsize2 %%rxvtsize%%

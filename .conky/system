@@ -31,8 +31,8 @@ $color2${top name 5}$alignr$color${top cpu 5}%
 
 ${voffset 1}${color2}${font Luxi Mono:bold:oblique:size=50}Weather
 ${voffset -75}${color}${font Luxi Mono:bold:size=16}
-${exec curl -s http://wttr.in/sou?format=%22%l:+%C+%t+%w+%p%22}
-${exec curl -s http://wttr.in/goi?format=%22%l:+%C+%t+%w+%p%22}
+${execi -1 curl -s http://wttr.in/sou?format=%22%l:+%C+%t+%w+%p%22}
+${execi -1 curl -s http://wttr.in/goi?format=%22%l:+%C+%t+%w+%p%22}
 
 ${voffset 1}${color2}${font Luxi Mono:bold:oblique:size=50}TODO
 ${voffset -75}${color}${font Luxi Mono:bold:size=16}
