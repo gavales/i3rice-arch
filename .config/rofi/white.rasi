@@ -1,9 +1,9 @@
 * {
 accent: #CDCBCD;
-bg2:    #282423;
-bg1:    #3c3837;
-fg2:    #b9b7b9;
-fg1:    #CDCBCD;
+bg1:    #282423;
+bg2:    #3c3837;
+fg2:    #CDCBCD;
+fg1:    #b9b7b9;
 redish: #cc241d;
 font1: "LuxiMono Bold Oblique 14";
 }

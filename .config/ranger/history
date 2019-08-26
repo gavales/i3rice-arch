@@ -5,7 +5,6 @@ shell convert  %f  -fill "#fbf1c7"  -tint 100 tint_darker.png
 rename (720P - mp4) Tactical+Force.mov
 rename (2011) Tactical+Force.mov
 rename (2011) Tactical Force.mov
-open_with vim
 rename pics
 mkdir walls
 normal
@@ -48,3 +47,4 @@ rename openvideo
 rename openvid
 shell readlink -f %f
 rename 
+open_with vim

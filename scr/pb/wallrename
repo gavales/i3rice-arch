@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+
+i3wall=$HOME/scr/i3wallpaper
+NAME=$(~/scr/i3menu -r 1 -c white)
+
+$i3wall -r "$NAME"

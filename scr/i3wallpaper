@@ -20,7 +20,8 @@ COLS="${WDIR}/cols"
 NWFD="$NORM"
 CURR="${WDIR}/current"
 WHT="${WDIR}/white.jpg"
-CRLN="$(readlink -f $CURR)" HIST="${WDIR}/.history"
+CRLN="$(readlink -f $CURR)"
+HIST="${WDIR}/.history"
 MONDIM=$(xdpyinfo | grep dimensions: | awk '{print $2}')
 MX=${MONDIM%x*}
 MY=${MONDIM#*x}
@@ -116,10 +117,16 @@ history () {
 }
 
 delete () {
-	rm -rf ${NORM}/${1}
-	rm -rf ${BLUR}/${1}
-	[[ ! -f ${NORM}/${1} ]] && echo "Deleted ${NORM}/${1}"
-	[[ ! -f ${BLUR}/${1} ]] && echo "Deleted ${BLUR}/${1}"
+	[[ -n ${1} ]] && DEL="${1}" || DEL="${CRLN##*/}"
+	rm -rf ${NORM}/${DEL}
+	rm -rf ${BLUR}/${DEL}
+	[[ ! -f ${NORM}/${DEL} ]] && echo "Deleted ${NORM}/${DEL}"
+	[[ ! -f ${BLUR}/${DEL} ]] && echo "Deleted ${BLUR}/${DEL}"
+}
+
+rename () {
+	NWNM="$1"
+	[[ -n $NWNM ]] && mv "$CRLN" "${CRLN%/*}/${NWNM}"
 }
 
 help () {
@@ -170,12 +177,13 @@ cat << 'EOB'
 EOB
 }
 
-while getopts :w:t:a:d:lbh opts; do
+while getopts :w:t:a:d:r:lbh opts; do
 	case $opts in
 		w) WPP="${OPTARG}" WPPACTUAL="${OPTARG}" ;;
 		t) TNT="${OPTARG}"             ;;
 		a) ADD="${OPTARG}"             ;;
 		d) delete "${OPTARG}" && exit  ;;
+		d) rename "${OPTARG}" && exit  ;;
 		l) list && exit                ;;
 		b) BLURT=TRUE                  ;;
 		h) help && exit                ;;

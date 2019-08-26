@@ -1,24 +1,22 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # OA: Gavin Vales
-# CREATED: Sat 16 Mar 20:08:40 GMT 2019
-# requires dmenu-manjaro
+# CREATED: Mon 26 Aug 17:35:49 BST 2019
+#iconFu="<span face='Font Awesome 5 Free'>&#xf240;</span>"
 
-# >>>> vars
-rofiDir="$HOME/.config/rofi"
-COLOR=blue THM=vertical TTLBR=26 BRDR=2 PRMT=" " MODE="menu"
-LNS="-no-fixed-num-lines"
-SLNS="-lines 15" LOC="2" WDTH="500"
-HGTH=" " XOFFSET="0" YOFFSET="0" fs=" "
-wnloc=$(xdotool getactivewindow getwindowgeometry | grep 'Position' | awk '{print $2}')
-wngeo=$(xdotool getactivewindow getwindowgeometry | grep 'Geometry' | awk '{print $2}')
-wnX=${wnloc%,*} wnY=${wnloc#*,} wnW=${wngeo%x*} wnH=${wngeo#*x}
+RFDIR="$HOME/.config/rofi"
+CLR=black THM=vertical TTLBR=25 BRDR=2 PRMT=" " MODE="menu"
+LOC="0" WDTH="500" HGTH=" " XFS="0" YFS="0" fs=" "
+WNLC=$(xdotool getactivewindow getwindowgeometry | \
+	grep 'Position' | awk '{print $2}')
+WNGO=$(xdotool getactivewindow getwindowgeometry | \
+	grep 'Geometry' | awk '{print $2}')
+wnX=${WNLC%,*} wnY=${WNLC#*,} wnW=${WNGO%x*} wnH=${WNGO#*x}
 sc=$(xdpyinfo | grep dimensions | awk '{print $2}') scW=${sc%x*} scH=${sc#*x}
 msX=$(xdotool getmouselocation | awk '{print $1}')
 msY=$(xdotool getmouselocation | awk '{print $2}')
 mon=$(xdotool getmouselocation | awk '{print $3}')
 
-# >>>> dmenu
 bg0=$(xrdb -query | grep '*color8' | awk '{print $NF}')
 fg0=$(xrdb -query | grep '*color15' | awk '{print $NF}')
 acc=$(xrdb -query | grep '*color9' | awk '{print $NF}')
@@ -28,36 +26,24 @@ dmthm="-fn "${fnt}:size=11" -nb "$bg0" -nf "$fg0" -sf "$bg0" -sb "$acc""
 dmloc="-x $(expr $wnX - $BRDR - $BRDR) -y $(expr $wnY - $TTLBR)"
 dmenu () { dmenu_run $dmloc $dmthm -w $(expr $wnW + $BRDR + $BRDR) -h $TTLBR ; }
 
-menu () {
-	rofi -dmenu -p "${PRMT}" $fs -theme $THM -monitor ${mon:7} -location $LOC \
-		$LNS -width $WDTH -xoffset $XOFFSET -yoffset $YOFFSET \
-		-theme-str "#window { $HGTH }" -markup-rows
-}
-
-start () {
-	rofi -show drun -p "${PRMT}" $fs -theme $THM -monitor ${mon:7} -location $LOC \
-		$SLNS -width $WDTH -xoffset $XOFFSET -yoffset $YOFFSET \
-		-theme-str "#window { $HGTH }"
-}
-
 help () {
 cat << 'EOB'
-  ██  ████
- ▒▒  █▒▒▒ █
+  ██ ██████
+ ▒▒ ▒█▒▒▒▒█
   ██▒    ▒█ ██████████   █████  ███████  ██   ██
- ▒██   ███ ▒▒██▒▒██▒▒██ ██▒▒▒██▒▒██▒▒▒██▒██  ▒██
- ▒██  ▒▒▒ █ ▒██ ▒██ ▒██▒███████ ▒██  ▒██▒██  ▒██
+ ▒██   ████▒▒██▒▒██▒▒██ ██▒▒▒██▒▒██▒▒▒██▒██  ▒██
+ ▒██  ▒▒▒▒█ ▒██ ▒██ ▒██▒███████ ▒██  ▒██▒██  ▒██
  ▒██ █   ▒█ ▒██ ▒██ ▒██▒██▒▒▒▒  ▒██  ▒██▒██  ▒██
- ▒██▒ ████  ███ ▒██ ▒██▒▒██████ ███  ▒██▒▒██████
- ▒▒  ▒▒▒▒  ▒▒▒  ▒▒  ▒▒  ▒▒▒▒▒▒ ▒▒▒   ▒▒  ▒▒▒▒▒▒
+ ▒██▒██████ ███ ▒██ ▒██▒▒██████ ███  ▒██▒▒██████
+ ▒▒ ▒▒▒▒▒▒ ▒▒▒  ▒▒  ▒▒  ▒▒▒▒▒▒ ▒▒▒   ▒▒  ▒▒▒▒▒▒
  	-- Rofi wrapper script
  
  Usage
  -----
  i3menu -h                ┼ Print this help
- i3menu -e                ┼ Fill active window
  i3menu -d                ┼ Dmenu mode
  i3menu -s                ┼ Application menu mode
+ i3menu -W                ┼ Fill active window
  i3menu -t                ┼ Spawn on i3wm title-bar
  i3menu -m                ┼ Spawn at mouse location
  i3menu -f                ┼ Fullscreen mode, working on this
@@ -71,43 +57,58 @@ cat << 'EOB'
  i3menu -x [INTEGER]      ┼ Horizontal Offset
  i3menu -y [INTEGER]      ┼ Vertical Offset
  i3menu -w [INTEGER]      ┼ Rofi width
- i3menu -g [INTEGER<=100] ┼ Rofi height (XX% of screen)
+ i3menu -H [INTEGER<=100] ┼ Rofi height (XX% of screen)
  i3menu -o [vertical|     ┼ Vertical or horizontal
            horizontal]    │   (like dmenu)
- i3menu -r [INTEGER]      ┼ Number of vertical rows
+ i3menu -L [INTEGER]      ┼ Number of vertical rows
 
 EOB
 }
 
-while getopts :p:P:l:x:y:g:c:w:o:r:edstmfh opts; do
+start () {
+	[[ -n $LNS ]] && ROWS=$LNS || ROWS="15"
+	rofi -show drun -p "${PRMT}" $fs -theme $THM -monitor ${mon:7} \
+		-location $LOC -lines $ROWS -width $WDTH -xoffset $XFS -yoffset $YFS \
+		-theme-str "#window { $HGTH }"
+}
+
+menu () {
+	STDIN="$RFDIR/.i3menustdin"
+	cat /dev/stdin > $STDIN
+	[[ -n $LNS ]] && ROWS=$LNS || ROWS=$(cat $STDIN | wc -l)
+	cat $STDIN | rofi -dmenu -p "${PRMT}" $fs -theme $THM -monitor ${mon:7} \
+		-location $LOC -lines $ROWS -width $WDTH -xoffset $XFS -yoffset $YFS \
+		-theme-str "#window { $HGTH }" -markup-rows
+}
+
+while getopts :p:l:L:x:y:H:c:w:o:Wdstmfh opts; do
 	case $opts in
-		p) PRMT="${OPTARG}" ;;
-		P) PRTSTR="${OPTARG}" ;;
-		l) LOC="${OPTARG}" ;;
-		x) XOFFSET="$(expr $XOFFSET + $OPTARG)" ;;
-		y) YOFFSET="$(expr $YOFFSET + $OPTARG)" ;;
-		c) COLOR="${OPTARG}" ;;
-		w) WDTH="${OPTARG}" ;;
-		g) HGTH="height: ${OPTARG};" ;;
-		o) THM="${OPTARG}" ;;
-		r) LNS="-lines ${OPTARG}" SLNS="-lines ${OPTARG}" ;;
-		e) [[ $THM == "vertical" ]] \
+		p) PRMT="${OPTARG}"                                              ;;
+		l) LOC="${OPTARG}"                                               ;;
+		L) LNS="${OPTARG}"                                               ;;
+		x) XFS="$(expr $XFS + $OPTARG)"                                  ;;
+		y) YFS="$(expr $YFS + $OPTARG)"                                  ;;
+		c) CLR="${OPTARG}"                                               ;;
+		w) WDTH="${OPTARG}"                                              ;;
+		H) HGTH="height: ${OPTARG};"                                     ;;
+		o) THM="${OPTARG}"                                               ;;
+		W) [[ $THM == "vertical" ]] \
 				&& HGTH=$(echo \
 				"((${wnH}*100)/$scH)+((($TTLBR+$TTLBR/2)*100)/$scH)" | bc) \
 				&& HGTH="height: ${HGTH}%;"
 			[[ $THM == "horizontal" ]] && LNS="15"
 			LOC=1 WDTH="$(expr $wnW + $BRDR + $BRDR)"
-			XOFFSET="$(expr $wnX - $BRDR - $BRDR)" YOFFSET="$(expr $wnY - $TTLBR)" ;;
-		d) MODE="dmenu" ;;
-		s) MODE="start" ;;
+			XFS="$(expr $wnX - $BRDR - $BRDR)" YFS="$(expr $wnY - $TTLBR)" ;;
+		d) MODE="dmenu"                                                  ;;
+		s) MODE="start"                                                  ;;
 		t) [[ $THM == "horizontal" ]] && LNS="15"
 			LOC=1 WDTH="$(expr $wnW + $BRDR + $BRDR)"
-			XOFFSET="$(expr $wnX - $BRDR - $BRDR)" YOFFSET="$(expr $wnY - $TTLBR)" ;;
-		m) THM=vertical LOC=1 WDTH=300 XOFFSET="${msX:2}" YOFFSET="${msY:2}" ;;
-		f) THM=vertical LOC=0 fs="-fullscreen" ;;
-		h) help && exit ;;
+			XFS="$(expr $wnX - $BRDR - $BRDR)" YFS="$(expr $wnY - $TTLBR)" ;;
+		m) THM=vertical LOC=1 WDTH=300 XFS="${msX:2}" YFS="${msY:2}"     ;;
+		f) THM=vertical LOC=0 fs="-fullscreen"                           ;;
+		h) help && exit                                                  ;;
 	esac
 done
 
-cat $rofiDir/${COLOR}.rasi > $rofiDir/globals.rasi
+cat $RFDIR/${CLR}.rasi > $RFDIR/globals.rasi
 $MODE

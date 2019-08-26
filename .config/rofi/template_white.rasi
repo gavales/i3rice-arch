@@ -1,9 +1,9 @@
 * {
 accent: %%fg0%%;
-bg2:    %%bg0%%;
-bg1:    %%bg1%%;
-fg2:    %%fg1%%;
-fg1:    %%fg0%%;
+bg1:    %%bg0%%;
+bg2:    %%bg1%%;
+fg2:    %%fg0%%;
+fg1:    %%fg1%%;
 redish: %%red%%;
 font1: "%%font%% Bold Oblique %%rofifsize%%";
 }

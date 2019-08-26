@@ -1,0 +1,113 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: Sat 16 Mar 20:08:40 GMT 2019
+# requires dmenu-manjaro
+
+# >>>> vars
+rofiDir="$HOME/.config/rofi"
+COLOR=blue THM=vertical TTLBR=26 BRDR=2 PRMT=" " MODE="menu"
+LNS="-no-fixed-num-lines"
+SLNS="-lines 15" LOC="2" WDTH="500"
+HGTH=" " XOFFSET="0" YOFFSET="0" fs=" "
+wnloc=$(xdotool getactivewindow getwindowgeometry | grep 'Position' | awk '{print $2}')
+wngeo=$(xdotool getactivewindow getwindowgeometry | grep 'Geometry' | awk '{print $2}')
+wnX=${wnloc%,*} wnY=${wnloc#*,} wnW=${wngeo%x*} wnH=${wngeo#*x}
+sc=$(xdpyinfo | grep dimensions | awk '{print $2}') scW=${sc%x*} scH=${sc#*x}
+msX=$(xdotool getmouselocation | awk '{print $1}')
+msY=$(xdotool getmouselocation | awk '{print $2}')
+mon=$(xdotool getmouselocation | awk '{print $3}')
+
+# >>>> dmenu
+bg0=$(xrdb -query | grep '*color8' | awk '{print $NF}')
+fg0=$(xrdb -query | grep '*color15' | awk '{print $NF}')
+acc=$(xrdb -query | grep '*color9' | awk '{print $NF}')
+fnt=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
+fnt=${fnt%:*} fnt=${fnt##*:}
+dmthm="-fn "${fnt}:size=11" -nb "$bg0" -nf "$fg0" -sf "$bg0" -sb "$acc""
+dmloc="-x $(expr $wnX - $BRDR - $BRDR) -y $(expr $wnY - $TTLBR)"
+dmenu () { dmenu_run $dmloc $dmthm -w $(expr $wnW + $BRDR + $BRDR) -h $TTLBR ; }
+
+menu () {
+	rofi -dmenu -p "${PRMT}" $fs -theme $THM -monitor ${mon:7} -location $LOC \
+		$LNS -width $WDTH -xoffset $XOFFSET -yoffset $YOFFSET \
+		-theme-str "#window { $HGTH }" -markup-rows
+}
+
+start () {
+	rofi -show drun -p "${PRMT}" $fs -theme $THM -monitor ${mon:7} -location $LOC \
+		$SLNS -width $WDTH -xoffset $XOFFSET -yoffset $YOFFSET \
+		-theme-str "#window { $HGTH }"
+}
+
+help () {
+cat << 'EOB'
+  ██  ████
+ ▒▒  █▒▒▒ █
+  ██▒    ▒█ ██████████   █████  ███████  ██   ██
+ ▒██   ███ ▒▒██▒▒██▒▒██ ██▒▒▒██▒▒██▒▒▒██▒██  ▒██
+ ▒██  ▒▒▒ █ ▒██ ▒██ ▒██▒███████ ▒██  ▒██▒██  ▒██
+ ▒██ █   ▒█ ▒██ ▒██ ▒██▒██▒▒▒▒  ▒██  ▒██▒██  ▒██
+ ▒██▒ ████  ███ ▒██ ▒██▒▒██████ ███  ▒██▒▒██████
+ ▒▒  ▒▒▒▒  ▒▒▒  ▒▒  ▒▒  ▒▒▒▒▒▒ ▒▒▒   ▒▒  ▒▒▒▒▒▒
+ 	-- Rofi wrapper script
+ 
+ Usage
+ -----
+ i3menu -h                ┼ Print this help
+ i3menu -e                ┼ Fill active window
+ i3menu -d                ┼ Dmenu mode
+ i3menu -s                ┼ Application menu mode
+ i3menu -t                ┼ Spawn on i3wm title-bar
+ i3menu -m                ┼ Spawn at mouse location
+ i3menu -f                ┼ Fullscreen mode, working on this
+ i3menu -c [COLOR]        ┼ Accent color; the name of one of
+                          │   in the variable files in
+                          │   .config/rofi
+ i3menu -p [PROMPT]       ┼ Prompt
+ i3menu -l [LOCATION]     ┼ Rofi location:  1 2 3
+                          │                 8 0 4
+                          │                 7 6 5
+ i3menu -x [INTEGER]      ┼ Horizontal Offset
+ i3menu -y [INTEGER]      ┼ Vertical Offset
+ i3menu -w [INTEGER]      ┼ Rofi width
+ i3menu -g [INTEGER<=100] ┼ Rofi height (XX% of screen)
+ i3menu -o [vertical|     ┼ Vertical or horizontal
+           horizontal]    │   (like dmenu)
+ i3menu -r [INTEGER]      ┼ Number of vertical rows
+
+EOB
+}
+
+while getopts :p:P:l:x:y:g:c:w:o:r:edstmfh opts; do
+	case $opts in
+		p) PRMT="${OPTARG}" ;;
+		P) PRTSTR="${OPTARG}" ;;
+		l) LOC="${OPTARG}" ;;
+		x) XOFFSET="$(expr $XOFFSET + $OPTARG)" ;;
+		y) YOFFSET="$(expr $YOFFSET + $OPTARG)" ;;
+		c) COLOR="${OPTARG}" ;;
+		w) WDTH="${OPTARG}" ;;
+		g) HGTH="height: ${OPTARG};" ;;
+		o) THM="${OPTARG}" ;;
+		r) LNS="-lines ${OPTARG}" SLNS="-lines ${OPTARG}" ;;
+		e) [[ $THM == "vertical" ]] \
+				&& HGTH=$(echo \
+				"((${wnH}*100)/$scH)+((($TTLBR+$TTLBR/2)*100)/$scH)" | bc) \
+				&& HGTH="height: ${HGTH}%;"
+			[[ $THM == "horizontal" ]] && LNS="15"
+			LOC=1 WDTH="$(expr $wnW + $BRDR + $BRDR)"
+			XOFFSET="$(expr $wnX - $BRDR - $BRDR)" YOFFSET="$(expr $wnY - $TTLBR)" ;;
+		d) MODE="dmenu" ;;
+		s) MODE="start" ;;
+		t) [[ $THM == "horizontal" ]] && LNS="15"
+			LOC=1 WDTH="$(expr $wnW + $BRDR + $BRDR)"
+			XOFFSET="$(expr $wnX - $BRDR - $BRDR)" YOFFSET="$(expr $wnY - $TTLBR)" ;;
+		m) THM=vertical LOC=1 WDTH=300 XOFFSET="${msX:2}" YOFFSET="${msY:2}" ;;
+		f) THM=vertical LOC=0 fs="-fullscreen" ;;
+		h) help && exit ;;
+	esac
+done
+
+cat $rofiDir/${COLOR}.rasi > $rofiDir/globals.rasi
+$MODE
