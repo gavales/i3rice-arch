@@ -1,17 +1,3 @@
-normal
-mkdir normal
-rename LisbonPortugal1920x1080.jpg
-rename KatsuraRiverJapan 1920x1080.jpg
-rename blossom
-mkdir Apes
-rename (1968) Planet Of The Apes
-rename (1970) Beneath The Planet Of The Apes
-rename (1972) Conquest Of The Planet Of The Apes.mp4
-rename (1973) Battle For The Planet Of The Apes.mp4
-open_with 2
-mkdir blur
-shell feh --bg-center %f
-shell convert "%s" -blur 0x4 "%s"
 delete][]]]
 rename relax
 mkdir .layouts
@@ -48,3 +34,17 @@ open_with ~/scr/opengvim
 rename template_lockscreen_
 rename template_lockscreen
 rename manjaro-mountain.png
+rename Trigun: Badlands Rumble (DUB).mp4
+rename (2010) Trigun: Badlands Rumble (DUB).mp4
+rename (2010) Trigun: Badlands Rumble.mp4
+rename Way Out There.mp3
+mkdir CarterBurwell
+rename Carter Burwell
+rename Alien Planet.mkv
+rename (1988) Akira.mp4
+rename Synthspiria-30YearsLater-AnAKIRATribute.zip
+mkdir Synthspiria
+rename cover.jpg
+rename 30 Years Later - An AKIRA Tribute
+rename mpmpv
+rename mpmpd

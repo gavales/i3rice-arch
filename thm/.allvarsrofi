@@ -1,34 +1,20 @@
-              <b><big>i3</big></b>
-wallpaper i3-manjaro
-ltimex    41
-ltimey    69
-guifont   Luxi Mono
-font      LuxiMono
-polyfont  CMU Typewriter Text
-size      11
-rxvtsize  12
-rofifsize 13
-gtk       Standard-light
-gtk-icon  DamaDamas
-cursor    Bibata_Dark_Red
-conky_loc1 top_left
-conky_loc2 bottom_right
-<span foreground="#CDCBCD" background="#356584"><b>tint	</b>rgb(53, 101, 132)	#356584 </span>
-<span foreground="#CDCBCD" background="#356584"><b>acc	</b>rgb(53, 101, 132)	#356584 </span>
-<span foreground="#CDCBCD" background="#CDCBCD"><b>fg0	</b>rgb(205, 203, 205)	#CDCBCD </span>
-<span foreground="#CDCBCD" background="#302f30"><b>bg0	</b>rgb(48, 47, 48)	#302f30 </span>
-<span foreground="#CDCBCD" background="#cc241d"><b>red	</b>rgb(204, 36, 29)	#cc241d </span>
-<span foreground="#CDCBCD" background="#98971a"><b>grn	</b>rgb(152, 151, 26)	#98971a </span>
-<span foreground="#CDCBCD" background="#d79921"><b>ylw	</b>rgb(215, 153, 33)	#d79921 </span>
-<span foreground="#CDCBCD" background="#b16286"><b>gnt	</b>rgb(177, 98, 134)	#b16286 </span>
-<span foreground="#CDCBCD" background="#458588"><b>blu	</b>rgb(69, 133, 136)	#458588 </span>
-<span foreground="#CDCBCD" background="#689d6a"><b>cyn	</b>rgb(104, 157, 106)	#689d6a </span>
-<span foreground="#CDCBCD" background="#d65d0e"><b>orange	</b>rgb(214, 93, 14)	#d65d0e </span>
-<span foreground="#CDCBCD" background="#918f91"><b>fg3	</b>rgb(145, 143, 145)	#918f91 </span>
-<span foreground="#CDCBCD" background="#a5a3a5"><b>fg2	</b>rgb(165, 163, 165)	#a5a3a5 </span>
-<span foreground="#CDCBCD" background="#b9b7b9"><b>fg1	</b>rgb(185, 183, 185)	#b9b7b9 </span>
-<span foreground="#CDCBCD" background="#8097a8"><b>acf	</b>rgb(128, 151, 168)	#8097a8 </span>
-<span foreground="#CDCBCD" background="#32495a"><b>acb	</b>rgb(50, 73, 90)	#32495a </span>
-<span foreground="#CDCBCD" background="#444344"><b>bg1	</b>rgb(68, 67, 68)	#444344 </span>
-<span foreground="#CDCBCD" background="#585758"><b>bg2	</b>rgb(88, 87, 88)	#585758 </span>
-<span foreground="#CDCBCD" background="#6c6b6c"><b>bg3	</b>rgb(108, 107, 108)	#6c6b6c </span>
+              <b><big>manjaro</big></b>
+<span background="#1ABB9B">   </span><span foreground="#f8f8f8" background="#222D31"> tint #1ABB9B </span>	wallpaper manjaro-mountain
+<span background="#222D31">   </span><span foreground="#f8f8f8" background="#222D31"> bg0 #222D31 </span>	guifont   Luxi Mono
+<span background="#f8f8f8">   </span><span foreground="#f8f8f8" background="#222D31"> fg0 #f8f8f8 </span>	font      LuxiMono
+<span background="#1ABB9B">   </span><span foreground="#f8f8f8" background="#222D31"> acc #1ABB9B </span>	polyfont  CMU Typewriter Text
+<span background="#ab4642">   </span><span foreground="#f8f8f8" background="#222D31"> red #ab4642 </span>	ltimex    1
+<span background="#7E807E">   </span><span foreground="#f8f8f8" background="#222D31"> grn #7E807E </span>	ltimey    90
+<span background="#f7ca88">   </span><span foreground="#f8f8f8" background="#222D31"> ylw #f7ca88 </span>	size      11
+<span background="#1ABB9B">   </span><span foreground="#f8f8f8" background="#222D31"> blu #1ABB9B </span>	rxvtsize  12
+<span background="#ba8baf">   </span><span foreground="#f8f8f8" background="#222D31"> gnt #ba8baf </span>	rofifsize 13
+<span background="#7cafc2">   </span><span foreground="#f8f8f8" background="#222D31"> cyn #7cafc2 </span>	gtk       Standard-light
+<span background="#d65d0e">   </span><span foreground="#f8f8f8" background="#222D31"> orange #d65d0e </span>	gtk-icon  DamaDamas
+<span background="#bcbcbc">   </span><span foreground="#f8f8f8" background="#222D31"> fg3 #bcbcbc </span>	cursor    Bibata_Dark_Red
+<span background="#d0d0d0">   </span><span foreground="#f8f8f8" background="#222D31"> fg2 #d0d0d0 </span>	conky_loc1 top_left
+<span background="#e4e4e4">   </span><span foreground="#f8f8f8" background="#222D31"> fg1 #e4e4e4 </span>	conky_loc2 bottom_right
+<span background="#89d9c9">   </span><span foreground="#f8f8f8" background="#222D31"> acf #89d9c9 </span>	
+<span background="#1e7365">   </span><span foreground="#f8f8f8" background="#222D31"> acb #1e7365 </span>	
+<span background="#364145">   </span><span foreground="#f8f8f8" background="#222D31"> bg1 #364145 </span>	
+<span background="#4a5559">   </span><span foreground="#f8f8f8" background="#222D31"> bg2 #4a5559 </span>	
+<span background="#5e696d">   </span><span foreground="#f8f8f8" background="#222D31"> bg3 #5e696d </span>	

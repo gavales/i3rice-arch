@@ -10,26 +10,26 @@
 [colors]
 tr = #000000ff
 
-#acc = #99356584
-#bg0 =   #302f30
-#acb = #9932495a
-#fg0 =   #CDCBCD
-#ylw = #99d79921
-#gnt = #99b16286
-#red = #99cc241d
-#grn = #9998971a
-#cyn = #99689d6a
+#acc = #991ABB9B
+#bg0 =   #222D31
+#acb = #991e7365
+#fg0 =   #f8f8f8
+#ylw = #99f7ca88
+#gnt = #99ba8baf
+#red = #99ab4642
+#grn = #997E807E
+#cyn = #997cafc2
 
-acc = #356584
-bg0 = #302f30
-acb = #32495a
-acf = #8097a8
-fg0 = #CDCBCD
-ylw = #d79921
-gnt = #b16286
-red = #cc241d
-grn = #98971a
-cyn = #689d6a
+acc = #1ABB9B
+bg0 = #222D31
+acb = #1e7365
+acf = #89d9c9
+fg0 = #f8f8f8
+ylw = #f7ca88
+gnt = #ba8baf
+red = #ab4642
+grn = #7E807E
+cyn = #7cafc2
 
 [settings]
 screenchange-reload = true
@@ -71,7 +71,7 @@ tray-position = right
 tray-padding = 2
 tray-maxsize = 16
 tray-transparent = true
-tray-background = #356584
+tray-background = #1ABB9B
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -122,7 +122,7 @@ font-2 = FontAwesome5Brands:style=Solid:size=12;3
 
 tray-position = right
 tray-padding = 2
-tray-background = #356584
+tray-background = #1ABB9B
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -256,8 +256,6 @@ hook-0 = ~/scr/pb/media
 initial = 1
 click-left = ~/scr/i3media togg
 click-right = ~/scr/i3media stop
-scroll-up = ~/scr/i3media next
-scroll-down = ~/scr/i3media prev
 format-background = ${colors.acc}
 format-foreground = ${colors.bg0}
 format-padding = 2

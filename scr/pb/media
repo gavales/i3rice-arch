@@ -2,19 +2,22 @@
 
 mpris=$(pidof spotify)
 mpv=$(pidof mpv)
+BLDR="$HOME/scr/pb"
+CNTL=$HOME/scr/i3media
 
-blocksDir="$HOME/scr/pb"
+_P="%{A1:$CNTL prev:}%{T1} %{T-}%{A}"
+_N="%{A1:$CNTL next:}%{T1} %{T-}%{A}"
+_T="%{A1:$CNTL togg:}%{T1} %{T-}%{A}"
+_S="%{A1:$CNTL stop:}%{T1} %{T-}%{A}"
+_CONTROLS=" $_P$_T$_S$_N"
 
 clr=$(xrdb -query | grep '*color7' | awk '{print $NF}')
 
 if [[ -n $mpv ]]; then
-	mpvtitle="$(xdotool getwindowname $(xdotool search --class mpv))"
-	mpvlen=$(expr ${#mpvtitle} - 38)
-	mpvtitle=${mpvtitle%.*}
-	[[ ${#mpvtitle} -ge 35 ]] && mpvtitle=${mpvtitle:0:-${mpvlen}} && mpvtitle="${mpvtitle}..."
-	echo "%{T1}%{T-} ${mpvtitle}"
+	CRPL=mpmpv
 elif [[ -n $mpris ]]; then
-	$blocksDir/mpgui
+	CRPL=mpgui
 else
-	$blocksDir/mpcblk
+	CRPL=mpmpd
 fi
+echo "$(${BLDR}/${CRPL})$_CONTROLS"

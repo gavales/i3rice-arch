@@ -78,8 +78,8 @@ main () {
 
 if [[ -z $MRK ]]; then
 	$APP &>/dev/null &
-elif [[ $MKS == *"$MRK"* ]]; then
-	echo "mark $MRK exists, launching APP" && main
+elif [[ $MKS =~ "$MRK" ]]; then
+	echo "mark $MRK exists, launching $APP" && main
 else
 	case $MRK in
 		*3) echo "no $MRK, making $MRK" && lmk3 ;;

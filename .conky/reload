@@ -1,6 +1,6 @@
 #!/bin/bash
 
-killall conky
+killall -9 conky
 for i in $(ls | grep ^template_); do
 	conky -c ${i/template_/} &>/dev/null &
 done

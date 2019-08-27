@@ -25,7 +25,6 @@ rng       #d65d0e
 EOB
 exit
 }
-
 [[ -d $TDR ]] || mkdir $TDR
 [[ -f $DEF ]] || create_def
 
@@ -166,17 +165,21 @@ create-rofi-list () {
 	fg0=$(cat $ALL | sed "/^fg0\ /!d;s/[^ ]* *//")
 	bg0=$(cat $ALL | sed "/^bg0\ /!d;s/[^ ]* *//")
 	wpr=$(cat $ALL | sed '/^wallpaper/!d;s/[^ ]* *//')
+	CLRLIST=$TDR/.colorlist
+	VARLIST=$TDR/.varlist
 	[[ -n $wpr ]] || wpr=$(cat $ALL | sed '/^acc/!d;s/[^ ]* *//')
-	echo "              <b><big>$(cat $ALL | sed '/^name/!d;s/[^ ]* *//')</big></b>
-wallpaper $wpr" > $ALR
-	cat $ALL | sed "/^wallpaper/d;/^name/d;/#/d;/,/d" >> $ALR
+	echo "              <b><big>$(cat $ALL | sed '/^name/!d;s/[^ ]* *//')</big></b>" > $ALR
+	rm $CLRLIST
+	rm $VARLIST
+	echo "wallpaper $wpr" > $VARLIST
+	cat $ALL | sed "/^wallpaper/d;/^name/d;/#/d;/,/d" >> $VARLIST
 	IFS=$'\n'
 	for i in $(cat $ALL | grep '#'); do
 		var=$(echo $i | awk '{print $1}')
 		val=$(echo $i | sed "/^"$var"/!d;s/[^ ]* *//")
-		valRGB=$(cat $ALL | sed "/^"${var}"RGB/!d;s/[^ ]* *//")
-		echo "<span foreground=\"$fg0\" background=\"$val\"><b>$var	</b>rgb($valRGB)	$val </span>" >> $ALR
+		echo "<span background=\"$val\">   </span><span foreground=\"$fg0\" background=\"$bg0\"> $var $val </span>" >> $CLRLIST
 	done
+	paste $CLRLIST $VARLIST >> $ALR
 }
 
 apply-current () {
@@ -214,7 +217,7 @@ gui-change () {
 
 getvar () {
 	[[ -n $1 ]] && cat $ALL | sed "/^$1/!d;s/[^ ]* *//" \
-		|| cat $ALR | $HOME/scr/i3menu -r $(cat $ALR | wc -l) -w 400
+		|| cat $ALR | $HOME/scr/i3menu -w 600
 }
 
 newtheme () {

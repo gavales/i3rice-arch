@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+mpvtitle="$(xdotool getwindowname $(xdotool search --class mpv))"
+mpvlen=$(expr ${#mpvtitle} - 38)
+mpvtitle=${mpvtitle%.*}
+[[ ${#mpvtitle} -ge 35 ]] && mpvtitle=${mpvtitle:0:-${mpvlen}} && mpvtitle="${mpvtitle}..."
+echo "%{T1}%{T-} ${mpvtitle}"

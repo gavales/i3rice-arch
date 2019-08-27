@@ -6,42 +6,39 @@
 artist="${1}"
 album="${2}"
 
-echo " "
-echo "===================="
-echo "       Title"
-echo "===================="
-echo " "
+echo "
+==================================================
+Applying title...
+"
 
 for i in *.mp3 ; do
 	resto=${i%.*}
 	id3v2 -t "${resto}" "${i}"
-	echo "${i}"
+	echo -ne "$resto >>> ${i}"\\r
 done
 
 
 if [[ -n $artist ]]; then
-	echo " "
-	echo "===================="
-	echo "       Artist"
-	echo "===================="
-	echo " "
+	echo "
+==================================================
+Changing artist to $artist...
+"
 	for i in *.mp3 ; do
 		resto=${i%.*}
 		id3v2 -a "${artist}" "${i}"
-		echo "${i}"
+		echo -ne "${i}"\\r
 	done
 fi
 
 
 if [[ -n $album ]]; then
-	echo " "
-	echo "===================="
-	echo "       Album"
-	echo "===================="
-	echo " "
+	echo "
+==================================================
+Changing album name to $album...
+"
 	for i in *.mp3 ; do
 		resto=${i%.*}
 		id3v2 -A "${album}" "${i}"
-		echo "${i}"
+		echo -ne "${i}"\\r
 	done
 fi

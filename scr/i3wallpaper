@@ -56,7 +56,8 @@ add () {
 	cd "$1"
 	count=0
 	total=$(ls | wc -l)
-	echo -ne "Adding...\n"
+	echo "Adding...
+"
 	IFS=$'\n'
 	for i in $(find -type f); do
 		count=$((count + 1))
@@ -73,7 +74,7 @@ add () {
 		TRG="${TRG/ /}"
 		TRG="${TRG/ /}"
 		TRG="${TRG/ /}"
-		echo -ne "\r${count}/${total} $TRG\r"
+		echo -ne "${count}/${total} $TRG"\\r
 		[[ ! -f ${NORM}/${TRG} ]] && convert "${SRC}" \
 			-resize "${MX}x${MY}^" \
 			-gravity center \
@@ -81,6 +82,7 @@ add () {
 		[[ ! -f ${BLUR}/${TRG} ]] && convert "${NORM}/${TRG}" \
 			-blur $blr "${BLUR}/${TRG}"
 	done
+	exit
 }
 
 tint () {
@@ -108,7 +110,7 @@ change-current () {
 
 set-wall () {
 	feh --bg-center $CURR
-	polybar-msg hook i3wallpaper 1
+	polybar-msg hook i3wallpaper 1 &>/dev/null &
 	echo "${CRLN##*/}"
 }
 

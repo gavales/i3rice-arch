@@ -1,17 +1,17 @@
-! i3
-#define cwhtl #CDCBCD
-#define cwhtd #32495a
-#define credd #cc241d
-#define credl #cc241d
-#define cgrnd #98971a
-#define cgrnl #98971a
-#define cylwd #d79921
-#define cylwl #d79921
-#define cblud #356584
-#define cblul #356584
-#define cgntd #b16286
-#define cgntl #b16286
-#define ccynd #689d6a
-#define ccynl #689d6a
-#define cblkd #302f30
-#define cblkl #444344
+! manjaro
+#define cwhtl #f8f8f8
+#define cwhtd #1e7365
+#define credd #ab4642
+#define credl #ab4642
+#define cgrnd #7E807E
+#define cgrnl #7E807E
+#define cylwd #f7ca88
+#define cylwl #f7ca88
+#define cblud #1ABB9B
+#define cblul #1ABB9B
+#define cgntd #ba8baf
+#define cgntl #ba8baf
+#define ccynd #7cafc2
+#define ccynl #7cafc2
+#define cblkd #222D31
+#define cblkl #364145

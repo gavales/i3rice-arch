@@ -22,24 +22,24 @@ ${voffset 25}$color2${font %%guifont%%:bold:size=60}${time %R} \
 ${voffset -25}$color3${font %%guifont%%:bold:oblique:size=20}  $alignr${time %A}
 ${voffset -10}$color3${font %%guifont%%:bold:oblique:size=20}  $alignr${time %e %b %Y}
 
-${voffset -5}${color}CPU${font %%guifont%%:bold:size=16}$alignr$cpu%
-${voffset 5}${font %%guifont%%:bold:size=16}$color2${top name 1}$alignr$color${top cpu 1}%
+${voffset -5}${color}CPU${font %%guifont%%:bold:size=14}$alignr$cpu%
+${voffset 5}${font %%guifont%%:bold:size=14}$color2${top name 1}$alignr$color${top cpu 1}%
 $color2${top name 2}$alignr$color${top cpu 2}%
 $color2${top name 3}$alignr$color${top cpu 3}%
 $color2${top name 4}$alignr$color${top cpu 4}%
 $color2${top name 5}$alignr$color${top cpu 5}%
 
-${voffset 1}${color2}${font %%guifont%%:bold:oblique:size=50}Weather
-${voffset -75}${color}${font %%guifont%%:bold:size=16}
+${voffset 1}${color2}${font %%guifont%%:bold:oblique:size=40}Weather
+${voffset -65}${color}${font %%guifont%%:bold:size=14}
 ${execi -1 curl -s http://wttr.in/sou?format=%22%l:+%C+%t+%w+%p%22}
 ${execi -1 curl -s http://wttr.in/goi?format=%22%l:+%C+%t+%w+%p%22}
 
-${voffset 1}${color2}${font %%guifont%%:bold:oblique:size=50}TODO
-${voffset -75}${color}${font %%guifont%%:bold:size=16}
+${voffset 1}${color2}${font %%guifont%%:bold:oblique:size=40}TODO
+${voffset -65}${color}${font %%guifont%%:bold:size=14}
 ${exec cat $HOME/dtp/TODO}
 
-${voffset 1}${color2}${font %%guifont%%:bold:oblique:size=50}Notes
-${voffset -75}${color}${font %%guifont%%:bold:size=16}
+${voffset 1}${color2}${font %%guifont%%:bold:oblique:size=40}Notes
+${voffset -65}${color}${font %%guifont%%:bold:size=14}
 ${exec cat $HOME/dtp/NOTES}
 
 ]]

@@ -2,8 +2,8 @@ sw_volume: 62
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
 state: pause
-current: 0
-time: 111.566000
+current: 6
+time: 183.725000
 random: 1
 repeat: 1
 single: 0
@@ -12,14 +12,15 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/01 - Mambo de Machaguay.mp3
-1:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/03 - La Cumbia del Pacurro.mp3
-2:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/04 - Para Chachita.mp3
-3:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/06 - Meshkalina.mp3
-4:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/09 - Bailando en la Campiña.mp3
-5:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/11 - Me Siento Felíz.mp3
-6:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/12 - Toro Mata.mp3
-7:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/13 - El Zambito Rumbero.mp3
-8:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/14 - La Gallina.mp3
-9:Various Artists/Peru Maravilloso_ Vintage Latin, Tropical and Cumbia/15 - Los Fabulosos en Onda.mp3
+0:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 02 Speed Machine - Mechanized Dystopia.mp3
+1:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 03 Leslie Nayoko - Who is this Akira.mp3
+2:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 04 neon shudder - I Am Tetsuo.mp3
+3:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 06 Gregorio Franco - Seigyo No Sakkaku.mp3
+4:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 07 Volkor X - Beam.mp3
+5:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 08 Carbon Killer - Dark Side of the Road.mp3
+6:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 09 AWITW - Doll's Awakening.mp3
+7:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 11 Roex - Floyd.mp3
+8:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 12 Earslicker - Ride or Die.mp3
+9:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 13 Peter Zimmermann - Kaneda's Theme (Italo Disco Reprise).mp3
+10:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 14 Aerds - Flycruisor.mp3
 playlist_end
