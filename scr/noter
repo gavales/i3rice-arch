@@ -1,9 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # OA: Gavin Vales
 # CREATED: Wed  7 Aug 14:04:15 BST 2019
 
-source $HOME/.config/user-dirs.dirs
 NOTEDIR=$XDG_DESKTOP_DIR
 DEFNOTES="NOTES\nWATCHLIST\nTODO"
 [[ -d $NOTEDIR ]] || mkdir $NOTEDIR
@@ -14,12 +13,12 @@ done
 
 DELETE () { sed "/${i}/d" -i ${TYPE} ; }
 LIST () { ls $NOTEDIR ; }
-LIST-NOTES () { cat $HOME/$1 || echo "$1 doesn't exist." ; }
+LIST-NOTES () { cat $NOTEDIR/$1 || echo "$1 doesn't exist." ; }
 
 CREATE () {
 	[[ -z ${TYPE} ]] || {
 		[[ -f ${TYPE} ]] || touch ${TYPE}
-		[[ -z ${NTRY} ]] && NTRY="$($HOME/scr/i3menu -o horizontal -w 800 -r 0 -c green)"
+		[[ -z ${NTRY} ]] && NTRY="$(i3menu -o horizontal -w 800 -r 0 -c green)"
 		[[ -z ${NTRY} ]] || echo -e "${NTRY}" >> ${TYPE}
 	}
 }

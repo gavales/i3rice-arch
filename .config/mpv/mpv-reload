@@ -7,7 +7,7 @@ VID="$(ps -fp $(pgrep -d, -x mpv) -o command | \
 
 main () {
 	i3-msg [id="$MPV"] kill
-	bash $HOME/scr/mppipe "$VID"
+	"$VID"
 #	echo "$VID"
 #	i3-msg [id="$MPV"] focus
 #	xdotool key ctrl+r

@@ -2,6 +2,7 @@
 
 # OA: Gavin Vales
 # CREATED: Sun 27 Jan 13:52:24 GMT 2019
+source $HOME/.config/user-dirs.dirs
 
 mpris=$(pidof spotify)
 box=$(pidof rhythmbox)

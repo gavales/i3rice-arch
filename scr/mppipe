@@ -3,24 +3,24 @@
 # OA: Gavin Vales
 # CREATED: Sat 26 Jan 21:59:12 GMT 2019
 
-vid="$1"
+VID="$1"
 open="$(pidof mpv)"
 fifo="$HOME/mp_fifo"
 
-if [[ ${vid} =~ 'youtube.com' ]]; then
+if [[ ${VID} =~ 'youtube.com' ]]; then
 	if [[ -n ${open} ]]; then
-		echo "loadfile \"${vid}\"" append-play > "${fifo}"
+		echo "loadfile \"${VID}\"" append-play > "${fifo}"
 	else
 		rm "${fifo}"
 		mkfifo "${fifo}"
-		mpv --geometry=35%-10-10 --ytdl-format=bestvideo+bestaudio --input-file="${fifo}" "${vid}" &>/dev/null &
+		mpv --geometry=35%-10-10 --ytdl-format=bestvideo+bestaudio --input-file="${fifo}" "${VID}" &>/dev/null &
 	fi
 else
 	if [[ -n ${open} ]]; then
-		echo "loadfile \"${vid}\"" append-play > "${fifo}"
+		echo "loadfile \"${VID}\"" append-play > "${fifo}"
 	else
 		rm "${fifo}"
 		mkfifo "${fifo}"
-		mpv --input-file="${fifo}" "${vid}" &>/dev/null &
+		mpv --input-file="${fifo}" "${VID}" &>/dev/null &
 	fi
 fi

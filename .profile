@@ -4,3 +4,17 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 # fix "xdg-open fork-bomb" export your preferred browser from here
 export BROWSER=/usr/bin/surf
 export TERM=/usr/bin/urxvtc
+export PATH="$PATH:$HOME/scr"
+export PATH="$PATH:$HOME/anaconda2/bin:$HOME/anaconda3/bin"
+export SCR_DIR="$HOME/scr"
+export XRS_DIR="$HOME/xrs"
+export DRV_DIR="$HOME/Drive"
+export REPO_DIR="$HOME/git"
+export XDG_DESKTOP_DIR="$HOME/dtp"
+export XDG_DOWNLOAD_DIR="$HOME/dwn"
+export XDG_TEMPLATES_DIR="$HOME/plt"
+export XDG_PUBLICSHARE_DIR="$HOME/plc"
+export XDG_DOCUMENTS_DIR="$HOME/doc"
+export XDG_MUSIC_DIR="$HOME/mus"
+export XDG_PICTURES_DIR="$HOME/pic"
+export XDG_VIDEOS_DIR="$HOME/vid"

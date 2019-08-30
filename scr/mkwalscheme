@@ -3,31 +3,16 @@
 # OA: Gavin Vales
 # CREATED: Sun 16 Dec 18:22:14 GMT 2018
 
-TRG=$HOME/themes/pywal
+TRG=$HOME/thm/pywal
 wal -q -e -n -s -t -i "${1}"
 WALL="${1}"
 
 cd $thmDir
 
-name=${1/%.*}
+name=${1##*/}
+name=${name/%.*}
 name=${name/%(*}
-name=${name/1920x1080/}
-name=${name/,/}
-name=${name/,/}
-name=${name/,/}
-name=${name/ /}
-name=${name/ /}
-name=${name/ /}
-name=${name/ /}
-name=${name/ /}
-name=${name/ /}
-name=${name/ /}
-name=${name/ /}
-name=${name/ /}
-name=${name/ /}
-name=${name/ /}
-name=${name/ /}
-name=${name##*/}
+name=$(echo "$name" | sed "s/1920x1080//g;s/,//g;s/\ //g")
 echo "# vim:ft=perl" > $TRG
 echo "name      ${name}" >> $TRG
 echo "wallpaper ${name}" >> $TRG
@@ -44,8 +29,8 @@ s/color6/cyn/g;\
 /color7/d" \
 >> $TRG
 
-$HOME/scr/i3wallpaper -w "$WALL"
-$HOME/scr/themer -c pywal
-$HOME/scr/reloadconfs &>/dev/null &
-$HOME/scr/themer -x post-build-apply \
-                 -a /home/gavarch/numix-solarized-gtk-theme &>/dev/null &
+i3wallpaper -w "$WALL"
+themer -c pywal
+reloadconfs &>/dev/null &
+themer -x post-build-apply \
+       -a /home/gavarch/numix-solarized-gtk-theme &>/dev/null &

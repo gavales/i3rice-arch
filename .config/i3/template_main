@@ -10,8 +10,9 @@ set $wlw  bindsym --whole-window Mod4
 set $mlw  bindsym --whole-window Mod1
 set $exn  exec --no-startup-id
 set $exs  exec --no-startup-id ~/scr
+#set $exs  exec --no-startup-id ~/scr
 set $ena  exec_always --no-startup-id
-set $lch  exec ~/scr/i3launch
+set $lch  exec i3launch
 set $tf   title_format
 set $fw   for_window
 set $mk1  _W1
@@ -70,7 +71,7 @@ set $t   ff
 # //// APPS
 
 set $term      urxvtc
-set $edit      exec --no-startup-id ~/scr/opengvim
+set $edit      exec --no-startup-id ~/scr/openvim
 set $brow      google-chrome-beta
 set $viva      firefox
 set $gfm       thunar
@@ -115,7 +116,7 @@ client.background       $bg0
 # >>>> MOD1 BINDINGS
 # //// Misc
 
-$mod+Home           $exs/keybindingsmenu
+$mod+Home           $exn keybindingsmenu
 
 $mlw+button1        floating disable, $mvm3, [con_mark=$mk3] focus, focus child
                                                     
@@ -131,13 +132,13 @@ $mlw+Shift+button5  move right
 
 $mod+Escape         mode "SHUTDOWN"
 mode "SHUTDOWN" {
-	bindsym l $exs/i3exit lock, mode "default"
-	bindsym s $exs/i3exit suspend, mode "default"
-	bindsym u $exs/i3exit switch_user, mode "default"
-	bindsym e $exs/i3exit logout, mode "default"
-	bindsym h $exs/i3exit hibernate, mode "default"
-	bindsym r $exs/i3exit reboot, mode "default"
-	bindsym x $exs/i3exit shutdown, mode "default"
+	bindsym l $exn i3exit lock, mode "default"
+	bindsym s $exn i3exit suspend, mode "default"
+	bindsym u $exn i3exit switch_user, mode "default"
+	bindsym e $exn i3exit logout, mode "default"
+	bindsym h $exn i3exit hibernate, mode "default"
+	bindsym r $exn i3exit reboot, mode "default"
+	bindsym x $exn i3exit shutdown, mode "default"
 
 	#exit system mode: "Enter" or "Escape"
 	bindsym   Return mode "default"
@@ -145,13 +146,13 @@ mode "SHUTDOWN" {
 }
 
 $mod+space          focus mode_toggle
-$mod+Shift+space    $exs/i3flttg
+$mod+Shift+space    $exn i3flttg
 
 $mod+Ctrl+Right     workspace next
 
 $mod+Ctrl+Left      workspace prev
 
-bindsym Print       $exs/screenshot
+bindsym Print       $exn screenshot
 
 # //// Numbers
 
@@ -189,7 +190,7 @@ $mod+e              layout toggle tabbed split
 $mod+r              $lch '$term -name RSS -e newsboat' $mk2
 $mod+Shift+r        restart
 
-$mod+t              $exs/mkwalrando
+$mod+t              $exn mkwalrando
 
 $mod+y              resize shrink width 5 px or 5 ppt
 $mod+Shift+y        $lch '$brow --new-window --app=https://www.youtube.com/' $mk1
@@ -202,14 +203,14 @@ $mod+Shift+i        $lch '$brow --new-window --app=https://www.bbc.co.uk/iplayer
 
 $mod+o              resize grow width 5 px or 5 ppt
 
-$mod+p              $exs/i3media togg
-$mod+Shift+p        $exs/screenshot
+$mod+p              $exn i3media togg
+$mod+Shift+p        $exn screenshot
 
-$mod+bracketright   $exs/i3media next
+$mod+bracketright   $exn i3media next
 
-$mod+bracketleft    $exs/i3media prev
+$mod+bracketleft    $exn i3media prev
 
-$mod+backslash      $exs/i3media stop
+$mod+backslash      $exn i3media stop
 
 # //// 2nd Row
 
@@ -220,8 +221,8 @@ $mod+s              $lch '$term -name MUSIC -e ncmpcpp' $mk1 fl
 $mod+Shift+s        $lch 'spotify && xdotool search --sync --classname spotify set_window --class SPOTIFY' $mk1
 $mod+Ctrl+s         sticky toggle
 
-$mod+d              $exs/i3menu -s -l 0
-$mod+Shift+d        $exs/i3menu -d
+$mod+d              $exn i3menu -s -l 0
+$mod+Shift+d        $exn i3menu -d
 
 #$mod+f              $lch '$term -name MEDIA -e ranger' $mk2
 $mod+f              $lch thunar $mk2
@@ -230,19 +231,19 @@ $mod+Shift+f        fullscreen toggle
 $mod+g              split toggle
 $mod+Shift+g        $lch '$term -name GRIVE -e bash $home/$scr/grivesync' $mk2 fl
 
-$mod+h              $exs/i3viswiz left
-$mod+Shift+h        $exs/i3move left
+$mod+h              $exn i3viswiz left
+$mod+Shift+h        $exn i3move left
 
-$mod+j              $exs/i3viswiz down
-$mod+Shift+j        $exs/i3move down
+$mod+j              $exn i3viswiz down
+$mod+Shift+j        $exn i3move down
 
-$mod+k              $exs/i3viswiz up
-$mod+Shift+k        $exs/i3move up
+$mod+k              $exn i3viswiz up
+$mod+Shift+k        $exn i3move up
 
-$mod+l              $exs/i3viswiz right
-$mod+Shift+l        $exs/i3move right
+$mod+l              $exn i3viswiz right
+$mod+Shift+l        $exn i3move right
 
-$mod+semicolon      $exs/nightmodetog
+$mod+semicolon      $exn nightmodetog
 
 $mod+apostrophe     $exn redshift -x
 
@@ -257,7 +258,7 @@ $mod+z              $lch 'surf docs.google.com/document/u/0/' $mk3
 $mod+x              $lch 'surf docs.google.com/spreadsheets/u/0/' $mk3
 
 $mod+c              $lch $viva $mk3
-$mod+Shift+c        $exs/xtheme
+$mod+Shift+c        $exn xtheme
 
 $mod+v              $lch '$term -name VIS -e vis' $mk1
 $mod+Shift+v        $lch 'projectM-pulseaudio' $mk1
@@ -271,29 +272,31 @@ $mod+n              $lch '$brow --new-window --app=https://www.netflix.com/' $mk
 $mod+m              $lch 'surf docs.google.com/presentation/u/0/' $mk3
 $mod+Shift+m        $lch '$brow --new-window --app=https://play.google.com/movies/' $mk1
 
-$mod+comma          $exs/i3volume dec
+$mod+comma          $exn i3volume dec
 
-$mod+period         $exs/i3volume inc
+$mod+period         $exn i3volume inc
 
-$mod+slash          $exs/i3volume mute
+$mod+slash          $exn i3volume mute
 
 # >>>> MOD4 BINDINGS
 # //// Misc
 
-floating_modifier	$wni
+floating_modifier   $wni
 
 # //// Numbers
 
-#$win+0              $exs/i3flttg
+#$win+0              $exn i3flttg
+
+$win+grave          $exn menunicode
 
 $win+1              $edit $home/.config/i3/template_main
-$win+Shift+1        $exs/i3-sticky-create 1
+$win+Shift+1        $exn i3-sticky-create 1
 
 $win+2              $edit $home/.config/i3/template_vars
-$win+Shift+2        $exs/i3-sticky-create 2
+$win+Shift+2        $exn i3-sticky-create 2
 
 $win+3              $edit $home/.bashrc
-$win+Shift+3        $exs/i3-sticky-create 3
+$win+Shift+3        $exn i3-sticky-create 3
 
 $win+4              $edit $home/.vimrc
 
@@ -335,16 +338,16 @@ $win+p              [con_mark=$mk1] resize set 45 ppt 20 ppt
 
 $win+bracketleft    [con_mark=$mk1] resize set height 98
 
-#$win+bracketright   $exs/i3media prev
+#$win+bracketright   $exn i3media prev
 #
-#$win+backslash      $exs/i3media stop
+#$win+backslash      $exn i3media stop
 
 # //// 2nd Row
 
-$win+Shift+a        $exs/wsloapp
+$win+Shift+a        $exn wsloapp
 
 $win+s              $lch slack $mk3
-$win+Shift+s        $exs/i3-sticky-toggle
+$win+Shift+s        $exn i3-sticky-toggle
 
 $win+d              move workspace to output $hdm
 
@@ -364,9 +367,9 @@ $win+Shift+k        move up
 $win+l              focus right
 $win+Shift+l        move right
 
-$win+semicolon      $exs/noter -t NOTES
+$win+semicolon      $exn noter -t NOTES
 
-$win+apostrophe     $exs/noter -t TODO
+$win+apostrophe     $exn noter -t TODO
 
 $win+Return         $exn xterm
 $win+Shift+Return   $exn $term -name FILES_ADMIN -e sudo ranger
@@ -377,7 +380,7 @@ $win+Shift+Return   $exn $term -name FILES_ADMIN -e sudo ranger
 $win+x              unmark
 
 $win+c              $lch '$term -name CALENDAR -e vim "+Calendar -view=day"' $mk2
-$win+Shift+c        $exs/reloadconfs
+$win+Shift+c        $exn reloadconfs
 
 $win+v              move workspace to output $vga
 
@@ -385,11 +388,11 @@ $win+b              $lch '$term -name BASHMOUNT -e bashmount' $mk2
 
 $win+n              move workspace to output $nat
 
-$win+m              $exs/multimon
+$win+m              $exn multimon
 
-$win+comma          $exs/i3brightness dec
+$win+comma          $exn i3brightness dec
 
-$win+period         $exs/i3brightness inc
+$win+period         $exn i3brightness inc
 
 # >>>> FOR_WINDOW
 # //// GLOBAL
@@ -522,11 +525,11 @@ $ena fix_xcursor
 $exn mpd
 $exn shutter --min_at_startup
 $exn setxkbmap $kb
-$exs/reloadconfs
+$exn reloadconfs
 #$exn polybar i3
 #$exn conky
 #$exn feh --bg-center $home/pic/walls/current
-#$exs/i3listen-toggle
+#$exn i3listen-toggle
 
 $ena mpv $home/$scrmus/A\ Tone\ His\ Self.mp3
 $ena notify-send 'i3 (re)loaded!' -i $home/$scrpic/i3white.png

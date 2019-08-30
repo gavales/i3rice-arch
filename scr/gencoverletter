@@ -1,12 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # OA: Gavin Vales
 # CREATED: Mon 22 Jul 19:53:50 BST 2019
 
-CLDIR=$HOME/doc/personal/coverletters
-PLT=$HOME/plt/tex/coverletter/coverletter.tex
+CLDIR=$XDG_DOCUMENTS_DIR/personal/coverletters
+PLT=$XDG_TEMPLATES_DIR/tex/coverletter/coverletter.tex
 [[ -n $1 ]] && TIT="$1" || \
-	TIT="$($HOME/scr/i3menu -p "Enter title of Cover Letter... " -c yellow -e)"
+	TIT="$(echo "" | i3menu -p "Enter title of Cover Letter... " -c yellow -W -L 0)"
 EDITOR="gvim -f"
 
 #while getopts :t: opts; do
@@ -30,4 +30,4 @@ cp $PLT ${FLD}.tex
 sed -e "s/TITLE/$TIT/g" -i ${FLD}.tex
 #touch maintext.tex
 $EDITOR maintext.tex
-$HOME/scr/clatex ${FLD}.tex
+$SCR_DIR/clatex ${FLD}.tex

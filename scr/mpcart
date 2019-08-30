@@ -1,15 +1,16 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # OA: Gavin Vales
 # CREATED: Fri  3 May 16:37:43 GMT 2019
 
-rm -rf $HOME/cover.jpg
-ffmpeg -i "$HOME/mus/$(mpc -f %file% | head -n1)" cover.jpg &>/dev/null &
+COVER=$HOME/cover.jpg
+rm -rf $COVER
+ffmpeg -i "$XDG_MUSIC_DIR/$(mpc -f %file% | head -n1)" $COVER &>/dev/null &
 
-#notify-send "Now Playing ♫" "$(mpc current)" -i $HOME/cover.jpg
+#notify-send "Now Playing ♫" "$(mpc current)" -i $COVER
 sleep .5
-[[ ! -f $HOME/cover.jpg ]] && cp $HOME/scrpic/albartdef.jpg $HOME/cover.jpg
+[[ ! -f $COVER ]] && cp ${SCR_DIR}pic/albartdef.jpg $COVER
 
-dunstify -r 1234 --raw_icon=$HOME/cover.jpg "Now Playing ♫" "$(mpc current)"
+dunstify -r 1234 --raw_icon=$COVER "Now Playing ♫" "$(mpc current)"
 
 polybar-msg hook media 1 &>/dev/null &

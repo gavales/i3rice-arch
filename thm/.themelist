@@ -1,8 +1,9 @@
 #!/bin/bash
 
 DEF=gruvbox_light
+LST=.theme_list
 main () {
-	echo "" > .theme_list
+	rm $LST
 	thms=$(ls -l | grep -v "^total" | awk '{print $NF}')
 	for i in $thms; do
 		ffg0=$(cat ${i} | sed '/^fg0/!d;s/[^ ]* *//')
@@ -15,7 +16,7 @@ main () {
 		[[ $acc =~ "$" ]] && acc=$(cat $DEF | sed "/^"${acc/\$/}\ "/!d;s/[^ ]* *//")
 		[[ $bg0 =~ "$" ]] && bg0=$(cat $DEF | sed "/^"${bg0/\$/}\ "/!d;s/[^ ]* *//")
 		echo "<span background=\"$acc\">   </span>\
-<span foreground=\"$fg0\" background=\"$bg0\"> $i </span>" >> .theme_list
+<span foreground=\"$fg0\" background=\"$bg0\"> $i </span>" >> $LST
 	done
 }
 

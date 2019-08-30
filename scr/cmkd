@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 file=$1
-wordtempDIR=$HOME/plt/pandoc
-cssDIR=$HOME/plt/css
+wordtempDIR=$XDG_TEMPLATES_DIR/pandoc
+cssDIR=$XDG_TEMPLATES_DIR/css
 bibDIR=$HOME
-yamlDIR=$HOME/plt/pandoc
+yamlDIR=$XDG_TEMPLATES_DIR/pandoc
 
 # WHICH BIBLIOGRAPHY FILE
 whichbib=$(cat $file | grep '#bib' | awk '{print $NF}')
@@ -17,9 +17,9 @@ fi
 # WHICH .yaml TO USE
 yaml=$(cat $file | grep '#yaml' | awk '{print $NF}')
 if [[ -n $yaml ]]; then
-	settings="$HOME/plt/pandoc/${yaml}.yaml"
+	settings="$XDG_TEMPLATES_DIR/pandoc/${yaml}.yaml"
 elif [[ -z $yaml ]]; then
-	settings="$HOME/plt/pandoc/settings.yaml"
+	settings="$XDG_TEMPLATES_DIR/pandoc/settings.yaml"
 fi
 
 # WHICH TEMPLATE FOR WORD DOCUMENTS
@@ -63,7 +63,7 @@ word() {
 
 html() {
 	pandoc $crossref $citeproc -s --toc $style -o ${file:0:-3}.html ${file}
-	ls *.html | entr $HOME/scr/reload-browser surf &>/dev/null &
+#	ls *.html | entr $HOME/scr/reload-browser surf &>/dev/null &
 }
 
 beamer() {

@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 main () {
-	$HOME/scr/themer -c ""
-	$HOME/scr/reloadconfs
-	$HOME/scr/themer -x post-build-apply -a /home/gavarch/numix-solarized-gtk-theme
+	themer -c ""
+	reloadconfs
+	themer -x post-build-apply -a $HOME/numix-solarized-gtk-theme
 }
 
 main

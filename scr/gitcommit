@@ -1,20 +1,19 @@
 #!/usr/bin/env bash
 
-cd
+cd $REPO_DIR
+RPO="$(ls | i3menu -p "Update which repo?")"
 
-repo="$(ls $HOME/git | ~/scr/i3menu -p "Update which repo?")"
-
-if [[ -z $repo ]]; then
-	:
-else
-	echo "$repo"
-	cd $HOME/git/"${repo}"
-	notify-send "Updating your $repo git repo..." -i $HOME/scrpic/gitwhite.png
+main () {
+	ls
+	pwd
+	notify-send "Updating your $RPO git repo..." -i ${SCR_DIR}pic/gitwhite.png
+	cd ${RPO}
 	git add .
 	git commit -m "$(date +"%c")"
 	git fetch
 	git merge origin/master
 	git push -u origin master
-	cd
-	notify-send "... $repo repo updated." -i $HOME/scrpic/gitwhite.png
-fi
+	notify-send "... $RPO repo updated." -i ${SCR_DIR}pic/gitwhite.png
+}
+
+[[ -z $RPO ]] || [[ ! -d $REPO_DIR/$RPO ]] || main

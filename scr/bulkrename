@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # OA: Gavin Vales
 # CREATED: Thu  4 Jul 00:27:45 BST 2019
@@ -17,10 +17,9 @@ sed -e "s/$/\"/g;s/^/\"/g" -i $NEWNME
 sed -e "s/$/\"/g;s/^/mv\ \"/g" -i $OLDNME
 paste $OLDNME $NEWNME > $FINCMD
 confirm () {
-	cat $FINCMD | $HOME/scr/i3menu -t -c white -o vertical \
-		-r $(cat $FINCMD | wc -l) \
+	cat $FINCMD | i3menu -t -c white -o vertical \
 		-p "FINALCOMMANDS [<Esc> to confirm] "
-	confirm=$(echo -e "Yes\nNo" | $HOME/scr/i3menu -t -c magenta \
+	confirm=$(echo -e "Yes\nNo" | i3menu -t -c magenta \
 		-o horizontal \
 		-p "CONFIRM RENAME? ")
 	[[ $confirm == "Yes" ]] && source $FINCMD

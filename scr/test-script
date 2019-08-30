@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: Thu 29 Aug 14:39:06 BST 2019
+#source $HOME/.config/user-dirs.dirs
+
+echo -e "$SCR_DIR\n$XRS_DIR\n$DRV_DIR\n$REPO_DIR\n\
+$XDG_DESKTOP_DIR\n$XDG_DOWNLOAD_DIR\n$XDG_TEMPLATES_DIR\n\
+$XDG_DOCUMENTS_DIR\n$XDG_MUSIC_DIR\n$XDG_PICTURES_DIR\n\
+$XDG_VIDEOS_DIR\n$XDG_PUBLICSHARE_DIR" \
+	| i3menu
+

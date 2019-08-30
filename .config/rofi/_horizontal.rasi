@@ -1,0 +1,34 @@
+@import "globals.rasi"
+* {
+	background-color: @accent;
+	border-color:     @accent;
+	text-color:       @bg1;
+	font:             @font1;
+}
+#window {
+//	anchor:           north;
+//	location:         north;
+//	width:            100%;
+	padding:          2px;
+	children:         [ horibox ];
+}
+#horibox {
+	orientation:      horizontal;
+	children:         [ prompt, entry, listview ];
+}
+#listview {
+	layout:           horizontal;
+	spacing:          5px;
+	lines:            100;
+}
+#entry {
+	expand:           false;
+	width:            10em;
+}
+#element {
+	padding:          0px 2px;
+}
+#element selected {
+	background-color: @bg1;
+	text-color:       @accent;
+}

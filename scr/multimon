@@ -5,36 +5,65 @@ conn=$(xrandr -q | grep ' connected' | awk '{print $1}')
 declare -a disconn=($(xrandr -q | grep 'disconnected' | awk '{print $1}'))
 lenconn=$(xrandr -q | grep ' connected' | awk '{print $1}' | wc -l)
 
- 
-mode=$(echo -e "1 Monitor\n2 Monitors\n3 Monitors\nARandR" | $HOME/scr/i3menu -p "Choose mode" -l 1 -x 0 -y 0 -w 100 -c cyan -o horizontal)
+mode=$(echo -e "1 Monitor\n2 Monitors\n3 Monitors\nARandR" | \
+	i3menu -p "Choose mode" -l 1 -w 100 -o horizontal)
 
 if [[ $lenconn == 1 ]]; then
+
 	xrandr --output "$conn" --primary --auto
-	for i in "${disconn[@]}"
-	do
+
+	for i in "${disconn[@]}"; do
 		xrandr --output "$i" --off
 	done
+
 elif [[ $mode == "1 Monitor" ]]; then
-	primary=$(echo $conn | tr ' ' '\n' | $HOME/scr/i3menu -p "Choose primary monitor " -l 1 -x 0 -y 0 -w 100 -c cyan -o horizontal)
-	declare -a off=($(echo $all | tr ' ' '\n' | grep -v "$primary"))
-	xrandr --output "$primary" --primary --auto
-	for i in "${off[@]}"
-	do
+
+	MN1=$(echo $conn | tr ' ' '\n' | \
+		i3menu -p "Choose primary monitor " -l 1 -w 100 -o horizontal)
+
+	declare -a off=($(echo $all | tr ' ' '\n' | grep -v "$MN1"))
+
+	xrandr --output "$MN1" --primary --auto
+
+	for i in "${off[@]}"; do
 		xrandr --output "$i" --off
 	done
+
 elif [[ $mode == "2 Monitors" ]]; then
-	primary=$(echo $conn | tr ' ' '\n' | $HOME/scr/i3menu -p "Choose primary monitor " -l 1 -x 0 -y 0 -w 100 -c cyan -o horizontal)
-	second=$(echo $conn | tr ' ' '\n' | grep -v "$primary")
-	dir=$(echo -e "left-of\nright-of\nabove\nbelow\nsame-as" | $HOME/scr/i3menu -p "Choose position of second monitor " -l 1 -x 0 -y 0 -w 100 -c cyan -o horizontal)
-	xrandr --output "$primary" --primary --auto --output "$second" --"$dir" "$primary" --auto
+
+	MN1=$(echo $conn | tr ' ' '\n' | \
+		i3menu -p "Choose primary monitor " -l 1 -w 100 -o horizontal)
+
+	MN2=$(echo $conn | tr ' ' '\n' | grep -v "$MN1")
+
+	MN2DIR=$(echo -e "left-of\nright-of\nabove\nbelow\nsame-as" | \
+		i3menu -p "2nd monitor position " -l 1 -w 100 -o horizontal)
+
+	xrandr --output "$MN1" --primary --auto \
+		--output "$MN2" --"$MN2DIR" "$MN1" --auto
+
 elif [[ $mode == "3 Monitors" ]]; then
-	primary=$(echo $conn | tr ' ' '\n' | $HOME/scr/i3menu -p "Choose primary monitor " -l 1 -x 0 -y 0 -w 100 -c cyan -o horizontal)
-	second=$(echo $conn | tr ' ' '\n' | grep -v "$primary" | $HOME/scr/i3menu -p "Choose 2nd monitor " -l 1 -x 0 -y 0 -w 100 -c cyan -o horizontal)
-	third=$(echo $conn | tr ' ' '\n' | grep -v "$primary" | grep -v "$second")
-	seconddir=$(echo -e "left-of\nright-of\nabove\nbelow\nsame-as" | $HOME/scr/i3menu -p "Choose position of second monitor " -l 1 -x 0 -y 0 -w 100 -c cyan -o horizontal)
-	thirddir=$(echo -e "left-of\nright-of\nabove\nbelow\nsame-as" | $HOME/scr/i3menu -p "Monitor 3 will be.. " -l 1 -x 0 -y 0 -w 100 -c cyan -o horizontal)
-	which=$(echo $conn | tr ' ' '\n' | $HOME/scr/i3menu -p "Which monitor?" -l 1 -x 0 -y 0 -w 100 -c cyan -o horizontal)
-	xrandr --output "$primary" --primary --auto --output "$second" --"$seconddir" "$primary" --auto --output "$third" --"$thirddir" "$which" --auto
+
+	MN1=$(echo $conn | tr ' ' '\n' | \
+		i3menu -p "Choose primary monitor " -l 1 -w 100 -o horizontal)
+
+	MN2=$(echo $conn | tr ' ' '\n' | grep -v "$MN1" | \
+		i3menu -p "Choose 2nd monitor " -l 1 -w 100 -o horizontal)
+
+	MN2=$(echo $conn | tr ' ' '\n' | grep -v "$MN1" | grep -v "$MN2")
+
+	MN2DIR=$(echo -e "left-of\nright-of\nabove\nbelow\nsame-as" | \
+		i3menu -p "2nd monitor position " -l 1 -w 100 -o horizontal)
+
+	MN3DIR=$(echo -e "left-of\nright-of\nabove\nbelow\nsame-as" | \
+		i3menu -p "3rd monitor position " -l 1 -w 100 -o horizontal)
+
+	which=$(echo $conn | tr ' ' '\n' | \
+		i3menu -p "Which monitor?" -l 1 -w 100 -o horizontal)
+
+	xrandr --output "$MN1" --primary --auto --output "$MN2" \
+		--"$MN2DIR" "$MN1" --auto --output "$MN2" --"$MN3DIR" "$which" --auto
+
 elif [[ $mode == "ARandR" ]]; then
 	arandr ; exit
 fi

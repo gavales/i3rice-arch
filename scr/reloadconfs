@@ -1,25 +1,26 @@
-#!/bin/bash
-TMR="$HOME/scr/themer"
+#!/usr/bin/env bash
+
+TMR="themer"
 WPP=$($TMR -v wallpaper)
 TNT="$($TMR -v 'tint ')"
 [[ -n $WPP ]] || WPP=$($TMR -v "acc ")
 [[ -n $TNT ]] && TINT="-t $TNT" || TINT=" "
-$HOME/scr/i3wallpaper -w "$WPP" $TINT
-$TMR -x xrs-reload   -a $HOME/xrs
+i3wallpaper -w "$WPP" $TINT
+$TMR -x xrs-reload   -a $XRS_DIR
 $TMR -x i3concat     -a $HOME/.config/i3
 $TMR -x pb-reload    -a $HOME/.config/polybar
 $TMR -x reloadinst   -a $HOME/.config/zathura
 $TMR -x dunst-reload -a $HOME/.config/dunst
 $TMR -x reload       -a $HOME/.conky
-$TMR -a $HOME/git/i3rice-arch
+$TMR -a $GIT_DIR/i3rice-arch
 $TMR -a $HOME/.vim/colors
 $TMR -a $HOME/.config/rofi
 $TMR -a $HOME/.config/vis/colors
 $TMR -a $HOME/.config/mpv
 $TMR -a $HOME/.config/qutebrowser
-$TMR -a $HOME/scr
-$TMR -a $HOME/scr/.unused
-$TMR -a $HOME/plt/css
-$HOME/scr/i3listen-toggle
+$TMR -a $SCR_DIR
+$TMR -a $SCR_DIR/.unused
+$TMR -a $XDG_TEMPLATES_DIR/css
+i3listen-toggle
 #$TMR -a $HOME/.config/tint2
-#$TMR -a $HOME/git/atompackages/packages/rice-syntax/styles
+#$TMR -a $GIT_DIR/atompackages/packages/rice-syntax/styles

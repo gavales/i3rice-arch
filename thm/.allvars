@@ -1,15 +1,15 @@
-name      manjaro
-wallpaper manjaro-mountain
-tint      #1ABB9B
-bg0       #222D31
-fg0       #f8f8f8
-acc       #1ABB9B
-red       #ab4642
-grn       #7E807E
-ylw       #f7ca88
-blu       #1ABB9B
-gnt       #ba8baf
-cyn       #7cafc2
+name      gruvbox
+wallpaper Galápagossealion
+tint      #458588
+bg0       #282828
+fg0       #ebdbb2
+acc       #458588
+red       #cc241d
+grn       #98971a
+ylw       #d79921
+blu       #458588
+gnt       #b16286
+cyn       #689d6a
 guifont   Luxi Mono
 font      LuxiMono
 polyfont  CMU Typewriter Text
@@ -17,37 +17,37 @@ ltimex    1
 ltimey    90
 size      11
 rxvtsize  12
-rofifsize 13
+rofifsize 12
 gtk       Standard-light
 gtk-icon  DamaDamas
 cursor    Bibata_Dark_Red
 conky_loc1 top_left
 conky_loc2 bottom_right
 orange    #d65d0e
-fg3       #bcbcbc
-fg2       #d0d0d0
-fg1       #e4e4e4
-acf       #89d9c9
-acb       #1e7365
-bg1       #364145
-bg2       #4a5559
-bg3       #5e696d
-fg0RGB    248, 248, 248
-fg1RGB    228, 228, 228
-fg2RGB    208, 208, 208
-fg3RGB    188, 188, 188
-bg0RGB    34, 45, 49
-bg1RGB    54, 65, 69
-bg2RGB    74, 85, 89
-bg3RGB    94, 105, 109
-accRGB    26, 187, 155
-acfRGB    137, 217, 201
-acbRGB    30, 115, 101
-tintRGB    26, 187, 155
-redRGB    171, 70, 66
-grnRGB    126, 128, 126
-ylwRGB    247, 202, 136
-bluRGB    26, 187, 155
-gntRGB    186, 139, 175
-cynRGB    124, 175, 194
+fg3       #af9f76
+fg2       #c3b38a
+fg1       #d7c79e
+acf       #97af9d
+acb       #365658
+bg1       #3c3c3c
+bg2       #505050
+bg3       #646464
+fg0RGB    235, 219, 178
+fg1RGB    215, 199, 158
+fg2RGB    195, 179, 138
+fg3RGB    175, 159, 118
+bg0RGB    40, 40, 40
+bg1RGB    60, 60, 60
+bg2RGB    80, 80, 80
+bg3RGB    100, 100, 100
+accRGB    69, 133, 136
+acfRGB    151, 175, 157
+acbRGB    54, 86, 88
+tintRGB    69, 133, 136
+redRGB    204, 36, 29
+grnRGB    152, 151, 26
+ylwRGB    215, 153, 33
+bluRGB    69, 133, 136
+gntRGB    177, 98, 134
+cynRGB    104, 157, 106
 orangeRGB    214, 93, 14

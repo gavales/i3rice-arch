@@ -1,30 +1,153 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # OA: Gavin Vales
 # CREATED: Mon 26 Aug 17:35:49 BST 2019
 #iconFu="<span face='Font Awesome 5 Free'>&#xf240;</span>"
 
 RFDIR="$HOME/.config/rofi"
-CLR=black THM=vertical TTLBR=25 BRDR=2 PRMT=" " MODE="menu"
-LOC="0" WDTH="500" HGTH=" " XFS="0" YFS="0" fs=" "
-WNLC=$(xdotool getactivewindow getwindowgeometry | \
-	grep 'Position' | awk '{print $2}')
-WNGO=$(xdotool getactivewindow getwindowgeometry | \
-	grep 'Geometry' | awk '{print $2}')
-wnX=${WNLC%,*} wnY=${WNLC#*,} wnW=${WNGO%x*} wnH=${WNGO#*x}
-sc=$(xdpyinfo | grep dimensions | awk '{print $2}') scW=${sc%x*} scH=${sc#*x}
-msX=$(xdotool getmouselocation | awk '{print $1}')
-msY=$(xdotool getmouselocation | awk '{print $2}')
-mon=$(xdotool getmouselocation | awk '{print $3}')
+CONFIG="$RFDIR/.i3menuconfig"
+BLACK="$RFDIR/black.rasi"
+HORI="$RFDIR/_horizontal.rasi"
+VERT="$RFDIR/_vertical.rasi"
+PROMPT=" " # a comment
+MODE="menu"
+fs=" "
 
-bg0=$(xrdb -query | grep '*color8' | awk '{print $NF}')
-fg0=$(xrdb -query | grep '*color15' | awk '{print $NF}')
-acc=$(xrdb -query | grep '*color9' | awk '{print $NF}')
-fnt=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
-fnt=${fnt%:*} fnt=${fnt##*:}
-dmthm="-fn "${fnt}:size=11" -nb "$bg0" -nf "$fg0" -sf "$bg0" -sb "$acc""
-dmloc="-x $(expr $wnX - $BRDR - $BRDR) -y $(expr $wnY - $TTLBR)"
-dmenu () { dmenu_run $dmloc $dmthm -w $(expr $wnW + $BRDR + $BRDR) -h $TTLBR ; }
+i3menuconfig () {
+	cat > $CONFIG  << 'EOB'
+# vim:ft=sh
+ACCENT_COLOR=black
+ORIENTATION=vertical
+TITLEBAR_HEIGHT=25
+WINDOW_BORDER=2
+LOCATION="0"
+WIDTH="300"
+HEIGHT=" "
+XFS="0"
+YFS="0"
+WINDOW_LOCATION=$(xdotool getactivewindow getwindowgeometry | \
+		grep 'Position' | awk '{print $2}')
+WINDOW_GEOMETRY=$(xdotool getactivewindow getwindowgeometry | \
+		grep 'Geometry' | awk '{print $2}')
+WIN_X=${WINDOW_LOCATION%,*}
+WIN_Y=${WINDOW_LOCATION#*,}
+WIN_W=${WINDOW_GEOMETRY%x*}
+WIN_H=${WINDOW_GEOMETRY#*x}
+sc=$(xdpyinfo | grep dimensions | awk '{print $2}')
+SCREEN_W=${sc%x*}
+SCREEN_H=${sc#*x}
+MOUSE_X=$(xdotool getmouselocation | awk '{print $1}')
+MOUSE_Y=$(xdotool getmouselocation | awk '{print $2}')
+MONITOR=$(xdotool getmouselocation | awk '{print $3}')
+
+#dmenu_bg=$(xrdb -query | grep '*color8' | awk '{print $NF}')
+#dmenu_fg=$(xrdb -query | grep '*color15' | awk '{print $NF}')
+#dmenu_ac=$(xrdb -query | grep '*color9' | awk '{print $NF}')
+#dmenu_fnt=$(xrdb -query | grep 'URxvt.font' | awk '{print $NF}')
+#dmenu_fnt=${dmenu_fnt%:*}
+#dmenu_fnt=${dmenu_fnt##*:}
+#dmenu_thm="-fn "${dmenu_fnt}:size=11" -nb "$dmenu_bg" -nf "$dmenu_fg" -sf "$dmenu_bg" -sb "$dmenu_ac""
+#dmenu_loc="-x $(expr $WIN_X - $WINDOW_BORDER - $WINDOW_BORDER) -y $(expr $WIN_Y - $TITLEBAR_HEIGHT)"
+EOB
+
+	[[ -f $BLACK ]] || {
+		cat > $BLACK  << 'EOB'
+* {
+accent: #364145;
+fg1:    #222D31;
+fg2:    #364145;
+bg2:    #f8f8f8;
+bg1:    #e4e4e4;
+redish: #ab4642;
+font1: "LuxiMono 13";
+}
+EOB
+		}
+
+	[[ -f $HORI ]] || {
+		cat > $HORI  << 'EOB'
+@import "globals.rasi"
+* {
+	background-color: @accent;
+	border-color:     @accent;
+	text-color:       @bg1;
+	font:             @font1;
+}
+#window {
+//	anchor:           north;
+//	location:         north;
+//	width:            100%;
+	padding:          2px;
+	children:         [ horibox ];
+}
+#horibox {
+	orientation:      horizontal;
+	children:         [ prompt, entry, listview ];
+}
+#listview {
+	layout:           horizontal;
+	spacing:          5px;
+	lines:            100;
+}
+#entry {
+	expand:           false;
+	width:            10em;
+}
+#element {
+	padding:          0px 2px;
+}
+#element selected {
+	background-color: @bg1;
+	text-color:       @accent;
+}
+EOB
+		}
+
+	[[ -f $VERT ]] || {
+		cat > $VERT  << 'EOB'
+@import "globals.rasi"
+* {
+	background-color: @accent;
+	border-color:     @accent;
+	text-color:       @bg2;
+	font:             @font1;
+}
+#window {
+//	anchor:           north;
+//	location:         north;
+//	width:            100%;
+	padding:          4px;
+//	children:         [ horibox ];
+}
+#horibox {
+	children:         [ prompt, entry, listview ];
+}
+#listview {
+	spacing:          5px;
+}
+#entry {
+	expand:           false;
+	width:            10em;
+}
+#element {
+	padding:          2px 2px;
+}
+#element selected {
+	background-color: @bg1;
+	text-color:       @accent;
+}
+EOB
+	}
+
+}
+
+[[ -f $CONFIG ]] || i3menuconfig
+source $CONFIG
+
+dmenu () {
+	rofi -show run -p "${PROMPT}" $fs -theme _horizontal -monitor ${MONITOR:7} \
+		-location 1 -lines $ROWS -width 100
+}
 
 help () {
 cat << 'EOB'
@@ -67,48 +190,53 @@ EOB
 
 start () {
 	[[ -n $LNS ]] && ROWS=$LNS || ROWS="15"
-	rofi -show drun -p "${PRMT}" $fs -theme $THM -monitor ${mon:7} \
-		-location $LOC -lines $ROWS -width $WDTH -xoffset $XFS -yoffset $YFS \
-		-theme-str "#window { $HGTH }"
+	rofi -show drun -p "${PROMPT}" $fs -theme _$ORIENTATION -monitor ${MONITOR:7} \
+		-location $LOCATION -lines $ROWS -width $WIDTH -xoffset $XFS -yoffset $YFS \
+		-theme-str "#window { $HEIGHT }"
 }
 
 menu () {
 	STDIN="$RFDIR/.i3menustdin"
 	cat /dev/stdin > $STDIN
 	[[ -n $LNS ]] && ROWS=$LNS || ROWS=$(cat $STDIN | wc -l)
-	cat $STDIN | rofi -dmenu -p "${PRMT}" $fs -theme $THM -monitor ${mon:7} \
-		-location $LOC -lines $ROWS -width $WDTH -xoffset $XFS -yoffset $YFS \
-		-theme-str "#window { $HGTH }" -markup-rows
+	cat $STDIN | rofi -dmenu -p "${PROMPT}" $fs -theme _$ORIENTATION -monitor ${MONITOR:7} \
+		-location $LOCATION -lines $ROWS -width $WIDTH -xoffset $XFS -yoffset $YFS \
+		-theme-str "#window { $HEIGHT }" -markup-rows
+	rm -rf $STDIN
 }
 
 while getopts :p:l:L:x:y:H:c:w:o:Wdstmfh opts; do
 	case $opts in
-		p) PRMT="${OPTARG}"                                              ;;
-		l) LOC="${OPTARG}"                                               ;;
+		p) PROMPT="${OPTARG}"                                            ;;
+		l) LOCATION="${OPTARG}"                                          ;;
 		L) LNS="${OPTARG}"                                               ;;
 		x) XFS="$(expr $XFS + $OPTARG)"                                  ;;
 		y) YFS="$(expr $YFS + $OPTARG)"                                  ;;
-		c) CLR="${OPTARG}"                                               ;;
-		w) WDTH="${OPTARG}"                                              ;;
-		H) HGTH="height: ${OPTARG};"                                     ;;
-		o) THM="${OPTARG}"                                               ;;
-		W) [[ $THM == "vertical" ]] \
-				&& HGTH=$(echo \
-				"((${wnH}*100)/$scH)+((($TTLBR+$TTLBR/2)*100)/$scH)" | bc) \
-				&& HGTH="height: ${HGTH}%;"
-			[[ $THM == "horizontal" ]] && LNS="15"
-			LOC=1 WDTH="$(expr $wnW + $BRDR + $BRDR)"
-			XFS="$(expr $wnX - $BRDR - $BRDR)" YFS="$(expr $wnY - $TTLBR)" ;;
+		c) [[ -f $RFDIR/${OPTARG}.rasi ]] && ACCENT_COLOR="${OPTARG}"    ;;
+		w) WIDTH="${OPTARG}"                                             ;;
+		H) HEIGHT="height: ${OPTARG};"                                   ;;
+		o) ORIENTATION="${OPTARG}"                                       ;;
+		W) [[ $ORIENTATION == "vertical" ]] \
+				&& HEIGHT=$(echo \
+				"((${WIN_H}*100)/$SCREEN_H)+((($TITLEBAR_HEIGHT+$TITLEBAR_HEIGHT/2)*100)/$SCREEN_H)" | bc) \
+				&& HEIGHT="height: ${HEIGHT}%;"
+			[[ $ORIENTATION == "horizontal" ]] && LNS="15"
+			LOCATION=1 WIDTH="$(expr $WIN_W + $WINDOW_BORDER + $WINDOW_BORDER)"
+			XFS="$(expr $WIN_X - $WINDOW_BORDER - $WINDOW_BORDER)"
+			YFS="$(expr $WIN_Y - $TITLEBAR_HEIGHT)"
+			;;
 		d) MODE="dmenu"                                                  ;;
 		s) MODE="start"                                                  ;;
-		t) [[ $THM == "horizontal" ]] && LNS="15"
-			LOC=1 WDTH="$(expr $wnW + $BRDR + $BRDR)"
-			XFS="$(expr $wnX - $BRDR - $BRDR)" YFS="$(expr $wnY - $TTLBR)" ;;
-		m) THM=vertical LOC=1 WDTH=300 XFS="${msX:2}" YFS="${msY:2}"     ;;
-		f) THM=vertical LOC=0 fs="-fullscreen"                           ;;
+		t) [[ $ORIENTATION == "horizontal" ]] && LNS="15"
+			LOCATION=1 WIDTH="$(expr $WIN_W + $WINDOW_BORDER + $WINDOW_BORDER)"
+			XFS="$(expr $WIN_X - $WINDOW_BORDER - $WINDOW_BORDER)"
+			YFS="$(expr $WIN_Y - $TITLEBAR_HEIGHT)"
+			;;
+		m) ORIENTATION=vertical LOCATION=1 WIDTH=300 XFS="${MOUSE_X:2}" YFS="${MOUSE_Y:2}" ;;
+		f) ORIENTATION=vertical LOCATION=0 fs="-fullscreen"              ;;
 		h) help && exit                                                  ;;
 	esac
 done
 
-cat $RFDIR/${CLR}.rasi > $RFDIR/globals.rasi
+cat $RFDIR/${ACCENT_COLOR}.rasi > $RFDIR/globals.rasi
 $MODE

@@ -1,26 +1,27 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # OA: Gavin Vales
 # CREATED: Fri 17 May 18:47:08 BST 2019
 
-nightmode=$(cat ~/nightmode)
+NMFL=$HOME/nightmode
+nightmode=$(cat $NMFL)
 
-if [[ ! -f ~/nightmode ]]; then
+if [[ ! -f $NMFL ]]; then
 	redshift -P -O 3700
-	echo on > ~/nightmode
+	echo on > $NMFL
 	polybar-msg hook nm 2
-elif [[ -f ~/nightmode ]]; then
+elif [[ -f $NMFL ]]; then
 	if [[ $nightmode == "off" ]]; then
 		redshift -P -O 3700
-		echo on > ~/nightmode
+		echo on > $NMFL
 		polybar-msg hook nm 2
 	elif [[ $nightmode == "on" ]]; then
 		redshift -x
-		echo off > ~/nightmode
+		echo off > $NMFL
 		polybar-msg hook nm 1
 	fi
 else
 	redshift -x
-	echo off > ~/nightmode
+	echo off > $NMFL
 	polybar-msg hook nm 1
 fi

@@ -5,12 +5,12 @@
 CRLN=$(readlink -f $HOME/pic/i3wallpaper/current)
 i3wall=$HOME/scr/i3wallpaper
 
-_P="%{A1:$i3wall -w   PREV && polybar-msg hook i3wallpaper 1:}%{T1} %{T-}%{A}"
-_N="%{A1:$i3wall -w   NEXT && polybar-msg hook i3wallpaper 1:}%{T1} %{T-}%{A}"
-_R="%{A1:$i3wall -w RANDOM && polybar-msg hook i3wallpaper 1:}%{T1} %{T-}%{A}"
+_P="%{A1:$i3wall -w   PREV:}%{T1} %{T-}%{A}"
+_N="%{A1:$i3wall -w   NEXT:}%{T1} %{T-}%{A}"
+_R="%{A1:$i3wall -w RANDOM:}%{T1} %{T-}%{A}"
 _D="%{A1:$HOME/scr/pb/walldelete:}%{T1} %{T-}%{A}"
 _E="%{A1:$HOME/scr/pb/wallrename:}%{T1} %{T-}%{A}"
-_C=" ${CRLN##*/}"
+_C="%{A1:$HOME/scr/pb/walllist:} ${CRLN##*/}%{A}"
 
 _F="%{T1}%{T-}$_P$_R$_E$_D$_N$_C "
 

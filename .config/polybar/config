@@ -10,26 +10,26 @@
 [colors]
 tr = #000000ff
 
-#acc = #991ABB9B
-#bg0 =   #222D31
-#acb = #991e7365
-#fg0 =   #f8f8f8
-#ylw = #99f7ca88
-#gnt = #99ba8baf
-#red = #99ab4642
-#grn = #997E807E
-#cyn = #997cafc2
+#acc = #99458588
+#bg0 =   #282828
+#acb = #99365658
+#fg0 =   #ebdbb2
+#ylw = #99d79921
+#gnt = #99b16286
+#red = #99cc241d
+#grn = #9998971a
+#cyn = #99689d6a
 
-acc = #1ABB9B
-bg0 = #222D31
-acb = #1e7365
-acf = #89d9c9
-fg0 = #f8f8f8
-ylw = #f7ca88
-gnt = #ba8baf
-red = #ab4642
-grn = #7E807E
-cyn = #7cafc2
+acc = #458588
+bg0 = #282828
+acb = #365658
+acf = #97af9d
+fg0 = #ebdbb2
+ylw = #d79921
+gnt = #b16286
+red = #cc241d
+grn = #98971a
+cyn = #689d6a
 
 [settings]
 screenchange-reload = true
@@ -71,7 +71,7 @@ tray-position = right
 tray-padding = 2
 tray-maxsize = 16
 tray-transparent = true
-tray-background = #1ABB9B
+tray-background = #458588
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -122,7 +122,7 @@ font-2 = FontAwesome5Brands:style=Solid:size=12;3
 
 tray-position = right
 tray-padding = 2
-tray-background = #1ABB9B
+tray-background = #458588
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -149,19 +149,20 @@ margin-bottom = 0
 [module/start]
 type = custom/text
 content = %{T1}%{T-}
-click-left = ~/scr/i3menu -s -c white -l 1
+click-left = ~/scr/i3menu -s -c white -l 1 -y 25
 click-middle = ~/scr/xtheme
-click-right = ~/scr/keybindingsmenu launch
-content-background = ${colors.acf}
-content-foreground = ${colors.bg0}
+click-right = ~/scr/menunicode
+content-background = ${colors.acb}
+content-foreground = ${colors.fg0}
 content-padding = 2
 
 [module/startfvwm]
 type = custom/text
 content = %{T1}%{T-}
 click-left = ~/scr/i3menu -s -y 50 -x 10 -c white -l 1
-content-background = ${colors.acf}
-content-foreground = ${colors.bg0}
+click-right = ~/scr/menunicode
+content-background = ${colors.acb}
+content-foreground = ${colors.fg0}
 content-padding = 3
 
 [module/kill]
@@ -209,8 +210,8 @@ format-padding = 1
 [module/td]
 type = custom/script
 exec = bash ~/scr/pb/td
-format-background = ${colors.acf}
-format-foreground = ${colors.bg0}
+format-background = ${colors.acb}
+format-foreground = ${colors.fg0}
 format-padding = 1
 interval = 1
 
@@ -338,8 +339,8 @@ initial = 1
 click-left = ~/scr/nightmodetog
 scroll-up = "light -A 10 && polybar-msg hook backlight 1"
 scroll-down = "light -U 10 && polybar-msg hook backlight 1"
-format-background = ${colors.acf}
-format-foreground = ${colors.bg0}
+format-background = ${colors.acb}
+format-foreground = ${colors.fg0}
 format-padding = 0
 
 [module/backlight]
@@ -349,8 +350,8 @@ initial = 1
 click-left = ~/scr/nightmodetog
 scroll-up   = "light -A 2 && polybar-msg hook backlight 1"
 scroll-down = "light -U 2 && polybar-msg hook backlight 1"
-format-background = ${colors.acf}
-format-foreground = ${colors.bg0}
+format-background = ${colors.acb}
+format-foreground = ${colors.fg0}
 format-padding = 1
 
 [module/pulseaudio]
@@ -359,11 +360,11 @@ format-volume = <label-volume>
 label-volume-padding = 1
 label-volume = %{T1}%{T-} %percentage%
 ;label-volume-foreground = ${root.foreground}
-label-volume-background = ${colors.acf}
-label-volume-foreground = ${colors.bg0}
+label-volume-background = ${colors.acb}
+label-volume-foreground = ${colors.fg0}
 label-muted = %{T1}%{T-} --
 label-muted-foreground = ${colors.fg0}
-label-muted-background = ${colors.bg0}
+label-muted-background = ${colors.fg0}
 label-muted-padding = 1
 bar-volume-width = 10
 bar-volume-foreground-0 = ${colors.cyn}
@@ -380,7 +381,7 @@ bar-volume-fill = =
 bar-volume-fill-font = 0
 bar-volume-empty = -
 bar-volume-empty-font = 0
-bar-volume-empty-foreground = ${colors.fg0}
+bar-volume-empty-foreground = ${colors.bg0}
 
 [module/battery]
 type = internal/battery
@@ -392,26 +393,26 @@ label-charging-padding = 1
 label-discharging-padding = 1
 format-full-padding = 1
 format-full-prefix-padding = 1
-format-full-foreground = ${colors.bg0}
-format-full-background = ${colors.acf}
-format-full-prefix-foreground = ${colors.bg0}
-format-full-prefix-background = ${colors.acf}
-label-charging-foreground = ${colors.bg0}
-label-charging-background = ${colors.acf}
-label-discharging-foreground = ${colors.bg0}
-label-discharging-background = ${colors.acf}
+format-full-foreground = ${colors.fg0}
+format-full-background = ${colors.acb}
+format-full-prefix-foreground = ${colors.fg0}
+format-full-prefix-background = ${colors.acb}
+label-charging-foreground = ${colors.fg0}
+label-charging-background = ${colors.acb}
+label-discharging-foreground = ${colors.fg0}
+label-discharging-background = ${colors.acb}
 format-discharging-padding = 1
 format-discharging-prefix-padding = 1
-format-discharging-foreground = ${colors.bg0}
-format-discharging-background = ${colors.acf}
-format-discharging-prefix-foreground = ${colors.bg0}
-format-discharging-prefix-background = ${colors.acf}
-format-charging-padding-foreground = ${colors.bg0}
-format-charging-padding-background = ${colors.acf}
-format-discharging-padding-foreground = ${colors.bg0}
-format-discharging-padding-background = ${colors.acf}
+format-discharging-foreground = ${colors.fg0}
+format-discharging-background = ${colors.acb}
+format-discharging-prefix-foreground = ${colors.fg0}
+format-discharging-prefix-background = ${colors.acb}
+format-charging-padding-foreground = ${colors.fg0}
+format-charging-padding-background = ${colors.acb}
+format-discharging-padding-foreground = ${colors.fg0}
+format-discharging-padding-background = ${colors.acb}
 format-charging = <animation-charging><label-charging>
-format-charging-underline = ${colors.bg0}
+format-charging-underline = ${colors.fg0}
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 format-full-prefix = "%{T1}%{T-}"
@@ -421,15 +422,15 @@ ramp-capacity-1 = %{T1}%{T-}
 ramp-capacity-2 = %{T1}%{T-}
 ramp-capacity-3 = %{T1}%{T-}
 ramp-capacity-4 = %{T1}%{T-}
-ramp-capacity-foreground = ${colors.bg0}
-ramp-capacity-background = ${colors.acf}
+ramp-capacity-foreground = ${colors.fg0}
+ramp-capacity-background = ${colors.acb}
 animation-charging-0 = %{T1}%{T-}
 animation-charging-1 = %{T1}%{T-}
 animation-charging-2 = %{T1}%{T-}
 animation-charging-3 = %{T1}%{T-}
 animation-charging-4 = %{T1}%{T-}
-animation-charging-foreground = ${colors.bg0}
-animation-charging-background = ${colors.acf}
+animation-charging-foreground = ${colors.fg0}
+animation-charging-background = ${colors.acb}
 animation-charging-framerate = 500
 
 [module/bspwm]

@@ -1,7 +1,7 @@
 # vim:ft=perl
 name      manjaro
-wallpaper manjaro-mountain
-tint      $acc
+wallpaper manjaro_deserted
+#tint      $acc
 bg0       #222D31
 fg0       #f8f8f8
 acc       #1ABB9B

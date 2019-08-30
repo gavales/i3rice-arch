@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # OA: Gavin Vales
 # CREATED: Sat  6 Jul 00:50:41 BST 2019
@@ -12,9 +12,9 @@ NORM="${WDIR}/normal"
 BLUR="${WDIR}/blur"
 COLS="${WDIR}/cols"
 [[ -d $WDIR ]] || {
-	mkdir $WDIR && \
-	mkdir $NORM && \
-	mkdir $BLUR && \
+	mkdir $WDIR
+	mkdir $NORM
+	mkdir $BLUR
 	mkdir $COLS
 }
 NWFD="$NORM"
@@ -31,15 +31,7 @@ add-wall () {
 	SRC="$1"
 	TRG="${1##*/}"
 	TRG="${TRG%.*}"
-	TRG="${TRG/1920x1080/}"
-	TRG="${TRG/,/}"
-	TRG="${TRG/,/}"
-	TRG="${TRG/,/}"
-	TRG="${TRG/ /}"
-	TRG="${TRG/ /}"
-	TRG="${TRG/ /}"
-	TRG="${TRG/ /}"
-	TRG="${TRG/ /}"
+	TRG="$(echo $TRG | sed -e "s/1920x1080//g;s/,//g;s/\ //g")"
 	echo "
 	TRG=$TRG
 	SRC=$SRC"
@@ -65,15 +57,7 @@ add () {
 		SRC="${SRC#*/}"
 		TRG="${i#*/}"
 		TRG="${TRG%.*}"
-		TRG="${TRG/1920x1080/}"
-		TRG="${TRG/,/}"
-		TRG="${TRG/,/}"
-		TRG="${TRG/,/}"
-		TRG="${TRG/ /}"
-		TRG="${TRG/ /}"
-		TRG="${TRG/ /}"
-		TRG="${TRG/ /}"
-		TRG="${TRG/ /}"
+		TRG="$(echo $TRG | sed -e "s/1920x1080//g;s/,//g;s/\ //g")"
 		echo -ne "${count}/${total} $TRG"\\r
 		[[ ! -f ${NORM}/${TRG} ]] && convert "${SRC}" \
 			-resize "${MX}x${MY}^" \
@@ -221,7 +205,7 @@ if [[ -n $WPP ]]; then
 	[[ ! -f $NORM/$WPP ]] \
 		&& echo "${WPP##*/} not in walls directory, adding ${WPP##*/}" && add-wall "$WPP"
 	change-current
-	[[ ! -f "$WPP" ]] && help \
+	[[ ! -f "$WPP" ]] && [[ ! -f "$NORM/$WPP" ]] && help \
 		&& echo "Wallpaper doesn't exist"
 fi
 

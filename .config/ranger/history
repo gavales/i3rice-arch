@@ -1,19 +1,3 @@
-delete][]]]
-rename relax
-mkdir .layouts
-rename main_template
-touch test
-rename current
-rename .oldcurrent
-w
-mkdir dtp
-shell git clone https://github.com/ashinkarov/i3-extras.git
-shell unzip 'Heathrow SJT - Security Officer Reports-2019-Jul-27.zip' -d 'Heathrow SJT - Security Officer Reports-2019-Jul-27'
-shell identify %f
-shell git clone https://github.com/resloved/i3.git
-rename mpv.conf_old
-rename config_old
-rename themer_old
 rename themer
 open_with 
 open_with xterm -e vim
@@ -24,11 +8,9 @@ rename openvideo
 rename openvid
 shell readlink -f %f
 rename 
-open_with vim
 rename i3menu_old
 rename i3menu
 rename walldelete
-open_with gvim
 open_with ~/scropengvim
 open_with ~/scr/opengvim
 rename template_lockscreen_
@@ -48,3 +30,21 @@ rename cover.jpg
 rename 30 Years Later - An AKIRA Tribute
 rename mpmpv
 rename mpmpd
+rename _horizontal.rasi
+rename _vertical.rasi
+shell wgethttps://gist.githubusercontent.com/anonymous/de7f9413b826b869e397de7f57584880/raw/42560f21f77c2361910e9c975192966cc6d147c9/unicode.txt
+shell wget https://gist.githubusercontent.com/anonymous/de7f9413b826b869e397de7f57584880/raw/42560f21f77c2361910e9c975192966cc6d147c9/unicode.txt
+rename .unicode.txt
+rename walllist
+rename test_script
+rename AKIRA VHS REMIX.mp3
+mkdir Bwana
+open_with gvim
+rename .defaults
+mkdirexport SCR_DIR="$HOME/scr"
+mkdir listeners
+open_with vim
+scout -ftsea 
+search gitcommit
+mkdir .icons
+rename .unicode

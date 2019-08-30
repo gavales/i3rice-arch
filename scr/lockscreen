@@ -1,17 +1,20 @@
 #!/usr/bin/env bash
 
 PID=$(pidof i3lock)
-IMG=$(readlink -f ~/pic/i3wallpaper/current)
-bg0=$($HOME/scr/themer -v "bg0 ") fg0=$($HOME/scr/themer -v "fg0 ")
-acc=$($HOME/scr/themer -v "acc ") grn=$($HOME/scr/themer -v "grn ")
-ylw=$($HOME/scr/themer -v "ylw ") red=$($HOME/scr/themer -v "red ")
+IMG=$(readlink -f $XDG_PICTURES_DIR/i3wallpaper/current)
+bg0=$(themer -v "bg0 ") fg0=$(themer -v "fg0 ")
+acc=$(themer -v "acc ") grn=$(themer -v "grn ")
+ylw=$(themer -v "ylw ") red=$(themer -v "red ")
 SCR=$(xdpyinfo | grep 'name of display:' | awk '{print $2}')
 SCR=${SCR/:/}
 RES=$(xdpyinfo  | grep 'dimensions:' | awk '{print $2}')
-FNT=$($HOME/scr/themer -v "font ")
-XP=1 YP=90
-XRES=${RES%x*} YRES=${RES#*x}
-X=$(echo "(${XRES}*${XP})/100" | bc) Y=$(echo "(${YRES}*${YP})/100" | bc)
+FNT=$(themer -v "font ")
+XP=$(themer -v "ltimex")
+YP=$(themer -v "ltimey")
+XRES=${RES%x*}
+YRES=${RES#*x}
+X=$(echo "(${XRES}*${XP})/100" | bc)
+Y=$(echo "(${YRES}*${YP})/100" | bc)
 t="ff"
 
 B="${bg0}${t}"  # blank

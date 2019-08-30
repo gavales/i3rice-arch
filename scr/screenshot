@@ -1,20 +1,19 @@
 #!/usr/bin/env bash
 
-
-SCRD=$HOME/pic/scrots
+SCRD=$XDG_PICTURES_DIR/scrots
 TMP=${SCRD}/tmp.png
 [[ -d $SCRD ]] || mkdir $SCRD
 
 scrotname () {
 	TME="`date +%Y-%m-%d_%H:%M:%S`.png"
-	NME=$(echo -e "" | $HOME/scr/i3menu -p "Choose scrot name " \
-		-o vertical -w 200 -r 2 -l 0)
+	NME=$(echo -e "" | i3menu -p "Choose scrot name " \
+		-o vertical -w 200 -l 0)
 	[[ -z $NME ]] && SCRNME=$TME || SCRNME="$NME.png"
 }
 
 confirmscrot () {
-	ACT=$(echo -e "Save\nNew\nClipboard" | $HOME/scr/i3menu -p "Save? " \
-		-o vertical -w 200 -r 3 -l 0)
+	ACT=$(echo -e "Save\nNew\nClipboard" | i3menu -p "Save? " \
+		-o vertical -w 200 -l 0)
 	if [[ $ACT == "Save" ]]; then
 		scrotname
 		mv $TMP $SCRD/${SCRNME}
@@ -30,7 +29,7 @@ confirmscrot () {
 
 tmpscrot () {
 	SCRTPE=$(echo -e "Fullscreen\nSelection" | \
-		$HOME/scr/i3menu -p "Screenshot " -o vertical -w 200 -r 2 -l 0)
+		i3menu -p "Screenshot " -o vertical -w 200 -l 0)
 	if [[ $SCRTPE == "Fullscreen" ]]; then
 		sleep .25
 		maim --hidecursor $TMP

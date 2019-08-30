@@ -1,5 +1,5 @@
 "set guifont=Ubuntu\ Mono\ Regular:h20
-set guifont=%%font%%\ 15
+set guifont=%%font%%\ 13
 set guioptions-=m "remove menu bar
 set guioptions-=T "remove toolbar
 set guioptions-=r "remove right-hand scroll bar

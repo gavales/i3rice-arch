@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-bashDir=$HOME/scr
-pyDir=$HOME/doc/python
+bashDir=$SCR_DIR
+pyDir=$XDG_DOCUMENTS_DIR/python
 file=$1
 subdir=$2
 ft=$3

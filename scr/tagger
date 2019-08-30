@@ -3,42 +3,43 @@
 # OA: Gavin Vales
 # CREATED: Mon 18 Feb 19:46:53 GMT 2019
 
-artist="${1}"
-album="${2}"
+ART="${1}"
+ALB="${2}"
+TOT=$(ls | grep .mp3 | wc -l)
 
 echo "
 ==================================================
-Applying title...
-"
-
+Applying title..."
+CNT=0
 for i in *.mp3 ; do
+	CNT=$(($CNT + 1))
 	resto=${i%.*}
 	id3v2 -t "${resto}" "${i}"
-	echo -ne "$resto >>> ${i}"\\r
+	echo -ne "\r($CNT/$TOT) ${i}\r"
 done
 
-
-if [[ -n $artist ]]; then
+CNT=0
+if [[ -n $ART ]]; then
 	echo "
 ==================================================
-Changing artist to $artist...
-"
+Changing artist to $ART..."
 	for i in *.mp3 ; do
+		CNT=$(($CNT + 1))
 		resto=${i%.*}
-		id3v2 -a "${artist}" "${i}"
-		echo -ne "${i}"\\r
+		id3v2 -a "${ART}" "${i}"
+		echo -ne "\r($CNT/$TOT) ${i}\r"
 	done
 fi
 
-
-if [[ -n $album ]]; then
+CNT=0
+if [[ -n $ALB ]]; then
 	echo "
 ==================================================
-Changing album name to $album...
-"
+Changing album name to $ALB..."
 	for i in *.mp3 ; do
+		CNT=$(($CNT + 1))
 		resto=${i%.*}
-		id3v2 -A "${album}" "${i}"
-		echo -ne "${i}"\\r
+		id3v2 -A "${ALB}" "${i}"
+		echo -ne "\r($CNT/$TOT) ${i}\r"
 	done
 fi

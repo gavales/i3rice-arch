@@ -1,19 +1,20 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # OA: Gavin Vales
 # CREATED: Mon 29 Jul 19:21:39 BST 2019
 
-TDR=$HOME/thm DEF=${TDR}/gruvbox_light
+TDR=$HOME/thm DEF=${TDR}/.defaults
 create_def () {
 cat > $DEF << 'EOB'
 # vim:ft=perl
-name      gruvbox_light
-font      monospace
+# default theme, gruvbox light, basically
+name      default_theme
 guifont   Noto Sans
-size      12
+font      monospace
+size      11
+rxvtsize  12
 bg0       #fbf1c7
 fg0       #282828
-#acc       #918c77
 acc       #689d6a
 red       #cc241d
 grn       #98971a
@@ -21,7 +22,7 @@ ylw       #d79921
 gnt       #b16286
 blu       #458588
 cyn       #689d6a
-rng       #d65d0e
+orange    #d65d0e
 EOB
 exit
 }
@@ -38,10 +39,10 @@ variations () {
 	bg0R=$((16#${bg0:1:-4})) bg0G=$((16#${bg0:3:-2})) bg0B=$((16#${bg0:5}))
 	fg0R=$((16#${fg0:1:-4})) fg0G=$((16#${fg0:3:-2})) fg0B=$((16#${fg0:5}))
 	accR=$((16#${acc:1:-4})) accG=$((16#${acc:3:-2})) accB=$((16#${acc:5}))
-	acf=$($HOME/scr/colmix -x "50:${acc} 50:${fg0}")
-	acb=$($HOME/scr/colmix -x "50:${acc} 50:${bg0}")
-	acfRGB=$($HOME/scr/colmix -r "50:${acc} 50:${fg0}")
-	acbRGB=$($HOME/scr/colmix -r "50:${acc} 50:${bg0}")
+	acf=$(colmix -x "50:${acc} 50:${fg0}")
+	acb=$(colmix -x "50:${acc} 50:${bg0}")
+	acfRGB=$(colmix -r "50:${acc} 50:${fg0}")
+	acbRGB=$(colmix -r "50:${acc} 50:${bg0}")
 
 	[[ $bg0R -le 127 ]] || [[ $bg0G -le 127 ]] || [[ $bg0B -le 127 ]] && vrt=dark
 	if [[ $vrt == "light" ]]; then
@@ -135,7 +136,7 @@ change-current () {
 		var=$(echo $i | awk '{print $1}')
 		val=$(echo $i | sed "/^"$var"/!d;s/[^ ]* *//")
 		[[ $val =~ "mix" ]] && \
-			mix=$($HOME/scr/colmix -x "${val/mix /}") && \
+			mix=$(colmix -x "${val/mix /}") && \
 			sed "s/"$val"/"$mix"/g" -i $ALL
 	done
 	variations
@@ -189,7 +190,7 @@ apply-current () {
 	for i in ${templates}; do
 		cat ${i} | sed -e "${regex}" > ${i/template_/}
 	done
-	[[ -n $scr ]] && echo "Executing $scr in $1" && bash $scr &>/dev/null &
+	[[ -n $scr ]] && bash $scr &>/dev/null &
 	cd
 }
 
@@ -198,26 +199,25 @@ updatelist () { cd ${TDR} && bash .themelist ; }
 list () { ls ${TDR} | grep -v '^total' | awk '{print $NF}' ; }
 
 gui-change () {
-	THM=$(cat ${TDR}/.theme_list | $HOME/scr/i3menu -p "Choose theme " \
-		-w 350 -r $(cat ${TDR}/.theme_list | wc -l))
+	THM=$(cat ${TDR}/.theme_list | i3menu -p "Choose theme ")
 	THM=${THM% *}
 	THM=${THM##* }
 	echo $THM
-	notify-send "Chosen theme is $THM" -i "~/scrpic/theme.png"
+	notify-send "Chosen theme is $THM" -i "${SCR_DIR}pic/theme.png"
 	cd ${TDR}
 	if [[ -z ${THM} ]]; then
-		notify-send "No theme chosen"    -i "~/scrpic/theme.png" && exit
+		notify-send "No theme chosen"    -i "${SCR_DIR}pic/theme.png" && exit
 	elif [[ ! -f ${THM} ]]; then
-		notify-send "Theme don't exist"  -i "~/scrpic/theme.png" && exit
+		notify-send "Theme don't exist"  -i "${SCR_DIR}pic/theme.png" && exit
 	else
-		notify-send "Theme exists"       -i "~/scrpic/themepic.png"
+		notify-send "Theme exists"       -i "${SCR_DIR}pic/themepic.png"
 		ln -sf ${THM} ${CUR}
 	fi
 }
 
 getvar () {
 	[[ -n $1 ]] && cat $ALL | sed "/^$1/!d;s/[^ ]* *//" \
-		|| cat $ALR | $HOME/scr/i3menu -w 600
+		|| cat $ALR | i3menu -w 600
 }
 
 newtheme () {
@@ -256,7 +256,8 @@ cat << 'EOB'
  themer -x [SCRIPT]    ┼ Bash script to run after theme is made.
                        │   Specify before -a.
  themer -c [THEME]     ┼ Change current theme. Call themer -c ""
-                       │   for a rofi menu of all themes.
+                       │   for a rofi list of all themes.
+                       │   Requires my i3menu rofi wrapper.
  themer -v [VAR]       ┼ Get variables from current theme.
  themer -h             ┼ Display this help.
  themer -l             ┼ List available themes in theme directory.

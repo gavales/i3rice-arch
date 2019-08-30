@@ -1,13 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-PLYR="$HOME/scr/mppipe"
-FLLST="$HOME/.openvidfiles"
+PLYR="mppipe"
+FLLST="$HOME/.config/mpv/.openvidfiles"
 FILES="${1}"
 echo "$FILES" > $FLLST
 sed -e "s/^'//g;s/'$//g;s/'\ '/\n/g" -i $FLLST
-sed -e "s/\`/\\\`/g;s/\\\''//g"      -i $FLLST
+sed -e "s/\`/\\\`/g;s/\\\''//g" -i $FLLST
 IFS=$'\n'
 for i in $(cat $FLLST); do
 	$PLYR "$i"
 done
-rm $FLLST
