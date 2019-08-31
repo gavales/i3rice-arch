@@ -5,7 +5,7 @@
 
 VID="$1"
 open="$(pidof mpv)"
-fifo="$HOME/mp_fifo"
+fifo="$USER_TMP_DIR/mppipe"
 
 if [[ ${VID} =~ 'youtube.com' ]]; then
 	if [[ -n ${open} ]]; then

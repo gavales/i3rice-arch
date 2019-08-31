@@ -13,25 +13,25 @@ case $1 in
 esac
 
 if [[ $volint == 100 ]]; then
-	dunstify -r 1234 --raw_icon=${SCR_DIR}pic/speaker-full.png "    ████████████████████"
+	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/speaker-full.png "    ████████████████████"
 elif [[ $volint -ge 90 ]]; then
-	dunstify -r 1234 --raw_icon=${SCR_DIR}pic/speaker-full.png "    ██████████████████"
+	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/speaker-full.png "    ██████████████████"
 elif [[ $volint -ge 80 ]]; then
-	dunstify -r 1234 --raw_icon=${SCR_DIR}pic/speaker-full.png "    ████████████████"
+	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/speaker-full.png "    ████████████████"
 elif [[ $volint -ge 70 ]]; then
-	dunstify -r 1234 --raw_icon=${SCR_DIR}pic/speaker-full.png "    ██████████████"
+	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/speaker-full.png "    ██████████████"
 elif [[ $volint -ge 60 ]]; then
-	dunstify -r 1234 --raw_icon=${SCR_DIR}pic/speaker-full.png "    ████████████"
+	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/speaker-full.png "    ████████████"
 elif [[ $volint -ge 50 ]]; then
-	dunstify -r 1234 --raw_icon=${SCR_DIR}pic/speaker-full.png "    ██████████"
+	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/speaker-full.png "    ██████████"
 elif [[ $volint -ge 40 ]]; then
-	dunstify -r 1234 --raw_icon=${SCR_DIR}pic/speaker-full.png "    ████████"
+	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/speaker-full.png "    ████████"
 elif [[ $volint -ge 30 ]]; then
-	dunstify -r 1234 --raw_icon=${SCR_DIR}pic/speaker-full.png "    ██████"
+	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/speaker-full.png "    ██████"
 elif [[ $volint -ge 20 ]]; then
-	dunstify -r 1234 --raw_icon=${SCR_DIR}pic/speaker-full.png "    ████"
+	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/speaker-full.png "    ████"
 elif [[ $volint -ge 10 ]]; then
-	dunstify -r 1234 --raw_icon=${SCR_DIR}pic/speaker-full.png "    ██"
+	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/speaker-full.png "    ██"
 else
-	dunstify -r 1234 --raw_icon=${SCR_DIR}pic/speaker-empty.png "    MUTED"
+	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/speaker-empty.png "    MUTED"
 fi

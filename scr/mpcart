@@ -3,13 +3,13 @@
 # OA: Gavin Vales
 # CREATED: Fri  3 May 16:37:43 GMT 2019
 
-COVER=$HOME/cover.jpg
+COVER=$USER_TMP_DIR/mpcart
 rm -rf $COVER
 ffmpeg -i "$XDG_MUSIC_DIR/$(mpc -f %file% | head -n1)" $COVER &>/dev/null &
 
 #notify-send "Now Playing ♫" "$(mpc current)" -i $COVER
 sleep .5
-[[ ! -f $COVER ]] && cp ${SCR_DIR}pic/albartdef.jpg $COVER
+[[ ! -f $COVER ]] && cp ${USER_SCR_DIR}pic/albartdef.jpg $COVER
 
 dunstify -r 1234 --raw_icon=$COVER "Now Playing ♫" "$(mpc current)"
 

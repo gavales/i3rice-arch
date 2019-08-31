@@ -30,4 +30,4 @@ cp $PLT ${FLD}.tex
 sed -e "s/TITLE/$TIT/g" -i ${FLD}.tex
 #touch maintext.tex
 $EDITOR maintext.tex
-$SCR_DIR/clatex ${FLD}.tex
+$USER_SCR_DIR/clatex ${FLD}.tex

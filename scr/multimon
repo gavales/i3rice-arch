@@ -68,4 +68,4 @@ elif [[ $mode == "ARandR" ]]; then
 	arandr ; exit
 fi
 
-feh --bg-scale $HOME/.config/wall.png
+feh --bg-fill $HOME/pic/i3wallpaper/current

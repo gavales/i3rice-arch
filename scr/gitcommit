@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd $REPO_DIR
+cd $USER_REPO_DIR
 RPO="$(ls | i3menu -p "Update which repo?")"
 
 main () {
@@ -16,4 +16,4 @@ main () {
 	notify-send "... $RPO repo updated." -i ${SCR_DIR}pic/gitwhite.png
 }
 
-[[ -z $RPO ]] || [[ ! -d $REPO_DIR/$RPO ]] || main
+[[ -z $RPO ]] || [[ ! -d $USER_REPO_DIR/$RPO ]] || main

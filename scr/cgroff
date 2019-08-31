@@ -3,4 +3,4 @@
 file=$1
 
 #groff -ms ${file} -T pdf > ${file:0:-3}.pdf
-refer -PS -p $DRV_DIR/global -e "${file}" | groff -me -ms -keEjpt -T pdf > ${file:0:-3}.pdf
+refer -PS -p $USER_DRV_DIR/global -e "${file}" | groff -me -ms -keEjpt -T pdf > ${file:0:-3}.pdf

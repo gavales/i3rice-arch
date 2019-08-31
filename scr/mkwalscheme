@@ -3,6 +3,7 @@
 # OA: Gavin Vales
 # CREATED: Sun 16 Dec 18:22:14 GMT 2018
 
+thmDir=$HOME/thm
 TRG=$HOME/thm/pywal
 wal -q -e -n -s -t -i "${1}"
 WALL="${1}"

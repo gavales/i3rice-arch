@@ -1,24 +1,24 @@
 #!/usr/bin/env bash
 
-player=$($SCR_DIR/i3mediaplaying)
+player=$($USER_SCR_DIR/i3mediaplaying)
 
 case $1 in
 	togg)
-		[[ $player == "mpv" ]] && echo "cycle pause" > $HOME/mp_fifo
+		[[ $player == "mpv" ]] && echo "cycle pause" > $USER_TMP_DIR/mppipe
 		[[ $player == "spotify" ]] && playerctl play-pause
 		[[ $player == "box" ]] && playerctl play-pause
 		[[ $player == "mpd" ]] && mpc toggle && \
 			dunstify -r 1234 --raw_icon=$HOME/cover.jpg "Toggle Playback" "$(mpc current)"
 	;;
 	next)
-		[[ $player == "mpv" ]] && echo "seek 10" > $HOME/mp_fifo
+		[[ $player == "mpv" ]] && echo "seek 10" > $USER_TMP_DIR/mppipe
 		[[ $player == "spotify" ]] && playerctl next
 		[[ $player == "box" ]] && playerctl next
 		[[ $player == "mpd" ]] && mpc next && \
 			dunstify -r 1234 --raw_icon=$HOME/cover.jpg "Next Song" "$(mpc current)"
 	;;
 	prev)
-		[[ $player == "mpv" ]] && echo "seek -10" > $HOME/mp_fifo
+		[[ $player == "mpv" ]] && echo "seek -10" > $USER_TMP_DIR/mppipe
 		[[ $player == "spotify" ]] && playerctl previous
 		[[ $player == "box" ]] && playerctl previous
 		[[ $player == "mpd" ]] && mpc prev && \

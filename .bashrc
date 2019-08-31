@@ -124,7 +124,8 @@ shopt -s histappend
 #
 # # ex - archive extractor
 # # usage: ex <file>
-ex () {
+ex ()
+{
 	if [ -f $1 ] ; then
 		case $1 in
 			*.tar.bz2) tar xjf $1   ;;
@@ -151,14 +152,9 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 PS1='${debian_chroot:+($debian_chroot)}\[\033[00;31m\]['
 PS1+='\[\033[00;33m\]\u'
 PS1+='\[\033[00;32m\]@'
-PS1+='\[\033[00;34m\]\h'
-PS1+='\[\033[00;31m\]] \n'
+PS1+='\[\033[00;34m\]\h\[\033[00;31m\]] '
 PS1+='\[\033[00;36m\]\w '
-PS1+='\[\033[00;35m\]\$ \[\033[00m\]'
-
-#IFS=$'\n'
-#for i in $(cat $HOME/.config/user-dirs.dirs | sed "/^#/d"); do
-#	eval "export $i"
-#done
-
+PS1+='\[\033[00;35m\]\$ '
+PS1+='\[\033[00m\]'
+export PATH="$PATH:$HOME/anaconda2/bin:$HOME/anaconda3/bin:$HOME/scr"
 printf '\033[5 q\r'

@@ -9,25 +9,25 @@ case $1 in
 esac
 
 if [[ $bl -ge 100 ]]; then
-	dunstify -r 1234 --raw_icon=${SCR_DIR}pic/brightness-full.png "██████████████████"
+	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png "██████████████████"
 elif [[ $bl -ge 90 ]]; then
-	dunstify -r 1234 --raw_icon=${SCR_DIR}pic/brightness-full.png "████████████████"
+	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png "████████████████"
 elif [[ $bl -ge 80 ]]; then
-	dunstify -r 1234 --raw_icon=${SCR_DIR}pic/brightness-full.png "██████████████"
+	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png "██████████████"
 elif [[ $bl -ge 70 ]]; then
-	dunstify -r 1234 --raw_icon=${SCR_DIR}pic/brightness-full.png "████████████"
+	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png "████████████"
 elif [[ $bl -ge 60 ]]; then
-	dunstify -r 1234 --raw_icon=${SCR_DIR}pic/brightness-full.png "██████████"
+	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png "██████████"
 elif [[ $bl -ge 50 ]]; then
-	dunstify -r 1234 --raw_icon=${SCR_DIR}pic/brightness-full.png "████████"
+	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png "████████"
 elif [[ $bl -ge 40 ]]; then
-	dunstify -r 1234 --raw_icon=${SCR_DIR}pic/brightness-full.png "██████"
+	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png "██████"
 elif [[ $bl -ge 30 ]]; then
-	dunstify -r 1234 --raw_icon=${SCR_DIR}pic/brightness-full.png "████"
+	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png "████"
 elif [[ $bl -ge 20 ]]; then
-	dunstify -r 1234 --raw_icon=${SCR_DIR}pic/brightness-full.png "██"
+	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png "██"
 else
-	dunstify -r 1234 --raw_icon=${SCR_DIR}pic/brightness-full.png ""
+	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png ""
 fi
 
 polybar-msg hook backlight 1

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-$HOME/scr/bulkrename "$1"
+bulkrename "$1"

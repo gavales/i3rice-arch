@@ -3,7 +3,7 @@
 # OA: Gavin Vales
 # CREATED: Fri 17 May 18:47:08 BST 2019
 
-NMFL=$HOME/nightmode
+NMFL=$USER_TMP_DIR/nightmode
 nightmode=$(cat $NMFL)
 
 if [[ ! -f $NMFL ]]; then
