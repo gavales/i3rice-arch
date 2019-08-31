@@ -9,28 +9,28 @@ case $1 in
 		[[ $player == "box" ]] && playerctl play-pause
 		[[ $player == "mpd" ]] && mpc toggle && \
 			dunstify -r 1234 --raw_icon=$HOME/cover.jpg "Toggle Playback" "$(mpc current)"
-	;;
+		;;
 	next)
 		[[ $player == "mpv" ]] && echo "seek 10" > $USER_TMP_DIR/mppipe
 		[[ $player == "spotify" ]] && playerctl next
 		[[ $player == "box" ]] && playerctl next
 		[[ $player == "mpd" ]] && mpc next && \
 			dunstify -r 1234 --raw_icon=$HOME/cover.jpg "Next Song" "$(mpc current)"
-	;;
+		;;
 	prev)
 		[[ $player == "mpv" ]] && echo "seek -10" > $USER_TMP_DIR/mppipe
 		[[ $player == "spotify" ]] && playerctl previous
 		[[ $player == "box" ]] && playerctl previous
 		[[ $player == "mpd" ]] && mpc prev && \
 			dunstify -r 1234 --raw_icon=$HOME/cover.jpg "Previous Song" "$(mpc current)"
-	;;
+		;;
 	stop)
 		[[ $player == "mpv" ]] && kill $(pidof mpv)
 		[[ $player == "spotify" ]] && kill $(pidof spotify)
 		[[ $player == "box" ]] && kill $(pidof spotify)
 		[[ $player == "mpd" ]] && mpc stop && \
 			dunstify -r 1234 --raw_icon=$HOME/cover.jpg "Stopped Playing" "$(mpc current)"
-	;;
+		;;
 esac
 
 polybar-msg hook media 1

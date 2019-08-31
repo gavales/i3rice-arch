@@ -9,7 +9,7 @@ CONFIG="$RFDIR/.i3menuconfig"
 BLACK="$RFDIR/black.rasi"
 HORI="$RFDIR/_horizontal.rasi"
 VERT="$RFDIR/_vertical.rasi"
-PROMPT=" " # a comment
+PROMPT=" "
 MODE="menu"
 fs=" "
 

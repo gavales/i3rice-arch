@@ -1,4 +1,3 @@
-rename walldelete
 open_with ~/scropengvim
 open_with ~/scr/opengvim
 rename template_lockscreen_
@@ -48,3 +47,4 @@ rename pic
 rename dtp
 rename vid
 rename mus
+mkdir .tmp
