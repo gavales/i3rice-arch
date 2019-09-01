@@ -6,8 +6,7 @@
 # COMMAND TO UPDATE BLUR OF BLURS
 # for i in $(ls); do convert "${i}" -blur $blr "${PWD/normal/blur}/${i}"; echo "$i"; done
 
-[[ -f $HOME/.config/user-dirs.dirs ]] && source $HOME/.config/user-dirs.dirs \
-	&& WDIR="$XDG_PICTURES_DIR/i3wallpaper"
+WDIR="$XDG_PICTURES_DIR/i3wallpaper"
 NORM="${WDIR}/normal"
 BLUR="${WDIR}/blur"
 COLS="${WDIR}/cols"

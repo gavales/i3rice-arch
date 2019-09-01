@@ -12,20 +12,19 @@ cyn="\033[1;36m"
 wtd="\033[1;37m"
 wtl="\033[0m"
 
-cd $HOME
+cd ~
 cat << 'EOB'
 
 
 ================================================================================
-============================= UPDATE & GET MY REPOS ============================
+============================= UPDATE & GET MY REPOS ============================
 ================================================================================
 EOB
 sudo pacman -Syyu
-mkdir $HOME/Drive
-mkdir $HOME/.tmp
-mkdir $HOME/git
-cd $HOME/git
-git clone https://github.com/StillANixRookie/i3rice-arch.git
+mkdir ~/Drive
+mkdir ~/.tmp
+mkdir ~/git
+cd ~/git
 git clone https://github.com/StillANixRookie/icons_themer.git
 git clone https://github.com/StillANixRookie/numix-solarized-gtk-theme.git
 cd
@@ -36,17 +35,18 @@ cat << 'EOB'
 ============================ INSTALLING YOUR PROGRAMS ==========================
 ================================================================================
 EOB
-#sudo pacman -S rofi otf-font-awesome ttf-font-awesome nautilus evince mupdf \
-#    pinta redshift playerctl mplayer r tk gcc-fortran newsboat opencv \
-#    python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 \
-#    libreoffice pandoc pandoc-crossref pandoc-citeproc python-pygments \
-#    python2-pygments biber texlive-most acpi lm_sensors sysstat ntfs-3g \
-#    libmpdclient lxappearance sxiv ncurses fftw w3m mpd mpc ncmpcpp feh dunst \
-#    unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl urxvt-perls \
-#    trash-cli atom python-pywal vim-latexsuite calibre jq wmctrl polybar \
-#    vim-runtime gvim neovim xclip xsel firefox maim hsetroot xautolock
-#sudo cpan AnyEvent Linux::FD common::sense
-#cd $HOME
+sudo pacman -S rofi otf-font-awesome ttf-font-awesome nautilus evince mupdf \
+    pinta redshift playerctl mplayer r tk gcc-fortran newsboat opencv \
+    python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 \
+    libreoffice pandoc pandoc-crossref pandoc-citeproc python-pygments \
+    python2-pygments biber texlive-most acpi lm_sensors sysstat ntfs-3g \
+    libmpdclient lxappearance sxiv ncurses fftw w3m mpd mpc ncmpcpp feh dunst \
+    unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl urxvt-perls \
+    trash-cli atom python-pywal vim-latexsuite calibre jq wmctrl polybar \
+    vim-runtime gvim neovim xclip xsel firefox maim
+#hsetroot xautolock
+sudo cpan AnyEvent Linux::FD common::sense
+cd ~
 cat << 'EOB'
 
 
@@ -58,15 +58,15 @@ cat << 'EOB'
  - OPEN RANGER OR OTHER FILE MANAGER AND COPY SYMLINKS OF THE NECESSARY
      FOLDERS AND FILES
  - AUR APPS I GET TOO:
-       slack-desktop           i3lock-color          vivaldi
-       oni                     thunar-gtk2           google-chrome-beta
-       chrome-remote-desktop   spotify               grive
-       clipit                  pulseaudio-ctl        zathura-pdf-mupdf
-       xorg-xbacklight         light                 bashmount
-       i3blocks-gaps-git       mpris-ctl             figlet-fonts
-       urxvt-config-reload-git urxvt-resize-font-git i3ipc-python
-       cli-visualizer          pamac-aur             gtkrc-reload
-       ranger-git              betterlockscreen      vim-live-latex-preview
-       hideit.sh-git
+       slack-desktop           i3lock-color          vivaldi
+       oni                     thunar-gtk2           google-chrome-beta
+       chrome-remote-desktop   spotify               grive
+       clipit                  pulseaudio-ctl        zathura-pdf-mupdf
+       xorg-xbacklight         light                 bashmount
+       i3blocks-gaps-git       mpris-ctl             figlet-fonts
+       urxvt-config-reload-git urxvt-resize-font-git i3ipc-python
+       cli-visualizer          pamac-aur             gtkrc-reload
+       ranger-git              betterlockscreen      vim-live-latex-preview
+       hideit.sh-git
 
 EOB

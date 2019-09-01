@@ -4,9 +4,9 @@
 # CREATED: Thu  4 Jul 00:27:45 BST 2019
 
 EDITOR="gvim -f"
-NEWNME="$HOME/.bulkrenamenew"
-OLDNME="$HOME/.bulkrenameold"
-FINCMD="$HOME/.finalcommands"
+NEWNME="$USER_TMP_DIR/.bulkrenamenew"
+OLDNME="$USER_TMP_DIR/.bulkrenameold"
+FINCMD="$USER_TMP_DIR/.finalcommands"
 FILES="${1}"
 echo "$FILES" > $OLDNME
 sed -e "s/^'//g;s/'$//g;s/'\ '/\n/g" -i $OLDNME
