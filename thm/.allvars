@@ -1,15 +1,14 @@
-name      gruvbox_light
-wallpaper sawtooth
-bg0       #fbf1c7
-fg0       #282828
-acc       #689d6a
-red       #cc241d
-grn       #98971a
-ylw       #d79921
-gnt       #b16286
-blu       #689d6a
-cyn       #458588
-orange    #d65d0e
+name      nikes
+wallpaper JericoacoaraBrazil
+bg0       #f6f6f4
+fg0       #303030
+acc       #b46b7d
+red       #ff4845
+grn       #47aa12
+ylw       #ff890a
+blu       #b46b7d
+gnt       #288ad6
+cyn       #6bb4a2
 guifont   Luxi Mono
 font      LuxiMono
 polyfont  CMU Typewriter Text
@@ -23,29 +22,30 @@ gtk-icon  DamaDamas
 cursor    Bibata_Dark_Red
 conky_loc1 top_left
 conky_loc2 bottom_right
-fg3       #646464
-fg2       #505050
-fg1       #3c3c3c
-acf       #486249
-acb       #b1c698
-bg1       #e7ddb3
-bg2       #d3c99f
-bg3       #bfb58b
-fg0RGB    40, 40, 40
-fg1RGB    60, 60, 60
-fg2RGB    80, 80, 80
-fg3RGB    100, 100, 100
-bg0RGB    251, 241, 199
-bg1RGB    231, 221, 179
-bg2RGB    211, 201, 159
-bg3RGB    191, 181, 139
-accRGB    104, 157, 106
-acfRGB    72, 98, 73
-acbRGB    177, 198, 152
-redRGB    204, 36, 29
-grnRGB    152, 151, 26
-ylwRGB    215, 153, 33
-gntRGB    177, 98, 134
-bluRGB    104, 157, 106
-cynRGB    69, 133, 136
+orange    #d65d0e
+fg3       #6c6c6c
+fg2       #585858
+fg1       #444444
+acf       #724d56
+acb       #d5b0b8
+bg1       #e2e2e0
+bg2       #cececc
+bg3       #babab8
+fg0RGB    48, 48, 48
+fg1RGB    68, 68, 68
+fg2RGB    88, 88, 88
+fg3RGB    108, 108, 108
+bg0RGB    246, 246, 244
+bg1RGB    226, 226, 224
+bg2RGB    206, 206, 204
+bg3RGB    186, 186, 184
+accRGB    180, 107, 125
+acfRGB    114, 77, 86
+acbRGB    213, 176, 184
+redRGB    255, 72, 69
+grnRGB    71, 170, 18
+ylwRGB    255, 137, 10
+bluRGB    180, 107, 125
+gntRGB    40, 138, 214
+cynRGB    107, 180, 162
 orangeRGB    214, 93, 14

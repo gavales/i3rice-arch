@@ -11,7 +11,7 @@ gnt="\033[1;35m"
 cyn="\033[1;36m"
 wtd="\033[1;37m"
 wtl="\033[0m"
-
+#xfconf-query --channel thunar --property /misc-full-path-in-title --create --type bool --set true
 cd ~
 cat << 'EOB'
 

@@ -1,9 +1,9 @@
 sw_volume: 62
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
-state: play
-current: 4
-time: 4.097000
+state: pause
+current: 0
+time: 175.517000
 random: 1
 repeat: 1
 single: 0
@@ -13,9 +13,7 @@ mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
 0:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 03 Leslie Nayoko - Who is this Akira.mp3
-1:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 04 neon shudder - I Am Tetsuo.mp3
-2:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 07 Volkor X - Beam.mp3
-3:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 09 AWITW - Doll's Awakening.mp3
-4:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 12 Earslicker - Ride or Die.mp3
-5:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 13 Peter Zimmermann - Kaneda's Theme (Italo Disco Reprise).mp3
+1:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 07 Volkor X - Beam.mp3
+2:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 09 AWITW - Doll's Awakening.mp3
+3:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 13 Peter Zimmermann - Kaneda's Theme (Italo Disco Reprise).mp3
 playlist_end

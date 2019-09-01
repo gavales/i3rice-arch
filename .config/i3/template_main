@@ -132,13 +132,13 @@ $mlw+Shift+button5  move right
 
 $mod+Escape         mode "SHUTDOWN"
 mode "SHUTDOWN" {
-	bindsym l $exn i3exit lock, mode "default"
-	bindsym s $exn i3exit suspend, mode "default"
-	bindsym u $exn i3exit switch_user, mode "default"
-	bindsym e $exn i3exit logout, mode "default"
-	bindsym h $exn i3exit hibernate, mode "default"
-	bindsym r $exn i3exit reboot, mode "default"
-	bindsym x $exn i3exit shutdown, mode "default"
+	bindsym l $exn i3shutdown lock, mode "default"
+	bindsym s $exn i3shutdown suspend, mode "default"
+	bindsym u $exn i3shutdown switch_user, mode "default"
+	bindsym e $exn i3shutdown logout, mode "default"
+	bindsym h $exn i3shutdown hibernate, mode "default"
+	bindsym r $exn i3shutdown reboot, mode "default"
+	bindsym x $exn i3shutdown shutdown, mode "default"
 
 	#exit system mode: "Enter" or "Escape"
 	bindsym   Return mode "default"

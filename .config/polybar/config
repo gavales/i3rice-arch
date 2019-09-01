@@ -10,26 +10,26 @@
 [colors]
 tr = #000000ff
 
-#acc = #99689d6a
-#bg0 =   #fbf1c7
-#acb = #99b1c698
-#fg0 =   #282828
-#ylw = #99d79921
-#gnt = #99b16286
-#red = #99cc241d
-#grn = #9998971a
-#cyn = #99458588
+#acc = #99b46b7d
+#bg0 =   #f6f6f4
+#acb = #99d5b0b8
+#fg0 =   #303030
+#ylw = #99ff890a
+#gnt = #99288ad6
+#red = #99ff4845
+#grn = #9947aa12
+#cyn = #996bb4a2
 
-acc = #689d6a
-bg0 = #fbf1c7
-acb = #b1c698
-acf = #486249
-fg0 = #282828
-ylw = #d79921
-gnt = #b16286
-red = #cc241d
-grn = #98971a
-cyn = #458588
+acc = #b46b7d
+bg0 = #f6f6f4
+acb = #d5b0b8
+acf = #724d56
+fg0 = #303030
+ylw = #ff890a
+gnt = #288ad6
+red = #ff4845
+grn = #47aa12
+cyn = #6bb4a2
 
 [settings]
 screenchange-reload = true
@@ -71,7 +71,7 @@ tray-position = right
 tray-padding = 2
 tray-maxsize = 16
 tray-transparent = true
-tray-background = #689d6a
+tray-background = #b46b7d
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -122,7 +122,7 @@ font-2 = FontAwesome5Brands:style=Solid:size=12;3
 
 tray-position = right
 tray-padding = 2
-tray-background = #689d6a
+tray-background = #b46b7d
 
 ;wm-restack = bspwm
 ;wm-restack = i3

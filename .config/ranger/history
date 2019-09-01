@@ -1,7 +1,3 @@
-rename (2010) Trigun: Badlands Rumble.mp4
-rename Way Out There.mp3
-mkdir CarterBurwell
-rename Carter Burwell
 rename Alien Planet.mkv
 rename (1988) Akira.mp4
 rename Synthspiria-30YearsLater-AnAKIRATribute.zip
@@ -48,3 +44,7 @@ shell mkdir plt doc fonts
 rename dwn
 rename plc
 rename uni
+touch post-build-apply
+shell chmod +x %f
+search luxi
+search cmu

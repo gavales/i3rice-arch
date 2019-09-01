@@ -1,9 +1,9 @@
 * {
-accent: #458588;
-bg1:    #fbf1c7;
-bg2:    #e7ddb3;
-fg2:    #282828;
-fg1:    #3c3c3c;
-redish: #cc241d;
+accent: #6bb4a2;
+bg1:    #f6f6f4;
+bg2:    #e2e2e0;
+fg2:    #303030;
+fg1:    #444444;
+redish: #ff4845;
 font1: "LuxiMono 12";
 }

@@ -50,22 +50,22 @@ set $ws10 10
 
 # //// COLORS
 
-set $bg3 #bfb58b
-set $bg2 #d3c99f
-set $bg1 #e7ddb3
-set $bg0 #fbf1c7
-set $acb #b1c698
-set $acc #689d6a
-set $acf #486249
-set $fg0 #282828
-set $fg1 #3c3c3c
-set $fg2 #505050
-set $fg3 #646464
-set $red #cc241d
-set $grn #98971a
-set $ylw #d79921
-set $gnt #b16286
-set $cyn #458588
+set $bg3 #babab8
+set $bg2 #cececc
+set $bg1 #e2e2e0
+set $bg0 #f6f6f4
+set $acb #d5b0b8
+set $acc #b46b7d
+set $acf #724d56
+set $fg0 #303030
+set $fg1 #444444
+set $fg2 #585858
+set $fg3 #6c6c6c
+set $red #ff4845
+set $grn #47aa12
+set $ylw #ff890a
+set $gnt #288ad6
+set $cyn #6bb4a2
 set $t   ff
 
 # //// APPS
@@ -132,13 +132,13 @@ $mlw+Shift+button5  move right
 
 $mod+Escape         mode "SHUTDOWN"
 mode "SHUTDOWN" {
-	bindsym l $exn i3exit lock, mode "default"
-	bindsym s $exn i3exit suspend, mode "default"
-	bindsym u $exn i3exit switch_user, mode "default"
-	bindsym e $exn i3exit logout, mode "default"
-	bindsym h $exn i3exit hibernate, mode "default"
-	bindsym r $exn i3exit reboot, mode "default"
-	bindsym x $exn i3exit shutdown, mode "default"
+	bindsym l $exn i3shutdown lock, mode "default"
+	bindsym s $exn i3shutdown suspend, mode "default"
+	bindsym u $exn i3shutdown switch_user, mode "default"
+	bindsym e $exn i3shutdown logout, mode "default"
+	bindsym h $exn i3shutdown hibernate, mode "default"
+	bindsym r $exn i3shutdown reboot, mode "default"
+	bindsym x $exn i3shutdown shutdown, mode "default"
 
 	#exit system mode: "Enter" or "Escape"
 	bindsym   Return mode "default"
