@@ -1,7 +1,7 @@
 name      nikes
 wallpaper JericoacoaraBrazil
-bg0       #f6f6f4
-fg0       #303030
+fg0       #f6f6f4
+bg0       #303030
 acc       #b46b7d
 red       #ff4845
 grn       #47aa12
@@ -23,25 +23,25 @@ cursor    Bibata_Dark_Red
 conky_loc1 top_left
 conky_loc2 bottom_right
 orange    #d65d0e
-fg3       #6c6c6c
-fg2       #585858
-fg1       #444444
-acf       #724d56
-acb       #d5b0b8
-bg1       #e2e2e0
-bg2       #cececc
-bg3       #babab8
-fg0RGB    48, 48, 48
-fg1RGB    68, 68, 68
-fg2RGB    88, 88, 88
-fg3RGB    108, 108, 108
-bg0RGB    246, 246, 244
-bg1RGB    226, 226, 224
-bg2RGB    206, 206, 204
-bg3RGB    186, 186, 184
+fg3       #babab8
+fg2       #cececc
+fg1       #e2e2e0
+acf       #d5b0b8
+acb       #724d56
+bg1       #444444
+bg2       #585858
+bg3       #6c6c6c
+fg0RGB    246, 246, 244
+fg1RGB    226, 226, 224
+fg2RGB    206, 206, 204
+fg3RGB    186, 186, 184
+bg0RGB    48, 48, 48
+bg1RGB    68, 68, 68
+bg2RGB    88, 88, 88
+bg3RGB    108, 108, 108
 accRGB    180, 107, 125
-acfRGB    114, 77, 86
-acbRGB    213, 176, 184
+acfRGB    213, 176, 184
+acbRGB    114, 77, 86
 redRGB    255, 72, 69
 grnRGB    71, 170, 18
 ylwRGB    255, 137, 10

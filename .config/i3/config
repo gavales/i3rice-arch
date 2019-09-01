@@ -87,17 +87,17 @@ set $ws10 10
 
 # //// COLORS
 
-set $bg3 #babab8
-set $bg2 #cececc
-set $bg1 #e2e2e0
-set $bg0 #f6f6f4
-set $acb #d5b0b8
+set $bg3 #6c6c6c
+set $bg2 #585858
+set $bg1 #444444
+set $bg0 #303030
+set $acb #724d56
 set $acc #b46b7d
-set $acf #724d56
-set $fg0 #303030
-set $fg1 #444444
-set $fg2 #585858
-set $fg3 #6c6c6c
+set $acf #d5b0b8
+set $fg0 #f6f6f4
+set $fg1 #e2e2e0
+set $fg2 #cececc
+set $fg3 #babab8
 set $red #ff4845
 set $grn #47aa12
 set $ylw #ff890a
@@ -324,7 +324,7 @@ floating_modifier   $wni
 
 #$win+0              $exn i3flttg
 
-$win+grave          $exn menunicode
+$win+grave          $exn test-script
 
 $win+1              $edit $home/.config/i3/template_main
 $win+Shift+1        $exn i3-sticky-create 1
@@ -389,6 +389,7 @@ $win+Shift+s        $exn i3-sticky-toggle
 $win+d              move workspace to output $hdm
 
 $win+f              $lch 'gksu thunar' $mk2
+$win+Shift+f        focus parent, fullscreen toggle, focus child
 
 $win+g              $lch '$term -name GITREPOUPDATE -e bash $home/$scr/gitcommit' $mk2
 
@@ -416,7 +417,8 @@ $win+Shift+Return   $exn $term -name FILES_ADMIN -e sudo ranger
 #$win+x              $exn "pactl set-sink-mute 0 toggle; $home/$scr/notify_volume"
 $win+x              unmark
 
-$win+c              $lch '$term -name CALENDAR -e vim "+Calendar -view=day"' $mk2
+#$win+c              $lch '$term -name CALENDAR -e vim "+Calendar -view=day"' $mk2
+$win+c              $lch 'google-chrome-beta' $mk3
 $win+Shift+c        $exn reloadconfs
 
 $win+v              move workspace to output $vga

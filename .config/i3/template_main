@@ -287,7 +287,7 @@ floating_modifier   $wni
 
 #$win+0              $exn i3flttg
 
-$win+grave          $exn menunicode
+$win+grave          $exn test-script
 
 $win+1              $edit $home/.config/i3/template_main
 $win+Shift+1        $exn i3-sticky-create 1
@@ -352,6 +352,7 @@ $win+Shift+s        $exn i3-sticky-toggle
 $win+d              move workspace to output $hdm
 
 $win+f              $lch 'gksu thunar' $mk2
+$win+Shift+f        focus parent, fullscreen toggle, focus child
 
 $win+g              $lch '$term -name GITREPOUPDATE -e bash $home/$scr/gitcommit' $mk2
 
@@ -379,7 +380,8 @@ $win+Shift+Return   $exn $term -name FILES_ADMIN -e sudo ranger
 #$win+x              $exn "pactl set-sink-mute 0 toggle; $home/$scr/notify_volume"
 $win+x              unmark
 
-$win+c              $lch '$term -name CALENDAR -e vim "+Calendar -view=day"' $mk2
+#$win+c              $lch '$term -name CALENDAR -e vim "+Calendar -view=day"' $mk2
+$win+c              $lch 'google-chrome-beta' $mk3
 $win+Shift+c        $exn reloadconfs
 
 $win+v              move workspace to output $vga

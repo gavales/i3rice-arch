@@ -1,6 +1,6 @@
 ! nikes
-#define cwhtl #303030
-#define cwhtd #d5b0b8
+#define cwhtl #f6f6f4
+#define cwhtd #724d56
 #define credd #ff4845
 #define credl #ff4845
 #define cgrnd #47aa12
@@ -13,5 +13,5 @@
 #define cgntl #288ad6
 #define ccynd #6bb4a2
 #define ccynl #6bb4a2
-#define cblkd #f6f6f4
-#define cblkl #e2e2e0
+#define cblkd #303030
+#define cblkl #444444

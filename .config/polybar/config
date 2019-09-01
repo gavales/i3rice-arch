@@ -11,9 +11,9 @@
 tr = #000000ff
 
 #acc = #99b46b7d
-#bg0 =   #f6f6f4
-#acb = #99d5b0b8
-#fg0 =   #303030
+#bg0 =   #303030
+#acb = #99724d56
+#fg0 =   #f6f6f4
 #ylw = #99ff890a
 #gnt = #99288ad6
 #red = #99ff4845
@@ -21,10 +21,10 @@ tr = #000000ff
 #cyn = #996bb4a2
 
 acc = #b46b7d
-bg0 = #f6f6f4
-acb = #d5b0b8
-acf = #724d56
-fg0 = #303030
+bg0 = #303030
+acb = #724d56
+acf = #d5b0b8
+fg0 = #f6f6f4
 ylw = #ff890a
 gnt = #288ad6
 red = #ff4845
