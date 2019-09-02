@@ -33,9 +33,9 @@ vrt=light
 CUR=${TDR}/.current ALL=${TDR}/.allvars ALR=${TDR}/.allvarsrofi RGX=${TDR}/.regex
 
 variations () {
-	bg0=$(cat ${ALL} | sed '/^bg0/!d;s/[^ ]* *//')
-	fg0=$(cat ${ALL} | sed '/^fg0/!d;s/[^ ]* *//')
-	acc=$(cat ${ALL} | sed '/^acc/!d;s/[^ ]* *//')
+	bg0=$(cat ${ALL} | sed '/^bg0 /!d;s/[^ ]* *//')
+	fg0=$(cat ${ALL} | sed '/^fg0 /!d;s/[^ ]* *//')
+	acc=$(cat ${ALL} | sed '/^acc /!d;s/[^ ]* *//')
 	bg0R=$((16#${bg0:1:-4})) bg0G=$((16#${bg0:3:-2})) bg0B=$((16#${bg0:5}))
 	fg0R=$((16#${fg0:1:-4})) fg0G=$((16#${fg0:3:-2})) fg0B=$((16#${fg0:5}))
 	accR=$((16#${acc:1:-4})) accG=$((16#${acc:3:-2})) accB=$((16#${acc:5}))
@@ -259,6 +259,7 @@ cat << 'EOB'
                        │   for a rofi list of all themes.
                        │   Requires my i3menu rofi wrapper.
  themer -v [VAR]       ┼ Get variables from current theme.
+ themer -n [NAME]      ┼ Create new theme: NAME
  themer -h             ┼ Display this help.
  themer -l             ┼ List available themes in theme directory.
  themer -u             ┼ Update rofi theme list for -c.

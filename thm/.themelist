@@ -1,14 +1,14 @@
 #!/bin/bash
 
-DEF=gruvbox_light
+DEF=.defaults
 LST=.theme_list
 main () {
 	rm $LST
 	thms=$(ls -l | grep -v "^total" | awk '{print $NF}')
 	for i in $thms; do
-		ffg0=$(cat ${i} | sed '/^fg0/!d;s/[^ ]* *//')
-		facc=$(cat ${i} | sed '/^acc/!d;s/[^ ]* *//')
-		fbg0=$(cat ${i} | sed '/^bg0/!d;s/[^ ]* *//')
+		ffg0=$(cat ${i} | sed '/^fg0 /!d;s/[^ ]* *//')
+		facc=$(cat ${i} | sed '/^acc /!d;s/[^ ]* *//')
+		fbg0=$(cat ${i} | sed '/^bg0 /!d;s/[^ ]* *//')
 		[[ $ffg0 =~ "$" ]] && fg0=$(cat $i | sed "/^"${ffg0/\$/}\ "/!d;s/[^ ]* *//") || fg0=$ffg0
 		[[ $facc =~ "$" ]] && acc=$(cat $i | sed "/^"${facc/\$/}\ "/!d;s/[^ ]* *//") || acc=$facc
 		[[ $fbg0 =~ "$" ]] && bg0=$(cat $i | sed "/^"${fbg0/\$/}\ "/!d;s/[^ ]* *//") || bg0=$fbg0

@@ -50,22 +50,22 @@ set $ws10 10
 
 # //// COLORS
 
-set $bg3 #6c6c6c
-set $bg2 #585858
-set $bg1 #444444
-set $bg0 #303030
-set $acb #724d56
-set $acc #b46b7d
-set $acf #d5b0b8
-set $fg0 #f6f6f4
-set $fg1 #e2e2e0
-set $fg2 #cececc
-set $fg3 #babab8
-set $red #ff4845
-set $grn #47aa12
-set $ylw #ff890a
-set $gnt #288ad6
-set $cyn #6bb4a2
+set $bg3 #c3af87
+set $bg2 #d7c39b
+set $bg1 #ebd7af
+set $bg0 #ffebc3
+set $acb #c0caa2
+set $acc #82aa83
+set $acf #5f7b6b
+set $fg0 #3c4c55
+set $fg1 #506069
+set $fg2 #64747d
+set $fg3 #788891
+set $red #b97279
+set $grn #82aa83
+set $ylw #b0a27d
+set $gnt #a29fba
+set $cyn #689d6a
 set $t   ff
 
 # //// APPS
@@ -311,11 +311,13 @@ $win+8              $edit $home/.config/qutebrowser/template_config.py
 # //// 1st Row
 
 $win+q              floating disable, $mvm1, [con_mark=$mk1] focus, focus child
+$win+Shift+q        [con_mark=$mk1] focus, focus parent, fullscreen toggle, focus child
 
 $win+w              floating disable, $mvm2, [con_mark=$mk2] focus, focus child
-$win+Shift+w        $lch '$term -name LAYOUT_EDITOR -e bash $home/$scr/wsloget' $mk2
+$win+Shift+w        [con_mark=$mk2] focus, focus parent, fullscreen toggle, focus child
 
 $win+e              floating disable, $mvm3, [con_mark=$mk3] focus, focus child
+$win+Shift+e        [con_mark=$mk3] focus, focus parent, fullscreen toggle, focus child
 
 $win+r              $lch '$term -name RTV -e rtv' $mk2
 

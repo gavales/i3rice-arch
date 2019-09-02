@@ -1,14 +1,22 @@
-name      nikes
-wallpaper JericoacoaraBrazil
-fg0       #f6f6f4
-bg0       #303030
-acc       #b46b7d
-red       #ff4845
-grn       #47aa12
-ylw       #ff890a
-blu       #b46b7d
-gnt       #288ad6
-cyn       #6bb4a2
+name      forest-night
+bg0       #ffebc3
+fg0       #3c4c55
+acc       #82aa83
+red       #b97279
+grn       #82aa83
+ylw       #b0a27d
+blu       #8fa2b3
+gnt       #a29fba
+grey      #667784
+orange    #b18977
+accnight    #a9dd9d
+rednight    #fd888d
+grnnight    #a9dd9d
+ylwnight    #eed094
+blunight    #bdd0e5
+gntnight    #daccf0
+greynight   #7f8f9f
+orangenight #f0aa8a
 guifont   Luxi Mono
 font      LuxiMono
 polyfont  CMU Typewriter Text
@@ -22,30 +30,38 @@ gtk-icon  DamaDamas
 cursor    Bibata_Dark_Red
 conky_loc1 top_left
 conky_loc2 bottom_right
-orange    #d65d0e
-fg3       #babab8
-fg2       #cececc
-fg1       #e2e2e0
-acf       #d5b0b8
-acb       #724d56
-bg1       #444444
-bg2       #585858
-bg3       #6c6c6c
-fg0RGB    246, 246, 244
-fg1RGB    226, 226, 224
-fg2RGB    206, 206, 204
-fg3RGB    186, 186, 184
-bg0RGB    48, 48, 48
-bg1RGB    68, 68, 68
-bg2RGB    88, 88, 88
-bg3RGB    108, 108, 108
-accRGB    180, 107, 125
-acfRGB    213, 176, 184
-acbRGB    114, 77, 86
-redRGB    255, 72, 69
-grnRGB    71, 170, 18
-ylwRGB    255, 137, 10
-bluRGB    180, 107, 125
-gntRGB    40, 138, 214
-cynRGB    107, 180, 162
-orangeRGB    214, 93, 14
+cyn       #689d6a
+fg3       #788891
+fg2       #64747d
+fg1       #506069
+acf       #5f7b6b
+acb       #c0caa2
+bg1       #ebd7af
+bg2       #d7c39b
+bg3       #c3af87
+fg0RGB    60, 76, 85
+fg1RGB    80, 96, 105
+fg2RGB    100, 116, 125
+fg3RGB    120, 136, 145
+bg0RGB    255, 235, 195
+bg1RGB    235, 215, 175
+bg2RGB    215, 195, 155
+bg3RGB    195, 175, 135
+accRGB    130, 170, 131
+acfRGB    95, 123, 107
+acbRGB    192, 202, 162
+redRGB    185, 114, 121
+grnRGB    130, 170, 131
+ylwRGB    176, 162, 125
+bluRGB    143, 162, 179
+gntRGB    162, 159, 186
+greyRGB    102, 119, 132
+orangeRGB    177, 137, 119
+rednightRGB    253, 136, 141
+grnnightRGB    169, 221, 157
+ylwnightRGB    238, 208, 148
+blunightRGB    189, 208, 229
+gntnightRGB    218, 204, 240
+greynightRGB    127, 143, 159
+orangenightRGB    240, 170, 138
+cynRGB    104, 157, 106

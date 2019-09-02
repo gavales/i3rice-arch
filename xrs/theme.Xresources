@@ -1,17 +1,17 @@
-! nikes
-#define cwhtl #f6f6f4
-#define cwhtd #724d56
-#define credd #ff4845
-#define credl #ff4845
-#define cgrnd #47aa12
-#define cgrnl #47aa12
-#define cylwd #ff890a
-#define cylwl #ff890a
-#define cblud #b46b7d
-#define cblul #b46b7d
-#define cgntd #288ad6
-#define cgntl #288ad6
-#define ccynd #6bb4a2
-#define ccynl #6bb4a2
-#define cblkd #303030
-#define cblkl #444444
+! forest-night
+#define cwhtl #3c4c55
+#define cwhtd #c0caa2
+#define credd #b97279
+#define credl #b97279
+#define cgrnd #82aa83
+#define cgrnl #82aa83
+#define cylwd #b0a27d
+#define cylwl #b0a27d
+#define cblud #82aa83
+#define cblul #82aa83
+#define cgntd #a29fba
+#define cgntl #a29fba
+#define ccynd #689d6a
+#define ccynl #689d6a
+#define cblkd #ffebc3
+#define cblkl #ebd7af
