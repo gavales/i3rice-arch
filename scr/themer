@@ -6,8 +6,8 @@
 TDR=$HOME/thm DEF=${TDR}/.defaults
 create_def () {
 cat > $DEF << 'EOB'
-# vim:ft=perl
-# default theme, gruvbox light, basically
+! vim:ft=perl
+! default theme, gruvbox light, basically
 name      default_theme
 guifont   Noto Sans
 font      monospace
@@ -124,9 +124,9 @@ parse-vars () {
 
 change-current () {
 	[[ -z $1 ]] && gui-change || ln -sf ${1} $CUR
-	cat $CUR | sed '/^#/d' > $ALL
+	cat $CUR | sed '/^\!/d' > $ALL
 	IFS=$'\n'
-	for i in $(cat $DEF | sed -e "/^#/d;/^wallpaper/d"); do
+	for i in $(cat $DEF | sed -e "/^\!/d;/^wallpaper/d"); do
 		var=$(echo $i | awk '{print $1}')
 		XTS=$(cat $ALL | grep "^${var}")
 		[[ -n $XTS ]] || echo $i >> $ALL

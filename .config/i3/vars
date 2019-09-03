@@ -29,7 +29,7 @@ set $brightdec light -U 10
 set $nat       eDP1
 set $vga       VGA1
 set $hdm       HDMI1
-set $kb        us
+set $kb        gb
 
 set $mediaw    492
 set $mediaw2   492

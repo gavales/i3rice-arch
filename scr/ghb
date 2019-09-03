@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: $(date)
+#source $HOME/.config/user-dirs.dirs
+
+DIR=$USER_REPO_DIR/quickstart
+EDITOR="gvim -f"
+[[ -d $DIR ]] && cd $DIR || {
+	mkdir ${DIR%/*}
+	hugo new site quickstart
+	cd $DIR
+	}
+
+new () {
+	hugo new posts/${1}.md
+	hugo server -D &>/dev/null &
+	i3launch 'surf localhost:1313' _W2
+	i3-msg -q [con_mark="_W3"] focus
+	$EDITOR content/posts/${1}.md
+	killall hugo
+	killall surf
+}
+
+list () {
+	ls content/posts
+}
+
+delete () {
+	rm -rf content/posts/${1}.md
+}
+
+help () {
+	cat << 'EOB'
+          ██      ██     
+   █████ ▒██     ▒██     
+  ██▒▒▒██▒██     ▒██     
+ ▒██  ▒██▒██████ ▒██████ 
+ ▒▒██████▒██▒▒▒██▒██▒▒▒██
+  ▒▒▒▒▒██▒██  ▒██▒██  ▒██
+   █████ ▒██  ▒██▒██████ 
+  ▒▒▒▒▒  ▒▒   ▒▒ ▒▒▒▒▒   
+	-- a hugo blog wrapper script
+
+ Dependencies
+ ____________
+ 
+ hugo
+ 
+ Usage
+ _____
+ 
+ ghb -n [NAME] ┼ NAME of post to create
+ ghb -l        ┼ list posts in content/posts
+ ghb -d [NAME] ┼ NAME of post to delete
+ ghb -h        ┼ print this help
+EOB
+}
+
+while getopts :n:d:hl opts; do
+	case $opts in
+		n) new "${OPTARG}"    ;;
+		l) list               ;;
+		d) delete "${OPTARG}" ;;
+		h) help && exit       ;;
+	esac
+done

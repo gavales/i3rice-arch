@@ -63,7 +63,7 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = %%polyfont%%:style=Bold Oblique:size=12;3
+font-0 = %%polyfont%%:size=12;3
 font-1 = FontAwesome5Free:style=Solid:size=15;3
 font-2 = FontAwesome5Brands:style=Solid:size=15;3
 

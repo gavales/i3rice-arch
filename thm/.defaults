@@ -1,10 +1,10 @@
-# vim:ft=perl
+! vim:ft=perl
 name      gruvbox_light
 guifont   Luxi Mono
-font      LuxiMono
+!font      LuxiMono
 polyfont  CMU Typewriter Text
-#font      CMUTypewriterText
-#guifont   CMU Typewriter Text
+font      CMUTypewriterText
+!guifont   CMU Typewriter Text
 ltimex    1
 ltimey    90
 size      11

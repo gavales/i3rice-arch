@@ -1,17 +1,17 @@
-! forest-night
-#define cwhtl #3c4c55
-#define cwhtd #c0caa2
-#define credd #b97279
-#define credl #b97279
-#define cgrnd #82aa83
-#define cgrnl #82aa83
-#define cylwd #b0a27d
-#define cylwl #b0a27d
-#define cblud #82aa83
-#define cblul #82aa83
-#define cgntd #a29fba
-#define cgntl #a29fba
-#define ccynd #689d6a
-#define ccynl #689d6a
-#define cblkd #ffebc3
-#define cblkl #ebd7af
+! solarized_light
+#define cwhtl #002b36
+#define cwhtd #93cbbd
+#define credd #dc322f
+#define credl #dc322f
+#define cgrnd #859900
+#define cgrnl #859900
+#define cylwd #b58900
+#define cylwl #b58900
+#define cblud #2aa198
+#define cblul #2aa198
+#define cgntd #d33682
+#define cgntl #d33682
+#define ccynd #268bd2
+#define ccynl #268bd2
+#define cblkd #fdf6e3
+#define cblkl #e9e2cf

@@ -1,4 +1,4 @@
-# vim:ft=perl
+! vim:ft=perl
 name      i3
 wallpaper i3-manjaro
 tint      $acc
@@ -6,6 +6,6 @@ ltimex    41
 ltimey    69
 acc       #285577
 bg0       #CDCBCD
-#bg0       #282423
+!bg0       #282423
 fg0       #302f30
 red       #900000

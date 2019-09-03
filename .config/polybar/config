@@ -10,26 +10,26 @@
 [colors]
 tr = #000000ff
 
-#acc = #9982aa83
-#bg0 =   #ffebc3
-#acb = #99c0caa2
-#fg0 =   #3c4c55
-#ylw = #99b0a27d
-#gnt = #99a29fba
-#red = #99b97279
-#grn = #9982aa83
-#cyn = #99689d6a
+#acc = #992aa198
+#bg0 =   #fdf6e3
+#acb = #9993cbbd
+#fg0 =   #002b36
+#ylw = #99b58900
+#gnt = #99d33682
+#red = #99dc322f
+#grn = #99859900
+#cyn = #99268bd2
 
-acc = #82aa83
-bg0 = #ffebc3
-acb = #c0caa2
-acf = #5f7b6b
-fg0 = #3c4c55
-ylw = #b0a27d
-gnt = #a29fba
-red = #b97279
-grn = #82aa83
-cyn = #689d6a
+acc = #2aa198
+bg0 = #fdf6e3
+acb = #93cbbd
+acf = #156567
+fg0 = #002b36
+ylw = #b58900
+gnt = #d33682
+red = #dc322f
+grn = #859900
+cyn = #268bd2
 
 [settings]
 screenchange-reload = true
@@ -63,7 +63,7 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = CMU Typewriter Text:style=Bold Oblique:size=12;3
+font-0 = CMU Typewriter Text:size=12;3
 font-1 = FontAwesome5Free:style=Solid:size=15;3
 font-2 = FontAwesome5Brands:style=Solid:size=15;3
 
@@ -71,7 +71,7 @@ tray-position = right
 tray-padding = 2
 tray-maxsize = 16
 tray-transparent = true
-tray-background = #82aa83
+tray-background = #2aa198
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -122,7 +122,7 @@ font-2 = FontAwesome5Brands:style=Solid:size=12;3
 
 tray-position = right
 tray-padding = 2
-tray-background = #82aa83
+tray-background = #2aa198
 
 ;wm-restack = bspwm
 ;wm-restack = i3

@@ -1,7 +1,7 @@
-# vim:ft=perl
+! vim:ft=perl
 name      nikes
 wallpaper JericoacoaraBrazil
-#tint      $acc
+!tint      $acc
 fg0       #f6f6f4
 bg0       #303030
 acc       #b46b7d

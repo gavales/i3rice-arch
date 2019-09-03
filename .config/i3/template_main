@@ -290,13 +290,16 @@ floating_modifier   $wni
 $win+grave          $exn test-script
 
 $win+1              $edit $home/.config/i3/template_main
-$win+Shift+1        $exn i3-sticky-create 1
+#$win+Shift+1        $exn i3-sticky-create 1
+$win+Shift+1        [con_mark=$mk1] focus, focus parent, fullscreen toggle, focus child
 
 $win+2              $edit $home/.config/i3/template_vars
-$win+Shift+2        $exn i3-sticky-create 2
+#$win+Shift+2        $exn i3-sticky-create 2
+$win+Shift+2        [con_mark=$mk2] focus, focus parent, fullscreen toggle, focus child
 
 $win+3              $edit $home/.bashrc
-$win+Shift+3        $exn i3-sticky-create 3
+#$win+Shift+3        $exn i3-sticky-create 3
+$win+Shift+3        [con_mark=$mk3] focus, focus parent, fullscreen toggle, focus child
 
 $win+4              $edit $home/.vimrc
 
@@ -311,13 +314,10 @@ $win+8              $edit $home/.config/qutebrowser/template_config.py
 # //// 1st Row
 
 $win+q              floating disable, $mvm1, [con_mark=$mk1] focus, focus child
-$win+Shift+q        [con_mark=$mk1] focus, focus parent, fullscreen toggle, focus child
 
 $win+w              floating disable, $mvm2, [con_mark=$mk2] focus, focus child
-$win+Shift+w        [con_mark=$mk2] focus, focus parent, fullscreen toggle, focus child
 
 $win+e              floating disable, $mvm3, [con_mark=$mk3] focus, focus child
-$win+Shift+e        [con_mark=$mk3] focus, focus parent, fullscreen toggle, focus child
 
 $win+r              $lch '$term -name RTV -e rtv' $mk2
 
@@ -463,6 +463,7 @@ $fw [class="mpv"]                               $mvm1
 $fw [class="feh"]                               $mvm1
 $fw [class="Sxiv"]                              $mvm1
 #$fw [window_role="pop-up"]                      $mvm1
+
 $fw [class="Zathura"]                           $mvm2
 $fw [class="MuPDF"]                             $mvm2
 $fw [class="Electron"]                          $mvm2

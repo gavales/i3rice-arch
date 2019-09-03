@@ -1,25 +1,18 @@
-name      forest-night
-bg0       #ffebc3
-fg0       #3c4c55
-acc       #82aa83
-red       #b97279
-grn       #82aa83
-ylw       #b0a27d
-blu       #8fa2b3
-gnt       #a29fba
-grey      #667784
-orange    #b18977
-accnight    #a9dd9d
-rednight    #fd888d
-grnnight    #a9dd9d
-ylwnight    #eed094
-blunight    #bdd0e5
-gntnight    #daccf0
-greynight   #7f8f9f
-orangenight #f0aa8a
+name      solarized_light
+wallpaper flowy-hair
+tint      #2aa198
+fg0       #002b36
+bg0       #fdf6e3
+acc       #2aa198
+red       #dc322f
+grn       #859900
+ylw       #b58900
+blu       #2aa198
+gnt       #d33682
+cyn       #268bd2
 guifont   Luxi Mono
-font      LuxiMono
 polyfont  CMU Typewriter Text
+font      CMUTypewriterText
 ltimex    1
 ltimey    90
 size      11
@@ -30,38 +23,31 @@ gtk-icon  DamaDamas
 cursor    Bibata_Dark_Red
 conky_loc1 top_left
 conky_loc2 bottom_right
-cyn       #689d6a
-fg3       #788891
-fg2       #64747d
-fg1       #506069
-acf       #5f7b6b
-acb       #c0caa2
-bg1       #ebd7af
-bg2       #d7c39b
-bg3       #c3af87
-fg0RGB    60, 76, 85
-fg1RGB    80, 96, 105
-fg2RGB    100, 116, 125
-fg3RGB    120, 136, 145
-bg0RGB    255, 235, 195
-bg1RGB    235, 215, 175
-bg2RGB    215, 195, 155
-bg3RGB    195, 175, 135
-accRGB    130, 170, 131
-acfRGB    95, 123, 107
-acbRGB    192, 202, 162
-redRGB    185, 114, 121
-grnRGB    130, 170, 131
-ylwRGB    176, 162, 125
-bluRGB    143, 162, 179
-gntRGB    162, 159, 186
-greyRGB    102, 119, 132
-orangeRGB    177, 137, 119
-rednightRGB    253, 136, 141
-grnnightRGB    169, 221, 157
-ylwnightRGB    238, 208, 148
-blunightRGB    189, 208, 229
-gntnightRGB    218, 204, 240
-greynightRGB    127, 143, 159
-orangenightRGB    240, 170, 138
-cynRGB    104, 157, 106
+orange    #d65d0e
+fg3       #3c6772
+fg2       #28535e
+fg1       #143f4a
+acf       #156567
+acb       #93cbbd
+bg1       #e9e2cf
+bg2       #d5cebb
+bg3       #c1baa7
+fg0RGB    0, 43, 54
+fg1RGB    20, 63, 74
+fg2RGB    40, 83, 94
+fg3RGB    60, 103, 114
+bg0RGB    253, 246, 227
+bg1RGB    233, 226, 207
+bg2RGB    213, 206, 187
+bg3RGB    193, 186, 167
+accRGB    42, 161, 152
+acfRGB    21, 101, 103
+acbRGB    147, 203, 189
+tintRGB    42, 161, 152
+redRGB    220, 50, 47
+grnRGB    133, 153, 0
+ylwRGB    181, 137, 0
+bluRGB    42, 161, 152
+gntRGB    211, 54, 130
+cynRGB    38, 139, 210
+orangeRGB    214, 93, 14
