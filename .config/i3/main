@@ -50,22 +50,22 @@ set $ws10 10
 
 # //// COLORS
 
-set $bg3 #c1baa7
-set $bg2 #d5cebb
-set $bg1 #e9e2cf
-set $bg0 #fdf6e3
-set $acb #93cbbd
-set $acc #2aa198
-set $acf #156567
-set $fg0 #002b36
-set $fg1 #143f4a
-set $fg2 #28535e
-set $fg3 #3c6772
-set $red #dc322f
-set $grn #859900
-set $ylw #b58900
-set $gnt #d33682
-set $cyn #268bd2
+set $bg3 #bfb58b
+set $bg2 #d3c99f
+set $bg1 #e7ddb3
+set $bg0 #fbf1c7
+set $acb #b1c698
+set $acc #689d6a
+set $acf #486249
+set $fg0 #282828
+set $fg1 #3c3c3c
+set $fg2 #505050
+set $fg3 #646464
+set $red #cc241d
+set $grn #98971a
+set $ylw #d79921
+set $gnt #b16286
+set $cyn #458588
 set $t   ff
 
 # //// APPS
@@ -130,7 +130,9 @@ $mlw+Shift+button4  move left
 $mlw+button5        focus right
 $mlw+Shift+button5  move right
 
-$mod+Escape         mode "SHUTDOWN"
+$mod+Escape         $exn caltdel
+
+#$mod+Escape         mode "SHUTDOWN"
 mode "SHUTDOWN" {
 	bindsym l $exn i3shutdown lock, mode "default"
 	bindsym s $exn i3shutdown suspend, mode "default"
@@ -465,7 +467,6 @@ $fw [class="Sxiv"]                              $mvm1
 #$fw [window_role="pop-up"]                      $mvm1
 
 $fw [class="Zathura"]                           $mvm2
-$fw [class="Surf"]                              $mvm2
 $fw [class="MuPDF"]                             $mvm2
 $fw [class="Electron"]                          $mvm2
 $fw [window_role="GtkFileChooserDialog"]        $mvm2
@@ -518,7 +519,7 @@ workspace $ws5 gaps outer 40
 # >>>> STARTUP
 # DAEMONS
 $exn urxvtd -q -o -f
-$exn xautolock -corners 0-0- -cornersize 30 -time 1 -locker $HOME/scr/lockscreen
+$exn xautolock -corners 0-0- -cornersize 30 -time 5 -locker $HOME/scr/lockscreen
 $exn /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 $exn nm-applet
 $exn xfce4-power-manager

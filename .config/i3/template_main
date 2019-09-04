@@ -130,7 +130,9 @@ $mlw+Shift+button4  move left
 $mlw+button5        focus right
 $mlw+Shift+button5  move right
 
-$mod+Escape         mode "SHUTDOWN"
+$mod+Escape         $exn caltdel
+
+#$mod+Escape         mode "SHUTDOWN"
 mode "SHUTDOWN" {
 	bindsym l $exn i3shutdown lock, mode "default"
 	bindsym s $exn i3shutdown suspend, mode "default"
@@ -517,7 +519,7 @@ workspace $ws5 gaps outer 40
 # >>>> STARTUP
 # DAEMONS
 $exn urxvtd -q -o -f
-$exn xautolock -corners 0-0- -cornersize 30 -time 1 -locker $HOME/scr/lockscreen
+$exn xautolock -corners 0-0- -cornersize 30 -time 5 -locker $HOME/scr/lockscreen
 $exn /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 $exn nm-applet
 $exn xfce4-power-manager

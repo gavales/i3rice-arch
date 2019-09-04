@@ -12,9 +12,9 @@ def windownotify(i3, event):
 	if event.change == 'focus':
 		call('polybar-msg hook wintitle 1'.split(' '))
 
-	if event.change == 'title':
-		call('polybar-msg hook wintitle 1'.split(' '))
-		call('polybar-msg hook media 1'.split(' '))
+#	if event.change == 'title':
+#		call('polybar-msg hook wintitle 1'.split(' '))
+#		call('polybar-msg hook media 1'.split(' '))
 
 	if event.container.window_class == 'Spotify':
 		if event.change == 'title':

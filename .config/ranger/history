@@ -1,3 +1,6 @@
+rename cover.jpg
+rename 30 Years Later - An AKIRA Tribute
+rename mpmpv
 rename mpmpd
 rename _horizontal.rasi
 rename _vertical.rasi
@@ -38,13 +41,10 @@ rename dwn
 rename plc
 rename uni
 touch post-build-apply
+shell chmod +x %f
 search luxi
 search cmu
-shell wget https://raw.githubusercontent.com/Airblader/i3-sticky/master/i3-sticky
-rename i3-sticky.py
-shell chmod +x %f
-rename i3shutdown
-rename forest-night
-rename forest-dusk
-rename forest-dawn
-rename forest-day
+rename template_syntax.css_
+rename template_syntax.css
+shell git clone https://github.com/StillANixRookie/GavinVales.git
+open_with 

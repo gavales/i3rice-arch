@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: $(date)
+#source $HOME/.config/user-dirs.dirs
+
+OPT=$(echo -e "lock\nlogout\nswitch_user\nsuspend\nhibernate\nreboot\nshutdown" | \
+	i3menu -c red -w 500 -p "SHUTDOWN ")
+
+[[ -z $OPT ]] && exit || \
+	i3shutdown $OPT

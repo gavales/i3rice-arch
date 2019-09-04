@@ -1,35 +1,37 @@
 #!/usr/bin/env bash
 
-blr=$(light -G)
-declare -i bl=$(printf "%.0f" $blr)
-
 case $1 in
 	inc) light -A 5 ;;
 	dec) light -U 5 ;;
 esac
 
-if [[ $bl -ge 100 ]]; then
-	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png "██████████████████"
-elif [[ $bl -ge 90 ]]; then
-	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png "████████████████"
-elif [[ $bl -ge 80 ]]; then
-	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png "██████████████"
-elif [[ $bl -ge 70 ]]; then
-	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png "████████████"
-elif [[ $bl -ge 60 ]]; then
-	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png "██████████"
-elif [[ $bl -ge 50 ]]; then
-	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png "████████"
-elif [[ $bl -ge 40 ]]; then
-	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png "██████"
-elif [[ $bl -ge 30 ]]; then
-	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png "████"
-elif [[ $bl -ge 20 ]]; then
-	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png "██"
+BLR=$(light -G)
+BL=${BLR%.*}
+
+if [[ $BL -ge 100 ]]; then
+	BAR="████████████████████"
+elif [[ $BL -ge 90 ]]; then
+	BAR="██████████████████"
+elif [[ $BL -ge 80 ]]; then
+	BAR="████████████████"
+elif [[ $BL -ge 70 ]]; then
+	BAR="██████████████"
+elif [[ $BL -ge 60 ]]; then
+	BAR="████████████"
+elif [[ $BL -ge 50 ]]; then
+	BAR="██████████"
+elif [[ $BL -ge 40 ]]; then
+	BAR="████████"
+elif [[ $BL -ge 30 ]]; then
+	BAR="██████"
+elif [[ $BL -ge 20 ]]; then
+	BAR="████"
+elif [[ $BL -ge 10 ]]; then
+	BAR="██"
 else
-	dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png ""
+	BAR=""
 fi
 
 polybar-msg hook backlight 1
 
-echo $bl
+dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png " ${BL}% $BAR "

@@ -13,9 +13,9 @@ EDITOR="gvim -f"
 	}
 
 new () {
-	hugo new posts/${1}.md
+	[[ -f content/posts/${1}.md ]] || hugo new posts/${1}.md
 	hugo server -D &>/dev/null &
-	i3launch 'surf localhost:1313' _W2
+	i3launch 'surf localhost:1313' _W2 &>/dev/null &
 	i3-msg -q [con_mark="_W3"] focus
 	$EDITOR content/posts/${1}.md
 	killall hugo
