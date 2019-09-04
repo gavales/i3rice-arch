@@ -1,24 +1,22 @@
 #!/usr/bin/env bash
 
-file=$1
-whichcomp=$(cat $file | grep 'whichcompiler:' | awk '{print $NF}')
-if [[ -n $whichcomp ]]; then
-	compiler=$whichcomp
-elif [[ -z $whichcomp ]]; then
-	compiler=pdflatex
+TRG=${1%.*}
+WCPL=$(cat ${TRG}.tex | grep 'whichcompiler:' | awk '{print $NF}')
+if [[ -n $WCPL ]]; then
+	CPL=$WCPL
+elif [[ -z $WCPL ]]; then
+	CPL=pdflatex
 fi
 
-${compiler} -interaction=nonstopmode -shell-escape ${file:0:-4}.tex
-if [[ -e ${file:0:-4}.bcf ]]; then
-	biber ${file:0:-4}.bcf
-	${compiler} -interaction=nonstopmode -shell-escape ${file:0:-4}.tex
-	${compiler} -interaction=nonstopmode -shell-escape ${file:0:-4}.tex
-else
-	:
-fi
-if [[ -e ${file:0:-4}.nlo ]]; then
-	makeindex ${file:0:-4}.nlo -s nomencl.ist -o ${file:0:-4}.nls
-	${compiler} -interaction=nonstopmode -shell-escape ${file:0:-4}.tex
-else
-	:
-fi
+${CPL} -interaction=nonstopmode -shell-escape ${TRG}.tex
+
+[[ -f ${TRG}.bcf ]] && {
+	biber ${TRG}.bcf
+	${CPL} -interaction=nonstopmode -shell-escape ${TRG}.tex
+	${CPL} -interaction=nonstopmode -shell-escape ${TRG}.tex
+}
+
+[[ -f ${TRG}.nlo ]] && {
+	makeindex ${TRG}.nlo -s nomencl.ist -o ${TRG}.nls
+	${CPL} -interaction=nonstopmode -shell-escape ${TRG}.tex
+}

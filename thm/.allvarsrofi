@@ -1,19 +1,20 @@
-              <b><big>gruvbox_light</big></b>
-<span background="#fbf1c7">   </span><span foreground="#282828" background="#fbf1c7"> bg0 #fbf1c7 </span>	wallpaper sawtooth
-<span background="#282828">   </span><span foreground="#282828" background="#fbf1c7"> fg0 #282828 </span>	guifont   Luxi Mono
-<span background="#689d6a">   </span><span foreground="#282828" background="#fbf1c7"> acc #689d6a </span>	polyfont  CMU Typewriter Text
-<span background="#cc241d">   </span><span foreground="#282828" background="#fbf1c7"> red #cc241d </span>	font      CMUTypewriterText
-<span background="#98971a">   </span><span foreground="#282828" background="#fbf1c7"> grn #98971a </span>	ltimex    1
-<span background="#d79921">   </span><span foreground="#282828" background="#fbf1c7"> ylw #d79921 </span>	ltimey    90
-<span background="#b16286">   </span><span foreground="#282828" background="#fbf1c7"> gnt #b16286 </span>	size      11
-<span background="#689d6a">   </span><span foreground="#282828" background="#fbf1c7"> blu #689d6a </span>	rxvtsize  12
-<span background="#458588">   </span><span foreground="#282828" background="#fbf1c7"> cyn #458588 </span>	rofifsize 12
-<span background="#d65d0e">   </span><span foreground="#282828" background="#fbf1c7"> orange #d65d0e </span>	gtk       Standard-light
-<span background="#646464">   </span><span foreground="#282828" background="#fbf1c7"> fg3 #646464 </span>	gtk-icon  DamaDamas
-<span background="#505050">   </span><span foreground="#282828" background="#fbf1c7"> fg2 #505050 </span>	cursor    Bibata_Dark_Red
-<span background="#3c3c3c">   </span><span foreground="#282828" background="#fbf1c7"> fg1 #3c3c3c </span>	conky_loc1 top_left
-<span background="#486249">   </span><span foreground="#282828" background="#fbf1c7"> acf #486249 </span>	conky_loc2 bottom_right
-<span background="#b1c698">   </span><span foreground="#282828" background="#fbf1c7"> acb #b1c698 </span>	
-<span background="#e7ddb3">   </span><span foreground="#282828" background="#fbf1c7"> bg1 #e7ddb3 </span>	
-<span background="#d3c99f">   </span><span foreground="#282828" background="#fbf1c7"> bg2 #d3c99f </span>	
-<span background="#bfb58b">   </span><span foreground="#282828" background="#fbf1c7"> bg3 #bfb58b </span>	
+              <b><big>solarized_light</big></b>
+<span background="#2aa198">   </span><span foreground="#002b36" background="#fdf6e3"> tint #2aa198 </span>	wallpaper flowy-hair
+<span background="#002b36">   </span><span foreground="#002b36" background="#fdf6e3"> fg0 #002b36 </span>	guifont   Luxi Mono
+<span background="#fdf6e3">   </span><span foreground="#002b36" background="#fdf6e3"> bg0 #fdf6e3 </span>	polyfont  CMU Typewriter Text
+<span background="#2aa198">   </span><span foreground="#002b36" background="#fdf6e3"> acc #2aa198 </span>	font      CMUTypewriterText
+<span background="#dc322f">   </span><span foreground="#002b36" background="#fdf6e3"> red #dc322f </span>	ltimex    1
+<span background="#859900">   </span><span foreground="#002b36" background="#fdf6e3"> grn #859900 </span>	ltimey    90
+<span background="#b58900">   </span><span foreground="#002b36" background="#fdf6e3"> ylw #b58900 </span>	size      11
+<span background="#2aa198">   </span><span foreground="#002b36" background="#fdf6e3"> blu #2aa198 </span>	rxvtsize  12
+<span background="#d33682">   </span><span foreground="#002b36" background="#fdf6e3"> gnt #d33682 </span>	rofifsize 12
+<span background="#268bd2">   </span><span foreground="#002b36" background="#fdf6e3"> cyn #268bd2 </span>	gtk       Standard-light
+<span background="#d65d0e">   </span><span foreground="#002b36" background="#fdf6e3"> orange #d65d0e </span>	gtk-icon  DamaDamas
+<span background="#3c6772">   </span><span foreground="#002b36" background="#fdf6e3"> fg3 #3c6772 </span>	cursor    Bibata_Dark_Red
+<span background="#28535e">   </span><span foreground="#002b36" background="#fdf6e3"> fg2 #28535e </span>	conky_loc1 top_left
+<span background="#143f4a">   </span><span foreground="#002b36" background="#fdf6e3"> fg1 #143f4a </span>	conky_loc2 bottom_right
+<span background="#156567">   </span><span foreground="#002b36" background="#fdf6e3"> acf #156567 </span>	
+<span background="#93cbbd">   </span><span foreground="#002b36" background="#fdf6e3"> acb #93cbbd </span>	
+<span background="#e9e2cf">   </span><span foreground="#002b36" background="#fdf6e3"> bg1 #e9e2cf </span>	
+<span background="#d5cebb">   </span><span foreground="#002b36" background="#fdf6e3"> bg2 #d5cebb </span>	
+<span background="#c1baa7">   </span><span foreground="#002b36" background="#fdf6e3"> bg3 #c1baa7 </span>	

@@ -3,7 +3,19 @@
 # with openrc use loginctl
 [[ $(cat /proc/1/comm) == "systemd" ]] && logind=systemctl || logind=loginctl
 
-case "$1" in
+OPT=$(echo "
+lock
+logout
+switch_user
+suspend
+hibernate
+reboot
+shutdown" | \
+	i3menu -c red -w 500 -p "SHUTDOWN [<ESC> to cancel]")
+
+[[ -z $OPT ]] && exit
+
+case "$OPT" in
 	lock)        lockscreen                                   ;;
 	logout)      i3-msg exit                                  ;;
 	switch_user) dm-tool switch-to-greeter                    ;;
@@ -11,11 +23,6 @@ case "$1" in
 	hibernate)   lockscreen && sleep 0.5 && $logind hibernate ;;
 	reboot)      $logind reboot                               ;;
 	shutdown)    $logind poweroff                             ;;
-	*)
-		echo "== ! i3exit: missing or invalid argument ! =="
-		echo "Try again with: lock | logout | switch_user | suspend | hibernate | reboot | shutdown"
-		exit 2
-		;;
 esac
 
 exit 0

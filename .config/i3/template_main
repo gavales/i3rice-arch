@@ -116,6 +116,22 @@ client.background       $bg0
 # >>>> MOD1 BINDINGS
 # //// Misc
 
+$mod+Escape         $exn i3shutdown
+
+#$mod+Escape         mode "SHUTDOWN"
+#mode "SHUTDOWN" {
+#	bindsym l $exn i3shutdown lock, mode "default"
+#	bindsym s $exn i3shutdown suspend, mode "default"
+#	bindsym u $exn i3shutdown switch_user, mode "default"
+#	bindsym e $exn i3shutdown logout, mode "default"
+#	bindsym h $exn i3shutdown hibernate, mode "default"
+#	bindsym r $exn i3shutdown reboot, mode "default"
+#	bindsym x $exn i3shutdown shutdown, mode "default"
+#	#exit system mode: "Enter" or "Escape"
+#	bindsym   Return mode "default"
+#	bindsym   Escape mode "default"
+#}
+
 $mod+Home           $exn keybindingsmenu
 
 $mlw+button1        floating disable, $mvm3, [con_mark=$mk3] focus, focus child
@@ -129,23 +145,6 @@ $mlw+Shift+button4  move left
 
 $mlw+button5        focus right
 $mlw+Shift+button5  move right
-
-$mod+Escape         $exn caltdel
-
-#$mod+Escape         mode "SHUTDOWN"
-mode "SHUTDOWN" {
-	bindsym l $exn i3shutdown lock, mode "default"
-	bindsym s $exn i3shutdown suspend, mode "default"
-	bindsym u $exn i3shutdown switch_user, mode "default"
-	bindsym e $exn i3shutdown logout, mode "default"
-	bindsym h $exn i3shutdown hibernate, mode "default"
-	bindsym r $exn i3shutdown reboot, mode "default"
-	bindsym x $exn i3shutdown shutdown, mode "default"
-
-	#exit system mode: "Enter" or "Escape"
-	bindsym   Return mode "default"
-	bindsym   Escape mode "default"
-}
 
 $mod+space          focus mode_toggle
 $mod+Shift+space    $exn i3flttg
@@ -288,30 +287,31 @@ floating_modifier   $wni
 # //// Numbers
 
 #$win+0              $exn i3flttg
+#$win+Shift+1        $exn i3-sticky-create 1
+#$win+Shift+2        $exn i3-sticky-create 2
+#$win+Shift+3        $exn i3-sticky-create 3
 
 $win+grave          $exn test-script
 
-$win+1              $edit $home/.config/i3/template_main
-#$win+Shift+1        $exn i3-sticky-create 1
-$win+Shift+1        [con_mark=$mk1] focus, focus parent, fullscreen toggle, focus child
+$win+1              [con_mark=$mk1] focus, focus parent, fullscreen toggle, focus child
+$win+Shift+1        $edit $home/.config/i3/template_main
 
-$win+2              $edit $home/.config/i3/template_vars
-#$win+Shift+2        $exn i3-sticky-create 2
-$win+Shift+2        [con_mark=$mk2] focus, focus parent, fullscreen toggle, focus child
+$win+2              [con_mark=$mk2] focus, focus parent, fullscreen toggle, focus child
+$win+Shift+2        $edit $home/.config/i3/template_vars
 
-$win+3              $edit $home/.bashrc
-#$win+Shift+3        $exn i3-sticky-create 3
-$win+Shift+3        [con_mark=$mk3] focus, focus parent, fullscreen toggle, focus child
+$win+3              [con_mark=$mk3] focus, focus parent, fullscreen toggle, focus child
+$win+Shift+3        $edit $home/.bashrc
 
-$win+4              $edit $home/.vimrc
+$win+4              [con_mark=$mk4] focus, focus parent, fullscreen toggle, focus child
+$win+Shift+4        $edit $home/.vimrc
 
-$win+5              $edit $home/.config/ranger/rc.conf
+$win+Shift+5        $edit $home/.config/ranger/rc.conf
 
-$win+6              $edit $home/.config/ranger/rifle.conf
+$win+Shift+6        $edit $home/.config/ranger/rifle.conf
 
-$win+7              $edit $home/.config/polybar/template_config
+$win+Shift+7        $edit $home/.config/polybar/template_config
 
-$win+8              $edit $home/.config/qutebrowser/template_config.py
+$win+Shift+8        $edit $home/.config/qutebrowser/template_config.py
 
 # //// 1st Row
 
