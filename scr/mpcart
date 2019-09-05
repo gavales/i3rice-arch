@@ -13,4 +13,4 @@ sleep .5
 
 dunstify -r 1234 --raw_icon=$COVER "Now Playing ♫" "$(mpc current)"
 
-polybar-msg hook media 1 &>/dev/null &
+i3media &>/dev/null &

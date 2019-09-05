@@ -2,18 +2,15 @@
 
 # OA: Gavin Vales
 # CREATED: Sun 27 Jan 13:52:24 GMT 2019
-source $HOME/.config/user-dirs.dirs
+#source $HOME/.config/user-dirs.dirs
 
-mpris=$(pidof spotify)
+spo=$(pidof spotify)
 box=$(pidof rhythmbox)
 mpv=$(pidof mpv)
 
-if [[ -n $mpv ]]; then
-	echo mpv
-elif [[ -n $box ]]; then
-	echo box
-elif [[ -n $mpris ]]; then
-	echo spotify
-else
-	echo mpd
-fi
+CUR=mpmpd
+[[ -n $mpv ]] && CUR=mpmpv
+[[ -n $box ]] && CUR=mpgui
+[[ -n $spo ]] && CUR=mpgui
+
+echo $CUR

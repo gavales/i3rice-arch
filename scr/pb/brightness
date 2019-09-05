@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-blr=$(light -G)
-
-bl=$(printf "%.0f" $blr)
-
-echo "${bl}"
-#echo "%{T1}%{T-} ${bl}"

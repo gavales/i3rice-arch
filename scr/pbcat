@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: $(date)
+#source $HOME/.config/user-dirs.dirs
+
+MODDIR=$USER_TMP_DIR/pbcat
+[[ -d $MODDIR ]] || mkdir $MODDIR
+
+help () {
+cat << 'EOB'
+           ██                          ██  
+   ██████ ▒██                         ▒██  
+  ▒██▒▒▒██▒██       █████   ██████   ██████
+  ▒██  ▒██▒██████  ██▒▒▒██ ▒▒▒▒▒▒██ ▒▒▒██▒ 
+  ▒██████ ▒██▒▒▒██▒██  ▒▒   ███████   ▒██  
+  ▒██▒▒▒  ▒██  ▒██▒██   ██ ██▒▒▒▒██   ▒██  
+  ▒██     ▒██████ ▒▒█████ ▒▒████████  ▒▒██ 
+  ▒▒      ▒▒▒▒▒    ▒▒▒▒▒   ▒▒▒▒▒▒▒▒    ▒▒  
+	-- script to create lots of polybar ipc modules
+
+ Usage
+ -----
+ pbcat -h          ┼
+ pbcat -v [TEXT]   ┼ TEXT for MODULE to OUTPUT
+ pbcat -m [MODULE] ┼ MODULE to update
+EOB
+}
+
+while getopts :m:v:h opts; do
+	case $opts in
+		m) MOD="${OPTARG}" ;;
+		v) VAL="${OPTARG}" ;;
+		h) help && exit    ;;
+	esac
+done
+
+[[ -f $MODDIR/$MOD ]] || echo "$MOD" > $MODDIR/$MOD
+[[ -z $VAL ]] && cat $MODDIR/$MOD || {
+	FVAL="$VAL"
+	echo "$FVAL" > $MODDIR/$MOD
+	polybar-msg hook $MOD 1
+}

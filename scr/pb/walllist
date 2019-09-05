@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# OA: Gavin Vales
-
-wall=$(ls $HOME/pic/i3wallpaper/normal | $HOME/scr/i3menu -m -L 10 -w 500)
-$HOME/scr/i3wallpaper -w $wall
-polybar-msg hook i3wallpaper 1

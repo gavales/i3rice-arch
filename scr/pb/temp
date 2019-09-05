@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
 
-temp1=$(sensors coretemp-isa-0000 | grep '^Core 0' | awk '{ print $3 }')
-rawtemp=$(printf %.0f ${temp1:1:-4})
-
-if [[ $rawtemp -ge 65 ]]; then
-	echo "<span foreground=\"#ffff00\"><span face='Font Awesome 5 Free'>&#xf2c8;</span> $rawtemp</span>"
-elif [[ $rawtemp -ge 85 ]]; then
-	echo "<span background=\"#ff0000\"><span face='Font Awesome 5 Free'>&#xf2c7;</span> $rawtemp</span>"
-elif [[ $rawtemp -ge 50 ]]; then
-	echo "<span face='Font Awesome 5 Free'>&#xf2c9;</span> $rawtemp"
-else
-	echo "<span face='Font Awesome 5 Free'>&#xf2ca;</span> $rawtemp"
-fi
+_TMP=$(sensors coretemp-isa-0000 | grep '^Core 0' | awk '{ print $3 }')
+_TMP=${_TMP/+/}
+RTMP=${_TMP%.*}
+_ICN="%{T1}%{T-}"
+#_BCL="$(themer -v "acc ")"
+#_FCL="$(themer -v "bg0 ")"
+[[ $RTMP -ge 50 ]] && _ICN="%{T1}%{T-}" && _BCL="#ffff00" && _FCL="$(themer -v "fg0 ")"
+[[ $RTMP -ge 65 ]] && _ICN="%{T1}%{T-}" && _BCL="#ff0000" && _FCL="$(themer -v "fg0 ")"
+FSTR="%{B$_BCL}%{F$_FCL} ${_ICN} ${RTMP} %{B- F-}"
+echo $FSTR

@@ -1,14 +1,30 @@
 #!/usr/bin/env bash
 
 case $1 in
-	inc) pactl set-sink-volume 0 +2% ;;
-	dec) pactl set-sink-volume 0 -2% ;;
+	inc)  pactl set-sink-volume 0 +2%  ;;
+	dec)  pactl set-sink-volume 0 -2%  ;;
 	mute) pactl set-sink-mute 0 toggle ;;
 esac
 
-volraw=$(amixer get Master|tail -1|grep -oh "\w*%\w*")
-stat=$(amixer get Master|tail -1|awk '{print $NF}')
-VOL=${volraw:0:-1}
+RVL=$(amixer get Master | tail -n 1 | grep %)
+VOL=${RVL%\%*}
+VOL=${VOL#*[}
+STT=${RVL%]*}
+STT=${STT##*[}
+_ICN="%{T1}%{T-}"
+_BCL=$(themer -v "acb ")
+_FCL=$(themer -v "fg0 ")
+
+update () {
+	_VOL=$VOL
+	[[ $VOL == 0 ]]     && _ICN="%{T1}%{T-}" && _VOL=" ---"
+	[[ $VOL -ge 60 ]]   && _BCL="#ffff00"
+	[[ $VOL -ge 80 ]]   && _BCL="#ff0000"
+	[[ $STT == "off" ]] && _ICN="%{T1}%{T-}" && _VOL=" ---"
+	FSTR="%{B$_BCL}%{F$_FCL} \
+%{A4:i3volume inc:}%{A5:i3volume dec:}%{A1:i3volume mute:}${_ICN} ${_VOL}%{A}%{A}%{A}  %{B- F-}"
+	pbcat -m volume -v "$FSTR"
+}
 
 if [[ $VOL -ge 100 ]]; then
 	BAR="████████████████████"
@@ -37,3 +53,4 @@ else
 fi
 
 dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/speaker-full.png " ${VOL}% $BAR "
+update

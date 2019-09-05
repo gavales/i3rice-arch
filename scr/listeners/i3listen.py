@@ -14,15 +14,15 @@ def windownotify(i3, event):
 
 #	if event.change == 'title':
 #		call('polybar-msg hook wintitle 1'.split(' '))
-#		call('polybar-msg hook media 1'.split(' '))
+#		call('i3media'.split(' '))
 
 	if event.container.window_class == 'Spotify':
 		if event.change == 'title':
-			call('polybar-msg hook media 1'.split(' '))
+			call('i3media'.split(' '))
 
 	if event.container.window_class == 'mpv':
 		if event.change == 'title':
-			call('polybar-msg hook media 1'.split(' '))
+			call('i3media'.split(' '))
 
 	if event.change == "close":
 		if event.container.window_class == 'mpv':
@@ -55,7 +55,7 @@ def windownotify(i3, event):
 	if event.container.window_class == 'Thunar':
 		if event.container.focused == True:
 			if event.change == 'title':
-				call('bash /home/gavarch/scr/thunar/thunarview'.split(' '))
+				call('thunarview'.split(' '))
 
 i3.on('window', windownotify)
 i3.on('workspace', wsnotify)
