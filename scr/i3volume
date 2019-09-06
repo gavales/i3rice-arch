@@ -11,18 +11,21 @@ VOL=${RVL%\%*}
 VOL=${VOL#*[}
 STT=${RVL%]*}
 STT=${STT##*[}
-_ICN="%{T1}%{T-}"
-_BCL=$(themer -v "acb ")
-_FCL=$(themer -v "fg0 ")
+ICN="%{T1}%{T-}"
+BCL=$(themer -v "acb ")
+FCL=$(themer -v "fg0 ")
 
 update () {
 	_VOL=$VOL
-	[[ $VOL == 0 ]]     && _ICN="%{T1}%{T-}" && _VOL=" ---"
-	[[ $VOL -ge 60 ]]   && _BCL="#ffff00"
-	[[ $VOL -ge 80 ]]   && _BCL="#ff0000"
-	[[ $STT == "off" ]] && _ICN="%{T1}%{T-}" && _VOL=" ---"
-	FSTR="%{B$_BCL}%{F$_FCL} \
-%{A4:i3volume inc:}%{A5:i3volume dec:}%{A1:i3volume mute:}${_ICN} ${_VOL}%{A}%{A}%{A}  %{B- F-}"
+	[[ $VOL == 0 ]]     && ICN="%{T1}%{T-}"
+	[[ $VOL -ge 30 ]]   && ICN="%{T1}%{T-}"
+	[[ $VOL -ge 60 ]]   && ICN="%{T1}%{T-}" && BCL="#ffcc00"
+	[[ $VOL -ge 80 ]]   && BCL="#cc0000"
+	[[ $STT == "off" ]] && ICN="%{T1}%{T-}" && _VOL=" ---"
+	FSTR="%{B${BCL}}%{F${FCL}} \
+%{A4:i3volume inc:}%{A5:i3volume dec:}\
+%{A1:i3volume mute:}${ICN} ${_VOL}%{A}%{A}%{A}  \
+%{B- F-}"
 	pbcat -m volume -v "$FSTR"
 }
 

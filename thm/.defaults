@@ -11,7 +11,8 @@ size      11
 rxvtsize  12
 rofifsize 12
 gtk       Standard-light
-gtk-icon  DamaDamas
+!gtk-icon  DamaDamas
+gtk-icon  Numix-Circle
 cursor    Bibata_Dark_Red
 conky_loc1 top_left
 conky_loc2 bottom_right

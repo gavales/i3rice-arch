@@ -4,11 +4,11 @@
 # CREATED: $(date)
 #source $HOME/.config/user-dirs.dirs
 
-DIR=$USER_REPO_DIR/quickstart
+DIR="$USER_REPO_DIR/StillANixRookie.github.io"
 EDITOR="gvim -f"
 [[ -d $DIR ]] && cd $DIR || {
 	mkdir ${DIR%/*}
-	hugo new site quickstart
+#	hugo new site StillANixRookie.github.io
 	cd $DIR
 	}
 

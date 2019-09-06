@@ -15,9 +15,11 @@ nightmode () {
 }
 
 case $1 in
-	nm)  nightmode  ;;
-	inc) light -A 5 ;;
-	dec) light -U 5 ;;
+	nm)  nightmode         ;;
+	inc) xbacklight -inc 5 ;;
+	dec) xbacklight -dec 5 ;;
+#	inc) light -A 5        ;;
+#	dec) light -U 5        ;;
 esac
 
 BLR=$(light -G)

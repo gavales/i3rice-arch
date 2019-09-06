@@ -20,7 +20,7 @@ tr = #000000ff
 #grn = #99@@grn@@
 #cyn = #99@@cyn@@
 
-acc = #@@acc@@
+acc = #@@acb@@
 bg0 = #@@bg0@@
 acb = #@@acb@@
 acf = #@@acf@@
@@ -50,9 +50,9 @@ enable-ipc = true
 background = ${colors.acc}
 foreground = ${colors.bg0}
 line-size   = 0
-border-size = 0
+border-size = 1
 line-color   = ${colors.acc}
-border-color = ${colors.tr}
+border-color = %%acc%%
 padding-left        = 0
 padding-right       = 0
 module-margin-left  = 0
@@ -64,7 +64,7 @@ tray-position    = right
 tray-padding     = 2
 tray-maxsize     = 16
 tray-transparent = true
-tray-background  = %%acc%%
+tray-background  = ${colors.acc}
 cursor-click  = pointer
 cursor-scroll = ns-resize
 modules-left   = start td ws xkeyboard i3wallpaper
@@ -108,8 +108,8 @@ margin-bottom = 0
 
 [module/start]
 type = custom/text
-content = %{T1}   %{T-}
-click-left = i3menu -s -c white -l 1 -y 25
+content = %{T1}  %{T-}
+click-left = i3menu -s -c blue -l 1 -y 27
 click-right = xtheme
 content-background = ${colors.acb}
 content-foreground = ${colors.fg0}
@@ -117,8 +117,8 @@ content-padding = 0
 
 [module/startfvwm]
 type = custom/text
-content = %{T1}   %{T-}
-click-left = i3menu -s -y 50 -x 10 -c white -l 1
+content = %{T1}  %{T-}
+click-left = i3menu -s -y 50 -x 10 -c blue -l 1
 click-right = menunicode
 content-background = ${colors.acb}
 content-foreground = ${colors.fg0}

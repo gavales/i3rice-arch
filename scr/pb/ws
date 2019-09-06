@@ -3,14 +3,14 @@
 # OA: Gavin Vales
 # CREATED: Fri  5 Apr 00:04:13 GMT 2019
 
-ws=$(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2)
+_W=$(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2)
 
-icon="%{T1}%{T-}"
+_I="%{T1}%{T-}"
 
-case $ws in
-	1) icon="%{T1}%{T-}" ;;
-	2) icon="%{T1}%{T-}" ;;
-	3) icon="%{T1}%{T-}" ;;
+case $_W in
+	1) _I="%{T1}%{T-}" ;;
+	2) _I="%{T1}%{T-}" ;;
+	3) _I="%{T1}%{T-}" ;;
 esac
 
-echo "${icon} ${ws}"
+echo "${_I} ${_W}"

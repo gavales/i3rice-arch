@@ -4,14 +4,13 @@ CRPL=$(i3mediaplaying)
 BLDR=$HOME/scr/pb
 
 update () {
-	_P="%{A1:i3media prev:}%{T1}%{T-}%{A}"
-	_N="%{A1:i3media next:}%{T1}%{T-}%{A}"
-	_T="%{A1:i3media togg:}%{T1}%{T-}%{A}"
-	_S="%{A1:i3media stop:}%{T1}%{T-}%{A}"
+	_P="%{A1:i3media prev:}%{T1}%{T-}%{A}"
+	_N="%{A1:i3media next:}%{T1}%{T-}%{A}"
+	_T="%{A1:i3media togg:}%{T1}%{T-}%{A}"
+	_S="%{A1:i3media stop:}%{T1}%{T-}%{A}"
 	_CTRLS=" $_P $_T $_S $_N"
 	_NP="%{A1:i3media togg:}$(${BLDR}/${CRPL})%{A}"
 	pbcat -m media -v "$_NP$_CTRLS"
-#	echo "$_NP$_CTRLS"
 }
 
 case $1 in

@@ -9,14 +9,14 @@ update () {
 	PBSCR=$HOME/scr/pb
 #	_I="%{A1:$PBSCR/wall          :}%{T1}%{T-}%{A}"
 	_I=" "
-	_P="%{A1:$PBSCR/wall   prev:}%{T1}%{T-}%{A}"
-	_N="%{A1:$PBSCR/wall   next:}%{T1}%{T-}%{A}"
+	_P="%{A1:$PBSCR/wall   prev:}%{T1}%{T-}%{A}"
+	_N="%{A1:$PBSCR/wall   next:}%{T1}%{T-}%{A}"
 	_R="%{A1:$PBSCR/wall random:}%{T1}%{T-}%{A}"
 	_D="%{A1:$PBSCR/wall delete:}%{T1}%{T-}%{A}"
-	_E="%{A1:$PBSCR/wall rename:}%{T1}%{T-}%{A}"
+	_E="%{A1:$PBSCR/wall rename:}%{T1}%{T-}%{A}"
 	_C="%{A1:$PBSCR/wall   list:}${CRLN##*/}%{A}"
 	if [[ $CTXT == "$_I" ]]; then
-		_F="$_I $_P $_R $_E $_D $_N $_C"
+		_F="$_I$_P $_R $_E $_D $_N $_C"
 	else
 		_F="$_I"
 	fi

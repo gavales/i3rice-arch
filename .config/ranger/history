@@ -1,6 +1,3 @@
-rename cover.jpg
-rename 30 Years Later - An AKIRA Tribute
-rename mpmpv
 rename mpmpd
 rename _horizontal.rasi
 rename _vertical.rasi
@@ -48,3 +45,6 @@ rename template_syntax.css_
 rename template_syntax.css
 shell git clone https://github.com/StillANixRookie/GavinVales.git
 open_with 
+rename README.md
+rename TECHNOVIKING-MIX.mp3
+mkdir TechnoViking

@@ -10,26 +10,26 @@
 [colors]
 tr = #000000ff
 
-#acc = #992aa198
-#bg0 =   #fdf6e3
-#acb = #9993cbbd
-#fg0 =   #002b36
-#ylw = #99b58900
-#gnt = #99d33682
-#red = #99dc322f
-#grn = #99859900
-#cyn = #99268bd2
+#acc = #99fd888d
+#bg0 =   #3c4c55
+#acb = #999c6a70
+#fg0 =   #ffebc3
+#ylw = #99eed094
+#gnt = #99daccf0
+#red = #99bdd0e5
+#grn = #99a9dd9d
+#cyn = #99689d6a
 
-acc = #2aa198
-bg0 = #fdf6e3
-acb = #93cbbd
-acf = #156567
-fg0 = #002b36
-ylw = #b58900
-gnt = #d33682
-red = #dc322f
-grn = #859900
-cyn = #268bd2
+acc = #9c6a70
+bg0 = #3c4c55
+acb = #9c6a70
+acf = #fdb9a7
+fg0 = #ffebc3
+ylw = #eed094
+gnt = #daccf0
+red = #bdd0e5
+grn = #a9dd9d
+cyn = #689d6a
 
 [settings]
 screenchange-reload = true
@@ -50,9 +50,9 @@ enable-ipc = true
 background = ${colors.acc}
 foreground = ${colors.bg0}
 line-size   = 0
-border-size = 0
+border-size = 1
 line-color   = ${colors.acc}
-border-color = ${colors.tr}
+border-color = #fd888d
 padding-left        = 0
 padding-right       = 0
 module-margin-left  = 0
@@ -64,7 +64,7 @@ tray-position    = right
 tray-padding     = 2
 tray-maxsize     = 16
 tray-transparent = true
-tray-background  = #2aa198
+tray-background  = ${colors.acc}
 cursor-click  = pointer
 cursor-scroll = ns-resize
 modules-left   = start td ws xkeyboard i3wallpaper
@@ -95,7 +95,7 @@ font-1 = FontAwesome5Free:style=Solid:size=14;3
 font-2 = FontAwesome5Brands:style=Solid:size=12;3
 tray-position   = right
 tray-padding    = 2
-tray-background = #2aa198
+tray-background = #fd888d
 cursor-click  = pointer
 cursor-scroll = ns-resize
 modules-left   = startfvwm fvwmtd xkeyboard wintitle
@@ -108,8 +108,8 @@ margin-bottom = 0
 
 [module/start]
 type = custom/text
-content = %{T1}   %{T-}
-click-left = i3menu -s -c white -l 1 -y 25
+content = %{T1}  %{T-}
+click-left = i3menu -s -c blue -l 1 -y 27
 click-right = xtheme
 content-background = ${colors.acb}
 content-foreground = ${colors.fg0}
@@ -117,8 +117,8 @@ content-padding = 0
 
 [module/startfvwm]
 type = custom/text
-content = %{T1}   %{T-}
-click-left = i3menu -s -y 50 -x 10 -c white -l 1
+content = %{T1}  %{T-}
+click-left = i3menu -s -y 50 -x 10 -c blue -l 1
 click-right = menunicode
 content-background = ${colors.acb}
 content-foreground = ${colors.fg0}

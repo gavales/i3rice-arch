@@ -1,21 +1,13 @@
 #!/usr/bin/env bash
 
 case $BLOCK_BUTTON in
-	# right click
-	# set to `20
-	#3) light -set 20 ;;
-
-	# scroll up
-	# raise brightness
+	1) nightmodetog ;;
 	4) light -A 10 ;;
-
-	# scroll down
-	# lower brightness
 	5) light -U 10 ;;
 esac
 
-blr=$(light -G)
+IN="<span face='Font Awesome 5 Free'>&#xf042;</span>"
+_BL=$(light -G)
+BL=${_BL%.*}
 
-bl=$(printf "%.0f" $blr)
-
-echo "<span face='Font Awesome 5 Free'>&#xf042;</span> ${bl}"
+echo "${IN} ${BL}"

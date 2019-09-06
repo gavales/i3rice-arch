@@ -1,21 +1,17 @@
 #!/usr/bin/env bash
 
-icon="<span face='Font Awesome 5 Free'>&#xf2db;</span>"
+_I="%{T1}%{T-}"
 
-idle=$(top -b -n1 | sed -n 's/.* ni, \([^ ]*\).*/\1/p')
-idlelen=$(echo $idle | tr ' ' '\n' | wc -l)
-idletot=$(echo $idle | tr ' ' '\n' | awk '{s+=$1} END {print s}')
+IDL=$(top -b -n1 | sed -n 's/.* ni, \([^ ]*\).*/\1/p')
+ILN=$(echo $IDL | tr ' ' '\n' | wc -l)
+ITT=$(echo $IDL | tr ' ' '\n' | awk '{s+=$1} END {print s}')
 
-if [[ $idletot == *[.]* ]]; then
-	cpu=$(expr 100 - ${idletot:0:-2} / $idlelen)
+CPU=$(echo "100-(${ITT}/$ILN)" | bc)
+
+if [[ $CPU -ge 80 ]]; then
+	echo "%{B#ff0000}$_I $CPU%{B-}"
+elif [[ $CPU -ge 50 ]]; then
+	echo "%{B#ffff00}$_I $CPU%{B-}"
 else
-	cpu=$(expr 100 - ${idletot} / $idlelen)
-fi
-
-if [[ $cpu -ge 80 ]]; then
-	echo "<span foreground=\"#ff0000\">$icon $cpu</span>"
-elif [[ $cpu -ge 50 ]]; then
-	echo "<span foreground=\"#ffff00\">$icon $cpu</span>"
-else
-	echo "$icon $cpu"
+	echo "$_I $CPU"
 fi

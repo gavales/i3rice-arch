@@ -8,30 +8,13 @@ STTS=$(mpris-ctl info "%play_status")
 _TRCK=$(expr ${#TRCK} - 19)
 _RTST=$(expr ${#RTST} - 19)
 
-[[ $PLYR == "Spotify" ]]   && PLYR="%{T1}%{T-}"
+[[ $PLYR == "Chrome"    ]] && PLYR="%{T1}%{T-}"
+[[ $PLYR == "Spotify"   ]] && PLYR="%{T1}%{T-}"
 [[ $PLYR == "Rhythmbox" ]] && PLYR="%{T1}%{T-}"
 
 [[ ${#TRCK} -ge 20 ]] && TRCK="${TRCK:0:-$_TRCK}…"
 [[ ${#RTST} -ge 20 ]] && RTST="${RTST:0:-$_RTST}…"
 
-CURR=""
-[[ $PLYR == "%player_name" ]] || [[ -z $PLYR ]] || CURR="$RTST > $TRCK"
+CURR="$RTST > $TRCK"
+[[ $PLYR == "%player_name" ]] || [[ -z $PLYR ]] && CURR="" && PLYR="OFF"
 echo "$PLYR ${CURR}"
-
-#if [[ ${#TRCK} -ge 30 ]]; then
-#	TRCK="${TRCK:0:-$_TRCK}…"
-#else
-#	TRCK=$TRCK
-#fi
-#if [[ ${#RTST} -ge 20 ]]; then
-#	RTST="${RTST:0:-$_RTST}…"
-#else
-#	RTST=$RTST
-#fi
-#if [[ $PLYR == "%player_name" ]]; then
-#	:
-#elif [[ -z $PLYR ]]; then
-#	:
-#else
-#	echo "${CURR}"
-#fi

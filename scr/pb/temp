@@ -6,7 +6,7 @@ RTMP=${_TMP%.*}
 _ICN="%{T1}%{T-}"
 #_BCL="$(themer -v "acc ")"
 #_FCL="$(themer -v "bg0 ")"
-[[ $RTMP -ge 50 ]] && _ICN="%{T1}%{T-}" && _BCL="#ffff00" && _FCL="$(themer -v "fg0 ")"
-[[ $RTMP -ge 65 ]] && _ICN="%{T1}%{T-}" && _BCL="#ff0000" && _FCL="$(themer -v "fg0 ")"
+[[ $RTMP -ge 50 ]] && _ICN="%{T1}%{T-}" && _BCL="#ffcc00" && _FCL="$(themer -v "fg0 ")"
+[[ $RTMP -ge 65 ]] && _ICN="%{T1}%{T-}" && _BCL="#cc0000" && _FCL="$(themer -v "fg0 ")"
 FSTR="%{B$_BCL}%{F$_FCL} ${_ICN} ${RTMP} %{B- F-}"
 echo $FSTR

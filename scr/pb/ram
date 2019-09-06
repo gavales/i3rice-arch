@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
-icon="<span face='Font Awesome 5 Free'>&#xf538;</span>"
+_I="<span face='Font Awesome 5 Free'>&#xf538;</span>"
 
-tot=$(free|awk '/Mem/{print $2}')
-used=$(free|awk '/Mem/{print $3}')
+TOT=$(free | awk '/Mem/{print $2}')
+USD=$(free | awk '/Mem/{print $3}')
 
-c=$(awk -v t=${tot} -v u=${used} 'BEGIN{ print int(u/t*100) }')
+_C=$(echo "(${USD}/${TOT})*100" | bc)
 
-if [[ $c -ge 80 ]]; then
-	echo "<span foreground=\"#ff0000\">$icon $c</span>"
-elif [[ $c -ge 50 ]]; then
-	echo "<span foreground=\"#ffff00\">$icon $c</span>"
+if [[ $_C -ge 80 ]]; then
+	echo "%{B#ff0000}$_I $_C%{B-}"
+elif [[ $_C -ge 50 ]]; then
+	echo "%{B#ffff00}$_I $_C%{B-}"
 else
-	echo "$icon $c"
+	echo "$_I $_C"
 fi

@@ -47,7 +47,7 @@ echo -e "$wtl"
 #    libmpdclient lxappearance sxiv ncurses fftw w3m mpd mpc ncmpcpp feh dunst \
 #    unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl urxvt-perls \
 #    trash-cli atom python-pywal vim-latexsuite calibre jq wmctrl polybar \
-#    vim-runtime gvim neovim xclip xsel firefox maim zathura-pdf-mupdf
+#    vim-runtime gvim neovim xclip xsel firefox maim zathura-pdf-mupdf id3v2
 ##hsetroot xautolock
 #sudo cpan AnyEvent Linux::FD common::sense
 #cd ~

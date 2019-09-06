@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-iconDa="%{T1}%{T-}"
-iconTi="%{T1}%{T-}"
+_ID="%{T1}%{T-}"
+_IT="%{T1}%{T-}"
 
-echo "$iconTi $(date '+%T'), $(date '+%a %d %b')"
+echo "$_IT $(date '+%T'), $(date '+%a %d %b')"

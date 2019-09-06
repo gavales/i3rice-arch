@@ -2,7 +2,7 @@
 
 PID=$(pidof i3lock)
 IMG=$(readlink -f $XDG_PICTURES_DIR/i3wallpaper/current)
-bg0=$(themer -v "bg0 ") fg0=$(themer -v "fg0 ") acc=$(themer -v "acc ")
+bg0=$(themer -v "bg0 ") fg0=$(themer -v "acf ") acc=$(themer -v "acc ")
 grn=$(themer -v "grn ") ylw=$(themer -v "ylw ") red=$(themer -v "red ")
 SCR=$(xdpyinfo | grep 'name of display:' | awk '{print $2}')
 SCR=${SCR/:/}

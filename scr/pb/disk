@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-icon="%{T1}%{T-}"
+_I="%{T1}%{T-}"
 DIR="${BLOCK_INSTANCE:-$HOME}"
 
-avail=$(df -h -P -l "$DIR"|grep 'dev'|awk '{print $4}')
-usep=$(df -h -P -l "$DIR"|grep 'dev'|awk '{print $5}')
-use=${usep:0:-1}
+FREE=$(df -h -P -l "$DIR" | grep 'dev' | awk '{print $4}')
+PCNT=$(df -h -P -l "$DIR" | grep 'dev' | awk '{print $5}')
+NCNT=${PCNT/%/}
 
-echo "$icon $avail"
+echo "$_I $FREE"
