@@ -33,8 +33,8 @@ set $kb        gb
 
 set $mediaw    492
 set $mediaw2   492
-set $mediah    302
-set $mediah2   392
+set $mediah    299
+set $mediah2   389
 # >>>> MAIN VARS
 # //// i3
 
@@ -87,22 +87,22 @@ set $ws10 10
 
 # //// COLORS
 
-set $bg3 #788891
-set $bg2 #64747d
-set $bg1 #506069
-set $bg0 #3c4c55
-set $acb #9c6a70
-set $acc #fd888d
-set $acf #fdb9a7
-set $fg0 #ffebc3
-set $fg1 #ebd7af
-set $fg2 #d7c39b
-set $fg3 #c3af87
-set $red #bdd0e5
-set $grn #a9dd9d
-set $ylw #eed094
-set $gnt #daccf0
-set $cyn #689d6a
+set $bg3 #3c6772
+set $bg2 #28535e
+set $bg1 #143f4a
+set $bg0 #002b36
+set $acb #135a84
+set $acc #268bd2
+set $acf #91c0da
+set $fg0 #fdf6e3
+set $fg1 #e9e2cf
+set $fg2 #d5cebb
+set $fg3 #c1baa7
+set $red #dc322f
+set $grn #859900
+set $ylw #b58900
+set $gnt #d33682
+set $cyn #2aa198
 set $t   ff
 
 # //// APPS
@@ -310,11 +310,11 @@ $mod+n              $lch '$brow --new-window --app=https://www.netflix.com/' $mk
 $mod+m              $lch 'surf docs.google.com/presentation/u/0/' $mk3
 $mod+Shift+m        $lch '$brow --new-window --app=https://play.google.com/movies/' $mk1
 
-$mod+comma          $exn i3volume dec
+$mod+comma          $exn i3vol dec
 
-$mod+period         $exn i3volume inc
+$mod+period         $exn i3vol inc
 
-$mod+slash          $exn i3volume mute
+$mod+slash          $exn i3vol mute
 
 # >>>> MOD4 BINDINGS
 # //// Misc
@@ -433,9 +433,9 @@ $win+n              move workspace to output $nat
 
 $win+m              $exn multimon
 
-$win+comma          $exn i3brightness dec
+$win+comma          $exn i3light dec
 
-$win+period         $exn i3brightness inc
+$win+period         $exn i3light inc
 
 # >>>> FOR_WINDOW
 # //// GLOBAL
@@ -448,6 +448,8 @@ focus_wrapping force
 workspace_auto_back_and_forth yes
 $fw [class="^.*"] border normal 1
 $fw [urgent=latest] focus
+$fw [workspace="$ws2"] floating enable,resize set 750 500
+$fw [workspace="$ws3"] floating enable,resize set 750 500
 $fw [workspace="$ws4"] floating enable,resize set 750 500
 $fw [workspace="$ws5"] floating enable,resize set 750 500
 
@@ -545,13 +547,11 @@ $fw [instance="MOUNT"]                          $tf "mount"
 $fw [instance="UNMOUNT"]                        $tf "unmount"
 
 # >>>> GAPS
-gaps inner 0
-gaps outer 0
+gaps inner 20
+gaps outer 40
 
-workspace $ws4 gaps inner 40
-workspace $ws4 gaps outer 40
-workspace $ws5 gaps inner 40
-workspace $ws5 gaps outer 40
+workspace $ws1 gaps inner 0
+workspace $ws1 gaps outer 0
 
 # >>>> STARTUP
 # DAEMONS

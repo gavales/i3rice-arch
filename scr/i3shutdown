@@ -1,28 +1,29 @@
 #!/usr/bin/env bash
 
 # with openrc use loginctl
+#switch_user
+#switch_user) dm-tool switch-to-greeter                    ;;
 [[ $(cat /proc/1/comm) == "systemd" ]] && logind=systemctl || logind=loginctl
 
 OPT=$(echo "
-lock
-logout
-switch_user
-suspend
-hibernate
-reboot
-shutdown" | \
-	i3menu -c red -w 500 -p "SHUTDOWN [<ESC> to cancel]")
+l lock
+e logout
+s suspend
+h hibernate
+r reboot
+x shutdown" | \
+	i3menu -c red -w 500 -p "SHUTDOWN [<ESC> to cancel]" | \
+	awk '{print $1}')
 
 [[ -z $OPT ]] && exit
 
 case "$OPT" in
-	lock)        lockscreen                                   ;;
-	logout)      i3-msg exit                                  ;;
-	switch_user) dm-tool switch-to-greeter                    ;;
-	suspend)     lockscreen && sleep 0.5 && $logind suspend   ;;
-	hibernate)   lockscreen && sleep 0.5 && $logind hibernate ;;
-	reboot)      $logind reboot                               ;;
-	shutdown)    $logind poweroff                             ;;
+	l) lockscreen                                   ;;
+	e) i3-msg exit                                  ;;
+	s) lockscreen && sleep 0.5 && $logind suspend   ;;
+	h) lockscreen && sleep 0.5 && $logind hibernate ;;
+	r) $logind reboot                               ;;
+	x) $logind poweroff                             ;;
 esac
 
 exit 0

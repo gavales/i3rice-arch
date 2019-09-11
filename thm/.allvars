@@ -1,29 +1,14 @@
-name      forest-day
-wallpaper CantonofVaudSwitzerland
-fg0       #ffebc3
-bg0       #3c4c55
-acc       #fd888d
-red       #bdd0e5
-grn       #a9dd9d
-ylw       #eed094
-blu       #fd888d
-gnt       #daccf0
-grey      #7f8f9f
-orange    #f0aa8a
-dayred    #b97279
-daygrn    #82aa83
-dayylw    #b0a27d
-dayblu    #8fa2b3
-daygnt    #a29fba
-daygrey   #667784
-dayorange #b18977
-nightred    #fd888d
-nightgrn    #a9dd9d
-nightylw    #eed094
-nightblu    #bdd0e5
-nightgnt    #daccf0
-nightgrey   #7f8f9f
-nightorange #f0aa8a
+name      solarized
+wallpaper nebula-turquoise
+bg0       #002b36
+fg0       #fdf6e3
+acc       #268bd2
+red       #dc322f
+grn       #859900
+ylw       #b58900
+blu       #268bd2
+gnt       #d33682
+cyn       #2aa198
 guifont   Luxi Mono
 polyfont  CMU Typewriter Text
 font      CMUTypewriterText
@@ -37,45 +22,30 @@ gtk-icon  Numix-Circle
 cursor    Bibata_Dark_Red
 conky_loc1 top_left
 conky_loc2 bottom_right
-cyn       #689d6a
-fg3       #c3af87
-fg2       #d7c39b
-fg1       #ebd7af
-acf       #fdb9a7
-acb       #9c6a70
-bg1       #506069
-bg2       #64747d
-bg3       #788891
-fg0RGB    255, 235, 195
-fg1RGB    235, 215, 175
-fg2RGB    215, 195, 155
-fg3RGB    195, 175, 135
-bg0RGB    60, 76, 85
-bg1RGB    80, 96, 105
-bg2RGB    100, 116, 125
-bg3RGB    120, 136, 145
-accRGB    253, 136, 141
-acfRGB    253, 185, 167
-acbRGB    156, 106, 112
-redRGB    189, 208, 229
-grnRGB    169, 221, 157
-ylwRGB    238, 208, 148
-bluRGB    253, 136, 141
-gntRGB    218, 204, 240
-greyRGB    127, 143, 159
-orangeRGB    240, 170, 138
-dayredRGB    185, 114, 121
-daygrnRGB    130, 170, 131
-dayylwRGB    176, 162, 125
-daybluRGB    143, 162, 179
-daygntRGB    162, 159, 186
-daygreyRGB    102, 119, 132
-dayorangeRGB    177, 137, 119
-nightredRGB    253, 136, 141
-nightgrnRGB    169, 221, 157
-nightylwRGB    238, 208, 148
-nightbluRGB    189, 208, 229
-nightgntRGB    218, 204, 240
-nightgreyRGB    127, 143, 159
-nightorangeRGB    240, 170, 138
-cynRGB    104, 157, 106
+orange    #d65d0e
+fg3       #c1baa7
+fg2       #d5cebb
+fg1       #e9e2cf
+acf       #91c0da
+acb       #135a84
+bg1       #143f4a
+bg2       #28535e
+bg3       #3c6772
+fg0RGB    253, 246, 227
+fg1RGB    233, 226, 207
+fg2RGB    213, 206, 187
+fg3RGB    193, 186, 167
+bg0RGB    0, 43, 54
+bg1RGB    20, 63, 74
+bg2RGB    40, 83, 94
+bg3RGB    60, 103, 114
+accRGB    38, 139, 210
+acfRGB    145, 192, 218
+acbRGB    19, 90, 132
+redRGB    220, 50, 47
+grnRGB    133, 153, 0
+ylwRGB    181, 137, 0
+bluRGB    38, 139, 210
+gntRGB    211, 54, 130
+cynRGB    42, 161, 152
+orangeRGB    214, 93, 14

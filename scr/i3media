@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CRPL=$(i3mediaplaying)
+CRPL=$(i3wplyr)
 BLDR=$HOME/scr/pb
 
 update () {

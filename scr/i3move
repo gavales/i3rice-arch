@@ -1,22 +1,22 @@
 #!/usr/bin/env bash
 
-dir=$1
+DRN=$1
 cd $HOME
 i3-msg -t get_tree > get_tree
 sed 's/},{/\n/g' get_tree > tree_new
-focussed=$(cat tree_new | grep '"focused":true')
-tabbed=$(cat tree_new | grep 'tabbed')
-echo $tabbed
+FCS=$(cat tree_new | grep '"focused":true')
+TBD=$(cat tree_new | grep 'tabbed')
+echo $TBD
 
-geometry=$(xdotool getactivewindow getwindowgeometry | grep 'Geometry' | awk '{print $NF}' | tr 'x' ' ')
-width=$(echo $geometry | awk '{print $1}')
-height=$(echo $geometry | awk '{print $2}')
-geo=\"width\":${width},\"height\":${height}
+GEO=$(xdotool getactivewindow getwindowgeometry | grep 'Geometry' | awk '{print $NF}'
+WDT=${GEO%x*}
+HGT=${GEO#*x}
+IGO=\"width\":${WDT},\"height\":${HGT}
 
-if [[ $tabbed =~ $geo ]]; then
-	i3-msg "focus parent; move $dir; focus child"
+if [[ $TBD =~ $IGO ]]; then
+	i3-msg "focus parent; move $DRN; focus child"
 else
-	i3-msg move $dir
+	i3-msg move $DRN
 fi
 
 rm get_tree tree_new

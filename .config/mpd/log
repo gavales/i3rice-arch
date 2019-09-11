@@ -2666,3 +2666,368 @@ Sep 06 18:32 : client: [410] opened from [::1]:39488
 Sep 06 18:32 : client: [410] closed
 Sep 06 18:32 : client: [411] opened from [::1]:39490
 Sep 06 18:32 : client: [411] closed
+Sep 06 22:18 : client: [412] opened from [::1]:35706
+Sep 06 22:18 : client: [412] closed
+Sep 06 22:18 : client: [413] opened from [::1]:35708
+Sep 06 22:18 : client: [413] closed
+Sep 06 22:18 : client: [414] opened from [::1]:35710
+Sep 06 22:18 : client: [414] closed
+Sep 06 22:18 : client: [415] opened from [::1]:35712
+Sep 06 22:18 : client: [415] closed
+Sep 06 22:18 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 06 22:19 : client: [416] opened from [::1]:35860
+Sep 06 22:19 : client: [416] closed
+Sep 06 22:19 : client: [417] opened from [::1]:35862
+Sep 06 22:19 : client: [417] closed
+Sep 06 22:19 : client: [418] opened from [::1]:35864
+Sep 06 22:19 : client: [418] closed
+Sep 06 22:19 : client: [419] opened from [::1]:35866
+Sep 06 22:19 : client: [419] closed
+Sep 06 23:02 : client: [420] opened from [::1]:44128
+Sep 06 23:02 : client: [421] opened from [::1]:44130
+Sep 06 23:02 : client: [421] closed
+Sep 06 23:02 : client: [422] opened from [::1]:44132
+Sep 06 23:02 : client: [422] closed
+Sep 06 23:02 : client: [423] opened from [::1]:44134
+Sep 06 23:02 : client: [423] closed
+Sep 06 23:02 : client: [424] opened from [::1]:44136
+Sep 06 23:02 : client: [424] closed
+Sep 06 23:02 : client: [420] closed
+Sep 06 23:02 : client: [425] opened from [::1]:44142
+Sep 06 23:02 : client: [426] opened from [::1]:44144
+Sep 06 23:02 : client: [426] closed
+Sep 06 23:02 : client: [427] opened from [::1]:44146
+Sep 06 23:02 : client: [427] closed
+Sep 06 23:02 : client: [428] opened from [::1]:44148
+Sep 06 23:02 : client: [428] closed
+Sep 06 23:02 : client: [429] opened from [::1]:44150
+Sep 06 23:02 : client: [429] closed
+Sep 06 23:02 : client: [425] closed
+Sep 06 23:03 : player: played "TechnoViking/TECHNOVIKING-MIX.mp3"
+Sep 06 23:04 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 06 23:04 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 06 23:04 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Sep 06 23:04 : client: [0] opened from [::1]:41556
+Sep 06 23:04 : client: [1] opened from [::1]:41558
+Sep 06 23:04 : client: [1] closed
+Sep 06 23:04 : client: [2] opened from [::1]:41560
+Sep 06 23:04 : client: [2] closed
+Sep 06 23:04 : client: [3] opened from [::1]:41562
+Sep 06 23:04 : client: [3] closed
+Sep 06 23:04 : client: [4] opened from [::1]:41564
+Sep 06 23:04 : client: [4] closed
+Sep 06 23:04 : client: [0] closed
+Sep 06 23:04 : client: [5] opened from [::1]:41566
+Sep 06 23:04 : client: [6] opened from [::1]:41568
+Sep 06 23:04 : client: [6] closed
+Sep 06 23:04 : client: [7] opened from [::1]:41570
+Sep 06 23:04 : client: [7] closed
+Sep 06 23:04 : client: [8] opened from [::1]:41572
+Sep 06 23:04 : client: [8] closed
+Sep 06 23:04 : client: [9] opened from [::1]:41574
+Sep 06 23:04 : client: [9] closed
+Sep 06 23:04 : client: [5] closed
+Sep 06 23:04 : client: [10] opened from [::1]:41576
+Sep 06 23:04 : client: [11] opened from [::1]:41578
+Sep 06 23:04 : client: [11] closed
+Sep 06 23:04 : client: [12] opened from [::1]:41580
+Sep 06 23:04 : client: [12] closed
+Sep 06 23:04 : client: [13] opened from [::1]:41582
+Sep 06 23:04 : client: [13] closed
+Sep 06 23:04 : client: [14] opened from [::1]:41584
+Sep 06 23:04 : client: [14] closed
+Sep 06 23:04 : client: [10] closed
+Sep 07 15:32 : client: [15] opened from [::1]:34704
+Sep 07 15:32 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 07 15:32 : client: [15] closed
+Sep 07 15:32 : client: [16] opened from [::1]:34706
+Sep 07 15:32 : client: [16] closed
+Sep 07 15:32 : client: [17] opened from [::1]:34708
+Sep 07 15:32 : client: [17] closed
+Sep 07 15:32 : client: [18] opened from [::1]:34710
+Sep 07 15:32 : client: [18] closed
+Sep 07 15:32 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 07 15:34 : player: played "TechnoViking/TECHNOVIKING-MIX.mp3"
+Sep 07 15:34 : client: [19] opened from [::1]:35436
+Sep 07 15:34 : client: [20] opened from [::1]:35440
+Sep 07 15:34 : client: [20] closed
+Sep 07 15:34 : client: [21] opened from [::1]:35446
+Sep 07 15:34 : client: [21] closed
+Sep 07 15:34 : client: [22] opened from [::1]:35448
+Sep 07 15:34 : client: [22] closed
+Sep 07 15:34 : client: [23] opened from [::1]:35450
+Sep 07 15:34 : client: [23] closed
+Sep 07 15:36 : client: [24] opened from [::1]:35798
+Sep 07 15:36 : client: [24] closed
+Sep 07 15:36 : client: [25] opened from [::1]:35800
+Sep 07 15:36 : client: [25] closed
+Sep 07 15:36 : client: [26] opened from [::1]:35802
+Sep 07 15:36 : client: [26] closed
+Sep 07 15:36 : client: [27] opened from [::1]:35804
+Sep 07 15:36 : client: [27] closed
+Sep 07 15:36 : client: [28] opened from [::1]:35810
+Sep 07 15:36 : client: [28] closed
+Sep 07 15:36 : client: [29] opened from [::1]:35812
+Sep 07 15:36 : client: [29] closed
+Sep 07 15:36 : client: [30] opened from [::1]:35814
+Sep 07 15:36 : client: [30] closed
+Sep 07 15:36 : client: [31] opened from [::1]:35816
+Sep 07 15:36 : client: [31] closed
+Sep 07 15:36 : client: [32] opened from [::1]:35822
+Sep 07 15:36 : client: [32] closed
+Sep 07 15:36 : client: [33] opened from [::1]:35824
+Sep 07 15:36 : client: [33] closed
+Sep 07 15:36 : client: [34] opened from [::1]:35826
+Sep 07 15:36 : client: [34] closed
+Sep 07 15:36 : client: [35] opened from [::1]:35828
+Sep 07 15:36 : client: [35] closed
+Sep 07 16:23 : client: [36] opened from [::1]:45764
+Sep 07 16:23 : client: [36] closed
+Sep 07 16:23 : client: [37] opened from [::1]:45766
+Sep 07 16:23 : client: [37] closed
+Sep 07 16:23 : client: [38] opened from [::1]:45768
+Sep 07 16:23 : client: [38] closed
+Sep 07 16:23 : client: [39] opened from [::1]:45770
+Sep 07 16:23 : client: [39] closed
+Sep 07 16:23 : client: [40] opened from [::1]:45776
+Sep 07 16:23 : client: [40] closed
+Sep 07 16:23 : client: [41] opened from [::1]:45778
+Sep 07 16:23 : client: [41] closed
+Sep 07 16:23 : client: [42] opened from [::1]:45780
+Sep 07 16:23 : client: [42] closed
+Sep 07 16:23 : client: [43] opened from [::1]:45782
+Sep 07 16:23 : client: [43] closed
+Sep 07 16:23 : client: [44] opened from [::1]:45784
+Sep 07 16:23 : client: [44] closed
+Sep 07 16:23 : client: [45] opened from [::1]:45786
+Sep 07 16:23 : client: [45] closed
+Sep 07 16:23 : client: [46] opened from [::1]:45788
+Sep 07 16:23 : client: [46] closed
+Sep 07 16:23 : client: [47] opened from [::1]:45790
+Sep 07 16:23 : client: [47] closed
+Sep 07 16:23 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 07 16:23 : client: [48] opened from [::1]:45796
+Sep 07 16:23 : client: [48] closed
+Sep 07 16:23 : client: [49] opened from [::1]:45798
+Sep 07 16:23 : client: [49] closed
+Sep 07 16:23 : client: [50] opened from [::1]:45800
+Sep 07 16:23 : client: [50] closed
+Sep 07 16:23 : client: [51] opened from [::1]:45802
+Sep 07 16:23 : client: [51] closed
+Sep 07 16:23 : client: [52] opened from [::1]:45808
+Sep 07 16:23 : client: [52] closed
+Sep 07 16:23 : client: [53] opened from [::1]:45810
+Sep 07 16:23 : client: [53] closed
+Sep 07 16:23 : client: [54] opened from [::1]:45812
+Sep 07 16:23 : client: [54] closed
+Sep 07 16:23 : client: [55] opened from [::1]:45814
+Sep 07 16:23 : client: [55] closed
+Sep 07 16:24 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 07 16:24 : client: [56] opened from [::1]:45848
+Sep 07 16:24 : client: [56] closed
+Sep 07 16:24 : client: [57] opened from [::1]:45850
+Sep 07 16:24 : client: [57] closed
+Sep 07 16:24 : client: [58] opened from [::1]:45852
+Sep 07 16:24 : client: [58] closed
+Sep 07 16:24 : client: [59] opened from [::1]:45854
+Sep 07 16:24 : client: [59] closed
+Sep 07 16:24 : client: [60] opened from [::1]:45868
+Sep 07 16:24 : client: [60] closed
+Sep 07 16:24 : client: [61] opened from [::1]:45870
+Sep 07 16:24 : client: [61] closed
+Sep 07 16:24 : client: [62] opened from [::1]:45872
+Sep 07 16:24 : client: [62] closed
+Sep 07 16:24 : client: [63] opened from [::1]:45874
+Sep 07 16:24 : client: [63] closed
+Sep 07 16:24 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 07 16:24 : client: [64] opened from [::1]:45878
+Sep 07 16:24 : client: [64] closed
+Sep 07 16:24 : client: [65] opened from [::1]:45880
+Sep 07 16:24 : client: [65] closed
+Sep 07 16:24 : client: [66] opened from [::1]:45882
+Sep 07 16:24 : client: [66] closed
+Sep 07 16:24 : client: [67] opened from [::1]:45884
+Sep 07 16:24 : client: [67] closed
+Sep 07 16:27 : client: [68] opened from [::1]:46788
+Sep 07 16:27 : client: [68] closed
+Sep 07 16:27 : client: [69] opened from [::1]:46790
+Sep 07 16:27 : client: [69] closed
+Sep 07 16:27 : client: [70] opened from [::1]:46792
+Sep 07 16:27 : client: [70] closed
+Sep 07 16:27 : client: [71] opened from [::1]:46794
+Sep 07 16:27 : client: [71] closed
+Sep 07 16:27 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 07 16:27 : client: [72] opened from [::1]:46800
+Sep 07 16:27 : client: [72] closed
+Sep 07 16:27 : client: [73] opened from [::1]:46802
+Sep 07 16:27 : client: [73] closed
+Sep 07 16:27 : client: [74] opened from [::1]:46804
+Sep 07 16:27 : client: [74] closed
+Sep 07 16:27 : client: [75] opened from [::1]:46806
+Sep 07 16:27 : client: [75] closed
+Sep 07 16:27 : player: played "Bob Marley/Natural Mystic (Remastered)/00 Positive Vibration.mp3"
+Sep 07 16:28 : client: [76] opened from [::1]:46904
+Sep 07 16:28 : client: [76] closed
+Sep 07 16:28 : client: [77] opened from [::1]:46906
+Sep 07 16:28 : client: [77] closed
+Sep 07 16:28 : client: [78] opened from [::1]:46908
+Sep 07 16:28 : client: [78] closed
+Sep 07 16:28 : client: [79] opened from [::1]:46910
+Sep 07 16:28 : client: [79] closed
+Sep 07 16:28 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 07 16:28 : client: [80] opened from [::1]:46912
+Sep 07 16:28 : client: [80] closed
+Sep 07 16:28 : client: [81] opened from [::1]:46914
+Sep 07 16:28 : client: [81] closed
+Sep 07 16:28 : client: [82] opened from [::1]:46916
+Sep 07 16:28 : client: [82] closed
+Sep 07 16:28 : client: [83] opened from [::1]:46918
+Sep 07 16:28 : client: [83] closed
+Sep 07 16:29 : client: [84] opened from [::1]:46926
+Sep 07 16:29 : client: [84] closed
+Sep 07 16:29 : client: [85] opened from [::1]:46928
+Sep 07 16:29 : client: [85] closed
+Sep 07 16:29 : client: [86] opened from [::1]:46930
+Sep 07 16:29 : client: [86] closed
+Sep 07 16:29 : client: [87] opened from [::1]:46932
+Sep 07 16:29 : client: [87] closed
+Sep 07 16:29 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 07 16:30 : client: [88] opened from [::1]:47102
+Sep 07 16:31 : client: [88] closed
+Sep 07 16:31 : client: [89] opened from [::1]:47104
+Sep 07 16:31 : client: [89] closed
+Sep 07 16:31 : client: [90] opened from [::1]:47106
+Sep 07 16:31 : client: [90] closed
+Sep 07 16:31 : client: [91] opened from [::1]:47108
+Sep 07 16:31 : client: [91] closed
+Sep 07 16:31 : client: [92] opened from [::1]:47110
+Sep 07 16:31 : client: [92] closed
+Sep 07 16:31 : client: [93] opened from [::1]:47112
+Sep 07 16:31 : client: [93] closed
+Sep 07 16:31 : client: [94] opened from [::1]:47114
+Sep 07 16:31 : client: [94] closed
+Sep 07 16:31 : client: [95] opened from [::1]:47116
+Sep 07 16:31 : client: [95] closed
+Sep 07 16:31 : client: [96] opened from [::1]:47122
+Sep 07 16:31 : client: [96] closed
+Sep 07 16:31 : client: [97] opened from [::1]:47124
+Sep 07 16:31 : client: [97] closed
+Sep 07 16:31 : client: [98] opened from [::1]:47126
+Sep 07 16:31 : client: [98] closed
+Sep 07 16:31 : client: [99] opened from [::1]:47128
+Sep 07 16:31 : client: [99] closed
+Sep 07 16:31 : client: [100] opened from [::1]:47130
+Sep 07 16:31 : client: [100] closed
+Sep 07 16:31 : client: [101] opened from [::1]:47132
+Sep 07 16:31 : client: [101] closed
+Sep 07 16:31 : client: [102] opened from [::1]:47134
+Sep 07 16:31 : client: [102] closed
+Sep 07 16:31 : client: [103] opened from [::1]:47136
+Sep 07 16:31 : client: [103] closed
+Sep 07 16:31 : client: [104] opened from [::1]:47246
+Sep 07 16:31 : client: [104] closed
+Sep 07 16:31 : client: [105] opened from [::1]:47248
+Sep 07 16:31 : client: [105] closed
+Sep 07 16:31 : client: [106] opened from [::1]:47250
+Sep 07 16:31 : client: [106] closed
+Sep 07 16:31 : client: [107] opened from [::1]:47252
+Sep 07 16:31 : client: [107] closed
+Sep 07 16:40 : client: [108] opened from [::1]:49426
+Sep 07 16:40 : client: [108] closed
+Sep 07 16:40 : client: [109] opened from [::1]:49428
+Sep 07 16:40 : client: [109] closed
+Sep 07 16:40 : client: [110] opened from [::1]:49430
+Sep 07 16:40 : client: [110] closed
+Sep 07 16:40 : client: [111] opened from [::1]:49432
+Sep 07 16:40 : client: [111] closed
+Sep 07 16:40 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 07 16:41 : client: [112] opened from [::1]:49436
+Sep 07 16:41 : client: [112] closed
+Sep 07 16:41 : client: [113] opened from [::1]:49438
+Sep 07 16:41 : client: [113] closed
+Sep 07 16:41 : client: [114] opened from [::1]:49440
+Sep 07 16:41 : client: [114] closed
+Sep 07 16:41 : client: [115] opened from [::1]:49442
+Sep 07 16:41 : client: [115] closed
+Sep 07 16:51 : client: [116] opened from [::1]:50850
+Sep 07 16:51 : client: [116] closed
+Sep 07 16:51 : client: [117] opened from [::1]:50852
+Sep 07 16:51 : client: [117] closed
+Sep 07 16:51 : client: [118] opened from [::1]:50854
+Sep 07 16:51 : client: [118] closed
+Sep 07 16:51 : client: [119] opened from [::1]:50856
+Sep 07 16:51 : client: [119] closed
+Sep 07 16:51 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 07 16:51 : client: [120] opened from [::1]:50858
+Sep 07 16:51 : client: [120] closed
+Sep 07 16:51 : client: [121] opened from [::1]:50860
+Sep 07 16:51 : client: [121] closed
+Sep 07 16:51 : client: [122] opened from [::1]:50862
+Sep 07 16:51 : client: [122] closed
+Sep 07 16:51 : client: [123] opened from [::1]:50864
+Sep 07 16:51 : client: [123] closed
+Sep 07 16:51 : client: [124] opened from [::1]:50866
+Sep 07 16:51 : client: [124] closed
+Sep 07 16:51 : client: [125] opened from [::1]:50868
+Sep 07 16:51 : client: [125] closed
+Sep 07 16:51 : client: [126] opened from [::1]:50870
+Sep 07 16:51 : client: [126] closed
+Sep 07 16:51 : client: [127] opened from [::1]:50872
+Sep 07 16:51 : client: [127] closed
+Sep 07 16:51 : client: [128] opened from [::1]:50874
+Sep 07 16:51 : client: [128] closed
+Sep 07 16:51 : client: [129] opened from [::1]:50876
+Sep 07 16:51 : client: [129] closed
+Sep 07 16:51 : client: [130] opened from [::1]:50878
+Sep 07 16:51 : client: [130] closed
+Sep 07 16:51 : client: [131] opened from [::1]:50880
+Sep 07 16:51 : client: [131] closed
+Sep 07 17:02 : client: [132] opened from [::1]:52828
+Sep 07 17:02 : client: [132] closed
+Sep 07 17:02 : client: [133] opened from [::1]:52830
+Sep 07 17:02 : client: [133] closed
+Sep 07 17:02 : client: [134] opened from [::1]:52832
+Sep 07 17:02 : client: [134] closed
+Sep 07 17:02 : client: [135] opened from [::1]:52834
+Sep 07 17:02 : client: [135] closed
+Sep 07 17:02 : client: [136] opened from [::1]:52844
+Sep 07 17:02 : client: [136] closed
+Sep 07 17:02 : client: [137] opened from [::1]:52846
+Sep 07 17:02 : client: [137] closed
+Sep 07 17:02 : client: [138] opened from [::1]:52848
+Sep 07 17:02 : client: [138] closed
+Sep 07 17:02 : client: [139] opened from [::1]:52850
+Sep 07 17:02 : client: [139] closed
+Sep 07 18:14 : client: [140] opened from [::1]:40978
+Sep 07 18:14 : client: [140] closed
+Sep 07 18:14 : client: [141] opened from [::1]:40980
+Sep 07 18:14 : client: [141] closed
+Sep 07 18:14 : client: [142] opened from [::1]:40982
+Sep 07 18:14 : client: [142] closed
+Sep 07 18:14 : client: [143] opened from [::1]:40984
+Sep 07 18:14 : client: [143] closed
+Sep 07 18:14 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 07 18:14 : client: [144] opened from [::1]:41006
+Sep 07 18:14 : client: [144] closed
+Sep 07 18:14 : client: [145] opened from [::1]:41008
+Sep 07 18:14 : client: [145] closed
+Sep 07 18:14 : client: [146] opened from [::1]:41010
+Sep 07 18:14 : client: [146] closed
+Sep 07 18:14 : client: [147] opened from [::1]:41012
+Sep 07 18:14 : client: [147] closed
+Sep 10 19:06 : client: [148] opened from [::1]:55770
+Sep 10 19:06 : client: [148] closed
+Sep 10 19:06 : client: [149] opened from [::1]:55772
+Sep 10 19:06 : client: [149] closed
+Sep 10 19:06 : client: [150] opened from [::1]:55774
+Sep 10 19:06 : client: [150] closed
+Sep 10 19:06 : client: [151] opened from [::1]:55776
+Sep 10 19:06 : client: [151] closed
+Sep 10 19:06 : client: [152] opened from [::1]:55778
+Sep 10 19:06 : client: [152] closed
+Sep 10 19:06 : client: [153] opened from [::1]:55780
+Sep 10 19:06 : client: [153] closed
+Sep 10 19:06 : client: [154] opened from [::1]:55782
+Sep 10 19:06 : client: [154] closed
+Sep 10 19:06 : client: [155] opened from [::1]:55784
+Sep 10 19:06 : client: [155] closed

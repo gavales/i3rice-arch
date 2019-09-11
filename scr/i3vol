@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+case $1 in
+	inc)  pactl set-sink-volume 0 +2%  ;;
+	dec)  pactl set-sink-volume 0 -2%  ;;
+	mute) pactl set-sink-mute 0 toggle ;;
+esac
+
+RVL=$(amixer get Master | tail -n 1 | grep %)
+VOL=${RVL%\%*}
+VOL=${VOL#*[}
+STT=${RVL%]*}
+STT=${STT##*[}
+ICN="%{T1}%{T-}"
+#BCL=$(themer -v "acb ")
+#FCL=$(themer -v "fg0 ")
+
+update () {
+	_VOL=$VOL
+	[[ $VOL == 0 ]]     && ICN="%{T1}%{T-}" FCL="$(themer -v "bg0 ")"
+	[[ $VOL -le 30 ]]   && ICN="%{T1}%{T-}" FCL="$(themer -v "fg0 ")"
+	[[ $VOL -ge 30 ]]   && ICN="%{T1}%{T-}" FCL="$(themer -v "fg0 ")"
+	[[ $STT == "off" ]] && ICN="%{T1}%{T-}" FCL="$(themer -v "bg0 ")" _VOL=" ---"
+	FSTR="%{B${BCL}}%{F${FCL}} \
+%{A4:i3vol inc:}%{A5:i3vol dec:}\
+%{A1:i3vol mute:}${ICN} ${_VOL}%{A}%{A}%{A} \
+%{B- F-}"
+	pbcat -m volume -v "$FSTR"
+}
+
+BVL=$(echo "(2*$VOL)/10" | bc)
+BAR="$(printf '█%.0s' $(seq 1 $BVL))"
+
+dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/speaker-full.png " ${VOL}% $BAR "
+update

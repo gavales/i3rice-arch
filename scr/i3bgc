@@ -9,12 +9,12 @@ update () {
 	PBSCR=$HOME/scr/pb
 #	_I="%{A1:$PBSCR/wall          :}%{T1}%{T-}%{A}"
 	_I=" "
-	_P="%{A1:$PBSCR/wall   prev:}%{T1}%{T-}%{A}"
-	_N="%{A1:$PBSCR/wall   next:}%{T1}%{T-}%{A}"
-	_R="%{A1:$PBSCR/wall random:}%{T1}%{T-}%{A}"
-	_D="%{A1:$PBSCR/wall delete:}%{T1}%{T-}%{A}"
-	_E="%{A1:$PBSCR/wall rename:}%{T1}%{T-}%{A}"
-	_C="%{A1:$PBSCR/wall   list:}${CRLN##*/}%{A}"
+	_P="%{A1:i3bgc   prev:}%{T1}%{T-}%{A}"
+	_N="%{A1:i3bgc   next:}%{T1}%{T-}%{A}"
+	_R="%{A1:i3bgc random:}%{T1}%{T-}%{A}"
+	_D="%{A1:i3bgc delete:}%{T1}%{T-}%{A}"
+	_E="%{A1:i3bgc rename:}%{T1}%{T-}%{A}"
+	_C="%{A1:i3bgc   list:}${CRLN##*/}%{A}"
 	if [[ $CTXT == "$_I" ]]; then
 		_F="$_I$_P $_R $_E $_D $_N $_C"
 	else
@@ -25,27 +25,28 @@ update () {
 
 case $1 in
 	show)   CTXT=$(pbcat -m i3wallpaper) && update ;;
-	prev)   i3wallpaper -w PREV          && update ;;
-	next)   i3wallpaper -w NEXT          && update ;;
-	random) i3wallpaper -w RANDOM        && update ;;
+	blur)   i3bg -b                         ;;
+	prev)   i3bg -w PREV          && update ;;
+	next)   i3bg -w NEXT          && update ;;
+	random) i3bg -w RANDOM        && update ;;
 	delete)
 		CONFIRM=$(echo -e "Yes\nNo" | i3menu -y 0 -m -c red)
 		[[ $CONFIRM == "YES" ]] && {
-			i3wallpaper -d ""
-			i3wallpaper -w RANDOM
+			i3bg -d ""
+			i3bg -w RANDOM
 			update
 		}
 		;;
 	rename)
 		NAME=$(echo " " | i3menu -m -L 0 -x 65 -y -10 -c black)
 		[[ -n $NAME ]] && {
-			i3wallpaper -r "$NAME"
-			i3wallpaper -w "$NAME"
+			i3bg -r "$NAME"
+			i3bg -w "$NAME"
 			update
 		}
 		;;
 	list)
 		wall=$(ls $XDG_PICTURES_DIR/i3wallpaper/normal | i3menu -m -L 10 -w 300)
-		[[ -n $wall ]] && i3wallpaper -w $wall && update
+		[[ -n $wall ]] && i3bg -w $wall && update
 		;;
 esac

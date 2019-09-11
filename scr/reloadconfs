@@ -12,8 +12,9 @@ $TMR -x pb-reload    -a $HOME/.config/polybar
 $TMR -x reloadinst   -a $HOME/.config/zathura
 $TMR -x dunst-reload -a $HOME/.config/dunst
 $TMR -x reload       -a $HOME/.conky
+$TMR -x genfavicon   -a $USER_REPO_DIR/ghb/themes/hyde/static/css
 $TMR -a $USER_REPO_DIR/i3rice-arch
-$TMR -a $USER_REPO_DIR/quickstart/themes/hyde/static/css
+#$TMR -a $USER_REPO_DIR/ghb/themes/hyde/layouts/_default
 $TMR -a $HOME/.vim/colors
 $TMR -a $HOME/.config/rofi
 $TMR -a $HOME/.config/vis/colors

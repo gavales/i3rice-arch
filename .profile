@@ -5,6 +5,7 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export BROWSER=/usr/bin/surf
 export TERM=/usr/bin/urxvtc
 export PATH="$PATH:$HOME/scr"
+export USER_I3LAUNCH_WS="1"
 export USER_SCR_DIR="$HOME/scr"
 export USER_TMP_DIR="$HOME/.tmp"
 export USER_XRS_DIR="$HOME/xrs"

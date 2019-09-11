@@ -14,3 +14,4 @@ case $_W in
 esac
 
 echo "${_I} ${_W}"
+dunstify -r 1234 " WORKSPACE $_W"

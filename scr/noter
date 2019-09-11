@@ -18,8 +18,9 @@ LIST-NOTES () { cat $NOTEDIR/$1 || echo "$1 doesn't exist." ; }
 CREATE () {
 	[[ -z ${TYPE} ]] || {
 		[[ -f ${TYPE} ]] || touch ${TYPE}
-		[[ -z ${NTRY} ]] && NTRY="$(i3menu -o horizontal -w 800 -c green)"
-		[[ -z ${NTRY} ]] || echo -e "${NTRY}" >> ${TYPE}
+		[[ -n ${NTRY} ]] && FNTRY="$NTRY" \
+			|| FNTRY="$(echo "" | i3menu -o horizontal -w 800 -c green -p "${TYPE##*/} ")"
+		[[ -z ${FNTRY} ]] || echo -e "${FNTRY}" >> ${TYPE}
 	}
 }
 
@@ -42,15 +43,13 @@ help () {
                       │   NOTE_TYPE = OTHER|NOTES|
                       │     WATCHLIST|TODO
  noter -h             ┼ Print this help
- noter -t [NOTE_TYPE] ┼ Type of note to create,
-                      │   one of the files in the
-                      │   NOTE_DIR
+ noter -t [NOTE_TYPE] ┼ Create NOTE_DIR/NOTE_TYPE
  noter -e [ENTRY]     ┼ Entry to add to the note
  noter -d [ENTRY]     ┼ Delete entry in note file
- noter -g [NOTE_TYPE] ┼ List all entries in note file
- noter -l             ┼ List all note files
- noter -D [NOTE_TYPE] ┼ Delete NOTE_TYPE in
-                      │   NOTE_DIR
+ noter -g [NOTE_TYPE] ┼ cat NOTE_DIR/NOTE_TYPE
+ noter -l             ┼ ls NOTE_DIR
+ noter -D [NOTE_TYPE] ┼ Delete NOTE_DIR/NOTE_TYPE
+                      │   
 
 EOB
 }
