@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: Mon 22 Jul 19:53:50 BST 2019
+
+help () {
+cat << 'EOB'
+                                             ██
+   █████                                    ▒██
+  ██▒▒▒██  █████  ███████   █████  ██    ██ ▒██
+ ▒██  ▒██ ██▒▒▒██▒▒██▒▒▒██ ██▒▒▒██▒██   ▒██ ▒██
+ ▒▒██████▒███████ ▒██  ▒██▒██  ▒▒ ▒▒██ ▒██  ▒██
+  ▒▒▒▒▒██▒██▒▒▒▒  ▒██  ▒██▒██   ██ ▒▒████   ▒██
+   █████ ▒▒██████ ███  ▒██▒▒█████   ▒▒██    ███
+  ▒▒▒▒▒   ▒▒▒▒▒▒ ▒▒▒   ▒▒  ▒▒▒▒▒     ▒▒    ▒▒▒ 
+	-- job appliction cover letter generator
+	     using latex
+
+Usage
+-----
+
+gencvl -h        ┼ print this help
+gencvl -n [NAME] ┼ create new coverletter
+                 │   with name NAME
+EOB
+}
+
+while getopts :n:h opts; do
+	case $opts in
+		n) TIT="$OPTARG" ;;
+		h) help && exit  ;;
+	esac
+done
+
+CLDIR=$XDG_DOCUMENTS_DIR/personal/CVL
+PLT=$XDG_TEMPLATES_DIR/tex/coverletter/coverletter.tex
+EDITOR="gvim -f"
+[[ -n $TIT ]] || TIT="$(echo "" | i3menu -c yellow -w 500 -L 0 \
+	-p "Enter title: ")"
+[[ -n $TIT ]] || exit
+
+FLD="$(echo "${TIT}" | sed 's/\ //g')"
+#TIT="$(echo $TIT | sed 's/\ /\\\ /g')"
+echo $FLD
+echo $TIT
+
+[[ ! -f $CLDIR ]] && mkdir $CLDIR
+cd $CLDIR
+[[ ! -f $CLDIR ]] && mkdir $FLD
+cd $FLD
+cp $PLT ${FLD}.tex
+sed -e "s/TITLE/$TIT/g" -i ${FLD}.tex
+#touch maintext.tex
+$EDITOR maintext.tex
+$USER_SCR_DIR/clatex ${FLD}.tex
