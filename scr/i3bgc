@@ -5,7 +5,7 @@
 CTXT=" "
 
 update () {
-	CRLN=$(readlink -f $HOME/pic/i3wallpaper/current)
+	CRLN=$(readlink -f $HOME/pic/i3bg/current)
 	PBSCR=$HOME/scr/pb
 #	_I="%{A1:$PBSCR/wall          :}%{T1}%{T-}%{A}"
 	_I=" "

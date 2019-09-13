@@ -14,7 +14,7 @@ name=${1##*/}
 name=${name/%.*}
 name=${name/%(*}
 name=$(echo "$name" | sed "s/1920x1080//g;s/,//g;s/\ //g")
-echo "# vim:ft=perl" > $TRG
+echo "! vim:ft=perl" > $TRG
 echo "name      ${name}" >> $TRG
 echo "wallpaper ${name}" >> $TRG
 cat $HOME/.cache/wal/colors-kitty.conf | grep 'color' | \
@@ -30,8 +30,8 @@ s/color6/cyn/g;\
 /color7/d" \
 >> $TRG
 
-i3wallpaper -w "$WALL"
+i3bg -w "$WALL"
 themer -c pywal
 reloadconfs &>/dev/null &
 themer -x post-build-apply \
-       -a /home/gavarch/numix-solarized-gtk-theme &>/dev/null &
+       -a $HOME/numix &>/dev/null &

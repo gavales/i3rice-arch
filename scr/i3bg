@@ -6,7 +6,7 @@
 # COMMAND TO UPDATE BLUR OF BLURS
 # for i in $(ls); do convert "${i}" -blur $blr "${PWD/normal/blur}/${i}"; echo "$i"; done
 
-WDIR="$XDG_PICTURES_DIR/i3wallpaper"
+WDIR="$XDG_PICTURES_DIR/i3bg"
 NORM="${WDIR}/normal"
 BLUR="${WDIR}/blur"
 COLS="${WDIR}/cols"
@@ -31,11 +31,12 @@ add-wall () {
 	TRG="${1##*/}"
 	TRG="${TRG%.*}"
 	TRG="$(echo $TRG | sed -e "s/1920x1080//g;s/,//g;s/\ //g")"
-	echo "
-	TRG=$TRG
-	SRC=$SRC"
-	convert "${SRC}" -resize "${MX}x${MY}^" -gravity center -extent "${MX}x${MY}" "${NORM}/${TRG}"
-	convert "${NORM}/${TRG}" -blur $blr "${BLUR}/${TRG}"
+	echo "$SRC >> $NORM/$TRG"
+	[[ -f ${NORM}/${TRG} ]] || {
+		convert "${SRC}" -resize "${MX}x${MY}^" -gravity center \
+			-extent "${MX}x${MY}" "${NORM}/${TRG}"
+		convert "${NORM}/${TRG}" -blur $blr "${BLUR}/${TRG}"
+		}
 	WPP="$TRG"
 }
 
@@ -93,7 +94,6 @@ change-current () {
 
 set-wall () {
 	feh --bg-center $CURR
-	polybar-msg hook i3wallpaper 1 &>/dev/null &
 	echo "${CRLN##*/}"
 }
 
@@ -128,42 +128,34 @@ rename () {
 
 help () {
 cat << 'EOB'
-  ██ ██████                       ██  ██
- ▒▒ ▒█▒▒▒▒█                      ▒██ ▒██
-  ██▒    ▒█ ███     ██  ██████   ▒██ ▒██
- ▒██   ████▒▒██  █ ▒██ ▒▒▒▒▒▒██  ▒██ ▒██
- ▒██  ▒▒▒▒█ ▒██ ███▒██  ███████  ▒██ ▒██  ████████
- ▒██ █   ▒█ ▒████▒████ ██▒▒▒▒██  ▒██ ▒██ ▒▒▒▒▒▒▒▒
- ▒██▒██████ ███▒ ▒▒▒██▒▒████████ ███ ███
- ▒▒ ▒▒▒▒▒▒ ▒▒▒    ▒▒▒  ▒▒▒▒▒▒▒▒ ▒▒▒ ▒▒▒
-
-         ██████            ██████
-        ▒██▒▒▒██  ██████  ▒██▒▒▒██  █████  ██████
-        ▒██  ▒██ ▒▒▒▒▒▒██ ▒██  ▒██ ██▒▒▒██▒▒██▒▒█
-        ▒██████   ███████ ▒██████ ▒███████ ▒██ ▒
-        ▒██▒▒▒   ██▒▒▒▒██ ▒██▒▒▒  ▒██▒▒▒▒  ▒██
-        ▒██     ▒▒████████▒██     ▒▒██████▒███
-        ▒▒       ▒▒▒▒▒▒▒▒ ▒▒       ▒▒▒▒▒▒ ▒▒▒
+  ██  ████  ██             
+ ▒▒  █▒▒▒ █▒██       █████ 
+  ██▒    ▒█▒██      ██▒▒▒██
+ ▒██   ███ ▒██████ ▒██  ▒██
+ ▒██  ▒▒▒ █▒██▒▒▒██▒▒██████
+ ▒██ █   ▒█▒██  ▒██ ▒▒▒▒▒██
+ ▒██▒ ████ ▒██████   █████ 
+ ▒▒  ▒▒▒▒  ▒▒▒▒▒    ▒▒▒▒▒  
  	-- A script to set wallpaper, with other features.
 
  Usage
  -----
- i3wallpaper                ┼ Create default directories:
-                            │   WALL_DIR/(normal|blur|cols)
- i3wallpaper -h             ┼ Print this help
- i3wallpaper -w [PATH|PREV| ┼ Wallpaper to set 
-                NEXT|RANDOM │
-                  |NAME]    │
- i3wallpaper -t [HEX COLOR] ┼ Tint color of wallpaper
- i3wallpaper -a [DIRECTORY] ┼ Add walls from DIRECTORY
- i3wallpaper -l             ┼ List available wallpapers
- i3wallpaper -b             ┼ Toggle blur
- i3wallpaper -r [NAME]      ┼ Rename current wallpaper
- i3wallpaper -d             ┼ Remove wallpaper from
-                            │   WALL_DIR/(normal|blur)
+ i3bg                ┼ Create default directories:
+                     │   WALL_DIR/(normal|blur|cols)
+ i3bg -h             ┼ Print this help
+ i3bg -w [PATH|PREV| ┼ Wallpaper to set 
+         NEXT|RANDOM │
+           |NAME]    │
+ i3bg -t [HEX COLOR] ┼ Tint color of wallpaper
+ i3bg -a [DIRECTORY] ┼ Add walls from DIRECTORY
+ i3bg -l             ┼ List available wallpapers
+ i3bg -b             ┼ Toggle blur
+ i3bg -r [NAME]      ┼ Rename current wallpaper
+ i3bg -d             ┼ Remove wallpaper from
+                     │   WALL_DIR/(normal|blur)
  
- WALL_DIR  ┼ Default i3wallpaper folder:
-           │   $XDG_PICTURES_DIR/i3wallpaper
+ WALL_DIR  ┼ Default i3bg folder:
+           │   $XDG_PICTURES_DIR/i3bg
  DIRECTORY ┼ is a path to a directory containing pictures
  HEX COLOR ┼ Hexadecimal color Eg. #002b36
  PATH      ┼ is a path to a picture
@@ -201,10 +193,11 @@ if [[ -n $WPP ]]; then
 		WPP="$(sed -n "/"${CRLN##*/}"/{n;p;}" $HIST)"
 		[[ -z $WPP ]] && WPP="$(head -n 1 $HIST)"
 		}
-	[[ ! -f $NORM/$WPP ]] \
-		&& echo "${WPP##*/} not in walls directory, adding ${WPP##*/}" && add-wall "$WPP"
+	WPC=${WPP##*/}
+	[[ ! -f $NORM/${WPC%.*} ]] && \
+		echo "${WPC%.*} not in walls directory, adding ${WPC%.*}" && add-wall "$WPP"
 	change-current
-	[[ ! -f "$WPP" ]] && [[ ! -f "$NORM/$WPP" ]] && help \
+	[[ ! -f "$WPP" ]] && [[ ! -f "$NORM/${WPC%.*}" ]] && help \
 		&& echo "Wallpaper doesn't exist"
 fi
 

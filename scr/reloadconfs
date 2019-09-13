@@ -5,7 +5,7 @@ WPP=$($TMR -v wallpaper)
 TNT="$($TMR -v 'tint ')"
 [[ -n $WPP ]] || WPP=$($TMR -v "acc ")
 [[ -n $TNT ]] && TINT="-t $TNT" || TINT=" "
-i3wallpaper -w "$WPP" $TINT
+i3bg -w "$WPP" $TINT
 $TMR -x xrs-reload   -a $USER_XRS_DIR
 $TMR -x i3concat     -a $HOME/.config/i3
 $TMR -x pb-reload    -a $HOME/.config/polybar

@@ -2,5 +2,5 @@
 
 pkill -f i3-sticky.py
 pkill -f i3listen.py
-python $USER_SCR_DIR/listeners/i3-sticky.py
-python $USER_SCR_DIR/listeners/i3listen.py
+python $USER_SCR_DIR/listeners/i3-sticky.py &>/dev/null &
+python $USER_SCR_DIR/listeners/i3listen.py &>/dev/null &

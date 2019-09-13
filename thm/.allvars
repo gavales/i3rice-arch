@@ -1,14 +1,29 @@
-name      solarized
-wallpaper nebula-turquoise
-bg0       #002b36
-fg0       #fdf6e3
-acc       #268bd2
-red       #dc322f
-grn       #859900
-ylw       #b58900
-blu       #268bd2
-gnt       #d33682
-cyn       #2aa198
+name      forest-dusk
+wallpaper invasive1
+fg0       #fdd89a
+bg0       #3c4542
+acc       #fc796b
+red       #fc796b
+grn       #a8cb79
+ylw       #edc074
+blu       #bcbfb4
+gnt       #d8bbbd
+grey      #7e837c
+orange    #ed9c6a
+dawnred    #b9655b
+dawngrn    #819b64
+dawnylw    #af9461
+dawnblu    #8f948b
+dawngnt    #a19191
+dawngrey   #666c66
+dawnorange #af7c5a
+duskred    #fc796b
+duskgrn    #a8cb79
+duskylw    #edc074
+duskblu    #bcbfb4
+duskgnt    #d8bbbd
+duskgrey   #7e837c
+duskorange #ed9c6a
 guifont   Luxi Mono
 polyfont  CMU Typewriter Text
 font      CMUTypewriterText
@@ -22,30 +37,45 @@ gtk-icon  Numix-Circle
 cursor    Bibata_Dark_Red
 conky_loc1 top_left
 conky_loc2 bottom_right
-orange    #d65d0e
-fg3       #c1baa7
-fg2       #d5cebb
-fg1       #e9e2cf
-acf       #91c0da
-acb       #135a84
-bg1       #143f4a
-bg2       #28535e
-bg3       #3c6772
-fg0RGB    253, 246, 227
-fg1RGB    233, 226, 207
-fg2RGB    213, 206, 187
-fg3RGB    193, 186, 167
-bg0RGB    0, 43, 54
-bg1RGB    20, 63, 74
-bg2RGB    40, 83, 94
-bg3RGB    60, 103, 114
-accRGB    38, 139, 210
-acfRGB    145, 192, 218
-acbRGB    19, 90, 132
-redRGB    220, 50, 47
-grnRGB    133, 153, 0
-ylwRGB    181, 137, 0
-bluRGB    38, 139, 210
-gntRGB    211, 54, 130
-cynRGB    42, 161, 152
-orangeRGB    214, 93, 14
+cyn       #689d6a
+fg3       #c19c5e
+fg2       #d5b072
+fg1       #e9c486
+acf       #fca882
+acb       #9c5e56
+bg1       #505956
+bg2       #646d6a
+bg3       #78817e
+fg0RGB    253, 216, 154
+fg1RGB    233, 196, 134
+fg2RGB    213, 176, 114
+fg3RGB    193, 156, 94
+bg0RGB    60, 69, 66
+bg1RGB    80, 89, 86
+bg2RGB    100, 109, 106
+bg3RGB    120, 129, 126
+accRGB    252, 121, 107
+acfRGB    252, 168, 130
+acbRGB    156, 94, 86
+redRGB    252, 121, 107
+grnRGB    168, 203, 121
+ylwRGB    237, 192, 116
+bluRGB    188, 191, 180
+gntRGB    216, 187, 189
+greyRGB    126, 131, 124
+orangeRGB    237, 156, 106
+dawnredRGB    185, 101, 91
+dawngrnRGB    129, 155, 100
+dawnylwRGB    175, 148, 97
+dawnbluRGB    143, 148, 139
+dawngntRGB    161, 145, 145
+dawngreyRGB    102, 108, 102
+dawnorangeRGB    175, 124, 90
+duskredRGB    252, 121, 107
+duskgrnRGB    168, 203, 121
+duskylwRGB    237, 192, 116
+duskbluRGB    188, 191, 180
+duskgntRGB    216, 187, 189
+duskgreyRGB    126, 131, 124
+duskorangeRGB    237, 156, 106
+cynRGB    104, 157, 106

@@ -10,26 +10,26 @@
 [colors]
 tr = #000000ff
 
-#acc = #99268bd2
-#bg0 =   #002b36
-#acb = #99135a84
-#fg0 =   #fdf6e3
-#ylw = #99b58900
-#gnt = #99d33682
-#red = #99dc322f
-#grn = #99859900
-#cyn = #992aa198
+#acc = #99fc796b
+#bg0 =   #3c4542
+#acb = #999c5e56
+#fg0 =   #fdd89a
+#ylw = #99edc074
+#gnt = #99d8bbbd
+#red = #99fc796b
+#grn = #99a8cb79
+#cyn = #99689d6a
 
-acc = #135a84
-bg0 = #002b36
-acb = #135a84
-acf = #91c0da
-fg0 = #fdf6e3
-ylw = #b58900
-gnt = #d33682
-red = #dc322f
-grn = #859900
-cyn = #2aa198
+acc = #9c5e56
+bg0 = #3c4542
+acb = #9c5e56
+acf = #fca882
+fg0 = #fdd89a
+ylw = #edc074
+gnt = #d8bbbd
+red = #fc796b
+grn = #a8cb79
+cyn = #689d6a
 
 [settings]
 screenchange-reload = true
@@ -52,7 +52,7 @@ foreground = ${colors.bg0}
 line-size   = 0
 border-size = 1
 line-color   = ${colors.acc}
-border-color = #268bd2
+border-color = #fc796b
 padding-left        = 0
 padding-right       = 0
 module-margin-left  = 0
@@ -95,7 +95,7 @@ font-1 = FontAwesome5Free:style=Solid:size=14;3
 font-2 = FontAwesome5Brands:style=Solid:size=12;3
 tray-position   = right
 tray-padding    = 2
-tray-background = #268bd2
+tray-background = #fc796b
 cursor-click  = pointer
 cursor-scroll = ns-resize
 modules-left   = startfvwm fvwmtd xkeyboard wintitle
@@ -173,8 +173,8 @@ type = custom/ipc
 hook-0 = pbcat -m i3wallpaper
 format = %{T1}%{T-}<output>
 initial = 1
-click-left  = i3wctrl show
-click-right = i3wctrl blur
+click-left  = i3bgc show
+click-right = i3bgc blur
 format-background = ${colors.acc}
 format-foreground = ${colors.bg0}
 format-padding = 0
