@@ -5,7 +5,7 @@ function hextorgb(HEX,NME){
 	print NME "RGB    " strtonum( "0x" HEXR ) ", " strtonum( "0x" HEXG ) ", " strtonum( "0x" HEXB );
 	}
 
-function colmix(NME,ONE,TWO,RT1,RT2){
+function mixer(NME,ONE,TWO,RT1,RT2){
 	ONER=substr(ONE,2,length(ONE)-5);
 	ONEG=substr(ONE,4,length(ONE)-5);
 	ONEB=substr(ONE,6,length(ONE)-5);
@@ -18,9 +18,9 @@ function colmix(NME,ONE,TWO,RT1,RT2){
 	TWRR=strtonum( "0x" TWOR );
 	TWRG=strtonum( "0x" TWOG );
 	TWRB=strtonum( "0x" TWOB );
-	CL3R=int((ONRR * RT1 + TWRR * RT2) / 100);
-	CL3G=int((ONRG * RT1 + TWRG * RT2) / 100);
-	CL3B=int((ONRB * RT1 + TWRB * RT2) / 100);
+	CL3R=int(((ONRR * RT1) / 100) + ((TWRR * RT2) / 100));
+	CL3G=int(((ONRG * RT1) / 100) + ((TWRG * RT2) / 100));
+	CL3B=int(((ONRB * RT1) / 100) + ((TWRB * RT2) / 100));
 	CL3RX=sprintf( "%x", CL3R );
 	CL3GX=sprintf( "%x", CL3G );
 	CL3BX=sprintf( "%x", CL3B );

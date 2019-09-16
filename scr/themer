@@ -36,7 +36,7 @@ function hextorgb(HEX,NME){
 	print NME "RGB    " strtonum( "0x" HEXR ) ", " strtonum( "0x" HEXG ) ", " strtonum( "0x" HEXB );
 	}
 
-function colmix(NME,ONE,TWO,RT1,RT2){
+function mixer(NME,ONE,TWO,RT1,RT2){
 	ONER=substr(ONE,2,length(ONE)-5);
 	ONEG=substr(ONE,4,length(ONE)-5);
 	ONEB=substr(ONE,6,length(ONE)-5);
@@ -92,9 +92,9 @@ vrt=light
 CUR=${TDR}/.current ALL=${TDR}/.allvars ALR=${TDR}/.allvarsrofi RGX=${TDR}/.regex
 
 variations () {
-	bg0=$(awk ' $1 ~ /bg0/ {$1="";gsub(/^[ \t]+/, "", $0);print $0;}' $ALL)
-	fg0=$(awk ' $1 ~ /fg0/ {$1="";gsub(/^[ \t]+/, "", $0);print $0;}' $ALL)
-	acc=$(awk ' $1 ~ /acc/ {$1="";gsub(/^[ \t]+/, "", $0);print $0;}' $ALL)
+	bg0=$(awk ' $1 ~ /^bg0$/ {$1="";gsub(/^[ \t]+/, "", $0);print $0;}' $ALL)
+	fg0=$(awk ' $1 ~ /^fg0$/ {$1="";gsub(/^[ \t]+/, "", $0);print $0;}' $ALL)
+	acc=$(awk ' $1 ~ /^acc$/ {$1="";gsub(/^[ \t]+/, "", $0);print $0;}' $ALL)
 	hexrgbraw $bg0 bg0
 	hexrgbraw $fg0 fg0
 	hexrgbraw $acc acc
@@ -121,8 +121,8 @@ variations () {
 				bg3R=(bg2R + INC); bg3G=(bg2G + INC); bg3B=(bg2B + INC);
 			}
 
-			colmix("acf",acc,fg0,50,50)
-			colmix("acb",acc,bg0,50,50)
+			mixer("acf",acc,fg0,50,50)
+			mixer("acb",acc,bg0,50,50)
 			print "fg1R="  fg1R  "\nfg1G="  fg1G  "\nfg1B="  fg1B ;
 			print "fg2R="  fg2R  "\nfg2G="  fg2G  "\nfg2B="  fg2B ;
 			print "fg3R="  fg3R  "\nfg3G="  fg3G  "\nfg3B="  fg3B ;

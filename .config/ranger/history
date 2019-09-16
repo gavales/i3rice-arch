@@ -1,3 +1,5 @@
+rename vid
+rename mus
 mkdir .tmp
 rename 
 open_with M
@@ -46,5 +48,3 @@ rename themer_oldold
 rename themer_old
 rename rc.conf
 rename .bashrc
-mkdir .old
-rename darkineicons.tar.gz

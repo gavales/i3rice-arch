@@ -10,16 +10,16 @@
 [colors]
 tr = #000000ff
 
-acc = #365658
-bg0 = #282828
-acb = #365658
-acf = #98b09d
-fg0 = #ebdbb2
+acc = #b1c798
+bg0 = #fbf1c7
+acb = #b1c798
+acf = #486249
+fg0 = #282828
 ylw = #d79921
 gnt = #b16286
 red = #cc241d
 grn = #98971a
-cyn = #689d6a
+cyn = #458588
 
 [settings]
 screenchange-reload = true
@@ -42,7 +42,7 @@ foreground = ${colors.bg0}
 line-size   = 0
 border-size = 0
 line-color   = ${colors.acc}
-border-color = #458588
+border-color = #689d6a
 padding-left        = 0
 padding-right       = 0
 module-margin-left  = 0
@@ -86,7 +86,7 @@ font-1 = FontAwesome5Free:style=Solid:size=14;3
 font-2 = FontAwesome5Brands:style=Solid:size=12;3
 tray-position   = right
 tray-padding    = 2
-tray-background = #458588
+tray-background = #689d6a
 cursor-click  = pointer
 cursor-scroll = ns-resize
 modules-left   = startfvwm fvwmtd xkeyboard wintitle
@@ -308,13 +308,13 @@ animation-charging-framerate = 500
 [module/arrow2]
 type = custom/text
 content = %{T4}   %{T-}
-content-foreground = #365658
+content-foreground = #b1c798
 content-background = ${colors.tr}
  
 [module/arrow1]
 type = custom/text
 content = %{T4}  %{T-}
-content-foreground = #365658
+content-foreground = #b1c798
 content-background = ${colors.tr}
 
 ; vim:ft=dosini

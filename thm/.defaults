@@ -19,7 +19,7 @@ conky_loc1 top_left
 conky_loc2 bottom_right
 bg0        #fbf1c7
 fg0        #282828
-defacc     #689d6a
+acc        #689d6a
 red        #cc241d
 grn        #98971a
 ylw        #d79921
