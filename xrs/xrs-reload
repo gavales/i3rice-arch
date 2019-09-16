@@ -5,10 +5,10 @@
 
 XDIR=$HOME/xrs
 XRS=$HOME/.Xresources
-check=$(cat $XDIR/theme.Xresources | grep '%')
+check=$(cat $XDIR/0theme.Xresources | grep '#')
 
-if [[ -z $check ]]; then
-	cat $XDIR/theme.Xresources > $XRS
+if [[ -n $check ]]; then
+	cat $XDIR/0theme.Xresources > $XRS
 else
 	cat > $XRS << 'EOB'
 ! emacs
