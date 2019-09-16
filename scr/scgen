@@ -26,7 +26,7 @@ files () {
 		key=$1;$1="";
 		gsub(/^[ \t]+/, "", $0);
 		print "alias g" key "=\"cd "          $0 "\"";
-		print "Y"       key "() { cp \"$1\" " $0 "/\"$1\" ; }";
+		print "Y"       key "() { cp -r \"$1\" " $0 "/\"$1\" ; }";
 		print "M"       key "() { mv \"$1\" " $0 "/\"$1\" ; }";
 	}' >> $SBO
 }

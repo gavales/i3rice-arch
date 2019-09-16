@@ -1,15 +1,14 @@
-name      dracula
-wallpaper dracula
-tint      #FF6E67
-bg0       #282A36
-acc       #FF6E67
-fg0       #fffff2
-blu       #BD93F9
-grn       #5AF78E
-ylw       #cccc00
-red       #FF6E67
-gnt       #FF92D0
-cyn       #8BE9FD
+name      gruvbox
+wallpaper AthabascaGlacier
+bg0       #282828
+fg0       #ebdbb2
+acc       #458588
+red       #cc241d
+grn       #98971a
+ylw       #d79921
+blu       #458588
+gnt       #b16286
+cyn       #689d6a
 guifont   Luxi Mono
 polyfont  CMU Typewriter Text
 font      CMUTypewriterText
@@ -24,40 +23,39 @@ cursor    Bibata_Dark_Red
 conky_loc1 top_left
 conky_loc2 bottom_right
 orange    #d65d0e
-acf       #ffb6ac
-acb       #934c4e
-fg3       #c3c3b6
-fg2       #d7d7ca
-fg1       #ebebde
-bg1       #3c3e4a
-bg2       #50525e
-bg3       #646672
-bg0RGB    40, 42, 54
-fg0RGB    255, 255, 242
-accRGB    255, 110, 103
-acfRGB    255, 182, 172
-acbRGB    147, 76, 78
-fg0RGB    255, 255, 242
-fg1RGB    235, 235, 222
-fg2RGB    215, 215, 202
-fg3RGB    195, 195, 182
-bg0RGB    40, 42, 54
-bg1RGB    60, 62, 74
-bg2RGB    80, 82, 94
-bg3RGB    100, 102, 114
-tintRGB    255, 110, 103
-bluRGB    189, 147, 249
-grnRGB    90, 247, 142
-ylwRGB    204, 204, 0
-redRGB    255, 110, 103
-gntRGB    255, 146, 208
-cynRGB    139, 233, 253
+acf       #98b09d
+acb       #365658
+fg3       #af9f76
+fg2       #c3b38a
+fg1       #d7c79e
+bg1       #3c3c3c
+bg2       #505050
+bg3       #646464
+bg0RGB    40, 40, 40
+fg0RGB    235, 219, 178
+accRGB    69, 133, 136
+acfRGB    152, 176, 157
+acbRGB    54, 86, 88
+fg0RGB    235, 219, 178
+fg1RGB    215, 199, 158
+fg2RGB    195, 179, 138
+fg3RGB    175, 159, 118
+bg0RGB    40, 40, 40
+bg1RGB    60, 60, 60
+bg2RGB    80, 80, 80
+bg3RGB    100, 100, 100
+redRGB    204, 36, 29
+grnRGB    152, 151, 26
+ylwRGB    215, 153, 33
+bluRGB    69, 133, 136
+gntRGB    177, 98, 134
+cynRGB    104, 157, 106
 orangeRGB    214, 93, 14
-acfRGB    255, 182, 172
-acbRGB    147, 76, 78
-fg3RGB    195, 195, 182
-fg2RGB    215, 215, 202
-fg1RGB    235, 235, 222
-bg1RGB    60, 62, 74
-bg2RGB    80, 82, 94
-bg3RGB    100, 102, 114
+acfRGB    152, 176, 157
+acbRGB    54, 86, 88
+fg3RGB    175, 159, 118
+fg2RGB    195, 179, 138
+fg1RGB    215, 199, 158
+bg1RGB    60, 60, 60
+bg2RGB    80, 80, 80
+bg3RGB    100, 100, 100

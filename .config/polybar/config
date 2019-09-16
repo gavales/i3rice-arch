@@ -10,26 +10,26 @@
 [colors]
 tr = #000000ff
 
-#acc = #99FF6E67
-#bg0 =   #282A36
-#acb = #99934c4e
-#fg0 =   #fffff2
-#ylw = #99cccc00
-#gnt = #99FF92D0
-#red = #99FF6E67
-#grn = #995AF78E
-#cyn = #998BE9FD
+#acc = #99458588
+#bg0 =   #282828
+#acb = #99365658
+#fg0 =   #ebdbb2
+#ylw = #99d79921
+#gnt = #99b16286
+#red = #99cc241d
+#grn = #9998971a
+#cyn = #99689d6a
 
-acc = #934c4e
-bg0 = #282A36
-acb = #934c4e
-acf = #ffb6ac
-fg0 = #fffff2
-ylw = #cccc00
-gnt = #FF92D0
-red = #FF6E67
-grn = #5AF78E
-cyn = #8BE9FD
+acc = #365658
+bg0 = #282828
+acb = #365658
+acf = #98b09d
+fg0 = #ebdbb2
+ylw = #d79921
+gnt = #b16286
+red = #cc241d
+grn = #98971a
+cyn = #689d6a
 
 [settings]
 screenchange-reload = true
@@ -52,7 +52,7 @@ foreground = ${colors.bg0}
 line-size   = 0
 border-size = 1
 line-color   = ${colors.acc}
-border-color = #FF6E67
+border-color = #458588
 padding-left        = 0
 padding-right       = 0
 module-margin-left  = 0
@@ -95,7 +95,7 @@ font-1 = FontAwesome5Free:style=Solid:size=14;3
 font-2 = FontAwesome5Brands:style=Solid:size=12;3
 tray-position   = right
 tray-padding    = 2
-tray-background = #FF6E67
+tray-background = #458588
 cursor-click  = pointer
 cursor-scroll = ns-resize
 modules-left   = startfvwm fvwmtd xkeyboard wintitle

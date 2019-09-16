@@ -9,23 +9,28 @@ EDITOR="gvim -f"
 [[ -d $DIR ]] && cd $DIR || {
 #	echo "NEED TO RUN hugo new site quickstart IN THE APPROPRIATE DIRECTORY"
 	mkdir ${DIR%/*}
+	cd ${DIR%/*}
 	hugo new site quickstart
 	mv quickstart ${DIR##*/}
 	cd $DIR
 	}
 
 new () {
-	[[ -f content/posts/${1}.md ]] || hugo new posts/${1}.md
+	[[ -n $1 ]] && POST="$1" || \
+		POST=$(ls content/posts | sed '/.md$/!d;s/.md//g' | i3menu -c green)
+	[[ -z $POST ]] && exit
+	[[ -f content/posts/${POST}.md ]] || hugo new posts/${POST}.md
 	hugo server &>/dev/null &
 	i3launch 'surf localhost:1313' _W2 &>/dev/null &
 	i3-msg -q [con_mark="_W3"] focus
-	$EDITOR content/posts/${1}.md
+	$EDITOR content/posts/${POST}.md
 	killall hugo
 	killall surf
+	cd $DIR
 	hugo
 }
 
-list () { ls content/posts ; }
+list () { ls content/posts | sed '/.md$/!d' ; }
 
 delete () { rm -rf content/posts/${1}.md ; }
 
