@@ -1,82 +1,41 @@
 #!/bin/bash
 
-name="$(xdotool getactivewindow getwindowname)"
-name="${name/ - File Manager/}"
-title="${name/$HOME/'~'}"
-title="${title/i3rice-arch/dot}"
+NME="$(xdotool getactivewindow getwindowname)"
+NME="${NME/ - File Manager/}"
+TTL="${NME/$HOME/'~'}"
+#TTL="${TTL/i3rice-arch/dot}"
+DIR="${NME##*/}"
 
-dir="${name##*/}"
+_I="xdotool key ctrl+shift+i" _L="xdotool key ctrl+shift+l"
 
-icn="xdotool key ctrl+shift+i"
-lst="xdotool key ctrl+shift+l"
+ora="xdotool key ctrl+shift+k" ord="xdotool key ctrl+shift+j"
 
-ora="xdotool key ctrl+shift+k"
-ord="xdotool key ctrl+shift+j"
+nme="xdotool key ctrl+shift+n" dte="xdotool key ctrl+shift+d"
+sze="xdotool key ctrl+shift+s" tpe="xdotool key ctrl+shift+t"
 
-nme="xdotool key ctrl+shift+n"
-dte="xdotool key ctrl+shift+d"
-sze="xdotool key ctrl+shift+s"
-tpe="xdotool key ctrl+shift+t"
+wmctrl -r :ACTIVE: -N ${TTL}
+i3-msg -q title_format "${TTL}"
 
-wmctrl -r :ACTIVE: -N ${title}
-i3-msg -q title_format "${title}"
+$ora; $nme
 
-$ora
-$nme
-
-case $dir in
-	gavarch)
-		$ora
-		$nme
-		$icn
-		$nme
-		;;
-	Drive)
-		$ora
-		$nme
-		$lst
-		$nme
-		;;
-	dwn)
-		$ord
-		$dte
-		$lst
-		$dte
-		;;
-	pic)
-		$ora
-		$lst
-		;;
-	scr)
-		$ora
-		$lst
-		;;
-	gifs)
-		$ora
-		$icn
-		;;
-	meme)
-		$ora
-		$icn
-		;;
-	scrots)
-		$ora
-		$icn
-		;;
-	walls)
-		$ora
-		$icn
-		;;
-	vid)
-		$ora
-		$lst
-		;;
-	lecs)
-		$ora
-		$lst
-		;;
-	ex)
-		$ora
-		$lst
-		;;
+case $DIR in
+	gavarch)    $_I             ;;
+	Drive)      $_L             ;;
+	dwn)        $ord; $dte; $_L ;;
+	pic)        $_L             ;;
+	favs)       $_I             ;;
+	gifs)       $_I             ;;
+	i3bg)       $_I             ;;
+	meme)       $_I             ;;
+	pics)       $_I             ;;
+	scrots)     $_I             ;;
+	SpotBright) $_I             ;;
+	scr)        $_L             ;;
+	gifs)       $_I             ;;
+	meme)       $_I             ;;
+	scrots)     $_I             ;;
+	walls)      $_I             ;;
+	vid)        $_L             ;;
+	lecs)       $_L             ;;
+	ex)         $_L             ;;
 esac

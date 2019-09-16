@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: $(date)
+#source $HOME/.config/user-dirs.dirs
+
+rm -rf *.fls *.synctex.gz *.fdb_latexmk *.aux *.bbl *.bcf *.blg *.ilg *.log \
+	*.nlo *.nls *.out *.toc *.run.xml _minted*

@@ -3,7 +3,9 @@ name      forest-night
 wallpaper CantonofVaudSwitzerland
 fg0       #ffebc3
 bg0       #3c4c55
+xied      colmix 66:$nightred 33:$nightylw
 acc       $nightred
+mixedref  $xied
 red       $nightblu
 grn       $nightgrn
 ylw       $nightylw

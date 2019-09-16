@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: $(date)
+# source $HOME/.config/user-dirs.dirs
+
+SCD=$USER_SCR_DIR/sc
+STB=$SCD/_bashrc
+STR=$SCD/_rcconf
+SBO=$SCD/shortcuts.bashrc
+SRO=$USER_REPO_DIR/i3rice-arch/.config/ranger/shortcuts.conf
+SCF=$SCD/files SCX=$SCD/scripts SCT=$SCD/templates
+
+files () {
+	echo "# >>>> dir" > $SRO
+	cat $SCF | sed '/#/d' | awk '{
+		key=$1;$1="";
+		gsub(/^[ \t]+/, "", $0);
+		print "map g" key " cd "                  $0;
+		print "map Y" key " shell cp %f "         $0 "/%f";
+		print "map M" key " shell mv %f "         $0 "/%f";
+		print "map C" key " console shell cp -r " $0 "%space";
+	}' >> $SRO
+	echo "# SHORTCUTS" > $SBO
+	cat $SCF | sed '/#/d' | awk '{
+		key=$1;$1="";
+		gsub(/^[ \t]+/, "", $0);
+		print "alias g" key "=\"cd "          $0 "\"";
+		print "Y"       key "() { cp \"$1\" " $0 "/\"$1\" ; }";
+		print "M"       key "() { mv \"$1\" " $0 "/\"$1\" ; }";
+	}' >> $SBO
+}
+
+scripts () {
+	echo "
+# //// scripts" >> $SRO
+	cat $SCX | sed '/#/d' | awk '{
+		key=$1;
+		shl=$2;
+		$1=$2="";
+		gsub(/^[ \t]+/, "", $0);
+		if (shl ~ "console") {
+			print "map x" key " console shell " $0;
+		} else {
+			print "map x" key " shell " $0;
+		}
+	}' >> $SRO
+}
+
+templates () {
+	echo "
+# //// templates" >> $SRO
+	cat $SCT | sed '/#/d' | awk '{
+		key=$1; $1="";
+		gsub(/^[ \t]+/, "", $0);
+		print "map T" key " console shell " $0 "%space";
+	}' >> $SRO
+	echo "
+# templates" >> $SBO
+	cat $SCT | sed '/#/d' | awk '{
+		key=$1; $1="";
+		gsub(/^[ \t]+/, "", $0);
+		print "T" key "() { cp \"" $0 "\" \"$1\" ; }" \
+	}' >> $SBO
+}
+
+[[ -f $SCF ]] && files
+[[ -f $SCX ]] && scripts
+[[ -f $SCT ]] && templates

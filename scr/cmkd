@@ -1,80 +1,56 @@
 #!/usr/bin/env bash
 
-file=$1
-wordtempDIR=$XDG_TEMPLATES_DIR/pandoc
-cssDIR=$XDG_TEMPLATES_DIR/css
-bibDIR=$HOME
-yamlDIR=$XDG_TEMPLATES_DIR/pandoc
+TRG=$1
+WTDR=$XDG_TEMPLATES_DIR/pandoc
+CSDR=$XDG_TEMPLATES_DIR/css
+BBDR=$HOME
+YLDR=$XDG_TEMPLATES_DIR/pandoc
 
 # WHICH BIBLIOGRAPHY FILE
-whichbib=$(cat $file | grep '#bib' | awk '{print $NF}')
-if [[ -n $whichbib ]]; then
-	bib="${whichbib}"
-elif [[ -z $whichbib ]]; then
-	bib="$HOME/global.bib"
-fi
+BIB=$(cat $TRG | sed '/^#bib /!d;s/[^ ]* *//')
+[[ -z $BIB ]] && BIB="$HOME/global.bib"
 
 # WHICH .yaml TO USE
-yaml=$(cat $file | grep '#yaml' | awk '{print $NF}')
-if [[ -n $yaml ]]; then
-	settings="$XDG_TEMPLATES_DIR/pandoc/${yaml}.yaml"
-elif [[ -z $yaml ]]; then
-	settings="$XDG_TEMPLATES_DIR/pandoc/settings.yaml"
-fi
+YML=$(cat $TRG | sed '/^#yaml /!d;s/[^ ]* *//')
+[[ -z $YML ]] && YML=settings
+FYL="$YLDR/settings.yaml"
 
 # WHICH TEMPLATE FOR WORD DOCUMENTS
-whichwordtemp=$(cat $file | grep '#word_template' | awk '{print $NF}')
-if [[ -n $whichwordtemp ]]; then
-	wordtemp=$(cat $file | grep '#word_template' | awk '{print $NF}')
-elif [[ -z $whichwordtemp ]]; then
-	wordtemp=reference
-fi
+WTM=$(cat $TRG | sed '/^#word_template /!d;s/[^ ]* *//')
+[[ -z $WTM ]] && WTM=reference
 
 # WHICH CSS FOR .html
-whichcss=$(cat $file | grep '#cssfile' | awk '{print $NF}')
-if [[ -n $whichcss ]]; then
-	css=$(cat $file | grep '#cssfile' | awk '{print $NF}')
-	style="-c ${cssDIR}/${css}.css"
-elif [[ -z $whichcss ]]; then
-	style=""
-fi
+WCS=$(cat $TRG | sed '#cssfile /!d;s/[^ ]* *//')
+[[ -n $WCS ]] && CSS="-c ${CSDR}/${WCS}.css" || CSS="-c ${CSDR}/themer.css"
 
 # WHICH LATEX ENGINE
-engine=$(cat $file | grep '#compiler' | awk '{print $NF}')
-if [[ -n $engine ]]; then
-	texgine="--pdf-engine=$engine"
-elif [[ -z $engine ]]; then
-	texgine=
-fi
+NGN=$(cat $TRG | grep '#compiler /!d;s/[^ ]* *//')
+[[ -n $NGN ]] && NGN="--pdf-engine=$NGN" || NGN=""
 
-crossref="-F pandoc-crossref --metadata-file ${settings}"
-citeproc="--bibliography ${bib} -F pandoc-citeproc"
-wordtemplate="--reference-doc ${wordtempDIR}/${wordtemp}.docx"
-nsec="--number-sections"
+REF="-F pandoc-crossref --metadata-file ${FYL}"
+CIT="--bibliography ${BIB} -F pandoc-citeproc"
+WTS="--reference-doc ${WTDR}/${WTM}.docx"
+NSC="--number-sections"
 
 latex() {
-	pandoc $crossref $citeproc $texgine $nsec -o ${file:0:-3}.pdf ${file}
+	pandoc $REF $CIT $NGN $NSC -o ${TRG:0:-3}.pdf ${TRG}
 	pkill -HUP mupdf
 }
 
 word() {
-	pandoc $crossref $citeproc $wordtemplate -o ${file:0:-3}.docx ${file}
+	pandoc $REF $CIT $WTS -o ${TRG:0:-3}.docx ${TRG}
 }
 
 html() {
-	pandoc $crossref $citeproc -s --toc $style -o ${file:0:-3}.html ${file}
+	pandoc $REF $CIT -s --toc $CSS -o ${TRG:0:-3}.html ${TRG}
 #	ls *.html | entr $HOME/scr/reload-browser surf &>/dev/null &
 }
 
 beamer() {
-	pandoc $citeproc -t beamer --incremental -o ${file:0:-3}.pdf ${file}
+	pandoc $CIT -t beamer --incremental -o ${TRG:0:-3}.pdf ${TRG}
 	pkill -HUP mupdf
 }
 
-output=$(cat $file | grep '#output' | awk '{print $NF}')
-if [[ -n $output ]]; then
-	$output
-elif [[ -z $output ]]; then
-	html
-fi
+output=$(cat $TRG | sed '^/#output /!d;s/[^ ]* *//')
+[[ -n $output ]] && $output || html
 

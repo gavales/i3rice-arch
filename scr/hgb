@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-# OA: Gavin Vales
-# CREATED: $(date)
-source $HOME/.config/user-dirs.dirs
-
-

@@ -4,6 +4,7 @@
 # CREATED: Mon 29 Jul 19:21:39 BST 2019
 
 TDR=$HOME/thm DEF=${TDR}/.defaults
+LBD=${TDR}/.awklib ALB=${LBD}/rgbNmix.awk
 create_def () {
 cat > $DEF << 'EOB'
 ! vim:ft=perl
@@ -26,46 +27,122 @@ orange    #d65d0e
 EOB
 exit
 }
+create_alb () {
+cat > $ALB << 'EOB'
+function hextorgb(HEX,NME){
+	HEXR=substr(HEX,2,length(HEX)-5);
+	HEXG=substr(HEX,4,length(HEX)-5);
+	HEXB=substr(HEX,6,length(HEX)-5);
+	print NME "RGB    " strtonum( "0x" HEXR ) ", " strtonum( "0x" HEXG ) ", " strtonum( "0x" HEXB );
+	}
+
+function colmix(NME,ONE,TWO,RT1,RT2){
+	ONER=substr(ONE,2,length(ONE)-5);
+	ONEG=substr(ONE,4,length(ONE)-5);
+	ONEB=substr(ONE,6,length(ONE)-5);
+	TWOR=substr(TWO,2,length(TWO)-5);
+	TWOG=substr(TWO,4,length(TWO)-5);
+	TWOB=substr(TWO,6,length(TWO)-5);
+	ONRR=strtonum( "0x" ONER );
+	ONRG=strtonum( "0x" ONEG );
+	ONRB=strtonum( "0x" ONEB );
+	TWRR=strtonum( "0x" TWOR );
+	TWRG=strtonum( "0x" TWOG );
+	TWRB=strtonum( "0x" TWOB );
+	CL3R=int((ONRR * RT1 + TWRR * RT2) / 100);
+	CL3G=int((ONRG * RT1 + TWRG * RT2) / 100);
+	CL3B=int((ONRB * RT1 + TWRB * RT2) / 100);
+	CL3RX=sprintf( "%x", CL3R );
+	CL3GX=sprintf( "%x", CL3G );
+	CL3BX=sprintf( "%x", CL3B );
+	print NME "RX=" CL3RX "\n" NME "GX=" CL3GX "\n" NME "BX=" CL3BX "";
+	print NME "R="  CL3R  "\n" NME "G="  CL3G  "\n" NME "B="  CL3B "";
+	}
+
+function colmixnp(NME,ONE,TWO,RT1,RT2){
+	ONER=substr(ONE,2,length(ONE)-5);
+	ONEG=substr(ONE,4,length(ONE)-5);
+	ONEB=substr(ONE,6,length(ONE)-5);
+	TWOR=substr(TWO,2,length(TWO)-5);
+	TWOG=substr(TWO,4,length(TWO)-5);
+	TWOB=substr(TWO,6,length(TWO)-5);
+	ONRR=strtonum( "0x" ONER );
+	ONRG=strtonum( "0x" ONEG );
+	ONRB=strtonum( "0x" ONEB );
+	TWRR=strtonum( "0x" TWOR );
+	TWRG=strtonum( "0x" TWOG );
+	TWRB=strtonum( "0x" TWOB );
+	CL3R=int((ONRR * RT1 + TWRR * RT2) / 100);
+	CL3G=int((ONRG * RT1 + TWRG * RT2) / 100);
+	CL3B=int((ONRB * RT1 + TWRB * RT2) / 100);
+	CL3RX=sprintf( "%x", CL3R );
+	CL3GX=sprintf( "%x", CL3G );
+	CL3BX=sprintf( "%x", CL3B );
+	}
+
+EOB
+exit
+}
 [[ -d $TDR ]] || mkdir $TDR
 [[ -f $DEF ]] || create_def
+[[ -d $LBD ]] || mkdir $LBD
+[[ -f $ALB ]] || create_alb
 
 vrt=light
 CUR=${TDR}/.current ALL=${TDR}/.allvars ALR=${TDR}/.allvarsrofi RGX=${TDR}/.regex
 
 variations () {
-	bg0=$(cat ${ALL} | sed '/^bg0 /!d;s/[^ ]* *//')
-	fg0=$(cat ${ALL} | sed '/^fg0 /!d;s/[^ ]* *//')
-	acc=$(cat ${ALL} | sed '/^acc /!d;s/[^ ]* *//')
-	bg0R=$((16#${bg0:1:-4})) bg0G=$((16#${bg0:3:-2})) bg0B=$((16#${bg0:5}))
-	fg0R=$((16#${fg0:1:-4})) fg0G=$((16#${fg0:3:-2})) fg0B=$((16#${fg0:5}))
-	accR=$((16#${acc:1:-4})) accG=$((16#${acc:3:-2})) accB=$((16#${acc:5}))
-	acf=$(colmix -x "50:${acc} 50:${fg0}")
-	acb=$(colmix -x "50:${acc} 50:${bg0}")
-	acfRGB=$(colmix -r "50:${acc} 50:${fg0}")
-	acbRGB=$(colmix -r "50:${acc} 50:${bg0}")
-
+	bg0=$(awk ' $1 ~ /bg0/ {$1="";gsub(/^[ \t]+/, "", $0);print $0;}' $ALL)
+	fg0=$(awk ' $1 ~ /fg0/ {$1="";gsub(/^[ \t]+/, "", $0);print $0;}' $ALL)
+	acc=$(awk ' $1 ~ /acc/ {$1="";gsub(/^[ \t]+/, "", $0);print $0;}' $ALL)
+	hexrgbraw $bg0 bg0
+	hexrgbraw $fg0 fg0
+	hexrgbraw $acc acc
 	[[ $bg0R -le 127 ]] || [[ $bg0G -le 127 ]] || [[ $bg0B -le 127 ]] && vrt=dark
-	if [[ $vrt == "light" ]]; then
-		fg1R=$(expr ${fg0R} + 20) fg1G=$(expr ${fg0G} + 20) fg1B=$(expr ${fg0B} + 20)
-		fg2R=$(expr ${fg0R} + 40) fg2G=$(expr ${fg0G} + 40) fg2B=$(expr ${fg0B} + 40)
-		fg3R=$(expr ${fg0R} + 60) fg3G=$(expr ${fg0G} + 60) fg3B=$(expr ${fg0B} + 60)
-		bg1R=$(expr ${bg0R} - 20) bg1G=$(expr ${bg0G} - 20) bg1B=$(expr ${bg0B} - 20)
-		bg2R=$(expr ${bg0R} - 40) bg2G=$(expr ${bg0G} - 40) bg2B=$(expr ${bg0B} - 40)
-		bg3R=$(expr ${bg0R} - 60) bg3G=$(expr ${bg0G} - 60) bg3B=$(expr ${bg0B} - 60)
-	else
-		fg1R=$(expr ${fg0R} - 20) fg1G=$(expr ${fg0G} - 20) fg1B=$(expr ${fg0B} - 20)
-		fg2R=$(expr ${fg0R} - 40) fg2G=$(expr ${fg0G} - 40) fg2B=$(expr ${fg0B} - 40)
-		fg3R=$(expr ${fg0R} - 60) fg3G=$(expr ${fg0G} - 60) fg3B=$(expr ${fg0B} - 60)
-		bg1R=$(expr ${bg0R} + 20) bg1G=$(expr ${bg0G} + 20) bg1B=$(expr ${bg0B} + 20)
-		bg2R=$(expr ${bg0R} + 40) bg2G=$(expr ${bg0G} + 40) bg2B=$(expr ${bg0B} + 40)
-		bg3R=$(expr ${bg0R} + 60) bg3G=$(expr ${bg0G} + 60) bg3B=$(expr ${bg0B} + 60)
-	fi
+
+	eval $(awk -F "" -i "$ALB" -v VRT="$vrt" -v INC="20" \
+		-v bg0="$bg0" -v bg0R="$bg0R" -v bg0G="$bg0G" -v bg0B="$bg0B" \
+		-v fg0="$fg0" -v fg0R="$fg0R" -v fg0G="$fg0G" -v fg0B="$fg0B" \
+		-v acc="$acc" -v accR="$accR" -v accG="$accG" -v accB="$accB" '
+		BEGIN {
+			if (VRT=="light") {
+				fg1R=(fg0R + INC); fg1G=(fg0G + INC); fg1B=(fg0B + INC);
+				fg2R=(fg1R + INC); fg2G=(fg1G + INC); fg2B=(fg1B + INC);
+				fg3R=(fg2R + INC); fg3G=(fg2G + INC); fg3B=(fg2B + INC);
+				bg1R=(bg0R - INC); bg1G=(bg0G - INC); bg1B=(bg0B - INC);
+				bg2R=(bg1R - INC); bg2G=(bg1G - INC); bg2B=(bg1B - INC);
+				bg3R=(bg2R - INC); bg3G=(bg2G - INC); bg3B=(bg2B - INC);
+			} else {
+				fg1R=(fg0R - INC); fg1G=(fg0G - INC); fg1B=(fg0B - INC);
+				fg2R=(fg1R - INC); fg2G=(fg1G - INC); fg2B=(fg1B - INC);
+				fg3R=(fg2R - INC); fg3G=(fg2G - INC); fg3B=(fg2B - INC);
+				bg1R=(bg0R + INC); bg1G=(bg0G + INC); bg1B=(bg0B + INC);
+				bg2R=(bg1R + INC); bg2G=(bg1G + INC); bg2B=(bg1B + INC);
+				bg3R=(bg2R + INC); bg3G=(bg2G + INC); bg3B=(bg2B + INC);
+			}
+
+			colmix("acf",acc,fg0,50,50)
+			colmix("acb",acc,bg0,50,50)
+			print "fg1R="  fg1R  "\nfg1G="  fg1G  "\nfg1B="  fg1B ;
+			print "fg2R="  fg2R  "\nfg2G="  fg2G  "\nfg2B="  fg2B ;
+			print "fg3R="  fg3R  "\nfg3G="  fg3G  "\nfg3B="  fg3B ;
+			print "bg1R="  bg1R  "\nbg1G="  bg1G  "\nbg1B="  bg1B ;
+			print "bg2R="  bg2R  "\nbg2G="  bg2G  "\nbg2B="  bg2B ;
+			print "bg3R="  bg3R  "\nbg3G="  bg3G  "\nbg3B="  bg3B ;
+		}')
+
 	fg1RX=$(printf '%x\n' ${fg1R/-/}) fg1GX=$(printf '%x\n' ${fg1G/-/}) fg1BX=$(printf '%x\n' ${fg1B/-/})
 	fg2RX=$(printf '%x\n' ${fg2R/-/}) fg2GX=$(printf '%x\n' ${fg2G/-/}) fg2BX=$(printf '%x\n' ${fg2B/-/})
 	fg3RX=$(printf '%x\n' ${fg3R/-/}) fg3GX=$(printf '%x\n' ${fg3G/-/}) fg3BX=$(printf '%x\n' ${fg3B/-/})
 	bg1RX=$(printf '%x\n' ${bg1R/-/}) bg1GX=$(printf '%x\n' ${bg1G/-/}) bg1BX=$(printf '%x\n' ${bg1B/-/})
 	bg2RX=$(printf '%x\n' ${bg2R/-/}) bg2GX=$(printf '%x\n' ${bg2G/-/}) bg2BX=$(printf '%x\n' ${bg2B/-/})
 	bg3RX=$(printf '%x\n' ${bg3R/-/}) bg3GX=$(printf '%x\n' ${bg3G/-/}) bg3BX=$(printf '%x\n' ${bg3B/-/})
+	[[ ${#acfRX} == 1 ]] && acfRX="0$acfRX"
+	[[ ${#acfGX} == 1 ]] && acfGX="0$acfGX"
+	[[ ${#acfBX} == 1 ]] && acfBX="0$acfBX"
+	[[ ${#acbRX} == 1 ]] && acbRX="0$acbRX"
+	[[ ${#acbGX} == 1 ]] && acbGX="0$acbGX"
+	[[ ${#acbBX} == 1 ]] && acbBX="0$acbBX"
 	[[ ${#fg1RX} == 1 ]] && fg1RX="0$fg1RX"
 	[[ ${#fg1GX} == 1 ]] && fg1GX="0$fg1GX"
 	[[ ${#fg1BX} == 1 ]] && fg1BX="0$fg1BX"
@@ -84,16 +161,19 @@ variations () {
 	[[ ${#bg3RX} == 1 ]] && bg3RX="0$bg3RX"
 	[[ ${#bg3GX} == 1 ]] && bg3GX="0$bg3GX"
 	[[ ${#bg3BX} == 1 ]] && bg3BX="0$bg3BX"
-	fg1="#${fg1RX}${fg1GX}${fg1BX}" fg2="#${fg2RX}${fg2GX}${fg2BX}" fg3="#${fg3RX}${fg3GX}${fg3BX}"
-	bg1="#${bg1RX}${bg1GX}${bg1BX}" bg2="#${bg2RX}${bg2GX}${bg2BX}" bg3="#${bg3RX}${bg3GX}${bg3BX}"
-	echo "fg3       $fg3
-fg2       $fg2
-fg1       $fg1
-acf       $acf
-acb       $acb
-bg1       $bg1
-bg2       $bg2
-bg3       $bg3
+	echo "acf       #${acfRX}${acfGX}${acfBX}
+acb       #${acbRX}${acbGX}${acbBX}
+fg3       #${fg3RX}${fg3GX}${fg3BX}
+fg2       #${fg2RX}${fg2GX}${fg2BX}
+fg1       #${fg1RX}${fg1GX}${fg1BX}
+bg1       #${bg1RX}${bg1GX}${bg1BX}
+bg2       #${bg2RX}${bg2GX}${bg2BX}
+bg3       #${bg3RX}${bg3GX}${bg3BX}
+bg0RGB    $bg0R, $bg0G, $bg0B
+fg0RGB    $fg0R, $fg0G, $fg0B
+accRGB    $accR, $accG, $accB
+acfRGB    $acfR, $acfG, $acfB
+acbRGB    $acbR, $acbG, $acbB
 fg0RGB    ${fg0R/-/}, ${fg0G/-/}, ${fg0B/-/}
 fg1RGB    ${fg1R/-/}, ${fg1G/-/}, ${fg1B/-/}
 fg2RGB    ${fg2R/-/}, ${fg2G/-/}, ${fg2B/-/}
@@ -101,85 +181,79 @@ fg3RGB    ${fg3R/-/}, ${fg3G/-/}, ${fg3B/-/}
 bg0RGB    ${bg0R/-/}, ${bg0G/-/}, ${bg0B/-/}
 bg1RGB    ${bg1R/-/}, ${bg1G/-/}, ${bg1B/-/}
 bg2RGB    ${bg2R/-/}, ${bg2G/-/}, ${bg2B/-/}
-bg3RGB    ${bg3R/-/}, ${bg3G/-/}, ${bg3B/-/}
-accRGB    ${accR/-/}, ${accG/-/}, ${accB/-/}
-acfRGB    $acfRGB
-acbRGB    $acbRGB" >> $ALL
+bg3RGB    ${bg3R/-/}, ${bg3G/-/}, ${bg3B/-/}" >> $ALL
+}
+
+hexrgbraw () {
+	eval $(echo $1 | awk -F "" -v NME="$2" '{
+			R=$2$3;G=$4$5;B=$6$7;
+			print NME "R=" strtonum( "0x" R ) "";
+			print NME "G=" strtonum( "0x" G ) "";
+			print NME "B=" strtonum( "0x" B ) "";
+			}')
 }
 
 hex-rgb () {
-	hex="$1"
-	rgbR=$((16#${hex:1:-4})) rgbG=$((16#${hex:3:-2})) rgbB=$((16#${hex:5}))
-	echo "$rgbR, $rgbG, $rgbB"
+	echo $1 | awk -F "" '{
+			R=$2$3;G=$4$5;B=$6$7;
+			print strtonum( "0x" R ) ", " strtonum( "0x" G ) ", " strtonum( "0x" B );
+			}'
 }
 
 parse-vars () {
-	for i in $(cat $ALL); do
-		var=$(echo $i | awk '{print $1}')
-		val=$(echo $i | sed "/^"$var"/!d;s/[^ ]* *//")
-		cnt=$(cat $ALL | grep -c "\$$var")
-		[[ $cnt -gt 0 ]] && sed -e "s/\$"$var"/"$val"/g" -i $ALL
-	done
-}
-
-change-current () {
-	[[ -z $1 ]] && gui-change || ln -sf ${1} $CUR
-	cat $CUR | sed '/^\!/d' > $ALL
-	IFS=$'\n'
-	for i in $(cat $DEF | sed -e "/^\!/d;/^wallpaper/d"); do
-		var=$(echo $i | awk '{print $1}')
-		XTS=$(cat $ALL | grep "^${var}")
-		[[ -n $XTS ]] || echo $i >> $ALL
-	done
-	parse-vars
-	for i in $(cat $ALL); do
-		var=$(echo $i | awk '{print $1}')
-		val=$(echo $i | sed "/^"$var"/!d;s/[^ ]* *//")
-		[[ $val =~ "mix" ]] && \
-			mix=$(colmix -x "${val/mix /}") && \
-			sed "s/"$val"/"$mix"/g" -i $ALL
-	done
-	variations
-	for i in $( cat $ALL | grep '#' | sed -e "/^fg/d;/^bg/d;/^ac/d"); do
-		var=$(echo $i | awk '{print $1}') hex=$(echo $i | awk '{print $2}')
-		echo "${var}RGB    $(hex-rgb "$hex")" >> $ALL
-	done
-	parse-vars
-	create-regex
-	create-rofi-list
+	REPLACE=$(awk '
+		!/\$/ {
+			key=$1;
+			$1="";
+			gsub(/^[ \t]+/, "", $0);
+			val=$0;
+			print ";s/$" key "/" val "/g";
+		}
+		' $ALL | tr -d "\n")
+	sed -i "${REPLACE:1}" $ALL
 }
 
 create-regex () {
-	regex=""
-	IFS=$'\n'
-	for i in $(cat $ALL); do
-		var=$(echo $i | awk '{print $1}')
-		val=$(echo $i | sed "/^"$var"/!d;s/[^ ]* *//")
-		regex+="s/\%\%${var}\%\%/${val}/g"
-		[[ $i =~ "#" ]] && regex+=";s/@@${var}@@/${val/\#/}/g"
-		[[ $i != "$(tail -n 1 $ALL)" ]] && regex+=";"
-	done
+	regex="$(awk '
+	{
+		key=$1;
+		$1="";
+		gsub(/^[ \t]+/, "", $0);
+		print ";s/\\%\\%" key "\\%\\%/" $0 "/g";
+		if ($0 ~ /#/) {
+			sub(/#/, "", $0);
+			print ";s/@@" key "@@/" $0 "/g";
+		}
+	}' $ALL | tr -d "\n")"
+	regex="${regex:1}"
 	echo "$regex" > $RGX
 }
 
 create-rofi-list () {
-	fg0=$(cat $ALL | sed "/^fg0\ /!d;s/[^ ]* *//")
-	bg0=$(cat $ALL | sed "/^bg0\ /!d;s/[^ ]* *//")
-	wpr=$(cat $ALL | sed '/^wallpaper/!d;s/[^ ]* *//')
+	bg0=$(cat $ALL | sed '/^bg0 /!d;s/[^ ]* *//')
+	fg0=$(cat $ALL | sed '/^fg0 /!d;s/[^ ]* *//')
+	acc=$(cat $ALL | sed '/^acc /!d;s/[^ ]* *//')
+	wpr=$(cat $ALL | sed '/^wallpaper /!d;s/[^ ]* *//')
 	CLRLIST=$TDR/.colorlist
 	VARLIST=$TDR/.varlist
-	[[ -n $wpr ]] || wpr=$(cat $ALL | sed '/^acc/!d;s/[^ ]* *//')
+	[[ -n $wpr ]] || wpr=$acc
 	echo "              <b><big>$(cat $ALL | sed '/^name/!d;s/[^ ]* *//')</big></b>" > $ALR
 	rm $CLRLIST
 	rm $VARLIST
 	echo "wallpaper $wpr" > $VARLIST
 	cat $ALL | sed "/^wallpaper/d;/^name/d;/#/d;/,/d" >> $VARLIST
 	IFS=$'\n'
-	for i in $(cat $ALL | grep '#'); do
-		var=$(echo $i | awk '{print $1}')
-		val=$(echo $i | sed "/^"$var"/!d;s/[^ ]* *//")
-		echo "<span background=\"$val\">   </span><span foreground=\"$fg0\" background=\"$bg0\"> $var $val </span>" >> $CLRLIST
-	done
+	cat $ALL | awk -v bg0="$bg0" -v fg0="$fg0" '
+		{
+			var=$1;
+			$1="";
+			gsub(/^[ \t]+/, "", $0);
+			val=$0;
+			if (val ~ /#/) {
+				print "<span background=\"" val "\">   </span><span foreground=\"" fg0 "\" background=\"" bg0 "\"> " var " " val " </span>";
+			}
+		}
+		' > $CLRLIST
 	paste $CLRLIST $VARLIST >> $ALR
 }
 
@@ -206,12 +280,14 @@ gui-change () {
 	notify-send "Chosen theme is $THM" -i "${SCR_DIR}pic/theme.png"
 	cd ${TDR}
 	if [[ -z ${THM} ]]; then
-		notify-send "No theme chosen"    -i "${SCR_DIR}pic/theme.png" && exit
+		notify-send "No theme chosen"    -i "${SCR_DIR}pic/theme.png"
+		exit
 	elif [[ ! -f ${THM} ]]; then
-		notify-send "Theme don't exist"  -i "${SCR_DIR}pic/theme.png" && exit
+		notify-send "Theme don't exist"  -i "${SCR_DIR}pic/theme.png"
+		exit
 	else
 		notify-send "Theme exists"       -i "${SCR_DIR}pic/themepic.png"
-		ln -sf ${THM} ${CUR}
+		cat ${THM} > ${CUR}
 	fi
 }
 
@@ -222,7 +298,7 @@ getvar () {
 
 newtheme () {
 	NTHM="${TDR}/${1}"
-	echo "# vim:ft=perl" > $NTHM
+	echo "! vim:ft=perl" > $NTHM
 	echo "Enter accent colour..."
 	read ACC
 	echo "Enter background colour..."
@@ -313,6 +389,42 @@ cat << 'EOB'
    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 
 EOB
+}
+
+change-current () {
+	[[ -n $1 ]] && cat ${TDR}/${1} > $CUR || gui-change
+	cat $CUR | sed '/^\!/d' > $ALL
+	awk ' NR==FNR {
+			a[$1]=$1; b[$1]=$0; next;
+		}
+		$1!=a[$1] {
+			print $0;
+		}' $ALL $DEF | sed '/^!/d' >> $ALL
+	parse-vars
+	CMRX="$(awk -i "$ALB" '
+		/colmix/ {
+			key=$1;$1="";$2="";
+			gsub(/^[ \t]+/, "", $0);
+			mix=$0;
+			ONE=substr($0,4,length($0)-14);
+			TWO=substr($0,15,length($0)-1);
+			RT1=substr($0,1,length($0)-19);
+			RT2=substr($0,12,length($0)-19);
+			colmixnp(key,ONE,TWO,RT1,RT2);
+			print ";s/colmix " mix "/#" CL3RX CL3GX CL3BX "/g";
+		}' $ALL | tr -d "\n")"
+	sed -i "${CMRX:1}" $ALL
+	parse-vars
+	variations
+	cat $ALL | sed '/^bg0 /d;/^fg0 /d;/^acc /d' | awk -i "$ALB"  '
+		/#/ {
+			key=$1;
+			$1="";
+			gsub(/^[ \t]+/, "", $0);
+			hextorgb($0,key);
+		}' >> $ALL
+	create-regex
+	create-rofi-list
 }
 
 while getopts :c:x:a:v:n:ulh opts; do

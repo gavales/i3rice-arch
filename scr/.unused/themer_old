@@ -1,148 +1,50 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # OA: Gavin Vales
-# CREATED: Tue  7 May 23:07:28 GMT 2019
+# CREATED: Mon 29 Jul 19:21:39 BST 2019
 
-colsDir=$HOME/themes
-defThm=${colsDir}/gruvbox_light
-dir="$HOME/numix-solarized-gtk-theme"
-vrt="light"
-scr="post-build-apply"
-
-updatelist () {
-	cd ${colsDir}
-	bash .themelist
+TDR=$HOME/thm DEF=${TDR}/.defaults
+create_def () {
+cat > $DEF << 'EOB'
+! vim:ft=perl
+! default theme, gruvbox light, basically
+name      default_theme
+guifont   Noto Sans
+font      monospace
+size      11
+rxvtsize  12
+bg0       #fbf1c7
+fg0       #282828
+acc       #689d6a
+red       #cc241d
+grn       #98971a
+ylw       #d79921
+gnt       #b16286
+blu       #458588
+cyn       #689d6a
+orange    #d65d0e
+EOB
+exit
 }
+[[ -d $TDR ]] || mkdir $TDR
+[[ -f $DEF ]] || create_def
 
-list () {
-	ls ${colsDir} | grep -v '^total' | awk '{print $NF}'
-}
+vrt=light
+CUR=${TDR}/.current ALL=${TDR}/.allvars ALR=${TDR}/.allvarsrofi RGX=${TDR}/.regex
 
-guiapply () {
-	theme=$(cat ${colsDir}/.theme_list | $HOME/scr/i3menu -p \
-		"Choose theme " -w 350 -r $(cat ${colsDir}/.theme_list | wc -l) | awk '{print $NF}')
-	cd ${colsDir}
-	if [[ -z ${theme} ]]; then
-		notify-send "No theme chosen" -i "~/scrpic/theme.png"
-		:
-	elif [[ ! -f ${colsDir}/${theme} ]]; then
-		notify-send "Theme don't exist" -i "~/scrpic/theme.png"
-		:
-	else
-		notify-send "Theme exists" -i "~/scrpic/themepic.png"
-		finaltheme=${theme}
-		ln -sf ${finaltheme} .current
-	fi
-}
+variations () {
+	bg0=$(cat ${ALL} | sed '/^bg0 /!d;s/[^ ]* *//')
+	fg0=$(cat ${ALL} | sed '/^fg0 /!d;s/[^ ]* *//')
+	acc=$(cat ${ALL} | sed '/^acc /!d;s/[^ ]* *//')
+	bg0R=$((16#${bg0:1:-4})) bg0G=$((16#${bg0:3:-2})) bg0B=$((16#${bg0:5}))
+	fg0R=$((16#${fg0:1:-4})) fg0G=$((16#${fg0:3:-2})) fg0B=$((16#${fg0:5}))
+	accR=$((16#${acc:1:-4})) accG=$((16#${acc:3:-2})) accB=$((16#${acc:5}))
+	acf=$(colmix -x "50:${acc} 50:${fg0}")
+	acb=$(colmix -x "50:${acc} 50:${bg0}")
+	acfRGB=$(colmix -r "50:${acc} 50:${fg0}")
+	acbRGB=$(colmix -r "50:${acc} 50:${bg0}")
 
-termapply () {
-	theme=${1}
-	cd ${colsDir}
-	if [[ -z ${theme} ]]; then
-		echo "No theme chosen"
-	elif [[ ! -f ${theme} ]]; then
-		echo "Theme don't exist"
-	else
-		echo "Theme exists"
-		ln -sf ${theme} .current
-	fi
-}
-
-printcurrenttheme () {
-	echo "$nme
-wallpaper $wpr
-font      $fnt
-guifont   $gft
-fontsize  $sze
-fg3       rgb($fg3RGB)	$fg3
-fg2       rgb($fg2RGB)	$fg2
-fg1       rgb($fg1RGB)	$fg1
-fg0       rgb($fg0RGB)	$fg0
-accentf   rgb($acfRGB)	$acf
-accent    rgb($accRGB)	$acc
-accentb   rgb($acbRGB)	$acb
-bg0       rgb($bg0RGB)	$bg0
-bg1       rgb($bg1RGB)	$bg1
-bg2       rgb($bg2RGB)	$bg2
-bg3       rgb($bg3RGB)	$bg3
-green     rgb($grnRGB)	$grn
-yellow    rgb($ylwRGB)	$ylw
-red       rgb($redRGB)	$red
-blue      rgb($bluRGB)	$blu
-cyan      rgb($cynRGB)	$cyn
-magenta   rgb($gntRGB)	$gnt
-" > ${colsDir}/.allvars
-	echo "
-              <b><big>$nme</big></b>
-<b>wallpaper  </b>$wpr
-<b>font       </b>$fnt
-<b>guifont    </b>$gft
-<b>fontsize   </b>$sze
-<span foreground=\"$bg0\" background=\"$fg3\"><b> fg3       </b>rgb($fg3RGB)	$fg3 </span>
-<span foreground=\"$bg0\" background=\"$fg2\"><b> fg2       </b>rgb($fg2RGB)	$fg2 </span>
-<span foreground=\"$bg0\" background=\"$fg1\"><b> fg1       </b>rgb($fg1RGB)	$fg1 </span>
-<span foreground=\"$bg0\" background=\"$fg0\"><b> fg0       </b>rgb($fg0RGB)	$fg0 </span>
-<span foreground=\"$bg0\" background=\"$acf\"><b> acf       </b>rgb($acfRGB)	$acf </span>
-<span foreground=\"$fg0\" background=\"$acc\"><b> acc       </b>rgb($accRGB)	$acc </span>
-<span foreground=\"$fg0\" background=\"$acb\"><b> acb       </b>rgb($acbRGB)	$acb </span>
-<span foreground=\"$fg0\" background=\"$bg0\"><b> bg0       </b>rgb($bg0RGB)	$bg0 </span>
-<span foreground=\"$fg0\" background=\"$bg1\"><b> bg1       </b>rgb($bg1RGB)	$bg1 </span>
-<span foreground=\"$fg0\" background=\"$bg2\"><b> bg2       </b>rgb($bg2RGB)	$bg2 </span>
-<span foreground=\"$fg0\" background=\"$bg3\"><b> bg3       </b>rgb($bg3RGB)	$bg3 </span>
-<span foreground=\"$fg0\" background=\"$grn\"><b> grn       </b>rgb($grnRGB)	$grn </span>
-<span foreground=\"$fg0\" background=\"$ylw\"><b> ylw       </b>rgb($ylwRGB)	$ylw </span>
-<span foreground=\"$fg0\" background=\"$red\"><b> red       </b>rgb($redRGB)	$red </span>
-<span foreground=\"$fg0\" background=\"$blu\"><b> blu       </b>rgb($bluRGB)	$blu </span>
-<span foreground=\"$fg0\" background=\"$cyn\"><b> cyn       </b>rgb($cynRGB)	$cyn </span>
-<span foreground=\"$fg0\" background=\"$gnt\"><b> gnt       </b>rgb($gntRGB)	$gnt </span>
-" > ${colsDir}/.allvarsrofi
-}
-
-main () {
-	nme=$(cat ${colsDir}/.current | sed '/^name/!d;s/[^ ]* *//')
-	wpr=$(cat ${colsDir}/.current | sed '/^wallpaper/!d;s/[^ ]* *//')
-	fnt=$(cat ${colsDir}/.current | sed '/^font/!d;s/[^ ]* *//')
-	gft=$(cat ${colsDir}/.current | sed '/^guifont/!d;s/[^ ]* *//')
-	sze=$(cat ${colsDir}/.current | sed '/^size/!d;s/[^ ]* *//')
-	bg0=$(cat ${colsDir}/.current | sed '/^bg0/!d;s/[^ ]* *//')
-	fg0=$(cat ${colsDir}/.current | sed '/^fg0/!d;s/[^ ]* *//')
-	acc=$(cat ${colsDir}/.current | sed '/^acc/!d;s/[^ ]* *//')
-	acf=$($HOME/scr/colmix -c "50:${acc} 50:${fg0}" | grep '#')
-	acb=$($HOME/scr/colmix -c "50:${acc} 50:${bg0}" | grep '#')
-	grn=$(cat ${colsDir}/.current | sed '/^grn/!d;s/[^ ]* *//')
-	ylw=$(cat ${colsDir}/.current | sed '/^ylw/!d;s/[^ ]* *//')
-	red=$(cat ${colsDir}/.current | sed '/^red/!d;s/[^ ]* *//')
-	blu=$(cat ${colsDir}/.current | sed '/^blu/!d;s/[^ ]* *//')
-	gnt=$(cat ${colsDir}/.current | sed '/^gnt/!d;s/[^ ]* *//')
-	cyn=$(cat ${colsDir}/.current | sed '/^cyn/!d;s/[^ ]* *//')
-
-	[[ -z $nme ]] && nme="unnamed"
-	[[ -z $fnt ]] && fnt=$(cat ${defThm} | sed '/^font/!d;s/[^ ]* *//')
-	[[ -z $gft ]] && gft=$(cat ${defThm} | sed '/^guifont/!d;s/[^ ]* *//')
-	[[ -z $sze ]] && sze=$(cat ${defThm} | sed '/^size/!d;s/[^ ]* *//')
-	[[ -z $grn ]] && grn=$(cat ${defThm} | sed '/^grn/!d;s/[^ ]* *//')
-	[[ -z $ylw ]] && ylw=$(cat ${defThm} | sed '/^ylw/!d;s/[^ ]* *//')
-	[[ -z $red ]] && red=$(cat ${defThm} | sed '/^red/!d;s/[^ ]* *//')
-	[[ -z $blu ]] && blu=$(cat ${defThm} | sed '/^blu/!d;s/[^ ]* *//')
-	[[ -z $gnt ]] && gnt=$(cat ${defThm} | sed '/^gnt/!d;s/[^ ]* *//')
-	[[ -z $cyn ]] && cyn=$(cat ${defThm} | sed '/^cyn/!d;s/[^ ]* *//')
-
-	# convert to RGB
-	accR=$((16#${acc:1:-4})) && accG=$((16#${acc:3:-2})) && accB=$((16#${acc:5}))
-	acfR=$((16#${acf:1:-4})) && acfG=$((16#${acf:3:-2})) && acfB=$((16#${acf:5}))
-	acbR=$((16#${acb:1:-4})) && acbG=$((16#${acb:3:-2})) && acbB=$((16#${acb:5}))
-	fg0R=$((16#${fg0:1:-4})) && fg0G=$((16#${fg0:3:-2})) && fg0B=$((16#${fg0:5}))
-	bg0R=$((16#${bg0:1:-4})) && bg0G=$((16#${bg0:3:-2})) && bg0B=$((16#${bg0:5}))
-	redR=$((16#${red:1:-4})) && redG=$((16#${red:3:-2})) && redB=$((16#${red:5}))
-	ylwR=$((16#${ylw:1:-4})) && ylwG=$((16#${ylw:3:-2})) && ylwB=$((16#${ylw:5}))
-	bluR=$((16#${blu:1:-4})) && bluG=$((16#${blu:3:-2})) && bluB=$((16#${blu:5}))
-	grnR=$((16#${grn:1:-4})) && grnG=$((16#${grn:3:-2})) && grnB=$((16#${grn:5}))
-	cynR=$((16#${cyn:1:-4})) && cynG=$((16#${cyn:3:-2})) && cynB=$((16#${cyn:5}))
-	gntR=$((16#${gnt:1:-4})) && gntG=$((16#${gnt:3:-2})) && gntB=$((16#${gnt:5}))
-
-	[[ $bg0R -le 127 ]] || [[ $bg0G -le 127 ]] || [[ $bg0B -le 127 ]] && \
-		vrt=dark && echo "theme is $vrt"
-
+	[[ $bg0R -le 127 ]] || [[ $bg0G -le 127 ]] || [[ $bg0B -le 127 ]] && vrt=dark
 	if [[ $vrt == "light" ]]; then
 		fg1R=$(expr ${fg0R} + 20) fg1G=$(expr ${fg0G} + 20) fg1B=$(expr ${fg0B} + 20)
 		fg2R=$(expr ${fg0R} + 40) fg2G=$(expr ${fg0G} + 40) fg2B=$(expr ${fg0B} + 40)
@@ -158,32 +60,12 @@ main () {
 		bg2R=$(expr ${bg0R} + 40) bg2G=$(expr ${bg0G} + 40) bg2B=$(expr ${bg0B} + 40)
 		bg3R=$(expr ${bg0R} + 60) bg3G=$(expr ${bg0G} + 60) bg3B=$(expr ${bg0B} + 60)
 	fi
-	accRGB="${accR}, ${accG}, ${accB}"
-	acfRGB="${acfR}, ${acfG}, ${acfB}"
-	acbRGB="${acbR}, ${acbG}, ${acbB}"
-
-	fg0RGB="${fg0R}, ${fg0G}, ${fg0B}"
-	fg1RGB="${fg1R/-/}, ${fg1G/-/}, ${fg1B/-/}"
-	fg2RGB="${fg2R/-/}, ${fg2G/-/}, ${fg2B/-/}"
-	fg3RGB="${fg3R/-/}, ${fg3G/-/}, ${fg3B/-/}"
-	bg0RGB="${bg0R}, ${bg0G}, ${bg0B}"
-	bg1RGB="${bg1R/-/}, ${bg1G/-/}, ${bg1B/-/}"
-	bg2RGB="${bg2R/-/}, ${bg2G/-/}, ${bg2B/-/}"
-	bg3RGB="${bg3R/-/}, ${bg3G/-/}, ${bg3B/-/}"
-	grnRGB="${grnR}, ${grnG}, ${grnB}"
-	ylwRGB="${ylwR}, ${ylwG}, ${ylwB}"
-	redRGB="${redR}, ${redG}, ${redB}"
-	bluRGB="${bluR}, ${bluG}, ${bluB}"
-	gntRGB="${gntR}, ${gntG}, ${gntB}"
-	cynRGB="${cynR}, ${cynG}, ${cynB}"
-
-	# variations of fg, bg, accent colors in hex
-	fg1RX=$(printf '%x\n' ${fg1R/-/}) && fg1GX=$(printf '%x\n' ${fg1G/-/}) && fg1BX=$(printf '%x\n' ${fg1B/-/})
-	fg2RX=$(printf '%x\n' ${fg2R/-/}) && fg2GX=$(printf '%x\n' ${fg2G/-/}) && fg2BX=$(printf '%x\n' ${fg2B/-/})
-	fg3RX=$(printf '%x\n' ${fg3R/-/}) && fg3GX=$(printf '%x\n' ${fg3G/-/}) && fg3BX=$(printf '%x\n' ${fg3B/-/})
-	bg1RX=$(printf '%x\n' ${bg1R/-/}) && bg1GX=$(printf '%x\n' ${bg1G/-/}) && bg1BX=$(printf '%x\n' ${bg1B/-/})
-	bg2RX=$(printf '%x\n' ${bg2R/-/}) && bg2GX=$(printf '%x\n' ${bg2G/-/}) && bg2BX=$(printf '%x\n' ${bg2B/-/})
-	bg3RX=$(printf '%x\n' ${bg3R/-/}) && bg3GX=$(printf '%x\n' ${bg3G/-/}) && bg3BX=$(printf '%x\n' ${bg3B/-/})
+	fg1RX=$(printf '%x\n' ${fg1R/-/}) fg1GX=$(printf '%x\n' ${fg1G/-/}) fg1BX=$(printf '%x\n' ${fg1B/-/})
+	fg2RX=$(printf '%x\n' ${fg2R/-/}) fg2GX=$(printf '%x\n' ${fg2G/-/}) fg2BX=$(printf '%x\n' ${fg2B/-/})
+	fg3RX=$(printf '%x\n' ${fg3R/-/}) fg3GX=$(printf '%x\n' ${fg3G/-/}) fg3BX=$(printf '%x\n' ${fg3B/-/})
+	bg1RX=$(printf '%x\n' ${bg1R/-/}) bg1GX=$(printf '%x\n' ${bg1G/-/}) bg1BX=$(printf '%x\n' ${bg1B/-/})
+	bg2RX=$(printf '%x\n' ${bg2R/-/}) bg2GX=$(printf '%x\n' ${bg2G/-/}) bg2BX=$(printf '%x\n' ${bg2B/-/})
+	bg3RX=$(printf '%x\n' ${bg3R/-/}) bg3GX=$(printf '%x\n' ${bg3G/-/}) bg3BX=$(printf '%x\n' ${bg3B/-/})
 	[[ ${#fg1RX} == 1 ]] && fg1RX="0$fg1RX"
 	[[ ${#fg1GX} == 1 ]] && fg1GX="0$fg1GX"
 	[[ ${#fg1BX} == 1 ]] && fg1BX="0$fg1BX"
@@ -202,127 +84,246 @@ main () {
 	[[ ${#bg3RX} == 1 ]] && bg3RX="0$bg3RX"
 	[[ ${#bg3GX} == 1 ]] && bg3GX="0$bg3GX"
 	[[ ${#bg3BX} == 1 ]] && bg3BX="0$bg3BX"
+	fg1="#${fg1RX}${fg1GX}${fg1BX}" fg2="#${fg2RX}${fg2GX}${fg2BX}" fg3="#${fg3RX}${fg3GX}${fg3BX}"
+	bg1="#${bg1RX}${bg1GX}${bg1BX}" bg2="#${bg2RX}${bg2GX}${bg2BX}" bg3="#${bg3RX}${bg3GX}${bg3BX}"
+	echo "fg3       $fg3
+fg2       $fg2
+fg1       $fg1
+acf       $acf
+acb       $acb
+bg1       $bg1
+bg2       $bg2
+bg3       $bg3
+fg0RGB    ${fg0R/-/}, ${fg0G/-/}, ${fg0B/-/}
+fg1RGB    ${fg1R/-/}, ${fg1G/-/}, ${fg1B/-/}
+fg2RGB    ${fg2R/-/}, ${fg2G/-/}, ${fg2B/-/}
+fg3RGB    ${fg3R/-/}, ${fg3G/-/}, ${fg3B/-/}
+bg0RGB    ${bg0R/-/}, ${bg0G/-/}, ${bg0B/-/}
+bg1RGB    ${bg1R/-/}, ${bg1G/-/}, ${bg1B/-/}
+bg2RGB    ${bg2R/-/}, ${bg2G/-/}, ${bg2B/-/}
+bg3RGB    ${bg3R/-/}, ${bg3G/-/}, ${bg3B/-/}
+accRGB    ${accR/-/}, ${accG/-/}, ${accB/-/}
+acfRGB    $acfRGB
+acbRGB    $acbRGB" >> $ALL
+}
 
-	fg1="#${fg1RX}${fg1GX}${fg1BX}"
-	fg2="#${fg2RX}${fg2GX}${fg2BX}"
-	fg3="#${fg3RX}${fg3GX}${fg3BX}"
-	bg1="#${bg1RX}${bg1GX}${bg1BX}"
-	bg2="#${bg2RX}${bg2GX}${bg2BX}"
-	bg3="#${bg3RX}${bg3GX}${bg3BX}"
+hex-rgb () {
+	hex="$1"
+	rgbR=$((16#${hex:1:-4})) rgbG=$((16#${hex:3:-2})) rgbB=$((16#${hex:5}))
+	echo "$rgbR, $rgbG, $rgbB"
+}
 
-	[[ -z $wpr ]] && wpr="$acc"
+parse-vars () {
+	for i in $(cat $ALL); do
+		var=$(echo $i | awk '{print $1}')
+		val=$(echo $i | sed "/^"$var"/!d;s/[^ ]* *//")
+		cnt=$(cat $ALL | grep -c "\$$var")
+		[[ $cnt -gt 0 ]] && sed -e "s/\$"$var"/"$val"/g" -i $ALL
+	done
+}
 
-	regex="s/\%\%name\%\%/"${nme}"/g;s/\%\%guifont\%\%/"${gft}"/g;\
-s/\%\%font\%\%/"${fnt}"/g;s/\%\%fontsize\%\%/"${sze}"/g;\
-s/\%\%bg0\%\%/"${bg0}"/g;s/\%\%fg0\%\%/"${fg0}"/g;s/\%\%acc\%\%/"${acc}"/g;\
-s/\%\%acf\%\%/"${acf}"/g;s/\%\%acb\%\%/"${acb}"/g;\
-s/\%\%grn\%\%/"${grn}"/g;s/\%\%ylw\%\%/"${ylw}"/g;s/\%\%red\%\%/"${red}"/g;\
-s/\%\%blu\%\%/"${blu}"/g;s/\%\%gnt\%\%/"${gnt}"/g;s/\%\%cyn\%\%/"${cyn}"/g;\
-s/\%\%fg1\%\%/"${fg1}"/g;s/\%\%fg2\%\%/"${fg2}"/g;s/\%\%fg3\%\%/"${fg3}"/g;\
-s/\%\%bg1\%\%/"${bg1}"/g;s/\%\%bg2\%\%/"${bg2}"/g;s/\%\%bg3\%\%/"${bg3}"/g;\
-s/@@bg0@@/"${bg0/\#/}"/g;s/@@fg0@@/"${fg0/\#/}"/g;s/@@acc@@/"${acc/\#/}"/g;\
-s/@@acf@@/"${acf/\#/}"/g;s/@@acb@@/"${acb/\#/}"/g;\
-s/@@grn@@/"${grn/\#/}"/g;s/@@ylw@@/"${ylw/\#/}"/g;s/@@red@@/"${red/\#/}"/g;\
-s/@@blu@@/"${blu/\#/}"/g;s/@@gnt@@/"${gnt/\#/}"/g;s/@@cyn@@/"${cyn/\#/}"/g;\
-s/@@fg1@@/"${fg1/\#/}"/g;s/@@fg2@@/"${fg2/\#/}"/g;s/@@fg3@@/"${fg3/\#/}"/g;\
-s/@@bg1@@/"${bg1/\#/}"/g;s/@@bg2@@/"${bg2/\#/}"/g;s/@@bg3@@/"${bg3/\#/}"/g;\
-s/\%\%cynRGB\%\%/"${cynRGB}"/g;s/\%\%gntRGB\%\%/"${gntRGB}"/g;\
-s/\%\%bluRGB\%\%/"${bluRGB}"/g;s/\%\%redRGB\%\%/"${redRGB}"/g;\
-s/\%\%ylwRGB\%\%/"${ylwRGB}"/g;s/\%\%grnRGB\%\%/"${grnRGB}"/g;\
-s/\%\%fg0RGB\%\%/"${fg0RGB}"/g;s/\%\%bg0RGB\%\%/"${bg0RGB}"/g;\
-s/\%\%comRGB\%\%/"${comRGB}"/g;s/\%\%accRGB\%\%/"${accRGB}"/g;\
-s/\%\%fg1RGB\%\%/"${fg1RGB}"/g;s/\%\%fg2RGB\%\%/"${fg2RGB}"/g;\
-s/\%\%fg3RGB\%\%/"${fg3RGB}"/g;s/\%\%bg1RGB\%\%/"${bg1RGB}"/g;\
-s/\%\%bg2RGB\%\%/"${bg2RGB}"/g;s/\%\%bg3RGB\%\%/"${bg3RGB}"/g"
+change-current () {
+	[[ -z $1 ]] && gui-change || ln -sf ${1} $CUR
+	cat $CUR | sed '/^\!/d' > $ALL
+	IFS=$'\n'
+	for i in $(cat $DEF | sed -e "/^\!/d;/^wallpaper/d"); do
+		var=$(echo $i | awk '{print $1}')
+		XTS=$(cat $ALL | grep "^${var}")
+		[[ -n $XTS ]] || echo $i >> $ALL
+	done
+	parse-vars
+	for i in $(cat $ALL); do
+		var=$(echo $i | awk '{print $1}')
+		val=$(echo $i | sed "/^"$var"/!d;s/[^ ]* *//")
+		[[ $val =~ "mix" ]] && \
+			mix=$(colmix -x "${val/mix /}") && \
+			sed "s/"$val"/"$mix"/g" -i $ALL
+	done
+	variations
+#	for i in $( cat $ALL | grep '#' | sed -e "/^fg/d;/^bg/d;/^ac/d"); do
+#		var=$(echo $i | awk '{print $1}') hex=$(echo $i | awk '{print $2}')
+#		echo "${var}RGB    $(hex-rgb "$hex")" >> $ALL
+#	done
+#	parse-vars
+#	create-regex
+#	create-rofi-list
+}
 
-	cd ${dir} || exit 1
+create-regex () {
+	regex=""
+	IFS=$'\n'
+	for i in $(cat $ALL); do
+		var=$(echo $i | awk '{print $1}')
+		val=$(echo $i | sed "/^"$var"/!d;s/[^ ]* *//")
+		regex+="s/\%\%${var}\%\%/${val}/g"
+		[[ $i =~ "#" ]] && regex+=";s/@@${var}@@/${val/\#/}/g"
+		[[ $i != "$(tail -n 1 $ALL)" ]] && regex+=";"
+	done
+	echo "$regex" > $RGX
+}
+
+create-rofi-list () {
+	fg0=$(cat $ALL | sed "/^fg0\ /!d;s/[^ ]* *//")
+	bg0=$(cat $ALL | sed "/^bg0\ /!d;s/[^ ]* *//")
+	wpr=$(cat $ALL | sed '/^wallpaper/!d;s/[^ ]* *//')
+	CLRLIST=$TDR/.colorlist
+	VARLIST=$TDR/.varlist
+	[[ -n $wpr ]] || wpr=$(cat $ALL | sed '/^acc/!d;s/[^ ]* *//')
+	echo "              <b><big>$(cat $ALL | sed '/^name/!d;s/[^ ]* *//')</big></b>" > $ALR
+	rm $CLRLIST
+	rm $VARLIST
+	echo "wallpaper $wpr" > $VARLIST
+	cat $ALL | sed "/^wallpaper/d;/^name/d;/#/d;/,/d" >> $VARLIST
+	IFS=$'\n'
+	for i in $(cat $ALL | grep '#'); do
+		var=$(echo $i | awk '{print $1}')
+		val=$(echo $i | sed "/^"$var"/!d;s/[^ ]* *//")
+		echo "<span background=\"$val\">   </span><span foreground=\"$fg0\" background=\"$bg0\"> $var $val </span>" >> $CLRLIST
+	done
+	paste $CLRLIST $VARLIST >> $ALR
+}
+
+apply-current () {
+	regex=$(cat $RGX)
+	cd ${1} || exit 1
 	templates=$(ls -al | awk '{print $NF}' | grep 'template_')
 	for i in ${templates}; do
 		cat ${i} | sed -e "${regex}" > ${i/template_/}
 	done
-	bash $scr
-	printcurrenttheme
+	[[ -n $scr ]] && bash $scr &>/dev/null &
 	cd
 }
 
+updatelist () { cd ${TDR} && bash .themelist ; }
+
+list () { ls ${TDR} | grep -v '^total' | awk '{print $NF}' ; }
+
+gui-change () {
+	THM=$(cat ${TDR}/.theme_list | i3menu -p "Choose theme ")
+	THM=${THM% *}
+	THM=${THM##* }
+	echo $THM
+	notify-send "Chosen theme is $THM" -i "${SCR_DIR}pic/theme.png"
+	cd ${TDR}
+	if [[ -z ${THM} ]]; then
+		notify-send "No theme chosen"    -i "${SCR_DIR}pic/theme.png" && exit
+	elif [[ ! -f ${THM} ]]; then
+		notify-send "Theme don't exist"  -i "${SCR_DIR}pic/theme.png" && exit
+	else
+		notify-send "Theme exists"       -i "${SCR_DIR}pic/themepic.png"
+		ln -sf ${THM} ${CUR}
+	fi
+}
+
 getvar () {
-	[[ -n $1 ]] && cat ${colsDir}/.allvars | sed "/^$1/!d;s/[^ ]* *//" \
-		|| cat ${colsDir}/.allvarsrofi | \
-		$HOME/scr/i3menu -r $(cat ${colsDir}/.allvarsrofi | wc -l)
+	[[ -n $1 ]] && cat $ALL | sed "/^$1/!d;s/[^ ]* *//" \
+		|| cat $ALR | i3menu -w 600
+}
+
+newtheme () {
+	NTHM="${TDR}/${1}"
+	echo "# vim:ft=perl" > $NTHM
+	echo "Enter accent colour..."
+	read ACC
+	echo "Enter background colour..."
+	read BG0
+	echo "Enter foreground colour..."
+	read FG0
+	echo "acc       $ACC" >> $NTHM
+	echo "bg0       $BG0" >> $NTHM
+	echo "fg0       $FG0" >> $NTHM
+	echo "Theme ${NTHM##*/} created"
 }
 
 help () {
 cat << 'EOB'
-Script to make any config use terminal colours
+    ██   ██
+   ▒██  ▒██
+  ██████▒██       █████  ██████████   █████  ██████
+ ▒▒▒██▒ ▒██████  ██▒▒▒██▒▒██▒▒██▒▒██ ██▒▒▒██▒▒██▒▒█
+   ▒██  ▒██▒▒▒██▒███████ ▒██ ▒██ ▒██▒███████ ▒██ ▒
+   ▒██  ▒██  ▒██▒██▒▒▒▒  ▒██ ▒██ ▒██▒██▒▒▒▒  ▒██
+   ▒▒██ ▒██  ▒██▒▒██████ ███ ▒██ ▒██▒▒██████ ███
+    ▒▒  ▒▒   ▒▒  ▒▒▒▒▒▒ ▒▒▒  ▒▒  ▒▒  ▒▒▒▒▒▒ ▒▒▒
+ 	-- A script to change theme of configs
+ 	          using a theme file.
 
-		Options
-	-h --> display help
-	
-	-u --> update theme list for -a
-	
-	-a --> change current theme (.current located in theme directory)
-	
-	-v --> get variables from current theme, all located in .allvars in the
-		theme directory
-	-c --> terminal version of -a
-	
-	-g --> apply current theme using _templates
-	
-	-l --> list available themes in theme directory
-	
-	-t --> full path to target folder, optional,
-		DEFAULT = \$HOME/numix-solarized-gtk-theme
-	-x --> bash script to run after theme is made
-		DEFAULT = post-build-apply
-	-t and -x used in conjunction with -g
-	
-To make theme template, just cd into the theme's main dir, duplicate the
-file(s) with the colors, rename with \"_template\" ending, replace
-colours with:
-	%%name%%      == name of theme
-	%%wallpaper%% == wallpaper
-	%%font%%      == font (I use this one for terminal)
-	%%guifont%%   == guifont (I use this one for gui applications)
-	%%fontsize%%  == fontsize (I use this one for terminal and guifont)
+ Usage
+ -----
+ themer                ┼ Produce [~/thm] to place themes
+                       │   in, and example gruvbox_light theme.
+ themer -a [DIRECTORY] ┼ Apply current theme to given directory.
+ themer -x [SCRIPT]    ┼ Bash script to run after theme is made.
+                       │   Specify before -a.
+ themer -c [THEME]     ┼ Change current theme. Call themer -c ""
+                       │   for a rofi list of all themes.
+                       │   Requires my i3menu rofi wrapper.
+ themer -v [VAR]       ┼ Get variables from current theme.
+ themer -n [NAME]      ┼ Create new theme: NAME
+ themer -h             ┼ Display this help.
+ themer -l             ┼ List available themes in theme directory.
+ themer -u             ┼ Update rofi theme list for -c.
 
-	%%bg3%%       == background A
-	%%bg2%%       == background │
-	%%bg1%%       == background │ getting lighter if theme is dark
-	%%bg0%%       == background │
-
-	%%fg0%%       == foreground │
-	%%fg1%%       == foreground │ getting darker if theme is dark
-	%%fg2%%       == foreground │
-	%%fg3%%       == foreground V
-
-	%%acc%%       == accent
-	%%acf%%       == 50% accent + 50% foreground
-	%%acb%%       == 50% accent + 50% background
-
-	%%grn%%       == green
-	%%ylw%%       == yellow
-	%%red%%       == red
-	%%blu%%       == blue
-	%%gnt%%       == magenta
-	%%cyn%%       == cyan
-    add RGB after colour name to get RGB in "R, G, B" form
-        eg. %%bg0RGB%%
-and run this script in the theme's main directory, and any other
-commands that you need to run
+ Making Themes
+ -------------
+ Make a theme file like the default one. The
+ variables I use are shown below, but you can
+ use your own. You need at least a name, bg0
+ [background], fg0 [foreground] and acc [accent].
+ The rest of the variables can be taken from the
+ default gruvbox_light theme.
+ 
+ To make theme template, just cd into the theme's
+ main dir, duplicate the file(s) with the colors,
+ rename with "template_" prefix, and replace all
+ colors or other things with the variables in your
+ theme file. Run `themer -c [THEME]` to generate
+ all variables, including fg0, bg0, and acc
+ variations, and then `themer -x [SCRIPT]
+ -a [DIRECTORY]` appropriately to apply the theme.
+ Add RGB after colour name to get its RGB in
+ "R, G, B" form eg. %%bg0RGB%%.
+ Use @@color@@ instead of %%color%% to get
+ hex color without '#'. Useful for #AARRGGBB
+ colors.
+ You can also reference variables with a '$'
+ in front of the variable name, and mix colours
+ eg.  {variable}  mix XX:#HEX XX:#HEX
+ where XX are required mix ratios, and #HEX are
+ actual colours, or variables.
+ 
+ ┌┈┈┈┈ MAIN VARIABLES ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┐
+ │%%name%%      Name of theme                  │▒▒
+ │%%wallpaper%% Wallpaper                      │▒▒
+ │%%font%%      Terminal font                  │▒▒
+ │%%guifont%%   Guifont                        │▒▒
+ │%%size%%      Font size                      │▒▒
+ ├┈┈┈┈ COLORS ┈┈┈┈┈┈┈┈┈┬┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤▒▒
+ │%%bg0%% │ background │ %%acc%% accent        │▒▒
+ │%%bg1%% │ (gets      │ %%acf%% 50%acc+50%fg0 │▒▒
+ │%%bg2%% │ lighter    │ %%acb%% 50%acc+50%bg0 │▒▒
+ │%%bg3%% V if dark)   ├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤▒▒
+ ├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤ %%red%% red           │▒▒
+ ├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤ %%grn%% green         │▒▒
+ │%%fg0%% │ foreground │ %%ylw%% yellow        │▒▒
+ │%%fg1%% │ (gets      │ %%blu%% blue          │▒▒
+ │%%fg2%% │ darker     │ %%cyn%% cyan          │▒▒
+ │%%fg3%% V if light)  │ %%gnt%% magenta       │▒▒
+ └┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┴┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┘▒▒
+   ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 
 EOB
 }
 
-while getopts :t:x:c:v:galuh opts; do
-	case "$opts" in
-		t) dir="${OPTARG}"             ;;
-		x) scr="${OPTARG}"             ;;
-		c) termapply ${OPTARG} && exit ;;
-		g) main          && cd && exit ;;
-		a) guiapply            && exit ;;
-		l) list                && exit ;;
-		u) updatelist          && exit ;;
-		v) getvar ${OPTARG}    && exit ;;
-		h) help                && exit ;;
+while getopts :c:x:a:v:n:ulh opts; do
+	case $opts in
+		h) help                    && exit ;;
+		u) updatelist              && exit ;;
+		v) getvar "${OPTARG}"      && exit ;;
+		n) newtheme "${OPTARG}"    && exit ;;
+		l) list                    && exit ;;
+		c) change-current $OPTARG  && exit ;;
+		x) scr="$OPTARG"                   ;;
+		a) apply-current "$OPTARG" && exit ;;
 	esac
 done

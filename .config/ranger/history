@@ -1,13 +1,3 @@
-delete
-search :
-search *:
-rename 033 - Behold, Universe 6! This Is the Super Saiyan Son Goku!.mkv
-rename pic_
-rename mus_
-rename vid_
-rename dtp_
-rename pic
-rename dtp
 rename vid
 rename mus
 mkdir .tmp
@@ -48,3 +38,13 @@ rename gencvl
 rename CVL
 rename numix
 rename i3bg
+rename wall
+rename sptl
+shell cp "~/pic/scrots" test
+shell cp ~/pic/scrots test
+shell cp ~/pic/scrots 
+shell cp -r "~/pic/scrots" test
+rename themer_oldold
+rename themer_old
+rename rc.conf
+rename .bashrc

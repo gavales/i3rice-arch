@@ -3141,3 +3141,61 @@ Sep 13 01:35 : client: [206] opened from [::1]:42988
 Sep 13 01:35 : client: [206] closed
 Sep 13 01:35 : client: [207] opened from [::1]:42990
 Sep 13 01:35 : client: [207] closed
+Sep 13 21:47 : client: [208] opened from [::1]:52386
+Sep 13 21:47 : client: [208] closed
+Sep 13 21:47 : client: [209] opened from [::1]:52388
+Sep 13 21:47 : client: [209] closed
+Sep 13 21:47 : client: [210] opened from [::1]:52390
+Sep 13 21:47 : client: [210] closed
+Sep 13 21:47 : client: [211] opened from [::1]:52392
+Sep 13 21:47 : client: [211] closed
+Sep 13 21:47 : client: [212] opened from [::1]:52398
+Sep 13 21:47 : client: [212] closed
+Sep 13 21:47 : client: [213] opened from [::1]:52400
+Sep 13 21:47 : client: [213] closed
+Sep 13 21:47 : client: [214] opened from [::1]:52402
+Sep 13 21:47 : client: [214] closed
+Sep 13 21:47 : client: [215] opened from [::1]:52404
+Sep 13 21:47 : client: [215] closed
+Sep 13 21:49 : client: [19] closed
+Sep 14 01:26 : player: played "Jim Croce/Time in a Bottle_Greatest Love/07 I'll Have to Say I Love You in.mp3"
+Sep 14 01:28 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 14 01:28 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 14 01:28 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Sep 14 01:28 : player: played "Jim Croce/Time in a Bottle_Greatest Love/07 I'll Have to Say I Love You in.mp3"
+Sep 14 01:31 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 14 01:31 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 14 01:31 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Sep 14 13:23 : client: [0] opened from [::1]:50870
+Sep 14 13:23 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 14 13:23 : client: [0] closed
+Sep 14 13:23 : client: [1] opened from [::1]:50872
+Sep 14 13:23 : client: [1] closed
+Sep 14 13:23 : client: [2] opened from [::1]:50874
+Sep 14 13:23 : client: [2] closed
+Sep 14 13:23 : client: [3] opened from [::1]:50876
+Sep 14 13:23 : client: [3] closed
+Sep 14 13:23 : client: [4] opened from [::1]:50878
+Sep 14 13:23 : client: [4] closed
+Sep 14 13:23 : client: [5] opened from [::1]:50880
+Sep 14 13:23 : client: [5] closed
+Sep 14 13:23 : client: [6] opened from [::1]:50882
+Sep 14 13:23 : client: [6] closed
+Sep 14 13:23 : client: [7] opened from [::1]:50884
+Sep 14 13:23 : client: [7] closed
+Sep 14 16:48 : client: [8] opened from [::1]:52146
+Sep 14 16:48 : client: [8] closed
+Sep 14 16:48 : client: [9] opened from [::1]:52148
+Sep 14 16:48 : client: [9] closed
+Sep 14 16:48 : client: [10] opened from [::1]:52150
+Sep 14 16:48 : client: [10] closed
+Sep 14 16:48 : client: [11] opened from [::1]:52152
+Sep 14 16:48 : client: [11] closed
+Sep 14 16:48 : client: [12] opened from [::1]:52158
+Sep 14 16:48 : client: [12] closed
+Sep 14 16:48 : client: [13] opened from [::1]:52160
+Sep 14 16:48 : client: [13] closed
+Sep 14 16:48 : client: [14] opened from [::1]:52162
+Sep 14 16:48 : client: [14] closed
+Sep 14 16:48 : client: [15] opened from [::1]:52166
+Sep 14 16:48 : client: [15] closed

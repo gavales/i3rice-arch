@@ -25,13 +25,9 @@ new () {
 	hugo
 }
 
-list () {
-	ls content/posts
-}
+list () { ls content/posts ; }
 
-delete () {
-	rm -rf content/posts/${1}.md
-}
+delete () { rm -rf content/posts/${1}.md ; }
 
 help () {
 	cat << 'EOB'

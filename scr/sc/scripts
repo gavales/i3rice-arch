@@ -1,0 +1,14 @@
+# first letter is x
+cb  shell   biber %f
+cg  shell   cgroff %f
+cm  shell   cmkd %f
+cn  console makeindex %f -s nomencl.ist -o %f
+cp  shell   clatex %f
+g   shell   gitcommit
+p   shell   mkwalscheme %d/%f
+ra  shell   raux
+s   console bash ~/scr/
+u   shell   extractor '%f'
+v   shell   openvid "%s"
+w   shell   i3bg -w %f -b
+wb  shell   i3bg -w %f

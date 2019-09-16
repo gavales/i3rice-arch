@@ -1,1 +1,13 @@
-forest-dusk
+! vim:ft=perl
+name      dracula
+wallpaper dracula
+tint      $acc
+bg0       #282A36
+acc       #FF6E67
+fg0       #fffff2
+blu       #BD93F9
+grn       #5AF78E
+ylw       #cccc00
+red       #FF6E67
+gnt       #FF92D0
+cyn       #8BE9FD
