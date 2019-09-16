@@ -8,7 +8,8 @@ g   shell   gitcommit
 p   shell   mkwalscheme %d/%f
 ra  shell   raux
 s   console bash ~/scr/
-u   shell   extractor '%f'
 v   shell   openvid "%s"
-w   shell   i3bg -w %f -b
 wb  shell   i3bg -w %f
+wd  shell   i3bg -d %f
+ww  shell   i3bg -w %f -b
+x   shell   extractor "%f"

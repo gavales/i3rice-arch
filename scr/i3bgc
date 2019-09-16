@@ -5,9 +5,9 @@
 CTXT=" "
 
 update () {
-	CRLN=$(readlink -f $HOME/pic/i3bg/current)
+	CRLN=$(readlink -f $XDG_PICTURES_DIR/i3bg/current)
 	PBSCR=$HOME/scr/pb
-#	_I="%{A1:$PBSCR/wall          :}%{T1}%{T-}%{A}"
+#	_I="%{A1:i3bgc       :}%{T1}%{T-}%{A}"
 	_I=" "
 	_P="%{A1:i3bgc   prev:}%{T1}%{T-}%{A}"
 	_N="%{A1:i3bgc   next:}%{T1}%{T-}%{A}"
@@ -16,15 +16,15 @@ update () {
 	_E="%{A1:i3bgc rename:}%{T1}%{T-}%{A}"
 	_C="%{A1:i3bgc   list:}${CRLN##*/}%{A}"
 	if [[ $CTXT == "$_I" ]]; then
-		_F="$_I$_P $_R $_E $_D $_N $_C"
+		_F=" $_P $_R $_E $_D $_N $_C"
 	else
 		_F="$_I"
 	fi
-	pbcat -m i3wallpaper -v "$_F"
+	pbcat -m i3bg -v "$_F"
 }
 
 case $1 in
-	show)   CTXT=$(pbcat -m i3wallpaper) && update ;;
+	show)   CTXT=$(pbcat -m i3bg) && update ;;
 	blur)   i3bg -b                         ;;
 	prev)   i3bg -w PREV          && update ;;
 	next)   i3bg -w NEXT          && update ;;
@@ -46,7 +46,7 @@ case $1 in
 		}
 		;;
 	list)
-		wall=$(ls $XDG_PICTURES_DIR/i3wallpaper/normal | i3menu -m -L 10 -w 300)
+		wall=$(ls $XDG_PICTURES_DIR/i3bg/normal | i3menu -m -L 10 -w 300)
 		[[ -n $wall ]] && i3bg -w $wall && update
 		;;
 esac

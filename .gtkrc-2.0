@@ -3,7 +3,7 @@
 
 include "/home/gavarch/.gtkrc-2.0.mine"
 gtk-theme-name="Standard-light"
-gtk-icon-theme-name="Numix-Circle"
+gtk-icon-theme-name="darkine"
 gtk-font-name="Luxi Mono 12"
 gtk-cursor-theme-name="Xcursor.theme:	Bibata_Dark_Red"
 gtk-cursor-theme-size=0

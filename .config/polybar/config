@@ -10,16 +10,6 @@
 [colors]
 tr = #000000ff
 
-#acc = #99458588
-#bg0 =   #282828
-#acb = #99365658
-#fg0 =   #ebdbb2
-#ylw = #99d79921
-#gnt = #99b16286
-#red = #99cc241d
-#grn = #9998971a
-#cyn = #99689d6a
-
 acc = #365658
 bg0 = #282828
 acb = #365658
@@ -47,10 +37,10 @@ width = 100%
 radius = 0.0
 fixed-center = false
 enable-ipc = true
-background = ${colors.acc}
+background = ${colors.tr}
 foreground = ${colors.bg0}
 line-size   = 0
-border-size = 1
+border-size = 0
 line-color   = ${colors.acc}
 border-color = #458588
 padding-left        = 0
@@ -60,6 +50,7 @@ module-margin-right = 0
 font-0 = CMU Typewriter Text:size=12;3
 font-1 = FontAwesome5Free:style=Solid:size=15;3
 font-2 = FontAwesome5Brands:style=Solid:size=15;3
+font-3 = Inconsolata Nerd Font:style=Regular:size=21;6
 tray-position    = right
 tray-padding     = 2
 tray-maxsize     = 16
@@ -67,9 +58,9 @@ tray-transparent = true
 tray-background  = ${colors.acc}
 cursor-click  = pointer
 cursor-scroll = ns-resize
-modules-left   = start td ws xkeyboard i3wallpaper
+modules-left   = start td ws xkeyboard i3bg arrow1
 modules-center = 
-modules-right  = media disk memory cpu temperature backlight volume battery
+modules-right  = arrow2 i3media disk memory cpu temperature i3light i3vol battery
 
 [bar/fvwm]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -100,7 +91,7 @@ cursor-click  = pointer
 cursor-scroll = ns-resize
 modules-left   = startfvwm fvwmtd xkeyboard wintitle
 modules-center = 
-modules-right  = media disk memory cpu temperature nm backlight volume battery
+modules-right  = i3media disk memory cpu temperature nm i3light i3vol battery
 
 [global/wm]
 margin-top = 0
@@ -168,9 +159,9 @@ format-prefix-underline    = ${colors.acc}
 label-layout-underline     = ${colors.acc}
 label-indicator-underline  = ${colors.gnt}
 
-[module/i3wallpaper]
+[module/i3bg]
 type = custom/ipc
-hook-0 = pbcat -m i3wallpaper
+hook-0 = pbcat -m i3bg
 format = %{T1}%{T-}<output>
 initial = 1
 click-left  = i3bgc show
@@ -197,9 +188,9 @@ format-background = ${colors.bg0}
 format-foreground = ${colors.fg0}
 format-padding = 1
 
-[module/media]
+[module/i3media]
 type = custom/ipc
-hook-0 = pbcat -m media
+hook-0 = pbcat -m i3media
 initial = 1
 click-left = i3media
 format-background = ${colors.acc}
@@ -246,20 +237,20 @@ format-foreground = ${colors.fg0}
 format-padding = 0
 interval = 10
 
-[module/backlight]
+[module/i3light]
 type = custom/ipc
-hook-0 = pbcat -m backlight
+hook-0 = pbcat -m i3light
 initial = 1
-click-left  = i3brightness
+click-left  = i3light
 format-background = ${colors.acb}
 format-foreground = ${colors.fg0}
 format-padding = 1
 
-[module/volume]
+[module/i3vol]
 type = custom/ipc
-hook-0 = pbcat -m volume
+hook-0 = pbcat -m i3vol
 initial = 1
-click-left  = i3volume mute
+click-left  = i3vol mute
 format-background = ${colors.acb}
 format-foreground = ${colors.fg0}
 format-padding = 0
@@ -313,5 +304,17 @@ animation-charging-4 = %{T1}%{T-}
 animation-charging-foreground = ${colors.fg0}
 animation-charging-background = ${colors.acb}
 animation-charging-framerate = 500
+
+[module/arrow2]
+type = custom/text
+content = %{T4}   %{T-}
+content-foreground = #365658
+content-background = ${colors.tr}
+ 
+[module/arrow1]
+type = custom/text
+content = %{T4}  %{T-}
+content-foreground = #365658
+content-background = ${colors.tr}
 
 ; vim:ft=dosini

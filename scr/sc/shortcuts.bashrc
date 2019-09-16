@@ -44,6 +44,9 @@ Mph() { mv "$1" ~/pic/"$1" ; }
 alias gpf="cd ~/pic/favs"
 Ypf() { cp -r "$1" ~/pic/favs/"$1" ; }
 Mpf() { mv "$1" ~/pic/favs/"$1" ; }
+alias gpi="cd ~/pic/i3bg"
+Ypi() { cp -r "$1" ~/pic/i3bg/"$1" ; }
+Mpi() { mv "$1" ~/pic/i3bg/"$1" ; }
 alias gps="cd ~/pic/scrots"
 Yps() { cp -r "$1" ~/pic/scrots/"$1" ; }
 Mps() { mv "$1" ~/pic/scrots/"$1" ; }
@@ -110,6 +113,9 @@ MP4() { mv "$1" /run/media/gavarch/LILPRECIOUS/Part4/"$1" ; }
 alias gR="cd /run/media/gavarch"
 YR() { cp -r "$1" /run/media/gavarch/"$1" ; }
 MR() { mv "$1" /run/media/gavarch/"$1" ; }
+alias gt="cd ~/.tmp"
+Yt() { cp -r "$1" ~/.tmp/"$1" ; }
+Mt() { mv "$1" ~/.tmp/"$1" ; }
 alias gT="cd ~/plt"
 YT() { cp -r "$1" ~/plt/"$1" ; }
 MT() { mv "$1" ~/plt/"$1" ; }

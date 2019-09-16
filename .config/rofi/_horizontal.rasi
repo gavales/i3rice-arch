@@ -1,4 +1,4 @@
-@import "globals.rasi"
+@import "_globals.rasi"
 * {
 	background-color: @accent;
 	border-color:     @accent;
@@ -26,7 +26,9 @@
 	width:            10em;
 }
 #element {
-	padding:          0px 2px;
+	border:           0;
+	border-radius:    10px;
+	padding:          1px 1px;
 }
 #element selected {
 	background-color: @bg1;

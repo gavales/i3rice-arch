@@ -12,8 +12,8 @@ VOL=${VOL#*[}
 STT=${RVL%]*}
 STT=${STT##*[}
 ICN="%{T1}%{T-}"
-#BCL=$(themer -v "acb ")
-#FCL=$(themer -v "fg0 ")
+BCL=$(themer -v "acb ")
+FCL=$(themer -v "fg0 ")
 
 update () {
 	_VOL=$VOL
@@ -25,7 +25,7 @@ update () {
 %{A4:i3vol inc:}%{A5:i3vol dec:}\
 %{A1:i3vol mute:}${ICN} ${_VOL}%{A}%{A}%{A} \
 %{B- F-}"
-	pbcat -m volume -v "$FSTR"
+	pbcat -m i3vol -v "$FSTR"
 }
 
 BVL=$(echo "(2*$VOL)/10" | bc)

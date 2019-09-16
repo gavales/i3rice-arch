@@ -1,7 +1,7 @@
 name      retro
-#font      FixedsysMono
-#guifont   FixedsysMono
-#size      14
+!font      FixedsysMono
+!guifont   FixedsysMono
+!size      14
 fg0       #00ff00
 acc       #2222ff
 bg0       #000000

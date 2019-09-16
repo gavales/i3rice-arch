@@ -30,7 +30,7 @@ update () {
 	_NM="%{T1} %{T-}"
 	[[ $NM == "on" ]] && _NM="%{T1} %{T-}"
 	_MS="%{A1:i3light nm:}%{A4:i3light inc:}%{A5:i3light dec:}${_NM}${BL}%{A}%{A}%{A}"
-	pbcat -m backlight -v "${_MS}"
+	pbcat -m i3light -v "${_MS}"
 }
 
 BBL=$(echo "(2*$BL)/10" | bc)

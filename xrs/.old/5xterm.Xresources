@@ -1,8 +1,8 @@
 
-!! 5xterm !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! 5xterm     ------------------------------------------------------------------
 
-XTerm*background:        cwhtl
-XTerm*foreground:        cblkl
+XTerm*foreground:        cwhtl
+XTerm*background:        cblkl
 ! XTerm*pointerColor:    ccynd
 XTerm*faceName:          fontname
 XTerm*faceSize:          16

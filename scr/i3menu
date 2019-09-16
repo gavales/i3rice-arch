@@ -62,11 +62,11 @@ redish: #ab4642;
 font1: "LuxiMono 13";
 }
 EOB
-		}
+	}
 
 	[[ -f $HORI ]] || {
 		cat > $HORI  << 'EOB'
-@import "globals.rasi"
+@import "_globals.rasi"
 * {
 	background-color: @accent;
 	border-color:     @accent;
@@ -94,18 +94,20 @@ EOB
 	width:            10em;
 }
 #element {
-	padding:          0px 2px;
+	border:           0;
+	border-radius:    10px;
+	padding:          1px 1px;
 }
 #element selected {
 	background-color: @bg1;
 	text-color:       @accent;
 }
 EOB
-		}
+	}
 
 	[[ -f $VERT ]] || {
 		cat > $VERT  << 'EOB'
-@import "globals.rasi"
+@import "_globals.rasi"
 * {
 	background-color: @accent;
 	border-color:     @accent;
@@ -116,7 +118,9 @@ EOB
 //	anchor:           north;
 //	location:         north;
 //	width:            100%;
-	padding:          4px;
+	padding:          1px;
+	border:           0;
+	border-radius:    5px;
 //	children:         [ horibox ];
 }
 #horibox {
@@ -126,11 +130,13 @@ EOB
 	spacing:          5px;
 }
 #entry {
-	expand:           false;
-	width:            10em;
+	expand:           true;
+//	width:            10em;
 }
 #element {
-	padding:          2px 2px;
+	border:           1;
+	border-radius:    30px;
+	padding:          1px 1px;
 }
 #element selected {
 	background-color: @bg1;
@@ -238,5 +244,5 @@ while getopts :p:l:L:x:y:H:c:w:o:Wdstmfh opts; do
 	esac
 done
 
-cat $RFDIR/${ACCENT_COLOR}.rasi > $RFDIR/globals.rasi
+cat $RFDIR/${ACCENT_COLOR}.rasi > $RFDIR/_globals.rasi
 $MODE

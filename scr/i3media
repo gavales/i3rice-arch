@@ -10,7 +10,7 @@ update () {
 	_S="%{A1:i3media stop:}%{T1}%{T-}%{A}"
 	_CTRLS=" $_P $_T $_S $_N"
 	_NP="%{A1:i3media togg:}$(${BLDR}/${CRPL})%{A}"
-	pbcat -m media -v "$_NP$_CTRLS"
+	pbcat -m i3media -v "$_NP$_CTRLS"
 }
 
 case $1 in
