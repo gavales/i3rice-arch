@@ -1,16 +1,9 @@
 #!/usr/bin/env bash
 
-_I="<span face='Font Awesome 5 Free'>&#xf538;</span>"
+_I="%{T1}%{T-}"
 
-TOT=$(free | awk '/Mem/{print $2}')
-USD=$(free | awk '/Mem/{print $3}')
+USD=$(free | awk '$1 ~ /Mem/{c=(100 * (1 - ($NF / $2)));print c}')
+USD=${USD%.*}
 
-_C=$(echo "(${USD}/${TOT})*100" | bc)
-
-if [[ $_C -ge 80 ]]; then
-	echo "%{B#ff0000}$_I $_C%{B-}"
-elif [[ $_C -ge 50 ]]; then
-	echo "%{B#ffff00}$_I $_C%{B-}"
-else
-	echo "$_I $_C"
-fi
+[[ $USD -ge 50 ]] && REV="%{R}"
+echo "$REV$_I $USD"

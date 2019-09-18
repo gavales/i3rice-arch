@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-STTS=$(mpc current)
 _I="%{T1}%{T-}"
 CURR=$(ncmpcpp -q --current-song '%20a > %20t')
 echo "${_I} ${CURR}"

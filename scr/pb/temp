@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-_TMP=$(sensors coretemp-isa-0000 | grep '^Core 0' | awk '{ print $3 }')
+_TMP=$(sensors coretemp-isa-0000 | awk '/Core 0/ {print $3}')
 _TMP=${_TMP/+/}
 RTMP=${_TMP%.*}
-_ICN="%{T1}%{T-}"
-[[ $RTMP -ge 50 ]] && _ICN="%{T1}%{T-}" BCL="#ffcc00" FCL="#000000"
-[[ $RTMP -ge 65 ]] && _ICN="%{T1}%{T-}" BCL="#cc0000" FCL="#ffffff"
-FSTR="%{B$BCL}%{F$FCL} ${_ICN} ${RTMP} %{B- F-}"
+_ICN="%{T1}%{T-}"
+[[ $RTMP -ge 70  ]] && _ICN="%{T1}%{T-}" REV="%{R}"
+FSTR="$REV ${_ICN} ${RTMP} "
 echo $FSTR

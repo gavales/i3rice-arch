@@ -3,8 +3,5 @@
 _I="%{T1}%{T-}"
 DIR="${BLOCK_INSTANCE:-$HOME}"
 
-FREE=$(df -h -P -l "$DIR" | grep 'dev' | awk '{print $4}')
-PCNT=$(df -h -P -l "$DIR" | grep 'dev' | awk '{print $5}')
-NCNT=${PCNT/%/}
-
+FREE=$(df -h -P -l "$DIR" | awk '/dev/ {print $3"/"$2}')
 echo "$_I $FREE"

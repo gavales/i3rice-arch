@@ -10,7 +10,7 @@
 [colors]
 tr = #000000ff
 
-acc = #@@acb@@
+acc = #@@acc@@
 bg0 = #@@bg0@@
 acb = #@@acb@@
 acf = #@@acf@@
@@ -102,7 +102,7 @@ type = custom/text
 content = %{T1}  %{T-}
 click-left = i3menu -s -c blue -l 1 -y 27
 click-right = xtheme
-content-background = ${colors.acb}
+content-background = ${colors.acc}
 content-foreground = ${colors.fg0}
 content-padding = 0
 
@@ -111,14 +111,14 @@ type = custom/text
 content = %{T1}  %{T-}
 click-left = i3menu -s -y 50 -x 10 -c blue -l 1
 click-right = menunicode
-content-background = ${colors.acb}
+content-background = ${colors.acc}
 content-foreground = ${colors.fg0}
 content-padding = 1
 
 [module/td]
 type = custom/script
 exec = bash ~/scr/pb/td
-format-background = ${colors.acb}
+format-background = ${colors.acc}
 format-foreground = ${colors.fg0}
 format-padding = 1
 interval = 1
@@ -126,8 +126,8 @@ interval = 1
 [module/fvwmtd]
 type = custom/script
 exec = bash ~/scr/pb/td
-format-background = ${colors.bg0}
-format-foreground = ${colors.fg0}
+format-background = ${colors.acc}
+format-foreground = ${colors.bg0}
 format-padding = 1
 interval = 1
 
@@ -232,7 +232,7 @@ format-padding = 1
 [module/temperature]
 type = custom/script
 exec = bash ~/scr/pb/temp
-format-background = ${colors.acb}
+format-background = ${colors.acc}
 format-foreground = ${colors.fg0}
 format-padding = 0
 interval = 10
@@ -242,7 +242,7 @@ type = custom/ipc
 hook-0 = pbcat -m i3light
 initial = 1
 click-left  = i3light
-format-background = ${colors.acb}
+format-background = ${colors.acc}
 format-foreground = ${colors.fg0}
 format-padding = 1
 
@@ -251,7 +251,7 @@ type = custom/ipc
 hook-0 = pbcat -m i3vol
 initial = 1
 click-left  = i3vol mute
-format-background = ${colors.acb}
+format-background = ${colors.acc}
 format-foreground = ${colors.fg0}
 format-padding = 0
 
@@ -266,23 +266,23 @@ label-discharging-padding = 1
 format-full-padding = 1
 format-full-prefix-padding = 1
 format-full-foreground = ${colors.fg0}
-format-full-background = ${colors.acb}
+format-full-background = ${colors.acc}
 format-full-prefix-foreground = ${colors.fg0}
-format-full-prefix-background = ${colors.acb}
+format-full-prefix-background = ${colors.acc}
 label-charging-foreground = ${colors.fg0}
-label-charging-background = ${colors.acb}
+label-charging-background = ${colors.acc}
 label-discharging-foreground = ${colors.fg0}
-label-discharging-background = ${colors.acb}
+label-discharging-background = ${colors.acc}
 format-discharging-padding = 0
 format-discharging-prefix-padding = 1
 format-discharging-foreground = ${colors.fg0}
-format-discharging-background = ${colors.acb}
+format-discharging-background = ${colors.acc}
 format-discharging-prefix-foreground = ${colors.fg0}
-format-discharging-prefix-background = ${colors.acb}
+format-discharging-prefix-background = ${colors.acc}
 format-charging-padding-foreground = ${colors.fg0}
-format-charging-padding-background = ${colors.acb}
+format-charging-padding-background = ${colors.acc}
 format-discharging-padding-foreground = ${colors.fg0}
-format-discharging-padding-background = ${colors.acb}
+format-discharging-padding-background = ${colors.acc}
 format-charging = <animation-charging><label-charging>
 format-charging-underline = ${colors.fg0}
 format-discharging = <ramp-capacity><label-discharging>
@@ -295,26 +295,26 @@ ramp-capacity-2 = %{T1}%{T-}
 ramp-capacity-3 = %{T1}%{T-}
 ramp-capacity-4 = %{T1}%{T-}
 ramp-capacity-foreground = ${colors.fg0}
-ramp-capacity-background = ${colors.acb}
+ramp-capacity-background = ${colors.acc}
 animation-charging-0 = %{T1}%{T-}
 animation-charging-1 = %{T1}%{T-}
 animation-charging-2 = %{T1}%{T-}
 animation-charging-3 = %{T1}%{T-}
 animation-charging-4 = %{T1}%{T-}
 animation-charging-foreground = ${colors.fg0}
-animation-charging-background = ${colors.acb}
+animation-charging-background = ${colors.acc}
 animation-charging-framerate = 500
 
 [module/arrow2]
 type = custom/text
 content = %{T4}   %{T-}
-content-foreground = %%acb%%
+content-foreground = ${colors.acc}
 content-background = ${colors.tr}
  
 [module/arrow1]
 type = custom/text
 content = %{T4}  %{T-}
-content-foreground = %%acb%%
+content-foreground = ${colors.acc}
 content-background = ${colors.tr}
 
 ; vim:ft=dosini
