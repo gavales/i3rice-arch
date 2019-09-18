@@ -1,0 +1,9 @@
+function final() {
+	print "map g"   key " cd "                  val               >> "shortcuts.conf";
+	print "map Y"   key " shell cp %f "         val "/%f"         >> "shortcuts.conf";
+	print "map M"   key " shell mv %f "         val "/%f"         >> "shortcuts.conf";
+	print "map C"   key " console shell cp -r " val "%space"      >> "shortcuts.conf";
+	print "alias g" key "=\"cd "                val "\""          >> "shortcuts.bashrc";
+	print "Y"       key "() { cp -r \"$1\" "    val "/\"$1\" ; }" >> "shortcuts.bashrc";
+	print "M"       key "() { mv \"$1\" "       val "/\"$1\" ; }" >> "shortcuts.bashrc";
+}

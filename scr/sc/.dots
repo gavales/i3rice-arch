@@ -1,0 +1,4 @@
+function final() {
+	print "map D"   key " shell openvim "   val ""   >> "shortcuts.conf";
+	print "alias D" key "=\"openvim "       val "\"" >> "shortcuts.bashrc";
+}

@@ -1,0 +1,4 @@
+function final() {
+	print "map T" key " console shell " val "%space"        >> "shortcuts.conf";
+	print "T"     key "() { cp \""      val "\" \"$1\" ; }" >> "shortcuts.bashrc";
+}

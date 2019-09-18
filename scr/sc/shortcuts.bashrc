@@ -1,4 +1,11 @@
-# SHORTCUTS
+# >>>> shortcuts
+alias Db="openvim ~/git/i3rice-arch/.bashrc"
+alias Dim="openvim ~/git/i3rice-arch/.config/i3/template_main"
+alias Div="openvim ~/git/i3rice-arch/.config/i3/template_vars"
+alias Dp="openvim ~/git/i3rice-arch/.config/polybar/template_config"
+alias Drc="openvim ~/git/i3rice-arch/.config/ranger/rc.conf"
+alias Drr="openvim ~/git/i3rice-arch/.config/ranger/rifle.conf"
+alias Dv="openvim ~/git/i3rice-arch/.vimrc"
 alias ga="cd ~/Drive"
 Ya() { cp -r "$1" ~/Drive/"$1" ; }
 Ma() { mv "$1" ~/Drive/"$1" ; }
@@ -11,9 +18,15 @@ Mc() { mv "$1" ~/.config/"$1" ; }
 alias gdh="cd ~/doc"
 Ydh() { cp -r "$1" ~/doc/"$1" ; }
 Mdh() { mv "$1" ~/doc/"$1" ; }
-alias gdp="cd ~/doc/personal"
-Ydp() { cp -r "$1" ~/doc/personal/"$1" ; }
-Mdp() { mv "$1" ~/doc/personal/"$1" ; }
+alias gde="cd ~/doc/ebks"
+Yde() { cp -r "$1" ~/doc/ebks/"$1" ; }
+Mde() { mv "$1" ~/doc/ebks/"$1" ; }
+alias gdl="cd ~/doc/lit"
+Ydl() { cp -r "$1" ~/doc/lit/"$1" ; }
+Mdl() { mv "$1" ~/doc/lit/"$1" ; }
+alias gdm="cd ~/doc/mine"
+Ydm() { cp -r "$1" ~/doc/mine/"$1" ; }
+Mdm() { mv "$1" ~/doc/mine/"$1" ; }
 alias gD="cd ~/dtp"
 YD() { cp -r "$1" ~/dtp/"$1" ; }
 MD() { mv "$1" ~/dtp/"$1" ; }
@@ -32,15 +45,27 @@ Mgg() { mv "$1" ~/git/ghb/"$1" ; }
 alias ggp="cd ~/git/public"
 Ygp() { cp -r "$1" ~/git/public/"$1" ; }
 Mgp() { mv "$1" ~/git/public/"$1" ; }
+alias glh="cd /run/media/gavarch/LILPRECIOUS"
+Ylh() { cp -r "$1" /run/media/gavarch/LILPRECIOUS/"$1" ; }
+Mlh() { mv "$1" /run/media/gavarch/LILPRECIOUS/"$1" ; }
+alias gl1="cd /run/media/gavarch/LILPRECIOUS/Part1"
+Yl1() { cp -r "$1" /run/media/gavarch/LILPRECIOUS/Part1/"$1" ; }
+Ml1() { mv "$1" /run/media/gavarch/LILPRECIOUS/Part1/"$1" ; }
+alias gl2="cd /run/media/gavarch/LILPRECIOUS/Part2"
+Yl2() { cp -r "$1" /run/media/gavarch/LILPRECIOUS/Part2/"$1" ; }
+Ml2() { mv "$1" /run/media/gavarch/LILPRECIOUS/Part2/"$1" ; }
+alias gl3="cd /run/media/gavarch/LILPRECIOUS/Part3"
+Yl3() { cp -r "$1" /run/media/gavarch/LILPRECIOUS/Part3/"$1" ; }
+Ml3() { mv "$1" /run/media/gavarch/LILPRECIOUS/Part3/"$1" ; }
+alias gl4="cd /run/media/gavarch/LILPRECIOUS/Part4"
+Yl4() { cp -r "$1" /run/media/gavarch/LILPRECIOUS/Part4/"$1" ; }
+Ml4() { mv "$1" /run/media/gavarch/LILPRECIOUS/Part4/"$1" ; }
 alias gm="cd ~/mus"
 Ym() { cp -r "$1" ~/mus/"$1" ; }
 Mm() { mv "$1" ~/mus/"$1" ; }
 alias gM="cd ~/thm"
 YM() { cp -r "$1" ~/thm/"$1" ; }
 MM() { mv "$1" ~/thm/"$1" ; }
-alias gph="cd ~/pic"
-Yph() { cp -r "$1" ~/pic/"$1" ; }
-Mph() { mv "$1" ~/pic/"$1" ; }
 alias gpf="cd ~/pic/favs"
 Ypf() { cp -r "$1" ~/pic/favs/"$1" ; }
 Mpf() { mv "$1" ~/pic/favs/"$1" ; }
@@ -95,36 +120,39 @@ Mpww() { mv "$1" ~/pic/wall/weeb/"$1" ; }
 alias gpwx="cd ~/pic/wall/cmx"
 Ypwx() { cp -r "$1" ~/pic/wall/cmx/"$1" ; }
 Mpwx() { mv "$1" ~/pic/wall/cmx/"$1" ; }
-alias gPh="cd /run/media/gavarch/LILPRECIOUS"
-YPh() { cp -r "$1" /run/media/gavarch/LILPRECIOUS/"$1" ; }
-MPh() { mv "$1" /run/media/gavarch/LILPRECIOUS/"$1" ; }
-alias gP1="cd /run/media/gavarch/LILPRECIOUS/Part1"
-YP1() { cp -r "$1" /run/media/gavarch/LILPRECIOUS/Part1/"$1" ; }
-MP1() { mv "$1" /run/media/gavarch/LILPRECIOUS/Part1/"$1" ; }
-alias gP2="cd /run/media/gavarch/LILPRECIOUS/Part2"
-YP2() { cp -r "$1" /run/media/gavarch/LILPRECIOUS/Part2/"$1" ; }
-MP2() { mv "$1" /run/media/gavarch/LILPRECIOUS/Part2/"$1" ; }
-alias gP3="cd /run/media/gavarch/LILPRECIOUS/Part3"
-YP3() { cp -r "$1" /run/media/gavarch/LILPRECIOUS/Part3/"$1" ; }
-MP3() { mv "$1" /run/media/gavarch/LILPRECIOUS/Part3/"$1" ; }
-alias gP4="cd /run/media/gavarch/LILPRECIOUS/Part4"
-YP4() { cp -r "$1" /run/media/gavarch/LILPRECIOUS/Part4/"$1" ; }
-MP4() { mv "$1" /run/media/gavarch/LILPRECIOUS/Part4/"$1" ; }
 alias gR="cd /run/media/gavarch"
 YR() { cp -r "$1" /run/media/gavarch/"$1" ; }
 MR() { mv "$1" /run/media/gavarch/"$1" ; }
-alias gt="cd ~/.tmp"
-Yt() { cp -r "$1" ~/.tmp/"$1" ; }
-Mt() { mv "$1" ~/.tmp/"$1" ; }
-alias gT="cd ~/plt"
-YT() { cp -r "$1" ~/plt/"$1" ; }
-MT() { mv "$1" ~/plt/"$1" ; }
-alias gU="cd ~/uni"
-YU() { cp -r "$1" ~/uni/"$1" ; }
-MU() { mv "$1" ~/uni/"$1" ; }
-alias gV="cd ~/vid"
-YV() { cp -r "$1" ~/vid/"$1" ; }
-MV() { mv "$1" ~/vid/"$1" ; }
+alias gt="cd ~/plt"
+Yt() { cp -r "$1" ~/plt/"$1" ; }
+Mt() { mv "$1" ~/plt/"$1" ; }
+alias gT="cd ~/.tmp"
+YT() { cp -r "$1" ~/.tmp/"$1" ; }
+MT() { mv "$1" ~/.tmp/"$1" ; }
+alias gu="cd ~/uni"
+Yu() { cp -r "$1" ~/uni/"$1" ; }
+Mu() { mv "$1" ~/uni/"$1" ; }
+alias gU="cd /usr"
+YU() { cp -r "$1" /usr/"$1" ; }
+MU() { mv "$1" /usr/"$1" ; }
+alias gvd="cd ~/vid/docu"
+Yvd() { cp -r "$1" ~/vid/docu/"$1" ; }
+Mvd() { mv "$1" ~/vid/docu/"$1" ; }
+alias gvf="cd ~/vid/film"
+Yvf() { cp -r "$1" ~/vid/film/"$1" ; }
+Mvf() { mv "$1" ~/vid/film/"$1" ; }
+alias gvm="cd ~/vid/musv"
+Yvm() { cp -r "$1" ~/vid/musv/"$1" ; }
+Mvm() { mv "$1" ~/vid/musv/"$1" ; }
+alias gvt="cd ~/vid/tv"
+Yvt() { cp -r "$1" ~/vid/tv/"$1" ; }
+Mvt() { mv "$1" ~/vid/tv/"$1" ; }
+alias gvy="cd ~/vid/yt"
+Yvy() { cp -r "$1" ~/vid/yt/"$1" ; }
+Mvy() { mv "$1" ~/vid/yt/"$1" ; }
+alias gV="cd /var"
+YV() { cp -r "$1" /var/"$1" ; }
+MV() { mv "$1" /var/"$1" ; }
 alias gw="cd ~/dwn"
 Yw() { cp -r "$1" ~/dwn/"$1" ; }
 Mw() { mv "$1" ~/dwn/"$1" ; }
@@ -134,8 +162,6 @@ MW() { mv "$1" /mnt/media/Users/test/"$1" ; }
 alias gx="cd ~/xrs"
 Yx() { cp -r "$1" ~/xrs/"$1" ; }
 Mx() { mv "$1" ~/xrs/"$1" ; }
-
-# templates
 Ta() { cp "~/plt/tex/article" "$1" ; }
 Tg() { cp "~/plt/groff" "$1" ; }
 Tm() { cp "~/plt/md/name.md" "$1" ; }

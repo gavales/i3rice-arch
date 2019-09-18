@@ -1,33 +1,3 @@
-rename vid
-rename mus
-mkdir .tmp
-rename 
-open_with M
-
-shell mkdir plt doc fonts
-rename dwn
-rename plc
-rename uni
-touch post-build-apply
-shell chmod +x %f
-search luxi
-search cmu
-rename template_syntax.css_
-rename template_syntax.css
-shell git clone https://github.com/StillANixRookie/GavinVales.git
-open_with 
-rename i3blocks
-rename cv.md
-touch .gitmodules
-rename StillANixRookiegithubio
-shell git clone https://github.com/StillANixRookie/StillANixRookie.github.io.git
-rename .gtkrc-2.0
-scout -ftsea forest
-shell convert "%f" -resize 64x64 safavicon.png
-shell convert %f -resize 64x64 safavicon.png
-shell 
-rename cv.files
-cd D
 wq
 rename i3light
 rename i3vol
@@ -48,3 +18,33 @@ rename themer_oldold
 rename themer_old
 rename rc.conf
 rename .bashrc
+mkdir .old
+rename darkineicons.tar.gz
+rename icyphox
+rename _globals.rasi
+rename _i3menuconfig
+
+open_with 
+open_with nautilus
+open_with 1
+mkdir UNI
+rename marks
+rename ucas
+mkdir plmed
+rename ebks
+rename lit
+rename fritz
+rename mine
+rename py
+rename qr
+rename quads
+touch configs
+rename _configs
+scout -ftsea 
+search 
+rename _folds
+rename _dots
+touch .outputfiles
+rename _flds
+rename _scrs
+rename _tmps

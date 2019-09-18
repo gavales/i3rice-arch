@@ -1,0 +1,4 @@
+function final() {
+	sub(/console/,"console shell",val);
+	print "map x" key " " val >> "shortcuts.conf";
+}
