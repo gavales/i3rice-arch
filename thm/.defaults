@@ -3,6 +3,7 @@
 !guifont    CMU Typewriter Text
 !gtk-icon   DamaDamas
 !gtk-icon   Numix-Circle
+!gtk-icon   darkine
 name       gruvbox_light
 guifont    Luxi Mono
 polyfont   CMU Typewriter Text
@@ -13,7 +14,7 @@ size       11
 rxvtsize   12
 rofifsize  12
 gtk        Standard-light
-gtk-icon   darkine
+gtk-icon   Tela-red-dark
 cursor     Bibata_Dark_Red
 conky_loc1 top_left
 conky_loc2 bottom_right

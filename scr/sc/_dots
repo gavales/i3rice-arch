@@ -5,4 +5,8 @@ iv  ~/git/i3rice-arch/.config/i3/template_vars
 p   ~/git/i3rice-arch/.config/polybar/template_config
 rc  ~/git/i3rice-arch/.config/ranger/rc.conf
 rr  ~/git/i3rice-arch/.config/ranger/rifle.conf
+sd  ~/scr/sc/_dots
+sf  ~/scr/sc/_flds
+ss  ~/scr/sc/_scrs
+st  ~/scr/sc/_tmps
 v   ~/git/i3rice-arch/.vimrc

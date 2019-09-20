@@ -10,16 +10,16 @@
 [colors]
 tr = #000000ff
 
-acc = #689d6a
-bg0 = #fbf1c7
-acb = #b1c798
-acf = #486249
-fg0 = #282828
+acc = #285577
+bg0 = #CDCBCD
+acb = #7a90a2
+acf = #2c4253
+fg0 = #302f30
 ylw = #d79921
 gnt = #b16286
-red = #cc241d
+red = #900000
 grn = #98971a
-cyn = #458588
+cyn = #689d6a
 
 [settings]
 screenchange-reload = true
@@ -42,7 +42,7 @@ foreground = ${colors.bg0}
 line-size   = 0
 border-size = 0
 line-color   = ${colors.acc}
-border-color = #689d6a
+border-color = #285577
 padding-left        = 0
 padding-right       = 0
 module-margin-left  = 0
@@ -86,7 +86,7 @@ font-1 = FontAwesome5Free:style=Solid:size=14;3
 font-2 = FontAwesome5Brands:style=Solid:size=12;3
 tray-position   = right
 tray-padding    = 2
-tray-background = #689d6a
+tray-background = #285577
 cursor-click  = pointer
 cursor-scroll = ns-resize
 modules-left   = startfvwm fvwmtd xkeyboard wintitle
@@ -152,8 +152,8 @@ format-background = ${colors.acc}
 format-foreground = ${colors.bg0}
 format-prefix-foreground = ${colors.bg0}
 label-indicator-background = ${colors.gnt}
-format-padding = 1
-label-indicator-padding = 1
+format-padding = 0
+label-indicator-padding = 0
 label-indicator-margin = 1
 format-prefix-underline    = ${colors.acc}
 label-layout-underline     = ${colors.acc}
@@ -162,7 +162,7 @@ label-indicator-underline  = ${colors.gnt}
 [module/i3bg]
 type = custom/ipc
 hook-0 = pbcat -m i3bg
-format = %{T1}%{T-}<output>
+format = %{T1} %{T-}<output>
 initial = 1
 click-left  = i3bgc show
 click-right = i3bgc blur
@@ -307,7 +307,7 @@ animation-charging-framerate = 500
 
 [module/arrow2]
 type = custom/text
-content = %{T4}   %{T-}
+content = %{T4} %{T-}
 content-foreground = ${colors.acc}
 content-background = ${colors.tr}
  

@@ -5,16 +5,10 @@
 
 TRG="$1"
 
-case "$TRG" in
-	*\.tar.gz)
-		mkdir "${TRG/.tar.gz/}"
-		tar -xvf "${TRG}" -C "${TRG/.tar.gz/}"
-		;;
-	*\.tar.xz)
-		mkdir "${TRG/.tar.xz/}"
-		tar -xJf "${TRG}" -C "${TRG/.tar.xz/}"
-		;;
-	*\.zip) unzip "${TRG}" -d "${TRG%.*}" ;;
-	*\.gz) gunzip "${TRG}" -d "${TRG%.*}" ;;
-	*\.rar) unrar x "${TRG}" ;;
+case $TRG in
+	*.tar.gz) mkdir   "${TRG/.tar.gz/}"; tar -xvf "${TRG}" -C "${TRG%%.*}" ;;
+	*.tar.xz) mkdir   "${TRG/.tar.xz/}"; tar -xJf "${TRG}" -C "${TRG%%.*}" ;;
+	*.zip)    unzip   "${TRG}" -d "${TRG%%.*}" ;;
+	*.gz)     gunzip  "${TRG}" -d "${TRG%%.*}" ;;
+	*.rar)    unrar x "${TRG}" ;;
 esac

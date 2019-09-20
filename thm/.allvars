@@ -1,15 +1,9 @@
-name      gruvbox_light
-wallpaper MunnarKeralaIndia
-bg0       #fbf1c7
-fg0       #282828
-acc       #689d6a
-red       #cc241d
-grn       #98971a
-ylw       #d79921
-gnt       #b16286
-blu       #689d6a
-cyn       #458588
-orange    #d65d0e
+name      i3
+wallpaper WW_128000000001339009_EN
+acc       #285577
+bg0       #CDCBCD
+fg0       #302f30
+red       #900000
 guifont    Luxi Mono
 polyfont   CMU Typewriter Text
 font       CMUTypewriterText
@@ -19,43 +13,49 @@ size       11
 rxvtsize   12
 rofifsize  12
 gtk        Standard-light
-gtk-icon   darkine
+gtk-icon   Tela-red-dark
 cursor     Bibata_Dark_Red
 conky_loc1 top_left
 conky_loc2 bottom_right
-acf       #486249
-acb       #b1c798
-fg3       #646464
-fg2       #505050
-fg1       #3c3c3c
-bg1       #e7ddb3
-bg2       #d3c99f
-bg3       #bfb58b
-bg0RGB    251, 241, 199
-fg0RGB    40, 40, 40
-accRGB    104, 157, 106
-acfRGB    72, 98, 73
-acbRGB    177, 199, 152
-fg0RGB    40, 40, 40
-fg1RGB    60, 60, 60
-fg2RGB    80, 80, 80
-fg3RGB    100, 100, 100
-bg0RGB    251, 241, 199
-bg1RGB    231, 221, 179
-bg2RGB    211, 201, 159
-bg3RGB    191, 181, 139
-redRGB    204, 36, 29
+grn        #98971a
+ylw        #d79921
+gnt        #b16286
+blu        #458588
+cyn        #689d6a
+orange     #d65d0e
+acf       #2c4253
+acb       #7a90a2
+fg3       #6c6b6c
+fg2       #585758
+fg1       #444344
+bg1       #b9b7b9
+bg2       #a5a3a5
+bg3       #918f91
+bg0RGB    205, 203, 205
+fg0RGB    48, 47, 48
+accRGB    40, 85, 119
+acfRGB    44, 66, 83
+acbRGB    122, 144, 162
+fg0RGB    48, 47, 48
+fg1RGB    68, 67, 68
+fg2RGB    88, 87, 88
+fg3RGB    108, 107, 108
+bg0RGB    205, 203, 205
+bg1RGB    185, 183, 185
+bg2RGB    165, 163, 165
+bg3RGB    145, 143, 145
+redRGB    144, 0, 0
 grnRGB    152, 151, 26
 ylwRGB    215, 153, 33
 gntRGB    177, 98, 134
-bluRGB    104, 157, 106
-cynRGB    69, 133, 136
+bluRGB    69, 133, 136
+cynRGB    104, 157, 106
 orangeRGB    214, 93, 14
-acfRGB    72, 98, 73
-acbRGB    177, 199, 152
-fg3RGB    100, 100, 100
-fg2RGB    80, 80, 80
-fg1RGB    60, 60, 60
-bg1RGB    231, 221, 179
-bg2RGB    211, 201, 159
-bg3RGB    191, 181, 139
+acfRGB    44, 66, 83
+acbRGB    122, 144, 162
+fg3RGB    108, 107, 108
+fg2RGB    88, 87, 88
+fg1RGB    68, 67, 68
+bg1RGB    185, 183, 185
+bg2RGB    165, 163, 165
+bg3RGB    145, 143, 145

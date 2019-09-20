@@ -1,3 +1,11 @@
+shell git clone https://github.com/StillANixRookie/StillANixRookie.github.io.git
+rename .gtkrc-2.0
+scout -ftsea forest
+shell convert "%f" -resize 64x64 safavicon.png
+shell convert %f -resize 64x64 safavicon.png
+shell 
+rename cv.files
+cd D
 wq
 rename i3light
 rename i3vol
@@ -38,13 +46,5 @@ rename mine
 rename py
 rename qr
 rename quads
-touch configs
-rename _configs
-scout -ftsea 
-search 
-rename _folds
-rename _dots
-touch .outputfiles
-rename _flds
-rename _scrs
-rename _tmps
+shell ex %f
+shell tar -xJf %f

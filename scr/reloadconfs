@@ -1,28 +1,26 @@
 #!/usr/bin/env bash
 
-TMR="themer"
-WPP=$($TMR -v wallpaper)
-TNT="$($TMR -v 'tint ')"
-[[ -n $WPP ]] || WPP=$($TMR -v "acc ")
+WPP=$(themer -v wallpaper)
+TNT="$(themer -v 'tint ')"
+[[ -n $WPP ]] || WPP=$(themer -v 'acc ')
 [[ -n $TNT ]] && TINT="-t $TNT" || TINT=" "
 i3bg -w "$WPP" $TINT
-$TMR -x xrs-reload   -a $USER_XRS_DIR
-$TMR -x i3concat     -a $HOME/.config/i3
-$TMR -x pb-reload    -a $HOME/.config/polybar
-$TMR -x reloadinst   -a $HOME/.config/zathura
-$TMR -x dunst-reload -a $HOME/.config/dunst
-$TMR -x reload       -a $HOME/.conky
-$TMR -x genfavicon   -a $USER_REPO_DIR/ghb/themes/hyde/static/css
-$TMR -a $USER_REPO_DIR/i3rice-arch
-#$TMR -a $USER_REPO_DIR/ghb/themes/hyde/layouts/_default
-$TMR -a $HOME/.vim/colors
-$TMR -a $HOME/.config/rofi
-$TMR -a $HOME/.config/vis/colors
-$TMR -a $HOME/.config/mpv
-$TMR -a $HOME/.config/qutebrowser
-$TMR -a $USER_SCR_DIR
-$TMR -a $USER_SCR_DIR/.unused
-$TMR -a $XDG_TEMPLATES_DIR/css
+themer -x xrs-reload   -a $USER_XRS_DIR
+themer -x i3concat     -a $HOME/.config/i3
+themer -x pb-reload    -a $HOME/.config/polybar
+themer -x reloadinst   -a $HOME/.config/zathura
+themer -x dunst-reload -a $HOME/.config/dunst
+themer -x reload       -a $HOME/.conky
+themer -x genfavicon   -a $USER_REPO_DIR/ghb/themes/hyde/static/css
+themer -a $USR_REPO_DIR/i3rice-arch
+themer -a $HOME/.vim/colors
+themer -a $HOME/.config/rofi
+themer -a $HOME/.config/vis/colors
+themer -a $HOME/.config/mpv
+themer -a $HOME/.config/qutebrowser
+themer -a $USER_SCR_DIR
+themer -a $USER_SCR_DIR/.unused
+themer -a $XDG_TEMPLATES_DIR/css
 i3listen-toggle
-#$TMR -a $HOME/.config/tint2
-#$TMR -a $USER_GIT_DIR/atompackages/packages/rice-syntax/styles
+#themer -a $HOME/.config/tint2
+#themer -a $USER_GIT_DIR/atompackages/packages/rice-syntax/styles

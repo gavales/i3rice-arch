@@ -152,8 +152,8 @@ format-background = ${colors.acc}
 format-foreground = ${colors.bg0}
 format-prefix-foreground = ${colors.bg0}
 label-indicator-background = ${colors.gnt}
-format-padding = 1
-label-indicator-padding = 1
+format-padding = 0
+label-indicator-padding = 0
 label-indicator-margin = 1
 format-prefix-underline    = ${colors.acc}
 label-layout-underline     = ${colors.acc}
@@ -162,7 +162,7 @@ label-indicator-underline  = ${colors.gnt}
 [module/i3bg]
 type = custom/ipc
 hook-0 = pbcat -m i3bg
-format = %{T1}%{T-}<output>
+format = %{T1} %{T-}<output>
 initial = 1
 click-left  = i3bgc show
 click-right = i3bgc blur
@@ -307,7 +307,7 @@ animation-charging-framerate = 500
 
 [module/arrow2]
 type = custom/text
-content = %{T4}   %{T-}
+content = %{T4} %{T-}
 content-foreground = ${colors.acc}
 content-background = ${colors.tr}
  

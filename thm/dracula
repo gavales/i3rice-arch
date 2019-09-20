@@ -1,9 +1,8 @@
 ! vim:ft=perl
 name      dracula
-wallpaper dracula
-tint      $acc
+wallpaper WW_128000000001396909_EN
 bg0       #282A36
-acc       #FF6E67
+acc       $blu
 fg0       #fffff2
 blu       #BD93F9
 grn       #5AF78E

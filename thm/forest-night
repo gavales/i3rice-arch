@@ -1,11 +1,9 @@
 ! vim:ft=perl
 name      forest-night
-wallpaper CantonofVaudSwitzerland
+wallpaper WW_128000000001173149_EN
 fg0       #ffebc3
 bg0       #3c4c55
-xied      colmix 66:$nightred 33:$nightylw
 acc       $nightred
-mixedref  $xied
 red       $nightblu
 grn       $nightgrn
 ylw       $nightylw

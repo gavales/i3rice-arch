@@ -1,11 +1,9 @@
 ! vim:ft=perl
 name      solarized_light
-wallpaper alphabreath
-tint      $bg0
+wallpaper WW_128000000001428569_EN
 fg0       #002b36
 bg0       #fdf6e3
-acc       $defacc
-!acc       #2aa198
+acc       $blu
 red       #dc322f
 grn       #859900
 ylw       #b58900

@@ -9,7 +9,7 @@ p   shell   mkwalscheme %d/%f
 ra  shell   raux
 s   console bash ~/scr/
 v   shell   openvid "%s"
-wb  shell   i3bg -w %f
+wb  shell   i3bg -w %f -b
 wd  shell   i3bg -d %f
-ww  shell   i3bg -w %f -b
-x   shell   extractor "%f"
+ww  shell   i3bg -w %f
+x   shell   extractor %f

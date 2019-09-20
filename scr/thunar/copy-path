@@ -1,4 +1,4 @@
 #!/bin/bash
 
 FLS="${1}"
-xclip -i "$(echo $FLS | sed -e "s/'//g")"
+echo $FLS | sed -e "s/^'//g;s/'$//g;s/'\ '/\n/g" | xsel -i; xsel -o | xsel -i -b
