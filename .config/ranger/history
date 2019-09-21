@@ -1,3 +1,6 @@
+scout -ftsea forest
+shell convert "%f" -resize 64x64 safavicon.png
+shell convert %f -resize 64x64 safavicon.png
 shell 
 rename cv.files
 cd D
@@ -43,8 +46,5 @@ rename qr
 rename quads
 shell ex %f
 shell tar -xJf %f
-rename forest-fog-hill.jpg
-mkdir normal
-mkdir blur
-shell wget https://raw.githubusercontent.com/LukeSmithxyz/voidrice/archi3/.local/bin/tools/getbib
-shell chmod +x %f
+touch 
+shell ~/plt/md/cvl.md MaleSecurityOfficer-HeathrowAirport.md

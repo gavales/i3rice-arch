@@ -1,4 +1,5 @@
 # first letter is x
+cc  shell   compiler %f
 cb  shell   biber %f
 cg  shell   cgroff %f
 cm  shell   cmkd %f
@@ -6,7 +7,7 @@ cn  console makeindex %f -s nomencl.ist -o %f
 cp  shell   clatex %f
 g   shell   gitcommit
 p   shell   mkwalscheme %d/%f
-ra  shell   raux
+r   shell   raux
 s   console bash ~/scr/
 v   shell   openvid "%s"
 wb  shell   i3bg -w %f -b

@@ -10,7 +10,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # >>>> MAIN
-set $font1 %%guifont%%
+set $font1 %%romanfont%%
 set $font2 FontAwesome
 set $font3 monaco
 set $fonts %%size%%

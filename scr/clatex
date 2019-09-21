@@ -20,3 +20,5 @@ ${CPL} -interaction=nonstopmode -shell-escape ${TRG}.tex
 	makeindex ${TRG}.nlo -s nomencl.ist -o ${TRG}.nls
 	${CPL} -interaction=nonstopmode -shell-escape ${TRG}.tex
 }
+
+raux

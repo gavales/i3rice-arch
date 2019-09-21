@@ -1,13 +1,10 @@
 ! vim:ft=perl
-!font       LuxiMono
-!guifont    CMU Typewriter Text
-!gtk-icon   DamaDamas
-!gtk-icon   Numix-Circle
-!gtk-icon   darkine
 name       gruvbox_light
-guifont    Luxi Mono
-polyfont   CMU Typewriter Text
+guifont    $romanfont
 font       CMUTypewriterText
+sansfont   Lucida Sans
+monofont   CMU Typewriter Text
+romanfont  Luxi Mono
 ltimex     1
 ltimey     90
 size       11

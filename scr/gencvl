@@ -3,6 +3,10 @@
 # OA: Gavin Vales
 # CREATED: Mon 22 Jul 19:53:50 BST 2019
 
+CLDIR=$XDG_DOCUMENTS_DIR/mine/cvl
+PLT=$XDG_TEMPLATES_DIR/md/cvl.md
+EDITOR="gvim -f"
+
 help () {
 cat << 'EOB'
                                              ██
@@ -32,24 +36,16 @@ while getopts :n:h opts; do
 	esac
 done
 
-CLDIR=$XDG_DOCUMENTS_DIR/personal/CVL
-PLT=$XDG_TEMPLATES_DIR/tex/coverletter/coverletter.tex
-EDITOR="gvim -f"
-[[ -n $TIT ]] || TIT="$(echo "" | i3menu -c yellow -w 500 -L 0 \
-	-p "Enter title: ")"
+[[ -n $TIT ]] || TIT="$(echo "" | i3menu -c yellow -w 500 -p "Enter title: ")"
 [[ -n $TIT ]] || exit
 
 FLD="$(echo "${TIT}" | sed 's/\ //g')"
-#TIT="$(echo $TIT | sed 's/\ /\\\ /g')"
-echo $FLD
-echo $TIT
-
-[[ ! -f $CLDIR ]] && mkdir $CLDIR
+[[ ! -d $CLDIR ]] && mkdir $CLDIR
 cd $CLDIR
-[[ ! -f $CLDIR ]] && mkdir $FLD
+[[ ! -d $FLD ]] && mkdir $FLD
 cd $FLD
-cp $PLT ${FLD}.tex
-sed -e "s/TITLE/$TIT/g" -i ${FLD}.tex
-#touch maintext.tex
-$EDITOR maintext.tex
-$USER_SCR_DIR/clatex ${FLD}.tex
+cp $PLT ${FLD}.md
+sed -e "s/TITLE/$TIT/g" -i ${FLD}.md
+$EDITOR ${FLD}.md
+compiler ${FLD}.md
+raux

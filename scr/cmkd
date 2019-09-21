@@ -6,51 +6,27 @@ CSDR=$XDG_TEMPLATES_DIR/css
 BBDR=$HOME
 YLDR=$XDG_TEMPLATES_DIR/pandoc
 
-# WHICH BIBLIOGRAPHY FILE
-BIB=$(cat $TRG | sed '/^#bib /!d;s/[^ ]* *//')
+BIB=$(awk '$1 ~ /^#bib$/    {$1="";gsub(/^[ \t]+/, "", $0);print $0}' $TRG )
+YML=$(awk '$1 ~ /^#yaml$/   {$1="";gsub(/^[ \t]+/, "", $0);print $0}' $TRG )
+WTM=$(awk '$1 ~ /^#doctmp$/ {$1="";gsub(/^[ \t]+/, "", $0);print $0}' $TRG )
+WCS=$(awk '$1 ~ /^#css$/    {$1="";gsub(/^[ \t]+/, "", $0);print $0}' $TRG )
+NGN=$(awk '$1 ~ /^#engine$/ {$1="";gsub(/^[ \t]+/, "", $0);print $0}' $TRG )
+
 [[ -z $BIB ]] && BIB="$HOME/global.bib"
-
-# WHICH .yaml TO USE
-YML=$(cat $TRG | sed '/^#yaml /!d;s/[^ ]* *//')
-[[ -z $YML ]] && YML=settings
-FYL="$YLDR/settings.yaml"
-
-# WHICH TEMPLATE FOR WORD DOCUMENTS
-WTM=$(cat $TRG | sed '/^#word_template /!d;s/[^ ]* *//')
+[[ -z $YML ]] && YML=settings ; FYL="$YLDR/${YML}.yaml"
 [[ -z $WTM ]] && WTM=reference
-
-# WHICH CSS FOR .html
-WCS=$(cat $TRG | sed '#cssfile /!d;s/[^ ]* *//')
 [[ -n $WCS ]] && CSS="-c ${CSDR}/${WCS}.css" || CSS="-c ${CSDR}/themer.css"
-
-# WHICH LATEX ENGINE
-NGN=$(cat $TRG | grep '#compiler /!d;s/[^ ]* *//')
-[[ -n $NGN ]] && NGN="--pdf-engine=$NGN" || NGN=""
+[[ -n $NGN ]] && NGN="--pdf-engine=$NGN"     || NGN=""
 
 REF="-F pandoc-crossref --metadata-file ${FYL}"
 CIT="--bibliography ${BIB} -F pandoc-citeproc"
 WTS="--reference-doc ${WTDR}/${WTM}.docx"
 NSC="--number-sections"
 
-latex() {
-	pandoc $REF $CIT $NGN $NSC -o ${TRG:0:-3}.pdf ${TRG}
-	pkill -HUP mupdf
-}
+pdf () { pandoc $REF $CIT $NGN $NSC -o ${TRG:0:-3}.pdf ${TRG} ; }
+word () { pandoc $REF $CIT $WTS -o ${TRG:0:-3}.docx ${TRG} ; }
+html () { pandoc $REF $CIT -s --toc $CSS -o ${TRG:0:-3}.html ${TRG} ; }
+beamer () { pandoc $CIT -t beamer --incremental -o ${TRG:0:-3}.pdf ${TRG} ; }
 
-word() {
-	pandoc $REF $CIT $WTS -o ${TRG:0:-3}.docx ${TRG}
-}
-
-html() {
-	pandoc $REF $CIT -s --toc $CSS -o ${TRG:0:-3}.html ${TRG}
-#	ls *.html | entr $HOME/scr/reload-browser surf &>/dev/null &
-}
-
-beamer() {
-	pandoc $CIT -t beamer --incremental -o ${TRG:0:-3}.pdf ${TRG}
-	pkill -HUP mupdf
-}
-
-output=$(cat $TRG | sed '^/#output /!d;s/[^ ]* *//')
+output=$(cat $TRG | sed '/^#output /!d;s/[^ ]* *//')
 [[ -n $output ]] && $output || html
-

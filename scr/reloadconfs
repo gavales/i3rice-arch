@@ -12,15 +12,15 @@ themer -x reloadinst   -a $HOME/.config/zathura
 themer -x dunst-reload -a $HOME/.config/dunst
 themer -x reload       -a $HOME/.conky
 themer -x genfavicon   -a $USER_REPO_DIR/ghb/themes/hyde/static/css
-themer -a $USR_REPO_DIR/i3rice-arch
+themer -a $USER_REPO_DIR/i3rice-arch
 themer -a $HOME/.vim/colors
 themer -a $HOME/.config/rofi
 themer -a $HOME/.config/vis/colors
 themer -a $HOME/.config/mpv
 themer -a $HOME/.config/qutebrowser
-themer -a $USER_SCR_DIR
 themer -a $USER_SCR_DIR/.unused
 themer -a $XDG_TEMPLATES_DIR/css
+themer -a $XDG_TEMPLATES_DIR/pandoc
 i3listen-toggle
 #themer -a $HOME/.config/tint2
 #themer -a $USER_GIT_DIR/atompackages/packages/rice-syntax/styles

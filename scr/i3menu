@@ -204,6 +204,8 @@ start () {
 menu () {
 	STDIN="$RFDIR/.i3menustdin"
 	cat /dev/stdin > $STDIN
+	STSZ=$(du -k $STDIN | cut -f1)
+	[[ $STSZ == "1" ]] && rm $STDIN && touch $STDIN
 	[[ -n $LNS ]] && ROWS=$LNS || ROWS=$(cat $STDIN | wc -l)
 	cat $STDIN | rofi -dmenu -p "${PROMPT}" $fs -theme _$ORIENTATION -monitor ${MONITOR:7} \
 		-location $LOCATION -lines $ROWS -width $WIDTH -xoffset $XFS -yoffset $YFS \

@@ -1,19 +1,21 @@
 name      i3
 wallpaper WW_128000000001339009_EN
+gtk-icon  Tela-yellow-dark
 acc       #285577
 bg0       #CDCBCD
 fg0       #302f30
 red       #900000
 guifont    Luxi Mono
-polyfont   CMU Typewriter Text
 font       CMUTypewriterText
+sansfont   Lucida Sans
+monofont   CMU Typewriter Text
+romanfont  Luxi Mono
 ltimex     1
 ltimey     90
 size       11
 rxvtsize   12
 rofifsize  12
 gtk        Standard-light
-gtk-icon   Tela-red-dark
 cursor     Bibata_Dark_Red
 conky_loc1 top_left
 conky_loc2 bottom_right

@@ -50,6 +50,8 @@ vnoremap <S-j> :m '>+1<CR>gv=gv
 vnoremap <S-k> :m '<-2<CR>gv=gv
 vnoremap // y/<C-R>"<CR>
 
+nnoremap \ll :!compiler<space><C-r>%<Enter><Enter>
+
 "autocmd FileType python,css,html,vim,json,perl,sh set tabstop=4
 "autocmd FileType python,css,html,vim,json,perl,sh set shiftwidth=4
 "autocmd FileType python,css,html,vim,json,perl,sh set colorcolumn=80
@@ -382,10 +384,6 @@ endif
 
 " //// COMPILING
 
-" COMPLETE
-autocmd Filetype tex map ;C :w<space>!bash<space>~/scr/clatex<space><C-r>
-	\%<Enter><Enter>
-
 " PDFLATEX
 autocmd Filetype tex map ;p :w<space>!pdflatex<space>-interaction=nonstopmode
 	\<space>-shell-escape<space><C-r>%<Enter><Enter>
@@ -517,10 +515,7 @@ autocmd Filetype bib inoremap <Tab>org <Esc>A<Enter>
 	\<Tab>organization<space>=<space>{},<Esc>hi
 
 " >>>> GROFF
-
 au BufNewFile,BufRead *.groff,*.ms set filetype=groff
-autocmd FileType groff nnoremap \c :!bash<space>~/scripts/cgroff<space><C-r>%<Enter><Enter>
-
 " //// SNIPPETS
 
 autocmd FileType groff inoremap ;b <Esc>o.B<space>""<space><++><Enter><++><Esc>0kf"a
@@ -608,10 +603,6 @@ autocmd FileType markdown vnoremap \4n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Esc>
 autocmd FileType markdown vnoremap \5n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Esc>
 autocmd FileType markdown vnoremap \6n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Tab><Esc>
 autocmd FileType markdown vnoremap \7n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Tab><Tab><Esc>
-
-" //// COMPILER
-
-autocmd Filetype markdown map \c :!bash<space>~/scr/cmkd<space><C-r>%<Enter><Enter>
 
 " >>>> R MARKDOWN
 
@@ -713,7 +704,7 @@ autocmd Filetype markdown map \vh :!bash<space>~/scr/openhtml<space><C-r>%<Enter
 
 " >>>> PYTHON FILES
 
-autocmd Filetype python map \ll :w<space>!python<Enter>
+autocmd Filetype python nnoremap \ll :w<space>!python<Enter>
 autocmd FileType python set noexpandtab smartindent tabstop=4 shiftwidth=4
 	\ cinwords=if,elif,else,for,while,try,except,finally,def,class
 

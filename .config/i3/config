@@ -194,6 +194,8 @@ bindsym Print       $exn screenshot
 
 # //// Numbers
 
+$mod+grave          $exn gencvl
+
 $mod+1              workspace $ws1
 $mod+Shift+1        move container to workspace $ws1; workspace $ws1
 

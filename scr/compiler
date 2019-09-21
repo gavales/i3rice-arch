@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: $(date)
+#source $HOME/.config/user-dirs.dirs
+
+SRC=${1}
+EXT=${SRC##*.}
+
+case $EXT in
+	tex) clatex "$SRC" ;;
+	md)  cmkd   "$SRC" ;;
+	ms)  cgroff "$SRC" ;;
+esac
