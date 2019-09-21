@@ -89,9 +89,9 @@ handle_image() {
     local mimetype="${1}"
     case "${mimetype}" in
         # SVG
-        # image/svg+xml)
-        #     convert "${FILE_PATH}" "${IMAGE_CACHE_PATH}" && exit 6
-        #     exit 1;;
+        image/svg+xml)
+            convert "${FILE_PATH}" "${IMAGE_CACHE_PATH}" && exit 6
+            exit 1;;
 
         # Image
         image/*)
@@ -107,21 +107,43 @@ handle_image() {
             # `w3mimgdisplay` will be called for all images (unless overriden as above),
             # but might fail for unsupported types.
             exit 7;;
-
+        # ePub, MOBI, FB2 (using Calibre)
+        application/epub+zip|application/x-mobipocket-ebook|application/x-fictionbook+xml)
+            ebook-meta --get-cover="${IMAGE_CACHE_PATH}" -- "${FILE_PATH}" > /dev/null \
+                && exit 6 || exit 1;;
         # Video
-        # video/*)
-        #     # Thumbnail
-        #     ffmpegthumbnailer -i "${FILE_PATH}" -o "${IMAGE_CACHE_PATH}" -s 0 && exit 6
-        #     exit 1;;
+        video/*)
+            # Thumbnail
+            ffmpegthumbnailer -i "${FILE_PATH}" -o "${IMAGE_CACHE_PATH}" -s 0 && exit 6
+            exit 1;;
         # PDF
-        # application/pdf)
-        #     pdftoppm -f 1 -l 1 \
-        #              -scale-to-x 1920 \
-        #              -scale-to-y -1 \
-        #              -singlefile \
-        #              -jpeg -tiffcompression jpeg \
-        #              -- "${FILE_PATH}" "${IMAGE_CACHE_PATH%.*}" \
-        #         && exit 6 || exit 1;;
+        application/pdf)
+            pdftoppm -f 1 -l 1 \
+                     -scale-to-x 1920 \
+                     -scale-to-y -1 \
+                     -singlefile \
+                     -jpeg -tiffcompression jpeg \
+                     -- "${FILE_PATH}" "${IMAGE_CACHE_PATH%.*}" \
+                && exit 6 || exit 1;;
+        application/font*|application/*opentype)
+            preview_png="/tmp/$(basename "${IMAGE_CACHE_PATH%.*}").png"
+            if fontimage -o "${preview_png}" \
+                         --pixelsize "120" \
+                         --fontname \
+                         --pixelsize "80" \
+                         --text "  ABCDEFGHIJKLMNOPQRSTUVWXYZ  " \
+                         --text "  abcdefghijklmnopqrstuvwxyz  " \
+                         --text "  0123456789.:,;(*!?') ff fl fi ffi ffl  " \
+                         --text "  The quick brown fox jumps over the lazy dog.  " \
+                         "${FILE_PATH}";
+            then
+                convert -- "${preview_png}" "${IMAGE_CACHE_PATH}" \
+                    && rm "${preview_png}" \
+                    && exit 6
+            else
+                exit 1
+            fi
+            ;;
     esac
 }
 
