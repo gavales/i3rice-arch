@@ -9,48 +9,67 @@
 
 " >>>> SETTINGS
 " //// GENERAL
-
 filetype plugin on
-"execute pathogen#infect()
 syntax enable
 set encoding=utf-8
-colorscheme koehler
-set number
-set relativenumber
-set hls
-set is
-set wrap
-set linebreak
-set textwidth=0
-set wrapmargin=0
+colorscheme themer
+"set background=dark
+"colorscheme koehler
+set number relativenumber
+set hls is wrap linebreak
+set textwidth=0 wrapmargin=0
 set title titlestring=%f titlelen=70
 set mouse=a
-vnoremap <C-c> "+y
-map <C-p> "+P
-set smartindent
-set tabstop=2
-set shiftwidth=2
+set smartindent tabstop=2 shiftwidth=2
 set incsearch
-set cursorline
-set colorcolumn=81
-"set conceallevel=2
-"set concealcursor=nic
-set list
-set listchars=tab:│\ 
-autocmd CursorHold,CursorHoldI * update
-autocmd CursorHold,CursorHoldI * redraw!
+set cursorline colorcolumn=81
+"set conceallevel=2 concealcursor=nic
+set list listchars=tab:│\ ,trail:+,precedes:←,extends:→
 set noshowmode
 set noruler
 set noshowcmd
 set cmdheight=1
-map <Tab><Tab> <Esc>/>>>><Enter>
-inoremap \ph <++>
+set splitbelow splitright
+set t_Co=16
 
+" //// GLOBAL MAPS
+map <Tab><Tab> <Esc>/>>>><Enter>
+map <C-p>      "+P
+map <C-Up>     :res<space>+5<Enter>
+map <C-Down>   :res<space>-5<Enter>
+map <C-Left>   :vertical<space>resize<space>-5<Enter>
+map <C-Right>  :vertical<space>resize<space>+5<Enter>
+map <F10>      :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+nnoremap \ll   :!compiler<space><C-r>%<Enter><Enter>
+nnoremap <C-T> :tabnew<return>
+nnoremap <C-W> :tabclose<return>
+nnoremap <C-H> :tabprevious<return>
+nnoremap <C-L> :tabNext<return>
+
+inoremap \ph   <++>
+inoremap ()    ()<Esc>F)i
+inoremap []    []<++><Esc>F]i
+inoremap {}    {}<++><Esc>F}i
+
+vnoremap <C-c> "+y
 vnoremap <S-j> :m '>+1<CR>gv=gv
 vnoremap <S-k> :m '<-2<CR>gv=gv
-vnoremap // y/<C-R>"<CR>
-
-nnoremap \ll :!compiler<space><C-r>%<Enter><Enter>
+vnoremap //    y/<C-R>"<CR>
+vnoremap \#    :'<,'>norm 0i#<Enter>
+vnoremap \d#   :'<,'>norm 0x<Enter>
+vnoremap \%    :'<,'>norm 0i%<Enter>
+vnoremap \d%   :'<,'>norm 0x<Enter>
+vnoremap \!    :'<,'>norm 0i!<Enter>
+vnoremap \d!   :'<,'>norm 0x<Enter>
+vnoremap \"    :'<,'>norm 0i"<Enter>
+vnoremap \d"   :'<,'>norm 0x<Enter>
+vnoremap \/    :'<,'>norm 0i//<Enter>
+vnoremap \d/   :'<,'>norm 0xx<Enter>
+vnoremap \;    :'<,'>norm 0i;<Enter>
+vnoremap \d;   :'<,'>norm 0x<Enter>
 
 "autocmd FileType python,css,html,vim,json,perl,sh set tabstop=4
 "autocmd FileType python,css,html,vim,json,perl,sh set shiftwidth=4
@@ -60,6 +79,8 @@ nnoremap \ll :!compiler<space><C-r>%<Enter><Enter>
 "autocmd FileType python call matchadd('ColorColumn', '\%81v', 100)
 
 " //// CURSOR
+autocmd CursorHold,CursorHoldI * update
+autocmd CursorHold,CursorHoldI * redraw!
 let &t_SI = "\<esc>[5 q"
 let &t_SR = "\<esc>[3 q"
 let &t_EI = "\<esc>[2 q"
@@ -69,107 +90,6 @@ if has("gui_running")
 	so ~/.guivimrc
 endif
 
-" //// CHANGE HIGHLIGHT COLOURS
-
-set t_Co=16
-
-map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-
-hi Normal			ctermfg=white		ctermbg=none
-hi Title			cterm=bold			ctermfg=white ctermbg=none
-hi LineNr			cterm=none			ctermfg=blue ctermbg=black
-hi CursorLineNr		cterm=bold			ctermfg=blue ctermbg=DarkGray
-hi SpecialKey		ctermfg=DarkGray	ctermbg=none
-hi ModeMsg			cterm=bold			ctermfg=black	ctermbg=blue
-hi Cursor			ctermfg=black		ctermbg=red
-hi ColorColumn		cterm=none			ctermbg=DarkGray
-hi CursorLine		cterm=none			ctermbg=DarkGray
-hi Visual			ctermfg=Gray		ctermbg=white
-hi VisualNOS		ctermfg=Gray		ctermbg=white
-
-hi Type			cterm=bold		ctermfg=white	ctermbg=black
-hi Identifier	cterm=italic	ctermfg=yellow	ctermbg=black
-hi Comment		cterm=italic	ctermfg=Gray	ctermbg=black
-hi Folded		cterm=italic	ctermfg=white	ctermbg=black
-hi Constant		cterm=italic	ctermfg=white	ctermbg=black
-hi Special		cterm=bold		ctermfg=white	ctermbg=black
-hi Statement	cterm=bold		ctermfg=white	ctermbg=black
-hi PreProc		cterm=bold		ctermfg=blue	ctermbg=black
-hi MatchParen	cterm=bold		ctermfg=yellow	ctermbg=black
-hi Search		cterm=none		ctermfg=black	ctermbg=yellow
-hi Error		cterm=none		ctermfg=red		ctermbg=black
-hi EndOfBuffer	cterm=none		ctermfg=black	ctermbg=black
-
-hi SpellBad		cterm=underline,bold ctermfg=red		ctermbg=none
-hi SpellCap		cterm=underline,bold ctermfg=blue		ctermbg=none
-hi SpellRare	cterm=underline,bold ctermfg=magenta	ctermbg=none
-hi SpellLocal	cterm=underline,bold ctermfg=cyan		ctermbg=none
-
-hi StatusLine		ctermfg=black	ctermbg=blue
-hi StatusLineNC		ctermfg=black	ctermbg=blue
-hi StatusLineTerm	ctermfg=black	ctermbg=blue
-hi StatusLineTermNC	ctermfg=black	ctermbg=blue
-hi ToolbarLine		ctermfg=black	ctermbg=blue
-hi ToolbarButton	ctermfg=black	ctermbg=blue
-
-hi Pmenu		cterm=none ctermfg=blue		ctermbg=white
-hi PmenuSel		cterm=none ctermfg=black	ctermbg=blue
-hi PmenuSbar	cterm=none ctermfg=blue		ctermbg=black
-hi PmenuThumb	cterm=none ctermfg=green	ctermbg=green
-hi TabLine		cterm=none ctermfg=blue		ctermbg=black
-hi TabLineSel	cterm=none ctermfg=black	ctermbg=blue
-hi TabLineFill	cterm=none ctermfg=blue		ctermbg=black
-
-hi usrred		ctermbg=red		ctermfg=black
-hi usrylw		ctermbg=yellow	ctermfg=black
-hi usrgrn		ctermbg=green	ctermfg=black
-hi usrgry		ctermbg=grey	ctermfg=black
-hi usrblu		ctermbg=blue	ctermfg=black
-hi usrgnt		ctermbg=magenta	ctermfg=black
-
-"hi NonText        Normal
-"hi Directory      Normal
-"hi ErrorMsg       Normal
-"hi IncSearch      Normal
-"hi MoreMsg        Normal
-"hi Question       Normal
-"hi VertSplit      Normal
-"hi WarningMsg     Normal
-"hi WildMenu       Normal
-"hi FoldColumn     Normal
-"hi DiffAdd        Normal
-"hi DiffChange     Normal
-"hi DiffDelete     Normal
-"hi DiffText       Normal
-"hi SignColumn     Normal
-"hi Conceal        Normal
-"hi Underlined     Normal
-"hi Ignore         Normal
-"hi Todo           Normal
-
-" //// LAYOUT
-
-map <C-Up> :res<space>+5<Enter>
-map <C-Down> :res<space>-5<Enter>
-map <C-Left> :vertical<space>resize<space>-5<Enter>
-map <C-Right> :vertical<space>resize<space>+5<Enter>
-
-noremap <C-T> :tabnew<return>
-noremap <C-W> :tabclose<return>
-noremap <C-H> :tabprevious<return>
-noremap <C-L> :tabNext<return>
-
-set splitbelow
-set splitright
-
-" //// BRACKETS
-
-inoremap () ()<++><Esc>F)i
-inoremap [] []<++><Esc>F]i
-inoremap {} {}<++><Esc>F}i
-
 " //// CALENDAR
 
 autocmd Filetype calendar set laststatus=0
@@ -178,21 +98,6 @@ let g:calendar_frame = 'default'
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
 let g:calendar_modifiable = 1
-
-" //// COMMENT/UNCOMMENT
-
-vnoremap \# :'<,'>norm 0i#<Enter>
-vnoremap \d# :'<,'>norm 0x<Enter>
-vnoremap \% :'<,'>norm 0i%<Enter>
-vnoremap \d% :'<,'>norm 0x<Enter>
-vnoremap \! :'<,'>norm 0i!<Enter>
-vnoremap \d! :'<,'>norm 0x<Enter>
-vnoremap \" :'<,'>norm 0i"<Enter>
-vnoremap \d" :'<,'>norm 0x<Enter>
-vnoremap \/ :'<,'>norm 0i//<Enter>
-vnoremap \d/ :'<,'>norm 0xx<Enter>
-vnoremap \; :'<,'>norm 0i;<Enter>
-vnoremap \d; :'<,'>norm 0x<Enter>
 
 " >>>> GOYO
 
@@ -286,26 +191,13 @@ function! StatuslineGit()
 endfunction
 
 let g:currentmode={
-	\ 'n'	  : 'N ',
-	\ 'no'	 : 'N·Operator Pending ',
-	\ 'v'	  : 'V ',
-	\ 'V'	  : 'V·Line ',
-	\ '\<C-V>' : 'V·Block ',
-	\ 's'	  : 'Select ',
-	\ 'S'	  : 'S·Line ',
-	\ '\<C-S>' : 'S·Block ',
-	\ 'i'	  : 'I ',
-	\ 'R'	  : 'R ',
-	\ 'Rv'	 : 'V·Replace ',
-	\ 'c'	  : 'Command ',
-	\ 'cv'	 : 'Vim Ex ',
-	\ 'ce'	 : 'Ex ',
-	\ 'r'	  : 'Prompt ',
-	\ 'rm'	 : 'More ',
-	\ 'r?'	 : 'Confirm ',
-	\ '!'	  : 'Shell ',
-	\ 't'	  : 'Terminal '
-	\}
+	\ 'n'      : 'N ',       'no' : 'N·Operator Pending ',
+	\ 'v'      : 'V ',       'V'  : 'V·Line ',       '\<C-V>' : 'V·Block ',
+	\ 's'      : 'Select ',  'S'  : 'S·Line ',       '\<C-S>' : 'S·Block ',
+	\ 'i'      : 'I ',       'R'  : 'R ',            'Rv'     : 'V·Replace ',
+	\ 'c'      : 'Command ', 'cv' : 'Vim Ex ',       'ce'     : 'Ex ',
+	\ 'r'      : 'Prompt ',  'rm' : 'More ',         'r?'     : 'Confirm ',
+	\ '!'      : 'Shell ',   't'  : 'Terminal '}
 
 function! ModeCurrent() abort
 	let l:modecurrent = mode()
@@ -320,26 +212,21 @@ endfunction
 " //// ACTUAL
 
 set statusline=
-set statusline+=%#usrblu#
-set statusline+=\ 
+set statusline+=%#usrblu#\ 
 set statusline+=\ %{ModeCurrent()}
-set statusline+=\ %f
-set statusline+=\ 
+set statusline+=\ %f\ 
 set statusline+=\ %{ReadOnly()}\ %m\ %w\ 
 set statusline+=%=
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
-set statusline+=\[%{&fileformat}\]
-set statusline+=\ 
-set statusline+=\ %Y
-set statusline+=\ 
+set statusline+=\[%{&fileformat}\]\ 
+set statusline+=\ %Y\ 
 set statusline+=\ %-3(%{FileSize()}%)
 set statusline+=\ %p%%
 set statusline+=\ L:
 set statusline+=%l/
 set statusline+=%L
 set statusline+=\ C:
-set statusline+=%c
-set statusline+=\ 
+set statusline+=%c\ 
 
 " >>>> LATEX
 " //// LATEX-SUITE
@@ -349,17 +236,13 @@ autocmd FileType tex set smartindent
 if has("win32")
 	let g:Tex_DefaultTargetFormat = 'pdf'
 	let g:Tex_CompileRule_pdf = 'xelatex -interaction=nonstopmode -shell-escape $*'
-	"let g:Tex_ViewRule_pdf = 'C:\Program Files\MuPDF\mupdf.exe'
+	"MuPDF: 'C:\Program Files\MuPDF\mupdf.exe'
 	let g:Tex_ViewRule_pdf = 'C:\Users\test\AppData\Local\Apps\Evince-2.32.0.145\bin\evince.exe'
 	let g:Tex_MultipleCompileFormats='dvi,pdf,bibtex,pdf'
 	let g:Tex_BibtexFlavor = 'biber'
-
 	"let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
-	"let g:Tex_CompileRule_dvi = 'latex --interaction=nonstopmode $*'
 	"let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
-	"let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
 
-	"filetype plugin on "invoke latex-suite when opening tex file
 	set shellslash "for windows
 	set grepprg=grep\ -nH\ $* "set grep to always generate filename
 	let g:tex_flavor='latex' "invoke tex, not plaintex, for empty tex file
@@ -370,42 +253,30 @@ else
 	let g:Tex_ViewRule_pdf = '/usr/bin/zathura'
 	let g:Tex_MultipleCompileFormats='pdf,dvi'
 	let g:Tex_BibtexFlavor = 'biber'
-
 	"let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
-	"let g:Tex_CompileRule_dvi = 'latex --interaction=nonstopmode $*'
 	"let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
-	"let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
 
-	"filetype plugin on "invoke latex-suite when opening tex file
 	set grepprg=grep\ -nH\ $* "set grep to always generate filename
 	let g:tex_flavor='latex' "invoke tex, not plaintex, for empty tex file
 	set iskeyword+=: "press <C-n> to cycle through \label's
 endif
 
 " //// COMPILING
-
-" PDFLATEX
 autocmd Filetype tex map ;p :w<space>!pdflatex<space>-interaction=nonstopmode
 	\<space>-shell-escape<space><C-r>%<Enter><Enter>
-
-" XELATEX
 autocmd Filetype tex map ;x :w<space>!xelatex<space>-interaction=nonstopmode
 	\<space>-shell-escape<space><C-r>%<Enter><Enter>
-
-" BIBER
 autocmd Filetype tex map ;b :!biber<space><C-r>%<BS><BS><BS>bcf<Enter><Enter>
-
-" MAKEINDEX
 autocmd Filetype tex map ;n :!makeindex<space><C-r>%<BS><BS><BS>
 	\nlo<space>-s<space>nomencl.ist<space>-o<space><C-r>%<BS><BS><BS>
 	\nls<Enter><Enter>
 
 " //// (LUKE SMITH'S) SNIPPETS
 
-autocmd FileType tex inoremap $$ $$<++><Esc>F$i
-autocmd FileType tex inoremap <Tab>( \left(\right)<++><Esc>T(i
-autocmd FileType tex inoremap <Tab>{{ \left\{\right\}<++><Esc>T{i
-autocmd FileType tex inoremap <Tab>[ \left[\right]<++><Esc>T[i
+autocmd FileType tex inoremap $$       $$<++><Esc>F$i
+autocmd FileType tex inoremap <Tab>(   \left(\right)<++><Esc>T(i
+autocmd FileType tex inoremap <Tab>{{  \left\{\right\}<++><Esc>T{i
+autocmd FileType tex inoremap <Tab>[   \left[\right]<++><Esc>T[i
 autocmd FileType tex inoremap <Tab>bar \left\right<++><Esc>F\i
 
 autocmd FileType tex inoremap <Tab>bf \textbf{}<++><Esc>T{i
@@ -516,29 +387,26 @@ autocmd Filetype bib inoremap <Tab>org <Esc>A<Enter>
 
 " >>>> GROFF
 au BufNewFile,BufRead *.groff,*.ms set filetype=groff
-" //// SNIPPETS
 
-autocmd FileType groff inoremap ;b <Esc>o.B<space>""<space><++><Enter><++><Esc>0kf"a
-autocmd FileType groff inoremap ;c <Esc>o.[<Enter><Enter>.]<Enter><++><Esc>02ki
-autocmd FileType groff inoremap ;d <Esc>o.IP<space><space>2<Enter><++><Esc>0kt2i
+autocmd FileType groff inoremap ;b  <Esc>o.B<space>""<space><++><Enter><++><Esc>0kf"a
+autocmd FileType groff inoremap ;c  <Esc>o.[<Enter><Enter>.]<Enter><++><Esc>02ki
+autocmd FileType groff inoremap ;d  <Esc>o.IP<space><space>2<Enter><++><Esc>0kt2i
 autocmd FileType groff inoremap ;e0 <Esc>o.nr<space>step<space>0<space>1<Enter>
 	\.IP<space>\n+[step]<Enter>
 autocmd FileType groff inoremap ;ei <Esc>o.IP<space>\n+[step]<Enter>
-autocmd FileType groff inoremap ;i <Esc>o.I<space>""<space><++><Enter><++><Esc>0kf"a
-autocmd FileType groff inoremap ;l <Esc>o.IP<space>\[bu]<space>2<Enter>
-autocmd FileType groff inoremap ;n <Esc>o.RS<Enter><Enter>.RE<Enter><++><Esc>02ki
+autocmd FileType groff inoremap ;i  <Esc>o.I<space>""<space><++><Enter><++><Esc>0kf"a
+autocmd FileType groff inoremap ;l  <Esc>o.IP<space>\[bu]<space>2<Enter>
+autocmd FileType groff inoremap ;n  <Esc>o.RS<Enter><Enter>.RE<Enter><++><Esc>02ki
 autocmd FileType groff inoremap ;s0 <Esc>o.SH<Enter><Enter>.PP<Enter><++><Esc>02ki
 autocmd FileType groff inoremap ;s1 <Esc>o.NH<Enter><Enter>.PP<Enter><++><Esc>02ki
 autocmd FileType groff inoremap ;s2 <Esc>o.NH<space>2<Enter><Enter>.PP<Enter><++><Esc>02ki
 autocmd FileType groff inoremap ;s3 <Esc>o.NH<space>3<Enter><Enter>.PP<Enter><++><Esc>02ki
 autocmd FileType groff inoremap ;s4 <Esc>o.NH<space>4<Enter><Enter>.PP<Enter><++><Esc>02ki
-autocmd FileType groff inoremap ;u <Esc>o.UL<space>""<space><++><Enter><++><Esc>0kf"a
-autocmd FileType groff inoremap ;x <Esc>o.BX<space>""<space><++><Enter><++><Esc>0kf"a
+autocmd FileType groff inoremap ;u  <Esc>o.UL<space>""<space><++><Enter><++><Esc>0kf"a
+autocmd FileType groff inoremap ;x  <Esc>o.BX<space>""<space><++><Enter><++><Esc>0kf"a
 autocmd FileType groff inoremap <Tab><Enter> <Esc>o.PP<Enter>
 
 " >>>> MARKDOWN
-" //// MACROS
-
 autocmd FileType markdown inoremap 1h <Esc>A<Enter><Enter>#<space>
 autocmd FileType markdown inoremap 2h <Esc>A<Enter><Enter>##<space>
 autocmd FileType markdown inoremap 3h <Esc>A<Enter><Enter>###<space>
@@ -677,40 +545,21 @@ autocmd FileType sh inoremap fun<Tab> * () {
 autocmd FileType sh inoremap for<Tab> for i in *; do
 	\<Enter><++>
 	\<Enter><BS>done<Esc>02kf*xi
-autocmd FileType sh inoremap col<Tab> <Enter>
-	\bkd=$(xrdb -query <bar> grep '*color0' <bar> awk '{print $NF}')
-	\<Enter>bkl=$(xrdb -query <bar> grep '*color8' <bar> awk '{print $NF}')
-	\<Enter>grn=$(xrdb -query <bar> grep '*color2' <bar> awk '{print $NF}')
-	\<Enter>ylw=$(xrdb -query <bar> grep '*color3' <bar> awk '{print $NF}')
-	\<Enter>red=$(xrdb -query <bar> grep '*color9' <bar> awk '{print $NF}')
-	\<Enter>wtd=$(xrdb -query <bar> grep '*color7' <bar> awk '{print $NF}')
-	\<Enter>wtl=$(xrdb -query <bar> grep '*color15' <bar> awk '{print $NF}')
-	\<Enter>blu=$(xrdb -query <bar> grep '*color4' <bar> awk '{print $NF}')
-	\<Enter>gnt=$(xrdb -query <bar> grep '*color5' <bar> awk '{print $NF}')
-	\<Enter>cyn=$(xrdb -query <bar> grep '*color6' <bar> awk '{print $NF}')
-	\<Enter>
 
+" >>>> OPENERS
 
-" >>>> VIEW PDF
-
-autocmd FileType tex,rmd map ;vp :silent<space>!zathura<space>
+autocmd FileType tex,rmd        map ;vp :silent<space>!zathura<space>
 	\<C-r>%<BS><BS><BS>pdf<space>&<Enter>
 autocmd FileType markdown,groff map ;vp :silent<space>!zathura<space>
 	\<C-r>%<BS><BS>pdf<space>&<Enter>
-
-" >>>> VIEW HTML
-
-autocmd Filetype markdown map \vh :!bash<space>~/scr/openhtml<space><C-r>%<Enter><Enter>
+autocmd Filetype markdown       map ;vh :!openhtml<space><C-r>%<Enter><Enter>
 
 " >>>> PYTHON FILES
-
 autocmd Filetype python nnoremap \ll :w<space>!python<Enter>
 autocmd FileType python set noexpandtab smartindent tabstop=4 shiftwidth=4
 	\ cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 " >>>> PDF WORDCOUNT
-
 autocmd Filetype tex map \wc :!pdftotext <C-r>%<BS><BS><BS><BS>.pdf -  <bar> wc -w<Enter>
 autocmd Filetype rmd map \wc :!pdftotext <C-r>%<BS><BS><BS><BS>.pdf -  <bar> wc -w<Enter>
 autocmd Filetype markdown map \wc :!pdftotext <C-r>%<BS><BS><BS>.pdf - <bar> wc -w<Enter>
-

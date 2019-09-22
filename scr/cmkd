@@ -23,10 +23,13 @@ CIT="--bibliography ${BIB} -F pandoc-citeproc"
 WTS="--reference-doc ${WTDR}/${WTM}.docx"
 NSC="--number-sections"
 
-pdf () { pandoc $REF $CIT $NGN $NSC -o ${TRG:0:-3}.pdf ${TRG} ; }
-word () { pandoc $REF $CIT $WTS -o ${TRG:0:-3}.docx ${TRG} ; }
-html () { pandoc $REF $CIT -s --toc $CSS -o ${TRG:0:-3}.html ${TRG} ; }
-beamer () { pandoc $CIT -t beamer --incremental -o ${TRG:0:-3}.pdf ${TRG} ; }
+pdf () { pandoc $REF $CIT $NGN $NSC -o ${TRG%.*}.pdf ${TRG} ; }
+word () { pandoc $REF $CIT $WTS -o ${TRG%.*}.docx ${TRG} ; }
+html () { pandoc $REF $CIT -s --toc $CSS -o ${TRG%.*}.html ${TRG} ; }
+beamer () { pandoc $CIT -t beamer --incremental -o ${TRG%.*}_pres.pdf ${TRG} ; }
 
-output=$(cat $TRG | sed '/^#output /!d;s/[^ ]* *//')
-[[ -n $output ]] && $output || html
+for i in $(awk '$1 ~ /^#output$/ {$1="";gsub(/^[ \t]+/, "", $0);print $0}' $TRG ); do
+	$i
+done
+#output=$(awk '$1 ~ /^#output$/ {$1="";gsub(/^[ \t]+/, "", $0);print $0}' $TRG )
+#[[ -n $output ]] && $output || html

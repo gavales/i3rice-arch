@@ -1,10 +1,15 @@
 name      i3
-wallpaper WW_128000000001339009_EN
+wallpaper PenedodoGuinchoLisbonPortugal
 gtk-icon  Tela-yellow-dark
 acc       #285577
 bg0       #CDCBCD
 fg0       #302f30
 red       #900000
+ylw       #904800
+blu       #004890
+grn       #009048
+cyn       #009090
+gnt       #900048
 guifont    Luxi Mono
 font       CMUTypewriterText
 sansfont   Lucida Sans
@@ -19,11 +24,6 @@ gtk        Standard-light
 cursor     Bibata_Dark_Red
 conky_loc1 top_left
 conky_loc2 bottom_right
-grn        #98971a
-ylw        #d79921
-gnt        #b16286
-blu        #458588
-cyn        #689d6a
 orange     #d65d0e
 acf       #2c4253
 acb       #7a90a2
@@ -47,11 +47,11 @@ bg1RGB    185, 183, 185
 bg2RGB    165, 163, 165
 bg3RGB    145, 143, 145
 redRGB    144, 0, 0
-grnRGB    152, 151, 26
-ylwRGB    215, 153, 33
-gntRGB    177, 98, 134
-bluRGB    69, 133, 136
-cynRGB    104, 157, 106
+ylwRGB    144, 72, 0
+bluRGB    0, 72, 144
+grnRGB    0, 144, 72
+cynRGB    0, 144, 144
+gntRGB    144, 0, 72
 orangeRGB    214, 93, 14
 acfRGB    44, 66, 83
 acbRGB    122, 144, 162

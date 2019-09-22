@@ -4,56 +4,7 @@ set guioptions-=m "remove menu bar
 set guioptions-=T "remove toolbar
 set guioptions-=r "remove right-hand scroll bar
 set guioptions-=L "remove left-hand scroll bar
-colorscheme mine
+"colorscheme off
 set linespace=0
 "set lines=999 columns=999
 "au GUIEnter * simalt ~x
-
-hi Normal guifg=%%fg0%% guibg=%%bg0%%
-hi Title gui=bold guifg=%%fg0%% guibg=%%bg0%%
-hi StatusLineTerm guifg=%%bg0%% guibg=%%grn%%
-hi StatusLineTermNC guifg=%%fg0%% guibg=%%grn%%
-hi StatusLine guifg=%%bg0%% guibg=%%acc%%
-hi StatusLineNC guifg=%%bg0%% guibg=%%acc%%
-hi StatusLineTerm guifg=%%bg0%% guibg=%%acc%%
-hi StatusLineTermNC guifg=%%bg0%% guibg=%%acc%%
-hi ToolbarLine guifg=%%bg0%% guibg=%%acc%%
-hi ToolbarButton guifg=%%bg0%% guibg=%%acc%%
-hi LineNr gui=none guifg=%%acc%% guibg=%%bg0%%
-hi CursorLineNr gui=bold guifg=%%acc%% guibg=%%bg1%%
-hi SpecialKey guifg=%%bg1%% guibg=%%bg0%%
-hi ModeMsg gui=bold guifg=%%fg0%%
-hi Cursor guifg=%%bg0%% guibg=%%red%%
-hi ColorColumn guifg=%%bg0%% guibg=%%bg1%%
-hi CursorLine gui=none guibg=%%bg1%%
-hi Visual guifg=%%fg0%% guibg=%%acb%%
-hi VisualNOS guifg=%%fg0%% guibg=%%acb%%
-hi Type gui=bold guifg=%%fg0%% guibg=%%bg0%%
-hi Identifier gui=italic guifg=%%ylw%% guibg=%%bg0%%
-hi Comment gui=italic guifg=%%acb%% guibg=%%bg0%%
-hi Folded gui=italic guifg=%%acb%% guibg=%%bg0%%
-hi Constant gui=italic guifg=%%fg0%% guibg=%%bg0%%
-hi Special gui=bold guifg=%%fg0%% guibg=%%bg0%%
-hi Statement gui=bold guifg=%%fg0%% guibg=%%bg0%%
-hi PreProc gui=none guifg=%%acc%% guibg=%%bg0%%
-hi MatchParen gui=bold guifg=%%ylw%% guibg=%%bg0%%
-hi Search gui=none guifg=%%bg0%% guibg=%%ylw%%
-hi Error gui=none guifg=%%red%% guibg=%%bg0%%
-hi EndOfBuffer gui=none guifg=%%bg0%% guibg=%%bg0%%
-hi SpellBad gui=underline,bold guifg=%%red%% guibg=%%bg0%%
-hi SpellCap gui=underline,bold guifg=%%acc%% guibg=%%bg0%%
-hi SpellRare gui=underline,bold guifg=%%gnt%% guibg=%%bg0%%
-hi SpellLocal gui=underline,bold guifg=%%cyn%% guibg=%%bg0%%
-hi Pmenu gui=none guifg=%%acc%% guibg=%%fg0%%
-hi PmenuSel gui=none guifg=%%bg0%% guibg=%%acc%%
-hi PmenuSbar gui=none guifg=%%acc%% guibg=%%bg0%%
-hi PmenuThumb gui=none guifg=%%grn%% guibg=%%grn%%
-hi TabLine gui=none guifg=%%acc%% guibg=%%bg0%%
-hi TabLineSel gui=none guifg=%%bg0%% guibg=%%acc%%
-hi TabLineFill gui=none guifg=%%acc%% guibg=%%bg0%%
-hi usrred guibg=%%red%% guifg=%%bg0%%
-hi usrylw guibg=%%ylw%% guifg=%%bg0%%
-hi usrgrn guibg=%%grn%% guifg=%%bg0%%
-hi usrgry guibg=%%bg1%% guifg=%%bg0%%
-hi usrblu guibg=%%acc%% guifg=%%bg0%%
-hi usrgnt guibg=%%gnt%% guifg=%%bg0%%

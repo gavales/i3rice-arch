@@ -15,11 +15,11 @@ bg0 = #CDCBCD
 acb = #7a90a2
 acf = #2c4253
 fg0 = #302f30
-ylw = #d79921
-gnt = #b16286
+ylw = #904800
+gnt = #900048
 red = #900000
-grn = #98971a
-cyn = #689d6a
+grn = #009048
+cyn = #009090
 
 [settings]
 screenchange-reload = true

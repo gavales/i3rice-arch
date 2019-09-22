@@ -1,13 +1,13 @@
               <b><big>i3</big></b>
-<span background="#285577">   </span><span foreground="#302f30" background="#CDCBCD"> acc #285577 </span>	wallpaper WW_128000000001339009_EN
+<span background="#285577">   </span><span foreground="#302f30" background="#CDCBCD"> acc #285577 </span>	wallpaper PenedodoGuinchoLisbonPortugal
 <span background="#CDCBCD">   </span><span foreground="#302f30" background="#CDCBCD"> bg0 #CDCBCD </span>	gtk-icon  Tela-yellow-dark
 <span background="#302f30">   </span><span foreground="#302f30" background="#CDCBCD"> fg0 #302f30 </span>	guifont    Luxi Mono
 <span background="#900000">   </span><span foreground="#302f30" background="#CDCBCD"> red #900000 </span>	font       CMUTypewriterText
-<span background="#98971a">   </span><span foreground="#302f30" background="#CDCBCD"> grn #98971a </span>	sansfont   Lucida Sans
-<span background="#d79921">   </span><span foreground="#302f30" background="#CDCBCD"> ylw #d79921 </span>	monofont   CMU Typewriter Text
-<span background="#b16286">   </span><span foreground="#302f30" background="#CDCBCD"> gnt #b16286 </span>	romanfont  Luxi Mono
-<span background="#458588">   </span><span foreground="#302f30" background="#CDCBCD"> blu #458588 </span>	ltimex     1
-<span background="#689d6a">   </span><span foreground="#302f30" background="#CDCBCD"> cyn #689d6a </span>	ltimey     90
+<span background="#904800">   </span><span foreground="#302f30" background="#CDCBCD"> ylw #904800 </span>	sansfont   Lucida Sans
+<span background="#004890">   </span><span foreground="#302f30" background="#CDCBCD"> blu #004890 </span>	monofont   CMU Typewriter Text
+<span background="#009048">   </span><span foreground="#302f30" background="#CDCBCD"> grn #009048 </span>	romanfont  Luxi Mono
+<span background="#009090">   </span><span foreground="#302f30" background="#CDCBCD"> cyn #009090 </span>	ltimex     1
+<span background="#900048">   </span><span foreground="#302f30" background="#CDCBCD"> gnt #900048 </span>	ltimey     90
 <span background="#d65d0e">   </span><span foreground="#302f30" background="#CDCBCD"> orange #d65d0e </span>	size       11
 <span background="#2c4253">   </span><span foreground="#302f30" background="#CDCBCD"> acf #2c4253 </span>	rxvtsize   12
 <span background="#7a90a2">   </span><span foreground="#302f30" background="#CDCBCD"> acb #7a90a2 </span>	rofifsize  12

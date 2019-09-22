@@ -62,10 +62,10 @@ set $fg1 #444344
 set $fg2 #585758
 set $fg3 #6c6b6c
 set $red #900000
-set $grn #98971a
-set $ylw #d79921
-set $gnt #b16286
-set $cyn #689d6a
+set $grn #009048
+set $ylw #904800
+set $gnt #900048
+set $cyn #009090
 set $t   ff
 
 # //// APPS

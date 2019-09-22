@@ -28,8 +28,8 @@ c.colors.completion.odd.bg                      = '#b9b7b9'
 c.colors.completion.fg                          = ['#285577', '#302f30', '#918f91']
 c.colors.completion.item.selected.bg            = '#285577'
 c.colors.completion.item.selected.fg            = '#b9b7b9'
-c.colors.completion.item.selected.border.bottom = '#98971a'
-c.colors.completion.item.selected.border.top    = '#98971a'
+c.colors.completion.item.selected.border.bottom = '#009048'
+c.colors.completion.item.selected.border.top    = '#009048'
 c.colors.completion.match.fg                    = '#285577'
 c.colors.completion.scrollbar.bg                = '#b9b7b9'
 c.colors.completion.scrollbar.fg                = '#302f30'
@@ -40,16 +40,16 @@ c.colors.downloads.error.bg  = '#900000'
 c.colors.downloads.error.fg  = '#302f30'
 c.colors.downloads.start.bg  = '#285577'
 c.colors.downloads.start.fg  = '#302f30'
-c.colors.downloads.stop.bg   = '#98971a'
+c.colors.downloads.stop.bg   = '#009048'
 c.colors.downloads.stop.fg   = '#302f30'
 c.colors.downloads.system.bg = 'rgb' # rgb, hsv, hsl, none
 c.colors.downloads.system.fg = 'rgb' # rgb, hsv, hsl, none
 
 # //// hints
-c.colors.hints.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(215, 153, 33, 0.8), stop:1 rgba(215, 153, 33, 0.8))'
+c.colors.hints.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(144, 72, 0, 0.8), stop:1 rgba(144, 72, 0, 0.8))'
 c.colors.hints.fg          = '#302f30'
-c.colors.hints.match.fg    = '#98971a'
-c.colors.keyhint.bg        = 'rgba(215, 153, 33, 80%)'
+c.colors.hints.match.fg    = '#009048'
+c.colors.keyhint.bg        = 'rgba(144, 72, 0, 80%)'
 c.colors.keyhint.fg        = '#302f30'
 c.colors.keyhint.suffix.fg = '#b9b7b9'
 
@@ -64,8 +64,8 @@ c.colors.messages.info.border = '#302f30'
 c.colors.messages.info.fg     = '#b9b7b9'
 
 # //// warning
-c.colors.messages.warning.bg     = '#d79921'
-c.colors.messages.warning.border = '#d79921'
+c.colors.messages.warning.bg     = '#904800'
+c.colors.messages.warning.border = '#904800'
 c.colors.messages.warning.fg     = '#b9b7b9'
 
 # //// prompts
@@ -75,15 +75,15 @@ c.colors.prompts.fg          = '#302f30'
 c.colors.prompts.selected.bg = '#285577'
 
 # //// statusbar
-c.colors.statusbar.caret.fg             = '#b16286'
+c.colors.statusbar.caret.fg             = '#900048'
 c.colors.statusbar.caret.bg             = '#b9b7b9'
-c.colors.statusbar.caret.selection.fg   = '#b16286'
+c.colors.statusbar.caret.selection.fg   = '#900048'
 c.colors.statusbar.caret.selection.bg   = '#b9b7b9'
 c.colors.statusbar.command.fg           = '#302f30'
 c.colors.statusbar.command.bg           = '#b9b7b9'
 c.colors.statusbar.command.private.bg   = '#918f91'
 c.colors.statusbar.command.private.fg   = '#302f30'
-c.colors.statusbar.insert.fg            = '#98971a'
+c.colors.statusbar.insert.fg            = '#009048'
 c.colors.statusbar.insert.bg            = '#b9b7b9'
 c.colors.statusbar.normal.fg            = '#285577'
 c.colors.statusbar.normal.bg            = '#b9b7b9'
@@ -97,7 +97,7 @@ c.colors.statusbar.url.fg               = '#302f30'
 c.colors.statusbar.url.hover.fg         = '#285577'
 c.colors.statusbar.url.success.http.fg  = '#302f30'
 c.colors.statusbar.url.success.https.fg = '#302f30'
-c.colors.statusbar.url.warn.fg          = '#d79921'
+c.colors.statusbar.url.warn.fg          = '#904800'
 
 # //// tabs
 c.colors.tabs.bar.bg           = '#b9b7b9'
@@ -107,7 +107,7 @@ c.colors.tabs.odd.bg           = '#b9b7b9'
 c.colors.tabs.odd.fg           = '#302f30'
 c.colors.tabs.indicator.error  = '#900000'
 c.colors.tabs.indicator.start  = '#285577'
-c.colors.tabs.indicator.stop   = '#98971a'
+c.colors.tabs.indicator.stop   = '#009048'
 c.colors.tabs.indicator.system = 'rgb' # rgb, hsv, hsl, none
 c.colors.tabs.selected.even.bg = '#285577'
 c.colors.tabs.selected.even.fg = '#b9b7b9'
@@ -233,7 +233,7 @@ c.editor.encoding = 'utf-8'
 # //// hints
 c.hints.auto_follow                = 'unique-match' # always, unique-match, full-match, never
 c.hints.auto_follow_timeout        = 0
-c.hints.border                     = '1px solid #d79921'
+c.hints.border                     = '1px solid #904800'
 c.hints.chars                      = 'asdfghjkl'
 #c.hints.dictionary                 = '/usr/share/dict/words'
 c.hints.find_implementation        = 'python' # javascript, python

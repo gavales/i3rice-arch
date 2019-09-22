@@ -8,7 +8,8 @@ SRC=${1}
 EXT=${SRC##*.}
 
 case $EXT in
-	tex) clatex "$SRC" ;;
-	md)  cmkd   "$SRC" ;;
-	ms)  cgroff "$SRC" ;;
+	tex) ctex "$SRC" ;;
+	rmd) echo "require(rmarkdown); render('$SRC')" | R --vanilla ;;
+	md)  cmkd "$SRC" ;;
+	ms)  crff "$SRC" ;;
 esac

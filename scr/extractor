@@ -4,11 +4,12 @@
 # CREATED: Tue 25 Dec 21:35:29 GMT 2018
 
 TRG="$1"
+EXT="${TRG#*.}"
 
-case $TRG in
-	*.tar.gz) mkdir   "${TRG/.tar.gz/}"; tar -xvf "${TRG}" -C "${TRG%%.*}" ;;
-	*.tar.xz) mkdir   "${TRG/.tar.xz/}"; tar -xJf "${TRG}" -C "${TRG%%.*}" ;;
-	*.zip)    unzip   "${TRG}" -d "${TRG%%.*}" ;;
-	*.gz)     gunzip  "${TRG}" -d "${TRG%%.*}" ;;
-	*.rar)    unrar x "${TRG}" ;;
+case $EXT in
+	tar.gz) mkdir   "${TRG/.tar.gz/}"; tar -xvf "${TRG}" -C "${TRG%%.*}" ;;
+	tar.xz) mkdir   "${TRG/.tar.xz/}"; tar -xJf "${TRG}" -C "${TRG%%.*}" ;;
+	zip)    unzip   "${TRG}" -d "${TRG%%.*}" ;;
+	gz)     gunzip  "${TRG}" -d "${TRG%%.*}" ;;
+	rar)    unrar x "${TRG}" ;;
 esac

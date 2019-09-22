@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SCD=$XDG_PICTURES_DIR/scrots
+SCD=$XDG_PICTURES_DIR/shot
 TMP=${SCD}/tmp.png
 [[ -d $SCD ]] || mkdir $SCD
 
