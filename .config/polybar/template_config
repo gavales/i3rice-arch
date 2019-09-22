@@ -233,7 +233,7 @@ format-padding = 1
 type = custom/script
 exec = bash ~/scr/pb/temp
 format-background = ${colors.acc}
-format-foreground = ${colors.fg0}
+format-foreground = ${colors.bg0}
 format-padding = 0
 interval = 10
 

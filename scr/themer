@@ -97,91 +97,82 @@ variations () {
 	acc=$(awk ' $1 ~ /^acc$/ {$1="";gsub(/^[ \t]+/, "", $0);print $0;}' $ALL)
 	hexrgbraw $bg0 bg0
 	hexrgbraw $fg0 fg0
-	hexrgbraw $acc acc
 	[[ $bg0R -le 127 ]] || [[ $bg0G -le 127 ]] || [[ $bg0B -le 127 ]] && vrt=dark
 
-	eval $(awk -F "" -i "$ALB" -v VRT="$vrt" -v INC="20" \
-		-v bg0="$bg0" -v bg0R="$bg0R" -v bg0G="$bg0G" -v bg0B="$bg0B" \
-		-v fg0="$fg0" -v fg0R="$fg0R" -v fg0G="$fg0G" -v fg0B="$fg0B" \
-		-v acc="$acc" -v accR="$accR" -v accG="$accG" -v accB="$accB" '
+	awk -i "$ALB" -v bg0="$bg0" -v fg0="$fg0" '
+		/#/ && !/^fg0|^bg0|^acc/ {
+			key=$1;val=$2;
+			mixer("dark"key,val,fg0,50,50)
+			mixer("light"key,val,bg0,50,50)
+		}' $ALL >> $ALL
+
+	awk -i "$ALB" -v VRT="$vrt" -v INC="20" \
+		-v bg0R="$bg0R" -v bg0G="$bg0G" -v bg0B="$bg0B" \
+		-v fg0R="$fg0R" -v fg0G="$fg0G" -v fg0B="$fg0B" \
+		-v bg0="$bg0" -v fg0="$fg0" -v acc="$acc" '
 		BEGIN {
 			if (VRT=="light") {
-				fg1R=(fg0R + INC); fg1G=(fg0G + INC); fg1B=(fg0B + INC);
-				fg2R=(fg1R + INC); fg2G=(fg1G + INC); fg2B=(fg1B + INC);
-				fg3R=(fg2R + INC); fg3G=(fg2G + INC); fg3B=(fg2B + INC);
-				bg1R=(bg0R - INC); bg1G=(bg0G - INC); bg1B=(bg0B - INC);
-				bg2R=(bg1R - INC); bg2G=(bg1G - INC); bg2B=(bg1B - INC);
-				bg3R=(bg2R - INC); bg3G=(bg2G - INC); bg3B=(bg2B - INC);
+				fg1R=fg0R + INC; fg1G=fg0G + INC; fg1B=fg0B + INC;
+				fg2R=fg1R + INC; fg2G=fg1G + INC; fg2B=fg1B + INC;
+				fg3R=fg2R + INC; fg3G=fg2G + INC; fg3B=fg2B + INC;
+				bg1R=bg0R - INC; bg1G=bg0G - INC; bg1B=bg0B - INC;
+				bg2R=bg1R - INC; bg2G=bg1G - INC; bg2B=bg1B - INC;
+				bg3R=bg2R - INC; bg3G=bg2G - INC; bg3B=bg2B - INC;
 			} else {
-				fg1R=(fg0R - INC); fg1G=(fg0G - INC); fg1B=(fg0B - INC);
-				fg2R=(fg1R - INC); fg2G=(fg1G - INC); fg2B=(fg1B - INC);
-				fg3R=(fg2R - INC); fg3G=(fg2G - INC); fg3B=(fg2B - INC);
-				bg1R=(bg0R + INC); bg1G=(bg0G + INC); bg1B=(bg0B + INC);
-				bg2R=(bg1R + INC); bg2G=(bg1G + INC); bg2B=(bg1B + INC);
-				bg3R=(bg2R + INC); bg3G=(bg2G + INC); bg3B=(bg2B + INC);
+				fg1R=fg0R - INC; fg1G=fg0G - INC; fg1B=fg0B - INC;
+				fg2R=fg1R - INC; fg2G=fg1G - INC; fg2B=fg1B - INC;
+				fg3R=fg2R - INC; fg3G=fg2G - INC; fg3B=fg2B - INC;
+				bg1R=bg0R + INC; bg1G=bg0G + INC; bg1B=bg0B + INC;
+				bg2R=bg1R + INC; bg2G=bg1G + INC; bg2B=bg1B + INC;
+				bg3R=bg2R + INC; bg3G=bg2G + INC; bg3B=bg2B + INC;
 			}
+
+			sub(/-/,"",fg1R);sub(/-/,"",fg1G);sub(/-/,"",fg1B);
+			sub(/-/,"",fg2R);sub(/-/,"",fg2G);sub(/-/,"",fg2B);
+			sub(/-/,"",fg3R);sub(/-/,"",fg3G);sub(/-/,"",fg3B);
+			sub(/-/,"",bg1R);sub(/-/,"",bg1G);sub(/-/,"",bg1B);
+			sub(/-/,"",bg2R);sub(/-/,"",bg2G);sub(/-/,"",bg2B);
+			sub(/-/,"",bg3R);sub(/-/,"",bg3G);sub(/-/,"",bg3B);
+			if (fg3R>255) {fg3R=255}; if (fg3G>255) {fg3G=255}; if (fg3B>255) {fg3B=255}
+			if (fg2R>255) {fg2R=255}; if (fg2G>255) {fg2G=255}; if (fg2B>255) {fg2B=255}
+			if (fg1R>255) {fg1R=255}; if (fg1G>255) {fg1G=255}; if (fg1B>255) {fg1B=255}
+			if (bg1R>255) {bg1R=255}; if (bg1G>255) {bg1G=255}; if (bg1B>255) {bg1B=255}
+			if (bg2R>255) {bg2R=255}; if (bg2G>255) {bg2G=255}; if (bg2B>255) {bg2B=255}
+			if (bg3R>255) {bg3R=255}; if (bg3G>255) {bg3G=255}; if (bg3B>255) {bg3B=255}
+
+			fg1RX=sprintf("%x", fg1R); fg1GX=sprintf("%x", fg1G); fg1BX=sprintf("%x", fg1B);
+			fg2RX=sprintf("%x", fg2R); fg2GX=sprintf("%x", fg2G); fg2BX=sprintf("%x", fg2B);
+			fg3RX=sprintf("%x", fg3R); fg3GX=sprintf("%x", fg3G); fg3BX=sprintf("%x", fg3B);
+			bg3RX=sprintf("%x", bg3R); bg3GX=sprintf("%x", bg3G); bg3BX=sprintf("%x", bg3B);
+			bg2RX=sprintf("%x", bg2R); bg2GX=sprintf("%x", bg2G); bg2BX=sprintf("%x", bg2B);
+			bg1RX=sprintf("%x", bg1R); bg1GX=sprintf("%x", bg1G); bg1BX=sprintf("%x", bg1B);
+			if (length(fg3RX)==1) {fg3RX="0"fg3RX}; if (length(fg3GX)==1) {fg3GX="0"fg3GX}
+			if (length(fg3BX)==1) {fg3BX="0"fg3BX}; if (length(fg2RX)==1) {fg2RX="0"fg2RX}
+			if (length(fg2GX)==1) {fg2GX="0"fg2GX}; if (length(fg2BX)==1) {fg2BX="0"fg2BX}
+			if (length(fg1RX)==1) {fg1RX="0"fg1RX}; if (length(fg1GX)==1) {fg1GX="0"fg1GX}
+			if (length(fg1BX)==1) {fg1BX="0"fg1BX}; if (length(bg1RX)==1) {bg1RX="0"bg1RX}
+			if (length(bg1GX)==1) {bg1GX="0"bg1GX}; if (length(bg1BX)==1) {bg1BX="0"bg1BX}
+			if (length(bg2RX)==1) {bg2RX="0"bg2RX}; if (length(bg2GX)==1) {bg2GX="0"bg2GX}
+			if (length(bg2BX)==1) {bg2BX="0"bg2BX}; if (length(bg3RX)==1) {bg3RX="0"bg3RX}
+			if (length(bg3GX)==1) {bg3GX="0"bg3GX}; if (length(bg3BX)==1) {bg3BX="0"bg3BX}
+
+			print "fg1 #" fg1RX fg1GX fg1BX ;
+			print "fg2 #" fg2RX fg2GX fg2BX ;
+			print "fg3 #" fg3RX fg3GX fg3BX ;
+			print "bg1 #" bg1RX bg1GX bg1BX ;
+			print "bg2 #" bg2RX bg2GX bg2BX ;
+			print "bg3 #" bg3RX bg3GX bg3BX ;
+
+			print "fg1RGB " fg1R ", " fg1G ", " fg1B ;
+			print "fg2RGB " fg2R ", " fg2G ", " fg2B ;
+			print "fg3RGB " fg3R ", " fg3G ", " fg3B ;
+			print "bg1RGB " bg1R ", " bg1G ", " bg1B ;
+			print "bg2RGB " bg2R ", " bg2G ", " bg2B ;
+			print "bg3RGB " bg3R ", " bg3G ", " bg3B ;
 
 			mixer("acf",acc,fg0,50,50)
 			mixer("acb",acc,bg0,50,50)
-			print "fg1R="  fg1R  "\nfg1G="  fg1G  "\nfg1B="  fg1B ;
-			print "fg2R="  fg2R  "\nfg2G="  fg2G  "\nfg2B="  fg2B ;
-			print "fg3R="  fg3R  "\nfg3G="  fg3G  "\nfg3B="  fg3B ;
-			print "bg1R="  bg1R  "\nbg1G="  bg1G  "\nbg1B="  bg1B ;
-			print "bg2R="  bg2R  "\nbg2G="  bg2G  "\nbg2B="  bg2B ;
-			print "bg3R="  bg3R  "\nbg3G="  bg3G  "\nbg3B="  bg3B ;
-		}')
-
-	fg1RX=$(printf '%x\n' ${fg1R/-/}) fg1GX=$(printf '%x\n' ${fg1G/-/}) fg1BX=$(printf '%x\n' ${fg1B/-/})
-	fg2RX=$(printf '%x\n' ${fg2R/-/}) fg2GX=$(printf '%x\n' ${fg2G/-/}) fg2BX=$(printf '%x\n' ${fg2B/-/})
-	fg3RX=$(printf '%x\n' ${fg3R/-/}) fg3GX=$(printf '%x\n' ${fg3G/-/}) fg3BX=$(printf '%x\n' ${fg3B/-/})
-	bg1RX=$(printf '%x\n' ${bg1R/-/}) bg1GX=$(printf '%x\n' ${bg1G/-/}) bg1BX=$(printf '%x\n' ${bg1B/-/})
-	bg2RX=$(printf '%x\n' ${bg2R/-/}) bg2GX=$(printf '%x\n' ${bg2G/-/}) bg2BX=$(printf '%x\n' ${bg2B/-/})
-	bg3RX=$(printf '%x\n' ${bg3R/-/}) bg3GX=$(printf '%x\n' ${bg3G/-/}) bg3BX=$(printf '%x\n' ${bg3B/-/})
-	[[ ${#acfRX} == 1 ]] && acfRX="0$acfRX"
-	[[ ${#acfGX} == 1 ]] && acfGX="0$acfGX"
-	[[ ${#acfBX} == 1 ]] && acfBX="0$acfBX"
-	[[ ${#acbRX} == 1 ]] && acbRX="0$acbRX"
-	[[ ${#acbGX} == 1 ]] && acbGX="0$acbGX"
-	[[ ${#acbBX} == 1 ]] && acbBX="0$acbBX"
-	[[ ${#fg1RX} == 1 ]] && fg1RX="0$fg1RX"
-	[[ ${#fg1GX} == 1 ]] && fg1GX="0$fg1GX"
-	[[ ${#fg1BX} == 1 ]] && fg1BX="0$fg1BX"
-	[[ ${#fg2RX} == 1 ]] && fg2RX="0$fg2RX"
-	[[ ${#fg2GX} == 1 ]] && fg2GX="0$fg2GX"
-	[[ ${#fg2BX} == 1 ]] && fg2BX="0$fg2BX"
-	[[ ${#fg3RX} == 1 ]] && fg3RX="0$fg3RX"
-	[[ ${#fg3GX} == 1 ]] && fg3GX="0$fg3GX"
-	[[ ${#fg3BX} == 1 ]] && fg3BX="0$fg3BX"
-	[[ ${#bg1RX} == 1 ]] && bg1RX="0$bg1RX"
-	[[ ${#bg1GX} == 1 ]] && bg1GX="0$bg1GX"
-	[[ ${#bg1BX} == 1 ]] && bg1BX="0$bg1BX"
-	[[ ${#bg2RX} == 1 ]] && bg2RX="0$bg2RX"
-	[[ ${#bg2GX} == 1 ]] && bg2GX="0$bg2GX"
-	[[ ${#bg2BX} == 1 ]] && bg2BX="0$bg2BX"
-	[[ ${#bg3RX} == 1 ]] && bg3RX="0$bg3RX"
-	[[ ${#bg3GX} == 1 ]] && bg3GX="0$bg3GX"
-	[[ ${#bg3BX} == 1 ]] && bg3BX="0$bg3BX"
-	echo "acf       #${acfRX}${acfGX}${acfBX}
-acb       #${acbRX}${acbGX}${acbBX}
-fg3       #${fg3RX}${fg3GX}${fg3BX}
-fg2       #${fg2RX}${fg2GX}${fg2BX}
-fg1       #${fg1RX}${fg1GX}${fg1BX}
-bg1       #${bg1RX}${bg1GX}${bg1BX}
-bg2       #${bg2RX}${bg2GX}${bg2BX}
-bg3       #${bg3RX}${bg3GX}${bg3BX}
-bg0RGB    $bg0R, $bg0G, $bg0B
-fg0RGB    $fg0R, $fg0G, $fg0B
-accRGB    $accR, $accG, $accB
-acfRGB    $acfR, $acfG, $acfB
-acbRGB    $acbR, $acbG, $acbB
-fg0RGB    ${fg0R/-/}, ${fg0G/-/}, ${fg0B/-/}
-fg1RGB    ${fg1R/-/}, ${fg1G/-/}, ${fg1B/-/}
-fg2RGB    ${fg2R/-/}, ${fg2G/-/}, ${fg2B/-/}
-fg3RGB    ${fg3R/-/}, ${fg3G/-/}, ${fg3B/-/}
-bg0RGB    ${bg0R/-/}, ${bg0G/-/}, ${bg0B/-/}
-bg1RGB    ${bg1R/-/}, ${bg1G/-/}, ${bg1B/-/}
-bg2RGB    ${bg2R/-/}, ${bg2G/-/}, ${bg2B/-/}
-bg3RGB    ${bg3R/-/}, ${bg3G/-/}, ${bg3B/-/}" >> $ALL
+		}' >> $ALL
 }
 
 hexrgbraw () {
@@ -234,27 +225,24 @@ create-rofi-list () {
 	fg0=$(cat $ALL | sed '/^fg0 /!d;s/[^ ]* *//')
 	acc=$(cat $ALL | sed '/^acc /!d;s/[^ ]* *//')
 	wpr=$(cat $ALL | sed '/^wallpaper /!d;s/[^ ]* *//')
-	CLRLIST=$TDR/.colorlist
-	VARLIST=$TDR/.varlist
+	CLST1=$TDR/.colorlist1
+	CLST2=$TDR/.colorlist2
+	VLST1=$TDR/.varlist
 	[[ -n $wpr ]] || wpr=$acc
 	echo "              <b><big>$(cat $ALL | sed '/^name/!d;s/[^ ]* *//')</big></b>" > $ALR
-	rm $CLRLIST
-	rm $VARLIST
-	echo "wallpaper $wpr" > $VARLIST
-	cat $ALL | sed "/^wallpaper/d;/^name/d;/#/d;/,/d" >> $VARLIST
+	echo "wallpaper $wpr" > $VLST1
+	cat $ALL | sed "/^wallpaper/d;/^name/d;/#/d;/,/d" >> $VLST1
 	IFS=$'\n'
-	cat $ALL | awk -v bg0="$bg0" -v fg0="$fg0" '
-		{
-			var=$1;
-			$1="";
-			gsub(/^[ \t]+/, "", $0);
-			val=$0;
-			if (val ~ /#/) {
-				print "<span background=\"" val "\">   </span><span foreground=\"" fg0 "\" background=\"" bg0 "\"> " var " " val " </span>";
-			}
-		}
-		' > $CLRLIST
-	paste $CLRLIST $VARLIST >> $ALR
+	awk -v bg0="$bg0" -v fg0="$fg0" ' /#/ && !/^dark|^light/ {
+		var=$1; $1=""; gsub(/^[ \t]+/, "", $0); val=$0;
+		print "<span background=\"" val "\">   </span><span foreground=\"" fg0 "\" background=\"" bg0 "\"> " var " " val " </span>";}' $ALL > $CLST1
+	awk -v bg0="$bg0" -v fg0="$fg0" ' /#/ && /^dark|^light/ {
+		var=$1; $1=""; gsub(/^[ \t]+/, "", $0); val=$0;
+		print "<span background=\"" val "\">   </span><span foreground=\"" fg0 "\" background=\"" bg0 "\"> " var " " val " </span>";}' $ALL > $CLST2
+	paste $CLST1 $CLST2 $VLST1 >> $ALR
+	rm $CLST1
+	rm $CLST2
+	rm $VLST1
 }
 
 apply-current () {
@@ -293,7 +281,7 @@ gui-change () {
 
 getvar () {
 	[[ -n $1 ]] && cat $ALL | sed "/^$1/!d;s/[^ ]* *//" \
-		|| cat $ALR | i3menu -w 600
+		|| cat $ALR | i3menu -w 800
 }
 
 newtheme () {
@@ -394,35 +382,23 @@ EOB
 change-current () {
 	[[ -n $1 ]] && cat ${TDR}/${1} > $CUR || gui-change
 	cat $CUR | sed '/^\!/d' > $ALL
-	awk ' NR==FNR {
-			a[$1]=$1; b[$1]=$0; next;
-		}
-		$1!=a[$1] {
-			print $0;
-		}' $ALL $DEF | sed '/^!/d' >> $ALL
+	awk ' NR==FNR { a[$1]=$1; b[$1]=$0; next; }
+		$1!=a[$1] { print $0; }' $ALL $DEF | sed '/^!/d' >> $ALL
 	parse-vars
-	CMRX="$(awk -i "$ALB" '
-		/colmix/ {
-			key=$1;$1="";$2="";
-			gsub(/^[ \t]+/, "", $0);
-			mix=$0;
-			ONE=substr($0,4,length($0)-14);
-			TWO=substr($0,15,length($0)-1);
-			RT1=substr($0,1,length($0)-19);
-			RT2=substr($0,12,length($0)-19);
+	CMRX="$(awk -i "$ALB" ' $2 ~ /^colmix/ {
+			key=$1;$1="";$2=""; gsub(/^[ \t]+/, "", $0); mix=$0;
+			ONE=substr($0,4,length($0)-14); TWO=substr($0,15,length($0)-1);
+			RT1=substr($0,1,length($0)-19); RT2=substr($0,12,length($0)-19);
 			colmixnp(key,ONE,TWO,RT1,RT2);
 			print ";s/colmix " mix "/#" CL3RX CL3GX CL3BX "/g";
 		}' $ALL | tr -d "\n")"
 	sed -i "${CMRX:1}" $ALL
 	parse-vars
 	variations
-	cat $ALL | sed '/^bg0 /d;/^fg0 /d;/^acc /d' | awk -i "$ALB"  '
-		/#/ {
-			key=$1;
-			$1="";
-			gsub(/^[ \t]+/, "", $0);
+	awk -i "$ALB" ' /#/ && !/^bg|^fg|^ac/ {
+			key=$1;$1="";gsub(/^[ \t]+/, "", $0);
 			hextorgb($0,key);
-		}' >> $ALL
+		}' $ALL >> $ALL
 	create-regex
 	create-rofi-list
 }

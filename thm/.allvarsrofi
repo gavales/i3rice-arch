@@ -1,19 +1,19 @@
               <b><big>i3</big></b>
-<span background="#285577">   </span><span foreground="#302f30" background="#CDCBCD"> acc #285577 </span>	wallpaper PenedodoGuinchoLisbonPortugal
-<span background="#CDCBCD">   </span><span foreground="#302f30" background="#CDCBCD"> bg0 #CDCBCD </span>	gtk-icon  Tela-yellow-dark
-<span background="#302f30">   </span><span foreground="#302f30" background="#CDCBCD"> fg0 #302f30 </span>	guifont    Luxi Mono
-<span background="#900000">   </span><span foreground="#302f30" background="#CDCBCD"> red #900000 </span>	font       CMUTypewriterText
-<span background="#904800">   </span><span foreground="#302f30" background="#CDCBCD"> ylw #904800 </span>	sansfont   Lucida Sans
-<span background="#004890">   </span><span foreground="#302f30" background="#CDCBCD"> blu #004890 </span>	monofont   CMU Typewriter Text
-<span background="#009048">   </span><span foreground="#302f30" background="#CDCBCD"> grn #009048 </span>	romanfont  Luxi Mono
-<span background="#009090">   </span><span foreground="#302f30" background="#CDCBCD"> cyn #009090 </span>	ltimex     1
-<span background="#900048">   </span><span foreground="#302f30" background="#CDCBCD"> gnt #900048 </span>	ltimey     90
-<span background="#d65d0e">   </span><span foreground="#302f30" background="#CDCBCD"> orange #d65d0e </span>	size       11
-<span background="#2c4253">   </span><span foreground="#302f30" background="#CDCBCD"> acf #2c4253 </span>	rxvtsize   12
-<span background="#7a90a2">   </span><span foreground="#302f30" background="#CDCBCD"> acb #7a90a2 </span>	rofifsize  12
-<span background="#6c6b6c">   </span><span foreground="#302f30" background="#CDCBCD"> fg3 #6c6b6c </span>	gtk        Standard-light
-<span background="#585758">   </span><span foreground="#302f30" background="#CDCBCD"> fg2 #585758 </span>	cursor     Bibata_Dark_Red
-<span background="#444344">   </span><span foreground="#302f30" background="#CDCBCD"> fg1 #444344 </span>	conky_loc1 top_left
-<span background="#b9b7b9">   </span><span foreground="#302f30" background="#CDCBCD"> bg1 #b9b7b9 </span>	conky_loc2 bottom_right
-<span background="#a5a3a5">   </span><span foreground="#302f30" background="#CDCBCD"> bg2 #a5a3a5 </span>	
-<span background="#918f91">   </span><span foreground="#302f30" background="#CDCBCD"> bg3 #918f91 </span>	
+<span background="#285577">   </span><span foreground="#302f30" background="#CDCBCD"> acc #285577 </span>	<span background="#601718">   </span><span foreground="#302f30" background="#CDCBCD"> darkred #601718 </span>	wallpaper PenedodoGuinchoLisbonPortugal
+<span background="#CDCBCD">   </span><span foreground="#302f30" background="#CDCBCD"> bg0 #CDCBCD </span>	<span background="#ae6566">   </span><span foreground="#302f30" background="#CDCBCD"> lightred #ae6566 </span>	gtk-icon  Tela-yellow-dark
+<span background="#302f30">   </span><span foreground="#302f30" background="#CDCBCD"> fg0 #302f30 </span>	<span background="#603b18">   </span><span foreground="#302f30" background="#CDCBCD"> darkylw #603b18 </span>	guifont    Luxi Mono
+<span background="#900000">   </span><span foreground="#302f30" background="#CDCBCD"> red #900000 </span>	<span background="#ae8966">   </span><span foreground="#302f30" background="#CDCBCD"> lightylw #ae8966 </span>	font       CMUTypewriterText
+<span background="#904800">   </span><span foreground="#302f30" background="#CDCBCD"> ylw #904800 </span>	<span background="#183b60">   </span><span foreground="#302f30" background="#CDCBCD"> darkblu #183b60 </span>	sansfont   Lucida Sans
+<span background="#004890">   </span><span foreground="#302f30" background="#CDCBCD"> blu #004890 </span>	<span background="#6689ae">   </span><span foreground="#302f30" background="#CDCBCD"> lightblu #6689ae </span>	monofont   CMU Typewriter Text
+<span background="#009048">   </span><span foreground="#302f30" background="#CDCBCD"> grn #009048 </span>	<span background="#185f3c">   </span><span foreground="#302f30" background="#CDCBCD"> darkgrn #185f3c </span>	romanfont  Luxi Mono
+<span background="#009090">   </span><span foreground="#302f30" background="#CDCBCD"> cyn #009090 </span>	<span background="#66ad8a">   </span><span foreground="#302f30" background="#CDCBCD"> lightgrn #66ad8a </span>	ltimex     1
+<span background="#900048">   </span><span foreground="#302f30" background="#CDCBCD"> gnt #900048 </span>	<span background="#185f60">   </span><span foreground="#302f30" background="#CDCBCD"> darkcyn #185f60 </span>	ltimey     90
+<span background="#d65d0e">   </span><span foreground="#302f30" background="#CDCBCD"> rng #d65d0e </span>	<span background="#66adae">   </span><span foreground="#302f30" background="#CDCBCD"> lightcyn #66adae </span>	size       11
+<span background="#444344">   </span><span foreground="#302f30" background="#CDCBCD"> fg1 #444344 </span>	<span background="#60173c">   </span><span foreground="#302f30" background="#CDCBCD"> darkgnt #60173c </span>	rxvtsize   12
+<span background="#585758">   </span><span foreground="#302f30" background="#CDCBCD"> fg2 #585758 </span>	<span background="#ae658a">   </span><span foreground="#302f30" background="#CDCBCD"> lightgnt #ae658a </span>	rofifsize  12
+<span background="#6c6b6c">   </span><span foreground="#302f30" background="#CDCBCD"> fg3 #6c6b6c </span>	<span background="#83461f">   </span><span foreground="#302f30" background="#CDCBCD"> darkrng #83461f </span>	gtk        Standard-light
+<span background="#b9b7b9">   </span><span foreground="#302f30" background="#CDCBCD"> bg1 #b9b7b9 </span>	<span background="#d1946d">   </span><span foreground="#302f30" background="#CDCBCD"> lightrng #d1946d </span>	cursor     Bibata_Dark_Red
+<span background="#a5a3a5">   </span><span foreground="#302f30" background="#CDCBCD"> bg2 #a5a3a5 </span>		conky_loc1 top_left
+<span background="#918f91">   </span><span foreground="#302f30" background="#CDCBCD"> bg3 #918f91 </span>		conky_loc2 bottom_right
+<span background="#2c4253">   </span><span foreground="#302f30" background="#CDCBCD"> acf #2c4253 </span>		
+<span background="#7a90a2">   </span><span foreground="#302f30" background="#CDCBCD"> acb #7a90a2 </span>		
