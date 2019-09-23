@@ -1,22 +1,22 @@
 !! themer     ------------------------------------------------------------------
-!! i3
+!! nikes
 
-#define cwhtl #302f30
-#define cwhtd #7a90a2
-#define credd #900000
-#define credl #900000
-#define cgrnd #009048
-#define cgrnl #009048
-#define cylwd #904800
-#define cylwl #904800
-#define cblud #285577
-#define cblul #285577
-#define cgntd #900048
-#define cgntl #900048
-#define ccynd #009090
-#define ccynl #009090
-#define cblkd #CDCBCD
-#define cblkl #b9b7b9
+#define cwhtl #f6f6f4
+#define cwhtd #724d56
+#define credd #ff4845
+#define credl #ff4845
+#define cgrnd #47aa12
+#define cgrnl #47aa12
+#define cylwd #ff890a
+#define cylwl #ff890a
+#define cblud #b46b7d
+#define cblul #b46b7d
+#define cgntd #288ad6
+#define cgntl #288ad6
+#define ccynd #6bb4a2
+#define ccynl #6bb4a2
+#define cblkd #303030
+#define cblkl #444444
 
 !! 1vars      ------------------------------------------------------------------
 

@@ -27,8 +27,8 @@ orange    #d65d0e
 EOB
 exit
 }
-create_alb () {
-cat > $ALB << 'EOB'
+awklib () {
+cat << 'EOB'
 function hextorgb(HEX,NME){
 	HEXR=substr(HEX,2,length(HEX)-5);
 	HEXG=substr(HEX,4,length(HEX)-5);
@@ -43,20 +43,15 @@ function mixer(NME,ONE,TWO,RT1,RT2){
 	TWOR=substr(TWO,2,length(TWO)-5);
 	TWOG=substr(TWO,4,length(TWO)-5);
 	TWOB=substr(TWO,6,length(TWO)-5);
-	ONRR=strtonum( "0x" ONER );
-	ONRG=strtonum( "0x" ONEG );
-	ONRB=strtonum( "0x" ONEB );
-	TWRR=strtonum( "0x" TWOR );
-	TWRG=strtonum( "0x" TWOG );
-	TWRB=strtonum( "0x" TWOB );
-	CL3R=int((ONRR * RT1 + TWRR * RT2) / 100);
-	CL3G=int((ONRG * RT1 + TWRG * RT2) / 100);
-	CL3B=int((ONRB * RT1 + TWRB * RT2) / 100);
-	CL3RX=sprintf( "%x", CL3R );
-	CL3GX=sprintf( "%x", CL3G );
-	CL3BX=sprintf( "%x", CL3B );
-	print NME "RX=" CL3RX "\n" NME "GX=" CL3GX "\n" NME "BX=" CL3BX "";
-	print NME "R="  CL3R  "\n" NME "G="  CL3G  "\n" NME "B="  CL3B "";
+	ONRR=strtonum("0x" ONER); ONRG=strtonum("0x" ONEG); ONRB=strtonum("0x" ONEB);
+	TWRR=strtonum("0x" TWOR); TWRG=strtonum("0x" TWOG); TWRB=strtonum("0x" TWOB);
+	CL3R=int(((ONRR * RT1) / 100) + ((TWRR * RT2) / 100));
+	CL3G=int(((ONRG * RT1) / 100) + ((TWRG * RT2) / 100));
+	CL3B=int(((ONRB * RT1) / 100) + ((TWRB * RT2) / 100));
+	CL3RX=sprintf("%x",CL3R); CL3GX=sprintf("%x",CL3G); CL3BX=sprintf("%x",CL3B);
+	if (length(CL3RX)==1) {CL3RX="0"CL3RX}; if (length(CL3GX)==1) {CL3GX="0"CL3GX}
+	print NME " #"    CL3RX     CL3GX     CL3BX;
+	print NME "RGB "  CL3R ", " CL3G ", " CL3B;
 	}
 
 function colmixnp(NME,ONE,TWO,RT1,RT2){
@@ -66,18 +61,12 @@ function colmixnp(NME,ONE,TWO,RT1,RT2){
 	TWOR=substr(TWO,2,length(TWO)-5);
 	TWOG=substr(TWO,4,length(TWO)-5);
 	TWOB=substr(TWO,6,length(TWO)-5);
-	ONRR=strtonum( "0x" ONER );
-	ONRG=strtonum( "0x" ONEG );
-	ONRB=strtonum( "0x" ONEB );
-	TWRR=strtonum( "0x" TWOR );
-	TWRG=strtonum( "0x" TWOG );
-	TWRB=strtonum( "0x" TWOB );
+	ONRR=strtonum("0x" ONER); ONRG=strtonum("0x" ONEG); ONRB=strtonum("0x" ONEB);
+	TWRR=strtonum("0x" TWOR); TWRG=strtonum("0x" TWOG); TWRB=strtonum("0x" TWOB);
 	CL3R=int((ONRR * RT1 + TWRR * RT2) / 100);
 	CL3G=int((ONRG * RT1 + TWRG * RT2) / 100);
 	CL3B=int((ONRB * RT1 + TWRB * RT2) / 100);
-	CL3RX=sprintf( "%x", CL3R );
-	CL3GX=sprintf( "%x", CL3G );
-	CL3BX=sprintf( "%x", CL3B );
+	CL3RX=sprintf("%x",CL3R); CL3GX=sprintf("%x",CL3G); CL3BX=sprintf("%x",CL3B);
 	}
 
 EOB
@@ -99,14 +88,14 @@ variations () {
 	hexrgbraw $fg0 fg0
 	[[ $bg0R -le 127 ]] || [[ $bg0G -le 127 ]] || [[ $bg0B -le 127 ]] && vrt=dark
 
-	awk -i "$ALB" -v bg0="$bg0" -v fg0="$fg0" '
+	awk -i <(awklib) -v bg0="$bg0" -v fg0="$fg0" '
 		/#/ && !/^fg0|^bg0|^acc/ {
 			key=$1;val=$2;
 			mixer("dark"key,val,fg0,50,50)
 			mixer("light"key,val,bg0,50,50)
 		}' $ALL >> $ALL
 
-	awk -i "$ALB" -v VRT="$vrt" -v INC="20" \
+	awk -i <(awklib) -v VRT="$vrt" -v INC="20" \
 		-v bg0R="$bg0R" -v bg0G="$bg0G" -v bg0B="$bg0B" \
 		-v fg0R="$fg0R" -v fg0G="$fg0G" -v fg0B="$fg0B" \
 		-v bg0="$bg0" -v fg0="$fg0" -v acc="$acc" '
@@ -385,7 +374,7 @@ change-current () {
 	awk ' NR==FNR { a[$1]=$1; b[$1]=$0; next; }
 		$1!=a[$1] { print $0; }' $ALL $DEF | sed '/^!/d' >> $ALL
 	parse-vars
-	CMRX="$(awk -i "$ALB" ' $2 ~ /^colmix/ {
+	CMRX="$(awk -i <(awklib) ' $2 ~ /^colmix/ {
 			key=$1;$1="";$2=""; gsub(/^[ \t]+/, "", $0); mix=$0;
 			ONE=substr($0,4,length($0)-14); TWO=substr($0,15,length($0)-1);
 			RT1=substr($0,1,length($0)-19); RT2=substr($0,12,length($0)-19);
@@ -395,7 +384,7 @@ change-current () {
 	sed -i "${CMRX:1}" $ALL
 	parse-vars
 	variations
-	awk -i "$ALB" ' /#/ && !/^bg|^fg|^ac/ {
+	awk -i <(awklib) ' /#/ && !/^bg|^fg|^ac|^dark|^light/ {
 			key=$1;$1="";gsub(/^[ \t]+/, "", $0);
 			hextorgb($0,key);
 		}' $ALL >> $ALL
