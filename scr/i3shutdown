@@ -5,15 +5,9 @@
 #switch_user) dm-tool switch-to-greeter                    ;;
 [[ $(cat /proc/1/comm) == "systemd" ]] && logind=systemctl || logind=loginctl
 
-OPT=$(echo "
-l lock
-e logout
-s suspend
-h hibernate
-r reboot
-x shutdown" | \
-	i3menu -c red -w 500 -p "SHUTDOWN [<ESC> to cancel]" | \
-	awk '{print $1}')
+OPT=$(printf "%s\n" "l lock" "e logout" "s suspend" \
+	"h hibernate" "r reboot" "x shutdown" | i3menu -c red -l 1 -y 27 -w 500 \
+	-p "SHUTDOWN [<ESC> to cancel]" | awk '{print $1}')
 
 [[ -z $OPT ]] && exit
 

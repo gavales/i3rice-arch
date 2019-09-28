@@ -100,8 +100,8 @@ margin-bottom = 0
 [module/start]
 type = custom/text
 content = %{T1}  %{T-}
-click-left = i3menu -s -c blue -l 1 -y 27
-click-right = xtheme
+click-left = i3menu -l 1 -y 27 -s -c blue
+click-right = i3shutdown
 content-background = ${colors.acc}
 content-foreground = ${colors.fg0}
 content-padding = 0

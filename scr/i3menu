@@ -155,45 +155,6 @@ dmenu () {
 		-location 1 -lines $ROWS -width 100
 }
 
-help () {
-cat << 'EOB'
-  ██ ██████
- ▒▒ ▒█▒▒▒▒█
-  ██▒    ▒█ ██████████   █████  ███████  ██   ██
- ▒██   ████▒▒██▒▒██▒▒██ ██▒▒▒██▒▒██▒▒▒██▒██  ▒██
- ▒██  ▒▒▒▒█ ▒██ ▒██ ▒██▒███████ ▒██  ▒██▒██  ▒██
- ▒██ █   ▒█ ▒██ ▒██ ▒██▒██▒▒▒▒  ▒██  ▒██▒██  ▒██
- ▒██▒██████ ███ ▒██ ▒██▒▒██████ ███  ▒██▒▒██████
- ▒▒ ▒▒▒▒▒▒ ▒▒▒  ▒▒  ▒▒  ▒▒▒▒▒▒ ▒▒▒   ▒▒  ▒▒▒▒▒▒
- 	-- Rofi wrapper script
- 
- Usage
- -----
- i3menu -h                ┼ Print this help
- i3menu -d                ┼ Dmenu mode
- i3menu -s                ┼ Application menu mode
- i3menu -W                ┼ Fill active window
- i3menu -t                ┼ Spawn on i3wm title-bar
- i3menu -m                ┼ Spawn at mouse location
- i3menu -f                ┼ Fullscreen mode, working on this
- i3menu -c [COLOR]        ┼ Accent color; the name of one of
-                          │   in the variable files in
-                          │   .config/rofi
- i3menu -p [PROMPT]       ┼ Prompt
- i3menu -l [LOCATION]     ┼ Rofi location:  1 2 3
-                          │                 8 0 4
-                          │                 7 6 5
- i3menu -x [INTEGER]      ┼ Horizontal Offset
- i3menu -y [INTEGER]      ┼ Vertical Offset
- i3menu -w [INTEGER]      ┼ Rofi width
- i3menu -H [INTEGER<=100] ┼ Rofi height (XX% of screen)
- i3menu -o [vertical|     ┼ Vertical or horizontal
-           horizontal]    │   (like dmenu)
- i3menu -L [INTEGER]      ┼ Number of vertical rows
-EOB
-exit
-}
-
 start () {
 	[[ -n $LNS ]] && ROWS=$LNS || ROWS="15"
 	rofi -show drun -p "${PROMPT}" $fs -theme _$ORIENTATION -monitor ${MONITOR:7} \
@@ -233,7 +194,7 @@ window () {
 }
 
 color () {
-	[[ -f $RFDIR/${2:-}.rasi ]] && ACCENT_COLOR="${2:-}"
+	[[ -f $RFDIR/${1}.rasi ]] && ACCENT_COLOR="${1}"
 }
 
 monitor () {
@@ -245,14 +206,55 @@ fullscreen () {
 	ORIENTATION=vertical LOCATION=0 fs="-fullscreen"
 }
 
+help () {
+cat << 'EOB'
+  ██ ██████
+ ▒▒ ▒█▒▒▒▒█
+  ██▒    ▒█ ██████████   █████  ███████  ██   ██
+ ▒██   ████▒▒██▒▒██▒▒██ ██▒▒▒██▒▒██▒▒▒██▒██  ▒██
+ ▒██  ▒▒▒▒█ ▒██ ▒██ ▒██▒███████ ▒██  ▒██▒██  ▒██
+ ▒██ █   ▒█ ▒██ ▒██ ▒██▒██▒▒▒▒  ▒██  ▒██▒██  ▒██
+ ▒██▒██████ ███ ▒██ ▒██▒▒██████ ███  ▒██▒▒██████
+ ▒▒ ▒▒▒▒▒▒ ▒▒▒  ▒▒  ▒▒  ▒▒▒▒▒▒ ▒▒▒   ▒▒  ▒▒▒▒▒▒
+ 	-- Rofi wrapper script
+
+ Usage
+ -----
+ --prompt|-p      [PROMPT]       ┼ Prompt
+ --location|-l    [LOCATION]     ┼ Rofi location:  1 2 3
+                                 │                 8 0 4
+                                 │                 7 6 5
+ --lines|-L       [INTEGER]      ┼ Number of vertical rows
+ --xoffset|-x     [INTEGER]      ┼ Horizontal Offset
+ --yoffset|-y     [INTEGER]      ┼ Vertical Offset
+ --color|-c       [COLOR]        ┼ Accent color; the name
+                                 │   of one of in the
+                                 │   variable files in
+                                 │   .config/rofi
+ --width|-w       [INTEGER]      ┼ Rofi width
+ --height|-H      [INTEGER<=100] ┼ Rofi height
+ --orientation|-o [vertical|     ┼ Vertical or horizontal
+                  horizontal]    │   (like dmenu)
+ --window|-W                     ┼ Fill active window
+ --dmenu|-d                      ┼ Dmenu mode
+ --apps|-s                       ┼ Application menu mode
+ --titlebar|-t                   ┼ Spawn on i3wm title-bar
+ --monitor|-m                    ┼ Spawn at mouse location
+ --fullscreen|-f                 ┼ Fullscreen mode
+                                 │   (in progress)
+ --help|-h                       ┼ Print this help
+EOB
+exit
+}
+
 while true; do
 	case $1 in
 		--prompt      | -p ) PROMPT="${2:-}"      ; shift ;;
-		--location    | -l ) LOCATION="2:-}"      ; shift ;;
+		--location    | -l ) LOCATION="${2:-}"    ; shift ;;
 		--lines       | -L ) LNS="${2:-}"         ; shift ;;
 		--xoffset     | -x ) XFS="${2:-}"         ; shift ;;
 		--yoffset     | -y ) YFS="${2:-}"         ; shift ;;
-		--color       | -c ) color                ; shift ;;
+		--color       | -c ) color "${2:-}"       ; shift ;;
 		--width       | -w ) WIDTH="${2:-}"       ; shift ;;
 		--height      | -H ) HEIGHT="${2:-}"      ; shift ;;
 		--orientation | -o ) ORIENTATION="${2:-}" ; shift ;;
