@@ -1,78 +1,78 @@
-name      nikes
-wallpaper JericoacoaraBrazil
-fg0       #f6f6f4
-bg0       #303030
-acc       #b46b7d
-red       #ff4845
-grn       #47aa12
-ylw       #ff890a
-blu       #b46b7d
-gnt       #288ad6
-cyn       #6bb4a2
-guifont    Luxi Mono
-font       CMUTypewriterText
-sansfont   Lucida Sans
-monofont   CMU Typewriter Text
-romanfont  Luxi Mono
-ltimex     1
-ltimey     90
-size       11
-rxvtsize   12
-rofifsize  12
-gtk        Standard-light
-gtk-icon   Tela-red-dark
-cursor     Bibata_Dark_Red
-conky_loc1 top_left
-conky_loc2 bottom_right
-rng        #d65d0e
-darkred #fa9f9c
-darkredRGB 250, 159, 156
-lightred #973c3a
-lightredRGB 151, 60, 58
-darkgrn #9ed083
-darkgrnRGB 158, 208, 131
-lightgrn #3b6d21
-lightgrnRGB 59, 109, 33
-darkylw #fabf7f
-darkylwRGB 250, 191, 127
-lightylw #975c1d
-lightylwRGB 151, 92, 29
-darkblu #d5b0b8
-darkbluRGB 213, 176, 184
-lightblu #724d56
-lightbluRGB 114, 77, 86
-darkgnt #8fc0e5
-darkgntRGB 143, 192, 229
-lightgnt #2c5d83
-lightgntRGB 44, 93, 131
-darkcyn #b0d5cb
-darkcynRGB 176, 213, 203
-lightcyn #4d7269
-lightcynRGB 77, 114, 105
-darkrng #e6a981
-darkrngRGB 230, 169, 129
-lightrng #83461f
-lightrngRGB 131, 70, 31
-fg1 #e2e2e0
-fg2 #cececc
-fg3 #babab8
-bg1 #444444
-bg2 #585858
-bg3 #6c6c6c
-fg1RGB 226, 226, 224
-fg2RGB 206, 206, 204
-fg3RGB 186, 186, 184
-bg1RGB 68, 68, 68
-bg2RGB 88, 88, 88
-bg3RGB 108, 108, 108
-acf #d5b0b8
-acfRGB 213, 176, 184
-acb #724d56
-acbRGB 114, 77, 86
-redRGB    255, 72, 69
-grnRGB    71, 170, 18
-ylwRGB    255, 137, 10
-bluRGB    180, 107, 125
-gntRGB    40, 138, 214
-cynRGB    107, 180, 162
-rngRGB    214, 93, 14
+name               solarized_light
+wallpaper          WW_128000000001428569_EN
+fg0                #002b36
+bg0                #fdf6e3
+acc                #2aa198
+red                #dc322f
+grn                #859900
+ylw                #b58900
+blu                #2aa198
+gnt                #d33682
+cyn                #268bd2
+guifont            Luxi Mono
+font               CMUTypewriterText
+sansfont           Lucida Sans
+monofont           CMU Typewriter Text
+romanfont          Luxi Mono
+ltimex             1
+ltimey             90
+size               11
+rxvtsize           12
+rofifsize          12
+gtk                Standard-light
+gtk-icon           Tela-red-dark
+cursor             Bibata_Dark_Red
+conky_loc1         top_left
+conky_loc2         bottom_right
+rng                #d65d0e
+darkred            #912f31
+darkredRGB         145, 47, 49
+lightred           #e7746c
+lightredRGB        231, 116, 108
+darkgrn            #577312
+darkgrnRGB         87, 115, 18
+lightgrn           #adb84d
+lightgrnRGB        173, 184, 77
+darkylw            #776912
+darkylwRGB         119, 105, 18
+lightylw           #cdae4d
+lightylwRGB        205, 174, 77
+darkblu            #1b7876
+darkbluRGB         27, 120, 118
+lightblu           #71bdb1
+lightbluRGB        113, 189, 177
+darkgnt            #8b3268
+darkgntRGB         139, 50, 104
+lightgnt           #e177a2
+lightgntRGB        225, 119, 162
+darkcyn            #196a9c
+darkcynRGB         25, 106, 156
+lightcyn           #6fafd7
+lightcynRGB        111, 175, 215
+darkrng            #8d4c1b
+darkrngRGB         141, 76, 27
+lightrng           #e39156
+lightrngRGB        227, 145, 86
+fg1                #143f4a
+fg2                #28535e
+fg3                #3c6772
+bg1                #e9e2cf
+bg2                #d5cebb
+bg3                #c1baa7
+fg1RGB             20, 63, 74
+fg2RGB             40, 83, 94
+fg3RGB             60, 103, 114
+bg1RGB             233, 226, 207
+bg2RGB             213, 206, 187
+bg3RGB             193, 186, 167
+acf                #0e5357
+acfRGB             14, 83, 87
+acb                #b5d9c9
+acbRGB             181, 217, 201
+redRGB             220, 50, 47
+grnRGB             133, 153, 0
+ylwRGB             181, 137, 0
+bluRGB             42, 161, 152
+gntRGB             211, 54, 130
+cynRGB             38, 139, 210
+rngRGB             214, 93, 14

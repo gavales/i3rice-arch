@@ -536,6 +536,14 @@ autocmd FileType sh inoremap opt<Tab> while getopts ::<++> opts; do
 	\<Enter>;;
 	\<Enter><BS><BS>esac
 	\<Enter><BS>done<Esc>06kf:a
+autocmd FileType sh inoremap lop<Tab> while true; do
+	\<Enter>case $1 in
+	\<Enter><Tab>-- \| -<++> ) __o<++>="${2:-}" ; shift ;;
+	\<Enter>-- ) shift ; break ;;
+	\<Enter>*  ) break         ;;
+	\<Enter><BS>esac
+	\<Enter>shift
+	\<Enter><BS>done<Esc>05kf-ea
 autocmd FileType sh inoremap whi<Tab> while ; do
 	\<Enter><++>
 	\<Enter><BS>done<Esc>02kf;i

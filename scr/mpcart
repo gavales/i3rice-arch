@@ -3,7 +3,7 @@
 # OA: Gavin Vales
 # CREATED: Fri  3 May 16:37:43 GMT 2019
 
-COVER=$USER_TMP_DIR/mpcart
+COVER=$USER_TMP_DIR/mpcart.png
 rm -rf $COVER
 ffmpeg -i "$XDG_MUSIC_DIR/$(mpc -f %file% | head -n1)" $COVER &>/dev/null &
 

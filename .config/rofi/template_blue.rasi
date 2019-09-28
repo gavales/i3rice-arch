@@ -1,9 +1,9 @@
 * {
-accent: %%acc%%;
-bg1:    %%bg0%%;
-bg2:    %%bg1%%;
-fg2:    %%fg0%%;
-fg1:    %%fg1%%;
-redish: %%red%%;
-font1: "%%font%% %%rofifsize%%";
-}
+	accent: %%acc%%;
+	bg1:    %%bg0%%;
+	bg2:    %%bg1%%;
+	fg2:    %%fg0%%;
+	fg1:    %%fg1%%;
+	redish: %%red%%;
+	font1: "%%font%% %%rofifsize%%";
+	}

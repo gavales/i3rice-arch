@@ -10,16 +10,16 @@
 [colors]
 tr = #000000ff
 
-acc = #b46b7d
-bg0 = #303030
-acb = #724d56
-acf = #d5b0b8
-fg0 = #f6f6f4
-ylw = #ff890a
-gnt = #288ad6
-red = #ff4845
-grn = #47aa12
-cyn = #6bb4a2
+acc = #2aa198
+bg0 = #fdf6e3
+acb = #b5d9c9
+acf = #0e5357
+fg0 = #002b36
+ylw = #b58900
+gnt = #d33682
+red = #dc322f
+grn = #859900
+cyn = #268bd2
 
 [settings]
 screenchange-reload = true
@@ -42,7 +42,7 @@ foreground = ${colors.bg0}
 line-size   = 0
 border-size = 0
 line-color   = ${colors.acc}
-border-color = #b46b7d
+border-color = #2aa198
 padding-left        = 0
 padding-right       = 0
 module-margin-left  = 0
@@ -86,7 +86,7 @@ font-1 = FontAwesome5Free:style=Solid:size=14;3
 font-2 = FontAwesome5Brands:style=Solid:size=12;3
 tray-position   = right
 tray-padding    = 2
-tray-background = #b46b7d
+tray-background = #2aa198
 cursor-click  = pointer
 cursor-scroll = ns-resize
 modules-left   = startfvwm fvwmtd xkeyboard wintitle

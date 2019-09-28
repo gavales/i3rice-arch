@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-main () {
-	themer -c ""
-	reloadconfs &>/dev/null &
-	themer -x post-build-apply -a $HOME/numix
-}
-
-main
+themer --change
+reloadconfs &>/dev/null &
+themer --apply $HOME/numix

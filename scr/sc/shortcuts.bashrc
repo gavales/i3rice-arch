@@ -127,6 +127,12 @@ Mpwx() { mv "$1" ~/pic/wall/cmx/"$1" ; }
 alias gR="cd /run/media/gavarch"
 YR() { cp -r "$1" /run/media/gavarch/"$1" ; }
 MR() { mv "$1" /run/media/gavarch/"$1" ; }
+alias gsm="cd /mnt/media"
+Ysm() { cp -r "$1" /mnt/media/"$1" ; }
+Msm() { mv "$1" /mnt/media/"$1" ; }
+alias gsw="cd /mnt/win10"
+Ysw() { cp -r "$1" /mnt/win10/"$1" ; }
+Msw() { mv "$1" /mnt/win10/"$1" ; }
 alias gt="cd ~/plt"
 Yt() { cp -r "$1" ~/plt/"$1" ; }
 Mt() { mv "$1" ~/plt/"$1" ; }

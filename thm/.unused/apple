@@ -1,8 +1,8 @@
 ! vim:ft=perl
-name      apple
-wallpaper forest-fog-mist-pine
-conky_loc top_right
-tint      $acc
-acc       #b44a70
-bg0       #31121f
-fg0       #fcf7f9
+name            apple
+wallpaper       forest-fog-mist-pine
+conky_loc       top_right
+tint            $acc
+acc             #b44a70
+bg0             #31121f
+fg0             #fcf7f9

@@ -3256,3 +3256,563 @@ Sep 18 10:50 : client: [42] opened from [::1]:33754
 Sep 18 10:50 : client: [42] closed
 Sep 18 10:51 : client: [43] opened from [::1]:33862
 Sep 18 10:51 : client: [43] closed
+Sep 24 16:51 : client: [44] opened from [::1]:50830
+Sep 24 16:51 : client: [44] closed
+Sep 24 16:51 : client: [45] opened from [::1]:50832
+Sep 24 16:51 : client: [45] closed
+Sep 24 16:51 : client: [46] opened from [::1]:50834
+Sep 24 16:51 : client: [46] closed
+Sep 24 16:51 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 16:51 : client: [47] opened from [::1]:50836
+Sep 24 16:51 : client: [47] closed
+Sep 24 16:51 : client: [48] opened from [::1]:50838
+Sep 24 16:51 : client: [48] closed
+Sep 24 16:51 : client: [49] opened from [::1]:50840
+Sep 24 16:51 : client: [49] closed
+Sep 24 16:51 : client: [50] opened from [::1]:50842
+Sep 24 16:51 : client: [50] closed
+Sep 24 16:51 : client: [51] opened from [::1]:50844
+Sep 24 16:51 : client: [51] closed
+Sep 24 16:51 : client: [52] opened from [::1]:50846
+Sep 24 16:51 : client: [52] closed
+Sep 24 16:51 : client: [53] opened from [::1]:50848
+Sep 24 16:51 : client: [53] closed
+Sep 24 16:51 : client: [54] opened from [::1]:50850
+Sep 24 16:51 : client: [54] closed
+Sep 24 16:51 : client: [55] opened from [::1]:50852
+Sep 24 16:51 : client: [55] closed
+Sep 24 16:51 : client: [56] opened from [::1]:50854
+Sep 24 16:51 : client: [56] closed
+Sep 24 16:51 : client: [57] opened from [::1]:50856
+Sep 24 16:51 : client: [57] closed
+Sep 24 16:51 : client: [58] opened from [::1]:50858
+Sep 24 16:51 : client: [58] closed
+Sep 24 16:51 : client: [59] opened from [::1]:50860
+Sep 24 16:51 : client: [59] closed
+Sep 24 16:51 : client: [60] opened from [::1]:50862
+Sep 24 16:51 : client: [60] closed
+Sep 24 16:51 : client: [61] opened from [::1]:50864
+Sep 24 16:51 : client: [61] closed
+Sep 24 16:51 : client: [62] opened from [::1]:50866
+Sep 24 16:51 : client: [62] closed
+Sep 24 16:51 : client: [63] opened from [::1]:50868
+Sep 24 16:51 : client: [63] closed
+Sep 24 16:51 : client: [64] opened from [::1]:50870
+Sep 24 16:51 : client: [64] closed
+Sep 24 16:51 : client: [65] opened from [::1]:50872
+Sep 24 16:51 : client: [65] closed
+Sep 24 16:51 : client: [66] opened from [::1]:50874
+Sep 24 16:51 : client: [66] closed
+Sep 24 16:51 : client: [67] opened from [::1]:50876
+Sep 24 16:51 : client: [67] closed
+Sep 24 16:51 : client: [68] opened from [::1]:50878
+Sep 24 16:51 : client: [68] closed
+Sep 24 16:51 : client: [69] opened from [::1]:50880
+Sep 24 16:51 : client: [69] closed
+Sep 24 16:51 : client: [70] opened from [::1]:50882
+Sep 24 16:51 : client: [70] closed
+Sep 24 16:51 : client: [71] opened from [::1]:50884
+Sep 24 16:51 : client: [71] closed
+Sep 24 16:51 : client: [72] opened from [::1]:50886
+Sep 24 16:51 : client: [72] closed
+Sep 24 16:51 : client: [73] opened from [::1]:50888
+Sep 24 16:51 : client: [73] closed
+Sep 24 16:51 : client: [74] opened from [::1]:50890
+Sep 24 16:51 : client: [74] closed
+Sep 24 16:51 : client: [75] opened from [::1]:50892
+Sep 24 16:51 : client: [75] closed
+Sep 24 16:51 : client: [76] opened from [::1]:50894
+Sep 24 16:51 : client: [76] closed
+Sep 24 16:51 : client: [77] opened from [::1]:50896
+Sep 24 16:51 : client: [77] closed
+Sep 24 16:51 : client: [78] opened from [::1]:50898
+Sep 24 16:51 : client: [78] closed
+Sep 24 16:51 : client: [79] opened from [::1]:50900
+Sep 24 16:51 : client: [79] closed
+Sep 24 16:51 : client: [80] opened from [::1]:50902
+Sep 24 16:51 : client: [80] closed
+Sep 24 16:51 : client: [81] opened from [::1]:50904
+Sep 24 16:51 : client: [81] closed
+Sep 24 16:51 : client: [82] opened from [::1]:50906
+Sep 24 16:51 : client: [82] closed
+Sep 24 16:51 : client: [83] opened from [::1]:50908
+Sep 24 16:51 : client: [83] closed
+Sep 24 16:51 : client: [84] opened from [::1]:50910
+Sep 24 16:51 : client: [84] closed
+Sep 24 16:51 : client: [85] opened from [::1]:50912
+Sep 24 16:51 : client: [85] closed
+Sep 24 16:54 : client: [86] opened from [::1]:50918
+Sep 24 16:54 : client: [86] closed
+Sep 24 16:54 : client: [87] opened from [::1]:50920
+Sep 24 16:54 : client: [87] closed
+Sep 24 16:54 : client: [88] opened from [::1]:50922
+Sep 24 16:54 : client: [88] closed
+Sep 24 16:54 : client: [89] opened from [::1]:50924
+Sep 24 16:54 : client: [89] closed
+Sep 24 16:54 : client: [90] opened from [::1]:50926
+Sep 24 16:54 : client: [90] closed
+Sep 24 16:54 : client: [91] opened from [::1]:50928
+Sep 24 16:54 : client: [91] closed
+Sep 24 16:54 : client: [92] opened from [::1]:50932
+Sep 24 16:54 : client: [92] closed
+Sep 24 16:54 : client: [93] opened from [::1]:50934
+Sep 24 16:54 : client: [93] closed
+Sep 24 16:54 : client: [94] opened from [::1]:50936
+Sep 24 16:54 : client: [94] closed
+Sep 24 16:54 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 16:54 : client: [95] opened from [::1]:50938
+Sep 24 16:54 : client: [95] closed
+Sep 24 16:54 : client: [96] opened from [::1]:50940
+Sep 24 16:54 : client: [96] closed
+Sep 24 16:54 : client: [97] opened from [::1]:50942
+Sep 24 16:54 : client: [97] closed
+Sep 24 16:54 : client: [98] opened from [::1]:50944
+Sep 24 16:54 : client: [98] closed
+Sep 24 16:54 : client: [99] opened from [::1]:50946
+Sep 24 16:54 : client: [99] closed
+Sep 24 16:54 : client: [100] opened from [::1]:50948
+Sep 24 16:54 : client: [100] closed
+Sep 24 16:54 : client: [101] opened from [::1]:50950
+Sep 24 16:54 : client: [101] closed
+Sep 24 16:54 : client: [102] opened from [::1]:50952
+Sep 24 16:54 : client: [102] closed
+Sep 24 16:54 : client: [103] opened from [::1]:50954
+Sep 24 16:54 : client: [103] closed
+Sep 24 16:54 : client: [104] opened from [::1]:50956
+Sep 24 16:54 : client: [104] closed
+Sep 24 16:54 : client: [105] opened from [::1]:50958
+Sep 24 16:54 : client: [105] closed
+Sep 24 16:54 : client: [106] opened from [::1]:50960
+Sep 24 16:54 : client: [106] closed
+Sep 24 16:54 : client: [107] opened from [::1]:50962
+Sep 24 16:54 : client: [107] closed
+Sep 24 16:54 : client: [108] opened from [::1]:50964
+Sep 24 16:54 : client: [108] closed
+Sep 24 16:54 : client: [109] opened from [::1]:50966
+Sep 24 16:54 : client: [109] closed
+Sep 24 16:54 : client: [110] opened from [::1]:50970
+Sep 24 16:54 : client: [110] closed
+Sep 24 16:54 : client: [111] opened from [::1]:50972
+Sep 24 16:54 : client: [111] closed
+Sep 24 16:54 : client: [112] opened from [::1]:50974
+Sep 24 16:54 : client: [112] closed
+Sep 24 16:54 : client: [113] opened from [::1]:50976
+Sep 24 16:54 : client: [113] closed
+Sep 24 16:54 : client: [114] opened from [::1]:50978
+Sep 24 16:54 : client: [114] closed
+Sep 24 16:54 : client: [115] opened from [::1]:50980
+Sep 24 16:54 : client: [115] closed
+Sep 24 16:54 : client: [116] opened from [::1]:50982
+Sep 24 16:54 : client: [116] closed
+Sep 24 16:54 : client: [117] opened from [::1]:50984
+Sep 24 16:54 : client: [117] closed
+Sep 24 16:54 : client: [118] opened from [::1]:50986
+Sep 24 16:54 : client: [118] closed
+Sep 24 16:54 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 16:54 : client: [119] opened from [::1]:50988
+Sep 24 16:54 : client: [119] closed
+Sep 24 16:54 : client: [120] opened from [::1]:50990
+Sep 24 16:54 : client: [120] closed
+Sep 24 16:54 : client: [121] opened from [::1]:50992
+Sep 24 16:54 : client: [121] closed
+Sep 24 16:55 : client: [122] opened from [::1]:51000
+Sep 24 16:55 : client: [122] closed
+Sep 24 16:55 : client: [123] opened from [::1]:51002
+Sep 24 16:55 : client: [123] closed
+Sep 24 16:55 : client: [124] opened from [::1]:51004
+Sep 24 16:55 : client: [124] closed
+Sep 24 16:55 : client: [125] opened from [::1]:51006
+Sep 24 16:55 : client: [125] closed
+Sep 24 16:55 : client: [126] opened from [::1]:51008
+Sep 24 16:55 : client: [126] closed
+Sep 24 16:55 : client: [127] opened from [::1]:51010
+Sep 24 16:55 : client: [127] closed
+Sep 24 16:55 : client: [128] opened from [::1]:51012
+Sep 24 16:55 : client: [128] closed
+Sep 24 16:55 : client: [129] opened from [::1]:51014
+Sep 24 16:55 : client: [129] closed
+Sep 24 16:55 : client: [130] opened from [::1]:51016
+Sep 24 16:55 : client: [130] closed
+Sep 24 16:55 : client: [131] opened from [::1]:51018
+Sep 24 16:55 : client: [131] closed
+Sep 24 16:55 : client: [132] opened from [::1]:51020
+Sep 24 16:55 : client: [132] closed
+Sep 24 16:55 : client: [133] opened from [::1]:51022
+Sep 24 16:55 : client: [133] closed
+Sep 24 16:55 : client: [134] opened from [::1]:51024
+Sep 24 16:55 : client: [134] closed
+Sep 24 16:55 : client: [135] opened from [::1]:51026
+Sep 24 16:55 : client: [135] closed
+Sep 24 16:55 : client: [136] opened from [::1]:51028
+Sep 24 16:55 : client: [136] closed
+Sep 24 16:55 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 16:55 : client: [137] opened from [::1]:51030
+Sep 24 16:55 : client: [137] closed
+Sep 24 16:55 : client: [138] opened from [::1]:51032
+Sep 24 16:55 : client: [138] closed
+Sep 24 16:55 : client: [139] opened from [::1]:51034
+Sep 24 16:55 : client: [139] closed
+Sep 24 16:55 : client: [140] opened from [::1]:51036
+Sep 24 16:55 : client: [140] closed
+Sep 24 16:55 : client: [141] opened from [::1]:51038
+Sep 24 16:55 : client: [141] closed
+Sep 24 16:55 : client: [142] opened from [::1]:51040
+Sep 24 16:55 : client: [142] closed
+Sep 24 16:55 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 16:55 : client: [143] opened from [::1]:51042
+Sep 24 16:55 : client: [143] closed
+Sep 24 16:55 : client: [144] opened from [::1]:51044
+Sep 24 16:55 : client: [144] closed
+Sep 24 16:55 : client: [145] opened from [::1]:51046
+Sep 24 16:55 : client: [145] closed
+Sep 24 16:55 : client: [146] opened from [::1]:51048
+Sep 24 16:55 : client: [146] closed
+Sep 24 16:55 : client: [147] opened from [::1]:51050
+Sep 24 16:55 : client: [147] closed
+Sep 24 16:55 : client: [148] opened from [::1]:51052
+Sep 24 16:55 : client: [148] closed
+Sep 24 16:55 : client: [149] opened from [::1]:51054
+Sep 24 16:55 : client: [149] closed
+Sep 24 16:55 : client: [150] opened from [::1]:51056
+Sep 24 16:55 : client: [150] closed
+Sep 24 16:55 : client: [151] opened from [::1]:51058
+Sep 24 16:55 : client: [151] closed
+Sep 24 16:55 : client: [152] opened from [::1]:51060
+Sep 24 16:55 : client: [152] closed
+Sep 24 16:55 : client: [153] opened from [::1]:51062
+Sep 24 16:55 : client: [153] closed
+Sep 24 16:55 : client: [154] opened from [::1]:51064
+Sep 24 16:55 : client: [154] closed
+Sep 24 16:55 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 16:55 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 16:55 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 16:55 : client: [155] opened from [::1]:51066
+Sep 24 16:55 : client: [155] closed
+Sep 24 16:55 : client: [156] opened from [::1]:51068
+Sep 24 16:55 : client: [156] closed
+Sep 24 16:55 : client: [157] opened from [::1]:51070
+Sep 24 16:55 : client: [157] closed
+Sep 24 16:55 : client: [158] opened from [::1]:51072
+Sep 24 16:55 : client: [158] closed
+Sep 24 16:55 : client: [159] opened from [::1]:51074
+Sep 24 16:55 : client: [159] closed
+Sep 24 16:55 : client: [160] opened from [::1]:51076
+Sep 24 16:55 : client: [160] closed
+Sep 24 16:55 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 16:55 : client: [161] opened from [::1]:51078
+Sep 24 16:55 : client: [161] closed
+Sep 24 16:55 : client: [162] opened from [::1]:51080
+Sep 24 16:55 : client: [162] closed
+Sep 24 16:56 : client: [163] opened from [::1]:51082
+Sep 24 16:56 : client: [163] closed
+Sep 24 16:56 : client: [164] opened from [::1]:51084
+Sep 24 16:56 : client: [164] closed
+Sep 24 16:56 : client: [165] opened from [::1]:51086
+Sep 24 16:56 : client: [165] closed
+Sep 24 16:56 : client: [166] opened from [::1]:51088
+Sep 24 16:56 : client: [166] closed
+Sep 24 16:56 : client: [167] opened from [::1]:51090
+Sep 24 16:56 : client: [167] closed
+Sep 24 16:56 : client: [168] opened from [::1]:51092
+Sep 24 16:56 : client: [168] closed
+Sep 24 16:56 : client: [169] opened from [::1]:51094
+Sep 24 16:56 : client: [169] closed
+Sep 24 16:56 : client: [170] opened from [::1]:51096
+Sep 24 16:56 : client: [170] closed
+Sep 24 16:56 : client: [171] opened from [::1]:51098
+Sep 24 16:56 : client: [171] closed
+Sep 24 16:56 : client: [172] opened from [::1]:51100
+Sep 24 16:56 : client: [172] closed
+Sep 24 16:56 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 16:56 : client: [173] opened from [::1]:51102
+Sep 24 16:56 : client: [173] closed
+Sep 24 16:56 : client: [174] opened from [::1]:51104
+Sep 24 16:56 : client: [174] closed
+Sep 24 16:56 : client: [175] opened from [::1]:51106
+Sep 24 16:56 : client: [175] closed
+Sep 24 16:56 : client: [176] opened from [::1]:51108
+Sep 24 16:56 : client: [176] closed
+Sep 24 16:56 : client: [177] opened from [::1]:51110
+Sep 24 16:56 : client: [177] closed
+Sep 24 16:56 : client: [178] opened from [::1]:51112
+Sep 24 16:56 : client: [178] closed
+Sep 24 16:56 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 16:56 : client: [179] opened from [::1]:51114
+Sep 24 16:56 : client: [179] closed
+Sep 24 16:56 : client: [180] opened from [::1]:51116
+Sep 24 16:56 : client: [180] closed
+Sep 24 16:56 : client: [181] opened from [::1]:51118
+Sep 24 16:56 : client: [181] closed
+Sep 24 16:56 : client: [182] opened from [::1]:51120
+Sep 24 16:56 : client: [182] closed
+Sep 24 16:56 : client: [183] opened from [::1]:51122
+Sep 24 16:56 : client: [183] closed
+Sep 24 16:56 : client: [184] opened from [::1]:51124
+Sep 24 16:56 : client: [184] closed
+Sep 24 16:56 : client: [185] opened from [::1]:51126
+Sep 24 16:56 : client: [185] closed
+Sep 24 16:56 : client: [186] opened from [::1]:51128
+Sep 24 16:56 : client: [186] closed
+Sep 24 16:56 : client: [187] opened from [::1]:51130
+Sep 24 16:56 : client: [187] closed
+Sep 24 17:20 : client: [188] opened from [::1]:52502
+Sep 24 17:20 : client: [188] closed
+Sep 24 17:23 : client: [189] opened from [::1]:52508
+Sep 24 17:23 : client: [189] closed
+Sep 24 17:24 : client: [190] opened from [::1]:52510
+Sep 24 17:24 : client: [190] closed
+Sep 24 17:24 : client: [191] opened from [::1]:52514
+Sep 24 17:24 : client: [191] closed
+Sep 24 17:25 : client: [192] opened from [::1]:52520
+Sep 24 17:25 : client: [192] closed
+Sep 24 17:25 : client: [193] opened from [::1]:52522
+Sep 24 17:25 : client: [193] closed
+Sep 24 17:25 : client: [194] opened from [::1]:52524
+Sep 24 17:25 : client: [194] closed
+Sep 24 17:25 : client: [195] opened from [::1]:52526
+Sep 24 17:25 : client: [195] closed
+Sep 24 17:25 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 17:25 : client: [196] opened from [::1]:52528
+Sep 24 17:25 : client: [196] closed
+Sep 24 17:25 : client: [197] opened from [::1]:52530
+Sep 24 17:25 : client: [197] closed
+Sep 24 17:25 : client: [198] opened from [::1]:52532
+Sep 24 17:25 : client: [198] closed
+Sep 24 17:25 : client: [199] opened from [::1]:52534
+Sep 24 17:25 : client: [199] closed
+Sep 24 17:25 : client: [200] opened from [::1]:52536
+Sep 24 17:25 : client: [200] closed
+Sep 24 17:25 : client: [201] opened from [::1]:52538
+Sep 24 17:25 : client: [201] closed
+Sep 24 17:25 : client: [202] opened from [::1]:52540
+Sep 24 17:25 : client: [202] closed
+Sep 24 17:25 : client: [203] opened from [::1]:52542
+Sep 24 17:25 : client: [203] closed
+Sep 24 17:25 : client: [204] opened from [::1]:52544
+Sep 24 17:25 : client: [204] closed
+Sep 24 17:25 : client: [205] opened from [::1]:52546
+Sep 24 17:25 : client: [205] closed
+Sep 24 17:25 : client: [206] opened from [::1]:52548
+Sep 24 17:25 : client: [206] closed
+Sep 24 17:25 : client: [207] opened from [::1]:52550
+Sep 24 17:25 : client: [207] closed
+Sep 24 17:25 : client: [208] opened from [::1]:52552
+Sep 24 17:25 : client: [208] closed
+Sep 24 17:25 : client: [209] opened from [::1]:52554
+Sep 24 17:25 : client: [209] closed
+Sep 24 17:25 : client: [210] opened from [::1]:52556
+Sep 24 17:25 : client: [210] closed
+Sep 24 17:25 : client: [211] opened from [::1]:52558
+Sep 24 17:25 : client: [211] closed
+Sep 24 17:25 : client: [212] opened from [::1]:52560
+Sep 24 17:25 : client: [212] closed
+Sep 24 17:25 : client: [213] opened from [::1]:52562
+Sep 24 17:25 : client: [213] closed
+Sep 24 17:25 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 17:25 : client: [214] opened from [::1]:52564
+Sep 24 17:25 : client: [214] closed
+Sep 24 17:25 : client: [215] opened from [::1]:52566
+Sep 24 17:25 : client: [215] closed
+Sep 24 17:25 : client: [216] opened from [::1]:52568
+Sep 24 17:25 : client: [216] closed
+Sep 24 17:25 : client: [217] opened from [::1]:52570
+Sep 24 17:25 : client: [217] closed
+Sep 24 17:25 : client: [218] opened from [::1]:52572
+Sep 24 17:25 : client: [218] closed
+Sep 24 17:25 : client: [219] opened from [::1]:52574
+Sep 24 17:25 : client: [219] closed
+Sep 24 17:25 : client: [220] opened from [::1]:52576
+Sep 24 17:25 : client: [220] closed
+Sep 24 17:25 : client: [221] opened from [::1]:52578
+Sep 24 17:25 : client: [221] closed
+Sep 24 17:25 : client: [222] opened from [::1]:52580
+Sep 24 17:25 : client: [222] closed
+Sep 24 17:25 : client: [223] opened from [::1]:52582
+Sep 24 17:25 : client: [223] closed
+Sep 24 17:25 : client: [224] opened from [::1]:52584
+Sep 24 17:25 : client: [224] closed
+Sep 24 17:25 : client: [225] opened from [::1]:52586
+Sep 24 17:25 : client: [225] closed
+Sep 24 17:25 : client: [226] opened from [::1]:52588
+Sep 24 17:25 : client: [226] closed
+Sep 24 17:25 : client: [227] opened from [::1]:52590
+Sep 24 17:25 : client: [227] closed
+Sep 24 17:25 : client: [228] opened from [::1]:52592
+Sep 24 17:25 : client: [228] closed
+Sep 24 17:25 : client: [229] opened from [::1]:52594
+Sep 24 17:25 : client: [229] closed
+Sep 24 17:25 : client: [230] opened from [::1]:52596
+Sep 24 17:25 : client: [230] closed
+Sep 24 17:25 : client: [231] opened from [::1]:52598
+Sep 24 17:25 : client: [231] closed
+Sep 24 17:25 : client: [232] opened from [::1]:52602
+Sep 24 17:25 : client: [232] closed
+Sep 24 17:25 : client: [233] opened from [::1]:52604
+Sep 24 17:25 : client: [233] closed
+Sep 24 17:25 : client: [234] opened from [::1]:52606
+Sep 24 17:25 : client: [234] closed
+Sep 24 17:25 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 17:25 : client: [235] opened from [::1]:52608
+Sep 24 17:25 : client: [235] closed
+Sep 24 17:25 : client: [236] opened from [::1]:52610
+Sep 24 17:25 : client: [236] closed
+Sep 24 17:25 : client: [237] opened from [::1]:52612
+Sep 24 17:25 : client: [237] closed
+Sep 24 17:25 : client: [238] opened from [::1]:52614
+Sep 24 17:25 : client: [239] opened from [::1]:52616
+Sep 24 17:25 : client: [239] closed
+Sep 24 17:25 : client: [240] opened from [::1]:52620
+Sep 24 17:25 : client: [240] closed
+Sep 24 17:25 : client: [241] opened from [::1]:52622
+Sep 24 17:25 : client: [241] closed
+Sep 24 17:26 : player: played "Jim Croce/Time in a Bottle_Greatest Love/12 Photographs and Memories.mp3"
+Sep 24 17:26 : client: [242] opened from [::1]:52624
+Sep 24 17:26 : client: [242] closed
+Sep 24 17:26 : client: [243] opened from [::1]:52626
+Sep 24 17:26 : client: [243] closed
+Sep 24 17:26 : client: [244] opened from [::1]:52628
+Sep 24 17:26 : client: [244] closed
+Sep 24 17:26 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 17:27 : client: [245] opened from [::1]:52630
+Sep 24 17:27 : client: [245] closed
+Sep 24 17:27 : client: [246] opened from [::1]:52632
+Sep 24 17:27 : client: [246] closed
+Sep 24 17:27 : client: [247] opened from [::1]:52634
+Sep 24 17:27 : client: [247] closed
+Sep 24 17:27 : client: [248] opened from [::1]:52636
+Sep 24 17:27 : client: [248] closed
+Sep 24 17:27 : client: [249] opened from [::1]:52638
+Sep 24 17:27 : client: [249] closed
+Sep 24 17:27 : client: [250] opened from [::1]:52640
+Sep 24 17:27 : client: [250] closed
+Sep 24 17:27 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 17:27 : client: [251] opened from [::1]:52644
+Sep 24 17:27 : client: [251] closed
+Sep 24 17:27 : client: [252] opened from [::1]:52646
+Sep 24 17:27 : client: [252] closed
+Sep 24 17:27 : client: [253] opened from [::1]:52648
+Sep 24 17:27 : client: [253] closed
+Sep 24 17:27 : client: [254] opened from [::1]:52650
+Sep 24 17:27 : client: [254] closed
+Sep 24 17:27 : client: [255] opened from [::1]:52652
+Sep 24 17:27 : client: [255] closed
+Sep 24 17:27 : client: [256] opened from [::1]:52654
+Sep 24 17:27 : client: [256] closed
+Sep 24 17:27 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 17:27 : client: [257] opened from [::1]:52656
+Sep 24 17:27 : client: [257] closed
+Sep 24 17:27 : client: [258] opened from [::1]:52658
+Sep 24 17:27 : client: [258] closed
+Sep 24 17:27 : client: [259] opened from [::1]:52660
+Sep 24 17:27 : client: [259] closed
+Sep 24 17:27 : client: [260] opened from [::1]:52662
+Sep 24 17:27 : client: [260] closed
+Sep 24 17:27 : client: [261] opened from [::1]:52664
+Sep 24 17:27 : client: [261] closed
+Sep 24 17:27 : client: [262] opened from [::1]:52666
+Sep 24 17:27 : client: [262] closed
+Sep 24 17:27 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 17:27 : client: [263] opened from [::1]:52670
+Sep 24 17:27 : client: [263] closed
+Sep 24 17:27 : client: [264] opened from [::1]:52672
+Sep 24 17:27 : client: [264] closed
+Sep 24 17:27 : client: [265] opened from [::1]:52674
+Sep 24 17:27 : client: [265] closed
+Sep 24 19:53 : client: [266] opened from [::1]:41020
+Sep 24 19:53 : client: [266] closed
+Sep 24 19:53 : client: [267] opened from [::1]:41022
+Sep 24 19:53 : client: [267] closed
+Sep 24 19:53 : client: [268] opened from [::1]:41024
+Sep 24 19:53 : client: [268] closed
+Sep 24 19:53 : client: [269] opened from [::1]:41026
+Sep 24 19:53 : client: [269] closed
+Sep 24 19:53 : client: [270] opened from [::1]:41028
+Sep 24 19:53 : client: [270] closed
+Sep 24 19:53 : client: [271] opened from [::1]:41030
+Sep 24 19:53 : client: [271] closed
+Sep 24 21:39 : client: [272] opened from [::1]:44834
+Sep 24 21:39 : client: [272] closed
+Sep 24 21:39 : client: [273] opened from [::1]:44836
+Sep 24 21:39 : client: [273] closed
+Sep 24 21:39 : client: [274] opened from [::1]:44838
+Sep 24 21:39 : client: [274] closed
+Sep 24 21:39 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 21:39 : client: [275] opened from [::1]:44880
+Sep 24 21:39 : client: [275] closed
+Sep 24 21:39 : client: [276] opened from [::1]:44882
+Sep 24 21:39 : client: [276] closed
+Sep 24 21:39 : client: [277] opened from [::1]:44884
+Sep 24 21:39 : client: [277] closed
+Sep 24 21:39 : client: [278] opened from [::1]:44894
+Sep 24 21:39 : client: [278] closed
+Sep 24 21:39 : client: [279] opened from [::1]:44896
+Sep 24 21:39 : client: [279] closed
+Sep 24 21:39 : client: [280] opened from [::1]:44898
+Sep 24 21:39 : client: [280] closed
+Sep 24 21:39 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 21:39 : client: [281] opened from [::1]:44934
+Sep 24 21:39 : client: [281] closed
+Sep 24 21:39 : client: [282] opened from [::1]:44936
+Sep 24 21:39 : client: [282] closed
+Sep 24 21:39 : client: [283] opened from [::1]:44938
+Sep 24 21:39 : client: [283] closed
+Sep 24 21:39 : client: [284] opened from [::1]:44940
+Sep 24 21:39 : client: [284] closed
+Sep 24 21:39 : client: [285] opened from [::1]:44942
+Sep 24 21:39 : client: [285] closed
+Sep 24 21:39 : client: [286] opened from [::1]:44944
+Sep 24 21:39 : client: [286] closed
+Sep 24 21:40 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 21:40 : client: [287] opened from [::1]:44966
+Sep 24 21:40 : client: [287] closed
+Sep 24 21:40 : client: [288] opened from [::1]:44968
+Sep 24 21:40 : client: [288] closed
+Sep 24 21:40 : client: [289] opened from [::1]:44970
+Sep 24 21:40 : client: [289] closed
+Sep 24 21:40 : client: [290] opened from [::1]:45044
+Sep 24 21:40 : client: [290] closed
+Sep 24 21:40 : client: [291] opened from [::1]:45046
+Sep 24 21:40 : client: [291] closed
+Sep 24 21:40 : client: [292] opened from [::1]:45048
+Sep 24 21:40 : client: [292] closed
+Sep 24 21:40 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 24 21:40 : client: [293] opened from [::1]:45128
+Sep 24 21:40 : client: [293] closed
+Sep 24 21:40 : client: [294] opened from [::1]:45130
+Sep 24 21:40 : client: [294] closed
+Sep 24 21:40 : client: [295] opened from [::1]:45132
+Sep 24 21:40 : client: [295] closed
+Sep 26 16:49 : client: [238] closed
+Sep 27 14:42 : client: [296] opened from [::1]:56874
+Sep 27 14:42 : client: [297] opened from [::1]:56876
+Sep 27 14:42 : client: [297] closed
+Sep 27 14:42 : client: [298] opened from [::1]:56882
+Sep 27 14:42 : client: [298] closed
+Sep 27 14:42 : client: [299] opened from [::1]:56894
+Sep 27 14:42 : client: [299] closed
+Sep 27 23:07 : client: [300] opened from [::1]:59972
+Sep 27 23:07 : client: [300] closed
+Sep 27 23:07 : client: [301] opened from [::1]:59974
+Sep 27 23:07 : client: [301] closed
+Sep 27 23:07 : client: [302] opened from [::1]:59976
+Sep 27 23:07 : client: [302] closed
+Sep 27 23:07 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 27 23:07 : client: [303] opened from [::1]:59978
+Sep 27 23:07 : client: [303] closed
+Sep 27 23:07 : client: [304] opened from [::1]:59980
+Sep 27 23:07 : client: [304] closed
+Sep 27 23:07 : client: [305] opened from [::1]:59982
+Sep 27 23:07 : client: [305] closed
+Sep 28 14:38 : client: [306] opened from [::1]:33284
+Sep 28 14:38 : client: [307] opened from [::1]:33286
+Sep 28 14:38 : client: [307] closed
+Sep 28 14:38 : client: [308] opened from [::1]:33288
+Sep 28 14:38 : client: [308] closed
+Sep 28 14:38 : client: [306] closed
+Sep 28 15:05 : client: [296] closed
+Sep 28 16:00 : client: [309] opened from [::1]:48034
+Sep 28 16:00 : client: [310] opened from [::1]:48036
+Sep 28 16:00 : client: [310] closed
+Sep 28 16:00 : client: [311] opened from [::1]:48040
+Sep 28 16:00 : client: [311] closed
+Sep 28 16:01 : client: [309] closed

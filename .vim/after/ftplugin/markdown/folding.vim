@@ -1,6 +1,8 @@
 function! Folds()
 	let thisline = getline(v:lnum)
-	if match(thisline, '^## ') >= 0
+	if match(thisline, '^### ') >= 0
+		return ">1"
+	elseif match(thisline, '^## ') >= 0
 		return ">1"
 	elseif match(thisline, '^# ') >= 0
 		return ">1"
@@ -17,16 +19,17 @@ setlocal foldexpr=Folds()
 
 setlocal foldtext=FoldText()
 function FoldText()
-    let nucolwidth = &fdc + &number * &numberwidth
-    let windowwidth = winwidth(0) - nucolwidth - 3
-    let foldsize = (v:foldend-v:foldstart)
-    let foldline = getline(v:foldstart)
-    let foldline = substitute(foldline, '^# ', "> ", "")
-    let foldline = substitute(foldline, '^## ', "~> ", "")
-    let foldline = substitute(foldline, '^### ', "--> ", "")
-    let text = foldline.foldsize.'line     '
-    let fillcharcount = windowwidth - strdisplaywidth(text)
-    return foldline.'  '.repeat(".",fillcharcount).'  ('.foldsize.' lines)'
+	let nucolwidth = &fdc + &number * &numberwidth
+	let windowwidth = winwidth(0) - nucolwidth - 3
+	let foldsize = (v:foldend-v:foldstart)
+	let foldline = getline(v:foldstart)
+	let foldline = substitute(foldline, '^# ', "┤ ", "")
+	let foldline = substitute(foldline, '^## ', "┼ ", "")
+	let foldline = substitute(foldline, '^### ', "┼┈ ", "")
+	let text = foldline.foldsize.'line     '
+	let barcharcount = ((windowwidth * 2)/ 3) - strdisplaywidth(foldsize.'lines     ')
+	let spacecharcount = windowwidth - strdisplaywidth(text) - barcharcount
+	return ' '.foldline.repeat(" ",spacecharcount).'├'.repeat("┈",barcharcount).'  ('.foldsize.' lines)'
 endfunction
 
 setlocal spell spelllang=en_gb

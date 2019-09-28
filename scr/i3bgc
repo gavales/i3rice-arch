@@ -20,15 +20,15 @@ update () {
 	else
 		_F="$_I"
 	fi
-	pbcat -m i3bg -v "$_F"
+	pbcat --module i3bg "$_F"
 }
 
 case $1 in
 	show)   CTXT=$(pbcat -m i3bg) && update ;;
 	blur)   i3bg -b                         ;;
-	prev)   i3bg -w PREV          && update ;;
-	next)   i3bg -w NEXT          && update ;;
-	random) i3bg -w RANDOM        && update ;;
+	prev)   i3bg -w prev          && update ;;
+	next)   i3bg -w next          && update ;;
+	random) i3bg -w random        && update ;;
 	delete)
 		CONFIRM=$(echo -e "Yes\nNo" | i3menu -y 0 -m -c red)
 		[[ $CONFIRM == "YES" ]] && {

@@ -21,7 +21,7 @@ CURR="${WDIR}/current"
 WHT="${WDIR}/white.jpg"
 CRLN="$(readlink -f $CURR)"
 HIST="${WDIR}/.history"
-MONDIM=$(xdpyinfo | grep dimensions: | awk '{print $2}')
+MONDIM=$(xdpyinfo | awk '/dimensions/ {print $2}')
 MX=${MONDIM%x*}
 MY=${MONDIM#*x}
 blr=0x16
@@ -41,15 +41,11 @@ add-wall () {
 }
 
 add () {
-	[[ -d $1 ]] || {
-		echo "Directory doesn't exist."
-		exit
-		}
+	[[ -d $1 ]] || { echo "Directory doesn't exist." ; exit ; }
 	cd "$1"
 	count=0
 	total=$(ls | wc -l)
-	echo "Adding...
-"
+	echo "Adding..."
 	IFS=$'\n'
 	for i in $(find -type f); do
 		count=$((count + 1))
@@ -100,13 +96,13 @@ set-wall () {
 list () {
 	cd $NORM
 	$HOME/scr/openimage "$(ls | head -n 1)"
+	exit
 }
 
 history () {
 	[[ ! -f $HIST ]] && touch $HIST
 	sed -e "/"${1}"/d" -i $HIST
 	echo -e "${1}\n$(cat $HIST)" > $HIST
-	echo "Added current wall to history"
 }
 
 delete () {
@@ -115,15 +111,26 @@ delete () {
 	rm -rf ${BLUR}/${DEL}
 	[[ ! -f ${NORM}/${DEL} ]] && echo "Deleted ${NORM}/${DEL}"
 	[[ ! -f ${BLUR}/${DEL} ]] && echo "Deleted ${BLUR}/${DEL}"
+	exit
 }
 
 rename () {
 	NWNM="$1"
 	[[ -n $1 ]] && {
-#		notify-send $1
 		cd $NORM && mv "${CRLN##*/}" "${1}"
 		cd $BLUR && mv "${CRLN##*/}" "${1}"
 		}
+	exit
+}
+
+next () {
+	WPP="$(sed -n "/"${CRLN##*/}"/{n;p;}" $HIST)"
+	[[ -z $WPP ]] && WPP="$(head -n 1 $HIST)"
+}
+
+prev () {
+	WPP="$(sed -n "/"${CRLN##*/}"/{g;1!p;};h" $HIST)"
+	[[ -z $WPP ]] && WPP="$(tail -n 1 $HIST)"
 }
 
 help () {
@@ -140,64 +147,59 @@ cat << 'EOB'
 
  Usage
  -----
- i3bg                ┼ Create default directories:
-                     │   WALL_DIR/(normal|blur|cols)
- i3bg -h             ┼ Print this help
- i3bg -w [PATH|PREV| ┼ Wallpaper to set 
-         NEXT|RANDOM │
-           |NAME]    │
- i3bg -t [HEX COLOR] ┼ Tint color of wallpaper
- i3bg -a [DIRECTORY] ┼ Add walls from DIRECTORY
- i3bg -l             ┼ List available wallpapers
- i3bg -b             ┼ Toggle blur
- i3bg -r [NAME]      ┼ Rename current wallpaper
- i3bg -d             ┼ Remove wallpaper from
-                     │   WALL_DIR/(normal|blur)
+ i3bg                            ┼ Create default directories:
+                                 │   WALL_DIR/(normal|blur|cols)
+ i3bg --help|-h                  ┼ Print this help
+ i3bg --wallpaper|-w [PATH|prev| ┼ Wallpaper to set 
+                     next|random │
+                       |NAME]    │
+ i3bg --tint|-t      [HEX COLOR] ┼ Tint color of wallpaper
+ i3bg --add|-a       [DIRECTORY] ┼ Add walls from DIRECTORY
+ i3bg --list|-l                  ┼ List available wallpapers
+ i3bg --blur|-b                  ┼ Toggle blur
+ i3bg --rename|-r         [NAME] ┼ Rename current wallpaper
+ i3bg --delete|-d                ┼ Remove wallpaper from
+                                 │   WALL_DIR/(normal|blur)
  
  WALL_DIR  ┼ Default i3bg folder:
            │   $XDG_PICTURES_DIR/i3bg
  DIRECTORY ┼ is a path to a directory containing pictures
  HEX COLOR ┼ Hexadecimal color Eg. #002b36
  PATH      ┼ is a path to a picture
- PREV      ┼ previous wallpaper in history
- NEXT      ┼ next wallpaper in history
+ prev      ┼ previous wallpaper in history
+ next      ┼ next wallpaper in history
  NAME      ┼ name of wallpaper stored in WALL_DIR/normal
- RANDOM    ┼ random wallpaper in WALL_DIR/normal
+ random    ┼ random wallpaper in WALL_DIR/normal
 
 EOB
+exit
 }
 
-while getopts :w:t:a:d:r:lbh opts; do
-	case $opts in
-		w) WPP="${OPTARG}" WPPACTUAL="${OPTARG}" ;;
-		t) TNT="${OPTARG}"             ;;
-		a) add "${OPTARG}" && exit     ;;
-		d) delete "${OPTARG}" && exit  ;;
-		r) rename "${OPTARG}" && exit  ;;
-		l) list && exit                ;;
-		b) BLURT=TRUE                  ;;
-		h) help && exit                ;;
+while true; do
+	case $1 in
+		--wallpaper | -w ) WPP="${2:-}" WPPACT="${2:-}" ; shift ;;
+		--tint      | -t ) TNT="${2:-}"                 ; shift ;;
+		--add       | -a ) add "${2:-}"                 ; shift ;;
+		--delete    | -d ) delete "${2:-}"              ; shift ;;
+		--rename    | -r ) rename "${2:-}"              ; shift ;;
+		--list      | -l ) list                         ; shift ;;
+		--blur      | -b ) BLURT=TRUE                   ; shift ;;
+		--help      | -h ) help                         ; shift ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
 	esac
+	shift
 done
 
 if [[ -n $WPP ]]; then
-	[[ $WPP =~ "#" ]]      && echo "Background colour is" && colour && exit
-	[[ $WPP == "RANDOM" ]] && echo "Random wallpaper is"  && WPP=$(ls $NORM | shuf -n 1)
-	[[ $WPP == "PREV" ]] && {
-		echo "Previous wallpaper is"
-		WPP="$(sed -n "/"${CRLN##*/}"/{g;1!p;};h" $HIST)"
-		[[ -z $WPP ]] && WPP="$(tail -n 1 $HIST)"
-		}
-	[[ $WPP == "NEXT" ]] && {
-		echo "Next wallpaper is" 
-		WPP="$(sed -n "/"${CRLN##*/}"/{n;p;}" $HIST)"
-		[[ -z $WPP ]] && WPP="$(head -n 1 $HIST)"
-		}
+	[[ $WPP =~ "#" ]]          && colour && exit
+	[[ $WPP == "random" ]]     && WPP=$(ls $NORM | shuf -n 1)
+	[[ $WPP == "prev" ]]       && prev
+	[[ $WPP == "next" ]]       && next
 	WPC=${WPP##*/}
-	[[ ! -f $NORM/${WPC%.*} ]] && \
-		echo "${WPC%.*} not in walls directory, adding ${WPC%.*}" && add-wall "$WPP"
+	[[ ! -f $NORM/${WPC%.*} ]] && echo "Adding ${WPC%.*}" && add-wall "$WPP"
 	change-current
-	[[ ! -f "$WPP" ]] && [[ ! -f "$NORM/${WPC%.*}" ]] && help \
+	[[ ! -f "$WPP" ]]          && [[ ! -f "$NORM/${WPC%.*}" ]] && help \
 		&& echo "Wallpaper doesn't exist"
 fi
 
@@ -207,15 +209,8 @@ fi
 	[[ ${CRFD} == "normal" ]] \
 		&& ln -sf  ${CRLN/\/normal\//\/blur\/} $CURR && NWFD="$BLUR" \
 		|| ln -sf  ${CRLN/\/blur\//\/normal\/} $CURR
-	echo "Blur toggled."
 }
 
-[[ -n $TNT ]] && echo "Tint colour = $TNT" && tint
+[[ -n $TNT ]] && tint
 set-wall
-if [[ $WPPACTUAL == "NEXT" ]]; then
-	:
-elif [[ $WPPACTUAL == "PREV" ]]; then
-	:
-else
-	history ${CRLN##*/}
-fi
+[[ $WPPACT == "NEXT" ]] || [[ $WPPACT == "PREV" ]] || history ${CRLN##*/}

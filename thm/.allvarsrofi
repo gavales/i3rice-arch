@@ -1,19 +1,19 @@
-              <b><big>nikes</big></b>
-<span background="#f6f6f4">   </span><span foreground="#f6f6f4" background="#303030"> fg0 #f6f6f4 </span>	<span background="#fa9f9c">   </span><span foreground="#f6f6f4" background="#303030"> darkred #fa9f9c </span>	wallpaper JericoacoaraBrazil
-<span background="#303030">   </span><span foreground="#f6f6f4" background="#303030"> bg0 #303030 </span>	<span background="#973c3a">   </span><span foreground="#f6f6f4" background="#303030"> lightred #973c3a </span>	guifont    Luxi Mono
-<span background="#b46b7d">   </span><span foreground="#f6f6f4" background="#303030"> acc #b46b7d </span>	<span background="#9ed083">   </span><span foreground="#f6f6f4" background="#303030"> darkgrn #9ed083 </span>	font       CMUTypewriterText
-<span background="#ff4845">   </span><span foreground="#f6f6f4" background="#303030"> red #ff4845 </span>	<span background="#3b6d21">   </span><span foreground="#f6f6f4" background="#303030"> lightgrn #3b6d21 </span>	sansfont   Lucida Sans
-<span background="#47aa12">   </span><span foreground="#f6f6f4" background="#303030"> grn #47aa12 </span>	<span background="#fabf7f">   </span><span foreground="#f6f6f4" background="#303030"> darkylw #fabf7f </span>	monofont   CMU Typewriter Text
-<span background="#ff890a">   </span><span foreground="#f6f6f4" background="#303030"> ylw #ff890a </span>	<span background="#975c1d">   </span><span foreground="#f6f6f4" background="#303030"> lightylw #975c1d </span>	romanfont  Luxi Mono
-<span background="#b46b7d">   </span><span foreground="#f6f6f4" background="#303030"> blu #b46b7d </span>	<span background="#d5b0b8">   </span><span foreground="#f6f6f4" background="#303030"> darkblu #d5b0b8 </span>	ltimex     1
-<span background="#288ad6">   </span><span foreground="#f6f6f4" background="#303030"> gnt #288ad6 </span>	<span background="#724d56">   </span><span foreground="#f6f6f4" background="#303030"> lightblu #724d56 </span>	ltimey     90
-<span background="#6bb4a2">   </span><span foreground="#f6f6f4" background="#303030"> cyn #6bb4a2 </span>	<span background="#8fc0e5">   </span><span foreground="#f6f6f4" background="#303030"> darkgnt #8fc0e5 </span>	size       11
-<span background="#d65d0e">   </span><span foreground="#f6f6f4" background="#303030"> rng #d65d0e </span>	<span background="#2c5d83">   </span><span foreground="#f6f6f4" background="#303030"> lightgnt #2c5d83 </span>	rxvtsize   12
-<span background="#e2e2e0">   </span><span foreground="#f6f6f4" background="#303030"> fg1 #e2e2e0 </span>	<span background="#b0d5cb">   </span><span foreground="#f6f6f4" background="#303030"> darkcyn #b0d5cb </span>	rofifsize  12
-<span background="#cececc">   </span><span foreground="#f6f6f4" background="#303030"> fg2 #cececc </span>	<span background="#4d7269">   </span><span foreground="#f6f6f4" background="#303030"> lightcyn #4d7269 </span>	gtk        Standard-light
-<span background="#babab8">   </span><span foreground="#f6f6f4" background="#303030"> fg3 #babab8 </span>	<span background="#e6a981">   </span><span foreground="#f6f6f4" background="#303030"> darkrng #e6a981 </span>	gtk-icon   Tela-red-dark
-<span background="#444444">   </span><span foreground="#f6f6f4" background="#303030"> bg1 #444444 </span>	<span background="#83461f">   </span><span foreground="#f6f6f4" background="#303030"> lightrng #83461f </span>	cursor     Bibata_Dark_Red
-<span background="#585858">   </span><span foreground="#f6f6f4" background="#303030"> bg2 #585858 </span>		conky_loc1 top_left
-<span background="#6c6c6c">   </span><span foreground="#f6f6f4" background="#303030"> bg3 #6c6c6c </span>		conky_loc2 bottom_right
-<span background="#d5b0b8">   </span><span foreground="#f6f6f4" background="#303030"> acf #d5b0b8 </span>		
-<span background="#724d56">   </span><span foreground="#f6f6f4" background="#303030"> acb #724d56 </span>		
+				<b><big>solarized_light</big></b>
+<span background="#002b36">   </span><span foreground="#002b36" background="#fdf6e3"> fg0 #002b36 </span>	<span background="#912f31">   </span><span foreground="#002b36" background="#fdf6e3"> darkred #912f31 </span>	wallpaper WW_128000000001428569_EN
+<span background="#fdf6e3">   </span><span foreground="#002b36" background="#fdf6e3"> bg0 #fdf6e3 </span>	<span background="#e7746c">   </span><span foreground="#002b36" background="#fdf6e3"> lightred #e7746c </span>	guifont    Luxi Mono
+<span background="#2aa198">   </span><span foreground="#002b36" background="#fdf6e3"> acc #2aa198 </span>	<span background="#577312">   </span><span foreground="#002b36" background="#fdf6e3"> darkgrn #577312 </span>	font       CMUTypewriterText
+<span background="#dc322f">   </span><span foreground="#002b36" background="#fdf6e3"> red #dc322f </span>	<span background="#adb84d">   </span><span foreground="#002b36" background="#fdf6e3"> lightgrn #adb84d </span>	sansfont   Lucida Sans
+<span background="#859900">   </span><span foreground="#002b36" background="#fdf6e3"> grn #859900 </span>	<span background="#776912">   </span><span foreground="#002b36" background="#fdf6e3"> darkylw #776912 </span>	monofont   CMU Typewriter Text
+<span background="#b58900">   </span><span foreground="#002b36" background="#fdf6e3"> ylw #b58900 </span>	<span background="#cdae4d">   </span><span foreground="#002b36" background="#fdf6e3"> lightylw #cdae4d </span>	romanfont  Luxi Mono
+<span background="#2aa198">   </span><span foreground="#002b36" background="#fdf6e3"> blu #2aa198 </span>	<span background="#1b7876">   </span><span foreground="#002b36" background="#fdf6e3"> darkblu #1b7876 </span>	ltimex     1
+<span background="#d33682">   </span><span foreground="#002b36" background="#fdf6e3"> gnt #d33682 </span>	<span background="#71bdb1">   </span><span foreground="#002b36" background="#fdf6e3"> lightblu #71bdb1 </span>	ltimey     90
+<span background="#268bd2">   </span><span foreground="#002b36" background="#fdf6e3"> cyn #268bd2 </span>	<span background="#8b3268">   </span><span foreground="#002b36" background="#fdf6e3"> darkgnt #8b3268 </span>	size       11
+<span background="#d65d0e">   </span><span foreground="#002b36" background="#fdf6e3"> rng #d65d0e </span>	<span background="#e177a2">   </span><span foreground="#002b36" background="#fdf6e3"> lightgnt #e177a2 </span>	rxvtsize   12
+<span background="#143f4a">   </span><span foreground="#002b36" background="#fdf6e3"> fg1 #143f4a </span>	<span background="#196a9c">   </span><span foreground="#002b36" background="#fdf6e3"> darkcyn #196a9c </span>	rofifsize  12
+<span background="#28535e">   </span><span foreground="#002b36" background="#fdf6e3"> fg2 #28535e </span>	<span background="#6fafd7">   </span><span foreground="#002b36" background="#fdf6e3"> lightcyn #6fafd7 </span>	gtk        Standard-light
+<span background="#3c6772">   </span><span foreground="#002b36" background="#fdf6e3"> fg3 #3c6772 </span>	<span background="#8d4c1b">   </span><span foreground="#002b36" background="#fdf6e3"> darkrng #8d4c1b </span>	gtk-icon   Tela-red-dark
+<span background="#e9e2cf">   </span><span foreground="#002b36" background="#fdf6e3"> bg1 #e9e2cf </span>	<span background="#e39156">   </span><span foreground="#002b36" background="#fdf6e3"> lightrng #e39156 </span>	cursor     Bibata_Dark_Red
+<span background="#d5cebb">   </span><span foreground="#002b36" background="#fdf6e3"> bg2 #d5cebb </span>		conky_loc1 top_left
+<span background="#c1baa7">   </span><span foreground="#002b36" background="#fdf6e3"> bg3 #c1baa7 </span>		conky_loc2 bottom_right
+<span background="#0e5357">   </span><span foreground="#002b36" background="#fdf6e3"> acf #0e5357 </span>		
+<span background="#b5d9c9">   </span><span foreground="#002b36" background="#fdf6e3"> acb #b5d9c9 </span>		

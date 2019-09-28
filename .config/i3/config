@@ -87,22 +87,22 @@ set $ws10 10
 
 # //// COLORS
 
-set $bg3 #6c6c6c
-set $bg2 #585858
-set $bg1 #444444
-set $bg0 #303030
-set $acb #724d56
-set $acc #b46b7d
-set $acf #d5b0b8
-set $fg0 #f6f6f4
-set $fg1 #e2e2e0
-set $fg2 #cececc
-set $fg3 #babab8
-set $red #ff4845
-set $grn #47aa12
-set $ylw #ff890a
-set $gnt #288ad6
-set $cyn #6bb4a2
+set $bg3 #c1baa7
+set $bg2 #d5cebb
+set $bg1 #e9e2cf
+set $bg0 #fdf6e3
+set $acb #b5d9c9
+set $acc #2aa198
+set $acf #0e5357
+set $fg0 #002b36
+set $fg1 #143f4a
+set $fg2 #28535e
+set $fg3 #3c6772
+set $red #dc322f
+set $grn #859900
+set $ylw #b58900
+set $gnt #d33682
+set $cyn #268bd2
 set $t   ff
 
 # //// APPS
@@ -283,7 +283,7 @@ $mod+Shift+k        $exn i3move up
 $mod+l              $exn i3viswiz right
 $mod+Shift+l        $exn i3move right
 
-$mod+semicolon      $exn nightmodetog
+$mod+semicolon      $exn i3light nm
 
 $mod+apostrophe     $exn redshift -x
 
@@ -379,7 +379,7 @@ $win+Shift+o        gaps inner current set 4; gaps outer current set 40
 
 $win+p              [con_mark=$mk1] resize set 45 ppt 20 ppt
 
-$win+bracketleft    [con_mark=$mk1] resize set height 98
+$win+bracketleft    [con_mark=$mk1] resize set height 123
 
 #$win+bracketright   $exn i3media prev
 #

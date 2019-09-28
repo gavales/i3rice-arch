@@ -1,3 +1,23 @@
+shell convert "%f" -resize 64x64 safavicon.png
+shell convert %f -resize 64x64 safavicon.png
+shell 
+rename cv.files
+cd D
+wq
+rename i3light
+rename i3vol
+rename i3bgc
+rename i3l
+rename i3wplyr
+rename gencvl
+rename CVL
+rename numix
+rename i3bg
+rename wall
+rename sptl
+shell cp "~/pic/scrots" test
+shell cp ~/pic/scrots test
+shell cp ~/pic/scrots 
 shell cp -r "~/pic/scrots" test
 rename themer_oldold
 rename themer_old
@@ -8,7 +28,6 @@ rename darkineicons.tar.gz
 rename icyphox
 rename _globals.rasi
 rename _i3menuconfig
-
 open_with 
 open_with nautilus
 open_with 1
@@ -25,26 +44,7 @@ rename qr
 rename quads
 shell ex %f
 shell tar -xJf %f
-rename forest-fog-hill.jpg
-mkdir blur
-shell wget https://raw.githubusercontent.com/LukeSmithxyz/voidrice/archi3/.local/bin/tools/getbib
-shell chmod +x %f
-rename maintext.tex
-shell 
-source rc.conf
-source ~/.config/ranger/rc.conf
-mkdir normal
-mkdir cvl
-rename normal.md
-rename cvl.md
-rename cvl
-rename report
-rename cvl.yaml
-rename cvl.yaml_
-shell cp -r ~/plt/md/cvl.md MaleSecurityOfficer-HeathrowAirport
-rename MaleSecurityOfficer-HeathrowAirport.md
-shell cp -r ~/plt/md/cvl.md SecurityOfficer-SCMidlands.md
-shell cp -r ~/plt/md/cvl.md WarehouseNightshift-Lidl.md
-rename shot
-rename ctex
-rename crff
+touch 
+shell -p #
+rename .themelist_
+

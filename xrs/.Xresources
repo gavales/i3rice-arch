@@ -1,30 +1,49 @@
-!! themer     ------------------------------------------------------------------
-!! nikes
+!! vim:ft=xdefaults
+! >>>> default theme: i3      ├
 
-#define cwhtl #f6f6f4
-#define cwhtd #724d56
-#define credd #ff4845
-#define credl #ff4845
-#define cgrnd #47aa12
-#define cgrnl #47aa12
-#define cylwd #ff890a
-#define cylwl #ff890a
-#define cblud #b46b7d
-#define cblul #b46b7d
-#define cgntd #288ad6
-#define cgntl #288ad6
-#define ccynd #6bb4a2
-#define ccynl #6bb4a2
-#define cblkd #303030
-#define cblkl #444444
+#define cwhtl #302f30
+#define cwhtd #7a90a2
+#define credd #900000
+#define credl #601718
+#define cgrnd #009048
+#define cgrnl #185f3c
+#define cylwd #904800
+#define cylwl #603b18
+#define cblud #285577
+#define cblul #2c4253
+#define cgntd #900048
+#define cgntl #60173c
+#define ccynd #009090
+#define ccynl #185f60
+#define cblkd #CDCBCD
+#define cblkl #b9b7b9
 
-!! 1vars      ------------------------------------------------------------------
+! >>>> themer theme: solarized_light ├
+
+#define cwhtl #002b36
+#define cwhtd #b5d9c9
+#define credd #dc322f
+#define credl #dc322f
+#define cgrnd #859900
+#define cgrnl #859900
+#define cylwd #b58900
+#define cylwl #b58900
+#define cblud #2aa198
+#define cblul #2aa198
+#define cgntd #d33682
+#define cgntl #d33682
+#define ccynd #268bd2
+#define ccynl #268bd2
+#define cblkd #fdf6e3
+#define cblkl #e9e2cf
+
+! >>>> 1vars                  ├
 
 #define fontname  CMUTypewriterText
 #define fontsize  12
 #define fontsize2 12
 
-!! 2colorvars ------------------------------------------------------------------
+! >>>> 2colorvars             ├
 
 *background:             cblkd
 *foreground:             cwhtl
@@ -36,23 +55,23 @@
 *border:                 cblkd
 
 *color0:                 cblkd
-*color8:                 cblkl
 *color1:                 credd
-*color9:                 credl
 *color2:                 cgrnd
-*color10:                cgrnl
 *color3:                 cylwd
-*color11:                cylwl
 *color4:                 cblud
-*color12:                cblul
 *color5:                 cgntd
-*color13:                cgntl
 *color6:                 ccynd
-*color14:                ccynl
 *color7:                 cwhtd
+*color8:                 cblkl
+*color9:                 credl
+*color10:                cgrnl
+*color11:                cylwl
+*color12:                cblul
+*color13:                cgntl
+*color14:                ccynl
 *color15:                cwhtl
 
-!! 3rofi      ------------------------------------------------------------------
+! >>>> 3rofi                  ├
 
 !rofi.width:           400
 !rofi.lines:           15
@@ -97,7 +116,7 @@ rofi.fuzzy:            false
 rofi.separator-style:  none
 rofi.markup-rows:      false
 
-!! 4xft       ------------------------------------------------------------------
+! >>>> 4xft                   ├
 
 Xft.dpi:       96
 Xft.antialias: true
@@ -107,7 +126,7 @@ Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-!! 5xterm     ------------------------------------------------------------------
+! >>>> 5xterm                 ├
 
 XTerm*foreground:        cwhtl
 XTerm*background:        cblkl
@@ -117,12 +136,12 @@ XTerm*faceSize:          16
 ! XTerm*reverseVideo:    on
 XTerm*selectToClipboard: true
 
-!! 6xcursor   ------------------------------------------------------------------
+! >>>> 6xcursor               ├
 
 Xcursor.theme: Bibata_Dark_Red
 Xcursor.size:  36
 
-!! 7urxvt     ------------------------------------------------------------------
+! >>>> 7urxvt                 ├
 
 URxvt.font:                 xft:fontname:size=fontsize, xft:FontAwesome:size=9
 
@@ -148,7 +167,7 @@ URxvt*lineSpace:            3
 !URxvt*transparent:         true
 !URxvt*shading:             138
 
-!! 8urxvtext  ------------------------------------------------------------------
+! >>>> 8urxvtext              ├
 
 URxvt*perl-ext-common:      default,matcher,resize-font,config-reload
 !URxvt*perl-lib:            /home/gavarch/.urxvt/ext

@@ -26,9 +26,9 @@ HEIGHT=" "
 XFS="0"
 YFS="0"
 WINDOW_LOCATION=$(xdotool getactivewindow getwindowgeometry | \
-		grep 'Position' | awk '{print $2}')
+	grep 'Position' | awk '{print $2}')
 WINDOW_GEOMETRY=$(xdotool getactivewindow getwindowgeometry | \
-		grep 'Geometry' | awk '{print $2}')
+	grep 'Geometry' | awk '{print $2}')
 WIN_X=${WINDOW_LOCATION%,*}
 WIN_Y=${WINDOW_LOCATION#*,}
 WIN_W=${WINDOW_GEOMETRY%x*}
@@ -60,7 +60,7 @@ bg2:    #f8f8f8;
 bg1:    #e4e4e4;
 redish: #ab4642;
 font1: "LuxiMono 13";
-}
+	}
 EOB
 	}
 
@@ -72,36 +72,36 @@ EOB
 	border-color:     @accent;
 	text-color:       @bg1;
 	font:             @font1;
-}
+	}
 #window {
 //	anchor:           north;
 //	location:         north;
 //	width:            100%;
 	padding:          2px;
 	children:         [ horibox ];
-}
+	}
 #horibox {
 	orientation:      horizontal;
 	children:         [ prompt, entry, listview ];
-}
+	}
 #listview {
 	layout:           horizontal;
 	spacing:          5px;
 	lines:            100;
-}
+	}
 #entry {
 	expand:           false;
 	width:            10em;
-}
+	}
 #element {
 	border:           0;
 	border-radius:    10px;
 	padding:          1px 1px;
-}
+	}
 #element selected {
 	background-color: @bg1;
 	text-color:       @accent;
-}
+	}
 EOB
 	}
 
@@ -113,7 +113,7 @@ EOB
 	border-color:     @accent;
 	text-color:       @bg2;
 	font:             @font1;
-}
+	}
 #window {
 //	anchor:           north;
 //	location:         north;
@@ -122,26 +122,26 @@ EOB
 	border:           0;
 	border-radius:    5px;
 //	children:         [ horibox ];
-}
+	}
 #horibox {
 	children:         [ prompt, entry, listview ];
-}
+	}
 #listview {
 	spacing:          5px;
-}
+	}
 #entry {
 	expand:           true;
 //	width:            10em;
-}
+	}
 #element {
 	border:           1;
 	border-radius:    30px;
 	padding:          1px 1px;
-}
+	}
 #element selected {
 	background-color: @bg1;
 	text-color:       @accent;
-}
+	}
 EOB
 	}
 
@@ -190,8 +190,8 @@ cat << 'EOB'
  i3menu -o [vertical|     ┼ Vertical or horizontal
            horizontal]    │   (like dmenu)
  i3menu -L [INTEGER]      ┼ Number of vertical rows
-
 EOB
+exit
 }
 
 start () {
@@ -213,37 +213,60 @@ menu () {
 	rm -rf $STDIN
 }
 
-while getopts :p:l:L:x:y:H:c:w:o:Wdstmfh opts; do
-	case $opts in
-		p) PROMPT="${OPTARG}"                                            ;;
-		l) LOCATION="${OPTARG}"                                          ;;
-		L) LNS="${OPTARG}"                                               ;;
-		x) XFS="$(expr $XFS + $OPTARG)"                                  ;;
-		y) YFS="$(expr $YFS + $OPTARG)"                                  ;;
-		c) [[ -f $RFDIR/${OPTARG}.rasi ]] && ACCENT_COLOR="${OPTARG}"    ;;
-		w) WIDTH="${OPTARG}"                                             ;;
-		H) HEIGHT="height: ${OPTARG};"                                   ;;
-		o) ORIENTATION="${OPTARG}"                                       ;;
-		W) [[ $ORIENTATION == "vertical" ]] \
-				&& HEIGHT=$(echo \
-				"((${WIN_H}*100)/$SCREEN_H)+((($TITLEBAR_HEIGHT+$TITLEBAR_HEIGHT/2)*100)/$SCREEN_H)" | bc) \
-				&& HEIGHT="height: ${HEIGHT}%;"
-			[[ $ORIENTATION == "horizontal" ]] && LNS="15"
-			LOCATION=1 WIDTH="$(expr $WIN_W + $WINDOW_BORDER + $WINDOW_BORDER)"
-			XFS="$(expr $WIN_X - $WINDOW_BORDER - $WINDOW_BORDER)"
-			YFS="$(expr $WIN_Y - $TITLEBAR_HEIGHT)"
-			;;
-		d) MODE="dmenu"                                                  ;;
-		s) MODE="start"                                                  ;;
-		t) [[ $ORIENTATION == "horizontal" ]] && LNS="15"
-			LOCATION=1 WIDTH="$(expr $WIN_W + $WINDOW_BORDER + $WINDOW_BORDER)"
-			XFS="$(expr $WIN_X - $WINDOW_BORDER - $WINDOW_BORDER)"
-			YFS="$(expr $WIN_Y - $TITLEBAR_HEIGHT)"
-			;;
-		m) ORIENTATION=vertical LOCATION=1 WIDTH=300 XFS="${MOUSE_X:2}" YFS="${MOUSE_Y:2}" ;;
-		f) ORIENTATION=vertical LOCATION=0 fs="-fullscreen"              ;;
-		h) help && exit                                                  ;;
+titlebar () {
+	[[ $ORIENTATION == "horizontal" ]] && LNS="15"
+	LOCATION=1
+	WIDTH="$(expr $WIN_W + $WINDOW_BORDER + $WINDOW_BORDER)"
+	XFS="$(expr $WIN_X - $WINDOW_BORDER - $WINDOW_BORDER)"
+	YFS="$(expr $WIN_Y - $TITLEBAR_HEIGHT)"
+}
+
+window () {
+	[[ $ORIENTATION == "vertical" ]] && HEIGHT=$(echo \
+		"((${WIN_H}*100)/$SCREEN_H)+((($TITLEBAR_HEIGHT+$TITLEBAR_HEIGHT/2)*100)/$SCREEN_H)" | bc) \
+		&& HEIGHT="height: ${HEIGHT}%;"
+	[[ $ORIENTATION == "horizontal" ]] && LNS="15"
+	LOCATION=1
+	WIDTH="$(expr $WIN_W + $WINDOW_BORDER + $WINDOW_BORDER)"
+	XFS="$(expr $WIN_X - $WINDOW_BORDER - $WINDOW_BORDER)"
+	YFS="$(expr $WIN_Y - $TITLEBAR_HEIGHT)"
+}
+
+color () {
+	[[ -f $RFDIR/${2:-}.rasi ]] && ACCENT_COLOR="${2:-}"
+}
+
+monitor () {
+	ORIENTATION=vertical LOCATION=1
+	WIDTH=300 XFS="${MOUSE_X:2}" YFS="${MOUSE_Y:2}"
+}
+
+fullscreen () {
+	ORIENTATION=vertical LOCATION=0 fs="-fullscreen"
+}
+
+while true; do
+	case $1 in
+		--prompt      | -p ) PROMPT="${2:-}"      ; shift ;;
+		--location    | -l ) LOCATION="2:-}"      ; shift ;;
+		--lines       | -L ) LNS="${2:-}"         ; shift ;;
+		--xoffset     | -x ) XFS="${2:-}"         ; shift ;;
+		--yoffset     | -y ) YFS="${2:-}"         ; shift ;;
+		--color       | -c ) color                ; shift ;;
+		--width       | -w ) WIDTH="${2:-}"       ; shift ;;
+		--height      | -H ) HEIGHT="${2:-}"      ; shift ;;
+		--orientation | -o ) ORIENTATION="${2:-}" ; shift ;;
+		--window      | -W ) window               ; shift ;;
+		--dmenu       | -d ) MODE="dmenu"         ; shift ;;
+		--apps        | -s ) MODE="start"         ; shift ;;
+		--titlebar    | -t ) titlebar             ; shift ;;
+		--monitor     | -m ) monitor              ; shift ;;
+		--fullscreen  | -f ) fullscreen           ; shift ;;
+		--help        | -h ) help                 ; shift ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
 	esac
+	shift
 done
 
 cat $RFDIR/${ACCENT_COLOR}.rasi > $RFDIR/_globals.rasi

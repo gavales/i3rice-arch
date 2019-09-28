@@ -54,18 +54,22 @@ help () {
  Usage
  _____
  
- ghb -n [NAME] ┼ NAME of post to create
- ghb -l        ┼ list posts in content/posts
- ghb -d [NAME] ┼ NAME of post to delete
- ghb -h        ┼ print this help
+ ghb --post|-p   [NAME] ┼ NAME of post to create
+ ghb --list|-l          ┼ list posts in content/posts
+ ghb --delete|-d [NAME] ┼ NAME of post to delete
+ ghb --help|-h          ┼ print this help
 EOB
+exit
 }
 
-while getopts :n:d:hl opts; do
-	case $opts in
-		n) new "${OPTARG}"    ;;
-		l) list               ;;
-		d) delete "${OPTARG}" ;;
-		h) help && exit       ;;
+while true; do
+	case $1 in
+		--post   | -p ) new "${2:-}"    ; shift ;;
+		--list   | -l ) list            ; shift ;;
+		--delete | -d ) delete "${2:-}" ; shift ;;
+		--help   | -h ) help            ; shift ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
 	esac
+	shift
 done

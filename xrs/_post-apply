@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# OA: Gavin Vales
+# CREATED: Tue 11 Jun 14:48:08 BST 2019
+
+XDIR=$HOME/xrs
+XRS=$HOME/.Xresources
+cat $XDIR/.Xresources > $XRS
+xrdb -load $XRS
+kill -1 $(pidof urxvtd)

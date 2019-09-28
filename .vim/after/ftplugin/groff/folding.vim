@@ -19,19 +19,20 @@ setlocal foldexpr=Folds()
 
 setlocal foldtext=FoldText()
 function FoldText()
-    let nucolwidth = &fdc + &number * &numberwidth
-    let windowwidth = winwidth(0) - nucolwidth - 3
-    let foldsize = (v:foldend-v:foldstart)
-    let foldline = getline(v:foldstart)
-    let foldbel = getline(v:foldstart + 1)
-    let foldline = substitute(foldline, '.TL', "Title: ", "")
-    let foldline = substitute(foldline, '.NH 2', "~~> ", "")
-    let foldline = substitute(foldline, '.NH 3', "--> ", "")
-    let foldline = substitute(foldline, '.NH', ">>> ", "")
-    let foldline = substitute(foldline, '.SH', "==> ", "")
-    let text = foldline.foldbel.foldsize.'line     '
-    let fillcharcount = windowwidth - strdisplaywidth(text)
-    return foldline.' '.foldbel.' '.repeat(".",fillcharcount).'  ('.foldsize.' lines)'
+	let nucolwidth = &fdc + &number * &numberwidth
+	let windowwidth = winwidth(0) - nucolwidth - 3
+	let foldsize = (v:foldend-v:foldstart)
+	let foldline = getline(v:foldstart)
+	let foldbel = getline(v:foldstart + 1)
+	let foldline = substitute(foldline, '.TL', "Title: ", "")
+	let foldline = substitute(foldline, '.NH 2', "┈┈┼ ", "")
+	let foldline = substitute(foldline, '.NH 3', "┈┈┼┈ ", "")
+	let foldline = substitute(foldline, '.NH', "┈┈┤ ", "")
+	let foldline = substitute(foldline, '.SH', "--┤ ", "")
+	let text = foldline.foldsize.'line         '
+	let barcharcount = ((windowwidth * 2)/ 3) - strdisplaywidth(foldsize.'lines         ')
+	let spacecharcount = windowwidth - strdisplaywidth(text) - barcharcount
+	return foldline.' '.foldbel.repeat(" ",spacecharcount).'├'.repeat("┈",barcharcount).'  ('.foldsize.' lines)'
 endfunction
 
 setlocal updatetime=500

@@ -23,18 +23,22 @@ cat << 'EOB'
 Usage
 -----
 
-gencvl -h        ┼ print this help
-gencvl -n [NAME] ┼ create new coverletter
-                 │   with name NAME
+gencvl -h     ┼ print this help
+gencvl [NAME] ┼ create new coverletter
+              │   with name NAME
 EOB
 }
 
-while getopts :n:h opts; do
-	case $opts in
-		n) TIT="$OPTARG" ;;
-		h) help && exit  ;;
+while true; do
+	case $1 in
+		--help | -h ) help ; shift ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
 	esac
+	shift
 done
+
+TIT="${@:-}"
 
 [[ -n $TIT ]] || TIT="$(echo "" | i3menu -c yellow -w 500 -p "Enter title: ")"
 [[ -n $TIT ]] || exit

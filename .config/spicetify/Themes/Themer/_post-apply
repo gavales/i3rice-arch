@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+#LF=$(xdotool getactivewindow)
+#SPD=$(pidof spotify)
+#
+#main () {
+#	i3-msg [class="Spotify"] focus
+#	xdotool ctrl+shift+r
+#	i3-msg [id="$LF"] focus
+#}
+
+spicetify update
+#[[ -n $SPD ]] && main

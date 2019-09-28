@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 
-stkpar=$1
-declare -i stkchl=1
-marks=$(i3-msg -t get_marks)
+SPAR=$1
+SCHL=1
+MRKS=$(i3-msg -t get_marks)
 
 urxvtc
 
-if [[ $marks != *"_sticky_$stkpar"* ]]; then
-	markfoc="i3-msg [con_id=__focused__] mark _sticky_$stkpar"
+if [[ $MRKS != *"_sticky_${SPAR}"* ]]; then
+	CMD="i3-msg [con_id=__focused__] mark _sticky_${SPAR}"
 	echo True
-elif [[ $marks =~ "_sticky_$stkpar" ]]; then
-	while [[ $marks =~ "_sticky_$stkpar_$stkchl" ]]; do
-		stkchl=$stkchl+1
+elif [[ $MRKS =~ "_sticky_${SPAR}" ]]; then
+	while [[ $MRKS =~ "_sticky_${SPAR}_${SCHL}" ]]; do
+		SCHL+=1
 	done
-	markfoc="i3-msg [con_id=__focused__] mark _sticky_${stkpar}_${stkchl}"
+	CMD="i3-msg [con_id=__focused__] mark _sticky_${SPAR}_${SCHL}"
 fi
 
-${markfoc}
+${CMD}

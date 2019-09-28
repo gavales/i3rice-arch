@@ -21,23 +21,38 @@ cat << 'EOB'
 
  Usage
  -----
- pbcat -h          ┼
- pbcat -v [TEXT]   ┼ TEXT for MODULE to OUTPUT
- pbcat -m [MODULE] ┼ MODULE to update
+ pbcat                 [TEXT]   ┼ TEXT for MODULE to OUTPUT
+ pbcat --module|-m     [MODULE] ┼ MODULE to update
+ pbcat --foreground|-f [HEX]    ┼ Foreground colour
+ pbcat --background|-b [HEX]    ┼ Background colour
+ pbcat --invert|-i              ┼ Invert foreground and
+                                │   background colours
+ pbcat --help|-h                ┼ Print this help
 EOB
+exit
 }
 
-while getopts :m:v:h opts; do
-	case $opts in
-		m) MOD="${OPTARG}" ;;
-		v) VAL="${OPTARG}" ;;
-		h) help && exit    ;;
+while true; do
+	case $1 in
+		--module     | -m ) MOD="${2:-}" ; shift ;;
+		--foreground | -f ) FG="${2:-}"  ; shift ;;
+		--background | -b ) BG="${2:-}"  ; shift ;;
+		--invert     | -i ) PRE+="%{R}" ;;
+		--help       | -h ) help        ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
 	esac
+	shift
 done
+
+VAL="${@:-}"
+notify-send $VAL
 
 [[ -f $MODDIR/$MOD ]] || echo "$MOD" > $MODDIR/$MOD
 [[ -z $VAL ]] && cat $MODDIR/$MOD || {
-	FVAL="$VAL"
+	[[ -n $FG ]] && PRE+="%{F$FG}" END+="%{F-}"
+	[[ -n $BG ]] && PRE+="%{B$BG}" END+="%{B-}"
+	FVAL="$PRE$VAL$END"
 	echo "$FVAL" > $MODDIR/$MOD
 	polybar-msg hook $MOD 1
 }

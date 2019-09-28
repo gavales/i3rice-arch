@@ -11,32 +11,33 @@ cyn="\033[1;36m"
 wtd="\033[1;37m"
 nrm="\033[0m"
 
-txt=$1
 fnt="-f 3-d"
 
 help () {
-	echo -e "${blu}\n$(figlet $fnt " banner"| \
+	echo -e "${blu}$(figlet $fnt " banner"| \
 		sed $'s/\*/\u2588/g;s/\//\u2592/g')${nrm}"
 cat << 'EOB'
  	-- Simple figlet wrapper
  
  Usage
  -----
- banner -h ┼ print this help
- banner -c ┼ centre
-
+ banner --help|-h   ┼ print this help
+ banner --centre|-c ┼ centre
 EOB
+exit
 }
 
-while getopts :-ch opts; do
-	case "$opts" in
-		-) :            ;;
-		c) fnt+=" -c"   ;;
-		h) help && exit ;;
+while true; do
+	case $1 in
+		--centre | -c ) fnt+=" -c" ;;
+		--help   | -h ) help       ; shift ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
 	esac
+	shift
 done
 
-[[ -n $txt ]] && echo -e "${blu}\n$(echo -e " $txt" | figlet ${fnt} | \
+[[ -n ${@:-} ]] && echo -e "${blu}$(echo -e " ${@:-}" | figlet ${fnt} | \
 	sed $'s/\*/\u2588/g;s/\//\u2592/g')"
 
 # >>>> unused

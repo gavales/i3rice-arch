@@ -4,7 +4,7 @@
 	border-color:     @accent;
 	text-color:       @bg2;
 	font:             @font1;
-}
+	}
 #window {
 //	anchor:           north;
 //	location:         north;
@@ -13,23 +13,23 @@
 	border:           0;
 	border-radius:    5px;
 //	children:         [ horibox ];
-}
+	}
 #horibox {
 	children:         [ prompt, entry, listview ];
-}
+	}
 #listview {
 	spacing:          5px;
-}
+	}
 #entry {
 	expand:           true;
 //	width:            10em;
-}
+	}
 #element {
 	border:           1;
 	border-radius:    30px;
 	padding:          1px 1px;
-}
+	}
 #element selected {
 	background-color: @bg1;
 	text-color:       @accent;
-}
+	}

@@ -4,33 +4,33 @@
 	border-color:     @accent;
 	text-color:       @bg1;
 	font:             @font1;
-}
+	}
 #window {
 //	anchor:           north;
 //	location:         north;
 //	width:            100%;
 	padding:          2px;
 	children:         [ horibox ];
-}
+	}
 #horibox {
 	orientation:      horizontal;
 	children:         [ prompt, entry, listview ];
-}
+	}
 #listview {
 	layout:           horizontal;
 	spacing:          5px;
 	lines:            100;
-}
+	}
 #entry {
 	expand:           false;
 	width:            10em;
-}
+	}
 #element {
 	border:           0;
 	border-radius:    10px;
 	padding:          1px 1px;
-}
+	}
 #element selected {
 	background-color: @bg1;
 	text-color:       @accent;
-}
+	}

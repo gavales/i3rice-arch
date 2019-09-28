@@ -22,7 +22,7 @@ update () {
 	FSTR="${REV} \
 %{A4:i3vol inc:}%{A5:i3vol dec:}\
 %{A1:i3vol mute:}${ICN} ${_VOL}%{A}%{A}%{A} "
-	pbcat -m i3vol -v "$FSTR"
+	pbcat --module i3vol "$FSTR"
 }
 
 BVL=$(echo "(2*$VOL)/10" | bc)

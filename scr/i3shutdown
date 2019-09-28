@@ -17,7 +17,7 @@ x shutdown" | \
 
 [[ -z $OPT ]] && exit
 
-case "$OPT" in
+case $OPT in
 	l) lockscreen                                   ;;
 	e) i3-msg exit                                  ;;
 	s) lockscreen && sleep 0.5 && $logind suspend   ;;

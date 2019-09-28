@@ -1,7 +1,7 @@
 ! vim:ft=perl
-name      scarletibis
-wallpaper scarletibis
-tint      $bg0
-bg0       #090D10
-fg0       #f3bdab
-acc       #EE6653
+name            scarletibis
+wallpaper       scarletibis
+tint            $bg0
+bg0             #090D10
+fg0             #f3bdab
+acc             #EE6653

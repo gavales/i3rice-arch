@@ -14,73 +14,48 @@ cat << 'EOB'
   ▒▒█████ ▒▒██████  ███ ███ ▒██ ▒██▒██ ██ ▒▒██
    ▒▒▒▒▒   ▒▒▒▒▒▒  ▒▒▒ ▒▒▒  ▒▒  ▒▒ ▒▒ ▒▒   ▒▒
  	-- Script to mix 2 hex colors
- 
+
  Usage
  -----
- colmix -h                     ┼ Print this help
- colmix -x [XX:#COL1 XX:#COL2] ┼ Print final color in hex
- colmix -r [XX:#COL1 XX:#COL2] ┼ Print final color in rgb 
+ colmix --hex|-x  ┼ Print final color in hex
+ colmix --rgb|-r  ┼ Print final color in rgb
+ colmix --help|-h ┼ Print this help
 
- Input only hex color.
+ Input only hex color in last argument eg.
+     colmix -x XX:#HEX XX:#HEX
  XX are required ratios to mix the colors.
 EOB
+exit
 }
 
-HEX () {
-	eval $(echo ${1} | awk -F "" '
-		{
-			RAT1=$1$2;
-			RAT2=$12$13;
-			ONER=$5$6;ONEG=$7$8;ONEB=$9$10;
-			TWOR=$16$17;TWOG=$18$19;TWOB=$20$21;
-			ONRR=strtonum( "0x" ONER );
-			ONRG=strtonum( "0x" ONEG );
-			ONRB=strtonum( "0x" ONEB );
-			TWRR=strtonum( "0x" TWOR );
-			TWRG=strtonum( "0x" TWOG );
-			TWRB=strtonum( "0x" TWOB );
-			CL3R=int((ONRR * RAT1 + TWRR * RAT2) / 100);
-			CL3G=int((ONRG * RAT1 + TWRG * RAT2) / 100);
-			CL3B=int((ONRB * RAT1 + TWRB * RAT2) / 100);
-			CL3XR=sprintf( "%x", CL3R );
-			CL3XG=sprintf( "%x", CL3G );
-			CL3XB=sprintf( "%x", CL3B );
-			print "CL3RX=\"" CL3XR "\"\nCL3GX=\"" CL3XG "\"\nCL3BX=\"" CL3XB "\"";
-			print "CL3R=\""  CL3R  "\"\nCL3G=\""  CL3G  "\"\nCL3B=\""    CL3B "\"";
-		}
-		')
-	[[ ${#CL3RX} == 1 ]] && CL3RX="0$CL3RX"
-	[[ ${#CL3GX} == 1 ]] && CL3GX="0$CL3GX"
-	[[ ${#CL3BX} == 1 ]] && CL3BX="0$CL3BX"
-	echo "#${CL3RX}${CL3GX}${CL3BX}"
-}
-
-RGB () {
-	eval $(echo ${1} | awk -F "" '
-		{
-			RAT1=$1$2;
-			RAT2=$12$13;
-			ONER=$5$6;ONEG=$7$8;ONEB=$9$10;
-			TWOR=$16$17;TWOG=$18$19;TWOB=$20$21;
-			ONRR=strtonum( "0x" ONER );
-			ONRG=strtonum( "0x" ONEG );
-			ONRB=strtonum( "0x" ONEB );
-			TWRR=strtonum( "0x" TWOR );
-			TWRG=strtonum( "0x" TWOG );
-			TWRB=strtonum( "0x" TWOB );
-			CL3R=int((ONRR * RAT1 + TWRR * RAT2) / 100);
-			CL3G=int((ONRG * RAT1 + TWRG * RAT2) / 100);
-			CL3B=int((ONRB * RAT1 + TWRB * RAT2) / 100);
-			print "CL3R=\""  CL3R  "\"\nCL3G=\""  CL3G  "\"\nCL3B=\""    CL3B "\"";
-		}
-		')
-	echo "$CL3R, $CL3G, $CL3B" 
-}
-
-while getopts :x:r:h opts; do
-	case $opts in
-		x) HEX "$OPTARG" ;;
-		r) RGB "$OPTARG" ;;
-		h) help && exit  ;;
+while true; do
+	case $1 in
+		--hex  | -x ) PRINT=HEX ;;
+		--rgb  | -r ) PRINT=RGB ;;
+		--help | -h ) help ; shift ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
 	esac
+	shift
 done
+
+echo ${@:-} | awk -F "" -v PRINT="$PRINT" '{
+		RAT1=$1$2;
+		RAT2=$12$13;
+		ONER=$5$6;ONEG=$7$8;ONEB=$9$10;
+		TWOR=$16$17;TWOG=$18$19;TWOB=$20$21;
+		ONRR=strtonum("0x" ONER); ONRG=strtonum("0x" ONEG); ONRB=strtonum("0x" ONEB);
+		TWRR=strtonum("0x" TWOR); TWRG=strtonum("0x" TWOG); TWRB=strtonum("0x" TWOB);
+		CL3R=int((ONRR * RAT1 + TWRR * RAT2) / 100);
+		CL3G=int((ONRG * RAT1 + TWRG * RAT2) / 100);
+		CL3B=int((ONRB * RAT1 + TWRB * RAT2) / 100);
+		CL3XR=sprintf("%x",CL3R); CL3XG=sprintf("%x",CL3G); CL3XB=sprintf("%x",CL3B);
+		if (length(CL3XR)==1) {CL3XR="0"CL3XR}
+		if (length(CL3XG)==1) {CL3XG="0"CL3XG}
+		if (length(CL3XB)==1) {CL3XB="0"CL3XB}
+		if (PRINT=="HEX") {
+			print "#" CL3XR CL3XG CL3XB ;
+		} else {
+			print "" CL3R ", " CL3G ", " CL3B ;
+		}
+	}'

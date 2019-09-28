@@ -11,11 +11,12 @@ for i in $(echo -e $DEFNOTES); do
 	[[ -f $NOTEDIR/${i} ]] || touch "$NOTEDIR/${i}"
 done
 
-DELETE () { sed "/${i}/d" -i ${TYPE} ; }
-LIST () { ls $NOTEDIR ; }
-LIST-NOTES () { cat $NOTEDIR/$1 || echo "$1 doesn't exist." ; }
+deleteentry () { sed "/${1}/d" -i ${TYPE} ; exit ; }
+deletetype  () { rm -rf "$NOTEDIR/${1}" ; exit ; }
+listtypes   () { ls $NOTEDIR ; exit ; }
+listnotes   () { cat $NOTEDIR/$1 || echo "$1 doesn't exist." ; exit ; }
 
-CREATE () {
+create () {
 	[[ -z ${TYPE} ]] || {
 		[[ -f ${TYPE} ]] || touch ${TYPE}
 		[[ -n ${NTRY} ]] && FNTRY="$NTRY" \
@@ -38,32 +39,47 @@ help () {
  Usage
  -----
 
- noter                ┼ Create defaults:
-                      │   NOTE_DIR = $HOME/Desktop
-                      │   NOTE_TYPE = OTHER|NOTES|
-                      │     WATCHLIST|TODO
- noter -h             ┼ Print this help
- noter -t [NOTE_TYPE] ┼ Create NOTE_DIR/NOTE_TYPE
- noter -e [ENTRY]     ┼ Entry to add to the note
- noter -d [ENTRY]     ┼ Delete entry in note file
- noter -g [NOTE_TYPE] ┼ cat NOTE_DIR/NOTE_TYPE
- noter -l             ┼ ls NOTE_DIR
- noter -D [NOTE_TYPE] ┼ Delete NOTE_DIR/NOTE_TYPE
-                      │   
+ noter                              ┼ Create defaults:
+                                    │   NOTE_DIR = $HOME/Desktop
+                                    │   NOTE_TYPE = OTHER|NOTES|
+                                    │     WATCHLIST|TODO
+ noter --help|-h                    ┼ Print this help
+ noter --type|-t        [NOTE_TYPE] ┼ Create NOTE_DIR/NOTE_TYPE
+ noter --entry|-e       [ENTRY]     ┼ Entry to add to the note
+ noter --delete|-d      [ENTRY]     ┼ Delete entry in note file
+ noter --delete-type|-D [NOTE_TYPE] ┼ cat NOTE_DIR/NOTE_TYPE
+ noter --list|-l                    ┼ ls NOTE_DIR
+ noter --list-types|-L  [NOTE_TYPE] ┼ Delete NOTE_DIR/NOTE_TYPE
 
 EOB
+exit
 }
 
-while getopts :e:t:d:D:g:hl opts; do
-	case $opts in
-		h) help && exit                                  ;;
-		t) TYPE="${NOTEDIR}/${OPTARG}"                   ;;
-		e) NTRY="$(echo ${OPTARG} | sed "s/_/\n\ \ /g")" ;;
-		d) DELETE "${OPTARG}" && exit                    ;;
-		D) rm -rf "$NOTEDIR/$OPTARG" && exit             ;;
-		g) LIST-NOTES "${OPTARG}" && exit                ;;
-		l) LIST && exit                                  ;;
+while true; do
+	case $1 in
+		--help        | -h ) help                                       ; shift ;;
+		--type        | -t ) TYPE="${NOTEDIR}/${2:-}"                   ; shift ;;
+		--entry       | -e ) NTRY="$(echo ${2:-} | sed "s/_/\n\ \ /g")" ; shift ;;
+		--delete      | -d ) deleteentry "${2:-}"                       ; shift ;;
+		--delete-type | -D ) deletetype "${2:-}"                        ; shift ;;
+		--list        | -l ) listnotes "${2:-}"                         ; shift ;;
+		--list-types  | -L ) listtypes "${2:-}"                         ; shift ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
 	esac
+	shift
 done
 
-CREATE
+#while getopts :e:t:d:D:g:hl opts; do
+#	case $opts in
+#		h) help && exit                                  ;;
+#		t) TYPE="${NOTEDIR}/${OPTARG}"                   ;;
+#		e) NTRY="$(echo ${OPTARG} | sed "s/_/\n\ \ /g")" ;;
+#		d) deleteentry "${OPTARG}" && exit               ;;
+#		D) rm -rf "$NOTEDIR/$OPTARG" && exit             ;;
+#		g) listnotes "${OPTARG}" && exit                 ;;
+#		l) listtypes && exit                             ;;
+#	esac
+#done
+
+create
