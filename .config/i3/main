@@ -50,22 +50,22 @@ set $ws10 10
 
 # //// COLORS
 
-set $bg3 #c1baa7
-set $bg2 #d5cebb
-set $bg1 #e9e2cf
-set $bg0 #fdf6e3
-set $acb #b5d9c9
-set $acc #2aa198
-set $acf #0e5357
-set $fg0 #002b36
-set $fg1 #143f4a
-set $fg2 #28535e
-set $fg3 #3c6772
-set $red #dc322f
-set $grn #859900
-set $ylw #b58900
-set $gnt #d33682
-set $cyn #268bd2
+set $bg3 #c3c3c3
+set $bg2 #d7d7d7
+set $bg1 #ebebeb
+set $bg0 #ffffff
+set $acb #b2b2b2
+set $acc #666666
+set $acf #333333
+set $fg0 #000000
+set $fg1 #141414
+set $fg2 #282828
+set $fg3 #3c3c3c
+set $red #cc241d
+set $grn #009048
+set $ylw #904800
+set $gnt #900048
+set $cyn #009090
 set $t   ff
 
 # //// APPS
