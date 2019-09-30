@@ -87,22 +87,22 @@ set $ws10 10
 
 # //// COLORS
 
-set $bg3 #c3c3c3
-set $bg2 #d7d7d7
-set $bg1 #ebebeb
-set $bg0 #ffffff
-set $acb #b2b2b2
-set $acc #666666
-set $acf #333333
-set $fg0 #000000
-set $fg1 #141414
-set $fg2 #282828
-set $fg3 #3c3c3c
-set $red #cc241d
-set $grn #009048
-set $ylw #904800
-set $gnt #900048
-set $cyn #009090
+set $bg3 #c3c3a2
+set $bg2 #d7d7b6
+set $bg1 #ebebca
+set $bg0 #ffffde
+set $acb #a3d7a6
+set $acc #48b06f
+set $acf #386d52
+set $fg0 #282A36
+set $fg1 #3c3e4a
+set $fg2 #50525e
+set $fg3 #646672
+set $red #b55655
+set $grn #896eb6
+set $ylw #939411
+set $gnt #b56e9b
+set $cyn #68a7b8
 set $t   ff
 
 # //// APPS
@@ -287,7 +287,7 @@ $mod+semicolon      $exn i3light nm
 
 $mod+apostrophe     $exn redshift -x
 
-$mod+Return         $lch '$term -name URXVTC'
+$mod+Return         $lch $term
 $mod+Shift+Return   $lch '$term -name FILES -e ranger'
 $mod+Control+Return $lch $term $mk4
 
@@ -377,9 +377,9 @@ $win+Shift+i        gaps inner current plus 1; gaps outer current plus 10
 $win+o              [con_mark=$mk1] resize grow width 5 px or 5 ppt, resize grow height 5 px or 5 ppt
 $win+Shift+o        gaps inner current set 4; gaps outer current set 40
 
-$win+p              [con_mark=$mk1] resize set 45 ppt 20 ppt
+$win+p              [con_mark=$mk1] resize set 40 ppt 20 ppt
 
-$win+bracketleft    [con_mark=$mk1] resize set height 123
+$win+bracketleft    [con_mark=$mk1] resize set height 98
 
 #$win+bracketright   $exn i3media prev
 #

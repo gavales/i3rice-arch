@@ -5,13 +5,13 @@
 
 _W=$(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2)
 
-_I="%{T1}%{T-}"
+_I="%{T1}%{T-}"
 
 case $_W in
-	1) _I="%{T1}%{T-}" ;;
-	2) _I="%{T1}%{T-}" ;;
-	3) _I="%{T1}%{T-}" ;;
+	1) _I="%{T1}%{T-}" ;;
+#	2) _I="%{T1}%{T-}" ;;
+#	3) _I="%{T1}%{T-}" ;;
 esac
 
-echo "${_I} ${_W}"
+echo "${_I}"
 dunstify -r 1234 " WORKSPACE $_W"

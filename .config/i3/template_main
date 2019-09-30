@@ -250,7 +250,7 @@ $mod+semicolon      $exn i3light nm
 
 $mod+apostrophe     $exn redshift -x
 
-$mod+Return         $lch '$term -name URXVTC'
+$mod+Return         $lch $term
 $mod+Shift+Return   $lch '$term -name FILES -e ranger'
 $mod+Control+Return $lch $term $mk4
 
@@ -340,9 +340,9 @@ $win+Shift+i        gaps inner current plus 1; gaps outer current plus 10
 $win+o              [con_mark=$mk1] resize grow width 5 px or 5 ppt, resize grow height 5 px or 5 ppt
 $win+Shift+o        gaps inner current set 4; gaps outer current set 40
 
-$win+p              [con_mark=$mk1] resize set 45 ppt 20 ppt
+$win+p              [con_mark=$mk1] resize set 40 ppt 20 ppt
 
-$win+bracketleft    [con_mark=$mk1] resize set height 123
+$win+bracketleft    [con_mark=$mk1] resize set height 98
 
 #$win+bracketright   $exn i3media prev
 #

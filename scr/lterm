@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: Sun 29 Sep 15:23:02 BST 2019
+
+CHK=$(xdotool search --class URxvt)
+DPD=$(pidof urxvtd)
+
+[[ -n $CHK ]] && urxvtc ${@:-} || {
+	[[ -n $DPD ]] && killall urxvtd
+	urxvtd -q -o -f &>/dev/null &
+	urxvtc ${@:-}
+	}

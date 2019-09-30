@@ -1,43 +1,81 @@
 #!/usr/bin/env bash
 
-bashDir=$USER_SCR_DIR
-pyDir=$XDG_DOCUMENTS_DIR/python
-file=$1
-subdir=$2
-ft=$3
-
 cd $HOME
+DIR=$USER_SCR_DIR
 
-if [[ ! -d $bashDir ]]; then
-	mkdir $bashDir
-	cd $bashDir
-else
-	cd $bashDir
-fi
+help () {
+	cat <<EOB
+$(banner ${0##*/})
+	-- generate bash script
 
-if [[ -n $subdir ]]; then
-	if [[ ! -d $subdir ]]; then
-		mkdir $subdir
-		cd $subdir
-	else
-		cd $subdir
-	fi
-else
-	:
-fi
+ Usage
+ -----
+ ${0##*/} --subdirectory|-s  [DIR] ┼ Create script in
+                                │   subdirectory DIR
+ ${0##*/} --generate-help|-g       ┼ Generate help function
+ ${0##*/} --help|-h                ┼ print this help
+EOB
+exit
+}
 
-if [[ -f $file ]]; then
-	vim $file
-else
-	cat > $file << 'EOB'
+main () {
+	[[ -d $DIR ]] && cd $DIR || {
+		mkdir $DIR
+		cd $DIR
+		}
+
+	[[ -n $SDR ]] && {
+		[[ -d $SDR ]] && cd $SDR || {
+			mkdir $SDR && cd $SDR
+			}
+		}
+
+	[[ -f $TRG ]] && vim $TRG || {
+		cat > $TRG <<EOB
 #!/usr/bin/env bash
 
 # OA: Gavin Vales
 # CREATED: $(date)
-source $HOME/.config/user-dirs.dirs
+# source $HOME/.config/user-dirs.dirs
 
+while true; do
+	case \$1 in
+		--<++> | -<++> ) <++>="\${2:-}" ; shift ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
 
 EOB
-	chmod +x $file
-	vim $file
-fi
+		[[ -n $GHP ]] && {
+		cat >> $TRG <<EOB
+help () {
+$(banner $TRG)
+	-- <++>
+
+ Usage
+ -----
+ $TRG --<++>|-<++> ┼ <++>
+ $TRG --help|-h    ┼ Print this help
+}
+EOB
+			}
+		chmod +x $TRG
+		vim $TRG
+	}
+}
+
+while true; do
+	case $1 in
+		--subdirectory  | -s ) SDR="${2:-}" ; shift ;;
+		--generate-help | -g ) GHP=1 ;;
+		--help          | -h ) help ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+TRG=${@:-}
+main

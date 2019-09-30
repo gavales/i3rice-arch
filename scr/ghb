@@ -15,25 +15,6 @@ EDITOR="gvim -f"
 	cd $DIR
 	}
 
-new () {
-	[[ -n $1 ]] && POST="$1" || \
-		POST=$(ls content/posts | sed '/.md$/!d;s/.md//g' | i3menu -c green)
-	[[ -z $POST ]] && exit
-	[[ -f content/posts/${POST}.md ]] || hugo new posts/${POST}.md
-	hugo server &>/dev/null &
-	i3launch 'surf localhost:1313' _W2 &>/dev/null &
-	i3-msg -q [con_mark="_W3"] focus
-	$EDITOR content/posts/${POST}.md
-	killall hugo
-	killall surf
-	cd $DIR
-	hugo
-}
-
-list () { ls content/posts | sed '/.md$/!d' ; }
-
-delete () { rm -rf content/posts/${1}.md ; }
-
 help () {
 	cat << 'EOB'
           ██      ██     
@@ -61,6 +42,25 @@ help () {
 EOB
 exit
 }
+
+new () {
+	[[ -n $1 ]] && POST="$1" || \
+		POST=$(ls content/posts | sed '/.md$/!d;s/.md//g' | i3menu -c green)
+	[[ -z $POST ]] && exit
+	[[ -f content/posts/${POST}.md ]] || hugo new posts/${POST}.md
+	hugo server &>/dev/null &
+	i3launch 'surf localhost:1313' _W2 &>/dev/null &
+	i3-msg -q [con_mark="_W3"] focus
+	$EDITOR content/posts/${POST}.md
+	killall hugo
+	killall surf
+	cd $DIR
+	hugo
+}
+
+list () { ls content/posts | sed '/.md$/!d' ; }
+
+delete () { rm -rf content/posts/${1}.md ; }
 
 while true; do
 	case $1 in

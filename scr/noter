@@ -11,20 +11,6 @@ for i in $(echo -e $DEFNOTES); do
 	[[ -f $NOTEDIR/${i} ]] || touch "$NOTEDIR/${i}"
 done
 
-deleteentry () { sed "/${1}/d" -i ${TYPE} ; exit ; }
-deletetype  () { rm -rf "$NOTEDIR/${1}" ; exit ; }
-listtypes   () { ls $NOTEDIR ; exit ; }
-listnotes   () { cat $NOTEDIR/$1 || echo "$1 doesn't exist." ; exit ; }
-
-create () {
-	[[ -z ${TYPE} ]] || {
-		[[ -f ${TYPE} ]] || touch ${TYPE}
-		[[ -n ${NTRY} ]] && FNTRY="$NTRY" \
-			|| FNTRY="$(echo "" | i3menu -o horizontal -w 800 -c green -p "${TYPE##*/} ")"
-		[[ -z ${FNTRY} ]] || echo -e "${FNTRY}" >> ${TYPE}
-	}
-}
-
 help () {
 	cat << 'EOB'
                        ██
@@ -55,6 +41,20 @@ EOB
 exit
 }
 
+deleteentry () { sed "/${1}/d" -i ${TYPE} ; exit ; }
+deletetype  () { rm -rf "$NOTEDIR/${1}" ; exit ; }
+listtypes   () { ls $NOTEDIR ; exit ; }
+listnotes   () { cat $NOTEDIR/$1 || echo "$1 doesn't exist." ; exit ; }
+
+create () {
+	[[ -z ${TYPE} ]] || {
+		[[ -f ${TYPE} ]] || touch ${TYPE}
+		[[ -n ${NTRY} ]] && FNTRY="$NTRY" \
+			|| FNTRY="$(echo "" | i3menu -o horizontal -w 800 -c green -p "${TYPE##*/} ")"
+		[[ -z ${FNTRY} ]] || echo -e "${FNTRY}" >> ${TYPE}
+	}
+}
+
 while true; do
 	case $1 in
 		--help        | -h ) help                                       ; shift ;;
@@ -69,17 +69,5 @@ while true; do
 	esac
 	shift
 done
-
-#while getopts :e:t:d:D:g:hl opts; do
-#	case $opts in
-#		h) help && exit                                  ;;
-#		t) TYPE="${NOTEDIR}/${OPTARG}"                   ;;
-#		e) NTRY="$(echo ${OPTARG} | sed "s/_/\n\ \ /g")" ;;
-#		d) deleteentry "${OPTARG}" && exit               ;;
-#		D) rm -rf "$NOTEDIR/$OPTARG" && exit             ;;
-#		g) listnotes "${OPTARG}" && exit                 ;;
-#		l) listtypes && exit                             ;;
-#	esac
-#done
 
 create

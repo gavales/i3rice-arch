@@ -3,7 +3,7 @@
 # OA: Gavin Vales
 # CREATED: Mon 29 Jul 19:21:39 BST 2019
 
-TDR=$HOME/thm DEF=${TDR}/.defaults
+TDR=$HOME/.config/themer DEF=${TDR}/.defaults
 create_def () {
 cat > $DEF << 'EOB'
 ! vim:ft=perl
@@ -82,6 +82,106 @@ vrt=light
 CUR=${TDR}/.current ALL=${TDR}/.allvars ALR=${TDR}/.allvarsrofi RGX=${TDR}/.regex
 DIRS=${TDR}/.dirs LST=${TDR}/.themelist
 
+help () {
+cat << 'EOB'
+    ██   ██
+   ▒██  ▒██
+  ██████▒██       █████  ██████████   █████  ██████
+ ▒▒▒██▒ ▒██████  ██▒▒▒██▒▒██▒▒██▒▒██ ██▒▒▒██▒▒██▒▒█
+   ▒██  ▒██▒▒▒██▒███████ ▒██ ▒██ ▒██▒███████ ▒██ ▒
+   ▒██  ▒██  ▒██▒██▒▒▒▒  ▒██ ▒██ ▒██▒██▒▒▒▒  ▒██
+   ▒▒██ ▒██  ▒██▒▒██████ ███ ▒██ ▒██▒▒██████ ███
+    ▒▒  ▒▒   ▒▒  ▒▒▒▒▒▒ ▒▒▒  ▒▒  ▒▒  ▒▒▒▒▒▒ ▒▒▒
+ 	 -- A script to change theme of configs using
+ 	        a theme file. Inspired by budlabs'
+ 	        mondo-generator from the AUR.
+
+ Usage
+ -----
+ themer                    ┼ Create defaults in
+                           │   $HOME/.config/themer
+ themer --change|-c        ┼ Change current THEME
+                   [THEME] │   Call themer -c "" for
+                           │   a rofi list of all
+                           │   themes. Requires
+                           │   my i3menu rofi wrapper.
+ themer --apply-single|-a  ┼ Apply current theme to
+               [DIRECTORY] │   DIRECTORY
+ themer --apply-all|-A     ┼ Apply current theme to
+                           │   directories listed in
+                           │   $HOME/.config/themer/.dirs
+ themer --getvar|-v  [VAR] ┼ Get variable VAR from
+                           │   current theme.
+ themer --new|-n    [NAME] ┼ Create new theme
+ themer --list|-l [themes| ┼ List `themes`, `vars`, or
+                     vars| │   `vars-rofi` (for a rofi
+                vars-rofi] │   list of all variables).
+ themer --updatelist|-u    ┼ Update rofi theme list for -c.
+ themer --help|-h          ┼ Display this help.
+
+ Making Themes
+ -------------
+ Using themer -n will prompt to create the
+ required fg0 [foreground], bg0 [background] and
+ acc [accent] colours. The variables I use are
+ shown below, but you can use your own.
+     The rest of the variables will be taken from
+ the .default theme, created automatically, and
+ the .default theme can be changed as you wish.
+
+ Generating Themes
+ -----------------
+ Run `themer -c THEME` to generate all variables,
+ including fg0, bg0, and acc variations, and then
+ `themer -a DIRECTORY` appropriately to apply the
+ theme to each template.
+     Create _pre-apply and _post-apply bash scripts
+ in the DIRECTORY to eg. reload i3, polybar etc.
+ before/after applying a theme.
+
+ Making Theme Template
+ ---------------------
+ To make a theme template, just cd into the desired
+ config DIRECTORY, duplicate the file(s) you wish to
+ template with the "template_" prefix, and replace
+ all colors or other things with the variables in
+ your theme file. The variables are to be
+ referenced with: %%variable%%.
+     Add RGB after colour name to get its RGB in
+ "R, G, B" form eg. %%bg0RGB%%.
+     Use @@color@@ instead of %%color%% to get hex
+ color without '#'. Useful for #AARRGGBB colors.
+     You can also reference variables with a '$'
+ in front of the variable name, and mix colours eg.
+ blue  colmix XX:HEX XX:HEX where XX are required
+ mix ratios, and HEX are actual colours, or variables.
+
+ My Variables
+ ------------
+ ┌┈┈ MY MAIN VARIABLES ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┐
+ │%%name%%      Name of theme                │▒
+ │%%wallpaper%% Wallpaper                    │▒
+ │%%font%%      Terminal font                │▒
+ │%%guifont%%   Guifont                      │▒
+ │%%size%%      Font size                    │▒
+ ├┈┈ DEFAULT COLOURS ┈┈┬┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤▒
+ │%%bg0%% │ background │ %%acc%% accent      │▒
+ │%%bg1%% │ (gets      │ %%acf%% acc + fg0   │▒
+ │%%bg2%% │ lighter    │ %%acb%% acc + bg0   │▒
+ │%%bg3%% V if dark)   ├┈┈ MY OTHER COLOURS ┈┤▒
+ ├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤ %%red%% red         │▒
+ ├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤ %%grn%% green       │▒
+ │%%fg0%% │ foreground │ %%ylw%% yellow      │▒
+ │%%fg1%% │ (gets      │ %%blu%% blue        │▒
+ │%%fg2%% │ darker     │ %%cyn%% cyan        │▒
+ │%%fg3%% V if light)  │ %%gnt%% magenta     │▒
+ └┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┴┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┘▒
+   ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+EOB
+exit
+}
+
 variations () {
 	bg0=$(sed '/^bg0 /!d;s/[^ ]* *//' $ALL)
 	fg0=$(sed '/^fg0 /!d;s/[^ ]* *//' $ALL)
@@ -158,17 +258,17 @@ variations () {
 
 			mixer("ac88f",acc,fg0,12,88)
 			mixer("ac75f",acc,fg0,25,75)
-			mixer("ac67f",acc,fg0,33,67)
+			mixer("ac63f",acc,fg0,37,63)
 			mixer("ac50f",acc,fg0,50,50)
-			mixer("ac33f",acc,fg0,67,33)
+			mixer("ac37f",acc,fg0,63,37)
 			mixer("ac25f",acc,fg0,75,25)
 			mixer("ac12f",acc,fg0,88,12)
 
 			mixer("ac12b",acc,bg0,88,12)
 			mixer("ac25b",acc,bg0,75,25)
-			mixer("ac33b",acc,bg0,67,33)
+			mixer("ac37b",acc,bg0,63,37)
 			mixer("ac50b",acc,bg0,50,50)
-			mixer("ac67b",acc,bg0,33,67)
+			mixer("ac63b",acc,bg0,37,63)
 			mixer("ac75b",acc,bg0,25,75)
 			mixer("ac88b",acc,bg0,12,88)
 
@@ -290,6 +390,8 @@ apply-single () {
 	cd
 }
 
+apply () { eval "$(awk '!/#/{print "themer -a " $0}' $DIRS)" ; exit ; }
+
 colmix-parse () {
 	CMRX="$(awk -i <(awklib) ' $2 ~ /^colmix/ {
 			key=$1;$1="";$2="";gsub(/^[ \t]+/, "", $0);mix=$0;
@@ -309,6 +411,7 @@ create-rgb () {
 
 change-current () {
 	[[ -n $1 ]] && cat ${TDR}/${1} > $CUR || gui-change
+	[[ -n $DARK ]] && sed -i 's/fg0/bgint/g;s/bg0/fg0/g;s/bgint/bg0/g' $CUR
 	cat $CUR | sed '/^\!/d' > $ALL
 	awk ' NR==FNR { a[$1]=$1; b[$1]=$0; next; }
 		$1!=a[$1] { print $0; }' $ALL $DEF | sed '/^!/d' >> $ALL
@@ -324,112 +427,20 @@ change-current () {
 		}' $ALL > ${TDR}/.tmp && mv ${TDR}/.tmp $ALL
 }
 
-help () {
-cat << 'EOB'
-    ██   ██
-   ▒██  ▒██
-  ██████▒██       █████  ██████████   █████  ██████
- ▒▒▒██▒ ▒██████  ██▒▒▒██▒▒██▒▒██▒▒██ ██▒▒▒██▒▒██▒▒█
-   ▒██  ▒██▒▒▒██▒███████ ▒██ ▒██ ▒██▒███████ ▒██ ▒
-   ▒██  ▒██  ▒██▒██▒▒▒▒  ▒██ ▒██ ▒██▒██▒▒▒▒  ▒██
-   ▒▒██ ▒██  ▒██▒▒██████ ███ ▒██ ▒██▒▒██████ ███
-    ▒▒  ▒▒   ▒▒  ▒▒▒▒▒▒ ▒▒▒  ▒▒  ▒▒  ▒▒▒▒▒▒ ▒▒▒
- 	    -- A 420 line script to change theme of configs using
- 	a theme file. Inspired by budlabs' mondo-generator from the AUR.
-
- Usage
- -----
- themer                         ┼ Create defaults
- themer --change|-c [THEME]     ┼ Change current THEME
-                                │   Call themer -c "" for
-                                │   a rofi list of all
-                                │   themes. Requires
-                                │   my i3menu rofi wrapper.
- themer --apply|-a  [DIRECTORY] ┼ Apply current theme to
-                                │   configs in given
-                                │   DIRECTORY
- themer --getvar|-v [VAR]       ┼ Get variable VAR from
-                                │   current theme.
- themer --new|-n    [NAME]      ┼ Create new theme
- themer --list|-l   [TYPE]      ┼ List `themes`, `vars`, or
-                                │   `vars-rofi` (for a rofi
-                                │   list of all variables).
- themer --updatelist|-u         ┼ Update rofi theme list
-                                │   for -c.
- themer --help|-h               ┼ Display this help.
-
- Making Themes
- -------------
- Using themer -n will prompt to create the
- required fg0 [foreground], bg0 [background] and
- acc [accent] colours. The variables I use are
- shown below, but you can use your own.
-     The rest of the variables will be taken from
- the .default theme, created automatically, and
- the .default theme can be changed as you wish.
-
- Generating Themes
- -----------------
- Run `themer -c THEME` to generate all variables,
- including fg0, bg0, and acc variations, and then
- `themer -a DIRECTORY` appropriately to apply the
- theme to each template.
-     Create _pre-apply and _post-apply bash scripts
- in the DIRECTORY to eg. reload i3, polybar etc.
- before/after applying a theme.
-
- Making Theme Template
- ---------------------
- To make a theme template, just cd into the desired
- config DIRECTORY, duplicate the file(s) you wish to
- template with the "template_" prefix, and replace
- all colors or other things with the variables in
- your theme file. The variables are to be
- referenced with: %%variable%%.
-     Add RGB after colour name to get its RGB in
- "R, G, B" form eg. %%bg0RGB%%.
-     Use @@color@@ instead of %%color%% to get hex
- color without '#'. Useful for #AARRGGBB colors.
-     You can also reference variables with a '$'
- in front of the variable name, and mix colours eg.
- blue  colmix XX:HEX XX:HEX where XX are required
- mix ratios, and HEX are actual colours, or variables.
-
- My Variables
- ------------
- ┌┈┈ MY MAIN VARIABLES ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┐
- │%%name%%      Name of theme                │▒
- │%%wallpaper%% Wallpaper                    │▒
- │%%font%%      Terminal font                │▒
- │%%guifont%%   Guifont                      │▒
- │%%size%%      Font size                    │▒
- ├┈┈ DEFAULT COLOURS ┈┈┬┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤▒
- │%%bg0%% │ background │ %%acc%% accent      │▒
- │%%bg1%% │ (gets      │ %%acf%% acc + fg0   │▒
- │%%bg2%% │ lighter    │ %%acb%% acc + bg0   │▒
- │%%bg3%% V if dark)   ├┈┈ MY OTHER COLOURS ┈┤▒
- ├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤ %%red%% red         │▒
- ├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤ %%grn%% green       │▒
- │%%fg0%% │ foreground │ %%ylw%% yellow      │▒
- │%%fg1%% │ (gets      │ %%blu%% blue        │▒
- │%%fg2%% │ darker     │ %%cyn%% cyan        │▒
- │%%fg3%% V if light)  │ %%gnt%% magenta     │▒
- └┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┴┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┘▒
-   ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-
-EOB
-exit
-}
+delete () { mv ${TDR}/${1} ${TDR}/.unused/${1} ; exit ; }
 
 while true; do
 	case $1 in
-		--help       | -h ) help                    ; shift ;;
-		--updatelist | -u ) updatelist              ; shift ;;
-		--getvar     | -v ) getvar "${2:-}"         ; shift ;;
-		--new        | -n ) newtheme "${2:-}"       ; shift ;;
-		--list       | -l ) list "${2:-}"           ; shift ;;
-		--change     | -c ) change-current "${2:-}" ; shift ;;
-		--apply      | -a ) apply-single "${2:-}"   ; shift ;;
+		--updatelist   | -u ) updatelist              ; shift ;;
+		--getvar       | -v ) getvar "${2:-}"         ; shift ;;
+		--new          | -n ) newtheme "${2:-}"       ; shift ;;
+		--list         | -l ) list "${2:-}"           ; shift ;;
+		--change       | -c ) change-current "${2:-}" ; shift ;;
+		--apply-single | -a ) apply-single "${2:-}"   ; shift ;;
+		--apply-all    | -A ) apply                   ; shift ;;
+		--delete       | -d ) delete "${2:-}"         ; shift ;;
+		--dark         | -D ) DARK=1                          ;;
+		--help         | -h ) help                            ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac

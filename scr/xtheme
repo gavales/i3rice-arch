@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-themer --change
+themer ${@:-} --change
 reloadconfs &>/dev/null &
-themer --apply $HOME/numix
+themer --apply-single $HOME/numix

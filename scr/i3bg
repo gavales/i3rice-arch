@@ -26,6 +26,48 @@ MX=${MONDIM%x*}
 MY=${MONDIM#*x}
 blr=0x16
 
+help () {
+cat << 'EOB'
+  ██  ████  ██             
+ ▒▒  █▒▒▒ █▒██       █████ 
+  ██▒    ▒█▒██      ██▒▒▒██
+ ▒██   ███ ▒██████ ▒██  ▒██
+ ▒██  ▒▒▒ █▒██▒▒▒██▒▒██████
+ ▒██ █   ▒█▒██  ▒██ ▒▒▒▒▒██
+ ▒██▒ ████ ▒██████   █████ 
+ ▒▒  ▒▒▒▒  ▒▒▒▒▒    ▒▒▒▒▒  
+ 	-- A script to set wallpaper, with other features.
+
+ Usage
+ -----
+ i3bg                            ┼ Create default directories:
+                                 │   WALL_DIR/(normal|blur|cols)
+ i3bg --help|-h                  ┼ Print this help
+ i3bg --wallpaper|-w [PATH|prev| ┼ Wallpaper to set 
+                     next|random │
+                       |NAME]    │
+ i3bg --tint|-t      [HEX COLOR] ┼ Tint color of wallpaper
+ i3bg --add|-a       [DIRECTORY] ┼ Add walls from DIRECTORY
+ i3bg --list|-l                  ┼ List available wallpapers
+ i3bg --blur|-b                  ┼ Toggle blur
+ i3bg --rename|-r         [NAME] ┼ Rename current wallpaper
+ i3bg --delete|-d                ┼ Remove wallpaper from
+                                 │   WALL_DIR/(normal|blur)
+ 
+ WALL_DIR  ┼ Default i3bg folder:
+           │   $XDG_PICTURES_DIR/i3bg
+ DIRECTORY ┼ is a path to a directory containing pictures
+ HEX COLOR ┼ Hexadecimal color Eg. #002b36
+ PATH      ┼ is a path to a picture
+ prev      ┼ previous wallpaper in history
+ next      ┼ next wallpaper in history
+ NAME      ┼ name of wallpaper stored in WALL_DIR/normal
+ random    ┼ random wallpaper in WALL_DIR/normal
+
+EOB
+exit
+}
+
 add-wall () {
 	SRC="$1"
 	TRG="${1##*/}"
@@ -131,48 +173,6 @@ next () {
 prev () {
 	WPP="$(sed -n "/"${CRLN##*/}"/{g;1!p;};h" $HIST)"
 	[[ -z $WPP ]] && WPP="$(tail -n 1 $HIST)"
-}
-
-help () {
-cat << 'EOB'
-  ██  ████  ██             
- ▒▒  █▒▒▒ █▒██       █████ 
-  ██▒    ▒█▒██      ██▒▒▒██
- ▒██   ███ ▒██████ ▒██  ▒██
- ▒██  ▒▒▒ █▒██▒▒▒██▒▒██████
- ▒██ █   ▒█▒██  ▒██ ▒▒▒▒▒██
- ▒██▒ ████ ▒██████   █████ 
- ▒▒  ▒▒▒▒  ▒▒▒▒▒    ▒▒▒▒▒  
- 	-- A script to set wallpaper, with other features.
-
- Usage
- -----
- i3bg                            ┼ Create default directories:
-                                 │   WALL_DIR/(normal|blur|cols)
- i3bg --help|-h                  ┼ Print this help
- i3bg --wallpaper|-w [PATH|prev| ┼ Wallpaper to set 
-                     next|random │
-                       |NAME]    │
- i3bg --tint|-t      [HEX COLOR] ┼ Tint color of wallpaper
- i3bg --add|-a       [DIRECTORY] ┼ Add walls from DIRECTORY
- i3bg --list|-l                  ┼ List available wallpapers
- i3bg --blur|-b                  ┼ Toggle blur
- i3bg --rename|-r         [NAME] ┼ Rename current wallpaper
- i3bg --delete|-d                ┼ Remove wallpaper from
-                                 │   WALL_DIR/(normal|blur)
- 
- WALL_DIR  ┼ Default i3bg folder:
-           │   $XDG_PICTURES_DIR/i3bg
- DIRECTORY ┼ is a path to a directory containing pictures
- HEX COLOR ┼ Hexadecimal color Eg. #002b36
- PATH      ┼ is a path to a picture
- prev      ┼ previous wallpaper in history
- next      ┼ next wallpaper in history
- NAME      ┼ name of wallpaper stored in WALL_DIR/normal
- random    ┼ random wallpaper in WALL_DIR/normal
-
-EOB
-exit
 }
 
 while true; do

@@ -1,7 +1,7 @@
 ! vim:ft=perl
 name            dosnerd
 wallpaper       random
-fg0             #DFBF9F
+bg0             #DFBF9F
 acc             #d5715e
-bg0             #1F1F1F
+fg0             #1F1F1F
 blu             $acc

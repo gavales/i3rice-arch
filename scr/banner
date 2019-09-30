@@ -37,7 +37,7 @@ while true; do
 	shift
 done
 
-[[ -n ${@:-} ]] && echo -e "${blu}$(echo -e " ${@:-}" | figlet ${fnt} | \
+[[ -n ${@:-} ]] && echo -e "$(echo -e " ${@:-}" | figlet ${fnt} | \
 	sed $'s/\*/\u2588/g;s/\//\u2592/g')"
 
 # >>>> unused

@@ -23,9 +23,9 @@ cat << 'EOB'
 Usage
 -----
 
-gencvl -h     ┼ print this help
-gencvl [NAME] ┼ create new coverletter
-              │   with name NAME
+gencvl --help|-h ┼ print this help
+gencvl [NAME]    ┼ create new coverletter
+                 │   with name NAME
 EOB
 }
 
