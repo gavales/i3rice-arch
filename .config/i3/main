@@ -32,22 +32,22 @@ set $ws9  9
 set $ws10 10
 
 # //// COLORS
-set $bg3 #b0b0b0
-set $bg2 #c4c4c4
-set $bg1 #d8d8d8
-set $bg0 #ececec
-set $acb #a9a9a9
-set $acc #666666
-set $acf #333333
-set $fg0 #000000
-set $fg1 #141414
-set $fg2 #282828
-set $fg3 #3c3c3c
-set $red #cc241d
-set $grn #009048
-set $ylw #904800
-set $gnt #900048
-set $cyn #009090
+set $bg3 #767676
+set $bg2 #626262
+set $bg1 #4e4e4e
+set $bg0 #3a3a3a
+set $acb #1d6060
+set $acc #008787
+set $acf #6db0b0
+set $fg0 #dadada
+set $fg1 #c6c6c6
+set $fg2 #b2b2b2
+set $fg3 #9e9e9e
+set $red #870100
+set $grn #005f00
+set $ylw #d8865f
+set $gnt #87025f
+set $cyn #0087af
 set $t   ff
 
 # //// APPS
@@ -153,7 +153,7 @@ $ALT+Control+Return $exn $TRM -name noterm
 $ALT+z              $exn surf docs.google.com/document/u/0/
 $ALT+x              $exn surf docs.google.com/spreadsheets/u/0/
 $ALT+c              $RUN -c 'Firefox' -e '$FFX'
-$ALT+Shift+c        $exn xtheme
+$ALT+Shift+c        $exn xtheme --time-change 7:20
 $ALT+v              $RUN -i 'visualiser' -e '$TRM -name visualiser -e vis'
 $ALT+Shift+v        $exn projectM-pulseaudio
 $ALT+b              $RUN -i 'references' -e '$TRM -name references -e vim $home/Drive/global.bib'

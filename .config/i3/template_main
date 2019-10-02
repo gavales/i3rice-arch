@@ -153,7 +153,7 @@ $ALT+Control+Return $exn $TRM -name noterm
 $ALT+z              $exn surf docs.google.com/document/u/0/
 $ALT+x              $exn surf docs.google.com/spreadsheets/u/0/
 $ALT+c              $RUN -c 'Firefox' -e '$FFX'
-$ALT+Shift+c        $exn xtheme
+$ALT+Shift+c        $exn xtheme --time-change 7:20
 $ALT+v              $RUN -i 'visualiser' -e '$TRM -name visualiser -e vis'
 $ALT+Shift+v        $exn projectM-pulseaudio
 $ALT+b              $RUN -i 'references' -e '$TRM -name references -e vim $home/Drive/global.bib'

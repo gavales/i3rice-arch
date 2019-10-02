@@ -64,55 +64,55 @@ hi usrblu           ctermfg=black    ctermbg=blue
 hi usrgnt           ctermfg=black    ctermbg=magenta
 
 " >>>> GUI
-hi Normal           guifg=#000000 guibg=#ececec
-hi Title            guifg=#000000 guibg=#ececec gui=bold
-hi LineNr           guifg=#666666 guibg=#ececec gui=none
-hi CursorLineNr     guifg=#666666 guibg=#d8d8d8 gui=bold
-hi SpecialKey       guifg=#d8d8d8 guibg=#ececec
-hi ModeMsg          guifg=#ececec guibg=#666666 gui=bold
-hi Cursor           guifg=#ececec guibg=#cc241d
-hi ColorColumn                    guibg=#d8d8d8 gui=none
-hi CursorLine                     guibg=#d8d8d8 gui=none
-hi Visual           guifg=#000000 guibg=#a9a9a9
-hi VisualNOS        guifg=#000000 guibg=#a9a9a9
+hi Normal           guifg=#dadada guibg=#3a3a3a
+hi Title            guifg=#dadada guibg=#3a3a3a gui=bold
+hi LineNr           guifg=#008787 guibg=#3a3a3a gui=none
+hi CursorLineNr     guifg=#008787 guibg=#4e4e4e gui=bold
+hi SpecialKey       guifg=#4e4e4e guibg=#3a3a3a
+hi ModeMsg          guifg=#3a3a3a guibg=#008787 gui=bold
+hi Cursor           guifg=#3a3a3a guibg=#870100
+hi ColorColumn                    guibg=#4e4e4e gui=none
+hi CursorLine                     guibg=#4e4e4e gui=none
+hi Visual           guifg=#dadada guibg=#1d6060
+hi VisualNOS        guifg=#dadada guibg=#1d6060
 
-hi Type             guifg=#000000 guibg=#ececec gui=bold
-hi Identifier       guifg=#904800 guibg=#ececec gui=italic
-hi Comment          guifg=#a9a9a9 guibg=#ececec gui=italic
-hi Folded           guifg=#000000 guibg=#ececec gui=italic
-hi Constant         guifg=#000000 guibg=#ececec gui=italic
-hi Special          guifg=#000000 guibg=#ececec gui=bold
-hi Statement        guifg=#000000 guibg=#ececec gui=bold
-hi PreProc          guifg=#666666 guibg=#ececec gui=bold
-hi MatchParen       guifg=#904800 guibg=#ececec gui=bold
-hi Search           guifg=#ececec guibg=#904800 gui=none
-hi Error            guifg=#cc241d guibg=#ececec gui=none
-hi EndOfBuffer      guifg=#ececec guibg=#ececec gui=none
+hi Type             guifg=#dadada guibg=#3a3a3a gui=bold
+hi Identifier       guifg=#d8865f guibg=#3a3a3a gui=italic
+hi Comment          guifg=#1d6060 guibg=#3a3a3a gui=italic
+hi Folded           guifg=#dadada guibg=#3a3a3a gui=italic
+hi Constant         guifg=#dadada guibg=#3a3a3a gui=italic
+hi Special          guifg=#dadada guibg=#3a3a3a gui=bold
+hi Statement        guifg=#dadada guibg=#3a3a3a gui=bold
+hi PreProc          guifg=#008787 guibg=#3a3a3a gui=bold
+hi MatchParen       guifg=#d8865f guibg=#3a3a3a gui=bold
+hi Search           guifg=#3a3a3a guibg=#d8865f gui=none
+hi Error            guifg=#870100 guibg=#3a3a3a gui=none
+hi EndOfBuffer      guifg=#3a3a3a guibg=#3a3a3a gui=none
 
-hi SpellBad         guifg=#cc241d guibg=#ececec gui=underline,bold
-hi SpellCap         guifg=#666666 guibg=#ececec gui=underline,bold
-hi SpellRare        guifg=#900048 guibg=#ececec gui=underline,bold
-hi SpellLocal       guifg=#009090 guibg=#ececec gui=underline,bold
+hi SpellBad         guifg=#870100 guibg=#3a3a3a gui=underline,bold
+hi SpellCap         guifg=#008787 guibg=#3a3a3a gui=underline,bold
+hi SpellRare        guifg=#87025f guibg=#3a3a3a gui=underline,bold
+hi SpellLocal       guifg=#0087af guibg=#3a3a3a gui=underline,bold
 
-hi StatusLine       guifg=#ececec guibg=#666666
-hi StatusLineNC     guifg=#ececec guibg=#666666
-hi StatusLineTerm   guifg=#ececec guibg=#666666
-hi StatusLineTermNC guifg=#ececec guibg=#666666
-hi ToolbarLine      guifg=#ececec guibg=#666666
-hi ToolbarButton    guifg=#ececec guibg=#666666
+hi StatusLine       guifg=#3a3a3a guibg=#008787
+hi StatusLineNC     guifg=#3a3a3a guibg=#008787
+hi StatusLineTerm   guifg=#3a3a3a guibg=#008787
+hi StatusLineTermNC guifg=#3a3a3a guibg=#008787
+hi ToolbarLine      guifg=#3a3a3a guibg=#008787
+hi ToolbarButton    guifg=#3a3a3a guibg=#008787
 
-hi Pmenu            guifg=#666666 guibg=#000000 gui=none
-hi PmenuSel         guifg=#ececec guibg=#666666 gui=none
-hi PmenuSbar        guifg=#666666 guibg=#ececec gui=none
-hi PmenuThumb       guifg=#009048 guibg=#009048 gui=none
-hi TabLine          guifg=#666666 guibg=#ececec gui=none
-hi TabLineSel       guifg=#ececec guibg=#666666 gui=none
-hi TabLineFill      guifg=#666666 guibg=#ececec gui=none
+hi Pmenu            guifg=#008787 guibg=#dadada gui=none
+hi PmenuSel         guifg=#3a3a3a guibg=#008787 gui=none
+hi PmenuSbar        guifg=#008787 guibg=#3a3a3a gui=none
+hi PmenuThumb       guifg=#005f00 guibg=#005f00 gui=none
+hi TabLine          guifg=#008787 guibg=#3a3a3a gui=none
+hi TabLineSel       guifg=#3a3a3a guibg=#008787 gui=none
+hi TabLineFill      guifg=#008787 guibg=#3a3a3a gui=none
 
-hi usrred           guifg=#ececec guibg=#cc241d
-hi usrylw           guifg=#ececec guibg=#904800
-hi usrgrn           guifg=#ececec guibg=#009048
-hi usrgry           guifg=#ececec guibg=#b0b0b0
-hi usrblu           guifg=#ececec guibg=#666666
-hi usrgnt           guifg=#ececec guibg=#900048
+hi usrred           guifg=#3a3a3a guibg=#870100
+hi usrylw           guifg=#3a3a3a guibg=#d8865f
+hi usrgrn           guifg=#3a3a3a guibg=#005f00
+hi usrgry           guifg=#3a3a3a guibg=#767676
+hi usrblu           guifg=#3a3a3a guibg=#008787
+hi usrgnt           guifg=#3a3a3a guibg=#87025f
 

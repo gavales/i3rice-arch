@@ -81,6 +81,8 @@ exit
 vrt=light
 CUR=${TDR}/.current ALL=${TDR}/.allvars ALR=${TDR}/.allvarsrofi RGX=${TDR}/.regex
 DIRS=${TDR}/.dirs LST=${TDR}/.themelist
+TIME=$(date | awk '{print $4}')
+TIME=${TIME%%:*}
 
 help () {
 cat << 'EOB'
@@ -117,6 +119,11 @@ cat << 'EOB'
                      vars| │   `vars-rofi` (for a rofi
                 vars-rofi] │   list of all variables).
  themer --updatelist|-u    ┼ Update rofi theme list for -c.
+ themer --dark|-D          ┼ Dark mode (switches fgo and bg0)
+ themer --auto-dark|-t     ┼ Dark/Light mode based on
+                   [AM:PM] │   time of day, specify
+                           │   AM hr for 'light' mode
+                           │   and PM hr for 'dark' mode
  themer --help|-h          ┼ Display this help.
 
  Making Themes
@@ -429,6 +436,13 @@ change-current () {
 
 delete () { mv ${TDR}/${1} ${TDR}/.unused/${1} ; exit ; }
 
+timechange () {
+	AM=${1%:*}
+	PM=${1#*:}
+	[[ $TIME -ge $PM ]] && DARK=1
+	[[ $TIME -lt $AM ]] && DARK=1
+}
+
 while true; do
 	case $1 in
 		--updatelist   | -u ) updatelist              ; shift ;;
@@ -440,6 +454,7 @@ while true; do
 		--apply-all    | -A ) apply                   ; shift ;;
 		--delete       | -d ) delete "${2:-}"         ; shift ;;
 		--dark         | -D ) DARK=1                          ;;
+		--auto-dark    | -t ) timechange "${2:-}"     ; shift ;;
 		--help         | -h ) help                            ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;

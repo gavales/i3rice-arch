@@ -1,7 +1,18 @@
 ! vim:ft=perl
-name            grayscale
-wallpaper       WW_128000000000408974_EN
-fg0             #000000
-acc             #666666
-blu             $acc
-bg0             #ececec
+!lgtred          #af5f5f
+!lgtgrn          #5f885f
+!lgtylw          #af8760
+!lgtcyn          #5f87ae
+!lgtgnt          #875f87
+!lgtblu          #5f8787
+name            seoul256 (light) theme adapted for URxvt
+wallpaper       forest-fog-hill
+fg0             #dadada
+bg0             #3a3a3a
+acc             $blu
+red             #870100
+grn             #005f00
+ylw             #d8865f
+cyn             #0087af
+gnt             #87025f
+blu             #008787

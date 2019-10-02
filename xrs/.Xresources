@@ -18,24 +18,24 @@
 #define cblkd #CDCBCD
 #define cblkl #b9b7b9
 
-! >>>> themer theme: grayscale ├
+! >>>> themer theme: seoul256 (light) theme adapted for URxvt ├
 
-#define cwhtl #000000
-#define cwhtd #a9a9a9
-#define credd #cc241d
-#define credl #cc241d
-#define cgrnd #009048
-#define cgrnl #009048
-#define cylwd #904800
-#define cylwl #904800
-#define cblud #666666
-#define cblul #666666
-#define cgntd #900048
-#define cgntl #900048
-#define ccynd #009090
-#define ccynl #009090
-#define cblkd #ececec
-#define cblkl #d8d8d8
+#define cwhtl #dadada
+#define cwhtd #1d6060
+#define credd #870100
+#define credl #870100
+#define cgrnd #005f00
+#define cgrnl #005f00
+#define cylwd #d8865f
+#define cylwl #d8865f
+#define cblud #008787
+#define cblul #008787
+#define cgntd #87025f
+#define cgntl #87025f
+#define ccynd #0087af
+#define ccynl #0087af
+#define cblkd #3a3a3a
+#define cblkl #4e4e4e
 
 ! >>>> 1vars                  ├
 
