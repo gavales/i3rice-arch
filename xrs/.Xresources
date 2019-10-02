@@ -18,24 +18,24 @@
 #define cblkd #CDCBCD
 #define cblkl #b9b7b9
 
-! >>>> themer theme: dracula ├
+! >>>> themer theme: grayscale ├
 
-#define cwhtl #282A36
-#define cwhtd #a3d7a6
-#define credd #b55655
-#define credl #b55655
-#define cgrnd #896eb6
-#define cgrnl #896eb6
-#define cylwd #939411
-#define cylwl #939411
-#define cblud #48b06f
-#define cblul #48b06f
-#define cgntd #b56e9b
-#define cgntl #b56e9b
-#define ccynd #68a7b8
-#define ccynl #68a7b8
-#define cblkd #ffffde
-#define cblkl #ebebca
+#define cwhtl #000000
+#define cwhtd #a9a9a9
+#define credd #cc241d
+#define credl #cc241d
+#define cgrnd #009048
+#define cgrnl #009048
+#define cylwd #904800
+#define cylwl #904800
+#define cblud #666666
+#define cblul #666666
+#define cgntd #900048
+#define cgntl #900048
+#define ccynd #009090
+#define ccynl #009090
+#define cblkd #ececec
+#define cblkl #d8d8d8
 
 ! >>>> 1vars                  ├
 

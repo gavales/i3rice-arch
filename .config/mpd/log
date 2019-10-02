@@ -3942,3 +3942,222 @@ Sep 30 12:53 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Syn
 Sep 30 12:58 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Sep 30 12:58 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Sep 30 12:58 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Sep 30 13:44 : client: [0] opened from [::1]:57596
+Sep 30 13:44 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 30 13:44 : client: [0] closed
+Sep 30 13:44 : client: [1] opened from [::1]:57598
+Sep 30 13:44 : client: [1] closed
+Sep 30 13:44 : client: [2] opened from [::1]:57600
+Sep 30 13:44 : client: [2] closed
+Sep 30 13:44 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 30 13:45 : client: [3] opened from [::1]:57758
+Sep 30 13:45 : client: [3] closed
+Sep 30 13:45 : client: [4] opened from [::1]:57760
+Sep 30 13:45 : client: [4] closed
+Sep 30 13:45 : client: [5] opened from [::1]:57762
+Sep 30 13:45 : client: [5] closed
+Sep 30 14:19 : client: [6] opened from [::1]:37244
+Sep 30 14:19 : client: [6] closed
+Sep 30 14:19 : client: [7] opened from [::1]:37246
+Sep 30 14:19 : client: [7] closed
+Sep 30 14:19 : client: [8] opened from [::1]:37248
+Sep 30 14:19 : client: [8] closed
+Sep 30 14:19 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 30 14:21 : client: [9] opened from [::1]:37660
+Sep 30 14:21 : client: [9] closed
+Sep 30 14:21 : client: [10] opened from [::1]:37662
+Sep 30 14:21 : client: [10] closed
+Sep 30 14:21 : client: [11] opened from [::1]:37664
+Sep 30 14:21 : client: [11] closed
+Sep 30 14:22 : client: [12] opened from [::1]:37900
+Sep 30 14:22 : client: [12] closed
+Sep 30 14:22 : client: [13] opened from [::1]:37906
+Sep 30 14:22 : client: [13] closed
+Sep 30 14:22 : client: [14] opened from [::1]:37908
+Sep 30 14:22 : client: [14] closed
+Sep 30 14:22 : client: [15] opened from [::1]:37910
+Sep 30 14:22 : client: [15] closed
+Sep 30 14:22 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 30 14:22 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 01 Wolf Arm - The Singularity.mp3"
+Sep 30 14:24 : client: [16] opened from [::1]:38410
+Sep 30 14:24 : client: [16] closed
+Sep 30 14:24 : client: [17] opened from [::1]:38412
+Sep 30 14:24 : client: [17] closed
+Sep 30 14:24 : client: [18] opened from [::1]:38414
+Sep 30 14:24 : client: [18] closed
+Sep 30 14:24 : client: [19] opened from [::1]:38420
+Sep 30 14:24 : client: [19] closed
+Sep 30 14:24 : client: [20] opened from [::1]:38422
+Sep 30 14:24 : client: [20] closed
+Sep 30 14:24 : client: [21] opened from [::1]:38424
+Sep 30 14:24 : client: [21] closed
+Sep 30 14:24 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 30 14:24 : client: [22] opened from [::1]:38430
+Sep 30 14:24 : client: [22] closed
+Sep 30 14:24 : client: [23] opened from [::1]:38432
+Sep 30 14:24 : client: [23] closed
+Sep 30 14:24 : client: [24] opened from [::1]:38434
+Sep 30 14:24 : client: [24] closed
+Sep 30 14:24 : client: [25] opened from [::1]:38490
+Sep 30 14:24 : client: [26] opened from [::1]:38492
+Sep 30 14:24 : client: [26] closed
+Sep 30 14:24 : client: [27] opened from [::1]:38494
+Sep 30 14:24 : client: [27] closed
+Sep 30 14:24 : client: [28] opened from [::1]:38500
+Sep 30 14:24 : client: [28] closed
+Sep 30 14:24 : client: [29] opened from [::1]:38538
+Sep 30 14:24 : client: [29] closed
+Sep 30 14:24 : client: [30] opened from [::1]:38540
+Sep 30 14:24 : client: [30] closed
+Sep 30 14:24 : client: [31] opened from [::1]:38542
+Sep 30 14:24 : client: [31] closed
+Sep 30 14:24 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 30 14:31 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 07 Volkor X - Beam.mp3"
+Sep 30 14:31 : client: [32] opened from [::1]:40308
+Sep 30 14:31 : client: [32] closed
+Sep 30 14:31 : client: [33] opened from [::1]:40314
+Sep 30 14:31 : client: [33] closed
+Sep 30 14:31 : client: [34] opened from [::1]:40316
+Sep 30 14:31 : client: [34] closed
+Sep 30 14:36 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 09 AWITW - Doll's Awakening.mp3"
+Sep 30 14:36 : client: [35] opened from [::1]:41092
+Sep 30 14:36 : client: [35] closed
+Sep 30 14:36 : client: [36] opened from [::1]:41094
+Sep 30 14:36 : client: [36] closed
+Sep 30 14:36 : client: [37] opened from [::1]:41096
+Sep 30 14:36 : client: [37] closed
+Sep 30 14:40 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 10 Acidulé - Neo Tokyo's Theme.mp3"
+Sep 30 14:40 : client: [38] opened from [::1]:42026
+Sep 30 14:40 : client: [38] closed
+Sep 30 14:40 : client: [39] opened from [::1]:42028
+Sep 30 14:40 : client: [39] closed
+Sep 30 14:40 : client: [40] opened from [::1]:42030
+Sep 30 14:40 : client: [40] closed
+Sep 30 14:45 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 12 Earslicker - Ride or Die.mp3"
+Sep 30 14:45 : client: [41] opened from [::1]:43150
+Sep 30 14:45 : client: [41] closed
+Sep 30 14:45 : client: [42] opened from [::1]:43156
+Sep 30 14:45 : client: [42] closed
+Sep 30 14:45 : client: [43] opened from [::1]:43158
+Sep 30 14:45 : client: [43] closed
+Sep 30 14:49 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 13 Peter Zimmermann - Kaneda's Theme (Italo Disco Reprise).mp3"
+Sep 30 14:49 : client: [44] opened from [::1]:44058
+Sep 30 14:49 : client: [44] closed
+Sep 30 14:49 : client: [45] opened from [::1]:44060
+Sep 30 14:49 : client: [45] closed
+Sep 30 14:49 : client: [46] opened from [::1]:44062
+Sep 30 14:49 : client: [46] closed
+Sep 30 14:53 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 02 Speed Machine - Mechanized Dystopia.mp3"
+Sep 30 14:53 : client: [47] opened from [::1]:45180
+Sep 30 14:53 : client: [47] closed
+Sep 30 14:53 : client: [48] opened from [::1]:45184
+Sep 30 14:53 : client: [48] closed
+Sep 30 14:53 : client: [49] opened from [::1]:45186
+Sep 30 14:53 : client: [49] closed
+Sep 30 14:58 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 08 Carbon Killer - Dark Side of the Road.mp3"
+Sep 30 14:58 : client: [50] opened from [::1]:46274
+Sep 30 14:58 : client: [50] closed
+Sep 30 14:58 : client: [51] opened from [::1]:46280
+Sep 30 14:58 : client: [51] closed
+Sep 30 14:58 : client: [52] opened from [::1]:46282
+Sep 30 14:58 : client: [52] closed
+Sep 30 14:59 : client: [53] opened from [::1]:46802
+Sep 30 14:59 : client: [53] closed
+Sep 30 14:59 : client: [54] opened from [::1]:46804
+Sep 30 14:59 : client: [54] closed
+Sep 30 14:59 : client: [55] opened from [::1]:46806
+Sep 30 14:59 : client: [55] closed
+Sep 30 18:58 : client: [25] closed
+Sep 30 18:58 : client: [56] opened from [::1]:44292
+Sep 30 18:58 : client: [57] opened from [::1]:44294
+Sep 30 18:58 : client: [57] closed
+Sep 30 18:58 : client: [58] opened from [::1]:44298
+Sep 30 18:58 : client: [58] closed
+Sep 30 18:58 : client: [59] opened from [::1]:44300
+Sep 30 18:58 : client: [59] closed
+Sep 30 20:43 : client: [56] closed
+Sep 30 20:43 : client: [60] opened from [::1]:34016
+Sep 30 20:43 : client: [61] opened from [::1]:34018
+Sep 30 20:43 : client: [61] closed
+Sep 30 20:43 : client: [62] opened from [::1]:34020
+Sep 30 20:43 : client: [62] closed
+Sep 30 20:43 : client: [63] opened from [::1]:34022
+Sep 30 20:43 : client: [63] closed
+Sep 30 20:44 : client: [60] closed
+Sep 30 22:37 : client: [64] opened from [::1]:54404
+Sep 30 22:37 : client: [65] opened from [::1]:54406
+Sep 30 22:37 : client: [65] closed
+Sep 30 22:37 : client: [66] opened from [::1]:54412
+Sep 30 22:37 : client: [66] closed
+Sep 30 22:37 : client: [67] opened from [::1]:54414
+Sep 30 22:37 : client: [67] closed
+Sep 30 22:37 : client: [64] closed
+Oct 01 10:06 : client: [68] opened from [::1]:44444
+Oct 01 10:06 : client: [69] opened from [::1]:44446
+Oct 01 10:06 : client: [69] closed
+Oct 01 10:06 : client: [70] opened from [::1]:44454
+Oct 01 10:06 : client: [70] closed
+Oct 01 10:08 : client: [68] closed
+Oct 01 10:16 : client: [71] opened from [::1]:46956
+Oct 01 10:16 : client: [72] opened from [::1]:46958
+Oct 01 10:16 : client: [72] closed
+Oct 01 10:16 : client: [73] opened from [::1]:46960
+Oct 01 10:16 : client: [73] closed
+Oct 01 10:16 : client: [71] closed
+Oct 01 10:16 : client: [74] opened from [::1]:46970
+Oct 01 10:16 : client: [75] opened from [::1]:46972
+Oct 01 10:16 : client: [75] closed
+Oct 01 10:16 : client: [76] opened from [::1]:46978
+Oct 01 10:16 : client: [76] closed
+Oct 01 10:16 : client: [74] closed
+Oct 01 10:21 : client: [77] opened from [::1]:47756
+Oct 01 10:21 : client: [78] opened from [::1]:47758
+Oct 01 10:21 : client: [78] closed
+Oct 01 10:21 : client: [79] opened from [::1]:47760
+Oct 01 10:21 : client: [79] closed
+Oct 01 10:26 : client: [77] closed
+Oct 01 10:44 : client: [80] opened from [::1]:52284
+Oct 01 10:44 : client: [81] opened from [::1]:52286
+Oct 01 10:44 : client: [81] closed
+Oct 01 10:44 : client: [82] opened from [::1]:52288
+Oct 01 10:44 : client: [82] closed
+Oct 01 10:44 : client: [80] closed
+Oct 01 10:48 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 11 Roex - Floyd.mp3"
+Oct 01 10:48 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 01 10:48 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 01 10:48 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 01 10:48 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 01 12:41 : client: [0] opened from [::1]:60188
+Oct 01 12:41 : client: [0] closed
+Oct 01 12:41 : client: [1] opened from [::1]:60190
+Oct 01 12:41 : client: [1] closed
+Oct 01 12:41 : client: [2] opened from [::1]:60192
+Oct 01 12:41 : client: [2] closed
+Oct 01 12:41 : client: [3] opened from [::1]:60194
+Oct 01 12:41 : client: [3] closed
+Oct 01 12:41 : client: [4] opened from [::1]:60196
+Oct 01 12:41 : client: [4] closed
+Oct 01 12:41 : client: [5] opened from [::1]:60198
+Oct 01 12:41 : client: [5] closed
+Oct 01 21:02 : client: [6] opened from [::1]:53902
+Oct 01 21:02 : client: [7] opened from [::1]:53906
+Oct 01 21:02 : client: [7] closed
+Oct 01 21:02 : client: [8] opened from [::1]:53908
+Oct 01 21:02 : client: [8] closed
+Oct 01 21:02 : client: [6] closed
+Oct 02 14:29 : client: [9] opened from [::1]:53684
+Oct 02 14:29 : client: [10] opened from [::1]:53686
+Oct 02 14:29 : client: [10] closed
+Oct 02 14:29 : client: [11] opened from [::1]:53688
+Oct 02 14:29 : client: [11] closed
+Oct 02 14:29 : client: [12] opened from [::1]:53690
+Oct 02 14:29 : client: [12] closed
+Oct 02 14:30 : client: [9] closed
+Oct 02 14:30 : client: [13] opened from [::1]:53692
+Oct 02 14:30 : client: [14] opened from [::1]:53694
+Oct 02 14:30 : client: [14] closed
+Oct 02 14:30 : client: [15] opened from [::1]:53696
+Oct 02 14:30 : client: [15] closed
+Oct 02 14:30 : client: [16] opened from [::1]:53698
+Oct 02 14:30 : client: [16] closed
+Oct 02 14:30 : client: [13] closed

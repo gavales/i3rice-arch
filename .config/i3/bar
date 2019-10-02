@@ -1,0 +1,24 @@
+# >>>>  BAR
+bar {
+	i3bar_command i3bar -t
+	status_command i3blocks -c $home/$scr/i3blocks.conf
+#	status_command i3blocks
+#	position top
+	id bar-1
+	tray_output none
+#	output $nat
+
+	bindsym button4 nop
+	bindsym button5 nop
+	font pango:$font1,$font2 $fonts
+
+	colors {
+	background $acc
+#                   brdr bkgr text
+	focused_workspace  $acc $acc $bg0
+	active_workspace   $acc $acc $fg0
+	inactive_workspace $acc $acc $fg0
+	binding_mode       $ylw $ylw $bg0
+	urgent_workspace   $red $red $bg0
+	}
+}

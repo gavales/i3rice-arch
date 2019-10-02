@@ -67,9 +67,9 @@ Ml4() { mv "$1" /run/media/gavarch/LILPRECIOUS/Part4/"$1" ; }
 alias gm="cd ~/mus"
 Ym() { cp -r "$1" ~/mus/"$1" ; }
 Mm() { mv "$1" ~/mus/"$1" ; }
-alias gM="cd ~/thm"
-YM() { cp -r "$1" ~/thm/"$1" ; }
-MM() { mv "$1" ~/thm/"$1" ; }
+alias gM="cd ~/.config/themer"
+YM() { cp -r "$1" ~/.config/themer/"$1" ; }
+MM() { mv "$1" ~/.config/themer/"$1" ; }
 alias gpf="cd ~/pic/favs"
 Ypf() { cp -r "$1" ~/pic/favs/"$1" ; }
 Mpf() { mv "$1" ~/pic/favs/"$1" ; }

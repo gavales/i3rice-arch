@@ -7,4 +7,6 @@ XDIR=$HOME/xrs
 XRS=$HOME/.Xresources
 cat $XDIR/.Xresources > $XRS
 xrdb -load $XRS
-kill -1 $(pidof urxvtd)
+for i in $(pidof urxvtd); do
+	kill -1 $i
+done

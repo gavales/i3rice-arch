@@ -4,4 +4,5 @@
 # CREATED: Sat 30 Mar 18:22:18 GMT 2019
 
 file=${1}
-i3launch "urxvtc -e vim "${file}"" "_W3"
+urxvtc -e vim "${file}"
+i3quad -m 3

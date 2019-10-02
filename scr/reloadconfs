@@ -25,4 +25,3 @@ themer --apply-all
 #themer -a $XDG_TEMPLATES_DIR/pandoc
 ##themer -a $HOME/.config/tint2
 ##themer -a $USER_GIT_DIR/atompackages/packages/rice-syntax/styles
-i3listen-toggle

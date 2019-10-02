@@ -4,18 +4,33 @@ cd $HOME
 DIR=$USER_SCR_DIR
 
 help () {
-	cat <<EOB
-$(banner ${0##*/})
-	-- generate bash script
+	cat << 'EOB'
+               ██                           
+              ▒██                           
+   ██████████ ▒██  ██  ██████  █████  ██████
+  ▒▒██▒▒██▒▒██▒██ ██  ██▒▒▒▒  ██▒▒▒██▒▒██▒▒█
+   ▒██ ▒██ ▒██▒████  ▒▒█████ ▒██  ▒▒  ▒██ ▒ 
+   ▒██ ▒██ ▒██▒██▒██  ▒▒▒▒▒██▒██   ██ ▒██   
+   ███ ▒██ ▒██▒██▒▒██ ██████ ▒▒█████ ▒███   
+  ▒▒▒  ▒▒  ▒▒ ▒▒  ▒▒ ▒▒▒▒▒▒   ▒▒▒▒▒  ▒▒▒    
+	-- make bash script
 
  Usage
  -----
- ${0##*/} --subdirectory|-s  [DIR] ┼ Create script in
-                                │   subdirectory DIR
- ${0##*/} --generate-help|-g       ┼ Generate help function
- ${0##*/} --help|-h                ┼ print this help
+ mkscr --subdirectory|-s  ┼ Create script in
+                    [DIR] │   subdirectory DIR
+ mkscr --generate-help|-g ┼ Generate help function
+ mkscr --template|-t      ┼ Use FILE as template
+                   [FILE] │
+ mkscr --help|-h          ┼ print this help
 EOB
 exit
+}
+
+template () {
+	cd $DIR
+	cp "${TEMP}" "${TRG}"
+	vim ${TRG}
 }
 
 main () {
@@ -68,8 +83,9 @@ EOB
 
 while true; do
 	case $1 in
-		--subdirectory  | -s ) SDR="${2:-}" ; shift ;;
-		--generate-help | -g ) GHP=1 ;;
+		--subdirectory  | -s ) SDR="${2:-}"  ; shift ;;
+		--template      | -t ) TEMP="${2:-}" ; shift ;;
+		--generate-help | -g ) GHP=1                 ;;
 		--help          | -h ) help ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
@@ -78,4 +94,4 @@ while true; do
 done
 
 TRG=${@:-}
-main
+[[ -n ${TEMP} ]] && template || main

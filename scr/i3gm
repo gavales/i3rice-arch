@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+
+import i3ipc
+
+i3 = i3ipc.Connection()
+focused = i3.get_tree().find_focused()
+if len(focused.marks) != 0:
+    print(focused.marks[0])

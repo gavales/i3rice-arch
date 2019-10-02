@@ -1,0 +1,158 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: Tue  4 Dec 15:23:43 GMT 2018
+
+I3="i3-msg -q"
+WSP=$(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2)
+[[ $USER_I3LAUNCH_WS == $WSP ]] || exit
+MKS=$(i3-msg -t get_marks)
+LF=$(xdotool getactivewindow)
+
+help () {
+	cat << 'EOB'
+  ██  ████                                 ██
+ ▒▒  █▒▒▒ █  ████                         ▒██
+  ██▒    ▒█ ██▒▒██  ██   ██  ██████       ▒██
+ ▒██   ███ ▒██ ▒██ ▒██  ▒██ ▒▒▒▒▒▒██   ██████
+ ▒██  ▒▒▒ █▒▒█████ ▒██  ▒██  ███████  ██▒▒▒██
+ ▒██ █   ▒█ ▒▒▒▒██ ▒██  ▒██ ██▒▒▒▒██ ▒██  ▒██
+ ▒██▒ ████     ▒███▒▒██████▒▒████████▒▒██████
+ ▒▒  ▒▒▒▒      ▒▒▒  ▒▒▒▒▒▒  ▒▒▒▒▒▒▒▒  ▒▒▒▒▒▒ 
+ 	-- my i3 layout launcher, inspired by budlabs'
+ 	       i3fyra
+
+ Usage
+ -----
+ i3quad --move|-m       [CON] ┼ Move window to mark _W<CON>
+ i3quad --fullscreen|-f [CON] ┼ Toggle mark _W<CON> fullscreen
+ i3quad --focus-last|-l       ┼ Focus last focussed window
+                              │   moving launched window to <CON>
+ i3quad --tile|-t             ┼ Tile currently focussed window
+ i3quad --help|-h             ┼ Print this help
+
+ The Layout
+ ----------
+ ┌┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┬┈┈┈┈┈┈┈┈┐
+ │    _W4             │  _W1   │▒
+ ├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┼┈┈┈┈┈┈┈┈┤▒
+ │                    │        │▒
+ │                    │        │▒
+ │    _W3             │  _W2   │▒
+ │                    │        │▒
+ │                    │        │▒
+ └┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┴┈┈┈┈┈┈┈┈┘▒
+   ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+EOB
+exit
+}
+
+CMK3 () {
+	$I3 floating disable
+	$I3 split h
+	$I3 layout tabbed
+	$I3 focus parent
+	$I3 mark _W3
+	$I3 focus child
+	$I3 "mark --add _3"
+}
+
+CMK1 () {
+	$I3 floating disable
+	$I3 move to mark _W3
+	$I3 [con_mark="_W3"] focus
+	$I3 focus child
+	$I3 move right
+	$I3 split v
+	$I3 layout tabbed
+	$I3 focus parent
+	$I3 mark _W1
+	$I3 focus child
+	$I3 "mark --add _1"
+	$I3 [con_mark="_W1"] resize set 492 402
+}
+
+CMK2 () {
+	$I3 floating disable
+	$I3 move to mark _W1
+	$I3 [con_mark="_W1"] focus
+	$I3 split v
+	$I3 focus child
+	$I3 move down
+	$I3 split h
+	$I3 split v
+	$I3 layout tabbed
+	$I3 focus parent
+	$I3 mark _W2
+	$I3 focus child
+	$I3 "mark --add _2"
+	$I3 [con_mark="_W1"] resize set 492 402
+}
+
+CMK4 () {
+	$I3 floating disable
+	$I3 move to mark _W3
+	$I3 [con_mark="_W3"] focus
+	$I3 split v
+	$I3 focus child
+	$I3 move up
+	$I3 split h
+	$I3 layout tabbed
+	$I3 focus parent
+	$I3 mark _W4
+	$I3 focus child
+	$I3 "mark --add _4"
+	$I3 resize set height 150
+	$I3 [con_mark="_W3"] split h
+}
+
+RSZ () {
+	MRK=_W${1%% *} CMD="i3-msg [con_mark=$MRK] resize "
+	W=${1% *}
+	W=${W#* }  WD=${W:0:1}
+	H=${1##* } HD=${H:0:1}
+
+	if   [[ $WD == "+" ]]; then WDT="grow width ${W/+/} px or ${W/+/} ppt"
+	elif [[ $WD == "-" ]]; then WDT="shrink width ${W/-/} px or ${W/-/} ppt"
+	else                        WDT="set $W " ; fi
+
+	if   [[ $HD == "+" ]]; then HDT="\n${CMD}grow height ${H/+/} px or ${H/+/} ppt"
+	elif [[ $HD == "-" ]]; then HDT="\n${CMD}shrink height ${H/-/} px or ${H/-/} ppt"
+	else                        HDT="$H"      ; fi
+
+	eval "$(echo -e $CMD$WDT$HDT)"
+	exit
+}
+
+EXISTS () {
+	$I3 floating disable
+	$I3 move to mark $MRK
+	$I3 [con_mark="$MRK"] focus
+	$I3 focus child
+	[[ -z $(i3gm) ]] && $I3 "mark --add _${MRK/_W/}"
+	exit
+}
+
+TILE   () { $I3 floating disable ; exit ; }
+FLSCRN () { $I3 "[con_mark=_W${1}] focus; fullscreen toggle; focus child" ; exit ; }
+
+while true; do
+	case $1 in
+		--move       | -m ) MRK="_W${2:-}" ; shift ;;
+		--fullscreen | -f ) FLSCRN "${2:-}" ;;
+		--resize     | -r ) RSZ "${2:-}"    ;;
+		--focus-last | -l ) FL=1 ;;
+		--tile       | -t ) TILE ;;
+		--help       | -h ) help ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+[[ $MKS =~ "$MRK" ]] && EXISTS || {
+	notify-send "no $MRK, making $MRK"
+	CMK${MRK/_W/}
+}
+
+[[ -n $FL ]] && sleep .5 && $I3 [id="$LF"] focus

@@ -57,15 +57,15 @@ def windownotify(i3, event):
 			if event.change == 'title':
 				call('thunarview'.split(' '))
 
+def set_floating(i3, event):
+	event.container.command('floating enable, border normal 1')
+
 i3.on('window', windownotify)
 i3.on('workspace', wsnotify)
+i3.on('window::new', set_floating)
 
 i3.main()
-#def set_floating(i3, event):
-#	if event.container.window_class != 'URxvt':
-#		event.container.command('floating enable, border normal 2')
-#
-#i3.on('window::new', set_floating)
+
 #	if event.container.fullscreen_mode == 0:
 #		call('polybar-msg cmd show'.split(' '))
 #	else:
