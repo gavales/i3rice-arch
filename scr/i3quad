@@ -5,9 +5,11 @@
 
 I3="i3-msg -q"
 WSP=$(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2)
+I3QTMP=$USER_TMP_DIR/i3quadwindows
 [[ $USER_I3LAUNCH_WS == $WSP ]] || exit
 MKS=$(i3-msg -t get_marks)
-LF=$(xdotool getactivewindow)
+XID=$(xdotool getactivewindow)
+XID=${XID%% *}
 
 help () {
 	cat << 'EOB'
@@ -45,6 +47,11 @@ help () {
    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 EOB
 exit
+}
+
+history () {
+	CHK=$(cat $I3QTMP | grep "$XID")
+	[[ -z $CHK ]] && echo "$XID    ${1}" >> $I3QTMP
 }
 
 CMK3 () {
@@ -130,10 +137,11 @@ EXISTS () {
 	$I3 [con_mark="$MRK"] focus
 	$I3 focus child
 	[[ -z $(i3gm) ]] && $I3 "mark --add _${MRK/_W/}"
+	history "$MRK"
 	exit
 }
 
-TILE   () { $I3 floating disable ; exit ; }
+TILE   () { $I3 floating disable && history "_tiled" ; exit ; }
 FLSCRN () { $I3 "[con_mark=_W${1}] focus; fullscreen toggle; focus child" ; exit ; }
 
 while true; do
@@ -153,6 +161,7 @@ done
 [[ $MKS =~ "$MRK" ]] && EXISTS || {
 	notify-send "no $MRK, making $MRK"
 	CMK${MRK/_W/}
+	history "$MRK"
 }
 
 [[ -n $FL ]] && sleep .5 && $I3 [id="$LF"] focus

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: Thu  3 Oct 00:29:37 BST 2019
+# source /home/gavarch/.config/user-dirs.dirs
+
+PID=$(wmctrl -lx | sed '/.URxvt/!d' | wc -l)
+[[ $PID != 0 ]] && urxvtc ${@:-} || {
+	killall urxvtd
+	urxvtd -q -o -f &
+	urxvtc ${@:-}
+}

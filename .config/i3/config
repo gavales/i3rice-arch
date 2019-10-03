@@ -69,22 +69,22 @@ set $ws9  9
 set $ws10 10
 
 # //// COLORS
-set $bg3 #767676
-set $bg2 #626262
-set $bg1 #4e4e4e
-set $bg0 #3a3a3a
-set $acb #1d6060
-set $acc #008787
-set $acf #6db0b0
-set $fg0 #dadada
-set $fg1 #c6c6c6
-set $fg2 #b2b2b2
-set $fg3 #9e9e9e
-set $red #870100
-set $grn #005f00
-set $ylw #d8865f
-set $gnt #87025f
-set $cyn #0087af
+set $bg3 #c1baa7
+set $bg2 #d5cebb
+set $bg1 #e9e2cf
+set $bg0 #fdf6e3
+set $acb #93cbbd
+set $acc #2aa198
+set $acf #156667
+set $fg0 #002b36
+set $fg1 #143f4a
+set $fg2 #28535e
+set $fg3 #3c6772
+set $red #dc322f
+set $grn #859900
+set $ylw #b58900
+set $gnt #d33682
+set $cyn #268bd2
 set $t   ff
 
 # //// APPS
@@ -140,15 +140,15 @@ $ALT+equal          $QUD -m 3
 # //// 1st Row
 $ALT+Tab            focus right
 $ALT+Shift+Tab      focus left
-$ALT+q              $RUN -i calculator -e '$TRM -name calculator -e R'
+$ALT+q              $RUN -t -i calculator -e '$TRM -name calculator -e R'
 $ALT+Shift+q        kill
-$ALT+w              $RUN -n '^watchseries' -e '$BAP --new-window --app=https://ww2.watch-series.co/'
+$ALT+w              $RUN -n ^watchseries -e '$BAP --new-window --app=https://ww2.watch-series.co/'
 $ALT+e              layout toggle tabbed split
-$ALT+r              $RUN -n 'newsboat' -e '$TRM -name newsboat -e newsboat'
+$ALT+r              $RUN -n newsboat -e '$TRM -name newsboat -e newsboat'
 $ALT+Shift+r        restart
 $ALT+t              $exn mkwalrando
 $ALT+y              resize shrink width 5 px or 5 ppt
-$ALT+Shift+y        $RUN -n 'YouTube$' -e '$BAP --new-window --app=https://www.youtube.com/'
+$ALT+Shift+y        $RUN -n YouTube$ -e '$BAP --new-window --app=https://www.youtube.com/'
 $ALT+u              resize shrink height 5 px or 5 ppt
 $ALT+Shift+u        $exn $BAP --new-window --app=https://outlook.office.com/mail/inbox/id/AAQkAGZjZGU2MmYyLTc5ZDctNDI1My05MzU4LWRjYTc3NjdhN2NkOAAQAOwToE4JkJhIgjz322aPjPU%3D
 $ALT+i              resize grow height 5 px or 5 ppt
@@ -189,13 +189,13 @@ $ALT+Control+Return $exn $TRM -name noterm
 # //// 3rd Row
 $ALT+z              $exn surf docs.google.com/document/u/0/
 $ALT+x              $exn surf docs.google.com/spreadsheets/u/0/
-$ALT+c              $RUN -c 'Firefox' -e '$FFX'
-$ALT+Shift+c        $exn xtheme --time-change 7:20
-$ALT+v              $RUN -i 'visualiser' -e '$TRM -name visualiser -e vis'
+$ALT+c              $RUN -c Firefox -e '$FFX'
+$ALT+Shift+c        $exn xtheme --auto-dark 7:20
+$ALT+v              $RUN -i visualiser -e '$TRM -name visualiser -e vis'
 $ALT+Shift+v        $exn projectM-pulseaudio
-$ALT+b              $RUN -i 'references' -e '$TRM -name references -e vim $home/Drive/global.bib'
+$ALT+b              $RUN -i references -e '$TRM -name references -e vim $home/Drive/global.bib'
 $ALT+Shift+b        $exn polybar-msg cmd hide
-$ALT+n              $RUN -n '^Netflix$' -e '$BAP --new-window --app=https://www.netflix.com/'
+$ALT+n              $RUN -n ^Netflix$ -e '$BAP --new-window --app=https://www.netflix.com/'
 $ALT+m              $exn surf docs.google.com/presentation/u/0/
 $ALT+Shift+m        $RUN -n '^My Movies & TV' -e '$BAP --new-window --app=https://play.google.com/movies/'
 $ALT+comma          $exn i3vol dec
@@ -209,23 +209,23 @@ floating_modifier   $WNI
 # //// Numbers
 $WIN+grave          $exn "notify-send $(i3gm)"
 $WIN+1              $QUD -f 1
-$WIN+Shift+1        $RUN -i 'i3main' -e '$EDT i3main -e vim $home/.config/i3/template_main'
+$WIN+Shift+1        $RUN -i i3main -e '$EDT i3main -e vim $home/.config/i3/template_main'
 $WIN+2              $QUD -f 2
-$WIN+Shift+2        $RUN -i 'i3vars' -e '$EDT i3vars -e vim $home/.config/i3/template_vars'
+$WIN+Shift+2        $RUN -i i3vars -e '$EDT i3vars -e vim $home/.config/i3/template_vars'
 $WIN+3              $QUD -f 3
-$WIN+Shift+3        $RUN -i 'bashrc' -e '$EDT bashrc -e vim $home/.bashrc'
+$WIN+Shift+3        $RUN -i bashrc -e '$EDT bashrc -e vim $home/.bashrc'
 $WIN+4              $QUD -f 4
-$WIN+Shift+4        $RUN -i 'vimrc' -e '$EDT vimrc -e vim $home/.vimrc'
-$WIN+Shift+5        $RUN -i 'rngrc' -e '$EDT rngrc -e vim $home/.config/ranger/rc.conf'
-$WIN+Shift+6        $RUN -i 'rngrfl' -e '$EDT rngrfl -e vim $home/.config/ranger/rifle.conf'
-$WIN+Shift+7        $RUN -i 'poly' -e '$EDT poly -e vim $home/.config/polybar/template_config'
-$WIN+Shift+8        $RUN -i 'qute' -e '$EDT qute -e vim $home/.config/qutebrowser/template_config.py'
+$WIN+Shift+4        $RUN -i vimrc -e '$EDT vimrc -e vim $home/.vimrc'
+$WIN+Shift+5        $RUN -i rngrc -e '$EDT rngrc -e vim $home/.config/ranger/rc.conf'
+$WIN+Shift+6        $RUN -i rngrfl -e '$EDT rngrfl -e vim $home/.config/ranger/rifle.conf'
+$WIN+Shift+7        $RUN -i poly -e '$EDT poly -e vim $home/.config/polybar/template_config'
+$WIN+Shift+8        $RUN -i qute -e '$EDT qute -e vim $home/.config/qutebrowser/template_config.py'
 
 # //// 1st Row
 $WIN+q              $QUD -m 1
 $WIN+w              $QUD -m 2
 $WIN+e              $QUD -m 3
-$WIN+r              $RUN -i 'reddit' -e '$TRM -name reddit -e rtv'
+$WIN+r              $RUN -i reddit -e '$TRM -name reddit -e rtv'
 $WIN+t              $exn compton
 $WIN+Shift+t        $exn pkill compton
 $WIN+y              $QUD --resize '1 -5 -5'
@@ -265,7 +265,7 @@ $WIN+x              unmark
 $WIN+c              $exn google-chrome-beta
 $WIN+Shift+c        $exn reloadconfs
 $WIN+v              move workspace to output $vga
-$WIN+b              $RUN -i 'bashmount' -e '$TRM -name bashmount -e bashmount'
+$WIN+b              $RUN -i bashmount -e '$TRM -name bashmount -e bashmount'
 $WIN+n              move workspace to output $nat
 $WIN+m              $exn multimon
 $WIN+comma          $exn i3light dec
@@ -299,9 +299,8 @@ $fw [class="MPlayer"]                    focus;$QUD -m 1;focus
 $fw [class="mpv"]                        focus;$QUD -m 1;focus
 $fw [class="feh"]                        focus;$QUD -m 1;focus
 $fw [class="Sxiv"]                       focus;$QUD -m 1;focus
-$fw [instance="ncmpcpp"]                 focus;$QUD -m 1 -l;focus;$tf "ncmpcpp"
-$fw [class="Spotify"]                    focus;$QUD -m 1 -l;focus;$tf "spotify"
-$fw [instance="visualiser"]              focus;$QUD -m 1 -l;focus;$tf "visualiser"
+$fw [instance="ncmpcpp"]                 focus;$QUD -m 1;focus;$tf "ncmpcpp"
+$fw [class="Spotify"]                    focus;$QUD -m 1;focus;$tf "spotify"
 $fw [title="^My Movies & TV"]            focus;$QUD -m 1;focus;$tf "movies"
 $fw [title="watchseries"]                focus;$QUD -m 1;focus;$tf "watch-series"
 $fw [title="YouTube$"]                   focus;$QUD -m 1;focus;$tf "youtube"
@@ -318,6 +317,7 @@ $fw [window_role="GtkFileChooserDialog"] focus;$QUD -m 2;focus
 $fw [title="_popout="]                   focus;$QUD -m 2;focus;$tf "ytchat"
 $fw [title="^localhost:8090$"]           focus;$QUD -m 2;focus;$tf "mdpreview"
 $fw [instance="newsboat"]                focus;$QUD -m 2;focus;$tf "newsboat"
+$fw [instance="PLAYING"]                 focus;$QUD -m 2;focus;$tf "PLAYING"
 $fw [instance="calculator"]              focus;$QUD -m 2;focus;$tf "calculator"
 $fw [instance="calendar"]                focus;$QUD -m 2;focus;$tf "calendar"
 $fw [instance="drive_sync"]              focus;$QUD -m 2;focus;$tf "drive_sync"
@@ -344,6 +344,7 @@ $fw [instance="qute"]                    focus;$QUD -m 3;focus;$tf "qutebrowser"
 $fw [class="Slack"]                      focus;$QUD -m 3;focus;$tf "slack"
 
 $fw [instance="noterm"]                  focus;$QUD -m 4;focus;$tf "noterm"
+$fw [instance="visualiser"]              focus;$QUD -m 4;focus;$tf "visualiser"
 
 # >>>> GAPS
 gaps inner 20

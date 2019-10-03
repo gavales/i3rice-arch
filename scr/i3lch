@@ -4,17 +4,46 @@
 # CREATED: Tue  4 Dec 15:23:43 GMT 2018
 
 WSP=$(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2)
-LF=$(xdotool getactivewindow)
-#MKS=$(i3-msg -t get_marks)
+XID=$(xdotool getactivewindow)
 SRCH=""
+
+help () {
+	cat << 'EOB'
+  ██  ████   ██         ██     
+ ▒▒  █▒▒▒ █ ▒██        ▒██     
+  ██▒    ▒█ ▒██  █████ ▒██     
+ ▒██   ███  ▒██ ██▒▒▒██▒██████ 
+ ▒██  ▒▒▒ █ ▒██▒██  ▒▒ ▒██▒▒▒██
+ ▒██ █   ▒█ ▒██▒██   ██▒██  ▒██
+ ▒██▒ ████  ███▒▒█████ ▒██  ▒██
+ ▒▒  ▒▒▒▒  ▒▒▒  ▒▒▒▒▒  ▒▒   ▒▒ 
+ 	-- run program but with added perks
+
+ Usage
+ -----
+ i3lch --class|-c    ┼ focus window with class CLASS
+ i3lch --instance|-i ┼ focus window with instance INSTANCE
+ i3lch --name|-n     ┼ focus window with name NAME
+ i3lch --exec|-e     ┼ command to run if CLASS INSTANCE
+                     │   or NAME not found
+ i3lch --toggle|-t   ┼ send to scratchpad if on current
+                     │   workspace, bring to current
+                     │   workspace if not on current
+                     │   workspace and hidden, bring
+                     │   to current workspace if on
+                     │   current scratchpad
+EOB
+exit
+}
 
 while true; do
 	case $1 in
-#		--toggle   | -t ) TOGG=1 ;;
 		--exec     | -e ) EXEC="${2:-}" ; shift ;;
 		--class    | -c ) CLSS="${2:-}" ; shift ;;
 		--instance | -i ) INST="${2:-}" ; shift ;;
 		--name     | -n ) NAME="${2:-}" ; shift ;;
+		--toggle   | -t ) TOGG=1 ;;
+		--help     | -h ) help   ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac
@@ -25,16 +54,32 @@ done
 [[ -n $CLSS ]] && ASCH="$CLSS" ISCH="class"    SRCH="--class"
 [[ -n $NAME ]] && ASCH="$NAME" ISCH="title"    SRCH="--name"
 PID=$(xdotool search $SRCH "$ASCH")
-[[ -n $PID ]] && i3-msg -q [$ISCH=\"$ASCH\"] focus || {
-	[[ -n $EXEC ]] && $EXEC &>/dev/null &
-	exit
+HID=$(wmctrl -lx | awk -v SRCH="$ASCH" '$0 ~ SRCH {print $2}')
+echo $PID
+CHK=$(cat $USER_TMP_DIR/i3quadwindows | awk -v pid="$PID" '$1 ~ pid {print $NF}')
+echo $CHK
+[[ -n $TOGG ]] && {
+	if [[ $HID == 0 ]]; then
+		i3-msg [$ISCH="$ASCH"] move scratchpad
+	elif [[ $HID == -1 ]]; then
+		i3-msg [$ISCH="$ASCH"] scratchpad show
+		i3-msg [$ISCH="$ASCH"] focus
+		[[ -n $CHK ]] && i3quad -m ${CHK/_W/}
+	else
+		[[ -z $PID ]] && {
+			[[ -n $EXEC ]] && $EXEC &>/dev/null &
+			exit
+		} || {
+			i3-msg [$ISCH=\"${ASCH}\"] move to workspace $WSP
+			i3-msg [$ISCH=\"${ASCH}\"] focus
+			[[ -n $CHK ]] && i3quad -m ${CHK/_W/}
+		}
+	fi
+} || {
+	[[ -z $PID ]] && {
+		[[ -n $EXEC ]] && $EXEC &>/dev/null &
+		exit
+	} || {
+		i3-msg [$ISCH=\"${ASCH}\"] focus
 	}
-#HID=$(wmctrl -lx | awk -v SRCH="$ASCH" '$0 ~ SRCH {print $2}')
-#[[ -n $TOGG ]] && {
-#	[[ $HID == "-1" ]] && {
-#		i3-msg [$ISCH="$ASCH"] scratchpad show
-#		i3-msg [$ISCH="$ASCH"] focus
-#		MRK=$(i3gm)
-#		[[ -n $MRK ]] && i3quad -m ${MRK/_/}
-#		} || i3-msg [$ISCH="$ASCH"] move scratchpad
-#}
+}

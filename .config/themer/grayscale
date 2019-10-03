@@ -1,7 +1,7 @@
 ! vim:ft=perl
 name            grayscale
 wallpaper       WW_128000000000408974_EN
-fg0             #000000
+fg0             #282828
 acc             #666666
 blu             $acc
 bg0             #ececec
