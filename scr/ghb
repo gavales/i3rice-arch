@@ -17,29 +17,37 @@ EDITOR="gvim -f"
 
 help () {
 	cat << 'EOB'
-          ██      ██     
-   █████ ▒██     ▒██     
-  ██▒▒▒██▒██     ▒██     
- ▒██  ▒██▒██████ ▒██████ 
- ▒▒██████▒██▒▒▒██▒██▒▒▒██
-  ▒▒▒▒▒██▒██  ▒██▒██  ▒██
-   █████ ▒██  ▒██▒██████ 
-  ▒▒▒▒▒  ▒▒   ▒▒ ▒▒▒▒▒   
-	-- a hugo blog wrapper script
+# ghb
+- a hugo blog wrapper script
 
- Dependencies
- ____________
- 
- hugo
- 
- Usage
- _____
- 
- ghb --post|-p   [NAME] ┼ NAME of post to create
- ghb --list|-l          ┼ list posts in content/posts
- ghb --delete|-d [NAME] ┼ NAME of post to delete
- ghb --help|-h          ┼ print this help
+## Dependencies
+
+`hugo`
+
+## Usage
+
+```
+ghb [--post|-p|--delete|-d] <name>
+ghb [--list|-l]
+ghb --help|-h
+```
+
+## Options
+
++ `--post|-p <name>`
+	+ `<name>` of post to create
+
++ `--list|-l`
+	+ list all posts
+
++ `--delete|-d <name>`
+	+ `<name>` of post to delete
+
++ `--help|-h`
+	+ Print this help
+
 EOB
+echo "$1"
 exit
 }
 
@@ -49,8 +57,7 @@ new () {
 	[[ -z $POST ]] && exit
 	[[ -f content/posts/${POST}.md ]] || hugo new posts/${POST}.md
 	hugo server &>/dev/null &
-	i3launch 'surf localhost:1313' _W2 &>/dev/null &
-	i3-msg -q [con_mark="_W3"] focus
+	surf localhost:1313 &>/dev/null &
 	$EDITOR content/posts/${POST}.md
 	killall hugo
 	killall surf

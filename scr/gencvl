@@ -9,23 +9,25 @@ EDITOR="gvim -f"
 
 help () {
 cat << 'EOB'
-                                             ██
-   █████                                    ▒██
-  ██▒▒▒██  █████  ███████   █████  ██    ██ ▒██
- ▒██  ▒██ ██▒▒▒██▒▒██▒▒▒██ ██▒▒▒██▒██   ▒██ ▒██
- ▒▒██████▒███████ ▒██  ▒██▒██  ▒▒ ▒▒██ ▒██  ▒██
-  ▒▒▒▒▒██▒██▒▒▒▒  ▒██  ▒██▒██   ██ ▒▒████   ▒██
-   █████ ▒▒██████ ███  ▒██▒▒█████   ▒▒██    ███
-  ▒▒▒▒▒   ▒▒▒▒▒▒ ▒▒▒   ▒▒  ▒▒▒▒▒     ▒▒    ▒▒▒ 
-	-- job appliction cover letter generator
-	     using latex
+# gencvl
 
-Usage
------
+- job application cover letter generator using latex
 
-gencvl --help|-h ┼ print this help
-gencvl [NAME]    ┼ create new coverletter
-                 │   with name NAME
+## Usage
+
+```
+gencvl <name>
+gencvl --help|-h
+```
+
+## Options
+
++ `<name>`
+	+ `<name>` of coverletter
+
++ `--help|-h`
+	+ Print this help
+
 EOB
 }
 

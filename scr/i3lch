@@ -9,30 +9,44 @@ SRCH=""
 
 help () {
 	cat << 'EOB'
-  ██  ████   ██         ██     
- ▒▒  █▒▒▒ █ ▒██        ▒██     
-  ██▒    ▒█ ▒██  █████ ▒██     
- ▒██   ███  ▒██ ██▒▒▒██▒██████ 
- ▒██  ▒▒▒ █ ▒██▒██  ▒▒ ▒██▒▒▒██
- ▒██ █   ▒█ ▒██▒██   ██▒██  ▒██
- ▒██▒ ████  ███▒▒█████ ▒██  ▒██
- ▒▒  ▒▒▒▒  ▒▒▒  ▒▒▒▒▒  ▒▒   ▒▒ 
- 	-- run program but with added perks
+# i3lch
+- launch a program in i3 but with added perks
 
- Usage
- -----
- i3lch --class|-c    ┼ focus window with class CLASS
- i3lch --instance|-i ┼ focus window with instance INSTANCE
- i3lch --name|-n     ┼ focus window with name NAME
- i3lch --exec|-e     ┼ command to run if CLASS INSTANCE
-                     │   or NAME not found
- i3lch --toggle|-t   ┼ send to scratchpad if on current
-                     │   workspace, bring to current
-                     │   workspace if not on current
-                     │   workspace and hidden, bring
-                     │   to current workspace if on
-                     │   current scratchpad
+## Usage
+
+```
+i3lch [--class|-c|--instance|-i|--name|-n] <class|instance|name>
+      [--exec|-e] <command>
+      [--toggle|-t]
+i3lch [--help|-h]
+```
+
+## Options
+
++ `--class|-c <class>`
+	+ Focus window with class `<class>`
+
++ `--instance|-i <instance>`
+	+ Focus window with instance `<instance>`
+
++ `--name|-n <name>`
+	+ Focus window with name `<name>`
+
++ `--exec|-e <command>`
+	+ Command to run if `<class|instance|name>` not found
+
++ `--help|-h`
+	+ Print this help
+
+## Still in progress
+
++ `--toggle|-t`
+	+ send to scratchpad if on current workspace.
+	+ bring to current workspace if not on current workspace and hidden.
+	+ bring to current workspace if on current scratchpad.
+
 EOB
+echo "$1"
 exit
 }
 

@@ -5,26 +5,33 @@
 
 help () {
 cat << 'EOB'
-                     ██             ██
-                    ▒██            ▒▒
-    █████   ██████  ▒██ ██████████  ██ ██   ██
-   ██▒▒▒██ ██▒▒▒▒██ ▒██▒▒██▒▒██▒▒██▒██▒▒██ ██
-  ▒██  ▒▒ ▒██   ▒██ ▒██ ▒██ ▒██ ▒██▒██ ▒▒███
-  ▒██   ██▒██   ▒██ ▒██ ▒██ ▒██ ▒██▒██  ██▒██
-  ▒▒█████ ▒▒██████  ███ ███ ▒██ ▒██▒██ ██ ▒▒██
-   ▒▒▒▒▒   ▒▒▒▒▒▒  ▒▒▒ ▒▒▒  ▒▒  ▒▒ ▒▒ ▒▒   ▒▒
- 	-- Script to mix 2 hex colors
+# colmix
+- Script to mix 2 hex colors
 
- Usage
- -----
- colmix --hex|-x  ┼ Print final color in hex
- colmix --rgb|-r  ┼ Print final color in rgb
- colmix --help|-h ┼ Print this help
+## Usage
 
- Input only hex color in last argument eg.
-     colmix -x XX:#HEX XX:#HEX
- XX are required ratios to mix the colors.
+```
+colmix [--hex|-x|--rgb|-r] '<ratio1>:<color1> <ratio2>:<color2>'
+colmix --help|-h
+```
+
+## Options
+
++ Final argument has to be `<ratio1>:<color1> <ratio2>:<color2>`
+	+ eg. `50:#000000 50:#ffffff`
+	+ Ratios are percentages, so `<ratio1> + <ratio2> = 100`
+
++ `--hex|-x`
+	+ Print final color in hex
+
++ `--rgb|-r`
+	+ Print final color in rgb
+
++ `--help|-h`
+	+ Print this help
+
 EOB
+echo "$1"
 exit
 }
 
@@ -39,7 +46,7 @@ while true; do
 	shift
 done
 
-echo ${@:-} | awk -F "" -v PRINT="$PRINT" '{
+[[ -z ${@:-} ]] && help 'No input specified' || echo ${@:-} | awk -F "" -v PRINT="$PRINT" '{
 		RAT1=$1$2;
 		RAT2=$12$13;
 		ONER=$5$6;ONEG=$7$8;ONEB=$9$10;
@@ -55,7 +62,10 @@ echo ${@:-} | awk -F "" -v PRINT="$PRINT" '{
 		if (length(CL3XB)==1) {CL3XB="0"CL3XB}
 		if (PRINT=="HEX") {
 			print "#" CL3XR CL3XG CL3XB ;
-		} else {
+		} else if (PRINT=="RGB") {
 			print "" CL3R ", " CL3G ", " CL3B ;
+		} else {
+			print CL3XR     CL3XG     CL3XB ;
+			print CL3R ", " CL3G ", " CL3B  ;
 		}
 	}'

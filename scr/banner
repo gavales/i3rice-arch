@@ -1,29 +1,58 @@
 #!/usr/bin/env bash
 
-bkd="\033[1;30m"
-bkl="\033[1;30m"
-red="\033[1;31m"
-grn="\033[1;32m"
-ylw="\033[1;33m"
-blu="\033[1;34m"
-gnt="\033[1;35m"
-cyn="\033[1;36m"
-wtd="\033[1;37m"
-nrm="\033[0m"
-
 fnt="-f 3-d"
 
 help () {
-	echo -e "${blu}$(figlet $fnt " banner"| \
-		sed $'s/\*/\u2588/g;s/\//\u2592/g')${nrm}"
 cat << 'EOB'
- 	-- Simple figlet wrapper
- 
- Usage
- -----
- banner --help|-h   ┼ print this help
- banner --centre|-c ┼ centre
+# banner
+- Simple figlet wrapper
+
+## Usage
+
+```
+banner [--centre|-c] <text>
+banner --help|-h
+```
+
+## Usage
+
++ `--centre|-c <text>`
+	+ centre
+
++ `--help|-h`
+	+ print this help
+
+## In progress
+
++ `--slant|-s`
+	+ slant
+
++ `--banner3|-b`
+	+ banner3
+
++ `--larry3d|-i`
+	+ larry3d
+
++ `--letters|-l`
+	+ letters
+
++ `--roman|-r`
+	+ roman
+
++ `--smisome1|-m`
+	+ smisome1
+
++ `--trek|-t`
+	+ trek
+
++ `--speed|-f`
+	+ speed
+
++ `--smkeyboard|-k`
+	+ smkeyboard
+
 EOB
+echo "$1"
 exit
 }
 

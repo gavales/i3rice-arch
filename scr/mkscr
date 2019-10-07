@@ -4,25 +4,33 @@ cd $HOME
 DIR=$USER_SCR_DIR
 
 help () {
-	cat << 'EOB'
-               ██                           
-              ▒██                           
-   ██████████ ▒██  ██  ██████  █████  ██████
-  ▒▒██▒▒██▒▒██▒██ ██  ██▒▒▒▒  ██▒▒▒██▒▒██▒▒█
-   ▒██ ▒██ ▒██▒████  ▒▒█████ ▒██  ▒▒  ▒██ ▒ 
-   ▒██ ▒██ ▒██▒██▒██  ▒▒▒▒▒██▒██   ██ ▒██   
-   ███ ▒██ ▒██▒██▒▒██ ██████ ▒▒█████ ▒███   
-  ▒▒▒  ▒▒  ▒▒ ▒▒  ▒▒ ▒▒▒▒▒▒   ▒▒▒▒▒  ▒▒▒    
-	-- make bash script
+cat << 'EOB'
+# mkscr
+- make bash script
 
- Usage
- -----
- mkscr --subdirectory|-s  ┼ Create script in
-                    [DIR] │   subdirectory DIR
- mkscr --generate-help|-g ┼ Generate help function
- mkscr --template|-t      ┼ Use FILE as template
-                   [FILE] │
- mkscr --help|-h          ┼ print this help
+## Usage
+
+```
+mkscr [--subdirectory|-s] <directory>
+      [--template|-t] <file>
+      [--generate-help|-g]
+mkscr --help|-h
+```
+
+## Options
+
++ `--subdirectory|-s <directory>`
+	+ Create script in subdirectory `<directory>`
+
++ `--generate-help|-g`
+	+ Generate help function
+
++ `--template|-t <file>`
+	+ Use `<file>` as template
+
++ `--help|-h`
+	+ Print this help
+
 EOB
 exit
 }

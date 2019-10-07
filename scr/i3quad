@@ -12,40 +12,52 @@ XID=$(xdotool getactivewindow)
 XID=${XID%% *}
 
 help () {
-	cat << 'EOB'
-  ██  ████                                 ██
- ▒▒  █▒▒▒ █  ████                         ▒██
-  ██▒    ▒█ ██▒▒██  ██   ██  ██████       ▒██
- ▒██   ███ ▒██ ▒██ ▒██  ▒██ ▒▒▒▒▒▒██   ██████
- ▒██  ▒▒▒ █▒▒█████ ▒██  ▒██  ███████  ██▒▒▒██
- ▒██ █   ▒█ ▒▒▒▒██ ▒██  ▒██ ██▒▒▒▒██ ▒██  ▒██
- ▒██▒ ████     ▒███▒▒██████▒▒████████▒▒██████
- ▒▒  ▒▒▒▒      ▒▒▒  ▒▒▒▒▒▒  ▒▒▒▒▒▒▒▒  ▒▒▒▒▒▒ 
- 	-- my i3 layout launcher, inspired by budlabs'
- 	       i3fyra
+cat << 'EOB'
+# i3quad
+- my i3 layout launcher, inspired by budlabs' i3fyra
 
- Usage
- -----
- i3quad --move|-m       [CON] ┼ Move window to mark _W<CON>
- i3quad --fullscreen|-f [CON] ┼ Toggle mark _W<CON> fullscreen
- i3quad --focus-last|-l       ┼ Focus last focussed window
-                              │   moving launched window to <CON>
- i3quad --tile|-t             ┼ Tile currently focussed window
- i3quad --help|-h             ┼ Print this help
+## The Layout
 
- The Layout
- ----------
- ┌┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┬┈┈┈┈┈┈┈┈┐
- │    _W4             │  _W1   │▒
- ├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┼┈┈┈┈┈┈┈┈┤▒
- │                    │        │▒
- │                    │        │▒
- │    _W3             │  _W2   │▒
- │                    │        │▒
- │                    │        │▒
- └┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┴┈┈┈┈┈┈┈┈┘▒
-   ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+```
+			┌┈┈┈┈┈┈┈┈┬┈┈┈┈┈┐
+			│  _W4   │ _W1 │▒
+			├┈┈┈┈┈┈┈┈┼┈┈┈┈┈┤▒
+			│  _W3   │ _W2 │▒
+			│        │     │▒
+			└┈┈┈┈┈┈┈┈┴┈┈┈┈┈┘▒
+			  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+```
+
+## Usage
+
+```
+i3quad [--move|-m] <con>
+i3quad [--fullscreen|-f]
+i3quad [--tile|-t]
+i3quad --help|-h
+```
+
+## Options
+
++ `--move|-m <con>`
+	+ Move window to mark `_W<con>`
+
++ `--fullscreen|-f <con>`
+	+ Toggle mark `_W<con>` fullscreen
+
++ `--tile|-t`
+	+ Tile currently focussed window
+
++ `--help|-h`
+	+ Print this help
+
+## In progress
+
++ `--focus-last|-l`
+	+ Focus last focussed window moving launched window to <con>
+
 EOB
+echo "$1"
 exit
 }
 
@@ -149,7 +161,6 @@ while true; do
 		--move       | -m ) MRK="_W${2:-}" ; shift ;;
 		--fullscreen | -f ) FLSCRN "${2:-}" ;;
 		--resize     | -r ) RSZ "${2:-}"    ;;
-		--focus-last | -l ) FL=1 ;;
 		--tile       | -t ) TILE ;;
 		--help       | -h ) help ;;
 		-- ) shift ; break ;;

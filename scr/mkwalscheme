@@ -30,8 +30,7 @@ s/color6/cyn/g;\
 /color7/d" \
 >> $TRG
 
-i3bg -w "$WALL"
-themer -c pywal
+i3bg -w "$WALL" &>/dev/null &
+themer -t 7:20 -c pywal &>/dev/null &
 reloadconfs &>/dev/null &
-themer -x post-build-apply \
-       -a $HOME/numix &>/dev/null &
+themer -a $HOME/numix &>/dev/null &

@@ -69,22 +69,22 @@ set $ws9  9
 set $ws10 10
 
 # //// COLORS
-set $bg3 #c1baa7
-set $bg2 #d5cebb
-set $bg1 #e9e2cf
-set $bg0 #fdf6e3
-set $acb #93cbbd
-set $acc #2aa198
-set $acf #156667
-set $fg0 #002b36
-set $fg1 #143f4a
-set $fg2 #28535e
-set $fg3 #3c6772
-set $red #dc322f
-set $grn #859900
-set $ylw #b58900
-set $gnt #d33682
-set $cyn #268bd2
+set $bg3 #b0b0b0
+set $bg2 #c4c4c4
+set $bg1 #d8d8d8
+set $bg0 #ececec
+set $acb #b5b5b5
+set $acc #7f7f7f
+set $acf #616161
+set $fg0 #444444
+set $fg1 #585858
+set $fg2 #6c6c6c
+set $fg3 #808080
+set $red #cc241d
+set $grn #009048
+set $ylw #904800
+set $gnt #900048
+set $cyn #009090
 set $t   ff
 
 # //// APPS
@@ -217,9 +217,9 @@ $WIN+Shift+3        $RUN -i bashrc -e '$EDT bashrc -e vim $home/.bashrc'
 $WIN+4              $QUD -f 4
 $WIN+Shift+4        $RUN -i vimrc -e '$EDT vimrc -e vim $home/.vimrc'
 $WIN+Shift+5        $RUN -i rngrc -e '$EDT rngrc -e vim $home/.config/ranger/rc.conf'
-$WIN+Shift+6        $RUN -i rngrfl -e '$EDT rngrfl -e vim $home/.config/ranger/rifle.conf'
-$WIN+Shift+7        $RUN -i poly -e '$EDT poly -e vim $home/.config/polybar/template_config'
-$WIN+Shift+8        $RUN -i qute -e '$EDT qute -e vim $home/.config/qutebrowser/template_config.py'
+$WIN+Shift+6        $RUN -i rngrl -e '$EDT rngrl -e vim $home/.config/ranger/rifle.conf'
+$WIN+Shift+7        $RUN -i polyb -e '$EDT polyb -e vim $home/.config/polybar/template_config'
+$WIN+Shift+8        $RUN -i quteb -e '$EDT quteb -e vim $home/.config/qutebrowser/template_config.py'
 
 # //// 1st Row
 $WIN+q              $QUD -m 1
@@ -309,6 +309,7 @@ $fw [title="^Netflix$"]                  focus;$QUD -m 1;focus;$tf "netflix"
 $fw [title="^Funimation"]                focus;$QUD -m 1;focus;$tf "funimation"
 $fw [title="Amazon.co.uk: Prime Video"]  focus;$QUD -m 1;focus;$tf "prime"
 
+$fw [class="Surf"]                       focus;$QUD -m 2;focus
 $fw [class="Zathura"]                    focus;$QUD -m 2;focus
 $fw [class="MuPDF"]                      focus;$QUD -m 2;focus
 $fw [class="Electron"]                   focus;$QUD -m 2;focus
@@ -329,7 +330,7 @@ $fw [instance="reddit"]                  focus;$QUD -m 2;focus;$tf "reddit"
 #$fw [instance="MOUNT"]                   focus;$QUD -m 2;focus;$tf "mount"
 #$fw [instance="UNMOUNT"]                 focus;$QUD -m 2;focus;$tf "unmount"
 
-#$fw [class="Gvim"]                       focus;$QUD -m 3;focus
+$fw [class="Gvim"]                       focus;$QUD -m 3;focus
 $fw [class="Firefox"]                    focus;$QUD -m 3;focus
 $fw [class="Pamac-manager"]              focus;$QUD -m 3;focus;$tf "software"
 $fw [title="Google Chrome$"]             focus;$QUD -m 3;focus;$tf "chrome"
@@ -338,9 +339,9 @@ $fw [instance="i3vars"]                  focus;$QUD -m 3;focus;$tf "i3vars"
 $fw [instance="bashrc"]                  focus;$QUD -m 3;focus;$tf "bashrc"
 $fw [instance="vimrc"]                   focus;$QUD -m 3;focus;$tf "vimrc"
 $fw [instance="rngrc"]                   focus;$QUD -m 3;focus;$tf "ranger_rc"
-$fw [instance="rngrfl"]                  focus;$QUD -m 3;focus;$tf "ranger_rifle"
-$fw [instance="poly"]                    focus;$QUD -m 3;focus;$tf "polybar"
-$fw [instance="qute"]                    focus;$QUD -m 3;focus;$tf "qutebrowser"
+$fw [instance="rngrl"]                   focus;$QUD -m 3;focus;$tf "ranger_rifle"
+$fw [instance="polyb"]                   focus;$QUD -m 3;focus;$tf "polybar"
+$fw [instance="quteb"]                   focus;$QUD -m 3;focus;$tf "qutebrowser"
 $fw [class="Slack"]                      focus;$QUD -m 3;focus;$tf "slack"
 
 $fw [instance="noterm"]                  focus;$QUD -m 4;focus;$tf "noterm"
@@ -367,6 +368,7 @@ $ena fix_xcursor
 $exn mpd
 $exn shutter --min_at_startup
 $exn setxkbmap $kb
+$exn i3listen-toggle
 $exn reloadconfs
 
 $ena mpv $home/$scrmus/A\ Tone\ His\ Self.mp3

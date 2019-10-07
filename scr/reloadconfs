@@ -4,24 +4,5 @@ WPP=$(themer -v wallpaper)
 TNT="$(themer -v 'tint ')"
 [[ -n $WPP ]] || WPP=$(themer -v 'acc ')
 [[ -n $TNT ]] && TINT="-t $TNT" || TINT=" "
-i3bg -w "$WPP" $TINT
+i3bg -w "$WPP" $TINT -b
 themer --apply-all
-#themer -a $USER_XRS_DIR
-#themer -a $HOME/.vim/colors
-#themer -a $HOME/.config/i3
-#themer -a $HOME/.config/polybar
-#themer -a $HOME/.config/zathura
-#themer -a $HOME/.config/dunst
-#themer -a $HOME/.config/rofi
-#themer -a $HOME/.config/vis/colors
-#themer -a $HOME/.config/mpv
-#themer -a $HOME/.config/qutebrowser
-#themer -a $HOME/.config/spicetify/Themes/Themer
-#themer -a $HOME/.conky
-#themer -a $USER_REPO_DIR/ghb/themes/hyde/static/css
-#themer -a $USER_REPO_DIR/i3rice-arch
-#themer -a $USER_SCR_DIR/.unused
-#themer -a $XDG_TEMPLATES_DIR/css
-#themer -a $XDG_TEMPLATES_DIR/pandoc
-##themer -a $HOME/.config/tint2
-##themer -a $USER_GIT_DIR/atompackages/packages/rice-syntax/styles

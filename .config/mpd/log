@@ -4167,3 +4167,31 @@ Oct 03 17:31 : client: [18] closed
 Oct 03 17:31 : client: [19] opened from [::1]:46572
 Oct 03 17:31 : client: [19] closed
 Oct 03 17:32 : client: [17] closed
+Oct 04 15:47 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 11 Roex - Floyd.mp3"
+Oct 04 16:23 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 04 16:23 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 04 16:23 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 04 16:24 : client: [0] opened from [::1]:58136
+Oct 04 16:24 : client: [1] opened from [::1]:58138
+Oct 04 16:24 : client: [1] closed
+Oct 04 16:24 : client: [2] opened from [::1]:58146
+Oct 04 16:24 : client: [2] closed
+Oct 04 16:24 : client: [3] opened from [::1]:58148
+Oct 04 16:24 : client: [3] closed
+Oct 04 16:25 : client: [0] closed
+Oct 04 16:27 : client: [4] opened from [::1]:58830
+Oct 04 16:27 : client: [5] opened from [::1]:58832
+Oct 04 16:27 : client: [5] closed
+Oct 04 16:27 : client: [6] opened from [::1]:58838
+Oct 04 16:27 : client: [6] closed
+Oct 04 16:27 : client: [7] opened from [::1]:58840
+Oct 04 16:27 : client: [7] closed
+Oct 04 17:14 : client: [4] closed
+Oct 04 17:14 : client: [8] opened from [::1]:38320
+Oct 04 17:14 : client: [9] opened from [::1]:38322
+Oct 04 17:14 : client: [9] closed
+Oct 04 17:14 : client: [10] opened from [::1]:38324
+Oct 04 17:14 : client: [10] closed
+Oct 04 17:14 : client: [11] opened from [::1]:38326
+Oct 04 17:14 : client: [11] closed
+Oct 04 18:44 : client: [8] closed

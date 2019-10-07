@@ -28,43 +28,58 @@ blr=0x16
 
 help () {
 cat << 'EOB'
-  ██  ████  ██             
- ▒▒  █▒▒▒ █▒██       █████ 
-  ██▒    ▒█▒██      ██▒▒▒██
- ▒██   ███ ▒██████ ▒██  ▒██
- ▒██  ▒▒▒ █▒██▒▒▒██▒▒██████
- ▒██ █   ▒█▒██  ▒██ ▒▒▒▒▒██
- ▒██▒ ████ ▒██████   █████ 
- ▒▒  ▒▒▒▒  ▒▒▒▒▒    ▒▒▒▒▒  
- 	-- A script to set wallpaper, with other features.
+# i3bg
+- A script to set wallpaper, with other features.
 
- Usage
- -----
- i3bg                            ┼ Create default directories:
-                                 │   WALL_DIR/(normal|blur|cols)
- i3bg --help|-h                  ┼ Print this help
- i3bg --wallpaper|-w [PATH|prev| ┼ Wallpaper to set 
-                     next|random │
-                       |NAME]    │
- i3bg --tint|-t      [HEX COLOR] ┼ Tint color of wallpaper
- i3bg --add|-a       [DIRECTORY] ┼ Add walls from DIRECTORY
- i3bg --list|-l                  ┼ List available wallpapers
- i3bg --blur|-b                  ┼ Toggle blur
- i3bg --rename|-r         [NAME] ┼ Rename current wallpaper
- i3bg --delete|-d                ┼ Remove wallpaper from
-                                 │   WALL_DIR/(normal|blur)
- 
- WALL_DIR  ┼ Default i3bg folder:
-           │   $XDG_PICTURES_DIR/i3bg
- DIRECTORY ┼ is a path to a directory containing pictures
- HEX COLOR ┼ Hexadecimal color Eg. #002b36
- PATH      ┼ is a path to a picture
- prev      ┼ previous wallpaper in history
- next      ┼ next wallpaper in history
- NAME      ┼ name of wallpaper stored in WALL_DIR/normal
- random    ┼ random wallpaper in WALL_DIR/normal
+## Usage
+
+```
+i3bg [--wallpaper|-w] <path|prev|next|random|name>
+     [--tint|-t|--blur|-b]
+i3bg [--add|-a] <directory>
+i3bg [--list|-l]
+i3bg [--rename|-r|--delete|-d] <name>
+i3bg --help|-h
+i3bg
+```
+
+## Options
+
++ Run with no options to create default directories:
+	+ $i3BGDIR/(normal|blur|cols)
+	+ Default i3bg folder: i3BGDIR = $XDG_PICTURES_DIR/i3bg
+
++ `--wallpaper|-w <path>|prev|next|random|<name>`
+	+ Wallpaper to set:
+		+ `<path>` - path to a picture
+		+ `prev`   - previous wallpaper in history
+		+ `next`   - next wallpaper in history
+		+ `random` - random wallpaper in $i3BGDIR/normal
+		+ `<name>` - name of wallpaper stored in $i3BGDIR/normal
+
++ `--tint|-t <hex_color>`
+	+ Tint color of wallpaper, Hexadecimal color Eg. #002b36
+
++ `--add|-a <directory>`
+	+ Add walls from `<directory>`
+
++ `--list|-l`
+	+ List available wallpapers
+
++ `--blur|-b`
+	+ Toggle blur
+
++ `--rename|-r <name>`
+	+ Rename current wallpaper to `<name>`
+
++ `--delete|-d <name>`
+	+ Remove `<name>` wallpaper from $i3BGDIR/(normal|blur)
+
++ `--help|-h`
+	+ Print this help
 
 EOB
+echo "$1"
 exit
 }
 
@@ -123,6 +138,7 @@ colour () {
 		-draw 'color 0,0 replace' "${COLS}/${WPP/\#/}"
 	ln -sf "${COLS}/${WPP/\#/}" $CURR
 	set-wall
+	exit
 }
 
 change-current () {
@@ -182,9 +198,9 @@ while true; do
 		--add       | -a ) add "${2:-}"                 ; shift ;;
 		--delete    | -d ) delete "${2:-}"              ; shift ;;
 		--rename    | -r ) rename "${2:-}"              ; shift ;;
-		--list      | -l ) list                         ; shift ;;
-		--blur      | -b ) BLURT=TRUE                   ; shift ;;
-		--help      | -h ) help                         ; shift ;;
+		--list      | -l ) list ;;
+		--blur      | -b ) BLURT=TRUE ;;
+		--help      | -h ) help ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac
@@ -192,15 +208,15 @@ while true; do
 done
 
 if [[ -n $WPP ]]; then
-	[[ $WPP =~ "#" ]]          && colour && exit
+	[[ $WPP =~ "#" ]]          && colour
 	[[ $WPP == "random" ]]     && WPP=$(ls $NORM | shuf -n 1)
 	[[ $WPP == "prev" ]]       && prev
 	[[ $WPP == "next" ]]       && next
 	WPC=${WPP##*/}
 	[[ ! -f $NORM/${WPC%.*} ]] && echo "Adding ${WPC%.*}" && add-wall "$WPP"
 	change-current
-	[[ ! -f "$WPP" ]]          && [[ ! -f "$NORM/${WPC%.*}" ]] && help \
-		&& echo "Wallpaper doesn't exist"
+	[[ ! -f "$WPP" ]]          && [[ ! -f "$NORM/${WPC%.*}" ]] && \
+		help "Wallpaper doesn't exist"
 fi
 
 [[ $BLURT == "TRUE" ]] && {

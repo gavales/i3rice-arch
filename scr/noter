@@ -12,32 +12,50 @@ for i in $(echo -e $DEFNOTES); do
 done
 
 help () {
-	cat << 'EOB'
-                       ██
-                      ▒██
-   ███████   ██████  ██████  █████  ██████
-  ▒▒██▒▒▒██ ██▒▒▒▒██▒▒▒██▒  ██▒▒▒██▒▒██▒▒█
-   ▒██  ▒██▒██   ▒██  ▒██  ▒███████ ▒██ ▒
-   ▒██  ▒██▒██   ▒██  ▒██  ▒██▒▒▒▒  ▒██
-   ███  ▒██▒▒██████   ▒▒██ ▒▒██████▒███
-  ▒▒▒   ▒▒  ▒▒▒▒▒▒     ▒▒   ▒▒▒▒▒▒ ▒▒▒
+cat << 'EOB'
+# noter
+- create notes, with different entries, stored in $XDG_DESKTOP_DIR
 
- Usage
- -----
+## Usage
 
- noter                              ┼ Create defaults:
-                                    │   NOTE_DIR = $HOME/Desktop
-                                    │   NOTE_TYPE = OTHER|NOTES|
-                                    │     WATCHLIST|TODO
- noter --help|-h                    ┼ Print this help
- noter --type|-t        [NOTE_TYPE] ┼ Create NOTE_DIR/NOTE_TYPE
- noter --entry|-e       [ENTRY]     ┼ Entry to add to the note
- noter --delete|-d      [ENTRY]     ┼ Delete entry in note file
- noter --delete-type|-D [NOTE_TYPE] ┼ cat NOTE_DIR/NOTE_TYPE
- noter --list|-l                    ┼ ls NOTE_DIR
- noter --list-types|-L  [NOTE_TYPE] ┼ Delete NOTE_DIR/NOTE_TYPE
+```
+noter [--type|-t] <note_type> [--entry|-e] <entry>
+noter [--list|-l|--delete-type|-D] <note_type>
+noter [--delete|-d] <entry>
+noter --list-types|-L
+noter --help|-h
+noter
+```
+
+## Options
+
++ Run with no options to create defaults:
+	+ NOTE_DIR  = $XDG_DESKTOP_DIR
+	+ NOTE_TYPE = OTHER|NOTES|WATCHLIST|TODO
+
++ `--help|-h`
+	+ Print this help
+
++ `--type|-t <note_type>`
+	+ Create $NOTE_DIR/`<note_type>`
+
++ `--entry|-e <entry>`
+	+ `<entry>` to add to the note
+
++ `--delete|-d <entry>`
+	+ Delete line containing `<entry>` in note file
+
++ `--delete-type|-D <note_type>`
+	+ Delete $NOTE_DIR/`<note_type>`
+
++ `--list|-l`
+	+ Print contents of $NOTE_DIR/`<note_type>`
+
++ `--list-types|-L <note_type>`
+	+ `ls` $NOTE_DIR
 
 EOB
+echo "$1"
 exit
 }
 

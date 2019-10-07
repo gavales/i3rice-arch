@@ -3,13 +3,42 @@
 # OA: Gavin Vales
 # CREATED: Thu 27 Dec 15:32:13 GMT 2018
 
+main () {
+
 bib=$1
-refer="$(cat "$bib" | grep -v '^@' | \
-	sed "s/^[ \t]*//;s/\ =\ / /g;s/^author/\%A/g;s/^booktitle/\%B/g" | \
-	sed "s/^title/\%T/g;s/^year/\%D/g;s/^journal/\%J/g;s/^book/\%B/g" | \
-	sed "s/^volume/\%V/g;s/^school/%I/g;s/^institution/%I/g" | \
-	sed "s/^publisher/\%I/g;s/^pages/\%P/g;s/^number/\%N/g" | \
-	sed "s/^organization/\%Q/g;s/^url/\%O/g;s/},//g;s/{//g;s/}//g" | \
-	sed "s/\\\&/\&/g;s/[\]\"//g;s/[$]//g;s/[\]//g" | \
-	sed "/^%A\ */s/\ and\ /\n%A\ /g;s/$//")"
-echo "${refer}" > ${bib:0:-4}
+cat "$bib" | sed "/^@/d;s/^[ \t]*//;s/\ =\ / /g;
+s/^author/\%A/g;
+s/^booktitle/\%B/g;
+s/^title/\%T/g;
+s/^year/\%D/g;
+s/^journal/\%J/g;
+s/^book/\%B/g;
+s/^volume/\%V/g;
+s/^school/%I/g;
+s/^institution/%I/g;
+s/^publisher/\%I/g;
+s/^pages/\%P/g;
+s/^number/\%N/g;
+s/^organization/\%Q/g;
+s/^url/\%O/g;
+s/},//g;s/{//g;s/}//g;
+s/\\\&/\&/g;s/[\]\"//g;s/[$]//g;s/[\]//g;
+/^%A\ */s/\ and\ /\n%A\ /g;s/$//" > ${bib%.*}
+
+}
+
+help () {
+	echo "Usage: bibtorefer <bib_file>.bib"
+	exit
+}
+
+while true; do
+	case $1 in
+		--help | -h ) help ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+[[ -z $1 ]] && help || main "$1"

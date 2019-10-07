@@ -9,26 +9,37 @@ MODDIR=$USER_TMP_DIR/pbcat
 
 help () {
 cat << 'EOB'
-           ██                          ██  
-   ██████ ▒██                         ▒██  
-  ▒██▒▒▒██▒██       █████   ██████   ██████
-  ▒██  ▒██▒██████  ██▒▒▒██ ▒▒▒▒▒▒██ ▒▒▒██▒ 
-  ▒██████ ▒██▒▒▒██▒██  ▒▒   ███████   ▒██  
-  ▒██▒▒▒  ▒██  ▒██▒██   ██ ██▒▒▒▒██   ▒██  
-  ▒██     ▒██████ ▒▒█████ ▒▒████████  ▒▒██ 
-  ▒▒      ▒▒▒▒▒    ▒▒▒▒▒   ▒▒▒▒▒▒▒▒    ▒▒  
-	-- script to create lots of polybar ipc modules
+# pbcat
+- script to create lots of polybar ipc modules
 
- Usage
- -----
- pbcat                 [TEXT]   ┼ TEXT for MODULE to OUTPUT
- pbcat --module|-m     [MODULE] ┼ MODULE to update
- pbcat --foreground|-f [HEX]    ┼ Foreground colour
- pbcat --background|-b [HEX]    ┼ Background colour
- pbcat --invert|-i              ┼ Invert foreground and
-                                │   background colours
- pbcat --help|-h                ┼ Print this help
+## Usage
+
+```
+pbcat [--module|-m] [--foreground|-f] [--background|-b] [--invert|-i] <text>
+pbcat --help|-h
+```
+
+## Options
+
++ Final argument is `<text>` to print to `<module>`
+
++ `--module|-m <module>`
+	+ `<module>` to update
+
++ `--foreground|-f <hex>`
+	+ Foreground colour
+
++ `--background|-b <hex>`
+	+ Background colour
+
++ `--invert|-i`
+	+ Invert foreground and background colours
+
++ `--help|-h`
+	+ Print this help
+
 EOB
+echo "$1"
 exit
 }
 

@@ -15,42 +15,78 @@ fs=" "
 
 help () {
 cat << 'EOB'
-  ██ ██████
- ▒▒ ▒█▒▒▒▒█
-  ██▒    ▒█ ██████████   █████  ███████  ██   ██
- ▒██   ████▒▒██▒▒██▒▒██ ██▒▒▒██▒▒██▒▒▒██▒██  ▒██
- ▒██  ▒▒▒▒█ ▒██ ▒██ ▒██▒███████ ▒██  ▒██▒██  ▒██
- ▒██ █   ▒█ ▒██ ▒██ ▒██▒██▒▒▒▒  ▒██  ▒██▒██  ▒██
- ▒██▒██████ ███ ▒██ ▒██▒▒██████ ███  ▒██▒▒██████
- ▒▒ ▒▒▒▒▒▒ ▒▒▒  ▒▒  ▒▒  ▒▒▒▒▒▒ ▒▒▒   ▒▒  ▒▒▒▒▒▒
- 	-- Rofi wrapper script
+# i3menu
+- Rofi wrapper script
 
- Usage
- -----
- --prompt|-p      [PROMPT]       ┼ Prompt
- --location|-l    [LOCATION]     ┼ Rofi location:  1 2 3
-                                 │                 8 0 4
-                                 │                 7 6 5
- --lines|-L       [INTEGER]      ┼ Number of vertical rows
- --xoffset|-x     [INTEGER]      ┼ Horizontal Offset
- --yoffset|-y     [INTEGER]      ┼ Vertical Offset
- --color|-c       [COLOR]        ┼ Accent color; the name
-                                 │   of one of in the
-                                 │   variable files in
-                                 │   .config/rofi
- --width|-w       [INTEGER]      ┼ Rofi width
- --height|-H      [INTEGER<=100] ┼ Rofi height
- --orientation|-o [vertical|     ┼ Vertical or horizontal
-                  horizontal]    │   (like dmenu)
- --window|-W                     ┼ Fill active window
- --dmenu|-d                      ┼ Dmenu mode
- --apps|-s                       ┼ Application menu mode
- --titlebar|-t                   ┼ Spawn on i3wm title-bar
- --monitor|-m                    ┼ Spawn at mouse location
- --fullscreen|-f                 ┼ Fullscreen mode
-                                 │   (in progress)
- --help|-h                       ┼ Print this help
+## Usage
+
+```
+i3menu [--dmenu|-d|--apps|-s]
+       [--window|-W|--titlebar|-t|--fullscreen|-f]
+       [--width|-w|--height|-H|--xoffset|-x|--yoffset|-y] <integer>
+       [--orientation|-o] vertical|horizontal
+       [--location|-l|--lines|-L|--monitor|-m] <integer>
+       [--color|-c] <color>
+       [--prompt|-p] <text>
+i3menu --help|-h
+```
+
+## Options
+
++ `--prompt|-p <text>`
+	+ Prompt
+
++ `--location|-l <integer>`
+	+ Rofi location:
+	+ `1 2 3`
+	+ `8 0 4`
+	+ `7 6 5`
+
++ `--lines|-L <integer>`
+	+ Number of vertical rows
+
++ `--xoffset|-x <integer>`
+	+ Horizontal Offset
+
++ `--yoffset|-y <integer>`
+	+ Vertical Offset
+
++ `--color|-c <color>`
+	+ Accent color
+	+ The name of one of in the variable files in .config/rofi
+
++ `--width|-w <integer>`
+	+ Rofi width
+
++ `--height|-H <integer<=100>`
+	+ Rofi height
+
++ `--orientation|-o [vertical|horizontal]`
+	+ Vertical or horizontal (like dmenu)
+
++ `--window|-W`
+	+ Fill active window
+
++ `--dmenu|-d`
+	+ Dmenu mode
+
++ `--apps|-s`
+	+ Application menu mode
+
++ `--titlebar|-t`
+	+ Spawn on i3wm title-bar
+
++ `--monitor|-m`
+	+ Spawn at mouse location
+
++ `--fullscreen|-f`
+	+ Fullscreen mode (in progress)
+
++ `--help|-h`
+	+ Print this help
+
 EOB
+echo "$1"
 exit
 }
 

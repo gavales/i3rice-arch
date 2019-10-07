@@ -4,7 +4,12 @@
 # CREATED: $(date)
 #source $HOME/.config/user-dirs.dirs
 
-SRC=${1}
+help () {
+	echo "Usage: compiler <file>"
+	exit
+}
+
+[[ -z $1 ]] && help || SRC=${1}
 EXT=${SRC##*.}
 
 case $EXT in
