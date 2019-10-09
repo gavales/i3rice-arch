@@ -1,5 +1,32 @@
 #!/usr/bin/env bash
 
+help () {
+cat << 'EOB'
+# i3vol
+- control volume for i3
+
+## Usage
+
+```
+i3vol mute|inc|dec
+i3vol --help|-h
+```
+EOB
+echo "$1"
+exit
+}
+
+while true; do
+	case $1 in
+		--help | -h ) help ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+[[ -z $1 ]] && help "Nothing to do!"
+
 case $1 in
 	inc)  pactl set-sink-volume 0 +2%  ;;
 	dec)  pactl set-sink-volume 0 -2%  ;;

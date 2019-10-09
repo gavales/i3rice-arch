@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cat ".themer/${1}/dunst-theme" ".themer/${1}/dunst-settings" > dunstrc
+killall dunst

@@ -4195,3 +4195,36 @@ Oct 04 17:14 : client: [10] closed
 Oct 04 17:14 : client: [11] opened from [::1]:38326
 Oct 04 17:14 : client: [11] closed
 Oct 04 18:44 : client: [8] closed
+Oct 07 23:04 : client: [12] opened from [::1]:59058
+Oct 07 23:04 : client: [12] closed
+Oct 07 23:04 : client: [13] opened from [::1]:59060
+Oct 07 23:04 : client: [13] closed
+Oct 07 23:04 : client: [14] opened from [::1]:59062
+Oct 07 23:04 : client: [14] closed
+Oct 07 23:15 : client: [15] opened from [::1]:60230
+Oct 07 23:15 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 07 23:15 : client: [15] closed
+Oct 07 23:15 : client: [16] opened from [::1]:60232
+Oct 07 23:15 : client: [16] closed
+Oct 07 23:15 : client: [17] opened from [::1]:60234
+Oct 07 23:15 : client: [17] closed
+Oct 07 23:15 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 07 23:15 : client: [18] opened from [::1]:60240
+Oct 07 23:15 : client: [18] closed
+Oct 07 23:15 : client: [19] opened from [::1]:60242
+Oct 07 23:15 : client: [19] closed
+Oct 07 23:15 : client: [20] opened from [::1]:60244
+Oct 07 23:15 : client: [20] closed
+Oct 08 10:35 : client: [21] opened from [::1]:45304
+Oct 08 10:35 : client: [21] closed
+Oct 08 10:35 : client: [22] opened from [::1]:45306
+Oct 08 10:35 : client: [22] closed
+Oct 08 10:35 : client: [23] opened from [::1]:45308
+Oct 08 10:35 : client: [23] closed
+Oct 08 10:35 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 08 10:35 : client: [24] opened from [::1]:45318
+Oct 08 10:35 : client: [24] closed
+Oct 08 10:35 : client: [25] opened from [::1]:45320
+Oct 08 10:35 : client: [25] closed
+Oct 08 10:35 : client: [26] opened from [::1]:45322
+Oct 08 10:35 : client: [26] closed

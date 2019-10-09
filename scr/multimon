@@ -1,5 +1,30 @@
 #!/usr/bin/env bash
 
+help () {
+cat << 'EOB'
+# multimon
+- monitor control for i3
+
+## Usage
+
+```
+multimon
+multimon --help|-h
+```
+EOB
+echo "$1"
+exit
+}
+
+while true; do
+	case $1 in
+		--help | -h ) help ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
 ALL=$(xrandr -q | grep 'connected'    | awk '{print $1}')
 CNN=$(xrandr -q | grep ' connected'   | awk '{print $1}')
 DCN=$(xrandr -q | grep 'disconnected' | awk '{print $1}')

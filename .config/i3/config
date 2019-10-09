@@ -69,17 +69,17 @@ set $ws9  9
 set $ws10 10
 
 # //// COLORS
-set $bg3 #b0b0b0
-set $bg2 #c4c4c4
-set $bg1 #d8d8d8
-set $bg0 #ececec
-set $acb #b5b5b5
+set $bg3 #808080
+set $bg2 #6c6c6c
+set $bg1 #585858
+set $bg0 #444444
+set $acb #616161
 set $acc #7f7f7f
-set $acf #616161
-set $fg0 #444444
-set $fg1 #585858
-set $fg2 #6c6c6c
-set $fg3 #808080
+set $acf #b5b5b5
+set $fg0 #ececec
+set $fg1 #d8d8d8
+set $fg2 #c4c4c4
+set $fg3 #b0b0b0
 set $red #cc241d
 set $grn #009048
 set $ylw #904800

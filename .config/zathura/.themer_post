@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+cp ".themer/${1}/zathurarc" zathurarc
+
+main () {
+	pdf=$(ps -fp $(pgrep -d, -x zathura) -o command | \
+		sed -e '/COMMAND/d;s/zathura //g;s/-- //g')
+
+	len=$(ps -fp $(pgrep -d, -x zathura) -o command | \
+		sed -e '/COMMAND/d;s/zathura //g;s/-- //g' | \
+		grep -c ".pdf")
+
+	pids=$(pidof zathura)
+
+	if [[ -n $pids ]]; then
+		if [[ $len == 1 ]]; then
+			killall zathura
+			zathura "${pdf}" &
+		else
+			killall zathura
+			IFS=$'\n'
+			for i in $pdf; do
+				zathura "$i" &
+			done
+		fi
+	else
+		echo "no pdf open"
+		:
+	fi
+	echo $len
+}
+
+main

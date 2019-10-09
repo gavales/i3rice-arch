@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+cp ".themer/${1}/color.ini" color.ini
+cp ".themer/${1}/user.css" user.css
+
+SPD=$(wmctrl -lx | awk '/.Spotify/ {print $1}')
+
+spicetify update
+[[ -n $SPD ]] && xdotool key --window "$SPD" "ctrl+shift+r"

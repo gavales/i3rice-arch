@@ -1,6 +1,27 @@
 #!/usr/bin/env bash
 
-file=$1
+help () {
+cat << 'EOB'
+# crff
+- compile `.ms` groff files into pdf
 
-#groff -ms ${file} -T pdf > ${file:0:-3}.pdf
-refer -PS -p $USER_DRV_DIR/global -e "${file}" | groff -me -ms -keEjpt -T pdf > ${file:0:-3}.pdf
+Usage: crff <file>.ms
+EOB
+exit
+}
+
+while true; do
+	case $1 in
+		--help | -h ) help ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+[[ -z $1 ]] && help
+
+SRC=$1
+TRG=${SRC%.*}
+#groff -ms ${SRC} -T pdf > ${TRG}.pdf
+refer -PS -p $USER_DRV_DIR/global -e "${SRC}" | groff -me -ms -keEjpt -T pdf > ${TRG}.pdf

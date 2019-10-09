@@ -1,5 +1,30 @@
 #!/usr/bin/env bash
 
+help () {
+cat << 'EOB'
+# screenshot
+- take screenshot with `maim`
+
+## Usage
+
+```
+screenshot
+screenshot --help|-h
+```
+EOB
+echo "$1"
+exit
+}
+
+while true; do
+	case $1 in
+		--help | -h ) help ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
 SCD=$XDG_PICTURES_DIR/shot
 TMP=${SCD}/tmp.png
 [[ -d $SCD ]] || mkdir $SCD

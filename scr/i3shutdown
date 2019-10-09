@@ -3,9 +3,53 @@
 # with openrc use loginctl
 #switch_user
 #switch_user) dm-tool switch-to-greeter                    ;;
+
+help () {
+cat << 'EOB'
+# i3shutdown
+- shutdown menu for i3wm
+
+## Usage
+
+```
+i3shutdown l|e|s|h|r|x
+i3shutdown --help|-h
+```
+
+## Options
+
++ Run with no option to produce a rofi menu of options
++ `l`
+	+ lock
++ `e`
+	+ logout
++ `s`
+	+ suspend
++ `h`
+	+ hibernate
++ `r`
+	+ reboot
++ `x`
+	+ shutdown
+EOB
+echo "$1"
+exit
+}
+
+while true; do
+	case $1 in
+		--help | -h ) help ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
 [[ $(cat /proc/1/comm) == "systemd" ]] && logind=systemctl || logind=loginctl
 
-OPT=$(printf "%s\n" "l lock" "e logout" "s suspend" \
+OPT=${1}
+
+[[ -z $OPT ]] && OPT=$(printf "%s\n" "l lock" "e logout" "s suspend" \
 	"h hibernate" "r reboot" "x shutdown" | i3menu -c red -l 1 -y 27 -w 500 \
 	-p "SHUTDOWN [<ESC> to cancel]" | awk '{print $1}')
 

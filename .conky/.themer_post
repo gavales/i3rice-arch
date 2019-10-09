@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+killall -9 conky
+for i in $(ls .themer | grep "^template_"); do
+	cp ".themer/${1}/${i/template_/}" ${i/template_/}
+	conky -c ${i/template_/} &>/dev/null &
+done

@@ -1,5 +1,32 @@
 #!/usr/bin/env bash
 
+help () {
+cat << 'EOB'
+# i3light
+- control backlight for i3
+
+## Usage
+
+```
+i3light nm|inc|dec
+i3light --help|-h
+```
+EOB
+echo "$1"
+exit
+}
+
+while true; do
+	case $1 in
+		--help | -h ) help ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+[[ -z $1 ]] && help "Nothing to do!"
+
 nightmode () {
 	NMFL=$USER_TMP_DIR/nightmode
 	[[ -f $NMFL ]] || echo off > $NMFL

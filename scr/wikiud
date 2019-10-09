@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: Mon  7 Oct 23:04:04 BST 2019
+# source /home/gavarch/.config/user-dirs.dirs
+
+SRC=$USER_SCR_DIR
+TRG="${USER_REPO_DIR}/i3rice-arch.wiki"
+BSE="${TRG}/_Sidebar.md_base"
+
+help () {
+cat << 'EOB'
+# wikiud
+- generates the script wikis shown in the sidebar
+
+## Usage
+
+```
+wikiud
+wikiud --help|-h
+```
+EOB
+exit
+}
+
+while true; do
+	case $1 in
+		--help | -h ) help ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+cd $SRC
+cat $BSE > ${BSE/_base/}
+
+for i in $(ls -l | sed '/^d/d;/^total/d' | awk '{print $NF}'); do
+	CHK=$(cat $i | grep '\-\-help')
+	[[ -n $CHK ]] && {
+		echo "# [${i}](https://github.com/StillANixRookie/i3rice-arch/blob/master/scr/${i})
+" >  ${TRG}/doc/${i}.md
+		$i --help >> ${TRG}/doc/${i}.md
+		echo "	- [${i}](https://github.com/StillANixRookie/i3rice-arch/wiki/${i})" >> ${BSE/_base/}
+		}
+done

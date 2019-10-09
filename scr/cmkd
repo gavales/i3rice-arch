@@ -1,35 +1,84 @@
 #!/usr/bin/env bash
 
 TRG=$1
-WTDR=$XDG_TEMPLATES_DIR/pandoc
+PDDR=$XDG_TEMPLATES_DIR/pandoc
 CSDR=$XDG_TEMPLATES_DIR/css
-BBDR=$HOME
-YLDR=$XDG_TEMPLATES_DIR/pandoc
 
-BIB=$(awk '$1 ~ /^#bib$/    {$1="";gsub(/^[ \t]+/, "", $0);print $0}' $TRG )
-YML=$(awk '$1 ~ /^#yaml$/   {$1="";gsub(/^[ \t]+/, "", $0);print $0}' $TRG )
-WTM=$(awk '$1 ~ /^#doctmp$/ {$1="";gsub(/^[ \t]+/, "", $0);print $0}' $TRG )
-WCS=$(awk '$1 ~ /^#css$/    {$1="";gsub(/^[ \t]+/, "", $0);print $0}' $TRG )
-NGN=$(awk '$1 ~ /^#engine$/ {$1="";gsub(/^[ \t]+/, "", $0);print $0}' $TRG )
+help () {
+cat << 'EOB'
+# cmkd
+- compile markdown files with pandoc by parsing the yaml header
+
+## Usage
+
+```
+cmkd <file>.md
+```
+
+## Example
+
+```markdown
+---
+title: __Title__
+subtitle: _Subtitle_
+author: Author
+theme: CambridgeUS
+#output pdf html word beamer  <<< specify output(s)
+#css    style.css             <<< specify css for html output
+#engine xelatex               <<< specify engine for normal pdf
+#bib    bibliography.bib      <<< bibliography
+#yaml   settings.yaml         <<< yaml file to source for additional settings
+#docx   reference.docx        <<< word document template to use
+---
+
+# A markdown file
+
++ bullet
+	+ bullet
+		+ bullet
++ bullet
++ bullet
+
+```
+
+EOB
+echo "$1"
+exit
+}
+
+[[ -z $1 ]] && echo 'No input file! [cmkd --help for more info]' && exit
+
+while true; do
+	case $1 in
+		--help | -h ) help ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+BIB=$(awk '$1 ~ /^#bib$/    {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
+YML=$(awk '$1 ~ /^#yaml$/   {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
+WTM=$(awk '$1 ~ /^#docx$/   {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
+WCS=$(awk '$1 ~ /^#css$/    {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
+NGN=$(awk '$1 ~ /^#engine$/ {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
 
 [[ -z $BIB ]] && BIB="$HOME/global.bib"
-[[ -z $YML ]] && YML=settings ; FYL="$YLDR/${YML}.yaml"
-[[ -z $WTM ]] && WTM=reference
-[[ -n $WCS ]] && CSS="-c ${CSDR}/${WCS}.css" || CSS="-c ${CSDR}/themer.css"
-[[ -n $NGN ]] && NGN="--pdf-engine=$NGN"     || NGN=""
+[[ -z $YML ]] && FYL="--metadata-file ${PDDR}/settings.yaml" || FYL="--metadata-file ${YML}"
+[[ -z $WTM ]] && DXR="$PDDR/reference.docx"
+[[ -n $WCS ]] && CSS="-c ${WCS}"         || CSS="-c ${CSDR}/themer.css"
+[[ -n $NGN ]] && NGN="--pdf-engine=$NGN" || NGN=""
 
-REF="-F pandoc-crossref --metadata-file ${FYL}"
+REF="-F pandoc-crossref ${FYL}"
 CIT="--bibliography ${BIB} -F pandoc-citeproc"
-WTS="--reference-doc ${WTDR}/${WTM}.docx"
+WTS="--reference-doc ${DXR}"
 NSC="--number-sections"
 
-pdf () { pandoc $REF $CIT $NGN $NSC -o ${TRG%.*}.pdf ${TRG} ; }
-word () { pandoc $REF $CIT $WTS -o ${TRG%.*}.docx ${TRG} ; }
-html () { pandoc $REF $CIT -s --toc $CSS -o ${TRG%.*}.html ${TRG} ; }
-beamer () { pandoc $CIT -t beamer --incremental -o ${TRG%.*}_pres.pdf ${TRG} ; }
+pdf    () { pandoc $REF $CIT $NGN $NSC -o ${TRG%.*}.pdf ${TRG} ; }
+word   () { pandoc $REF $CIT $WTS -o ${TRG%.*}.docx ${TRG} ; }
+html   () { pandoc $REF $CIT -s --toc $CSS -o ${TRG%.*}.html ${TRG} ; }
+beamer () { pandoc $CIT -t beamer --incremental -o ${TRG%.*}_beamer.pdf ${TRG} ; }
 
 for i in $(awk '$1 ~ /^#output$/ {$1="";gsub(/^[ \t]+/, "", $0);print $0}' $TRG ); do
 	$i
 done
-#output=$(awk '$1 ~ /^#output$/ {$1="";gsub(/^[ \t]+/, "", $0);print $0}' $TRG )
-#[[ -n $output ]] && $output || html

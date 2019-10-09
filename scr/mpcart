@@ -3,6 +3,31 @@
 # OA: Gavin Vales
 # CREATED: Fri  3 May 16:37:43 GMT 2019
 
+help () {
+cat << 'EOB'
+# mpcart
+- get album art of currently playing song in mpd
+
+## Usage
+
+```
+mpcart
+mpcart --help|-h
+```
+EOB
+echo "$1"
+exit
+}
+
+while true; do
+	case $1 in
+		--help | -h ) help ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
 COVER=$USER_TMP_DIR/mpcart.png
 rm -rf $COVER
 ffmpeg -i "$XDG_MUSIC_DIR/$(mpc -f %file% | head -n1)" $COVER &>/dev/null &

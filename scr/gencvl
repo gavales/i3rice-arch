@@ -10,7 +10,6 @@ EDITOR="gvim -f"
 help () {
 cat << 'EOB'
 # gencvl
-
 - job application cover letter generator using latex
 
 ## Usage
@@ -29,6 +28,8 @@ gencvl --help|-h
 	+ Print this help
 
 EOB
+echo "$1"
+exit
 }
 
 while true; do
@@ -43,7 +44,7 @@ done
 TIT="${@:-}"
 
 [[ -n $TIT ]] || TIT="$(echo "" | i3menu -c yellow -w 500 -p "Enter title: ")"
-[[ -n $TIT ]] || exit
+[[ -n $TIT ]] || help
 
 FLD="$(echo "${TIT}" | sed 's/\ //g')"
 [[ ! -d $CLDIR ]] && mkdir $CLDIR

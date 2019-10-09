@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-cat dunst-theme dunst-settings > dunstrc
-killall dunst

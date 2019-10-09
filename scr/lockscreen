@@ -1,5 +1,29 @@
 #!/usr/bin/env bash
 
+help () {
+cat << 'EOB'
+# lockscreen
+- i3lock-color wrapper
+
+## Usage
+
+```
+lockscreen
+```
+EOB
+echo "$1"
+exit
+}
+
+while true; do
+	case $1 in
+		--help | -h ) help ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
 PID=$(pidof i3lock)
 IMG=$(readlink -f $XDG_PICTURES_DIR/i3bg/current)
 bg0=$(themer -v "bg0 ") fg0=$(themer -v "acb ") acc=$(themer -v "acc ")

@@ -16,7 +16,7 @@ EDITOR="gvim -f"
 	}
 
 help () {
-	cat << 'EOB'
+cat << 'EOB'
 # ghb
 - a hugo blog wrapper script
 
