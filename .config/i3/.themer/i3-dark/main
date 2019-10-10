@@ -32,22 +32,22 @@ set $ws9  9
 set $ws10 10
 
 # //// COLORS
-set $bg3 #9e9e9e
-set $bg2 #b2b2b2
-set $bg1 #c6c6c6
-set $bg0 #dadada
-set $acb #6db0b0
-set $acc #008787
-set $acf #1d6060
-set $fg0 #3a3a3a
-set $fg1 #4e4e4e
-set $fg2 #626262
-set $fg3 #767676
-set $red #870100
-set $grn #005f00
-set $ylw #d8865f
-set $gnt #87025f
-set $cyn #0087af
+set $bg3 #797979
+set $bg2 #656565
+set $bg1 #515151
+set $bg0 #3d3d3d
+set $acb #32495a
+set $acc #285577
+set $acf #7a90a2
+set $fg0 #CDCBCD
+set $fg1 #b9b7b9
+set $fg2 #a5a3a5
+set $fg3 #918f91
+set $red #900000
+set $grn #009048
+set $ylw #904800
+set $gnt #900048
+set $cyn #009090
 set $t   ff
 
 # //// APPS
@@ -172,17 +172,17 @@ floating_modifier   $WNI
 # //// Numbers
 $WIN+grave          $exn "notify-send $(i3gm)"
 $WIN+1              $QUD -f 1
-$WIN+Shift+1        $RUN -i i3main -e '$EDT i3main -e vim $home/.config/i3/template_main'
+$WIN+Shift+1        $RUN -i i3main -e '$EDT i3main -e vim $home/.config/i3/.themer/template_main'
 $WIN+2              $QUD -f 2
-$WIN+Shift+2        $RUN -i i3vars -e '$EDT i3vars -e vim $home/.config/i3/template_vars'
+$WIN+Shift+2        $RUN -i i3vars -e '$EDT i3vars -e vim $home/.config/i3/.themer/template_vars'
 $WIN+3              $QUD -f 3
 $WIN+Shift+3        $RUN -i bashrc -e '$EDT bashrc -e vim $home/.bashrc'
 $WIN+4              $QUD -f 4
 $WIN+Shift+4        $RUN -i vimrc -e '$EDT vimrc -e vim $home/.vimrc'
 $WIN+Shift+5        $RUN -i rngrc -e '$EDT rngrc -e vim $home/.config/ranger/rc.conf'
 $WIN+Shift+6        $RUN -i rngrl -e '$EDT rngrl -e vim $home/.config/ranger/rifle.conf'
-$WIN+Shift+7        $RUN -i polyb -e '$EDT polyb -e vim $home/.config/polybar/template_config'
-$WIN+Shift+8        $RUN -i quteb -e '$EDT quteb -e vim $home/.config/qutebrowser/template_config.py'
+$WIN+Shift+7        $RUN -i polyb -e '$EDT polyb -e vim $home/.config/polybar/.themer/template_config'
+$WIN+Shift+8        $RUN -i quteb -e '$EDT quteb -e vim $home/.config/qutebrowser/.themer/template_config.py'
 
 # //// 1st Row
 $WIN+q              $QUD -m 1

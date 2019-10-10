@@ -172,17 +172,17 @@ floating_modifier   $WNI
 # //// Numbers
 $WIN+grave          $exn "notify-send $(i3gm)"
 $WIN+1              $QUD -f 1
-$WIN+Shift+1        $RUN -i i3main -e '$EDT i3main -e vim $home/.config/i3/template_main'
+$WIN+Shift+1        $RUN -i i3main -e '$EDT i3main -e vim $home/.config/i3/.themer/template_main'
 $WIN+2              $QUD -f 2
-$WIN+Shift+2        $RUN -i i3vars -e '$EDT i3vars -e vim $home/.config/i3/template_vars'
+$WIN+Shift+2        $RUN -i i3vars -e '$EDT i3vars -e vim $home/.config/i3/.themer/template_vars'
 $WIN+3              $QUD -f 3
 $WIN+Shift+3        $RUN -i bashrc -e '$EDT bashrc -e vim $home/.bashrc'
 $WIN+4              $QUD -f 4
 $WIN+Shift+4        $RUN -i vimrc -e '$EDT vimrc -e vim $home/.vimrc'
 $WIN+Shift+5        $RUN -i rngrc -e '$EDT rngrc -e vim $home/.config/ranger/rc.conf'
 $WIN+Shift+6        $RUN -i rngrl -e '$EDT rngrl -e vim $home/.config/ranger/rifle.conf'
-$WIN+Shift+7        $RUN -i polyb -e '$EDT polyb -e vim $home/.config/polybar/template_config'
-$WIN+Shift+8        $RUN -i quteb -e '$EDT quteb -e vim $home/.config/qutebrowser/template_config.py'
+$WIN+Shift+7        $RUN -i polyb -e '$EDT polyb -e vim $home/.config/polybar/.themer/template_config'
+$WIN+Shift+8        $RUN -i quteb -e '$EDT quteb -e vim $home/.config/qutebrowser/.themer/template_config.py'
 
 # //// 1st Row
 $WIN+q              $QUD -m 1

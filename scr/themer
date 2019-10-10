@@ -553,6 +553,11 @@ gui-change () {
 		}
 }
 
+gen_apply () {
+local DIR
+DIR="${1}"
+}
+
 O_change () {
 	[[ -n $1 ]] && cat ${TDR}/${1} > $CUR || gui-change
 	cat $CUR | sed '/^\!/d' > $ALL
@@ -661,19 +666,40 @@ O_new () {
 	echo "Theme ${NTHM##*/} created"
 }
 
+O_init () {
+	[[ -z ${1} ]] && DIR="$(pwd)" || DIR="${1}"
+	cd $DIR
+	[[ -f "${DIR}/.themer" ]] || mkdir "${DIR}/.themer"
+[[ -f "${DIR}/.themer_pre"  ]] || cat > "${DIR}/.themer_pre" <<EOB
+#!/usr/bin/env bash
+# To run before applying theme
+EOB
+[[ -f "${DIR}/.themer_post" ]] || cat > "${DIR}/.themer_post" <<EOB
+#!/usr/bin/env bash
+# To run after applying theme
+for i in \$(ls ${DIR}/.themer | grep '^template_'); do
+	cp "${DIR}/.themer/\${1}/\${i/template_}" "${DIR}/\${i/template_}"
+done
+EOB
+chmod +x "${DIR}/.themer_pre"
+chmod +x "${DIR}/.themer_post"
+echo "${DIR}" >> ${DIRS}
+}
+
 while true; do
 	case $1 in
 		--updatelist   | -u ) O_updatelist            ; shift ;;
-		--getvar       | -v ) O_getvar "${2:-}"       ; shift ;;
-		--new          | -n ) O_new "${2:-}"          ; shift ;;
-		--list         | -l ) O_list "${2:-}"         ; shift ;;
-		--change       | -c ) O_change "${2:-}"       ; shift ;;
+		--getvar       | -v ) O_getvar       "${2:-}" ; shift ;;
+		--new          | -n ) O_new          "${2:-}" ; shift ;;
+		--list         | -l ) O_list         "${2:-}" ; shift ;;
+		--change       | -c ) O_change       "${2:-}" ; shift ;;
 		--apply-single | -a ) O_apply-single "${2:-}" ; shift ;;
 		--apply-all    | -A ) O_apply-all             ; shift ;;
-		--delete       | -d ) O_delete "${2:-}"       ; shift ;;
+		--delete       | -d ) O_delete       "${2:-}" ; shift ;;
+		--auto-dark    | -t ) O_auto-dark    "${2:-}" ; shift ;;
+		--init         | -i ) O_init         "${2:-}" ; shift ;;
 		--dark         | -D ) DARK=1  ;;
 		--force        | -f ) FORCE=1 ;;
-		--auto-dark    | -t ) O_auto-dark "${2:-}"    ; shift ;;
 		--help         | -h ) help ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;

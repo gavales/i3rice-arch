@@ -50,9 +50,11 @@ nnoremap <C-H> :tabprevious<return>
 nnoremap <C-L> :tabNext<return>
 
 inoremap \ph   <++>
-inoremap ()    ()<Esc>F)i
+inoremap ()    ()<++><Esc>F)i
 inoremap []    []<++><Esc>F]i
 inoremap {}    {}<++><Esc>F}i
+inoremap ""    ""<++><Esc>F"i
+inoremap ''    ''<++><Esc>F'i
 
 vnoremap <C-c> "+y
 vnoremap <S-j> :m '>+1<CR>gv=gv
@@ -538,18 +540,19 @@ autocmd FileType sh inoremap opt<Tab> while getopts ::<++> opts; do
 	\<Enter><BS>done<Esc>06kf:a
 autocmd FileType sh inoremap lop<Tab> while true; do
 	\<Enter>case $1 in
-	\<Enter><Tab>-- \| -<++> ) __o<++>="${2:-}" ; shift ;;
+	\<Enter><Tab>-- \| -<++> ) <++>="${2:-}" ; shift ;;
+	\<Enter>--help \| -h ) help ; shift ;;
 	\<Enter>-- ) shift ; break ;;
 	\<Enter>*  ) break         ;;
 	\<Enter><BS>esac
 	\<Enter>shift
-	\<Enter><BS>done<Esc>05kf-ea
+	\<Enter><BS>done<Esc>06kf-ea
 autocmd FileType sh inoremap whi<Tab> while ; do
 	\<Enter><++>
 	\<Enter><BS>done<Esc>02kf;i
-autocmd FileType sh inoremap fun<Tab> * () {
+autocmd FileType sh inoremap fun<Tab> <space>() {
 	\<Enter><++>
-	\<Enter><BS>}<Esc>02kf*xi
+	\<Enter><BS>}<Esc>02ki
 autocmd FileType sh inoremap for<Tab> for i in *; do
 	\<Enter><++>
 	\<Enter><BS>done<Esc>02kf*xi
