@@ -20,8 +20,8 @@
 
 ! >>>> themer theme: grayscale ├
 
-#define cwhtl #ececec
-#define cwhtd #616161
+#define cwhtl #444444
+#define cwhtd #b5b5b5
 #define credd #cc241d
 #define credl #cc241d
 #define cgrnd #009048
@@ -34,8 +34,8 @@
 #define cgntl #900048
 #define ccynd #009090
 #define ccynl #009090
-#define cblkd #444444
-#define cblkl #585858
+#define cblkd #ececec
+#define cblkl #d8d8d8
 
 ! >>>> 1vars                  ├
 

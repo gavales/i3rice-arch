@@ -646,7 +646,7 @@ O_list () {
 	[[ -z $1 ]] && exit
 	case $1 in
 		vars) awk '{key=$1;$1="";gsub(/^[ \t]+/, "", $0);printf "%-19s%s\n", "%%" key "%%", $0;}' $ALL ;;
-		vars-rofi) cat $ALR | i3menu -w 800 ;;
+		vars-rofi) cat $ALR | rofi -dmenu -markup-rows -lines $(cat $ALR | wc -l) ;;
 		themes)    ls ${TDR} ;;
 		defaults) awk '{key=$1;$1="";gsub(/^[ \t]+/, "", $0);printf "%-19s%s\n", "%%" key "%%", $0;}' $DEF ;;
 	esac
