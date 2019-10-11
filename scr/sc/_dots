@@ -1,8 +1,8 @@
 # first key is D
 b   ~/git/i3rice-arch/.bashrc
-im  ~/git/i3rice-arch/.config/i3/template_main
-iv  ~/git/i3rice-arch/.config/i3/template_vars
-p   ~/git/i3rice-arch/.config/polybar/template_config
+im  ~/git/i3rice-arch/.config/i3/.themer/template_main
+iv  ~/git/i3rice-arch/.config/i3/.themer/template_vars
+p   ~/git/i3rice-arch/.config/polybar/.themer/template_config
 rc  ~/git/i3rice-arch/.config/ranger/rc.conf
 rr  ~/git/i3rice-arch/.config/ranger/rifle.conf
 sd  ~/scr/sc/_dots

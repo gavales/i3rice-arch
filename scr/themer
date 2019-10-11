@@ -3,7 +3,7 @@
 # OA: Gavin Vales
 # CREATED: Mon 29 Jul 19:21:39 BST 2019
 
-TDR=$HOME/.config/themer DEF=${TDR}/.defaults
+TDR=$HOME/.config/themer DEF=${TDR}/_defaults
 create_def () {
 cat > $DEF << 'EOB'
 ! vim:ft=perl
@@ -79,8 +79,8 @@ exit
 [[ -d $TDR ]] || mkdir $TDR
 [[ -f $DEF ]] || create_def
 vrt=light
-CUR=${TDR}/.current ALL=${TDR}/.allvars ALR=${TDR}/.allvarsrofi RGX=${TDR}/.regex
-DIRS=${TDR}/.dirs LST=${TDR}/.themelist
+CUR=${TDR}/_current ALL=${TDR}/.allvars ALR=${TDR}/.allvarsrofi RGX=${TDR}/.regex
+DIRS=${TDR}/_dirs LST=${TDR}/.themelist
 TIME=$(date | awk '{print $4}')
 TIME=${TIME%%:*}
 
@@ -95,11 +95,16 @@ Inspired by budlabs' mondo-generator from the AUR.
 ```
 themer [--dark|-D|--auto-dark|-t] [--change|-c|--new|-n] <name>
 themer [--getvar|-v] <variable>
-themer [--list|-l] themes|vars|vars-rofi|defaults
+themer [--list|-l] themes|vars|varmenu|default|current
 themer [--force|-f] [--apply-single|-a] <directory>
 themer [--apply-all|-A|--updatelist|-u]
 themer --help|-h
 themer
+```
+## Dependencies
+
+```
+Dependencies: rofi xsel
 ```
 
 ## Options
@@ -129,11 +134,13 @@ themer
 + `--new|-n <name>`
 	+ Create theme `<name>`.
 
-+ `--list|-l themes|vars|vars-rofi|defaults`
++ `--list|-l themes|vars|varmenu|default|current`
 	+ themes = list themes in $THEMER_DIR.
-	+ defaults = list default variables
-	+ vars = list vars of current theme.
-	+ vars-rofi = rofi list of variables in current theme.
+	+ default = list default variables
+	+ current = list variables specific to current theme name
+	+ vars = list all variables in the correct syntax
+	+ varmenu = rofi list of all variables. selected
+	item is automatically copied to the clipboard
 
 + `--updatelist|-u`
 	+ Update rofi theme list for -c.
@@ -155,8 +162,8 @@ themer
 
 ### My Default theme
 
-```
-$ themer --list defaults
+```sh
+$ themer --list default
 name           default
 guifont        $romanfont
 font           CMUTypewriterText
@@ -200,7 +207,7 @@ You can also reference variables using a '$' in front
 of the variable name in the theme file and you can
 also mix colours.
 
-```
+```sh
 $ cat ~/.config/themer/dosnerd
   name      dosnerd
   bg0       #DFBF9F
@@ -212,8 +219,15 @@ $ cat ~/.config/themer/dosnerd
 
 ## Generating Themes
 
-```
-themer --change <theme>
+```sh
+$ themer --change dosnerd
+$ themer --list current
+  %%name%%      dosnerd
+  %%bg0%%       #DFBF9F
+  %%acc%%       #d5715e
+  %%fg0%%       #1F1F1F
+  %%blu%%       $acc
+  %%mix%%       colmix 33:$bg0 66:$acc
 ```
 
 to change the current theme and generate all variables,
@@ -231,21 +245,29 @@ all the variables of the current theme.
 
 For example, an `.Xresources` theme:
 
-```
+### Setup
+
+```sh
 $ cd $HOME
-$ mkdir .themer
+$ themer --init
 $ cp .Xresources .themer/template_.Xresources
+$ mv .Xresources .Xresources_old        # backup!
 $ tree $HOME
   /home/user
   ├── .themer
   │   └── template_.Xresources
-  └── .Xresources
+  ├── .Xresources_old
+  ├── .themer_pre
+  └── .themer_post
 ```
 
-Replace all colours or other things with the variables of
-the current theme to get the `.Xresources` template below.
+### Edit the template
 
-```
+Replacing all colours or other things with the variables of
+the current theme in the `template_.Xresources` gives the
+below.
+
+```sh
 $ cat ~/.themer/template_.Xresources
 !! vim:ft=xdefaults
 
@@ -328,15 +350,18 @@ in "R, G, B" form eg. `%%bg0RGB%%`.
 Use `@@color@@` instead of `%%color%%` to get hex color
 without '#'. Useful for `#AARRGGBB` colours.
 
-Create .themer_pre and .themer_post bash scripts in
-the `<directory>` to eg. reload the .Xresources file (below) etc.
-before/after applying a theme. These scripts have the
-current theme name, eg. `dosnerd`, as their first argument.
-If they are not present, then the file created by applying
-the theme is just copied into the specified `<directory>`.
+The .themer_pre and .themer_post bash scripts in
+the `<directory>` are used to do things before/after
+applying the theme eg. reload the .Xresources file
+(below) etc.  These scripts have the current theme name,
+eg. `dosnerd`, as their first argument. Obviously, the
+shebang can be changed. My `.Xresources` .themer_post
+is shown below.
 
-```
-#!/bin/bash
+### `.themer_pre` & `.themer_post`
+
+```sh
+#!/usr/bin/env bash
 # requires you to use urxvtd & urxvtc
 # see budlabs "Let's Linux #021: urxvt reload-config"
 # https://www.youtube.com/watch?v=37jo_x6bXBk
@@ -348,16 +373,33 @@ xrdb -load $XRS
 kill -1 $(pidof urxvtd)
 ```
 
-```
+## Applying Themes
+
+### `--apply-single`
+
+```sh
 themer -a $HOME
 ```
 
 to apply the theme to each template in `$HOME/.themer`.
 
-If the theme is dosnerd, this will result in the following
-tree structure in `$HOME`:
+### `--apply-all`
 
+```sh
+themer --apply-all
 ```
+
+to apply theme to all directories listed in
+$THEMER_DIR/.dirs
+
+### The result
+
+Both of the above options will result in the following
+directory structure for our dosnerd theme `.Xresources`
+example. Both options will also run the `.themer_pre`
+& `.themer_post` scripts too.
+
+```sh
 $ cd $HOME
 $ tree $HOME
   /home/user
@@ -367,17 +409,11 @@ $ tree $HOME
   │   ├── dosnerd-dark
   │   │   └── .Xresources
   │   └── template_.Xresources
-  ├── .Xresources
+  ├── .Xresources_old
+  ├── .Xresources               # the new .Xresources!
   ├── .themer_pre
   └── .themer_post
 ```
-
-```
-themer --apply-all
-```
-
-to apply theme to all directories listed in
-$THEMER_DIR/.dirs
 
 EOB
 exit
@@ -510,17 +546,20 @@ create-rofi-list () {
 	wpr=$(sed '/^wallpaper /!d;s/[^ ]* *//' $ALL)
 	CLST1=$TDR/.colorlist1 CLST2=$TDR/.colorlist2 VLST1=$TDR/.varlist
 	[[ -n $wpr ]] || wpr=$acc
-	echo "				<b><big>$(cat $ALL | sed '/^name/!d;s/[^ ]* *//')</big></b>" > $ALR
-	echo "wallpaper $wpr" > $VLST1
-	cat $ALL | sed "/^wallpaper/d;/^name/d;/#/d;/,/d" >> $VLST1
+	awk '!/^name|#|,/ {
+		var=$1; $1=""; gsub(/^[ \t]+/, "", $0); val=$0;
+		printf "%-15s%s\n", val" ", var
+		}' $ALL > $VLST1
 	IFS=$'\n'
-	awk -v bg0="$bg0" -v fg0="$fg0" ' /#/ && /^bg|^fg|^ac/ {
+	awk ' /#/ && /^bg|^fg|^ac/ {
 		var=$1; $1=""; gsub(/^[ \t]+/, "", $0); val=$0;
-		print "<span background=\"" val "\">   </span><span foreground=\"" fg0 "\" background=\"" bg0 "\"> " var " " val " </span>";}' $ALL > $CLST1
-	awk -v bg0="$bg0" -v fg0="$fg0" ' /#/ && !/^bg|^fg|^ac/ {
+		printf "%-54s%s\n", "<span background=\"" val "\">   </span> " val, var
+		}' $ALL > $CLST1
+	awk ' /#/ && !/^bg|^fg|^ac/ {
 		var=$1; $1=""; gsub(/^[ \t]+/, "", $0); val=$0;
-		print "<span background=\"" val "\">   </span><span foreground=\"" fg0 "\" background=\"" bg0 "\"> " var " " val " </span>";}' $ALL > $CLST2
-	paste $CLST1 $CLST2 $VLST1 >> $ALR
+		printf "%-54s%s\n", "<span background=\"" val "\">   </span> " val, var
+		}' $ALL > $CLST2
+	cat $CLST1 $CLST2 $VLST1 > $ALR
 	rm $CLST1 $CLST2 $VLST1
 }
 
@@ -650,10 +689,28 @@ O_updatelist () {
 O_list () {
 	[[ -z $1 ]] && exit
 	case $1 in
-		vars) awk '{key=$1;$1="";gsub(/^[ \t]+/, "", $0);printf "%-19s%s\n", "%%" key "%%", $0;}' $ALL ;;
-		vars-rofi) cat $ALR | rofi -dmenu -markup-rows -lines $(cat $ALR | wc -l) ;;
-		themes)    ls ${TDR} ;;
-		defaults) awk '{key=$1;$1="";gsub(/^[ \t]+/, "", $0);printf "%-19s%s\n", "%%" key "%%", $0;}' $DEF ;;
+		vars)    awk '!/!/ {
+				key=$1;$1="";gsub(/^[ \t]+/, "", $0)
+				printf "%-19s%s\n", "%%" key "%%", $0
+				}' $ALL
+			;;
+		current) awk '!/!/ {
+				key=$1;$1="";gsub(/^[ \t]+/, "", $0)
+				printf "%-19s%s\n", "%%" key "%%", $0
+				}' $CUR
+			;;
+		default) awk '!/!/ {
+				key=$1;$1="";gsub(/^[ \t]+/, "", $0)
+				printf "%-19s%s\n", "%%" key "%%", $0
+				}' $DEF
+			;;
+		varmenu)
+			echo -n $(themer -v "$(cat $ALR | rofi -dmenu -p "$(themer -v name)" \
+					-markup-rows -lines 25 -columns 3 | \
+					awk '{print $NF}') ") | \
+				xsel -i; xsel -o | xsel -i -b 
+			;;
+		themes)  ls ${TDR} | grep -v '^_';;
 	esac
 }
 

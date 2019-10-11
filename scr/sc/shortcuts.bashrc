@@ -1,8 +1,8 @@
 # >>>> shortcuts
 alias Db="openvim ~/git/i3rice-arch/.bashrc"
-alias Dim="openvim ~/git/i3rice-arch/.config/i3/template_main"
-alias Div="openvim ~/git/i3rice-arch/.config/i3/template_vars"
-alias Dp="openvim ~/git/i3rice-arch/.config/polybar/template_config"
+alias Dim="openvim ~/git/i3rice-arch/.config/i3/.themer/template_main"
+alias Div="openvim ~/git/i3rice-arch/.config/i3/.themer/template_vars"
+alias Dp="openvim ~/git/i3rice-arch/.config/polybar/.themer/template_config"
 alias Drc="openvim ~/git/i3rice-arch/.config/ranger/rc.conf"
 alias Drr="openvim ~/git/i3rice-arch/.config/ranger/rifle.conf"
 alias Dsd="openvim ~/scr/sc/_dots"

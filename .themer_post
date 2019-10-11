@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-cp ".themer/${1}/.gtkrc-2.0" ".gtkrc-2.0"
-cp ".themer/${1}/.guivimrc" ".guivimrc"
+cp ".themer/${1}/.gtkrc-2.0" "$HOME/.gtkrc-2.0"
+cp ".themer/${1}/.guivimrc" "$HOME/.guivimrc"

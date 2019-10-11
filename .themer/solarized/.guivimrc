@@ -1,0 +1,10 @@
+"set guifont=Ubuntu\ Mono\ Regular:h20
+set guifont=CMUTypewriterText\ 13
+set guioptions-=m "remove menu bar
+set guioptions-=T "remove toolbar
+set guioptions-=r "remove right-hand scroll bar
+set guioptions-=L "remove left-hand scroll bar
+"colorscheme off
+set linespace=0
+"set lines=999 columns=999
+"au GUIEnter * simalt ~x
