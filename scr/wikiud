@@ -38,9 +38,19 @@ cat $BSE > ${BSE/_base/}
 for i in $(ls -l | sed '/^d/d;/^total/d' | awk '{print $NF}'); do
 	CHK=$(cat $i | grep '\-\-help')
 	[[ -n $CHK ]] && {
-		echo "# [${i}](https://github.com/StillANixRookie/i3rice-arch/blob/master/scr/${i})
-" >  ${TRG}/doc/${i}.md
+		$i --help | awk -v SCR="${i}" -v TRG="${TRG}/doc/${i}.md" -v BSE="${BSE/_base/}" '
+		BEGIN {
+			print "# [" SCR "](https://github.com/StillANixRookie/i3rice-arch/blob/master/scr/" SCR ")" > TRG
+			print "	- [" SCR "](https://github.com/StillANixRookie/i3rice-arch/wiki/" SCR ")" >> BSE
+			}
+		/^## / {
+			key=$1;$1=""
+			gsub(/^[ \t]+/, "", $0)
+			gsub(/[ \t]/, "-", $0)
+			mix=tolower($0)
+			print "		- [" mix "](https://github.com/StillANixRookie/i3rice-arch/wiki/" SCR "#" mix ")" >> TRG
+			}
+		'
 		$i --help >> ${TRG}/doc/${i}.md
-		echo "	- [${i}](https://github.com/StillANixRookie/i3rice-arch/wiki/${i})" >> ${BSE/_base/}
 		}
 done

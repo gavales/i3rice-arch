@@ -1,5 +1,21 @@
+open_with 1
+mkdir UNI
+rename marks
+rename ucas
+mkdir plmed
+rename ebks
+rename lit
+rename fritz
+rename mine
+rename py
+rename qr
+rename quads
+shell ex %f
+shell tar -xJf %f
+touch 
 shell -p #
 rename .themelist_
+
 rename 
 rename forest-night
 rename forest-dawn
@@ -14,37 +30,21 @@ shell bash %f
 rename i3lch
 open_with m
 shell mkwalscheme %f
-rename i3config.md
-rename _themer.vim
-
-rename .themer_post
-rename _gtkrc-2.0
-rename _guivimrc
-rename .gtkrc-2.0
-rename .guivimrc
-mkdir .themer
-rename .gtkrc-2.0.
-rename old
-rename _config
-rename .unused
-rename init.el
-mkdir .themes
-shell Standard-light
-shell mkdir Standard-light
-shell git clone https://github.com/Ferdi265/numix-solarized-gtk-theme.git
-shell git clone https://github.com/StillANixRookie/numix.git
-shell themer --init
-rename numix_
+mkdir _themer
+rename template_Standard-da.colors
+rename template_%%name%%.colors
+rename template_%%name%%-dark.colors
+rename template_%%%%name%%%%-dark.colors
+rename template_%%%%name%%%%.colors
+shell wget https://raw.githubusercontent.com/StillANixRookie/numix/master/template_Standard-dark.colors
+shell wget https://raw.githubusercontent.com/StillANixRookie/numix/master/template_Standard-light.colors
 rename template_dark.colors
-rename template_Themer.colors
-rename template_Themer-dark.colors
-rename themeri3.png
-rename themer-i3.png
-rename themer-gruvbox.png
-rename themer-redrock.png
-rename themer-solarized.png
-rename nikes.jpg
-rename Jericoacoara,Brazil.jpg
-rename JericoacoaraBrazil.jpg
-rename MunnarKeralaIndia.jpg
-rename PenedodoGuinchoLisbonPortugal.jpg
+rename template_light.colors
+rename post-apply
+rename _post-apply
+rename .themer
+rename .themer_post
+rename template_.colors
+rename _defaults
+rename _dirs
+rename _current
