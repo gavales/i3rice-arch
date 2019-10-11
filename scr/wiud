@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: Fri 11 Oct 21:00:20 BST 2019
+# source /home/gavarch/.config/user-dirs.dirs
+
+while true; do
+	case $1 in
+		--<++> | -<++> ) <++>="${2:-}" ; shift ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+

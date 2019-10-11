@@ -1,17 +1,5 @@
 [![Sparkline](https://stars.medv.io/StillANixRookie/i3rice-arch.svg)](https://stars.medv.io/StillANixRookie/i3rice-arch)
 
-# Scrots
-
-![gruvbox](themer-gruvbox.png "gruvbox")
-
-![i3](themer-i3.png "i3")
-
-![nikes](themer-nikes.png "nikes")
-
-![redrock](themer-redrock.png "redrock")
-
-![solarized](themer-solarized.png "solarized")
-
 # Main Install
 
 First check UEFI:
@@ -89,6 +77,18 @@ Now you should just have to exit the chroot, ```umount -R``` your arch drive, an
 + ```wget https://raw.githubusercontent.com/StillANixRookie/i3rice-arch/master/postarch```
 + ```bash postarch```
 # Walls
+
+![gruvbox](themer-gruvbox.png "gruvbox")
+
+![i3](themer-i3.png "i3")
+
+![nikes](themer-nikes.png "nikes")
+
+![redrock](themer-redrock.png "redrock")
+
+![solarized](themer-solarized.png "solarized")
+
+# Scrots
 
 ![Munnar Kerala India](MunnarKeralaIndia.jpg "gruvbox")
 

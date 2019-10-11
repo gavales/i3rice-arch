@@ -101,6 +101,7 @@ themer [--apply-all|-A|--updatelist|-u]
 themer --help|-h
 themer
 ```
+
 ## Dependencies
 
 ```
@@ -157,6 +158,27 @@ rofi xsel
 + `--help|-h`
 	+ Display this help.
 
+## Scrots
+
+![gruvbox](themer-gruvbox.png "gruvbox")
+
+![i3](themer-i3.png "i3")
+
+![nikes](themer-nikes.png "nikes")
+
+![redrock](themer-redrock.png "redrock")
+
+![solarized](themer-solarized.png "solarized")
+
+![Munnar Kerala India](MunnarKeralaIndia.jpg "gruvbox")
+
+![Penedo do Guicho Lisbon Portugal](PenedodoGuichoLisbonPortugal.jpg "i3")
+
+![Jericoacoara Brazil](JericoacoaraBrazil.jpg "nikes")
+
+![Valley of Fire State Park Overton NV](ValleyofFireStateParkOvertonNV.jpg "redrock")
+
+![solarized](WW_128000000001428569_EN.jpg "solarized")
 
 ## Making Themes
 
