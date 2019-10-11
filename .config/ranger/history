@@ -1,13 +1,3 @@
-rename ebks
-rename lit
-rename fritz
-rename mine
-rename py
-rename qr
-rename quads
-shell ex %f
-shell tar -xJf %f
-touch 
 shell -p #
 rename .themelist_
 rename 
@@ -48,3 +38,13 @@ rename numix_
 rename template_dark.colors
 rename template_Themer.colors
 rename template_Themer-dark.colors
+rename themeri3.png
+rename themer-i3.png
+rename themer-gruvbox.png
+rename themer-redrock.png
+rename themer-solarized.png
+rename nikes.jpg
+rename Jericoacoara,Brazil.jpg
+rename JericoacoaraBrazil.jpg
+rename MunnarKeralaIndia.jpg
+rename PenedodoGuinchoLisbonPortugal.jpg

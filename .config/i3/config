@@ -69,22 +69,22 @@ set $ws9  9
 set $ws10 10
 
 # //// COLORS
-set $bg3 #babab8
-set $bg2 #cececc
-set $bg1 #e2e2e0
-set $bg0 #f6f6f4
-set $acb #d5b0b8
-set $acc #b46b7d
-set $acf #724d56
-set $fg0 #303030
-set $fg1 #444444
-set $fg2 #585858
-set $fg3 #6c6c6c
-set $red #ff4845
-set $grn #47aa12
-set $ylw #ff890a
-set $gnt #288ad6
-set $cyn #6bb4a2
+set $bg3 #918f91
+set $bg2 #a5a3a5
+set $bg1 #b9b7b9
+set $bg0 #CDCBCD
+set $acb #7a90a2
+set $acc #285577
+set $acf #32495a
+set $fg0 #3d3d3d
+set $fg1 #515151
+set $fg2 #656565
+set $fg3 #797979
+set $red #900000
+set $grn #009048
+set $ylw #904800
+set $gnt #900048
+set $cyn #009090
 set $t   ff
 
 # //// APPS
@@ -117,7 +117,7 @@ $ALW+Shift+button4  move left
 $ALW+button5        focus right
 $ALW+Shift+button5  move right
 $ALT+space          focus mode_toggle
-$ALT+Shift+space    $exn i3flttg
+$ALT+Shift+space    floating toggle
 $ALT+Ctrl+Right     workspace next
 $ALT+Ctrl+Left      workspace prev
 bindsym Print       $exn screenshot

@@ -1,0 +1,45 @@
+conky.config = {
+	alignment = 'top_left',
+	background = true,
+	color2 = '689d6a',
+	color3 = '486249',
+	cpu_avg_samples = 2,
+	default_color = '486249',
+	double_buffer = true,
+	font = 'Lucida Sans:size=11',
+	gap_x = 25,
+	gap_y = 13,
+	minimum_width = 200,
+	no_buffers = true,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = true,
+	update_interval = 1.0,
+	use_xft = true,
+}
+conky.text = [[
+${voffset 25}$color2${font Lucida Sans:bold:size=60}${time %R} \
+${voffset -25}$color3${font Lucida Sans:bold:oblique:size=20}  $alignr${time %A}
+${voffset -10}$color3${font Lucida Sans:bold:oblique:size=20}  $alignr${time %e %b %Y}
+
+${voffset -5}${color}CPU${font Lucida Sans:bold:size=14}$alignr$cpu%
+${voffset 5}${font Lucida Sans:size=14}$color2${top name 1}$alignr$color${top cpu 1}%
+$color2${top name 2}$alignr$color${top cpu 2}%
+$color2${top name 3}$alignr$color${top cpu 3}%
+$color2${top name 4}$alignr$color${top cpu 4}%
+$color2${top name 5}$alignr$color${top cpu 5}%
+
+${voffset 1}${color2}${font Lucida Sans:bold:oblique:size=40}Weather
+${voffset -65}${color}${font Lucida Sans:size=14}
+${execi -1 curl -s http://wttr.in/sou?format=%22%l:+%C+%t+%w+%p%22}
+${execi -1 curl -s http://wttr.in/goi?format=%22%l:+%C+%t+%w+%p%22}
+
+${voffset 1}${color2}${font Lucida Sans:bold:oblique:size=40}TODO
+${voffset -65}${color}${font Lucida Sans:size=14}
+${exec cat $HOME/dtp/TODO}
+
+${voffset 1}${color2}${font Lucida Sans:bold:oblique:size=40}Notes
+${voffset -65}${color}${font Lucida Sans:size=14}
+${exec cat $HOME/dtp/NOTES}
+
+]]

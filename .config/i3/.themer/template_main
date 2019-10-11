@@ -80,7 +80,7 @@ $ALW+Shift+button4  move left
 $ALW+button5        focus right
 $ALW+Shift+button5  move right
 $ALT+space          focus mode_toggle
-$ALT+Shift+space    $exn i3flttg
+$ALT+Shift+space    floating toggle
 $ALT+Ctrl+Right     workspace next
 $ALT+Ctrl+Left      workspace prev
 bindsym Print       $exn screenshot

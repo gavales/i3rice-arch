@@ -2,11 +2,15 @@
 
 # Scrots
 
-![Theme 1](thm1.png "Theme 1")
+![gruvbox](themer-gruvbox.png "gruvbox")
 
-![Theme 2](thm2.png "Theme 2")
+![i3](themer-i3.png "i3")
 
-![Theme 3](thm3.png "Theme 3")
+![nikes](themer-nikes.png "nikes")
+
+![redrock](themer-redrock.png "redrock")
+
+![solarized](themer-solarized.png "solarized")
 
 # Main Install
 
@@ -86,9 +90,13 @@ Now you should just have to exit the chroot, ```umount -R``` your arch drive, an
 + ```bash postarch```
 # Walls
 
-![Wall 1](wall1.png "Wall 1")
+![Munnar Kerala India](MunnarKeralaIndia.jpg "gruvbox")
 
-![Wall 2](wall2.png "Wall 2")
+![Penedo do Guicho Lisbon Portugal](PenedodoGuichoLisbonPortugal.jpg "i3")
 
-![Wall 3](wall3.png "Wall 3")
+![Jericoacoara Brazil](JericoacoaraBrazil.jpg "nikes")
+
+![Valley of Fire State Park Overton NV](ValleyofFireStateParkOvertonNV.jpg "redrock")
+
+![solarized](WW_128000000001428569_EN.jpg "solarized")
 

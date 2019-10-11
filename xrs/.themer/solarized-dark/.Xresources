@@ -1,0 +1,184 @@
+!! vim:ft=xdefaults
+! >>>> default theme: i3      ├
+
+#define cwhtl #302f30
+#define cwhtd #7a90a2
+#define credd #900000
+#define credl #601718
+#define cgrnd #009048
+#define cgrnl #185f3c
+#define cylwd #904800
+#define cylwl #603b18
+#define cblud #285577
+#define cblul #2c4253
+#define cgntd #900048
+#define cgntl #60173c
+#define ccynd #009090
+#define ccynl #185f60
+#define cblkd #CDCBCD
+#define cblkl #b9b7b9
+
+! >>>> themer theme: solarized-dark ├
+
+#define cwhtl #fdf6e3
+#define cwhtd #156667
+#define credd #dc322f
+#define credl #dc322f
+#define cgrnd #859900
+#define cgrnl #859900
+#define cylwd #b58900
+#define cylwl #b58900
+#define cblud #2aa198
+#define cblul #2aa198
+#define cgntd #d33682
+#define cgntl #d33682
+#define ccynd #268bd2
+#define ccynl #268bd2
+#define cblkd #002b36
+#define cblkl #143f4a
+
+! >>>> 1vars                  ├
+
+#define fontname  CMUTypewriterText
+#define fontsize  12
+#define fontsize2 12
+
+! >>>> 2colorvars             ├
+
+*background:             cblkd
+*foreground:             cwhtl
+*fading:                 30
+*fadeColor:              black
+*cursorColor:            credd
+*pointerColorBackground: cblkd
+*pointerColorForeground: ccynd
+*border:                 cblkd
+
+*color0:                 cblkd
+*color1:                 credd
+*color2:                 cgrnd
+*color3:                 cylwd
+*color4:                 cblud
+*color5:                 cgntd
+*color6:                 ccynd
+*color7:                 cwhtd
+*color8:                 cblkl
+*color9:                 credl
+*color10:                cgrnl
+*color11:                cylwl
+*color12:                cblul
+*color13:                cgntl
+*color14:                ccynl
+*color15:                cwhtl
+
+! >>>> 3rofi                  ├
+
+!rofi.width:           400
+!rofi.lines:           15
+!rofi.location:        1
+!rofi.padding:         10
+!rofi.yoffset:         20
+!rofi.xoffset:         0
+rofi.show-icons:       true
+!rofi.line-margin:     10
+!rofi.hide-scrollbar:  true
+!
+rofi.modi:             ssh,window,drun,run
+rofi.sidebar-mode:     true
+rofi.terminal:         urxvt
+rofi.ssh-client:       ssh
+rofi.ssh-command:      {terminal} -e "{ssh-client} {host}"
+rofi.opacity:          50
+!rofi.columns:         1
+rofi.font:             fontname fontsize2
+rofi.fg:               cblud
+rofi.bg:               cwhtl
+rofi.fg-active:        cwhtl
+rofi.fg-urgent:        cwhtl
+rofi.hlfg-active:      ccynd
+rofi.hlfg-urgent:      ccynd
+rofi.bg-active:        cwhtl
+rofi.bg-urgent:        cwhtl
+rofi.hlbg-active:      cwhtd
+rofi.hlbg-urgent:      cwhtd
+rofi.bgalt:            cwhtl
+rofi.hlfg:             cwhtl
+rofi.hlbg:             cwhtl
+rofi.bc:               ccynd
+!State:                bg      fg      bgalt     hlbg    hlfg
+rofi.color-normal:     cwhtl,  cblkd,  cwhtl,    cblud,  cblkd
+!                      background  border
+rofi.color-window:     cwhtl,      cwhtl
+!rofi.bw:              10
+rofi.levenshtein-sort: true
+rofi.case-sensitive:   false
+rofi.fuzzy:            false
+rofi.separator-style:  none
+rofi.markup-rows:      false
+
+! >>>> 4xft                   ├
+
+Xft.dpi:       96
+Xft.antialias: true
+Xft.hinting:   true
+Xft.rgba:      rgb
+Xft.autohint:  false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+! >>>> 5xterm                 ├
+
+XTerm*foreground:        cwhtl
+XTerm*background:        cblkl
+! XTerm*pointerColor:    ccynd
+XTerm*faceName:          fontname
+XTerm*faceSize:          16
+! XTerm*reverseVideo:    on
+XTerm*selectToClipboard: true
+
+! >>>> 6xcursor               ├
+
+Xcursor.theme: Bibata_Dark_Red
+Xcursor.size:  36
+
+! >>>> 7urxvt                 ├
+
+URxvt.font:                 xft:fontname:size=fontsize, xft:FontAwesome:size=9
+
+URxvt*fading:               0
+URxvt*depth:                0
+URxvt*scrollBar:            false
+!URxvt*scrollBar_right:     true
+!URxvt*scrollColor:         cblkl
+!URxvt*troughColor:         cblkd
+!URxvt*scrollstyle:         plain
+URxvt*mouseWheelScrollPage: false
+URxvt*cursorBlink:          true
+URxvt*background:           cblkd
+URxvt*foreground:           cwhtl
+URxvt*saveLines:            5000
+URxvt*useColor:             true
+URxvt*internalBorder:       0
+URxvt*letterSpace:          1
+URxvt*lineSpace:            3
+
+!! for 'fake' transparency (without Compton) uncomment the following three lines
+!URxvt*inheritPixmap:       true
+!URxvt*transparent:         true
+!URxvt*shading:             138
+
+! >>>> 8urxvtext              ├
+
+URxvt*perl-ext-common:      default,matcher,resize-font,config-reload
+!URxvt*perl-lib:            /home/gavarch/.urxvt/ext
+URxvt*url-launcher:         /usr/bin/google-chrome-beta
+URxvt*matcher.button:       1
+! URxvt*keysym.C-y:         clipboard:copy
+! URxvt*keysym.C-a:         clipboard:paste
+URxvt*keysym.C-I:           resize-font:smaller
+URxvt*keysym.C-U:           resize-font:bigger
+URxvt*keysym.C-Y:           resize-font:reset
+! URxvt*tabbed.autohide:    true
+! URxvt*keysym.C-t:         perl:tabbedex:new_tab
+! URxvt*keysym.C-Tab:       perl:tabbedex:next_tab
+! URxvt*keysym.C-Shift-Tab: perl:tabbedex:prev_tab
