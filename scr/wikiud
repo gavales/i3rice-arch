@@ -40,17 +40,23 @@ for i in $(ls -l | sed '/^d/d;/^total/d' | awk '{print $NF}'); do
 	[[ -n $CHK ]] && {
 		$i --help | awk -v SCR="${i}" -v TRG="${TRG}/doc/${i}.md" -v BSE="${BSE/_base/}" '
 		BEGIN {
-			print "# [" SCR "](https://github.com/StillANixRookie/i3rice-arch/blob/master/scr/" SCR ")" > TRG
+			c=0
+			print "### _[ master/scr/" SCR "](https://github.com/StillANixRookie/i3rice-arch/blob/master/scr/" SCR ")_" > TRG
+			print "### _[ raw ](https://raw.githubusercontent.com/StillANixRookie/i3rice-arch/master/scr/" SCR ")_" > TRG
+			print "|     | Table of Contents |" >> TRG
+			print "|:---:|:--- |" >> TRG
 			print "	- [" SCR "](https://github.com/StillANixRookie/i3rice-arch/wiki/" SCR ")" >> BSE
 			}
 		/^## / {
+			c+=1
 			key=$1;$1=""
 			gsub(/^[ \t]+/, "", $0)
+			OLD=$0
 			gsub(/[ \t]/, "-", $0)
-			mix=tolower($0)
-			print "		- [" mix "](https://github.com/StillANixRookie/i3rice-arch/wiki/" SCR "#" mix ")" >> TRG
-			}
-		'
-		$i --help >> ${TRG}/doc/${i}.md
+			NEW=tolower($0)
+			print "|  "  c "  |[" OLD "](https://github.com/StillANixRookie/i3rice-arch/wiki/" SCR "#" NEW ")|" >> TRG
+#			print "		- [" OLD "](https://github.com/StillANixRookie/i3rice-arch/wiki/" SCR "#" NEW ")" >> BSE
+			}'
+		$i --help | sed '/^# /d' >> ${TRG}/doc/${i}.md
 		}
 done
