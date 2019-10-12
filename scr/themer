@@ -608,10 +608,9 @@ gui-change () {
 	THM=${THM##* }
 	notify-send "Chosen theme is $THM" -i "${SCR_DIR}pic/theme.png"
 	cd ${TDR}
-	[[ ! -f ${THM} ]] && notify-send "Theme don't exist"
-	[[ -z ${THM} ]]   && notify-send "No theme chosen" || {
-		notify-send "Theme exists" && cat ${THM} > ${CUR}
-		}
+	[[ -z ${THM} ]]            && notify-send "No theme chosen"   && exit
+	[[ ! -f ${TDR}/${THM} ]]   && notify-send "Theme don't exist" && exit
+	notify-send "Theme exists" && cat ${THM} > ${CUR}
 }
 
 gen_apply () {

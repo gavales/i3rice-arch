@@ -1,0 +1,24 @@
+conky.config = {
+	alignment = 'bottom_right',
+	background = true,
+	color2 = '689d6a',
+	color3 = 'b1c798',
+	cpu_avg_samples = 2,
+	default_color = 'b1c798',
+	double_buffer = true,
+	font = 'Lucida Sans:size=11',
+	gap_x = 25,
+	gap_y = 13,
+	minimum_width = 300,
+	no_buffers = true,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = true,
+	update_interval = 1.0,
+	use_xft = true,
+}
+conky.text = [[
+${voffset 1}${color2}${font Lucida Sans:bold:oblique:size=40}Watchlist
+${voffset -65}${color}${font Lucida Sans:size=14}
+${exec cat $HOME/dtp/WATCHLIST}
+]]
