@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-WPP=$(themer -v wallpaper)
+WPP="$(themer -v 'wallpaper ')"
 TNT="$(themer -v 'tint ')"
 [[ -n $WPP ]] || WPP=$(themer -v 'acc ')
 [[ -n $TNT ]] && TINT="-t $TNT" || TINT=" "
