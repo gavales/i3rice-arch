@@ -45,7 +45,7 @@ for i in $(ls -l | sed '/^d/d;/^total/d' | awk '{print $NF}'); do
 			print "### _[ raw ](https://raw.githubusercontent.com/StillANixRookie/i3rice-arch/master/scr/" SCR ")_" > TRG
 			print "|     | Table of Contents |" >> TRG
 			print "|:---:|:--- |" >> TRG
-			print "	- [" SCR "](https://github.com/StillANixRookie/i3rice-arch/wiki/" SCR ")" >> BSE
+			print "- [" SCR "](https://github.com/StillANixRookie/i3rice-arch/wiki/" SCR ")" >> BSE
 			}
 		/^## / {
 			c+=1
