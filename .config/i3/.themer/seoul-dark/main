@@ -1,36 +1,3 @@
-#   ██ ██████                             ████ ██        
-#  ▒▒ ▒█▒▒▒▒█                            ▒██▒ ▒▒   █████ 
-#   ██▒    ▒█  █████   ██████  ███████  ██████ ██ ██▒▒▒██
-#  ▒██   ████ ██▒▒▒██ ██▒▒▒▒██▒▒██▒▒▒██▒▒▒██▒ ▒██▒██  ▒██
-#  ▒██  ▒▒▒▒█▒██  ▒▒ ▒██   ▒██ ▒██  ▒██  ▒██  ▒██▒▒██████
-#  ▒██ █   ▒█▒██   ██▒██   ▒██ ▒██  ▒██  ▒██  ▒██ ▒▒▒▒▒██
-#  ▒██▒██████▒▒█████ ▒▒██████  ███  ▒██  ▒██  ▒██  █████ 
-#  ▒▒ ▒▒▒▒▒▒  ▒▒▒▒▒   ▒▒▒▒▒▒  ▒▒▒   ▒▒   ▒▒   ▒▒  ▒▒▒▒▒  
-
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
-
-# >>>> MAIN
-set $font1 Luxi Mono
-set $font2 FontAwesome
-set $font3 monaco
-set $fonts 11
-
-font pango:$font1,$font2 $fonts
-
-set $home      /home/gavarch
-set $term      urxvtc
-set $browser   google-chrome-beta
-set $brightinc light -A 10
-set $brightdec light -U 10
-set $nat       eDP1
-set $vga       VGA1
-set $hdm       HDMI1
-set $kb        gb
-
-set $mediaw    492
-set $mediaw2   492
-set $mediah    299
-set $mediah2   389
 # >>>> MAIN VARS
 # //// i3
 set $ADI Mod1

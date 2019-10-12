@@ -27,11 +27,13 @@ s/\\\&/\&/g;s/[\]\"//g;s/[$]//g;s/[\]//g;
 }
 
 help () {
-	echo "## Usage
+cat << 'EOB'
+## Usage
 ```
-bibtorefer <bib_file>.bib"
+bibtorefer <bib_file>.bib
 ```
-	exit
+EOB
+exit
 }
 
 while true; do
