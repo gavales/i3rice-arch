@@ -19,54 +19,22 @@ set $FEN floating enabled
 set $FDI floating disabled
 set $BNR border normal
 
-# //// WORKSPACE NAMES
-set $ws1  1
-set $ws2  2
-set $ws3  3
-set $ws4  4
-set $ws5  5
-set $ws6  6
-set $ws7  7
-set $ws8  8
-set $ws9  9
-set $ws10 10
-
-# //// COLORS
-set $bg3 %%bg3%%
-set $bg2 %%bg2%%
-set $bg1 %%bg1%%
-set $bg0 %%bg0%%
-set $acb %%acb%%
-set $acc %%acc%%
-set $acf %%acf%%
-set $fg0 %%fg0%%
-set $fg1 %%fg1%%
-set $fg2 %%fg2%%
-set $fg3 %%fg3%%
-set $red %%red%%
-set $grn %%grn%%
-set $ylw %%ylw%%
-set $gnt %%gnt%%
-set $cyn %%cyn%%
-set $t   ff
-
 # //// APPS
+set $HM  /home/gavarch
 set $TRM urxvtc
 set $EDT urxvtc -name
 set $BAP google-chrome-beta
 set $FFX firefox
 set $THN thunar
-set $LUP light -A 10
-set $LDN light -U 10
 
 # >>>> DECORATIONS
-# class                 brdr bkgr text indi chlb
-client.focused          $acc $acb $fg0 $acb $acc
-client.focused_inactive $acc $acc $fg0 $acc $acc
-client.unfocused        $acc $acc $bg0 $acc $acc
-client.urgent           $red $red $fg0 $red $red
-client.placeholder      $bg0 $bg0 $fg0 $bg0 $bg0
-client.background       $bg0
+# class                 brdr    bkgr    text    indi    chlb
+client.focused          %%acc%% %%acb%% %%fg0%% %%acb%% %%acc%%
+client.focused_inactive %%acc%% %%acc%% %%fg0%% %%acc%% %%acc%%
+client.unfocused        %%acc%% %%acc%% %%bg0%% %%acc%% %%acc%%
+client.urgent           %%red%% %%red%% %%fg0%% %%red%% %%red%%
+client.placeholder      %%bg0%% %%bg0%% %%fg0%% %%bg0%% %%bg0%%
+client.background       %%bg0%%
 
 # >>>> MOD1 BINDINGS
 # //// Misc
@@ -87,16 +55,16 @@ bindsym Print       $exn screenshot
 
 # //// Numbers
 $ALT+grave          $exn gencvl
-$ALT+1              workspace $ws1
-$ALT+Shift+1        move container to workspace $ws1; workspace $ws1
-$ALT+2              workspace $ws2
-$ALT+Shift+2        move container to workspace $ws2; workspace $ws2
-$ALT+3              workspace $ws3
-$ALT+Shift+3        move container to workspace $ws3; workspace $ws3
-$ALT+4              workspace $ws4
-$ALT+Shift+4        move container to workspace $ws4; workspace $ws4
-$ALT+5              workspace $ws5
-$ALT+Shift+5        move container to workspace $ws5; workspace $ws5
+$ALT+1              workspace 1
+$ALT+Shift+1        move container to workspace 1; workspace 1
+$ALT+2              workspace 2
+$ALT+Shift+2        move container to workspace 2; workspace 2
+$ALT+3              workspace 3
+$ALT+Shift+3        move container to workspace 3; workspace 3
+$ALT+4              workspace 4
+$ALT+Shift+4        move container to workspace 4; workspace 4
+$ALT+5              workspace 5
+$ALT+Shift+5        move container to workspace 5; workspace 5
 $ALT+minus          $QUD -m 2 -l
 $ALT+equal          $QUD -m 3
 
@@ -131,10 +99,10 @@ $ALT+Shift+s        $RUN -c Spotify -e 'spotify'
 $ALT+Ctrl+s         sticky toggle
 $ALT+d              $exn i3menu -s -l 0
 $ALT+Shift+d        $exn i3menu -d
-$ALT+f              $exn thunar
+$ALT+f              $exn $THN
 $ALT+Shift+f        fullscreen toggle
 $ALT+g              split toggle
-$ALT+Shift+g        $exn $TRM -name drive_sync -e bash $home/$scr/grivesync
+$ALT+Shift+g        $exn $TRM -name drive_sync -e bash $HM/scr/grivesync
 $ALT+h              $exn i3viswiz left
 $ALT+Shift+h        $exn i3move left
 $ALT+j              $exn i3viswiz down
@@ -156,7 +124,7 @@ $ALT+c              $RUN -c Firefox -e '$FFX'
 $ALT+Shift+c        $exn xtheme --auto-dark 7:20
 $ALT+v              $RUN -i visualiser -e '$TRM -name visualiser -e vis'
 $ALT+Shift+v        $exn projectM-pulseaudio
-$ALT+b              $RUN -i references -e '$TRM -name references -e vim $home/Drive/global.bib'
+$ALT+b              $RUN -i references -e '$TRM -name references -e vim $HM/Drive/global.bib'
 $ALT+Shift+b        $exn polybar-msg cmd hide
 $ALT+n              $RUN -n ^Netflix$ -e '$BAP --new-window --app=https://www.netflix.com/'
 $ALT+m              $exn surf docs.google.com/presentation/u/0/
@@ -172,17 +140,17 @@ floating_modifier   $WNI
 # //// Numbers
 $WIN+grave          $exn "notify-send $(i3gm)"
 $WIN+1              $QUD -f 1
-$WIN+Shift+1        $RUN -i i3main -e '$EDT i3main -e vim $home/.config/i3/.themer/template_main'
+$WIN+Shift+1        $RUN -i i3main -e '$EDT i3main -e vim $HM/.config/i3/.themer/template_main'
 $WIN+2              $QUD -f 2
-$WIN+Shift+2        $RUN -i i3vars -e '$EDT i3vars -e vim $home/.config/i3/.themer/template_vars'
+$WIN+Shift+2        $RUN -i i3vars -e '$EDT i3vars -e vim $HM/.config/i3/.themer/template_vars'
 $WIN+3              $QUD -f 3
-$WIN+Shift+3        $RUN -i bashrc -e '$EDT bashrc -e vim $home/.bashrc'
+$WIN+Shift+3        $RUN -i bashrc -e '$EDT bashrc -e vim $HM/.bashrc'
 $WIN+4              $QUD -f 4
-$WIN+Shift+4        $RUN -i vimrc -e '$EDT vimrc -e vim $home/.vimrc'
-$WIN+Shift+5        $RUN -i rngrc -e '$EDT rngrc -e vim $home/.config/ranger/rc.conf'
-$WIN+Shift+6        $RUN -i rngrl -e '$EDT rngrl -e vim $home/.config/ranger/rifle.conf'
-$WIN+Shift+7        $RUN -i polyb -e '$EDT polyb -e vim $home/.config/polybar/.themer/template_config'
-$WIN+Shift+8        $RUN -i quteb -e '$EDT quteb -e vim $home/.config/qutebrowser/.themer/template_config.py'
+$WIN+Shift+4        $RUN -i vimrc -e '$EDT vimrc -e vim $HM/.vimrc'
+$WIN+Shift+5        $RUN -i rngrc -e '$EDT rngrc -e vim $HM/.config/ranger/rc.conf'
+$WIN+Shift+6        $RUN -i rngrl -e '$EDT rngrl -e vim $HM/.config/ranger/rifle.conf'
+$WIN+Shift+7        $RUN -i polyb -e '$EDT polyb -e vim $HM/.config/polybar/.themer/template_config'
+$WIN+Shift+8        $RUN -i quteb -e '$EDT quteb -e vim $HM/.config/qutebrowser/.themer/template_config.py'
 
 # //// 1st Row
 $WIN+q              $QUD -m 1
@@ -207,9 +175,9 @@ $WIN+Shift+a        $exn wsloapp
 $WIN+s              $exn slack
 $WIN+Shift+s        $exn i3-sticky-toggle
 $WIN+d              move workspace to output $hdm
-$WIN+f              $exn gksu thunar
+$WIN+f              $exn gksu $THN
 $WIN+Shift+f        focus parent, fullscreen toggle, focus child
-$WIN+g              $exn $TRM -name gitcommit -e bash $home/$scr/gitcommit
+$WIN+g              $exn $TRM -name gitcommit -e bash $HM/scr/gitcommit
 $WIN+h              focus left
 $WIN+Shift+h        move left
 $WIN+j              focus down
@@ -243,11 +211,11 @@ $fw [urgent=latest] focus
 #focus_follows_mouse no
 
 # //// FLOATERS
-$fw [title="^Colour picker$"]              resize set 697 276
-$fw [title="Save Image"]                   resize set 750 500
-$fw [title="Open Files"]                   resize set 750 500
-$fw [title="Select a download location"]   resize set 750 500
-$fw [class="Pavucontrol"]                  resize set 525 300
+$fw [title="^Colour picker$"]            resize set 697 276
+$fw [title="Save Image"]                 resize set 750 500
+$fw [title="Open Files"]                 resize set 750 500
+$fw [title="Select a download location"] resize set 750 500
+$fw [class="Pavucontrol"]                resize set 525 300
 
 # //// QUAD
 $fw [title="Log in with PayPal"]         $tf "paypal"
@@ -295,6 +263,7 @@ $fw [instance="reddit"]                  focus;$QUD -m 2;focus;$tf "reddit"
 
 $fw [class="Gvim"]                       focus;$QUD -m 3;focus
 $fw [class="Firefox"]                    focus;$QUD -m 3;focus
+$fw [class="firefox"]                    focus;$QUD -m 3;focus
 $fw [class="Pamac-manager"]              focus;$QUD -m 3;focus;$tf "software"
 $fw [title="Google Chrome$"]             focus;$QUD -m 3;focus;$tf "chrome"
 $fw [instance="i3main"]                  focus;$QUD -m 3;focus;$tf "i3main"
@@ -313,8 +282,8 @@ $fw [instance="visualiser"]              focus;$QUD -m 4;focus;$tf "visualiser"
 # >>>> GAPS
 gaps inner 20
 gaps outer 40
-workspace $ws1 gaps inner 0
-workspace $ws1 gaps outer 0
+workspace 1 gaps inner 0
+workspace 1 gaps outer 0
 
 # >>>> STARTUP
 $exn urxvtd -q -o -f
@@ -334,7 +303,7 @@ $exn setxkbmap $kb
 $exn i3listen-toggle
 $exn reloadconfs
 
-$ena mpv $home/$scrmus/A\ Tone\ His\ Self.mp3
-$ena notify-send 'i3 (re)loaded!' -i $home/$scrpic/i3white.png
+$ena mpv $HM/scrmus/A\ Tone\ His\ Self.mp3
+$ena notify-send 'i3 (re)loaded!' -i $HM/scrpic/i3white.png
 
 # vim:ft=i3

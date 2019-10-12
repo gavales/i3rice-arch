@@ -24,11 +24,13 @@ s/^url/\%O/g;
 s/},//g;s/{//g;s/}//g;
 s/\\\&/\&/g;s/[\]\"//g;s/[$]//g;s/[\]//g;
 /^%A\ */s/\ and\ /\n%A\ /g;s/$//" > ${bib%.*}
-
 }
 
 help () {
-	echo "Usage: bibtorefer <bib_file>.bib"
+	echo "## Usage
+```
+bibtorefer <bib_file>.bib"
+```
 	exit
 }
 

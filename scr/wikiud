@@ -36,8 +36,7 @@ cd $SRC
 cat $BSE > ${BSE/_base/}
 
 for i in $(ls -l | sed '/^d/d;/^total/d' | awk '{print $NF}'); do
-	CHK=$(cat $i | grep '\-\-help')
-	[[ -n $CHK ]] && {
+	[[ -n $(grep '\-\-help' $i) ]] && {
 		$i --help | awk -v SCR="${i}" -v TRG="${TRG}/doc/${i}.md" -v BSE="${BSE/_base/}" '
 		BEGIN {
 			c=0
@@ -56,7 +55,8 @@ for i in $(ls -l | sed '/^d/d;/^total/d' | awk '{print $NF}'); do
 			NEW=tolower($0)
 			print "|  "  c "  |[" OLD "](https://github.com/StillANixRookie/i3rice-arch/wiki/" SCR "#" NEW ")|" >> TRG
 #			print "		- [" OLD "](https://github.com/StillANixRookie/i3rice-arch/wiki/" SCR "#" NEW ")" >> BSE
-			}'
+			}
+		'
 		$i --help | sed '/^# /d' >> ${TRG}/doc/${i}.md
 		}
 done

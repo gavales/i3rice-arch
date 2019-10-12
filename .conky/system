@@ -1,10 +1,10 @@
 conky.config = {
 	alignment = 'top_left',
 	background = true,
-	color2 = '689d6a',
-	color3 = '486249',
+	color2 = '008787',
+	color3 = '6db0b0',
 	cpu_avg_samples = 2,
-	default_color = '486249',
+	default_color = '6db0b0',
 	double_buffer = true,
 	font = 'Lucida Sans:size=11',
 	gap_x = 25,
