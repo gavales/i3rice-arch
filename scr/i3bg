@@ -126,7 +126,7 @@ tint () {
 	CRTNT="${NORM}/${CRLN##*/}-${TNT/\#/}"
 	[[ -f $CRTNT ]] || {
 		convert "$CURR" -fill "${TNT}" -tint 100 "$CRTNT"
-		convert "${CRTNT}" -blur 0x4 "${CRTNT/normal/blur}"
+		convert "${CRTNT}" -blur $blr"${CRTNT/normal/blur}"
 		}
 	ln -sf "$CRTNT" $CURR
 	CRLN=$(readlink -f $CURR)
@@ -134,8 +134,8 @@ tint () {
 
 colour () {
 	[[ ! -f ${COLS}/${WPP/\#/} ]] && \
-		convert $WHT -fill $WPP \
-		-draw 'color 0,0 replace' "${COLS}/${WPP/\#/}"
+#		convert $WHT -fill ${WPP} -tint 50 ${COLS}/${WPP/\#/}
+		convert $WHT -fill $WPP -draw 'color 0,0 replace' "${COLS}/${WPP/\#/}"
 	ln -sf "${COLS}/${WPP/\#/}" $CURR
 	set-wall
 	exit

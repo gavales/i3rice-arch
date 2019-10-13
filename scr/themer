@@ -688,7 +688,7 @@ O_getvar () {
 
 O_updatelist () {
 	cd $TDR
-	thms=$(ls)
+	thms=$(ls | grep -v '_')
 	rm $LST
 	for i in $thms; do
 		eval $(awk '

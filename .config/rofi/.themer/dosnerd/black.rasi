@@ -4,6 +4,6 @@
 	fg2:    #cbab8b;
 	bg2:    #1F1F1F;
 	bg1:    #333333;
-	redish: #cc241d;
+	redish: %%red%%;
 	font1: "CMUTypewriterText 12";
 	}

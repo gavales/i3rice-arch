@@ -3,17 +3,17 @@ width = 2
 color = "#DFBF9F"
 
 [urgency_low]
-background = "#009090"
+background = "%%cyn%%"
 foreground = "#DFBF9F"
 timeout = 3
 
 [urgency_normal]
-background = "#009090"
+background = "%%cyn%%"
 foreground = "#DFBF9F"
 timeout = 3
 
 [urgency_critical]
-background = "#cc241d"
+background = "%%red%%"
 foreground = "#DFBF9F"
 timeout = 3
 

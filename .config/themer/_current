@@ -1,9 +1,7 @@
 ! vim:ft=perl
-name            warm
-wallpaper       $ac12b
-fg0             #3f4e43
-acc             #68A8AD
-blu             #68A8AD
-bg0             #C4D4AF
-red             #F17D80
-gnt             #737495
+name            dosnerd
+wallpaper       random
+bg0             #DFBF9F
+acc             #d5715e
+fg0             #1F1F1F
+blu             $acc

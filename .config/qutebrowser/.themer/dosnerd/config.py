@@ -21,34 +21,34 @@ c.colors.completion.odd.bg                      = '#cbab8b'
 c.colors.completion.fg                          = ['#d5715e', '#1F1F1F', '#a38363']
 c.colors.completion.item.selected.bg            = '#d5715e'
 c.colors.completion.item.selected.fg            = '#cbab8b'
-c.colors.completion.item.selected.border.bottom = '#009048'
-c.colors.completion.item.selected.border.top    = '#009048'
+c.colors.completion.item.selected.border.bottom = '%%grn%%'
+c.colors.completion.item.selected.border.top    = '%%grn%%'
 c.colors.completion.match.fg                    = '#d5715e'
 c.colors.completion.scrollbar.bg                = '#cbab8b'
 c.colors.completion.scrollbar.fg                = '#1F1F1F'
 
 # //// downloads
 c.colors.downloads.bar.bg    = '#cbab8b'
-c.colors.downloads.error.bg  = '#cc241d'
+c.colors.downloads.error.bg  = '%%red%%'
 c.colors.downloads.error.fg  = '#1F1F1F'
 c.colors.downloads.start.bg  = '#d5715e'
 c.colors.downloads.start.fg  = '#1F1F1F'
-c.colors.downloads.stop.bg   = '#009048'
+c.colors.downloads.stop.bg   = '%%grn%%'
 c.colors.downloads.stop.fg   = '#1F1F1F'
 c.colors.downloads.system.bg = 'rgb' # rgb, hsv, hsl, none
 c.colors.downloads.system.fg = 'rgb' # rgb, hsv, hsl, none
 
 # //// hints
-c.colors.hints.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(144, 72, 0, 0.8), stop:1 rgba(144, 72, 0, 0.8))'
+c.colors.hints.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(%%ylwRGB%%, 0.8), stop:1 rgba(%%ylwRGB%%, 0.8))'
 c.colors.hints.fg          = '#1F1F1F'
-c.colors.hints.match.fg    = '#009048'
-c.colors.keyhint.bg        = 'rgba(144, 72, 0, 80%)'
+c.colors.hints.match.fg    = '%%grn%%'
+c.colors.keyhint.bg        = 'rgba(%%ylwRGB%%, 80%)'
 c.colors.keyhint.fg        = '#1F1F1F'
 c.colors.keyhint.suffix.fg = '#cbab8b'
 
 # //// errors
-c.colors.messages.error.bg     = '#cc241d'
-c.colors.messages.error.border = '#cc241d'
+c.colors.messages.error.bg     = '%%red%%'
+c.colors.messages.error.border = '%%red%%'
 c.colors.messages.error.fg     = '#1F1F1F'
 
 # //// info
@@ -57,8 +57,8 @@ c.colors.messages.info.border = '#1F1F1F'
 c.colors.messages.info.fg     = '#cbab8b'
 
 # //// warning
-c.colors.messages.warning.bg     = '#904800'
-c.colors.messages.warning.border = '#904800'
+c.colors.messages.warning.bg     = '%%ylw%%'
+c.colors.messages.warning.border = '%%ylw%%'
 c.colors.messages.warning.fg     = '#cbab8b'
 
 # //// prompts
@@ -68,15 +68,15 @@ c.colors.prompts.fg          = '#1F1F1F'
 c.colors.prompts.selected.bg = '#d5715e'
 
 # //// statusbar
-c.colors.statusbar.caret.fg             = '#900048'
+c.colors.statusbar.caret.fg             = '%%gnt%%'
 c.colors.statusbar.caret.bg             = '#cbab8b'
-c.colors.statusbar.caret.selection.fg   = '#900048'
+c.colors.statusbar.caret.selection.fg   = '%%gnt%%'
 c.colors.statusbar.caret.selection.bg   = '#cbab8b'
 c.colors.statusbar.command.fg           = '#1F1F1F'
 c.colors.statusbar.command.bg           = '#cbab8b'
 c.colors.statusbar.command.private.bg   = '#a38363'
 c.colors.statusbar.command.private.fg   = '#1F1F1F'
-c.colors.statusbar.insert.fg            = '#009048'
+c.colors.statusbar.insert.fg            = '%%grn%%'
 c.colors.statusbar.insert.bg            = '#cbab8b'
 c.colors.statusbar.normal.fg            = '#d5715e'
 c.colors.statusbar.normal.bg            = '#cbab8b'
@@ -85,12 +85,12 @@ c.colors.statusbar.passthrough.fg       = '#1F1F1F'
 c.colors.statusbar.private.bg           = '#a38363'
 c.colors.statusbar.private.fg           = '#1F1F1F'
 c.colors.statusbar.progress.bg          = '#1F1F1F'
-c.colors.statusbar.url.error.fg         = '#cc241d'
+c.colors.statusbar.url.error.fg         = '%%red%%'
 c.colors.statusbar.url.fg               = '#1F1F1F'
 c.colors.statusbar.url.hover.fg         = '#d5715e'
 c.colors.statusbar.url.success.http.fg  = '#1F1F1F'
 c.colors.statusbar.url.success.https.fg = '#1F1F1F'
-c.colors.statusbar.url.warn.fg          = '#904800'
+c.colors.statusbar.url.warn.fg          = '%%ylw%%'
 
 # //// tabs
 c.colors.tabs.bar.bg           = '#cbab8b'
@@ -98,9 +98,9 @@ c.colors.tabs.even.bg          = '#cbab8b'
 c.colors.tabs.even.fg          = '#1F1F1F'
 c.colors.tabs.odd.bg           = '#cbab8b'
 c.colors.tabs.odd.fg           = '#1F1F1F'
-c.colors.tabs.indicator.error  = '#cc241d'
+c.colors.tabs.indicator.error  = '%%red%%'
 c.colors.tabs.indicator.start  = '#d5715e'
-c.colors.tabs.indicator.stop   = '#009048'
+c.colors.tabs.indicator.stop   = '%%grn%%'
 c.colors.tabs.indicator.system = 'rgb' # rgb, hsv, hsl, none
 c.colors.tabs.selected.even.bg = '#d5715e'
 c.colors.tabs.selected.even.fg = '#cbab8b'
@@ -226,7 +226,7 @@ c.editor.encoding = 'utf-8'
 # //// hints
 c.hints.auto_follow                = 'unique-match' # always, unique-match, full-match, never
 c.hints.auto_follow_timeout        = 0
-c.hints.border                     = '1px solid #904800'
+c.hints.border                     = '1px solid %%ylw%%'
 c.hints.chars                      = 'asdfghjkl'
 #c.hints.dictionary                 = '/usr/share/dict/words'
 c.hints.find_implementation        = 'python' # javascript, python

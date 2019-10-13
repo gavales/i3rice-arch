@@ -41,12 +41,12 @@ for i in $(ls -l | sed '/^d/d;/^total/d' | awk '{print $NF}'); do
 		BEGIN {
 			c=0
 			print "<div align=\"center\">" > TRG
-			print "	<h1>" SCR "</h1>" > TRG
-			print "</div>\n" > TRG
-			print "### _[ master/scr/" SCR "](https://github.com/StillANixRookie/i3rice-arch/blob/master/scr/" SCR ")_" > TRG
-			print "### _[ raw ](https://raw.githubusercontent.com/StillANixRookie/i3rice-arch/master/scr/" SCR ")_" > TRG
-			print "|     | Table of Contents |" > TRG
-			print "|:---:|:--- |" > TRG
+			print "	<h1>" SCR "</h1>" >> TRG
+			print "</div>\n" >> TRG
+			print "### _[ master/scr/" SCR "](https://github.com/StillANixRookie/i3rice-arch/blob/master/scr/" SCR ")_" >> TRG
+			print "### _[ raw ](https://raw.githubusercontent.com/StillANixRookie/i3rice-arch/master/scr/" SCR ")_" >> TRG
+			print "|     | Table of Contents |" >> TRG
+			print "|:---:|:--- |" >> TRG
 			print "- [" SCR "](https://github.com/StillANixRookie/i3rice-arch/wiki/" SCR ")" > BSE
 			}
 		/^## / {
@@ -56,8 +56,8 @@ for i in $(ls -l | sed '/^d/d;/^total/d' | awk '{print $NF}'); do
 			OLD=$0
 			gsub(/[ \t]/, "-", $0)
 			NEW=tolower($0)
-			print "|  "  c "  |[" OLD "](https://github.com/StillANixRookie/i3rice-arch/wiki/" SCR "#" NEW ")|" > TRG
-#			print "		- [" OLD "](https://github.com/StillANixRookie/i3rice-arch/wiki/" SCR "#" NEW ")" > BSE
+			print "|  "  c "  |[" OLD "](https://github.com/StillANixRookie/i3rice-arch/wiki/" SCR "#" NEW ")|" >> TRG
+#			print "		- [" OLD "](https://github.com/StillANixRookie/i3rice-arch/wiki/" SCR "#" NEW ")" >> BSE
 			}
 		'
 		$i --help | sed '/^# /d' >> ${TRG}/doc/${i}.md
