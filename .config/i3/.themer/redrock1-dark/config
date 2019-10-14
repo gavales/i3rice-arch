@@ -1,3 +1,36 @@
+#   ██ ██████                             ████ ██        
+#  ▒▒ ▒█▒▒▒▒█                            ▒██▒ ▒▒   █████ 
+#   ██▒    ▒█  █████   ██████  ███████  ██████ ██ ██▒▒▒██
+#  ▒██   ████ ██▒▒▒██ ██▒▒▒▒██▒▒██▒▒▒██▒▒▒██▒ ▒██▒██  ▒██
+#  ▒██  ▒▒▒▒█▒██  ▒▒ ▒██   ▒██ ▒██  ▒██  ▒██  ▒██▒▒██████
+#  ▒██ █   ▒█▒██   ██▒██   ▒██ ▒██  ▒██  ▒██  ▒██ ▒▒▒▒▒██
+#  ▒██▒██████▒▒█████ ▒▒██████  ███  ▒██  ▒██  ▒██  █████ 
+#  ▒▒ ▒▒▒▒▒▒  ▒▒▒▒▒   ▒▒▒▒▒▒  ▒▒▒   ▒▒   ▒▒   ▒▒  ▒▒▒▒▒  
+
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+
+# >>>> MAIN
+set $font1 Luxi Mono
+set $font2 FontAwesome
+set $font3 monaco
+set $fonts 11
+
+font pango:$font1,$font2 $fonts
+
+set $home      /home/gavarch
+set $term      urxvtc
+set $browser   google-chrome-beta
+set $brightinc light -A 10
+set $brightdec light -U 10
+set $nat       eDP1
+set $vga       VGA1
+set $hdm       HDMI1
+set $kb        gb
+
+set $mediaw    492
+set $mediaw2   492
+set $mediah    299
+set $mediah2   389
 # >>>> MAIN VARS
 # //// i3
 set $ADI Mod1
@@ -29,12 +62,12 @@ set $THN thunar
 
 # >>>> DECORATIONS
 # class                 brdr    bkgr    text    indi    chlb
-client.focused          #68A8AD #96beae #6C8672 #96beae #68A8AD
-client.focused_inactive #68A8AD #68A8AD #6C8672 #68A8AD #68A8AD
-client.unfocused        #68A8AD #68A8AD #C4D4AF #68A8AD #68A8AD
-client.urgent           #F17D80 #F17D80 #6C8672 #F17D80 #F17D80
-client.placeholder      #C4D4AF #C4D4AF #6C8672 #C4D4AF #C4D4AF
-client.background       #C4D4AF
+client.focused          #DC8E69 #8d6953 #f9efe9 #8d6953 #DC8E69
+client.focused_inactive #DC8E69 #DC8E69 #f9efe9 #DC8E69 #DC8E69
+client.unfocused        #DC8E69 #DC8E69 #3e443e #DC8E69 #DC8E69
+client.urgent           #6F90A7 #6F90A7 #f9efe9 #6F90A7 #6F90A7
+client.placeholder      #3e443e #3e443e #f9efe9 #3e443e #3e443e
+client.background       #3e443e
 
 # >>>> MOD1 BINDINGS
 # //// Misc

@@ -141,13 +141,13 @@ label-layout = %layout%
 format-background = #a75c4e
 format-foreground = #DFBF9F
 format-prefix-foreground = #DFBF9F
-label-indicator-background = %%gnt%%
+label-indicator-background = #900048
 format-padding = 0
 label-indicator-padding = 0
 label-indicator-margin = 1
 format-prefix-underline    = #a75c4e
 label-layout-underline     = #a75c4e
-label-indicator-underline  = %%gnt%%
+label-indicator-underline  = #900048
 
 [module/i3bg]
 type = custom/ipc

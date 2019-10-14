@@ -8,6 +8,7 @@ guifont            Luxi Mono
 font               CMUTypewriterText
 sansfont           Lucida Sans
 monofont           CMU Typewriter Text
+gvimfont           Luxi\\ Mono
 romanfont          Luxi Mono
 ltimex             1
 ltimey             90
@@ -19,8 +20,26 @@ gtk-icon           Tela-red-dark
 cursor             Bibata_Dark_Red
 conky_loc1         top_left
 conky_loc2         bottom_right
+red                #cc241d
+ylw                #904800
+grn                #009048
+cyn                #009090
+gnt                #900048
+rng                #d65d0e
 darkblu            #7a483e
 lightblu           #da987e
+darkred            #75211e
+lightred           #d5715e
+darkylw            #57330f
+lightylw           #b7834f
+darkgrn            #0f5733
+lightgrn           #6fa773
+darkcyn            #0f5757
+lightcyn           #6fa797
+darkgnt            #570f33
+lightgnt           #b75f73
+darkrng            #7a3e16
+lightrng           #da8e56
 fg3                #5b5b5b
 fg2                #474747
 fg1                #333333
@@ -47,8 +66,26 @@ bg0RGB             223, 191, 159
 accRGB             213, 113, 94
 fg0RGB             31, 31, 31
 bluRGB             213, 113, 94
+redRGB             204, 36, 29
+ylwRGB             144, 72, 0
+grnRGB             0, 144, 72
+cynRGB             0, 144, 144
+gntRGB             144, 0, 72
+rngRGB             214, 93, 14
 darkbluRGB         122, 72, 62
 lightbluRGB        218, 152, 126
+darkredRGB         117, 33, 30
+lightredRGB        213, 113, 94
+darkylwRGB         87, 51, 15
+lightylwRGB        183, 131, 79
+darkgrnRGB         15, 87, 51
+lightgrnRGB        111, 167, 115
+darkcynRGB         15, 87, 87
+lightcynRGB        111, 167, 151
+darkgntRGB         87, 15, 51
+lightgntRGB        183, 95, 115
+darkrngRGB         122, 62, 22
+lightrngRGB        218, 142, 86
 fg3RGB             91, 91, 91
 fg2RGB             71, 71, 71
 fg1RGB             51, 51, 51

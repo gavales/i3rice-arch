@@ -108,10 +108,22 @@ themer
 rofi xsel
 ```
 
+## Examples
+
+[[/images/themer-gruvbox.png|gruvbox]]
+
+[[/images/themer-i3.png|i3]]
+
+[[/images/themer-nikes.png|nikes]]
+
+[[/images/themer-redrock.png|redrock]]
+
+[[/images/themer-solarized.png|solarized]]
+
 ## Options
 
 + Run with no options to create defaults in:
-	+ $THEMER_DIR = $HOME/.config/themer
+	+ `$THEMER_DIR` = `$HOME/.config/themer`
 
 + `--change|-c <theme>`
 	+ Change current theme to `<theme>`.
@@ -122,10 +134,10 @@ rofi xsel
 	+ Apply current theme to `<directory>`.
 
 + `--apply-all|-A`
-	+ Apply current theme to directories listed in $THEMER_DIR/.dirs.
+	+ Apply current theme to directories listed in `$THEMER_DIR/.dirs`.
 
 + `--force|-f`
-	+ Use with --apply-(single|all) to force apply a theme, since themes
+	+ Use with `--apply-(single|all)` to force apply a theme, since themes
 	are not automatically generated from 'template_' files to speed up
 	applying the theme
 
@@ -136,15 +148,15 @@ rofi xsel
 	+ Create theme `<name>`.
 
 + `--list|-l themes|vars|varmenu|default|current`
-	+ themes = list themes in $THEMER_DIR.
-	+ default = list default variables
-	+ current = list variables specific to current theme name
-	+ vars = list all variables in the correct syntax
-	+ varmenu = rofi list of all variables. selected
-	item is automatically copied to the clipboard
+	+`themes`  = list themes in `$THEMER_DIR`.
+	+`default` = list default variables
+	+`current` = list variables specific to current theme name
+	+`vars`    = list all variables in the correct syntax
+	+`varmenu` = rofi list of all variables. Selected item
+	is automatically copied to the clipboard. 
 
 + `--updatelist|-u`
-	+ Update rofi theme list for -c.
+	+ Update the rofi theme list
 
 + `--dark|-D`
 	+ Dark mode (switches fgo and bg0).
@@ -157,28 +169,6 @@ rofi xsel
 
 + `--help|-h`
 	+ Display this help.
-
-## Scrots
-
-![gruvbox](themer-gruvbox.png "gruvbox")
-
-![i3](themer-i3.png "i3")
-
-![nikes](themer-nikes.png "nikes")
-
-![redrock](themer-redrock.png "redrock")
-
-![solarized](themer-solarized.png "solarized")
-
-![Munnar Kerala India](MunnarKeralaIndia.jpg "gruvbox")
-
-![Penedo do Guicho Lisbon Portugal](PenedodoGuichoLisbonPortugal.jpg "i3")
-
-![Jericoacoara Brazil](JericoacoaraBrazil.jpg "nikes")
-
-![Valley of Fire State Park Overton NV](ValleyofFireStateParkOvertonNV.jpg "redrock")
-
-![solarized](WW_128000000001428569_EN.jpg "solarized")
 
 ## Making Themes
 
@@ -221,11 +211,11 @@ fg0 [foreground], bg0 [background] and acc [accent]
 colour variables.
 
 The rest of the variables will be taken from the
-$THEMER_DIR/.default theme, created automatically,
-when the theme is generated. The .default theme
+`$THEMER_DIR/_default` theme, created automatically,
+when the theme is generated. The `_default` theme
 can be changed as you wish.
 
-You can also reference variables using a '$' in front
+You can also reference variables using a `$` in front
 of the variable name in the theme file and you can
 also mix colours.
 
@@ -252,16 +242,26 @@ $ themer --list current
   %%mix%%       colmix 33:$bg0 66:$acc
 ```
 
-to change the current theme and generate all variables,
-including fg0, bg0, and acc variations.
+to change the current theme and generate all variables.
+If no theme is specified, you are prompted with the below
+rofi menu:
+
+[[/images/thememenu.png|themer --change]]
+
+including fg0, bg0, and acc variations. These variations
+can be seen below.
+
+Use `themer --list vars` or `themer --list varmenu` to see
+all the variables of the current theme. `rofi` is invoked
+with `-normal-window` flag with the latter option so
+you can have this menu open and copy variables manually:
+
+[[/images/varmenu.png|themer --list varmenu]]
 
 Add `--dark` or `--auto-dark <am_time>:<pm_time>` to
 convert <theme> to a dark theme (just swaps `fg0` and `bg0`
-and renames the theme to `<name>-dark`),
-or uses light/dark version based on time of day, respectively.
-
-Use `themer --list vars` or `themer --list vars-rofi` to see
-all the variables of the current theme.
+and renames the theme to `<name>-dark`), or uses
+light/dark version based on time of day, respectively.
 
 ## Making Theme Template
 
@@ -285,38 +285,11 @@ $ tree $HOME
 
 ### Edit the template
 
-Replacing all colours or other things with the variables of
-the current theme in the `template_.Xresources` gives the
-below.
+Here's my template_.Xresources
 
 ```sh
 $ cat ~/.themer/template_.Xresources
 !! vim:ft=xdefaults
-
-#define fontname  %%font%%
-#define fontsize  %%rxvtsize%%
-#define fontsize2 %%rxvtsize%%
-
-!! >> default colours
-
-#define cwhtl #302f30
-#define cwhtd #7a90a2
-#define credd #900000
-#define credl #601718
-#define cgrnd #009048
-#define cgrnl #185f3c
-#define cylwd #904800
-#define cylwl #603b18
-#define cblud #285577
-#define cblul #2c4253
-#define cgntd #900048
-#define cgntl #60173c
-#define ccynd #009090
-#define ccynl #185f60
-#define cblkd #CDCBCD
-#define cblkl #b9b7b9
-
-!! >> themer colours: %%name%%
 
 #define cwhtl %%fg0%%
 #define cwhtd %%acb%%
@@ -334,6 +307,12 @@ $ cat ~/.themer/template_.Xresources
 #define ccynl %%cyn%%
 #define cblkd %%bg0%%
 #define cblkl %%bg1%%
+
+
+#define fontname  %%font%%
+#define fontsize  %%rxvtsize%%
+#define fontsize2 %%rxvtsize%%
+
 
 *background:             cblkd
 *foreground:             cwhtl
@@ -390,7 +369,7 @@ is shown below.
 
 XRS=$HOME/.Xresources
 
-cat ".themer/${1}/.Xresources" > $XRS
+cat ".themer/${1}/.Xresources" | sed "s/\%\%.*\%\%//g" > $XRS
 xrdb -load $XRS
 kill -1 $(pidof urxvtd)
 ```
@@ -412,7 +391,7 @@ themer --apply-all
 ```
 
 to apply theme to all directories listed in
-$THEMER_DIR/.dirs
+`$THEMER_DIR/.dirs`
 
 ### The result
 
@@ -436,6 +415,18 @@ $ tree $HOME
   ├── .themer_pre
   └── .themer_post
 ```
+
+## Walls
+
+[[/images/MunnarKeralaIndia.jpg|gruvbox]]
+
+[[/images/PenedodoGuinchoLisbonPortugal.jpg|i3]]
+
+[[/images/JericoacoaraBrazil.jpg|nikes]]
+
+[[/images/ValleyofFireStateParkOvertonNV.jpg|redrock]]
+
+[[/images/WW_128000000001428569_EN.jpg|solarized]]
 
 EOB
 exit
@@ -603,7 +594,8 @@ create-rgb () {
 }
 
 gui-change () {
-	THM=$(cat $LST | i3menu -p "Choose theme ")
+	THM=$(cat $LST | rofi -dmenu -p "Choose theme " \
+		-markup-rows -lines $(cat $LST | wc -l) -width 300)
 	THM=${THM% *}
 	THM=${THM##* }
 	notify-send "Chosen theme is $THM" -i "${SCR_DIR}pic/theme.png"
@@ -727,7 +719,7 @@ O_list () {
 			;;
 		varmenu)
 			echo -n $(themer -v "$(cat $ALR | rofi -dmenu -p "$(themer -v name)" \
-					-markup-rows -lines 25 -columns 3 | \
+					-markup-rows -lines 25 -columns 3 -normal-window| \
 					awk '{print $NF}') ") | \
 				xsel -i; xsel -o | xsel -i -b 
 			;;

@@ -1,23 +1,4 @@
 !! vim:ft=xdefaults
-! >>>> default theme: i3      ├
-
-#define cwhtl #302f30
-#define cwhtd #7a90a2
-#define credd #900000
-#define credl #601718
-#define cgrnd #009048
-#define cgrnl #185f3c
-#define cylwd #904800
-#define cylwl #603b18
-#define cblud #285577
-#define cblul #2c4253
-#define cgntd #900048
-#define cgntl #60173c
-#define ccynd #009090
-#define ccynl #185f60
-#define cblkd #CDCBCD
-#define cblkl #b9b7b9
-
 ! >>>> themer theme: redrock1-dark ├
 
 #define cwhtl #f9efe9
@@ -36,6 +17,57 @@
 #define ccynl #60c1b8
 #define cblkd #3e443e
 #define cblkl #525852
+
+! >>>> default theme: i3      ├
+
+#if cwhtl == #f9efe9
+	#define cwhtl #302f30
+#endif
+#if cwhtd == #8d6953
+	#define cwhtd #7a90a2
+#endif
+#if credd == #6F90A7
+	#define credd #900000
+#endif
+#if credl == #6F90A7
+	#define credl #601718
+ #endif
+#if cgrnd == #507C88
+	#define cgrnd #009048
+#endif
+#if cgrnl == #507C88
+	#define cgrnl #185f3c
+#endif
+#if cylwd == #A5896D
+	#define cylwd #904800
+#endif
+#if cylwl == #A5896D
+	#define cylwl #603b18
+#endif
+#if cblud == #DC8E69
+	#define cblud #285577
+#endif
+#if cblul == #DC8E69
+	#define cblul #2c4253
+#endif
+#if cgntd == #609AC1
+	#define cgntd #900048
+#endif
+#if cgntl == #609AC1
+	#define cgntl #60173c
+#endif
+#if ccynd == #60c1b8
+	#define ccynd #009090
+#endif
+#if ccynl == #60c1b8
+	#define ccynl #185f60
+#endif
+#if cblkd == #3e443e
+	#define cblkd #CDCBCD
+#endif
+#if cblkl == #525852
+	#define cblkl #b9b7b9
+#endif
 
 ! >>>> 1vars                  ├
 

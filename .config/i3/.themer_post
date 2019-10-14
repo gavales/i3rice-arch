@@ -7,7 +7,7 @@ i3Dir=$HOME/.config/i3
 
 cd $i3Dir
 
-cat ".themer/${1}/vars" ".themer/${1}/main" > config
+cp ".themer/${1}/config" config
 
 i3-msg reload
 #killall i3bar

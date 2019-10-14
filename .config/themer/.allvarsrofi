@@ -24,13 +24,32 @@
 <span background="#dcab8e">   </span> #dcab8e         ac75b
 <span background="#ddb597">   </span> #ddb597         ac88b
 <span background="#d5715e">   </span> #d5715e         blu
+<span background="#cc241d">   </span> #cc241d         red
+<span background="#904800">   </span> #904800         ylw
+<span background="#009048">   </span> #009048         grn
+<span background="#009090">   </span> #009090         cyn
+<span background="#900048">   </span> #900048         gnt
+<span background="#d65d0e">   </span> #d65d0e         rng
 <span background="#7a483e">   </span> #7a483e         darkblu
 <span background="#da987e">   </span> #da987e         lightblu
+<span background="#75211e">   </span> #75211e         darkred
+<span background="#d5715e">   </span> #d5715e         lightred
+<span background="#57330f">   </span> #57330f         darkylw
+<span background="#b7834f">   </span> #b7834f         lightylw
+<span background="#0f5733">   </span> #0f5733         darkgrn
+<span background="#6fa773">   </span> #6fa773         lightgrn
+<span background="#0f5757">   </span> #0f5757         darkcyn
+<span background="#6fa797">   </span> #6fa797         lightcyn
+<span background="#570f33">   </span> #570f33         darkgnt
+<span background="#b75f73">   </span> #b75f73         lightgnt
+<span background="#7a3e16">   </span> #7a3e16         darkrng
+<span background="#da8e56">   </span> #da8e56         lightrng
 random         wallpaper
 Luxi Mono      guifont
 CMUTypewriterText font
 Lucida Sans    sansfont
 CMU Typewriter Text monofont
+Luxi\\ Mono    gvimfont
 Luxi Mono      romanfont
 1              ltimex
 90             ltimey

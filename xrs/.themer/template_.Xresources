@@ -1,5 +1,5 @@
 !! vim:ft=xdefaults
-! >>>> themer theme: %%name%% ├
+! >>>> themer theme: %%name%%
 
 #define cwhtl %%fg0%%
 #define cwhtd %%acb%%
@@ -18,64 +18,64 @@
 #define cblkd %%bg0%%
 #define cblkl %%bg1%%
 
-! >>>> default theme: i3      ├
+! >>>> default theme: i3
 
 #ifndef cwhtl
 	#define cwhtl #302f30
 #endif
-#ifndef cwhtl
+#ifndef cwhtd
 	#define cwhtd #7a90a2
 #endif
-#ifndef cwhtl
+#ifndef credd
 	#define credd #900000
 #endif
-#ifndef cwhtl
+#ifndef credl
 	#define credl #601718
  #endif
-#ifndef cwhtl
+#ifndef cgrnd
 	#define cgrnd #009048
 #endif
-#ifndef cwhtl
+#ifndef cgrnl
 	#define cgrnl #185f3c
 #endif
-#ifndef cwhtl
+#ifndef cylwd
 	#define cylwd #904800
 #endif
-#ifndef cwhtl
+#ifndef cylwl
 	#define cylwl #603b18
 #endif
-#ifndef cwhtl
+#ifndef cblud
 	#define cblud #285577
 #endif
-#ifndef cwhtl
+#ifndef cblul
 	#define cblul #2c4253
 #endif
-#ifndef cwhtl
+#ifndef cgntd
 	#define cgntd #900048
 #endif
-#ifndef cwhtl
+#ifndef cgntl
 	#define cgntl #60173c
 #endif
-#ifndef cwhtl
+#ifndef ccynd
 	#define ccynd #009090
 #endif
-#ifndef cwhtl
+#ifndef ccynl
 	#define ccynl #185f60
 #endif
-#ifndef cwhtl
+#ifndef cblkd
 	#define cblkd #CDCBCD
 #endif
-#ifndef cwhtl
+#ifndef cblkl
 	#define cblkl #b9b7b9
 #endif
 
-! >>>> 1vars                  ├
+! >>>> 1vars
 
 #define fontname  %%font%%
 #define fontsize  %%rxvtsize%%
 #define fontsize2 %%rxvtsize%%
 
-! >>>> 2colorvars             ├
+! >>>> 2colorvars
 
 *background:             cblkd
 *foreground:             cwhtl
@@ -103,7 +103,7 @@
 *color14:                ccynl
 *color15:                cwhtl
 
-! >>>> 3rofi                  ├
+! >>>> 3rofi
 
 !rofi.width:           400
 !rofi.lines:           15
@@ -148,7 +148,7 @@ rofi.fuzzy:            false
 rofi.separator-style:  none
 rofi.markup-rows:      false
 
-! >>>> 4xft                   ├
+! >>>> 4xft
 
 Xft.dpi:       96
 Xft.antialias: true
@@ -158,7 +158,7 @@ Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-! >>>> 5xterm                 ├
+! >>>> 5xterm
 
 XTerm*foreground:        cwhtl
 XTerm*background:        cblkl
@@ -168,12 +168,12 @@ XTerm*faceSize:          16
 ! XTerm*reverseVideo:    on
 XTerm*selectToClipboard: true
 
-! >>>> 6xcursor               ├
+! >>>> 6xcursor
 
 Xcursor.theme: Bibata_Dark_Red
 Xcursor.size:  36
 
-! >>>> 7urxvt                 ├
+! >>>> 7urxvt
 
 URxvt.font:                 xft:fontname:size=fontsize, xft:FontAwesome:size=9
 
@@ -199,7 +199,7 @@ URxvt*lineSpace:            3
 !URxvt*transparent:         true
 !URxvt*shading:             138
 
-! >>>> 8urxvtext              ├
+! >>>> 8urxvtext
 
 URxvt*perl-ext-common:      default,matcher,resize-font,config-reload
 !URxvt*perl-lib:            /home/gavarch/.urxvt/ext

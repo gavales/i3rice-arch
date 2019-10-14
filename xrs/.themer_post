@@ -5,6 +5,6 @@
 
 XDIR=$HOME/xrs
 XRS=$HOME/.Xresources
-cat ".themer/${1}/.Xresources" > $XRS
+cat ".themer/${1}/.Xresources" | sed "s/\%\%.*\%\%//g" > $XRS
 xrdb -load $XRS
 kill -1 $(pidof urxvtd)

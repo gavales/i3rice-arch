@@ -31,8 +31,8 @@ cat << 'EOB'
 ## Usage
 
 ```
-i3quad [--move|-m] <con>
-i3quad [--fullscreen|-f]
+i3quad [--focus|-f|--move|-m] <con>
+i3quad [--fullscreen|-F]
 i3quad [--tile|-t]
 i3quad --help|-h
 ```
@@ -42,7 +42,10 @@ i3quad --help|-h
 + `--move|-m <con>`
 	+ Move window to mark `_W<con>`
 
-+ `--fullscreen|-f <con>`
++ `--focus|-f <con>`
+	+ Move window to mark `_W<con>`
+
++ `--fullscreen|-F <con>`
 	+ Toggle mark `_W<con>` fullscreen
 
 + `--tile|-t`
@@ -125,7 +128,7 @@ CMK4 () {
 	$I3 [con_mark="_W3"] split h
 }
 
-RSZ () {
+O_resize () {
 	MRK=_W${1%% *} CMD="i3-msg [con_mark=$MRK] resize "
 	W=${1% *}
 	W=${W#* }  WD=${W:0:1}
@@ -153,15 +156,17 @@ EXISTS () {
 	exit
 }
 
-TILE   () { $I3 floating disable && history "_tiled" ; exit ; }
-FLSCRN () { $I3 "[con_mark=_W${1}] focus; fullscreen toggle; focus child" ; exit ; }
+O_tile       () { $I3 floating disable && history "_tiled" ; exit ; }
+O_fullscreen () { $I3 "[con_mark=_W${1}] focus; fullscreen toggle; focus child" ; exit ; }
+O_focus      () { $I3 "[con_mark=_W${1}] focus; focus child" ; exit ; }
 
 while true; do
 	case $1 in
 		--move       | -m ) MRK="_W${2:-}" ; shift ;;
-		--fullscreen | -f ) FLSCRN "${2:-}" ;;
-		--resize     | -r ) RSZ "${2:-}"    ;;
-		--tile       | -t ) TILE ;;
+		--fullscreen | -F ) O_fullscreen  "${2:-}" ;;
+		--focus      | -f ) O_focus       "${2:-}" ;;
+		--resize     | -r ) O_resize      "${2:-}" ;;
+		--tile       | -t ) O_tile ;;
 		--help       | -h ) help ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;

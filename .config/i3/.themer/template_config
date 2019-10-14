@@ -1,3 +1,36 @@
+#   ██ ██████                             ████ ██        
+#  ▒▒ ▒█▒▒▒▒█                            ▒██▒ ▒▒   █████ 
+#   ██▒    ▒█  █████   ██████  ███████  ██████ ██ ██▒▒▒██
+#  ▒██   ████ ██▒▒▒██ ██▒▒▒▒██▒▒██▒▒▒██▒▒▒██▒ ▒██▒██  ▒██
+#  ▒██  ▒▒▒▒█▒██  ▒▒ ▒██   ▒██ ▒██  ▒██  ▒██  ▒██▒▒██████
+#  ▒██ █   ▒█▒██   ██▒██   ▒██ ▒██  ▒██  ▒██  ▒██ ▒▒▒▒▒██
+#  ▒██▒██████▒▒█████ ▒▒██████  ███  ▒██  ▒██  ▒██  █████ 
+#  ▒▒ ▒▒▒▒▒▒  ▒▒▒▒▒   ▒▒▒▒▒▒  ▒▒▒   ▒▒   ▒▒   ▒▒  ▒▒▒▒▒  
+
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+
+# >>>> MAIN
+set $font1 %%romanfont%%
+set $font2 FontAwesome
+set $font3 monaco
+set $fonts %%size%%
+
+font pango:$font1,$font2 $fonts
+
+set $home      /home/gavarch
+set $term      urxvtc
+set $browser   google-chrome-beta
+set $brightinc light -A 10
+set $brightdec light -U 10
+set $nat       eDP1
+set $vga       VGA1
+set $hdm       HDMI1
+set $kb        gb
+
+set $mediaw    492
+set $mediaw2   492
+set $mediah    299
+set $mediah2   389
 # >>>> MAIN VARS
 # //// i3
 set $ADI Mod1
@@ -19,54 +52,22 @@ set $FEN floating enabled
 set $FDI floating disabled
 set $BNR border normal
 
-# //// WORKSPACE NAMES
-set $ws1  1
-set $ws2  2
-set $ws3  3
-set $ws4  4
-set $ws5  5
-set $ws6  6
-set $ws7  7
-set $ws8  8
-set $ws9  9
-set $ws10 10
-
-# //// COLORS
-set $bg3 #babab8
-set $bg2 #cececc
-set $bg1 #e2e2e0
-set $bg0 #f6f6f4
-set $acb #d5b0b8
-set $acc #b46b7d
-set $acf #724d56
-set $fg0 #303030
-set $fg1 #444444
-set $fg2 #585858
-set $fg3 #6c6c6c
-set $red #ff4845
-set $grn #47aa12
-set $ylw #ff890a
-set $gnt #288ad6
-set $cyn #6bb4a2
-set $t   ff
-
 # //// APPS
+set $HM  /home/gavarch
 set $TRM urxvtc
 set $EDT urxvtc -name
 set $BAP google-chrome-beta
 set $FFX firefox
 set $THN thunar
-set $LUP light -A 10
-set $LDN light -U 10
 
 # >>>> DECORATIONS
-# class                 brdr bkgr text indi chlb
-client.focused          $acc $acb $fg0 $acb $acc
-client.focused_inactive $acc $acc $fg0 $acc $acc
-client.unfocused        $acc $acc $bg0 $acc $acc
-client.urgent           $red $red $fg0 $red $red
-client.placeholder      $bg0 $bg0 $fg0 $bg0 $bg0
-client.background       $bg0
+# class                 brdr    bkgr    text    indi    chlb
+client.focused          %%acc%% %%acb%% %%fg0%% %%acb%% %%acc%%
+client.focused_inactive %%acc%% %%acc%% %%fg0%% %%acc%% %%acc%%
+client.unfocused        %%acc%% %%acc%% %%bg0%% %%acc%% %%acc%%
+client.urgent           %%red%% %%red%% %%fg0%% %%red%% %%red%%
+client.placeholder      %%bg0%% %%bg0%% %%fg0%% %%bg0%% %%bg0%%
+client.background       %%bg0%%
 
 # >>>> MOD1 BINDINGS
 # //// Misc
@@ -76,94 +77,107 @@ $ALW+button1        $QUD -m 3
 $ALW+button2        kill
 $ALW+button3        $QUD -m 2 -l
 $ALW+button4        focus left
-$ALW+Shift+button4  move left
 $ALW+button5        focus right
-$ALW+Shift+button5  move right
 $ALT+space          focus mode_toggle
-$ALT+Shift+space    floating toggle
-$ALT+Ctrl+Right     workspace next
-$ALT+Ctrl+Left      workspace prev
 bindsym Print       $exn screenshot
+
+$ALW+Shift+button4  move left
+$ALW+Shift+button5  move right
+$ALT+Shift+space    floating toggle
+
+$ALT+Control+Right  workspace next
+$ALT+Control+Left   workspace prev
 
 # //// Numbers
 $ALT+grave          $exn gencvl
-$ALT+1              workspace $ws1
-$ALT+Shift+1        move container to workspace $ws1; workspace $ws1
-$ALT+2              workspace $ws2
-$ALT+Shift+2        move container to workspace $ws2; workspace $ws2
-$ALT+3              workspace $ws3
-$ALT+Shift+3        move container to workspace $ws3; workspace $ws3
-$ALT+4              workspace $ws4
-$ALT+Shift+4        move container to workspace $ws4; workspace $ws4
-$ALT+5              workspace $ws5
-$ALT+Shift+5        move container to workspace $ws5; workspace $ws5
-$ALT+minus          $QUD -m 2 -l
+$ALT+1              $QUD -F 1
+$ALT+2              $QUD -F 2
+$ALT+3              $QUD -F 3
+$ALT+4              $QUD -F 4
+$ALT+minus          $QUD -m 2, $QUD -f 3
 $ALT+equal          $QUD -m 3
+
+$ALT+Shift+1        $QUD -m 1
+$ALT+Shift+2        $QUD -m 2
+$ALT+Shift+3        $QUD -m 3
+$ALT+Shift+4        $QUD -m 4
+
+$ALT+Ctrl+1         $RUN -i i3config -e '$EDT i3config -e vim $HM/.config/i3/.themer/template_config'
+$ALT+Ctrl+2         $RUN -i bashrc   -e '$EDT bashrc   -e vim $HM/.bashrc'
+$ALT+Ctrl+3         $RUN -i vimrc    -e '$EDT vimrc    -e vim $HM/.vimrc'
+$ALT+Ctrl+4         $RUN -i rngrc    -e '$EDT rngrc    -e vim $HM/.config/ranger/rc.conf'
+$ALT+Ctrl+5         $RUN -i rngrl    -e '$EDT rngrl    -e vim $HM/.config/ranger/rifle.conf'
+$ALT+Ctrl+6         $RUN -i plbar    -e '$EDT plbar    -e vim $HM/.config/polybar/.themer/template_config'
+$ALT+Ctrl+7         $RUN -i quteb    -e '$EDT quteb    -e vim $HM/.config/qutebrowser/.themer/template_config.py'
 
 # //// 1st Row
 $ALT+Tab            focus right
-$ALT+Shift+Tab      focus left
 $ALT+q              $RUN -t -i calculator -e '$TRM -name calculator -e R'
-$ALT+Shift+q        kill
 $ALT+w              $RUN -n ^watchseries -e '$BAP --new-window --app=https://ww2.watch-series.co/'
 $ALT+e              layout toggle tabbed split
 $ALT+r              $RUN -n newsboat -e '$TRM -name newsboat -e newsboat'
-$ALT+Shift+r        restart
 $ALT+t              $exn mkwalrando
 $ALT+y              resize shrink width 5 px or 5 ppt
-$ALT+Shift+y        $RUN -n YouTube$ -e '$BAP --new-window --app=https://www.youtube.com/'
 $ALT+u              resize shrink height 5 px or 5 ppt
-$ALT+Shift+u        $exn $BAP --new-window --app=https://outlook.office.com/mail/inbox/id/AAQkAGZjZGU2MmYyLTc5ZDctNDI1My05MzU4LWRjYTc3NjdhN2NkOAAQAOwToE4JkJhIgjz322aPjPU%3D
 $ALT+i              resize grow height 5 px or 5 ppt
-$ALT+Shift+i        $RUN -n '^BBC iPlayer$' -e '$BAP --new-window --app=https://www.bbc.co.uk/iplayer/'
 $ALT+o              resize grow width 5 px or 5 ppt
 $ALT+p              $exn i3media togg
-$ALT+Shift+p        $exn screenshot
 $ALT+bracketright   $exn i3media next
 $ALT+bracketleft    $exn i3media prev
 $ALT+backslash      $exn i3media stop
 
+$ALT+Shift+Tab      focus left
+$ALT+Shift+q        kill
+$ALT+Shift+r        restart
+$ALT+Shift+y        $RUN -n YouTube$ -e '$BAP --new-window --app=https://www.youtube.com/'
+$ALT+Shift+u        $exn $BAP --new-window --app=https://outlook.office.com/mail/inbox/id/AAQkAGZjZGU2MmYyLTc5ZDctNDI1My05MzU4LWRjYTc3NjdhN2NkOAAQAOwToE4JkJhIgjz322aPjPU%3D
+$ALT+Shift+i        $RUN -n '^BBC iPlayer$' -e '$BAP --new-window --app=https://www.bbc.co.uk/iplayer/'
+$ALT+Shift+p        $exn screenshot
+
 # //// 2nd Row
 $ALT+a              focus parent
-$ALT+Shift+a        focus child
 $ALT+s              $RUN -i ncmpcpp -e '$TRM -name ncmpcpp -e ncmpcpp'
-$ALT+Shift+s        $RUN -c Spotify -e 'spotify'
-$ALT+Ctrl+s         sticky toggle
 $ALT+d              $exn i3menu -s -l 0
-$ALT+Shift+d        $exn i3menu -d
-$ALT+f              $exn thunar
-$ALT+Shift+f        fullscreen toggle
+$ALT+f              $exn $THN
 $ALT+g              split toggle
-$ALT+Shift+g        $exn $TRM -name drive_sync -e bash $home/$scr/grivesync
 $ALT+h              $exn i3viswiz left
-$ALT+Shift+h        $exn i3move left
 $ALT+j              $exn i3viswiz down
-$ALT+Shift+j        $exn i3move down
 $ALT+k              $exn i3viswiz up
-$ALT+Shift+k        $exn i3move up
 $ALT+l              $exn i3viswiz right
-$ALT+Shift+l        $exn i3move right
 $ALT+semicolon      $exn i3light nm
 $ALT+apostrophe     $exn redshift -x
 $ALT+Return         $exn $TRM -name tiledterm
+
+$ALT+Shift+a        focus child
+$ALT+Shift+s        $RUN -c Spotify -e 'spotify'
+$ALT+Shift+d        $exn i3menu -d
+$ALT+Shift+f        fullscreen toggle
+$ALT+Shift+g        $exn $TRM -name drive_sync -e bash $HM/scr/grivesync
+$ALT+Shift+h        $exn i3move left
+$ALT+Shift+j        $exn i3move down
+$ALT+Shift+k        $exn i3move up
+$ALT+Shift+l        $exn i3move right
 $ALT+Shift+Return   $exn $TRM -name ranger -e ranger
+
+$ALT+Control+s      sticky toggle
 $ALT+Control+Return $exn $TRM -name noterm
 
 # //// 3rd Row
 $ALT+z              $exn surf docs.google.com/document/u/0/
 $ALT+x              $exn surf docs.google.com/spreadsheets/u/0/
 $ALT+c              $RUN -c Firefox -e '$FFX'
-$ALT+Shift+c        $exn xtheme --auto-dark 7:20
 $ALT+v              $RUN -i visualiser -e '$TRM -name visualiser -e vis'
-$ALT+Shift+v        $exn projectM-pulseaudio
-$ALT+b              $RUN -i references -e '$TRM -name references -e vim $home/Drive/global.bib'
-$ALT+Shift+b        $exn polybar-msg cmd hide
+$ALT+b              $RUN -i references -e '$TRM -name references -e vim $HM/Drive/global.bib'
 $ALT+n              $RUN -n ^Netflix$ -e '$BAP --new-window --app=https://www.netflix.com/'
 $ALT+m              $exn surf docs.google.com/presentation/u/0/
-$ALT+Shift+m        $RUN -n '^My Movies & TV' -e '$BAP --new-window --app=https://play.google.com/movies/'
 $ALT+comma          $exn i3vol dec
 $ALT+period         $exn i3vol inc
 $ALT+slash          $exn i3vol mute
+
+$ALT+Shift+c        $exn xtheme --auto-dark 7:20
+$ALT+Shift+v        $exn projectM-pulseaudio
+$ALT+Shift+b        $exn polybar-msg cmd hide
+$ALT+Shift+m        $RUN -n '^My Movies & TV' -e '$BAP --new-window --app=https://play.google.com/movies/'
 
 # >>>> MOD4 BINDINGS
 # //// Misc
@@ -171,68 +185,77 @@ floating_modifier   $WNI
 
 # //// Numbers
 $WIN+grave          $exn "notify-send $(i3gm)"
-$WIN+1              $QUD -f 1
-$WIN+Shift+1        $RUN -i i3main -e '$EDT i3main -e vim $home/.config/i3/.themer/template_main'
-$WIN+2              $QUD -f 2
-$WIN+Shift+2        $RUN -i i3vars -e '$EDT i3vars -e vim $home/.config/i3/.themer/template_vars'
-$WIN+3              $QUD -f 3
-$WIN+Shift+3        $RUN -i bashrc -e '$EDT bashrc -e vim $home/.bashrc'
-$WIN+4              $QUD -f 4
-$WIN+Shift+4        $RUN -i vimrc -e '$EDT vimrc -e vim $home/.vimrc'
-$WIN+Shift+5        $RUN -i rngrc -e '$EDT rngrc -e vim $home/.config/ranger/rc.conf'
-$WIN+Shift+6        $RUN -i rngrl -e '$EDT rngrl -e vim $home/.config/ranger/rifle.conf'
-$WIN+Shift+7        $RUN -i polyb -e '$EDT polyb -e vim $home/.config/polybar/.themer/template_config'
-$WIN+Shift+8        $RUN -i quteb -e '$EDT quteb -e vim $home/.config/qutebrowser/.themer/template_config.py'
+$WIN+1              workspace 1
+$WIN+2              workspace 2
+$WIN+3              workspace 3
+$WIN+4              workspace 4
+$WIN+5              workspace 5
+$WIN+6              workspace 6
+$WIN+7              workspace 7
+$WIN+8              workspace 8
+$WIN+9              workspace 9
+$WIN+0              workspace 10
+
+$WIN+Shift+1        move container to workspace 1; workspace 1
+$WIN+Shift+2        move container to workspace 2; workspace 2
+$WIN+Shift+3        move container to workspace 3; workspace 3
+$WIN+Shift+4        move container to workspace 4; workspace 4
+$WIN+Shift+5        move container to workspace 5; workspace 5
+$WIN+Shift+6        move container to workspace 6; workspace 6
+$WIN+Shift+7        move container to workspace 7; workspace 7
+$WIN+Shift+8        move container to workspace 8; workspace 8
+$WIN+Shift+9        move container to workspace 9; workspace 9
+$WIN+Shift+0        move container to workspace 10; workspace 10
 
 # //// 1st Row
-$WIN+q              $QUD -m 1
-$WIN+w              $QUD -m 2
-$WIN+e              $QUD -m 3
 $WIN+r              $RUN -i reddit -e '$TRM -name reddit -e rtv'
 $WIN+t              $exn compton
-$WIN+Shift+t        $exn pkill compton
 $WIN+y              $QUD --resize '1 -5 -5'
-$WIN+Shift+y        gaps inner current set 0; gaps outer current set 0
 $WIN+u              $QUD --resize '1 $mediaw2 $mediah2'
-$WIN+Shift+u        gaps inner current minus 1; gaps outer current minus 10
 $WIN+i              $QUD --resize '1 $mediaw $mediah'
-$WIN+Shift+i        gaps inner current plus 1; gaps outer current plus 10
 $WIN+o              $QUD --resize '1 +5 +5'
-$WIN+Shift+o        gaps inner current set 4; gaps outer current set 40
 $WIN+p              $QUD --resize '1 40 20'
 $WIN+bracketleft    [con_mark=$M1] resize set height 98
 
+$WIN+Shift+t        $exn pkill compton
+$WIN+Shift+y        gaps inner current set 0;   gaps outer current set 0
+$WIN+Shift+u        gaps inner current minus 1; gaps outer current minus 10
+$WIN+Shift+i        gaps inner current plus 1;  gaps outer current plus 10
+$WIN+Shift+o        gaps inner current set 4;   gaps outer current set 40
+
 # //// 2nd Row
-$WIN+Shift+a        $exn wsloapp
 $WIN+s              $exn slack
-$WIN+Shift+s        $exn i3-sticky-toggle
 $WIN+d              move workspace to output $hdm
-$WIN+f              $exn gksu thunar
-$WIN+Shift+f        focus parent, fullscreen toggle, focus child
-$WIN+g              $exn $TRM -name gitcommit -e bash $home/$scr/gitcommit
+$WIN+f              $exn gksu $THN
+$WIN+g              $exn $TRM -name gitcommit -e bash $HM/scr/gitcommit
 $WIN+h              focus left
-$WIN+Shift+h        move left
 $WIN+j              focus down
-$WIN+Shift+j        move down
 $WIN+k              focus up
-$WIN+Shift+k        move up
 $WIN+l              focus right
-$WIN+Shift+l        move right
 $WIN+semicolon      $exn noter -t NOTES
 $WIN+apostrophe     $exn noter -t TODO
 $WIN+Return         $exn xterm
+
+$WIN+Shift+a        $exn wsloapp
+$WIN+Shift+s        $exn i3-sticky-toggle
+$WIN+Shift+f        focus parent, fullscreen toggle, focus child
+$WIN+Shift+h        move left
+$WIN+Shift+j        move down
+$WIN+Shift+k        move up
+$WIN+Shift+l        move right
 $WIN+Shift+Return   $exn $TRM -name ranger_root -e sudo ranger
 
 # //// 3rd Row
 $WIN+x              unmark
 $WIN+c              $exn google-chrome-beta
-$WIN+Shift+c        $exn reloadconfs
 $WIN+v              move workspace to output $vga
 $WIN+b              $RUN -i bashmount -e '$TRM -name bashmount -e bashmount'
 $WIN+n              move workspace to output $nat
 $WIN+m              $exn multimon
 $WIN+comma          $exn i3light dec
 $WIN+period         $exn i3light inc
+
+$WIN+Shift+c        $exn reloadconfs
 
 # >>>> FOR_WINDOW
 # //// GLOBAL
@@ -243,11 +266,12 @@ $fw [urgent=latest] focus
 #focus_follows_mouse no
 
 # //// FLOATERS
-$fw [title="^Colour picker$"]              resize set 697 276
-$fw [title="Save Image"]                   resize set 750 500
-$fw [title="Open Files"]                   resize set 750 500
-$fw [title="Select a download location"]   resize set 750 500
-$fw [class="Pavucontrol"]                  resize set 525 300
+$fw [title="^Colour picker$"]            resize set 697 276
+$fw [title="Save Image"]                 resize set 750 500
+$fw [title="Open Files"]                 resize set 750 500
+$fw [title="Select a download location"] resize set 750 500
+$fw [class="Pavucontrol"]                resize set 525 300
+$fw [class="Rofi"]                       border pixel 1
 
 # //// QUAD
 $fw [title="Log in with PayPal"]         $tf "paypal"
@@ -294,18 +318,20 @@ $fw [instance="reddit"]                  focus;$QUD -m 2;focus;$tf "reddit"
 #$fw [instance="UNMOUNT"]                 focus;$QUD -m 2;focus;$tf "unmount"
 
 $fw [class="Gvim"]                       focus;$QUD -m 3;focus
+$fw [class="Emacs"]                      focus;$QUD -m 3;focus
 $fw [class="Firefox"]                    focus;$QUD -m 3;focus
+$fw [class="firefox"]                    focus;$QUD -m 3;focus
 $fw [class="Pamac-manager"]              focus;$QUD -m 3;focus;$tf "software"
 $fw [title="Google Chrome$"]             focus;$QUD -m 3;focus;$tf "chrome"
-$fw [instance="i3main"]                  focus;$QUD -m 3;focus;$tf "i3main"
-$fw [instance="i3vars"]                  focus;$QUD -m 3;focus;$tf "i3vars"
+$fw [instance="i3config"]                focus;$QUD -m 3;focus;$tf "i3config"
 $fw [instance="bashrc"]                  focus;$QUD -m 3;focus;$tf "bashrc"
 $fw [instance="vimrc"]                   focus;$QUD -m 3;focus;$tf "vimrc"
 $fw [instance="rngrc"]                   focus;$QUD -m 3;focus;$tf "ranger_rc"
 $fw [instance="rngrl"]                   focus;$QUD -m 3;focus;$tf "ranger_rifle"
-$fw [instance="polyb"]                   focus;$QUD -m 3;focus;$tf "polybar"
+$fw [instance="plbar"]                   focus;$QUD -m 3;focus;$tf "polybar"
 $fw [instance="quteb"]                   focus;$QUD -m 3;focus;$tf "qutebrowser"
 $fw [class="Slack"]                      focus;$QUD -m 3;focus;$tf "slack"
+#$fw [instance="i3vars"]                  focus;$QUD -m 3;focus;$tf "i3vars"
 
 $fw [instance="noterm"]                  focus;$QUD -m 4;focus;$tf "noterm"
 $fw [instance="visualiser"]              focus;$QUD -m 4;focus;$tf "visualiser"
@@ -313,8 +339,8 @@ $fw [instance="visualiser"]              focus;$QUD -m 4;focus;$tf "visualiser"
 # >>>> GAPS
 gaps inner 20
 gaps outer 40
-workspace $ws1 gaps inner 0
-workspace $ws1 gaps outer 0
+workspace 1 gaps inner 0
+workspace 1 gaps outer 0
 
 # >>>> STARTUP
 $exn urxvtd -q -o -f
@@ -334,7 +360,7 @@ $exn setxkbmap $kb
 $exn i3listen-toggle
 $exn reloadconfs
 
-$ena mpv $home/$scrmus/A\ Tone\ His\ Self.mp3
-$ena notify-send 'i3 (re)loaded!' -i $home/$scrpic/i3white.png
+$ena mpv $HM/scrmus/A\ Tone\ His\ Self.mp3
+$ena notify-send 'i3 (re)loaded!' -i $HM/scrpic/i3white.png
 
 # vim:ft=i3
