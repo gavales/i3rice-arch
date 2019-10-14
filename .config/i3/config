@@ -62,12 +62,12 @@ set $THN thunar
 
 # >>>> DECORATIONS
 # class                 brdr    bkgr    text    indi    chlb
-client.focused          #d5715e #da987e #1F1F1F #da987e #d5715e
-client.focused_inactive #d5715e #d5715e #1F1F1F #d5715e #d5715e
-client.unfocused        #d5715e #d5715e #DFBF9F #d5715e #d5715e
-client.urgent           #cc241d #cc241d #1F1F1F #cc241d #cc241d
-client.placeholder      #DFBF9F #DFBF9F #1F1F1F #DFBF9F #DFBF9F
-client.background       #DFBF9F
+client.focused          #DC8E69 #eabea9 #3e443e #eabea9 #DC8E69
+client.focused_inactive #DC8E69 #DC8E69 #3e443e #DC8E69 #DC8E69
+client.unfocused        #DC8E69 #DC8E69 #f9efe9 #DC8E69 #DC8E69
+client.urgent           #6F90A7 #6F90A7 #3e443e #6F90A7 #6F90A7
+client.placeholder      #f9efe9 #f9efe9 #3e443e #f9efe9 #f9efe9
+client.background       #f9efe9
 
 # >>>> MOD1 BINDINGS
 # //// Misc

@@ -15,6 +15,18 @@ colmix [--hex|-x|--rgb|-r] '<ratio1>:<color1> <ratio2>:<color2>'
 colmix --help|-h
 ```
 
+## Example
+
+```sh
+$ colmix 50:#00ff00 50:#002b36
+  00951b
+  0, 149, 27
+```
+
+So ![#00ff00](https://placehold.it/15/00ff00/000000?text=+) #00ff00 +
+   ![#002b36](https://placehold.it/15/002b36/000000?text=+) #002b36 =
+   ![#00951b](https://placehold.it/15/00951b/000000?text=+) #00951b!
+
 ## Options
 
 + Final argument has to be `<ratio1>:<color1> <ratio2>:<color2>`

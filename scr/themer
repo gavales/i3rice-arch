@@ -363,9 +363,9 @@ is shown below.
 
 ```sh
 #!/usr/bin/env bash
-# requires you to use urxvtd & urxvtc
-# see budlabs "Let's Linux #021: urxvt reload-config"
-# https://www.youtube.com/watch?v=37jo_x6bXBk
+#requires you to use urxvtd & urxvtc
+#see budlabs "Let's Linux #021: urxvt reload-config"
+#https://www.youtube.com/watch?v=37jo_x6bXBk
 
 XRS=$HOME/.Xresources
 
