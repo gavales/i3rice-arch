@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-# OA: Gavin Vales
-# CREATED: Sat 30 Mar 18:22:18 GMT 2019
-
-file=${1}
-urxvtc -e vim "${file}"
-i3quad -m 3

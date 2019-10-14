@@ -1,15 +1,14 @@
 # >>>> shortcuts
-alias Db="openvim ~/git/i3rice-arch/.bashrc"
-alias Dim="openvim ~/git/i3rice-arch/.config/i3/.themer/template_main"
-alias Div="openvim ~/git/i3rice-arch/.config/i3/.themer/template_vars"
-alias Dp="openvim ~/git/i3rice-arch/.config/polybar/.themer/template_config"
-alias Drc="openvim ~/git/i3rice-arch/.config/ranger/rc.conf"
-alias Drr="openvim ~/git/i3rice-arch/.config/ranger/rifle.conf"
-alias Dsd="openvim ~/scr/sc/_dots"
-alias Dsf="openvim ~/scr/sc/_flds"
-alias Dss="openvim ~/scr/sc/_scrs"
-alias Dst="openvim ~/scr/sc/_tmps"
-alias Dv="openvim ~/git/i3rice-arch/.vimrc"
+alias Db="edtr ~/git/i3rice-arch/.bashrc"
+alias Di="edtr ~/git/i3rice-arch/.config/i3/.themer/template_config"
+alias Dp="edtr ~/git/i3rice-arch/.config/polybar/.themer/template_config"
+alias Drc="edtr ~/git/i3rice-arch/.config/ranger/rc.conf"
+alias Drr="edtr ~/git/i3rice-arch/.config/ranger/rifle.conf"
+alias Dsd="edtr ~/scr/sc/_dots"
+alias Dsf="edtr ~/scr/sc/_flds"
+alias Dss="edtr ~/scr/sc/_scrs"
+alias Dst="edtr ~/scr/sc/_tmps"
+alias Dv="edtr ~/git/i3rice-arch/.vimrc"
 alias ga="cd ~/Drive"
 Ya() { cp -r "$1" ~/Drive/"$1" ; }
 Ma() { mv "$1" ~/Drive/"$1" ; }
@@ -76,9 +75,9 @@ Mpf() { mv "$1" ~/pic/favs/"$1" ; }
 alias gpi="cd ~/pic/i3bg"
 Ypi() { cp -r "$1" ~/pic/i3bg/"$1" ; }
 Mpi() { mv "$1" ~/pic/i3bg/"$1" ; }
-alias gps="cd ~/pic/scrots"
-Yps() { cp -r "$1" ~/pic/scrots/"$1" ; }
-Mps() { mv "$1" ~/pic/scrots/"$1" ; }
+alias gps="cd ~/pic/shot"
+Yps() { cp -r "$1" ~/pic/shot/"$1" ; }
+Mps() { mv "$1" ~/pic/shot/"$1" ; }
 alias gpp="cd ~/pic/sptl"
 Ypp() { cp -r "$1" ~/pic/sptl/"$1" ; }
 Mpp() { mv "$1" ~/pic/sptl/"$1" ; }

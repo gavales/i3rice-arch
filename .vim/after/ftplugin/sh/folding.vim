@@ -43,7 +43,7 @@ function FoldText()
 "	let foldline = substitute(foldline, ' in$', " C", "")
 "	let foldline = substitute(foldline, 'opts; do$', "W", "")
 	let text = foldline.foldsize.'line     '
-	let barcharcount = ((windowwidth * 2)/ 3) - strdisplaywidth(foldsize.'lines     ')
-	let spacecharcount = windowwidth - strdisplaywidth(text) - barcharcount
-	return ' '.foldline.repeat(" ",spacecharcount).'├'.repeat("┈",barcharcount).'  ('.foldsize.' lines)'
+"	let barcharcount = ((windowwidth * 2)/ 3) - strdisplaywidth(foldsize.'lines     ')
+	let spacecharcount = windowwidth - strdisplaywidth(text)
+	return ' '.foldline.repeat("┈",spacecharcount).'  ('.foldsize.' lines)'
 endfunction

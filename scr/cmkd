@@ -24,11 +24,11 @@ subtitle: _Subtitle_
 author: Author
 theme: CambridgeUS
 #output pdf html word beamer  <<< specify output(s)
-#css    style.css             <<< specify css for html output
-#engine xelatex               <<< specify engine for normal pdf
-#bib    bibliography.bib      <<< bibliography
-#yaml   settings.yaml         <<< yaml file to source for additional settings
-#docx   reference.docx        <<< word document template to use
+#css    style.css             <<< full path to css for html output
+#engine xelatex               <<< TeX engine for normal pdf
+#bib    bibliography.bib      <<< full path to bibliography
+#yaml   settings.yaml         <<< full path to yaml file for additional settings
+#docx   reference.docx        <<< full path to word document template
 ---
 
 # A markdown file
@@ -64,12 +64,12 @@ WCS=$(awk '$1 ~ /^#css$/    {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
 NGN=$(awk '$1 ~ /^#engine$/ {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
 
 [[ -z $BIB ]] && BIB="$HOME/global.bib"
-[[ -z $YML ]] && FYL="--metadata-file ${PDDR}/settings.yaml" || FYL="--metadata-file ${YML}"
+[[ -z $YML ]] && FYL="${PDDR}/settings.yaml" || FYL="${YML}"
 [[ -z $WTM ]] && DXR="$PDDR/reference.docx"
 [[ -n $WCS ]] && CSS="-c ${WCS}"         || CSS="-c ${CSDR}/themer.css"
 [[ -n $NGN ]] && NGN="--pdf-engine=$NGN" || NGN=""
 
-REF="-F pandoc-crossref ${FYL}"
+REF="-F pandoc-crossref --metadata-file ${FYL}"
 CIT="--bibliography ${BIB} -F pandoc-citeproc"
 WTS="--reference-doc ${DXR}"
 NSC="--number-sections"

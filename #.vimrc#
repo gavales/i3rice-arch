@@ -33,14 +33,13 @@ set splitbelow splitright
 set t_Co=16
 
 " //// GLOBAL MAPS
-map <Tab><Tab>    <Esc>/>>>><Enter>
-map <Tab><Space> <Esc>/>>>><Enter>
-map <C-p>         "+P
-map <C-Up>        :res<space>+5<Enter>
-map <C-Down>      :res<space>-5<Enter>
-map <C-Left>      :vertical<space>resize<space>-5<Enter>
-map <C-Right>     :vertical<space>resize<space>+5<Enter>
-map <F10>         :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+map <Tab><Tab> <Esc>/>>>><Enter>
+map <C-p>      "+P
+map <C-Up>     :res<space>+5<Enter>
+map <C-Down>   :res<space>-5<Enter>
+map <C-Left>   :vertical<space>resize<space>-5<Enter>
+map <C-Right>  :vertical<space>resize<space>+5<Enter>
+map <F10>      :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 

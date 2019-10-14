@@ -9,7 +9,8 @@
 
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-# >>>> MAIN
+# >>>> VARS
+# //// MAIN
 set $font1 Luxi Mono
 set $font2 FontAwesome
 set $font3 monaco
@@ -17,9 +18,6 @@ set $fonts 11
 
 font pango:$font1,$font2 $fonts
 
-set $home      /home/gavarch
-set $term      urxvtc
-set $browser   google-chrome-beta
 set $brightinc light -A 10
 set $brightdec light -U 10
 set $nat       eDP1
@@ -31,7 +29,7 @@ set $mediaw    492
 set $mediaw2   492
 set $mediah    299
 set $mediah2   389
-# >>>> MAIN VARS
+
 # //// i3
 set $ADI Mod1
 set $WNI Mod4
@@ -55,7 +53,8 @@ set $BNR border normal
 # //// APPS
 set $HM  /home/gavarch
 set $TRM urxvtc
-set $EDT urxvtc -name
+set $EDT exec --no-startup-id edtr -s DOOTS
+#set $EDT urxvtc -name
 set $BAP google-chrome-beta
 set $FFX firefox
 set $THN thunar
@@ -102,13 +101,21 @@ $ALT+Shift+2        $QUD -m 2
 $ALT+Shift+3        $QUD -m 3
 $ALT+Shift+4        $QUD -m 4
 
-$ALT+Ctrl+1         $RUN -i i3config -e '$EDT i3config -e vim $HM/.config/i3/.themer/template_config'
-$ALT+Ctrl+2         $RUN -i bashrc   -e '$EDT bashrc   -e vim $HM/.bashrc'
-$ALT+Ctrl+3         $RUN -i vimrc    -e '$EDT vimrc    -e vim $HM/.vimrc'
-$ALT+Ctrl+4         $RUN -i rngrc    -e '$EDT rngrc    -e vim $HM/.config/ranger/rc.conf'
-$ALT+Ctrl+5         $RUN -i rngrl    -e '$EDT rngrl    -e vim $HM/.config/ranger/rifle.conf'
-$ALT+Ctrl+6         $RUN -i plbar    -e '$EDT plbar    -e vim $HM/.config/polybar/.themer/template_config'
-$ALT+Ctrl+7         $RUN -i quteb    -e '$EDT quteb    -e vim $HM/.config/qutebrowser/.themer/template_config.py'
+$ALT+Ctrl+1         $EDT $HM/.config/i3/.themer/template_config
+$ALT+Ctrl+2         $EDT $HM/.bashrc
+$ALT+Ctrl+3         $EDT $HM/.vimrc
+$ALT+Ctrl+4         $EDT $HM/.config/ranger/rc.conf
+$ALT+Ctrl+5         $EDT $HM/.config/ranger/rifle.conf
+$ALT+Ctrl+6         $EDT $HM/.config/polybar/.themer/template_config
+$ALT+Ctrl+7         $EDT $HM/.config/qutebrowser/.themer/template_config.py
+
+#$ALT+Ctrl+1         $RUN -i i3config -e '$EDT $HM/.config/i3/.themer/template_config'
+#$ALT+Ctrl+2         $RUN -i bashrc   -e '$EDT $HM/.bashrc'
+#$ALT+Ctrl+3         $RUN -i vimrc    -e '$EDT $HM/.vimrc'
+#$ALT+Ctrl+4         $RUN -i rngrc    -e '$EDT $HM/.config/ranger/rc.conf'
+#$ALT+Ctrl+5         $RUN -i rngrl    -e '$EDT $HM/.config/ranger/rifle.conf'
+#$ALT+Ctrl+6         $RUN -i plbar    -e '$EDT $HM/.config/polybar/.themer/template_config'
+#$ALT+Ctrl+7         $RUN -i quteb    -e '$EDT $HM/.config/qutebrowser/.themer/template_config.py'
 
 # //// 1st Row
 $ALT+Tab            focus right
@@ -174,7 +181,7 @@ $ALT+comma          $exn i3vol dec
 $ALT+period         $exn i3vol inc
 $ALT+slash          $exn i3vol mute
 
-$ALT+Shift+c        $exn xtheme --auto-dark 7:20
+$ALT+Shift+c        $exn xtheme --auto-dark 7:19
 $ALT+Shift+v        $exn projectM-pulseaudio
 $ALT+Shift+b        $exn polybar-msg cmd hide
 $ALT+Shift+m        $RUN -n '^My Movies & TV' -e '$BAP --new-window --app=https://play.google.com/movies/'
@@ -246,7 +253,7 @@ $WIN+Shift+l        move right
 $WIN+Shift+Return   $exn $TRM -name ranger_root -e sudo ranger
 
 # //// 3rd Row
-$WIN+x              unmark
+#$WIN+x              unmark
 $WIN+c              $exn google-chrome-beta
 $WIN+v              move workspace to output $vga
 $WIN+b              $RUN -i bashmount -e '$TRM -name bashmount -e bashmount'
@@ -323,6 +330,8 @@ $fw [class="Firefox"]                    focus;$QUD -m 3;focus
 $fw [class="firefox"]                    focus;$QUD -m 3;focus
 $fw [class="Pamac-manager"]              focus;$QUD -m 3;focus;$tf "software"
 $fw [title="Google Chrome$"]             focus;$QUD -m 3;focus;$tf "chrome"
+$fw [instance="EDITOR"]                  focus;$QUD -m 3;focus;$tf "EDITOR"
+$fw [instance="DOOTS"]                   focus;$QUD -m 3;focus;$tf "DOOTS"
 $fw [instance="i3config"]                focus;$QUD -m 3;focus;$tf "i3config"
 $fw [instance="bashrc"]                  focus;$QUD -m 3;focus;$tf "bashrc"
 $fw [instance="vimrc"]                   focus;$QUD -m 3;focus;$tf "vimrc"
