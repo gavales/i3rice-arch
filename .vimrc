@@ -7,14 +7,12 @@
 "  ▒██  ▒▒██   ▒██ ███ ▒██ ▒██▒███   ▒▒█████ 
 "  ▒▒    ▒▒    ▒▒ ▒▒▒  ▒▒  ▒▒ ▒▒▒     ▒▒▒▒▒  
 
-" >>>> SETTINGS
-" //// GENERAL
+" >> SETTINGS
+" ━━ GENERAL
 filetype plugin on
 syntax enable
 set encoding=utf-8
 colorscheme themer
-"set background=dark
-"colorscheme koehler
 set number relativenumber
 set hls is wrap linebreak
 set textwidth=0 wrapmargin=0
@@ -25,16 +23,15 @@ set incsearch
 set cursorline colorcolumn=81
 "set conceallevel=2 concealcursor=nic
 set list listchars=tab:│\ ,trail:+,precedes:←,extends:→
-set noshowmode
-set noruler
-set noshowcmd
-set cmdheight=1
+set noshowmode noruler noshowcmd
+set cmdheight=0
 set splitbelow splitright
 set t_Co=16
 
-" //// GLOBAL MAPS
-map <Tab><Tab>    <Esc>/>>>><Enter>
-map <Tab><Space> <Esc>/>>>><Enter>
+" ━━ GLOBAL MAPS
+map \gy :Goyo<bar>set<Space>laststatus=2<Enter><Enter>
+map <Tab><Tab>    <Esc>/>><Enter>
+map <Tab><Space> <Esc>/>><Enter>
 map <C-p>         "+P
 map <C-Up>        :res<space>+5<Enter>
 map <C-Down>      :res<space>-5<Enter>
@@ -83,19 +80,19 @@ vnoremap \d;   :'<,'>norm 0x<Enter>
 "autocmd FileType python,css,html,vim,json,perl,sh set listchars=tab:│\ 
 "autocmd FileType python call matchadd('ColorColumn', '\%81v', 100)
 
-" //// CURSOR
+" ━━ CURSOR
 autocmd CursorHold,CursorHoldI * update
 autocmd CursorHold,CursorHoldI * redraw!
 let &t_SI = "\<esc>[5 q"
 let &t_SR = "\<esc>[3 q"
 let &t_EI = "\<esc>[2 q"
 
-" //// GUI-SPECIFIC
+" ━━ GUI-SPECIFIC
 if has("gui_running")
 	so ~/.guivimrc
 endif
 
-" //// CALENDAR
+" ━━ CALENDAR
 
 autocmd Filetype calendar set laststatus=0
 autocmd Filetype calendar set nolist
@@ -104,58 +101,10 @@ let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
 let g:calendar_modifiable = 1
 
-" >>>> GOYO
+" >> STATUSLINE
+" ━━ FUNCTIONS
 
-map \gy :Goyo<bar>
-	\hi Normal ctermfg=white ctermbg=none<bar>
-	\hi Title cterm=bold ctermfg=white ctermbg=none<bar>
-	\hi StatusLineTerm ctermfg=black ctermbg=green<bar>
-	\hi StatusLineTermNC ctermfg=white ctermbg=green<bar>
-	\hi LineNr cterm=none ctermfg=blue ctermbg=DarkGray<bar>
-	\hi CursorLineNr cterm=bold ctermfg=blue ctermbg=DarkGray<bar>
-	\hi SpecialKey ctermfg=DarkGray ctermbg=none<bar>
-	\hi ModeMsg cterm=bold ctermfg=white<bar>
-	\hi Cursor ctermfg=black ctermbg=blue<bar>
-	\hi ColorColumn cterm=none ctermbg=DarkGray<bar>
-	\hi CursorLine cterm=none ctermbg=DarkGray<bar>
-	\hi Visual ctermfg=blue ctermbg=black<bar>
-	\hi VisualNOS ctermfg=blue ctermbg=black<bar>
-	\hi Type cterm=bold ctermfg=white ctermbg=black<bar>
-	\hi Identifier cterm=italic ctermfg=yellow ctermbg=black<bar>
-	\hi Comment cterm=italic ctermfg=Gray ctermbg=black<bar>
-	\hi Folded cterm=italic ctermfg=white ctermbg=DarkGray<bar>
-	\hi Constant cterm=italic ctermfg=white ctermbg=black<bar>
-	\hi Special cterm=bold ctermfg=white ctermbg=black<bar>
-	\hi Statement cterm=bold ctermfg=white ctermbg=black<bar>
-	\hi PreProc cterm=bold ctermfg=blue ctermbg=black<bar>
-	\hi MatchParen cterm=bold ctermfg=yellow <bar>
-	\hi Search cterm=none ctermfg=black ctermbg=yellow<bar>
-	\hi Error cterm=none ctermfg=red ctermbg=black<bar>
-	\hi EndOfBuffer cterm=none ctermfg=black ctermbg=black<bar>
-	\hi SpellBad cterm=underline,bold ctermfg=red ctermbg=none<bar>
-	\hi SpellCap cterm=underline,bold ctermfg=blue ctermbg=none<bar>
-	\hi SpellRare cterm=underline,bold ctermfg=magenta ctermbg=none<bar>
-	\hi SpellLocal cterm=underline,bold ctermfg=cyan ctermbg=none<bar>
-	\hi Pmenu cterm=none ctermfg=blue ctermbg=white<bar>
-	\hi PmenuSel cterm=none ctermfg=black ctermbg=blue<bar>
-	\hi PmenuSbar cterm=none ctermfg=blue ctermbg=black<bar>
-	\hi PmenuThumb cterm=none ctermfg=green ctermbg=green<bar>
-	\hi TabLine cterm=none ctermfg=blue ctermbg=black<bar>
-	\hi TabLineSel cterm=none ctermfg=black ctermbg=blue<bar>
-	\hi TabLineFill cterm=none ctermfg=blue ctermbg=black<bar>
-	\hi User1 ctermbg=red ctermfg=black<bar>
-	\hi User2 ctermbg=yellow ctermfg=black<bar>
-	\hi User3 ctermbg=green ctermfg=black<bar>
-	\hi User4 ctermbg=grey ctermfg=black<bar>
-	\hi User5 ctermbg=blue ctermfg=black<bar>
-	\hi User6 ctermbg=magenta ctermfg=black<bar>
-	\<Enter><Enter>
-
-
-" >>>> STATUSLINE
-" //// FUNCTIONS
-
-set laststatus=2
+set laststatus=1
 
 function! FileSize()
 	let bytes = getfsize(expand('%:p'))
@@ -214,7 +163,7 @@ function! ModeCurrent() abort
 	return l:current_status_mode
 endfunction
 
-" //// ACTUAL
+" ━━ ACTUAL
 
 set statusline=
 set statusline+=%#usrblu#\ 
@@ -233,8 +182,8 @@ set statusline+=%L
 set statusline+=\ C:
 set statusline+=%c\ 
 
-" >>>> LATEX
-" //// LATEX-SUITE
+" >> LATEX
+" ━━ LATEX-SUITE
 autocmd FileType tex set smartindent
 	\ cinwords=\\begin
 
@@ -266,7 +215,7 @@ else
 	set iskeyword+=: "press <C-n> to cycle through \label's
 endif
 
-" //// COMPILING
+" ━━ COMPILING
 autocmd Filetype tex map ;p :w<space>!pdflatex<space>-interaction=nonstopmode
 	\<space>-shell-escape<space><C-r>%<Enter><Enter>
 autocmd Filetype tex map ;x :w<space>!xelatex<space>-interaction=nonstopmode
@@ -276,7 +225,7 @@ autocmd Filetype tex map ;n :!makeindex<space><C-r>%<BS><BS><BS>
 	\nlo<space>-s<space>nomencl.ist<space>-o<space><C-r>%<BS><BS><BS>
 	\nls<Enter><Enter>
 
-" //// (LUKE SMITH'S) SNIPPETS
+" ━━ SNIPPETS
 
 autocmd FileType tex inoremap $$       $$<++><Esc>F$i
 autocmd FileType tex inoremap <Tab>(   \left(\right)<++><Esc>T(i
@@ -356,7 +305,7 @@ autocmd FileType tex vnoremap <Tab>st xi{\setstretch{1.0}<Enter><Esc>pa}<Esc>
 autocmd FileType tex vnoremap <Tab>bm xi\begin{multicols}{2}<Enter><Esc>pa
 	\<Enter>\end{multicols}<Esc>
 
-" //// BIB SHORTCUTS
+" ━━ BIB SHORTCUTS
 
 autocmd Filetype bib inoremap \a <Esc>A<Enter>@article{,<Enter>}<Esc>kf,i
 autocmd Filetype bib inoremap \b <Esc>A<Enter>@book{,<Enter>}<Esc>kf,i
@@ -390,7 +339,7 @@ autocmd Filetype bib inoremap <Tab>num <Esc>A<Enter>
 autocmd Filetype bib inoremap <Tab>org <Esc>A<Enter>
 	\<Tab>organization<space>=<space>{},<Esc>hi
 
-" >>>> GROFF
+" >> GROFF
 au BufNewFile,BufRead *.groff,*.ms set filetype=groff
 
 autocmd FileType groff inoremap ;b  <Esc>o.B<space>""<space><++><Enter><++><Esc>0kf"a
@@ -411,7 +360,7 @@ autocmd FileType groff inoremap ;u  <Esc>o.UL<space>""<space><++><Enter><++><Esc
 autocmd FileType groff inoremap ;x  <Esc>o.BX<space>""<space><++><Enter><++><Esc>0kf"a
 autocmd FileType groff inoremap <Tab><Enter> <Esc>o.PP<Enter>
 
-" >>>> MARKDOWN
+" >> MARKDOWN
 autocmd FileType markdown inoremap 1h <Esc>A<Enter><Enter>#<space>
 autocmd FileType markdown inoremap 2h <Esc>A<Enter><Enter>##<space>
 autocmd FileType markdown inoremap 3h <Esc>A<Enter><Enter>###<space>
@@ -477,7 +426,7 @@ autocmd FileType markdown vnoremap \5n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Esc
 autocmd FileType markdown vnoremap \6n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Tab><Esc>
 autocmd FileType markdown vnoremap \7n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Tab><Tab><Esc>
 
-" >>>> R MARKDOWN
+" >> R MARKDOWN
 
 autocmd Filetype rmd map \c :!echo<space>"require(rmarkdown);<space>
 	\render('<c-r>%')"<space>\|<space>R<space>--vanilla<Enter><Enter>
@@ -521,7 +470,7 @@ autocmd FileType rmd vnoremap \s xa~~<Esc>pa~~<Esc>
 autocmd Filetype rmd inoremap \r ```{r}<CR>```<CR><CR><esc>2kO
 autocmd Filetype rmd inoremap \p ```{python}<CR>```<CR><CR><esc>2kO
 
-" >>>> SHELL
+" >> SHELL
 
 autocmd FileType sh inoremap if<Tab> if [[  ]]; then
 	\<Enter><++>
@@ -560,7 +509,7 @@ autocmd FileType sh inoremap for<Tab> for i in *; do
 	\<Enter><++>
 	\<Enter><BS>done<Esc>02kf*xi
 
-" >>>> OPENERS
+" >> OPENERS
 
 autocmd FileType tex,rmd        map ;vp :silent<space>!zathura<space>
 	\<C-r>%<BS><BS><BS>pdf<space>&<Enter>
@@ -568,12 +517,12 @@ autocmd FileType markdown,groff map ;vp :silent<space>!zathura<space>
 	\<C-r>%<BS><BS>pdf<space>&<Enter>
 autocmd Filetype markdown       map ;vh :!openhtml<space><C-r>%<Enter><Enter>
 
-" >>>> PYTHON FILES
+" >> PYTHON FILES
 autocmd Filetype python nnoremap \ll :w<space>!python<Enter>
 autocmd FileType python set noexpandtab smartindent tabstop=4 shiftwidth=4
 	\ cinwords=if,elif,else,for,while,try,except,finally,def,class
 
-" >>>> PDF WORDCOUNT
+" >> PDF WORDCOUNT
 autocmd Filetype tex map \wc :!pdftotext <C-r>%<BS><BS><BS><BS>.pdf -  <bar> wc -w<Enter>
 autocmd Filetype rmd map \wc :!pdftotext <C-r>%<BS><BS><BS><BS>.pdf -  <bar> wc -w<Enter>
 autocmd Filetype markdown map \wc :!pdftotext <C-r>%<BS><BS><BS>.pdf - <bar> wc -w<Enter>

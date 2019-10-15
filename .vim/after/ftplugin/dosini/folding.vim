@@ -15,13 +15,13 @@ function FoldText()
 	let windowwidth = winwidth(0) - nucolwidth - 3
 	let foldsize = (v:foldend-v:foldstart)
 	let foldline = getline(v:foldstart)
-	let foldline = substitute(foldline, '^[bar/', "┤BAR: ", "")
-	let foldline = substitute(foldline, '^[module/', "┤Module: ", "")
-	let foldline = substitute(foldline, '^[global/', "┤Glo: ", "")
-	let foldline = substitute(foldline, ']$', " ", "")
-	let foldline = substitute(foldline, '^[', "┤", "")
-	let text = foldline.foldsize.'line     '
+	let foldline = substitute(foldline, '^[bar/',    "┫BAR ",   "")
+	let foldline = substitute(foldline, '^[module/', "┫MOD    ", "")
+	let foldline = substitute(foldline, '^[global/', "┫GBL    ", "")
+	let foldline = substitute(foldline, ']$',        " ",        "")
+	let foldline = substitute(foldline, '^[',        "┫",        "")
+	let text = foldline.foldsize.'line    '
 	let barcharcount = ((windowwidth * 2)/ 3) - strdisplaywidth(foldsize.'lines     ')
 	let spacecharcount = windowwidth - strdisplaywidth(text) - barcharcount
-	return ' '.foldline.repeat(" ",spacecharcount).'├'.repeat("┈",barcharcount).'  ('.foldsize.' lines)'
+	return foldline.repeat(" ",spacecharcount).'┣'.repeat("━",barcharcount).'  ('.foldsize.' lines)'
 endfunction

@@ -23,13 +23,12 @@ function FoldText()
 	let windowwidth = winwidth(0) - nucolwidth - 3
 	let foldsize = (v:foldend-v:foldstart)
 	let foldline = getline(v:foldstart)
-	let foldline = substitute(foldline, '^# ', "┤ ", "")
-	let foldline = substitute(foldline, '^## ', "┼ ", "")
-	let foldline = substitute(foldline, '^### ', "┼┈ ", "")
-	let text = foldline.foldsize.'line     '
-	let barcharcount = ((windowwidth * 2)/ 3) - strdisplaywidth(foldsize.'lines     ')
-	let spacecharcount = windowwidth - strdisplaywidth(text) - barcharcount
-	return ' '.foldline.repeat(" ",spacecharcount).'├'.repeat("┈",barcharcount).'  ('.foldsize.' lines)'
+	let foldline = substitute(foldline, '^# ',   "┫ ",   "")
+	let foldline = substitute(foldline, '^## ',  "╋  ",  "")
+	let foldline = substitute(foldline, '^### ', "╋━  ", "")
+	let text = foldline.foldsize.'line   '
+	let spacecharcount = windowwidth - strdisplaywidth(text)
+	return foldline.repeat(" ",spacecharcount).'  ('.foldsize.' lines)'
 endfunction
 
 setlocal spell spelllang=en_gb

@@ -9,8 +9,8 @@
 
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-# >>>> VARS
-# //// MAIN
+# >> VARS
+# ━━ MAIN
 set $font1 %%romanfont%%
 set $font2 FontAwesome
 set $font3 monaco
@@ -30,7 +30,7 @@ set $mediaw2   492
 set $mediah    299
 set $mediah2   389
 
-# //// i3
+# ━━ i3
 set $ADI Mod1
 set $WNI Mod4
 set $ALT bindsym Mod1
@@ -50,7 +50,7 @@ set $FEN floating enabled
 set $FDI floating disabled
 set $BNR border normal
 
-# //// APPS
+# ━━ APPS
 set $HM  /home/gavarch
 set $TRM urxvtc
 set $EDT exec --no-startup-id edtr -s DOOTS
@@ -59,7 +59,7 @@ set $BAP google-chrome-beta
 set $FFX firefox
 set $THN thunar
 
-# >>>> DECORATIONS
+# >> DECORATIONS
 # class                 brdr    bkgr    text    indi    chlb
 client.focused          %%acc%% %%acb%% %%fg0%% %%acb%% %%acc%%
 client.focused_inactive %%acc%% %%acc%% %%fg0%% %%acc%% %%acc%%
@@ -68,8 +68,8 @@ client.urgent           %%red%% %%red%% %%fg0%% %%red%% %%red%%
 client.placeholder      %%bg0%% %%bg0%% %%fg0%% %%bg0%% %%bg0%%
 client.background       %%bg0%%
 
-# >>>> MOD1 BINDINGS
-# //// Misc
+# >> MOD1 BINDINGS
+# ━━ Misc
 $ALT+Escape         $exn i3shutdown
 $ALT+Home           $exn keybindingsmenu
 $ALW+button1        $QUD -m 3
@@ -87,7 +87,7 @@ $ALT+Shift+space    floating toggle
 $ALT+Control+Right  workspace next
 $ALT+Control+Left   workspace prev
 
-# //// Numbers
+# ━━ Numbers
 $ALT+grave          $exn gencvl
 $ALT+1              $QUD -F 1
 $ALT+2              $QUD -F 2
@@ -117,7 +117,7 @@ $ALT+Ctrl+7         $EDT $HM/.config/qutebrowser/.themer/template_config.py
 #$ALT+Ctrl+6         $RUN -i plbar    -e '$EDT $HM/.config/polybar/.themer/template_config'
 #$ALT+Ctrl+7         $RUN -i quteb    -e '$EDT $HM/.config/qutebrowser/.themer/template_config.py'
 
-# //// 1st Row
+# ━━ 1st Row
 $ALT+Tab            focus right
 $ALT+q              $RUN -t -i calculator -e '$TRM -name calculator -e R'
 $ALT+w              $RUN -n ^watchseries -e '$BAP --new-window --app=https://ww2.watch-series.co/'
@@ -141,7 +141,7 @@ $ALT+Shift+u        $exn $BAP --new-window --app=https://outlook.office.com/mail
 $ALT+Shift+i        $RUN -n '^BBC iPlayer$' -e '$BAP --new-window --app=https://www.bbc.co.uk/iplayer/'
 $ALT+Shift+p        $exn screenshot
 
-# //// 2nd Row
+# ━━ 2nd Row
 $ALT+a              focus parent
 $ALT+s              $RUN -i ncmpcpp -e '$TRM -name ncmpcpp -e ncmpcpp'
 $ALT+d              $exn i3menu -s -l 0
@@ -169,7 +169,7 @@ $ALT+Shift+Return   $exn $TRM -name ranger -e ranger
 $ALT+Control+s      sticky toggle
 $ALT+Control+Return $exn $TRM -name noterm
 
-# //// 3rd Row
+# ━━ 3rd Row
 $ALT+z              $exn surf docs.google.com/document/u/0/
 $ALT+x              $exn surf docs.google.com/spreadsheets/u/0/
 $ALT+c              $RUN -c Firefox -e '$FFX'
@@ -186,11 +186,11 @@ $ALT+Shift+v        $exn projectM-pulseaudio
 $ALT+Shift+b        $exn polybar-msg cmd hide
 $ALT+Shift+m        $RUN -n '^My Movies & TV' -e '$BAP --new-window --app=https://play.google.com/movies/'
 
-# >>>> MOD4 BINDINGS
-# //// Misc
+# >> MOD4 BINDINGS
+# ━━ Misc
 floating_modifier   $WNI
 
-# //// Numbers
+# ━━ Numbers
 $WIN+grave          $exn "notify-send $(i3gm)"
 $WIN+1              workspace 1
 $WIN+2              workspace 2
@@ -214,7 +214,7 @@ $WIN+Shift+8        move container to workspace 8; workspace 8
 $WIN+Shift+9        move container to workspace 9; workspace 9
 $WIN+Shift+0        move container to workspace 10; workspace 10
 
-# //// 1st Row
+# ━━ 1st Row
 $WIN+r              $RUN -i reddit -e '$TRM -name reddit -e rtv'
 $WIN+t              $exn compton
 $WIN+y              $QUD --resize '1 -5 -5'
@@ -230,7 +230,7 @@ $WIN+Shift+u        gaps inner current minus 1; gaps outer current minus 10
 $WIN+Shift+i        gaps inner current plus 1;  gaps outer current plus 10
 $WIN+Shift+o        gaps inner current set 4;   gaps outer current set 40
 
-# //// 2nd Row
+# ━━ 2nd Row
 $WIN+s              $exn slack
 $WIN+d              move workspace to output $hdm
 $WIN+f              $exn gksu $THN
@@ -252,7 +252,7 @@ $WIN+Shift+k        move up
 $WIN+Shift+l        move right
 $WIN+Shift+Return   $exn $TRM -name ranger_root -e sudo ranger
 
-# //// 3rd Row
+# ━━ 3rd Row
 #$WIN+x              unmark
 $WIN+c              $exn google-chrome-beta
 $WIN+v              move workspace to output $vga
@@ -264,15 +264,15 @@ $WIN+period         $exn i3light inc
 
 $WIN+Shift+c        $exn reloadconfs
 
-# >>>> FOR_WINDOW
-# //// GLOBAL
+# >> FOR_WINDOW
+# ━━ GLOBAL
 focus_wrapping force
 workspace_auto_back_and_forth yes
 $fw [urgent=latest] focus
 #hide_edge_borders both
 #focus_follows_mouse no
 
-# //// FLOATERS
+# ━━ FLOATERS
 $fw [title="^Colour picker$"]            resize set 697 276
 $fw [title="Save Image"]                 resize set 750 500
 $fw [title="Open Files"]                 resize set 750 500
@@ -280,7 +280,7 @@ $fw [title="Select a download location"] resize set 750 500
 $fw [class="Pavucontrol"]                resize set 525 300
 $fw [class="Rofi"]                       border pixel 1
 
-# //// QUAD
+# ━━ QUAD
 $fw [title="Log in with PayPal"]         $tf "paypal"
 $fw [instance="tiledterm"]               focus;$QUD -t;$tf "tiledterm"
 $fw [instance="media"]                   focus;$QUD -t;$tf "media"
@@ -345,13 +345,13 @@ $fw [class="Slack"]                      focus;$QUD -m 3;focus;$tf "slack"
 $fw [instance="noterm"]                  focus;$QUD -m 4;focus;$tf "noterm"
 $fw [instance="visualiser"]              focus;$QUD -m 4;focus;$tf "visualiser"
 
-# >>>> GAPS
+# >> GAPS
 gaps inner 20
 gaps outer 40
 workspace 1 gaps inner 0
 workspace 1 gaps outer 0
 
-# >>>> STARTUP
+# >> STARTUP
 $exn urxvtd -q -o -f
 $exn xautolock -corners 0-0- -cornersize 30 -time 5 -locker $HOME/scr/lockscreen
 $exn /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

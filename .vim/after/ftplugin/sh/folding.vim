@@ -2,7 +2,7 @@ function! Folds()
 	let thisline = getline(v:lnum)
 	if match(thisline, '^while ') >= 0
 		return ">1"
-	elseif match(thisline, '^# >>>> ') >= 0
+	elseif match(thisline, '^# >> ') >= 0
 		return ">1"
 	elseif match(thisline, '^if ') >= 0
 		return ">1"
@@ -42,8 +42,8 @@ function FoldText()
 "	let foldline = substitute(foldline, '^case ', "", "")
 "	let foldline = substitute(foldline, ' in$', " C", "")
 "	let foldline = substitute(foldline, 'opts; do$', "W", "")
-	let text = foldline.foldsize.'line     '
+	let text = foldline.foldsize.'line    '
 "	let barcharcount = ((windowwidth * 2)/ 3) - strdisplaywidth(foldsize.'lines     ')
 	let spacecharcount = windowwidth - strdisplaywidth(text)
-	return ' '.foldline.repeat("┈",spacecharcount).'  ('.foldsize.' lines)'
+	return foldline.' '.repeat("┈",spacecharcount).'  ('.foldsize.' lines)'
 endfunction
