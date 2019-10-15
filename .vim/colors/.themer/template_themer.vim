@@ -10,7 +10,7 @@ endif
 
 let g:colors_name = "themer"
 
-" >>>> CTERM
+" >> CTERM
 hi Normal           ctermfg=white    ctermbg=none
 hi Title            ctermfg=white    ctermbg=none     cterm=bold
 hi LineNr           ctermfg=blue     ctermbg=black    cterm=none
@@ -52,9 +52,9 @@ hi Pmenu            ctermfg=blue     ctermbg=white    cterm=none
 hi PmenuSel         ctermfg=black    ctermbg=blue     cterm=none
 hi PmenuSbar        ctermfg=blue     ctermbg=black    cterm=none
 hi PmenuThumb       ctermfg=green    ctermbg=green    cterm=none
-hi TabLine          ctermfg=blue     ctermbg=black    cterm=none
-hi TabLineSel       ctermfg=black    ctermbg=blue     cterm=none
-hi TabLineFill      ctermfg=blue     ctermbg=black    cterm=none
+hi TabLine          ctermfg=blue     ctermbg=Gray     cterm=none
+hi TabLineSel       ctermfg=white    ctermbg=black    cterm=none
+hi TabLineFill      ctermfg=blue     ctermbg=Gray     cterm=none
 
 hi usrred           ctermfg=white    ctermbg=red
 hi usrylw           ctermfg=black    ctermbg=yellow
@@ -63,7 +63,7 @@ hi usrgry           ctermfg=black    ctermbg=grey
 hi usrblu           ctermfg=black    ctermbg=blue
 hi usrgnt           ctermfg=black    ctermbg=magenta
 
-" >>>> GUI
+" >> GUI
 hi Normal           guifg=%%fg0%% guibg=%%bg0%%
 hi Title            guifg=%%fg0%% guibg=%%bg0%% gui=bold
 hi LineNr           guifg=%%acc%% guibg=%%bg0%% gui=none
@@ -108,6 +108,9 @@ hi PmenuThumb       guifg=%%grn%% guibg=%%grn%% gui=none
 hi TabLine          guifg=%%acc%% guibg=%%bg0%% gui=none
 hi TabLineSel       guifg=%%bg0%% guibg=%%acc%% gui=none
 hi TabLineFill      guifg=%%acc%% guibg=%%bg0%% gui=none
+hi TabLine          guifg=%%acc%% guibg=%%acb%% gui=none
+hi TabLineSel       guifg=%%fg0%% guibg=%%bg0%% gui=none
+hi TabLineFill      guifg=%%acc%% guibg=%%acb%% gui=none
 
 hi usrred           guifg=%%bg0%% guibg=%%red%%
 hi usrylw           guifg=%%bg0%% guibg=%%ylw%%

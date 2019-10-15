@@ -10,7 +10,7 @@ endif
 
 let g:colors_name = "themer"
 
-" >>>> CTERM
+" >> CTERM
 hi Normal           ctermfg=white    ctermbg=none
 hi Title            ctermfg=white    ctermbg=none     cterm=bold
 hi LineNr           ctermfg=blue     ctermbg=black    cterm=none
@@ -52,9 +52,9 @@ hi Pmenu            ctermfg=blue     ctermbg=white    cterm=none
 hi PmenuSel         ctermfg=black    ctermbg=blue     cterm=none
 hi PmenuSbar        ctermfg=blue     ctermbg=black    cterm=none
 hi PmenuThumb       ctermfg=green    ctermbg=green    cterm=none
-hi TabLine          ctermfg=blue     ctermbg=black    cterm=none
-hi TabLineSel       ctermfg=black    ctermbg=blue     cterm=none
-hi TabLineFill      ctermfg=blue     ctermbg=black    cterm=none
+hi TabLine          ctermfg=blue     ctermbg=Gray     cterm=none
+hi TabLineSel       ctermfg=white    ctermbg=black    cterm=none
+hi TabLineFill      ctermfg=blue     ctermbg=Gray     cterm=none
 
 hi usrred           ctermfg=white    ctermbg=red
 hi usrylw           ctermfg=black    ctermbg=yellow
@@ -63,7 +63,7 @@ hi usrgry           ctermfg=black    ctermbg=grey
 hi usrblu           ctermfg=black    ctermbg=blue
 hi usrgnt           ctermfg=black    ctermbg=magenta
 
-" >>>> GUI
+" >> GUI
 hi Normal           guifg=#3e443e guibg=#f9efe9
 hi Title            guifg=#3e443e guibg=#f9efe9 gui=bold
 hi LineNr           guifg=#DC8E69 guibg=#f9efe9 gui=none
@@ -108,6 +108,9 @@ hi PmenuThumb       guifg=#507C88 guibg=#507C88 gui=none
 hi TabLine          guifg=#DC8E69 guibg=#f9efe9 gui=none
 hi TabLineSel       guifg=#f9efe9 guibg=#DC8E69 gui=none
 hi TabLineFill      guifg=#DC8E69 guibg=#f9efe9 gui=none
+hi TabLine          guifg=#DC8E69 guibg=#eabea9 gui=none
+hi TabLineSel       guifg=#3e443e guibg=#f9efe9 gui=none
+hi TabLineFill      guifg=#DC8E69 guibg=#eabea9 gui=none
 
 hi usrred           guifg=#f9efe9 guibg=#6F90A7
 hi usrylw           guifg=#f9efe9 guibg=#A5896D
