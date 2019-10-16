@@ -2,7 +2,7 @@ function! Folds()
 	let thisline = getline(v:lnum)
 	if match(thisline, '^while ') >= 0
 		return ">1"
-	elseif match(thisline, '^# >> ') >= 0
+	elseif match(thisline, '^# ━  ') >= 0
 		return ">1"
 	elseif match(thisline, '^if ') >= 0
 		return ">1"

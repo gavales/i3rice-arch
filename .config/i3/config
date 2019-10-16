@@ -1,11 +1,11 @@
-#   ██ ██████                             ████ ██        
-#  ▒▒ ▒█▒▒▒▒█                            ▒██▒ ▒▒   █████ 
+#   ██ ██████                             ████ ██
+#  ▒▒ ▒█▒▒▒▒█                            ▒██▒ ▒▒   █████
 #   ██▒    ▒█  █████   ██████  ███████  ██████ ██ ██▒▒▒██
 #  ▒██   ████ ██▒▒▒██ ██▒▒▒▒██▒▒██▒▒▒██▒▒▒██▒ ▒██▒██  ▒██
 #  ▒██  ▒▒▒▒█▒██  ▒▒ ▒██   ▒██ ▒██  ▒██  ▒██  ▒██▒▒██████
 #  ▒██ █   ▒█▒██   ██▒██   ▒██ ▒██  ▒██  ▒██  ▒██ ▒▒▒▒▒██
-#  ▒██▒██████▒▒█████ ▒▒██████  ███  ▒██  ▒██  ▒██  █████ 
-#  ▒▒ ▒▒▒▒▒▒  ▒▒▒▒▒   ▒▒▒▒▒▒  ▒▒▒   ▒▒   ▒▒   ▒▒  ▒▒▒▒▒  
+#  ▒██▒██████▒▒█████ ▒▒██████  ███  ▒██  ▒██  ▒██  █████
+#  ▒▒ ▒▒▒▒▒▒  ▒▒▒▒▒   ▒▒▒▒▒▒  ▒▒▒   ▒▒   ▒▒   ▒▒  ▒▒▒▒▒
 
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
@@ -51,11 +51,9 @@ set $FDI floating disabled
 set $BNR border normal
 
 # ━━ APPS
-set $HM  /home/gavarch
 set $TRM urxvtc
 set $EDT exec --no-startup-id edtr -s doots
-#set $EDT urxvtc -name
-set $BAP google-chrome-beta
+set $BAP google-chrome-beta --new-window
 set $FFX firefox
 set $THN thunar
 
@@ -101,26 +99,18 @@ $ALT+Shift+2        $QUD -m 2
 $ALT+Shift+3        $QUD -m 3
 $ALT+Shift+4        $QUD -m 4
 
-$ALT+Ctrl+1         $EDT $HM/.config/i3/.themer/template_config
-$ALT+Ctrl+2         $EDT $HM/.bashrc
-$ALT+Ctrl+3         $EDT $HM/.vimrc
-$ALT+Ctrl+4         $EDT $HM/.config/ranger/rc.conf
-$ALT+Ctrl+5         $EDT $HM/.config/ranger/rifle.conf
-$ALT+Ctrl+6         $EDT $HM/.config/polybar/.themer/template_config
-$ALT+Ctrl+7         $EDT $HM/.config/qutebrowser/.themer/template_config.py
-
-#$ALT+Ctrl+1         $RUN -i i3config -e '$EDT $HM/.config/i3/.themer/template_config'
-#$ALT+Ctrl+2         $RUN -i bashrc   -e '$EDT $HM/.bashrc'
-#$ALT+Ctrl+3         $RUN -i vimrc    -e '$EDT $HM/.vimrc'
-#$ALT+Ctrl+4         $RUN -i rngrc    -e '$EDT $HM/.config/ranger/rc.conf'
-#$ALT+Ctrl+5         $RUN -i rngrl    -e '$EDT $HM/.config/ranger/rifle.conf'
-#$ALT+Ctrl+6         $RUN -i plbar    -e '$EDT $HM/.config/polybar/.themer/template_config'
-#$ALT+Ctrl+7         $RUN -i quteb    -e '$EDT $HM/.config/qutebrowser/.themer/template_config.py'
+$ALT+Ctrl+1         $EDT /home/gavarch/.config/i3/.themer/template_config
+$ALT+Ctrl+2         $EDT /home/gavarch/.bashrc
+$ALT+Ctrl+3         $EDT /home/gavarch/.vimrc
+$ALT+Ctrl+4         $EDT /home/gavarch/.config/ranger/rc.conf
+$ALT+Ctrl+5         $EDT /home/gavarch/.config/ranger/rifle.conf
+$ALT+Ctrl+6         $EDT /home/gavarch/.config/polybar/.themer/template_config
+$ALT+Ctrl+7         $EDT /home/gavarch/.config/qutebrowser/.themer/template_config.py
 
 # ━━ 1st Row
 $ALT+Tab            focus right
 $ALT+q              $RUN -t -i calculator -e '$TRM -name calculator -e R'
-$ALT+w              $RUN -n ^watchseries -e '$BAP --new-window --app=https://ww2.watch-series.co/'
+$ALT+w              $RUN -n ^watchseries -e '$BAP --app=https://ww2.watch-series.co/'
 $ALT+e              layout toggle tabbed split
 $ALT+r              $RUN -n newsboat -e '$TRM -name newsboat -e newsboat'
 $ALT+t              $exn mkwalrando
@@ -136,9 +126,9 @@ $ALT+backslash      $exn i3media stop
 $ALT+Shift+Tab      focus left
 $ALT+Shift+q        kill
 $ALT+Shift+r        restart
-$ALT+Shift+y        $RUN -n YouTube$ -e '$BAP --new-window --app=https://www.youtube.com/'
-$ALT+Shift+u        $exn $BAP --new-window --app=https://outlook.office.com/mail/inbox/id/AAQkAGZjZGU2MmYyLTc5ZDctNDI1My05MzU4LWRjYTc3NjdhN2NkOAAQAOwToE4JkJhIgjz322aPjPU%3D
-$ALT+Shift+i        $RUN -n '^BBC iPlayer$' -e '$BAP --new-window --app=https://www.bbc.co.uk/iplayer/'
+$ALT+Shift+y        $RUN -n YouTube$ -e '$BAP --app=https://www.youtube.com/'
+$ALT+Shift+u        $exn $BAP --app=https://outlook.office.com/mail/inbox/id/AAQkAGZjZGU2MmYyLTc5ZDctNDI1My05MzU4LWRjYTc3NjdhN2NkOAAQAOwToE4JkJhIgjz322aPjPU%3D
+$ALT+Shift+i        $RUN -n '^BBC iPlayer$' -e '$BAP --app=https://www.bbc.co.uk/iplayer/'
 $ALT+Shift+p        $exn screenshot
 
 # ━━ 2nd Row
@@ -159,7 +149,7 @@ $ALT+Shift+a        focus child
 $ALT+Shift+s        $RUN -c Spotify -e 'spotify'
 $ALT+Shift+d        $exn i3menu -d
 $ALT+Shift+f        fullscreen toggle
-$ALT+Shift+g        $exn $TRM -name drive_sync -e bash $HM/scr/grivesync
+$ALT+Shift+g        $exn $TRM -name drive_sync -e grivesync
 $ALT+Shift+h        $exn i3move left
 $ALT+Shift+j        $exn i3move down
 $ALT+Shift+k        $exn i3move up
@@ -174,8 +164,8 @@ $ALT+z              $exn surf docs.google.com/document/u/0/
 $ALT+x              $exn surf docs.google.com/spreadsheets/u/0/
 $ALT+c              $RUN -c Firefox -e '$FFX'
 $ALT+v              $RUN -i visualiser -e '$TRM -name visualiser -e vis'
-$ALT+b              $RUN -i references -e '$TRM -name references -e vim $HM/Drive/global.bib'
-$ALT+n              $RUN -n ^Netflix$ -e '$BAP --new-window --app=https://www.netflix.com/'
+$ALT+b              $RUN -i references -e '$EDT /home/gavarch/Drive/global.bib'
+$ALT+n              $RUN -n ^Netflix$ -e '$BAP --app=https://www.netflix.com/'
 $ALT+m              $exn surf docs.google.com/presentation/u/0/
 $ALT+comma          $exn i3vol dec
 $ALT+period         $exn i3vol inc
@@ -184,7 +174,7 @@ $ALT+slash          $exn i3vol mute
 $ALT+Shift+c        $exn xtheme --auto-dark 7:19
 $ALT+Shift+v        $exn projectM-pulseaudio
 $ALT+Shift+b        $exn polybar-msg cmd hide
-$ALT+Shift+m        $RUN -n '^My Movies & TV' -e '$BAP --new-window --app=https://play.google.com/movies/'
+$ALT+Shift+m        $RUN -n '^My Movies & TV' -e '$BAP --app=https://play.google.com/movies/'
 
 # >> MOD4 BINDINGS
 # ━━ Misc
@@ -234,7 +224,7 @@ $WIN+Shift+o        gaps inner current set 4;   gaps outer current set 40
 $WIN+s              $exn slack
 $WIN+d              move workspace to output $hdm
 $WIN+f              $exn gksu $THN
-$WIN+g              $exn $TRM -name gitcommit -e bash $HM/scr/gitcommit
+$WIN+g              $exn $TRM -name gitcommit -e bash /home/gavarch/scr/gitcommit
 $WIN+h              focus left
 $WIN+j              focus down
 $WIN+k              focus up
@@ -371,7 +361,7 @@ $exn setxkbmap $kb
 $exn i3listen-toggle
 $exn reloadconfs
 
-$ena mpv $HM/scrmus/A\ Tone\ His\ Self.mp3
-$ena notify-send 'i3 (re)loaded!' -i $HM/scrpic/i3white.png
+$ena mpv /home/gavarch/scrmus/A\ Tone\ His\ Self.mp3
+$ena notify-send 'i3 (re)loaded!' -i /home/gavarch/scrpic/i3white.png
 
 # vim:ft=i3

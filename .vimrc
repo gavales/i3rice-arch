@@ -7,7 +7,7 @@
 "  ▒██  ▒▒██   ▒██ ███ ▒██ ▒██▒███   ▒▒█████
 "  ▒▒    ▒▒    ▒▒ ▒▒▒  ▒▒  ▒▒ ▒▒▒     ▒▒▒▒▒
 
-" >> SETTINGS
+" ━  SETTINGS
 " ━━ GENERAL
 filetype plugin on
 syntax enable
@@ -22,22 +22,23 @@ set smartindent tabstop=2 shiftwidth=2
 set incsearch
 set cursorline colorcolumn=81
 "set conceallevel=2 concealcursor=nic
-set list listchars=tab:│\ ,trail:+,precedes:←,extends:→
+set list listchars=tab:│\ ,trail:╳,precedes:←,extends:→
 set noshowmode noruler noshowcmd
 set cmdheight=1
 set splitbelow splitright
 set t_Co=16
 
 " ━━ GLOBAL MAPS
-map \gy :Goyo<bar>set<Space>laststatus=2<Enter><Enter>
-map <Tab><Tab>    <Esc>/>><Enter>
-map <Tab><Space> <Esc>/>><Enter>
+map \gy           :Goyo<bar>set<Space>laststatus=2<Enter><Enter>
+map <Tab><Tab>    <Esc>/ ━ <Enter>
+map <Tab><Space>  <Esc>/ ━━ <Enter>
 map <C-p>         "+P
 map <C-Up>        :res<space>+5<Enter>
 map <C-Down>      :res<space>-5<Enter>
 map <C-Left>      :vertical<space>resize<space>-5<Enter>
 map <C-Right>     :vertical<space>resize<space>+5<Enter>
-map <F10>         :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+map <F10>         :echo "hi<"
+\ . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
@@ -101,7 +102,7 @@ let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
 let g:calendar_modifiable = 1
 
-" >> STATUSLINE
+" ━  STATUSLINE
 " ━━ FUNCTIONS
 
 set laststatus=2
@@ -182,7 +183,7 @@ set statusline+=%L
 set statusline+=\ C:
 set statusline+=%c\ 
 
-" >> LATEX
+" ━  LATEX
 " ━━ LATEX-SUITE
 autocmd FileType tex set smartindent
 	\ cinwords=\\begin
@@ -339,7 +340,7 @@ autocmd Filetype bib inoremap <Tab>num <Esc>A<Enter>
 autocmd Filetype bib inoremap <Tab>org <Esc>A<Enter>
 	\<Tab>organization<space>=<space>{},<Esc>hi
 
-" >> GROFF
+" ━  GROFF
 au BufNewFile,BufRead *.groff,*.ms set filetype=groff
 
 autocmd FileType groff inoremap ;b  <Esc>o.B<space>""<space><++><Enter><++><Esc>0kf"a
@@ -360,7 +361,7 @@ autocmd FileType groff inoremap ;u  <Esc>o.UL<space>""<space><++><Enter><++><Esc
 autocmd FileType groff inoremap ;x  <Esc>o.BX<space>""<space><++><Enter><++><Esc>0kf"a
 autocmd FileType groff inoremap <Tab><Enter> <Esc>o.PP<Enter>
 
-" >> MARKDOWN
+" ━  MARKDOWN
 autocmd FileType markdown inoremap 1h <Esc>A<Enter><Enter>#<space>
 autocmd FileType markdown inoremap 2h <Esc>A<Enter><Enter>##<space>
 autocmd FileType markdown inoremap 3h <Esc>A<Enter><Enter>###<space>
@@ -426,7 +427,7 @@ autocmd FileType markdown vnoremap \5n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Esc
 autocmd FileType markdown vnoremap \6n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Tab><Esc>
 autocmd FileType markdown vnoremap \7n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Tab><Tab><Esc>
 
-" >> R MARKDOWN
+" ━  R MARKDOWN
 
 autocmd Filetype rmd map \c :!echo<space>"require(rmarkdown);<space>
 	\render('<c-r>%')"<space>\|<space>R<space>--vanilla<Enter><Enter>
@@ -470,7 +471,7 @@ autocmd FileType rmd vnoremap \s xa~~<Esc>pa~~<Esc>
 autocmd Filetype rmd inoremap \r ```{r}<CR>```<CR><CR><esc>2kO
 autocmd Filetype rmd inoremap \p ```{python}<CR>```<CR><CR><esc>2kO
 
-" >> SHELL
+" ━  SHELL
 
 autocmd FileType sh inoremap if<Tab> if [[  ]]; then
 	\<Enter><++>
@@ -509,7 +510,7 @@ autocmd FileType sh inoremap for<Tab> for i in *; do
 	\<Enter><++>
 	\<Enter><BS>done<Esc>02kf*xi
 
-" >> OPENERS
+" ━  OPENERS
 
 autocmd FileType tex,rmd        map ;vp :silent<space>!zathura<space>
 	\<C-r>%<BS><BS><BS>pdf<space>&<Enter>
@@ -517,12 +518,12 @@ autocmd FileType markdown,groff map ;vp :silent<space>!zathura<space>
 	\<C-r>%<BS><BS>pdf<space>&<Enter>
 autocmd Filetype markdown       map ;vh :!openhtml<space><C-r>%<Enter><Enter>
 
-" >> PYTHON FILES
+" ━  PYTHON FILES
 autocmd Filetype python nnoremap \ll :w<space>!python<Enter>
 autocmd FileType python set noexpandtab smartindent tabstop=4 shiftwidth=4
 	\ cinwords=if,elif,else,for,while,try,except,finally,def,class
 
-" >> PDF WORDCOUNT
+" ━  PDF WORDCOUNT
 autocmd Filetype tex map \wc :!pdftotext <C-r>%<BS><BS><BS><BS>.pdf -  <bar> wc -w<Enter>
 autocmd Filetype rmd map \wc :!pdftotext <C-r>%<BS><BS><BS><BS>.pdf -  <bar> wc -w<Enter>
 autocmd Filetype markdown map \wc :!pdftotext <C-r>%<BS><BS><BS>.pdf - <bar> wc -w<Enter>

@@ -67,6 +67,6 @@ esac
 [[ -n $EXF ]] && SVR="edtr-$EXF"
 [[ -n $SVO ]] && SVR="$SVO"
 
-urxvtc -name "${SVR}" -fn "xft:Luxi Mono:size=13" \
+urxvtc -name "${SVR}" -fn "xft:CMU Typewriter Text:size=14" \
 	-e vim --servername "${SVR}" --remote-tab \
 	"${TRG}" &>/dev/null &

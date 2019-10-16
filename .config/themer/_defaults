@@ -1,5 +1,6 @@
 ! vim:ft=perl
 name       gruvbox_light
+HOME       \/home\/gavarch
 guifont    $romanfont
 font       CMUTypewriterText
 sansfont   Lucida Sans

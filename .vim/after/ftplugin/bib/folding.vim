@@ -2,7 +2,7 @@ function! Folds()
 	let thisline = getline(v:lnum)
 	if match(thisline, '^@') >= 0
 		return ">2"
-	elseif match(thisline, '^% >>') >= 0
+	elseif match(thisline, '^% ━ ') >= 0
 		return ">1"
 	else
 		return "="
@@ -16,7 +16,7 @@ function FoldText()
 	let windowwidth = winwidth(0) - nucolwidth - 3
 	let foldsize = (v:foldend-v:foldstart)
 	let foldline = getline(v:foldstart)
-	let foldline = substitute(foldline, '^% >> ',           " ┫  ",   "")
+	let foldline = substitute(foldline, '^% ━  ',           " ┫  ",   "")
 	let foldline = substitute(foldline, ',$',               "",       "")
 	let foldline = substitute(foldline, '^@article{',       " ┣━ A ", "")
 	let foldline = substitute(foldline, '^@book{',          " ┣━ B ", "")

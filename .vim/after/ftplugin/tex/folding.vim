@@ -38,7 +38,7 @@ function! Folds()
 		return ">0"
 	elseif match(thisline, '% ━━') >= 0
 		return ">2"
-	elseif match(thisline, '% >>') >= 0
+	elseif match(thisline, '% ━ ') >= 0
 		return ">1"
 	else
 		return "="
@@ -55,21 +55,21 @@ function FoldText()
 	let foldsize = (v:foldend-v:foldstart)
 	let foldline = getline(v:foldstart)
 	let foldline = substitute(foldline, '% ',                 "",          "")
-	let foldline = substitute(foldline, '^>>',                "╢  ",       "")
-	let foldline = substitute(foldline, '^━━',                "╫  ",       "")
+	let foldline = substitute(foldline, '^━ ',                "╢    ",     "")
+	let foldline = substitute(foldline, '^━━',                "╫    ",     "")
 	let foldline = substitute(foldline, '\\documentclass',    "┫ PAmble ", "")
-	let foldline = substitute(foldline, '\\section{',         "┫  ",       "")
-	let foldline = substitute(foldline, '\\subsection{',      "╋━ ",       "")
+	let foldline = substitute(foldline, '\\section{',         "┫    ",     "")
+	let foldline = substitute(foldline, '\\subsection{',      "╋━   ",     "")
 	let foldline = substitute(foldline, '\\subsubsection{',   "╋━━━ ",     "")
-	let foldline = substitute(foldline, '\\section\*{',       "┫  ",       "")
-	let foldline = substitute(foldline, '\\subsection\*{',    "╋┅ ",       "")
+	let foldline = substitute(foldline, '\\section\*{',       "┫    ",     "")
+	let foldline = substitute(foldline, '\\subsection\*{',    "╋┅   ",     "")
 	let foldline = substitute(foldline, '\\subsubsection\*{', "╋┅┅┅ ",     "")
-	let foldline = substitute(foldline, '\\block{',           "┫  ",       "")
+	let foldline = substitute(foldline, '\\block{',           "┫    ",     "")
 	let foldline = substitute(foldline, '\\column{',          "Column:",   "")
-	let foldline = substitute(foldline, '\[',                        "",   "")
-	let foldline = substitute(foldline, '\]',                       ",",   "")
-	let foldline = substitute(foldline, '{',                         "",   "")
-	let foldline = substitute(foldline, '}.*',                       "",   "")
+	let foldline = substitute(foldline, '\[',                 "",          "")
+	let foldline = substitute(foldline, '\]',                 ",",         "")
+	let foldline = substitute(foldline, '{',                  "",          "")
+	let foldline = substitute(foldline, '}.*',                "",          "")
 	let text = foldline.foldsize.'line     '
 	let barcharcount = ((windowwidth * 2)/ 3) - strdisplaywidth(foldsize.'lines     ')
 	let spacecharcount = windowwidth - strdisplaywidth(text) - barcharcount
