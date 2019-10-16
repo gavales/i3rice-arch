@@ -1,11 +1,11 @@
-"               ██                           
-"              ▒▒                            
-"      ██    ██ ██ ██████████  ██████  █████ 
+"               ██
+"              ▒▒
+"      ██    ██ ██ ██████████  ██████  █████
 "     ▒██   ▒██▒██▒▒██▒▒██▒▒██▒▒██▒▒█ ██▒▒▒██
-"     ▒▒██ ▒██ ▒██ ▒██ ▒██ ▒██ ▒██ ▒ ▒██  ▒▒ 
+"     ▒▒██ ▒██ ▒██ ▒██ ▒██ ▒██ ▒██ ▒ ▒██  ▒▒
 "   ██ ▒▒████  ▒██ ▒██ ▒██ ▒██ ▒██   ▒██   ██
-"  ▒██  ▒▒██   ▒██ ███ ▒██ ▒██▒███   ▒▒█████ 
-"  ▒▒    ▒▒    ▒▒ ▒▒▒  ▒▒  ▒▒ ▒▒▒     ▒▒▒▒▒  
+"  ▒██  ▒▒██   ▒██ ███ ▒██ ▒██▒███   ▒▒█████
+"  ▒▒    ▒▒    ▒▒ ▒▒▒  ▒▒  ▒▒ ▒▒▒     ▒▒▒▒▒
 
 " >> SETTINGS
 " ━━ GENERAL
@@ -24,7 +24,7 @@ set cursorline colorcolumn=81
 "set conceallevel=2 concealcursor=nic
 set list listchars=tab:│\ ,trail:+,precedes:←,extends:→
 set noshowmode noruler noshowcmd
-set cmdheight=0
+set cmdheight=1
 set splitbelow splitright
 set t_Co=16
 
@@ -104,7 +104,7 @@ let g:calendar_modifiable = 1
 " >> STATUSLINE
 " ━━ FUNCTIONS
 
-set laststatus=1
+set laststatus=2
 
 function! FileSize()
 	let bytes = getfsize(expand('%:p'))
@@ -130,7 +130,7 @@ endfunction
 
 function! ReadOnly()
 	if &readonly || !&modifiable
-		return ''
+		return '╳'
 	else
 		return ''
 endfunction

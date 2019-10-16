@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: Sat 30 Mar 18:22:18 GMT 2019
+
+help () {
+cat << 'EOB'
+# openvim
+- vim server wrapper
+
+## Usage
+```
+openvim [--server|-s] <name> <file>
+openvim --help|-h
+```
+
+## Options
+
++ `--server|-s <name>`
+	+ Specify server name
+	+ Default is EDITOR
+
++ `--help|-h`
+	+ Print this help
+
+EOB
+exit
+}
+
+SVR=EDITOR
+
+while true; do
+	case $1 in
+		--server | -s ) SVR="${2:-}" ; shift ;;
+		--help | -h ) help ; shift ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+TRG="${@:-}"
+
+#EXT="${TRG##*.}"
+#TYP="$(file $(readlink "$TRG"))"
+#TYP=${TRG#*:}
+#TYP=${TYP%%,*}
+#
+##case $TYP in
+##	<++>) <++> ;;
+##esac
+
+urxvtc -name "${SVR}" -fn "xft:Luxi Mono:size=13" -e vim --servername "${SVR}" --remote-tab "${TRG}" &>/dev/null &

@@ -26,7 +26,7 @@ hi VisualNOS        ctermfg=white    ctermbg=Gray
 hi Type             ctermfg=white    ctermbg=black    cterm=bold
 hi Identifier       ctermfg=yellow   ctermbg=black    cterm=italic
 hi Comment          ctermfg=Gray     ctermbg=black    cterm=italic
-hi Folded           ctermfg=white    ctermbg=black    cterm=italic
+hi Folded           ctermfg=blue     ctermbg=black    cterm=italic
 hi Constant         ctermfg=white    ctermbg=black    cterm=italic
 hi Special          ctermfg=white    ctermbg=black    cterm=bold
 hi Statement        ctermfg=white    ctermbg=black    cterm=bold
@@ -79,7 +79,7 @@ hi VisualNOS        guifg=#3e443e guibg=#eabea9
 hi Type             guifg=#3e443e guibg=#f9efe9 gui=bold
 hi Identifier       guifg=#A5896D guibg=#f9efe9 gui=italic
 hi Comment          guifg=#eabea9 guibg=#f9efe9 gui=italic
-hi Folded           guifg=#3e443e guibg=#f9efe9 gui=italic
+hi Folded           guifg=#DC8E69 guibg=#f9efe9 gui=italic
 hi Constant         guifg=#3e443e guibg=#f9efe9 gui=italic
 hi Special          guifg=#3e443e guibg=#f9efe9 gui=bold
 hi Statement        guifg=#3e443e guibg=#f9efe9 gui=bold

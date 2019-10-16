@@ -90,15 +90,17 @@ cat << 'EOB'
 - A script to change theme of configs using a theme file.
 Inspired by budlabs' mondo-generator from the AUR.
 
-## Usage
+## Synopsis
 
 ```
-themer [--dark|-D|--auto-dark|-t] [--change|-c|--new|-n] <name>
-themer [--getvar|-v] <variable>
-themer [--list|-l] themes|vars|varmenu|default|current
-themer [--force|-f] [--apply-single|-a] <directory>
+themer [--dark|-D]
+       [--auto-dark|-t <am_time:pm_time>]
+       [--change|-c|--new|-n <name>]
+themer [--getvar|-v <variable>]
+themer [--list|-l themes|vars|varmenu|default|current]
+themer [--force|-f] --apply-single|-a <directory>
 themer [--apply-all|-A|--updatelist|-u]
-themer --help|-h
+themer [--help|-h]
 themer
 ```
 

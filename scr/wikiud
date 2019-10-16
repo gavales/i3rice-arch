@@ -13,7 +13,7 @@ cat << 'EOB'
 # wikiud
 - generates the script wikis shown in the sidebar
 
-## Usage
+## Synopsis
 
 ```
 wikiud

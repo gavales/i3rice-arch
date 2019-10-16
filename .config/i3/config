@@ -53,7 +53,7 @@ set $BNR border normal
 # ━━ APPS
 set $HM  /home/gavarch
 set $TRM urxvtc
-set $EDT exec --no-startup-id edtr -s DOOTS
+set $EDT exec --no-startup-id edtr -s doots
 #set $EDT urxvtc -name
 set $BAP google-chrome-beta
 set $FFX firefox
@@ -320,27 +320,29 @@ $fw [instance="references"]              focus;$QUD -m 2;focus;$tf "biblbiograph
 $fw [instance="bashmount"]               focus;$QUD -m 2;focus;$tf "bashmount"
 $fw [instance="gitcommit"]               focus;$QUD -m 2;focus;$tf "git-sync"
 $fw [instance="reddit"]                  focus;$QUD -m 2;focus;$tf "reddit"
-#$fw [instance="i3BLOCKS"]                focus;$QUD -m 2;focus;$tf "i3blocks"
-#$fw [instance="MOUNT"]                   focus;$QUD -m 2;focus;$tf "mount"
-#$fw [instance="UNMOUNT"]                 focus;$QUD -m 2;focus;$tf "unmount"
+$fw [instance="^edtr-yaml$"]             focus;$QUD -m 2;focus;$tf "edtr-yaml"
+$fw [instance="^edtr-bib$"]              focus;$QUD -m 2;focus;$tf "edtr-bib"
 
-$fw [class="Gvim"]                       focus;$QUD -m 3;focus
 $fw [class="Emacs"]                      focus;$QUD -m 3;focus
-$fw [class="Firefox"]                    focus;$QUD -m 3;focus
 $fw [class="firefox"]                    focus;$QUD -m 3;focus
+$fw [class="Firefox"]                    focus;$QUD -m 3;focus
+$fw [class="Gvim"]                       focus;$QUD -m 3;focus
 $fw [class="Pamac-manager"]              focus;$QUD -m 3;focus;$tf "software"
-$fw [title="Google Chrome$"]             focus;$QUD -m 3;focus;$tf "chrome"
-$fw [instance="EDITOR"]                  focus;$QUD -m 3;focus;$tf "EDITOR"
-$fw [instance="DOOTS"]                   focus;$QUD -m 3;focus;$tf "DOOTS"
-$fw [instance="i3config"]                focus;$QUD -m 3;focus;$tf "i3config"
-$fw [instance="bashrc"]                  focus;$QUD -m 3;focus;$tf "bashrc"
-$fw [instance="vimrc"]                   focus;$QUD -m 3;focus;$tf "vimrc"
-$fw [instance="rngrc"]                   focus;$QUD -m 3;focus;$tf "ranger_rc"
-$fw [instance="rngrl"]                   focus;$QUD -m 3;focus;$tf "ranger_rifle"
-$fw [instance="plbar"]                   focus;$QUD -m 3;focus;$tf "polybar"
-$fw [instance="quteb"]                   focus;$QUD -m 3;focus;$tf "qutebrowser"
 $fw [class="Slack"]                      focus;$QUD -m 3;focus;$tf "slack"
-#$fw [instance="i3vars"]                  focus;$QUD -m 3;focus;$tf "i3vars"
+$fw [title="Google Chrome$"]             focus;$QUD -m 3;focus;$tf "chrome"
+$fw [instance="^edtr$"]                  focus;$QUD -m 3;focus;$tf "edtr"
+$fw [instance="^edtr-bash$"]             focus;$QUD -m 3;focus;$tf "edtr-bash"
+$fw [instance="^edtr-configs$"]          focus;$QUD -m 3;focus;$tf "edtr-configs"
+$fw [instance="^edtr-css$"]              focus;$QUD -m 3;focus;$tf "edtr-css"
+$fw [instance="^edtr-groff$"]            focus;$QUD -m 3;focus;$tf "edtr-groff"
+$fw [instance="^edtr-html$"]             focus;$QUD -m 3;focus;$tf "edtr-html"
+$fw [instance="^edtr-py$"]               focus;$QUD -m 3;focus;$tf "edtr-py"
+$fw [instance="^edtr-md$"]               focus;$QUD -m 3;focus;$tf "edtr-md"
+$fw [instance="^edtr-sh$"]               focus;$QUD -m 3;focus;$tf "edtr-sh"
+$fw [instance="^edtr-tex$"]              focus;$QUD -m 3;focus;$tf "edtr-tex"
+$fw [instance="^edtr-vim$"]              focus;$QUD -m 3;focus;$tf "edtr-vim"
+$fw [instance="^edtr-Xfiles$"]           focus;$QUD -m 3;focus;$tf "edtr-Xfiles"
+$fw [instance="^doots$"]                 focus;$QUD -m 3;focus;$tf "doots"
 
 $fw [instance="noterm"]                  focus;$QUD -m 4;focus;$tf "noterm"
 $fw [instance="visualiser"]              focus;$QUD -m 4;focus;$tf "visualiser"

@@ -18,17 +18,17 @@ cat << 'EOB'
 # i3menu
 - Rofi wrapper script
 
-## Usage
+## Synopsis
 
 ```
 i3menu [--dmenu|-d|--apps|-s]
        [--window|-W|--titlebar|-t|--fullscreen|-f]
-       [--width|-w|--height|-H|--xoffset|-x|--yoffset|-y] <integer>
-       [--orientation|-o] vertical|horizontal
-       [--location|-l|--lines|-L|--monitor|-m] <integer>
-       [--color|-c] <color>
-       [--prompt|-p] <text>
-i3menu --help|-h
+       [--width|-w|--height|-H|--xoffset|-x|--yoffset|-y <integer>]
+       [--orientation|-o <vertical|horizontal>]
+       [--location|-l|--lines|-L|--monitor|-m <integer>]
+       [--color|-c <color>]
+       [--prompt|-p <text>]
+i3menu [--help|-h]
 ```
 
 ## Options
@@ -58,8 +58,8 @@ i3menu --help|-h
 + `--width|-w <integer>`
 	+ Rofi width
 
-+ `--height|-H <integer<=100>`
-	+ Rofi height
++ `--height|-H <integer>`
+	+ Rofi height, integer less than 100
 
 + `--orientation|-o [vertical|horizontal]`
 	+ Vertical or horizontal (like dmenu)

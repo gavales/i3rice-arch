@@ -5,20 +5,20 @@
 
 help () {
 cat << 'EOB'
-# openvim
+# edtr
 - vim server wrapper
 
-## Usage
+## Synopsis
 ```
-openvim [--server|-s] <name> <file>
-openvim --help|-h
+edtr [--server|-s <name>] <file>
+edtr [--help|-h]
 ```
 
 ## Options
 
 + `--server|-s <name>`
-	+ Specify server name
-	+ Default is EDITOR
+	+ '-`<name>`' is appended to the default `--servername`
+	+ Default `--servername` is 'edtr'
 
 + `--help|-h`
 	+ Print this help
@@ -27,12 +27,12 @@ EOB
 exit
 }
 
-SVR=EDITOR
+SVR=edtr
 
 while true; do
 	case $1 in
-		--server | -s ) SVR="${2:-}" ; shift ;;
-		--help | -h ) help ; shift ;;
+		--server | -s ) SVO="${2:-}" ; shift ;;
+		--help   | -h ) help         ; shift ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac
@@ -40,4 +40,33 @@ while true; do
 done
 
 TRG="${@:-}"
-urxvtc -name "${SVR}" -fn "xft:Luxi Mono:size=13" -e vim --servername "${SVR}" --remote-tab "${TRG}" &>/dev/null &
+
+EXT="${TRG##*/}" ; EXT="${EXT##*.}"
+
+TYP="$(file $(readlink -f "$TRG"))"
+TYP="${TYP#*:}" ; TYP="${TYP#* }" ; TYP="${TYP%% *}"
+[[ $TYP == "Bourne-Again" ]] && TPF=bash
+
+case $EXT in
+	Xres*|Xdef*) EXF=Xfiles  ;;
+	*conf*)      EXF=configs ;;
+	*bash*)      EXF=bash    ;;
+	sh)          EXF=sh      ;;
+	*vim*)       EXF=vim     ;;
+	yaml)        EXF=yaml    ;;
+	html)        EXF=html    ;;
+	py)          EXF=py      ;;
+	ms)          EXF=groff   ;;
+	css)         EXF=css     ;;
+	md|rmd)      EXF=md      ;;
+	bib)         EXF=bib     ;;
+	tex)         EXF=tex     ;;
+esac
+
+[[ -n $TPF ]] && SVR="edtr-$TPF"
+[[ -n $EXF ]] && SVR="edtr-$EXF"
+[[ -n $SVO ]] && SVR="$SVO"
+
+urxvtc -name "${SVR}" -fn "xft:Luxi Mono:size=13" \
+	-e vim --servername "${SVR}" --remote-tab \
+	"${TRG}" &>/dev/null &
