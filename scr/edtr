@@ -27,6 +27,7 @@ EOB
 exit
 }
 
+FNT=$(themer -v  'romanfont ')
 SVR=edtr
 
 while true; do
@@ -67,6 +68,6 @@ esac
 [[ -n $EXF ]] && SVR="edtr-$EXF"
 [[ -n $SVO ]] && SVR="$SVO"
 
-urxvtc -name "${SVR}" -fn "xft:CMU Typewriter Text:size=14" \
+urxvtc -name "${SVR}" -fn "xft:${FNT}:size=13" \
 	-e vim --servername "${SVR}" --remote-tab \
 	"${TRG}" &>/dev/null &

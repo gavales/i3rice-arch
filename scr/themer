@@ -734,6 +734,7 @@ O_list () {
 O_new () {
 	NTHM="${TDR}/${1}"
 	echo "! vim:ft=perl" > $NTHM
+	echo "name    ${1}" > $NTHM
 	echo "Enter accent colour..."     && read ACC && echo "acc    $ACC" >> $NTHM
 	echo "Enter background colour..." && read BG0 && echo "bg0    $BG0" >> $NTHM
 	echo "Enter foreground colour..." && read FG0 && echo "fg0    $FG0" >> $NTHM

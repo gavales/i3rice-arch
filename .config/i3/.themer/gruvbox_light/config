@@ -1,0 +1,364 @@
+#   ██ ██████                             ████ ██
+#  ▒▒ ▒█▒▒▒▒█                            ▒██▒ ▒▒   █████
+#   ██▒    ▒█  █████   ██████  ███████  ██████ ██ ██▒▒▒██
+#  ▒██   ████ ██▒▒▒██ ██▒▒▒▒██▒▒██▒▒▒██▒▒▒██▒ ▒██▒██  ▒██
+#  ▒██  ▒▒▒▒█▒██  ▒▒ ▒██   ▒██ ▒██  ▒██  ▒██  ▒██▒▒██████
+#  ▒██ █   ▒█▒██   ██▒██   ▒██ ▒██  ▒██  ▒██  ▒██ ▒▒▒▒▒██
+#  ▒██▒██████▒▒█████ ▒▒██████  ███  ▒██  ▒██  ▒██  █████
+#  ▒▒ ▒▒▒▒▒▒  ▒▒▒▒▒   ▒▒▒▒▒▒  ▒▒▒   ▒▒   ▒▒   ▒▒  ▒▒▒▒▒
+
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+
+# ━  VARS
+# ━━ MAIN
+set $FTM Luxi Mono
+set $FTI FontAwesome
+set $FSZ 11
+
+font pango:$FTM,$FTI $FSZ
+
+set $nat eDP1
+set $vga VGA1
+set $hdm HDMI1
+set $kb  gb
+
+set $W69 492
+set $W43 492
+set $H69 299
+set $H43 389
+
+# ━━ i3
+set $ADI Mod1
+set $WNI Mod4
+set $ALT bindsym Mod1
+set $WIN bindsym Mod4
+set $ARL bindsym --release Mod1
+set $ALW bindsym --whole-window Mod1
+set $WLW bindsym --whole-window Mod4
+set $exn exec --no-startup-id
+set $ena exec_always --no-startup-id
+set $RUN exec --no-startup-id i3lch
+set $QUD exec --no-startup-id i3quad
+set $tf  title_format
+set $fw  for_window
+set $M1  _W1
+set $MVC move position center
+set $FEN floating enabled
+set $FDI floating disabled
+set $BNR border normal
+
+# ━━ APPS
+set $TRM urxvtc
+set $EDT exec --no-startup-id edtr -s doots
+set $BAP google-chrome-beta --new-window
+set $FFX firefox
+set $THN thunar
+
+# ━  DECORATIONS
+# class                 brdr    bkgr    text    indi    chlb
+client.focused          #714019 #b88c66 #1A110A #b88c66 #714019
+client.focused_inactive #714019 #714019 #1A110A #714019 #714019
+client.unfocused        #714019 #714019 #FFD9B3 #714019 #714019
+client.urgent           #cc241d #cc241d #1A110A #cc241d #cc241d
+client.placeholder      #FFD9B3 #FFD9B3 #1A110A #FFD9B3 #FFD9B3
+client.background       #FFD9B3
+
+# ━  MOD1 BINDINGS
+# ━━ Misc
+$ALT+Escape         $exn i3shutdown
+$ALT+Home           $exn keybindingsmenu
+$ALW+button1        $QUD -m 3
+$ALW+button2        kill
+$ALW+button3        $QUD -m 2, $QUD -f 3
+$ALW+button4        focus left
+$ALW+button5        focus right
+$ALT+space          focus mode_toggle
+bindsym Print       $exn screenshot
+
+$ALW+Shift+button4  move left
+$ALW+Shift+button5  move right
+$ALT+Shift+space    floating toggle
+
+$ALT+Control+Right  workspace next
+$ALT+Control+Left   workspace prev
+
+# ━━ Numbers
+$ALT+grave          $exn gencvl
+$ALT+1              $QUD -F 1
+$ALT+2              $QUD -F 2
+$ALT+3              $QUD -F 3
+$ALT+4              $QUD -F 4
+$ALT+minus          $QUD -m 2, $QUD -f 3
+$ALT+equal          $QUD -m 3
+
+$ALT+Shift+1        $QUD -m 1
+$ALT+Shift+2        $QUD -m 2
+$ALT+Shift+3        $QUD -m 3
+$ALT+Shift+4        $QUD -m 4
+
+$ALT+Ctrl+1         $EDT /home/gavarch/.config/i3/.themer/template_config
+$ALT+Ctrl+2         $EDT /home/gavarch/.bashrc
+$ALT+Ctrl+3         $EDT /home/gavarch/.vimrc
+$ALT+Ctrl+4         $EDT /home/gavarch/.config/ranger/rc.conf
+$ALT+Ctrl+5         $EDT /home/gavarch/.config/ranger/rifle.conf
+$ALT+Ctrl+6         $EDT /home/gavarch/.config/polybar/.themer/template_config
+$ALT+Ctrl+7         $EDT /home/gavarch/.config/qutebrowser/.themer/template_config.py
+
+# ━━ 1st Row
+$ALT+Tab            focus right
+$ALT+q              $RUN -t -i calculator -e '$TRM -name calculator -e R'
+$ALT+w              $RUN -n ^watchseries -e '$BAP --app=https://ww2.watch-series.co/'
+$ALT+e              layout toggle tabbed split
+$ALT+r              $RUN -n newsboat -e '$TRM -name newsboat -e newsboat'
+$ALT+t              $exn mkwalrando
+$ALT+y              resize shrink width 5 px or 5 ppt
+$ALT+u              resize shrink height 5 px or 5 ppt
+$ALT+i              resize grow height 5 px or 5 ppt
+$ALT+o              resize grow width 5 px or 5 ppt
+$ALT+p              $exn i3media togg
+$ALT+bracketright   $exn i3media next
+$ALT+bracketleft    $exn i3media prev
+$ALT+backslash      $exn i3media stop
+
+$ALT+Shift+Tab      focus left
+$ALT+Shift+q        kill
+$ALT+Shift+r        restart
+$ALT+Shift+y        $RUN -n YouTube$ -e '$BAP --app=https://www.youtube.com/'
+$ALT+Shift+u        $exn $BAP --app=https://outlook.office.com/mail/inbox/id/AAQkAGZjZGU2MmYyLTc5ZDctNDI1My05MzU4LWRjYTc3NjdhN2NkOAAQAOwToE4JkJhIgjz322aPjPU%3D
+$ALT+Shift+i        $RUN -n '^BBC iPlayer$' -e '$BAP --app=https://www.bbc.co.uk/iplayer/'
+$ALT+Shift+p        $exn screenshot
+
+# ━━ 2nd Row
+$ALT+a              focus parent
+$ALT+s              $RUN -i ncmpcpp -e '$TRM -name ncmpcpp -e ncmpcpp'
+$ALT+d              $exn i3menu -s -l 0
+$ALT+f              $exn $THN
+$ALT+g              split toggle
+$ALT+h              $exn i3viswiz left
+$ALT+j              $exn i3viswiz down
+$ALT+k              $exn i3viswiz up
+$ALT+l              $exn i3viswiz right
+$ALT+semicolon      $exn i3light nm
+$ALT+apostrophe     $exn redshift -x
+$ALT+Return         $exn $TRM -name tiledterm
+
+$ALT+Shift+a        focus child
+$ALT+Shift+s        $RUN -c Spotify -e 'spotify'
+$ALT+Shift+d        $exn i3menu -d
+$ALT+Shift+f        fullscreen toggle
+$ALT+Shift+g        $exn $TRM -name drive_sync -e grivesync
+$ALT+Shift+h        $exn i3move left
+$ALT+Shift+j        $exn i3move down
+$ALT+Shift+k        $exn i3move up
+$ALT+Shift+l        $exn i3move right
+$ALT+Shift+Return   $exn $TRM -name ranger -e ranger
+
+$ALT+Control+s      sticky toggle
+$ALT+Control+Return $exn $TRM -name noterm
+
+# ━━ 3rd Row
+$ALT+z              $exn surf docs.google.com/document/u/0/
+$ALT+x              $exn surf docs.google.com/spreadsheets/u/0/
+$ALT+c              $RUN -c Firefox -e '$FFX'
+$ALT+v              $RUN -i visualiser -e '$TRM -name visualiser -e vis'
+$ALT+b              $RUN -i references -e '$EDT /home/gavarch/Drive/global.bib'
+$ALT+n              $RUN -n ^Netflix$ -e '$BAP --app=https://www.netflix.com/'
+$ALT+m              $exn surf docs.google.com/presentation/u/0/
+$ALT+comma          $exn i3vol dec
+$ALT+period         $exn i3vol inc
+$ALT+slash          $exn i3vol mute
+
+$ALT+Shift+c        $exn xtheme --auto-dark 7:19
+$ALT+Shift+v        $exn projectM-pulseaudio
+$ALT+Shift+b        $exn polybar-msg cmd hide
+$ALT+Shift+m        $RUN -n '^My Movies & TV' -e '$BAP --app=https://play.google.com/movies/'
+
+# ━  MOD4 BINDINGS
+# ━━ Misc
+floating_modifier   $WNI
+
+# ━━ Numbers
+$WIN+grave          $exn "notify-send $(i3gm)"
+$WIN+1              workspace 1
+$WIN+2              workspace 2
+$WIN+3              workspace 3
+$WIN+4              workspace 4
+$WIN+5              workspace 5
+$WIN+6              workspace 6
+$WIN+7              workspace 7
+$WIN+8              workspace 8
+$WIN+9              workspace 9
+$WIN+0              workspace 10
+
+$WIN+Shift+1        move container to workspace 1; workspace 1
+$WIN+Shift+2        move container to workspace 2; workspace 2
+$WIN+Shift+3        move container to workspace 3; workspace 3
+$WIN+Shift+4        move container to workspace 4; workspace 4
+$WIN+Shift+5        move container to workspace 5; workspace 5
+$WIN+Shift+6        move container to workspace 6; workspace 6
+$WIN+Shift+7        move container to workspace 7; workspace 7
+$WIN+Shift+8        move container to workspace 8; workspace 8
+$WIN+Shift+9        move container to workspace 9; workspace 9
+$WIN+Shift+0        move container to workspace 10; workspace 10
+
+# ━━ 1st Row
+$WIN+r              $RUN -i reddit -e '$TRM -name reddit -e rtv'
+$WIN+t              $exn compton
+$WIN+y              $QUD --resize '1 -5 -5'
+$WIN+u              $QUD --resize '1 $W43 $H43'
+$WIN+i              $QUD --resize '1 $W69 $H69'
+$WIN+o              $QUD --resize '1 +5 +5'
+$WIN+p              $QUD --resize '1 40 20'
+$WIN+bracketleft    [con_mark=$M1] resize set height 98
+
+$WIN+Shift+t        $exn pkill compton
+$WIN+Shift+y        gaps inner current set 0;   gaps outer current set 0
+$WIN+Shift+u        gaps inner current minus 1; gaps outer current minus 10
+$WIN+Shift+i        gaps inner current plus 1;  gaps outer current plus 10
+$WIN+Shift+o        gaps inner current set 4;   gaps outer current set 40
+
+# ━━ 2nd Row
+$WIN+s              $exn slack
+$WIN+d              move workspace to output $hdm
+$WIN+f              $exn gksu $THN
+$WIN+g              $exn $TRM -name gitcommit -e bash /home/gavarch/scr/gitcommit
+$WIN+h              focus left
+$WIN+j              focus down
+$WIN+k              focus up
+$WIN+l              focus right
+$WIN+semicolon      $exn noter -t NOTES
+$WIN+apostrophe     $exn noter -t TODO
+$WIN+Return         $exn xterm
+
+$WIN+Shift+a        $exn wsloapp
+$WIN+Shift+s        $exn i3-sticky-toggle
+$WIN+Shift+f        focus parent, fullscreen toggle, focus child
+$WIN+Shift+h        move left
+$WIN+Shift+j        move down
+$WIN+Shift+k        move up
+$WIN+Shift+l        move right
+$WIN+Shift+Return   $exn $TRM -name ranger_root -e sudo ranger
+
+# ━━ 3rd Row
+#$WIN+x              unmark
+$WIN+c              $exn google-chrome-beta
+$WIN+v              move workspace to output $vga
+$WIN+b              $RUN -i bashmount -e '$TRM -name bashmount -e bashmount'
+$WIN+n              move workspace to output $nat
+$WIN+m              $exn multimon
+$WIN+comma          $exn i3light dec
+$WIN+period         $exn i3light inc
+
+$WIN+Shift+c        $exn reloadconfs
+
+# ━  FOR_WINDOW
+# ━━ GLOBAL
+focus_wrapping force
+workspace_auto_back_and_forth yes
+$fw [urgent=latest] focus
+#hide_edge_borders both
+#focus_follows_mouse no
+
+# ━━ FLOATERS
+$fw [title="^Colour picker$"]            resize set 697 276
+$fw [title="Save Image"]                 resize set 750 500
+$fw [title="Open Files"]                 resize set 750 500
+$fw [title="Select a download location"] resize set 750 500
+$fw [class="Pavucontrol"]                resize set 525 300
+$fw [class="Rofi"]                       border pixel 1
+
+# ━━ QUAD
+$fw [title="Log in with PayPal"]         $tf "paypal"
+$fw [instance="tiledterm"]               focus;$QUD -t;$tf "tiledterm"
+$fw [instance="media"]                   focus;$QUD -t;$tf "media"
+$fw [instance="ranger"]                  focus;$QUD -t;$tf "ranger"
+$fw [instance="ranger_root"]             focus;$QUD -t;$tf "ranger_root"
+$fw [title="^MATLAB R20"]                focus;$QUD -t;$tf "matlab"
+
+#$fw [window_role="pop-up"]               focus; $QUD -m 1; focus
+$fw [class="MPlayer"]                    focus;$QUD -m 1;focus
+$fw [class="mpv"]                        focus;$QUD -m 1;focus
+$fw [class="feh"]                        focus;$QUD -m 1;focus
+$fw [class="Sxiv"]                       focus;$QUD -m 1;focus
+$fw [instance="ncmpcpp"]                 focus;$QUD -m 1;focus;$tf "ncmpcpp"
+$fw [class="Spotify"]                    focus;$QUD -m 1;focus;$tf "spotify"
+$fw [title="^My Movies & TV"]            focus;$QUD -m 1;focus;$tf "movies"
+$fw [title="watchseries"]                focus;$QUD -m 1;focus;$tf "watch-series"
+$fw [title="YouTube$"]                   focus;$QUD -m 1;focus;$tf "youtube"
+$fw [title="^BBC iPlayer$"]              focus;$QUD -m 1;focus;$tf "iplayer"
+$fw [title="^Netflix$"]                  focus;$QUD -m 1;focus;$tf "netflix"
+$fw [title="^Funimation"]                focus;$QUD -m 1;focus;$tf "funimation"
+$fw [title="Amazon.co.uk: Prime Video"]  focus;$QUD -m 1;focus;$tf "prime"
+
+$fw [class="Surf"]                       focus;$QUD -m 2;focus
+$fw [class="Zathura"]                    focus;$QUD -m 2;focus
+$fw [class="MuPDF"]                      focus;$QUD -m 2;focus
+$fw [class="Electron"]                   focus;$QUD -m 2;focus
+$fw [class="Thunar"]                     focus;$QUD -m 2;focus
+$fw [window_role="GtkFileChooserDialog"] focus;$QUD -m 2;focus
+$fw [title="_popout="]                   focus;$QUD -m 2;focus;$tf "ytchat"
+$fw [title="^localhost:8090$"]           focus;$QUD -m 2;focus;$tf "mdpreview"
+$fw [instance="newsboat"]                focus;$QUD -m 2;focus;$tf "newsboat"
+$fw [instance="PLAYING"]                 focus;$QUD -m 2;focus;$tf "PLAYING"
+$fw [instance="calculator"]              focus;$QUD -m 2;focus;$tf "calculator"
+$fw [instance="calendar"]                focus;$QUD -m 2;focus;$tf "calendar"
+$fw [instance="drive_sync"]              focus;$QUD -m 2;focus;$tf "drive_sync"
+$fw [instance="references"]              focus;$QUD -m 2;focus;$tf "biblbiography"
+$fw [instance="bashmount"]               focus;$QUD -m 2;focus;$tf "bashmount"
+$fw [instance="gitcommit"]               focus;$QUD -m 2;focus;$tf "git-sync"
+$fw [instance="reddit"]                  focus;$QUD -m 2;focus;$tf "reddit"
+$fw [instance="^edtr-yaml$"]             focus;$QUD -m 2;focus;$tf "edtr-yaml"
+$fw [instance="^edtr-bib$"]              focus;$QUD -m 2;focus;$tf "edtr-bib"
+
+$fw [class="Emacs"]                      focus;$QUD -m 3;focus
+$fw [class="firefox"]                    focus;$QUD -m 3;focus
+$fw [class="Firefox"]                    focus;$QUD -m 3;focus
+$fw [class="Gvim"]                       focus;$QUD -m 3;focus
+$fw [class="Pamac-manager"]              focus;$QUD -m 3;focus;$tf "software"
+$fw [class="Slack"]                      focus;$QUD -m 3;focus;$tf "slack"
+$fw [title="Google Chrome$"]             focus;$QUD -m 3;focus;$tf "chrome"
+$fw [instance="^edtr$"]                  focus;$QUD -m 3;focus;$tf "edtr"
+$fw [instance="^edtr-bash$"]             focus;$QUD -m 3;focus;$tf "edtr-bash"
+$fw [instance="^edtr-configs$"]          focus;$QUD -m 3;focus;$tf "edtr-configs"
+$fw [instance="^edtr-css$"]              focus;$QUD -m 3;focus;$tf "edtr-css"
+$fw [instance="^edtr-groff$"]            focus;$QUD -m 3;focus;$tf "edtr-groff"
+$fw [instance="^edtr-html$"]             focus;$QUD -m 3;focus;$tf "edtr-html"
+$fw [instance="^edtr-py$"]               focus;$QUD -m 3;focus;$tf "edtr-py"
+$fw [instance="^edtr-md$"]               focus;$QUD -m 3;focus;$tf "edtr-md"
+$fw [instance="^edtr-sh$"]               focus;$QUD -m 3;focus;$tf "edtr-sh"
+$fw [instance="^edtr-tex$"]              focus;$QUD -m 3;focus;$tf "edtr-tex"
+$fw [instance="^edtr-vim$"]              focus;$QUD -m 3;focus;$tf "edtr-vim"
+$fw [instance="^edtr-Xfiles$"]           focus;$QUD -m 3;focus;$tf "edtr-Xfiles"
+$fw [instance="^doots$"]                 focus;$QUD -m 3;focus;$tf "doots"
+
+$fw [instance="noterm"]                  focus;$QUD -m 4;focus;$tf "noterm"
+$fw [instance="visualiser"]              focus;$QUD -m 4;focus;$tf "visualiser"
+
+# ━  GAPS
+gaps inner 20
+gaps outer 40
+workspace 1 gaps inner 0
+workspace 1 gaps outer 0
+
+# ━  STARTUP
+$exn urxvtd -q -o -f
+$exn xautolock -corners 0-0- -cornersize 30 -time 5 -locker $HOME/scr/lockscreen
+$exn /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+$exn nm-applet
+$exn xfce4-power-manager
+$exn pamac-tray
+$exn clipit
+$exn blueman-applet
+$exn compton
+$ena ff-theme-util
+$ena fix_xcursor
+$exn mpd
+$exn shutter --min_at_startup
+$exn setxkbmap $kb
+$exn i3listen-toggle
+$exn reloadconfs
+
+$ena mpv /home/gavarch/scrmus/A\ Tone\ His\ Self.mp3
+$ena notify-send 'i3 (re)loaded!' -i /home/gavarch/scrpic/i3white.png
+
+# vim:ft=i3

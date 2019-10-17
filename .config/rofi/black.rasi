@@ -1,9 +1,9 @@
 * {
-	accent: #d1c7c1;
-	fg1:    #f9efe9;
-	fg2:    #e5dbd5;
-	bg2:    #3e443e;
-	bg1:    #525852;
-	redish: #6F90A7;
+	accent: #423932;
+	fg1:    #1A110A;
+	fg2:    #2e251e;
+	bg2:    #FFD9B3;
+	bg1:    #ebc59f;
+	redish: #cc241d;
 	font1: "CMUTypewriterText 12";
 	}
