@@ -9,6 +9,7 @@ cat << 'EOB'
 
 ```
 lockscreen
+lockscreen [--help|-h]
 ```
 EOB
 echo "$1"

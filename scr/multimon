@@ -3,13 +3,13 @@
 help () {
 cat << 'EOB'
 # multimon
-- monitor control for i3
+- rofi monitor control for i3
 
-## Usage
+## Synopsis
 
 ```
 multimon
-multimon --help|-h
+multimon [--help|-h]
 ```
 EOB
 echo "$1"

@@ -9,26 +9,23 @@
 
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-# >> VARS
+# ━  VARS
 # ━━ MAIN
-set $font1 Luxi Mono
-set $font2 FontAwesome
-set $font3 monaco
-set $fonts 11
+set $FTM Luxi Mono
+set $FTI FontAwesome
+set $FSZ 11
 
-font pango:$font1,$font2 $fonts
+font pango:$FTM,$FTI $FSZ
 
-set $brightinc light -A 10
-set $brightdec light -U 10
-set $nat       eDP1
-set $vga       VGA1
-set $hdm       HDMI1
-set $kb        gb
+set $nat eDP1
+set $vga VGA1
+set $hdm HDMI1
+set $kb  gb
 
-set $mediaw    492
-set $mediaw2   492
-set $mediah    299
-set $mediah2   389
+set $W69 492
+set $W43 492
+set $H69 299
+set $H43 389
 
 # ━━ i3
 set $ADI Mod1
@@ -57,7 +54,7 @@ set $BAP google-chrome-beta --new-window
 set $FFX firefox
 set $THN thunar
 
-# >> DECORATIONS
+# ━  DECORATIONS
 # class                 brdr    bkgr    text    indi    chlb
 client.focused          #DC8E69 #eabea9 #3e443e #eabea9 #DC8E69
 client.focused_inactive #DC8E69 #DC8E69 #3e443e #DC8E69 #DC8E69
@@ -66,13 +63,13 @@ client.urgent           #6F90A7 #6F90A7 #3e443e #6F90A7 #6F90A7
 client.placeholder      #f9efe9 #f9efe9 #3e443e #f9efe9 #f9efe9
 client.background       #f9efe9
 
-# >> MOD1 BINDINGS
+# ━  MOD1 BINDINGS
 # ━━ Misc
 $ALT+Escape         $exn i3shutdown
 $ALT+Home           $exn keybindingsmenu
 $ALW+button1        $QUD -m 3
 $ALW+button2        kill
-$ALW+button3        $QUD -m 2 -l
+$ALW+button3        $QUD -m 2, $QUD -f 3
 $ALW+button4        focus left
 $ALW+button5        focus right
 $ALT+space          focus mode_toggle
@@ -176,7 +173,7 @@ $ALT+Shift+v        $exn projectM-pulseaudio
 $ALT+Shift+b        $exn polybar-msg cmd hide
 $ALT+Shift+m        $RUN -n '^My Movies & TV' -e '$BAP --app=https://play.google.com/movies/'
 
-# >> MOD4 BINDINGS
+# ━  MOD4 BINDINGS
 # ━━ Misc
 floating_modifier   $WNI
 
@@ -208,8 +205,8 @@ $WIN+Shift+0        move container to workspace 10; workspace 10
 $WIN+r              $RUN -i reddit -e '$TRM -name reddit -e rtv'
 $WIN+t              $exn compton
 $WIN+y              $QUD --resize '1 -5 -5'
-$WIN+u              $QUD --resize '1 $mediaw2 $mediah2'
-$WIN+i              $QUD --resize '1 $mediaw $mediah'
+$WIN+u              $QUD --resize '1 $W43 $H43'
+$WIN+i              $QUD --resize '1 $W69 $H69'
 $WIN+o              $QUD --resize '1 +5 +5'
 $WIN+p              $QUD --resize '1 40 20'
 $WIN+bracketleft    [con_mark=$M1] resize set height 98
@@ -254,7 +251,7 @@ $WIN+period         $exn i3light inc
 
 $WIN+Shift+c        $exn reloadconfs
 
-# >> FOR_WINDOW
+# ━  FOR_WINDOW
 # ━━ GLOBAL
 focus_wrapping force
 workspace_auto_back_and_forth yes
@@ -337,13 +334,13 @@ $fw [instance="^doots$"]                 focus;$QUD -m 3;focus;$tf "doots"
 $fw [instance="noterm"]                  focus;$QUD -m 4;focus;$tf "noterm"
 $fw [instance="visualiser"]              focus;$QUD -m 4;focus;$tf "visualiser"
 
-# >> GAPS
+# ━  GAPS
 gaps inner 20
 gaps outer 40
 workspace 1 gaps inner 0
 workspace 1 gaps outer 0
 
-# >> STARTUP
+# ━  STARTUP
 $exn urxvtd -q -o -f
 $exn xautolock -corners 0-0- -cornersize 30 -time 5 -locker $HOME/scr/lockscreen
 $exn /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

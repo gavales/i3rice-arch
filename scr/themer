@@ -98,7 +98,7 @@ themer [--dark|-D]
        [--change|-c|--new|-n <name>]
 themer [--getvar|-v <variable>]
 themer [--list|-l themes|vars|varmenu|default|current]
-themer [--force|-f] --apply-single|-a <directory>
+themer [--force|-f] [--apply-single|-a <directory>]
 themer [--apply-all|-A|--updatelist|-u]
 themer [--help|-h]
 themer
@@ -282,7 +282,8 @@ $ tree $HOME
   │   └── template_.Xresources
   ├── .Xresources_old
   ├── .themer_pre
-  └── .themer_post
+  ├── .themer_post
+  ┊
 ```
 
 ### Edit the template
@@ -353,6 +354,8 @@ in "R, G, B" form eg. `%%bg0RGB%%`.
 Use `@@color@@` instead of `%%color%%` to get hex color
 without '#'. Useful for `#AARRGGBB` colours.
 
+### `.themer_pre` & `.themer_post`
+
 The .themer_pre and .themer_post bash scripts in
 the `<directory>` are used to do things before/after
 applying the theme eg. reload the .Xresources file
@@ -360,8 +363,6 @@ applying the theme eg. reload the .Xresources file
 eg. `dosnerd`, as their first argument. Obviously, the
 shebang can be changed. My `.Xresources` .themer_post
 is shown below.
-
-### `.themer_pre` & `.themer_post`
 
 ```sh
 #!/usr/bin/env bash
@@ -415,7 +416,8 @@ $ tree $HOME
   ├── .Xresources_old
   ├── .Xresources               # the new .Xresources!
   ├── .themer_pre
-  └── .themer_post
+  ├── .themer_post
+  ┊
 ```
 
 ## Walls

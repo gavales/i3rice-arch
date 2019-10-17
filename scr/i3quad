@@ -16,25 +16,13 @@ cat << 'EOB'
 # i3quad
 - my i3 layout launcher, inspired by budlabs' i3fyra
 
-## The Layout
-
-```
-			┌┈┈┈┈┈┈┈┈┬┈┈┈┈┈┐
-			│  _W4   │ _W1 │▒
-			├┈┈┈┈┈┈┈┈┼┈┈┈┈┈┤▒
-			│  _W3   │ _W2 │▒
-			│        │     │▒
-			└┈┈┈┈┈┈┈┈┴┈┈┈┈┈┘▒
-			  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-```
-
-## Usage
+## Synopsis
 
 ```
 i3quad [--focus|-f|--move|-m] <con>
 i3quad [--fullscreen|-F]
 i3quad [--tile|-t]
-i3quad --help|-h
+i3quad [--help|-h]
 ```
 
 ## Options
@@ -53,6 +41,18 @@ i3quad --help|-h
 
 + `--help|-h`
 	+ Print this help
+
+## The Layout
+
+```
+			┌┈┈┈┈┈┈┈┈┬┈┈┈┈┈┐
+			│  _W4   │ _W1 │▒
+			├┈┈┈┈┈┈┈┈┼┈┈┈┈┈┤▒
+			│  _W3   │ _W2 │▒
+			│        │     │▒
+			└┈┈┈┈┈┈┈┈┴┈┈┈┈┈┘▒
+			  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+```
 
 ## In progress
 

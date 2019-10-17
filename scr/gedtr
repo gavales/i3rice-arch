@@ -4,13 +4,13 @@
 # CREATED: Sat 30 Mar 18:22:18 GMT 2019
 help () {
 cat << 'EOB'
-# openvim
-- vim server wrapper
+# gedtr
+- gvim server wrapper
 
-## Usage
+## Synopsis
 ```
-openvim [--server|-s] <name> <file>
-openvim --help|-h
+gedtr [--server|-s <name>] <file>
+gedtr [--help|-h]
 ```
 
 ## Options

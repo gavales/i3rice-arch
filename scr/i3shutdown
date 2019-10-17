@@ -9,11 +9,11 @@ cat << 'EOB'
 # i3shutdown
 - shutdown menu for i3wm
 
-## Usage
+## Synopsis
 
 ```
 i3shutdown l|e|s|h|r|x
-i3shutdown --help|-h
+i3shutdown [--help|-h]
 ```
 
 ## Options

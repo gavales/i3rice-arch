@@ -24,12 +24,12 @@ cat << 'EOB'
 
 `hugo`
 
-## Usage
+## Synopsis
 
 ```
-ghb [--post|-p|--delete|-d] <name>
+ghb [--post|-p|--delete|-d <name>]
 ghb [--list|-l]
-ghb --help|-h
+ghb [--help|-h]
 ```
 
 ## Options

@@ -12,11 +12,11 @@ cat << 'EOB'
 # gencvl
 - job application cover letter generator using latex
 
-## Usage
+## Synopsis
 
 ```
 gencvl <name>
-gencvl --help|-h
+gencvl [--help|-h]
 ```
 
 ## Options

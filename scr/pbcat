@@ -12,11 +12,14 @@ cat << 'EOB'
 # pbcat
 - script to create lots of polybar ipc modules
 
-## Usage
+## Synopsis
 
 ```
-pbcat [--module|-m] [--foreground|-f] [--background|-b] [--invert|-i] <text>
-pbcat --help|-h
+pbcat [--module|-m <module>]
+      [--foreground|-f <hex>]
+      [--background|-b <hex>]
+      [--invert|-i] <text>
+pbcat [--help|-h]
 ```
 
 ## Options

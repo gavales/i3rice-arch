@@ -48,6 +48,13 @@ nnoremap <C-T> :tabnew<return>
 nnoremap <C-W> :tabclose<return>
 nnoremap <C-H> :tabprevious<return>
 nnoremap <C-L> :tabNext<return>
+nnoremap \r(   di(hPl2x
+nnoremap \r[   di[hPl2x
+nnoremap \r{   di{hPl2x
+nnoremap \r'   di'hPl2x
+nnoremap \r`   di`hPl2x
+nnoremap \r<   di<hPl2x
+nnoremap \r"   di"hPl2x
 
 inoremap <space>i<space> <space>I<space>
 inoremap \ph             <++>
@@ -56,23 +63,32 @@ inoremap []              []<++><Esc>F]i
 inoremap {}              {}<++><Esc>F}i
 inoremap ""              ""<++><Esc>F"i
 inoremap ''              ''<++><Esc>F'i
+vnoremap ``              ``<++><Esc>F`i
+vnoremap <>              <><++><Esc>2F>i
 
 vnoremap <C-c> "+y
 vnoremap <S-j> :m '>+1<CR>gv=gv
 vnoremap <S-k> :m '<-2<CR>gv=gv
 vnoremap //    y/<C-R>"<CR>
 vnoremap \#    :'<,'>norm 0i#<Enter>
-vnoremap \d#   :'<,'>norm 0x<Enter>
 vnoremap \%    :'<,'>norm 0i%<Enter>
-vnoremap \d%   :'<,'>norm 0x<Enter>
 vnoremap \!    :'<,'>norm 0i!<Enter>
-vnoremap \d!   :'<,'>norm 0x<Enter>
 vnoremap \"    :'<,'>norm 0i"<Enter>
-vnoremap \d"   :'<,'>norm 0x<Enter>
 vnoremap \/    :'<,'>norm 0i//<Enter>
-vnoremap \d/   :'<,'>norm 0xx<Enter>
 vnoremap \;    :'<,'>norm 0i;<Enter>
+vnoremap \d#   :'<,'>norm 0x<Enter>
+vnoremap \d%   :'<,'>norm 0x<Enter>
+vnoremap \d!   :'<,'>norm 0x<Enter>
+vnoremap \d"   :'<,'>norm 0x<Enter>
+vnoremap \d/   :'<,'>norm 0xx<Enter>
 vnoremap \d;   :'<,'>norm 0x<Enter>
+vnoremap \s(   xa()<Esc>P
+vnoremap \s[   xa[]<Esc>P
+vnoremap \s{   xa{}<Esc>P
+vnoremap \s'   xa''<Esc>P
+vnoremap \s`   xa``<Esc>P
+vnoremap \s<   xa<><Esc>P
+vnoremap \s"   xa""<Esc>P
 
 "autocmd FileType python,css,html,vim,json,perl,sh set tabstop=4
 "autocmd FileType python,css,html,vim,json,perl,sh set shiftwidth=4

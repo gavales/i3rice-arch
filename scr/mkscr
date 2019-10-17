@@ -8,13 +8,13 @@ cat << 'EOB'
 # mkscr
 - make bash script
 
-## Usage
+## Synopsis
 
 ```
-mkscr [--subdirectory|-s] <directory>
-      [--template|-t] <file>
+mkscr [--subdirectory|-s <directory>]
+      [--template|-t <file>]
       [--generate-help|-g]
-mkscr --help|-h
+mkscr [--help|-h]
 ```
 
 ## Options

@@ -7,11 +7,11 @@ cat << 'EOB'
 # banner
 - Simple figlet wrapper
 
-## Usage
+## Synopsis
 
 ```
 banner [--centre|-c] <text>
-banner --help|-h
+banner [--help|-h]
 ```
 
 ## Options

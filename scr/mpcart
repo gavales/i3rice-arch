@@ -8,11 +8,11 @@ cat << 'EOB'
 # mpcart
 - get album art of currently playing song in mpd
 
-## Usage
+## Synopsis
 
 ```
 mpcart
-mpcart --help|-h
+mpcart [--help|-h]
 ```
 EOB
 echo "$1"

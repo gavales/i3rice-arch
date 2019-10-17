@@ -5,9 +5,10 @@ cat << 'EOB'
 # crff
 - compile `.ms` groff files into pdf
 
-## Usage
+## Synopsis
 ```
 crff <file>.ms
+crff [--help|-h]
 ```
 EOB
 exit

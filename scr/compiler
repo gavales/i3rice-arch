@@ -5,8 +5,14 @@
 #source $HOME/.config/user-dirs.dirs
 
 help () {
-	echo "Usage: compiler <file>"
-	exit
+cat << 'EOB'
+## Synopsis
+```
+compiler <file>
+compiler [--help|-h]
+```
+EOB
+exit
 }
 
 [[ -z $1 ]] && help || SRC=${1}

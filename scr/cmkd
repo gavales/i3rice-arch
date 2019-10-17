@@ -9,10 +9,11 @@ cat << 'EOB'
 # cmkd
 - compile markdown files with pandoc by parsing the yaml header
 
-## Usage
+## Synopsis
 
 ```
 cmkd <file>.md
+cmkd [--help|-h]
 ```
 
 ## Example

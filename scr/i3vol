@@ -5,12 +5,13 @@ cat << 'EOB'
 # i3vol
 - control volume for i3
 
-## Usage
+## Synopsis
 
 ```
 i3vol mute|inc|dec
-i3vol --help|-h
+i3vol [--help|-h]
 ```
+
 EOB
 echo "$1"
 exit

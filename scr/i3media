@@ -10,10 +10,10 @@ cat << 'EOB'
 uses `i3wplyr` to decide the hierarchy of which player
 to control
 
-## Usage
+## Synopsis
 ```
 i3media togg|next|prev|stop
-i3media --help|-h
+i3media [--help|-h]
 ```
 
 EOB

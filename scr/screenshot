@@ -5,11 +5,11 @@ cat << 'EOB'
 # screenshot
 - take screenshot with `maim`
 
-## Usage
+## Synopsis
 
 ```
 screenshot
-screenshot --help|-h
+screenshot [--help|-h]
 ```
 EOB
 echo "$1"

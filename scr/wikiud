@@ -17,7 +17,7 @@ cat << 'EOB'
 
 ```
 wikiud
-wikiud --help|-h
+wikiud [--help|-h]
 ```
 EOB
 exit

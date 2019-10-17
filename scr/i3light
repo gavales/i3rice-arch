@@ -5,11 +5,11 @@ cat << 'EOB'
 # i3light
 - control backlight for i3
 
-## Usage
+## Synopsis
 
 ```
 i3light nm|inc|dec
-i3light --help|-h
+i3light [--help|-h]
 ```
 EOB
 echo "$1"

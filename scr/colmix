@@ -8,11 +8,11 @@ cat << 'EOB'
 # colmix
 - Script to mix 2 hex colors
 
-## Usage
+## Synopsis
 
 ```
-colmix [--hex|-x|--rgb|-r] '<ratio1>:<color1> <ratio2>:<color2>'
-colmix --help|-h
+colmix [--hex|-x|--rgb|-r] <ratio1>:<color1> <ratio2>:<color2>
+colmix [--help|-h]
 ```
 
 ## Example

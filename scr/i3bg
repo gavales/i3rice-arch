@@ -31,15 +31,15 @@ cat << 'EOB'
 # i3bg
 - A script to set wallpaper, with other features.
 
-## Usage
+## Synopsis
 
 ```
-i3bg [--wallpaper|-w] <path|prev|next|random|name>
+i3bg [--wallpaper|-w <path|prev|next|random|name>]
      [--tint|-t|--blur|-b]
-i3bg [--add|-a] <directory>
+i3bg [--add|-a <directory>]
 i3bg [--list|-l]
-i3bg [--rename|-r|--delete|-d] <name>
-i3bg --help|-h
+i3bg [--rename|-r|--delete|-d <name>]
+i3bg [--help|-h]
 i3bg
 ```
 

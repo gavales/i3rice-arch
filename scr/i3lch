@@ -12,11 +12,11 @@ help () {
 # i3lch
 - launch a program in i3 but with added perks
 
-## Usage
+## Synopsis
 
 ```
-i3lch [--class|-c|--instance|-i|--name|-n] <class|instance|name>
-      [--exec|-e] <command>
+i3lch [--class|-c|--instance|-i|--name|-n <class|instance|name>]
+      [--exec|-e <command>]
       [--toggle|-t]
 i3lch [--help|-h]
 ```
