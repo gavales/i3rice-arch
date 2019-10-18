@@ -1,20 +1,20 @@
-# >>>> QUERIES
+# ━  QUERIES
 "query:Online Blogs/Feeds:tags # \"Blogs\"" "Blogs"
 "query:Nasa Jet Propulsion Laboratory:tags # \"JPL\"" "JPL"
 "query:YouTube Subscriptions:tags # \"YouTube\"" "YouTube"
 "query:Journal Articles:tags # \"Journals\"" "Journals"
 "query:NewScientist Articles:tags # \"NewScientist\"" "NewScientist"
 
-# >>>> Journals
+# ━  Journals
 http://rsob.royalsocietypublishing.org/rss/current.xml "Journals" "~The Royal Society: Open Biology Current"
 http://rspb.royalsocietypublishing.org/rss/current.xml "Journals" "~The Royal Society: Proceedings B Current"
 http://rspa.royalsocietypublishing.org/rss/current.xml "Journals" "~The Royal Society: Proceedings A Current"
-http://rspb.royalsocietypublishing.org/rss/recent.xml "Journals" "~The Royal Society: Proceedings B Recent"
-http://rsob.royalsocietypublishing.org/rss/recent.xml "Journals" "~The Royal Society: Open Biology Recent"
-http://rspa.royalsocietypublishing.org/rss/recent.xml "Journals" "~The Royal Society: Proceedings A Recent"
+http://rspb.royalsocietypublishing.org/rss/recent.xml  "Journals" "~The Royal Society: Proceedings B Recent"
+http://rsob.royalsocietypublishing.org/rss/recent.xml  "Journals" "~The Royal Society: Open Biology Recent"
+http://rspa.royalsocietypublishing.org/rss/recent.xml  "Journals" "~The Royal Society: Proceedings A Recent"
 
-# >>>> YoutTube
-# //// Entertainment
+# ━  YoutTube
+# ━━ Entertainment
 https://www.youtube.com/feeds/videos.xml?channel_id=UCwNPa8fSXzzAZuT9859GVhg  "YouTube" "YouTube: Entertainment" "~ADVChina"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC20_a5xMoC85LQXw17fufEQ  "YouTube" "YouTube: Entertainment" "~Anti-Trekker"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCU3gQGhk0lYK-fKOR0sopgg  "YouTube" "YouTube: Entertainment" "~CarsandCameras"
@@ -26,13 +26,13 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCl7mAGnY4jh4Ps8rhhh8XZg  "Y
 https://www.youtube.com/feeds/videos.xml?channel_id=UCu8YylsPiu9XfaQC74Hr_Gw  "YouTube" "YouTube: Entertainment" "~Seth's Bike Hacks"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCfjaAUlTZRHJapJmCT6eyIg  "YouTube" "YouTube: Entertainment" "~Spacedock"
 
-# //// Linux
+# ━━ Linux
 https://www.youtube.com/feeds/videos.xml?channel_id=UCi8XrDg1bK_MJ0goOnbpTMQ "YouTube" "YouTube: Linux" "~budlabs"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "YouTube" "YouTube: Linux" "~DistroTube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "YouTube" "YouTube: Linux" "~Luke Smith"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCBE-FO9JUOghSysV9gjTeHw "YouTube" "YouTube: Linux" "~Nixie Pixel"
 
-# //// RC Hobby
+# ━━ RC Hobby
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2QTy9BHei7SbeBRq59V66Q "YouTube" "YouTube: RC Hobby" "~Andrew Newton"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC9zTuyWffK9ckEz1216noAw "YouTube" "YouTube: RC Hobby" "~FliteTest"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCLtBvixg3XdD5I6S0J6HluQ "YouTube" "YouTube: RC Hobby" "~Grumpy Trev"
@@ -41,13 +41,13 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC7yF9tV4xWEMZkel7q8La_w "Yo
 https://www.youtube.com/feeds/videos.xml?channel_id=UC67gfx2Fg7K2NSHqoENVgwA "YouTube" "YouTube: RC Hobby" "~Tom Stanton"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC3ioIOr3tH6Yz8qzr418R-g "YouTube" "YouTube: RC Hobby" "~UAVfutures"
 
-# //// Science
+# ━━ Science
 https://www.youtube.com/feeds/videos.xml?channel_id=UCwg6_F2hDHYrqbNSGjmar4w "YouTube" "YouTube: Science" "~Animalogic"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCONd1SNf3_QqjzjCVsURNuA "YouTube" "YouTube: Science" "~AntsCanada"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCljE1ODdSF7LS9xx9eWq0GQ "YouTube" "YouTube: Science" "~potholer54"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCRtsZ5Iak9wSLsQLQ3XOAeA "YouTube" "YouTube: Science" "~SciManDan"
 
-# //// Skeptics & Flat Earth
+# ━━ Skeptics & Flat Earth
 https://www.youtube.com/feeds/videos.xml?channel_id=UCAJfDidJyukTekgSRZrjadw "YouTube" "YouTube: Skeptics" "~AronRa"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCbuO3qj9_dSjnKQf-LhRqPA "YouTube" "YouTube: Skeptics" "~Conspiracy Catz"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCx3s3t5kpD4VMfJjDi5keXw "YouTube" "YouTube: Skeptics" "~CoolHardLogic"
@@ -64,34 +64,34 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCf6V5DZJsjnJd3N2uEkpGIg "Yo
 https://www.youtube.com/feeds/videos.xml?channel_id=UCUhjF0k10WbNf-t1244XkxA "YouTube" "YouTube: Skeptics" "~Wolfie6020"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCuQPbSSSGG1fE60MahpRZKA "YouTube" "YouTube: Skeptics" "~Young Blue Skeptic"
 
-# //// Tech
+# ━━ Tech
 https://www.youtube.com/feeds/videos.xml?channel_id=UCHhy08xelXhKIOwgsFssaTQ "YouTube" "YouTube: Tech" "~Goodereader"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCmtGQ6FRVPjv-al7BsbDDAQ "YouTube" "YouTube: Tech" "~The Inktelligent"
 
-# >>>> Blogs
-http://www.factfiend.com/feed/ "Blogs" "~Fact Fiend"
-https://goodereader.com/blog/feed "Blogs" "~Goodereader"
-http://lukesmith.xyz/rss.xml "Blogs" "~Luke Smith"
+# ━  Blogs
+http://www.factfiend.com/feed/                         "Blogs" "~Fact Fiend"
+https://goodereader.com/blog/feed                      "Blogs" "~Goodereader"
+http://lukesmith.xyz/rss.xml                           "Blogs" "~Luke Smith"
 http://newtonairlines.blogspot.com/feeds/posts/default "Blogs" "~Newton Airlines"
-https://primitivetechnology.wordpress.com/feed/ "Blogs" "~Primitive Technology"
-http://www.nonseqshow.com/rss "Blogs" "~The NonSequitor Show"
-http://blog.z3bra.org/rss/feed.xml "Blogs" "~z3bra's Blog"
+https://primitivetechnology.wordpress.com/feed/        "Blogs" "~Primitive Technology"
+http://www.nonseqshow.com/rss                          "Blogs" "~The NonSequitor Show"
+http://blog.z3bra.org/rss/feed.xml                     "Blogs" "~z3bra's Blog"
 
-# >>>> JPL
-http://www.jpl.nasa.gov/multimedia/rss/news.xml "JPL" "~News & Feature Stories"
+# ━  JPL
+http://www.jpl.nasa.gov/multimedia/rss/news.xml        "JPL" "~News & Feature Stories"
 http://www.jpl.nasa.gov/multimedia/podcast/podfeed.xml "JPL" "~Podcasts (Audio & Video)"
-http://www.jpl.nasa.gov/multimedia/rss/podfeed-hd.xml "JPL" "~HD Videos"
+http://www.jpl.nasa.gov/multimedia/rss/podfeed-hd.xml  "JPL" "~HD Videos"
 http://www.jpl.nasa.gov/blog/feed/ "JPL" "~Blogs"
-http://www.jpl.nasa.gov/multimedia/rss/slideshows.xml "JPL" "~Slide Shows & Interactive Features"
+http://www.jpl.nasa.gov/multimedia/rss/slideshows.xml  "JPL" "~Slide Shows & Interactive Features"
 
-# >>>> NewScienist
-http://feeds.newscientist.com/ "NewScientist" "~All Articles"
+# ━  NewScienist
+http://feeds.newscientist.com/             "NewScientist" "~All Articles"
 http://feeds.newscientist.com/science-news "NewScientist" "~News"
-http://feeds.newscientist.com/features "NewScientist" "~Features"
+http://feeds.newscientist.com/features     "NewScientist" "~Features"
 http://feeds.newscientist.com/physics-math "NewScientist" "~Physics"
-http://feeds.newscientist.com/tech "NewScientist" "~Technology"
-http://feeds.newscientist.com/space "NewScientist" "~Space"
-http://feeds.newscientist.com/life "NewScientist" "~Life"
-http://feeds.newscientist.com/environment "NewScientist" "~Earth"
-http://feeds.newscientist.com/health "NewScientist" "~Health"
-http://feeds.newscientist.com/humans "NewScientist" "~Humans"
+http://feeds.newscientist.com/tech         "NewScientist" "~Technology"
+http://feeds.newscientist.com/space        "NewScientist" "~Space"
+http://feeds.newscientist.com/life         "NewScientist" "~Life"
+http://feeds.newscientist.com/environment  "NewScientist" "~Earth"
+http://feeds.newscientist.com/health       "NewScientist" "~Health"
+http://feeds.newscientist.com/humans       "NewScientist" "~Humans"

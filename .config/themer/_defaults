@@ -5,8 +5,9 @@ guifont    $romanfont
 font       CMUTypewriterText
 sansfont   Lucida Sans
 monofont   CMU Typewriter Text
-gvimfont   Luxi\\ Mono
+monofnt2   monaco
 romanfont  Luxi Mono
+gvimfont   Luxi\\ Mono
 ltimex     1
 ltimey     90
 size       11

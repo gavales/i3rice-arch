@@ -56,7 +56,7 @@ set $THN thunar
 
 # ━  DECORATIONS
 # class                 brdr    bkgr    text    indi    chlb
-client.focused          %%acc%% %%acb%% %%fg0%% %%acb%% %%acc%%
+client.focused          %%acb%% %%acb%% %%fg0%% %%acb%% %%acc%%
 client.focused_inactive %%acc%% %%acc%% %%fg0%% %%acc%% %%acc%%
 client.unfocused        %%acc%% %%acc%% %%bg0%% %%acc%% %%acc%%
 client.urgent           %%red%% %%red%% %%fg0%% %%red%% %%red%%

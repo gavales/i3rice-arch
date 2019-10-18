@@ -58,7 +58,7 @@ def windownotify(i3, event):
 				call('thunarview'.split(' '))
 
 def set_floating(i3, event):
-	event.container.command('floating enable, border normal 1')
+	event.container.command('floating enable, border normal 0')
 
 i3.on('window', windownotify)
 i3.on('workspace', wsnotify)

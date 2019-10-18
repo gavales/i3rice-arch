@@ -11,7 +11,7 @@ cat << 'EOB'
 ## Synopsis
 
 ```
-colmix [--hex|-x|--rgb|-r] <ratio1>:<color1> <ratio2>:<color2>
+colmix [--hex|-x|--rgb|-r|--verbose|-v] <ratio1>:<color1> <ratio2>:<color2>
 colmix [--help|-h]
 ```
 
@@ -39,6 +39,9 @@ So ![#00ff00](https://placehold.it/15/00ff00/000000?text=+) #00ff00 +
 + `--rgb|-r`
 	+ Print final color in rgb
 
++ `--verbose|-v`
+	+ Print input colors aswell, and rgb versions as well
+
 + `--help|-h`
 	+ Print this help
 
@@ -49,16 +52,18 @@ exit
 
 while true; do
 	case $1 in
-		--hex  | -x ) PRINT=HEX ;;
-		--rgb  | -r ) PRINT=RGB ;;
-		--help | -h ) help ; shift ;;
+		--hex     | -x ) PRINT=HEX ;;
+		--rgb     | -r ) PRINT=RGB ;;
+		--verbose | -v ) PRINT=VER ;;
+		--help    | -h ) help      ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac
 	shift
 done
 
-[[ -z ${@:-} ]] && help 'No input specified' || echo ${@:-} | awk -F "" -v PRINT="$PRINT" '{
+[[ -z ${@:-} ]] && help 'No input specified' || \
+	echo ${@:-} | awk -F "" -v PRINT="$PRINT" '{
 		RAT1=$1$2;
 		RAT2=$12$13;
 		ONER=$5$6;ONEG=$7$8;ONEB=$9$10;
@@ -68,16 +73,23 @@ done
 		CL3R=int((ONRR * RAT1 + TWRR * RAT2) / 100);
 		CL3G=int((ONRG * RAT1 + TWRG * RAT2) / 100);
 		CL3B=int((ONRB * RAT1 + TWRB * RAT2) / 100);
-		CL3XR=sprintf("%x",CL3R); CL3XG=sprintf("%x",CL3G); CL3XB=sprintf("%x",CL3B);
-		if (length(CL3XR)==1) {CL3XR="0"CL3XR}
-		if (length(CL3XG)==1) {CL3XG="0"CL3XG}
-		if (length(CL3XB)==1) {CL3XB="0"CL3XB}
+		C3XR=sprintf("%x",CL3R); C3XG=sprintf("%x",CL3G); C3XB=sprintf("%x",CL3B);
+		if (length(C3XR)==1) {C3XR="0"C3XR}
+		if (length(C3XG)==1) {C3XG="0"C3XG}
+		if (length(C3XB)==1) {C3XB="0"C3XB}
 		if (PRINT=="HEX") {
-			print "#" CL3XR CL3XG CL3XB ;
+			print "#"C3XR    C3XG    C3XB;
 		} else if (PRINT=="RGB") {
-			print "" CL3R ", " CL3G ", " CL3B ;
+			print    CL3R", "CL3G", "CL3B;
+		} else if (PRINT=="VER") {
+			print "#"ONER    ONEG    ONEB;
+			print    ONRR", "ONRG", "ONRB;
+			print "#"TWOR    TWOG    TWOB;
+			print    TWRR", "TWRG", "TWRB;
+			print "#"C3XR    C3XG    C3XB;
+			print    CL3R", "CL3G", "CL3B;
 		} else {
-			print CL3XR     CL3XG     CL3XB ;
-			print CL3R ", " CL3G ", " CL3B  ;
+			print "#"C3XR    C3XG    C3XB;
+			print    CL3R", "CL3G", "CL3B;
 		}
 	}'

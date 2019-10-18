@@ -1,8 +1,3 @@
-
-rename 
-rename forest-night
-rename forest-dawn
-rename forest-day
 rename dracula
 rename gruvbox
 rename solarized
@@ -47,4 +42,9 @@ w
 open_with edtr
 rename opengvim
 open_with vim
+shell mkdir vim conf
+rename edtr_
 rename edtr
+rename python
+rename 109 - The Ultimate Enemy Approaches Goku! Now, Let Loose! The Killer Spirit Bomb!!.mkv
+rename 128 - Noble Pride to the End! Vegeta Falls!!.mkv
