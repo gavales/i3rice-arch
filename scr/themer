@@ -150,12 +150,12 @@ rofi xsel
 	+ Create theme `<name>`.
 
 + `--list|-l themes|vars|varmenu|default|current`
-	+`themes`  = list themes in `$THEMER_DIR`.
-	+`default` = list default variables
-	+`current` = list variables specific to current theme name
-	+`vars`    = list all variables in the correct syntax
-	+`varmenu` = rofi list of all variables. Selected item
-	is automatically copied to the clipboard. 
+	+ `themes`  = list themes in `$THEMER_DIR`
+	+ `default` = list default variables
+	+ `current` = list variables specific to current theme name
+	+ `vars`    = list all variables in the correct syntax
+	+ `varmenu` = rofi list of all variables. Selected item
+	is automatically copied to the clipboard
 
 + `--updatelist|-u`
 	+ Update the rofi theme list

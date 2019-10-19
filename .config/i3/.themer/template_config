@@ -337,8 +337,8 @@ $fw [instance="visualiser"]              focus;$QUD -m 4;focus;$tf "visualiser"
 # ━  GAPS
 gaps inner 20
 gaps outer 40
-workspace 1 gaps inner 0
-workspace 1 gaps outer 0
+workspace 1 gaps inner 5
+workspace 1 gaps outer 5
 
 # ━  STARTUP
 $exn urxvtd -q -o -f
