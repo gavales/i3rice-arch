@@ -4,28 +4,46 @@
 # CREATED: Mon  7 Oct 23:04:04 BST 2019
 # source /home/gavarch/.config/user-dirs.dirs
 
-SRC=${USER_SCR_DIR}
-TRG=${USER_SCR_DIR}man
+SDR=${USER_SCR_DIR}
+
 
 help () {
 cat << 'EOB'
 # NAME
 
-__manner__ - generates man pages for scripts, in my scripts directory
-that have a help function, using pandoc
+__manner__ - generates man pages for scripts
 
 # SYNOPSIS
 
 ```
-manner
+manner --directory|-d <directory>
+manner --script|-s <script>
 manner [--help|-h]
 ```
+
+# DESCRIPTION
+
+All my bash scripts that have a help function are just
+called with the '--help' flag and the output piped to
+'pandoc -s -t man', and that output redirected to the
+directory <directory>man. The default directory is
+'~/scr', so the resulting manpages will be redirected
+to the appropriate file in '~/scrman'.
+
+Note that this only works because all my help functions
+are written in markdown.
+
+The '--script' flag can be used to automatically pipe the
+output of the specified script to a man page.
+
 EOB
 exit
 }
 
 while true; do
 	case $1 in
+		--directory | -d ) SDR="${2:-}" ;;
+		--script    | -s ) ${2:-} --help | pandoc -s -t man | man -l - ; exit ;;
 		--help | -h ) help ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
@@ -33,11 +51,14 @@ while true; do
 	shift
 done
 
+SRC=${SDR}
+TRG=${SDR}man
+
 cd $SRC
 
 for i in $(ls -l | sed '/^d/d;/^total/d' | awk '{print $NF}'); do
 	[[ -n $(grep '\-\-help' $i) ]] && {
-		echo ".TH ${i^^} 1 $(date +%F | sed 's/-/\\-/g') Linux "User Manuals"" > ${TRG}/${i}.1
+		echo ".TH ${i^^} 1 $(date +%F | sed 's/-/\\-/g') Linux \"User Manuals\"" > ${TRG}/${i}.1
 		$i --help | pandoc -s -t man | sed '/.TH/d' >> ${TRG}/${i}.1
 		}
 done

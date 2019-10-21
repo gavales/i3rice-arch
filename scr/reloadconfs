@@ -4,5 +4,5 @@ WPP="$(themer -v 'wallpaper ')"
 TNT="$(themer -v 'tint ')"
 [[ -n $WPP ]] || WPP=$(themer -v 'acc ')
 [[ -n $TNT ]] && TINT="-t $TNT" || TINT=" "
-i3bg -w "$WPP" $TINT -b
+i3bg -w "$WPP" $TINT
 themer --force --apply-all

@@ -10,7 +10,7 @@ endif
 
 let g:colors_name = "themer"
 
-" >>>> CTERM
+" >> CTERM
 hi Normal           ctermfg=white    ctermbg=none
 hi Title            ctermfg=white    ctermbg=none     cterm=bold
 hi LineNr           ctermfg=blue     ctermbg=black    cterm=none
@@ -26,7 +26,7 @@ hi VisualNOS        ctermfg=white    ctermbg=Gray
 hi Type             ctermfg=white    ctermbg=black    cterm=bold
 hi Identifier       ctermfg=yellow   ctermbg=black    cterm=italic
 hi Comment          ctermfg=Gray     ctermbg=black    cterm=italic
-hi Folded           ctermfg=white    ctermbg=black    cterm=italic
+hi Folded           ctermfg=blue     ctermbg=black    cterm=italic
 hi Constant         ctermfg=white    ctermbg=black    cterm=italic
 hi Special          ctermfg=white    ctermbg=black    cterm=bold
 hi Statement        ctermfg=white    ctermbg=black    cterm=bold
@@ -52,9 +52,9 @@ hi Pmenu            ctermfg=blue     ctermbg=white    cterm=none
 hi PmenuSel         ctermfg=black    ctermbg=blue     cterm=none
 hi PmenuSbar        ctermfg=blue     ctermbg=black    cterm=none
 hi PmenuThumb       ctermfg=green    ctermbg=green    cterm=none
-hi TabLine          ctermfg=blue     ctermbg=black    cterm=none
-hi TabLineSel       ctermfg=black    ctermbg=blue     cterm=none
-hi TabLineFill      ctermfg=blue     ctermbg=black    cterm=none
+hi TabLine          ctermfg=blue     ctermbg=Gray     cterm=none
+hi TabLineSel       ctermfg=white    ctermbg=black    cterm=none
+hi TabLineFill      ctermfg=blue     ctermbg=Gray     cterm=none
 
 hi usrred           ctermfg=white    ctermbg=red
 hi usrylw           ctermfg=black    ctermbg=yellow
@@ -63,7 +63,7 @@ hi usrgry           ctermfg=black    ctermbg=grey
 hi usrblu           ctermfg=black    ctermbg=blue
 hi usrgnt           ctermfg=black    ctermbg=magenta
 
-" >>>> GUI
+" >> GUI
 hi Normal           guifg=#ececec guibg=#444444
 hi Title            guifg=#ececec guibg=#444444 gui=bold
 hi LineNr           guifg=#7f7f7f guibg=#444444 gui=none
@@ -79,7 +79,7 @@ hi VisualNOS        guifg=#ececec guibg=#616161
 hi Type             guifg=#ececec guibg=#444444 gui=bold
 hi Identifier       guifg=#904800 guibg=#444444 gui=italic
 hi Comment          guifg=#616161 guibg=#444444 gui=italic
-hi Folded           guifg=#ececec guibg=#444444 gui=italic
+hi Folded           guifg=#7f7f7f guibg=#444444 gui=italic
 hi Constant         guifg=#ececec guibg=#444444 gui=italic
 hi Special          guifg=#ececec guibg=#444444 gui=bold
 hi Statement        guifg=#ececec guibg=#444444 gui=bold
@@ -108,6 +108,9 @@ hi PmenuThumb       guifg=#009048 guibg=#009048 gui=none
 hi TabLine          guifg=#7f7f7f guibg=#444444 gui=none
 hi TabLineSel       guifg=#444444 guibg=#7f7f7f gui=none
 hi TabLineFill      guifg=#7f7f7f guibg=#444444 gui=none
+hi TabLine          guifg=#7f7f7f guibg=#616161 gui=none
+hi TabLineSel       guifg=#ececec guibg=#444444 gui=none
+hi TabLineFill      guifg=#7f7f7f guibg=#616161 gui=none
 
 hi usrred           guifg=#444444 guibg=#cc241d
 hi usrylw           guifg=#444444 guibg=#904800

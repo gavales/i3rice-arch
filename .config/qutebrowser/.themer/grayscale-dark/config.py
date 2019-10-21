@@ -10,8 +10,8 @@
 # vim:ft=python
 # config.load_autoconfig()
 
-# >>>> COLORS
-# //// completion
+# ━  COLORS
+# ━━ completion
 c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #7f7f7f, stop:1 #7f7f7f)'
 c.colors.completion.category.border.bottom      = '#7f7f7f'
 c.colors.completion.category.border.top         = '#7f7f7f'
@@ -27,7 +27,7 @@ c.colors.completion.match.fg                    = '#7f7f7f'
 c.colors.completion.scrollbar.bg                = '#585858'
 c.colors.completion.scrollbar.fg                = '#ececec'
 
-# //// downloads
+# ━━ downloads
 c.colors.downloads.bar.bg    = '#585858'
 c.colors.downloads.error.bg  = '#cc241d'
 c.colors.downloads.error.fg  = '#ececec'
@@ -38,7 +38,7 @@ c.colors.downloads.stop.fg   = '#ececec'
 c.colors.downloads.system.bg = 'rgb' # rgb, hsv, hsl, none
 c.colors.downloads.system.fg = 'rgb' # rgb, hsv, hsl, none
 
-# //// hints
+# ━━ hints
 c.colors.hints.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(144, 72, 0, 0.8), stop:1 rgba(144, 72, 0, 0.8))'
 c.colors.hints.fg          = '#ececec'
 c.colors.hints.match.fg    = '#009048'
@@ -46,28 +46,28 @@ c.colors.keyhint.bg        = 'rgba(144, 72, 0, 80%)'
 c.colors.keyhint.fg        = '#ececec'
 c.colors.keyhint.suffix.fg = '#585858'
 
-# //// errors
+# ━━ errors
 c.colors.messages.error.bg     = '#cc241d'
 c.colors.messages.error.border = '#cc241d'
 c.colors.messages.error.fg     = '#ececec'
 
-# //// info
+# ━━ info
 c.colors.messages.info.bg     = '#ececec'
 c.colors.messages.info.border = '#ececec'
 c.colors.messages.info.fg     = '#585858'
 
-# //// warning
+# ━━ warning
 c.colors.messages.warning.bg     = '#904800'
 c.colors.messages.warning.border = '#904800'
 c.colors.messages.warning.fg     = '#585858'
 
-# //// prompts
+# ━━ prompts
 c.colors.prompts.bg          = '#585858'
 c.colors.prompts.border      = '1px solid #585858'
 c.colors.prompts.fg          = '#ececec'
 c.colors.prompts.selected.bg = '#7f7f7f'
 
-# //// statusbar
+# ━━ statusbar
 c.colors.statusbar.caret.fg             = '#900048'
 c.colors.statusbar.caret.bg             = '#585858'
 c.colors.statusbar.caret.selection.fg   = '#900048'
@@ -92,7 +92,7 @@ c.colors.statusbar.url.success.http.fg  = '#ececec'
 c.colors.statusbar.url.success.https.fg = '#ececec'
 c.colors.statusbar.url.warn.fg          = '#904800'
 
-# //// tabs
+# ━━ tabs
 c.colors.tabs.bar.bg           = '#585858'
 c.colors.tabs.even.bg          = '#585858'
 c.colors.tabs.even.fg          = '#ececec'
@@ -107,8 +107,8 @@ c.colors.tabs.selected.even.fg = '#585858'
 c.colors.tabs.selected.odd.bg  = '#7f7f7f'
 c.colors.tabs.selected.odd.fg  = '#585858'
 
-# >>>> SETTINGS
-# //// misc
+# ━  SETTINGS
+# ━━ misc
 c.messages.timeout = 2000
 c.aliases = {
 	'w': 'session-save', 'q': 'close',
@@ -131,7 +131,7 @@ c.colors.webpage.bg = '#585858'
 #		# id-ID, it-IT, ko, lt-LT, lv-LV, nb-NO, nl-NL, pl-PL, pt-BR, pt-PT, ro-RO,
 #		# ru-RU, sh, sk-SK, sl-SI, sq, sr, sv-SE, ta-IN, tg-TG, tr-TR, uk-UA, vi-VN,
 
-# //// completion
+# ━━ completion
 c.completion.cmd_history_max_items = 100
 c.completion.delay                 = 0
 c.completion.height                = '50%'
@@ -147,7 +147,7 @@ c.completion.use_best_match        = False
 c.completion.web_history.exclude   = []
 c.completion.web_history.max_items = -1
 
-# //// content
+# ━━ content
 c.confirm_quit                                   = ['never'] # always, multiple-tabs, downloads, never
 c.content.autoplay                               = True
 c.content.cache.appcache                         = True
@@ -210,7 +210,7 @@ c.content.webrtc_ip_handling_policy              = 'all-interfaces'
 c.content.windowed_fullscreen                    = True
 c.content.xss_auditing                           = True
 
-# //// downloads
+# ━━ downloads
 c.downloads.location.directory  = '/home/gavarch/dwn'
 c.downloads.location.prompt     = True
 c.downloads.location.remember   = True
@@ -219,11 +219,11 @@ c.downloads.open_dispatcher     = None # `{}` expanded to filename
 c.downloads.position            = 'top'
 c.downloads.remove_finished     = -1
 
-# //// editor
+# ━━ editor
 c.editor.command  = ['gvim', '-f', '{file}', '-c', 'normal {line}G{column0}l']
 c.editor.encoding = 'utf-8'
 
-# //// hints
+# ━━ hints
 c.hints.auto_follow                = 'unique-match' # always, unique-match, full-match, never
 c.hints.auto_follow_timeout        = 0
 c.hints.border                     = '1px solid #904800'
@@ -261,7 +261,7 @@ c.keyhint.delay                    = 500
 c.keyhint.radius                   = 6
 c.history_gap_interval             = 30
 
-# //// input
+# ━━ input
 c.input.escape_quits_reporter         = True
 c.input.forward_unbound_keys          = 'auto' # all, auto, none
 c.input.insert_mode.auto_enter        = True
@@ -274,11 +274,11 @@ c.input.partial_timeout               = 5000
 c.input.rocker_gestures               = False
 c.input.spatial_navigation            = False
 
-# //// prompt
+# ━━ prompt
 c.prompt.filebrowser = True
 c.prompt.radius      = 8
 
-# //// qt
+# ━━ qt
 c.qt.args = []
 c.qt.force_platform           = None
 c.qt.force_software_rendering = 'chromium' # software-opengl, qt-quick, chromium, none
@@ -287,19 +287,19 @@ c.qt.low_end_device_mode      = 'auto' # always, auto, never
 c.qt.process_model            = 'process-per-site-instance'
 	# process-per-site-instance, process-per-site, single-process
 
-# //// scrollbar
+# ━━ scrollbar
 c.scrolling.bar    = 'when-searching' # always, never, when-searching
 c.scrolling.smooth = True
 
-# //// search
+# ━━ search
 c.search.ignore_case = 'smart' # always, never, smart
 c.search.incremental = True
 
-# //// session
+# ━━ session
 c.session.default_name = None
 c.session.lazy_restore = True
 
-# //// statusbar
+# ━━ statusbar
 c.statusbar.hide     = False
 c.statusbar.padding  = {'top': 1, 'bottom': 1, 'left': 1, 'right': 1}
 c.statusbar.position = 'bottom'
@@ -307,7 +307,7 @@ c.statusbar.widgets  = [ # url, scroll, scroll_raw, history, tabs, keypress, pro
 	'keypress', 'url', 'scroll', 'history', 'tabs', 'progress'
 	]
 
-# //// url
+# ━━ url
 c.url.auto_search             = 'naive' # naive, dns, never
 c.url.default_page            = 'https://www.google.com/'
 c.url.incdec_segments         = ['path', 'query'] # host, port, path, query, anchor
@@ -324,11 +324,11 @@ c.url.yank_ignored_parameters = [
 	'ref', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'
 	]
 
-# //// window
+# ━━ window
 c.window.hide_decoration = False
 c.window.title_format    = '{perc}{current_title}{title_sep}'
 
-# //// zoom
+# ━━ zoom
 c.zoom.default       = '100%'
 c.zoom.levels        = [
 	'25%', '33%', '50%', '67%', '75%', '90%', '100%', '110%',
@@ -337,7 +337,7 @@ c.zoom.levels        = [
 c.zoom.mouse_divider = 512
 c.zoom.text_only     = False
 
-# //// tabs
+# ━━ tabs
 c.tabs.background                 = True
 c.tabs.close_mouse_button         = 'middle'
 c.tabs.close_mouse_button_on_bar  = 'new-tab' # new-tab, close-current, close-last, ignore
@@ -382,7 +382,7 @@ c.tabs.wrap                       = True
 c.new_instance_open_target        = 'tab' # tab, tab-bg, tab-silent, tab-bg-silent, window
 c.new_instance_open_target_window = 'last-focused' # first-opened, last-opened, last-focused, last-visible
 
-# >>>> FONTS
+# ━  FONTS
 c.fonts.monospace                = 'Luxi Mono'
 # , "xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
 c.fonts.completion.category      = 'bold 11pt monospace'
@@ -408,8 +408,8 @@ c.fonts.tabs                     = 'bold 11pt monospace'
 #c.fonts.web.size.minimum         = 0
 #c.fonts.web.size.minimum_logical = 6
 
-# >>>> BINDINGS
-# //// Normal
+# ━  BINDINGS
+# ━━ Normal
 config.bind("'",              'enter-mode jump_mark')
 config.bind('+',              'zoom-in')
 config.bind('-',              'zoom-out')
@@ -574,7 +574,7 @@ config.bind('yy',             'yank')
 config.bind('{{',             'navigate prev -t')
 config.bind('}}',             'navigate next -t')
 
-# //// Caret
+# ━━ Caret
 config.bind('$',            'move-to-end-of-line', mode='caret')
 config.bind('0',            'move-to-start-of-line', mode='caret')
 config.bind('<Ctrl-Space>', 'drop-selection', mode='caret')
@@ -603,7 +603,7 @@ config.bind('y',            'yank selection', mode='caret')
 config.bind('{',            'move-to-end-of-prev-block', mode='caret')
 config.bind('}',            'move-to-end-of-next-block', mode='caret')
 
-# //// Command
+# ━━ Command
 config.bind('<Alt-B>',          'rl-backward-word', mode='command')
 config.bind('<Alt-D>',          'rl-kill-word', mode='command')
 config.bind('<Alt-F>',          'rl-forward-word', mode='command')
@@ -641,22 +641,22 @@ config.bind('gsp',              'open -t https://sotonac-my.sharepoint.com/perso
 config.bind('gm',               'open -t https://outlook.office.com/owa/?realm=soton.ac.uk', mode='command')
 config.bind('god',              'open -t https://onedrive.live.com/?id=FA5C121A2376FB2D%211566&cid=FA5C121A2376FB2D', mode='command')
 
-# //// Hint
+# ━━ Hint
 config.bind('<Ctrl-B>', 'hint all tab-bg', mode='hint')
 config.bind('<Ctrl-F>', 'hint links', mode='hint')
 config.bind('<Ctrl-R>', 'hint --rapid links tab-bg', mode='hint')
 config.bind('<Escape>', 'leave-mode', mode='hint')
 config.bind('<Return>', 'follow-hint', mode='hint')
 
-# //// Insert
+# ━━ Insert
 config.bind('<Ctrl-E>',    'open-editor', mode='insert')
 config.bind('<Escape>',    'leave-mode', mode='insert')
 config.bind('<Shift-Ins>', 'insert-text {primary}', mode='insert')
 
-# //// Passthrough
+# ━━ Passthrough
 config.bind('<Ctrl-V>', 'leave-mode', mode='passthrough')
 
-# //// Prompt
+# ━━ Prompt
 config.bind('<Alt-B>',         'rl-backward-word', mode='prompt')
 config.bind('<Alt-Backspace>', 'rl-backward-kill-word', mode='prompt')
 config.bind('<Alt-D>',         'rl-kill-word', mode='prompt')
@@ -681,10 +681,10 @@ config.bind('<Shift-Tab>',     'prompt-item-focus prev', mode='prompt')
 config.bind('<Tab>',           'prompt-item-focus next', mode='prompt')
 config.bind('<Up>',            'prompt-item-focus prev', mode='prompt')
 
-# //// Register
+# ━━ Register
 config.bind('<Escape>', 'leave-mode', mode='register')
 
-# //// Yesno
+# ━━ Yesno
 config.bind('<Alt-Shift-Y>', 'prompt-yank --sel', mode='yesno')
 config.bind('<Alt-Y>',       'prompt-yank', mode='yesno')
 config.bind('<Escape>',      'leave-mode', mode='yesno')
