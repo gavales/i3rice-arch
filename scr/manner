@@ -91,7 +91,7 @@ for i in $(ls -l | sed '/^d/d;/^total/d' | awk '{print $NF}'); do
 
 #			'/^.\\"/d;/.TH "" "" "" "" ""/d;s/^\\f\[C\]$/PRECODE/g;s/\\f\[C\]/\\f\[B\]/g;s/PRECODE/\\f\[C\]/g' \
 		$i --help | pandoc -s -t man | sed \
-			'/^.\\"/d;/.TH "" "" "" "" ""/d;s/\\f\[C\]/\\f\[B\]/g;s/</\\fI/g;s/>/\\fP/g' \
+			'/^.\\"/d;/.TH "" "" "" "" ""/d;s/\\f\[C\]/\\f\[B\]/g;s/</\\fI</g;s/>/>\\fP/g' \
 			>> ${TRG}/${i}.1
 
 		[[ -z $INS ]] || [[ ! -f /usr/share/man/man1/${i}.1 ]] && {

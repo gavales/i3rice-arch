@@ -8,9 +8,9 @@ $XDG_DESKTOP_DIR, usually $HOME/Desktop
 .IP
 .nf
 \f[B]
-noter [--type|-t \fInote_type\fP] [--entry|-e \fIentry\fP]
-noter --list|-l|--delete-type|-D \fInote_type\fP
-noter --delete|-d \fIentry\fP
+noter [--type|-t \fI<note_type>\fP] [--entry|-e \fI<entry>\fP]
+noter --list|-l|--delete-type|-D \fI<note_type>\fP
+noter --delete|-d \fI<entry>\fP
 noter --list-types|-L
 noter --help|-h
 noter
@@ -34,37 +34,37 @@ Run with no options to create defaults:
 .PD
 Print this help
 .PP
-\f[B]--type|-t \fInote_type\fP\f[R]
+\f[B]--type|-t \fI<note_type>\fP\f[R]
 .PD 0
 .P
 .PD
-Create $NOTE_DIR/\f[B]\fInote_type\fP\f[R]
+Create $NOTE_DIR/\f[B]\fI<note_type>\fP\f[R]
 .PP
-\f[B]--entry|-e \fIentry\fP\f[R]
+\f[B]--entry|-e \fI<entry>\fP\f[R]
 .PD 0
 .P
 .PD
-\f[B]\fIentry\fP\f[R] to add to the note
+\f[B]\fI<entry>\fP\f[R] to add to the note
 .PP
-\f[B]--delete|-d \fIentry\fP\f[R]
+\f[B]--delete|-d \fI<entry>\fP\f[R]
 .PD 0
 .P
 .PD
-Delete line containing \f[B]\fIentry\fP\f[R] in note file
+Delete line containing \f[B]\fI<entry>\fP\f[R] in note file
 .PP
-\f[B]--delete-type|-D \fInote_type\fP\f[R]
+\f[B]--delete-type|-D \fI<note_type>\fP\f[R]
 .PD 0
 .P
 .PD
-Delete $NOTE_DIR/\f[B]\fInote_type\fP\f[R]
+Delete $NOTE_DIR/\f[B]\fI<note_type>\fP\f[R]
 .PP
 \f[B]--list|-l\f[R]
 .PD 0
 .P
 .PD
-Print contents of $NOTE_DIR/\f[B]\fInote_type\fP\f[R]
+Print contents of $NOTE_DIR/\f[B]\fI<note_type>\fP\f[R]
 .PP
-\f[B]--list-types|-L \fInote_type\fP\f[R]
+\f[B]--list-types|-L \fI<note_type>\fP\f[R]
 .PD 0
 .P
 .PD

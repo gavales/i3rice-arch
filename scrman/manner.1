@@ -7,8 +7,8 @@
 .IP
 .nf
 \f[B]
-manner [--directory|-d \fIdirectory\fP] [--install|-i copy|link]
-manner --script|-s \fIscript\fP
+manner [--directory|-d \fI<directory>\fP] [--install|-i copy|link]
+manner --script|-s \fI<script>\fP
 manner --help|-h
 \f[R]
 .fi
@@ -21,24 +21,24 @@ pandoc
 .fi
 .SH OPTIONS
 .PP
-\f[B]--directory|-d \fIdirectory\fP\f[R]
+\f[B]--directory|-d \fI<directory>\fP\f[R]
 .PD 0
 .P
 .PD
 Change target directory
 .PP
-\f[B]--script|-s \fIscript\fP\f[R]
+\f[B]--script|-s \fI<script>\fP\f[R]
 .PD 0
 .P
 .PD
-Call specified \f[B]\fIscript\fP\f[R] with \f[B]--help\f[R] flag, and
+Call specified \f[B]\fI<script>\fP\f[R] with \f[B]--help\f[R] flag, and
 convert the output to a man page with \f[B]pandoc -s -t man\f[R].
 .PP
 \f[B]--install|-i copy|link\f[R]
 .PD 0
 .P
 .PD
-Install all the manpages in \f[B]\fIdirectory\fP\f[R]man to
+Install all the manpages in \f[B]\fI<directory>\fP\f[R]man to
 \f[B]/usr/share/man/man1\f[R] if they do not already exist.
 .PD 0
 .P
@@ -56,7 +56,7 @@ Print this help
 All my bash scripts that have a help function are just called with the
 \f[B]--help\f[R] flag and the output piped to
 \f[B]pandoc -s -t man\f[R], and that output redirected to the directory
-\f[B]\fIdirectory\fP\f[R]man.
+\f[B]\fI<directory>\fP\f[R]man.
 The default directory is \f[B]$HOME/scr\f[R], so the resulting manpages
 will be redirected to the appropriate file in \f[B]$HOME/scrman\f[R].
 .PP

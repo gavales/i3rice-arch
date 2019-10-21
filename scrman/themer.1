@@ -10,12 +10,12 @@ Inspired by budlabs\[cq] \f[B]mondo-generator\f[R] from the AUR.
 .nf
 \f[B]
 themer [--dark|-D]
-       [--auto-dark|-t \fIam_time:pm_time\fP]
-       --change|-c \fIname\fP
-themer --new|-n \fIname\fP
-themer --getvar|-v \fIvariable\fP
+       [--auto-dark|-t \fI<am_time:pm_time>\fP]
+       --change|-c \fI<name>\fP
+themer --new|-n \fI<name>\fP
+themer --getvar|-v \fI<variable>\fP
 themer --list|-l themes|vars|varmenu|default|current
-themer [--force|-f] --apply-single|-a \fIdirectory\fP
+themer [--force|-f] --apply-single|-a \fI<directory>\fP
 themer --apply-all|-A
 themer --updatelist|-u
 themer --help|-h
@@ -43,18 +43,18 @@ Run with no options to create defaults in \f[B]THEMER_DIR\f[R]
 .PD
 \f[B]$THEMER_DIR\f[R] = \f[B]$HOME/.config/themer\f[R]
 .PP
-\f[B]--change|-c \fItheme\fP\f[R]
+\f[B]--change|-c \fI<theme>\fP\f[R]
 .PD 0
 .P
 .PD
-Change current theme to \f[B]\fItheme\fP\f[R].
-If \f[B]\fItheme\fP\f[R] is empty, a rofi list of themes will be displayed.
+Change current theme to \f[B]\fI<theme>\fP\f[R].
+If \f[B]\fI<theme>\fP\f[R] is empty, a rofi list of themes will be displayed.
 .PP
-\f[B]--apply-single|-a \fIdirectory\fP\f[R]
+\f[B]--apply-single|-a \fI<directory>\fP\f[R]
 .PD 0
 .P
 .PD
-Apply current theme to \f[B]\fIdirectory\fP\f[R].
+Apply current theme to \f[B]\fI<directory>\fP\f[R].
 .PP
 \f[B]--apply-all|-A\f[R]
 .PD 0
@@ -71,17 +71,17 @@ Use with \f[B]--apply-(single|all)\f[R] to force apply a theme, since
 themes are not automatically generated from `template_' files to speed
 up applying the theme
 .PP
-\f[B]--getvar|-v \fIvariable\fP\f[R]
+\f[B]--getvar|-v \fI<variable>\fP\f[R]
 .PD 0
 .P
 .PD
-Get \f[B]\fIvariable\fP\f[R] from current theme.
+Get \f[B]\fI<variable>\fP\f[R] from current theme.
 .PP
-\f[B]--new|-n \fIname\fP\f[R]
+\f[B]--new|-n \fI<name>\fP\f[R]
 .PD 0
 .P
 .PD
-Create theme \f[B]\fIname\fP\f[R].
+Create theme \f[B]\fI<name>\fP\f[R].
 .PP
 \f[B]--list|-l themes|vars|varmenu|default|current\f[R]
 .IP \[bu] 2
@@ -108,7 +108,7 @@ Update the rofi theme list
 .PD
 Dark mode (switches fgo and bg0).
 .PP
-\f[B]--auto-dark|-t \fIam_time\fP:\fIpm_time\fP\f[R]
+\f[B]--auto-dark|-t \fI<am_time>\fP:\fI<pm_time>\fP\f[R]
 .PD 0
 .P
 .PD
@@ -118,9 +118,9 @@ Dark/Light mode based on time of day.
 .PD
 Uses 24-hr time format
 .IP \[bu] 2
-\f[B]\fIam_time\fP\f[R] hr to apply `light' mode.
+\f[B]\fI<am_time>\fP\f[R] hr to apply `light' mode.
 .IP \[bu] 2
-\f[B]\fIpm_time\fP\f[R] hr to apply `dark' mode.
+\f[B]\fI<pm_time>\fP\f[R] hr to apply `dark' mode.
 .PP
 \f[B]--help|-h\f[R]
 .PD 0
@@ -216,9 +216,9 @@ manually:
 .PP
 [[/images/varmenu.png|themer \[en]list varmenu]]
 .PP
-Add \f[B]--dark\f[R] or \f[B]--auto-dark \fIam_time\fP:\fIpm_time\fP\f[R] to
+Add \f[B]--dark\f[R] or \f[B]--auto-dark \fI<am_time>\fP:\fI<pm_time>\fP\f[R] to
 convert to a dark theme (just swaps \f[B]fg0\f[R] and \f[B]bg0\f[R] and
-renames the theme to \f[B]\fIname\fP-dark\f[R]), or uses light/dark version
+renames the theme to \f[B]\fI<name>\fP-dark\f[R]), or uses light/dark version
 based on time of day, respectively.
 .SH MAKING THEME TEMPLATE
 .PP
@@ -298,7 +298,7 @@ $ cat \[ti]/.themer/template_.Xresources
 .PP
 The variables from the current theme can be listed using
 \f[B]themer --list vars\f[R], and are to be referenced with:
-\f[B]%%\fIvariable\fP%%\f[R].
+\f[B]%%\fI<variable>\fP%%\f[R].
 .PP
 Add RGB after a colour name to get its RGB value in \[lq]R, G, B\[rq]
 form eg.
@@ -310,7 +310,7 @@ Useful for \f[B]#AARRGGBB\f[R] colours.
 .SS \f[B].themer_pre\f[R] & \f[B].themer_post\f[R]
 .PP
 The .themer_pre and .themer_post bash scripts in the
-\f[B]\fIdirectory\fP\f[R] are used to do things before/after applying the
+\f[B]\fI<directory>\fP\f[R] are used to do things before/after applying the
 theme eg.
 reload the .Xresources file (below) etc.
 These scripts have the current theme name, eg.
@@ -327,7 +327,7 @@ My \f[B].Xresources\f[R] .themer_post is shown below.
 
 XRS=$HOME/.Xresources
 
-cat \[dq].themer/${1}/.Xresources\[dq] | sed \[dq]s/\[rs]%\[rs]%.*\[rs]%\[rs]%//g\[dq] \fP $XRS
+cat \[dq].themer/${1}/.Xresources\[dq] | sed \[dq]s/\[rs]%\[rs]%.*\[rs]%\[rs]%//g\[dq] >\fP $XRS
 xrdb -load $XRS
 kill -1 $(pidof urxvtd)
 \f[R]
