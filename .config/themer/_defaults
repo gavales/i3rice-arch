@@ -2,7 +2,7 @@
 name       gruvbox_light
 HOME       \/home\/gavarch
 guifont    $romanfont
-font       CMUTypewriterText
+font       monaco
 sansfont   Lucida Sans
 monofont   CMU Typewriter Text
 monofnt2   monaco

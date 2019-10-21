@@ -4,7 +4,7 @@
 .PP
 \f[B]themer\f[R] - A script to change theme of configs using a theme
 file.
-Inspired by budlabs\[cq] \f[C]mondo-generator\f[R] from the AUR.
+Inspired by budlabs\[cq] \f[B]mondo-generator\f[R] from the AUR.
 .SH SYNOPSIS
 .IP
 .nf
@@ -37,97 +37,103 @@ rofi xsel
 [[/images/themer-solarized.png|solarized]]
 .SH OPTIONS
 .PP
-Run with no options to create defaults in \f[C]THEMER_DIR\f[R]
+Run with no options to create defaults in \f[B]THEMER_DIR\f[R]
 .PD 0
 .P
 .PD
-\f[C]$THEMER_DIR\f[R] = \f[C]$HOME/.config/themer\f[R]
+\f[B]$THEMER_DIR\f[R] = \f[B]$HOME/.config/themer\f[R]
 .PP
-\f[C]--change|-c <theme>\f[R]
+\f[B]--change|-c <theme>\f[R]
 .PD 0
 .P
 .PD
-Change current theme to \f[C]<theme>\f[R].
-If \f[C]<theme>\f[R] is empty, a rofi list of themes will be displayed.
+Change current theme to \f[B]<theme>\f[R].
+If \f[B]<theme>\f[R] is empty, a rofi list of themes will be displayed.
 .PP
-\f[C]--apply-single|-a <directory>\f[R]
+\f[B]--apply-single|-a <directory>\f[R]
 .PD 0
 .P
 .PD
-Apply current theme to \f[C]<directory>\f[R].
+Apply current theme to \f[B]<directory>\f[R].
 .PP
-\f[C]--apply-all|-A\f[R]
+\f[B]--apply-all|-A\f[R]
 .PD 0
 .P
 .PD
 Apply current theme to directories listed in
-\f[C]$THEMER_DIR/.dirs\f[R].
+\f[B]$THEMER_DIR/.dirs\f[R].
 .PP
-\f[C]--force|-f\f[R]
+\f[B]--force|-f\f[R]
 .PD 0
 .P
 .PD
-Use with \f[C]--apply-(single|all)\f[R] to force apply a theme, since
+Use with \f[B]--apply-(single|all)\f[R] to force apply a theme, since
 themes are not automatically generated from `template_' files to speed
 up applying the theme
 .PP
-\f[C]--getvar|-v <variable>\f[R]
+\f[B]--getvar|-v <variable>\f[R]
 .PD 0
 .P
 .PD
-Get \f[C]<variable>\f[R] from current theme.
+Get \f[B]<variable>\f[R] from current theme.
 .PP
-\f[C]--new|-n <name>\f[R]
+\f[B]--new|-n <name>\f[R]
 .PD 0
 .P
 .PD
-Create theme \f[C]<name>\f[R].
+Create theme \f[B]<name>\f[R].
 .PP
-\f[C]--list|-l themes|vars|varmenu|default|current\f[R]
+\f[B]--list|-l themes|vars|varmenu|default|current\f[R]
 .PD 0
 .P
 .PD
-\f[C]themes\f[R] = list themes in \f[C]$THEMER_DIR\f[R]
+\f[B]themes\f[R] = list themes in \f[B]$THEMER_DIR\f[R]
 .PD 0
 .P
 .PD
-\f[C]default\f[R] = list default variables
+\f[B]default\f[R] = list default variables
 .PD 0
 .P
 .PD
-\f[C]current\f[R] = list variables specific to current theme name
+\f[B]current\f[R] = list variables specific to current theme name
 .PD 0
 .P
 .PD
-\f[C]vars\f[R] = list all variables in the correct syntax
+\f[B]vars\f[R] = list all variables in the correct syntax
 .PD 0
 .P
 .PD
-\f[C]varmenu\f[R] = rofi list of all variables.
+\f[B]varmenu\f[R] = rofi list of all variables.
 Selected item is automatically copied to the clipboard
 .PP
-\f[C]--updatelist|-u\f[R]
+\f[B]--updatelist|-u\f[R]
 .PD 0
 .P
 .PD
 Update the rofi theme list
 .PP
-\f[C]--dark|-D\f[R]
+\f[B]--dark|-D\f[R]
 .PD 0
 .P
 .PD
 Dark mode (switches fgo and bg0).
 .PP
-\f[C]--auto-dark|-t <am_time>:<pm_time>\f[R]
+\f[B]--auto-dark|-t <am_time>:<pm_time>\f[R]
 .PD 0
 .P
 .PD
 Dark/Light mode based on time of day.
-+ \f[C]<am_time>\f[R] hr to apply `light' mode.
-+ \f[C]<pm_time>\f[R] hr to apply `dark' mode.
+.PD 0
+.P
+.PD
 Uses 24-hr time format
+.PD 0
+.P
+.PD
++ \f[B]<am_time>\f[R] hr to apply `light' mode.
++ \f[B]<pm_time>\f[R] hr to apply `dark' mode.
 .PP
-\f[C]--help|-h\f[R]
+\f[B]--help|-h\f[R]
 .PD 0
 .P
 .PD
@@ -172,11 +178,11 @@ Using themer -n will prompt to create the required fg0 [foreground], bg0
 [background] and acc [accent] colour variables.
 .PP
 The rest of the variables will be taken from the
-\f[C]$THEMER_DIR/_default\f[R] theme, created automatically, when the
+\f[B]$THEMER_DIR/_default\f[R] theme, created automatically, when the
 theme is generated.
-The \f[C]_default\f[R] theme can be changed as you wish.
+The \f[B]_default\f[R] theme can be changed as you wish.
 .PP
-You can also reference variables using a \f[C]$\f[R] in front of the
+You can also reference variables using a \f[B]$\f[R] in front of the
 variable name in the theme file and you can also mix colours.
 .IP
 .nf
@@ -213,21 +219,21 @@ If no theme is specified, you are prompted with the below rofi menu:
 including fg0, bg0, and acc variations.
 These variations can be seen below.
 .PP
-Use \f[C]themer --list vars\f[R] or \f[C]themer --list varmenu\f[R] to
+Use \f[B]themer --list vars\f[R] or \f[B]themer --list varmenu\f[R] to
 see all the variables of the current theme.
-\f[C]rofi\f[R] is invoked with \f[C]-normal-window\f[R] flag with the
+\f[B]rofi\f[R] is invoked with \f[B]-normal-window\f[R] flag with the
 latter option so you can have this menu open and copy variables
 manually:
 .PP
 [[/images/varmenu.png|themer \[en]list varmenu]]
 .PP
-Add \f[C]--dark\f[R] or \f[C]--auto-dark <am_time>:<pm_time>\f[R] to
-convert to a dark theme (just swaps \f[C]fg0\f[R] and \f[C]bg0\f[R] and
-renames the theme to \f[C]<name>-dark\f[R]), or uses light/dark version
+Add \f[B]--dark\f[R] or \f[B]--auto-dark <am_time>:<pm_time>\f[R] to
+convert to a dark theme (just swaps \f[B]fg0\f[R] and \f[B]bg0\f[R] and
+renames the theme to \f[B]<name>-dark\f[R]), or uses light/dark version
 based on time of day, respectively.
 .SH MAKING THEME TEMPLATE
 .PP
-For example, an \f[C].Xresources\f[R] theme:
+For example, an \f[B].Xresources\f[R] theme:
 .SS Setup
 .IP
 .nf
@@ -302,26 +308,26 @@ $ cat \[ti]/.themer/template_.Xresources
 .fi
 .PP
 The variables from the current theme can be listed using
-\f[C]themer --list vars\f[R], and are to be referenced with:
-\f[C]%%<variable>%%\f[R].
+\f[B]themer --list vars\f[R], and are to be referenced with:
+\f[B]%%<variable>%%\f[R].
 .PP
 Add RGB after a colour name to get its RGB value in \[lq]R, G, B\[rq]
 form eg.
-\f[C]%%bg0RGB%%\f[R].
+\f[B]%%bg0RGB%%\f[R].
 .PP
-Use \f[C]\[at]\[at]color\[at]\[at]\f[R] instead of \f[C]%%color%%\f[R]
+Use \f[B]\[at]\[at]color\[at]\[at]\f[R] instead of \f[B]%%color%%\f[R]
 to get hex color without `#'.
-Useful for \f[C]#AARRGGBB\f[R] colours.
-.SS \f[C].themer_pre\f[R] & \f[C].themer_post\f[R]
+Useful for \f[B]#AARRGGBB\f[R] colours.
+.SS \f[B].themer_pre\f[R] & \f[B].themer_post\f[R]
 .PP
 The .themer_pre and .themer_post bash scripts in the
-\f[C]<directory>\f[R] are used to do things before/after applying the
+\f[B]<directory>\f[R] are used to do things before/after applying the
 theme eg.
 reload the .Xresources file (below) etc.
 These scripts have the current theme name, eg.
-\f[C]dosnerd\f[R], as their first argument.
+\f[B]dosnerd\f[R], as their first argument.
 Obviously, the shebang can be changed.
-My \f[C].Xresources\f[R] .themer_post is shown below.
+My \f[B].Xresources\f[R] .themer_post is shown below.
 .IP
 .nf
 \f[C]
@@ -338,7 +344,7 @@ kill -1 $(pidof urxvtd)
 \f[R]
 .fi
 .SH APPLYING THEMES
-.SS \f[C]--apply-single\f[R]
+.SS \f[B]--apply-single\f[R]
 .IP
 .nf
 \f[C]
@@ -346,8 +352,8 @@ themer -a $HOME
 \f[R]
 .fi
 .PP
-to apply the theme to each template in \f[C]$HOME/.themer\f[R].
-.SS \f[C]--apply-all\f[R]
+to apply the theme to each template in \f[B]$HOME/.themer\f[R].
+.SS \f[B]--apply-all\f[R]
 .IP
 .nf
 \f[C]
@@ -355,13 +361,13 @@ themer --apply-all
 \f[R]
 .fi
 .PP
-to apply theme to all directories listed in \f[C]$THEMER_DIR/.dirs\f[R]
+to apply theme to all directories listed in \f[B]$THEMER_DIR/.dirs\f[R]
 .SS The result
 .PP
 Both of the above options will result in the following directory
-structure for our dosnerd theme \f[C].Xresources\f[R] example.
-Both options will also run the \f[C].themer_pre\f[R] &
-\f[C].themer_post\f[R] scripts too.
+structure for our dosnerd theme \f[B].Xresources\f[R] example.
+Both options will also run the \f[B].themer_pre\f[R] &
+\f[B].themer_post\f[R] scripts too.
 .IP
 .nf
 \f[C]

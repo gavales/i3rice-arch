@@ -21,31 +21,31 @@ pandoc
 .fi
 .SH OPTIONS
 .PP
-\f[C]--directory|-d <directory>\f[R]
+\f[B]--directory|-d <directory>\f[R]
 .PD 0
 .P
 .PD
 Change target directory
-\f[C]--script|-s <script>\f[R]
+\f[B]--script|-s <script>\f[R]
 .PD 0
 .P
 .PD
 Call specified
 .PP
-with \f[C]--help\f[R] flag, and convert the output to a man page with
-\f[C]pandoc -s -t man\f[R].
+with \f[B]--help\f[R] flag, and convert the output to a man page with
+\f[B]pandoc -s -t man\f[R].
 .PP
-\f[C]--install|-i copy|link\f[R]
+\f[B]--install|-i copy|link\f[R]
 .PD 0
 .P
 .PD
-Install all the manpages in man to \f[C]/usr/share/man/man1\f[R] if they
-do not already exist.
+Install all the manpages in \f[B]<directory>\f[R]man to
+\f[B]/usr/share/man/man1\f[R] if they do not already exist.
 .PP
 Argument to this option determines whether the scripts are copied or
 linked.
 .PP
-\f[C]--help|-h\f[R]
+\f[B]--help|-h\f[R]
 .PD 0
 .P
 .PD
@@ -53,14 +53,14 @@ Print this help
 .SH DESCRIPTION
 .PP
 All my bash scripts that have a help function are just called with the
-\f[C]--help\f[R] flag and the output piped to
-\f[C]pandoc -s -t man\f[R], and that output redirected to the directory
-\f[C]<directory>\f[R]man.
-The default directory is \f[C]$HOME/scr\f[R], so the resulting manpages
-will be redirected to the appropriate file in \f[C]$HOME/scrman\f[R].
+\f[B]--help\f[R] flag and the output piped to
+\f[B]pandoc -s -t man\f[R], and that output redirected to the directory
+\f[B]<directory>\f[R]man.
+The default directory is \f[B]$HOME/scr\f[R], so the resulting manpages
+will be redirected to the appropriate file in \f[B]$HOME/scrman\f[R].
 .PP
 Note that this only works because all my help functions are written in
 markdown.
 .PP
-The \f[C]--script\f[R] flag can be used to automatically pipe the output
+The \f[B]--script\f[R] flag can be used to automatically pipe the output
 of the specified script to a man page.

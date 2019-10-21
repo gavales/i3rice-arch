@@ -162,10 +162,10 @@ Update the rofi theme list
 Dark mode (switches fgo and bg0).
 
 `--auto-dark|-t <am_time>:<pm_time>`  
-Dark/Light mode based on time of day.
+Dark/Light mode based on time of day.  
+Uses 24-hr time format  
 + `<am_time>` hr to apply 'light' mode.
 + `<pm_time>` hr to apply 'dark' mode.
-Uses 24-hr time format
 
 `--help|-h`  
 Display this help.
