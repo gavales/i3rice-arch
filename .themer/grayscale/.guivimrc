@@ -1,10 +1,13 @@
-"set guifont=Ubuntu\ Mono\ Regular:h20
-set guifont=CMUTypewriterText\ 13
+if has('gui_win32')
+	set guifont=monaco:h14
+else
+	set guifont=Luxi\ Mono\ 14
+endif
 set guioptions-=m "remove menu bar
 set guioptions-=T "remove toolbar
 set guioptions-=r "remove right-hand scroll bar
 set guioptions-=L "remove left-hand scroll bar
 "colorscheme off
-set linespace=0
+set linespace=2
 "set lines=999 columns=999
 "au GUIEnter * simalt ~x

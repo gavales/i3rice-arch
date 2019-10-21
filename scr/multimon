@@ -2,14 +2,15 @@
 
 help () {
 cat << 'EOB'
-# multimon
-- rofi monitor control for i3
+# NAME
 
-## Synopsis
+__multimon__ - rofi monitor control for i3
+
+# SYNOPSIS
 
 ```
 multimon
-multimon [--help|-h]
+multimon --help|-h
 ```
 EOB
 echo "$1"

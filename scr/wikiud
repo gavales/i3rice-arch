@@ -10,14 +10,15 @@ BSE="${TRG}/_Sidebar.md_base"
 
 help () {
 cat << 'EOB'
-# wikiud
-- generates the script wikis shown in the sidebar
+# NAME
 
-## Synopsis
+__wikiud__ - generates the script wikis shown in the sidebar
+
+# SYNOPSIS
 
 ```
 wikiud
-wikiud [--help|-h]
+wikiud --help|-h
 ```
 EOB
 exit

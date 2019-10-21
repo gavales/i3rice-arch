@@ -2,14 +2,15 @@
 
 help () {
 cat << 'EOB'
-# i3light
-- control backlight for i3
+# NAME
 
-## Synopsis
+__i3light__ - control backlight for i3
+
+# SYNOPSIS
 
 ```
 i3light nm|inc|dec
-i3light [--help|-h]
+i3light --help|-h
 ```
 EOB
 echo "$1"

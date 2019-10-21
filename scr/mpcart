@@ -5,14 +5,15 @@
 
 help () {
 cat << 'EOB'
-# mpcart
-- get album art of currently playing song in mpd
+# NAME
 
-## Synopsis
+__mpcart__ - get album art of currently playing song in mpd
+
+# SYNOPSIS
 
 ```
 mpcart
-mpcart [--help|-h]
+mpcart --help|-h
 ```
 EOB
 echo "$1"

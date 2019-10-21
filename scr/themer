@@ -89,93 +89,90 @@ cat << 'EOB'
 # NAME
 
 __themer__ - A script to change theme of configs using a theme file.
-Inspired by budlabs' mondo-generator from the AUR.
+Inspired by budlabs' `mondo-generator` from the AUR.
 
-# Synopsis
+# SYNOPSIS
 
 ```
 themer [--dark|-D]
        [--auto-dark|-t <am_time:pm_time>]
-       [--change|-c|--new|-n <name>]
-themer [--getvar|-v <variable>]
-themer [--list|-l themes|vars|varmenu|default|current]
-themer [--force|-f] [--apply-single|-a <directory>]
-themer [--apply-all|-A|--updatelist|-u]
-themer [--help|-h]
+       --change|-c <name>
+themer --new|-n <name>
+themer --getvar|-v <variable>
+themer --list|-l themes|vars|varmenu|default|current
+themer [--force|-f] --apply-single|-a <directory>
+themer --apply-all|-A
+themer --updatelist|-u
+themer --help|-h
 themer
 ```
 
-# Dependencies
+# DEPENDENCIES
 
 ```
 rofi xsel
 ```
 
-# Examples
+# EXAMPLES
 
 [[/images/themer-gruvbox.png|gruvbox]]
-
 [[/images/themer-i3.png|i3]]
-
 [[/images/themer-nikes.png|nikes]]
-
 [[/images/themer-redrock.png|redrock]]
-
 [[/images/themer-solarized.png|solarized]]
 
-# Options
+# OPTIONS
 
-Run with no options to create defaults in:
-	`$THEMER_DIR` = `$HOME/.config/themer`
+Run with no options to create defaults in `THEMER_DIR`  
+`$THEMER_DIR` = `$HOME/.config/themer`
 
-`--change|-c <theme>`
-	Change current theme to `<theme>`.
-	If `<theme>` is empty, a rofi list of themes will be displayed.
-	Requires my i3menu rofi wrapper.
+`--change|-c <theme>`  
+Change current theme to `<theme>`.
+If `<theme>` is empty, a rofi list of themes will be displayed.
 
-`--apply-single|-a <directory>`
-	Apply current theme to `<directory>`.
+`--apply-single|-a <directory>`  
+Apply current theme to `<directory>`.
 
-`--apply-all|-A`
-	Apply current theme to directories listed in `$THEMER_DIR/.dirs`.
+`--apply-all|-A`  
+Apply current theme to directories listed in `$THEMER_DIR/.dirs`.
 
-`--force|-f`
-	Use with `--apply-(single|all)` to force apply a theme, since themes
-	are not automatically generated from 'template_' files to speed up
-	applying the theme
+`--force|-f`  
+Use with `--apply-(single|all)` to force apply a theme,
+since themes are not automatically generated from
+'template_' files to speed up applying the theme
 
-`--getvar|-v <variable>`
-	Get `<variable>` from current theme.
+`--getvar|-v <variable>`  
+Get `<variable>` from current theme.
 
-`--new|-n <name>`
-	Create theme `<name>`.
+`--new|-n <name>`  
+Create theme `<name>`.
 
-`--list|-l themes|vars|varmenu|default|current`
-	+ `themes`  = list themes in `$THEMER_DIR`
-	+ `default` = list default variables
-	+ `current` = list variables specific to current theme name
-	+ `vars`    = list all variables in the correct syntax
-	+ `varmenu` = rofi list of all variables. Selected item
-	is automatically copied to the clipboard
+`--list|-l themes|vars|varmenu|default|current`  
+`themes`  = list themes in `$THEMER_DIR`  
+`default` = list default variables  
+`current` = list variables specific to current theme name  
+`vars`    = list all variables in the correct syntax  
+`varmenu` = rofi list of all variables. Selected item
+is automatically copied to the clipboard
 
-`--updatelist|-u`
-	Update the rofi theme list
+`--updatelist|-u`  
+Update the rofi theme list
 
-`--dark|-D`
-	Dark mode (switches fgo and bg0).
+`--dark|-D`  
+Dark mode (switches fgo and bg0).
 
-`--auto-dark|-t <am_time>:<pm_time>`
-	Dark/Light mode based on time of day.
-	+ `<am_time>` hr to apply 'light' mode.
-	+ `<pm_time>` hr to apply 'dark' mode.
-	Uses 24-hr time format
+`--auto-dark|-t <am_time>:<pm_time>`  
+Dark/Light mode based on time of day.
++ `<am_time>` hr to apply 'light' mode.
++ `<pm_time>` hr to apply 'dark' mode.
+Uses 24-hr time format
 
-`--help|-h`
-	Display this help.
+`--help|-h`  
+Display this help.
 
-# Making Themes
+# MAKING THEMES
 
-### My Default theme
+## My Default theme
 
 ```sh
 $ themer --list default
@@ -207,7 +204,7 @@ gnt            #900048
 rng            #d65d0e
 ```
 
-### Create New Theme
+## Create New Theme
 
 Using themer -n will prompt to create the required
 fg0 [foreground], bg0 [background] and acc [accent]
@@ -232,7 +229,7 @@ $ cat ~/.config/themer/dosnerd
   mix       colmix 33:$bg0 66:$acc
 ```
 
-# Generating Themes
+# GENERATING THEMES
 
 ```sh
 $ themer --change dosnerd
@@ -266,11 +263,11 @@ convert <theme> to a dark theme (just swaps `fg0` and `bg0`
 and renames the theme to `<name>-dark`), or uses
 light/dark version based on time of day, respectively.
 
-# Making Theme Template
+# MAKING THEME TEMPLATE
 
 For example, an `.Xresources` theme:
 
-### Setup
+## Setup
 
 ```sh
 $ cd $HOME
@@ -287,14 +284,13 @@ $ tree $HOME
   ┊
 ```
 
-### Edit the template
+## Edit the template
 
 Here's my template_.Xresources
 
 ```sh
 $ cat ~/.themer/template_.Xresources
 !! vim:ft=xdefaults
-
 #define cwhtl %%fg0%%
 #define cwhtd %%acb%%
 #define credd %%red%%
@@ -311,12 +307,9 @@ $ cat ~/.themer/template_.Xresources
 #define ccynl %%cyn%%
 #define cblkd %%bg0%%
 #define cblkl %%bg1%%
-
-
 #define fontname  %%font%%
 #define fontsize  %%rxvtsize%%
 #define fontsize2 %%rxvtsize%%
-
 
 *background:             cblkd
 *foreground:             cwhtl
@@ -326,7 +319,6 @@ $ cat ~/.themer/template_.Xresources
 *pointerColorBackground: cblkd
 *pointerColorForeground: ccynd
 *border:                 cblkd
-
 *color0:                 cblkd
 *color1:                 credd
 *color2:                 cgrnd
@@ -355,7 +347,7 @@ in "R, G, B" form eg. `%%bg0RGB%%`.
 Use `@@color@@` instead of `%%color%%` to get hex color
 without '#'. Useful for `#AARRGGBB` colours.
 
-### `.themer_pre` & `.themer_post`
+## `.themer_pre` & `.themer_post`
 
 The .themer_pre and .themer_post bash scripts in
 the `<directory>` are used to do things before/after
@@ -378,9 +370,9 @@ xrdb -load $XRS
 kill -1 $(pidof urxvtd)
 ```
 
-# Applying Themes
+# APPLYING THEMES
 
-### `--apply-single`
+## `--apply-single`
 
 ```sh
 themer -a $HOME
@@ -388,7 +380,7 @@ themer -a $HOME
 
 to apply the theme to each template in `$HOME/.themer`.
 
-### `--apply-all`
+## `--apply-all`
 
 ```sh
 themer --apply-all
@@ -397,7 +389,7 @@ themer --apply-all
 to apply theme to all directories listed in
 `$THEMER_DIR/.dirs`
 
-### The result
+## The result
 
 Both of the above options will result in the following
 directory structure for our dosnerd theme `.Xresources`
@@ -421,16 +413,12 @@ $ tree $HOME
   ┊
 ```
 
-# Walls
+# WALLS
 
 [[/images/MunnarKeralaIndia.jpg|gruvbox]]
-
 [[/images/PenedodoGuinchoLisbonPortugal.jpg|i3]]
-
 [[/images/JericoacoaraBrazil.jpg|nikes]]
-
 [[/images/ValleyofFireStateParkOvertonNV.jpg|redrock]]
-
 [[/images/WW_128000000001428569_EN.jpg|solarized]]
 
 EOB

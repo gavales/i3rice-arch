@@ -17,34 +17,37 @@ EDITOR="gvim -f"
 
 help () {
 cat << 'EOB'
-# ghb
-- a hugo blog wrapper script
+# NAME
 
-## Dependencies
+__ghb__ - a hugo blog wrapper script
 
-`hugo`
-
-## Synopsis
+# DEPENDENCIES
 
 ```
-ghb [--post|-p|--delete|-d <name>]
-ghb [--list|-l]
-ghb [--help|-h]
+hugo
 ```
 
-## Options
+# SYNOPSIS
 
-+ `--post|-p <name>`
-	+ `<name>` of post to create
+```
+ghb --post|-p|--delete|-d <name>
+ghb --list|-l
+ghb --help|-h
+```
 
-+ `--list|-l`
-	+ list all posts
+# OPTIONS
 
-+ `--delete|-d <name>`
-	+ `<name>` of post to delete
+`--post|-p <name>`  
+`<name>` of post to create
 
-+ `--help|-h`
-	+ Print this help
+`--list|-l`  
+list all posts
+
+`--delete|-d <name>`  
+`<name>` of post to delete
+
+`--help|-h`  
+Print this help
 
 EOB
 echo "$1"

@@ -6,11 +6,18 @@
 
 help () {
 cat << 'EOB'
-## Synopsis
+# NAME
+
+__compiler__ - compile markup documents using one
+of my compiler scripts
+
+# SYNOPSIS
+
 ```
 compiler <file>
-compiler [--help|-h]
+compiler --help|-h
 ```
+
 EOB
 exit
 }

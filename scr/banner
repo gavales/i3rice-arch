@@ -15,42 +15,48 @@ banner [--centre|-c] <text>
 banner [--help|-h]
 ```
 
+# DEPENDENCIES
+
+```
+figlet
+```
+
 # OPTIONS
 
-`--centre|-c <text>`
-	centre
+`--centre|-c <text>`  
+centre
 
-`--help|-h`
-	print this help
+`--help|-h`  
+print this help
 
-# In progress
+# IN PROGRESS
 
-`--slant|-s`
-	slant
+`--slant|-s`  
+slant
 
-`--banner3|-b`
-	banner3
+`--banner3|-b`  
+banner3
 
-`--larry3d|-i`
-	larry3d
+`--larry3d|-i`  
+larry3d
 
-`--letters|-l`
-	letters
+`--letters|-l`  
+letters
 
-`--roman|-r`
-	roman
+`--roman|-r`  
+roman
 
-`--smisome1|-m`
-	smisome1
+`--smisome1|-m`  
+smisome1
 
-`--trek|-t`
-	trek
+`--trek|-t`  
+trek
 
-`--speed|-f`
-	speed
+`--speed|-f`  
+speed
 
-`--smkeyboard|-k`
-	smkeyboard
+`--smkeyboard|-k`  
+smkeyboard
 
 EOB
 echo "$1"

@@ -5,15 +5,16 @@ BLDR=$HOME/scr/pb
 
 help () {
 cat << 'EOB'
-# i3media
-- control whatever media player is currently active,
-uses `i3wplyr` to decide the hierarchy of which player
-to control
+# NAME
 
-## Synopsis
+__i3media__ - control whatever media player is currently active,
+uses `i3wplyr` to decide the hierarchy of which player to control
+
+# SYNOPSIS
+
 ```
 i3media togg|next|prev|stop
-i3media [--help|-h]
+i3media --help|-h
 ```
 
 EOB

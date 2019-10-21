@@ -28,10 +28,14 @@ s/\\\&/\&/g;s/[\]\"//g;s/[$]//g;s/[\]//g;
 
 help () {
 cat << 'EOB'
-## Synopsis
+# NAME
+
+__bibtorefer__ - convert a `.bib` file to `refer` syntax
+
+# SYNOPSIS
 ```
 bibtorefer <file>.bib
-bibtorefer [--help|-h]
+bibtorefer --help|-h
 ```
 EOB
 exit

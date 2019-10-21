@@ -9,23 +9,24 @@ EDITOR="gvim -f"
 
 help () {
 cat << 'EOB'
-# gencvl
-- job application cover letter generator using latex
+# NAME
 
-## Synopsis
+__gencvl__ - job application cover letter generator using `markdown` and `pandoc`
+
+# SYNOPSIS
 
 ```
 gencvl <name>
-gencvl [--help|-h]
+gencvl --help|-h
 ```
 
-## Options
+# OPTIONS
 
-+ `<name>`
-	+ `<name>` of coverletter
+`<name>`  
+`<name>` of coverletter
 
-+ `--help|-h`
-	+ Print this help
+`--help|-h`  
+Print this help
 
 EOB
 echo "$1"

@@ -6,17 +6,24 @@ CSDR=$XDG_TEMPLATES_DIR/css
 
 help () {
 cat << 'EOB'
-# cmkd
-- compile markdown files with pandoc by parsing the yaml header
+# NAME
 
-## Synopsis
+__cmkd__ - compile markdown files with pandoc by parsing the yaml header
+
+# SYNOPSIS
 
 ```
 cmkd <file>.md
-cmkd [--help|-h]
+cmkd --help|-h
 ```
 
-## Example
+# DEPENDENCIES
+
+```
+pandoc
+```
+
+# EXAMPLE
 
 ```markdown
 ---

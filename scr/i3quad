@@ -13,36 +13,36 @@ XID=${XID%% *}
 
 help () {
 cat << 'EOB'
-# i3quad
-- my i3 layout launcher, inspired by budlabs' i3fyra
+# NAME
 
-## Synopsis
+__i3quad__ - my i3 layout launcher, inspired by budlabs' `i3fyra`
+
+# SYNOPSIS
 
 ```
-i3quad [--focus|-f|--move|-m] <con>
-i3quad [--fullscreen|-F]
-i3quad [--tile|-t]
-i3quad [--help|-h]
+i3quad [--fullscreen|-F|--focus|-f|--move|-m] <con>
+i3quad --tile|-t
+i3quad --help|-h
 ```
 
-## Options
+# OPTIONS
 
-+ `--move|-m <con>`
-	+ Move window to mark `_W<con>`
+`--move|-m <con>`  
+Move window to mark `_W<con>`
 
-+ `--focus|-f <con>`
-	+ Move window to mark `_W<con>`
+`--focus|-f <con>`  
+Move window to mark `_W<con>`
 
-+ `--fullscreen|-F <con>`
-	+ Toggle mark `_W<con>` fullscreen
+`--fullscreen|-F <con>`  
+Toggle mark `_W<con>` fullscreen
 
-+ `--tile|-t`
-	+ Tile currently focussed window
+`--tile|-t`  
+Tile currently focussed window
 
-+ `--help|-h`
-	+ Print this help
+`--help|-h`  
+Print this help
 
-## The Layout
+# THE LAYOUT
 
 ```
 			┌┈┈┈┈┈┈┈┈┬┈┈┈┈┈┐
@@ -54,10 +54,10 @@ i3quad [--help|-h]
 			  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ```
 
-## In progress
+# IN PROGRESS
 
-+ `--focus-last|-l`
-	+ Focus last focussed window moving launched window to <con>
+`--focus-last|-l`  
+Focus last focussed window moving launched window to <con>
 
 EOB
 echo "$1"

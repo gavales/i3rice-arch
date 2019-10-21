@@ -16,17 +16,43 @@ __manner__ - generates man pages for scripts
 # SYNOPSIS
 
 ```
-manner --directory|-d <directory>
+manner [--directory|-d <directory>] [--install|-i copy|link]
 manner --script|-s <script>
-manner [--help|-h]
+manner --help|-h
 ```
+
+# DEPENDENCIES
+
+```
+pandoc
+```
+
+# OPTIONS
+
+`--directory|-d <directory>`  
+Change target directory
+
+`--script|-s <script>`  
+Call specified <script> with `--help` flag, and convert
+the output to a man page with `pandoc -s -t man`.
+
+`--install|-i copy|link`  
+Install all the manpages in <directory>man to
+`/usr/share/man/man1` if they do not already exist.
+
+Argument to this option determines whether the scripts
+are copied or linked.
+
+`--help|-h`  
+Print this help
+
 
 # DESCRIPTION
 
 All my bash scripts that have a help function are just
 called with the `--help` flag and the output piped to
 `pandoc -s -t man`, and that output redirected to the
-directory <directory>man. The default directory is
+directory `<directory>`man. The default directory is
 `$HOME/scr`, so the resulting manpages will be redirected
 to the appropriate file in `$HOME/scrman`.
 
@@ -43,6 +69,7 @@ exit
 while true; do
 	case $1 in
 		--directory | -d ) SDR="${2:-}" ;;
+		--install   | -i ) INS="${2:-}" ;;
 		--script    | -s ) ${2:-} --help | pandoc -s -t man | man -l - ; exit ;;
 		--help | -h ) help ;;
 		-- ) shift ; break ;;
@@ -59,6 +86,12 @@ cd $SRC
 for i in $(ls -l | sed '/^d/d;/^total/d' | awk '{print $NF}'); do
 	[[ -n $(grep '\-\-help' $i) ]] && {
 		echo ".TH ${i^^} 1 $(date +%F | sed 's/-/\\-/g') Linux \"User Manuals\"" > ${TRG}/${i}.1
-		$i --help | pandoc -s -t man | sed '/.TH/d' >> ${TRG}/${i}.1
+		$i --help | pandoc -s -t man | sed '/^.\\"/d;/.TH "" "" "" "" ""/d' >> ${TRG}/${i}.1
+		[[ -z $INS ]] || [[ ! -f /usr/share/man/man1/${i}.1 ]] && {
+			[[ $INS == "copy" ]] && \
+				sudo cp      ${TRG}/${i}.1 /usr/share/man/man1/${i}.1
+			[[ $INS == "link" ]] && \
+				sudo ln -sf  ${TRG}/${i}.1 /usr/share/man/man1/${i}.1
+			}
 		}
 done

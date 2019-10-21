@@ -6,31 +6,39 @@
 
 help () {
 cat << 'EOB'
-# i3shutdown
-- shutdown menu for i3wm
+# NAME
 
-## Synopsis
+__i3shutdown__ - shutdown menu for i3wm
+
+# SYNOPSIS
 
 ```
 i3shutdown l|e|s|h|r|x
-i3shutdown [--help|-h]
+i3shutdown --help|-h
 ```
 
-## Options
+# OPTIONS
 
-+ Run with no option to produce a rofi menu of options
-+ `l`
-	+ lock
-+ `e`
-	+ logout
-+ `s`
-	+ suspend
-+ `h`
-	+ hibernate
-+ `r`
-	+ reboot
-+ `x`
-	+ shutdown
+Run with no option to produce a rofi menu of options
+
+`l`  
+lock
+
+`e`  
+logout
+
+`s`  
+suspend
+
+`h`  
+hibernate
+
+`r`  
+reboot
+
+`x`  
+shutdown
+
 EOB
 echo "$1"
 exit

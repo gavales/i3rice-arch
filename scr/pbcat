@@ -4,42 +4,45 @@
 # CREATED: $(date)
 #source $HOME/.config/user-dirs.dirs
 
-MODDIR=$USER_TMP_DIR/pbcat
+MODDIR=$HOME/.config/pbcat
 [[ -d $MODDIR ]] || mkdir $MODDIR
 
 help () {
 cat << 'EOB'
-# pbcat
-- script to create lots of polybar ipc modules
+# NAME
 
-## Synopsis
+__pbcat__ - script to create lots of polybar ipc modules
+
+# SYNOPSIS
 
 ```
-pbcat [--module|-m <module>]
-      [--foreground|-f <hex>]
+pbcat [--foreground|-f <hex>]
       [--background|-b <hex>]
-      [--invert|-i] <text>
-pbcat [--help|-h]
+      [--invert|-i]
+      --module|-m <module>
+      <text>
+pbcat --help|-h
 ```
 
-## Options
+# OPTIONS
 
-+ Final argument is `<text>` to print to `<module>`
+Final argument is `<text>` to print to `<module>`.
+All modules are stored in `$HOME/.config/pbcat`.
 
-+ `--module|-m <module>`
-	+ `<module>` to update
+`--module|-m <module>`  
+`<module>` to update
 
-+ `--foreground|-f <hex>`
-	+ Foreground colour
+`--foreground|-f <hex>`  
+Foreground colour
 
-+ `--background|-b <hex>`
-	+ Background colour
+`--background|-b <hex>`  
+Background colour
 
-+ `--invert|-i`
-	+ Invert foreground and background colours
+`--invert|-i`  
+Invert foreground and background colours
 
-+ `--help|-h`
-	+ Print this help
+`--help|-h`  
+Print this help
 
 EOB
 echo "$1"

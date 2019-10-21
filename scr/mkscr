@@ -5,31 +5,35 @@ DIR=$USER_SCR_DIR
 
 help () {
 cat << 'EOB'
-# mkscr
-- make bash script
+# NAME
 
-## Synopsis
+__mkscr__ - make bash script
+
+# SYNOPSIS
 
 ```
 mkscr [--subdirectory|-s <directory>]
       [--template|-t <file>]
       [--generate-help|-g]
-mkscr [--help|-h]
+      <name>
+mkscr --help|-h
 ```
 
-## Options
+# OPTIONS
 
-+ `--subdirectory|-s <directory>`
-	+ Create script in subdirectory `<directory>`
+Last argument is always the `<name>` of the new script
 
-+ `--generate-help|-g`
-	+ Generate help function
+`--subdirectory|-s <directory>`  
+Create script in subdirectory `<directory>`
 
-+ `--template|-t <file>`
-	+ Use `<file>` as template
+`--generate-help|-g`  
+Generate help function
 
-+ `--help|-h`
-	+ Print this help
+`--template|-t <file>`  
+Use `<file>` as template
+
+`--help|-h`  
+Print this help
 
 EOB
 exit

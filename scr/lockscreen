@@ -2,14 +2,15 @@
 
 help () {
 cat << 'EOB'
-# lockscreen
-- i3lock-color wrapper
+# NAME
 
-## Usage
+__lockscreen__ - i3lock-color wrapper
+
+# USAGE
 
 ```
 lockscreen
-lockscreen [--help|-h]
+lockscreen --help|-h
 ```
 EOB
 echo "$1"

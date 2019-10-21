@@ -2,13 +2,15 @@
 
 help () {
 cat << 'EOB'
-# crff
-- compile `.ms` groff files into pdf
+# NAME
 
-## Synopsis
+__crff__ - compile `.ms` groff files into pdf
+
+# SYNOPSIS
+
 ```
 crff <file>.ms
-crff [--help|-h]
+crff --help|-h
 ```
 EOB
 exit

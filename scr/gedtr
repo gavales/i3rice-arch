@@ -4,23 +4,24 @@
 # CREATED: Sat 30 Mar 18:22:18 GMT 2019
 help () {
 cat << 'EOB'
-# gedtr
-- gvim server wrapper
+# NAME
 
-## Synopsis
+__gedtr__ - gvim server wrapper
+
+# SYNOPSIS
+
 ```
 gedtr [--server|-s <name>] <file>
-gedtr [--help|-h]
+gedtr --help|-h
 ```
 
-## Options
+# OPTIONS
 
-+ `--server|-s <name>`
-	+ Specify server name
-	+ Default is EDITOR
+`--server|-s <name>`  
+Specify server name. Default is `GVIM`.
 
-+ `--help|-h`
-	+ Print this help
+`--help|-h`  
+Print this help
 
 EOB
 exit

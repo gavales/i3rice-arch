@@ -13,46 +13,48 @@ done
 
 help () {
 cat << 'EOB'
-# noter
-- create notes, with different entries, stored in $XDG_DESKTOP_DIR
+# NAME
 
-## Synopsis
+__noter__ - create notes, with different entries,
+stored in $XDG_DESKTOP_DIR, usually $HOME/Desktop
+
+# SYNOPSIS
 
 ```
 noter [--type|-t <note_type>] [--entry|-e <entry>]
-noter [--list|-l|--delete-type|-D <note_type>]
-noter [--delete|-d <entry>]
-noter [--list-types|-L]
-noter [--help|-h]
+noter --list|-l|--delete-type|-D <note_type>
+noter --delete|-d <entry>
+noter --list-types|-L
+noter --help|-h
 noter
 ```
 
-## Options
+# OPTIONS
 
-+ Run with no options to create defaults:
-	+ NOTE_DIR  = $XDG_DESKTOP_DIR
-	+ NOTE_TYPE = OTHER|NOTES|WATCHLIST|TODO
+Run with no options to create defaults:  
+`NOTE_DIR`  = `$HOME/Desktop`  
+`NOTE_TYPE` = `OTHER|NOTES|WATCHLIST|TODO`  
 
-+ `--help|-h`
-	+ Print this help
+`--help|-h`  
+Print this help
 
-+ `--type|-t <note_type>`
-	+ Create $NOTE_DIR/`<note_type>`
+`--type|-t <note_type>`  
+Create $NOTE_DIR/`<note_type>`
 
-+ `--entry|-e <entry>`
-	+ `<entry>` to add to the note
+`--entry|-e <entry>`  
+`<entry>` to add to the note
 
-+ `--delete|-d <entry>`
-	+ Delete line containing `<entry>` in note file
+`--delete|-d <entry>`  
+Delete line containing `<entry>` in note file
 
-+ `--delete-type|-D <note_type>`
-	+ Delete $NOTE_DIR/`<note_type>`
+`--delete-type|-D <note_type>`  
+Delete $NOTE_DIR/`<note_type>`
 
-+ `--list|-l`
-	+ Print contents of $NOTE_DIR/`<note_type>`
+`--list|-l`  
+Print contents of $NOTE_DIR/`<note_type>`
 
-+ `--list-types|-L <note_type>`
-	+ `ls` $NOTE_DIR
+`--list-types|-L <note_type>`  
+`ls` $NOTE_DIR
 
 EOB
 echo "$1"

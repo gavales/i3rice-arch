@@ -9,41 +9,42 @@ SRCH=""
 
 help () {
 	cat << 'EOB'
-# i3lch
-- launch a program in i3 but with added perks
+# NAME
 
-## Synopsis
+__i3lch__ - launch a program in i3 but with added perks
+
+# SYNOPSIS
 
 ```
 i3lch [--class|-c|--instance|-i|--name|-n <class|instance|name>]
       [--exec|-e <command>]
       [--toggle|-t]
-i3lch [--help|-h]
+i3lch --help|-h
 ```
 
-## Options
+# OPTIONS
 
-+ `--class|-c <class>`
-	+ Focus window with class `<class>`
+`--class|-c <class>`  
+Focus window with class `<class>`
 
-+ `--instance|-i <instance>`
-	+ Focus window with instance `<instance>`
+`--instance|-i <instance>`  
+Focus window with instance `<instance>`
 
-+ `--name|-n <name>`
-	+ Focus window with name `<name>`
+`--name|-n <name>`  
+Focus window with name `<name>`
 
-+ `--exec|-e <command>`
-	+ Command to run if `<class|instance|name>` not found
+`--exec|-e <command>`  
+Command to run if `<class|instance|name>` not found
 
-+ `--help|-h`
-	+ Print this help
+`--help|-h`  
+Print this help
 
-## Still in progress
+# IN PROGRESS
 
-+ `--toggle|-t`
-	+ send to scratchpad if on current workspace.
-	+ bring to current workspace if not on current workspace and hidden.
-	+ bring to current workspace if on current scratchpad.
+`--toggle|-t`  
++ send to scratchpad if on current workspace.
++ bring to current workspace if not on current workspace and hidden.
++ bring to current workspace if on current scratchpad.
 
 EOB
 echo "$1"

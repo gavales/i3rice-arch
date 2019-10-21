@@ -15,10 +15,11 @@ fs=" "
 
 help () {
 cat << 'EOB'
-# i3menu
-- Rofi wrapper script
+# NAME
 
-## Synopsis
+__i3menu__ - Rofi wrapper script
+
+# SYNOPSIS
 
 ```
 i3menu [--dmenu|-d|--apps|-s]
@@ -28,63 +29,63 @@ i3menu [--dmenu|-d|--apps|-s]
        [--location|-l|--lines|-L|--monitor|-m <integer>]
        [--color|-c <color>]
        [--prompt|-p <text>]
-i3menu [--help|-h]
+i3menu --help|-h
 ```
 
-## Options
+# OPTIONS
 
-+ `--prompt|-p <text>`
-	+ Prompt
+`--prompt|-p <text>`  
+Prompt
 
-+ `--location|-l <integer>`
-	+ Rofi location:
-	+ `1 2 3`
-	+ `8 0 4`
-	+ `7 6 5`
+`--location|-l <integer>`  
+Rofi location:  
+```
+1 2 3
+8 0 4
+7 6 5
+```
 
-+ `--lines|-L <integer>`
-	+ Number of vertical rows
+`--lines|-L <integer>`  
+Number of vertical rows
 
-+ `--xoffset|-x <integer>`
-	+ Horizontal Offset
+`--xoffset|-x <integer>`  
+Horizontal Offset
 
-+ `--yoffset|-y <integer>`
-	+ Vertical Offset
+`--yoffset|-y <integer>`  
+Vertical Offset
 
-+ `--color|-c <color>`
-	+ Accent color
-	+ The name of one of in the variable files in .config/rofi
+`--color|-c <color>`  
+Accent color. The name of one of in the variable files in .config/rofi
 
-+ `--width|-w <integer>`
-	+ Rofi width
+`--width|-w <integer>`  
+Rofi width
 
-+ `--height|-H <integer>`
-	+ Rofi height, integer less than 100
+`--height|-H <integer>`  
+Rofi height, integer less than 100
 
-+ `--orientation|-o [vertical|horizontal]`
-	+ Vertical or horizontal (like dmenu)
+`--orientation|-o [vertical|horizontal]`  
+Vertical or horizontal (like dmenu)
 
-+ `--window|-W`
-	+ Fill active window
+`--window|-W`  
+Fill active window
 
-+ `--dmenu|-d`
-	+ Dmenu mode
+`--dmenu|-d`  
+Dmenu mode
 
-+ `--apps|-s`
-	+ Application menu mode
+`--apps|-s`  
+Application menu mode
 
-+ `--titlebar|-t`
-	+ Spawn on i3wm title-bar
+`--titlebar|-t`  
+Spawn on i3wm title-bar
 
-+ `--monitor|-m`
-	+ Spawn at mouse location
+`--monitor|-m`  
+Spawn at mouse location
 
-+ `--fullscreen|-f`
-	+ Fullscreen mode (in progress)
+`--fullscreen|-f`  
+Fullscreen mode (in progress)
 
-+ `--help|-h`
-	+ Print this help
-
+`--help|-h`  
+Print this help
 EOB
 echo "$1"
 exit

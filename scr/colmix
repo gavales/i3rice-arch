@@ -5,17 +5,18 @@
 
 help () {
 cat << 'EOB'
-# colmix
-- Script to mix 2 hex colors
+# NAME
 
-## Synopsis
+__colmix__ - Script to mix 2 hex colors
+
+# SYNOPSIS
 
 ```
 colmix [--hex|-x|--rgb|-r|--verbose|-v] <ratio1>:<color1> <ratio2>:<color2>
-colmix [--help|-h]
+colmix --help|-h
 ```
 
-## Example
+# EXAMPLE
 
 ```sh
 $ colmix 50:#00ff00 50:#002b36
@@ -27,23 +28,23 @@ So ![#00ff00](https://placehold.it/15/00ff00/000000?text=+) #00ff00 +
    ![#002b36](https://placehold.it/15/002b36/000000?text=+) #002b36 =
    ![#00951b](https://placehold.it/15/00951b/000000?text=+) #00951b!
 
-## Options
+# OPTIONS
 
-+ Final argument has to be `<ratio1>:<color1> <ratio2>:<color2>`
-	+ eg. `50:#000000 50:#ffffff`
-	+ Ratios are percentages, so `<ratio1> + <ratio2> = 100`
+Final argument has to be `<ratio1>:<color1> <ratio2>:<color2>`  
++ eg. `50:#000000 50:#ffffff`
++ Ratios are percentages, so `<ratio1> + <ratio2> = 100`
 
-+ `--hex|-x`
-	+ Print final color in hex
+`--hex|-x`  
+Print final color in hex
 
-+ `--rgb|-r`
-	+ Print final color in rgb
+`--rgb|-r`  
+Print final color in rgb
 
-+ `--verbose|-v`
-	+ Print input colors aswell, and rgb versions as well
+`--verbose|-v`  
+Print input colors and rgb versions as well
 
-+ `--help|-h`
-	+ Print this help
+`--help|-h`  
+Print this help
 
 EOB
 echo "$1"

@@ -2,14 +2,15 @@
 
 help () {
 cat << 'EOB'
-# i3vol
-- control volume for i3
+# NAME
 
-## Synopsis
+__i3vol__ - control volume for i3
+
+# SYNOPSIS
 
 ```
 i3vol mute|inc|dec
-i3vol [--help|-h]
+i3vol --help|-h
 ```
 
 EOB

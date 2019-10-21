@@ -5,23 +5,25 @@
 
 help () {
 cat << 'EOB'
-# edtr
-- vim server wrapper
+# NAME
 
-## Synopsis
+__edtr__ - vim server wrapper
+
+# SYNOPSIS
+
 ```
 edtr [--server|-s <name>] <file>
-edtr [--help|-h]
+edtr --help|-h
 ```
 
-## Options
+# OPTIONS
 
-+ `--server|-s <name>`
-	+ '-`<name>`' is appended to the default `--servername`
-	+ Default `--servername` is 'edtr'
+`--server|-s <name>`  
+'-`<name>`' is appended to the default `--servername`.
+Default `--servername` is 'edtr'.
 
-+ `--help|-h`
-	+ Print this help
+`--help|-h`  
+Print this help
 
 EOB
 exit

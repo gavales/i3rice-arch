@@ -4281,3 +4281,15 @@ Oct 20 12:59 : exception: RTIOThread could not get realtime scheduling, continui
 Oct 20 12:59 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Oct 20 12:59 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Oct 20 12:59 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 21 15:59 : client: [0] opened from [::1]:49426
+Oct 21 15:59 : client: [0] closed
+Oct 21 15:59 : client: [1] opened from [::1]:49428
+Oct 21 15:59 : client: [1] closed
+Oct 21 15:59 : client: [2] opened from [::1]:49430
+Oct 21 15:59 : client: [2] closed
+Oct 21 15:59 : client: [3] opened from [::1]:49432
+Oct 21 15:59 : client: [3] closed
+Oct 21 15:59 : client: [4] opened from [::1]:49434
+Oct 21 15:59 : client: [4] closed
+Oct 21 15:59 : client: [5] opened from [::1]:49436
+Oct 21 15:59 : client: [5] closed
