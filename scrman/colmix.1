@@ -6,15 +6,15 @@
 .SH SYNOPSIS
 .IP
 .nf
-\f[C]
-colmix [--hex|-x|--rgb|-r|--verbose|-v] <ratio1>:<color1> <ratio2>:<color2>
+\f[B]
+colmix [--hex|-x|--rgb|-r|--verbose|-v] \fIratio1\fP:\fIcolor1\fP \fIratio2\fP:\fIcolor2\fP
 colmix --help|-h
 \f[R]
 .fi
 .SH EXAMPLE
 .IP
 .nf
-\f[C]
+\f[B]
 $ colmix 50:#00ff00 50:#002b36
   00951b
   0, 149, 27
@@ -28,13 +28,16 @@ So [IMAGE: #00ff00 (https://placehold.it/15/00ff00/000000?text=+)]
 #00951b!
 .SH OPTIONS
 .PP
-Final argument has to be \f[B]<ratio1>:<color1> <ratio2>:<color2>\f[R]
+Final argument has to be \f[B]\fIratio1\fP:\fIcolor1\fP \fIratio2\fP:\fIcolor2\fP\f[R]
 .PD 0
 .P
 .PD
 + eg.
-\f[B]50:#000000 50:#ffffff\f[R] + Ratios are percentages, so
-\f[B]<ratio1> + <ratio2> = 100\f[R]
+\f[B]50:#000000 50:#ffffff\f[R]
+.PD 0
+.P
+.PD
++ Ratios are percentages, so \f[B]\fIratio1\fP + \fIratio2\fP = 100\f[R]
 .PP
 \f[B]--hex|-x\f[R]
 .PD 0

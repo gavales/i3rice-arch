@@ -9,8 +9,8 @@ box=$(pidof rhythmbox)
 mpv=$(pidof mpv)
 
 CUR=mpmpd
-[[ -n $mpv ]] && CUR=mpmpv
 [[ -n $box ]] && CUR=mpgui
 [[ -n $spo ]] && CUR=mpgui
+[[ -n $mpv ]] && CUR=mpmpv
 
 echo $CUR

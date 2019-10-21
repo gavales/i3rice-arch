@@ -6,12 +6,12 @@
 .SH SYNOPSIS
 .IP
 .nf
-\f[C]
-i3bg [--wallpaper|-w <path|prev|next|random|name>]
+\f[B]
+i3bg [--wallpaper|-w \fIpath|prev|next|random|name\fP]
      [--tint|-t|--blur|-b]
-i3bg [--add|-a <directory>]
+i3bg [--add|-a \fIdirectory\fP]
 i3bg [--list|-l]
-i3bg [--rename|-r|--delete|-d <name>]
+i3bg [--rename|-r|--delete|-d \fIname\fP]
 i3bg [--help|-h]
 i3bg
 \f[R]
@@ -25,7 +25,7 @@ Run with no options to create default directories:
 + $i3BGDIR/(normal|blur|cols) + Default i3bg folder: i3BGDIR =
 $XDG_PICTURES_DIR/i3bg
 .PP
-\f[B]--wallpaper|-w <path>|prev|next|random|<name>\f[R]
+\f[B]--wallpaper|-w \fIpath\fP|prev|next|random|\fIname\fP\f[R]
 .PD 0
 .P
 .PD
@@ -33,23 +33,23 @@ Wallpaper to set:
 .PD 0
 .P
 .PD
-+ \f[B]<path>\f[R] - path to a picture + \f[B]prev\f[R] - previous
++ \f[B]\fIpath\fP\f[R] - path to a picture + \f[B]prev\f[R] - previous
 wallpaper in history + \f[B]next\f[R] - next wallpaper in history +
 \f[B]random\f[R] - random wallpaper in $i3BGDIR/normal +
-\f[B]<name>\f[R] - name of wallpaper stored in $i3BGDIR/normal
+\f[B]\fIname\fP\f[R] - name of wallpaper stored in $i3BGDIR/normal
 .PP
-\f[B]--tint|-t <hex_color>\f[R]
+\f[B]--tint|-t \fIhex_color\fP\f[R]
 .PD 0
 .P
 .PD
 Tint color of wallpaper, Hexadecimal color Eg.
 #002b36
 .PP
-\f[B]--add|-a <directory>\f[R]
+\f[B]--add|-a \fIdirectory\fP\f[R]
 .PD 0
 .P
 .PD
-Add walls from \f[B]<directory>\f[R]
+Add walls from \f[B]\fIdirectory\fP\f[R]
 .PP
 \f[B]--list|-l\f[R]
 .PD 0
@@ -63,17 +63,17 @@ List available wallpapers
 .PD
 Toggle blur
 .PP
-\f[B]--rename|-r <name>\f[R]
+\f[B]--rename|-r \fIname\fP\f[R]
 .PD 0
 .P
 .PD
-Rename current wallpaper to \f[B]<name>\f[R]
+Rename current wallpaper to \f[B]\fIname\fP\f[R]
 .PP
-\f[B]--delete|-d <name>\f[R]
+\f[B]--delete|-d \fIname\fP\f[R]
 .PD 0
 .P
 .PD
-Remove \f[B]<name>\f[R] wallpaper from $i3BGDIR/(normal|blur)
+Remove \f[B]\fIname\fP\f[R] wallpaper from $i3BGDIR/(normal|blur)
 .PP
 \f[B]--help|-h\f[R]
 .PD 0

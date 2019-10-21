@@ -6,42 +6,43 @@
 .SH SYNOPSIS
 .IP
 .nf
-\f[C]
-manner [--directory|-d <directory>] [--install|-i copy|link]
-manner --script|-s <script>
+\f[B]
+manner [--directory|-d \fIdirectory\fP] [--install|-i copy|link]
+manner --script|-s \fIscript\fP
 manner --help|-h
 \f[R]
 .fi
 .SH DEPENDENCIES
 .IP
 .nf
-\f[C]
+\f[B]
 pandoc
 \f[R]
 .fi
 .SH OPTIONS
 .PP
-\f[B]--directory|-d <directory>\f[R]
+\f[B]--directory|-d \fIdirectory\fP\f[R]
 .PD 0
 .P
 .PD
 Change target directory
-\f[B]--script|-s <script>\f[R]
+.PP
+\f[B]--script|-s \fIscript\fP\f[R]
 .PD 0
 .P
 .PD
-Call specified
-.PP
-with \f[B]--help\f[R] flag, and convert the output to a man page with
-\f[B]pandoc -s -t man\f[R].
+Call specified \f[B]\fIscript\fP\f[R] with \f[B]--help\f[R] flag, and
+convert the output to a man page with \f[B]pandoc -s -t man\f[R].
 .PP
 \f[B]--install|-i copy|link\f[R]
 .PD 0
 .P
 .PD
-Install all the manpages in \f[B]<directory>\f[R]man to
+Install all the manpages in \f[B]\fIdirectory\fP\f[R]man to
 \f[B]/usr/share/man/man1\f[R] if they do not already exist.
-.PP
+.PD 0
+.P
+.PD
 Argument to this option determines whether the scripts are copied or
 linked.
 .PP
@@ -55,12 +56,13 @@ Print this help
 All my bash scripts that have a help function are just called with the
 \f[B]--help\f[R] flag and the output piped to
 \f[B]pandoc -s -t man\f[R], and that output redirected to the directory
-\f[B]<directory>\f[R]man.
+\f[B]\fIdirectory\fP\f[R]man.
 The default directory is \f[B]$HOME/scr\f[R], so the resulting manpages
 will be redirected to the appropriate file in \f[B]$HOME/scrman\f[R].
 .PP
 Note that this only works because all my help functions are written in
 markdown.
+All precode is converted to bold text.
 .PP
 The \f[B]--script\f[R] flag can be used to automatically pipe the output
 of the specified script to a man page.

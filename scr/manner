@@ -33,13 +33,12 @@ pandoc
 Change target directory
 
 `--script|-s <script>`  
-Call specified <script> with `--help` flag, and convert
+Call specified `<script>` with `--help` flag, and convert
 the output to a man page with `pandoc -s -t man`.
 
 `--install|-i copy|link`  
 Install all the manpages in `<directory>`man to
-`/usr/share/man/man1` if they do not already exist.
-
+`/usr/share/man/man1` if they do not already exist.  
 Argument to this option determines whether the scripts
 are copied or linked.
 
@@ -52,11 +51,12 @@ All my bash scripts that have a help function are just
 called with the `--help` flag and the output piped to
 `pandoc -s -t man`, and that output redirected to the
 directory `<directory>`man. The default directory is
-`$HOME/scr`, so the resulting manpages will be redirected
-to the appropriate file in `$HOME/scrman`.
+`$HOME/scr`, so the resulting manpages will be
+redirected to the appropriate file in `$HOME/scrman`.
 
 Note that this only works because all my help functions
-are written in markdown.
+are written in markdown. All precode is converted to bold
+text.
 
 The `--script` flag can be used to automatically pipe the
 output of the specified script to a man page.
@@ -89,8 +89,9 @@ for i in $(ls -l | sed '/^d/d;/^total/d' | awk '{print $NF}'); do
 
 		echo ".TH ${i^^} 1 $(date +%F | sed 's/-/\\-/g') Linux \"User Manuals\"" > ${TRG}/${i}.1
 
+#			'/^.\\"/d;/.TH "" "" "" "" ""/d;s/^\\f\[C\]$/PRECODE/g;s/\\f\[C\]/\\f\[B\]/g;s/PRECODE/\\f\[C\]/g' \
 		$i --help | pandoc -s -t man | sed \
-			'/^.\\"/d;/.TH "" "" "" "" ""/d;s/^\\f\[C\]$/PRECODE/g;s/\\f\[C\]/\\f\[B\]/g;s/PRECODE/\\f\[C\]/g' \
+			'/^.\\"/d;/.TH "" "" "" "" ""/d;s/\\f\[C\]/\\f\[B\]/g;s/</\\fI/g;s/>/\\fP/g' \
 			>> ${TRG}/${i}.1
 
 		[[ -z $INS ]] || [[ ! -f /usr/share/man/man1/${i}.1 ]] && {

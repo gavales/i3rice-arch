@@ -140,7 +140,16 @@ PS1+='\[\033[00;34m\]\h\[\033[00;31m\]] '
 PS1+='\[\033[00;36m\]\w '
 PS1+='\[\033[00;35m\]\$ '
 PS1+='\[\033[00m\]'
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
+
 export PATH="$PATH:$HOME/anaconda2/bin:$HOME/anaconda3/bin:$HOME/scr"
 printf '\033[5 q\r'
 
+alias c='clear'
 source $HOME/scr/sc/shortcuts.bashrc

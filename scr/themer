@@ -147,12 +147,13 @@ Get `<variable>` from current theme.
 `--new|-n <name>`  
 Create theme `<name>`.
 
-`--list|-l themes|vars|varmenu|default|current`  
-`themes`  = list themes in `$THEMER_DIR`  
-`default` = list default variables  
-`current` = list variables specific to current theme name  
-`vars`    = list all variables in the correct syntax  
-`varmenu` = rofi list of all variables. Selected item
+`--list|-l themes|vars|varmenu|default|current`
+
++ `themes`  = list themes in `$THEMER_DIR`
++ `default` = list default variables
++ `current` = list variables specific to current theme name
++ `vars`    = list all variables in the correct syntax
++ `varmenu` = rofi list of all variables. Selected item
 is automatically copied to the clipboard
 
 `--updatelist|-u`  
@@ -163,7 +164,8 @@ Dark mode (switches fgo and bg0).
 
 `--auto-dark|-t <am_time>:<pm_time>`  
 Dark/Light mode based on time of day.  
-Uses 24-hr time format  
+Uses 24-hr time format
+
 + `<am_time>` hr to apply 'light' mode.
 + `<pm_time>` hr to apply 'dark' mode.
 

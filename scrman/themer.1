@@ -8,14 +8,14 @@ Inspired by budlabs\[cq] \f[B]mondo-generator\f[R] from the AUR.
 .SH SYNOPSIS
 .IP
 .nf
-\f[C]
+\f[B]
 themer [--dark|-D]
-       [--auto-dark|-t <am_time:pm_time>]
-       --change|-c <name>
-themer --new|-n <name>
-themer --getvar|-v <variable>
+       [--auto-dark|-t \fIam_time:pm_time\fP]
+       --change|-c \fIname\fP
+themer --new|-n \fIname\fP
+themer --getvar|-v \fIvariable\fP
 themer --list|-l themes|vars|varmenu|default|current
-themer [--force|-f] --apply-single|-a <directory>
+themer [--force|-f] --apply-single|-a \fIdirectory\fP
 themer --apply-all|-A
 themer --updatelist|-u
 themer --help|-h
@@ -25,7 +25,7 @@ themer
 .SH DEPENDENCIES
 .IP
 .nf
-\f[C]
+\f[B]
 rofi xsel
 \f[R]
 .fi
@@ -43,18 +43,18 @@ Run with no options to create defaults in \f[B]THEMER_DIR\f[R]
 .PD
 \f[B]$THEMER_DIR\f[R] = \f[B]$HOME/.config/themer\f[R]
 .PP
-\f[B]--change|-c <theme>\f[R]
+\f[B]--change|-c \fItheme\fP\f[R]
 .PD 0
 .P
 .PD
-Change current theme to \f[B]<theme>\f[R].
-If \f[B]<theme>\f[R] is empty, a rofi list of themes will be displayed.
+Change current theme to \f[B]\fItheme\fP\f[R].
+If \f[B]\fItheme\fP\f[R] is empty, a rofi list of themes will be displayed.
 .PP
-\f[B]--apply-single|-a <directory>\f[R]
+\f[B]--apply-single|-a \fIdirectory\fP\f[R]
 .PD 0
 .P
 .PD
-Apply current theme to \f[B]<directory>\f[R].
+Apply current theme to \f[B]\fIdirectory\fP\f[R].
 .PP
 \f[B]--apply-all|-A\f[R]
 .PD 0
@@ -71,38 +71,28 @@ Use with \f[B]--apply-(single|all)\f[R] to force apply a theme, since
 themes are not automatically generated from `template_' files to speed
 up applying the theme
 .PP
-\f[B]--getvar|-v <variable>\f[R]
+\f[B]--getvar|-v \fIvariable\fP\f[R]
 .PD 0
 .P
 .PD
-Get \f[B]<variable>\f[R] from current theme.
+Get \f[B]\fIvariable\fP\f[R] from current theme.
 .PP
-\f[B]--new|-n <name>\f[R]
+\f[B]--new|-n \fIname\fP\f[R]
 .PD 0
 .P
 .PD
-Create theme \f[B]<name>\f[R].
+Create theme \f[B]\fIname\fP\f[R].
 .PP
 \f[B]--list|-l themes|vars|varmenu|default|current\f[R]
-.PD 0
-.P
-.PD
+.IP \[bu] 2
 \f[B]themes\f[R] = list themes in \f[B]$THEMER_DIR\f[R]
-.PD 0
-.P
-.PD
+.IP \[bu] 2
 \f[B]default\f[R] = list default variables
-.PD 0
-.P
-.PD
+.IP \[bu] 2
 \f[B]current\f[R] = list variables specific to current theme name
-.PD 0
-.P
-.PD
+.IP \[bu] 2
 \f[B]vars\f[R] = list all variables in the correct syntax
-.PD 0
-.P
-.PD
+.IP \[bu] 2
 \f[B]varmenu\f[R] = rofi list of all variables.
 Selected item is automatically copied to the clipboard
 .PP
@@ -118,7 +108,7 @@ Update the rofi theme list
 .PD
 Dark mode (switches fgo and bg0).
 .PP
-\f[B]--auto-dark|-t <am_time>:<pm_time>\f[R]
+\f[B]--auto-dark|-t \fIam_time\fP:\fIpm_time\fP\f[R]
 .PD 0
 .P
 .PD
@@ -127,11 +117,10 @@ Dark/Light mode based on time of day.
 .P
 .PD
 Uses 24-hr time format
-.PD 0
-.P
-.PD
-+ \f[B]<am_time>\f[R] hr to apply `light' mode.
-+ \f[B]<pm_time>\f[R] hr to apply `dark' mode.
+.IP \[bu] 2
+\f[B]\fIam_time\fP\f[R] hr to apply `light' mode.
+.IP \[bu] 2
+\f[B]\fIpm_time\fP\f[R] hr to apply `dark' mode.
 .PP
 \f[B]--help|-h\f[R]
 .PD 0
@@ -142,7 +131,7 @@ Display this help.
 .SS My Default theme
 .IP
 .nf
-\f[C]
+\f[B]
 $ themer --list default
 name           default
 guifont        $romanfont
@@ -186,7 +175,7 @@ You can also reference variables using a \f[B]$\f[R] in front of the
 variable name in the theme file and you can also mix colours.
 .IP
 .nf
-\f[C]
+\f[B]
 $ cat \[ti]/.config/themer/dosnerd
   name      dosnerd
   bg0       #DFBF9F
@@ -199,7 +188,7 @@ $ cat \[ti]/.config/themer/dosnerd
 .SH GENERATING THEMES
 .IP
 .nf
-\f[C]
+\f[B]
 $ themer --change dosnerd
 $ themer --list current
   %%name%%      dosnerd
@@ -227,9 +216,9 @@ manually:
 .PP
 [[/images/varmenu.png|themer \[en]list varmenu]]
 .PP
-Add \f[B]--dark\f[R] or \f[B]--auto-dark <am_time>:<pm_time>\f[R] to
+Add \f[B]--dark\f[R] or \f[B]--auto-dark \fIam_time\fP:\fIpm_time\fP\f[R] to
 convert to a dark theme (just swaps \f[B]fg0\f[R] and \f[B]bg0\f[R] and
-renames the theme to \f[B]<name>-dark\f[R]), or uses light/dark version
+renames the theme to \f[B]\fIname\fP-dark\f[R]), or uses light/dark version
 based on time of day, respectively.
 .SH MAKING THEME TEMPLATE
 .PP
@@ -237,7 +226,7 @@ For example, an \f[B].Xresources\f[R] theme:
 .SS Setup
 .IP
 .nf
-\f[C]
+\f[B]
 $ cd $HOME
 $ themer --init
 $ cp .Xresources .themer/template_.Xresources
@@ -257,7 +246,7 @@ $ tree $HOME
 Here\[cq]s my template_.Xresources
 .IP
 .nf
-\f[C]
+\f[B]
 $ cat \[ti]/.themer/template_.Xresources
 !! vim:ft=xdefaults
 #define cwhtl %%fg0%%
@@ -309,7 +298,7 @@ $ cat \[ti]/.themer/template_.Xresources
 .PP
 The variables from the current theme can be listed using
 \f[B]themer --list vars\f[R], and are to be referenced with:
-\f[B]%%<variable>%%\f[R].
+\f[B]%%\fIvariable\fP%%\f[R].
 .PP
 Add RGB after a colour name to get its RGB value in \[lq]R, G, B\[rq]
 form eg.
@@ -321,7 +310,7 @@ Useful for \f[B]#AARRGGBB\f[R] colours.
 .SS \f[B].themer_pre\f[R] & \f[B].themer_post\f[R]
 .PP
 The .themer_pre and .themer_post bash scripts in the
-\f[B]<directory>\f[R] are used to do things before/after applying the
+\f[B]\fIdirectory\fP\f[R] are used to do things before/after applying the
 theme eg.
 reload the .Xresources file (below) etc.
 These scripts have the current theme name, eg.
@@ -330,7 +319,7 @@ Obviously, the shebang can be changed.
 My \f[B].Xresources\f[R] .themer_post is shown below.
 .IP
 .nf
-\f[C]
+\f[B]
 #!/usr/bin/env bash
 #requires you to use urxvtd & urxvtc
 #see budlabs \[dq]Let\[aq]s Linux #021: urxvt reload-config\[dq]
@@ -338,7 +327,7 @@ My \f[B].Xresources\f[R] .themer_post is shown below.
 
 XRS=$HOME/.Xresources
 
-cat \[dq].themer/${1}/.Xresources\[dq] | sed \[dq]s/\[rs]%\[rs]%.*\[rs]%\[rs]%//g\[dq] > $XRS
+cat \[dq].themer/${1}/.Xresources\[dq] | sed \[dq]s/\[rs]%\[rs]%.*\[rs]%\[rs]%//g\[dq] \fP $XRS
 xrdb -load $XRS
 kill -1 $(pidof urxvtd)
 \f[R]
@@ -347,7 +336,7 @@ kill -1 $(pidof urxvtd)
 .SS \f[B]--apply-single\f[R]
 .IP
 .nf
-\f[C]
+\f[B]
 themer -a $HOME
 \f[R]
 .fi
@@ -356,7 +345,7 @@ to apply the theme to each template in \f[B]$HOME/.themer\f[R].
 .SS \f[B]--apply-all\f[R]
 .IP
 .nf
-\f[C]
+\f[B]
 themer --apply-all
 \f[R]
 .fi
@@ -370,7 +359,7 @@ Both options will also run the \f[B].themer_pre\f[R] &
 \f[B].themer_post\f[R] scripts too.
 .IP
 .nf
-\f[C]
+\f[B]
 $ cd $HOME
 $ tree $HOME
   /home/user
