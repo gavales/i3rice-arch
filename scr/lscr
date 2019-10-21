@@ -4,13 +4,13 @@ help () {
 cat << 'EOB'
 # NAME
 
-__lockscreen__ - i3lock-color wrapper
+__lscr__ - i3lock-color wrapper
 
 # USAGE
 
 ```
-lockscreen
-lockscreen --help|-h
+lscr
+lscr --help|-h
 ```
 EOB
 echo "$1"

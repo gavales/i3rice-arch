@@ -8,13 +8,13 @@ help () {
 cat << 'EOB'
 # NAME
 
-__i3shutdown__ - shutdown menu for i3wm
+__i3end__ - shutdown menu for i3wm
 
 # SYNOPSIS
 
 ```
-i3shutdown l|e|s|h|r|x
-i3shutdown --help|-h
+i3end l|e|s|h|r|x
+i3end --help|-h
 ```
 
 # OPTIONS
@@ -64,10 +64,10 @@ OPT=${1}
 [[ -z $OPT ]] && exit
 
 case $OPT in
-	l) lockscreen                                   ;;
+	l) lscr                                   ;;
 	e) i3-msg exit                                  ;;
-	s) lockscreen && sleep 0.5 && $logind suspend   ;;
-	h) lockscreen && sleep 0.5 && $logind hibernate ;;
+	s) lscr && sleep 0.5 && $logind suspend   ;;
+	h) lscr && sleep 0.5 && $logind hibernate ;;
 	r) $logind reboot                               ;;
 	x) $logind poweroff                             ;;
 esac

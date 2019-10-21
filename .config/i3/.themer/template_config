@@ -65,7 +65,7 @@ client.background       %%bg0%%
 
 # ━  MOD1 BINDINGS
 # ━━ Misc
-$ALT+Escape         $exn i3shutdown
+$ALT+Escape         $exn i3end
 $ALT+Home           $exn keybindingsmenu
 $ALW+button1        $QUD -m 3
 $ALW+button2        kill
@@ -73,7 +73,7 @@ $ALW+button3        $QUD -m 2, $QUD -f 3
 $ALW+button4        focus left
 $ALW+button5        focus right
 $ALT+space          focus mode_toggle
-bindsym Print       $exn screenshot
+bindsym Print       $exn snap
 
 $ALW+Shift+button4  move left
 $ALW+Shift+button5  move right
@@ -126,7 +126,7 @@ $ALT+Shift+r        restart
 $ALT+Shift+y        $RUN -n YouTube$ -e '$BAP --app=https://www.youtube.com/'
 $ALT+Shift+u        $exn $BAP --app=https://outlook.office.com/mail/inbox/id/AAQkAGZjZGU2MmYyLTc5ZDctNDI1My05MzU4LWRjYTc3NjdhN2NkOAAQAOwToE4JkJhIgjz322aPjPU%3D
 $ALT+Shift+i        $RUN -n '^BBC iPlayer$' -e '$BAP --app=https://www.bbc.co.uk/iplayer/'
-$ALT+Shift+p        $exn screenshot
+$ALT+Shift+p        $exn snap
 
 # ━━ 2nd Row
 $ALT+a              focus parent
@@ -245,7 +245,7 @@ $WIN+c              $exn google-chrome-beta
 $WIN+v              move workspace to output $vga
 $WIN+b              $RUN -i bashmount -e '$TRM -name bashmount -e bashmount'
 $WIN+n              move workspace to output $nat
-$WIN+m              $exn multimon
+$WIN+m              $exn mmon
 $WIN+comma          $exn i3light dec
 $WIN+period         $exn i3light inc
 

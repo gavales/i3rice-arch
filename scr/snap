@@ -4,13 +4,13 @@ help () {
 cat << 'EOB'
 # NAME
 
-__screenshot__ - take screenshot with `maim`
+__snap__ - take screenshot with `maim`
 
 # SYNOPSIS
 
 ```
-screenshot
-screenshot --help|-h
+snap
+snap --help|-h
 ```
 EOB
 echo "$1"
