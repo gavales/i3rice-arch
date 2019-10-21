@@ -24,16 +24,16 @@ manner [--help|-h]
 # DESCRIPTION
 
 All my bash scripts that have a help function are just
-called with the '--help' flag and the output piped to
-'pandoc -s -t man', and that output redirected to the
+called with the `--help` flag and the output piped to
+`pandoc -s -t man`, and that output redirected to the
 directory <directory>man. The default directory is
-'~/scr', so the resulting manpages will be redirected
-to the appropriate file in '~/scrman'.
+`$HOME/scr`, so the resulting manpages will be redirected
+to the appropriate file in `$HOME/scrman`.
 
 Note that this only works because all my help functions
 are written in markdown.
 
-The '--script' flag can be used to automatically pipe the
+The `--script` flag can be used to automatically pipe the
 output of the specified script to a man page.
 
 EOB

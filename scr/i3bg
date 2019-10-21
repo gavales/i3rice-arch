@@ -28,10 +28,11 @@ blr=0x16
 
 help () {
 cat << 'EOB'
-# i3bg
-- A script to set wallpaper, with other features.
+# NAME 
 
-## Synopsis
+__i3bg__ - A script to set wallpaper, with other features.
+
+# SYNOPSIS
 
 ```
 i3bg [--wallpaper|-w <path|prev|next|random|name>]
@@ -43,40 +44,40 @@ i3bg [--help|-h]
 i3bg
 ```
 
-## Options
+# OPTIONS
 
-+ Run with no options to create default directories:
+Run with no options to create default directories:
 	+ $i3BGDIR/(normal|blur|cols)
 	+ Default i3bg folder: i3BGDIR = $XDG_PICTURES_DIR/i3bg
 
-+ `--wallpaper|-w <path>|prev|next|random|<name>`
-	+ Wallpaper to set:
+`--wallpaper|-w <path>|prev|next|random|<name>`
+	Wallpaper to set:
 		+ `<path>` - path to a picture
 		+ `prev`   - previous wallpaper in history
 		+ `next`   - next wallpaper in history
 		+ `random` - random wallpaper in $i3BGDIR/normal
 		+ `<name>` - name of wallpaper stored in $i3BGDIR/normal
 
-+ `--tint|-t <hex_color>`
-	+ Tint color of wallpaper, Hexadecimal color Eg. #002b36
+`--tint|-t <hex_color>`
+	Tint color of wallpaper, Hexadecimal color Eg. #002b36
 
-+ `--add|-a <directory>`
-	+ Add walls from `<directory>`
+`--add|-a <directory>`
+	Add walls from `<directory>`
 
-+ `--list|-l`
-	+ List available wallpapers
+`--list|-l`
+	List available wallpapers
 
-+ `--blur|-b`
-	+ Toggle blur
+`--blur|-b`
+	Toggle blur
 
-+ `--rename|-r <name>`
-	+ Rename current wallpaper to `<name>`
+`--rename|-r <name>`
+	Rename current wallpaper to `<name>`
 
-+ `--delete|-d <name>`
-	+ Remove `<name>` wallpaper from $i3BGDIR/(normal|blur)
+`--delete|-d <name>`
+	Remove `<name>` wallpaper from $i3BGDIR/(normal|blur)
 
-+ `--help|-h`
-	+ Print this help
+`--help|-h`
+	Print this help
 
 EOB
 echo "$1"

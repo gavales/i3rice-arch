@@ -86,11 +86,12 @@ TIME=${TIME%%:*}
 
 help () {
 cat << 'EOB'
-# themer
-- A script to change theme of configs using a theme file.
+# NAME
+
+__themer__ - A script to change theme of configs using a theme file.
 Inspired by budlabs' mondo-generator from the AUR.
 
-## Synopsis
+# Synopsis
 
 ```
 themer [--dark|-D]
@@ -104,13 +105,13 @@ themer [--help|-h]
 themer
 ```
 
-## Dependencies
+# Dependencies
 
 ```
 rofi xsel
 ```
 
-## Examples
+# Examples
 
 [[/images/themer-gruvbox.png|gruvbox]]
 
@@ -122,34 +123,34 @@ rofi xsel
 
 [[/images/themer-solarized.png|solarized]]
 
-## Options
+# Options
 
-+ Run with no options to create defaults in:
-	+ `$THEMER_DIR` = `$HOME/.config/themer`
+Run with no options to create defaults in:
+	`$THEMER_DIR` = `$HOME/.config/themer`
 
-+ `--change|-c <theme>`
-	+ Change current theme to `<theme>`.
+`--change|-c <theme>`
+	Change current theme to `<theme>`.
 	If `<theme>` is empty, a rofi list of themes will be displayed.
 	Requires my i3menu rofi wrapper.
 
-+ `--apply-single|-a <directory>`
-	+ Apply current theme to `<directory>`.
+`--apply-single|-a <directory>`
+	Apply current theme to `<directory>`.
 
-+ `--apply-all|-A`
-	+ Apply current theme to directories listed in `$THEMER_DIR/.dirs`.
+`--apply-all|-A`
+	Apply current theme to directories listed in `$THEMER_DIR/.dirs`.
 
-+ `--force|-f`
-	+ Use with `--apply-(single|all)` to force apply a theme, since themes
+`--force|-f`
+	Use with `--apply-(single|all)` to force apply a theme, since themes
 	are not automatically generated from 'template_' files to speed up
 	applying the theme
 
-+ `--getvar|-v <variable>`
-	+ Get `<variable>` from current theme.
+`--getvar|-v <variable>`
+	Get `<variable>` from current theme.
 
-+ `--new|-n <name>`
-	+ Create theme `<name>`.
+`--new|-n <name>`
+	Create theme `<name>`.
 
-+ `--list|-l themes|vars|varmenu|default|current`
+`--list|-l themes|vars|varmenu|default|current`
 	+ `themes`  = list themes in `$THEMER_DIR`
 	+ `default` = list default variables
 	+ `current` = list variables specific to current theme name
@@ -157,22 +158,22 @@ rofi xsel
 	+ `varmenu` = rofi list of all variables. Selected item
 	is automatically copied to the clipboard
 
-+ `--updatelist|-u`
-	+ Update the rofi theme list
+`--updatelist|-u`
+	Update the rofi theme list
 
-+ `--dark|-D`
-	+ Dark mode (switches fgo and bg0).
+`--dark|-D`
+	Dark mode (switches fgo and bg0).
 
-+ `--auto-dark|-t <am_time>:<pm_time>`
-	+ Dark/Light mode based on time of day.
+`--auto-dark|-t <am_time>:<pm_time>`
+	Dark/Light mode based on time of day.
 	+ `<am_time>` hr to apply 'light' mode.
 	+ `<pm_time>` hr to apply 'dark' mode.
-	+ Uses 24-hr time format
+	Uses 24-hr time format
 
-+ `--help|-h`
-	+ Display this help.
+`--help|-h`
+	Display this help.
 
-## Making Themes
+# Making Themes
 
 ### My Default theme
 
@@ -231,7 +232,7 @@ $ cat ~/.config/themer/dosnerd
   mix       colmix 33:$bg0 66:$acc
 ```
 
-## Generating Themes
+# Generating Themes
 
 ```sh
 $ themer --change dosnerd
@@ -265,7 +266,7 @@ convert <theme> to a dark theme (just swaps `fg0` and `bg0`
 and renames the theme to `<name>-dark`), or uses
 light/dark version based on time of day, respectively.
 
-## Making Theme Template
+# Making Theme Template
 
 For example, an `.Xresources` theme:
 
@@ -377,7 +378,7 @@ xrdb -load $XRS
 kill -1 $(pidof urxvtd)
 ```
 
-## Applying Themes
+# Applying Themes
 
 ### `--apply-single`
 
@@ -420,7 +421,7 @@ $ tree $HOME
   ┊
 ```
 
-## Walls
+# Walls
 
 [[/images/MunnarKeralaIndia.jpg|gruvbox]]
 

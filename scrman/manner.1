@@ -17,13 +17,14 @@ manner [--help|-h]
 .SH DESCRIPTION
 .PP
 All my bash scripts that have a help function are just called with the
-`\[en]help' flag and the output piped to `pandoc -s -t man', and that
-output redirected to the directory man.
-The default directory is `\[ti]/scr', so the resulting manpages will be
-redirected to the appropriate file in `\[ti]/scrman'.
+\f[C]--help\f[R] flag and the output piped to
+\f[C]pandoc -s -t man\f[R], and that output redirected to the directory
+man.
+The default directory is \f[C]$HOME/scr\f[R], so the resulting manpages
+will be redirected to the appropriate file in \f[C]$HOME/scrman\f[R].
 .PP
 Note that this only works because all my help functions are written in
 markdown.
 .PP
-The `\[en]script' flag can be used to automatically pipe the output of
-the specified script to a man page.
+The \f[C]--script\f[R] flag can be used to automatically pipe the output
+of the specified script to a man page.
