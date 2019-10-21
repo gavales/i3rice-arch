@@ -520,7 +520,7 @@ autocmd FileType sh inoremap whi<Tab> while ; do
 	\<Enter><++>
 	\<Enter><BS>done<Esc>02kf;i
 autocmd FileType sh inoremap fun<Tab> <space>() {
-	\<Enter><++>
+	\<Enter><BS><++>
 	\<Enter><BS>}<Esc>02ki
 autocmd FileType sh inoremap for<Tab> for i in *; do
 	\<Enter><++>

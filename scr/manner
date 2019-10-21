@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: Mon  7 Oct 23:04:04 BST 2019
+# source /home/gavarch/.config/user-dirs.dirs
+
+SRC=${USER_SCR_DIR}
+TRG=${USER_SCR_DIR}man
+
+help () {
+cat << 'EOB'
+# NAME
+
+__manner__ - generates man pages for scripts, in my scripts directory
+that have a help function, using pandoc
+
+# SYNOPSIS
+
+```
+manner
+manner [--help|-h]
+```
+EOB
+exit
+}
+
+while true; do
+	case $1 in
+		--help | -h ) help ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+cd $SRC
+
+for i in $(ls -l | sed '/^d/d;/^total/d' | awk '{print $NF}'); do
+	[[ -n $(grep '\-\-help' $i) ]] && {
+		echo ".TH ${i^^} 1 $(date +%F | sed 's/-/\\-/g') Linux "User Manuals"" > ${TRG}/${i}.1
+		$i --help | pandoc -s -t man | sed '/.TH/d' >> ${TRG}/${i}.1
+		}
+done
