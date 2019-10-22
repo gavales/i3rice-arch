@@ -1,9 +1,3 @@
-rename forest-dawn
-rename forest-day
-rename dracula
-rename gruvbox
-rename solarized
-rename themer
 delete
 shell bash %f
 rename i3lch
@@ -36,7 +30,6 @@ rename varmenu.png
 shell git clone https://github.com/StillANixRookie/i3rice-arch.wiki.git
 mkdir images
 open_with 
-open_with pinta
 rename openterm
 rename openeditor
 rename openvim
@@ -48,3 +41,10 @@ rename edtr
 search Wave
 search wave
 rename mywal
+mkdir scrman
+open_with pinta
+rename lscr
+rename i3end
+rename mmon
+shell hugo
+shell

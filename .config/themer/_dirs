@@ -1,20 +1,21 @@
-$USER_XRS_DIR
+FORCE $USER_XRS_DIR
 $HOME/.vim/colors
-$HOME/.config/i3
-$HOME/.config/polybar
-$HOME/.config/zathura
-$HOME/.config/dunst
-$HOME/.config/rofi
+FORCE $HOME/.config/i3
+FORCE $HOME/.config/polybar
+FORCE $HOME/.config/zathura
+FORCE $HOME/.config/dunst
+FORCE $HOME/.config/rofi
 $HOME/.config/vis/colors
 $HOME/.config/mpv
-$HOME/.config/qutebrowser
+FORCE $HOME/.config/qutebrowser
 $HOME/.config/spicetify/Themes/Themer
 $USER_REPO_DIR/ghb/themes/hyde/static/css
-$USER_REPO_DIR/i3rice-arch
+FORCE $USER_REPO_DIR/i3rice-arch
 $USER_SCR_DIR/.unused
 $XDG_TEMPLATES_DIR/css
 $XDG_TEMPLATES_DIR/pandoc
-$HOME/.emacs.d/themes
-#$HOME/.conky
-#$HOME/.config/tint2
-#$USER_GIT_DIR/atompackages/packages/rice-syntax/styles
+FORCE $HOME/.emacs.d/themes
+#FORCE $HOME/.conky
+#FORCE $HOME/.config/tint2
+#FORCE $USER_GIT_DIR/atompackages/packages/rice-syntax/styles
+FORCE $HOME/.config/glava

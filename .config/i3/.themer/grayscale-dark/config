@@ -160,7 +160,8 @@ $ALT+Control+Return $exn $TRM -name noterm
 $ALT+z              $exn surf docs.google.com/document/u/0/
 $ALT+x              $exn surf docs.google.com/spreadsheets/u/0/
 $ALT+c              $RUN -c Firefox -e '$FFX'
-$ALT+v              $RUN -i visualiser -e '$TRM -name visualiser -e vis'
+$ALT+v              $exn glach
+#$ALT+v              $RUN -i visualiser -e '$TRM -name visualiser -e vis'
 $ALT+b              $RUN -i references -e '$EDT /home/gavarch/Drive/global.bib'
 $ALT+n              $RUN -n ^Netflix$ -e '$BAP --app=https://www.netflix.com/'
 $ALT+m              $exn surf docs.google.com/presentation/u/0/
@@ -333,6 +334,7 @@ $fw [instance="^doots$"]                 focus;$QUD -m 3;focus;$tf "doots"
 
 $fw [instance="noterm"]                  focus;$QUD -m 4;focus;$tf "noterm"
 $fw [instance="visualiser"]              focus;$QUD -m 4;focus;$tf "visualiser"
+$fw [class="Glava"]                      focus;$QUD -m 4;focus;border pixel 0
 
 # ━  GAPS
 gaps inner 20

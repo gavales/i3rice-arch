@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: Tue 22 Oct 20:19:00 BST 2019
+# source /home/gavarch/.config/user-dirs.dirs
+
+PID=$(pidof glava)
+
+if [[ -n $PID ]]; then
+	killall glava
+else
+	glava --desktop &>/dev/null &
+fi

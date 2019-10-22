@@ -4370,3 +4370,203 @@ Oct 22 00:05 : client: [40] opened from [::1]:41744
 Oct 22 00:05 : client: [40] closed
 Oct 22 00:05 : client: [41] opened from [::1]:41746
 Oct 22 00:05 : client: [41] closed
+Oct 22 16:30 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 11 Roex - Floyd.mp3"
+Oct 22 18:31 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 22 18:31 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 22 18:31 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 22 19:29 : client: [0] opened from [::1]:49900
+Oct 22 19:29 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 22 19:29 : client: [0] closed
+Oct 22 19:29 : client: [1] opened from [::1]:49902
+Oct 22 19:29 : client: [1] closed
+Oct 22 19:29 : client: [2] opened from [::1]:49904
+Oct 22 19:29 : client: [2] closed
+Oct 22 19:29 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 22 19:30 : client: [3] opened from [::1]:49906
+Oct 22 19:30 : client: [3] closed
+Oct 22 19:30 : client: [4] opened from [::1]:49908
+Oct 22 19:30 : client: [4] closed
+Oct 22 19:30 : client: [5] opened from [::1]:49910
+Oct 22 19:30 : client: [5] closed
+Oct 22 20:02 : client: [6] opened from [::1]:50386
+Oct 22 20:02 : client: [6] closed
+Oct 22 20:02 : client: [7] opened from [::1]:50388
+Oct 22 20:02 : client: [7] closed
+Oct 22 20:02 : client: [8] opened from [::1]:50390
+Oct 22 20:02 : client: [8] closed
+Oct 22 20:02 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 22 20:02 : client: [9] opened from [::1]:50392
+Oct 22 20:02 : client: [9] closed
+Oct 22 20:02 : client: [10] opened from [::1]:50394
+Oct 22 20:02 : client: [10] closed
+Oct 22 20:02 : client: [11] opened from [::1]:50396
+Oct 22 20:02 : client: [11] closed
+Oct 22 20:02 : client: [12] opened from [::1]:50398
+Oct 22 20:02 : client: [12] closed
+Oct 22 20:02 : client: [13] opened from [::1]:50400
+Oct 22 20:02 : client: [13] closed
+Oct 22 20:02 : client: [14] opened from [::1]:50402
+Oct 22 20:02 : client: [14] closed
+Oct 22 20:02 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 22 20:02 : client: [15] opened from [::1]:50404
+Oct 22 20:02 : client: [15] closed
+Oct 22 20:02 : client: [16] opened from [::1]:50406
+Oct 22 20:02 : client: [16] closed
+Oct 22 20:02 : client: [17] opened from [::1]:50408
+Oct 22 20:02 : client: [17] closed
+Oct 22 20:03 : client: [18] opened from [::1]:50410
+Oct 22 20:03 : client: [18] closed
+Oct 22 20:03 : client: [19] opened from [::1]:50412
+Oct 22 20:03 : client: [19] closed
+Oct 22 20:03 : client: [20] opened from [::1]:50414
+Oct 22 20:03 : client: [20] closed
+Oct 22 20:03 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 22 20:03 : client: [21] opened from [::1]:50416
+Oct 22 20:03 : client: [21] closed
+Oct 22 20:03 : client: [22] opened from [::1]:50418
+Oct 22 20:03 : client: [22] closed
+Oct 22 20:03 : client: [23] opened from [::1]:50420
+Oct 22 20:03 : client: [23] closed
+Oct 22 20:05 : client: [24] opened from [::1]:50422
+Oct 22 20:05 : client: [24] closed
+Oct 22 20:05 : client: [25] opened from [::1]:50424
+Oct 22 20:05 : client: [25] closed
+Oct 22 20:05 : client: [26] opened from [::1]:50426
+Oct 22 20:05 : client: [26] closed
+Oct 22 20:05 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 22 20:05 : client: [27] opened from [::1]:50428
+Oct 22 20:05 : client: [27] closed
+Oct 22 20:05 : client: [28] opened from [::1]:50430
+Oct 22 20:05 : client: [28] closed
+Oct 22 20:05 : client: [29] opened from [::1]:50432
+Oct 22 20:05 : client: [29] closed
+Oct 22 20:05 : client: [30] opened from [::1]:50434
+Oct 22 20:05 : client: [30] closed
+Oct 22 20:05 : client: [31] opened from [::1]:50436
+Oct 22 20:05 : client: [31] closed
+Oct 22 20:05 : client: [32] opened from [::1]:50438
+Oct 22 20:05 : client: [32] closed
+Oct 22 20:05 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 22 20:06 : client: [33] opened from [::1]:50440
+Oct 22 20:06 : client: [33] closed
+Oct 22 20:06 : client: [34] opened from [::1]:50442
+Oct 22 20:06 : client: [34] closed
+Oct 22 20:06 : client: [35] opened from [::1]:50444
+Oct 22 20:06 : client: [35] closed
+Oct 22 20:06 : client: [36] opened from [::1]:50446
+Oct 22 20:06 : client: [36] closed
+Oct 22 20:06 : client: [37] opened from [::1]:50448
+Oct 22 20:06 : client: [37] closed
+Oct 22 20:06 : client: [38] opened from [::1]:50450
+Oct 22 20:06 : client: [38] closed
+Oct 22 20:06 : client: [39] opened from [::1]:50452
+Oct 22 20:06 : client: [39] closed
+Oct 22 20:06 : client: [40] opened from [::1]:50454
+Oct 22 20:06 : client: [40] closed
+Oct 22 20:06 : client: [41] opened from [::1]:50456
+Oct 22 20:06 : client: [41] closed
+Oct 22 20:06 : client: [42] opened from [::1]:50460
+Oct 22 20:06 : client: [42] closed
+Oct 22 20:06 : client: [43] opened from [::1]:50462
+Oct 22 20:06 : client: [43] closed
+Oct 22 20:06 : client: [44] opened from [::1]:50464
+Oct 22 20:06 : client: [44] closed
+Oct 22 20:06 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 22 20:08 : client: [45] opened from [::1]:50468
+Oct 22 20:08 : client: [45] closed
+Oct 22 20:08 : client: [46] opened from [::1]:50470
+Oct 22 20:08 : client: [46] closed
+Oct 22 20:08 : client: [47] opened from [::1]:50472
+Oct 22 20:08 : client: [47] closed
+Oct 22 20:10 : client: [48] opened from [::1]:50476
+Oct 22 20:10 : client: [48] closed
+Oct 22 20:10 : client: [49] opened from [::1]:50478
+Oct 22 20:10 : client: [49] closed
+Oct 22 20:10 : client: [50] opened from [::1]:50480
+Oct 22 20:10 : client: [50] closed
+Oct 22 20:10 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 22 20:13 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 11 Roex - Floyd.mp3"
+Oct 22 20:17 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 06 Gregorio Franco - Seigyo No Sakkaku.mp3"
+Oct 22 20:17 : client: [51] opened from [::1]:50500
+Oct 22 20:17 : client: [51] closed
+Oct 22 20:17 : client: [52] opened from [::1]:50502
+Oct 22 20:17 : client: [52] closed
+Oct 22 20:17 : client: [53] opened from [::1]:50504
+Oct 22 20:17 : client: [53] closed
+Oct 22 20:26 : client: [54] opened from [::1]:50560
+Oct 22 20:26 : client: [54] closed
+Oct 22 20:26 : client: [55] opened from [::1]:50562
+Oct 22 20:26 : client: [55] closed
+Oct 22 20:26 : client: [56] opened from [::1]:50564
+Oct 22 20:26 : client: [56] closed
+Oct 22 20:26 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 22 20:26 : client: [57] opened from [::1]:50566
+Oct 22 20:26 : client: [57] closed
+Oct 22 20:26 : client: [58] opened from [::1]:50568
+Oct 22 20:26 : client: [58] closed
+Oct 22 20:26 : client: [59] opened from [::1]:50570
+Oct 22 20:26 : client: [59] closed
+Oct 22 20:26 : client: [60] opened from [::1]:50574
+Oct 22 20:26 : client: [60] closed
+Oct 22 20:26 : client: [61] opened from [::1]:50576
+Oct 22 20:26 : client: [61] closed
+Oct 22 20:26 : client: [62] opened from [::1]:50578
+Oct 22 20:26 : client: [62] closed
+Oct 22 20:26 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 22 20:26 : client: [63] opened from [::1]:50580
+Oct 22 20:26 : client: [63] closed
+Oct 22 20:26 : client: [64] opened from [::1]:50582
+Oct 22 20:26 : client: [64] closed
+Oct 22 20:26 : client: [65] opened from [::1]:50584
+Oct 22 20:26 : client: [65] closed
+Oct 22 20:31 : client: [66] opened from [::1]:50590
+Oct 22 20:31 : client: [66] closed
+Oct 22 20:31 : client: [67] opened from [::1]:50592
+Oct 22 20:31 : client: [67] closed
+Oct 22 20:31 : client: [68] opened from [::1]:50594
+Oct 22 20:31 : client: [68] closed
+Oct 22 20:31 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 22 20:31 : client: [69] opened from [::1]:50596
+Oct 22 20:31 : client: [69] closed
+Oct 22 20:31 : client: [70] opened from [::1]:50598
+Oct 22 20:31 : client: [70] closed
+Oct 22 20:31 : client: [71] opened from [::1]:50600
+Oct 22 20:31 : client: [71] closed
+Oct 22 20:31 : client: [72] opened from [::1]:50606
+Oct 22 20:31 : client: [72] closed
+Oct 22 20:31 : client: [73] opened from [::1]:50608
+Oct 22 20:31 : client: [73] closed
+Oct 22 20:31 : client: [74] opened from [::1]:50610
+Oct 22 20:31 : client: [74] closed
+Oct 22 20:31 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 22 20:31 : client: [75] opened from [::1]:50612
+Oct 22 20:31 : client: [75] closed
+Oct 22 20:31 : client: [76] opened from [::1]:50614
+Oct 22 20:31 : client: [76] closed
+Oct 22 20:31 : client: [77] opened from [::1]:50616
+Oct 22 20:31 : client: [77] closed
+Oct 22 20:31 : client: [78] opened from [::1]:50618
+Oct 22 20:31 : client: [78] closed
+Oct 22 20:31 : client: [79] opened from [::1]:50620
+Oct 22 20:31 : client: [79] closed
+Oct 22 20:31 : client: [80] opened from [::1]:50622
+Oct 22 20:31 : client: [80] closed
+Oct 22 20:31 : client: [81] opened from [::1]:50624
+Oct 22 20:31 : client: [81] closed
+Oct 22 20:31 : client: [82] opened from [::1]:50626
+Oct 22 20:31 : client: [82] closed
+Oct 22 20:31 : client: [83] opened from [::1]:50628
+Oct 22 20:31 : client: [83] closed
+Oct 22 20:54 : client: [84] opened from [::1]:51026
+Oct 22 20:54 : client: [84] closed
+Oct 22 20:54 : client: [85] opened from [::1]:51028
+Oct 22 20:54 : client: [85] closed
+Oct 22 20:54 : client: [86] opened from [::1]:51030
+Oct 22 20:54 : client: [86] closed
+Oct 22 20:54 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 22 20:54 : client: [87] opened from [::1]:51032
+Oct 22 20:54 : client: [87] closed
+Oct 22 20:54 : client: [88] opened from [::1]:51034
+Oct 22 20:54 : client: [88] closed
+Oct 22 20:54 : client: [89] opened from [::1]:51036
+Oct 22 20:54 : client: [89] closed

@@ -99,7 +99,8 @@ themer [--dark|-D]
        --change|-c <name>
 themer --new|-n <name>
 themer --getvar|-v <variable>
-themer --list|-l themes|vars|varmenu|default|current
+themer --list|-l themes|thememenu|vars|varmenu|default|current
+themer [--force|-f] --init|-i <directory>
 themer [--force|-f] --apply-single|-a <directory>
 themer --apply-all|-A
 themer --updatelist|-u
@@ -149,12 +150,14 @@ Create theme `<name>`.
 
 `--list|-l themes|vars|varmenu|default|current`
 
-+ `themes`  = list themes in `$THEMER_DIR`
-+ `default` = list default variables
-+ `current` = list variables specific to current theme name
-+ `vars`    = list all variables in the correct syntax
-+ `varmenu` = rofi list of all variables. Selected item
-is automatically copied to the clipboard
+|     | Description |
+|:--- |:--- |
+| `themes`    | list themes in `$THEMER_DIR` |
+| `default`   | list default variables (from `$THEMER_DIR/_def`) |
+| `current`   | list variables specific to current theme name (from `$THEMER_DIR/_current`) |
+| `vars`      | list all variables in the correct syntax (from `$THEMER_DIR/.allvars`) |
+| `varmenu`   | rofi list of all variables. Selected item is automatically copied to the clipboard |
+| `thememenu` | rofi list of all themes. Selected theme is output |
 
 `--updatelist|-u`  
 Update the rofi theme list
@@ -388,8 +391,12 @@ to apply the theme to each template in `$HOME/.themer`.
 themer --apply-all
 ```
 
-to apply theme to all directories listed in
-`$THEMER_DIR/.dirs`
+to apply the current theme to all directories in
+`$THEMER_DIR/_dirs`. Running `themer --init <directory>`
+automatically adds `<directory>` to this file, and if
+the `--force` flag is added, 'FORCE `<directory>`' is
+added to `$THEMER_DIR/_dirs`, to force-apply of the
+current theme to a specific `<directory>`.
 
 ## The result
 
@@ -516,7 +523,6 @@ variations () {
 			mixer("ac63b",acc,bg0,37,63)
 			mixer("ac75b",acc,bg0,25,75)
 			mixer("ac88b",acc,bg0,12,88)
-
 		}' >> $ALL
 }
 
@@ -589,14 +595,13 @@ create-rgb () {
 }
 
 gui-change () {
-	THM=$(cat $LST | rofi -dmenu -p "Choose theme " \
-		-markup-rows -lines $(cat $LST | wc -l) -width 300)
-	THM=${THM% *}
-	THM=${THM##* }
+	THM=$(themer --list thememenu)
+#	THM=${THM% *}
+#	THM=${THM##* }
 	notify-send "Chosen theme is $THM" -i "${SCR_DIR}pic/theme.png"
 	cd ${TDR}
-	[[ -z ${THM} ]]            && notify-send "No theme chosen"   && exit
-	[[ ! -f ${TDR}/${THM} ]]   && notify-send "Theme don't exist" && exit
+	[[ -z ${THM} ]]            && notify-send "No theme chosen"   && exit 1
+	[[ ! -f ${TDR}/${THM} ]]   && notify-send "Theme don't exist" && exit 1
 	notify-send "Theme exists" && cat ${THM} > ${CUR}
 }
 
@@ -658,9 +663,14 @@ O_apply-single () {
 }
 
 O_apply-all () {
-	[[ -n $FORCE ]] && echo forcing theme \
-		&& eval "$(awk '!/#/{print "themer --force -a " $0}' $DIRS)" \
-		|| eval "$(awk '!/#/{print "themer -a " $0}' $DIRS)"
+	eval "$(awk '!/#/{
+		if($1=="FORCE"){
+			gsub(/^FORCE/, "", $0);
+			print "themer --force -a " $0
+		}else{
+			print "themer -a " $0
+		}
+		}' $DIRS)"
 	exit
 }
 
@@ -719,6 +729,11 @@ O_list () {
 				xsel -i; xsel -o | xsel -i -b 
 			;;
 		themes)  ls ${TDR} | grep -v '^_';;
+		thememenu)
+			cat $LST | rofi -dmenu -p "Choose theme" \
+					-markup-rows -lines $(cat $LST | wc -l) -width 250 | \
+					awk '{print $6}'
+			;;
 	esac
 }
 
@@ -749,7 +764,8 @@ done
 EOB
 chmod +x "${DIR}/.themer_pre"
 chmod +x "${DIR}/.themer_post"
-echo "${DIR}" >> ${DIRS}
+[[ -n $FORCE ]] && _DIR="FORCE ${DIR}" || _DIR="${DIR}"
+echo "${_DIR}" >> ${DIRS}
 }
 
 while true; do

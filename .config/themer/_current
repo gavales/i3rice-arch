@@ -1,8 +1,7 @@
 ! vim:ft=perl
-name            grayscale
-wallpaper       rollingeyes
-!wallpaper       WW_128000000000408974_EN
-fg0             #444444
-acc             #7f7f7f
+name            dosnerd
+wallpaper       random
+bg0             #DFBF9F
+acc             #d5715e
+fg0             #1F1F1F
 blu             $acc
-bg0             #ececec

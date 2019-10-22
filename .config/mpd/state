@@ -2,8 +2,8 @@ sw_volume: 60
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
 state: pause
-current: 4
-time: 128.526000
+current: 3
+time: 31.372000
 random: 1
 repeat: 1
 single: 0
@@ -15,7 +15,5 @@ playlist_begin
 0:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 03 Leslie Nayoko - Who is this Akira.mp3
 1:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 04 neon shudder - I Am Tetsuo.mp3
 2:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 05 Fixions - The Espers.mp3
-3:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 06 Gregorio Franco - Seigyo No Sakkaku.mp3
-4:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 11 Roex - Floyd.mp3
-5:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 14 Aerds - Flycruisor.mp3
+3:Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 14 Aerds - Flycruisor.mp3
 playlist_end

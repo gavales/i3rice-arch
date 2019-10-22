@@ -14,7 +14,8 @@ themer [--dark|-D]
        --change|-c \fI<name>\fP
 themer --new|-n \fI<name>\fP
 themer --getvar|-v \fI<variable>\fP
-themer --list|-l themes|vars|varmenu|default|current
+themer --list|-l themes|thememenu|vars|varmenu|default|current
+themer [--force|-f] --init|-i \fI<directory>\fP
 themer [--force|-f] --apply-single|-a \fI<directory>\fP
 themer --apply-all|-A
 themer --updatelist|-u
@@ -84,17 +85,50 @@ Get \f[B]\fI<variable>\fP\f[R] from current theme.
 Create theme \f[B]\fI<name>\fP\f[R].
 .PP
 \f[B]--list|-l themes|vars|varmenu|default|current\f[R]
-.IP \[bu] 2
-\f[B]themes\f[R] = list themes in \f[B]$THEMER_DIR\f[R]
-.IP \[bu] 2
-\f[B]default\f[R] = list default variables
-.IP \[bu] 2
-\f[B]current\f[R] = list variables specific to current theme name
-.IP \[bu] 2
-\f[B]vars\f[R] = list all variables in the correct syntax
-.IP \[bu] 2
-\f[B]varmenu\f[R] = rofi list of all variables.
+.PP
+.TS
+tab(@);
+lw(35.0n) lw(35.0n).
+T{
+T}@T{
+Description
+T}
+_
+T{
+\f[B]themes\f[R]
+T}@T{
+list themes in \f[B]$THEMER_DIR\f[R]
+T}
+T{
+\f[B]default\f[R]
+T}@T{
+list default variables (from \f[B]$THEMER_DIR/_def\f[R])
+T}
+T{
+\f[B]current\f[R]
+T}@T{
+list variables specific to current theme name (from
+\f[B]$THEMER_DIR/_current\f[R])
+T}
+T{
+\f[B]vars\f[R]
+T}@T{
+list all variables in the correct syntax (from
+\f[B]$THEMER_DIR/.allvars\f[R])
+T}
+T{
+\f[B]varmenu\f[R]
+T}@T{
+rofi list of all variables.
 Selected item is automatically copied to the clipboard
+T}
+T{
+\f[B]thememenu\f[R]
+T}@T{
+rofi list of all themes.
+Selected theme is output
+T}
+.TE
 .PP
 \f[B]--updatelist|-u\f[R]
 .PD 0
@@ -350,7 +384,13 @@ themer --apply-all
 \f[R]
 .fi
 .PP
-to apply theme to all directories listed in \f[B]$THEMER_DIR/.dirs\f[R]
+to apply the current theme to all directories in
+\f[B]$THEMER_DIR/_dirs\f[R].
+Running \f[B]themer --init \fI<directory>\fP\f[R] automatically adds
+\f[B]\fI<directory>\fP\f[R] to this file, and if the \f[B]--force\f[R] flag is
+added, `FORCE \f[B]\fI<directory>\fP\f[R]' is added to
+\f[B]$THEMER_DIR/_dirs\f[R], to force-apply of the current theme to a
+specific \f[B]\fI<directory>\fP\f[R].
 .SS The result
 .PP
 Both of the above options will result in the following directory

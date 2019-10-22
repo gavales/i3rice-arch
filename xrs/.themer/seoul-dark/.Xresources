@@ -1,77 +1,109 @@
 !! vim:ft=xdefaults
-! >>>> default theme: i3      ├
+! >> themer theme: seoul-dark
 
-#define cwhtl #302f30
-#define cwhtd #7a90a2
-#define credd #900000
-#define credl #601718
-#define cgrnd #009048
-#define cgrnl #185f3c
-#define cylwd #904800
-#define cylwl #603b18
-#define cblud #285577
-#define cblul #2c4253
-#define cgntd #900048
-#define cgntl #60173c
-#define ccynd #009090
-#define ccynl #185f60
-#define cblkd #CDCBCD
-#define cblkl #b9b7b9
+#define tfg0 #dadada
+#define tacb #1d6060
+#define tred #870100
+#define redl #870100
+#define tgrn #005f00
+#define grnl #005f00
+#define tylw #d8865f
+#define ylwl #d8865f
+#define tblu #008787
+#define blul #008787
+#define tgnt #87025f
+#define gntl #87025f
+#define tcyn #0087af
+#define cynl #0087af
+#define tbg0 #3a3a3a
+#define tbg1 #4e4e4e
 
-! >>>> themer theme: seoul-dark ├
+! >> default theme: i3
 
-#define cwhtl #dadada
-#define cwhtd #1d6060
-#define credd #870100
-#define credl #870100
-#define cgrnd #005f00
-#define cgrnl #005f00
-#define cylwd #d8865f
-#define cylwl #d8865f
-#define cblud #008787
-#define cblul #008787
-#define cgntd #87025f
-#define cgntl #87025f
-#define ccynd #0087af
-#define ccynl #0087af
-#define cblkd #3a3a3a
-#define cblkl #4e4e4e
+#ifndef tfg0
+	#define tfg0 #302f30
+#endif
+#ifndef tacb
+	#define tacb #7a90a2
+#endif
+#ifndef tred
+	#define tred #900000
+#endif
+#ifndef redl
+	#define redl #601718
+ #endif
+#ifndef tgrn
+	#define tgrn #009048
+#endif
+#ifndef grnl
+	#define grnl #185f3c
+#endif
+#ifndef tylw
+	#define tylw #904800
+#endif
+#ifndef ylwl
+	#define ylwl #603b18
+#endif
+#ifndef tblu
+	#define tblu #285577
+#endif
+#ifndef blul
+	#define blul #2c4253
+#endif
+#ifndef tgnt
+	#define tgnt #900048
+#endif
+#ifndef gntl
+	#define gntl #60173c
+#endif
+#ifndef tcyn
+	#define tcyn #009090
+#endif
+#ifndef cynl
+	#define cynl #185f60
+#endif
+#ifndef tbg0
+	#define tbg0 #CDCBCD
+#endif
+#ifndef tbg1
+	#define tbg1 #b9b7b9
+#endif
 
-! >>>> 1vars                  ├
+! >> 1vars
 
-#define fontname  CMUTypewriterText
+#define fontname  monaco
 #define fontsize  12
 #define fontsize2 12
 
-! >>>> 2colorvars             ├
+! >> 2colorvars
 
-*background:             cblkd
-*foreground:             cwhtl
+*background:             tbg0
+*foreground:             tfg0
 *fading:                 30
 *fadeColor:              black
-*cursorColor:            credd
-*pointerColorBackground: cblkd
-*pointerColorForeground: ccynd
-*border:                 cblkd
+*cursorColor:            tred
+*pointerColorBackground: tbg0
+*pointerColorForeground: tcyn
+*border:                 tbg0
 
-*color0:                 cblkd
-*color1:                 credd
-*color2:                 cgrnd
-*color3:                 cylwd
-*color4:                 cblud
-*color5:                 cgntd
-*color6:                 ccynd
-*color7:                 cwhtd
-*color8:                 cblkl
-*color9:                 credl
-*color10:                cgrnl
-*color11:                cylwl
-*color12:                cblul
-*color13:                cgntl
-*color14:                ccynl
-*color15:                cwhtl
+*color0:                 tbg0
+*color1:                 tred
+*color2:                 tgrn
+*color3:                 tylw
+*color4:                 tblu
+*color5:                 tgnt
+*color6:                 tcyn
+*color7:                 tacb
+*color8:                 tbg1
+*color9:                 redl
+*color10:                grnl
+*color11:                ylwl
+*color12:                blul
+*color13:                gntl
+*color14:                cynl
+*color15:                tfg0
 
-! >>>> 3rofi                  ├
+! >> 3rofi
 
 !rofi.width:           400
 !rofi.lines:           15
@@ -91,24 +123,24 @@ rofi.ssh-command:      {terminal} -e "{ssh-client} {host}"
 rofi.opacity:          50
 !rofi.columns:         1
 rofi.font:             fontname fontsize2
-rofi.fg:               cblud
-rofi.bg:               cwhtl
-rofi.fg-active:        cwhtl
-rofi.fg-urgent:        cwhtl
-rofi.hlfg-active:      ccynd
-rofi.hlfg-urgent:      ccynd
-rofi.bg-active:        cwhtl
-rofi.bg-urgent:        cwhtl
-rofi.hlbg-active:      cwhtd
-rofi.hlbg-urgent:      cwhtd
-rofi.bgalt:            cwhtl
-rofi.hlfg:             cwhtl
-rofi.hlbg:             cwhtl
-rofi.bc:               ccynd
+rofi.fg:               tblu
+rofi.bg:               tfg0
+rofi.fg-active:        tfg0
+rofi.fg-urgent:        tfg0
+rofi.hlfg-active:      tcyn
+rofi.hlfg-urgent:      tcyn
+rofi.bg-active:        tfg0
+rofi.bg-urgent:        tfg0
+rofi.hlbg-active:      tacb
+rofi.hlbg-urgent:      tacb
+rofi.bgalt:            tfg0
+rofi.hlfg:             tfg0
+rofi.hlbg:             tfg0
+rofi.bc:               tcyn
 !State:                bg      fg      bgalt     hlbg    hlfg
-rofi.color-normal:     cwhtl,  cblkd,  cwhtl,    cblud,  cblkd
+rofi.color-normal:     tfg0,  tbg0,  tfg0,    tblu,  tbg0
 !                      background  border
-rofi.color-window:     cwhtl,      cwhtl
+rofi.color-window:     tfg0,      tfg0
 !rofi.bw:              10
 rofi.levenshtein-sort: true
 rofi.case-sensitive:   false
@@ -116,7 +148,7 @@ rofi.fuzzy:            false
 rofi.separator-style:  none
 rofi.markup-rows:      false
 
-! >>>> 4xft                   ├
+! >> 4xft
 
 Xft.dpi:       96
 Xft.antialias: true
@@ -126,22 +158,22 @@ Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-! >>>> 5xterm                 ├
+! >> 5xterm
 
-XTerm*foreground:        cwhtl
-XTerm*background:        cblkl
-! XTerm*pointerColor:    ccynd
+XTerm*foreground:        tfg0
+XTerm*background:        tbg1
+! XTerm*pointerColor:    tcyn
 XTerm*faceName:          fontname
 XTerm*faceSize:          16
 ! XTerm*reverseVideo:    on
 XTerm*selectToClipboard: true
 
-! >>>> 6xcursor               ├
+! >> 6xcursor
 
 Xcursor.theme: Bibata_Dark_Red
 Xcursor.size:  36
 
-! >>>> 7urxvt                 ├
+! >> 7urxvt
 
 URxvt.font:                 xft:fontname:size=fontsize, xft:FontAwesome:size=9
 
@@ -149,13 +181,13 @@ URxvt*fading:               0
 URxvt*depth:                0
 URxvt*scrollBar:            false
 !URxvt*scrollBar_right:     true
-!URxvt*scrollColor:         cblkl
-!URxvt*troughColor:         cblkd
+!URxvt*scrollColor:         tbg1
+!URxvt*troughColor:         tbg0
 !URxvt*scrollstyle:         plain
 URxvt*mouseWheelScrollPage: false
 URxvt*cursorBlink:          true
-URxvt*background:           cblkd
-URxvt*foreground:           cwhtl
+URxvt*background:           tbg0
+URxvt*foreground:           tfg0
 URxvt*saveLines:            5000
 URxvt*useColor:             true
 URxvt*internalBorder:       0
@@ -167,7 +199,7 @@ URxvt*lineSpace:            3
 !URxvt*transparent:         true
 !URxvt*shading:             138
 
-! >>>> 8urxvtext              ├
+! >> 8urxvtext
 
 URxvt*perl-ext-common:      default,matcher,resize-font,config-reload
 !URxvt*perl-lib:            /home/gavarch/.urxvt/ext
