@@ -31,6 +31,7 @@ exit
 
 FNT=$(themer -v  'romanfont ')
 SVR=edtr
+INS=edtr
 
 while true; do
 	case $1 in
@@ -66,10 +67,10 @@ case $EXT in
 	tex)         EXF=tex     ;;
 esac
 
-[[ -n $TPF ]] && SVR="edtr-$TPF"
-[[ -n $EXF ]] && SVR="edtr-$EXF"
-[[ -n $SVO ]] && SVR="$SVO"
+[[ -n $TPF ]] && SVR="edtr-$TPF" INS="$TPF - edtr"
+[[ -n $EXF ]] && SVR="edtr-$EXF" INS="$EXF - edtr"
+[[ -n $SVO ]] && SVR="$SVO"      INS="$SVO"
 
-urxvtc -name "${SVR}" -fn "xft:${FNT}:size=13" \
+urxvtc -name "${INS}" -fn "xft:${FNT}:size=13" \
 	-e vim --servername "${SVR}" --remote-tab \
 	"${TRG}" &>/dev/null &

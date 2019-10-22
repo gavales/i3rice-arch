@@ -56,12 +56,12 @@ set $THN thunar
 
 # ━  DECORATIONS
 # class                 brdr    bkgr    text    indi    chlb
-client.focused          #b5b5b5 #b5b5b5 #444444 #b5b5b5 #7f7f7f
-client.focused_inactive #7f7f7f #7f7f7f #444444 #7f7f7f #7f7f7f
-client.unfocused        #7f7f7f #7f7f7f #ececec #7f7f7f #7f7f7f
-client.urgent           #cc241d #cc241d #444444 #cc241d #cc241d
-client.placeholder      #ececec #ececec #444444 #ececec #ececec
-client.background       #ececec
+client.focused          #616161 #616161 #ececec #616161 #7f7f7f
+client.focused_inactive #7f7f7f #7f7f7f #ececec #7f7f7f #7f7f7f
+client.unfocused        #7f7f7f #7f7f7f #444444 #7f7f7f #7f7f7f
+client.urgent           #cc241d #cc241d #ececec #cc241d #cc241d
+client.placeholder      #444444 #444444 #ececec #444444 #444444
+client.background       #444444
 
 # ━  MOD1 BINDINGS
 # ━━ Misc
@@ -307,8 +307,8 @@ $fw [instance="references"]              focus;$QUD -m 2;focus;$tf "biblbiograph
 $fw [instance="bashmount"]               focus;$QUD -m 2;focus;$tf "bashmount"
 $fw [instance="gitcommit"]               focus;$QUD -m 2;focus;$tf "git-sync"
 $fw [instance="reddit"]                  focus;$QUD -m 2;focus;$tf "reddit"
-$fw [instance="^edtr-yaml$"]             focus;$QUD -m 2;focus;$tf "edtr-yaml"
-$fw [instance="^edtr-bib$"]              focus;$QUD -m 2;focus;$tf "edtr-bib"
+$fw [instance="^yaml - edtr$"]           focus;$QUD -m 2;focus;$tf "yaml - edtr"
+$fw [instance="^bib - edtr$"]            focus;$QUD -m 2;focus;$tf "bib - edtr"
 
 $fw [class="Emacs"]                      focus;$QUD -m 3;focus
 $fw [class="firefox"]                    focus;$QUD -m 3;focus
@@ -318,17 +318,17 @@ $fw [class="Pamac-manager"]              focus;$QUD -m 3;focus;$tf "software"
 $fw [class="Slack"]                      focus;$QUD -m 3;focus;$tf "slack"
 $fw [title="Google Chrome$"]             focus;$QUD -m 3;focus;$tf "chrome"
 $fw [instance="^edtr$"]                  focus;$QUD -m 3;focus;$tf "edtr"
-$fw [instance="^edtr-bash$"]             focus;$QUD -m 3;focus;$tf "edtr-bash"
-$fw [instance="^edtr-configs$"]          focus;$QUD -m 3;focus;$tf "edtr-configs"
-$fw [instance="^edtr-css$"]              focus;$QUD -m 3;focus;$tf "edtr-css"
-$fw [instance="^edtr-groff$"]            focus;$QUD -m 3;focus;$tf "edtr-groff"
-$fw [instance="^edtr-html$"]             focus;$QUD -m 3;focus;$tf "edtr-html"
-$fw [instance="^edtr-py$"]               focus;$QUD -m 3;focus;$tf "edtr-py"
-$fw [instance="^edtr-md$"]               focus;$QUD -m 3;focus;$tf "edtr-md"
-$fw [instance="^edtr-sh$"]               focus;$QUD -m 3;focus;$tf "edtr-sh"
-$fw [instance="^edtr-tex$"]              focus;$QUD -m 3;focus;$tf "edtr-tex"
-$fw [instance="^edtr-vim$"]              focus;$QUD -m 3;focus;$tf "edtr-vim"
-$fw [instance="^edtr-Xfiles$"]           focus;$QUD -m 3;focus;$tf "edtr-Xfiles"
+$fw [instance="^bash - edtr$"]           focus;$QUD -m 3;focus;$tf "bash - edtr"
+$fw [instance="^configs - edtr$"]        focus;$QUD -m 3;focus;$tf "configs - edtr"
+$fw [instance="^css - edtr$"]            focus;$QUD -m 3;focus;$tf "css - edtr"
+$fw [instance="^groff - edtr$"]          focus;$QUD -m 3;focus;$tf "groff - edtr"
+$fw [instance="^html - edtr$"]           focus;$QUD -m 3;focus;$tf "html - edtr"
+$fw [instance="^py - edtr$"]             focus;$QUD -m 3;focus;$tf "py - edtr"
+$fw [instance="^md - edtr$"]             focus;$QUD -m 3;focus;$tf "md - edtr"
+$fw [instance="^sh - edtr$"]             focus;$QUD -m 3;focus;$tf "sh - edtr"
+$fw [instance="^tex - edtr$"]            focus;$QUD -m 3;focus;$tf "tex - edtr"
+$fw [instance="^vim - edtr$"]            focus;$QUD -m 3;focus;$tf "vim - edtr"
+$fw [instance="^Xfiles - edtr$"]         focus;$QUD -m 3;focus;$tf "Xfiles - edtr"
 $fw [instance="^doots$"]                 focus;$QUD -m 3;focus;$tf "doots"
 
 $fw [instance="noterm"]                  focus;$QUD -m 4;focus;$tf "noterm"

@@ -59,7 +59,7 @@ i3lock \
 	--bar-max-height=150 \
 	--bar-orientation=horizontal \
 	--indpos="$X:$Y" \
-	--image=${IMG/\/blur\//\/normal\/} \
+	--image=${IMG/\/normal\//\/blur\/} \
 	--insidevercolor=$V \
 	--ringvercolor=$V \
 	\
