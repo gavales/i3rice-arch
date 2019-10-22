@@ -27,7 +27,7 @@ radius              = 0.0
 fixed-center        = false
 enable-ipc          = true
 background          = ${colors.tr}
-foreground          = #444444
+foreground          = #ececec
 line-size           = 0
 border-size         = 0
 line-color          = #7f7f7f
@@ -61,7 +61,7 @@ radius              = 0.0
 fixed-center        = false
 enable-ipc          = true
 background          = ${colors.tr}
-foreground          = #444444
+foreground          = #ececec
 line-size           = 0
 border-size         = 10
 line-color          = #7f7f7f
@@ -93,7 +93,7 @@ content = %{T1}  %{T-}
 click-left = i3menu -l 1 -y 27 -s -c blue
 click-right = i3shutdown
 content-background = #7f7f7f
-content-foreground = #ececec
+content-foreground = #444444
 content-padding = 0
 
 [module/startfvwm]
@@ -102,14 +102,14 @@ content = %{T1}  %{T-}
 click-left = i3menu -s -y 50 -x 10 -c blue -l 1
 click-right = menunicode
 content-background = #7f7f7f
-content-foreground = #ececec
+content-foreground = #444444
 content-padding = 1
 
 [module/td]
 type = custom/script
 exec = bash ~/scr/pb/td
 format-background = #7f7f7f
-format-foreground = #ececec
+format-foreground = #444444
 format-padding = 1
 interval = 1
 
@@ -117,7 +117,7 @@ interval = 1
 type = custom/script
 exec = bash ~/scr/pb/td
 format-background = #7f7f7f
-format-foreground = #444444
+format-foreground = #ececec
 format-padding = 1
 interval = 1
 
@@ -128,8 +128,8 @@ initial = 1
 click-left  = i3-msg workspace back_and_forth
 scroll-up   = i3-msg workspace prev
 scroll-down = i3-msg workspace next
-format-background = #8c8c8c
-format-foreground = #444444
+format-background = #777777
+format-foreground = #ececec
 format-padding = 1
 
 
@@ -138,15 +138,15 @@ type = internal/xkeyboard
 blacklist-0 = num lock
 format-prefix = %{T1}  %{T-}
 label-layout = %layout%
-format-background = #9a9a9a
-format-foreground = #444444
-format-prefix-foreground = #444444
+format-background = #707070
+format-foreground = #ececec
+format-prefix-foreground = #ececec
 label-indicator-background = #900048
 format-padding = 0
 label-indicator-padding = 0
 label-indicator-margin = 1
-format-prefix-underline    = #9a9a9a
-label-layout-underline     = #9a9a9a
+format-prefix-underline    = #707070
+label-layout-underline     = #707070
 label-indicator-underline  = #900048
 
 [module/i3bg]
@@ -156,8 +156,8 @@ format = %{T1} %{T-}<output>
 initial = 1
 click-left  = i3bgc show
 click-right = i3bgc blur
-format-background = #a7a7a7
-format-foreground = #444444
+format-background = #696969
+format-foreground = #ececec
 format-padding = 0
 
 [module/shot]
@@ -165,7 +165,7 @@ type = custom/text
 content = %{T1}%{T-}
 click-left = screenshot
 content-background = #7f7f7f
-content-foreground = #444444
+content-foreground = #ececec
 content-padding = 1
 interval = 1
 
@@ -174,20 +174,20 @@ type = custom/ipc
 hook-0 = ~/scr/pb/wintitle
 initial = 1
 click-left = polybar-msg cmd hide
-format-background = #444444
-format-foreground = #ececec
+format-background = #ececec
+format-foreground = #444444
 format-padding = 1
 
 [module/arrow1]
 type = custom/text
 content = %{T4}  %{T-}
-content-foreground = #a7a7a7
+content-foreground = #696969
 content-background = ${colors.tr}
 
 [module/arrow2]
 type = custom/text
 content = %{T4} %{T-}
-content-foreground = #c3c3c3
+content-foreground = #595959
 content-background = ${colors.tr}
  
 [module/i3media]
@@ -195,27 +195,27 @@ type = custom/ipc
 hook-0 = pbcat -m i3media
 initial = 1
 click-left = i3media
-format-background = #c3c3c3
-format-foreground = #444444
+format-background = #595959
+format-foreground = #ececec
 format-padding = 1
 
 [module/arrow3]
 type = custom/text
 content = %{T4}  %{T-}
-content-foreground = #c3c3c3
+content-foreground = #595959
 content-background = ${colors.tr}
  
 [module/arrow4]
 type = custom/text
 content = %{T4} %{T-}
-content-foreground = #b5b5b5
+content-foreground = #616161
 content-background = ${colors.tr}
  
 [module/disk]
 type = custom/script
 exec = bash ~/scr/pb/disk
-format-background = #b5b5b5
-format-foreground = #444444
+format-background = #616161
+format-foreground = #ececec
 format-padding = 1
 interval = 60
 
@@ -223,10 +223,10 @@ interval = 60
 type = internal/memory
 interval = 2
 format-prefix = "%{T1} %{T-}"
-format-prefix-foreground = #444444
-format-background = #a7a7a7
-format-foreground = #444444
-format-underline = #444444
+format-prefix-foreground = #ececec
+format-background = #696969
+format-foreground = #ececec
+format-underline = #ececec
 format-padding = 1
 label = %percentage_used%
 
@@ -235,15 +235,15 @@ type = internal/cpu
 label = %{T1} %{T-}%percentage%
 format = <label>
 interval = 2
-format-background = #9a9a9a
-format-foreground = #444444
+format-background = #707070
+format-foreground = #ececec
 format-padding = 1
 
 [module/temperature]
 type = custom/script
 exec = bash ~/scr/pb/temp
-format-background = #8c8c8c
-format-foreground = #444444
+format-background = #777777
+format-foreground = #ececec
 format-padding = 1
 interval = 10
 
@@ -253,7 +253,7 @@ hook-0 = pbcat -m i3light
 initial = 1
 click-left  = i3light
 format-background = #7f7f7f
-format-foreground = #ececec
+format-foreground = #444444
 format-padding = 1
 
 [module/i3vol]
@@ -262,7 +262,7 @@ hook-0 = pbcat -m i3vol
 initial = 1
 click-left  = i3vol mute
 format-background = #7f7f7f
-format-foreground = #ececec
+format-foreground = #444444
 format-padding = 0
 
 [module/battery]
@@ -275,26 +275,26 @@ label-charging-padding = 1
 label-discharging-padding = 1
 format-full-padding = 1
 format-full-prefix-padding = 1
-format-full-foreground = #ececec
+format-full-foreground = #444444
 format-full-background = #7f7f7f
-format-full-prefix-foreground = #ececec
+format-full-prefix-foreground = #444444
 format-full-prefix-background = #7f7f7f
-label-charging-foreground = #ececec
+label-charging-foreground = #444444
 label-charging-background = #7f7f7f
-label-discharging-foreground = #ececec
+label-discharging-foreground = #444444
 label-discharging-background = #7f7f7f
 format-discharging-padding = 0
 format-discharging-prefix-padding = 1
-format-discharging-foreground = #ececec
+format-discharging-foreground = #444444
 format-discharging-background = #7f7f7f
-format-discharging-prefix-foreground = #ececec
+format-discharging-prefix-foreground = #444444
 format-discharging-prefix-background = #7f7f7f
-format-charging-padding-foreground = #ececec
+format-charging-padding-foreground = #444444
 format-charging-padding-background = #7f7f7f
-format-discharging-padding-foreground = #ececec
+format-discharging-padding-foreground = #444444
 format-discharging-padding-background = #7f7f7f
 format-charging = <animation-charging><label-charging>
-format-charging-underline = #ececec
+format-charging-underline = #444444
 format-discharging = <ramp-capacity><label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 format-full-prefix = "%{T1}%{T-}"
@@ -304,14 +304,14 @@ ramp-capacity-1 = %{T1}%{T-}
 ramp-capacity-2 = %{T1}%{T-}
 ramp-capacity-3 = %{T1}%{T-}
 ramp-capacity-4 = %{T1}%{T-}
-ramp-capacity-foreground = #ececec
+ramp-capacity-foreground = #444444
 ramp-capacity-background = #7f7f7f
 animation-charging-0 = %{T1}%{T-}
 animation-charging-1 = %{T1}%{T-}
 animation-charging-2 = %{T1}%{T-}
 animation-charging-3 = %{T1}%{T-}
 animation-charging-4 = %{T1}%{T-}
-animation-charging-foreground = #ececec
+animation-charging-foreground = #444444
 animation-charging-background = #7f7f7f
 animation-charging-framerate = 500
 

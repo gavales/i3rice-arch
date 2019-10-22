@@ -15,97 +15,97 @@
 c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #7f7f7f, stop:1 #7f7f7f)'
 c.colors.completion.category.border.bottom      = '#7f7f7f'
 c.colors.completion.category.border.top         = '#7f7f7f'
-c.colors.completion.category.fg                 = '#444444'
-c.colors.completion.even.bg                     = '#585858'
-c.colors.completion.odd.bg                      = '#585858'
-c.colors.completion.fg                          = ['#7f7f7f', '#ececec', '#808080']
+c.colors.completion.category.fg                 = '#ececec'
+c.colors.completion.even.bg                     = '#d8d8d8'
+c.colors.completion.odd.bg                      = '#d8d8d8'
+c.colors.completion.fg                          = ['#7f7f7f', '#444444', '#b0b0b0']
 c.colors.completion.item.selected.bg            = '#7f7f7f'
-c.colors.completion.item.selected.fg            = '#585858'
+c.colors.completion.item.selected.fg            = '#d8d8d8'
 c.colors.completion.item.selected.border.bottom = '#009048'
 c.colors.completion.item.selected.border.top    = '#009048'
 c.colors.completion.match.fg                    = '#7f7f7f'
-c.colors.completion.scrollbar.bg                = '#585858'
-c.colors.completion.scrollbar.fg                = '#ececec'
+c.colors.completion.scrollbar.bg                = '#d8d8d8'
+c.colors.completion.scrollbar.fg                = '#444444'
 
 # ━━ downloads
-c.colors.downloads.bar.bg    = '#585858'
+c.colors.downloads.bar.bg    = '#d8d8d8'
 c.colors.downloads.error.bg  = '#cc241d'
-c.colors.downloads.error.fg  = '#ececec'
+c.colors.downloads.error.fg  = '#444444'
 c.colors.downloads.start.bg  = '#7f7f7f'
-c.colors.downloads.start.fg  = '#ececec'
+c.colors.downloads.start.fg  = '#444444'
 c.colors.downloads.stop.bg   = '#009048'
-c.colors.downloads.stop.fg   = '#ececec'
+c.colors.downloads.stop.fg   = '#444444'
 c.colors.downloads.system.bg = 'rgb' # rgb, hsv, hsl, none
 c.colors.downloads.system.fg = 'rgb' # rgb, hsv, hsl, none
 
 # ━━ hints
 c.colors.hints.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(144, 72, 0, 0.8), stop:1 rgba(144, 72, 0, 0.8))'
-c.colors.hints.fg          = '#ececec'
+c.colors.hints.fg          = '#444444'
 c.colors.hints.match.fg    = '#009048'
 c.colors.keyhint.bg        = 'rgba(144, 72, 0, 80%)'
-c.colors.keyhint.fg        = '#ececec'
-c.colors.keyhint.suffix.fg = '#585858'
+c.colors.keyhint.fg        = '#444444'
+c.colors.keyhint.suffix.fg = '#d8d8d8'
 
 # ━━ errors
 c.colors.messages.error.bg     = '#cc241d'
 c.colors.messages.error.border = '#cc241d'
-c.colors.messages.error.fg     = '#ececec'
+c.colors.messages.error.fg     = '#444444'
 
 # ━━ info
-c.colors.messages.info.bg     = '#ececec'
-c.colors.messages.info.border = '#ececec'
-c.colors.messages.info.fg     = '#585858'
+c.colors.messages.info.bg     = '#444444'
+c.colors.messages.info.border = '#444444'
+c.colors.messages.info.fg     = '#d8d8d8'
 
 # ━━ warning
 c.colors.messages.warning.bg     = '#904800'
 c.colors.messages.warning.border = '#904800'
-c.colors.messages.warning.fg     = '#585858'
+c.colors.messages.warning.fg     = '#d8d8d8'
 
 # ━━ prompts
-c.colors.prompts.bg          = '#585858'
-c.colors.prompts.border      = '1px solid #585858'
-c.colors.prompts.fg          = '#ececec'
+c.colors.prompts.bg          = '#d8d8d8'
+c.colors.prompts.border      = '1px solid #d8d8d8'
+c.colors.prompts.fg          = '#444444'
 c.colors.prompts.selected.bg = '#7f7f7f'
 
 # ━━ statusbar
 c.colors.statusbar.caret.fg             = '#900048'
-c.colors.statusbar.caret.bg             = '#585858'
+c.colors.statusbar.caret.bg             = '#d8d8d8'
 c.colors.statusbar.caret.selection.fg   = '#900048'
-c.colors.statusbar.caret.selection.bg   = '#585858'
-c.colors.statusbar.command.fg           = '#ececec'
-c.colors.statusbar.command.bg           = '#585858'
-c.colors.statusbar.command.private.bg   = '#808080'
-c.colors.statusbar.command.private.fg   = '#ececec'
+c.colors.statusbar.caret.selection.bg   = '#d8d8d8'
+c.colors.statusbar.command.fg           = '#444444'
+c.colors.statusbar.command.bg           = '#d8d8d8'
+c.colors.statusbar.command.private.bg   = '#b0b0b0'
+c.colors.statusbar.command.private.fg   = '#444444'
 c.colors.statusbar.insert.fg            = '#009048'
-c.colors.statusbar.insert.bg            = '#585858'
+c.colors.statusbar.insert.bg            = '#d8d8d8'
 c.colors.statusbar.normal.fg            = '#7f7f7f'
-c.colors.statusbar.normal.bg            = '#585858'
-c.colors.statusbar.passthrough.bg       = '#585858'
-c.colors.statusbar.passthrough.fg       = '#ececec'
-c.colors.statusbar.private.bg           = '#808080'
-c.colors.statusbar.private.fg           = '#ececec'
-c.colors.statusbar.progress.bg          = '#ececec'
+c.colors.statusbar.normal.bg            = '#d8d8d8'
+c.colors.statusbar.passthrough.bg       = '#d8d8d8'
+c.colors.statusbar.passthrough.fg       = '#444444'
+c.colors.statusbar.private.bg           = '#b0b0b0'
+c.colors.statusbar.private.fg           = '#444444'
+c.colors.statusbar.progress.bg          = '#444444'
 c.colors.statusbar.url.error.fg         = '#cc241d'
-c.colors.statusbar.url.fg               = '#ececec'
+c.colors.statusbar.url.fg               = '#444444'
 c.colors.statusbar.url.hover.fg         = '#7f7f7f'
-c.colors.statusbar.url.success.http.fg  = '#ececec'
-c.colors.statusbar.url.success.https.fg = '#ececec'
+c.colors.statusbar.url.success.http.fg  = '#444444'
+c.colors.statusbar.url.success.https.fg = '#444444'
 c.colors.statusbar.url.warn.fg          = '#904800'
 
 # ━━ tabs
-c.colors.tabs.bar.bg           = '#585858'
-c.colors.tabs.even.bg          = '#585858'
-c.colors.tabs.even.fg          = '#ececec'
-c.colors.tabs.odd.bg           = '#585858'
-c.colors.tabs.odd.fg           = '#ececec'
+c.colors.tabs.bar.bg           = '#d8d8d8'
+c.colors.tabs.even.bg          = '#d8d8d8'
+c.colors.tabs.even.fg          = '#444444'
+c.colors.tabs.odd.bg           = '#d8d8d8'
+c.colors.tabs.odd.fg           = '#444444'
 c.colors.tabs.indicator.error  = '#cc241d'
 c.colors.tabs.indicator.start  = '#7f7f7f'
 c.colors.tabs.indicator.stop   = '#009048'
 c.colors.tabs.indicator.system = 'rgb' # rgb, hsv, hsl, none
 c.colors.tabs.selected.even.bg = '#7f7f7f'
-c.colors.tabs.selected.even.fg = '#585858'
+c.colors.tabs.selected.even.fg = '#d8d8d8'
 c.colors.tabs.selected.odd.bg  = '#7f7f7f'
-c.colors.tabs.selected.odd.fg  = '#585858'
+c.colors.tabs.selected.odd.fg  = '#d8d8d8'
 
 # ━  SETTINGS
 # ━━ misc
@@ -124,7 +124,7 @@ c.bindings.key_mappings = {
 	'<Shift-Return>': '<Return>', '<Enter>':      '<Return>',
 	'<Shift-Enter>':  '<Return>', '<Ctrl-Enter>': '<Ctrl-Return>'
 	}
-c.colors.webpage.bg = '#585858'
+c.colors.webpage.bg = '#d8d8d8'
 #c.spellcheck.languages = ['en-GB']
 #		# af-ZA, bg-BG, ca-ES, cs-CZ, da-DK, de-DE, el-GR, en-AU, en-CA, en-GB,
 #		# en-US, es-ES, et-EE, fa-IR, fo-FO, fr-FR, he-IL, hi-IN, hr-HR, hu-HU,
