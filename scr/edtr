@@ -7,7 +7,7 @@ help () {
 cat << 'EOB'
 # NAME
 
-__edtr__ - vim server wrapper
+__edtr__ - vim server wrapper using `rxvt-unicode`
 
 # SYNOPSIS
 
@@ -19,12 +19,36 @@ edtr --help|-h
 # OPTIONS
 
 `--server|-s <name>`  
-'-`<name>`' is appended to the default `--servername`.
+`--servername` changed to `<name>`.
 Default `--servername` is 'edtr'.
 
 `--help|-h`  
 Print this help
 
+# MORE
+
+`edtr` will also decide the `--servername` based
+on filetype (from `file` output) and file extension:
+
+|  Filetype      |  servername  |  urxvt instance name  |
+| --------------:|:------------ |:--------------------- |
+| `Bourne-Again` | `bash-edtr`  | `bash - edtr`         |
+
+|  Extension    |  servername    |  urxvt instance name  |
+| -------------:|:--------------:|:--------------------- |
+| `Xres*|Xdef*` | `edtr-Xfiles`  | `Xfiles - edtr`       |
+| `*conf*`      | `edtr-configs` | `configs - edtr`      |
+| `*bash*`      | `edtr-bash`    | `bash - edtr`         |
+| `sh`          | `edtr-sh`      | `sh - edtr`           |
+| `*vim*`       | `edtr-vim`     | `vim - edtr`          |
+| `yaml`        | `edtr-yaml`    | `yaml - edtr`         |
+| `html`        | `edtr-html`    | `html - edtr`         |
+| `py`          | `edtr-py`      | `py - edtr`           |
+| `ms`          | `edtr-groff`   | `groff - edtr`        |
+| `css`         | `edtr-css`     | `css - edtr`          |
+| `md|rmd`      | `edtr-md`      | `md - edtr`           |
+| `bib`         | `edtr-bib`     | `bib - edtr`          |
+| `tex`         | `edtr-tex`     | `tex - edtr`          |
 EOB
 exit
 }
