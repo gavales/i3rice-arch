@@ -1,0 +1,98 @@
+#!/bin/sh
+#
+# focus
+
+usage() {
+    base=$(basename $0)
+
+    cat >&2 << EOF
+Usage:
+    $base -w | wid:   Focus given window id.
+    $base -n | next:  Focus the next window in stack.
+    $base -c | cycle: Focus the next window in stack on the same screen.
+    $base -p | prev:  Focus the previous window in stack.
+    $base -h | help:  Show this help.
+EOF
+
+    test $# -eq 0 || exit $1
+}
+
+window() {
+    wid="$1"
+    widCheck "$wid" && {
+        test "$wid" != "$PFW" && focus || exit 1
+    } || {
+        exit 1
+    }
+}
+
+next() {
+    wid="$(lsw | head -n 1)"
+    focus
+}
+
+prev() {
+    wid="$(lsw | tail -n 2 | head -n 1)"
+    focus
+}
+
+cycle() {
+    wid="$(lsw | grep "$(listcurrent)" | head -n 1)"
+    focus
+}
+
+focus() {
+    # map window if not visible
+    wattr m "$wid" || mapw -m "$wid"
+
+    # be as responsive as possible to user input
+    wtf "$wid"
+    chwso -r "$wid"
+
+    grep -qrw "$wid" "$fsdir" 2> /dev/null
+
+    case $? in
+        # no border when wid is found to be fullscreen
+        0)
+            chwb -s "$BW" -c "$INACTIVE" "$PFW"
+            chwb -s 0 "$wid"
+            ;;
+        1)
+            grep -qrw "$PFW" "$fsdir" && {
+                # set border when focusing from a fullscreen wid
+                chwb -s 0 "$PFW"
+                chwb -s "$BW" -c "$ACTIVE" "$wid"
+            } || {
+                # normal focusing
+                chwb -s "$BW" -c "$INACTIVE" "$PFW"
+                chwb -s "$BW" -c "$ACTIVE" "$wid"
+            }
+            ;;
+        *)
+            # normal focusing
+            chwb -s "$BW" -c "$INACTIVE" "$PFW"
+            chwb -s "$BW" -c "$ACTIVE" "$wid"
+            ;;
+    esac
+
+    # move mouse to middle of window
+    wmp -a $(($(wattr x $wid) + $(wattr w $wid) / 2)) \
+           $(($(wattr y $wid) + $(wattr h $wid) / 2))
+}
+
+main() {
+    . fwmrc
+    wmenv
+    wmcolours
+
+    case "$1" in
+        -w|--wid|wid)     window "$2" ;;
+        -n|--next|next)   next        ;;
+        -p|--prev|prev)   prev        ;;
+        -c|--cycle|cycle) cycle       ;;
+        -h|--help|help)   usage 0     ;;
+        *)                usage 1     ;;
+    esac
+}
+
+main "$@"

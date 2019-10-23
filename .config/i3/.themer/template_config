@@ -20,7 +20,6 @@ font pango:$FTM,$FTI $FSZ
 set $nat eDP1
 set $vga VGA1
 set $hdm HDMI1
-set $kb  gb
 
 set $W69 492
 set $W43 492
@@ -28,7 +27,7 @@ set $H69 299
 set $H43 389
 
 # ━━ i3
-set $ADI Mod1
+set $ALI Mod1
 set $WNI Mod4
 set $ALT bindsym Mod1
 set $WIN bindsym Mod4
@@ -50,7 +49,7 @@ set $BNR border normal
 # ━━ APPS
 set $TRM urxvtc
 set $EDT exec --no-startup-id edtr -s doots
-set $BAP google-chrome-beta --new-window
+set $BAP chrap
 set $FFX firefox
 set $THN thunar
 
@@ -107,14 +106,14 @@ $ALT+Ctrl+7         $EDT %%HOME%%/.config/qutebrowser/.themer/template_config.py
 # ━━ 1st Row
 $ALT+Tab            focus right
 $ALT+q              $RUN -t -i calculator -e '$TRM -name calculator -e R'
-$ALT+w              $RUN -n ^watchseries -e '$BAP --app=https://ww2.watch-series.co/'
+$ALT+w              $RUN -n ^watchseries -e '$BAP https://ww2.watch-series.co/'
 $ALT+e              layout toggle tabbed split
 $ALT+r              $RUN -n newsboat -e '$TRM -name newsboat -e newsboat'
 $ALT+t              $exn mkwalrando
-$ALT+y              resize shrink width 5 px or 5 ppt
+$ALT+y              resize shrink width  5 px or 5 ppt
 $ALT+u              resize shrink height 5 px or 5 ppt
-$ALT+i              resize grow height 5 px or 5 ppt
-$ALT+o              resize grow width 5 px or 5 ppt
+$ALT+i              resize grow   height 5 px or 5 ppt
+$ALT+o              resize grow   width  5 px or 5 ppt
 $ALT+p              $exn i3media togg
 $ALT+bracketright   $exn i3media next
 $ALT+bracketleft    $exn i3media prev
@@ -123,9 +122,9 @@ $ALT+backslash      $exn i3media stop
 $ALT+Shift+Tab      focus left
 $ALT+Shift+q        kill
 $ALT+Shift+r        restart
-$ALT+Shift+y        $RUN -n YouTube$ -e '$BAP --app=https://www.youtube.com/'
-$ALT+Shift+u        $exn $BAP --app=https://outlook.office.com/mail/inbox/id/AAQkAGZjZGU2MmYyLTc5ZDctNDI1My05MzU4LWRjYTc3NjdhN2NkOAAQAOwToE4JkJhIgjz322aPjPU%3D
-$ALT+Shift+i        $RUN -n '^BBC iPlayer$' -e '$BAP --app=https://www.bbc.co.uk/iplayer/'
+$ALT+Shift+y        $RUN -n YouTube$ -e '$BAP https://www.youtube.com/'
+$ALT+Shift+u        $exn $BAP https://outlook.office.com/mail/inbox/id/AAQkAGZjZGU2MmYyLTc5ZDctNDI1My05MzU4LWRjYTc3NjdhN2NkOAAQAOwToE4JkJhIgjz322aPjPU%3D
+$ALT+Shift+i        $RUN -n '^BBC iPlayer$' -e '$BAP https://www.bbc.co.uk/iplayer/'
 $ALT+Shift+p        $exn snap
 
 # ━━ 2nd Row
@@ -163,7 +162,7 @@ $ALT+c              $RUN -c Firefox -e '$FFX'
 $ALT+v              $exn glach
 #$ALT+v              $RUN -i visualiser -e '$TRM -name visualiser -e vis'
 $ALT+b              $RUN -i references -e '$EDT %%HOME%%/Drive/global.bib'
-$ALT+n              $RUN -n ^Netflix$ -e '$BAP --app=https://www.netflix.com/'
+$ALT+n              $RUN -n ^Netflix$ -e '$BAP https://www.netflix.com/'
 $ALT+m              $exn surf docs.google.com/presentation/u/0/
 $ALT+comma          $exn i3vol dec
 $ALT+period         $exn i3vol inc
@@ -172,7 +171,7 @@ $ALT+slash          $exn i3vol mute
 $ALT+Shift+c        $exn xtheme --auto-dark 7:19
 $ALT+Shift+v        $exn projectM-pulseaudio
 $ALT+Shift+b        $exn polybar-msg cmd hide
-$ALT+Shift+m        $RUN -n '^My Movies & TV' -e '$BAP --app=https://play.google.com/movies/'
+$ALT+Shift+m        $RUN -n '^My Movies & TV' -e '$BAP https://play.google.com/movies/'
 
 # ━  MOD4 BINDINGS
 # ━━ Misc
@@ -339,12 +338,15 @@ $fw [class="Glava"]                      focus;$QUD -m 4;focus;border pixel 0
 # ━  GAPS
 gaps inner 20
 gaps outer 40
+gaps top   80
 workspace 1 gaps inner 5
 workspace 1 gaps outer 5
 
 # ━  STARTUP
 $exn urxvtd -q -o -f
-$exn xautolock -corners 0-0- -cornersize 30 -time 5 -locker $HOME/scr/lockscreen
+$exn reloadconfs
+$exn mpd
+$exn xautolock -corners 0-0- -cornersize 30 -time 5 -locker lockscreen
 $exn /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 $exn nm-applet
 $exn xfce4-power-manager
@@ -354,11 +356,7 @@ $exn blueman-applet
 $exn compton
 $ena ff-theme-util
 $ena fix_xcursor
-$exn mpd
-$exn shutter --min_at_startup
-$exn setxkbmap $kb
 $exn i3listen-toggle
-$exn reloadconfs
 
 $ena mpv %%HOME%%/scrmus/A\ Tone\ His\ Self.mp3
 $ena notify-send 'i3 (re)loaded!' -i %%HOME%%/scrpic/i3white.png

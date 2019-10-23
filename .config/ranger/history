@@ -1,12 +1,3 @@
-delete
-shell bash %f
-rename i3lch
-open_with m
-shell mkwalscheme %f
-mkdir _themer
-rename template_Standard-da.colors
-rename template_%%name%%.colors
-rename template_%%name%%-dark.colors
 rename template_%%%%name%%%%-dark.colors
 rename template_%%%%name%%%%.colors
 shell wget https://raw.githubusercontent.com/StillANixRookie/numix/master/template_Standard-dark.colors
@@ -46,5 +37,14 @@ open_with pinta
 rename lscr
 rename i3end
 rename mmon
-shell hugo
 shell
+shell themer --init
+shell hugo
+shell wget https://raw.githubusercontent.com/dkeg/wm-configs/master/.cwmrc
+rename template_.cwmrc
+mkdir fwm
+shell git clone https://github.com/lwilletts/fwm.git
+touch .xsession
+rename _xinitrc
+wq
+rename .xinitrc

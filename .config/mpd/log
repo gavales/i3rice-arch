@@ -4570,3 +4570,170 @@ Oct 22 20:54 : client: [88] opened from [::1]:51034
 Oct 22 20:54 : client: [88] closed
 Oct 22 20:54 : client: [89] opened from [::1]:51036
 Oct 22 20:54 : client: [89] closed
+Oct 23 18:24 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 18:24 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 18:24 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 23 19:03 : client: [90] opened from [::1]:54908
+Oct 23 19:03 : client: [90] closed
+Oct 23 19:03 : client: [91] opened from [::1]:54910
+Oct 23 19:03 : client: [91] closed
+Oct 23 19:03 : client: [92] opened from [::1]:54912
+Oct 23 19:03 : client: [92] closed
+Oct 23 19:03 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 23 19:03 : client: [93] opened from [::1]:54914
+Oct 23 19:03 : client: [93] closed
+Oct 23 19:03 : client: [94] opened from [::1]:54916
+Oct 23 19:03 : client: [94] closed
+Oct 23 19:03 : client: [95] opened from [::1]:54918
+Oct 23 19:03 : client: [95] closed
+Oct 23 19:03 : client: [96] opened from [::1]:54920
+Oct 23 19:03 : client: [96] closed
+Oct 23 19:03 : client: [97] opened from [::1]:54922
+Oct 23 19:03 : client: [97] closed
+Oct 23 19:03 : client: [98] opened from [::1]:54924
+Oct 23 19:03 : client: [98] closed
+Oct 23 19:03 : client: [99] opened from [::1]:54926
+Oct 23 19:03 : client: [99] closed
+Oct 23 19:03 : client: [100] opened from [::1]:54928
+Oct 23 19:03 : client: [100] closed
+Oct 23 19:03 : client: [101] opened from [::1]:54930
+Oct 23 19:03 : client: [101] closed
+Oct 23 19:04 : client: [102] opened from [::1]:54934
+Oct 23 19:04 : client: [103] opened from [::1]:54936
+Oct 23 19:04 : client: [103] closed
+Oct 23 19:04 : client: [104] opened from [::1]:54938
+Oct 23 19:04 : client: [104] closed
+Oct 23 19:04 : client: [102] closed
+Oct 23 19:11 : client: [105] opened from [::1]:54942
+Oct 23 19:11 : client: [106] opened from [::1]:54944
+Oct 23 19:11 : client: [106] closed
+Oct 23 19:11 : client: [107] opened from [::1]:54946
+Oct 23 19:11 : client: [107] closed
+Oct 23 19:11 : client: [105] closed
+Oct 23 19:32 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 19:32 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 19:32 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 23 19:32 : client: [108] opened from [::1]:55288
+Oct 23 19:32 : client: [109] opened from [::1]:55290
+Oct 23 19:32 : client: [109] closed
+Oct 23 19:32 : client: [110] opened from [::1]:55292
+Oct 23 19:32 : client: [110] closed
+Oct 23 19:32 : client: [108] closed
+Oct 23 21:09 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 14 Aerds - Flycruisor.mp3"
+Oct 23 21:09 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 14 Aerds - Flycruisor.mp3"
+Oct 23 21:09 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 14 Aerds - Flycruisor.mp3"
+Oct 23 21:09 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 21:09 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 21:09 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 21:09 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 23 21:11 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 21:11 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 21:11 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 21:11 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 23 21:13 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 14 Aerds - Flycruisor.mp3"
+Oct 23 21:13 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 14 Aerds - Flycruisor.mp3"
+Oct 23 21:58 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 21:58 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 21:58 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 23 21:58 : client: [0] opened from [::1]:37700
+Oct 23 21:58 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 21:58 : client: [0] closed
+Oct 23 21:58 : client: [1] opened from [::1]:37702
+Oct 23 21:58 : client: [1] closed
+Oct 23 21:58 : client: [2] opened from [::1]:37704
+Oct 23 21:58 : client: [2] closed
+Oct 23 21:58 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 23 21:58 : client: [3] opened from [::1]:37706
+Oct 23 21:58 : client: [3] closed
+Oct 23 21:58 : client: [4] opened from [::1]:37708
+Oct 23 21:58 : client: [4] closed
+Oct 23 21:58 : client: [5] opened from [::1]:37710
+Oct 23 21:58 : client: [5] closed
+Oct 23 21:58 : client: [6] opened from [::1]:37712
+Oct 23 21:58 : client: [6] closed
+Oct 23 21:58 : client: [7] opened from [::1]:37714
+Oct 23 21:58 : client: [7] closed
+Oct 23 21:58 : client: [8] opened from [::1]:37716
+Oct 23 21:58 : client: [8] closed
+Oct 23 21:58 : client: [9] opened from [::1]:37718
+Oct 23 21:58 : client: [9] closed
+Oct 23 21:58 : client: [10] opened from [::1]:37720
+Oct 23 21:58 : client: [10] closed
+Oct 23 21:58 : client: [11] opened from [::1]:37722
+Oct 23 21:58 : client: [11] closed
+Oct 23 21:58 : client: [12] opened from [::1]:37724
+Oct 23 21:58 : client: [12] closed
+Oct 23 21:58 : client: [13] opened from [::1]:37726
+Oct 23 21:58 : client: [13] closed
+Oct 23 21:58 : client: [14] opened from [::1]:37728
+Oct 23 21:58 : client: [14] closed
+Oct 23 21:58 : client: [15] opened from [::1]:37730
+Oct 23 21:58 : client: [15] closed
+Oct 23 21:58 : client: [16] opened from [::1]:37732
+Oct 23 21:58 : client: [16] closed
+Oct 23 21:58 : client: [17] opened from [::1]:37734
+Oct 23 21:58 : client: [17] closed
+Oct 23 22:14 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 14 Aerds - Flycruisor.mp3"
+Oct 23 22:15 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 22:15 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 22:15 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 23 22:17 : client: [0] opened from [::1]:45310
+Oct 23 22:17 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 22:17 : client: [0] closed
+Oct 23 22:17 : client: [1] opened from [::1]:45312
+Oct 23 22:17 : client: [1] closed
+Oct 23 22:17 : client: [2] opened from [::1]:45314
+Oct 23 22:17 : client: [2] closed
+Oct 23 22:17 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 23 22:17 : client: [3] opened from [::1]:45316
+Oct 23 22:17 : client: [3] closed
+Oct 23 22:17 : client: [4] opened from [::1]:45318
+Oct 23 22:17 : client: [4] closed
+Oct 23 22:17 : client: [5] opened from [::1]:45320
+Oct 23 22:17 : client: [5] closed
+Oct 23 22:18 : client: [6] opened from [::1]:45380
+Oct 23 22:18 : client: [7] opened from [::1]:45382
+Oct 23 22:18 : client: [7] closed
+Oct 23 22:18 : client: [8] opened from [::1]:45384
+Oct 23 22:18 : client: [8] closed
+Oct 23 22:18 : client: [6] closed
+Oct 23 22:24 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 14 Aerds - Flycruisor.mp3"
+Oct 23 22:27 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 22:27 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 22:27 : client: [0] opened from [::1]:45606
+Oct 23 22:27 : client: [1] opened from [::1]:45608
+Oct 23 22:27 : client: [1] closed
+Oct 23 22:27 : client: [2] opened from [::1]:45610
+Oct 23 22:27 : client: [2] closed
+Oct 23 22:27 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 23 22:27 : client: [3] opened from [::1]:45612
+Oct 23 22:27 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 22:27 : client: [3] closed
+Oct 23 22:27 : client: [4] opened from [::1]:45614
+Oct 23 22:27 : client: [4] closed
+Oct 23 22:27 : client: [5] opened from [::1]:45616
+Oct 23 22:27 : client: [5] closed
+Oct 23 22:27 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 23 22:27 : client: [6] opened from [::1]:45618
+Oct 23 22:27 : client: [6] closed
+Oct 23 22:27 : client: [7] opened from [::1]:45620
+Oct 23 22:27 : client: [7] closed
+Oct 23 22:27 : client: [8] opened from [::1]:45622
+Oct 23 22:27 : client: [8] closed
+Oct 23 22:27 : client: [9] opened from [::1]:45624
+Oct 23 22:27 : client: [9] closed
+Oct 23 22:27 : client: [10] opened from [::1]:45626
+Oct 23 22:27 : client: [10] closed
+Oct 23 22:27 : client: [11] opened from [::1]:45628
+Oct 23 22:27 : client: [11] closed
+Oct 23 22:27 : client: [12] opened from [::1]:45630
+Oct 23 22:27 : client: [12] closed
+Oct 23 22:27 : client: [13] opened from [::1]:45632
+Oct 23 22:27 : client: [13] closed
+Oct 23 22:27 : client: [14] opened from [::1]:45634
+Oct 23 22:27 : client: [14] closed
+Oct 23 22:28 : client: [0] closed
+Oct 23 22:30 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 22:30 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 22:30 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 22:30 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.

@@ -5,4 +5,5 @@ TNT="$(themer -v 'tint ')"
 [[ -n $WPP ]] || WPP=$(themer -v 'acc ')
 [[ -n $TNT ]] && TINT="-t $TNT" || TINT=" "
 i3bg -w "$WPP" $TINT
+setxkbmap gb
 themer --force --apply-all

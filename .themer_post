@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
 cp ".themer/${1}/.gtkrc-2.0" "$HOME/.gtkrc-2.0"
-cp ".themer/${1}/.guivimrc" "$HOME/.guivimrc"
+cp ".themer/${1}/.guivimrc"  "$HOME/.guivimrc"
+cp ".themer/${1}/.cwmrc"     "$HOME/.cwmrc"
+CWMPID=$(pidof cwm)
+[[ -n $CWMPID ]] && kill -1 $CWMPID

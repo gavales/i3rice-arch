@@ -30,8 +30,10 @@ set t_Co=16
 
 " ━━ GLOBAL MAPS
 map \gy           :Goyo<bar>set<Space>laststatus=2<Enter><Enter>
-map <Tab><Tab>    <Esc>/ ━ <Enter>
-map <Tab><Space>  <Esc>/ ━━ <Enter>
+map \S            <Esc>/ ━ <Space><Esc>
+map \s            <Esc>/ ━━<Space><Esc>
+map \pS           <Esc>0a ━ <Space><Esc>
+map \ps           <Esc>0a ━━<Space><Esc>
 map <C-p>         "+P
 map <C-Up>        :res<space>+5<Enter>
 map <C-Down>      :res<space>-5<Enter>
