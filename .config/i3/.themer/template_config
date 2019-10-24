@@ -36,7 +36,7 @@ set $ALW bindsym --whole-window Mod1
 set $WLW bindsym --whole-window Mod4
 set $exn exec --no-startup-id
 set $ena exec_always --no-startup-id
-set $RUN exec --no-startup-id i3lch
+set $RUN exec --no-startup-id lch
 set $QUD exec --no-startup-id i3quad
 set $tf  title_format
 set $fw  for_window
