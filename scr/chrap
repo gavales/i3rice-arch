@@ -5,7 +5,7 @@
 # source /home/gavarch/.config/user-dirs.dirs
 
 help () {
-cat << EOB
+cat << 'EOB'
 # NAME
 
 __chrap__ - `google-chrome-beta` app wrapper

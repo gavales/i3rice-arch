@@ -4737,3 +4737,49 @@ Oct 23 22:30 : exception: RTIOThread could not get realtime scheduling, continui
 Oct 23 22:30 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Oct 23 22:30 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Oct 23 22:30 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 24 00:57 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 14 Aerds - Flycruisor.mp3"
+Oct 24 00:57 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 14 Aerds - Flycruisor.mp3"
+Oct 24 00:57 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 24 00:57 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 24 00:57 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 24 00:57 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 24 00:57 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 24 00:57 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 24 00:58 : client: [0] opened from [::1]:40770
+Oct 24 00:58 : client: [1] opened from [::1]:40772
+Oct 24 00:58 : client: [1] closed
+Oct 24 00:58 : client: [2] opened from [::1]:40778
+Oct 24 00:58 : client: [2] closed
+Oct 24 00:58 : client: [0] closed
+Oct 24 00:59 : client: [3] opened from [::1]:40948
+Oct 24 00:59 : client: [4] opened from [::1]:40950
+Oct 24 00:59 : client: [4] closed
+Oct 24 00:59 : client: [5] opened from [::1]:40952
+Oct 24 00:59 : client: [5] closed
+Oct 24 00:59 : client: [3] closed
+Oct 24 01:05 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 14 Aerds - Flycruisor.mp3"
+Oct 24 01:05 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 14 Aerds - Flycruisor.mp3"
+Oct 24 01:05 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 24 01:05 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 24 01:05 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 24 01:05 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 24 01:05 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 24 01:05 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 24 01:05 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 24 01:05 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 24 01:05 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 24 01:05 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 24 01:08 : client: [0] opened from [::1]:44968
+Oct 24 01:08 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 24 01:08 : client: [0] closed
+Oct 24 01:08 : client: [1] opened from [::1]:44970
+Oct 24 01:08 : client: [1] closed
+Oct 24 01:08 : client: [2] opened from [::1]:44972
+Oct 24 01:08 : client: [2] closed
+Oct 24 01:08 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 24 01:08 : client: [3] opened from [::1]:44974
+Oct 24 01:08 : client: [3] closed
+Oct 24 01:08 : client: [4] opened from [::1]:44976
+Oct 24 01:08 : client: [4] closed
+Oct 24 01:08 : client: [5] opened from [::1]:44978
+Oct 24 01:08 : client: [5] closed

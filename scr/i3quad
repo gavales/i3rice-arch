@@ -3,14 +3,6 @@
 # OA: Gavin Vales
 # CREATED: Tue  4 Dec 15:23:43 GMT 2018
 
-I3="i3-msg -q"
-WSP=$(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2)
-I3QTMP=$USER_TMP_DIR/i3quadwindows
-[[ $USER_I3LAUNCH_WS == $WSP ]] || exit
-MKS=$(i3-msg -t get_marks)
-XID=$(xdotool getactivewindow)
-XID=${XID%% *}
-
 help () {
 cat << 'EOB'
 # NAME
@@ -173,6 +165,14 @@ while true; do
 	esac
 	shift
 done
+
+I3="i3-msg -q"
+WSP=$(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2)
+I3QTMP=$USER_TMP_DIR/i3quadwindows
+[[ $USER_I3LAUNCH_WS == $WSP ]] || exit
+MKS=$(i3-msg -t get_marks)
+XID=$(xdotool getactivewindow)
+XID=${XID%% *}
 
 [[ $MKS =~ "$MRK" ]] && EXISTS || {
 	notify-send "no $MRK, making $MRK"

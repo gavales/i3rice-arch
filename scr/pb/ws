@@ -3,6 +3,9 @@
 # OA: Gavin Vales
 # CREATED: Fri  5 Apr 00:04:13 GMT 2019
 
+PID=$(pidof i3)
+[[ -z $PID ]] && exit
+
 _W=$(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2)
 
 _I="%{T1}%{T-}"

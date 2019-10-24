@@ -338,24 +338,24 @@ $fw [class="Glava"]                      focus;$QUD -m 4;focus;border pixel 0
 # ━  GAPS
 gaps inner 20
 gaps outer 40
-gaps top   40
 workspace 1 gaps inner 5
 workspace 1 gaps outer 5
+workspace 1 gaps top   30
 
 # ━  STARTUP
-$exn urxvtd -q -o -f
-$exn reloadconfs
-$exn mpd
-$exn xautolock -corners 0-0- -cornersize 30 -time 5 -locker lockscreen
-$exn /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-$exn nm-applet
-$exn xfce4-power-manager
-$exn pamac-tray
-$exn clipit
-$exn blueman-applet
-$exn compton
-$ena ff-theme-util
-$ena fix_xcursor
+#$exn urxvtd -q -o -f
+#$exn reloadconfs
+#$exn mpd
+#$exn xautolock -corners 0-0- -cornersize 30 -time 5 -locker lockscreen
+#$exn /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#$exn nm-applet
+#$exn xfce4-power-manager
+#$exn pamac-tray
+#$exn clipit
+#$exn blueman-applet
+#$exn compton
+#$ena ff-theme-util
+#$ena fix_xcursor
 $exn i3listen-toggle
 
 $ena mpv /home/gavarch/scrmus/A\ Tone\ His\ Self.mp3

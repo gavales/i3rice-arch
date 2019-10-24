@@ -55,12 +55,12 @@ set $THN thunar
 
 # ━  DECORATIONS
 # class                 brdr    bkgr    text    indi    chlb
-client.focused          #657f86 #657f86 #D8DEE9 #657f86 #8FBCBB
-client.focused_inactive #8FBCBB #8FBCBB #D8DEE9 #8FBCBB #8FBCBB
-client.unfocused        #8FBCBB #8FBCBB #3B4252 #8FBCBB #8FBCBB
-client.urgent           #bf616a #bf616a #D8DEE9 #bf616a #bf616a
-client.placeholder      #3B4252 #3B4252 #D8DEE9 #3B4252 #3B4252
-client.background       #3B4252
+client.focused          #616161 #616161 #ececec #616161 #7f7f7f
+client.focused_inactive #7f7f7f #7f7f7f #ececec #7f7f7f #7f7f7f
+client.unfocused        #7f7f7f #7f7f7f #444444 #7f7f7f #7f7f7f
+client.urgent           #cc241d #cc241d #ececec #cc241d #cc241d
+client.placeholder      #444444 #444444 #ececec #444444 #444444
+client.background       #444444
 
 # ━  MOD1 BINDINGS
 # ━━ Misc
@@ -338,24 +338,24 @@ $fw [class="Glava"]                      focus;$QUD -m 4;focus;border pixel 0
 # ━  GAPS
 gaps inner 20
 gaps outer 40
-gaps top   40
 workspace 1 gaps inner 5
 workspace 1 gaps outer 5
+workspace 1 gaps top   30
 
 # ━  STARTUP
-$exn urxvtd -q -o -f
-$exn reloadconfs
-$exn mpd
-$exn xautolock -corners 0-0- -cornersize 30 -time 5 -locker lockscreen
-$exn /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-$exn nm-applet
-$exn xfce4-power-manager
-$exn pamac-tray
-$exn clipit
-$exn blueman-applet
-$exn compton
-$ena ff-theme-util
-$ena fix_xcursor
+#$exn urxvtd -q -o -f
+#$exn reloadconfs
+#$exn mpd
+#$exn xautolock -corners 0-0- -cornersize 30 -time 5 -locker lockscreen
+#$exn /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#$exn nm-applet
+#$exn xfce4-power-manager
+#$exn pamac-tray
+#$exn clipit
+#$exn blueman-applet
+#$exn compton
+#$ena ff-theme-util
+#$ena fix_xcursor
 $exn i3listen-toggle
 
 $ena mpv /home/gavarch/scrmus/A\ Tone\ His\ Self.mp3

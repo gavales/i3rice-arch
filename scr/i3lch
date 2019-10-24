@@ -3,12 +3,8 @@
 # OA: Gavin Vales
 # CREATED: Tue  4 Dec 15:23:43 GMT 2018
 
-WSP=$(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2)
-XID=$(xdotool getactivewindow)
-SRCH=""
-
 help () {
-	cat << 'EOB'
+cat << 'EOB'
 # NAME
 
 __i3lch__ - launch a program in i3 but with added perks
@@ -64,6 +60,10 @@ while true; do
 	esac
 	shift
 done
+
+WSP=$(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2)
+XID=$(xdotool getactivewindow)
+SRCH=""
 
 [[ -n $INST ]] && ASCH="$INST" ISCH="instance" SRCH="--classname"
 [[ -n $CLSS ]] && ASCH="$CLSS" ISCH="class"    SRCH="--class"

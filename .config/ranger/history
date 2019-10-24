@@ -1,4 +1,3 @@
-rename template_%%%%name%%%%-dark.colors
 rename template_%%%%name%%%%.colors
 shell wget https://raw.githubusercontent.com/StillANixRookie/numix/master/template_Standard-dark.colors
 shell wget https://raw.githubusercontent.com/StillANixRookie/numix/master/template_Standard-light.colors
@@ -48,3 +47,4 @@ touch .xsession
 rename _xinitrc
 wq
 rename .xinitrc
+rename .xprofile
