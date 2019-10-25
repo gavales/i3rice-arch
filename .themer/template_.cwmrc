@@ -9,27 +9,24 @@
 #unbind-key all
 #unbind-mouse all
 
-bind-mouse M-1 window-move
-bind-mouse M-3 window-resize
-bind-mouse M-4 window-raise
-bind-mouse M-5 window-lower
+bind-mouse M-1  window-move
+bind-mouse M-3  window-resize
+bind-mouse M-4  window-raise
+bind-mouse M-5  window-lower
 
-bind-key 4S-c     reloadconfs
-bind-key MS-c     "xtheme --auto-dark 7:19"
-bind-key MS-q     window-delete
-bind-key M-d      "i3menu -s -l 0"
-bind-key M-z      menu-window
-bind-key M-Return "urxvt -name terminal"
+#bind-key   M-1  group-toggle-1
+#bind-key   M-2  group-toggle-2
+#bind-key   M-3  group-toggle-3
+#bind-key   M-4  group-toggle-4
+#bind-key   MS-1 window-movetogroup-1
+#bind-key   MS-2 window-movetogroup-2
+#bind-key   MS-3 window-movetogroup-3
+#bind-key   MS-4 window-movetogroup-4
+#
+bind-key   MS-q window-delete
 
-bind-key M-c   window-stick
-#bind-key M-1   group-toggle-1
-#bind-key M-2   group-toggle-2
-#bind-key M-3   group-toggle-3
-#bind-key M-4   group-toggle-4
-#bind-key MS-1  window-movetogroup-1
-#bind-key MS-2  window-movetogroup-2
-#bind-key MS-3  window-movetogroup-3
-#bind-key MS-4  window-movetogroup-4
+bind-key   M-z  menu-window
+bind-key   M-c  window-stick
 
 # ━  right-click menu
 command term    "urxvt  -name terminal"

@@ -768,6 +768,10 @@ chmod +x "${DIR}/.themer_post"
 echo "${_DIR}" >> ${DIRS}
 }
 
+O_clean () {
+	exit
+}
+
 while true; do
 	case $1 in
 		--updatelist   | -u ) O_updatelist            ; shift ;;
@@ -780,6 +784,7 @@ while true; do
 		--delete       | -d ) O_delete       "${2:-}" ; shift ;;
 		--auto-dark    | -t ) O_auto-dark    "${2:-}" ; shift ;;
 		--init         | -i ) O_init         "${2:-}" ; shift ;;
+		--clean        | -C ) O_clean                 ; shift ;;
 		--dark         | -D ) DARK=1  ;;
 		--force        | -f ) FORCE=1 ;;
 		--help         | -h ) help ;;

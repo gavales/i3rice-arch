@@ -99,6 +99,13 @@ vnoremap \s"   xa""<Esc>P
 "autocmd FileType python,css,html,vim,json,perl,sh set listchars=tab:│\ 
 "autocmd FileType python call matchadd('ColorColumn', '\%81v', 100)
 
+" ━━ POST-WRITE
+autocmd BufWritePost *sxhkdrc !kill -10 $(pidof sxhkd)
+autocmd BufWritePost *_dots   !scgen
+autocmd BufWritePost *_flds   !scgen
+autocmd BufWritePost *_scrs   !scgen
+autocmd BufWritePost *_tmps   !scgen
+
 " ━━ CURSOR
 autocmd CursorHold,CursorHoldI * update
 autocmd CursorHold,CursorHoldI * redraw!

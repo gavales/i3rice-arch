@@ -1,6 +1,9 @@
 ! vim:ft=perl
 name       gruvbox_light
 HOME       \/home\/gavarch
+MON1       eDP1
+MON2       VGA1
+MON3       HDMI1
 guifont    $romanfont
 font       monaco
 sansfont   Lucida Sans
