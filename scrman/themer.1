@@ -1,4 +1,4 @@
-.TH THEMER 1 2019\-10\-25 Linux "User Manuals"
+.TH THEMER 1 2019\-10\-26 Linux "User Manuals"
 .hy
 .SH NAME
 .PP
@@ -18,6 +18,7 @@ themer --list|-l themes|thememenu|vars|varmenu|default|current
 themer [--force|-f] --init|-i \fI<directory>\fP
 themer [--force|-f] --apply-single|-a \fI<directory>\fP
 themer --apply-all|-A
+themer --clean|-C \fI<directory>\fP
 themer --updatelist|-u
 themer --help|-h
 themer
@@ -71,6 +72,26 @@ Apply current theme to directories listed in
 Use with \f[B]--apply-(single|all)\f[R] to force apply a theme, since
 themes are not automatically generated from `template_' files to speed
 up applying the theme
+.PP
+\f[B]--dark|-D\f[R]
+.PD 0
+.P
+.PD
+Dark mode (switches fgo and bg0).
+.PP
+\f[B]--auto-dark|-t \fI<am_time>\fP:\fI<pm_time>\fP\f[R]
+.PD 0
+.P
+.PD
+Dark/Light mode based on time of day.
+.PD 0
+.P
+.PD
+Uses 24-hr time format
+.IP \[bu] 2
+\f[B]\fI<am_time>\fP\f[R] hr to apply `light' mode.
+.IP \[bu] 2
+\f[B]\fI<pm_time>\fP\f[R] hr to apply `dark' mode.
 .PP
 \f[B]--getvar|-v \fI<variable>\fP\f[R]
 .PD 0
@@ -136,25 +157,14 @@ T}
 .PD
 Update the rofi theme list
 .PP
-\f[B]--dark|-D\f[R]
+\f[B]--clean|-C \fI<directory>\fP\f[R]
 .PD 0
 .P
 .PD
-Dark mode (switches fgo and bg0).
-.PP
-\f[B]--auto-dark|-t \fI<am_time>\fP:\fI<pm_time>\fP\f[R]
-.PD 0
-.P
-.PD
-Dark/Light mode based on time of day.
-.PD 0
-.P
-.PD
-Uses 24-hr time format
-.IP \[bu] 2
-\f[B]\fI<am_time>\fP\f[R] hr to apply `light' mode.
-.IP \[bu] 2
-\f[B]\fI<pm_time>\fP\f[R] hr to apply `dark' mode.
+Remove all the generated theme files in
+\f[B]\fI<directory>\fP/.themer/\fI<name>\fP\f[R].
+If no \f[B]\fI<directory>\fP\f[R] is specified, then all directories in
+\f[B]$THEMER_DIR/_dirs\f[R]
 .PP
 \f[B]--help|-h\f[R]
 .PD 0

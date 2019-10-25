@@ -69,12 +69,15 @@ Mm() { mv "$1" ~/mus/"$1" ; }
 alias gM="cd ~/.config/themer"
 YM() { cp -r "$1" ~/.config/themer/"$1" ; }
 MM() { mv "$1" ~/.config/themer/"$1" ; }
+alias gph="cd ~/pic"
+Yph() { cp -r "$1" ~/pic/"$1" ; }
+Mph() { mv "$1" ~/pic/"$1" ; }
 alias gpf="cd ~/pic/favs"
 Ypf() { cp -r "$1" ~/pic/favs/"$1" ; }
 Mpf() { mv "$1" ~/pic/favs/"$1" ; }
-alias gpi="cd ~/pic/i3bg"
-Ypi() { cp -r "$1" ~/pic/i3bg/"$1" ; }
-Mpi() { mv "$1" ~/pic/i3bg/"$1" ; }
+alias gpg="cd ~/pic/gwc"
+Ypg() { cp -r "$1" ~/pic/gwc/"$1" ; }
+Mpg() { mv "$1" ~/pic/gwc/"$1" ; }
 alias gps="cd ~/pic/shot"
 Yps() { cp -r "$1" ~/pic/shot/"$1" ; }
 Mps() { mv "$1" ~/pic/shot/"$1" ; }

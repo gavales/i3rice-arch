@@ -1,0 +1,285 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: Sat  6 Jul 00:50:41 BST 2019
+
+# COMMAND TO UPDATE BLUR OF BLURS
+# for i in $(ls); do convert "${i}" -blur $blr "${PWD/normal/blur}/${i}"; echo "$i"; done
+
+WDIR="$XDG_PICTURES_DIR/gwc"
+NORM="${WDIR}/normal"
+BLUR="${WDIR}/blur"
+COLS="${WDIR}/cols"
+[[ -d $WDIR ]] || {
+	mkdir $WDIR
+	mkdir $NORM
+	mkdir $BLUR
+	mkdir $COLS
+}
+NWFD="$NORM"
+CURR="${WDIR}/current"
+WHT="${WDIR}/white.jpg"
+CRLN="$(readlink -f $CURR)"
+HIST="${WDIR}/.history"
+MONDIM=$(xdpyinfo | awk '/dimensions/ {print $2}')
+MX=${MONDIM%x*}
+MY=${MONDIM#*x}
+blr=0x16
+
+help () {
+cat << 'EOB'
+# NAME
+
+__gwc__ - A script to set wallpaper, with other features.
+
+# SYNOPSIS
+
+```
+gwc [--wallpaper|-w <path|name>]
+    [--next|-n] [--previous|-p] [--random|-r]
+    [--tint|-t|--blur|-b]
+gwc --add|-a <directory|path>
+gwc --list|-l
+gwc --rename|-R '<oldname> <newname>'
+gwc --delete|-d '<name>'
+gwc --help|-h
+gwc
+```
+
+# OPTIONS
+
+Run with no options to create default directories:  
++ `$GWCDIR/(normal|blur|cols)`
++ Default gwc folder: `GWCDIR` = `$XDG_PICTURES_DIR/gwc`
+
+`--wallpaper|-w <path|name>`  
+Wallpaper to set:  
++ `<path>` - path to a picture
++ `<name>` - name of wallpaper stored in `$GWCDIR/normal`
+
+`--previous|-p`  
+previous wallpaper in history
+
+`--next|-p`  
+next wallpaper in history
+
+`--random|-p`  
+random wallpaper in `$GWCDIR/normal`
+
+`--tint|-t <hex_color>`  
+Tint color of wallpaper, Hexadecimal color Eg. #002b36
+
+`--add|-a <directory|path>`  
+Add walls from `<directory>`
+
+`--list|-l`  
+List available wallpapers
+
+`--blur|-b`  
+Toggle blur
+
+`--rename|-r <oldname> <newname>`  
+Rename `<oldname>` wallpaper to `<newname>`.
+If only there is only one argument, the current
+wallpaper is renamed to that argument.
+
+`--delete|-d <name>`  
+Remove `<name>` wallpaper from `$GWCDIR/(normal|blur)`
+If `<name>` is empty, the current wallpaper is
+removed.
+
+`--help|-h`  
+Print this help
+
+EOB
+echo "$1"
+exit
+}
+
+add-wall () {
+	SRC="$1"
+	TRG="${1##*/}"
+	TRG="${TRG%.*}"
+	TRG="$(echo $TRG | sed -e "s/1920x1080//g;s/,//g;s/\ //g")"
+	echo "$SRC >> $NORM/$TRG"
+	[[ -f ${NORM}/${TRG} ]] || {
+		convert "${SRC}" -resize "${MX}x${MY}^" -gravity center \
+			-extent "${MX}x${MY}" "${NORM}/${TRG}"
+		convert "${NORM}/${TRG}" -blur $blr "${BLUR}/${TRG}"
+		}
+	_WPP="$TRG"
+}
+
+tint () {
+	CRTNT="${CRLN##*/}-${_TNT/\#/}"
+	[[ -f ${NORM}/${CRTNT} ]] || {
+		convert "${NORM}/${CRLN##*/}" -fill "${_TNT}" -tint 100 "${NORM}/${CRTNT}"
+		convert "${NORM}/${CRTNT}"    -blur $blr "${BLUR}/${CRTNT}"
+		}
+	ln -sf "${NWFD}/${CRTNT}" $CURR
+	CRLN=$(readlink -f $CURR)
+}
+
+colour () {
+	[[ ! -f ${COLS}/${1/\#/} ]] && \
+#		convert $WHT -fill ${1} -tint 50 ${COLS}/${1/\#/}
+		convert $WHT -fill $1 -draw 'color 0,0 replace' "${COLS}/${1/\#/}"
+	ln -sf "${COLS}/${1/\#/}" $CURR
+	set-wall
+	exit
+}
+
+change-current () {
+	ln -sf "${NWFD}/${_WPP}" $CURR
+	CRLN="$(readlink -f $CURR)"
+}
+
+history () {
+	[[ ! -f $HIST ]] && touch $HIST
+	sed -e "/"${1}"/d" -i $HIST
+	echo -e "${1}\n$(cat $HIST)" > $HIST
+}
+
+random () {
+	_WPP=$(ls $NORM | shuf -n 1)
+}
+
+previous () {
+	_WPP="$(sed -n "/"${CRLN##*/}"/{n;p;}" $HIST)"
+	[[ -z $_WPP ]] && _WPP="$(head -n 1 $HIST)"
+}
+
+next () {
+	_WPP="$(sed -n "/"${CRLN##*/}"/{g;1!p;};h" $HIST)"
+	[[ -z $_WPP ]] && _WPP="$(tail -n 1 $HIST)"
+}
+
+set-wall () {
+	feh --bg-center $CURR
+	echo "${CRLN##*/}"
+}
+
+O_list () {
+	cd ${NORM}
+	sxiv -a -b ${CRLN##*/} *
+	exit
+}
+
+O_add () {
+	if [[ -z $1 ]]; then
+		echo "No argument, checking for pictures in current dir to add"
+		ls *.jpg  | xargs -I {} gwc --add "{}"
+		ls *.jpeg | xargs -I {} gwc --add "{}"
+		ls *.png  | xargs -I {} gwc --add "{}"
+		ls *.PNG  | xargs -I {} gwc --add "{}"
+		ls *.JPG  | xargs -I {} gwc --add "{}"
+		ls *.JPEG | xargs -I {} gwc --add "{}"
+	elif [[ -d $1 ]]; then
+		echo "$1 is a directory"
+		cd "${1}"
+		ls *.jpg  | xargs -I {} gwc --add "{}"
+		ls *.jpeg | xargs -I {} gwc --add "{}"
+		ls *.png  | xargs -I {} gwc --add "{}"
+		ls *.PNG  | xargs -I {} gwc --add "{}"
+		ls *.JPG  | xargs -I {} gwc --add "{}"
+		ls *.JPEG | xargs -I {} gwc --add "{}"
+	elif [[ -f $1 ]]; then
+		add-wall "${1}"
+	else
+		:
+	fi
+	exit
+}
+
+O_rename () {
+	eval "$(echo "${1}" | awk '{
+		print "OLD=\"" $1 "\" " "NEW=\"" $2 "\""
+		}')"
+	if [[ -z $NEW ]]; then
+		mv "${NORM}/${CRLN##*/}" "${NORM}/${OLD}"
+		mv "${BLUR}/${CRLN##*/}" "${BLUR}/${OLD}"
+		gwc --wallpaper "$OLD"
+	else
+		mv "${NORM}/${OLD}" "${NORM}/${NEW}"
+		mv "${BLUR}/${OLD}" "${BLUR}/${NEW}"
+		gwc --wallpaper "$NEW"
+	fi
+	exit
+}
+
+O_delete () {
+	DEL="${1}"
+	if [[ -z $DEL ]]; then
+		rm "${NORM}/${CRLN##*/}"
+		rm "${BLUR}/${CRLN##*/}"
+	else
+		rm "${NORM}/${DEL}"
+		rm "${BLUR}/${DEL}"
+	fi
+	gwc --previous
+	exit
+}
+
+while true; do
+	case $1 in
+		--wallpaper | -w ) _WPO="${2:-}" ; shift ;;
+		--tint      | -t ) _TNT="${2:-}" ; shift ;;
+		--blur      | -b ) _BLR=1 ;;
+		--next      | -n ) _NXT=1 ;;
+		--previous  | -p ) _PRV=1 ;;
+		--random    | -r ) _RND=1 ;;
+		--list      | -l ) O_list                    ;;
+		--add       | -a ) O_add    "${2:-}" ; shift ;;
+		--rename    | -R ) O_rename "${2:-}" ; shift ;;
+		--delete    | -d ) O_delete "${2:-}" ; shift ;;
+		--help      | -h ) help ; shift ;;
+		-- ) shift ; break ;;
+		*  ) break ;;
+	esac
+	shift
+done
+
+_WPP=${CRLN##*/}
+
+if [[ -n $_WPO ]]; then
+
+	_WPP="$_WPO"
+	echo $_WPP
+	[[ $_WPP =~ "#" ]] && colour "$_WPP"
+
+	WPC=${_WPP##*/}
+
+	if [[ ! -f $NORM/${WPC%.*} ]]; then
+		if [[ ! -f "$_WPP" ]]; then
+			help "Wallpaper doesn't exist anywhere"
+		else
+			echo "Adding ${WPC%.*}"
+			add-wall "$_WPP"
+		fi
+	fi
+
+	change-current
+
+fi
+
+[[ -n $_RND ]] && random   && change-current
+[[ -n $_PRV ]] && previous && change-current
+[[ -n $_NXT ]] && next     && change-current
+
+[[ -n $_BLR ]] && {
+	CRFD=${CRLN%/*}
+	CRFD=${CRFD##*/}
+
+	if [[ ${CRFD} == "normal" ]]; then
+		echo changing to blur
+		ln -sf ${BLUR}/${CRLN##*/} $CURR
+		NWFD=${BLUR}
+	else
+		echo changing to non-blur
+		ln -sf ${NORM}/${CRLN##*/} $CURR
+	fi
+}
+
+[[ -n $_TNT ]] && tint
+set-wall
+[[ -n $_NXT ]] || [[ -n $_PRV ]] || history ${CRLN##*/}

@@ -59,11 +59,11 @@ fontname    'Luxi Mono:size=12'
 
 # ━  colors
 color activeborder   "#008787"
-color inactiveborder "#1d6060"
-color font           "#dadada"
-color selfont        "#dadada"
-color menubg         "#3a3a3a"
-color menufg         "#1d6060"
+color inactiveborder "#6db0b0"
+color font           "#3a3a3a"
+color selfont        "#3a3a3a"
+color menubg         "#dadada"
+color menufg         "#6db0b0"
 color groupborder    "#005f00"
 color urgentborder   "#870100"
 color ungroupborder  "#d8865f"

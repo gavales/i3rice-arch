@@ -123,6 +123,35 @@ add () {
 	exit
 }
 
+set-wall () {
+	feh --bg-center $CURR
+	echo "${CRLN##*/}"
+}
+
+list () {
+	cd $NORM
+	$HOME/scr/openimage "$(ls | head -n 1)"
+	exit
+}
+
+delete () {
+	[[ -n ${1} ]] && DEL="${1}" || DEL="${CRLN##*/}"
+	rm -rf ${NORM}/${DEL}
+	rm -rf ${BLUR}/${DEL}
+	[[ ! -f ${NORM}/${DEL} ]] && echo "Deleted ${NORM}/${DEL}"
+	[[ ! -f ${BLUR}/${DEL} ]] && echo "Deleted ${BLUR}/${DEL}"
+	exit
+}
+
+rename () {
+	NWNM="$1"
+	[[ -n $1 ]] && {
+		cd $NORM && mv "${CRLN##*/}" "${1}"
+		cd $BLUR && mv "${CRLN##*/}" "${1}"
+		}
+	exit
+}
+
 tint () {
 	CRTNT="${NORM}/${CRLN##*/}-${TNT/\#/}"
 	[[ -f $CRTNT ]] || {
@@ -147,39 +176,10 @@ change-current () {
 	CRLN="$(readlink -f $CURR)"
 }
 
-set-wall () {
-	feh --bg-center $CURR
-	echo "${CRLN##*/}"
-}
-
-list () {
-	cd $NORM
-	$HOME/scr/openimage "$(ls | head -n 1)"
-	exit
-}
-
 history () {
 	[[ ! -f $HIST ]] && touch $HIST
 	sed -e "/"${1}"/d" -i $HIST
 	echo -e "${1}\n$(cat $HIST)" > $HIST
-}
-
-delete () {
-	[[ -n ${1} ]] && DEL="${1}" || DEL="${CRLN##*/}"
-	rm -rf ${NORM}/${DEL}
-	rm -rf ${BLUR}/${DEL}
-	[[ ! -f ${NORM}/${DEL} ]] && echo "Deleted ${NORM}/${DEL}"
-	[[ ! -f ${BLUR}/${DEL} ]] && echo "Deleted ${BLUR}/${DEL}"
-	exit
-}
-
-rename () {
-	NWNM="$1"
-	[[ -n $1 ]] && {
-		cd $NORM && mv "${CRLN##*/}" "${1}"
-		cd $BLUR && mv "${CRLN##*/}" "${1}"
-		}
-	exit
 }
 
 next () {

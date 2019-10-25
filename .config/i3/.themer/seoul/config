@@ -17,9 +17,9 @@ set $FSZ 11
 
 font pango:$FTM,$FTI $FSZ
 
-set $nat eDP1
-set $vga VGA1
-set $hdm HDMI1
+set $MON1 eDP1
+set $MON3 HDMI1
+set $MON2 VGA1
 
 set $W69 492
 set $W43 492
@@ -30,13 +30,10 @@ set $H43 389
 set $ALI Mod1
 set $WNI Mod4
 set $ALT bindsym Mod1
-set $WIN bindsym Mod4
 set $ARL bindsym --release Mod1
 set $ALW bindsym --whole-window Mod1
-set $WLW bindsym --whole-window Mod4
 set $exn exec --no-startup-id
 set $ena exec_always --no-startup-id
-set $RUN exec --no-startup-id lch
 set $QUD exec --no-startup-id i3quad
 set $tf  title_format
 set $fw  for_window
@@ -45,13 +42,6 @@ set $MVC move position center
 set $FEN floating enabled
 set $FDI floating disabled
 set $BNR border normal
-
-# ━━ APPS
-set $TRM urxvtc
-set $EDT exec --no-startup-id edtr -s doots
-set $BAP chrap
-set $FFX firefox
-set $THN thunar
 
 # ━  DECORATIONS
 # class                 brdr    bkgr    text    indi    chlb
@@ -62,194 +52,117 @@ client.urgent           #870100 #870100 #3a3a3a #870100 #870100
 client.placeholder      #dadada #dadada #3a3a3a #dadada #dadada
 client.background       #dadada
 
-# ━  MOD1 BINDINGS
+# ━  BINDINGS
 # ━━ Misc
-$ALT+Escape         $exn i3end
-$ALT+Home           $exn keybindingsmenu
-$ALW+button1        $QUD -m 3
-$ALW+button2        kill
-$ALW+button3        $QUD -m 2, $QUD -f 3
-$ALW+button4        focus left
-$ALW+button5        focus right
-$ALT+space          focus mode_toggle
-bindsym Print       $exn snap
+floating_modifier  $WNI
 
-$ALW+Shift+button4  move left
-$ALW+Shift+button5  move right
-$ALT+Shift+space    floating toggle
+$ALW+button1       $QUD -m 3
+$ALW+button2       kill
+$ALW+button3       $QUD -m 2, $QUD -f 3
+$ALW+button4       focus left
+$ALW+button5       focus right
+$ALT+space         focus mode_toggle
 
-$ALT+Control+Right  workspace next
-$ALT+Control+Left   workspace prev
+$ALW+Shift+button4 move left
+$ALW+Shift+button5 move right
+$ALT+Shift+space   floating toggle
+
+$ALT+Control+Right workspace next
+$ALT+Control+Left  workspace prev
 
 # ━━ Numbers
-$ALT+grave          $exn gencvl
-$ALT+1              $QUD -F 1
-$ALT+2              $QUD -F 2
-$ALT+3              $QUD -F 3
-$ALT+4              $QUD -F 4
-$ALT+minus          $QUD -m 2, $QUD -f 3
-$ALT+equal          $QUD -m 3
+$ALT+grave           $exn "notify-send $(i3gm)"
+$ALT+1               $QUD -F 1
+$ALT+2               $QUD -F 2
+$ALT+3               $QUD -F 3
+$ALT+4               $QUD -F 4
+$ALT+minus           $QUD -m 2, $QUD -f 3
+$ALT+equal           $QUD -m 3
 
-$ALT+Shift+1        $QUD -m 1
-$ALT+Shift+2        $QUD -m 2
-$ALT+Shift+3        $QUD -m 3
-$ALT+Shift+4        $QUD -m 4
+$ALT+Shift+1         $QUD -m 1
+$ALT+Shift+2         $QUD -m 2
+$ALT+Shift+3         $QUD -m 3
+$ALT+Shift+4         $QUD -m 4
 
-$ALT+Ctrl+1         $EDT /home/gavarch/.config/i3/.themer/template_config
-$ALT+Ctrl+2         $EDT /home/gavarch/.bashrc
-$ALT+Ctrl+3         $EDT /home/gavarch/.vimrc
-$ALT+Ctrl+4         $EDT /home/gavarch/.config/ranger/rc.conf
-$ALT+Ctrl+5         $EDT /home/gavarch/.config/ranger/rifle.conf
-$ALT+Ctrl+6         $EDT /home/gavarch/.config/polybar/.themer/template_config
-$ALT+Ctrl+7         $EDT /home/gavarch/.config/qutebrowser/.themer/template_config.py
+$ALT+Control+1       workspace  1
+$ALT+Control+2       workspace  2
+$ALT+Control+3       workspace  3
+$ALT+Control+4       workspace  4
+$ALT+Control+5       workspace  5
+$ALT+Control+6       workspace  6
+$ALT+Control+7       workspace  7
+$ALT+Control+8       workspace  8
+$ALT+Control+9       workspace  9
+$ALT+Control+0       workspace 10
 
-# ━━ 1st Row
-$ALT+Tab            focus right
-$ALT+q              $RUN -t -i calculator -e '$TRM -name calculator -e R'
-$ALT+w              $RUN -n ^watchseries -e '$BAP https://ww2.watch-series.co/'
-$ALT+e              layout toggle tabbed split
-$ALT+r              $RUN -n newsboat -e '$TRM -name newsboat -e newsboat'
-$ALT+t              $exn mkwalrando
-$ALT+y              resize shrink width  5 px or 5 ppt
-$ALT+u              resize shrink height 5 px or 5 ppt
-$ALT+i              resize grow   height 5 px or 5 ppt
-$ALT+o              resize grow   width  5 px or 5 ppt
-$ALT+p              $exn i3media togg
-$ALT+bracketright   $exn i3media next
-$ALT+bracketleft    $exn i3media prev
-$ALT+backslash      $exn i3media stop
-
-$ALT+Shift+Tab      focus left
-$ALT+Shift+q        kill
-$ALT+Shift+r        restart
-$ALT+Shift+y        $RUN -n YouTube$ -e '$BAP https://www.youtube.com/'
-$ALT+Shift+u        $exn $BAP https://outlook.office.com/mail/inbox/id/AAQkAGZjZGU2MmYyLTc5ZDctNDI1My05MzU4LWRjYTc3NjdhN2NkOAAQAOwToE4JkJhIgjz322aPjPU%3D
-$ALT+Shift+i        $RUN -n '^BBC iPlayer$' -e '$BAP https://www.bbc.co.uk/iplayer/'
-$ALT+Shift+p        $exn snap
-
-# ━━ 2nd Row
-$ALT+a              focus parent
-$ALT+s              $RUN -i ncmpcpp -e '$TRM -name ncmpcpp -e ncmpcpp'
-$ALT+d              $exn i3menu -s -l 0
-$ALT+f              $exn $THN
-$ALT+g              split toggle
-$ALT+h              $exn i3viswiz left
-$ALT+j              $exn i3viswiz down
-$ALT+k              $exn i3viswiz up
-$ALT+l              $exn i3viswiz right
-$ALT+semicolon      $exn i3light nm
-$ALT+apostrophe     $exn redshift -x
-$ALT+Return         $exn $TRM -name tiledterm
-
-$ALT+Shift+a        focus child
-$ALT+Shift+s        $RUN -c Spotify -e 'spotify'
-$ALT+Shift+d        $exn i3menu -d
-$ALT+Shift+f        fullscreen toggle
-$ALT+Shift+g        $exn $TRM -name drive_sync -e grivesync
-$ALT+Shift+h        $exn i3move left
-$ALT+Shift+j        $exn i3move down
-$ALT+Shift+k        $exn i3move up
-$ALT+Shift+l        $exn i3move right
-$ALT+Shift+Return   $exn $TRM -name ranger -e ranger
-
-$ALT+Control+s      sticky toggle
-$ALT+Control+Return $exn $TRM -name noterm
-
-# ━━ 3rd Row
-$ALT+z              $exn surf docs.google.com/document/u/0/
-$ALT+x              $exn surf docs.google.com/spreadsheets/u/0/
-$ALT+c              $RUN -c Firefox -e '$FFX'
-$ALT+v              $exn glach
-#$ALT+v              $RUN -i visualiser -e '$TRM -name visualiser -e vis'
-$ALT+b              $RUN -i references -e '$EDT /home/gavarch/Drive/global.bib'
-$ALT+n              $RUN -n ^Netflix$ -e '$BAP https://www.netflix.com/'
-$ALT+m              $exn surf docs.google.com/presentation/u/0/
-$ALT+comma          $exn i3vol dec
-$ALT+period         $exn i3vol inc
-$ALT+slash          $exn i3vol mute
-
-$ALT+Shift+c        $exn xtheme --auto-dark 7:19
-$ALT+Shift+v        $exn projectM-pulseaudio
-$ALT+Shift+b        $exn polybar-msg cmd hide
-$ALT+Shift+m        $RUN -n '^My Movies & TV' -e '$BAP https://play.google.com/movies/'
-
-# ━  MOD4 BINDINGS
-# ━━ Misc
-floating_modifier   $WNI
-
-# ━━ Numbers
-$WIN+grave          $exn "notify-send $(i3gm)"
-$WIN+1              workspace 1
-$WIN+2              workspace 2
-$WIN+3              workspace 3
-$WIN+4              workspace 4
-$WIN+5              workspace 5
-$WIN+6              workspace 6
-$WIN+7              workspace 7
-$WIN+8              workspace 8
-$WIN+9              workspace 9
-$WIN+0              workspace 10
-
-$WIN+Shift+1        move container to workspace 1; workspace 1
-$WIN+Shift+2        move container to workspace 2; workspace 2
-$WIN+Shift+3        move container to workspace 3; workspace 3
-$WIN+Shift+4        move container to workspace 4; workspace 4
-$WIN+Shift+5        move container to workspace 5; workspace 5
-$WIN+Shift+6        move container to workspace 6; workspace 6
-$WIN+Shift+7        move container to workspace 7; workspace 7
-$WIN+Shift+8        move container to workspace 8; workspace 8
-$WIN+Shift+9        move container to workspace 9; workspace 9
-$WIN+Shift+0        move container to workspace 10; workspace 10
+$ALT+Control+Shift+1 move container to workspace 1;  workspace  1
+$ALT+Control+Shift+2 move container to workspace 2;  workspace  2
+$ALT+Control+Shift+3 move container to workspace 3;  workspace  3
+$ALT+Control+Shift+4 move container to workspace 4;  workspace  4
+$ALT+Control+Shift+5 move container to workspace 5;  workspace  5
+$ALT+Control+Shift+6 move container to workspace 6;  workspace  6
+$ALT+Control+Shift+7 move container to workspace 7;  workspace  7
+$ALT+Control+Shift+8 move container to workspace 8;  workspace  8
+$ALT+Control+Shift+9 move container to workspace 9;  workspace  9
+$ALT+Control+Shift+0 move container to workspace 10; workspace 10
 
 # ━━ 1st Row
-$WIN+r              $RUN -i reddit -e '$TRM -name reddit -e rtv'
-$WIN+t              $exn compton
-$WIN+y              $QUD --resize '1 -5 -5'
-$WIN+u              $QUD --resize '1 $W43 $H43'
-$WIN+i              $QUD --resize '1 $W69 $H69'
-$WIN+o              $QUD --resize '1 +5 +5'
-$WIN+p              $QUD --resize '1 40 20'
-$WIN+bracketleft    [con_mark=$M1] resize set height 98
+$ALT+Tab         focus right
+$ALT+e           layout toggle tabbed split
+$ALT+y           $QUD --resize '1 -5 -5'
+$ALT+u           $QUD --resize '1 $W43 $H43'
+$ALT+i           $QUD --resize '1 $W69 $H69'
+$ALT+o           $QUD --resize '1 +5 +5'
+$ALT+p           $QUD --resize '1 40 20'
+$ALT+bracketleft [con_mark=$M1] resize set height 98
 
-$WIN+Shift+t        $exn pkill compton
-$WIN+Shift+y        gaps inner current set 0;   gaps outer current set 0
-$WIN+Shift+u        gaps inner current minus 1; gaps outer current minus 10
-$WIN+Shift+i        gaps inner current plus 1;  gaps outer current plus 10
-$WIN+Shift+o        gaps inner current set 4;   gaps outer current set 40
+$ALT+Shift+Tab   focus left
+$ALT+Shift+q     kill
+$ALT+Shift+r     restart
+$ALT+Shift+y     gaps inner current set    0; gaps outer current set    0
+$ALT+Shift+u     gaps inner current minus 10; gaps outer current minus 10
+$ALT+Shift+i     gaps inner current plus  10; gaps outer current plus  10
+$ALT+Shift+o     gaps inner current set   40; gaps outer current set   40
+
+$ALT+Control+y   resize shrink width  5 px or 5 ppt
+$ALT+Control+u   resize shrink height 5 px or 5 ppt
+$ALT+Control+i   resize grow   height 5 px or 5 ppt
+$ALT+Control+o   resize grow   width  5 px or 5 ppt
 
 # ━━ 2nd Row
-$WIN+s              $exn slack
-$WIN+d              move workspace to output $hdm
-$WIN+f              $exn gksu $THN
-$WIN+g              $exn $TRM -name gitcommit -e bash /home/gavarch/scr/gitcommit
-$WIN+h              focus left
-$WIN+j              focus down
-$WIN+k              focus up
-$WIN+l              focus right
-$WIN+semicolon      $exn noter -t NOTES
-$WIN+apostrophe     $exn noter -t TODO
-$WIN+Return         $exn xterm
+$ALT+a               focus parent
+$ALT+g               split toggle
+$ALT+h               $exn i3viswiz left
+$ALT+j               $exn i3viswiz down
+$ALT+k               $exn i3viswiz up
+$ALT+l               $exn i3viswiz right
 
-$WIN+Shift+a        $exn wsloapp
-$WIN+Shift+s        $exn i3-sticky-toggle
-$WIN+Shift+f        focus parent, fullscreen toggle, focus child
-$WIN+Shift+h        move left
-$WIN+Shift+j        move down
-$WIN+Shift+k        move up
-$WIN+Shift+l        move right
-$WIN+Shift+Return   $exn $TRM -name ranger_root -e sudo ranger
+$ALT+Shift+a         focus child
+$ALT+Shift+f         fullscreen toggle
+$ALT+Shift+h         $exn i3move left
+$ALT+Shift+j         $exn i3move down
+$ALT+Shift+k         $exn i3move up
+$ALT+Shift+l         $exn i3move right
+
+$ALT+Control+s       sticky toggle
+$ALT+Control+d       move workspace to output $MON2
+$ALT+Control+h       focus left
+$ALT+Control+j       focus down
+$ALT+Control+k       focus up
+$ALT+Control+l       focus right
+
+$ALT+Control+Shift+a $exn wsloapp
+$ALT+Control+Shift+s $exn i3-sticky-toggle
+$ALT+Control+Shift+f focus parent, fullscreen toggle, focus child
+$ALT+Control+Shift+h move left
+$ALT+Control+Shift+j move down
+$ALT+Control+Shift+k move up
+$ALT+Control+Shift+l move right
 
 # ━━ 3rd Row
-#$WIN+x              unmark
-$WIN+c              $exn google-chrome-beta
-$WIN+v              move workspace to output $vga
-$WIN+b              $RUN -i bashmount -e '$TRM -name bashmount -e bashmount'
-$WIN+n              move workspace to output $nat
-$WIN+m              $exn mmon
-$WIN+comma          $exn i3light dec
-$WIN+period         $exn i3light inc
-
-$WIN+Shift+c        $exn reloadconfs
+#$ALT+x  unmark
+$ALT+v  move workspace to output $MON3
+$ALT+n  move workspace to output $MON1
 
 # ━  FOR_WINDOW
 # ━━ GLOBAL
@@ -269,7 +182,7 @@ $fw [class="Rofi"]                       border pixel 1
 
 # ━━ QUAD
 $fw [title="Log in with PayPal"]         $tf "paypal"
-$fw [instance="tiledterm"]               focus;$QUD -t;$tf "tiledterm"
+$fw [instance="terminal"]                focus;$QUD -t;$tf "terminal"
 $fw [instance="media"]                   focus;$QUD -t;$tf "media"
 $fw [instance="ranger"]                  focus;$QUD -t;$tf "ranger"
 $fw [instance="ranger_root"]             focus;$QUD -t;$tf "ranger_root"
@@ -338,8 +251,8 @@ $fw [class="Glava"]                      focus;$QUD -m 4;focus;border pixel 0
 # ━  GAPS
 gaps inner 20
 gaps outer 40
-workspace 1 gaps inner 5
-workspace 1 gaps outer 5
+workspace 1 gaps inner  5
+workspace 1 gaps outer  5
 workspace 1 gaps top   30
 
 # ━  STARTUP

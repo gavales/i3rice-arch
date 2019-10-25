@@ -10,6 +10,7 @@
 
 set -o vi
 shopt -s nocaseglob
+shopt -s extglob
 
 [[ $- != *i* ]] && return
 

@@ -4798,3 +4798,10 @@ Oct 24 02:04 : client: [10] opened from [::1]:47020
 Oct 24 02:04 : client: [10] closed
 Oct 24 02:04 : client: [11] opened from [::1]:47022
 Oct 24 02:04 : client: [11] closed
+Oct 25 14:17 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 14 Aerds - Flycruisor.mp3"
+Oct 25 14:17 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 14 Aerds - Flycruisor.mp3"
+Oct 25 14:17 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 14 Aerds - Flycruisor.mp3"
+Oct 25 14:17 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 14 Aerds - Flycruisor.mp3"
+Oct 25 14:17 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 25 14:17 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 25 14:17 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.

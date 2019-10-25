@@ -103,6 +103,7 @@ themer --list|-l themes|thememenu|vars|varmenu|default|current
 themer [--force|-f] --init|-i <directory>
 themer [--force|-f] --apply-single|-a <directory>
 themer --apply-all|-A
+themer --clean|-C <directory>
 themer --updatelist|-u
 themer --help|-h
 themer
@@ -142,6 +143,16 @@ Use with `--apply-(single|all)` to force apply a theme,
 since themes are not automatically generated from
 'template_' files to speed up applying the theme
 
+`--dark|-D`  
+Dark mode (switches fgo and bg0).
+
+`--auto-dark|-t <am_time>:<pm_time>`  
+Dark/Light mode based on time of day.  
+Uses 24-hr time format
+
++ `<am_time>` hr to apply 'light' mode.
++ `<pm_time>` hr to apply 'dark' mode.
+
 `--getvar|-v <variable>`  
 Get `<variable>` from current theme.
 
@@ -162,15 +173,10 @@ Create theme `<name>`.
 `--updatelist|-u`  
 Update the rofi theme list
 
-`--dark|-D`  
-Dark mode (switches fgo and bg0).
-
-`--auto-dark|-t <am_time>:<pm_time>`  
-Dark/Light mode based on time of day.  
-Uses 24-hr time format
-
-+ `<am_time>` hr to apply 'light' mode.
-+ `<pm_time>` hr to apply 'dark' mode.
+`--clean|-C <directory>`  
+Remove all the generated theme files in
+`<directory>/.themer/<name>`. If no `<directory>`
+is specified, then all directories in `$THEMER_DIR/_dirs`
 
 `--help|-h`  
 Display this help.
@@ -639,6 +645,7 @@ O_auto-dark () {
 O_apply-single () {
 	regex=$(cat $RGX)
 	DIR="$1"
+	[[ -d $DIR ]] || exit
 	CTHM="$(themer -v name)"
 	cd $DIR
 	[[ -f "${DIR}/.themer_pre" ]] && ./.themer_pre &>/dev/null &
@@ -769,7 +776,15 @@ echo "${_DIR}" >> ${DIRS}
 }
 
 O_clean () {
-	exit
+	if [[ -n ${1} ]]; then
+		cd "${1}/.themer"
+		ls -d */ | xargs rm -rf
+	else
+		eval "$(cat $DIRS | sed '/^#/d;s/^FORCE //g' | awk '{
+			print "cd \"" $0 "/.themer\""
+			print "ls -d */ | xargs rm -rf"
+		}')"
+	fi
 }
 
 while true; do
@@ -784,7 +799,7 @@ while true; do
 		--delete       | -d ) O_delete       "${2:-}" ; shift ;;
 		--auto-dark    | -t ) O_auto-dark    "${2:-}" ; shift ;;
 		--init         | -i ) O_init         "${2:-}" ; shift ;;
-		--clean        | -C ) O_clean                 ; shift ;;
+		--clean        | -C ) O_clean        "${2:-}" ; shift ;;
 		--dark         | -D ) DARK=1  ;;
 		--force        | -f ) FORCE=1 ;;
 		--help         | -h ) help ;;

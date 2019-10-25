@@ -17,29 +17,29 @@ super + Home
 
 # ━  NUM
 super + 1
-	edtr -s doots $HOME/.config/i3/.themer/template_config
+	$EDITOR -s doots $HOME/.config/i3/.themer/template_config
 super + 2
-	edtr -s doots $HOME/.bashrc
+	$EDITOR -s doots $HOME/.bashrc
 super + 3
-	edtr -s doots $HOME/.vimrc
+	$EDITOR -s doots $HOME/.vimrc
 super + 4
-	edtr -s doots $HOME/.config/sxhkd/sxhkdrc
+	$EDITOR -s doots $HOME/.config/sxhkd/sxhkdrc
 super + 5
-	edtr -s doots $HOME/.config/ranger/rc.conf
+	$EDITOR -s doots $HOME/.config/ranger/rc.conf
 super + 6
-	edtr -s doots $HOME/.config/ranger/rifle.conf
+	$EDITOR -s doots $HOME/.config/ranger/rifle.conf
 super + 7
-	edtr -s doots $HOME/.config/polybar/.themer/template_config
+	$EDITOR -s doots $HOME/.config/polybar/.themer/template_config
 super + 8
-	edtr -s doots $HOME/.config/qutebrowser/.themer/template_config.py
+	$EDITOR -s doots $HOME/.config/qutebrowser/.themer/template_config.py
 
 # ━  ROW1
 super + q
-	lch -t -i calculator -e "urxvtc -name calculator -e R"
+	lch -t -i calculator -e "$TWOMINAL -name calculator -e R"
 super + w
 	lch -n ^watchseries -e "chrap https://ww2.watch-series.co/"
 super + r
-	lch -n newsboat -e "urxvtc -name newsboat -e newsboat"
+	lch -n newsboat -e "$TWOMINAL -name newsboat -e newsboat"
 super + t
 	mkwalrando
 super + y
@@ -52,7 +52,7 @@ super + {p,bracketright,bracketleft,backslash}
 	i3media {togg,next,prev,stop}
 
 super + shift + r
-	lch -i reddit -e "urxvtc -name reddit -e rtv"
+	lch -i reddit -e "$TWOMINAL -name reddit -e rtv"
 super + shift + t
 	compton
 super + shift + y
@@ -62,19 +62,19 @@ super + shift + p
 
 # ━  ROW2
 super + s
-	lch -i ncmpcpp -e "urxvtc -name ncmpcpp -e ncmpcpp"
+	lch -i ncmpcpp -e "$TWOMINAL -name ncmpcpp -e ncmpcpp"
 super + d
 	i3menu -s -l 0
 super + f
 	thunar
 super + g
-	urxvtc -name gitcommit -e gitcommit
+	$TWOMINAL -name gitcommit -e gitcommit
 super + semicolon
-	xterm
+	$TREMINAL
 super + apostrophe
-	urxvtc -name noterm
+	$TWOMINAL -name noterm
 super + Return
-	urxvtc -name terminal
+	$TWOMINAL -name terminal
 
 super + shift + s
 	lch -c Spotify -e "spotify"
@@ -83,18 +83,18 @@ super + shift + d
 super + shift + f
 	gksu thunar
 super + shift + g
-	urxvtc -name drive_sync -e grivesync
+	$TWOMINAL -name drive_sync -e grivesync
 super + shift + semicolon
 	noter -t NOTES
 super + shift + apostrophe
 	noter -t TODO
 super + shift + Return
-	urxvtc -name ranger -e ranger
+	$TWOMINAL -name ranger -e ranger
 
 super + control + s
 	slack
 super + control + Return
-	urxvtc -name ranger_root -e sudo ranger
+	$TWOMINAL -name ranger_root -e sudo ranger
 
 # ━  ROW3
 super + z
@@ -102,13 +102,13 @@ super + z
 super + x
 	surf docs.google.com/spreadsheets/u/0/
 super + c
-	lch -c Firefox -e "firefox"
+	lch -c Firefox -e "$BROWSER"
 super + v
 	glach
 #super + v
-	#lch -i visualiser -e "urxvtc -name visualiser -e vis"
+	#lch -i visualiser -e "$TWOMINAL -name visualiser -e vis"
 super + b
-	lch -i references -e "edtr $HOME/Drive/global.bib"
+	lch -i references -e "$EDITOR $HOME/Drive/global.bib"
 super + n
 	lch -n ^Netflix$ -e "chrap https://www.netflix.com/"
 super + m
@@ -121,7 +121,7 @@ super + shift + c
 super + shift + v
 	projectM-pulseaudio
 super + shift + b
-	lch -i bashmount -e "urxvtc -name bashmount -e bashmount"
+	lch -i bashmount -e "$TWOMINAL -name bashmount -e bashmount"
 super + shift + m
 	lch -n '^My Movies & TV' -e "chrap https://play.google.com/movies/"
 super + shift + {comma,period,slash}

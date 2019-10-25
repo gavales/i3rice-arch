@@ -58,18 +58,18 @@ done
 OPT=${1}
 
 [[ -z $OPT ]] && OPT=$(printf "%s\n" "l lock" "e logout" "s suspend" \
-	"h hibernate" "r reboot" "x shutdown" | i3menu -c red -l 1 -y 27 -w 500 \
+	"r reboot" "h hibernate" "x shutdown" | i3menu -c red -l 1 -y 27 -w 500 \
 	-p "SHUTDOWN [<ESC> to cancel]" | awk '{print $1}')
 
 [[ -z $OPT ]] && exit
 
 case $OPT in
 	l) lscr                                   ;;
-	e) i3-msg exit                                  ;;
+	e) i3-msg exit                            ;;
 	s) lscr && sleep 0.5 && $logind suspend   ;;
 	h) lscr && sleep 0.5 && $logind hibernate ;;
-	r) $logind reboot                               ;;
-	x) $logind poweroff                             ;;
+	r) $logind reboot                         ;;
+	x) $logind poweroff                       ;;
 esac
 
 exit 0
