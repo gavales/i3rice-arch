@@ -24,7 +24,7 @@ Run with no options to create default directories:
 .PD 0
 .P
 .PD
-+ \f[B]$GWCDIR/(normal|blur|cols)\f[R] + Default gwc folder:
++ \f[B]$GWCDIR/(normal|blur|cols)\f[R] + Default \f[B]gwc\f[R] database:
 \f[B]GWCDIR\f[R] = \f[B]$XDG_PICTURES_DIR/gwc\f[R]
 .PP
 \f[B]--wallpaper|-w \fI<path|name>\fP\f[R]
@@ -54,7 +54,7 @@ next wallpaper in history
 .PD 0
 .P
 .PD
-random wallpaper in \f[B]$GWCDIR/normal\f[R]
+Choose a random wallpaper in \f[B]$GWCDIR/normal\f[R]
 .PP
 \f[B]--tint|-t \fI<hex_color>\fP\f[R]
 .PD 0
@@ -67,13 +67,15 @@ Tint color of wallpaper, Hexadecimal color Eg.
 .PD 0
 .P
 .PD
-Add walls from \f[B]\fI<directory>\fP\f[R]
+Add walls from \f[B]\fI<directory>\fP\f[R], add the wallpaper in
+\f[B]\fI<path>\fP\f[R], or if there\[cq]s no argument, check for pictures in
+the working directory and add those to \f[B]$GWCDIR\f[R]
 .PP
 \f[B]--list|-l\f[R]
 .PD 0
 .P
 .PD
-List available wallpapers
+View all wallpapers in the database
 .PP
 \f[B]--blur|-b\f[R]
 .PD 0
@@ -81,7 +83,7 @@ List available wallpapers
 .PD
 Toggle blur
 .PP
-\f[B]--rename|-r \fI<oldname>\fP \fI<newname>\fP\f[R]
+\f[B]--rename|-r \[aq]\fI<oldname>\fP \fI<newname>\fP\[aq]\f[R]
 .PD 0
 .P
 .PD

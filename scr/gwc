@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # OA: Gavin Vales
 # CREATED: Sat  6 Jul 00:50:41 BST 2019
 
@@ -50,7 +49,7 @@ gwc
 
 Run with no options to create default directories:  
 + `$GWCDIR/(normal|blur|cols)`
-+ Default gwc folder: `GWCDIR` = `$XDG_PICTURES_DIR/gwc`
++ Default `gwc` database: `GWCDIR` = `$XDG_PICTURES_DIR/gwc`
 
 `--wallpaper|-w <path|name>`  
 Wallpaper to set:  
@@ -64,21 +63,23 @@ previous wallpaper in history
 next wallpaper in history
 
 `--random|-p`  
-random wallpaper in `$GWCDIR/normal`
+Choose a random wallpaper in `$GWCDIR/normal`
 
 `--tint|-t <hex_color>`  
 Tint color of wallpaper, Hexadecimal color Eg. #002b36
 
 `--add|-a <directory|path>`  
-Add walls from `<directory>`
+Add walls from `<directory>`, add the wallpaper in
+`<path>`, or if there's no argument, check for pictures
+in the working directory and add those to `$GWCDIR`
 
 `--list|-l`  
-List available wallpapers
+View all wallpapers in the database
 
 `--blur|-b`  
 Toggle blur
 
-`--rename|-r <oldname> <newname>`  
+`--rename|-r '<oldname> <newname>'`  
 Rename `<oldname>` wallpaper to `<newname>`.
 If only there is only one argument, the current
 wallpaper is renamed to that argument.
