@@ -1,22 +1,3 @@
-[frame]
-width = 2
-color = "#303030"
-
-[urgency_low]
-background = "#6bb4a2"
-foreground = "#303030"
-timeout = 3
-
-[urgency_normal]
-background = "#6bb4a2"
-foreground = "#303030"
-timeout = 3
-
-[urgency_critical]
-background = "#ff4845"
-foreground = "#303030"
-timeout = 3
-
 [shortcuts]
 	close = ctrl+space
 	close_all = ctrl+shift+space

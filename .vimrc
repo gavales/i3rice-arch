@@ -27,6 +27,8 @@ set noshowmode noruler noshowcmd
 set cmdheight=1
 set splitbelow splitright
 set t_Co=16
+set autoread
+au CursorHold * checktime
 
 " ━━ GLOBAL MAPS
 map \gy           :Goyo<bar>set<Space>laststatus=2<Enter><Enter>
@@ -192,7 +194,7 @@ endfunction
 " ━━ ACTUAL
 
 set statusline=
-set statusline+=%#usrblu#\ 
+set statusline+=%#usrStatus#\ 
 set statusline+=\ %{ModeCurrent()}
 set statusline+=\ %f\ 
 set statusline+=\ %{ReadOnly()}\ %m\ %w\ 

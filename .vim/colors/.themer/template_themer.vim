@@ -10,7 +10,7 @@ endif
 
 let g:colors_name = "themer"
 
-" >> CTERM
+" ━  CTERM
 hi Normal           ctermfg=white    ctermbg=none
 hi Title            ctermfg=white    ctermbg=none     cterm=bold
 hi LineNr           ctermfg=blue     ctermbg=black    cterm=none
@@ -56,14 +56,15 @@ hi TabLine          ctermfg=blue     ctermbg=Gray     cterm=none
 hi TabLineSel       ctermfg=white    ctermbg=black    cterm=none
 hi TabLineFill      ctermfg=blue     ctermbg=Gray     cterm=none
 
-hi usrred           ctermfg=white    ctermbg=red
-hi usrylw           ctermfg=black    ctermbg=yellow
-hi usrgrn           ctermfg=black    ctermbg=green
-hi usrgry           ctermfg=black    ctermbg=grey
-hi usrblu           ctermfg=black    ctermbg=blue
-hi usrgnt           ctermfg=black    ctermbg=magenta
+hi usrStatus        ctermfg=black    ctermbg=blue
+hi usrred           ctermfg=red      ctermbg=black    cterm=underline,bold
+hi usrylw           ctermfg=yellow   ctermbg=black    cterm=underline,bold
+hi usrgrn           ctermfg=green    ctermbg=black    cterm=underline,bold
+hi usrgry           ctermfg=grey     ctermbg=black    cterm=underline,bold
+hi usrblu           ctermfg=blue     ctermbg=black    cterm=underline,bold
+hi usrgnt           ctermfg=magenta  ctermbg=black    cterm=underline,bold
 
-" >> GUI
+" ━  GUI
 hi Normal           guifg=%%fg0%% guibg=%%bg0%%
 hi Title            guifg=%%fg0%% guibg=%%bg0%% gui=bold
 hi LineNr           guifg=%%acc%% guibg=%%bg0%% gui=none
@@ -112,10 +113,10 @@ hi TabLine          guifg=%%acc%% guibg=%%acb%% gui=none
 hi TabLineSel       guifg=%%fg0%% guibg=%%bg0%% gui=none
 hi TabLineFill      guifg=%%acc%% guibg=%%acb%% gui=none
 
-hi usrred           guifg=%%bg0%% guibg=%%red%%
-hi usrylw           guifg=%%bg0%% guibg=%%ylw%%
-hi usrgrn           guifg=%%bg0%% guibg=%%grn%%
-hi usrgry           guifg=%%bg0%% guibg=%%bg3%%
-hi usrblu           guifg=%%bg0%% guibg=%%acc%%
-hi usrgnt           guifg=%%bg0%% guibg=%%gnt%%
-
+hi usrStatus        guifg=%%bg0%% guibg=%%acc%%
+hi usrred           guifg=%%red%% guibg=%%bg0%% gui=underline,bold
+hi usrylw           guifg=%%ylw%% guibg=%%bg0%% gui=underline,bold
+hi usrgrn           guifg=%%grn%% guibg=%%bg0%% gui=underline,bold
+hi usrgry           guifg=%%bg3%% guibg=%%bg0%% gui=underline,bold
+hi usrblu           guifg=%%acc%% guibg=%%bg0%% gui=underline,bold
+hi usrgnt           guifg=%%gnt%% guibg=%%bg0%% gui=underline,bold

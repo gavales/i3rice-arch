@@ -274,4 +274,3 @@ $exn i3listen-toggle
 $ena mpv %%HOME%%/scrmus/A\ Tone\ His\ Self.mp3
 $ena notify-send 'i3 (re)loaded!' -i %%HOME%%/scrpic/i3white.png
 
-# vim:ft=i3
