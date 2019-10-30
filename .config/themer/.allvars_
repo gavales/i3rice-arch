@@ -1,0 +1,115 @@
+name               grayscale-dark
+wallpaper          rollingeyes
+bg0                #444444
+acc                #e60012
+blu                #e60012
+fg0                #ececec
+HOME               
+MON1               eDP1
+MON2               VGA1
+MON3               HDMI1
+guifont            Luxi Mono
+font               monaco
+sansfont           Lucida Sans
+monofont           CMU Typewriter Text
+monofnt2           monaco
+romanfont          Luxi Mono
+gvimfont           Luxi\\ Mono
+ltimex             1
+ltimey             90
+size               11
+rxvtsize           12
+rofifsize          12
+gtk                Themer
+gtk-icon           Tela-red-dark
+cursor             Bibata_Dark_Red
+conky_loc1         top_left
+conky_loc2         bottom_right
+red                #cc241d
+ylw                #904800
+grn                #009048
+cyn                #009090
+gnt                #900048
+rng                #d65d0e
+darkblu            #e9767f
+lightblu           #95222b
+darkred            #dc8884
+lightred           #883430
+darkylw            #be9a76
+lightylw           #6a4622
+darkgrn            #76be9a
+lightgrn           #226a46
+darkcyn            #76bebe
+lightcyn           #226a6a
+darkgnt            #be769a
+lightgnt           #6a2246
+darkrng            #e1a47d
+lightrng           #8d5029
+fg3                #b0b0b0
+fg2                #c4c4c4
+fg1                #d8d8d8
+acf                #e9767f
+acb                #95222b
+bg1                #585858
+bg2                #6c6c6c
+bg3                #808080
+ac88f              #ebcfd1
+ac75f              #eab1b5
+ac63f              #e9949b
+ac50f              #e9767f
+ac37f              #e85762
+ac25f              #e73b48
+ac12f              #e61c2c
+ac12b              #d20818
+ac25b              #bd111e
+ac37b              #aa1924
+ac50b              #95222b
+ac63b              #7f2a31
+ac75b              #6c3337
+ac88b              #573b3e
+bg0RGB             68, 68, 68
+accRGB             230, 0, 18
+bluRGB             230, 0, 18
+fg0RGB             236, 236, 236
+redRGB             204, 36, 29
+ylwRGB             144, 72, 0
+grnRGB             0, 144, 72
+cynRGB             0, 144, 144
+gntRGB             144, 0, 72
+rngRGB             214, 93, 14
+darkbluRGB         233, 118, 127
+lightbluRGB        149, 34, 43
+darkredRGB         220, 136, 132
+lightredRGB        136, 52, 48
+darkylwRGB         190, 154, 118
+lightylwRGB        106, 70, 34
+darkgrnRGB         118, 190, 154
+lightgrnRGB        34, 106, 70
+darkcynRGB         118, 190, 190
+lightcynRGB        34, 106, 106
+darkgntRGB         190, 118, 154
+lightgntRGB        106, 34, 70
+darkrngRGB         225, 164, 125
+lightrngRGB        141, 80, 41
+fg3RGB             176, 176, 176
+fg2RGB             196, 196, 196
+fg1RGB             216, 216, 216
+acfRGB             233, 118, 127
+acbRGB             149, 34, 43
+bg1RGB             88, 88, 88
+bg2RGB             108, 108, 108
+bg3RGB             128, 128, 128
+ac88fRGB           235, 207, 209
+ac75fRGB           234, 177, 181
+ac63fRGB           233, 148, 155
+ac50fRGB           233, 118, 127
+ac37fRGB           232, 87, 98
+ac25fRGB           231, 59, 72
+ac12fRGB           230, 28, 44
+ac12bRGB           210, 8, 24
+ac25bRGB           189, 17, 30
+ac37bRGB           170, 25, 36
+ac50bRGB           149, 34, 43
+ac63bRGB           127, 42, 49
+ac75bRGB           108, 51, 55
+ac88bRGB           87, 59, 62

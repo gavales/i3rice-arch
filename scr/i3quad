@@ -22,6 +22,7 @@ __i3quad__ - my i3 layout launcher, inspired by budlabs' `i3fyra`
 
 ```
 i3quad [--fullscreen|-F|--focus|-f|--move|-m] <con>
+i3quad --resize|-r '<con> +|-|%|<integer|*> +|-|%|<integer|*>'
 i3quad --tile|-t
 i3quad --help|-h
 ```
@@ -33,6 +34,24 @@ Move window to mark `_W<con>`
 
 `--focus|-f <con>`  
 Move window to mark `_W<con>`
+
+`--resize|-r '<con> +|-|%|<integer|*> +|-|%|<integer|*>'`  
+Resize/set container `_W<con>`'s dimensions. First argument
+is the target container, second is the width increment/value,
+third is the height increment/value. Eg.
+
++ `i3quad -r '1 +20 -40'`  
+Increases width of container 1 by 20 px or 20 ppt.  
+Decreases height of container 1 by 40 px or 40 ppt.
++ `i3quad -r '2 %20 +40'`  
+Sets width of container 2 to 20% of screen.  
+increases height of container 2 by 40 px or 40 ppt.
++ `i3quad -r '3 20 40'`  
+Sets width of container 3 to 20 pixels.  
+Sets height of container 3 to 20 pixels.
++ `i3quad -r '4 * -40'`  
+Doesn't change width of container 4.  
+Decreases height of container 4 by 40 px or 40 ppt.
 
 `--fullscreen|-F <con>`  
 Toggle mark `_W<con>` fullscreen
@@ -135,15 +154,20 @@ O_resize () {
 	W=${W#* }  WD=${W:0:1}
 	H=${1##* } HD=${H:0:1}
 
-	if   [[ $WD == "+" ]]; then WDT="grow width ${W/+/} px or ${W/+/} ppt"
-	elif [[ $WD == "-" ]]; then WDT="shrink width ${W/-/} px or ${W/-/} ppt"
-	else                        WDT="set $W " ; fi
+	if   [[ $WD == "+" ]]; then WDT="${CMD}grow width ${W/+/} px or ${W/+/} ppt"
+	elif [[ $WD == "-" ]]; then WDT="${CMD}shrink width ${W/-/} px or ${W/-/} ppt"
+	elif [[ $WD == "%" ]]; then WDT="${CMD}set width ${W/\%/} ppt"
+	elif [[ $WD == "*" ]]; then WDT=""
+	else                        WDT="${CMD}set width  $W"  ; fi
 
-	if   [[ $HD == "+" ]]; then HDT="\n${CMD}grow height ${H/+/} px or ${H/+/} ppt"
-	elif [[ $HD == "-" ]]; then HDT="\n${CMD}shrink height ${H/-/} px or ${H/-/} ppt"
-	else                        HDT="$H"      ; fi
+	if   [[ $HD == "+" ]]; then HDT="${CMD}grow height ${H/+/} px or ${H/+/} ppt"
+	elif [[ $HD == "-" ]]; then HDT="${CMD}shrink height ${H/-/} px or ${H/-/} ppt"
+	elif [[ $HD == "%" ]]; then HDT="${CMD}set height ${H/\%/} ppt"
+	elif [[ $HD == "*" ]]; then HDT=""
+	else                        HDT="${CMD}set height $H"  ; fi
 
-	eval "$(echo -e $CMD$WDT$HDT)"
+	eval "$(echo $WDT)"
+	eval "$(echo $HDT)"
 	exit
 }
 

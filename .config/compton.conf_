@@ -1,4 +1,4 @@
-# >>>> Shadow
+# ━  Shadow
 
 shadow = true;
 no-dock-shadow = true;
@@ -25,7 +25,7 @@ shadow-exclude = [
 
 shadow-ignore-shaped = false;
 
-# >>>> Opacity
+# ━  Opacity
 
 active-opacity = 1.00;
 menu-opacity = 1.00;
@@ -70,14 +70,14 @@ inactive-dim = 0.00;
 #inactive-opacity-override = true;
 #inactive-dim-fixed = true;
 
-# >>>> Blur
+# ━  Blur
 
 blur-background = false;
 #blur-background-frame = true;
 #blur-background-fixed = false;
 #blur-background-exclude = [ "window_type = 'dock'", "window_type = 'desktop'" ];
 
-# >>>> Fading
+# ━  Fading
 
 fading = false;
 fade-delta = 7;
@@ -89,14 +89,14 @@ fade-out-step = 0.03;
 #alpha-step = 0.06;
 #no-fading-openclose = false;
 
-# >>>> Other
+# ━  Other
 
 #inactive-dim = 0.5;
 mark-wmwin-focused = true;
 mark-ovredir-focused = true;
 detect-rounded-corners = false;
 
-# >>>> Wintypes
+# ━  Wintypes
 
 wintypes:
 {

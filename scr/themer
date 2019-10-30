@@ -716,7 +716,12 @@ O_list () {
 	case $1 in
 		vars)    awk '!/!/ {
 				key=$1;$1="";gsub(/^[ \t]+/, "", $0)
-				printf "%-19s%s\n", "%%" key "%%", $0
+				if (key~"RGB$"){
+					gsub(/RGB$/, "", key)
+					printf "%-19s%s\n", "@@" key "@@", $0
+				} else {
+					printf "%-19s%s\n", "%%" key "%%", $0
+				}
 				}' $ALL
 			;;
 		current) awk '!/!/ {

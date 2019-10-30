@@ -34,7 +34,7 @@ __gwc__ - A script to set wallpaper, with other features.
 # SYNOPSIS
 
 ```
-gwc [--wallpaper|-w <path|name>]
+gwc [--wallpaper|-w <path|name|random|previous|next>]
     [--next|-n] [--previous|-p] [--random|-r]
     [--tint|-t|--blur|-b]
 gwc --add|-a <directory|path>
@@ -51,7 +51,7 @@ Run with no options to create default directories:
 + `$GWCDIR/(normal|blur|cols)`
 + Default `gwc` database: `GWCDIR` = `$XDG_PICTURES_DIR/gwc`
 
-`--wallpaper|-w <path|name>`  
+`--wallpaper|-w <path|name|random|previous|next>`  
 Wallpaper to set:  
 + `<path>` - path to a picture
 + `<name>` - name of wallpaper stored in `$GWCDIR/normal`
@@ -250,7 +250,10 @@ if [[ -n $_WPO ]]; then
 
 	WPC=${_WPP##*/}
 
-	if [[ ! -f $NORM/${WPC%.*} ]]; then
+	if   [[ $_WPO == "random"   ]]; then random
+	elif [[ $_WPO == "previous" ]]; then previous
+	elif [[ $_WPO == "next"     ]]; then next
+	elif [[ ! -f $NORM/${WPC%.*} ]]; then
 		if [[ ! -f "$_WPP" ]]; then
 			help "Wallpaper doesn't exist anywhere"
 		else
@@ -258,6 +261,10 @@ if [[ -n $_WPO ]]; then
 			add-wall "$_WPP"
 		fi
 	fi
+
+	
+	
+	
 
 	change-current
 

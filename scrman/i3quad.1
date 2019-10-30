@@ -1,4 +1,4 @@
-.TH I3QUAD 1 2019\-10\-26 Linux "User Manuals"
+.TH I3QUAD 1 2019\-10\-30 Linux "User Manuals"
 .hy
 .SH NAME
 .PP
@@ -9,6 +9,7 @@
 .nf
 \f[B]
 i3quad [--fullscreen|-F|--focus|-f|--move|-m] \fI<con>\fP
+i3quad --resize|-r \[aq]\fI<con>\fP +|-|%|\fI<integer|*>\fP +|-|%|\fI<integer|*>\fP\[aq]
 i3quad --tile|-t
 i3quad --help|-h
 \f[R]
@@ -26,6 +27,55 @@ Move window to mark \f[B]_W\fI<con>\fP\f[R]
 .P
 .PD
 Move window to mark \f[B]_W\fI<con>\fP\f[R]
+.PP
+\f[B]--resize|-r \[aq]\fI<con>\fP +|-|%|\fI<integer|*>\fP +|-|%|\fI<integer|*>\fP\[aq]\f[R]
+.PD 0
+.P
+.PD
+Resize/set container \f[B]_W\fI<con>\fP\f[R]\[cq]s dimensions.
+First argument is the target container, second is the width
+increment/value, third is the height increment/value.
+Eg.
+.IP \[bu] 2
+\f[B]i3quad -r \[aq]1 +20 -40\[aq]\f[R]
+.PD 0
+.P
+.PD
+Increases width of container 1 by 20 px or 20 ppt.
+.PD 0
+.P
+.PD
+Decreases height of container 1 by 40 px or 40 ppt.
+.IP \[bu] 2
+\f[B]i3quad -r \[aq]2 %20 +40\[aq]\f[R]
+.PD 0
+.P
+.PD
+Sets width of container 2 to 20% of screen.
+.PD 0
+.P
+.PD
+increases height of container 2 by 40 px or 40 ppt.
+.IP \[bu] 2
+\f[B]i3quad -r \[aq]3 20 40\[aq]\f[R]
+.PD 0
+.P
+.PD
+Sets width of container 3 to 20 pixels.
+.PD 0
+.P
+.PD
+Sets height of container 3 to 20 pixels.
+.IP \[bu] 2
+\f[B]i3quad -r \[aq]4 * -40\[aq]\f[R]
+.PD 0
+.P
+.PD
+Doesn\[cq]t change width of container 4.
+.PD 0
+.P
+.PD
+Decreases height of container 4 by 40 px or 40 ppt.
 .PP
 \f[B]--fullscreen|-F \fI<con>\fP\f[R]
 .PD 0

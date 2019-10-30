@@ -1,12 +1,12 @@
 mpd_music_dir = "~/mus/"
 mpd_crossfade_time = "5"
 
-# >>>> Visualizer
+# ━  Visualizer
 visualizer_fifo_path = "/tmp/mpd.fifo"
 visualizer_output_name = "fifo"
 visualizer_type = "spectrum" (spectrum/wave)
 
-# >>>> Playlist
+# ━  Playlist
 #song_columns_list_format = "$L(9)[white]{l} (20)[red]{a} (30)[green]{b}$R(20)[cyan]{t}"
 now_playing_prefix = "$b"
 #now_playing_subfix = "/$b"
@@ -16,7 +16,7 @@ centered_cursor = "yes"
 cyclic_scrolling = "yes"
 mouse_list_scroll_whole_page = "no"
 
-# >>>> song format
+# ━  song format
 
 ## for song format you can use:
 
@@ -82,7 +82,7 @@ mouse_list_scroll_whole_page = "no"
 song_list_format = " {$5%a }{ $R$7%30t} "
 song_columns_list_format = "(50)[magenta]{ar} (50)[green]{t}"
 
-# >>>> Bars
+# ━  Bars
 song_status_format = "{%a - }{%t - }{%b}"
 #progressbar_look = "|> "
 progressbar_look = "─╼ "
@@ -90,11 +90,11 @@ titles_visibility = "no"
 header_visibility = "no"
 statusbar_visibility = "no" 
 
-# >>>> Browser
+# ━  Browser
 browser_playlist_prefix = "$2plist »$9 "
 browser_display_mode = "classic" (classic/columns)
 
-# >>>> Colors
+# ━  Colors
 #discard_colors_if_item_is_selected = "no"
 #header_window_color = "black"
 #volume_color = "cyan"
@@ -109,7 +109,7 @@ browser_display_mode = "classic" (classic/columns)
 #active_column_color = "blue"
 #visualizer_color = "blue"
 
-# >>>> Others
+# ━  Others
 song_window_title_format = "MPD: {%a > }{%t}{ [%b{ Disc %d}]}|{%f}"
 search_engine_display_mode = "columns" (classic/columns)
 follow_now_playing_lyrics = "yes"

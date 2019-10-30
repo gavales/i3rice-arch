@@ -8,17 +8,15 @@ WIDTH="300"
 HEIGHT=" "
 XFS="0"
 YFS="0"
+CURRENT_WIN=$(pfw)
 WINDOW_LOCATION=$(xdotool getactivewindow getwindowgeometry | \
-		grep 'Position' | awk '{print $2}')
-WINDOW_GEOMETRY=$(xdotool getactivewindow getwindowgeometry | \
-		grep 'Geometry' | awk '{print $2}')
+	grep 'Position' | awk '{print $2}')
 WIN_X=${WINDOW_LOCATION%,*}
 WIN_Y=${WINDOW_LOCATION#*,}
-WIN_W=${WINDOW_GEOMETRY%x*}
-WIN_H=${WINDOW_GEOMETRY#*x}
-sc=$(xdpyinfo | grep dimensions | awk '{print $2}')
-SCREEN_W=${sc%x*}
-SCREEN_H=${sc#*x}
+WIN_W=$(wattr w $CURRENT_WIN)
+WIN_H=$(wattr h $CURRENT_WIN)
+SCREEN_W=$(wattr w $(lsw -r))
+SCREEN_H=$(wattr h $(lsw -r))
 MOUSE_X=$(xdotool getmouselocation | awk '{print $1}')
 MOUSE_Y=$(xdotool getmouselocation | awk '{print $2}')
 MONITOR=$(xdotool getmouselocation | awk '{print $3}')

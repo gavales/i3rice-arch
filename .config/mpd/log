@@ -4805,3 +4805,187 @@ Oct 25 14:17 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Syn
 Oct 25 14:17 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Oct 25 14:17 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Oct 25 14:17 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 29 23:38 : client: [0] opened from [::1]:42376
+Oct 29 23:38 : client: [1] opened from [::1]:42378
+Oct 29 23:38 : client: [1] closed
+Oct 29 23:38 : client: [2] opened from [::1]:42380
+Oct 29 23:38 : client: [2] closed
+Oct 29 23:38 : update: added Sleep/Dopesmoker/01 - Dopesmoker.mp3
+Oct 29 23:38 : update: added Sleep/Dopesmoker/02 - Holy Mountain.mp3
+Oct 29 23:38 : update: added Clutch/Blast Tyrant/01 - Mercury.mp3
+Oct 29 23:38 : update: added Clutch/Blast Tyrant/02 - Profits of Doom.mp3
+Oct 29 23:38 : update: added Clutch/Blast Tyrant/03 - The Mob Goes Wild.mp3
+Oct 29 23:38 : update: added Clutch/Blast Tyrant/04 - Cypress Grove.mp3
+Oct 29 23:38 : update: added Clutch/Blast Tyrant/05 - Promoter (Of Earthbound Causes).mp3
+Oct 29 23:38 : update: added Clutch/Blast Tyrant/06 - The Regulator.mp3
+Oct 29 23:38 : update: added Clutch/Blast Tyrant/07 - Worm Drink.mp3
+Oct 29 23:38 : update: added Clutch/Blast Tyrant/08 - Army of Bono.mp3
+Oct 29 23:38 : update: added Clutch/Blast Tyrant/09 - Spleen Merchant.mp3
+Oct 29 23:38 : update: added Clutch/Blast Tyrant/10 - (In the Wake of) The Swollen Goat.mp3
+Oct 29 23:38 : update: added Clutch/Blast Tyrant/11 - Weathermaker.mp3
+Oct 29 23:38 : update: added Clutch/Blast Tyrant/12 - Subtle Hustle.mp3
+Oct 29 23:38 : update: added Clutch/Blast Tyrant/13 - Ghost.mp3
+Oct 29 23:38 : update: added Clutch/Blast Tyrant/14 - (Notes From the Trial of) La Curandera.mp3
+Oct 29 23:38 : update: added Clutch/Blast Tyrant/15 - Wysiwyg.mp3
+Oct 29 23:38 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 14 Aerds - Flycruisor.mp3"
+Oct 29 23:39 : client: [0] closed
+Oct 29 23:40 : client: [3] opened from [::1]:42386
+Oct 29 23:40 : client: [4] opened from [::1]:42388
+Oct 29 23:40 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 29 23:40 : client: [5] opened from [::1]:42390
+Oct 29 23:40 : client: [4] closed
+Oct 29 23:40 : client: [5] closed
+Oct 29 23:40 : client: [6] opened from [::1]:42392
+Oct 29 23:40 : client: [6] closed
+Oct 29 23:40 : client: [7] opened from [::1]:42394
+Oct 29 23:40 : client: [7] closed
+Oct 29 23:40 : client: [8] opened from [::1]:42396
+Oct 29 23:40 : client: [8] closed
+Oct 29 23:40 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 29 23:40 : client: [9] opened from [::1]:42402
+Oct 29 23:40 : client: [9] closed
+Oct 29 23:40 : client: [10] opened from [::1]:42404
+Oct 29 23:40 : client: [10] closed
+Oct 29 23:40 : client: [11] opened from [::1]:42406
+Oct 29 23:40 : client: [11] closed
+Oct 29 23:46 : client: [3] closed
+Oct 29 23:46 : player: played "Clutch/Blast Tyrant/01 - Mercury.mp3"
+Oct 29 23:47 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 29 23:47 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 29 23:47 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 29 23:48 : client: [0] opened from [::1]:39138
+Oct 29 23:48 : client: [1] opened from [::1]:39140
+Oct 29 23:48 : client: [1] closed
+Oct 29 23:48 : client: [2] opened from [::1]:39142
+Oct 29 23:48 : client: [2] closed
+Oct 29 23:49 : client: [3] opened from [::1]:39202
+Oct 29 23:49 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 29 23:49 : client: [3] closed
+Oct 29 23:49 : client: [4] opened from [::1]:39204
+Oct 29 23:49 : client: [4] closed
+Oct 29 23:49 : client: [5] opened from [::1]:39206
+Oct 29 23:49 : client: [5] closed
+Oct 29 23:49 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 29 23:50 : client: [6] opened from [::1]:39214
+Oct 29 23:50 : client: [6] closed
+Oct 29 23:50 : client: [7] opened from [::1]:39216
+Oct 29 23:50 : client: [7] closed
+Oct 29 23:50 : client: [8] opened from [::1]:39218
+Oct 29 23:50 : client: [8] closed
+Oct 29 23:50 : client: [9] opened from [::1]:39224
+Oct 29 23:50 : client: [9] closed
+Oct 29 23:50 : client: [10] opened from [::1]:39226
+Oct 29 23:50 : client: [10] closed
+Oct 29 23:50 : client: [11] opened from [::1]:39228
+Oct 29 23:50 : client: [11] closed
+Oct 29 23:50 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 29 23:52 : player: played "Clutch/Blast Tyrant/01 - Mercury.mp3"
+Oct 29 23:52 : client: [12] opened from [::1]:39230
+Oct 29 23:52 : client: [12] closed
+Oct 29 23:52 : client: [13] opened from [::1]:39232
+Oct 29 23:52 : client: [13] closed
+Oct 29 23:54 : player: played "Clutch/Blast Tyrant/09 - Spleen Merchant.mp3"
+Oct 29 23:54 : client: [14] opened from [::1]:39272
+Oct 29 23:54 : client: [14] closed
+Oct 29 23:54 : client: [15] opened from [::1]:39274
+Oct 29 23:54 : client: [15] closed
+Oct 29 23:56 : client: [0] closed
+Oct 29 23:56 : client: [16] opened from [::1]:39276
+Oct 29 23:56 : client: [17] opened from [::1]:39278
+Oct 29 23:56 : client: [17] closed
+Oct 29 23:56 : client: [18] opened from [::1]:39280
+Oct 29 23:56 : client: [18] closed
+Oct 29 23:57 : player: played "Clutch/Blast Tyrant/04 - Cypress Grove.mp3"
+Oct 29 23:57 : client: [19] opened from [::1]:39398
+Oct 29 23:57 : client: [19] closed
+Oct 29 23:57 : client: [20] opened from [::1]:39400
+Oct 29 23:57 : client: [20] closed
+Oct 30 00:08 : client: [16] closed
+Oct 30 00:13 : client: [21] opened from [::1]:39512
+Oct 30 00:13 : client: [22] opened from [::1]:39514
+Oct 30 00:13 : client: [22] closed
+Oct 30 00:13 : client: [23] opened from [::1]:39516
+Oct 30 00:13 : client: [23] closed
+Oct 30 00:13 : client: [21] closed
+Oct 30 00:13 : client: [24] opened from [::1]:39520
+Oct 30 00:13 : client: [25] opened from [::1]:39522
+Oct 30 00:13 : client: [25] closed
+Oct 30 00:13 : client: [26] opened from [::1]:39524
+Oct 30 00:13 : client: [26] closed
+Oct 30 00:13 : client: [24] closed
+Oct 30 00:13 : client: [27] opened from [::1]:39526
+Oct 30 00:13 : client: [28] opened from [::1]:39528
+Oct 30 00:13 : client: [28] closed
+Oct 30 00:13 : client: [29] opened from [::1]:39530
+Oct 30 00:13 : client: [29] closed
+Oct 30 00:17 : client: [30] opened from [::1]:39706
+Oct 30 00:17 : client: [30] closed
+Oct 30 00:17 : client: [31] opened from [::1]:39708
+Oct 30 00:17 : client: [31] closed
+Oct 30 00:17 : client: [32] opened from [::1]:39710
+Oct 30 00:17 : client: [32] closed
+Oct 30 00:17 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 30 00:21 : player: played "Clutch/Blast Tyrant/06 - The Regulator.mp3"
+Oct 30 00:21 : client: [33] opened from [::1]:39812
+Oct 30 00:21 : client: [33] closed
+Oct 30 00:21 : client: [34] opened from [::1]:39814
+Oct 30 00:21 : client: [34] closed
+Oct 30 00:24 : player: played "Clutch/Blast Tyrant/10 - (In the Wake of) The Swollen Goat.mp3"
+Oct 30 00:24 : client: [35] opened from [::1]:39822
+Oct 30 00:24 : client: [35] closed
+Oct 30 00:24 : client: [36] opened from [::1]:39824
+Oct 30 00:24 : client: [36] closed
+Oct 30 00:30 : player: played "Clutch/Blast Tyrant/14 - (Notes From the Trial of) La Curandera.mp3"
+Oct 30 00:30 : client: [37] opened from [::1]:39832
+Oct 30 00:30 : client: [37] closed
+Oct 30 00:30 : client: [38] opened from [::1]:39834
+Oct 30 00:30 : client: [38] closed
+Oct 30 00:33 : player: played "Clutch/Blast Tyrant/03 - The Mob Goes Wild.mp3"
+Oct 30 00:33 : client: [39] opened from [::1]:39844
+Oct 30 00:33 : client: [39] closed
+Oct 30 00:33 : client: [40] opened from [::1]:39846
+Oct 30 00:33 : client: [40] closed
+Oct 30 00:36 : client: [27] closed
+Oct 30 00:36 : player: played "Clutch/Blast Tyrant/02 - Profits of Doom.mp3"
+Oct 30 00:41 : player: played "Clutch/Blast Tyrant/13 - Ghost.mp3"
+Oct 30 00:47 : player: played "Clutch/Blast Tyrant/15 - Wysiwyg.mp3"
+Oct 30 00:50 : player: played "Clutch/Blast Tyrant/05 - Promoter (Of Earthbound Causes).mp3"
+Oct 30 00:53 : client: [41] opened from [::1]:39902
+Oct 30 00:53 : client: [41] closed
+Oct 30 00:53 : client: [42] opened from [::1]:39904
+Oct 30 00:53 : client: [42] closed
+Oct 30 00:53 : client: [43] opened from [::1]:39906
+Oct 30 00:53 : client: [43] closed
+Oct 30 00:53 : client: [44] opened from [::1]:39908
+Oct 30 00:53 : client: [44] closed
+Oct 30 00:53 : client: [45] opened from [::1]:39910
+Oct 30 00:53 : client: [45] closed
+Oct 30 00:53 : client: [46] opened from [::1]:39912
+Oct 30 00:53 : client: [46] closed
+Oct 30 00:53 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 30 00:53 : client: [47] opened from [::1]:39944
+Oct 30 00:53 : client: [47] closed
+Oct 30 00:53 : client: [48] opened from [::1]:39946
+Oct 30 00:53 : client: [48] closed
+Oct 30 00:53 : client: [49] opened from [::1]:39948
+Oct 30 00:53 : client: [49] closed
+Oct 30 00:53 : client: [50] opened from [::1]:39950
+Oct 30 00:53 : client: [50] closed
+Oct 30 00:53 : client: [51] opened from [::1]:39952
+Oct 30 00:53 : client: [51] closed
+Oct 30 00:53 : client: [52] opened from [::1]:39954
+Oct 30 00:53 : client: [52] closed
+Oct 30 00:53 : client: [53] opened from [::1]:39956
+Oct 30 00:53 : client: [53] closed
+Oct 30 00:53 : client: [54] opened from [::1]:39958
+Oct 30 00:53 : client: [54] closed
+Oct 30 00:53 : client: [55] opened from [::1]:39960
+Oct 30 00:53 : client: [55] closed
+Oct 30 00:54 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 30 00:54 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 30 00:54 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 30 00:54 : client: [56] opened from [::1]:40036
+Oct 30 00:54 : client: [57] opened from [::1]:40038
+Oct 30 00:54 : client: [57] closed
+Oct 30 00:54 : client: [58] opened from [::1]:40040
+Oct 30 00:54 : client: [58] closed

@@ -113,8 +113,8 @@ $ALT+y           $QUD --resize '1 -5 -5'
 $ALT+u           $QUD --resize '1 $W43 $H43'
 $ALT+i           $QUD --resize '1 $W69 $H69'
 $ALT+o           $QUD --resize '1 +5 +5'
-$ALT+p           $QUD --resize '1 40 20'
-$ALT+bracketleft [con_mark=$M1] resize set height 98
+$ALT+p           $QUD --resize '1 %40 %20'
+$ALT+bracketleft $QUD --resize '1  *  98'
 
 $ALT+Shift+Tab   focus left
 $ALT+Shift+q     kill
@@ -274,4 +274,3 @@ $exn i3listen-toggle
 $ena mpv /home/gavarch/scrmus/A\ Tone\ His\ Self.mp3
 $ena notify-send 'i3 (re)loaded!' -i /home/gavarch/scrpic/i3white.png
 
-# vim:ft=i3
