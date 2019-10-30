@@ -2,6 +2,7 @@
 name            thinkpad
 wallpaper       random
 !wallpaper       WW_128000000000408974_EN
+gtk-icon        Tela-green-dark
 fg0             #222222
 acc             #aa1924
 blu             $acc

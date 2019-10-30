@@ -45,6 +45,7 @@
 <span background="#e1a47d">   </span> #e1a47d         darkrng
 <span background="#7c3f18">   </span> #7c3f18         lightrng
 random         wallpaper
+Tela-green-dark gtk-icon
 \/home\/gavarch HOME
 eDP1           MON1
 VGA1           MON2
@@ -62,7 +63,6 @@ Luxi\\ Mono    gvimfont
 12             rxvtsize
 12             rofifsize
 Themer         gtk
-Tela-red-dark  gtk-icon
 Bibata_Dark_Red cursor
 top_left       conky_loc1
 bottom_right   conky_loc2

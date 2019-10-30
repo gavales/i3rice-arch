@@ -1,5 +1,6 @@
 name               thinkpad-dark
 wallpaper          random
+gtk-icon           Tela-green-dark
 bg0                #222222
 acc                #aa1924
 blu                #aa1924
@@ -21,7 +22,6 @@ size               11
 rxvtsize           12
 rofifsize          12
 gtk                Themer
-gtk-icon           Tela-red-dark
 cursor             Bibata_Dark_Red
 conky_loc1         top_left
 conky_loc2         bottom_right
