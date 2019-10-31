@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cp ".themer/${1}/themer.vim" "themer.vim"
+PID=$(pidof gvim)
+[[ -n $PID ]] && cat $USER_TMP_DIR/.gvimservers | xargs -I {} gvim --servername {} --remote-send ":colorscheme themer<CR>"

@@ -1,14 +1,14 @@
 set recolor true
 set window-title-basename true
 set default-bg "#ececec"
-set default-fg "#222222"
+set default-fg "#444444"
 set font "Luxi Mono 11"
-set inputbar-bg "#222222"
+set inputbar-bg "#444444"
 set inputbar-fg "#ececec"
-set statusbar-bg "#222222"
+set statusbar-bg "#444444"
 set statusbar-fg "#ececec"
-set completion-bg "#222222"
+set completion-bg "#444444"
 set completion-fg "#ececec"
 set show-scrollbars false
-set recolor-darkcolor "#cb8288"
-set recolor-lightcolor "#222222"
+set recolor-darkcolor "#b5b5b5"
+set recolor-lightcolor "#444444"

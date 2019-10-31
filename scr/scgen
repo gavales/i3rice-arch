@@ -19,3 +19,5 @@ for i in $(ls $SCDIR | sed '/_/!d'); do
 		key=$1;$1=""; gsub(/^[ \t]+/, "", $0);val=$0;final();
 	}'
 done
+
+notify-send "Shortcuts generated!"

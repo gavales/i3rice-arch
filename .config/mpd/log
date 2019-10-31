@@ -4989,3 +4989,33 @@ Oct 30 00:54 : client: [57] opened from [::1]:40038
 Oct 30 00:54 : client: [57] closed
 Oct 30 00:54 : client: [58] opened from [::1]:40040
 Oct 30 00:54 : client: [58] closed
+Oct 30 19:42 : client: [59] opened from [::1]:44294
+Oct 30 19:42 : client: [59] closed
+Oct 30 19:42 : client: [60] opened from [::1]:44296
+Oct 30 19:42 : client: [60] closed
+Oct 30 19:42 : client: [61] opened from [::1]:44298
+Oct 30 19:42 : client: [61] closed
+Oct 30 19:42 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Oct 30 19:42 : client: [62] opened from [::1]:44300
+Oct 30 19:42 : client: [62] closed
+Oct 30 19:42 : client: [63] opened from [::1]:44302
+Oct 30 19:42 : client: [63] closed
+Oct 30 19:42 : client: [64] opened from [::1]:44304
+Oct 30 19:42 : client: [64] closed
+Oct 30 19:42 : client: [65] opened from [::1]:44306
+Oct 30 19:42 : client: [65] closed
+Oct 30 19:42 : client: [66] opened from [::1]:44308
+Oct 30 19:42 : client: [66] closed
+Oct 30 19:42 : client: [67] opened from [::1]:44310
+Oct 30 19:42 : client: [67] closed
+Oct 30 19:43 : client: [68] opened from [::1]:44314
+Oct 30 19:43 : client: [68] closed
+Oct 30 19:43 : client: [69] opened from [::1]:44316
+Oct 30 19:43 : client: [69] closed
+Oct 30 19:43 : client: [70] opened from [::1]:44318
+Oct 30 19:43 : client: [70] closed
+Oct 31 00:20 : client: [56] closed
+Oct 31 00:20 : player: played "Clutch/Blast Tyrant/08 - Army of Bono.mp3"
+Oct 31 00:20 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 31 00:20 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 31 00:20 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.

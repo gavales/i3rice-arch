@@ -58,12 +58,12 @@ gap         10 40 10 20
 fontname    'Luxi Mono:size=12'
 
 # ━  colors
-color activeborder   "#aa1924"
-color inactiveborder "#661d23"
+color activeborder   "#7f7f7f"
+color inactiveborder "#616161"
 color font           "#ececec"
 color selfont        "#ececec"
-color menubg         "#222222"
-color menufg         "#661d23"
+color menubg         "#444444"
+color menufg         "#616161"
 color groupborder    "#009048"
 color urgentborder   "#cc241d"
 color ungroupborder  "#904800"

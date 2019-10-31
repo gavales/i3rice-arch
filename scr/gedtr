@@ -2,6 +2,10 @@
 
 # OA: Gavin Vales
 # CREATED: Sat 30 Mar 18:22:18 GMT 2019
+
+SVRLIST="$USER_TMP_DIR/.gvimservers"
+[[ -f ${SVRLIST} ]] || touch ${SVRLIST}
+
 help () {
 cat << 'EOB'
 # NAME
@@ -31,7 +35,7 @@ SVR=GVIM
 
 while true; do
 	case $1 in
-		--server | -s ) SVR="${2:-}" ; shift ;;
+		--server | -s ) SVO="${2:-}" ; shift ;;
 		--help | -h ) help ; shift ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
@@ -39,7 +43,35 @@ while true; do
 	shift
 done
 
-
 TRG="${@:-}"
 
-gvim --servername $SVR --remote-tab "${TRG}" &>/dev/null &
+EXT="${TRG##*/}" ; EXT="${EXT##*.}"
+
+TYP="$(file $(readlink -f "$TRG"))"
+TYP="${TYP#*:}" ; TYP="${TYP#* }" ; TYP="${TYP%% *}"
+[[ $TYP == "Bourne-Again" ]] && TPF=bash
+
+case $EXT in
+	Xres*|Xdef*) EXF=Xfiles  ;;
+	*conf*)      EXF=configs ;;
+	*bash*)      EXF=bash    ;;
+	sh)          EXF=sh      ;;
+	*vim*)       EXF=vim     ;;
+	yaml)        EXF=yaml    ;;
+	html)        EXF=html    ;;
+	py)          EXF=py      ;;
+	ms)          EXF=groff   ;;
+	css)         EXF=css     ;;
+	md|rmd)      EXF=md      ;;
+	bib)         EXF=bib     ;;
+	tex)         EXF=tex     ;;
+esac
+
+[[ -n $TPF ]] && SVR="gedtr-$TPF"
+[[ -n $EXF ]] && SVR="gedtr-$EXF"
+[[ -n $SVO ]] && SVR="$SVO"
+
+gvim --servername ${SVR^^} --remote-tab "${TRG}" &>/dev/null &
+
+CHK=$(cat ${SVRLIST} | grep "${SVR^^}")
+[[ -z $CHK  ]] && echo ${SVR^^} >> ${SVRLIST}

@@ -103,10 +103,8 @@ vnoremap \s"   xa""<Esc>P
 
 " ━━ POST-WRITE
 autocmd BufWritePost *sxhkdrc !kill -10 $(pidof sxhkd)
-autocmd BufWritePost *_dots   !scgen
-autocmd BufWritePost *_flds   !scgen
-autocmd BufWritePost *_scrs   !scgen
-autocmd BufWritePost *_tmps   !scgen
+autocmd BufWritePost _dots,_flds,_scrs,_tmps !scgen
+autocmd BufWritePost .dots,.flds,.scrs,.tmps !scgen
 
 " ━━ CURSOR
 autocmd CursorHold,CursorHoldI * update

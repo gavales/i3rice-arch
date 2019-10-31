@@ -17,7 +17,8 @@ COLS="${WDIR}/cols"
 }
 NWFD="$NORM"
 CURR="${WDIR}/current"
-WHT="${WDIR}/white.jpg"
+WHT="${WDIR}/white-drops.jpg"
+#WHT="${WDIR}/white.jpg"
 CRLN="$(readlink -f $CURR)"
 HIST="${WDIR}/.history"
 MONDIM=$(xdpyinfo | awk '/dimensions/ {print $2}')
@@ -112,21 +113,24 @@ add-wall () {
 }
 
 tint () {
-	CRTNT="${CRLN##*/}-${_TNT/\#/}"
-	[[ -f ${NORM}/${CRTNT} ]] || {
-		convert "${NORM}/${CRLN##*/}" -fill "${_TNT}" -tint 100 "${NORM}/${CRTNT}"
-		convert "${NORM}/${CRTNT}"    -blur $blr "${BLUR}/${CRTNT}"
-		}
-	ln -sf "${NWFD}/${CRTNT}" $CURR
+	hsetroot -center $CRLN -tint "$_TNT"
+#	CRTNT="${CRLN##*/}-${_TNT/\#/}"
+#	[[ -f ${NORM}/${CRTNT} ]] || {
+#		convert "${NORM}/${CRLN##*/}" -fill "${_TNT}" -tint 100 "${NORM}/${CRTNT}"
+#		convert "${NORM}/${CRTNT}"    -blur $blr "${BLUR}/${CRTNT}"
+#		}
+#	ln -sf "${NWFD}/${CRTNT}" $CURR
 	CRLN=$(readlink -f $CURR)
 }
 
 colour () {
-	[[ ! -f ${COLS}/${1/\#/} ]] && \
+	[[ ! -f ${COLS}/${WHT/${WDIR}\/white-/${1/\#/}-} ]] && \
 #		convert $WHT -fill ${1} -tint 50 ${COLS}/${1/\#/}
-		convert $WHT -fill $1 -draw 'color 0,0 replace' "${COLS}/${1/\#/}"
-	ln -sf "${COLS}/${1/\#/}" $CURR
-	set-wall
+#		convert $WHT -fill $1 -draw 'color 0,0 replace' "${COLS}/${1/\#/}"
+	hsetroot -tile $WHT -tint "${1}" -write "${COLS}/${WHT/${WDIR}\/white-/${1/\#/}-}"
+	echo ${COLS}/${WHT/${WDIR}\/white-/${1/\#/}-}
+	ln -sf "${COLS}/${WHT/${WDIR}\/white-/${1/\#/}-}" $CURR
+#	set-wall
 	exit
 }
 
@@ -279,15 +283,14 @@ fi
 	CRFD=${CRFD##*/}
 
 	if [[ ${CRFD} == "normal" ]]; then
-		echo changing to blur
+		echo blur
 		ln -sf ${BLUR}/${CRLN##*/} $CURR
 		NWFD=${BLUR}
 	else
-		echo changing to non-blur
+		echo non-blur
 		ln -sf ${NORM}/${CRLN##*/} $CURR
 	fi
 }
 
-[[ -n $_TNT ]] && tint
-set-wall
+[[ -n $_TNT ]] && tint || set-wall
 [[ -n $_NXT ]] || [[ -n $_PRV ]] || history ${CRLN##*/}

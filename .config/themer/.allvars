@@ -1,5 +1,5 @@
 name               thinkpad-dark
-wallpaper          random
+wallpaper          #661d23
 gtk-icon           Tela-green-dark
 bg0                #222222
 acc                #aa1924
@@ -67,6 +67,7 @@ ac50b              #661d23
 ac63b              #541e22
 ac75b              #441f22
 ac88b              #322022
+wallpaperRGB       102, 29, 35
 bg0RGB             34, 34, 34
 accRGB             170, 25, 36
 bluRGB             170, 25, 36

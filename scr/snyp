@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: Thu 31 Oct 01:31:09 GMT 2019
+# source /home/gavarch/.config/user-dirs.dirs
+
+help () {
+cat << 'EOB'
+# NAME
+__snyp__ - create and manage vim snippets
+
+# SYNOPSIS
+
+```
+snyp --type|-t <type> [--create|-c <name>] [--get|-g <name>]
+snyp --help|-h
+```
+
+EOB
+exit
+}
+
+while true; do
+	case $1 in
+		--type   | -t ) TYP="${2:-}" ; shift ;;
+		--create | -c ) NME="${2:-}" ; shift ;;
+		--get    | -g ) NME="${2:-}" ; shift ;;
+		--help | -h ) help ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+

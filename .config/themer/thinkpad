@@ -1,6 +1,6 @@
 ! vim:ft=perl
 name            thinkpad
-wallpaper       random
+wallpaper       $acb
 !wallpaper       WW_128000000000408974_EN
 gtk-icon        Tela-green-dark
 fg0             #222222

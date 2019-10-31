@@ -9,7 +9,7 @@
 #define GRADIENT_SCALE 75
 /* Color definition. By default this is a gradient formed by mixing two colors.
    `pos` represents the pixel position relative to the visualizer baseline. */
-#define COLOR mix(#aa1924, #222222, clamp(pos / GRADIENT_SCALE, 0, 1))
+#define COLOR mix(#7f7f7f, #444444, clamp(pos / GRADIENT_SCALE, 0, 1))
 /* 1 to draw outline, 0 to disable */
 #define DRAW_OUTLINE 0
 /* 1 to draw edge highlight, 0 to disable */
@@ -19,7 +19,7 @@
    Note: requires `xroot` or `none` opacity to be set */
 #define ANTI_ALIAS 0
 /* outline color */
-#define OUTLINE #222222
+#define OUTLINE #444444
 /* 1 to join the two channels together in the middle, 0 to clamp both down to zero */
 #define JOIN_CHANNELS 0
 /* 1 to invert (vertically), 0 otherwise */
