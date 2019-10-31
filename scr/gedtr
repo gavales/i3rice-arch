@@ -3,9 +3,6 @@
 # OA: Gavin Vales
 # CREATED: Sat 30 Mar 18:22:18 GMT 2019
 
-SVRLIST="$USER_TMP_DIR/.gvimservers"
-[[ -f ${SVRLIST} ]] || touch ${SVRLIST}
-
 help () {
 cat << 'EOB'
 # NAME
@@ -71,7 +68,4 @@ esac
 [[ -n $EXF ]] && SVR="gedtr-$EXF"
 [[ -n $SVO ]] && SVR="$SVO"
 
-gvim --servername ${SVR^^} --remote-tab "${TRG}" &>/dev/null &
-
-CHK=$(cat ${SVRLIST} | grep "${SVR^^}")
-[[ -z $CHK  ]] && echo ${SVR^^} >> ${SVRLIST}
+gvim --servername ${SVR} --remote-tab "${TRG}" &>/dev/null &

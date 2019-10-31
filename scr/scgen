@@ -10,7 +10,7 @@ cd $SCDIR
 OPF=.outputfiles
 
 for i in $(cat .outputfiles); do
-	echo "# >>>> shortcuts" > $i
+	echo "# ━  shortcuts" > $i
 done
 
 for i in $(ls $SCDIR | sed '/_/!d'); do
