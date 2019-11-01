@@ -1,0 +1,59 @@
+%%% BEGIN table
+\begin{table}[H]
+	\centering
+	\begin{tabular}{cSNYP}
+		\toprule
+		\textbf{<++>} \\
+		\midrule
+		<++> \\
+		\bottomrule
+	\end{tabular}
+	\caption{<++>
+	\label{tab:<++>}}
+\end{table}
+%%% END
+
+%%% BEGIN figure
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=SNYP]{<++>}
+	\caption{<++>
+	\label{fig:<++>}}
+\end{figure}
+%%% END
+
+%%% BEGIN begin
+\begin{SNYP}
+	<++>
+\end{SNYP}
+
+<++>
+%%% END
+
+%%% BEGIN multicol
+\begin{multicols}{SNYP}
+
+<++>
+
+\end{multicols}
+
+<++>
+%%% END
+
+%%% BEGIN neq
+\begin{equation}
+SNYP
+\end{equation}
+
+<++>
+%%% END
+
+%%% BEGIN stretch
+{\setstretch{SNYP}
+
+<++>
+
+}
+<++>
+%%% END
+

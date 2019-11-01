@@ -1,3 +1,14 @@
+autocmd FileType sh inoremap if<Tab> <Esc>:read !snyp -t sh -g if<CR>/SNYP<CR>4xi
+autocmd FileType sh inoremap elif <BS>elif [[  ]]; then<Enter><Tab><++><Esc>0kf[2la
+autocmd FileType sh inoremap else <BS>else<Enter>
+autocmd FileType sh inoremap [[ [[  ]]<Esc>F]hi
+autocmd FileType sh inoremap cas<Tab> <Esc>:read !snyp -t sh -g case<CR>/SNYP<CR>4xi
+autocmd FileType sh inoremap opt<Tab> <Esc>:read !snyp -t sh -g opt<CR>/SNYP<CR>4xi
+autocmd FileType sh inoremap lop<Tab> <Esc>:read !snyp -t sh -g lop<CR>/SNYP<CR>4xi
+autocmd FileType sh inoremap whi<Tab> <Esc>:read !snyp -t sh -g whi<CR>/SNYP<CR>4xi
+autocmd FileType sh inoremap fun<Tab> <Esc>:read !snyp -t sh -g fun<CR>/SNYP<CR>4xi
+autocmd FileType sh inoremap for<Tab> <Esc>:read !snyp -t sh -g for<CR>/SNYP<CR>4xi
+
 function! Folds()
 	let thisline = getline(v:lnum)
 	if match(thisline, '^while ') >= 0

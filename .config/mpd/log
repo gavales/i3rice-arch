@@ -5036,3 +5036,25 @@ Oct 31 01:50 : client: [77] opened from [::1]:47668
 Oct 31 01:50 : client: [77] closed
 Oct 31 01:50 : client: [78] opened from [::1]:47670
 Oct 31 01:50 : client: [78] closed
+Oct 31 01:51 : client: [79] opened from [::1]:47676
+Oct 31 01:51 : client: [79] closed
+Oct 31 01:51 : client: [80] opened from [::1]:47678
+Oct 31 01:51 : client: [80] closed
+Oct 31 01:51 : client: [81] opened from [::1]:47680
+Oct 31 01:51 : client: [81] closed
+Oct 31 12:37 : client: [74] closed
+Oct 31 12:37 : player: played "Clutch/Blast Tyrant/08 - Army of Bono.mp3"
+Oct 31 12:37 : player: played "Clutch/Blast Tyrant/12 - Subtle Hustle.mp3"
+Oct 31 12:38 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 31 12:38 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 31 12:38 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 31 12:43 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 31 12:43 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 31 12:43 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 31 13:30 : client: [0] opened from [::1]:37322
+Oct 31 13:30 : player: played "Clutch/Blast Tyrant/12 - Subtle Hustle.mp3"
+Oct 31 13:30 : client: [0] closed
+Oct 31 13:30 : client: [1] opened from [::1]:37324
+Oct 31 13:30 : client: [1] closed
+Oct 31 13:30 : client: [2] opened from [::1]:37326
+Oct 31 13:30 : client: [2] closed

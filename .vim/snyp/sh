@@ -1,0 +1,53 @@
+%%% BEGIN if
+iif [[ SNYP ]]; then
+	<++>
+fi<Esc>
+%%% END
+
+%%% BEGIN case
+case $SNYP in
+	<++>) <++> ;;
+esac
+%%% END
+
+%%% BEGIN opt
+while getopts :SNYP:<++> opts; do
+	case $opts in
+		<++>)
+			<++>
+			;;
+	esac
+done
+%%% END
+
+%%% BEGIN lop
+while true; do
+	case $1 in
+		--SNYP | -<++> ) <++>="${2:-}" ; shift ;;
+		--help | -h ) help ; shift ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+%%% END
+
+%%% BEGIN whi
+while SNYP; do
+	<++>
+done
+%%% END
+
+%%% BEGIN fun
+SNYP () {
+	<++>
+	exit
+}
+%%% END
+
+%%% BEGIN for
+for i in SNYP; do
+	<++>
+done
+%%% END
+

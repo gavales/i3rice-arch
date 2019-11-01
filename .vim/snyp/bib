@@ -1,0 +1,97 @@
+%%% BEGIN art
+@article{SNYP,
+<++>
+	}
+
+<++>
+%%% END
+
+%%% BEGIN book
+@book{SNYP,
+<++>
+	}
+
+<++>
+%%% END
+
+%%% BEGIN inpro
+@inproceedings{SNYP,
+<++>
+	}
+
+<++>
+%%% END
+
+%%% BEGIN phd
+<++>
+@phdthesis{SNYP,
+	}
+
+<++>
+%%% END
+
+%%% BEGIN online
+@online{SNYP,
+	title = {<++>},
+	author = {<++>},
+	publisher = {<++>}
+	}
+
+<++>
+%%% END
+
+%%% BEGIN title
+title = {SNYP},
+<++>
+%%% END
+
+%%% BEGIN author
+author = {SNYP},
+<++>
+%%% END
+
+%%% BEGIN year
+year = {SNYP},
+<++>
+%%% END
+
+%%% BEGIN pub
+publisher = {SNYP},
+<++>
+%%% END
+
+%%% BEGIN jour
+journal = {SNYP},
+<++>
+%%% END
+
+%%% BEGIN vol
+volume = {SNYP},
+<++>
+%%% END
+
+%%% BEGIN pages
+pages = {SNYP},
+<++>
+%%% END
+
+%%% BEGIN school
+school = {SNYP},
+<++>
+%%% END
+
+%%% BEGIN bktitle
+booktitle = {SNYP},
+<++>
+%%% END
+
+%%% BEGIN number
+number = {SNYP},
+<++>
+%%% END
+
+%%% BEGIN org
+organization = {SNYP},
+<++>
+%%% END
+

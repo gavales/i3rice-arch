@@ -20,11 +20,35 @@ EOB
 exit
 }
 
+EDITOR="gvim -f"
+TMP=${HOME}/.snyptmp
+SNPDIR=${HOME}/.vim/snyp
+[[ -d $SNPDIR ]] || mkdir $SNPDIR
+
+O_create () {
+	[[ -n ${TYP} ]] || exit 1
+	$EDITOR $TMP
+
+	echo "%%% BEGIN ${1}" >> ${SNPDIR}/${TYP}
+	cat $TMP >> ${SNPDIR}/${TYP}
+	echo "%%% END" >> ${SNPDIR}/${TYP}
+	echo "" >> ${SNPDIR}/${TYP}
+
+	exit
+}
+
+O_get () {
+	[[ -n $TYP ]] || exit 1
+	sed -n "/\%\%\%\ BEGIN\ "${1}"/,/\%\%\%\ END/p" ${SNPDIR}/${TYP} | \
+		sed '/%%%/d'
+	exit
+}
+
 while true; do
 	case $1 in
 		--type   | -t ) TYP="${2:-}" ; shift ;;
-		--create | -c ) NME="${2:-}" ; shift ;;
-		--get    | -g ) NME="${2:-}" ; shift ;;
+		--create | -c ) O_create "${2:-}" ; shift ;;
+		--get    | -g ) O_get    "${2:-}" ; shift ;;
 		--help | -h ) help ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
