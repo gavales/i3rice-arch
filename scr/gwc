@@ -17,14 +17,15 @@ COLS="${WDIR}/cols"
 }
 NWFD="$NORM"
 CURR="${WDIR}/current"
-WHT="${WDIR}/white-drops.jpg"
-#WHT="${WDIR}/white.jpg"
+WHT="white-drops"
 CRLN="$(readlink -f $CURR)"
 HIST="${WDIR}/.history"
 MONDIM=$(xdpyinfo | awk '/dimensions/ {print $2}')
 MX=${MONDIM%x*}
 MY=${MONDIM#*x}
 blr=0x16
+[[ -n $(command -v parallel) ]] && ADDCMD="| parallel gwc --add \"{}\"" || \
+	ADDCMD="| xargs -I {} gwc --add \"{}\""
 
 help () {
 cat << 'EOB'
@@ -35,9 +36,9 @@ __gwc__ - A script to set wallpaper, with other features.
 # SYNOPSIS
 
 ```
-gwc [--wallpaper|-w <path|name|random|previous|next>]
+gwc [--wallpaper|-w <path|name|color|random|previous|next>]
     [--next|-n] [--previous|-p] [--random|-r]
-    [--tint|-t|--blur|-b]
+    [--tint|-t <hex_color>] [--blur|-b]
 gwc --add|-a <directory|path>
 gwc --list|-l
 gwc --rename|-R '<oldname> <newname>'
@@ -53,17 +54,27 @@ Run with no options to create default directories:
 + Default `gwc` database: `GWCDIR` = `$XDG_PICTURES_DIR/gwc`
 
 `--wallpaper|-w <path|name|random|previous|next>`  
-Wallpaper to set:  
-+ `<path>` - path to a picture
-+ `<name>` - name of wallpaper stored in `$GWCDIR/normal`
+Wallpaper to set:
+
++ `<path>`      - path to a picture
++ `<name>`      - name of wallpaper stored in `$GWCDIR/normal`
++ `<hex_color>` - When the argument to this flag starts with
+a `<hex_color>`, `gwc` uses `hsetroot` to tile the wallpaper
+`$GWCDIR/white` (by default), and tint it to the specified
+`<hex_color>`. If the argument is eg. `<hex_color>-paper`, then
+`gwc` finds and uses `$GWCDIR/white-paper` as the tiled image
+instead.
++ `<previous>`  - previous wallpaper in history
++ `<next>`      - next wallpaper in history
++ `<random>`    - Choose a random wallpaper in `$GWCDIR/normal`
 
 `--previous|-p`  
 previous wallpaper in history
 
-`--next|-p`  
+`--next|-n`  
 next wallpaper in history
 
-`--random|-p`  
+`--random|-r`  
 Choose a random wallpaper in `$GWCDIR/normal`
 
 `--tint|-t <hex_color>`  
@@ -124,14 +135,39 @@ tint () {
 }
 
 colour () {
-	[[ ! -f ${COLS}/${WHT/${WDIR}\/white-/${1/\#/}-} ]] && \
-#		convert $WHT -fill ${1} -tint 50 ${COLS}/${1/\#/}
 #		convert $WHT -fill $1 -draw 'color 0,0 replace' "${COLS}/${1/\#/}"
-	hsetroot -tile $WHT -tint "${1}" -write "${COLS}/${WHT/${WDIR}\/white-/${1/\#/}-}"
-	echo ${COLS}/${WHT/${WDIR}\/white-/${1/\#/}-}
-	ln -sf "${COLS}/${WHT/${WDIR}\/white-/${1/\#/}-}" $CURR
-#	set-wall
-	exit
+#		convert $WHT -fill ${1} -tint 50 ${COLS}/${1/\#/}
+
+	[[ -f ${COLS}/${1/\#/}.png ]] && \
+		ln -sf "${COLS}/${1/\#/}.png" $CURR && set-wall && \
+		exit 1
+
+	if [[ ${#1} -le 7 ]]; then
+
+		[[ ! -f ${WDIR}/white ]] && \
+			echo Please create ${WDIR}/white && exit 1 || \
+			hsetroot \
+				-tile "${WDIR}/${WHT}" \
+				-tint "${1}" \
+				-write "${COLS}/${WHT/white-/${1/\#/}-}.png"
+		echo ${WHT/white-/${1/\#/}-}.png
+		ln -sf "${COLS}/${WHT/white-/${1/\#/}-}.png" $CURR
+
+	else
+
+		SUF=${1##*-} ; PRF=${1%%-*}
+		[[ ! -f ${WDIR}/white-${SUF} ]] && \
+			echo Please create ${WDIR}/white-${SUF} && exit 1 || \
+			hsetroot \
+				-tile ${WDIR}/white-${SUF} \
+				-tint "${PRF}" \
+				-write "${COLS}/${PRF/\#/}-${SUF}.png"
+		echo ${COLS}/${PRF/\#/}-${SUF}.png
+		ln -sf "${COLS}/${WHT/${WDIR}\/white-/${1/\#/}-}.png" $CURR
+
+	fi
+
+exit
 }
 
 change-current () {
@@ -173,21 +209,21 @@ O_list () {
 O_add () {
 	if [[ -z $1 ]]; then
 		echo "No argument, checking for pictures in current dir to add"
-		ls *.jpg  | xargs -I {} gwc --add "{}"
-		ls *.jpeg | xargs -I {} gwc --add "{}"
-		ls *.png  | xargs -I {} gwc --add "{}"
-		ls *.PNG  | xargs -I {} gwc --add "{}"
-		ls *.JPG  | xargs -I {} gwc --add "{}"
-		ls *.JPEG | xargs -I {} gwc --add "{}"
+		[[ -n $(ls *.jpg)  ]] && echo Found .jpgs  ; eval "ls *.jpg  $ADDCMD"
+		[[ -n $(ls *.jpeg) ]] && echo Found .jpegs ; eval "ls *.jpeg $ADDCMD"
+		[[ -n $(ls *.png)  ]] && echo Found .pngs  ; eval "ls *.png  $ADDCMD"
+		[[ -n $(ls *.PNG)  ]] && echo Found .PNGs  ; eval "ls *.PNG  $ADDCMD"
+		[[ -n $(ls *.JPG)  ]] && echo Found .JPGs  ; eval "ls *.JPG  $ADDCMD"
+		[[ -n $(ls *.JPEG) ]] && echo Found .JPEGs ; eval "ls *.JPEG $ADDCMD"
 	elif [[ -d $1 ]]; then
 		echo "$1 is a directory"
 		cd "${1}"
-		ls *.jpg  | xargs -I {} gwc --add "{}"
-		ls *.jpeg | xargs -I {} gwc --add "{}"
-		ls *.png  | xargs -I {} gwc --add "{}"
-		ls *.PNG  | xargs -I {} gwc --add "{}"
-		ls *.JPG  | xargs -I {} gwc --add "{}"
-		ls *.JPEG | xargs -I {} gwc --add "{}"
+		[[ -n $(ls *.jpg)  ]] && echo Found .jpgs  ; eval "ls *.jpg  $ADDCMD"
+		[[ -n $(ls *.jpeg) ]] && echo Found .jpegs ; eval "ls *.jpeg $ADDCMD"
+		[[ -n $(ls *.png)  ]] && echo Found .pngs  ; eval "ls *.png  $ADDCMD"
+		[[ -n $(ls *.PNG)  ]] && echo Found .PNGs  ; eval "ls *.PNG  $ADDCMD"
+		[[ -n $(ls *.JPG)  ]] && echo Found .JPGs  ; eval "ls *.JPG  $ADDCMD"
+		[[ -n $(ls *.JPEG) ]] && echo Found .JPEGs ; eval "ls *.JPEG $ADDCMD"
 	elif [[ -f $1 ]]; then
 		add-wall "${1}"
 	else

@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: Mon  4 Nov 00:10:18 GMT 2019
+
+CHK=$(pidof cwm)
+[[ -n $CHK ]] || exit 1
+GWMDIR=$HOME/.config/gwm
+CONF=$GWMDIR/config
+
+defaults () {
+cat > $CONF << 'EOB'
+GAPS=20
+BORDER=2
+W1W=
+W1H=
+EOB
+exit
+}
+
+[[ -f $CONF ]] || defaults
+[[ -d $GWMDIR ]] && cd $GWMDIR || mkdir $GWMDIR && cd $GWMDIR
+
+help () {
+cat << 'EOB'
+# NAME
+
+__gawm__ - manage custom `wmutils` scripts
+
+# SYNOPSIS
+
+```
+gwmc <commands to run>
+gwmc --help|-h
+```
+
+# DESCRIPTION
+
+Basically runs one of the scripts in the default gwm directory.
+For me, that's `$HOME/scr/gwm`.
+
+EOB
+exit
+}
+
+while true; do
+	case $1 in
+# 		--<++> | -<++> ) <++>="${2:-}" ; shift ;;
+		--help | -h ) help ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+cd ${GWMDIR}/bin
+./${@}

@@ -137,9 +137,9 @@ rofi.bgalt:            tfg0
 rofi.hlfg:             tfg0
 rofi.hlbg:             tfg0
 rofi.bc:               tcyn
-!State:                bg      fg      bgalt     hlbg    hlfg
-rofi.color-normal:     tfg0,  tbg0,  tfg0,    tblu,  tbg0
-!                      background  border
+!State:                bg    fg    bgalt hlbg  hlfg
+rofi.color-normal:     tfg0, tbg0, tfg0, tblu, tbg0
+!                      background border
 rofi.color-window:     tfg0,      tfg0
 !rofi.bw:              10
 rofi.levenshtein-sort: true
@@ -167,6 +167,7 @@ XTerm*faceName:          fontname
 XTerm*faceSize:          16
 ! XTerm*reverseVideo:    on
 XTerm*selectToClipboard: true
+XTerm.vt100.geometry: 79x25
 
 ! ━  6xcursor
 

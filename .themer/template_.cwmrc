@@ -53,20 +53,21 @@ ignore polybar
 # ━  style
 sticky      no
 moveamount  20
-borderwidth 2
+borderwidth 4
 gap         10 40 10 20
 fontname    '%%romanfont%%:size=12'
 
 # ━  colors
+
 color activeborder   "%%acc%%"
-color inactiveborder "%%acb%%"
+color inactiveborder "%%bg0%%"
+color groupborder    "%%grn%%"
+color ungroupborder  "%%ylw%%"
 color font           "%%fg0%%"
 color selfont        "%%fg0%%"
 color menubg         "%%bg0%%"
 color menufg         "%%acb%%"
-color groupborder    "%%grn%%"
 color urgentborder   "%%red%%"
-color ungroupborder  "%%ylw%%"
 
 # ━  groups apps
 #autogroup 2 "qutebrowser,qutebrowser"

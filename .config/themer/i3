@@ -2,13 +2,14 @@
 !ltimex          41
 !ltimey          69
 name            i3
-wallpaper       PenedodoGuinchoLisbonPortugal
+!wallpaper       PenedodoGuinchoLisbonPortugal
+wallpaper       $ac75b-oldtile
 gtk-icon        Tela-yellow-dark
 acc             $blu
 bg0             #CDCBCD
-fg0             #3d3d3d
+!fg0             #3d3d3d
 !fg0             #282423
-!fg0             #302f30
+fg0             #302f30
 red             #900000
 ylw             #904800
 blu             #285577

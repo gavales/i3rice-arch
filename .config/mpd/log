@@ -5058,3 +5058,49 @@ Oct 31 13:30 : client: [1] opened from [::1]:37324
 Oct 31 13:30 : client: [1] closed
 Oct 31 13:30 : client: [2] opened from [::1]:37326
 Oct 31 13:30 : client: [2] closed
+Nov 02 13:42 : player: played "Clutch/Blast Tyrant/12 - Subtle Hustle.mp3"
+Nov 02 13:49 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 02 13:49 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 02 13:49 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 03 01:51 : client: [0] opened from [::1]:36506
+Nov 03 01:51 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 03 01:51 : client: [0] closed
+Nov 03 01:51 : client: [1] opened from [::1]:36508
+Nov 03 01:51 : client: [1] closed
+Nov 03 01:51 : client: [2] opened from [::1]:36510
+Nov 03 01:51 : client: [2] closed
+Nov 03 01:51 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Nov 03 01:51 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Nov 03 01:51 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Nov 03 01:51 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Nov 03 01:51 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Nov 03 01:52 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Nov 03 01:52 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Nov 03 01:52 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Nov 03 01:52 : client: [3] opened from [::1]:36512
+Nov 03 01:52 : client: [3] closed
+Nov 03 01:52 : client: [4] opened from [::1]:36514
+Nov 03 01:52 : client: [4] closed
+Nov 03 01:52 : client: [5] opened from [::1]:36516
+Nov 03 01:52 : client: [5] closed
+Nov 03 21:18 : player: played "Clutch/Blast Tyrant/12 - Subtle Hustle.mp3"
+Nov 03 21:19 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 03 21:19 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 03 21:19 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 04 15:13 : client: [0] opened from [::1]:44920
+Nov 04 15:13 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 04 15:13 : client: [0] closed
+Nov 04 15:13 : client: [1] opened from [::1]:44922
+Nov 04 15:13 : client: [1] closed
+Nov 04 15:13 : client: [2] opened from [::1]:44924
+Nov 04 15:13 : client: [2] closed
+Nov 04 15:13 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Nov 04 15:13 : client: [3] opened from [::1]:44926
+Nov 04 15:13 : client: [3] closed
+Nov 04 15:13 : client: [4] opened from [::1]:44928
+Nov 04 15:13 : client: [4] closed
+Nov 04 15:13 : client: [5] opened from [::1]:44930
+Nov 04 15:13 : client: [5] closed
+Nov 04 16:14 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 04 16:14 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 04 16:14 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.

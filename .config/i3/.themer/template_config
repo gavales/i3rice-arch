@@ -229,6 +229,7 @@ $fw [class="Firefox"]                    focus;$QUD -m 3;focus
 $fw [class="Gvim"]                       focus;$QUD -m 3;focus
 $fw [class="Pamac-manager"]              focus;$QUD -m 3;focus;$tf "software"
 $fw [class="Slack"]                      focus;$QUD -m 3;focus;$tf "slack"
+$fw [class="qutebrowser"]                focus;$QUD -m 3;focus;$tf "qute"
 $fw [title="Google Chrome$"]             focus;$QUD -m 3;focus;$tf "chrome"
 $fw [instance="^edtr$"]                  focus;$QUD -m 3;focus;$tf "edtr"
 $fw [instance="^bash - edtr$"]           focus;$QUD -m 3;focus;$tf "bash - edtr"

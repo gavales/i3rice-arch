@@ -7,6 +7,14 @@
 #  ██████  ██ ▒▒██▒██  ▒██▒██▒▒██▒▒██████▒███   ▒▒█████
 # ▒▒▒▒▒▒  ▒▒   ▒▒ ▒▒   ▒▒ ▒▒  ▒▒  ▒▒▒▒▒▒ ▒▒▒     ▒▒▒▒▒
 
+## ━  WMUTILS
+#alt + shift + f
+#	gwmc fullscreen $(pfw)
+#
+## ━  MOUSE
+#-button1
+#	gwmc focus $(gwmc underneath)
+
 # ━  misc
 Print
 	snap

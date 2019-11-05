@@ -19,3 +19,4 @@ $XDG_TEMPLATES_DIR/css
 $XDG_TEMPLATES_DIR/pandoc
 FORCE $HOME/.emacs.d/themes
 FORCE $HOME/.config/glava
+FORCE $HOME/.config/gwm

@@ -1,4 +1,4 @@
-.TH GWC 1 2019\-11\-01 Linux "User Manuals"
+.TH GWC 1 2019\-11\-04 Linux "User Manuals"
 .hy
 .SH NAME
 .PP
@@ -7,9 +7,9 @@
 .IP
 .nf
 \f[B]
-gwc [--wallpaper|-w \fI<path|name|random|previous|next>\fP]
+gwc [--wallpaper|-w \fI<path|name|color|random|previous|next>\fP]
     [--next|-n] [--previous|-p] [--random|-r]
-    [--tint|-t|--blur|-b]
+    [--tint|-t \fI<hex_color>\fP] [--blur|-b]
 gwc --add|-a \fI<directory|path>\fP
 gwc --list|-l
 gwc --rename|-R \[aq]\fI<oldname>\fP \fI<newname>\fP\[aq]
@@ -32,11 +32,25 @@ Run with no options to create default directories:
 .P
 .PD
 Wallpaper to set:
-.PD 0
-.P
-.PD
-+ \f[B]\fI<path>\fP\f[R] - path to a picture + \f[B]\fI<name>\fP\f[R] - name of
-wallpaper stored in \f[B]$GWCDIR/normal\f[R]
+.IP \[bu] 2
+\f[B]\fI<path>\fP\f[R] - path to a picture
+.IP \[bu] 2
+\f[B]\fI<name>\fP\f[R] - name of wallpaper stored in \f[B]$GWCDIR/normal\f[R]
+.IP \[bu] 2
+\f[B]\fI<hex_color>\fP\f[R] - When the argument to this flag starts with a
+\f[B]\fI<hex_color>\fP\f[R], \f[B]gwc\f[R] uses \f[B]hsetroot\f[R] to tile the
+wallpaper \f[B]$GWCDIR/white\f[R] (by default), and tint it to the
+specified \f[B]\fI<hex_color>\fP\f[R].
+If the argument is eg.
+\f[B]\fI<hex_color>\fP-paper\f[R], then \f[B]gwc\f[R] finds and uses
+\f[B]$GWCDIR/white-paper\f[R] as the tiled image instead.
+.IP \[bu] 2
+\f[B]\fI<previous>\fP\f[R] - previous wallpaper in history
+.IP \[bu] 2
+\f[B]\fI<next>\fP\f[R] - next wallpaper in history
+.IP \[bu] 2
+\f[B]\fI<random>\fP\f[R] - Choose a random wallpaper in
+\f[B]$GWCDIR/normal\f[R]
 .PP
 \f[B]--previous|-p\f[R]
 .PD 0
@@ -44,13 +58,13 @@ wallpaper stored in \f[B]$GWCDIR/normal\f[R]
 .PD
 previous wallpaper in history
 .PP
-\f[B]--next|-p\f[R]
+\f[B]--next|-n\f[R]
 .PD 0
 .P
 .PD
 next wallpaper in history
 .PP
-\f[B]--random|-p\f[R]
+\f[B]--random|-r\f[R]
 .PD 0
 .P
 .PD

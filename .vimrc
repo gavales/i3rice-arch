@@ -75,33 +75,33 @@ vnoremap <S-j> :m '>+1<CR>gv=gv
 vnoremap <S-k> :m '<-2<CR>gv=gv
 vnoremap //    y/<C-R>"<CR>
 
-vnoremap \s(   ()<Esc>P
-vnoremap \s[   []<Esc>P
-vnoremap \s{   {}<Esc>P
-vnoremap \s'   ''<Esc>P
-vnoremap \s`   ``<Esc>P
-vnoremap \s<   <><Esc>P
-vnoremap \s"   ""<Esc>P
+vnoremap \s(  c()<Esc>P
+vnoremap \s[  c[]<Esc>P
+vnoremap \s{  c{}<Esc>P
+vnoremap \s'  c''<Esc>P
+vnoremap \s`  c``<Esc>P
+vnoremap \s<  c<><Esc>P
+vnoremap \s"  c""<Esc>P
 
 " ━━ COMMENTING
-autocmd FileType tex              let b:comment_start = '% '  | let b:comment_end = ''
-autocmd FileType vim              let b:comment_start = '" '  | let b:comment_end = ''
+autocmd FileType tex              let b:comment_start = '%'  | let b:comment_end = ''
+autocmd FileType vim              let b:comment_start = '"'  | let b:comment_end = ''
 autocmd FileType css              let b:comment_start = '/* ' | let b:comment_end = ' */'
-autocmd FileType mail             let b:comment_start = '> '  | let b:comment_end = ''
-autocmd FileType dosini           let b:comment_start = '; '  | let b:comment_end = ''
-autocmd FileType xdefaults        let b:comment_start = '! '  | let b:comment_end = ''
-autocmd FileType sh,ruby,python   let b:comment_start = '# '  | let b:comment_end = ''
-autocmd FileType conf,fstab,perl  let b:comment_start = '# '  | let b:comment_end = ''
-autocmd FileType c,cpp,java,scala let b:comment_start = '// ' | let b:comment_end = ''
+autocmd FileType mail             let b:comment_start = '>'  | let b:comment_end = ''
+autocmd FileType dosini           let b:comment_start = ';'  | let b:comment_end = ''
+autocmd FileType xdefaults        let b:comment_start = '!'  | let b:comment_end = ''
+autocmd FileType sh,ruby,python   let b:comment_start = '#'  | let b:comment_end = ''
+autocmd FileType conf,fstab,perl  let b:comment_start = '#'  | let b:comment_end = ''
+autocmd FileType c,cpp,java,scala let b:comment_start = '//' | let b:comment_end = ''
 
-nnoremap \#  mw:s/^/\=b:comment_start/<CR>:s/$/\=b:comment_end/<CR>:noh<CR>`wll
-nnoremap \d# mw:execute 's/^'.b:comment_start.'//'<CR>:execute 's/'.b:comment_end.'$//'<CR>:noh<CR>`whh
+nnoremap \> mw:s/^/\=b:comment_start/<CR>:s/$/\=b:comment_end/<CR>:noh<CR>`wll
+nnoremap \< mw:execute 's/^'.b:comment_start.'//'<CR>:execute 's/'.b:comment_end.'$//'<CR>:noh<CR>`whh
 
-inoremap \#  <Esc>mw:s/^/\=b:comment_start/<CR><bar>:s/$/\=b:comment_end/<CR>:noh<CR>`wlla
-inoremap \d# <Esc>mw:execute 's/^'.b:comment_start.'//'<CR>:execute 's/'.b:comment_end.'$//'<CR>:noh<CR>`whi
+inoremap \> <Esc>mw:s/^/\=b:comment_start/<CR><bar>:s/$/\=b:comment_end/<CR>:noh<CR>`wlla
+inoremap \< <Esc>mw:execute 's/^'.b:comment_start.'//'<CR>:execute 's/'.b:comment_end.'$//'<CR>:noh<CR>`whi
 
-vnoremap \#  :s/^/\=b:comment_start/ \| :'<,'>s/$/\=b:comment_end/ \| :noh<CR><CR>
-" vnoremap \d# :execute 's/^'.b:comment_start.'//g' \|
+vnoremap \> :s/^/\=b:comment_start/ \| :'<,'>s/$/\=b:comment_end/ \| :noh<CR><CR>
+" vnoremap \< :execute 's/^'.b:comment_start.'//g' \|
 " 	\ :'<,'>execute 's/'.b:comment_end.'$//' \|
 " 	\ :noh
 
@@ -196,7 +196,9 @@ endfunction
 " ━━ ACTUAL
 
 set statusline=
-set statusline+=%#usrStatus#\ 
+set statusline+=%#Normal#
+set statusline+=\ 
+set statusline+=%#usrStatus#
 set statusline+=\ %{ModeCurrent()}
 set statusline+=\ %f\ 
 set statusline+=\ %{ReadOnly()}\ %m\ %w\ 
@@ -211,6 +213,8 @@ set statusline+=%l/
 set statusline+=%L
 set statusline+=\ C:
 set statusline+=%c\ 
+set statusline+=%#Normal#
+set statusline+=\ 
 
 " ━  LATEX
 autocmd FileType tex set smartindent cinwords=\\begin

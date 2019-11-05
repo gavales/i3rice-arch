@@ -1,0 +1,4 @@
+-x
+-f bestaudio
+--embed-thumbnail
+-o ~/mus/ytdl/%(title)s.%(ext)s

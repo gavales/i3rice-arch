@@ -10,7 +10,7 @@ cat << 'EOB'
 
 __chrap__ - `google-chrome-beta` app wrapper
 
-# Synopsis
+# SYNOPSIS
 
 ```
 chrap <url>

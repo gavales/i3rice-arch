@@ -1,22 +1,3 @@
-rename post-apply
-rename _post-apply
-rename .themer
-rename .themer_post
-rename template_.colors
-rename _defaults
-rename _dirs
-rename _current
-rename OYUC		gruvbox
-rename warm
-rename white-.jpg
-rename white_.jpg
-rename white.jpg
-rename varmenu.png
-shell git clone https://github.com/StillANixRookie/i3rice-arch.wiki.git
-mkdir images
-open_with 
-rename openterm
-rename openeditor
 rename openvim
 w
 open_with edtr
@@ -32,7 +13,6 @@ rename lscr
 rename i3end
 rename mmon
 shell
-shell themer --init
 shell hugo
 shell wget https://raw.githubusercontent.com/dkeg/wm-configs/master/.cwmrc
 rename template_.cwmrc
@@ -48,3 +28,23 @@ touch sxhkdrc
 shell git
 shell git clone https://github.com/StillANixRookie/vim-sxhkdrc.git
 wq
+touch tex
+open_with gedtr
+mkdir youtube-dl
+touch config
+shell git clone
+shell git clone https://github.com/wmutils/contrib.git
+rename snap
+rename snapwindow
+rename gawm
+rename gwm
+touch pulsecolors
+
+shell themer --init
+rename template_pulsecolors
+rename focus_fwm
+rename focus
+rename pulse
+rename gwmc
+mkdir scripts
+mkdir scr

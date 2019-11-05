@@ -45,12 +45,12 @@ set $BNR border normal
 
 # ━  DECORATIONS
 # class                 brdr    bkgr    text    indi    chlb
-client.focused          #724d56 #724d56 #f6f6f4 #724d56 #b46b7d
-client.focused_inactive #b46b7d #b46b7d #f6f6f4 #b46b7d #b46b7d
-client.unfocused        #b46b7d #b46b7d #303030 #b46b7d #b46b7d
-client.urgent           #ff4845 #ff4845 #f6f6f4 #ff4845 #ff4845
-client.placeholder      #303030 #303030 #f6f6f4 #303030 #303030
-client.background       #303030
+client.focused          #d5b0b8 #d5b0b8 #303030 #d5b0b8 #b46b7d
+client.focused_inactive #b46b7d #b46b7d #303030 #b46b7d #b46b7d
+client.unfocused        #b46b7d #b46b7d #f6f6f4 #b46b7d #b46b7d
+client.urgent           #ff4845 #ff4845 #303030 #ff4845 #ff4845
+client.placeholder      #f6f6f4 #f6f6f4 #303030 #f6f6f4 #f6f6f4
+client.background       #f6f6f4
 
 # ━  BINDINGS
 # ━━ Misc
@@ -229,6 +229,7 @@ $fw [class="Firefox"]                    focus;$QUD -m 3;focus
 $fw [class="Gvim"]                       focus;$QUD -m 3;focus
 $fw [class="Pamac-manager"]              focus;$QUD -m 3;focus;$tf "software"
 $fw [class="Slack"]                      focus;$QUD -m 3;focus;$tf "slack"
+$fw [class="qutebrowser"]                focus;$QUD -m 3;focus;$tf "qute"
 $fw [title="Google Chrome$"]             focus;$QUD -m 3;focus;$tf "chrome"
 $fw [instance="^edtr$"]                  focus;$QUD -m 3;focus;$tf "edtr"
 $fw [instance="^bash - edtr$"]           focus;$QUD -m 3;focus;$tf "bash - edtr"

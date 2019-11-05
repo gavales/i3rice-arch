@@ -1,7 +1,7 @@
 %%% BEGIN if
-iif [[ SNYP ]]; then
+if [[ SNYP ]]; then
 	<++>
-fi<Esc>
+fi
 %%% END
 
 %%% BEGIN case

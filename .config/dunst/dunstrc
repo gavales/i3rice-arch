@@ -1,20 +1,20 @@
 [frame]
-width = 2
-color = "#303030"
+width = 1
+color = "#f6f6f4"
 
 [urgency_low]
 background = "#6bb4a2"
-foreground = "#303030"
+foreground = "#f6f6f4"
 timeout = 3
 
 [urgency_normal]
 background = "#6bb4a2"
-foreground = "#303030"
+foreground = "#f6f6f4"
 timeout = 3
 
 [urgency_critical]
 background = "#ff4845"
-foreground = "#303030"
+foreground = "#f6f6f4"
 timeout = 3
 
 [shortcuts]
@@ -64,5 +64,5 @@ timeout = 3
 	icon_position = on
 	icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 	max_icon_size = 100
-	corner_radius = 50
+	corner_radius = 5
 

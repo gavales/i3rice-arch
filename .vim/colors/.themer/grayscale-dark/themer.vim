@@ -56,7 +56,7 @@ hi TabLine          ctermfg=blue     ctermbg=Gray     cterm=none
 hi TabLineSel       ctermfg=white    ctermbg=black    cterm=none
 hi TabLineFill      ctermfg=blue     ctermbg=Gray     cterm=none
 
-hi usrStatus        ctermfg=black    ctermbg=blue
+hi usrStatus        ctermfg=white    ctermbg=Gray
 hi usrred           ctermfg=red      ctermbg=black    cterm=underline,bold
 hi usrylw           ctermfg=yellow   ctermbg=black    cterm=underline,bold
 hi usrgrn           ctermfg=green    ctermbg=black    cterm=underline,bold
@@ -113,7 +113,7 @@ hi TabLine          guifg=#7f7f7f guibg=#616161 gui=none
 hi TabLineSel       guifg=#ececec guibg=#444444 gui=none
 hi TabLineFill      guifg=#7f7f7f guibg=#616161 gui=none
 
-hi usrStatus        guifg=#444444 guibg=#7f7f7f
+hi usrStatus        guifg=#ececec guibg=#585858
 hi usrred           guifg=#cc241d guibg=#444444 gui=underline,bold
 hi usrylw           guifg=#904800 guibg=#444444 gui=underline,bold
 hi usrgrn           guifg=#009048 guibg=#444444 gui=underline,bold
