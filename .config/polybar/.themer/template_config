@@ -47,7 +47,7 @@ tray-transparent    = true
 tray-background     = %%acc%%
 cursor-click        = pointer
 cursor-scroll       = ns-resize
-modules-left        = start td ws xkeyboard i3bg arrow1
+modules-left        = start td ws xkeyboard gwc arrow1
 modules-center      = arrow2 i3media arrow3
 modules-right       = arrow4 disk memory cpu temperature i3light i3vol battery
 
@@ -149,13 +149,13 @@ format-prefix-underline    = %%ac25f%%
 label-layout-underline     = %%ac25f%%
 label-indicator-underline  = %%gnt%%
 
-[module/i3bg]
+[module/gwc]
 type = custom/ipc
-hook-0 = pbcat -m i3bg
+hook-0 = pbcat -m gwc
 format = %{T1} %{T-}<output>
 initial = 1
-click-left  = i3bgc show
-click-right = i3bgc blur
+click-left  = gwcmod show
+click-right = gwcmod blur
 format-background = %%ac37f%%
 format-foreground = %%bg0%%
 format-padding = 0

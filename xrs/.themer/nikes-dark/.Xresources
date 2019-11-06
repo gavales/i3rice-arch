@@ -167,6 +167,7 @@ XTerm*faceName:          fontname
 XTerm*faceSize:          16
 ! XTerm*reverseVideo:    on
 XTerm*selectToClipboard: true
+XTerm.vt100.geometry: 79x25
 
 ! ━  6xcursor
 

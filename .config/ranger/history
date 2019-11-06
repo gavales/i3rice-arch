@@ -1,10 +1,3 @@
-rename openvim
-w
-open_with edtr
-rename opengvim
-open_with vim
-rename edtr
-search Wave
 search wave
 rename mywal
 mkdir scrman
@@ -48,3 +41,10 @@ rename pulse
 rename gwmc
 mkdir scripts
 mkdir scr
+shell git clone git://git.2f30.org/colors.git
+shell make
+shell make instal
+shell make install
+shell 
+mkdir blur
+mkdir normal

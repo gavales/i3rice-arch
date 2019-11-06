@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #
-# z3bra - 2015 (c) wtfpl
-# make the current window "rainbowish"... Awesome idea from xero@nixers.net !
+# make the current window border "pulse" a la xero
 
 FREQ=${FREQ:-0.05}
 COLORS="$(cat pulsecolors | sed '/^#/d')"
@@ -9,8 +8,8 @@ CUR=$(pfw)
 echo $COLORS
 
 while :; do
-    for c in $COLORS; do
-        chwb -c ${c} $(pfw)
-        sleep $FREQ
-    done
+	for c in $COLORS; do
+		chwb -c ${c} $(pfw)
+		sleep $FREQ
+	done
 done

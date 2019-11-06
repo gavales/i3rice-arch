@@ -56,7 +56,7 @@ hi TabLine          ctermfg=blue     ctermbg=Gray     cterm=none
 hi TabLineSel       ctermfg=white    ctermbg=black    cterm=none
 hi TabLineFill      ctermfg=blue     ctermbg=Gray     cterm=none
 
-hi usrStatus        ctermfg=white    ctermbg=Gray
+hi usrStatus        ctermfg=white    ctermbg=DarkGray
 hi usrred           ctermfg=red      ctermbg=black    cterm=underline,bold
 hi usrylw           ctermfg=yellow   ctermbg=black    cterm=underline,bold
 hi usrgrn           ctermfg=green    ctermbg=black    cterm=underline,bold

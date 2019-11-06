@@ -5,5 +5,5 @@ TNT="$(themer -v 'tint ')"
 [[ -n $WPP ]] || WPP=$(themer -v 'acc ')
 [[ -n $TNT ]] && TINT="-t $TNT" || TINT=" "
 gwc -w "$WPP" $TINT
-setxkbmap gb
-themer --force --apply-all
+setxkbmap "$(themer -v xkb)"
+themer --apply-all

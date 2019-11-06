@@ -6,25 +6,24 @@ CTXT=" "
 
 update () {
 	CRLN=$(readlink -f $XDG_PICTURES_DIR/gwc/current)
-	PBSCR=$HOME/scr/pb
-#	_I="%{A1:i3bgc       :}%{T1}%{T-}%{A}"
+#	_I="%{A1:$(basename $0)       :}%{T1}%{T-}%{A}"
 	_I=" "
-	_P="%{A1:i3bgc previous:}%{T1}%{T-}%{A}"
-	_N="%{A1:i3bgc     next:}%{T1}%{T-}%{A}"
-	_R="%{A1:i3bgc   random:}%{T1}%{T-}%{A}"
-	_D="%{A1:i3bgc   delete:}%{T1}%{T-}%{A}"
-	_E="%{A1:i3bgc   rename:}%{T1}%{T-}%{A}"
-	_C="%{A1:i3bgc     list:}${CRLN##*/}%{A}"
+	_P="%{A1:$(basename $0) previous:}%{T1}%{T-}%{A}"
+	_N="%{A1:$(basename $0)     next:}%{T1}%{T-}%{A}"
+	_R="%{A1:$(basename $0)   random:}%{T1}%{T-}%{A}"
+	_D="%{A1:$(basename $0)   delete:}%{T1}%{T-}%{A}"
+	_E="%{A1:$(basename $0)   rename:}%{T1}%{T-}%{A}"
+	_C="%{A1:$(basename $0)     list:}${CRLN##*/}%{A}"
 	if [[ $CTXT == "$_I" ]]; then
 		_F=" $_P $_R $_E $_D $_N $_C"
 	else
 		_F="$_I"
 	fi
-	pbcat --module i3bg "$_F"
+	pbcat --module gwc "$_F"
 }
 
 case $1 in
-	show) CTXT=$(pbcat -m i3bg) && update ;;
+	show) CTXT=$(pbcat -m gwc) && update ;;
 	blur|previous|next|random) gwc -${1:0:1} && update ;;
 	delete)
 		CONFIRM=$(echo -e "Yes\nNo" | i3menu -y 0 -m -c red)
