@@ -1,5 +1,3 @@
-rename lscr
-rename i3end
 rename mmon
 shell
 shell hugo
@@ -47,4 +45,6 @@ shell wget https://raw.githubusercontent.com/dylanaraps/wal2/master/wal
 shell chmod +x %f
 rename walarap
 rename goste.vim
+touch .goste
 open_with gedtr
+rename goste

@@ -2,16 +2,18 @@ if exists("b:current_syntax")
     finish
 endif
 
-syn match gosteSav /\[×\]/
-syn match gosteDon /\[✔\]/
+syn match gosteUrg /\[×\]/
+syn match gosteDon /\[✔\].*$/
 syn match gostePen /\[\ \]/
 
 syn keyword gosteFunc colmix :
 
-hi def link gosteSav  usrylw
-hi def link gosteDon  usrblu
-hi def link gostePen  usrred
+hi def link gosteUrg  usrred
+hi def link gosteDon  usrgry
+hi def link gostePen  usrylw
 hi def link gosteFunc Define
+
+hi Folded cterm=none gui=none
 
 setlocal foldcolumn=5
 setlocal colorcolumn=0
