@@ -61,7 +61,7 @@ hi usrStatus        ctermfg=white    ctermbg=DarkGray
 hi usrred           ctermfg=black    ctermbg=red      cterm=none
 hi usrylw           ctermfg=black    ctermbg=yellow   cterm=none
 hi usrgrn           ctermfg=black    ctermbg=green    cterm=none
-hi usrgry           ctermfg=black    ctermbg=grey     cterm=none
+hi usrgry           ctermfg=Gray     ctermbg=Darkgray cterm=none
 hi usrblu           ctermfg=black    ctermbg=blue     cterm=none
 hi usrgnt           ctermfg=black    ctermbg=magenta  cterm=none
 
@@ -116,7 +116,7 @@ hi TabLineSel       guifg=%%fg0%% guibg=%%bg0%% gui=none
 hi TabLineFill      guifg=%%acc%% guibg=%%acb%% gui=none
 
 hi usrStatus        guifg=%%fg0%% guibg=%%bg1%%
-hi usrgry           guifg=%%bg0%% guibg=%%bg3%% gui=none
+hi usrgry           guifg=%%acb%% guibg=%%bg1%% gui=none
 hi usrblu           guifg=%%bg0%% guibg=%%acb%% gui=none
 hi usrred           guifg=%%bg0%% guibg=%%lightred%% gui=none
 hi usrylw           guifg=%%bg0%% guibg=%%lightylw%% gui=none
