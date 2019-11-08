@@ -1,0 +1,98 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: Wed  7 Aug 14:04:15 BST 2019
+
+NOTEDIR=$XDG_DESKTOP_DIR/goste
+[[ -d $NOTEDIR ]] || mkdir $NOTEDIR
+
+help () {
+cat << 'EOB'
+# NAME
+
+__goste__ - create notes, with different types,
+stored in $XDG_DESKTOP_DIR/goste
+
+# SYNOPSIS
+
+```
+goste --create|-c|--open|-o <type>
+goste --list-entries|-l|--delete-type|-D <type>
+goste --list-types|-L
+goste --help|-h
+goste
+```
+
+# DEPENDENCIES
+
+```
+i3menu edtr urxvt banner
+```
+
+# OPTIONS
+
+Run with no options to create defaults:  
+`GOSTE_DIR`  = `$HOME/Desktop/goste`  
+
+`--help|-h`  
+Print this help
+
+`--create|-c <type>`  
+Create $GOSTE_DIR/`<type>`
+
+`--open|-o <type>`  
+Open $GOSTE_DIR/`<type>`
+
+`--delete-type|-D <type>`  
+Delete $GOSTE_DIR/`<type>`
+
+`--list-entries|-l`  
+Print contents of $GOSTE_DIR/`<type>`
+
+`--list-types|-L <type>`  
+`ls` $GOSTE_DIR
+
+EOB
+echo "$1"
+exit
+}
+
+O_delete-type  () { [[ -f ${1} ]] && rm "${1}" ; exit ; }
+O_list-entries () { cat ${1} | sed '/^$/d;/█/d;/▒/d' ; exit ; }
+O_list-types   () { ls ${NOTEDIR} | sed 's/.goste//g' ; exit ; }
+
+O_create () {
+	[[ -n ${1} ]] && CRT="${NOTEDIR}/${1}.goste" || {
+		echo "Specify a name!" && exit
+		}
+	[[ -f ${CRT} ]] || {
+		echo ""      > ${CRT}
+		banner ${1} >> ${CRT}
+		echo ""     >> ${CRT}
+		}
+	exit 1
+}
+
+O_open () {
+	[[ -n ${1} ]] && OPN="${NOTEDIR}/${1}.goste" || {
+		_OPN="$(goste -L | i3menu -c blue)"
+		OPN="${NOTEDIR}/${_OPN}.goste"
+		}
+	[[ -z ${OPN} ]] && exit 1
+	edtr -s 'GOSTE' -S '11' "${OPN}"
+	exit 1
+}
+
+while true; do
+	case $1 in
+		--help         | -h ) help                    ; shift ;;
+		--create       | -c ) O_create       "${2:-}" ; shift ;;
+		--open         | -o ) O_open         "${2:-}" ; shift ;;
+		--delete-type  | -D ) O_delete-type  "${NOTEDIR}/${2:-}.goste" ; shift ;;
+		--list-entries | -l ) O_list-entries "${NOTEDIR}/${2:-}.goste" ; shift ;;
+		--list-types   | -L ) O_list-types            ; shift ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done

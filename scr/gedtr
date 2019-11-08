@@ -50,6 +50,7 @@ TYP="${TYP#*:}" ; TYP="${TYP#* }" ; TYP="${TYP%% *}"
 
 case $EXT in
 	Xres*|Xdef*) EXF=Xfiles  ;;
+	goste)       EXF=goste   ;;
 	*conf*)      EXF=configs ;;
 	*bash*)      EXF=bash    ;;
 	sh)          EXF=sh      ;;

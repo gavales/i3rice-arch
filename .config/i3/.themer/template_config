@@ -222,6 +222,7 @@ $fw [instance="gitcommit"]               focus;$QUD -m 2;focus;$tf "git-sync"
 $fw [instance="reddit"]                  focus;$QUD -m 2;focus;$tf "reddit"
 $fw [instance="^yaml - edtr$"]           focus;$QUD -m 2;focus;$tf "yaml - edtr"
 $fw [instance="^bib - edtr$"]            focus;$QUD -m 2;focus;$tf "bib - edtr"
+$fw [instance="^GOSTE$"]                 focus;$QUD -m 2;focus;$tf "goste"
 
 $fw [class="Emacs"]                      focus;$QUD -m 3;focus
 $fw [class="firefox"]                    focus;$QUD -m 3;focus

@@ -14,13 +14,17 @@ syntax enable
 set encoding=utf-8
 colorscheme themer
 set number relativenumber
-set hls is wrap linebreak
+set hls
+"set is
+"set linebreak
+set nowrap
+set sidescroll=1
 set textwidth=0 wrapmargin=0
+set cursorline colorcolumn=81
 set title titlestring=%f titlelen=70
 set mouse=a
 set smartindent tabstop=2 shiftwidth=2
 set incsearch
-set cursorline colorcolumn=81
 "set conceallevel=2 concealcursor=nic
 set list listchars=tab:│\ ,trail:╳,precedes:←,extends:→
 set noshowmode noruler noshowcmd
@@ -92,6 +96,7 @@ autocmd FileType dosini           let b:comment_start = ';'  | let b:comment_end
 autocmd FileType xdefaults        let b:comment_start = '!'  | let b:comment_end = ''
 autocmd FileType sh,ruby,python   let b:comment_start = '#'  | let b:comment_end = ''
 autocmd FileType conf,fstab,perl  let b:comment_start = '#'  | let b:comment_end = ''
+autocmd FileType sxhkdrc          let b:comment_start = '#'  | let b:comment_end = ''
 autocmd FileType c,cpp,java,scala let b:comment_start = '//' | let b:comment_end = ''
 
 nnoremap \> mw:s/^/\=b:comment_start/<CR>:s/$/\=b:comment_end/<CR>:noh<CR>`wll

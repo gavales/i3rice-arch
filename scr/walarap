@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+#
+# wal
+
+gen_cols() {
+	case "${backend:=imagemagick}" in
+		imagemagick)
+			for ((i=0;i<20;i++)); {
+				IFS=$'\n' read -d "" -ra raw_colors \
+					< <(convert "$image_file" -resize 25% -colors "$((16 + i))" -unique-colors txt:-)
+				
+				if ((${#raw_colors[@]} > 16)); then
+					break
+				
+				elif ((i == 19)); then
+					printf '%s\n' \
+						"error: Imagemagick couldn't generate a palette." >&2
+					exit 1
+				else
+					printf '%s\n%s\n' \
+						"warn: Imagemagick couldn't generate a palette." \
+						"warn: Trying a larger palette size ($((16 + i)))."
+				fi
+			}
+			
+			raw_colors=("${raw_colors[@]//*\#}")
+			raw_colors=("${raw_colors[@]// *}")
+		;;
+		
+		colorz)
+		
+		;;
+	esac
+}
+
+get_args() {
+    while [[ $1 ]]; do
+        case "$1" in
+            "-i")
+                image_file="$2"
+            ;;
+
+            "--backend")
+                backend="$2"
+            ;;
+        esac
+
+        shift
+    done
+
+    [[ ! -f $image_file ]] && {
+        printf '%s\n' "error: no image passed or image doesn't exist." >&2
+        exit 1
+    }
+}
+
+main() {
+    get_args "$@"
+    gen_cols
+}
+
+main "$@"

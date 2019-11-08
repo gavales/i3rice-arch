@@ -1,17 +1,17 @@
 # ━  QUERIES
-"query:Online Blogs/Feeds:tags # \"Blogs\"" "Blogs"
-"query:Nasa Jet Propulsion Laboratory:tags # \"JPL\"" "JPL"
-"query:YouTube Subscriptions:tags # \"YouTube\"" "YouTube"
-"query:Journal Articles:tags # \"Journals\"" "Journals"
-"query:NewScientist Articles:tags # \"NewScientist\"" "NewScientist"
+"query:Online Blogs/Feeds:tags             # \"Blogs\""        "Blogs"
+"query:Nasa Jet Propulsion Laboratory:tags # \"JPL\""          "JPL"
+"query:YouTube Subscriptions:tags          # \"YouTube\""      "YouTube"
+#"query:Journal Articles:tags               # \"Journals\""     "Journals"
+"query:NewScientist Articles:tags          # \"NewScientist\"" "NewScientist"
 
 # ━  Journals
-http://rsob.royalsocietypublishing.org/rss/current.xml "Journals" "~The Royal Society: Open Biology Current"
-http://rspb.royalsocietypublishing.org/rss/current.xml "Journals" "~The Royal Society: Proceedings B Current"
-http://rspa.royalsocietypublishing.org/rss/current.xml "Journals" "~The Royal Society: Proceedings A Current"
-http://rspb.royalsocietypublishing.org/rss/recent.xml  "Journals" "~The Royal Society: Proceedings B Recent"
-http://rsob.royalsocietypublishing.org/rss/recent.xml  "Journals" "~The Royal Society: Open Biology Recent"
-http://rspa.royalsocietypublishing.org/rss/recent.xml  "Journals" "~The Royal Society: Proceedings A Recent"
+#http://rsob.royalsocietypublishing.org/rss/current.xml "Journals" "~The Royal Society: Open Biology Current"
+#http://rspb.royalsocietypublishing.org/rss/current.xml "Journals" "~The Royal Society: Proceedings B Current"
+#http://rspa.royalsocietypublishing.org/rss/current.xml "Journals" "~The Royal Society: Proceedings A Current"
+#http://rspb.royalsocietypublishing.org/rss/recent.xml  "Journals" "~The Royal Society: Proceedings B Recent"
+#http://rsob.royalsocietypublishing.org/rss/recent.xml  "Journals" "~The Royal Society: Open Biology Recent"
+#http://rspa.royalsocietypublishing.org/rss/recent.xml  "Journals" "~The Royal Society: Proceedings A Recent"
 
 # ━  YoutTube
 # ━━ Entertainment
@@ -74,6 +74,7 @@ https://goodereader.com/blog/feed                      "Blogs" "~Goodereader"
 http://lukesmith.xyz/rss.xml                           "Blogs" "~Luke Smith"
 http://newtonairlines.blogspot.com/feeds/posts/default "Blogs" "~Newton Airlines"
 https://primitivetechnology.wordpress.com/feed/        "Blogs" "~Primitive Technology"
+https://mmafitnessclub.weebly.com/2/feed               "Blogs" "~Ramsey Dewey"
 http://www.nonseqshow.com/rss                          "Blogs" "~The NonSequitor Show"
 http://blog.z3bra.org/rss/feed.xml                     "Blogs" "~z3bra's Blog"
 
@@ -81,7 +82,7 @@ http://blog.z3bra.org/rss/feed.xml                     "Blogs" "~z3bra's Blog"
 http://www.jpl.nasa.gov/multimedia/rss/news.xml        "JPL" "~News & Feature Stories"
 http://www.jpl.nasa.gov/multimedia/podcast/podfeed.xml "JPL" "~Podcasts (Audio & Video)"
 http://www.jpl.nasa.gov/multimedia/rss/podfeed-hd.xml  "JPL" "~HD Videos"
-http://www.jpl.nasa.gov/blog/feed/ "JPL" "~Blogs"
+http://www.jpl.nasa.gov/blog/feed/                     "JPL" "~Blogs"
 http://www.jpl.nasa.gov/multimedia/rss/slideshows.xml  "JPL" "~Slide Shows & Interactive Features"
 
 # ━  NewScienist

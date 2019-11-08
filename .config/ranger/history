@@ -1,7 +1,3 @@
-search wave
-rename mywal
-mkdir scrman
-open_with pinta
 rename lscr
 rename i3end
 rename mmon
@@ -22,7 +18,6 @@ shell git
 shell git clone https://github.com/StillANixRookie/vim-sxhkdrc.git
 wq
 touch tex
-open_with gedtr
 mkdir youtube-dl
 touch config
 shell git clone
@@ -48,3 +43,8 @@ shell make install
 shell 
 mkdir blur
 mkdir normal
+shell wget https://raw.githubusercontent.com/dylanaraps/wal2/master/wal
+shell chmod +x %f
+rename walarap
+rename goste.vim
+open_with gedtr

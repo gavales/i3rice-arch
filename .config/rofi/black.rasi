@@ -1,9 +1,9 @@
 * {
-	accent: #474747;
-	fg1:    #1F1F1F;
-	fg2:    #333333;
-	bg2:    #DFBF9F;
-	bg1:    #cbab8b;
-	redish: #cc241d;
+	accent: #28535e;
+	fg1:    #002b36;
+	fg2:    #143f4a;
+	bg2:    #fdf6e3;
+	bg1:    #e9e2cf;
+	redish: #dc322f;
 	font1: "monaco 12";
 	}

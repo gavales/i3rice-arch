@@ -5,7 +5,7 @@
 # source /home/gavarch/.config/user-dirs.dirs
 
 SDR=${USER_SCR_DIR}
-
+MANDIR=/usr/share/man/man1
 
 help () {
 cat << 'EOB'
@@ -17,6 +17,7 @@ __manner__ - generates man pages for scripts
 
 ```
 manner [--directory|-d <directory>] [--install|-i copy|link]
+       [--delete|-D]
 manner --script|-s <script>
 manner --help|-h
 ```
@@ -31,6 +32,9 @@ pandoc
 
 `--directory|-d <directory>`  
 Change target directory
+
+`--delete|-D`  
+Delete all occurences of your scripts' installed manpages
 
 `--script|-s <script>`  
 Call specified `<script>` with `--help` flag, and convert
@@ -65,9 +69,12 @@ EOB
 exit
 }
 
+O_delete () { ls ${SDR}man | xargs -I {} sudo rm ${MANDIR}/{} ; exit 1 ; }
+
 while true; do
 	case $1 in
 		--directory | -d ) SDR="${2:-}" ;;
+		--delete    | -D ) O_delete     ;;
 		--install   | -i ) INS="${2:-}" ;;
 		--script    | -s ) ${2:-} --help | pandoc -s -t man | man -l - ; exit ;;
 		--help | -h ) help ;;
@@ -86,19 +93,15 @@ for i in $(ls -l | sed '/^d/d;/^total/d' | awk '{print $NF}'); do
 	[[ -n $(grep '\-\-help' $i) ]] && {
 
 		echo "$i"
-
 		echo ".TH ${i^^} 1 $(date +%F | sed 's/-/\\-/g') Linux \"User Manuals\"" > ${TRG}/${i}.1
 
-#			'/^.\\"/d;/.TH "" "" "" "" ""/d;s/^\\f\[C\]$/PRECODE/g;s/\\f\[C\]/\\f\[B\]/g;s/PRECODE/\\f\[C\]/g' \
 		$i --help | pandoc -s -t man | sed \
 			'/^.\\"/d;/.TH "" "" "" "" ""/d;s/\\f\[C\]/\\f\[B\]/g;s/</\\fI</g;s/>/>\\fP/g' \
 			>> ${TRG}/${i}.1
 
-		[[ -z $INS ]] || [[ ! -f /usr/share/man/man1/${i}.1 ]] && {
-			[[ $INS == "copy" ]] && \
-				sudo cp      ${TRG}/${i}.1 /usr/share/man/man1/${i}.1
-			[[ $INS == "link" ]] && \
-				sudo ln -sf  ${TRG}/${i}.1 /usr/share/man/man1/${i}.1
+		[[ -n $INS ]] && {
+			[[ $INS == "copy" ]] && sudo cp      ${TRG}/${i}.1 ${MANDIR}/${i}.1
+			[[ $INS == "link" ]] && sudo ln -sf  ${TRG}/${i}.1 ${MANDIR}/${i}.1
 			}
 
 		}

@@ -1,4 +1,4 @@
-.TH MANNER 1 2019\-11\-04 Linux "User Manuals"
+.TH MANNER 1 2019\-11\-08 Linux "User Manuals"
 .hy
 .SH NAME
 .PP
@@ -8,6 +8,7 @@
 .nf
 \f[B]
 manner [--directory|-d \fI<directory>\fP] [--install|-i copy|link]
+       [--delete|-D]
 manner --script|-s \fI<script>\fP
 manner --help|-h
 \f[R]
@@ -26,6 +27,12 @@ pandoc
 .P
 .PD
 Change target directory
+.PP
+\f[B]--delete|-D\f[R]
+.PD 0
+.P
+.PD
+Delete all occurences of your scripts\[cq] installed manpages
 .PP
 \f[B]--script|-s \fI<script>\fP\f[R]
 .PD 0

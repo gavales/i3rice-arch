@@ -7,14 +7,6 @@
 #  ██████  ██ ▒▒██▒██  ▒██▒██▒▒██▒▒██████▒███   ▒▒█████
 # ▒▒▒▒▒▒  ▒▒   ▒▒ ▒▒   ▒▒ ▒▒  ▒▒  ▒▒▒▒▒▒ ▒▒▒     ▒▒▒▒▒
 
-## ━  WMUTILS
-#alt + shift + f
-#	gwmc fullscreen $(pfw)
-#
-## ━  MOUSE
-#-button1
-#	gwmc focus $(gwmc underneath)
-
 # ━  misc
 Print
 	snap
@@ -24,6 +16,8 @@ super + Home
 	keybindingsmenu
 
 # ━  NUM
+super + grave
+	goste -o
 super + 1
 	$EDITOR -s doots $HOME/.config/i3/.themer/template_config
 super + 2
@@ -92,10 +86,6 @@ super + shift + f
 	gksu thunar
 super + shift + g
 	$TWOMINAL -name drive_sync -e grivesync
-super + shift + semicolon
-	noter -t NOTES
-super + shift + apostrophe
-	noter -t TODO
 super + shift + Return
 	$TWOMINAL -name ranger -e ranger
 

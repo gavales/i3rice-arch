@@ -54,13 +54,15 @@ exit
 }
 
 FNT=$(themer -v  'romanfont ')
+SZE=13
 SVR=edtr
 INS=edtr
 
 while true; do
 	case $1 in
-		--server | -s ) SVO="${2:-}" ; shift ;;
-		--help   | -h ) help         ; shift ;;
+		--server   | -s ) SVO="${2:-}" ; shift ;;
+		--fontsize | -S ) SZE="${2:-}" ; shift ;;
+		--help     | -h ) help         ; shift ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac
@@ -69,7 +71,7 @@ done
 
 TRG="${@:-}"
 
-EXT="${TRG##*/}" ; EXT="${EXT##*.}"
+EXT="${TRG##*/}" ; [[ ${EXT} =~ "." ]] && EXT="${EXT##*.}"
 
 TYP="$(file $(readlink -f "$TRG"))"
 TYP="${TYP#*:}" ; TYP="${TYP#* }" ; TYP="${TYP%% *}"
@@ -95,6 +97,6 @@ esac
 [[ -n $EXF ]] && SVR="edtr-$EXF" INS="$EXF - edtr"
 [[ -n $SVO ]] && SVR="$SVO"      INS="$SVO"
 
-urxvtc -name "${INS}" -fn "xft:${FNT}:size=13" \
+urxvtc -name "${INS}" -fn "xft:${FNT}:size=${SZE}" \
 	-e vim --servername "${SVR}" --remote-tab \
 	"${TRG}" &>/dev/null &

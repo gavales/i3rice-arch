@@ -27,6 +27,7 @@ hi Type             ctermfg=white    ctermbg=black    cterm=bold
 hi Identifier       ctermfg=yellow   ctermbg=black    cterm=italic
 hi Comment          ctermfg=Gray     ctermbg=black    cterm=italic
 hi Folded           ctermfg=blue     ctermbg=black    cterm=italic
+hi FoldColumn       ctermfg=black    ctermbg=black    cterm=italic
 hi Constant         ctermfg=white    ctermbg=black    cterm=italic
 hi Special          ctermfg=white    ctermbg=black    cterm=bold
 hi Statement        ctermfg=white    ctermbg=black    cterm=bold
@@ -57,12 +58,12 @@ hi TabLineSel       ctermfg=white    ctermbg=black    cterm=none
 hi TabLineFill      ctermfg=blue     ctermbg=Gray     cterm=none
 
 hi usrStatus        ctermfg=white    ctermbg=DarkGray
-hi usrred           ctermfg=red      ctermbg=black    cterm=underline,bold
-hi usrylw           ctermfg=yellow   ctermbg=black    cterm=underline,bold
-hi usrgrn           ctermfg=green    ctermbg=black    cterm=underline,bold
-hi usrgry           ctermfg=grey     ctermbg=black    cterm=underline,bold
-hi usrblu           ctermfg=blue     ctermbg=black    cterm=underline,bold
-hi usrgnt           ctermfg=magenta  ctermbg=black    cterm=underline,bold
+hi usrred           ctermfg=black    ctermbg=red      cterm=none
+hi usrylw           ctermfg=black    ctermbg=yellow   cterm=none
+hi usrgrn           ctermfg=black    ctermbg=green    cterm=none
+hi usrgry           ctermfg=black    ctermbg=grey     cterm=none
+hi usrblu           ctermfg=black    ctermbg=blue     cterm=none
+hi usrgnt           ctermfg=black    ctermbg=magenta  cterm=none
 
 " ━  GUI
 hi Normal           guifg=%%fg0%% guibg=%%bg0%%
@@ -81,6 +82,7 @@ hi Type             guifg=%%fg0%% guibg=%%bg0%% gui=bold
 hi Identifier       guifg=%%ylw%% guibg=%%bg0%% gui=italic
 hi Comment          guifg=%%acb%% guibg=%%bg0%% gui=italic
 hi Folded           guifg=%%acc%% guibg=%%bg0%% gui=italic
+hi FoldColumn       guifg=%%bg0%% guibg=%%bg0%% gui=italic
 hi Constant         guifg=%%fg0%% guibg=%%bg0%% gui=italic
 hi Special          guifg=%%fg0%% guibg=%%bg0%% gui=bold
 hi Statement        guifg=%%fg0%% guibg=%%bg0%% gui=bold
@@ -114,9 +116,9 @@ hi TabLineSel       guifg=%%fg0%% guibg=%%bg0%% gui=none
 hi TabLineFill      guifg=%%acc%% guibg=%%acb%% gui=none
 
 hi usrStatus        guifg=%%fg0%% guibg=%%bg1%%
-hi usrred           guifg=%%red%% guibg=%%bg0%% gui=underline,bold
-hi usrylw           guifg=%%ylw%% guibg=%%bg0%% gui=underline,bold
-hi usrgrn           guifg=%%grn%% guibg=%%bg0%% gui=underline,bold
-hi usrgry           guifg=%%bg3%% guibg=%%bg0%% gui=underline,bold
-hi usrblu           guifg=%%acc%% guibg=%%bg0%% gui=underline,bold
-hi usrgnt           guifg=%%gnt%% guibg=%%bg0%% gui=underline,bold
+hi usrgry           guifg=%%bg0%% guibg=%%bg3%% gui=none
+hi usrblu           guifg=%%bg0%% guibg=%%acb%% gui=none
+hi usrred           guifg=%%bg0%% guibg=%%lightred%% gui=none
+hi usrylw           guifg=%%bg0%% guibg=%%lightylw%% gui=none
+hi usrgrn           guifg=%%bg0%% guibg=%%lightgrn%% gui=none
+hi usrgnt           guifg=%%bg0%% guibg=%%lightgnt%% gui=none
