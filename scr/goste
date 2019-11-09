@@ -79,7 +79,7 @@ O_open () {
 		OPN="${NOTEDIR}/${_OPN}.goste"
 		}
 	[[ -z ${OPN} ]] && exit 1
-	edtr -s 'GOSTE' -S '11' "${OPN}"
+	edtr -s "${1} (goste)" -S '11' "${OPN}"
 	exit 1
 }
 

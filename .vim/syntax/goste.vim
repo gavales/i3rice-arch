@@ -72,9 +72,9 @@ function FoldText()
 	let foldsize = (v:foldend-v:foldstart)
 	let foldline = getline(v:foldstart)
 "	let foldline = substitute(foldline, '^[.*] ',           " ┫  ",   "")
-	let text = foldline.foldsize.'line  '
+	let text = foldline.foldsize
 	let spacecharcount = windowwidth - strdisplaywidth(foldsize.text)
-	return foldline.repeat(" ",spacecharcount).'  ('.foldsize.' tasks)'
+	return foldline.'  ('.foldsize.')'.repeat(" ",spacecharcount)
 endfunction
 setlocal foldtext=FoldText()
 
