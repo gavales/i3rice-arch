@@ -28,7 +28,8 @@ sudo pacman -S rofi otf-font-awesome ttf-font-awesome nautilus evince mupdf \
 	unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl urxvt-perls \
 	trash-cli atom python-pywal vim-latexsuite calibre jq wmctrl polybar \
 	vim-runtime gvim neovim xclip xsel firefox maim zathura-pdf-mupdf id3v2 \
-	hsetroot xorg-xsetroot xautolock xorg-xev sxhkd
+	hsetroot xorg-xsetroot xautolock xorg-xev sxhkd wmutils i3lock-color \
+	glib2 gdk-pixbuf2 ruby-sass inkscape
 sudo cpan AnyEvent Linux::FD common::sense
 cd ~
 xfconf-query --channel thunar --property /misc-full-path-in-title --create --type bool --set true
@@ -45,13 +46,13 @@ $blu
 - OPEN RANGER OR OTHER FILE MANAGER AND COPY SYMLINKS OF THE NECESSARY
 	FOLDERS AND FILES
 - AUR APPS I GET TOO:
-	slack-desktop           i3lock-color          vivaldi
-	oni                     thunar-gtk2           google-chrome-beta
+	slack-desktop
+	                        thunar-gtk2           google-chrome-beta
 	chrome-remote-desktop   spotify               grive
 	clipit                  pulseaudio-ctl        zathura-pdf-mupdf
 	xorg-xbacklight         light                 bashmount
-	i3blocks-gaps-git       mpris-ctl             figlet-fonts
-	urxvt-config-reload-git urxvt-resize-font-git i3ipc-python
+	                        mpris-ctl             figlet-fonts
+	urxvt-config-reload-git urxvt-resize-font-git i3ipc-python-git
 	cli-visualizer          pamac-aur             gtkrc-reload
 	ranger-git              wordgrinder           vim-live-latex-preview
 $wtl

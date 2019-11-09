@@ -5164,3 +5164,69 @@ Nov 09 01:31 : client: [10] opened from [::1]:53046
 Nov 09 01:31 : client: [10] closed
 Nov 09 01:31 : client: [11] opened from [::1]:53048
 Nov 09 01:31 : client: [11] closed
+Nov 09 14:29 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 09 14:29 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 09 14:29 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+                                                                           Nov 09 14:32 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 09 14:32 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 09 14:48 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 09 14:48 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 09 14:51 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 09 14:51 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 09 15:03 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 09 15:03 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 09 15:40 : client: [0] opened from [::1]:35048
+Nov 09 15:40 : client: [0] closed
+Nov 09 15:53 : client: [1] opened from [::1]:35262
+Nov 09 15:53 : client: [1] closed
+Nov 09 15:53 : client: [2] opened from [::1]:35264
+Nov 09 15:53 : client: [2] closed
+Nov 09 15:53 : client: [3] opened from [::1]:35266
+Nov 09 15:53 : client: [3] closed
+Nov 09 15:53 : client: [4] opened from [::1]:35280
+Nov 09 15:57 : client: [4] closed
+Nov 09 16:51 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 09 16:51 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 09 17:10 : client: [0] opened from [::1]:33632
+Nov 09 17:11 : client: [0] closed
+Nov 09 17:13 : client: [1] opened from [::1]:33838
+Nov 09 17:13 : client: [2] opened from [::1]:33840
+Nov 09 17:13 : client: [2] closed
+Nov 09 17:13 : client: [3] opened from [::1]:33842
+Nov 09 17:13 : client: [3] closed
+Nov 09 17:13 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 09 17:13 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 09 17:13 : client: [4] opened from [::1]:33844
+Nov 09 17:13 : client: [4] closed
+Nov 09 17:13 : client: [5] opened from [::1]:33846
+Nov 09 17:13 : client: [5] closed
+Nov 09 17:13 : client: [6] opened from [::1]:33848
+Nov 09 17:13 : client: [6] closed
+Nov 09 17:14 : client: [7] opened from [::1]:33850
+Nov 09 17:14 : client: [7] closed
+Nov 09 17:14 : client: [8] opened from [::1]:33852
+Nov 09 17:14 : client: [8] closed
+Nov 09 17:14 : client: [9] opened from [::1]:33854
+Nov 09 17:14 : client: [9] closed
+Nov 09 17:18 : client: [10] opened from [::1]:33942
+Nov 09 17:18 : client: [10] closed
+Nov 09 17:18 : client: [11] opened from [::1]:33944
+Nov 09 17:18 : client: [11] closed
+Nov 09 17:18 : client: [12] opened from [::1]:33946
+Nov 09 17:18 : client: [12] closed
+Nov 09 17:21 : player: played "Clutch/Blast Tyrant/01 - Mercury.mp3"
+Nov 09 17:21 : client: [13] opened from [::1]:34138
+Nov 09 17:21 : client: [13] closed
+Nov 09 17:21 : client: [14] opened from [::1]:34140
+Nov 09 17:21 : client: [14] closed
+Nov 09 17:24 : client: [1] closed
+Nov 09 17:24 : player: played "Clutch/Blast Tyrant/02 - Profits of Doom.mp3"
+Nov 09 17:24 : client: [15] opened from [::1]:34160
+Nov 09 17:24 : client: [15] closed
+Nov 09 17:24 : client: [16] opened from [::1]:34162
+Nov 09 17:24 : client: [16] closed
+Nov 09 17:24 : client: [17] opened from [::1]:34164
+Nov 09 17:24 : client: [17] closed
+Nov 09 18:00 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 09 18:00 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 09 18:00 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.

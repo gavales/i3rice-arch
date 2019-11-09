@@ -18,14 +18,14 @@ cyn #3FDCEE
 !lightblu #8897F4
 !lightgnt #C574DD
 !lightcyn #79E6F3
-name       gruvbox_light
+name       default
 HOME       \/home\/gavarch
 xkb        gb
 MON1       eDP1
 MON2       VGA1
 MON3       HDMI1
 guifont    $romanfont
-font       monaco
+font       Iosevka
 sansfont   Lucida Sans
 monofont   CMU Typewriter Text
 monofnt2   monaco

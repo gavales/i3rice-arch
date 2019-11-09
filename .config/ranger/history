@@ -1,15 +1,3 @@
-rename mmon
-shell
-shell hugo
-shell wget https://raw.githubusercontent.com/dkeg/wm-configs/master/.cwmrc
-rename template_.cwmrc
-mkdir fwm
-shell git clone https://github.com/lwilletts/fwm.git
-touch .xsession
-rename _xinitrc
-rename .xinitrc
-rename .xprofile
-rename lch
 mkdir sxhkd
 touch sxhkdrc
 shell git
@@ -48,3 +36,15 @@ rename goste.vim
 touch .goste
 open_with gedtr
 rename goste
+rename dtp
+open_with 
+open_with vim
+rename .profile
+rename .icons
+shell git clone https://github.com/StillANixRookie/i3rice-arch.wiki.git
+shell git clone https://github.com/StillANixRookie/numix.git
+shell git clone https://github.com/StillANixRookie/ghb.git
+shell git clone https://github.com/StillANixRookie/stillanixrookie.git
+shell git clone https://github.com/StillANixRookie/stillanixrookie.github.io.git
+rename public
+shell grive -a
