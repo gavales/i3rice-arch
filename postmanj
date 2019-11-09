@@ -53,8 +53,7 @@ $blu
 	i3blocks-gaps-git       mpris-ctl             figlet-fonts
 	urxvt-config-reload-git urxvt-resize-font-git i3ipc-python
 	cli-visualizer          pamac-aur             gtkrc-reload
-	ranger-git              betterlockscreen      vim-live-latex-preview
-	hideit.sh-git
+	ranger-git              wordgrinder           vim-live-latex-preview
 $wtl
 EOB
 

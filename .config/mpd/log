@@ -5137,3 +5137,30 @@ Nov 07 23:41 : client: [5] opened from [::1]:35374
 Nov 07 23:41 : client: [5] closed
 Nov 09 00:36 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Nov 09 00:36 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 09 01:31 : client: [0] opened from [::1]:53022
+Nov 09 01:31 : client: [0] closed
+Nov 09 01:31 : client: [1] opened from [::1]:53024
+Nov 09 01:31 : client: [1] closed
+Nov 09 01:31 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 09 01:31 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 09 01:31 : client: [2] opened from [::1]:53026
+Nov 09 01:31 : client: [2] closed
+Nov 09 01:31 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Nov 09 01:31 : client: [3] opened from [::1]:53028
+Nov 09 01:31 : client: [3] closed
+Nov 09 01:31 : client: [4] opened from [::1]:53030
+Nov 09 01:31 : client: [4] closed
+Nov 09 01:31 : client: [5] opened from [::1]:53032
+Nov 09 01:31 : client: [5] closed
+Nov 09 01:31 : client: [6] opened from [::1]:53034
+Nov 09 01:31 : client: [6] closed
+Nov 09 01:31 : client: [7] opened from [::1]:53036
+Nov 09 01:31 : client: [7] closed
+Nov 09 01:31 : client: [8] opened from [::1]:53038
+Nov 09 01:31 : client: [8] closed
+Nov 09 01:31 : client: [9] opened from [::1]:53044
+Nov 09 01:31 : client: [9] closed
+Nov 09 01:31 : client: [10] opened from [::1]:53046
+Nov 09 01:31 : client: [10] closed
+Nov 09 01:31 : client: [11] opened from [::1]:53048
+Nov 09 01:31 : client: [11] closed
