@@ -55,7 +55,7 @@ sticky      no
 moveamount  20
 borderwidth 4
 gap         10 10 10 50
-fontname    'Luxi Mono:size=12'
+fontname    'Input:size=12'
 
 # ━  colors
 

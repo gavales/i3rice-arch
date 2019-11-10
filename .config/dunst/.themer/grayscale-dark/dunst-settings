@@ -3,7 +3,7 @@
 	close_all = ctrl+shift+space
 
 [global]
-	font = Luxi Mono 11
+	font = Input 11
 	
 	allow_markup = yes
 	

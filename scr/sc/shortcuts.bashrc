@@ -1,4 +1,4 @@
-# >>>> shortcuts
+# ━  shortcuts
 alias Db="edtr ~/git/i3rice-arch/.bashrc"
 alias Di="edtr ~/git/i3rice-arch/.config/i3/.themer/template_config"
 alias Dp="edtr ~/git/i3rice-arch/.config/polybar/.themer/template_config"
@@ -9,9 +9,9 @@ alias Dsf="edtr ~/scr/sc/_flds"
 alias Dss="edtr ~/scr/sc/_scrs"
 alias Dst="edtr ~/scr/sc/_tmps"
 alias Dv="edtr ~/git/i3rice-arch/.vimrc"
-alias ga="cd ~/Drive"
-Ya() { cp -r "$1" ~/Drive/"$1" ; }
-Ma() { mv "$1" ~/Drive/"$1" ; }
+alias ga="cd ~/Dropbox"
+Ya() { cp -r "$1" ~/Dropbox/"$1" ; }
+Ma() { mv "$1" ~/Dropbox/"$1" ; }
 alias gb="cd ~/scr"
 Yb() { cp -r "$1" ~/scr/"$1" ; }
 Mb() { mv "$1" ~/scr/"$1" ; }

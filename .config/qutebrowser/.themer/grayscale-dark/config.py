@@ -383,7 +383,7 @@ c.new_instance_open_target        = 'tab' # tab, tab-bg, tab-silent, tab-bg-sile
 c.new_instance_open_target_window = 'last-focused' # first-opened, last-opened, last-focused, last-visible
 
 # ━  FONTS
-c.fonts.monospace                = 'Luxi Mono'
+c.fonts.monospace                = 'Input'
 # , "xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
 c.fonts.completion.category      = 'bold 11pt monospace'
 c.fonts.completion.entry         = '11pt monospace'

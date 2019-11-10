@@ -15,13 +15,13 @@ xkb                gb
 MON1               eDP1
 MON2               VGA1
 MON3               HDMI1
-guifont            Luxi Mono
+guifont            Input
 font               Iosevka
 sansfont           Lucida Sans
 monofont           CMU Typewriter Text
 monofnt2           monaco
-romanfont          Luxi Mono
-gvimfont           Luxi\\ Mono
+romanfont          Input
+gvimfont           Input
 ltimex             1
 ltimey             90
 size               11

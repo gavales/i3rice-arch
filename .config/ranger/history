@@ -1,5 +1,3 @@
-mkdir sxhkd
-touch sxhkdrc
 shell git
 shell git clone https://github.com/StillANixRookie/vim-sxhkdrc.git
 wq
@@ -48,3 +46,5 @@ shell git clone https://github.com/StillANixRookie/stillanixrookie.git
 shell git clone https://github.com/StillANixRookie/stillanixrookie.github.io.git
 rename public
 shell grive -a
+rename MotoG6Camera
+q
