@@ -45,12 +45,12 @@ set $BNR border normal
 
 # ━  DECORATIONS
 # class                 brdr    bkgr    text    indi    chlb
-client.focused          #9d9fa9 #9d9fa9 #282A36 #9d9fa9 #414458
-client.focused_inactive #414458 #414458 #282A36 #414458 #414458
-client.unfocused        #414458 #414458 #fafafa #414458 #414458
-client.urgent           #FF4971 #FF4971 #282A36 #FF4971 #FF4971
-client.placeholder      #fafafa #fafafa #282A36 #fafafa #fafafa
-client.background       #fafafa
+client.focused          #b5b5b5 #b5b5b5 #444444 #b5b5b5 #7f7f7f
+client.focused_inactive #7f7f7f #7f7f7f #444444 #7f7f7f #7f7f7f
+client.unfocused        #7f7f7f #7f7f7f #ececec #7f7f7f #7f7f7f
+client.urgent           #FF4971 #FF4971 #444444 #FF4971 #FF4971
+client.placeholder      #ececec #ececec #444444 #ececec #ececec
+client.background       #ececec
 
 # ━  BINDINGS
 # ━━ Misc
@@ -222,7 +222,11 @@ $fw [instance="gitcommit"]               focus;$QUD -m 2;focus;$tf "git-sync"
 $fw [instance="reddit"]                  focus;$QUD -m 2;focus;$tf "reddit"
 $fw [instance="^yaml - edtr$"]           focus;$QUD -m 2;focus;$tf "yaml - edtr"
 $fw [instance="^bib - edtr$"]            focus;$QUD -m 2;focus;$tf "bib - edtr"
-$fw [instance="^GOSTE$"]                 focus;$QUD -m 2;focus;$tf "goste"
+$fw [instance="^notes$"]                 focus;$QUD -m 2;focus;$tf "notes"
+$fw [instance="^todo$"]                  focus;$QUD -m 2;focus;$tf "todo"
+$fw [instance="^watchlist$"]             focus;$QUD -m 2;focus;$tf "watchlist"
+$fw [instance="^scrt$"]                  focus;$QUD -m 2;focus;$tf "scrt"
+$fw [instance="^projects$"]              focus;$QUD -m 2;focus;$tf "projects"
 
 $fw [class="Emacs"]                      focus;$QUD -m 3;focus
 $fw [class="firefox"]                    focus;$QUD -m 3;focus

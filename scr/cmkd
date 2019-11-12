@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-TRG=$1
 PDDR=$XDG_TEMPLATES_DIR/pandoc
 CSDR=$XDG_TEMPLATES_DIR/css
 
@@ -54,16 +53,18 @@ echo "$1"
 exit
 }
 
-[[ -z $1 ]] && echo 'No input file! [cmkd --help for more info]' && exit
-
 while true; do
 	case $1 in
-		--help | -h ) help ;;
+		--help ) help ;;
+		-h     ) help | sed -n "/# SYNOPSIS/,/#/p" | sed '/^#/d;/^$/d;/```/d' ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac
 	shift
 done
+
+TRG=$1
+[[ -z $1 ]] && echo 'No input file! [cmkd --help for more info]' && exit
 
 BIB=$(awk '$1 ~ /^#bib$/    {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
 YML=$(awk '$1 ~ /^#yaml$/   {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )

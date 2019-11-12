@@ -1,8 +1,8 @@
 !! vim:ft=xdefaults
 ! ━  themer theme: grayscale
 
-#define tfg0 #282A36
-#define tacb #9d9fa9
+#define tfg0 #444444
+#define tacb #b5b5b5
 #define tred #FF4971
 #define redl #FF4971
 #define tgrn #18E3C8
@@ -15,8 +15,8 @@
 #define gntl #B043D1
 #define tcyn #3FDCEE
 #define cynl #3FDCEE
-#define tbg0 #fafafa
-#define tbg1 #e6e6e6
+#define tbg0 #ececec
+#define tbg1 #d8d8d8
 
 ! ━  default theme: i3
 
@@ -192,7 +192,7 @@ URxvt*foreground:           tfg0
 URxvt*saveLines:            5000
 URxvt*useColor:             true
 URxvt*internalBorder:       0
-URxvt*letterSpace:          2
+URxvt*letterSpace:          0
 URxvt*lineSpace:            3
 
 !! for 'fake' transparency (without Compton) uncomment the following three lines

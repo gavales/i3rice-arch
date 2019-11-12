@@ -192,7 +192,7 @@ URxvt*foreground:           tfg0
 URxvt*saveLines:            5000
 URxvt*useColor:             true
 URxvt*internalBorder:       0
-URxvt*letterSpace:          2
+URxvt*letterSpace:          0
 URxvt*lineSpace:            3
 
 !! for 'fake' transparency (without Compton) uncomment the following three lines

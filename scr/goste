@@ -78,19 +78,20 @@ O_open () {
 		_OPN="$(goste -L | i3menu -c blue)"
 		OPN="${NOTEDIR}/${_OPN}.goste"
 		}
-	[[ -z ${OPN} ]] && exit 1
-	edtr -s "${1} (goste)" -S '11' "${OPN}"
+	[[ -z ${_OPN} ]] && exit 1
+	edtr -s "${1}" -S '11' "${OPN}"
 	exit 1
 }
 
 while true; do
 	case $1 in
-		--help         | -h ) help                    ; shift ;;
 		--create       | -c ) O_create       "${2:-}" ; shift ;;
 		--open         | -o ) O_open         "${2:-}" ; shift ;;
 		--delete-type  | -D ) O_delete-type  "${NOTEDIR}/${2:-}.goste" ; shift ;;
 		--list-entries | -l ) O_list-entries "${NOTEDIR}/${2:-}.goste" ; shift ;;
 		--list-types   | -L ) O_list-types            ; shift ;;
+		--help ) help ;;
+		-h     ) help | sed -n "/# SYNOPSIS/,/#/p" | sed '/^#/d;/^$/d;/```/d' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac

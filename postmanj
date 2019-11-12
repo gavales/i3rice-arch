@@ -29,7 +29,7 @@ sudo pacman -S rofi otf-font-awesome ttf-font-awesome nautilus evince mupdf \
 	trash-cli atom python-pywal vim-latexsuite calibre jq wmctrl polybar \
 	vim-runtime gvim neovim xclip xsel firefox maim zathura-pdf-mupdf id3v2 \
 	hsetroot xorg-xsetroot xautolock xorg-xev sxhkd wmutils i3lock-color \
-	glib2 gdk-pixbuf2 ruby-sass inkscape
+	glib2 gdk-pixbuf2 ruby-sass inkscape glava
 sudo cpan AnyEvent Linux::FD common::sense
 cd ~
 xfconf-query --channel thunar --property /misc-full-path-in-title --create --type bool --set true

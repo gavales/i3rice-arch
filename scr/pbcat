@@ -55,7 +55,8 @@ while true; do
 		--foreground | -f ) FG="${2:-}"  ; shift ;;
 		--background | -b ) BG="${2:-}"  ; shift ;;
 		--invert     | -i ) PRE+="%{R}" ;;
-		--help       | -h ) help        ;;
+		--help ) help ;;
+		-h     ) help | sed -n "/# SYNOPSIS/,/#/p" | sed '/^#/d;/^$/d;/```/d' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac

@@ -807,7 +807,8 @@ while true; do
 		--clean        | -C ) O_clean        "${2:-}" ; shift ;;
 		--dark         | -D ) DARK=1  ;;
 		--force        | -f ) FORCE=1 ;;
-		--help         | -h ) help ;;
+		--help ) help ;;
+		-h     ) help | sed -n "/# SYNOPSIS/,/#/p" | sed '/^#/d;/^$/d;/```/d' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac

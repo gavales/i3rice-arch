@@ -3,16 +3,10 @@ name            grayscale
 wallpaper       $ac75b-paper
 !wallpaper       rollingeyes
 !wallpaper       WW_128000000000408974_EN
-!fg0             #444444
-!acc             #7f7f7f
-!blu             $acc
-!bg0             #ececec
+fg0             #444444
+acc             #7f7f7f
+bg0             #ececec
 
-bg0 #fafafa
-!fg0 #212121
-!bg0 #FDFDFD
-fg0 #282A36
-acc #414458
 red #FF4971
 grn #18E3C8
 ylw #FF8037

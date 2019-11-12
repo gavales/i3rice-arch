@@ -12,7 +12,7 @@ __edtr__ - vim server wrapper using `rxvt-unicode`
 # SYNOPSIS
 
 ```
-edtr [--server|-s <name>] <file>
+edtr [--server|-s <name>] [--fontsize|-S <integer>] <file>
 edtr --help|-h
 ```
 
@@ -62,7 +62,8 @@ while true; do
 	case $1 in
 		--server   | -s ) SVO="${2:-}" ; shift ;;
 		--fontsize | -S ) SZE="${2:-}" ; shift ;;
-		--help     | -h ) help         ; shift ;;
+		--help ) help ;;
+		-h     ) help | sed -n "/# SYNOPSIS/,/#/p" | sed '/^#/d;/^$/d;/```/d' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac

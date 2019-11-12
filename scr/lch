@@ -59,7 +59,8 @@ while true; do
 		--instance | -i ) INST="${2:-}" ; shift ;;
 		--name     | -n ) NAME="${2:-}" ; shift ;;
 		--toggle   | -t ) TOGG=1 ;;
-		--help     | -h ) help   ;;
+		--help ) help ;;
+		-h     ) help | sed -n "/# SYNOPSIS/,/#/p" | sed '/^#/d;/^$/d;/```/d' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac

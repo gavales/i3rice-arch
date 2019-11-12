@@ -49,7 +49,8 @@ while true; do
 		--type   | -t ) TYP="${2:-}" ; shift ;;
 		--create | -c ) O_create "${2:-}" ; shift ;;
 		--get    | -g ) O_get    "${2:-}" ; shift ;;
-		--help | -h ) help ;;
+		--help ) help ;;
+		-h     ) help | sed -n "/# SYNOPSIS/,/#/p" | sed '/^#/d;/^$/d;/```/d' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac

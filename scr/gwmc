@@ -3,8 +3,8 @@
 # OA: Gavin Vales
 # CREATED: Mon  4 Nov 00:10:18 GMT 2019
 
-CHK=$(pidof cwm)
-[[ -n $CHK ]] || exit 1
+#CHK=$(pidof cwm)
+#[[ -n $CHK ]] || echo "cwm not running" && exit 1
 GWMDIR=$HOME/.config/gwm
 CONF=$GWMDIR/config
 
@@ -25,7 +25,7 @@ help () {
 cat << 'EOB'
 # NAME
 
-__gawm__ - manage custom `wmutils` scripts
+__gwmc__ - manage custom `wmutils` scripts
 
 # SYNOPSIS
 
@@ -43,10 +43,11 @@ EOB
 exit
 }
 
+# 		--<++> | -<++> ) <++>="${2:-}" ; shift ;;
 while true; do
 	case $1 in
-# 		--<++> | -<++> ) <++>="${2:-}" ; shift ;;
-		--help | -h ) help ;;
+		--help ) help ;;
+		-h     ) help | sed -n "/# SYNOPSIS/,/#/p" | sed '/^#/d;/^$/d;/```/d' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac

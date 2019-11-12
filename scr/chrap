@@ -23,7 +23,8 @@ exit
 
 while true; do
 	case $1 in
-		--help | -h ) help ;;
+		--help ) help ;;
+		-h     ) help | sed -n "/# SYNOPSIS/,/#/p" | sed '/^#/d;/^$/d;/```/d' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac

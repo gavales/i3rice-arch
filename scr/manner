@@ -77,7 +77,8 @@ while true; do
 		--delete    | -D ) O_delete     ;;
 		--install   | -i ) INS="${2:-}" ;;
 		--script    | -s ) ${2:-} --help | pandoc -s -t man | man -l - ; exit ;;
-		--help | -h ) help ;;
+		--help ) help ;;
+		-h     ) help | sed -n "/# SYNOPSIS/,/#/p" | sed '/^#/d;/^$/d;/```/d' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac

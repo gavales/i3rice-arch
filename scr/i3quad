@@ -192,7 +192,8 @@ while true; do
 		--focus      | -f ) O_focus       "${2:-}" ;;
 		--resize     | -r ) O_resize      "${2:-}" ;;
 		--tile       | -t ) O_tile ;;
-		--help       | -h ) help ;;
+		--help ) help ;;
+		-h     ) help | sed -n "/# SYNOPSIS/,/#/p" | sed '/^#/d;/^$/d;/```/d' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac

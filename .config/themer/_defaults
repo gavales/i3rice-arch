@@ -29,10 +29,8 @@ font       Iosevka
 sansfont   Lucida Sans
 monofont   CMU Typewriter Text
 monofnt2   monaco
-romanfont  Input
-gvimfont   Input
-!romanfont  Luxi Mono
-!gvimfont   Luxi\\ Mono
+romanfont  Luxi Mono
+gvimfont   Luxi\\ Mono
 ltimex     1
 ltimey     90
 size       11

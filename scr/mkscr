@@ -98,7 +98,8 @@ while true; do
 		--subdirectory  | -s ) SDR="${2:-}"  ; shift ;;
 		--template      | -t ) TEMP="${2:-}" ; shift ;;
 		--generate-help | -g ) GHP=1                 ;;
-		--help          | -h ) help ;;
+		--help ) help ;;
+		-h     ) help | sed -n "/# SYNOPSIS/,/#/p" | sed '/^#/d;/^$/d;/```/d' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac

@@ -100,5 +100,6 @@ setlocal spell spelllang=en_gb
 setlocal nonumber norelativenumber laststatus=0
 setlocal textwidth=80
 autocmd CursorMoved,CursorMovedI * update
-autocmd FileType markdown nnoremap \c :w !cmkd <C-r>%<Enter><Enter>
+autocmd CursorHold,CursorHoldI * silent !cmkd % &>/dev/null &
+"autocmd CursorHold,CursorHoldI * redraw!
 "autocmd VimEnter * Goyo"

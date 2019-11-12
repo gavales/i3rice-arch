@@ -55,5 +55,6 @@ endfunction
 setlocal updatetime=2000
 setlocal spell spelllang=en_gb
 setlocal nonumber norelativenumber
+autocmd CursorMoved,CursorMovedI * update
 autocmd CursorHold,CursorHoldI * silent !compiler % &>/dev/null &
 setlocal textwidth=80

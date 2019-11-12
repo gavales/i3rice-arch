@@ -5254,3 +5254,33 @@ Nov 09 23:29 : client: [4] opened from [::1]:51378
 Nov 09 23:29 : client: [4] closed
 Nov 09 23:29 : client: [5] opened from [::1]:51380
 Nov 09 23:29 : client: [5] closed
+Nov 10 18:32 : player: played "Clutch/Blast Tyrant/03 - The Mob Goes Wild.mp3"
+Nov 10 18:52 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 10 18:52 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 10 18:52 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 10 18:56 : client: [0] opened from [::1]:55120
+Nov 10 18:56 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 10 18:56 : client: [0] closed
+Nov 10 18:56 : client: [1] opened from [::1]:55122
+Nov 10 18:56 : client: [1] closed
+Nov 10 18:56 : client: [2] opened from [::1]:55124
+Nov 10 18:56 : client: [2] closed
+Nov 10 18:56 : client: [3] opened from [::1]:55126
+Nov 10 18:56 : client: [3] closed
+Nov 10 18:56 : client: [4] opened from [::1]:55128
+Nov 10 18:56 : client: [4] closed
+Nov 10 18:56 : client: [5] opened from [::1]:55130
+Nov 10 18:56 : client: [5] closed
+Nov 10 18:57 : client: [6] opened from [::1]:55132
+Nov 10 18:57 : client: [6] closed
+Nov 10 18:57 : client: [7] opened from [::1]:55134
+Nov 10 18:57 : client: [7] closed
+Nov 10 18:57 : client: [8] opened from [::1]:55136
+Nov 10 18:57 : client: [8] closed
+Nov 10 18:57 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Nov 10 18:57 : client: [9] opened from [::1]:55138
+Nov 10 18:57 : client: [9] closed
+Nov 10 18:57 : client: [10] opened from [::1]:55140
+Nov 10 18:57 : client: [10] closed
+Nov 10 18:57 : client: [11] opened from [::1]:55142
+Nov 10 18:57 : client: [11] closed

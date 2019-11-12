@@ -18,7 +18,8 @@ exit
 
 while true; do
 	case $1 in
-		--help | -h ) help ;;
+		--help ) help ;;
+		-h     ) help | sed -n "/# SYNOPSIS/,/#/p" | sed '/^#/d;/^$/d;/```/d' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac
@@ -30,4 +31,4 @@ done
 SRC=$1
 TRG=${SRC%.*}
 #groff -ms ${SRC} -T pdf > ${TRG}.pdf
-refer -PS -p $USER_DRV_DIR/global -e "${SRC}" | groff -me -ms -keEjpt -T pdf > ${TRG}.pdf
+refer -PS -p $HOME/global -e "${SRC}" | groff -me -ms -keEjpt -T pdf > ${TRG}.pdf
