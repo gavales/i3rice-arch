@@ -37,10 +37,10 @@ hi Search           ctermfg=black    ctermbg=yellow   cterm=none
 hi Error            ctermfg=red      ctermbg=black    cterm=none
 hi EndOfBuffer      ctermfg=black    ctermbg=black    cterm=none
 
-hi SpellBad         ctermfg=red      ctermbg=none     cterm=underline,bold
-hi SpellCap         ctermfg=blue     ctermbg=none     cterm=underline,bold
-hi SpellRare        ctermfg=magenta  ctermbg=none     cterm=underline,bold
-hi SpellLocal       ctermfg=cyan     ctermbg=none     cterm=underline,bold
+hi SpellBad         ctermfg=red      ctermbg=none     cterm=undercurl,bold
+hi SpellCap         ctermfg=blue     ctermbg=none     cterm=undercurl,bold
+hi SpellRare        ctermfg=magenta  ctermbg=none     cterm=undercurl,bold
+hi SpellLocal       ctermfg=cyan     ctermbg=none     cterm=undercurl,bold
 
 hi StatusLine       ctermfg=black    ctermbg=blue
 hi StatusLineNC     ctermfg=black    ctermbg=blue
@@ -92,10 +92,10 @@ hi Search           guifg=#fbf1c7 guibg=#d79921 gui=none
 hi Error            guifg=#cc241d guibg=#fbf1c7 gui=none
 hi EndOfBuffer      guifg=#fbf1c7 guibg=#fbf1c7 gui=none
 
-hi SpellBad         guifg=#cc241d guibg=#fbf1c7 gui=underline,bold
-hi SpellCap         guifg=#689d6a guibg=#fbf1c7 gui=underline,bold
-hi SpellRare        guifg=#b16286 guibg=#fbf1c7 gui=underline,bold
-hi SpellLocal       guifg=#458588 guibg=#fbf1c7 gui=underline,bold
+hi SpellBad         guifg=#cc241d guibg=#fbf1c7 gui=undercurl,bold
+hi SpellCap         guifg=#689d6a guibg=#fbf1c7 gui=undercurl,bold
+hi SpellRare        guifg=#b16286 guibg=#fbf1c7 gui=undercurl,bold
+hi SpellLocal       guifg=#458588 guibg=#fbf1c7 gui=undercurl,bold
 
 hi StatusLine       guifg=#fbf1c7 guibg=#689d6a
 hi StatusLineNC     guifg=#fbf1c7 guibg=#689d6a

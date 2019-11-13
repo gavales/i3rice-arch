@@ -78,7 +78,7 @@ while true; do
 		--install   | -i ) INS="${2:-}" ;;
 		--script    | -s ) ${2:-} --help | pandoc -s -t man | man -l - ; exit ;;
 		--help ) help ;;
-		-h     ) help | sed -n "/# SYNOPSIS/,/#/p" | sed '/^#/d;/^$/d;/```/d' && exit ;;
+		-h     ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac

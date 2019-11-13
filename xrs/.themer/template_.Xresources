@@ -181,10 +181,10 @@ URxvt.font:                 xft:fontname:size=fontsize, xft:FontAwesome:size=9
 URxvt*fading:               0
 URxvt*depth:                0
 URxvt*scrollBar:            false
-!URxvt*scrollBar_right:     true
-!URxvt*scrollColor:         tbg1
-!URxvt*troughColor:         tbg0
-!URxvt*scrollstyle:         plain
+!URxvt*scrollBar_right:      true
+!URxvt*scrollColor:          tbg1
+!URxvt*troughColor:          tbg0
+!URxvt*scrollstyle:          plain
 URxvt*mouseWheelScrollPage: false
 URxvt*cursorBlink:          true
 URxvt*background:           tbg0
@@ -192,13 +192,13 @@ URxvt*foreground:           tfg0
 URxvt*saveLines:            5000
 URxvt*useColor:             true
 URxvt*internalBorder:       0
-URxvt*letterSpace:          0
+URxvt*letterSpace:          1
 URxvt*lineSpace:            3
-
+URxvt.geometry:             60x20
 !! for 'fake' transparency (without Compton) uncomment the following three lines
-!URxvt*inheritPixmap:       true
-!URxvt*transparent:         true
-!URxvt*shading:             138
+!URxvt*inheritPixmap:        true
+!URxvt*transparent:          true
+!URxvt*shading:              138
 
 ! ━  8urxvtext
 

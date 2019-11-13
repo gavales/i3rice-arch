@@ -6,24 +6,19 @@
 main () {
 
 bib=$1
-cat "$bib" | sed "/^@/d;s/^[ \t]*//;s/\ =\ / /g;
-s/^author/\%A/g;
-s/^booktitle/\%B/g;
-s/^title/\%T/g;
-s/^year/\%D/g;
-s/^journal/\%J/g;
-s/^book/\%B/g;
-s/^volume/\%V/g;
-s/^school/%I/g;
-s/^institution/%I/g;
-s/^publisher/\%I/g;
-s/^pages/\%P/g;
-s/^number/\%N/g;
-s/^organization/\%Q/g;
-s/^url/\%O/g;
-s/},//g;s/{//g;s/}//g;
+cat "${bib}" | sed 's/^@.*{/\%K /g;s/^[ \t]*//;s/\ =\ / /g;
+s/^author/\%A/g;s/^booktitle/\%B/g;s/^title/\%T/g;
+s/^year/\%D/g;s/^journal/\%J/g;s/^book/\%B/g;
+s/^volume/\%V/g;s/^school/%I/g;s/^institution/%I/g;
+s/^publisher/\%I/g;s/^pages/\%P/g;s/^number/\%N/g;
+s/^organization/\%Q/g;s/^url/\%O/g;
+s/{//g;
+s/},//g;
+s/}//g;
 s/\\\&/\&/g;s/[\]\"//g;s/[$]//g;s/[\]//g;
-/^%A\ */s/\ and\ /\n%A\ /g;s/$//" > ${bib%.*}
+/^%K\ */s/,//g;s/$//;
+/^%A\ */s/\ and\ /\n%A\ /g;s/$//' > ${bib%.*}
+
 }
 
 help () {
@@ -44,7 +39,7 @@ exit
 while true; do
 	case $1 in
 		--help ) help ;;
-		-h     ) help | sed -n "/# SYNOPSIS/,/#/p" | sed '/^#/d;/^$/d;/```/d' && exit ;;
+		-h     ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac

@@ -78,7 +78,7 @@ while true; do
 		--list   | -l ) list            ; shift ;;
 		--delete | -d ) delete "${2:-}" ; shift ;;
 		--help ) help ;;
-		-h     ) help | sed -n "/# SYNOPSIS/,/#/p" | sed '/^#/d;/^$/d;/```/d' && exit ;;
+		-h     ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac

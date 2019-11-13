@@ -99,7 +99,7 @@ while true; do
 		--template      | -t ) TEMP="${2:-}" ; shift ;;
 		--generate-help | -g ) GHP=1                 ;;
 		--help ) help ;;
-		-h     ) help | sed -n "/# SYNOPSIS/,/#/p" | sed '/^#/d;/^$/d;/```/d' && exit ;;
+		-h     ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac

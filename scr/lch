@@ -60,7 +60,7 @@ while true; do
 		--name     | -n ) NAME="${2:-}" ; shift ;;
 		--toggle   | -t ) TOGG=1 ;;
 		--help ) help ;;
-		-h     ) help | sed -n "/# SYNOPSIS/,/#/p" | sed '/^#/d;/^$/d;/```/d' && exit ;;
+		-h     ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac

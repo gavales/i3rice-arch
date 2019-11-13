@@ -5284,3 +5284,16 @@ Nov 10 18:57 : client: [10] opened from [::1]:55140
 Nov 10 18:57 : client: [10] closed
 Nov 10 18:57 : client: [11] opened from [::1]:55142
 Nov 10 18:57 : client: [11] closed
+Nov 12 22:57 : client: [12] opened from [::1]:34458
+Nov 12 22:57 : client: [12] closed
+Nov 12 22:57 : client: [13] opened from [::1]:34460
+Nov 12 22:57 : client: [13] closed
+Nov 12 22:57 : client: [14] opened from [::1]:34462
+Nov 12 22:57 : client: [14] closed
+Nov 12 22:57 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Nov 12 22:58 : client: [15] opened from [::1]:34534
+Nov 12 22:58 : client: [15] closed
+Nov 12 22:58 : client: [16] opened from [::1]:34536
+Nov 12 22:58 : client: [16] closed
+Nov 12 22:58 : client: [17] opened from [::1]:34538
+Nov 12 22:58 : client: [17] closed

@@ -1,4 +1,3 @@
-rename snap
 rename snapwindow
 rename gawm
 rename gwm
@@ -24,7 +23,6 @@ shell chmod +x %f
 rename walarap
 rename goste.vim
 touch .goste
-open_with gedtr
 rename goste
 rename dtp
 open_with 
@@ -47,4 +45,6 @@ rename Input-Regular_(InputSerifNarrow-Regular).ttf
 rename Y1617W51COPY.pdf
 rename Payslip for Tax Week_16, Tax Year_2018-2019.pdf
 rename user-dirs.dirs
+rename snapper
 w
+open_with gedtr

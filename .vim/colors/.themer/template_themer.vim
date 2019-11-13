@@ -37,10 +37,10 @@ hi Search           ctermfg=black    ctermbg=yellow   cterm=none
 hi Error            ctermfg=red      ctermbg=black    cterm=none
 hi EndOfBuffer      ctermfg=black    ctermbg=black    cterm=none
 
-hi SpellBad         ctermfg=red      ctermbg=none     cterm=underline,bold
-hi SpellCap         ctermfg=blue     ctermbg=none     cterm=underline,bold
-hi SpellRare        ctermfg=magenta  ctermbg=none     cterm=underline,bold
-hi SpellLocal       ctermfg=cyan     ctermbg=none     cterm=underline,bold
+hi SpellBad         ctermfg=red      ctermbg=none     cterm=undercurl,bold
+hi SpellCap         ctermfg=blue     ctermbg=none     cterm=undercurl,bold
+hi SpellRare        ctermfg=magenta  ctermbg=none     cterm=undercurl,bold
+hi SpellLocal       ctermfg=cyan     ctermbg=none     cterm=undercurl,bold
 
 hi StatusLine       ctermfg=black    ctermbg=blue
 hi StatusLineNC     ctermfg=black    ctermbg=blue
@@ -92,10 +92,10 @@ hi Search           guifg=%%bg0%% guibg=%%ylw%% gui=none
 hi Error            guifg=%%red%% guibg=%%bg0%% gui=none
 hi EndOfBuffer      guifg=%%bg0%% guibg=%%bg0%% gui=none
 
-hi SpellBad         guifg=%%red%% guibg=%%bg0%% gui=underline,bold
-hi SpellCap         guifg=%%acc%% guibg=%%bg0%% gui=underline,bold
-hi SpellRare        guifg=%%gnt%% guibg=%%bg0%% gui=underline,bold
-hi SpellLocal       guifg=%%cyn%% guibg=%%bg0%% gui=underline,bold
+hi SpellBad         guifg=%%red%% guibg=%%bg0%% gui=undercurl,bold
+hi SpellCap         guifg=%%acc%% guibg=%%bg0%% gui=undercurl,bold
+hi SpellRare        guifg=%%gnt%% guibg=%%bg0%% gui=undercurl,bold
+hi SpellLocal       guifg=%%cyn%% guibg=%%bg0%% gui=undercurl,bold
 
 hi StatusLine       guifg=%%bg0%% guibg=%%acc%%
 hi StatusLineNC     guifg=%%bg0%% guibg=%%acc%%
