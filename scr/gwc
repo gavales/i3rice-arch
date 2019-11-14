@@ -134,46 +134,52 @@ tint () {
 	CRLN=$(readlink -f $CURR)
 }
 
+tile-wall () { feh --bg-tile $CURR ; echo "${CRLN##*/}" ; }
+
 colour () {
 #		convert $WHT -fill $1 -draw 'color 0,0 replace' "${COLS}/${1/\#/}"
-#		convert $WHT -fill ${1} -tint 50 ${COLS}/${1/\#/}
 
 	[[ -f ${COLS}/${1/\#/}.png ]] && \
-		ln -sf "${COLS}/${1/\#/}.png" $CURR && set-wall && \
-		exit 1
+		ln -sf "${COLS}/${1/\#/}.png" $CURR && tile-wall && \
+		exit
 
 	if [[ ${#1} -le 7 ]]; then
 
 		[[ ! -f ${WDIR}/white ]] && \
-			echo Please create ${WDIR}/white && exit 1 || \
-			hsetroot \
-				-tile "${WDIR}/${WHT}" \
-				-tint "${1}" \
-				-write "${COLS}/${WHT/white-/${1/\#/}-}.png"
+			echo Please create ${WDIR}/white && exit || \
+			convert "${WDIR}/${WHT}" \
+				-fill "${1}" -tint 100 \
+				"${COLS}/${WHT/white-/${1/\#/}-}.png"
+#			hsetroot \
+#				-tile "${WDIR}/${WHT}" \
+#				-tint "${1}" \
+#				-write "${COLS}/${WHT/white-/${1/\#/}-}.png"
 		echo ${WHT/white-/${1/\#/}-}.png
 		ln -sf "${COLS}/${WHT/white-/${1/\#/}-}.png" $CURR
+		tile-wall
 
 	else
 
 		SUF=${1##*-} ; PRF=${1%%-*}
 		[[ ! -f ${WDIR}/white-${SUF} ]] && \
 			echo Please create ${WDIR}/white-${SUF} && exit 1 || \
-			hsetroot \
-				-tile ${WDIR}/white-${SUF} \
-				-tint "${PRF}" \
-				-write "${COLS}/${PRF/\#/}-${SUF}.png"
+			convert "${WDIR}/white-${SUF}" \
+				-fill "${PRF}" -tint 100 \
+				"${COLS}/${PRF/\#/}-${SUF}.png"
+#			hsetroot \
+#				-tile "${WDIR}/white-${SUF}" \
+#				-tint "${PRF}" \
+#				-write "${COLS}/${PRF/\#/}-${SUF}.png"
 		echo ${COLS}/${PRF/\#/}-${SUF}.png
-		ln -sf "${COLS}/${WHT/${WDIR}\/white-/${1/\#/}-}.png" $CURR
+		ln -sf "${COLS}/${PRF/\#/}-${SUF}.png" $CURR
+		tile-wall
 
 	fi
 
 exit
 }
 
-change-current () {
-	ln -sf "${NWFD}/${_WPP}" $CURR
-	CRLN="$(readlink -f $CURR)"
-}
+change-current () { ln -sf "${NWFD}/${_WPP}" $CURR ; CRLN="$(readlink -f $CURR)" ; }
 
 history () {
 	[[ ! -f $HIST ]] && touch $HIST
@@ -181,9 +187,7 @@ history () {
 	echo -e "${1}\n$(cat $HIST)" > $HIST
 }
 
-random () {
-	_WPP=$(ls $NORM | shuf -n 1)
-}
+random () { _WPP=$(ls $NORM | shuf -n 1) ; }
 
 previous () {
 	_WPP="$(sed -n "/"${CRLN##*/}"/{n;p;}" $HIST)"
@@ -195,10 +199,7 @@ next () {
 	[[ -z $_WPP ]] && _WPP="$(tail -n 1 $HIST)"
 }
 
-set-wall () {
-	feh --bg-center $CURR
-	echo "${CRLN##*/}"
-}
+set-wall () { feh --bg-center $CURR ; echo "${CRLN##*/}" ; }
 
 O_list () {
 	cd ${NORM}

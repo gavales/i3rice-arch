@@ -1,6 +1,3 @@
-rename snapwindow
-rename gawm
-rename gwm
 touch pulsecolors
 
 shell themer --init
@@ -46,5 +43,8 @@ rename Y1617W51COPY.pdf
 rename Payslip for Tax Week_16, Tax Year_2018-2019.pdf
 rename user-dirs.dirs
 rename snapper
-w
 open_with gedtr
+shell mkdir cvl normal
+rename cvlold
+w
+rename cvl

@@ -126,7 +126,7 @@ super + shift + {comma,period,slash}
 	i3light {dec,inc,nm}
 
 super + control + c
-	xtheme --auto-dark 7:19
+	xtheme --auto-dark 7:18
 super + control + b
 	polybar-msg cmd hide
 super + control + m

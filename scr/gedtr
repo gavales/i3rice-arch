@@ -12,7 +12,7 @@ __gedtr__ - gvim server wrapper
 # SYNOPSIS
 
 ```
-gedtr [--server|-s <name>] <file>
+gedtr [--foreground|-f] [--server|-s <name>] <file>
 gedtr --help|-h
 ```
 
@@ -20,6 +20,9 @@ gedtr --help|-h
 
 `--server|-s <name>`  
 Specify server name. Default is `GVIM`.
+
+`--foreground|-f`  
+Do not detach from shell instance
 
 `--help|-h`  
 Print this help
@@ -32,7 +35,8 @@ SVR=GVIM
 
 while true; do
 	case $1 in
-		--server | -s ) SVO="${2:-}" ; shift ;;
+		--server     | -s ) SVO="${2:-}" ; shift ;;
+		--foreground | -f ) FG="-f" ;;
 		--help ) help ;;
 		-h     ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
 		-- ) shift ; break ;;
@@ -70,4 +74,4 @@ esac
 [[ -n $EXF ]] && SVR="gedtr-$EXF"
 [[ -n $SVO ]] && SVR="$SVO"
 
-gvim --servername ${SVR} --remote-tab "${TRG}" &>/dev/null &
+gvim $FG --servername ${SVR} --remote-tab "${TRG}"

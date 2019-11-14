@@ -4,20 +4,28 @@
 # CREATED: Mon 22 Jul 19:53:50 BST 2019
 
 CLDIR=$XDG_DOCUMENTS_DIR/mine/cvl
-PLT=$XDG_TEMPLATES_DIR/md/cvl.md
-EDITOR="gvim -f"
+#[[ -d $CLDIR ]] || mkdir -p $CLDIR
+AUTHOR="Gavin Luke Lawrence Vales"
 
 help () {
 cat << 'EOB'
 # NAME
 
-__gencvl__ - job application cover letter generator using `markdown` and `pandoc`
+__gencvl__ - job application cover letter
+generator using `markdown` and `pandoc`
 
 # SYNOPSIS
 
 ```
 gencvl <name>
 gencvl --help|-h
+```
+
+# DEPENDENCIES
+
+```
+compiler - my compiler script
+gedtr - my gvim wrapper, but you can change it your own editor as long as it doesn't detach from the terminal.
 ```
 
 # OPTIONS
@@ -45,16 +53,45 @@ done
 
 TIT="${@:-}"
 
-[[ -n $TIT ]] || TIT="$(echo "" | i3menu -c yellow -w 500 -p "Enter title: ")"
+[[ -n $TIT ]] || TIT="$(echo "" | i3menu -c yellow -w 800 -p "Enter title: ")"
 [[ -n $TIT ]] || help
 
-FLD="$(echo "${TIT}" | sed 's/\ //g')"
-[[ ! -d $CLDIR ]] && mkdir $CLDIR
-cd $CLDIR
-[[ ! -d $FLD ]] && mkdir $FLD
-cd $FLD
-cp $PLT ${FLD}.md
-sed -e "s/TITLE/$TIT/g" -i ${FLD}.md
-$EDITOR ${FLD}.md
-compiler ${FLD}.md
-raux
+FLD="${CLDIR}/$(echo "${TIT}" | sed 's/\ //g')"
+TRG="${FLD}/${FLD##*/}.md"
+
+[[ -d $FLD ]] || mkdir -p ${FLD}
+
+PLT () {
+cat > ${TRG} <<EOB
+---
+title: __TITLE__
+subtitle: 
+author: _${AUTHOR}_
+#output pdf
+#engine xelatex
+#yaml   /home/gavarch/plt/pandoc/cvl.yaml
+---
+
+|       |               |           |                               |
+| -----:|:------------- | ---------:|:----------------------------- |
+| **M** | 07832 965325  | **eMail** | \`\`\`gvales2831997@gmail.com\`\`\` |
+| **T** | 023 8043 8185 | **Web**   | \`\`\`vales.ga\`\`\`                |
+
+---
+
+Dear Sir/Madam,
+
+<++>
+
+Thanks for the consideration,
+
+Gavin Vales
+EOB
+sed -e "s/TITLE/$TIT/g" -i ${TRG}
+}
+[[ -f ${TRG} ]] || PLT
+
+gedtr -f "${TRG}"
+compiler ${TRG}
+rm -rf *.fls *.synctex.gz *.fdb_latexmk *.aux *.bbl *.bcf *.blg *.ilg *.log \
+	*.nlo *.nls *.out *.toc *.run.xml _minted*

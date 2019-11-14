@@ -5297,3 +5297,19 @@ Nov 12 22:58 : client: [16] opened from [::1]:34536
 Nov 12 22:58 : client: [16] closed
 Nov 12 22:58 : client: [17] opened from [::1]:34538
 Nov 12 22:58 : client: [17] closed
+Nov 14 21:36 : player: played "Clutch/Blast Tyrant/03 - The Mob Goes Wild.mp3"
+Nov 14 21:36 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 14 21:36 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 14 21:36 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 14 23:03 : client: [0] opened from [::1]:46290
+Nov 14 23:03 : client: [1] opened from [::1]:46292
+Nov 14 23:03 : client: [1] closed
+Nov 14 23:03 : client: [2] opened from [::1]:46294
+Nov 14 23:03 : client: [2] closed
+Nov 14 23:03 : client: [0] closed
+Nov 14 23:03 : client: [3] opened from [::1]:46298
+Nov 14 23:03 : client: [4] opened from [::1]:46300
+Nov 14 23:03 : client: [4] closed
+Nov 14 23:03 : client: [5] opened from [::1]:46302
+Nov 14 23:03 : client: [5] closed
+Nov 14 23:03 : client: [3] closed

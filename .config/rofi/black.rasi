@@ -1,9 +1,9 @@
 * {
-	accent: #505050;
-	fg1:    #282828;
-	fg2:    #3c3c3c;
-	bg2:    #fbf1c7;
-	bg1:    #e7ddb3;
-	redish: #cc241d;
+	accent: #28535e;
+	fg1:    #002b36;
+	fg2:    #143f4a;
+	bg2:    #fdf6e3;
+	bg1:    #e9e2cf;
+	redish: #dc322f;
 	font1: "Iosevka 12";
 	}

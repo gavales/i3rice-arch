@@ -21,7 +21,8 @@ set nowrap
 set sidescroll=1
 set textwidth=0 wrapmargin=0
 set cursorline colorcolumn=81
-set title titlestring=%f titlelen=70
+set title titlelen=70
+set titlestring=%{v:servername}
 set mouse=a
 set smartindent tabstop=2 shiftwidth=2
 set incsearch
