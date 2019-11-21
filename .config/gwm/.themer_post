@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# To run after applying theme
-
-cp .themer/${1}/pulsecolors bin/pulsecolors
