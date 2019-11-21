@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: Fri 15 Nov 22:07:56 GMT 2019
+
+CFG=$HOME/.config/gwm/config
+
+help () {
+cat << EOB
+get <gwmvariable>
+EOB
+exit
+}
+
+while true; do
+	case $1 in
+		--help ) help ;;
+		-h ) help ; exit ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+VAR="${@:-}"
+
+cat $CFG | awk -F '=' -v VAR="$VAR" '$1 ~ VAR {print $2}'

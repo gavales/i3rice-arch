@@ -5,11 +5,11 @@
 # COMMAND TO UPDATE BLUR OF BLURS
 # for i in $(ls); do convert "${i}" -blur $blr "${PWD/normal/blur}/${i}"; echo "$i"; done
 
-WDIR="$XDG_PICTURES_DIR/gwc"
+WDIR="${XDG_PICTURES_DIR}/gwc"
 NORM="${WDIR}/normal"
 BLUR="${WDIR}/blur"
 COLS="${WDIR}/cols"
-[[ -d $WDIR ]] || {
+[[ -d ${WDIR} ]] || {
 	mkdir $WDIR
 	mkdir $NORM
 	mkdir $BLUR

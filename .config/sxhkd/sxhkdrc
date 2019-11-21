@@ -7,9 +7,22 @@
 #  ██████  ██ ▒▒██▒██  ▒██▒██▒▒██▒▒██████▒███   ▒▒█████
 # ▒▒▒▒▒▒  ▒▒   ▒▒ ▒▒   ▒▒ ▒▒  ▒▒  ▒▒▒▒▒▒ ▒▒▒     ▒▒▒▒▒
 
+# ━  ALT
+#alt + Tab
+#	gwmsbar --cycle $(pfw)
+#alt + shift + Tab
+#	gwmfocus prev
+
+alt + 1
+	gwmsbar --focus $(pfw)
+alt + 2
+	gwmsbar --add   $(pfw)
+alt + 3
+	gwmsbar --main  $(pfw)
+
 # ━  misc
 Print
-	snap
+	snapper
 super + Escape
 	i3end
 super + Home
@@ -39,17 +52,17 @@ super + 8
 super + q
 	lch -t -i calculator -e "$TWOMINAL -name calculator -e R"
 super + w
-	lch -n ^watchseries -e "chrap https://ww2.watch-series.co/"
+	chrap https://ww2.watch-series.co/
 super + r
 	lch -n newsboat -e "$TWOMINAL -name newsboat -e newsboat"
 super + t
 	mkwalrando
 super + y
-	lch -n YouTube$ -e "chrap https://www.youtube.com/"
+	chrap https://www.youtube.com/
 super + u
 	chrap https://outlook.office.com/mail/inbox/id/AAQkAGZjZGU2MmYyLTc5ZDctNDI1My05MzU4LWRjYTc3NjdhN2NkOAAQAOwToE4JkJhIgjz322aPjPU%3D
 super + i
-	lch -n '^BBC iPlayer$' -e "chrap https://www.bbc.co.uk/iplayer/"
+	chrap https://www.bbc.co.uk/iplayer/
 super + {p,bracketright,bracketleft,backslash}
 	i3media {togg,next,prev,stop}
 
@@ -60,7 +73,7 @@ super + shift + t
 super + shift + y
 	pkill compton
 super + shift + p
-	snap
+	snapper
 
 # ━  ROW2
 super + s
@@ -108,7 +121,7 @@ super + v
 super + b
 	lch -i references -e "$EDITOR $HOME/Drive/global.bib"
 super + n
-	lch -n ^Netflix$ -e "chrap https://www.netflix.com/"
+	chrap https://www.netflix.com/
 super + m
 	surf docs.google.com/presentation/u/0/
 super + {comma,period,slash}
@@ -121,7 +134,7 @@ super + shift + v
 super + shift + b
 	lch -i bashmount -e "$TWOMINAL -name bashmount -e bashmount"
 super + shift + m
-	lch -n '^My Movies & TV' -e "chrap https://play.google.com/movies/"
+	chrap https://play.google.com/movies/
 super + shift + {comma,period,slash}
 	i3light {dec,inc,nm}
 

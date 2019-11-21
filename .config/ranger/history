@@ -1,19 +1,3 @@
-touch pulsecolors
-
-shell themer --init
-rename template_pulsecolors
-rename focus_fwm
-rename focus
-rename pulse
-rename gwmc
-mkdir scripts
-mkdir scr
-shell git clone git://git.2f30.org/colors.git
-shell make
-shell make instal
-shell make install
-shell 
-mkdir blur
 mkdir normal
 shell wget https://raw.githubusercontent.com/dylanaraps/wal2/master/wal
 shell chmod +x %f
@@ -46,5 +30,21 @@ rename snapper
 open_with gedtr
 shell mkdir cvl normal
 rename cvlold
-w
 rename cvl
+w
+rename folding.vim
+mkdir old
+rename gwmunderl
+rename gwmunder
+rename gwmwmenu
+rename gwmlstn__
+rename gwmlstn
+rename gwmlstn_for_new_wew
+open_with o
+rename gwmtest
+shell h bible
+rename sbarstack
+rename sbarfocus
+rename sbarmain
+shell 
+rename sbarmaincurrent

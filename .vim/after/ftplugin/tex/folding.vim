@@ -70,14 +70,14 @@ if has("win32")
 
 else
 	inoremap <Tab>bg <Esc>:read !snyp -t tex -g begin<CR>:MultipleCursorsFind SNYP<CR>c
-	inoremap <Tab>bm <Esc>:read !snyp -t tex -g multicol<CR>/SNYP<CR>4xi
-	inoremap <Tab>en <Esc>:read !snyp -t tex -g neq<CR>/SNYP<CR>4xi
-	inoremap <Tab>pi <Esc>:read !snyp -t tex -g figure<CR>/SNYP<CR>4xi
-	inoremap <Tab>st <Esc>:read !snyp -t tex -g stretch<CR>/SNYP<CR>4xi
-	inoremap <Tab>ta <Esc>:read !snyp -t tex -g table<CR>/SNYP<CR>4xi
+	inoremap <Tab>bm <Esc>:read !snyp -t tex -g multicol<CR>/SNYP<CR>zo4xi
+	inoremap <Tab>en <Esc>:read !snyp -t tex -g neq<CR>/SNYP<CR>zo4xi
+	inoremap <Tab>pi <Esc>:read !snyp -t tex -g figure<CR>/SNYP<CR>zo4xi
+	inoremap <Tab>st <Esc>:read !snyp -t tex -g stretch<CR>/SNYP<CR>zo4xi
+	inoremap <Tab>ta <Esc>:read !snyp -t tex -g table<CR>/SNYP<CR>zo4xi
 
-	vnoremap <Tab>st x:read !snyp -t tex -g stretch<CR>/<++><CR>v3lp/SNYP<CR>4xi
-	vnoremap <Tab>bm x:read !snyp -t tex -g multicol<CR>/<++><CR>v3lp/SNYP<CR>4xi
+	vnoremap <Tab>st x:read !snyp -t tex -g stretch<CR>/<++><CR>v3lp/SNYP<CR>zo4xi
+	vnoremap <Tab>bm x:read !snyp -t tex -g multicol<CR>/<++><CR>v3lp/SNYP<CR>zo4xi
 
 endif
 

@@ -1,13 +1,13 @@
-inoremap if<Tab>  <Esc>:read !snyp -t sh -g if<CR>/SNYP<CR>4xi
+inoremap if<Tab>  <Esc>:read !snyp -t sh -g if<CR>/SNYP<CR>zo4xi
 inoremap elif     <BS>elif [[  ]]; then<Enter><Tab><++><Esc>0kf[2la
 inoremap else     <BS>else<Enter>
 inoremap [[       [[  ]]<Esc>F]hi
-inoremap cas<Tab> <Esc>:read !snyp -t sh -g case<CR>/SNYP<CR>4xi
-inoremap opt<Tab> <Esc>:read !snyp -t sh -g opt<CR>/SNYP<CR>4xi
-inoremap lop<Tab> <Esc>:read !snyp -t sh -g lop<CR>/SNYP<CR>4xi
-inoremap whi<Tab> <Esc>:read !snyp -t sh -g whi<CR>/SNYP<CR>4xi
-inoremap fun<Tab> <Esc>:read !snyp -t sh -g fun<CR>/SNYP<CR>4xi
-inoremap for<Tab> <Esc>:read !snyp -t sh -g for<CR>/SNYP<CR>4xi
+inoremap cas<Tab> <Esc>:read !snyp -t sh -g case<CR>/SNYP<CR>zo4xi
+inoremap opt<Tab> <Esc>:read !snyp -t sh -g opt<CR>/SNYP<CR>zo4xi
+inoremap lop<Tab> <Esc>:read !snyp -t sh -g lop<CR>/SNYP<CR>zo4xi
+inoremap whi<Tab> <Esc>:read !snyp -t sh -g whi<CR>/SNYP<CR>zo4xi
+inoremap fun<Tab> <Esc>:read !snyp -t sh -g fun<CR>/SNYP<CR>zo4xi
+inoremap for<Tab> <Esc>:read !snyp -t sh -g for<CR>/SNYP<CR>zo4xi
 
 function! Folds()
 	let thisline = getline(v:lnum)

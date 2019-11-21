@@ -2,8 +2,8 @@ sw_volume: 100
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
 state: pause
-current: 2
-time: 81.729000
+current: 0
+time: 224.408000
 random: 0
 repeat: 0
 single: 0
@@ -12,21 +12,5 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Clutch/Blast Tyrant/01 - Mercury.mp3
-1:Clutch/Blast Tyrant/02 - Profits of Doom.mp3
-2:Clutch/Blast Tyrant/03 - The Mob Goes Wild.mp3
-3:Clutch/Blast Tyrant/04 - Cypress Grove.mp3
-4:Clutch/Blast Tyrant/05 - Promoter (Of Earthbound Causes).mp3
-5:Clutch/Blast Tyrant/06 - The Regulator.mp3
-6:Clutch/Blast Tyrant/07 - Worm Drink.mp3
-7:Clutch/Blast Tyrant/08 - Army of Bono.mp3
-8:Clutch/Blast Tyrant/09 - Spleen Merchant.mp3
-9:Clutch/Blast Tyrant/10 - (In the Wake of) The Swollen Goat.mp3
-10:Clutch/Blast Tyrant/11 - Weathermaker.mp3
-11:Clutch/Blast Tyrant/12 - Subtle Hustle.mp3
-12:Clutch/Blast Tyrant/13 - Ghost.mp3
-13:Clutch/Blast Tyrant/14 - (Notes From the Trial of) La Curandera.mp3
-14:Clutch/Blast Tyrant/15 - Wysiwyg.mp3
-15:Sleep/Dopesmoker/01 - Dopesmoker.mp3
-16:Sleep/Dopesmoker/02 - Holy Mountain.mp3
+0:The Les Claypool Frog Brigade/Purple Onion/05 Whamola.mp3
 playlist_end

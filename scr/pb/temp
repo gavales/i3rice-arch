@@ -5,5 +5,5 @@ _TMP=${_TMP/+/}
 RTMP=${_TMP%.*}
 _ICN="%{T1}%{T-}"
 [[ $RTMP -ge 70  ]] && _ICN="%{T1}%{T-}" REV="%{R}"
-FSTR="$REV ${_ICN} ${RTMP} "
+FSTR="$REV ${_ICN} ${RTMP} $REV"
 echo $FSTR

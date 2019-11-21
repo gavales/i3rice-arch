@@ -2,6 +2,3 @@
 # To run after applying theme
 
 cp .themer/${1}/pulsecolors bin/pulsecolors
-
-#pkill -f rainbow
-#gawm rainbow

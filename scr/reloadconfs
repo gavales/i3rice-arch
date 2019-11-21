@@ -6,4 +6,5 @@ TNT="$(themer -v 'tint ')"
 [[ -n $TNT ]] && TINT="-t $TNT" || TINT=" "
 gwc -w "$WPP" $TINT
 setxkbmap "$(themer -v xkb)"
+[[ -n $(pidof cwm) ]] && gwmrel --toggle
 themer --apply-all

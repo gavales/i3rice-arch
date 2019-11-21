@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 cd $HOME
-DIR=$USER_SCR_DIR
+TDR=$USER_SCR_DIR
 
 help () {
 cat << 'EOB'
@@ -12,7 +12,8 @@ __mkscr__ - make bash script
 # SYNOPSIS
 
 ```
-mkscr [--subdirectory|-s <directory>]
+mkscr [--targetdirectory|-d <directory>]
+      [--subdirectory|-s <directory>]
       [--template|-t <file>]
       [--generate-help|-g]
       <name>
@@ -40,34 +41,49 @@ exit
 }
 
 template () {
-	cd $DIR
+	cd $TDR
 	cp "${TEMP}" "${TRG}"
 	vim ${TRG}
 }
 
 main () {
-	[[ -d $DIR ]] && cd $DIR || {
-		mkdir $DIR
-		cd $DIR
-		}
+[[ -d $TDR ]] && cd $TDR || { mkdir $TDR ; cd $TDR ; }
+[[ -n $SDR ]] && { [[ -d $SDR ]] || mkdir $SDR ; cd $SDR ; }
 
-	[[ -n $SDR ]] && {
-		[[ -d $SDR ]] && cd $SDR || {
-			mkdir $SDR && cd $SDR
-			}
-		}
-
-	[[ -f $TRG ]] && vim $TRG || {
-		cat > $TRG <<EOB
+[[ -f $TRG ]] && vim $TRG || {
+cat > $TRG << 'EOB'
 #!/usr/bin/env bash
 
-# OA: Gavin Vales
-# CREATED: $(date)
-# source $HOME/.config/user-dirs.dirs
+EOB
 
+	[[ -n $GHP ]] && {
+	cat >> $TRG << 'EOB'
+help () {
+BSE=$(basename $0)
+cat << EOB
+# NAME
+__${BSE}__ - <++>
+
+# SYNOPSIS
+
+```
+${BSE} [--<++>|-<++>]
+${BSE} --help|-h
+```
+\EOB
+echo $1
+exit
+}
+
+EOB
+	}
+
+cat >> $TRG << 'EOB'
 while true; do
-	case \$1 in
-		--<++> | -<++> ) <++>="\${2:-}" ; shift ;;
+	case $1 in
+#		--<++> | -<++> ) <++>="${2:-}" ; shift ;;
+		--help ) help ;;
+		-h ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac
@@ -75,29 +91,18 @@ while true; do
 done
 
 EOB
-		[[ -n $GHP ]] && {
-		cat >> $TRG <<EOB
-help () {
-$(banner $TRG)
-	-- <++>
-
- Usage
- -----
- $TRG --<++>|-<++> ┼ <++>
- $TRG --help|-h    ┼ Print this help
 }
-EOB
-			}
-		chmod +x $TRG
-		vim $TRG
-	}
+
+chmod +x $TRG
+vim $TRG
 }
 
 while true; do
 	case $1 in
-		--subdirectory  | -s ) SDR="${2:-}"  ; shift ;;
-		--template      | -t ) TEMP="${2:-}" ; shift ;;
-		--generate-help | -g ) GHP=1                 ;;
+		--subdirectory    | -s ) SDR="${2:-}"  ; shift ;;
+		--targetdirectory | -d ) TDR="${2:-}"  ; shift ;;
+		--template        | -t ) TEMP="${2:-}" ; shift ;;
+		--generate-help   | -g ) GHP=1                 ;;
 		--help ) help ;;
 		-h     ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
 		-- ) shift ; break ;;

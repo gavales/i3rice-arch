@@ -19,11 +19,11 @@ if has("win32")
 	autocmd Filetype bib inoremap <Tab>num <Esc>A<CR><Tab>number = {},<Esc>hi
 	autocmd Filetype bib inoremap <Tab>org <Esc>A<CR><Tab>organization = {},<Esc>hi
 else
-	autocmd Filetype bib inoremap \a <Esc>:read !snyp -t bib -g art<CR>/SNYP<CR>4xi
-	autocmd Filetype bib inoremap \b <Esc>:read !snyp -t bib -g book<CR>/SNYP<CR>4xi
-	autocmd Filetype bib inoremap \i <Esc>:read !snyp -t bib -g inpro<CR>/SNYP<CR>4xi
-	autocmd Filetype bib inoremap \t <Esc>:read !snyp -t bib -g phd<CR>/SNYP<CR>4xi
-	autocmd Filetype bib inoremap \o <Esc>:read !snyp -t bib -g online<CR>/SNYP<CR>4xi
+	autocmd Filetype bib inoremap \a <Esc>:read !snyp -t bib -g art<CR>zi/SNYP<CR>zo4xi
+	autocmd Filetype bib inoremap \b <Esc>:read !snyp -t bib -g book<CR>zi/SNYP<CR>zo4xi
+	autocmd Filetype bib inoremap \i <Esc>:read !snyp -t bib -g inpro<CR>zi/SNYP<CR>zo4xi
+	autocmd Filetype bib inoremap \t <Esc>:read !snyp -t bib -g phd<CR>zi/SNYP<CR>zo4xi
+	autocmd Filetype bib inoremap \o <Esc>:read !snyp -t bib -g online<CR>zi/SNYP<CR>zo4xi
 	autocmd Filetype bib inoremap <Tab>tit <Esc>:read !snyp -t bib -g title<CR>/SNYP<CR>4xi
 	autocmd Filetype bib inoremap <Tab>aut <Esc>:read !snyp -t bib -g autho<CR>/SNYP<CR>4xi
 	autocmd Filetype bib inoremap <Tab>yea <Esc>:read !snyp -t bib -g year<CR>/SNYP<CR>4xi

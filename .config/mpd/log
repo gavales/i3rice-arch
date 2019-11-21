@@ -5313,3 +5313,144 @@ Nov 14 23:03 : client: [4] closed
 Nov 14 23:03 : client: [5] opened from [::1]:46302
 Nov 14 23:03 : client: [5] closed
 Nov 14 23:03 : client: [3] closed
+Nov 15 13:27 : client: [6] opened from [::1]:47112
+Nov 15 13:27 : client: [7] opened from [::1]:47114
+Nov 15 13:27 : client: [7] closed
+Nov 15 13:27 : client: [8] opened from [::1]:47118
+Nov 15 13:27 : client: [8] closed
+Nov 15 13:28 : client: [6] closed
+Nov 15 20:29 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 15 20:29 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 15 20:29 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 15 23:24 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 15 23:24 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 15 23:24 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 15 23:29 : exception: Failed to commit /home/gavarch/.config/mpd/state: File exists
+Nov 15 23:29 : player: played "Clutch/Blast Tyrant/03 - The Mob Goes Wild.mp3"
+Nov 15 23:29 : player: played "Clutch/Blast Tyrant/03 - The Mob Goes Wild.mp3"
+Nov 15 23:29 : player: played "Clutch/Blast Tyrant/03 - The Mob Goes Wild.mp3"
+Nov 15 23:29 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 15 23:29 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 15 23:29 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 15 23:30 : player: played "Clutch/Blast Tyrant/03 - The Mob Goes Wild.mp3"
+Nov 15 23:30 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 15 23:30 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 15 23:30 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 16 18:34 : client: [0] opened from [::1]:36554
+Nov 16 18:34 : client: [1] opened from [::1]:36556
+Nov 16 18:34 : client: [1] closed
+Nov 16 18:34 : client: [2] opened from [::1]:36558
+Nov 16 18:34 : client: [2] closed
+Nov 16 18:34 : player: played "Clutch/Blast Tyrant/03 - The Mob Goes Wild.mp3"
+Nov 16 18:35 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 16 18:35 : client: [3] opened from [::1]:36564
+Nov 16 18:35 : client: [3] closed
+Nov 16 18:35 : client: [4] opened from [::1]:36566
+Nov 16 18:35 : client: [4] closed
+Nov 16 18:35 : player: played "Primus/00 Master of Puppets _Cover__mp3.mp3"
+Nov 16 18:35 : client: [5] opened from [::1]:36570
+Nov 16 18:35 : client: [5] closed
+Nov 16 18:35 : client: [6] opened from [::1]:36572
+Nov 16 18:35 : client: [6] closed
+Nov 16 18:35 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Nov 16 18:36 : client: [0] closed
+Nov 16 18:36 : client: [7] opened from [::1]:36574
+Nov 16 18:36 : client: [7] closed
+Nov 16 18:36 : client: [8] opened from [::1]:36576
+Nov 16 18:36 : client: [8] closed
+Nov 16 18:36 : client: [9] opened from [::1]:36578
+Nov 16 18:36 : client: [9] closed
+Nov 16 18:36 : client: [10] opened from [::1]:36580
+Nov 16 18:36 : client: [10] closed
+Nov 16 18:36 : client: [11] opened from [::1]:36582
+Nov 16 18:36 : client: [11] closed
+Nov 16 18:36 : client: [12] opened from [::1]:36584
+Nov 16 18:36 : client: [12] closed
+Nov 16 18:36 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Nov 16 18:36 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Nov 16 18:40 : player: played "The Les Claypool Frog Brigade/Purple Onion/05 Whamola.mp3"
+Nov 16 23:49 : client: [13] opened from [::1]:38260
+Nov 16 23:49 : client: [13] closed
+Nov 17 17:48 : client: [14] opened from [::1]:40428
+Nov 17 17:48 : client: [14] closed
+Nov 17 17:48 : client: [15] opened from [::1]:40430
+Nov 17 17:48 : client: [15] closed
+Nov 17 17:48 : client: [16] opened from [::1]:40432
+Nov 17 17:48 : client: [16] closed
+Nov 17 17:48 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Nov 17 17:52 : client: [17] opened from [::1]:40446
+Nov 17 17:52 : client: [17] closed
+Nov 17 17:52 : client: [18] opened from [::1]:40448
+Nov 17 17:52 : client: [18] closed
+Nov 17 17:52 : client: [19] opened from [::1]:40450
+Nov 17 17:52 : client: [19] closed
+Nov 17 17:52 : client: [20] opened from [::1]:40452
+Nov 17 17:52 : client: [20] closed
+Nov 17 17:52 : client: [21] opened from [::1]:40454
+Nov 17 17:52 : client: [21] closed
+Nov 17 17:52 : client: [22] opened from [::1]:40456
+Nov 17 17:52 : client: [22] closed
+Nov 17 17:52 : client: [23] opened from [::1]:40458
+Nov 17 17:52 : client: [23] closed
+Nov 17 17:52 : client: [24] opened from [::1]:40460
+Nov 17 17:52 : client: [24] closed
+Nov 17 17:52 : client: [25] opened from [::1]:40462
+Nov 17 17:52 : client: [25] closed
+Nov 17 17:52 : client: [26] opened from [::1]:40464
+Nov 17 17:52 : client: [26] closed
+Nov 17 17:52 : client: [27] opened from [::1]:40466
+Nov 17 17:52 : client: [27] closed
+Nov 17 17:52 : client: [28] opened from [::1]:40468
+Nov 17 17:52 : client: [28] closed
+Nov 17 17:52 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Nov 17 17:52 : client: [29] opened from [::1]:40470
+Nov 17 17:52 : client: [29] closed
+Nov 17 17:52 : client: [30] opened from [::1]:40472
+Nov 17 17:52 : client: [30] closed
+Nov 17 17:52 : client: [31] opened from [::1]:40474
+Nov 17 17:52 : client: [31] closed
+Nov 18 22:31 : client: [32] opened from [::1]:50618
+Nov 18 22:31 : client: [32] closed
+Nov 18 22:31 : client: [33] opened from [::1]:50620
+Nov 18 22:31 : client: [33] closed
+Nov 18 22:31 : client: [34] opened from [::1]:50622
+Nov 18 22:31 : client: [34] closed
+Nov 18 22:31 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Nov 18 22:31 : client: [35] opened from [::1]:50624
+Nov 18 22:31 : client: [35] closed
+Nov 18 22:31 : client: [36] opened from [::1]:50626
+Nov 18 22:31 : client: [36] closed
+Nov 18 22:31 : client: [37] opened from [::1]:50628
+Nov 18 22:31 : client: [37] closed
+Nov 19 19:43 : player: played "The Les Claypool Frog Brigade/Purple Onion/05 Whamola.mp3"
+Nov 19 19:43 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 19 19:43 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 19 19:43 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 19 19:46 : client: [0] opened from [::1]:34186
+Nov 19 19:46 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 19 19:46 : client: [0] closed
+Nov 19 19:46 : client: [1] opened from [::1]:34188
+Nov 19 19:46 : client: [1] closed
+Nov 19 19:46 : client: [2] opened from [::1]:34190
+Nov 19 19:46 : client: [2] closed
+Nov 19 19:46 : client: [3] opened from [::1]:34192
+Nov 19 19:46 : client: [3] closed
+Nov 19 19:46 : client: [4] opened from [::1]:34194
+Nov 19 19:46 : client: [4] closed
+Nov 19 19:46 : client: [5] opened from [::1]:34196
+Nov 19 19:46 : client: [5] closed
+Nov 19 19:59 : client: [6] opened from [::1]:34332
+Nov 19 19:59 : client: [7] opened from [::1]:34334
+Nov 19 19:59 : client: [7] closed
+Nov 19 19:59 : client: [8] opened from [::1]:34336
+Nov 19 19:59 : client: [8] closed
+Nov 19 20:00 : client: [6] closed
+Nov 19 20:26 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 19 20:26 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 19 20:26 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 19 20:26 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 19 20:26 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 19 20:26 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 19 20:26 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 19 20:26 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 19 20:26 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.

@@ -1,0 +1,33 @@
+#!/bin/sh
+#
+# under
+
+main() {
+	pointX=$(wmp | cut -d\  -f 1)
+	pointY=$(wmp | cut -d\  -f 2)
+
+	for wid in $(lsw | tac); do
+		windowX="$(wattr x $wid)"
+		windowY="$(wattr y $wid)"
+
+		# no match if the left and top edges are greater than X or Y
+		test "$windowX" -gt "$pointX" && continue
+		test "$windowY" -gt "$pointY" && continue
+
+		windowW="$(wattr w $wid)"
+		windowH="$(wattr h $wid)"
+
+		# no match if the right and bottom edges are less than X or Y
+		test "$((windowX + windowW))" -lt "$pointX" && continue
+		test "$((windowY + windowH))" -lt "$pointY" && continue
+
+		# print wid on detection if no args passed
+		test "$#" -eq 0 && printf '%s\n' "$wid"
+		exit
+	done
+
+	# run args as command to shell as no window was detected
+	test "$#" -gt 0 && sh -c "$@"
+}
+
+main "$@"

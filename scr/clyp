@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: Sun 17 Nov 14:48:54 GMT 2019
+# source /home/gavarch/.config/user-dirs.dirs
+
+
+help () {
+cat << 'EOB'
+# NAME
+
+__clyp__ - manage clipboard with `rofi` and
+EOB
+exit
+}
+
+while true; do
+	case $1 in
+#		--<++> | -<++> ) <++>="${2:-}" ; shift ;;
+		--help ) help ;;
+		-h ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+

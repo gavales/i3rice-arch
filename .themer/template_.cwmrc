@@ -14,6 +14,11 @@ bind-mouse M-3  window-resize
 bind-mouse M-4  window-raise
 bind-mouse M-5  window-lower
 
+#bind-key   M-M1   "gwmfocus mouse"
+bind-key   M-f    "gwmfull -t"
+bind-key   M-Tab  "gwmfocus next"
+bind-key   MS-Tab "gwmfocus prev"
+
 #bind-key   M-1  group-toggle-1
 #bind-key   M-2  group-toggle-2
 #bind-key   M-3  group-toggle-3
@@ -22,7 +27,7 @@ bind-mouse M-5  window-lower
 #bind-key   MS-2 window-movetogroup-2
 #bind-key   MS-3 window-movetogroup-3
 #bind-key   MS-4 window-movetogroup-4
-#
+
 bind-key   MS-q window-delete
 
 bind-key   M-z  menu-window
@@ -54,20 +59,20 @@ ignore polybar
 sticky      no
 moveamount  20
 borderwidth 4
-gap         10 10 10 50
+#gap         10 10 10 50
 fontname    '%%romanfont%%:size=12'
 
 # ━  colors
 
-color activeborder   "%%bg0%%"
-color inactiveborder "%%bg0%%"
-color groupborder    "%%bg0%%"
-color ungroupborder  "%%bg0%%"
+color activeborder   "%%ac88b%%"
+color inactiveborder "%%ac88b%%"
+color groupborder    "%%ac88b%%"
+color ungroupborder  "%%ac88b%%"
 color font           "%%fg0%%"
 color selfont        "%%fg0%%"
 color menubg         "%%bg0%%"
 color menufg         "%%acb%%"
-color urgentborder   "%%bg0%%"
+color urgentborder   "%%red%%"
 
 # ━  groups apps
 #autogroup 2 "qutebrowser,qutebrowser"

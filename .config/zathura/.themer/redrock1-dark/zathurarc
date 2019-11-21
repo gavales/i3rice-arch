@@ -1,0 +1,14 @@
+set recolor true
+set window-title-basename true
+set default-bg "#f9efe9"
+set default-fg "#3e443e"
+set font "Luxi Mono 11"
+set inputbar-bg "#3e443e"
+set inputbar-fg "#f9efe9"
+set statusbar-bg "#3e443e"
+set statusbar-fg "#f9efe9"
+set completion-bg "#3e443e"
+set completion-fg "#f9efe9"
+set show-scrollbars false
+set recolor-darkcolor "#eabea9"
+set recolor-lightcolor "#3e443e"

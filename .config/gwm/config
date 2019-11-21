@@ -1,4 +1,8 @@
-GAPS=20
-BORDER=2
-W1W=
-W1H=
+TOPOFFSET=30
+BORDER=4
+GAP=20
+FSFL=/home/gavarch/.config/gwm/fullscreen
+SBARPRESET=/home/gavarch/.config/gwm/sbarpreset
+SBARSTACK=/home/gavarch/.config/gwm/sbarstack
+SBARFOCUS=/home/gavarch/.config/gwm/sbarfocus
+SBARMAIN=/home/gavarch/.config/gwm/sbarmain

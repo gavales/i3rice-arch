@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+
+help () {
+BSE=$(basename $0)
+cat << EOB
+# NAME
+
+__gwmdeet__ - get name, instance, class from window id
+
+# SYNOPSIS
+
+```
+gwmdeet [--class|-c|c|--instance|-i|i|--name|-n|n]
+        <WID>
+gwmdeet --help|-h
+```
+EOB
+echo $1
+exit
+}
+
+while true; do
+	case $1 in
+		--class    | -c | c ) O_class=1     ;;
+		--instance | -i | i ) O_instance=1  ;;
+		--name     | -n | n ) O_name=1      ;;
+		--help ) help ;;
+		-h ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+eval "$(xprop -id ${@:-} | awk -F '=' '
+	/^WM_CLASS/ {
+		gsub(/", "/,"\nCLASS=",$2)
+		gsub(/^ /,"INSTANCE=",$2)
+		gsub(/"/,"",$2)
+		print $2
+		}
+	/^WM_NAME/ {
+		gsub(/^ /,"NAME=",$2)
+		gsub(/"/,"",$2)
+		print $2
+		}' | \
+	sed 's/=/="/g;s/$/"/g')"
+
+FSTR=
+[[ -n $O_class ]] && FSTR+="$CLASS "
+[[ -n $O_instance ]] && FSTR+="$INSTANCE "
+[[ -n $O_name ]] && FSTR+="$NAME "
+
+echo $FSTR

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#
+# fyr | 2019 (c) MIT
+# dmenu wrapper to select windows based on their window title
+# use xprop -id $wid WM_NAME or WM_CLASS for better matching
+
+wid=$(\
+	for wid in $(lsw); do
+		printf '%s\n' "$wid | $(wname $wid)"
+	done | i3menu -p "Window:" | cut -d\  -f 1)
+
+[[ -n "$wid" ]] && gwmfocus "$wid"

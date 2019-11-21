@@ -3,8 +3,8 @@
 # OA: Gavin Vales
 # CREATED: Mon  4 Nov 00:10:18 GMT 2019
 
-#CHK=$(pidof cwm)
-#[[ -n $CHK ]] || echo "cwm not running" && exit 1
+CHK=$(pidof cwm)
+[[ -n $CHK ]] || echo "cwm not running" && exit 1
 GWMDIR=$HOME/.config/gwm
 CONF=$GWMDIR/config
 
@@ -19,7 +19,8 @@ exit
 }
 
 [[ -f $CONF ]] || defaults
-[[ -d $GWMDIR ]] && cd $GWMDIR || mkdir $GWMDIR && cd $GWMDIR
+[[ -d $GWMDIR ]] || mkdir $GWMDIR
+cd $GWMDIR 
 
 help () {
 cat << 'EOB'
@@ -37,13 +38,12 @@ gwmc --help|-h
 # DESCRIPTION
 
 Basically runs one of the scripts in the default gwm directory.
-For me, that's `$HOME/scr/gwm`.
+For me, that's `$HOME/.config/gwm/bin`.
 
 EOB
 exit
 }
 
-# 		--<++> | -<++> ) <++>="${2:-}" ; shift ;;
 while true; do
 	case $1 in
 		--help ) help ;;
@@ -55,4 +55,9 @@ while true; do
 done
 
 cd ${GWMDIR}/bin
-./${@} &>/dev/null &
+CMD="${@#* }"
+ARG="${@/${CMD}/}"
+echo $PWD
+echo $CMD
+echo $ARG
+#./${CMD} "${ARG}"

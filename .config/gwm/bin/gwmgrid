@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+
+help () {
+cat << 'EOB'
+Usage:        gwmgrid <tl|tr|bl|br|md> <WID|>
+Descripttion: Snap window <WID> to corners <tl|tr|bl|br>
+              or middle <md> of screen
+EOB
+exit
+}
+
+GAP=$(gwmget GAP)
+CUR=${2:-$(pfw)}
+[[ -z $CUR ]] && exit
+ROOT=$(lsw -r)
+SW=$(wattr w $ROOT)
+SH=$(wattr h $ROOT)
+SX=$(wattr x $ROOT)
+SY=$(wattr y $ROOT)
+
+BW=$(wattr b $CUR)
+W=$(wattr w $CUR)
+H=$(wattr h $CUR)
+
+X="$SX"
+Y="$SY"
+
+[[ -z $1 ]] && help
+
+case $1 in
+	tl) X=$((X + GAP))                  ; Y=$((Y + GAP*2)) ;;
+	tr) X=$((SX + SW - W - BW*2 - GAP)) ; Y=$((Y + GAP*2)) ;;
+	bl) X=$((X + GAP))                  ; Y=$((SY + SH - H - BW*2 - GAP)) ;;
+	br) X=$((SX + SW - W - BW*2 - GAP)) ; Y=$((SY + SH - H - BW*2 - GAP)) ;;
+	md)
+		X=$((SX + SW/2 - W/2 - BW))
+		Y=$((SY + SH/2 - H/2 - BW))
+		test "$Y" -lt $((GAP*2)) && Y=$((GAP*2))
+		;;
+esac
+
+wtp $X $Y $W $H $CUR
+gwmfocus $CUR
