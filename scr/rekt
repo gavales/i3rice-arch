@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+help () {
+exit
+}
+
+gifify () {
+	[[ -z $1 ]] && exit || TRG=${1}
+#	mkdir ${TRG%.*}frames
+#	cd ${TRG%.*}frames
+#	nframe=2
+#	fps=20
+
+	notify-send "Making GIF"
+	ulimit -Sv 1000000
+	ffmpeg \
+		-i "${TRG}" \
+		-r 10 \
+		-vf scale=512:-1 \
+		"${TRG%.*}.gif"
+
+## Split in frames
+#	convert "${TRG%.*}.gif" +adjoin temp_%02d.gif
+#	j=0
+#	for i in $(ls temp_*gif); do
+#			if [ $(( $j%${nframe} )) -eq 0 ]; then
+#					cp $i sel_`printf %02d $j`.gif;
+#			fi;
+#			j=$(echo "$j+1" | bc);
+#	done
+#	convert -delay $fps $( ls sel_*) "${TRG%.*}.gif"
+#	rm temp_* sel_*
+	
+	exit
+}
+
+while true; do
+	case $1 in
+		--output    | -o ) OP="${2:-}"  ; shift ;;
+		--outputdir | -d ) OPD="${2:-}" ; shift ;;
+		--gifify    | -g ) gifify "${2:-}" ; shift ;;
+		--help ) help ;;
+		-h     ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+TRG=${OP:-"rekt$(date '+%Y%m%d-%H%M')"}
+DIR=${OPD:-${HOME}}
+cd ${DIR}
+
+notify-send "Recording in 5 secs..."
+sleep 5
+ffmpeg -y \
+	-f x11grab \
+	-s $(mattr w $(pfm))x$(mattr h $(pfm)) \
+	-i :0.0 \
+	-framerate 30 \
+	"${TRG}.mp4"

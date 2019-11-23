@@ -1,4 +1,4 @@
-.TH GEDTR 1 2019\-11\-13 Linux "User Manuals"
+.TH GEDTR 1 2019\-11\-23 Linux "User Manuals"
 .hy
 .SH NAME
 .PP
@@ -7,7 +7,7 @@
 .IP
 .nf
 \f[B]
-gedtr [--server|-s \fI<name>\fP] \fI<file>\fP
+gedtr [--foreground|-f] [--server|-s \fI<name>\fP] \fI<file>\fP
 gedtr --help|-h
 \f[R]
 .fi
@@ -19,6 +19,12 @@ gedtr --help|-h
 .PD
 Specify server name.
 Default is \f[B]GVIM\f[R].
+.PP
+\f[B]--foreground|-f\f[R]
+.PD 0
+.P
+.PD
+Do not detach from shell instance
 .PP
 \f[B]--help|-h\f[R]
 .PD 0

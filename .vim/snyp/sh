@@ -24,7 +24,8 @@ done
 while true; do
 	case $1 in
 		--SNYP | -<++> ) <++>="${2:-}" ; shift ;;
-		--help | -h ) help ; shift ;;
+		--help ) help ;;
+		-h     ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac

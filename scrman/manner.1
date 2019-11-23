@@ -1,4 +1,4 @@
-.TH MANNER 1 2019\-11\-13 Linux "User Manuals"
+.TH MANNER 1 2019\-11\-23 Linux "User Manuals"
 .hy
 .SH NAME
 .PP
@@ -7,8 +7,10 @@
 .IP
 .nf
 \f[B]
-manner [--directory|-d \fI<directory>\fP] [--install|-i copy|link]
-       [--delete|-D]
+manner [--source-directory|-d \fI<source-directory>\fP]
+       [--man-directory|-d \fI<man-directory>\fP]
+       [--install|-i copy|link]
+manner --delete|-D
 manner --script|-s \fI<script>\fP
 manner --help|-h
 \f[R]
@@ -22,36 +24,43 @@ pandoc
 .fi
 .SH OPTIONS
 .PP
-\f[B]--directory|-d \fI<directory>\fP\f[R]
+\f[B]--source-directory|-d \fI<source-directory>\fP\f[R]
 .PD 0
 .P
 .PD
-Change target directory
+Directory that contains your source scripts
 .PP
-\f[B]--delete|-D\f[R]
+\f[B]--man-directory|-m \fI<man-directory>\fP\f[R]
 .PD 0
 .P
 .PD
-Delete all occurences of your scripts\[cq] installed manpages
-.PP
-\f[B]--script|-s \fI<script>\fP\f[R]
-.PD 0
-.P
-.PD
-Call specified \f[B]\fI<script>\fP\f[R] with \f[B]--help\f[R] flag, and
-convert the output to a man page with \f[B]pandoc -s -t man\f[R].
+Directory to output your new manpages
 .PP
 \f[B]--install|-i copy|link\f[R]
 .PD 0
 .P
 .PD
-Install all the manpages in \f[B]\fI<directory>\fP\f[R]man to
+Install all the manpages in \f[B]\fI<source-directory>\fP\f[R]man to
 \f[B]/usr/share/man/man1\f[R] if they do not already exist.
 .PD 0
 .P
 .PD
 Argument to this option determines whether the scripts are copied or
 linked.
+.PP
+\f[B]--delete|-D\f[R]
+.PD 0
+.P
+.PD
+Delete all occurences of generated manpages from
+\f[B]/usr/share/man/man1\f[R]
+.PP
+\f[B]--script|-s \fI<script>\fP\f[R]
+.PD 0
+.P
+.PD
+Call specified \f[B]\fI<script>\fP\f[R] with \f[B]--help\f[R] flag, and
+convert the output to a man page with \f[B]pandoc -s -t man\f[R]
 .PP
 \f[B]--help|-h\f[R]
 .PD 0
@@ -60,16 +69,23 @@ linked.
 Print this help
 .SH DESCRIPTION
 .PP
-All my bash scripts that have a help function are just called with the
-\f[B]--help\f[R] flag and the output piped to
-\f[B]pandoc -s -t man\f[R], and that output redirected to the directory
-\f[B]\fI<directory>\fP\f[R]man.
-The default directory is \f[B]$HOME/scr\f[R], so the resulting manpages
-will be redirected to the appropriate file in \f[B]$HOME/scrman\f[R].
+Looks for all scripts in \f[B]\fI<source-directory>\fP\f[R] that contain a
+\f[B]--help\f[R] string, and pipe \f[B]\fI<script>\fP --help\f[R] through
+\f[B]pandoc -s -t man\f[R] and redirect the output to a manpage named
+\f[B]\fI<script>\fP.1\f[R] in \f[B]\fI<man-directory>\fP\f[R]
+.RS
 .PP
 Note that this only works because all my help functions are written in
-markdown.
+\f[B]markdown\f[R].
 All precode is converted to bold text.
+.RE
 .PP
+The \f[B]--install\f[R] flag can be used to install the manpages in
+\f[B]\fI<man-directory>\fP\f[R] to \f[B]/usr/share/man/man1\f[R]
+.PP
+\f[B]In progress\f[R]
+.PD 0
+.P
+.PD
 The \f[B]--script\f[R] flag can be used to automatically pipe the output
 of the specified script to a man page.

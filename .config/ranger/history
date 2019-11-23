@@ -1,16 +1,3 @@
-mkdir normal
-shell wget https://raw.githubusercontent.com/dylanaraps/wal2/master/wal
-shell chmod +x %f
-rename walarap
-rename goste.vim
-touch .goste
-rename goste
-rename dtp
-open_with 
-open_with vim
-rename .profile
-rename .icons
-shell git clone https://github.com/StillANixRookie/i3rice-arch.wiki.git
 shell git clone https://github.com/StillANixRookie/numix.git
 shell git clone https://github.com/StillANixRookie/ghb.git
 shell git clone https://github.com/StillANixRookie/stillanixrookie.git
@@ -31,7 +18,6 @@ open_with gedtr
 shell mkdir cvl normal
 rename cvlold
 rename cvl
-w
 rename folding.vim
 mkdir old
 rename gwmunderl
@@ -48,3 +34,17 @@ rename sbarfocus
 rename sbarmain
 shell 
 rename sbarmaincurrent
+shell git clone https://github.com/StillANixRookie/gwm.wiki.git
+rename sbarminor
+rename sbarminordefault
+rename sbarmajor
+rename sbarmajordefault
+rename sbarmajorcurrent
+rename sbardefaults
+rename sbarconf
+rename rekt
+mkdir gwmdemoframes
+rename gwm_
+shell git clone https://github.com/StillANixRookie/gwm.git
+
+w

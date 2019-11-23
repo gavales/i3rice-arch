@@ -13,12 +13,20 @@
 #alt + shift + Tab
 #	gwmfocus prev
 
+alt + i
+	notify-send "$(gwmunder) $(gwmtest $(pfw))" "$(gwmdeet c $(pfw)) $(gwmdeet i $(pfw)) $(gwmdeet n $(pfw))"
+
+alt + shift + q
+	gwmsbar --delete "$(pfw)"
+
 alt + 1
 	gwmsbar --focus $(pfw)
 alt + 2
-	gwmsbar --add   $(pfw)
+	gwmsbar --stack $(pfw)
 alt + 3
-	gwmsbar --main  $(pfw)
+	gwmsbar --major $(pfw)
+alt + 4
+	gwmsbar --minor $(pfw)
 
 # ━  misc
 Print

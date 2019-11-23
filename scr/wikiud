@@ -4,28 +4,64 @@
 # CREATED: Mon  7 Oct 23:04:04 BST 2019
 # source /home/gavarch/.config/user-dirs.dirs
 
-SRC=$USER_SCR_DIR
-TRG="${USER_REPO_DIR}/i3rice-arch.wiki"
-BSE="${TRG}/_Sidebar.md_base"
+SRC="${USER_SCR_DIR:-"${HOME}/scr"}"
+USR="StillANixRookie"
+RPO="i3rice-arch"
+_BSE="_Sidebar.md_base"
 
 help () {
 cat << 'EOB'
 # NAME
 
-__wikiud__ - generates the script wikis shown in the sidebar
+__wikiud__ - generates the script wikis shown in my wiki sidebars
 
 # SYNOPSIS
 
 ```
-wikiud
+wikiud [--user|-u <github-user>]
+       [--repo|-r <repo>]
+       [--source-dir|-s <source-directory>]
+       [--target-dir|-t <target-directory>]
+       [--base|-b <file>]
 wikiud --help|-h
 ```
+
+# OPTIONS
+
+`--user|-u <github-user>`  
+Your Github username. Used to correctly link to the raw script
+
+`--repo|-r <github-user>`  
+Name of the target repo. Used to correctly link to the raw script
+
+`--source-dir|-s <source-directory>`  
+Source <source-directory>, which contains your scripts
+
+`--target-dir|-t <target-directory>`  
+Target <target-directory>, usually a directory named `<repo>.wiki`, for simplicity
+
+`--base|-b <file>`  
+Base file for `_Sidebar.md`. Contains stuff you want before
+the list of scripts in the wiki sidebar
+
+`--help|-h`  
+Print this help
+
+# DESCRIPTION
+
+Basically checks for scripts that contain the `--help` string
+and redirects `<script> --help` to `<target-directory>/doc`<++>
 EOB
 exit
 }
 
 while true; do
 	case $1 in
+		--user       | -u ) USR="${2:-}"  ; shift ;;
+		--repo       | -r ) RPO="${2:-}"  ; shift ;;
+		--source-dir | -s ) SRC="${2:-}"  ; shift ;;
+		--target-dir | -t ) TRG="${2:-}"  ; shift ;;
+		--base       | -b ) _BSE="${2:-}" ; shift ;;
 		--help ) help ;;
 		-h     ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
 		-- ) shift ; break ;;
@@ -34,22 +70,32 @@ while true; do
 	shift
 done
 
-cd $SRC
-cat $BSE > ${BSE/_base/}
+[[ -z ${TRG} ]] && TRG="${USER_REPO_DIR:-"${HOME}/git"}/${RPO}.wiki"
+[[ -d ${TRG} ]] || mkdir -p ${TRG}
+BSE="${TRG}/${_BSE}"
+cd "$SRC"
+cat "$BSE" > "${BSE/_base/}"
+
+echo $SRC
+echo $TRG
+echo $BSE
+echo $RPO
 
 for i in $(ls -l | sed '/^d/d;/^total/d' | awk '{print $NF}'); do
 	[[ -n $(grep '\-\-help' $i) ]] && {
-		$i --help | awk -v SCR="${i}" -v TRG="${TRG}/doc/${i}.md" -v BSE="${BSE/_base/}" '
+		$i --help | \
+			awk -v RPO="${RPO}" -v USR="${USR}" \
+			-v SCR="${i}" -v TRG="${TRG}/doc/${i}.md" -v BSE="${BSE/_base/}" '
 		BEGIN {
 			c=0
 			print "<div align=\"center\">" > TRG
-			print "	<h1>" SCR "</h1>"     >> TRG
+			print "	<h1>"SCR"</h1>"       >> TRG
 			print "</div>\n"              >> TRG
-			print "### _[ master/scr/" SCR "](https://github.com/StillANixRookie/i3rice-arch/blob/master/scr/" SCR ")_" >> TRG
-			print "### _[ raw ](https://raw.githubusercontent.com/StillANixRookie/i3rice-arch/master/scr/" SCR ")_" >> TRG
+			print "### _[ master/scr/"SCR"](https://github.com/"USR"/"RPO"/blob/master/scr/"SCR")_" >> TRG
+			print "### _[ raw ](https://raw.githubusercontent.com/"USR"/"RPO"/master/scr/"SCR")_" >> TRG
 			print "|     | Table of Contents |" >> TRG
 			print "|:---:|:--- |"               >> TRG
-			print "- [" SCR "](https://github.com/StillANixRookie/i3rice-arch/wiki/" SCR ")" >> BSE
+			print "- ["SCR"](https://github.com/"USR"/"RPO"/wiki/"SCR")" >> BSE
 			}
 		/^# / {
 			c+=1
@@ -58,8 +104,8 @@ for i in $(ls -l | sed '/^d/d;/^total/d' | awk '{print $NF}'); do
 			OLD=$0
 			gsub(/[ \t]/, "-", $0)
 			NEW=tolower($0)
-			print "|  "  c "  |[" OLD "](https://github.com/StillANixRookie/i3rice-arch/wiki/" SCR "#" NEW ")|" >> TRG
-#			print "		- [" OLD "](https://github.com/StillANixRookie/i3rice-arch/wiki/" SCR "#" NEW ")" >> BSE
+			print "|  "c"  |["OLD"](https://github.com/"USR"/"RPO"/wiki/"SCR"#"NEW")|" >> TRG
+#			print "		- ["OLD"](https://github.com/"USR"/"RPO"/wiki/"SCR"#"NEW")" >> BSE
 			}
 		'
 		$i --help | sed '/^# NAME/d;/^__/d' >> ${TRG}/doc/${i}.md

@@ -4,7 +4,7 @@
 # CREATED: Mon  7 Oct 23:04:04 BST 2019
 # source /home/gavarch/.config/user-dirs.dirs
 
-SDR=${USER_SCR_DIR}
+SDR=${USER_SCR_DIR:-"${HOME}/scr"}
 MANDIR=/usr/share/man/man1
 
 help () {
@@ -16,8 +16,10 @@ __manner__ - generates man pages for scripts
 # SYNOPSIS
 
 ```
-manner [--directory|-d <directory>] [--install|-i copy|link]
-       [--delete|-D]
+manner [--source-directory|-d <source-directory>]
+       [--man-directory|-d <man-directory>]
+       [--install|-i copy|link]
+manner --delete|-D
 manner --script|-s <script>
 manner --help|-h
 ```
@@ -30,38 +32,43 @@ pandoc
 
 # OPTIONS
 
-`--directory|-d <directory>`  
-Change target directory
+`--source-directory|-d <source-directory>`  
+Directory that contains your source scripts
 
-`--delete|-D`  
-Delete all occurences of your scripts' installed manpages
-
-`--script|-s <script>`  
-Call specified `<script>` with `--help` flag, and convert
-the output to a man page with `pandoc -s -t man`.
+`--man-directory|-m <man-directory>`  
+Directory to output your new manpages
 
 `--install|-i copy|link`  
-Install all the manpages in `<directory>`man to
+Install all the manpages in `<source-directory>`man to
 `/usr/share/man/man1` if they do not already exist.  
 Argument to this option determines whether the scripts
 are copied or linked.
+
+`--delete|-D`  
+Delete all occurences of generated manpages from `/usr/share/man/man1`
+
+`--script|-s <script>`  
+Call specified `<script>` with `--help` flag, and convert
+the output to a man page with `pandoc -s -t man`
 
 `--help|-h`  
 Print this help
 
 # DESCRIPTION
 
-All my bash scripts that have a help function are just
-called with the `--help` flag and the output piped to
-`pandoc -s -t man`, and that output redirected to the
-directory `<directory>`man. The default directory is
-`$HOME/scr`, so the resulting manpages will be
-redirected to the appropriate file in `$HOME/scrman`.
+Looks for all scripts in `<source-directory>` that
+contain a `--help` string, and pipe `<script> --help`
+through `pandoc -s -t man` and redirect the output to
+a manpage named `<script>.1` in `<man-directory>`
 
-Note that this only works because all my help functions
-are written in markdown. All precode is converted to bold
-text.
+> NOTE THAT THIS ONLY WORKS BECAUSE ALL MY HELP FUNCTIONS
+> ARE WRITTEN IN `markdown`. All precode is converted to bold
+> text.
 
+The `--install` flag can be used to install the manpages in
+`<man-directory>` to `/usr/share/man/man1`
+
+__In progress__  
 The `--script` flag can be used to automatically pipe the
 output of the specified script to a man page.
 
@@ -69,14 +76,15 @@ EOB
 exit
 }
 
-O_delete () { ls ${SDR}man | xargs -I {} sudo rm ${MANDIR}/{} ; exit 1 ; }
+O_delete () { ls ${MDR} | xargs -I {} sudo rm ${MANDIR}/"{}" ; exit ; }
 
 while true; do
 	case $1 in
-		--directory | -d ) SDR="${2:-}" ;;
-		--delete    | -D ) O_delete     ;;
-		--install   | -i ) INS="${2:-}" ;;
-		--script    | -s ) ${2:-} --help | pandoc -s -t man | man -l - ; exit ;;
+		--source-directory | -d ) SDR="${2:-}" ; shift ;;
+		--man-directory    | -m ) MDR="${2:-}" ; shift ;;
+		--install          | -i ) INS="${2:-}" ; shift ;;
+		--delete           | -D ) DEL=1 ;;
+		--script           | -s ) "${2:-}" --help | pandoc -s -t man | man -l - ; exit ;;
 		--help ) help ;;
 		-h     ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
 		-- ) shift ; break ;;
@@ -86,10 +94,13 @@ while true; do
 done
 
 SRC=${SDR}
-TRG=${SDR}man
+[[ -z ${MDR} ]] && MDR=${SRC}man
+[[ -d ${MDR} ]] || mkdir -p $MDR
+TRG=${MDR}
+
+[[ -n $DEL ]] && O_delete
 
 cd $SRC
-
 for i in $(ls -l | sed '/^d/d;/^total/d' | awk '{print $NF}'); do
 	[[ -n $(grep '\-\-help' $i) ]] && {
 

@@ -5454,3 +5454,32 @@ Nov 19 20:26 : avahi: Service 'Music Player @ ThinkPadT440p' successfully establ
 Nov 19 20:26 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Nov 19 20:26 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Nov 19 20:26 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 23 00:35 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 23 00:35 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 23 00:35 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 23 00:42 : client: [0] opened from [::1]:44732
+Nov 23 00:42 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 23 00:42 : client: [0] closed
+Nov 23 00:42 : client: [1] opened from [::1]:44734
+Nov 23 00:42 : client: [1] closed
+Nov 23 00:42 : client: [2] opened from [::1]:44736
+Nov 23 00:42 : client: [2] closed
+Nov 23 00:42 : client: [3] opened from [::1]:44738
+Nov 23 00:42 : client: [3] closed
+Nov 23 00:42 : client: [4] opened from [::1]:44740
+Nov 23 00:42 : client: [4] closed
+Nov 23 00:42 : client: [5] opened from [::1]:44742
+Nov 23 00:42 : client: [5] closed
+Nov 23 00:44 : client: [6] opened from [::1]:44746
+Nov 23 00:44 : client: [6] closed
+Nov 23 00:44 : client: [7] opened from [::1]:44748
+Nov 23 00:44 : client: [7] closed
+Nov 23 00:44 : client: [8] opened from [::1]:44750
+Nov 23 00:44 : client: [8] closed
+Nov 23 00:44 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Nov 23 00:44 : client: [9] opened from [::1]:44752
+Nov 23 00:44 : client: [9] closed
+Nov 23 00:44 : client: [10] opened from [::1]:44754
+Nov 23 00:44 : client: [10] closed
+Nov 23 00:44 : client: [11] opened from [::1]:44756
+Nov 23 00:44 : client: [11] closed
