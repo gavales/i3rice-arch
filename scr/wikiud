@@ -83,16 +83,16 @@ echo $RPO
 
 for i in $(ls -l | sed '/^d/d;/^total/d' | awk '{print $NF}'); do
 	[[ -n $(grep '\-\-help' $i) ]] && {
+#			print "<div align=\"center\">" > TRG
+#			print "	<h1>"SCR"</h1>"       >> TRG
+#			print "</div>\n"              >> TRG
 		$i --help | \
-			awk -v RPO="${RPO}" -v USR="${USR}" \
+			awk -v RPO="${RPO}" -v USR="${USR}" -v RTARG="${SRC##*/}" \
 			-v SCR="${i}" -v TRG="${TRG}/doc/${i}.md" -v BSE="${BSE/_base/}" '
 		BEGIN {
 			c=0
-			print "<div align=\"center\">" > TRG
-			print "	<h1>"SCR"</h1>"       >> TRG
-			print "</div>\n"              >> TRG
-			print "### _[ master/scr/"SCR"](https://github.com/"USR"/"RPO"/blob/master/scr/"SCR")_" >> TRG
-			print "### _[ raw ](https://raw.githubusercontent.com/"USR"/"RPO"/master/scr/"SCR")_" >> TRG
+			print "### _[ master/"RTARG"/"SCR"](https://github.com/"USR"/"RPO"/blob/master/"RTARG"/"SCR")_" > TRG
+			print "### _[ raw ](https://raw.githubusercontent.com/"USR"/"RPO"/master/"RTARG"/"SCR")_" >> TRG
 			print "|     | Table of Contents |" >> TRG
 			print "|:---:|:--- |"               >> TRG
 			print "- ["SCR"](https://github.com/"USR"/"RPO"/wiki/"SCR")" >> BSE
@@ -108,6 +108,6 @@ for i in $(ls -l | sed '/^d/d;/^total/d' | awk '{print $NF}'); do
 #			print "		- ["OLD"](https://github.com/"USR"/"RPO"/wiki/"SCR"#"NEW")" >> BSE
 			}
 		'
-		$i --help | sed '/^# NAME/d;/^__/d' >> ${TRG}/doc/${i}.md
+		$i --help | sed '/# NAME/d' >> ${TRG}/doc/${i}.md
 		}
 done
