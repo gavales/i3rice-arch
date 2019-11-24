@@ -17,7 +17,7 @@ __manner__ - generates man pages for scripts
 
 ```
 manner [--source-directory|-d <source-directory>]
-       [--man-directory|-d <man-directory>]
+       [--man-directory|-m <man-directory>]
        [--install|-i copy|link]
 manner --delete|-D
 manner --script|-s <script>
