@@ -161,5 +161,5 @@ function FoldText()
 endfunction
 
 setlocal spell spelllang=en_gb
-setlocal nonumber norelativenumber laststatus=0 textwidth=80
+setlocal nonumber norelativenumber laststatus=0 textwidth=60
 "filetype plugin on

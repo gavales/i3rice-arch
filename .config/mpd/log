@@ -5483,3 +5483,11 @@ Nov 23 00:44 : client: [10] opened from [::1]:44754
 Nov 23 00:44 : client: [10] closed
 Nov 23 00:44 : client: [11] opened from [::1]:44756
 Nov 23 00:44 : client: [11] closed
+Nov 24 15:37 : player: played "The Les Claypool Frog Brigade/Purple Onion/05 Whamola.mp3"
+Nov 24 15:38 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 24 15:38 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 24 15:38 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 24 15:40 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 24 15:40 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 24 15:40 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 24 15:40 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.

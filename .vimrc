@@ -20,7 +20,7 @@ set hls
 set nowrap
 set sidescroll=1
 set textwidth=0 wrapmargin=0
-set cursorline colorcolumn=81
+set cursorline colorcolumn=61
 set title titlelen=70
 set titlestring=%{v:servername}
 set mouse=a
