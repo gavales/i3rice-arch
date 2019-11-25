@@ -3,18 +3,18 @@
 
 #define tfg0 %%fg0%%
 #define tacb %%acb%%
-#define tred %%red%%
-#define redl %%red%%
-#define tgrn %%grn%%
-#define grnl %%grn%%
-#define tylw %%ylw%%
-#define ylwl %%ylw%%
-#define tblu %%blu%%
-#define blul %%blu%%
-#define tgnt %%gnt%%
-#define gntl %%gnt%%
-#define tcyn %%cyn%%
-#define cynl %%cyn%%
+#define tred %%darkred%%
+#define redl %%darkred%%
+#define tgrn %%darkgrn%%
+#define grnl %%darkgrn%%
+#define tylw %%darkylw%%
+#define ylwl %%darkylw%%
+#define tblu %%darkblu%%
+#define blul %%darkblu%%
+#define tgnt %%darkgnt%%
+#define gntl %%darkgnt%%
+#define tcyn %%darkcyn%%
+#define cynl %%darkcyn%%
 #define tbg0 %%bg0%%
 #define tbg1 %%bg1%%
 

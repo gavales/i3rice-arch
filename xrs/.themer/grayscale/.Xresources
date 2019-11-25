@@ -3,18 +3,18 @@
 
 #define tfg0 #444444
 #define tacb #b5b5b5
-#define tred #FF4971
-#define redl #FF4971
-#define tgrn #18E3C8
-#define grnl #18E3C8
-#define tylw #FF8037
-#define ylwl #FF8037
-#define tblu #556FFF
-#define blul #556FFF
-#define tgnt #B043D1
-#define gntl #B043D1
-#define tcyn #3FDCEE
-#define cynl #3FDCEE
+#define tred #a1465a
+#define redl #a1465a
+#define tgrn #2e9386
+#define grnl #2e9386
+#define tylw #a1623d
+#define ylwl #a1623d
+#define tblu #4c59a1
+#define blul #4c59a1
+#define tgnt #7a438a
+#define gntl #7a438a
+#define tcyn #419099
+#define cynl #419099
 #define tbg0 #ececec
 #define tbg1 #d8d8d8
 
@@ -181,10 +181,10 @@ URxvt.font:                 xft:fontname:size=fontsize, xft:FontAwesome:size=9
 URxvt*fading:               0
 URxvt*depth:                0
 URxvt*scrollBar:            false
-!URxvt*scrollBar_right:     true
-!URxvt*scrollColor:         tbg1
-!URxvt*troughColor:         tbg0
-!URxvt*scrollstyle:         plain
+!URxvt*scrollBar_right:      true
+!URxvt*scrollColor:          tbg1
+!URxvt*troughColor:          tbg0
+!URxvt*scrollstyle:          plain
 URxvt*mouseWheelScrollPage: false
 URxvt*cursorBlink:          true
 URxvt*background:           tbg0
@@ -192,13 +192,13 @@ URxvt*foreground:           tfg0
 URxvt*saveLines:            5000
 URxvt*useColor:             true
 URxvt*internalBorder:       0
-URxvt*letterSpace:          0
+URxvt*letterSpace:          1
 URxvt*lineSpace:            3
-
+URxvt.geometry:             60x17
 !! for 'fake' transparency (without Compton) uncomment the following three lines
-!URxvt*inheritPixmap:       true
-!URxvt*transparent:         true
-!URxvt*shading:             138
+!URxvt*inheritPixmap:        true
+!URxvt*transparent:          true
+!URxvt*shading:              138
 
 ! ━  8urxvtext
 

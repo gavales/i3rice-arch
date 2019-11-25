@@ -6,25 +6,18 @@
 # for i in $(ls); do convert "${i}" -blur $blr "${PWD/normal/blur}/${i}"; echo "$i"; done
 
 WDIR="${XDG_PICTURES_DIR}/gwc"
-NORM="${WDIR}/normal"
-BLUR="${WDIR}/blur"
-COLS="${WDIR}/cols"
-[[ -d ${WDIR} ]] || {
-	mkdir $WDIR
-	mkdir $NORM
-	mkdir $BLUR
-	mkdir $COLS
-}
+NORM="${WDIR}/normal" BLUR="${WDIR}/blur" COLS="${WDIR}/cols"
+[[ -d ${WDIR} ]] || mkdir -p "$NORM" "$BLUR" "$COLS"
 NWFD="$NORM"
 CURR="${WDIR}/current"
 WHT="white-drops"
 CRLN="$(readlink -f $CURR)"
 HIST="${WDIR}/.history"
-MONDIM=$(xdpyinfo | awk '/dimensions/ {print $2}')
-MX=${MONDIM%x*}
-MY=${MONDIM#*x}
+eval "$(mattr xywh $(pfm) | \
+	awk '{print "MX="$1 "MY="$2 "MW="$3 "MH="$4}')"
 blr=0x16
-[[ -n $(command -v parallel) ]] && ADDCMD="| parallel gwc --add \"{}\"" || \
+[[ -n $(command -v parallel) ]] && \
+	ADDCMD="| parallel gwc --add \"{}\"" || \
 	ADDCMD="| xargs -I {} gwc --add \"{}\""
 
 help () {
@@ -124,13 +117,12 @@ add-wall () {
 }
 
 tint () {
-	hsetroot -center $CRLN -tint "$_TNT"
-#	CRTNT="${CRLN##*/}-${_TNT/\#/}"
-#	[[ -f ${NORM}/${CRTNT} ]] || {
-#		convert "${NORM}/${CRLN##*/}" -fill "${_TNT}" -tint 100 "${NORM}/${CRTNT}"
-#		convert "${NORM}/${CRTNT}"    -blur $blr "${BLUR}/${CRTNT}"
-#		}
-#	ln -sf "${NWFD}/${CRTNT}" $CURR
+	CRTNT="${CRLN##*/}-${_TNT/\#/}"
+	[[ -f ${NORM}/${CRTNT} ]] || {
+		convert "${NORM}/${CRLN##*/}" -fill "${_TNT}" -tint 100 "${NORM}/${CRTNT}"
+		convert "${NORM}/${CRTNT}"    -blur $blr "${BLUR}/${CRTNT}"
+		}
+	ln -sf "${NWFD}/${CRTNT}" $CURR
 	CRLN=$(readlink -f $CURR)
 }
 
@@ -140,36 +132,33 @@ colour () {
 #		convert $WHT -fill $1 -draw 'color 0,0 replace' "${COLS}/${1/\#/}"
 
 	[[ -f ${COLS}/${1/\#/}.png ]] && \
-		ln -sf "${COLS}/${1/\#/}.png" $CURR && tile-wall && \
-		exit
+		ln -sf "${COLS}/${1/\#/}.png" $CURR && set-wall && exit
 
 	if [[ ${#1} -le 7 ]]; then
-
 		[[ ! -f ${WDIR}/white ]] && \
 			echo Please create ${WDIR}/white && exit || \
-			convert "${WDIR}/${WHT}" \
-				-fill "${1}" -tint 100 \
-				"${COLS}/${WHT/white-/${1/\#/}-}.png"
-#			hsetroot \
-#				-tile "${WDIR}/${WHT}" \
-#				-tint "${1}" \
-#				-write "${COLS}/${WHT/white-/${1/\#/}-}.png"
+#			convert "${WDIR}/${WHT}" \
+#				-fill "${1}" -tint 100 \
+#				"${COLS}/${WHT/white-/${1/\#/}-}.png"
+			hsetroot \
+				-tile "${WDIR}/${WHT}" \
+				-tint "${1}" \
+				-write "${COLS}/${WHT/white-/${1/\#/}-}.png"
 		echo ${WHT/white-/${1/\#/}-}.png
 		ln -sf "${COLS}/${WHT/white-/${1/\#/}-}.png" $CURR
-		tile-wall
+		set-wall
 
 	else
-
 		SUF=${1##*-} ; PRF=${1%%-*}
 		[[ ! -f ${WDIR}/white-${SUF} ]] && \
 			echo Please create ${WDIR}/white-${SUF} && exit 1 || \
-			convert "${WDIR}/white-${SUF}" \
-				-fill "${PRF}" -tint 100 \
-				"${COLS}/${PRF/\#/}-${SUF}.png"
-#			hsetroot \
-#				-tile "${WDIR}/white-${SUF}" \
-#				-tint "${PRF}" \
-#				-write "${COLS}/${PRF/\#/}-${SUF}.png"
+#				convert "${WDIR}/white-${SUF}" \
+#					-fill "${PRF}" -tint 100 \
+#					"${COLS}/${PRF/\#/}-${SUF}.png"
+				hsetroot \
+					-tile "${WDIR}/white-${SUF}" \
+					-tint "${PRF}" \
+					-write "${COLS}/${PRF/\#/}-${SUF}.png"
 		echo ${COLS}/${PRF/\#/}-${SUF}.png
 		ln -sf "${COLS}/${PRF/\#/}-${SUF}.png" $CURR
 		tile-wall
@@ -179,7 +168,10 @@ colour () {
 exit
 }
 
-change-current () { ln -sf "${NWFD}/${_WPP}" $CURR ; CRLN="$(readlink -f $CURR)" ; }
+change-current () {
+	ln -sf "${NWFD}/${_WPP}" $CURR
+	CRLN="$(readlink -f $CURR)"
+}
 
 history () {
 	[[ ! -f $HIST ]] && touch $HIST
@@ -201,11 +193,7 @@ next () {
 
 set-wall () { feh --bg-center $CURR ; echo "${CRLN##*/}" ; }
 
-O_list () {
-	cd ${NORM}
-	sxiv -a -b ${CRLN##*/} *
-	exit
-}
+O_list () { cd ${NORM} ; sxiv -a -b ${CRLN##*/} * ; exit ; }
 
 O_add () {
 	if [[ -z $1 ]]; then
@@ -270,7 +258,7 @@ while true; do
 		--next      | -n ) _NXT=1 ;;
 		--previous  | -p ) _PRV=1 ;;
 		--random    | -r ) _RND=1 ;;
-		--list      | -l ) O_list                    ;;
+		--list      | -l ) O_list ;;
 		--add       | -a ) O_add    "${2:-}" ; shift ;;
 		--rename    | -R ) O_rename "${2:-}" ; shift ;;
 		--delete    | -d ) O_delete "${2:-}" ; shift ;;
@@ -285,11 +273,9 @@ done
 _WPP=${CRLN##*/}
 
 if [[ -n $_WPO ]]; then
-
 	_WPP="$_WPO"
 	echo $_WPP
 	[[ $_WPP =~ "#" ]] && colour "$_WPP"
-
 	WPC=${_WPP##*/}
 
 	if   [[ $_WPO == "random"   ]]; then random
@@ -303,10 +289,6 @@ if [[ -n $_WPO ]]; then
 			add-wall "$_WPP"
 		fi
 	fi
-
-	
-	
-	
 
 	change-current
 
