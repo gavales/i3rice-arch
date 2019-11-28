@@ -11,27 +11,25 @@ inoremap for<Tab> <Esc>:read !snyp -t sh -g for<CR>/SNYP<CR>zo4xi
 
 function! Folds()
 	let thisline = getline(v:lnum)
-	if match(thisline, '^while ') >= 0
+	if match(thisline, '^# ━  ') >= 0
 		return "a1"
-	elseif match(thisline, '^# ━  ') >= 0
+	elseif match(thisline, '^while.*; do') >= 0
 		return "a1"
-	elseif match(thisline, '^if ') >= 0
+	elseif match(thisline, '^if.*; then') >= 0
 		return "a1"
-	elseif match(thisline, '^for ') >= 0
+	elseif match(thisline, '^for.*; do') >= 0
 		return "a1"
-	elseif match(thisline, '^case') >= 0
+	elseif match(thisline, '^case.*in') >= 0
 		return "a1"
 	elseif match(thisline, '() {$') >= 0
 		return "a1"
-	elseif match(thisline, '^[[:space:]]\+while ') >= 0
+	elseif match(thisline, '^[[:space:]]\+while.*; do') >= 0
 		return "a1"
-	elseif match(thisline, '^[[:space:]]\+# ━  ') >= 0
+	elseif match(thisline, '^[[:space:]]\+if.*; then') >= 0
 		return "a1"
-	elseif match(thisline, '^[[:space:]]\+if ') >= 0
+	elseif match(thisline, '^[[:space:]]\+for.*; do') >= 0
 		return "a1"
-	elseif match(thisline, '^[[:space:]]\+for ') >= 0
-		return "a1"
-	elseif match(thisline, '^[[:space:]]\+case') >= 0
+	elseif match(thisline, '^[[:space:]]\+case.*in') >= 0
 		return "a1"
 	elseif match(thisline, '|| {$') >= 0
 		return "a1"
@@ -44,6 +42,8 @@ function! Folds()
 	elseif match(thisline, '^esac$') >= 0
 		return "s1"
 	elseif match(thisline, '^fi$') >= 0
+		return "s1"
+	elseif match(thisline, '^[[:space:]]\+}$') >= 0
 		return "s1"
 	elseif match(thisline, '^[[:space:]]\+done$') >= 0
 		return "s1"
