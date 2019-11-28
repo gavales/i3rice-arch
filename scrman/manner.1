@@ -1,4 +1,4 @@
-.TH MANNER 1 2019\-11\-23 Linux "User Manuals"
+.TH MANNER 1 2019\-11\-28 Linux "User Manuals"
 .hy
 .SH NAME
 .PP
@@ -8,7 +8,7 @@
 .nf
 \f[B]
 manner [--source-directory|-d \fI<source-directory>\fP]
-       [--man-directory|-d \fI<man-directory>\fP]
+       [--man-directory|-m \fI<man-directory>\fP]
        [--install|-i copy|link]
 manner --delete|-D
 manner --script|-s \fI<script>\fP
@@ -75,7 +75,7 @@ Looks for all scripts in \f[B]\fI<source-directory>\fP\f[R] that contain a
 \f[B]\fI<script>\fP.1\f[R] in \f[B]\fI<man-directory>\fP\f[R]
 .RS
 .PP
-Note that this only works because all my help functions are written in
+NOTE THAT THIS ONLY WORKS BECAUSE ALL MY HELP FUNCTIONS ARE WRITTEN IN
 \f[B]markdown\f[R].
 All precode is converted to bold text.
 .RE
