@@ -1,11 +1,11 @@
-"               ██
-"              ▒▒
-"      ██    ██ ██ ██████████  ██████  █████
-"     ▒██   ▒██▒██▒▒██▒▒██▒▒██▒▒██▒▒█ ██▒▒▒██
-"     ▒▒██ ▒██ ▒██ ▒██ ▒██ ▒██ ▒██ ▒ ▒██  ▒▒
-"   ██ ▒▒████  ▒██ ▒██ ▒██ ▒██ ▒██   ▒██   ██
-"  ▒██  ▒▒██   ▒██ ███ ▒██ ▒██▒███   ▒▒█████
-"  ▒▒    ▒▒    ▒▒ ▒▒▒  ▒▒  ▒▒ ▒▒▒     ▒▒▒▒▒
+"              ██
+"             ▒▒
+"     ██    ██ ██ ██████████  ██████  █████
+"    ▒██   ▒██▒██▒▒██▒▒██▒▒██▒▒██▒▒█ ██▒▒▒██
+"    ▒▒██ ▒██ ▒██ ▒██ ▒██ ▒██ ▒██ ▒ ▒██  ▒▒
+"  ██ ▒▒████  ▒██ ▒██ ▒██ ▒██ ▒██   ▒██   ██
+" ▒██  ▒▒██   ▒██ ███ ▒██ ▒██▒███   ▒▒█████
+" ▒▒    ▒▒    ▒▒ ▒▒▒  ▒▒  ▒▒ ▒▒▒     ▒▒▒▒▒
 
 " ━  SETTINGS
 " ━━ GENERAL
@@ -33,6 +33,7 @@ set cmdheight=1
 set splitbelow splitright
 set t_Co=16
 set autoread
+set foldcolumn=10
 au CursorHold * checktime
 
 " ━━ GLOBAL MAPS
@@ -137,11 +138,17 @@ let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
 let g:calendar_modifiable = 1
 
-" ━  STATUSLINE
-" ━━ FUNCTIONS
-
-set laststatus=2
-
+" ━  FUNCTIONS
+let g:word_count="<unknown>"
+function! WordCount()
+	return g:word_count
+endfunction
+function! UpdateWordCount()
+	let script = 'wrdc "' . expand("%") . '"'
+	let wrdc = system(script)
+	let wrdc = substitute(wrdc, '\%x00',   "",   "")
+	let g:word_count = wrdc
+endfunction
 function! FileSize()
 	let bytes = getfsize(expand('%:p'))
 	if (bytes >= 1024)
@@ -150,11 +157,9 @@ function! FileSize()
 	if (exists('kbytes') && kbytes >= 1000)
 		let mbytes = kbytes / 1000
 	endif
-
 	if bytes <= 0
 		return '0'
 	endif
-
 	if (exists('mbytes'))
 		return mbytes . 'MB '
 	elseif (exists('kbytes'))
@@ -163,18 +168,16 @@ function! FileSize()
 		return bytes . 'B '
 	endif
 endfunction
-
 function! ReadOnly()
 	if &readonly || !&modifiable
 		return '╳'
 	else
 		return ''
+	endif
 endfunction
-
 function! GitBranch()
 	return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
 endfunction
-
 function! StatuslineGit()
 	let l:branchname = GitBranch()
 	return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
@@ -188,30 +191,27 @@ let g:currentmode={
 	\ 'c'      : 'Command ', 'cv' : 'Vim Ex ',             'ce'     : 'Ex ',
 	\ 'r'      : 'Prompt ',  'rm' : 'More ',               'r?'     : 'Confirm ',
 	\ '!'      : 'Shell ',   't'  : 'Terminal '}
-
 function! ModeCurrent() abort
 	let l:modecurrent = mode()
-	" use get() -> fails safely, since ^V doesn't seem to register
-	" 3rd arg is used when return of mode() == 0, which is case with ^V
-	" thus, ^V fails -> returns 0 -> replaced with 'V Block'
 	let l:modelist = toupper(get(g:currentmode, l:modecurrent, 'V·Block '))
 	let l:current_status_mode = l:modelist
 	return l:current_status_mode
 endfunction
 
-" ━━ ACTUAL
+" ━  STATUSLINE
+set laststatus=2
 
 set statusline=
 set statusline+=%#Normal#
 set statusline+=\ 
 set statusline+=%#usrStatus#
 set statusline+=\ %{ModeCurrent()}
-set statusline+=\ %f\ 
-set statusline+=\ %{ReadOnly()}\ %m\ %w\ 
+set statusline+=\ %t
+set statusline+=\ %{ReadOnly()}\ %m\ %w
 set statusline+=%=
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
-set statusline+=\[%{&fileformat}\]\ 
-set statusline+=\ %Y\ 
+set statusline+=\[%{&fileformat}\]
+set statusline+=\ %Y
 set statusline+=\ %-3(%{FileSize()}%)
 set statusline+=\ %p%%
 set statusline+=\ L:
@@ -222,7 +222,7 @@ set statusline+=%c\
 set statusline+=%#Normal#
 set statusline+=\ 
 
-" ━  LATEX
+" ━  LATEX-SUITE
 autocmd FileType tex set smartindent cinwords=\\begin
 
 if has("win32")

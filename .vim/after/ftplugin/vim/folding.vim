@@ -4,6 +4,22 @@ function! Folds()
 		return ">2"
 	elseif match(thisline, '^" ━  ') >= 0
 		return ">1"
+	elseif match(thisline, '^if') >= 0
+		return "a1"
+	elseif match(thisline, '^function') >= 0
+		return "a1"
+	elseif match(thisline, '^endif') >= 0
+		return "s1"
+	elseif match(thisline, '^endfunction') >= 0
+		return "s1"
+	elseif match(thisline, '^[[:space:]]\+if') >= 0
+		return "a1"
+	elseif match(thisline, '^[[:space:]]\+function') >= 0
+		return "a1"
+	elseif match(thisline, '^[[:space:]]\+endif') >= 0
+		return "s1"
+	elseif match(thisline, '^[[:space:]]\+endfunction') >= 0
+		return "s1"
 	else
 		return "="
 	endif
@@ -17,10 +33,9 @@ function FText()
 	let windowwidth = winwidth(0) - nucolwidth - 3
 	let foldsize = (v:foldend-v:foldstart)
 	let foldline = getline(v:foldstart)
-	let foldline = substitute(foldline, '^" ━  ', " ┫  ", "")
-	let foldline = substitute(foldline, '^" ━━ ', " ┣━ ", "")
-	let text = foldline.foldsize.'lines    '
-	let barcharcount = ((windowwidth * 2)/ 3) - strdisplaywidth(foldsize.'lines    ')
-	let spacecharcount = windowwidth - strdisplaywidth(text) - barcharcount
-	return ' '.foldline.repeat(" ",spacecharcount).'┣'.repeat("━",barcharcount).'  ('.foldsize.' lines)'
+	let foldline = substitute(foldline, '^" ━  ', "  ┫  ", "")
+	let foldline = substitute(foldline, '^" ━━ ', "  ┣━ ", "")
+	let text = foldline.foldsize.'lines'
+	let spacecharcount = windowwidth - strdisplaywidth(text)
+	return foldline.repeat(" ",spacecharcount).'('.foldsize.' lines)'
 endfunction

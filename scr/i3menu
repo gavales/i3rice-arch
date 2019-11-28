@@ -92,7 +92,7 @@ exit
 }
 
 i3menuconfig () {
-	cat > $CONFIG  << 'EOB'
+cat > $CONFIG  << 'EOB'
 # vim:ft=sh
 ACCENT_COLOR=black
 ORIENTATION=vertical
@@ -103,20 +103,11 @@ WIDTH="300"
 HEIGHT=" "
 XFS="0"
 YFS="0"
-WINDOW_LOCATION=$(xdotool getactivewindow getwindowgeometry | \
-	grep 'Position' | awk '{print $2}')
-WINDOW_GEOMETRY=$(xdotool getactivewindow getwindowgeometry | \
-	grep 'Geometry' | awk '{print $2}')
-WIN_X=${WINDOW_LOCATION%,*}
-WIN_Y=${WINDOW_LOCATION#*,}
-WIN_W=${WINDOW_GEOMETRY%x*}
-WIN_H=${WINDOW_GEOMETRY#*x}
-sc=$(xdpyinfo | grep dimensions | awk '{print $2}')
-SCREEN_W=${sc%x*}
-SCREEN_H=${sc#*x}
-MOUSE_X=$(xdotool getmouselocation | awk '{print $1}')
-MOUSE_Y=$(xdotool getmouselocation | awk '{print $2}')
-MONITOR=$(xdotool getmouselocation | awk '{print $3}')
+eval "$(wattr xywh $(pfw) | \
+	awk '{print "WIN_X="$1 "\nWIN_Y="$2 "\nWIN_W="$3 "\nWIN_H="$4}')"
+eval "$(mattr wh $(pfm) | awk '{print "SCREEN_W="$1 "\nSCREEN_H="$2}')"
+eval "$(wmp             | awk '{print "MOUSE_X="$1 "\nMOUSE_Y="$2}')"
+MONITOR=$(mattr d $(pfm))
 
 #dmenu_bg=$(xrdb -query | grep '*color8' | awk '{print $NF}')
 #dmenu_fg=$(xrdb -query | grep '*color15' | awk '{print $NF}')
@@ -128,8 +119,8 @@ MONITOR=$(xdotool getmouselocation | awk '{print $3}')
 #dmenu_loc="-x $(expr $WIN_X - $WINDOW_BORDER - $WINDOW_BORDER) -y $(expr $WIN_Y - $TITLEBAR_HEIGHT)"
 EOB
 
-	[[ -f $BLACK ]] || {
-		cat > $BLACK  << 'EOB'
+[[ -f $BLACK ]] || {
+cat > $BLACK  << 'EOB'
 * {
 accent: #364145;
 fg1:    #222D31;
@@ -140,10 +131,10 @@ redish: #ab4642;
 font1: "LuxiMono 13";
 	}
 EOB
-	}
+}
 
-	[[ -f $HORI ]] || {
-		cat > $HORI  << 'EOB'
+[[ -f $HORI ]] || {
+cat > $HORI  << 'EOB'
 @import "_globals.rasi"
 * {
 	background-color: @accent;
@@ -181,10 +172,10 @@ EOB
 	text-color:       @accent;
 	}
 EOB
-	}
+}
 
-	[[ -f $VERT ]] || {
-		cat > $VERT  << 'EOB'
+[[ -f $VERT ]] || {
+cat > $VERT  << 'EOB'
 @import "_globals.rasi"
 * {
 	background-color: @accent;
@@ -221,7 +212,7 @@ EOB
 	text-color:       @accent;
 	}
 EOB
-	}
+}
 
 }
 
@@ -229,14 +220,15 @@ EOB
 source $CONFIG
 
 dmenu () {
-	rofi -show run -p "${PROMPT}" $fs -theme _horizontal -monitor ${MONITOR:7} \
-		-location 1 -lines $ROWS -width 100
+	rofi -show run -p "${PROMPT}" $fs -theme _horizontal \
+		-monitor ${MONITOR} -location 1 -lines $ROWS -width 100
 }
 
 start () {
 	[[ -n $LNS ]] && ROWS=$LNS || ROWS="15"
-	rofi -show drun -p "${PROMPT}" $fs -theme _$ORIENTATION -monitor ${MONITOR:7} \
-		-location $LOCATION -lines $ROWS -width $WIDTH -xoffset $XFS -yoffset $YFS \
+	rofi -show drun -p "${PROMPT}" $fs -theme _$ORIENTATION \
+		-monitor ${MONITOR} -location $LOCATION -lines $ROWS \
+		-width $WIDTH -xoffset $XFS -yoffset $YFS \
 		-theme-str "#window { $HEIGHT }"
 }
 
@@ -246,9 +238,11 @@ menu () {
 	STSZ=$(du -k $STDIN | cut -f1)
 	[[ $STSZ == "1" ]] && rm $STDIN && touch $STDIN
 	[[ -n $LNS ]] && ROWS=$LNS || ROWS=$(cat $STDIN | wc -l)
-	cat $STDIN | rofi -dmenu -p "${PROMPT}" $fs -theme _$ORIENTATION -monitor ${MONITOR:7} \
-		-location $LOCATION -lines $ROWS -width $WIDTH -xoffset $XFS -yoffset $YFS \
-		-theme-str "#window { $HEIGHT }" -markup-rows
+	cat $STDIN | \
+		rofi -dmenu -p "${PROMPT}" $fs -theme _$ORIENTATION \
+			-monitor ${MONITOR} -location $LOCATION -lines $ROWS \
+			-width $WIDTH -xoffset $XFS -yoffset $YFS \
+			-theme-str "#window { $HEIGHT }" -markup-rows
 	rm -rf $STDIN
 }
 

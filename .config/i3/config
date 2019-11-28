@@ -45,12 +45,12 @@ set $BNR border normal
 
 # ━  DECORATIONS
 # class                 brdr    bkgr    text    indi    chlb
-client.focused          #b5b5b5 #b5b5b5 #444444 #b5b5b5 #7f7f7f
-client.focused_inactive #7f7f7f #7f7f7f #444444 #7f7f7f #7f7f7f
-client.unfocused        #7f7f7f #7f7f7f #ececec #7f7f7f #7f7f7f
-client.urgent           #FF4971 #FF4971 #444444 #FF4971 #FF4971
-client.placeholder      #ececec #ececec #444444 #ececec #ececec
-client.background       #ececec
+client.focused          #8d6953 #8d6953 #f9efe9 #8d6953 #DC8E69
+client.focused_inactive #DC8E69 #DC8E69 #f9efe9 #DC8E69 #DC8E69
+client.unfocused        #DC8E69 #DC8E69 #3e443e #DC8E69 #DC8E69
+client.urgent           #6F90A7 #6F90A7 #f9efe9 #6F90A7 #6F90A7
+client.placeholder      #3e443e #3e443e #f9efe9 #3e443e #3e443e
+client.background       #3e443e
 
 # ━  BINDINGS
 # ━━ Misc

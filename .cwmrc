@@ -64,15 +64,15 @@ fontname    'Luxi Mono:size=12'
 
 # ━  colors
 
-color activeborder   "#dedede"
-color inactiveborder "#dedede"
-color groupborder    "#dedede"
-color ungroupborder  "#dedede"
-color font           "#444444"
-color selfont        "#444444"
-color menubg         "#ececec"
-color menufg         "#b5b5b5"
-color urgentborder   "#FF4971"
+color activeborder   "#504c43"
+color inactiveborder "#504c43"
+color groupborder    "#504c43"
+color ungroupborder  "#504c43"
+color font           "#f9efe9"
+color selfont        "#f9efe9"
+color menubg         "#3e443e"
+color menufg         "#8d6953"
+color urgentborder   "#6F90A7"
 
 # ━  groups apps
 #autogroup 2 "qutebrowser,qutebrowser"

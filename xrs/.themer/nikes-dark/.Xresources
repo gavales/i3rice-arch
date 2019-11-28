@@ -3,18 +3,18 @@
 
 #define tfg0 #f6f6f4
 #define tacb #724d56
-#define tred #ff4845
-#define redl #ff4845
-#define tgrn #47aa12
-#define grnl #47aa12
-#define tylw #ff890a
-#define ylwl #ff890a
-#define tblu #b46b7d
-#define blul #b46b7d
-#define tgnt #288ad6
-#define gntl #288ad6
-#define tcyn #6bb4a2
-#define cynl #6bb4a2
+#define tred #fa9f9c
+#define redl #fa9f9c
+#define tgrn #9ed083
+#define grnl #9ed083
+#define tylw #fabf7f
+#define ylwl #fabf7f
+#define tblu #d5b0b8
+#define blul #d5b0b8
+#define tgnt #8fc0e5
+#define gntl #8fc0e5
+#define tcyn #b0d5cb
+#define cynl #b0d5cb
 #define tbg0 #303030
 #define tbg1 #444444
 

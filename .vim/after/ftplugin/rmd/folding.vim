@@ -40,15 +40,15 @@ autocmd Filetype rmd inoremap \p ```{python}<CR>```<CR><CR><esc>2kO
 function! Folds()
 	let thisline = getline(v:lnum)
 	if match(thisline, '^### ') >= 0
-		return ">1"
+		return "a1"
 	elseif match(thisline, '^## ') >= 0
-		return ">1"
+		return "a1"
 	elseif match(thisline, '^# ') >= 0
-		return ">1"
+		return "a1"
 	elseif match(thisline, '^title: ') >= 0
 		return ">1"
 	elseif match(thisline, '^---') >= 0
-		return ">0"
+		return "s1"
 	else
 		return "="
 	endif
@@ -71,6 +71,24 @@ function FoldText()
 endfunction
 
 setlocal spell spelllang=en_gb
-setlocal nonumber norelativenumber laststatus=0
+setlocal nonumber norelativenumber laststatus=2
 setlocal textwidth=60
 "autocmd VimEnter * Goyo"
+augroup WordCounter
+	au! CursorHold,CursorHoldI * silent !compiler % &>/dev/null &
+	au! CursorHold,CursorHoldI * call UpdateWordCount()
+augroup END
+
+set statusline=
+set statusline+=%#Normal#
+set statusline+=\ 
+set statusline+=%#usrStatus#
+set statusline+=\ %{ModeCurrent()}
+set statusline+=\ %f
+set statusline+=\ %{ReadOnly()}\ %m\ %w
+set statusline+=%=
+set statusline+=\ %-3(%{FileSize()}%)
+set statusline+=\ %p%%
+set statusline+=\ \ %{WordCount()}\ 
+set statusline+=%#Normal#
+set statusline+=\ 

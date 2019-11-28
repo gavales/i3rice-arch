@@ -22,24 +22,24 @@ inoremap 5n <Esc>A<Enter><Tab><Tab><Tab><Tab>#.<space>
 inoremap 6n <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab>(#)<space>
 inoremap 7n <Esc>A<Enter><Tab><Tab><Tab><Tab><Tab><Tab>1.<space>
 
-inoremap <Tab>b ****<++><Esc>5hi
-inoremap <Tab>i __<++><Esc>4hi
-inoremap <Tab>s ~~~~<++><Esc>5hi
+inoremap b<Tab> ****<++><Esc>5hi
+inoremap i<Tab> __<++><Esc>4hi
+inoremap s<Tab> ~~~~<++><Esc>5hi
 
-inoremap <Tab>pic <Esc>A<Enter><Enter>![](<++>){#fig:<++>}<Esc>F]i
-inoremap <Tab>eq  $$$$<space>{#eq:<++>}<++><Esc>F$hi
-inoremap <Tab>lin <Esc>A<Enter><Enter>[](<++>)<Esc>F]i
-inoremap <Tab>cod <Esc>A<Enter><Enter>```<Enter><++><Enter>```<Esc>2kA
-inoremap <Tab>ytb <Esc>A<Enter><Enter>[![](http://img.youtube.com/vi/<++>
+inoremap pic<Tab> <Esc>A<Enter><Enter>![](<++>){#fig:<++>}<Esc>F]i
+inoremap eq<Tab>  $$$$<space>{#eq:<++>}<++><Esc>F$hi
+inoremap lin<Tab> <Esc>A<Enter><Enter>[](<++>)<Esc>F]i
+inoremap cod<Tab> <Esc>A<Enter><Enter>```<Enter><++><Enter>```<Esc>2kA
+inoremap ytb<Tab> <Esc>A<Enter><Enter>[![](http://img.youtube.com/vi/<++>
 	\/0.jpg)](http://www.youtube.com/watch?v=<++>)<Esc>F[a
 
-inoremap <Tab>ci [@]<Esc>i
-inoremap <Tab>lt {#tbl:}<Esc>i
-inoremap <Tab>ls {#sec:}<Esc>i
-inoremap <Tab>rf [@fig:]<Esc>i
-inoremap <Tab>rs [@sec:]<Esc>i
-inoremap <Tab>re [@eq:]<Esc>i
-inoremap <Tab>rt [@tbl:]<Esc>i
+inoremap ci<Tab> [@]<Esc>i
+inoremap lt<Tab> {#tbl:}<Esc>i
+inoremap ls<Tab> {#sec:}<Esc>i
+inoremap rf<Tab> [@fig:]<Esc>i
+inoremap rs<Tab> [@sec:]<Esc>i
+inoremap re<Tab> [@eq:]<Esc>i
+inoremap rt<Tab> [@tbl:]<Esc>i
 
 vnoremap \b xa**<Esc>pa**<Esc>
 vnoremap \i xa_<Esc>pa_<Esc>
@@ -66,15 +66,15 @@ vnoremap \7n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Tab><Tab><Esc>
 function! Folds()
 	let thisline = getline(v:lnum)
 	if match(thisline, '^### ') >= 0
-		return ">1"
+		return "a1"
 	elseif match(thisline, '^## ') >= 0
-		return ">1"
+		return "a1"
 	elseif match(thisline, '^# ') >= 0
-		return ">1"
+		return "a1"
 	elseif match(thisline, '^title: ') >= 0
 		return ">1"
 	elseif match(thisline, '^---$') >= 0
-		return ">0"
+		return "s1"
 	else
 		return "="
 	endif
@@ -97,9 +97,27 @@ function FoldText()
 endfunction
 
 setlocal spell spelllang=en_gb
-setlocal nonumber norelativenumber laststatus=0
+setlocal nonumber norelativenumber laststatus=2
 setlocal textwidth=60
 autocmd CursorMoved,CursorMovedI * update
-autocmd CursorHold,CursorHoldI * silent !cmkd % &>/dev/null &
+augroup WordCounter
+	au! CursorHold,CursorHoldI * silent !cmkd % &>/dev/null &
+	au! CursorHold,CursorHoldI * call UpdateWordCount()
+augroup END
+
 "autocmd CursorHold,CursorHoldI * redraw!
 "autocmd VimEnter * Goyo"
+
+set statusline=
+set statusline+=%#Normal#
+set statusline+=\ 
+set statusline+=%#usrStatus#
+set statusline+=\ %{ModeCurrent()}
+set statusline+=\ %f
+set statusline+=\ %{ReadOnly()}\ %m\ %w
+set statusline+=%=
+set statusline+=\ %-3(%{FileSize()}%)
+set statusline+=\ %p%%
+set statusline+=\ \ %{WordCount()}\ 
+set statusline+=%#Normal#
+set statusline+=\ 

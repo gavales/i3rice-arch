@@ -5,11 +5,14 @@ bg0 #fafafa
 fg0 #282A36
 acc #414458
 red #FF4971
-grn #18E3C8
-ylw #FF8037
 blu #556FFF
+ylw #FF8037
+grn #18E3C8
 gnt #B043D1
 cyn #3FDCEE
+!red #b85227
+!blu #277eb8
+!ylw #DDB700
 !lightbg0 #BEBEC1
 !lightfg0 #414458
 !lightred #F37F97

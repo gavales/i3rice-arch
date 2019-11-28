@@ -1,6 +1,7 @@
 ! vim:ft=perl
 name            forest-dawn
-wallpaper       invasive1
+wallpaper       arabic_floor.xbm $acb $acc
+!wallpaper       invasive1
 bg0             #fdd89a
 fg0             #3c4542
 acc             $blu

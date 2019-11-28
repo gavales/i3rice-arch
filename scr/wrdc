@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+
+help () {
+cat << 'EOB'
+# NAME
+
+__wrdc__ - get word & page count from pdf using `pdftotext`
+
+# SYNOPSIS
+
+```
+wrdc <file>
+wrdc --help|-h
+```
+EOB
+exit
+}
+
+while true; do
+	case $1 in
+		--help ) help ;;
+		-h ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+[[ -z ${1} ]] && $0 -h || TRG="${1}"
+
+main () {
+	pdftotext "${1}" - | awk -v RS="\f" '
+		BEGIN { c=0 }
+		{ gsub(/[[:punct:]]/, "", $0); c+=NF }
+		END { print c" word(s), " NR" page(s)" }
+	'
+}
+
+if [[ ${TRG##*.} == "pdf" ]]; then
+	main "${TRG}"
+else
+	[[ -f ${TRG%.*}.pdf ]] && \
+		main "${TRG%.*}.pdf" || {
+			echo "${TRG%.*}.pdf doesn't exist"
+			exit
+			}
+fi

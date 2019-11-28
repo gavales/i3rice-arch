@@ -161,5 +161,22 @@ function FoldText()
 endfunction
 
 setlocal spell spelllang=en_gb
-setlocal nonumber norelativenumber laststatus=0 textwidth=60
+setlocal nonumber norelativenumber laststatus=2 textwidth=60
 "filetype plugin on
+augroup WordCounter
+	au! CursorHold,CursorHoldI * call UpdateWordCount()
+augroup END
+
+set statusline=
+set statusline+=%#Normal#
+set statusline+=\ 
+set statusline+=%#usrStatus#
+set statusline+=\ %{ModeCurrent()}
+set statusline+=\ %f
+set statusline+=\ %{ReadOnly()}\ %m\ %w
+set statusline+=%=
+set statusline+=\ %-3(%{FileSize()}%)
+set statusline+=\ %p%%
+set statusline+=\ \ %{WordCount()}\ 
+set statusline+=%#Normal#
+set statusline+=\ 

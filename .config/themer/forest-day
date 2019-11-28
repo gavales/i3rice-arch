@@ -1,8 +1,7 @@
 ! vim:ft=perl
 name            forest-day
 !wallpaper       WW_128000000001173149_EN
-!wallpaper       arabic_floor.xbm $acb $acc
-wallpaper       dirt.xpm $acb $acc
+wallpaper       rose_vines.xbm $acb $acf
 !wallpaper       bricks_weave.xbm $acb $acc
 bg0             #ffebc3
 fg0             #3c4c55

@@ -2,24 +2,17 @@
 ACCENT_COLOR=black
 ORIENTATION=vertical
 TITLEBAR_HEIGHT=25
-WINDOW_BORDER=2
-LOCATION="0"
-WIDTH="300"
+WINDOW_BORDER=4
+LOCATION=0
+WIDTH=300
 HEIGHT=" "
-XFS="0"
-YFS="0"
-CURRENT_WIN=$(pfw)
-WINDOW_LOCATION=$(xdotool getactivewindow getwindowgeometry | \
-	grep 'Position' | awk '{print $2}')
-WIN_X=${WINDOW_LOCATION%,*}
-WIN_Y=${WINDOW_LOCATION#*,}
-WIN_W=$(wattr w $CURRENT_WIN)
-WIN_H=$(wattr h $CURRENT_WIN)
-SCREEN_W=$(wattr w $(lsw -r))
-SCREEN_H=$(wattr h $(lsw -r))
-MOUSE_X=$(xdotool getmouselocation | awk '{print $1}')
-MOUSE_Y=$(xdotool getmouselocation | awk '{print $2}')
-MONITOR=$(xdotool getmouselocation | awk '{print $3}')
+XFS=0
+YFS=0
+eval "$(wattr xywh $(pfw) | \
+	awk '{print "WIN_X="$1 "\nWIN_Y="$2 "\nWIN_W="$3 "\nWIN_H="$4}')"
+eval "$(mattr wh $(pfm) | awk '{print "SCREEN_W="$1 "\nSCREEN_H="$2}')"
+eval "$(wmp             | awk '{print "MOUSE_X="$1 "\nMOUSE_Y="$2}')"
+MONITOR=$(mattr d $(pfm))
 
 #dmenu_bg=$(xrdb -query | grep '*color8' | awk '{print $NF}')
 #dmenu_fg=$(xrdb -query | grep '*color15' | awk '{print $NF}')

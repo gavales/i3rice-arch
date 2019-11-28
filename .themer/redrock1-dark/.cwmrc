@@ -16,7 +16,7 @@ bind-mouse M-5  window-lower
 
 #bind-key   M-M1   "gwmfocus mouse"
 bind-key   M-f    "gwmfull -t"
-bind-key   M-Tab  "gwmsbar --cycle"
+bind-key   M-Tab  "gwmfocus next"
 bind-key   MS-Tab "gwmfocus prev"
 
 #bind-key   M-1  group-toggle-1
