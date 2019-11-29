@@ -1,15 +1,3 @@
-shell grive -a
-rename MotoG6Camera
-q
-rename Input-Bold_(InputSerifNarrow-Bold).ttf
-rename Input-BoldItalic_(InputSerifNarrow-BoldItalic).ttf
-rename Input-Italic_(InputSerifNarrow-Italic).ttf
-rename Input-Regular_(InputSerifNarrow-Regular).ttf
-rename Y1617W51COPY.pdf
-rename Payslip for Tax Week_16, Tax Year_2018-2019.pdf
-rename user-dirs.dirs
-rename snapper
-open_with gedtr
 shell mkdir cvl normal
 rename cvlold
 rename cvl
@@ -42,9 +30,21 @@ mkdir gwmdemoframes
 rename gwm_
 shell git clone https://github.com/StillANixRookie/gwm.git
 
-w
 rename pulsecolors_old
 rename pulsecolors
 open_with mppipe
 open_with mpv
 search preview
+w
+shell git clone https://github.com/budRich/budlime.git
+shell s
+rename Packages
+sel
+open_with subl
+open_with b
+shell hugo
+rename %%home%%gavarch%%git%%i3rice-arch%%scr%%wrdc.swp
+open_with evince
+open_with 4
+open_with acroread
+open_with 

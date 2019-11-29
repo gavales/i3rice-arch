@@ -161,10 +161,10 @@ Xft.lcdfilter: lcddefault
 ! ━  5xterm
 
 XTerm*foreground:        tfg0
-XTerm*background:        tbg1
+XTerm*background:        tbg0
 ! XTerm*pointerColor:    tcyn
-XTerm*faceName:          fontname
-XTerm*faceSize:          16
+XTerm*faceName:          CMU Typewriter Text
+XTerm*faceSize:          15
 ! XTerm*reverseVideo:    on
 XTerm*selectToClipboard: true
 XTerm.vt100.geometry: 79x25

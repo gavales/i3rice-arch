@@ -5491,3 +5491,8 @@ Nov 24 15:40 : exception: RTIOThread could not get realtime scheduling, continui
 Nov 24 15:40 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Nov 24 15:40 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Nov 24 15:40 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 28 17:58 : player: played "The Les Claypool Frog Brigade/Purple Onion/05 Whamola.mp3"
+Nov 28 17:58 : player: played "The Les Claypool Frog Brigade/Purple Onion/05 Whamola.mp3"
+Nov 28 23:13 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 28 23:13 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 28 23:13 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
