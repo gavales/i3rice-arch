@@ -21,8 +21,6 @@ function! Folds()
 		return "a1"
 	elseif match(thisline, '^case.*in') >= 0
 		return "a1"
-	elseif match(thisline, '() {$') >= 0
-		return "a1"
 	elseif match(thisline, '^[[:space:]]\+while.*; do') >= 0
 		return "a1"
 	elseif match(thisline, '^[[:space:]]\+if.*; then') >= 0
@@ -31,19 +29,23 @@ function! Folds()
 		return "a1"
 	elseif match(thisline, '^[[:space:]]\+case.*in') >= 0
 		return "a1"
-	elseif match(thisline, '|| {$') >= 0
-		return "a1"
-	elseif match(thisline, '&& {$') >= 0
+	elseif match(thisline, '{$') >= 0
 		return "a1"
 	elseif match(thisline, '^}$') >= 0
 		return "s1"
+	elseif match(thisline, '^[[:space:]]\+}$') >= 0
+		return "s1"
+"	elseif match(thisline, '() {$') >= 0
+"		return "a1"
+"	elseif match(thisline, '&& {$') >= 0
+"		return "a1"
+"	elseif match(thisline, '^[[:space:]]\+}$') >= 0
+"		return "s1"
 	elseif match(thisline, '^done$') >= 0
 		return "s1"
 	elseif match(thisline, '^esac$') >= 0
 		return "s1"
 	elseif match(thisline, '^fi$') >= 0
-		return "s1"
-	elseif match(thisline, '^[[:space:]]\+}$') >= 0
 		return "s1"
 	elseif match(thisline, '^[[:space:]]\+done$') >= 0
 		return "s1"

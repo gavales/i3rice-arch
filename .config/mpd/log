@@ -5496,3 +5496,29 @@ Nov 28 17:58 : player: played "The Les Claypool Frog Brigade/Purple Onion/05 Wha
 Nov 28 23:13 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Nov 28 23:13 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Nov 28 23:13 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 30 21:56 : client: [0] opened from [::1]:59514
+Nov 30 21:56 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 30 21:56 : client: [0] closed
+Nov 30 21:56 : client: [1] opened from [::1]:59516
+Nov 30 21:56 : client: [1] closed
+Nov 30 21:56 : client: [2] opened from [::1]:59518
+Nov 30 21:56 : client: [2] closed
+Nov 30 21:56 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Nov 30 21:56 : client: [3] opened from [::1]:59520
+Nov 30 21:56 : client: [3] closed
+Nov 30 21:56 : client: [4] opened from [::1]:59522
+Nov 30 21:56 : client: [4] closed
+Nov 30 21:56 : client: [5] opened from [::1]:59524
+Nov 30 21:56 : client: [5] closed
+Nov 30 21:56 : client: [6] opened from [::1]:59526
+Nov 30 21:56 : client: [6] closed
+Nov 30 21:56 : client: [7] opened from [::1]:59528
+Nov 30 21:56 : client: [7] closed
+Nov 30 21:56 : client: [8] opened from [::1]:59530
+Nov 30 21:56 : client: [8] closed
+Nov 30 21:56 : client: [9] opened from [::1]:59532
+Nov 30 21:56 : client: [9] closed
+Nov 30 21:56 : client: [10] opened from [::1]:59534
+Nov 30 21:56 : client: [10] closed
+Nov 30 21:56 : client: [11] opened from [::1]:59536
+Nov 30 21:56 : client: [11] closed

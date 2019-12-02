@@ -27,7 +27,6 @@
 	}
 #element {
 	border:           0;
-	border-radius:    10px;
 	padding:          1px 1px;
 	}
 #element selected {

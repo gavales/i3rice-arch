@@ -1,0 +1,81 @@
+#!/usr/bin/env bash
+
+cd ${HOME}
+LST="${HOME}/.config/rofi/.rofindlist"
+IGN="${HOME}/.config/rofi/.rofindignore"
+[[ -s ${IGN} ]] || {
+cat > $IGN << 'EOB'
+./.icons
+./.themes
+./Dropbox/negaDrive/UNI
+./Dropbox/negaDrive/fonts
+./.moonchild
+./.moonchild productions
+EOB
+}
+#find . -type d \( -path dir1 -o -path dir2 -o -path dir3 \) -prune -o -print
+
+#MUSDIR="${XDG_MUSIC_DIR:-"${HOME}/Music"}"
+#VIDDIR="${XDG_VIDEOS_DIR:-"${HOME}/Videos"}"
+#PICDIR="${XDG_PICTURES_DIR:-"${HOME}/Pictures"}"
+##MUSRGX='/\.mp3$/!d'
+##VIDRGX='/(\.mp4|\.mkv|\.mov)$/!d'
+##PICRGX='/(\.png|\.jpeg|\.jpg)$/!d'
+
+help () {
+cat << 'EOB'
+# NAME
+
+__rofind__  - `find` wrapper with `rofi`
+
+# SYNOPSIS
+
+```
+
+```
+EOB
+exit
+}
+
+while true; do
+	case $1 in
+#		--<++> | -<++> ) <++>="${2:-}" ; shift ;;
+		--help ) help ;;
+		-h ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+oldlist () {
+#	find ${MUSDIR}/ -type f | \
+#		awk -v DIR="^$MUSDIR/" \
+#		'{gsub(DIR, "MUS ", $0);print $0}' > $LST
+#	find ${VIDDIR}/ -type f | \
+#		awk -v DIR="^$VIDDIR/" \
+#		'{gsub(DIR, "VID ", $0);print $0}' >> $LST
+#	find ${PICDIR}/ -type f | \
+#		awk -v DIR="^$PICDIR/" \
+#		'{gsub(DIR, "PIC ", $0);print $0}' >> $LST
+	exit
+}
+
+list () {
+	CMD="$(awk '
+	BEGIN{print "find -L . -type d \\( "}
+	{ print "-path \""$0"\" -o" }
+	END{print " \\) -prune -o -print"}
+	' $IGN)"
+	eval "$(echo ${CMD} | sed 's/-o \\)/\\)/g')"
+}
+
+flist () {
+	list | sed 's/^\.\//~\//g' | awk '
+	/.png|.jpeg|.jpg|.svg|.xpm/ { print "PIC "$0 }
+	/.mp4|.mkv|.mov/ { print "VID "$0 }
+	/.mp3/ { print "MUS "$0 }
+	'
+}
+
+flist

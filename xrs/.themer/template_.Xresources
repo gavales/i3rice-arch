@@ -144,9 +144,9 @@ rofi.color-window:     tfg0,      tfg0
 !rofi.bw:              10
 rofi.levenshtein-sort: true
 rofi.case-sensitive:   false
-rofi.fuzzy:            false
+rofi.fuzzy:            true
 rofi.separator-style:  none
-rofi.markup-rows:      false
+rofi.markup-rows:      true
 
 ! ━  4xft
 
@@ -162,12 +162,12 @@ Xft.lcdfilter: lcddefault
 
 XTerm*foreground:        tfg0
 XTerm*background:        tbg0
-! XTerm*pointerColor:    tcyn
 XTerm*faceName:          %%monofont%%
 XTerm*faceSize:          15
-! XTerm*reverseVideo:    on
 XTerm*selectToClipboard: true
-XTerm.vt100.geometry: 79x25
+XTerm.vt100.geometry:    79x25
+! XTerm*pointerColor:    tcyn
+! XTerm*reverseVideo:    on
 
 ! ━  6xcursor
 

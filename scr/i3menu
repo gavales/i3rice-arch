@@ -10,88 +10,13 @@ BLACK="$RFDIR/black.rasi"
 HORI="$RFDIR/_horizontal.rasi"
 VERT="$RFDIR/_vertical.rasi"
 PROMPT=" "
-MODE="menu"
 fs=" "
+COLUMNS="1"
+MODE="mode_menu"
 
-help () {
-cat << 'EOB'
-# NAME
+[[ -d $RFDIR ]] || mkdir -p $RFDIR
 
-__i3menu__ - Rofi wrapper script
-
-# SYNOPSIS
-
-```
-i3menu [--dmenu|-d|--apps|-s]
-       [--window|-W|--titlebar|-t|--fullscreen|-f]
-       [--width|-w|--height|-H|--xoffset|-x|--yoffset|-y <integer>]
-       [--orientation|-o <vertical|horizontal>]
-       [--location|-l|--lines|-L|--monitor|-m <integer>]
-       [--color|-c <color>]
-       [--prompt|-p <text>]
-i3menu --help|-h
-```
-
-# OPTIONS
-
-`--prompt|-p <text>`  
-Prompt
-
-`--location|-l <integer>`  
-Rofi location:  
-```
-1 2 3
-8 0 4
-7 6 5
-```
-
-`--lines|-L <integer>`  
-Number of vertical rows
-
-`--xoffset|-x <integer>`  
-Horizontal Offset
-
-`--yoffset|-y <integer>`  
-Vertical Offset
-
-`--color|-c <color>`  
-Accent color. The name of one of in the variable files in .config/rofi
-
-`--width|-w <integer>`  
-Rofi width
-
-`--height|-H <integer>`  
-Rofi height, integer less than 100
-
-`--orientation|-o [vertical|horizontal]`  
-Vertical or horizontal (like dmenu)
-
-`--window|-W`  
-Fill active window
-
-`--dmenu|-d`  
-Dmenu mode
-
-`--apps|-s`  
-Application menu mode
-
-`--titlebar|-t`  
-Spawn on i3wm title-bar
-
-`--monitor|-m`  
-Spawn at mouse location
-
-`--fullscreen|-f`  
-Fullscreen mode (in progress)
-
-`--help|-h`  
-Print this help
-EOB
-echo "$1"
-exit
-}
-
-i3menuconfig () {
+[[ -f $CONFIG ]] || {
 cat > $CONFIG  << 'EOB'
 # vim:ft=sh
 ACCENT_COLOR=black
@@ -118,6 +43,7 @@ MONITOR=$(mattr d $(pfm))
 #dmenu_thm="-fn "${dmenu_fnt}:size=11" -nb "$dmenu_bg" -nf "$dmenu_fg" -sf "$dmenu_bg" -sb "$dmenu_ac""
 #dmenu_loc="-x $(expr $WIN_X - $WINDOW_BORDER - $WINDOW_BORDER) -y $(expr $WIN_Y - $TITLEBAR_HEIGHT)"
 EOB
+}
 
 [[ -f $BLACK ]] || {
 cat > $BLACK  << 'EOB'
@@ -214,35 +140,115 @@ cat > $VERT  << 'EOB'
 EOB
 }
 
+help () {
+cat << 'EOB'
+# NAME
+
+__i3menu__ - Rofi wrapper script
+
+# SYNOPSIS
+
+```
+i3menu [--run|-r|--apps|-s]
+       [--window|-W|--titlebar|-t|--fullscreen|-f]
+       [--orientation|-o <vertical|horizontal>]
+       [--width|-w|--height|-H|--xoffset|-x|--yoffset|-y <integer>]
+       [--location|-l|--lines|-L|--monitor|-m|--columns|-C <integer>]
+       [--color|-c <color>]
+       [--prompt|-p <text>]
+i3menu --help|-h
+```
+
+# OPTIONS
+
+`--prompt|-p <text>`  
+Prompt
+
+`--location|-l <integer>`  
+Rofi location:  
+```
+1 2 3
+8 0 4
+7 6 5
+```
+
+`--lines|-L <integer>`  
+Number of vertical rows
+
+`--xoffset|-x <integer>`  
+Horizontal Offset
+
+`--yoffset|-y <integer>`  
+Vertical Offset
+
+`--color|-c <color>`  
+Accent color. The name of one of in the variable files in .config/rofi
+
+`--width|-w <integer>`  
+Rofi width
+
+`--height|-H <integer>`  
+Rofi height, integer less than 100
+
+`--orientation|-o [vertical|horizontal]`  
+Vertical or horizontal (like dmenu)
+
+`--window|-W`  
+Fill active window
+
+`--run|-r`  
+Dmenu mode
+
+`--apps|-s`  
+Application menu mode
+
+`--titlebar|-t`  
+Spawn on i3wm title-bar
+
+`--monitor|-m`  
+Spawn at mouse location
+
+`--fullscreen|-f`  
+Fullscreen mode (in progress)
+
+`--help|-h`  
+Print this help
+EOB
+echo "$1"
+exit
 }
 
-[[ -f $CONFIG ]] || i3menuconfig
 source $CONFIG
 
-dmenu () {
-	rofi -show run -p "${PROMPT}" $fs -theme _horizontal \
-		-monitor ${MONITOR} -location 1 -lines $ROWS -width 100
+mode_run () {
+	ROWS=${LNS:-"15"}
+	rofi -show run -p "${PROMPT}" $fs -theme _${ORIENTATION} \
+		-monitor ${MONITOR} -location ${LOCATION} -lines ${ROWS} \
+		-width ${WIDTH} -xoffset ${XFS} -yoffset ${YFS} \
+		-theme-str "#window { ${HEIGHT} }"
 }
 
-start () {
-	[[ -n $LNS ]] && ROWS=$LNS || ROWS="15"
-	rofi -show drun -p "${PROMPT}" $fs -theme _$ORIENTATION \
-		-monitor ${MONITOR} -location $LOCATION -lines $ROWS \
-		-width $WIDTH -xoffset $XFS -yoffset $YFS \
-		-theme-str "#window { $HEIGHT }"
+mode_apps () {
+	ROWS=${LNS:-"15"}
+	rofi -show drun -p "${PROMPT}" $fs -theme _${ORIENTATION} \
+		-monitor ${MONITOR} -location ${LOCATION} -lines ${ROWS} \
+		-width ${WIDTH} -xoffset ${XFS} -yoffset ${YFS} \
+		-theme-str "#window { ${HEIGHT} }"
 }
 
-menu () {
+mode_menu () {
 	STDIN="$RFDIR/.i3menustdin"
 	cat /dev/stdin > $STDIN
 	STSZ=$(du -k $STDIN | cut -f1)
 	[[ $STSZ == "1" ]] && rm $STDIN && touch $STDIN
-	[[ -n $LNS ]] && ROWS=$LNS || ROWS=$(cat $STDIN | wc -l)
+	ROWS=${LNS:-$(cat $STDIN | wc -l)}
+	((ROWS>99)) && ROWS=99
 	cat $STDIN | \
-		rofi -dmenu -p "${PROMPT}" $fs -theme _$ORIENTATION \
-			-monitor ${MONITOR} -location $LOCATION -lines $ROWS \
-			-width $WIDTH -xoffset $XFS -yoffset $YFS \
-			-theme-str "#window { $HEIGHT }" -markup-rows
+		rofi -dmenu -p "${PROMPT}" $fs -theme _${ORIENTATION} \
+			-monitor ${MONITOR} -location ${LOCATION} -lines ${ROWS} \
+			-width ${WIDTH} -xoffset ${XFS} -yoffset ${YFS} \
+			-theme-str "#window { ${HEIGHT} }" \
+			-markup-rows
 	rm -rf $STDIN
 }
 
@@ -285,18 +291,18 @@ while true; do
 		--lines       | -L ) LNS="${2:-}"         ; shift ;;
 		--xoffset     | -x ) XFS="${2:-}"         ; shift ;;
 		--yoffset     | -y ) YFS="${2:-}"         ; shift ;;
-		--color       | -c ) color "${2:-}"       ; shift ;;
 		--width       | -w ) WIDTH="${2:-}"       ; shift ;;
 		--height      | -H ) HEIGHT="${2:-}"      ; shift ;;
 		--orientation | -o ) ORIENTATION="${2:-}" ; shift ;;
+		--color       | -c ) color "${2:-}"       ; shift ;;
+		--run         | -r ) MODE="mode_run"      ; shift ;;
+		--apps        | -s ) MODE="mode_apps"     ; shift ;;
 		--window      | -W ) window               ; shift ;;
-		--dmenu       | -d ) MODE="dmenu"         ; shift ;;
-		--apps        | -s ) MODE="start"         ; shift ;;
 		--titlebar    | -t ) titlebar             ; shift ;;
 		--monitor     | -m ) monitor              ; shift ;;
 		--fullscreen  | -f ) fullscreen           ; shift ;;
 		--help ) help ;;
-		-h     ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
+		-h ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac
