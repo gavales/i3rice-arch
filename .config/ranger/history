@@ -1,7 +1,3 @@
-shell mkdir cvl normal
-rename cvlold
-rename cvl
-rename folding.vim
 mkdir old
 rename gwmunderl
 rename gwmunder
@@ -48,3 +44,7 @@ open_with evince
 open_with 4
 open_with acroread
 open_with 
+open_with gthumb
+rename i3menu_
+rename i3menu
+search 

@@ -34,7 +34,7 @@ case $1 in
 		}
 		;;
 	rename)
-		NAME=$(echo " " | i3menu -m -L 0 -x 65 -y -10 -c black)
+		NAME=$(echo "" | i3menu -m -x 65 -y -10 -c black)
 		[[ -n $NAME ]] && {
 			gwc -R "$NAME"
 			gwc -w "$NAME"
@@ -42,7 +42,7 @@ case $1 in
 		}
 		;;
 	list)
-		wall=$(ls $XDG_PICTURES_DIR/gwc/normal | i3menu -m -L 10 -w 300)
+		wall=$(ls $XDG_PICTURES_DIR/gwc/normal | i3menu -m -l 10 -w 300)
 		[[ -n $wall ]] && gwc -w $wall && update
 		;;
 esac

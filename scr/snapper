@@ -34,14 +34,14 @@ TMP=${SCD}/tmp.png
 
 scrotname () {
 	TME="`date +%Y-%m-%d_%H:%M:%S`.png"
-	NME=$(echo "" | i3menu -p "Choose scrot name " \
-		-o vertical -w 200 -l 0)
+	NME=$(echo "" | i3menu --prompt "Choose scrot name " \
+		-o vertical -w 200 -L 0)
 	[[ -z $NME ]] && SCRNME=$TME || SCRNME="$NME.png"
 }
 
 confirmscrot () {
-	ACT=$(printf "%s\n" Save New Clipboard | i3menu -p "Save? " \
-		-o vertical -w 200 -l 0)
+	ACT=$(printf "%s\n" Save New Clipboard | i3menu --prompt "Save? " \
+		-o vertical -w 200 -L 0)
 	if [[ $ACT == "Save" ]]; then
 		scrotname
 		mv $TMP $SCD/${SCRNME}
@@ -57,7 +57,7 @@ confirmscrot () {
 
 tmpscrot () {
 	SCRTPE=$(printf "%s\n" Fullscreen Selection | \
-		i3menu -p "Screenshot " -o vertical -w 200 -l 0)
+		i3menu --prompt "Screenshot " -o vertical -w 200 -L 0)
 	if [[ $SCRTPE == "Fullscreen" ]]; then
 		sleep .25
 		maim --hidecursor $TMP

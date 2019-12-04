@@ -53,7 +53,7 @@ done
 
 TIT="${@:-}"
 
-[[ -n $TIT ]] || TIT="$(echo "" | i3menu -c yellow -w 800 -p "Enter title: ")"
+[[ -n $TIT ]] || TIT="$(echo "" | i3menu --prompt "Enter title:"  -c yellow -w 800)"
 [[ -n $TIT ]] || help
 
 FLD="${CLDIR}/$(echo "${TIT}" | sed 's/\ //g')"

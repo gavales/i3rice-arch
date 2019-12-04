@@ -34,7 +34,6 @@ function hextorgb(HEX,NME){
 	HEXB=substr(HEX,6,length(HEX)-5);
 	print NME "RGB    " strtonum( "0x" HEXR ) ", " strtonum( "0x" HEXG ) ", " strtonum( "0x" HEXB );
 	}
-
 function mixer(NME,ONE,TWO,RT1,RT2){
 	ONER=substr(ONE,2,length(ONE)-5);
 	ONEG=substr(ONE,4,length(ONE)-5);
@@ -53,7 +52,6 @@ function mixer(NME,ONE,TWO,RT1,RT2){
 	if (length(CL3BX)==1) {CL3BX="0"CL3BX}
 	print NME " #" CL3RX CL3GX CL3BX;
 	}
-
 function colmixparse(NME,ONE,TWO,RT1,RT2){
 	ONER=substr(ONE,2,length(ONE)-5);
 	ONEG=substr(ONE,4,length(ONE)-5);
@@ -72,7 +70,6 @@ function colmixparse(NME,ONE,TWO,RT1,RT2){
 	if (length(CL3BX)==1) {CL3BX="0"CL3BX}
 	print ";s/colmix " mix "/#" CL3RX CL3GX CL3BX "/g";
 	}
-
 EOB
 exit
 }
@@ -446,7 +443,7 @@ variations () {
 	acc=$(sed '/^acc /!d;s/[^ ]* *//' $ALL)
 	hexrgbraw $bg0 bg0
 	hexrgbraw $fg0 fg0
-	[[ $bg0R -le 127 ]] || [[ $bg0G -le 127 ]] || [[ $bg0B -le 127 ]] && vrt=dark
+	((bg0R<=127)) || ((bg0G<=127)) || ((bg0B<=127)) && vrt=dark
 
 	awk -i <(awklib) -v bg0="$bg0" -v fg0="$fg0" '
 		/#/ && !/^fg0|^bg0|^acc/ {
@@ -467,7 +464,8 @@ variations () {
 				bg1R=bg0R - INC; bg1G=bg0G - INC; bg1B=bg0B - INC;
 				bg2R=bg1R - INC; bg2G=bg1G - INC; bg2B=bg1B - INC;
 				bg3R=bg2R - INC; bg3G=bg2G - INC; bg3B=bg2B - INC;
-			} else {
+			}
+			else {
 				fg1R=fg0R - INC; fg1G=fg0G - INC; fg1B=fg0B - INC;
 				fg2R=fg1R - INC; fg2G=fg1G - INC; fg2B=fg1B - INC;
 				fg3R=fg2R - INC; fg3G=fg2G - INC; fg3B=fg2B - INC;
@@ -602,8 +600,6 @@ create-rgb () {
 
 gui-change () {
 	THM=$(themer --list thememenu)
-#	THM=${THM% *}
-#	THM=${THM##* }
 	notify-send "Chosen theme is $THM" -i "${SCR_DIR}pic/theme.png"
 	cd ${TDR}
 	[[ -z ${THM} ]]            && notify-send "No theme chosen"   && exit 1
@@ -611,18 +607,13 @@ gui-change () {
 	notify-send "Theme exists" && cat ${THM} > ${CUR}
 }
 
-gen_apply () {
-local DIR
-DIR="${1}"
-}
-
 O_change () {
 	[[ -n $1 ]] && cat ${TDR}/${1} > $CUR || gui-change
 	cat $CUR | sed '/^\!/d' > $ALL
 	[[ -n $DARK ]] && \
 		sed -i "s/"$(themer -v name)"/"$(themer -v name)"-dark/g;s/fg0/bgint/g;s/bg0/fg0/g;s/bgint/bg0/g" $ALL
-	awk ' NR==FNR { a[$1]=$1; b[$1]=$0; next; }
-		$1!=a[$1] { print $0; }' $ALL $DEF | sed '/^!/d' >> $ALL
+	awk 'NR==FNR{a[$1]=$1;b[$1]=$0;next} $1!=a[$1]{print$0}' \
+		$ALL $DEF | sed '/^!/d' >> $ALL
 	parse-vars
 	colmix-parse
 	parse-vars
@@ -631,15 +622,14 @@ O_change () {
 	create-rgb
 	create-regex
 	create-rofi-list
-	awk '{ key=$1;$1="";gsub(/^[ \t]+/, "", $0); printf "%-19s%s\n", key, $0;
+	awk '{
+		key=$1;$1="";gsub(/^[ \t]+/, "", $0); printf "%-19s%s\n", key, $0;
 		}' $ALL > ${TDR}/.tmp && mv ${TDR}/.tmp $ALL
 }
 
 O_auto-dark () {
-	AM=${1%:*}
-	PM=${1#*:}
-	[[ $TIME -ge $PM ]] && DARK=1
-	[[ $TIME -lt $AM ]] && DARK=1
+	PM=${1#*:} ; ((TIME>=PM)) && DARK=1
+	AM=${1%:*} ; ((TIME<AM))  && DARK=1
 }
 
 O_apply-single () {
@@ -674,21 +664,17 @@ O_apply-all () {
 		if($1=="FORCE"){
 			gsub(/^FORCE/, "", $0);
 			print "themer --force -a " $0
-		}else{
+		}
+		else{
 			print "themer -a " $0
 		}
 		}' $DIRS)"
 	exit
 }
 
-O_delete () {
-	mv ${TDR}/${1} ${TDR}/.unused/${1}
-	exit
-}
+O_delete () { mv ${TDR}/${1} ${TDR}/.unused/${1} ; exit ; }
 
-O_getvar () {
-	[[ -n $1 ]] && cat $ALL | sed "/^$1/!d;s/[^ ]* *//"
-}
+O_getvar () { [[ -n $1 ]] && cat $ALL | sed "/^$1/!d;s/[^ ]* *//" ; }
 
 O_updatelist () {
 	cd $TDR
@@ -714,12 +700,13 @@ O_updatelist () {
 O_list () {
 	[[ -z $1 ]] && exit
 	case $1 in
-		vars)    awk '!/!/ {
+		vars) awk ' !/!/ {
 				key=$1;$1="";gsub(/^[ \t]+/, "", $0)
 				if (key~"RGB$"){
 					gsub(/RGB$/, "", key)
 					printf "%-19s%s\n", "@@" key "@@", $0
-				} else {
+				}
+				else {
 					printf "%-19s%s\n", "%%" key "%%", $0
 				}
 				}' $ALL
@@ -735,16 +722,17 @@ O_list () {
 				}' $DEF
 			;;
 		varmenu)
-			echo -n $(themer -v "$(cat $ALR | rofi -dmenu -p "$(themer -v name)" \
-					-markup-rows -lines 25 -columns 3 -normal-window| \
+			echo -n $(themer -v "$(cat $ALR | \
+				rofi -dmenu -p "$(themer -v name)" \
+					-markup-rows -lines 25 -columns 3 -normal-window | \
 					awk '{print $NF}') ") | \
 				xsel -i; xsel -o | xsel -i -b 
 			;;
 		themes)  ls ${TDR} | grep -v '^_';;
 		thememenu)
 			cat $LST | rofi -dmenu -p "Choose theme" \
-					-markup-rows -lines $(cat $LST | wc -l) -width 250 | \
-					awk '{print $6}'
+				-markup-rows -lines $(cat $LST | wc -l) -width 250 | \
+				awk '{print $6}'
 			;;
 	esac
 }
@@ -763,17 +751,21 @@ O_init () {
 	[[ -z ${1} ]] && DIR="$(pwd)" || DIR="${1}"
 	cd $DIR
 	[[ -f "${DIR}/.themer" ]] || mkdir "${DIR}/.themer"
-[[ -f "${DIR}/.themer_pre"  ]] || cat > "${DIR}/.themer_pre" <<EOB
+	[[ -f "${DIR}/.themer_pre"  ]] || {
+cat > "${DIR}/.themer_pre" << 'EOB'
 #!/usr/bin/env bash
 # To run before applying theme
 EOB
-[[ -f "${DIR}/.themer_post" ]] || cat > "${DIR}/.themer_post" <<EOB
+}
+	[[ -f "${DIR}/.themer_post" ]] || {
+cat > "${DIR}/.themer_post" <<EOB
 #!/usr/bin/env bash
 # To run after applying theme
 for i in \$(ls ${DIR}/.themer | grep '^template_'); do
 	cp "${DIR}/.themer/\${1}/\${i/template_}" "${DIR}/\${i/template_}"
 done
 EOB
+}
 chmod +x "${DIR}/.themer_pre"
 chmod +x "${DIR}/.themer_post"
 [[ -n $FORCE ]] && _DIR="FORCE ${DIR}" || _DIR="${DIR}"
@@ -808,7 +800,9 @@ while true; do
 		--dark         | -D ) DARK=1  ;;
 		--force        | -f ) FORCE=1 ;;
 		--help ) help ;;
-		-h     ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
+		-h ) help | \
+			sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | \
+			sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac

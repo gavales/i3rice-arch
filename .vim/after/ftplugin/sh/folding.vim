@@ -31,9 +31,9 @@ function! Folds()
 		return "a1"
 	elseif match(thisline, '{$') >= 0
 		return "a1"
-	elseif match(thisline, '^}$') >= 0
+	elseif match(thisline, '^}') >= 0
 		return "s1"
-	elseif match(thisline, '^[[:space:]]\+}$') >= 0
+	elseif match(thisline, '^[[:space:]]\+}') >= 0
 		return "s1"
 "	elseif match(thisline, '() {$') >= 0
 "		return "a1"

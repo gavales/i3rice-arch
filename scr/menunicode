@@ -3,5 +3,5 @@
 # OA: Gavin Vales
 # CREATED: Wed 28 Aug 16:27:25 BST 2019
 
-CHO=$(cat $HOME/.config/rofi/.unicode | i3menu -L 15 -w 500)
+CHO=$(cat $HOME/.config/rofi/.unicode | i3menu -l 15 -w 500)
 echo -n ${CHO:0:1} | xsel -i; xsel -o | xsel -i -b

@@ -1,26 +1,12 @@
 #!/usr/bin/env bash
 
 cd ${HOME}
+FOLDOPEN="thunar" FILEOPEN="edtr"
+IMGOPEN="openimage" VIDOPEN="openvid" MUSOPEN="mpc insert"
+XBMOPEN="gthumb"    PDFOPEN="zathura" MANOPEN="${TERMINAL:-"urxvt"} -e man"
 LST="${HOME}/.config/rofi/.rofindlist"
 IGN="${HOME}/.config/rofi/.rofindignore"
-[[ -s ${IGN} ]] || {
-cat > $IGN << 'EOB'
-./.icons
-./.themes
-./Dropbox/negaDrive/UNI
-./Dropbox/negaDrive/fonts
-./.moonchild
-./.moonchild productions
-EOB
-}
 #find . -type d \( -path dir1 -o -path dir2 -o -path dir3 \) -prune -o -print
-
-#MUSDIR="${XDG_MUSIC_DIR:-"${HOME}/Music"}"
-#VIDDIR="${XDG_VIDEOS_DIR:-"${HOME}/Videos"}"
-#PICDIR="${XDG_PICTURES_DIR:-"${HOME}/Pictures"}"
-##MUSRGX='/\.mp3$/!d'
-##VIDRGX='/(\.mp4|\.mkv|\.mov)$/!d'
-##PICRGX='/(\.png|\.jpeg|\.jpg)$/!d'
 
 help () {
 cat << 'EOB'
@@ -28,11 +14,25 @@ cat << 'EOB'
 
 __rofind__  - `find` wrapper with `rofi`
 
+# DEPENDENCIES
+
+```
+rofi
+i3menu
+```
+
 # SYNOPSIS
 
 ```
-
+rofind
+rofind --help|-h
 ```
+
+# DESCRIPTION
+
+Just a `rofi` wrapper for `find`, and opens the chosen item using
+an appropriate application.
+
 EOB
 exit
 }
@@ -41,41 +41,52 @@ while true; do
 	case $1 in
 #		--<++> | -<++> ) <++>="${2:-}" ; shift ;;
 		--help ) help ;;
-		-h ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
+		-h ) help | \
+			sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | \
+			sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac
 	shift
 done
 
-oldlist () {
-#	find ${MUSDIR}/ -type f | \
-#		awk -v DIR="^$MUSDIR/" \
-#		'{gsub(DIR, "MUS ", $0);print $0}' > $LST
-#	find ${VIDDIR}/ -type f | \
-#		awk -v DIR="^$VIDDIR/" \
-#		'{gsub(DIR, "VID ", $0);print $0}' >> $LST
-#	find ${PICDIR}/ -type f | \
-#		awk -v DIR="^$PICDIR/" \
-#		'{gsub(DIR, "PIC ", $0);print $0}' >> $LST
-	exit
+NORMAL () {
+	[[ -d "${1}" ]] && echo Folder && eval "$FOLDOPEN \"${1}\""
+	[[ -f "${1}" ]] && echo File   && eval "$FILEOPEN \"${1}\""
 }
 
 list () {
-	CMD="$(awk '
-	BEGIN{print "find -L . -type d \\( "}
-	{ print "-path \""$0"\" -o" }
-	END{print " \\) -prune -o -print"}
-	' $IGN)"
+	[[ -s $IGN ]] && CMD="$(awk '
+		BEGIN{print "find -L . -type d \\( "}
+		{ print "-path \""$0"\" -o" }
+		END{print " \\) -prune -o -print"}
+	' $IGN)" || CMD="find -L . -type d"
 	eval "$(echo ${CMD} | sed 's/-o \\)/\\)/g')"
 }
 
 flist () {
-	list | sed 's/^\.\//~\//g' | awk '
-	/.png|.jpeg|.jpg|.svg|.xpm/ { print "PIC "$0 }
-	/.mp4|.mkv|.mov/ { print "VID "$0 }
-	/.mp3/ { print "MUS "$0 }
-	'
+	list | awk -v HOME="~/" '
+		/.png$|.jpeg$|.jpg$|.svg$|.xpm$/{gsub(/^\.\//,HOME,$0);print"PIC "$0}
+		/.mp4$|.mkv$|.mov$/             {gsub(/^\.\//,HOME,$0);print"VID "$0}
+		/.mp3$/                         {gsub(/^\.\//,HOME,$0);print"MUS "$0}
+		/.xbm$/                         {gsub(/^\.\//,HOME,$0);print"XBM "$0}
+		/.pdf$|.epub$/                  {gsub(/^\.\//,HOME,$0);print"BKK "$0}
+		/.1$/                           {gsub(/^\.\//,HOME,$0);print"MAN "$0}
+		!/.png$|.jpeg$|.jpg$|.svg$|.xpm$|.mp4$|.mkv$|.mov$|.mp3$|.xbm$|.pdf$|.epub$|.1$/ {
+			gsub(/^\.\//,HOME,$0);print$0
+			}
+		'
 }
 
-flist
+#TRG="$(flist | rofi -dmenu -location 0 -lines 15 -width 100)"
+TRG="$(flist | i3menu --prompt "rofind" -l 15 -L 0 -w 600)"
+
+case $TRG in
+	PIC*) $IMGOPEN "${TRG/'PIC ~'/${HOME}}" ;;
+	VID*) $VIDOPEN "${TRG/'VID ~'/${HOME}}" ;;
+	MUS*) $MUSOPEN "${TRG/'MUS ~'/${HOME}}" ;;
+	XBM*) $XBMOPEN "${TRG/'XBM ~'/${HOME}}" ;;
+	BKK*) $PDFOPEN "${TRG/'BKK ~'/${HOME}}" ;;
+	MAN*) $MANOPEN "${TRG/'MAN ~'/${HOME}}" ;;
+	*)    NORMAL   "${TRG/'~'/${HOME}}" ;;
+esac

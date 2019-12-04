@@ -17,4 +17,4 @@ echo -e "
   XDG_TEMPLATES_DIR : $XDG_TEMPLATES_DIR
   XDG_DOCUMENTS_DIR : $XDG_DOCUMENTS_DIR
 XDG_PUBLICSHARE_DIR : $XDG_PUBLICSHARE_DIR" \
-	| i3menu -c green -w 25 -p "    My environmental variables"
+	| i3menu --prompt "    My environmental variables" -c green -w 25
