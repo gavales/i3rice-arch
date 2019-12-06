@@ -1,4 +1,4 @@
-.TH I3MENU 1 2019\-11\-28 Linux "User Manuals"
+.TH I3MENU 1 2019\-12\-06 Linux "User Manuals"
 .hy
 .SH NAME
 .PP
@@ -7,13 +7,13 @@
 .IP
 .nf
 \f[B]
-i3menu [--dmenu|-d|--apps|-s]
-       [--window|-W|--titlebar|-t|--fullscreen|-f]
-       [--width|-w|--height|-H|--xoffset|-x|--yoffset|-y \fI<integer>\fP]
-       [--orientation|-o \fI<vertical|horizontal>\fP]
-       [--location|-l|--lines|-L|--monitor|-m \fI<integer>\fP]
+[STDIN |] i3menu [--prompt|-p \fI<text>\fP]
+       [--run|-r|--drun|-d]
        [--color|-c \fI<color>\fP]
-       [--prompt|-p \fI<text>\fP]
+       [--window|-W|--titlebar|-T|--fullscreen|-f|--mouse|-m]
+       [--orientation|-o \fI<vertical|horizontal>\fP]
+       [--width|-w|--height|-H|--xoffset|-x|--yoffset|-y \fI<integer>\fP]
+       [--location|-L|--lines|-l|--padding|-P \fI<integer>\fP]
 i3menu --help|-h
 \f[R]
 .fi
@@ -25,7 +25,61 @@ i3menu --help|-h
 .PD
 Prompt
 .PP
-\f[B]--location|-l \fI<integer>\fP\f[R]
+\f[B]--orientation|-o [vertical|horizontal]\f[R]
+.PD 0
+.P
+.PD
+Vertical or horizontal (like dmenu)
+.PP
+\f[B]--run|-r\f[R]
+.PD 0
+.P
+.PD
+\f[B]rofi -show run\f[R] mode
+.PP
+\f[B]--drun|-d\f[R]
+.PD 0
+.P
+.PD
+\f[B]rofi -show drun\f[R] mode
+.PP
+\f[B]--titlebar|-T\f[R]
+.PD 0
+.P
+.PD
+Spawn on focussed window title-bar
+.PD 0
+.P
+.PD
+Requires \f[B]TITLEBAR_HEIGHT\f[R] in
+\f[B]\[ti]/.config/rofi/.i3menuconfig\f[R]
+.PP
+\f[B]--mouse|-m\f[R]
+.PD 0
+.P
+.PD
+Spawn at mouse location
+.PP
+\f[B]--fullscreen|-f\f[R]
+.PD 0
+.P
+.PD
+Fullscreen mode (in progress)
+.PP
+\f[B]--window|-W\f[R]
+.PD 0
+.P
+.PD
+Fill focussed window
+.PP
+\f[B]--color|-c \fI<color>\fP\f[R]
+.PD 0
+.P
+.PD
+Accent color.
+The name of one of in the variable files in .config/rofi
+.PP
+\f[B]--location|-L \fI<integer>\fP\f[R]
 .PD 0
 .P
 .PD
@@ -39,7 +93,7 @@ Rofi location:
 \f[R]
 .fi
 .PP
-\f[B]--lines|-L \fI<integer>\fP\f[R]
+\f[B]--lines|-l \fI<integer>\fP\f[R]
 .PD 0
 .P
 .PD
@@ -57,13 +111,6 @@ Horizontal Offset
 .PD
 Vertical Offset
 .PP
-\f[B]--color|-c \fI<color>\fP\f[R]
-.PD 0
-.P
-.PD
-Accent color.
-The name of one of in the variable files in .config/rofi
-.PP
 \f[B]--width|-w \fI<integer>\fP\f[R]
 .PD 0
 .P
@@ -76,47 +123,11 @@ Rofi width
 .PD
 Rofi height, integer less than 100
 .PP
-\f[B]--orientation|-o [vertical|horizontal]\f[R]
+\f[B]--padding|-P \fI<text>\fP\f[R]
 .PD 0
 .P
 .PD
-Vertical or horizontal (like dmenu)
-.PP
-\f[B]--window|-W\f[R]
-.PD 0
-.P
-.PD
-Fill active window
-.PP
-\f[B]--dmenu|-d\f[R]
-.PD 0
-.P
-.PD
-Dmenu mode
-.PP
-\f[B]--apps|-s\f[R]
-.PD 0
-.P
-.PD
-Application menu mode
-.PP
-\f[B]--titlebar|-t\f[R]
-.PD 0
-.P
-.PD
-Spawn on i3wm title-bar
-.PP
-\f[B]--monitor|-m\f[R]
-.PD 0
-.P
-.PD
-Spawn at mouse location
-.PP
-\f[B]--fullscreen|-f\f[R]
-.PD 0
-.P
-.PD
-Fullscreen mode (in progress)
+Padding
 .PP
 \f[B]--help|-h\f[R]
 .PD 0
