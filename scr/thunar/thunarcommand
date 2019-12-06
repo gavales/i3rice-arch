@@ -7,5 +7,5 @@ SCR="$HOME/scr/thunar"
 FLS="$1"
 COM=$(ls -l $SCR | sed -e "/thunarcommand/d;/total/d" | \
 	awk '{print $NF}' | \
-	i3menu -t -c black -o vertical -p ": ")
+	i3menu --prompt ": " -T -c black -o vertical)
 bash ${SCR}/${COM} "${FLS}"

@@ -1,15 +1,13 @@
-name               forest-day-dark
-wallpaper          rose_vines.xbm #9c6a71 #feb9a8
-fg0                #ffebc3
-bg0                #3c4c55
-acc                #fd888d
-blu                #fd888d
-grn                #a9dd9d
-ylw                #eed094
-red                #bdd0e5
-gnt                #daccf0
-grey               #7f8f9f
-rng                #f0aa8a
+name               grayscale-dark
+wallpaper          spheres.xbm #616161 #b5b5b5
+bg0                #444444
+acc                #7f7f7f
+fg0                #ececec
+red                #FF4971
+grn                #18E3C8
+ylw                #FF8037
+blu                #556FFF
+gnt                #B043D1
 cyn                #3FDCEE
 HOME               \/home\/gavarch
 xkb                gb
@@ -33,90 +31,80 @@ gtk-icon           Tela-red-dark
 cursor             Bibata_Dark_Red
 conky_loc1         top_left
 conky_loc2         bottom_right
-darkblu            #feb9a8
-lightblu           #9c6a71
-darkgrn            #d4e4b0
-lightgrn           #729479
-darkylw            #f6ddab
-lightylw           #958e74
-darkred            #deddd4
-lightred           #7c8e9d
-darkgnt            #ecdbd9
-lightgnt           #8b8ca2
-darkgrey           #bfbdb1
-lightgrey          #5d6d7a
-darkrng            #f7caa6
-lightrng           #967b6f
-darkcyn            #9fe3d8
-lightcyn           #3d94a1
-fg3                #c3af87
-fg2                #d7c39b
-fg1                #ebd7af
-acf                #feb9a8
-acb                #9c6a71
-bg1                #506069
-bg2                #64747d
-bg3                #788891
-ac88f              #fedfbc
-ac75f              #fed2b5
-ac63f              #fec6af
-ac50f              #feb9a8
-ac37f              #fdaca0
-ac25f              #fda09a
-ac12f              #fd9393
-ac12b              #e58086
-ac25b              #cc797f
-ac37b              #b57178
-ac50b              #9c6a71
-ac63b              #836269
-ac75b              #6c5b63
-ac88b              #53535b
-fg0RGB             255, 235, 195
-bg0RGB             60, 76, 85
-accRGB             253, 136, 141
-bluRGB             253, 136, 141
-grnRGB             169, 221, 157
-ylwRGB             238, 208, 148
-redRGB             189, 208, 229
-gntRGB             218, 204, 240
-greyRGB            127, 143, 159
-rngRGB             240, 170, 138
+darkred            #f59aae
+lightred           #a1465a
+darkgrn            #82e7da
+lightgrn           #2e9386
+darkylw            #f5b691
+lightylw           #a1623d
+darkblu            #a0adf5
+lightblu           #4c59a1
+darkgnt            #ce97de
+lightgnt           #7a438a
+darkcyn            #95e4ed
+lightcyn           #419099
+fg3                #b0b0b0
+fg2                #c4c4c4
+fg1                #d8d8d8
+acf                #b5b5b5
+acb                #616161
+bg1                #585858
+bg2                #6c6c6c
+bg3                #808080
+ac88f              #dedede
+ac75f              #d0d0d0
+ac63f              #c3c3c3
+ac50f              #b5b5b5
+ac37f              #a7a7a7
+ac25f              #9a9a9a
+ac12f              #8c8c8c
+ac12b              #777777
+ac25b              #707070
+ac37b              #696969
+ac50b              #616161
+ac63b              #595959
+ac75b              #525252
+ac88b              #4b4b4b
+bg0RGB             68, 68, 68
+accRGB             127, 127, 127
+fg0RGB             236, 236, 236
+redRGB             255, 73, 113
+grnRGB             24, 227, 200
+ylwRGB             255, 128, 55
+bluRGB             85, 111, 255
+gntRGB             176, 67, 209
 cynRGB             63, 220, 238
-darkbluRGB         254, 185, 168
-lightbluRGB        156, 106, 113
-darkgrnRGB         212, 228, 176
-lightgrnRGB        114, 148, 121
-darkylwRGB         246, 221, 171
-lightylwRGB        149, 142, 116
-darkredRGB         222, 221, 212
-lightredRGB        124, 142, 157
-darkgntRGB         236, 219, 217
-lightgntRGB        139, 140, 162
-darkgreyRGB        191, 189, 177
-lightgreyRGB       93, 109, 122
-darkrngRGB         247, 202, 166
-lightrngRGB        150, 123, 111
-darkcynRGB         159, 227, 216
-lightcynRGB        61, 148, 161
-fg3RGB             195, 175, 135
-fg2RGB             215, 195, 155
-fg1RGB             235, 215, 175
-acfRGB             254, 185, 168
-acbRGB             156, 106, 113
-bg1RGB             80, 96, 105
-bg2RGB             100, 116, 125
-bg3RGB             120, 136, 145
-ac88fRGB           254, 223, 188
-ac75fRGB           254, 210, 181
-ac63fRGB           254, 198, 175
-ac50fRGB           254, 185, 168
-ac37fRGB           253, 172, 160
-ac25fRGB           253, 160, 154
-ac12fRGB           253, 147, 147
-ac12bRGB           229, 128, 134
-ac25bRGB           204, 121, 127
-ac37bRGB           181, 113, 120
-ac50bRGB           156, 106, 113
-ac63bRGB           131, 98, 105
-ac75bRGB           108, 91, 99
-ac88bRGB           83, 83, 91
+darkredRGB         245, 154, 174
+lightredRGB        161, 70, 90
+darkgrnRGB         130, 231, 218
+lightgrnRGB        46, 147, 134
+darkylwRGB         245, 182, 145
+lightylwRGB        161, 98, 61
+darkbluRGB         160, 173, 245
+lightbluRGB        76, 89, 161
+darkgntRGB         206, 151, 222
+lightgntRGB        122, 67, 138
+darkcynRGB         149, 228, 237
+lightcynRGB        65, 144, 153
+fg3RGB             176, 176, 176
+fg2RGB             196, 196, 196
+fg1RGB             216, 216, 216
+acfRGB             181, 181, 181
+acbRGB             97, 97, 97
+bg1RGB             88, 88, 88
+bg2RGB             108, 108, 108
+bg3RGB             128, 128, 128
+ac88fRGB           222, 222, 222
+ac75fRGB           208, 208, 208
+ac63fRGB           195, 195, 195
+ac50fRGB           181, 181, 181
+ac37fRGB           167, 167, 167
+ac25fRGB           154, 154, 154
+ac12fRGB           140, 140, 140
+ac12bRGB           119, 119, 119
+ac25bRGB           112, 112, 112
+ac37bRGB           105, 105, 105
+ac50bRGB           97, 97, 97
+ac63bRGB           89, 89, 89
+ac75bRGB           82, 82, 82
+ac88bRGB           75, 75, 75

@@ -108,7 +108,7 @@ super + Return
 super + shift + s
 	lch -c Spotify -e "spotify"
 super + shift + d
-	i3menu -r -L 1 -l 7 -w 100
+	i3menu -r -L 1 -l 7 -w 100 -o horizontal
 super + shift + f
 	gksu thunar
 super + shift + g

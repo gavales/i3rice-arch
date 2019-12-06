@@ -11,8 +11,8 @@ HORI="$RFDIR/_horizontal.rasi"
 VERT="$RFDIR/_vertical.rasi"
 COLUMNS=1
 ORIENTATION="vertical"
-TITLEBAR_HEIGHT=25
-WINDOW_BORDER=4
+TITLEBAR_HEIGHT=0
+WINDOW_BORDER=$(gwmget BORDER)
 LOCATION=0
 WIDTH=300
 MODE="mode_dmenu"
@@ -31,7 +31,7 @@ fg2:    #364145;
 bg2:    #f8f8f8;
 bg1:    #e4e4e4;
 redish: #ab4642;
-font1: "LuxiMono 13";
+font1: "Monospace 13";
 	}
 EOB
 }
@@ -48,31 +48,34 @@ cat > $HORI  << 'EOB'
 //	anchor:           north;
 //	location:         north;
 //	width:            100%;
-	padding:          2px;
+	padding:          0px;
 	children:         [ horibox ];
 	}
 #horibox {
 	orientation:      horizontal;
 	children:         [ prompt, entry, listview ];
 	}
+#prompt {
+	background-color: @bg1;
+	text-color:       @accent;
+	padding:          2px 2px;
+	}
 #listview {
-	layout:           horizontal;
-	spacing:          5px;
-	lines:            100;
-	}
+	layout:  horizontal;
+	spacing: 5px;
+	lines:   100;
+}
 #entry {
-	expand:           false;
-	width:            10em;
-	}
+	expand: false;
+	width:  10em;
+}
 #element {
-	border:           0;
-	border-radius:    10px;
-	padding:          1px 1px;
-	}
+	padding: 0px 2px;
+}
 #element selected {
 	background-color: @bg1;
 	text-color:       @accent;
-	}
+}
 EOB
 }
 [[ -f $VERT ]]  || {
@@ -88,13 +91,18 @@ cat > $VERT  << 'EOB'
 //	anchor:           north;
 //	location:         north;
 //	width:            100%;
-	padding:          1px;
+	padding:          0px;
 	border:           0;
-	border-radius:    5px;
+//	border-radius:    5px;
 //	children:         [ horibox ];
 	}
 #horibox {
 	children:         [ prompt, entry, listview ];
+	}
+#prompt {
+	background-color: @bg1;
+	text-color:       @accent;
+	padding:          1px 1px 2px 2px;
 	}
 #listview {
 	spacing:          5px;
@@ -104,8 +112,8 @@ cat > $VERT  << 'EOB'
 //	width:            10em;
 	}
 #element {
-	border:           1;
-	border-radius:    30px;
+	border:           0;
+//	border-radius:    30px;
 	padding:          1px 1px;
 	}
 #element selected {
@@ -127,7 +135,7 @@ __i3menu__ - Rofi wrapper script
 [STDIN |] i3menu [--prompt|-p <text>]
        [--run|-r|--drun|-d]
        [--color|-c <color>]
-       [--window|-W|--titlebar|-t|--fullscreen|-f|--mouse|-m]
+       [--window|-W|--titlebar|-T|--fullscreen|-f|--mouse|-m]
        [--orientation|-o <vertical|horizontal>]
        [--width|-w|--height|-H|--xoffset|-x|--yoffset|-y <integer>]
        [--location|-L|--lines|-l|--padding|-P <integer>]
@@ -222,8 +230,8 @@ mode_dmenu () {
 titlebar   () {
 	[[ $ORIENTATION == "horizontal" ]] && LNS=15
 	LOCATION=1
-	WIDTH=$((WIN_W + WINDOW_BORDER + WINDOW_BORDER))
-	XFS=$((WIN_X - WINDOW_BORDER - WINDOW_BORDER))
+	WIDTH=$((WIN_W + 2*WINDOW_BORDER))
+	XFS=$WIN_X
 	YFS=$((WIN_Y - TITLEBAR_HEIGHT))
 }
 window     () {
@@ -234,8 +242,8 @@ window     () {
 		}
 	[[ $ORIENTATION == "horizontal" ]] && LNS=15
 	LOCATION=1
-	WIDTH=$((WIN_W + WINDOW_BORDER + WINDOW_BORDER))
-	XFS=$((WIN_X - WINDOW_BORDER - WINDOW_BORDER))
+	WIDTH=$((WIN_W + 2*WINDOW_BORDER))
+	XFS=$WIN_X
 	YFS=$((WIN_Y - TITLEBAR_HEIGHT))
 }
 mouse      () {
@@ -249,22 +257,25 @@ fullscreen () {
 
 while true; do
 	case $1 in
-		--prompt      | -p ) PROMPT="${2:-}"      ; shift ;;
-		--padding     | -g ) PADDING="${2:-}"     ; shift ;;
-		--location    | -L ) LOCATION="${2:-}"    ; shift ;;
-		--lines       | -l ) LNS="${2:-}"         ; shift ;;
-		--xoffset     | -x ) XFS="${2:-}"         ; shift ;;
-		--yoffset     | -y ) YFS="${2:-}"         ; shift ;;
-		--width       | -w ) WIDTH="${2:-}"       ; shift ;;
-		--height      | -H ) HEIGHT="${2:-}"      ; shift ;;
-		--orientation | -o ) ORIENTATION="${2:-}" ; shift ;;
-		--color | -c ) [[ -s $RFDIR/${2:-}.rasi ]] && ACCENT_COLOR="${2:-}" ; shift ;;
-		--run         | -r ) MODE="mode_run"  ;;
-		--drun        | -d ) MODE="mode_drun" ;;
-		--window      | -W ) window     ;;
-		--titlebar    | -T ) titlebar   ;;
-		--mouse       | -m ) mouse      ;;
-		--fullscreen  | -f ) fullscreen ;;
+		--prompt   | -p ) PROMPT="${2:-}"      ; shift ;;
+		--padding  | -g ) PADDING="${2:-}"     ; shift ;;
+		--location | -L ) LOCATION="${2:-}"    ; shift ;;
+		--lines    | -l ) LNS="${2:-}"         ; shift ;;
+		--xoffset  | -x ) XFS="${2:-}"         ; shift ;;
+		--yoffset  | -y ) YFS="${2:-}"         ; shift ;;
+		--width    | -w ) WIDTH="${2:-}"       ; shift ;;
+		--height   | -H ) HEIGHT="${2:-}"      ; shift ;;
+		--theme    | -o ) ORIENTATION="${2:-}" ; shift ;;
+		--color    | -c )
+			[[ -s $RFDIR/${2:-}.rasi ]] && ACCENT_COLOR="${2:-}"
+			shift
+			;;
+		--run  | -r ) MODE="mode_run"  ;;
+		--drun | -d ) MODE="mode_drun" ;;
+		--window     | -W ) window     ;;
+		--titlebar   | -T ) titlebar   ;;
+		--mouse      | -m ) mouse      ;;
+		--fullscreen | -f ) fullscreen ;;
 		--help ) help ;;
 		-h )
 			help | \
