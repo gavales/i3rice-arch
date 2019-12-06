@@ -13,6 +13,9 @@
 #alt + shift + Tab
 #	gwmfocus prev
 
+alt + grave
+	rofind
+
 alt + i
 	notify-send "$(gwmunder) $(gwmtest $(pfw))" "$(gwmdeet c $(pfw)) $(gwmdeet i $(pfw)) $(gwmdeet n $(pfw))"
 
@@ -55,6 +58,9 @@ super + 7
 	$EDITOR -s doots $HOME/.config/polybar/.themer/template_config
 super + 8
 	$EDITOR -s doots $HOME/.config/qutebrowser/.themer/template_config.py
+
+super + shift + grave
+	gencvl
 
 # ━  ROW1
 super + q
@@ -147,7 +153,7 @@ super + shift + {comma,period,slash}
 	i3light {dec,inc,nm}
 
 super + control + c
-	xtheme --auto-dark 7:18
+	xtheme --auto-dark 7:17
 super + control + b
 	polybar-msg cmd hide
 super + control + m

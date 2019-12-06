@@ -66,11 +66,11 @@ done
 TRG=$1
 [[ -z $1 ]] && echo 'No input file! [cmkd --help for more info]' && exit
 
-BIB=$(awk '$1 ~ /^#bib$/    {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
-YML=$(awk '$1 ~ /^#yaml$/   {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
-WTM=$(awk '$1 ~ /^#docx$/   {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
-WCS=$(awk '$1 ~ /^#css$/    {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
-NGN=$(awk '$1 ~ /^#engine$/ {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
+BIB=$(awk '$1~/^#bib$/   {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
+YML=$(awk '$1~/^#yaml$/  {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
+WTM=$(awk '$1~/^#docx$/  {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
+WCS=$(awk '$1~/^#css$/   {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
+NGN=$(awk '$1~/^#engine$/{$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
 
 [[ -z $BIB ]] && BIB="$HOME/global.bib"
 [[ -z $YML ]] && FYL="${PDDR}/settings.yaml" || FYL="${YML}"

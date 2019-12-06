@@ -23,10 +23,9 @@ gencvl --help|-h
 
 # DEPENDENCIES
 
-```
-compiler - my compiler script
-gedtr - my gvim wrapper, but you can change it your own editor as long as it doesn't detach from the terminal.
-```
++ `compiler` - my compiler script
++ `gedtr` - my gvim wrapper, but you can change it to your
+own editor as long as it doesn't detach from the terminal.
 
 # OPTIONS
 
@@ -61,7 +60,7 @@ TRG="${FLD}/${FLD##*/}.md"
 
 [[ -d $FLD ]] || mkdir -p ${FLD}
 
-PLT () {
+[[ -f ${TRG} ]] || {
 cat > ${TRG} <<EOB
 ---
 title: __TITLE__
@@ -83,15 +82,14 @@ Dear Sir/Madam,
 
 <++>
 
-Thanks for the consideration,
+Thank you for your the consideration,
 
 Gavin Vales
 EOB
 sed -e "s/TITLE/$TIT/g" -i ${TRG}
 }
-[[ -f ${TRG} ]] || PLT
 
 gedtr -f "${TRG}"
 compiler ${TRG}
-rm -rf *.fls *.synctex.gz *.fdb_latexmk *.aux *.bbl *.bcf *.blg *.ilg *.log \
-	*.nlo *.nls *.out *.toc *.run.xml _minted*
+rm -rf *.fls *.synctex.gz *.fdb_latexmk *.aux *.bbl *.bcf \
+	*.blg *.ilg *.log *.nlo *.nls *.out *.toc *.run.xml _minted*
