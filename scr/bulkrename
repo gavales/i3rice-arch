@@ -17,10 +17,10 @@ sed -e "s/$/\"/g;s/^/\"/g" -i $NEWNME
 sed -e "s/$/\"/g;s/^/mv\ \"/g" -i $OLDNME
 paste $OLDNME $NEWNME > $FINCMD
 confirm () {
-	cat $FINCMD | i3menu -T -c white -o vertical \
+	cat $FINCMD | i3menu -T -c white \
 		--prompt "FINALCOMMANDS [<Esc> to confirm] "
 	confirm=$(echo -e "Yes\nNo" | \
-		i3menu -T -c magenta -o horizontal --prompt "CONFIRM RENAME? ")
+		i3menu -T -c magenta -o --prompt "CONFIRM RENAME? ")
 	[[ $confirm == "Yes" ]] && source $FINCMD
 }
 confirm

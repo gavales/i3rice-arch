@@ -57,7 +57,7 @@ exit
 new () {
 	[[ -n $1 ]] && POST="$1" || \
 		POST=$(ls content/posts | sed '/.md$/!d;s/.md//g' | i3menu -c green)
-	[[ -z $POST ]] && exit
+	[[ -z $POST ]] && exit 1
 	[[ -f content/posts/${POST}.md ]] || hugo new posts/${POST}.md
 	hugo server &>/dev/null &
 	surf localhost:1313 &>/dev/null &

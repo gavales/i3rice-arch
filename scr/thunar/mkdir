@@ -1,4 +1,4 @@
 #!/bin/bash
 
-FLS=$(i3menu -t -o "horizontal" -c black -p "mkdir ")
+FLS=$(i3menu -T -o -c black --prompt "mkdir ")
 mkdir $FLS

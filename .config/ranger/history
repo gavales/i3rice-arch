@@ -1,11 +1,3 @@
-mkdir old
-rename gwmunderl
-rename gwmunder
-rename gwmwmenu
-rename gwmlstn__
-rename gwmlstn
-rename gwmlstn_for_new_wew
-open_with o
 rename gwmtest
 shell h bible
 rename sbarstack
@@ -45,6 +37,14 @@ open_with 4
 open_with acroread
 open_with 
 open_with gthumb
-rename i3menu_
-rename i3menu
 search 
+open_with gedtr
+shell chmod +x %f
+open_with 0
+rename i3menu_old_
+rename i3menu_old
+rename i3menu_old_old
+rename i3menu_
+rename i3menu_1
+rename i3menu_2
+rename i3menu

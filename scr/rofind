@@ -79,7 +79,7 @@ flist () {
 }
 
 #TRG="$(flist | rofi -dmenu -location 0 -lines 15 -width 100)"
-TRG="$(flist | i3menu --prompt "rofind" -l 15 -L 0 -w 600)"
+TRG="$(flist | i3menu --prompt "rofind" -l 15 -w 600)"
 
 case $TRG in
 	PIC*) $IMGOPEN "${TRG/'PIC ~'/${HOME}}" ;;

@@ -31,7 +31,7 @@ ALL=$(xrandr -q | grep 'connected'    | awk '{print $1}')
 CNN=$(xrandr -q | grep ' connected'   | awk '{print $1}')
 DCN=$(xrandr -q | grep 'disconnected' | awk '{print $1}')
 LCN=$(echo $CNN | wc -w)
-MNOP="-L 0 -w 100 -o horizontal"
+MNOP="-w 100"
 
 onecon () {
 	xrandr --output "${CNN/ /}" --primary --auto

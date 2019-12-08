@@ -1,0 +1,300 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: Mon 26 Aug 17:35:49 BST 2019
+#iconFu="<span face='Font Awesome 5 Free'>&#xf240;</span>"
+
+RFDIR="$HOME/.config/rofi"
+CONFIG="$RFDIR/.i3menuconfig"
+BLACK="$RFDIR/black.rasi"
+HORI="$RFDIR/_horizontal.rasi"
+VERT="$RFDIR/_vertical.rasi"
+COLUMNS=1
+ORIENTATION="vertical"
+TITLEBAR_HEIGHT=0
+WINDOW_BORDER=$(gwmget BORDER)
+LOCATION=0
+WIDTH=300
+MODE="mode_dmenu"
+eval "$(wattr xywh $(pfw) | \
+	awk '{print "WIN_X="$1 "\nWIN_Y="$2 "\nWIN_W="$3 "\nWIN_H="$4}')"
+eval "$(mattr wh $(pfm) | awk '{print "SCREEN_W="$1 "\nSCREEN_H="$2}')"
+MONITOR=$(mattr d $(pfm))
+
+[[ -d $RFDIR ]] || mkdir -p $RFDIR
+[[ -f $BLACK ]] || {
+cat > $BLACK  << 'EOB'
+* {
+accent: #364145;
+fg1:    #222D31;
+fg2:    #364145;
+bg2:    #f8f8f8;
+bg1:    #e4e4e4;
+redish: #ab4642;
+font1: "Monospace 13";
+	}
+EOB
+}
+[[ -f $HORI ]]  || {
+cat > $HORI  << 'EOB'
+@import "_globals.rasi"
+* {
+	background-color: @accent;
+	border-color:     @accent;
+	text-color:       @bg1;
+	font:             @font1;
+	}
+#window {
+//	anchor:           north;
+//	location:         north;
+//	width:            100%;
+	padding:          0px;
+	children:         [ horibox ];
+	}
+#horibox {
+	orientation:      horizontal;
+	children:         [ prompt, entry, listview ];
+	}
+#prompt {
+	background-color: @bg1;
+	text-color:       @accent;
+	padding:          2px 2px;
+	}
+#listview {
+	layout:  horizontal;
+	spacing: 5px;
+	lines:   100;
+}
+#entry {
+	expand: false;
+	width:  10em;
+}
+#element {
+	padding: 0px 2px;
+}
+#element selected {
+	background-color: @bg1;
+	text-color:       @accent;
+}
+EOB
+}
+[[ -f $VERT ]]  || {
+cat > $VERT  << 'EOB'
+@import "_globals.rasi"
+* {
+	background-color: @accent;
+	border-color:     @accent;
+	text-color:       @bg2;
+	font:             @font1;
+	}
+#window {
+	border:           0;
+//	children:         [ horibox ];
+	}
+#horibox {
+	children: [ prompt, entry, listview ];
+	}
+#prompt {
+	background-color: @bg1;
+	text-color:       @accent;
+//	padding:          1px 1px 2px 2px;
+	}
+#listview {
+	spacing:          5px;
+	}
+#entry {
+	expand:           true;
+//	width:            10em;
+	}
+#element {
+	border:           0;
+//	border-radius:    30px;
+//	padding:          1px 1px;
+	}
+#element selected {
+	background-color: @bg1;
+	text-color:       @accent;
+	}
+EOB
+}
+
+help () {
+cat << 'EOB'
+# NAME
+
+__i3menu__ - Rofi wrapper script
+
+# SYNOPSIS
+
+```
+[STDIN |] i3menu [--prompt|-p <text>]
+       [--run|-r|--drun|-d]
+       [--color|-c <color>]
+       [--window|-W|--titlebar|-T|--fullscreen|-f|--mouse|-m]
+       [--orientation|-o <vertical|horizontal>]
+       [--width|-w|--height|-H|--xoffset|-x|--yoffset|-y <integer>]
+       [--location|-L|--lines|-l|--padding|-P <integer>]
+i3menu --help|-h
+```
+
+# OPTIONS
+
+`--prompt|-p <text>`  
+Prompt
+
+`--orientation|-o [vertical|horizontal]`  
+Vertical or horizontal (like dmenu)
+
+`--run|-r`  
+`rofi -show run` mode
+
+`--drun|-d`  
+`rofi -show drun` mode
+
+`--titlebar|-T`  
+Spawn on focussed window title-bar  
+Requires `TITLEBAR_HEIGHT` in `~/.config/rofi/.i3menuconfig`
+
+`--mouse|-m`  
+Spawn at mouse location
+
+`--fullscreen|-f`  
+Fullscreen mode (in progress)
+
+`--window|-W`  
+Fill focussed window
+
+`--color|-c <color>`  
+Accent color. The name of one of in the variable files in .config/rofi
+
+`--location|-L <integer>`  
+Rofi location:  
+```
+1 2 3
+8 0 4
+7 6 5
+```
+
+`--lines|-l <integer>`  
+Number of vertical rows
+
+`--xoffset|-x <integer>`  
+Horizontal Offset
+
+`--yoffset|-y <integer>`  
+Vertical Offset
+
+`--width|-w <integer>`  
+Rofi width
+
+`--height|-H <integer>`  
+Rofi height, integer less than 100
+
+`--padding|-P <text>`  
+Padding
+
+`--help|-h`  
+Print this help
+EOB
+echo "$1"
+exit
+}
+
+mode_run   () {
+	OPTS+=" -lines ${LNS:-"15"}"
+	rofi -show run -p "${PROMPT:-"${MODE/mode_/}"}" $OPTS
+}
+mode_drun  () {
+	OPTS+=" -lines ${LNS:-"15"}"
+	[[ $MODE == "mode_drun" ]]  && PMD="-show drun"
+	rofi $PMD -p "${PROMPT:-"${MODE/mode_/}"}" $OPTS
+}
+mode_dmenu () {
+	STDIN="$RFDIR/.i3menustdin"
+	cat /dev/stdin > $STDIN
+	STSZ=$(du -k $STDIN | cut -f1)
+	((STSZ==1)) && rm $STDIN && touch $STDIN
+	ROWS=${LNS:-$(cat $STDIN | wc -l)}
+	((ROWS>99)) && ROWS=99
+	OPTS+=" -lines ${LNS:-$ROWS}"
+	cat $STDIN | \
+		rofi -dmenu -p "${PROMPT:-"${MODE/mode_/}"}" $OPTS -markup-rows
+	rm -rf $STDIN
+}
+
+titlebar   () {
+	[[ $ORIENTATION == "horizontal" ]] && LNS=15
+	LOCATION=1
+	WIDTH=$((WIN_W + 2*WINDOW_BORDER))
+	XFS=$WIN_X
+	YFS=$((WIN_Y - TITLEBAR_HEIGHT))
+}
+window     () {
+	[[ $ORIENTATION == "vertical" ]] && {
+		WINCENT=$(((WIN_H*100)/SCREEN_H))
+		TLBCENT=$(((TITLEBAR_HEIGHT*100)/SCREEN_H))
+		BRDCENT=$(((WINDOW_BORDER*100)/SCREEN_H))
+		HEIGHT=$((WINCENT + TLBCENT + BRDCENT))
+		}
+	[[ $ORIENTATION == "horizontal" ]] && LNS=15
+	LOCATION=1
+	WIDTH=$((WIN_W + WINDOW_BORDER + WINDOW_BORDER))
+	XFS=$WIN_X
+	YFS=$((WIN_Y - TITLEBAR_HEIGHT))
+}
+mouse      () {
+	ORIENTATION=vertical LOCATION=1 WIDTH=300
+	eval "$(wmp | awk '{print "XFS="$1 "\nYFS="$2}')"
+}
+fullscreen () {
+	WIDTH=$SCREEN_W HEIGHT=100 PADDING=500
+	LOCATION=1
+}
+
+while true; do
+	case $1 in
+		--prompt   | -p ) PROMPT="${2:-}"      ; shift ;;
+		--padding  | -g ) PADDING="${2:-}"     ; shift ;;
+		--location | -L ) LOCATION="${2:-}"    ; shift ;;
+		--lines    | -l ) LNS="${2:-}"         ; shift ;;
+		--xoffset  | -x ) XFS="${2:-}"         ; shift ;;
+		--yoffset  | -y ) YFS="${2:-}"         ; shift ;;
+		--width    | -w ) WIDTH="${2:-}"       ; shift ;;
+		--height   | -H ) HEIGHT="${2:-}"      ; shift ;;
+		--theme    | -o ) ORIENTATION="${2:-}" ; shift ;;
+		--color    | -c )
+			[[ -s $RFDIR/${2:-}.rasi ]] && ACCENT_COLOR="${2:-}"
+			shift
+			;;
+		--run  | -r ) MODE="mode_run"  ;;
+		--drun | -d ) MODE="mode_drun" ;;
+		--window     | -W ) window     ;;
+		--titlebar   | -T ) titlebar   ;;
+		--mouse      | -m ) mouse      ;;
+		--fullscreen | -f ) fullscreen ;;
+		--help ) help ;;
+		-h )
+			help | \
+				sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | \
+				sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit
+				;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+[[ -n $LOCATION ]]    && OPTS+=" -location $LOCATION"
+[[ -n $PADDING ]]     && OPTS+=" -padding $PADDING"
+[[ -n $XFS ]]         && OPTS+=" -xoffset $XFS"
+[[ -n $YFS ]]         && OPTS+=" -yoffset $YFS"
+[[ -n $WIDTH ]]       && OPTS+=" -width $WIDTH"
+[[ -n $MONITOR ]]     && OPTS+=" -monitor $MONITOR"
+[[ -n $ORIENTATION ]] && OPTS+=" -theme _$ORIENTATION"
+[[ -n $HEIGHT ]] && \
+	OPTS+=" -theme-str '#window { height: ${HEIGHT}%; }'"
+
+cat $RFDIR/${ACCENT_COLOR:-"black"}.rasi > $RFDIR/_globals.rasi
+#echo rofi $PMD -p "${PROMPT:-}" $OPTS
+#echo $SCREEN_W $SCREEN_H
+$MODE

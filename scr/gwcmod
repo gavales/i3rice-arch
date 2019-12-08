@@ -26,7 +26,7 @@ case $1 in
 	show) CTXT=$(pbcat -m gwc) && update ;;
 	blur|previous|next|random) gwc -${1:0:1} && update ;;
 	delete)
-		CONFIRM=$(echo -e "Yes\nNo" | i3menu -y 0 -m -c red)
+		CONFIRM=$(echo -e "Yes\nNo" | i3menu -y 0 -M -c red)
 		[[ $CONFIRM == "YES" ]] && {
 			gwc -d
 			gwc -r
@@ -34,7 +34,7 @@ case $1 in
 		}
 		;;
 	rename)
-		NAME=$(echo "" | i3menu -m -x 65 -y -10 -c black)
+		NAME=$(echo "" | i3menu -M -x 65 -y -10 -c black)
 		[[ -n $NAME ]] && {
 			gwc -R "$NAME"
 			gwc -w "$NAME"
@@ -42,7 +42,7 @@ case $1 in
 		}
 		;;
 	list)
-		wall=$(ls $XDG_PICTURES_DIR/gwc/normal | i3menu -m -l 10 -w 300)
+		wall=$(ls $XDG_PICTURES_DIR/gwc/normal | i3menu -M -l 10 -w 300)
 		[[ -n $wall ]] && gwc -w $wall && update
 		;;
 esac

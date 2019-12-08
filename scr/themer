@@ -108,9 +108,8 @@ themer
 
 # DEPENDENCIES
 
-```
-rofi xsel
-```
+`rofi`, `i3menu` - for gui menus
+`xsel` - copying variable for `--list varmenu`
 
 # EXAMPLES
 
@@ -529,7 +528,6 @@ variations () {
 			mixer("ac88b",acc,bg0,12,88)
 		}' >> $ALL
 }
-
 hexrgbraw () {
 	eval $(echo $1 | awk -F "" -v NME="$2" '{
 			R=$2$3;G=$4$5;B=$6$7;
@@ -538,7 +536,6 @@ hexrgbraw () {
 			print NME "B=" strtonum( "0x" B ) "";
 			}')
 }
-
 parse-vars () {
 	REPLACE=$(awk '!/\$/ {
 			key=$1;$1="";gsub(/^[ \t]+/, "", $0);val=$0;
@@ -546,7 +543,6 @@ parse-vars () {
 		}' $ALL | tr -d "\n")
 	sed -i "${REPLACE:1}" $ALL
 }
-
 create-regex () {
 	regex="$(awk '{
 			key=$1; $1=""; gsub(/^[ \t]+/, "", $0);
@@ -556,7 +552,6 @@ create-regex () {
 	regex="${regex:1}"
 	echo "$regex" > $RGX
 }
-
 create-rofi-list () {
 	bg0=$(sed '/^bg0 /!d;s/[^ ]* *//'       $ALL)
 	fg0=$(sed '/^fg0 /!d;s/[^ ]* *//'       $ALL)
@@ -580,7 +575,6 @@ create-rofi-list () {
 	cat $CLST1 $CLST2 $VLST1 > $ALR
 	rm $CLST1 $CLST2 $VLST1
 }
-
 colmix-parse () {
 	CMRX="$(awk -i <(awklib) ' $2 ~ /^colmix/ {
 			key=$1;$1="";$2="";gsub(/^[ \t]+/, "", $0);mix=$0;
@@ -590,14 +584,12 @@ colmix-parse () {
 		}' $ALL | tr -d "\n")"
 	sed -i "${CMRX:1}" $ALL
 }
-
 create-rgb () {
 	awk -i <(awklib) '$2 ~ /#/ {
 			key=$1;$1="";gsub(/^[ \t]+/, "", $0);
 			hextorgb($0,key);
 		}' $ALL >> $ALL
 }
-
 gui-change () {
 	THM=$(themer --list thememenu)
 	notify-send "Chosen theme is $THM" -i "${SCR_DIR}pic/theme.png"
@@ -615,10 +607,8 @@ O_change () {
 	awk 'NR==FNR{a[$1]=$1;b[$1]=$0;next} $1!=a[$1]{print$0}' \
 		$ALL $DEF | sed '/^!/d' >> $ALL
 	parse-vars
-	colmix-parse
-	parse-vars
-	variations
-	parse-vars
+	colmix-parse && parse-vars
+	variations && parse-vars
 	create-rgb
 	create-regex
 	create-rofi-list
@@ -626,12 +616,10 @@ O_change () {
 		key=$1;$1="";gsub(/^[ \t]+/, "", $0); printf "%-19s%s\n", key, $0;
 		}' $ALL > ${TDR}/.tmp && mv ${TDR}/.tmp $ALL
 }
-
 O_auto-dark () {
 	PM=${1#*:} ; ((TIME>=PM)) && DARK=1
 	AM=${1%:*} ; ((TIME<AM))  && DARK=1
 }
-
 O_apply-single () {
 	regex=$(cat $RGX)
 	DIR="$1"
@@ -658,7 +646,6 @@ O_apply-single () {
 	fi
 	cd
 }
-
 O_apply-all () {
 	eval "$(awk '!/#/{
 		if($1=="FORCE"){
@@ -671,11 +658,8 @@ O_apply-all () {
 		}' $DIRS)"
 	exit
 }
-
 O_delete () { mv ${TDR}/${1} ${TDR}/.unused/${1} ; exit ; }
-
 O_getvar () { [[ -n $1 ]] && cat $ALL | sed "/^$1/!d;s/[^ ]* *//" ; }
-
 O_updatelist () {
 	cd $TDR
 	thms=$(ls | grep -v '_')
@@ -696,7 +680,6 @@ O_updatelist () {
 <span foreground=\"$fg0\" background=\"$bg0\"> $i </span>" >> $LST
 	done
 }
-
 O_list () {
 	[[ -z $1 ]] && exit
 	case $1 in
@@ -723,20 +706,17 @@ O_list () {
 			;;
 		varmenu)
 			echo -n $(themer -v "$(cat $ALR | \
-				rofi -dmenu -p "$(themer -v name)" \
-					-markup-rows -lines 25 -columns 3 -normal-window | \
+					i3menu --prompt "$(themer -v name)" -l 25 -c 3 -n | \
 					awk '{print $NF}') ") | \
 				xsel -i; xsel -o | xsel -i -b 
 			;;
 		themes)  ls ${TDR} | grep -v '^_';;
 		thememenu)
-			cat $LST | rofi -dmenu -p "Choose theme" \
-				-markup-rows -lines $(cat $LST | wc -l) -width 250 | \
+			cat $LST | i3menu --prompt "Choose theme" -w 250 | \
 				awk '{print $6}'
 			;;
 	esac
 }
-
 O_new () {
 	NTHM="${TDR}/${1}"
 	echo "! vim:ft=perl" > $NTHM
@@ -746,7 +726,6 @@ O_new () {
 	echo "Enter foreground colour..." && read FG0 && echo "fg0    $FG0" >> $NTHM
 	echo "Theme ${NTHM##*/} created"
 }
-
 O_init () {
 	[[ -z ${1} ]] && DIR="$(pwd)" || DIR="${1}"
 	cd $DIR
@@ -771,7 +750,6 @@ chmod +x "${DIR}/.themer_post"
 [[ -n $FORCE ]] && _DIR="FORCE ${DIR}" || _DIR="${DIR}"
 echo "${_DIR}" >> ${DIRS}
 }
-
 O_clean () {
 	if [[ -n ${1} ]]; then
 		cd "${1}/.themer"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DST=$($HOME/scr/i3menu -t -c black -o vertical -p "move to ")
+DST=$(i3menu -T -c black --prompt "move to ")
 
 echo "${1}" > files
 sed -e "s/'\ '/\n/g;s/'//g" -i files

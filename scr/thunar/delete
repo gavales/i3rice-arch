@@ -3,8 +3,8 @@
 echo "${1}" > files
 sed -e "s/'\ '/\n/g;s/'//g" -i files
 IFS=$'\n'
-ANS=$(cat files | i3menu -t -o horizontal -c red \
-	-p "DELETE THESE FILES??? [ESC=NO; RETURN=YES]")
+ANS=$(cat files | i3menu -T -o -c red \
+	-e "DELETE THESE FILES??? [ESC=NO; RETURN=YES]")
 [[ -n $ANS ]] && {
 	for i in $(cat files); do
 		rm -rf "$i"

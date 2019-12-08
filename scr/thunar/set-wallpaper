@@ -8,5 +8,5 @@ wll="$HOME/.config/wall.png"
 #cp "${wpp}" "${wll}"
 #feh --bg-scale "${wll}"
 
-$HOME/scr/i3wallpaper -w "$wpp"
+gwc -w "$wpp"
 notify-send "${wpp}"

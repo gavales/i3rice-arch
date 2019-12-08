@@ -1,4 +1,4 @@
 #!/bin/bash
 
-FLS=$(i3menu -t -c blue -o horizontal -p "touch ")
+FLS=$(i3menu -T -c blue -o --prompt "touch ")
 touch $FLS

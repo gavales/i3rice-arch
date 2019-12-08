@@ -1,4 +1,4 @@
 #!/bin/bash
 
-pth=$($HOME/scr/i3menu -t -r 20 -o vertical -c black -p "cd ")
+pth=$(i3menu -T -l 20 --prompt "cd ")
 thunar ${pth/'~'/~}

@@ -93,7 +93,7 @@ super + shift + p
 super + s
 	lch -i ncmpcpp -e "$TWOMINAL -name ncmpcpp -e ncmpcpp"
 super + d
-	i3menu -d -L 0
+	i3menu -d
 super + f
 	thunar
 super + g
@@ -108,7 +108,7 @@ super + Return
 super + shift + s
 	lch -c Spotify -e "spotify"
 super + shift + d
-	i3menu -r -L 1 -l 7 -w 100 -o horizontal
+	i3menu -r -L 1 -w 100 -o
 super + shift + f
 	gksu thunar
 super + shift + g
