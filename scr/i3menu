@@ -125,9 +125,9 @@ Make menu horizontal like `dmenu`
 `--location|-L <integer>`  
 Rofi location:  
 ```
-1 2 3 northwest north  northeast
-8 0 4 west      center east
-7 6 5 southwest south  southeast
+1|northwest 2|north  3|northeast
+8|west      0|center 4|east
+7|southwest 6|south  5|southeast
 ```
 
 `--boxlayout|-b <p|e|l>`  
