@@ -66,15 +66,15 @@ vnoremap \7n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Tab><Tab><Esc>
 function! Folds()
 	let thisline = getline(v:lnum)
 	if match(thisline, '^### ') >= 0
-		return "a1"
+		return ">3"
 	elseif match(thisline, '^## ') >= 0
-		return "a1"
+		return ">2"
 	elseif match(thisline, '^# ') >= 0
-		return "a1"
+		return ">1"
 	elseif match(thisline, '^title: ') >= 0
 		return ">1"
 	elseif match(thisline, '^---$') >= 0
-		return "s1"
+		return ">0"
 	else
 		return "="
 	endif
@@ -99,13 +99,10 @@ endfunction
 setlocal spell spelllang=en_gb
 setlocal nonumber norelativenumber laststatus=2
 setlocal textwidth=60
-autocmd CursorMoved,CursorMovedI * update
-augroup WordCounter
-	au! CursorHold,CursorHoldI * silent !cmkd % &>/dev/null &
-	au! CursorHold,CursorHoldI * call UpdateWordCount()
-augroup END
+autocmd CursorHold,CursorHoldI * update
+autocmd CursorHold,CursorHoldI * silent !cmkd % &>/dev/null &
+autocmd CursorHold,CursorHoldI * call UpdateWordCount()
 
-"autocmd CursorHold,CursorHoldI * redraw!
 "autocmd VimEnter * Goyo"
 
 set statusline=

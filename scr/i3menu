@@ -131,7 +131,8 @@ Rofi location:
 ```
 
 `--boxlayout|-b <p|e|l>`  
-Elements of window to include: (p)rompt (e)ntry (l)istview
+Elements of window to include:
+(p)rompt (e)ntry (l)istview
 
 `--lines|-l <integer>`  
 Number of vertical rows
@@ -146,7 +147,8 @@ Horizontal Offset
 Vertical Offset
 
 `--width|-w <integer>`  
-Rofi width
+Rofi width. If `<=` 100, the value is taken to be
+a percentage.
 
 `--height|-H <integer>`  
 Rofi height, integer less than 100
