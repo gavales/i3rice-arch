@@ -115,7 +115,7 @@ rofi.show-icons:       true
 !rofi.line-margin:     10
 !rofi.hide-scrollbar:  true
 !
-rofi.modi:             ssh,window,drun,run
+rofi.modi:             ssh,window,drun,run,calc,combi
 rofi.sidebar-mode:     true
 rofi.terminal:         urxvt
 rofi.ssh-client:       ssh

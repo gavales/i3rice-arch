@@ -1,0 +1,27 @@
+* {
+	fg0:     %%fg0%%;
+	bg0:     %%bg0%%;
+	fg1:     %%fg1%%;
+	bg1:     %%bg1%%;
+	fg2:     %%fg2%%;
+	bg2:     %%bg2%%;
+	fg3:     %%fg3%%;
+	bg3:     %%bg3%%;
+	red:     %%lightred%%;
+	green:   %%lightgrn%%;
+	yellow:  %%lightylw%%;
+	blue:    %%lightblu%%;
+	magenta: %%lightgnt%%;
+	cyan:    %%lightcyn%%;
+	black:   @bg1;
+	white:   @fg1;
+
+	text-color:       @fg0;
+	background-color: @accent;
+	border-color:     @accent;
+	
+	spacing: 0;
+	border: 0;
+	
+	font: "%%romanfont%% %%rofifsize%%";
+	}
