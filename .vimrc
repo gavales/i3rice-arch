@@ -33,8 +33,16 @@ set cmdheight=1
 set splitbelow splitright
 set t_Co=16
 set autoread
-set foldcolumn=10
-au CursorHold * checktime
+function! CHKWW()
+	if &winwidth < 40
+		set foldcolumn=0
+	else
+		set foldcolumn=10
+	endif
+endfunction
+
+autocmd CursorHold,CursorHoldI * checktime
+autocmd CursorHold,CursorHoldI * call CHKWW()
 
 " ━━ GLOBAL MAPS
 map \gy           :Goyo \| set laststatus=2<CR><CR>
@@ -58,6 +66,7 @@ nnoremap <C-T> :tabnew<CR>
 nnoremap <C-W> :tabclose<CR>
 nnoremap <C-H> :tabprevious<CR>
 nnoremap <C-L> :tabNext<CR>
+nnoremap \r(   di(hPl2x
 nnoremap \r(   di(hPl2x
 nnoremap \r[   di[hPl2x
 nnoremap \r{   di{hPl2x

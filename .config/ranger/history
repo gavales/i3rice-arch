@@ -1,8 +1,3 @@
-rename gwmtest
-shell h bible
-rename sbarstack
-rename sbarfocus
-rename sbarmain
 shell 
 rename sbarmaincurrent
 shell git clone https://github.com/StillANixRookie/gwm.wiki.git
@@ -48,3 +43,8 @@ rename i3menu_
 rename i3menu_1
 rename i3menu_2
 rename i3menu
+rename patterns
+rename Great Bahama Bank, Bahamas 1920x1080.jpg
+rename book.yaml
+rename template_book.yaml
+rename sintra

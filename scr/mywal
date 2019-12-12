@@ -4,21 +4,22 @@
 # CREATED: Sun 16 Dec 18:22:14 GMT 2018
 
 thmDir=$HOME/.config/themer
-TRG=${thmDir}/pywal
+TRG=${thmDir}/mywal
 wal -q -e -n -s -t -i "${1}"
 WALL="${1}"
+gwc --add "$WALL" &>/dev/null &
 
 cd $thmDir
 
-name=${1##*/}
-name=${name/%.*}
-name=${name/%(*}
-name=$(echo "$name" | sed "s/1920x1080//g;s/,//g;s/\ //g")
+NME=${1##*/}
+NME=${NME%.*}
+NME=$(echo "$NME" | sed "s/1920x1080//g;s/,//g;s/\ //g")
 echo "! vim:ft=perl" > $TRG
-echo "name      ${name}" >> $TRG
-echo "wallpaper ${name}" >> $TRG
+echo "name      mywal" >> $TRG
+echo "wallpaper ${NME}" >> $TRG
 cat $HOME/.cache/wal/colors-kitty.conf | grep 'color' | \
-sed "/color10/d;/color11/d;/color12/d;/color13/d;/color14/d;/color9/d;/color8/d;\
+sed "/color10/d;/color11/d;/color12/d;/color13/d;\
+/color14/d;/color9/d;/color8/d;\
 s/color15/bg0\ /g;\
 s/color0/fg0/g;\
 s/color1/red/g;\
@@ -28,9 +29,8 @@ s/color4/acc/g;\
 s/color5/gnt/g;\
 s/color6/cyn/g;\
 /color7/d" >> $TRG
-echo "blu       \$acc" >> $TRG
+#echo "blu       \$acc" >> $TRG
 
-i3bg -w "$WALL" &>/dev/null &
-themer --auto-dark 7:20 --change pywal &>/dev/null &
+themer --auto-dark 7:20 --change ${TRG##*/} &>/dev/null &
 reloadconfs &>/dev/null &
 themer --apply-single $HOME/numix &>/dev/null &

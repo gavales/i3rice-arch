@@ -13,5 +13,6 @@ case $WPP in
 		;;
 esac
 
+i3listen-toggle
 setxkbmap "$(themer -v xkb)"
 themer --apply-all

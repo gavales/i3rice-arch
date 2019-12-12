@@ -55,39 +55,52 @@ exit
 
 while true; do
 	case $1 in
-		--help ) help ;;
-		-h     ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
+		--help) help ;;
+		-h) help | \
+			sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | \
+			sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g'
+			exit
+			;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac
 	shift
 done
 
-TRG=$1
-[[ -z $1 ]] && echo 'No input file! [cmkd --help for more info]' && exit
+FLE=$1
+[[ $FLE =~ "/" ]] && SRCDIR=${FLE%/*} || SRCDIR=$(pwd)
+cd $SRCDIR
+SRC=${FLE##*/} ; TRG=${SRC%.*}
+[[ -z $1 ]] && echo 'No input file!' && cmkd -h && exit
 
-BIB=$(awk '$1~/^#bib$/   {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
-YML=$(awk '$1~/^#yaml$/  {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
-WTM=$(awk '$1~/^#docx$/  {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
-WCS=$(awk '$1~/^#css$/   {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
-NGN=$(awk '$1~/^#engine$/{$1="";gsub(/^[ \t]+/,"",$0);print $0}' $TRG )
+OPT=$(awk '$1~/^#output$/{$1="";gsub(/^[ \t]+/,"",$0);print $0}' $SRC)
+BIB=$(awk '$1~/^#bib$/   {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $SRC)
+YML=$(awk '$1~/^#yaml$/  {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $SRC)
+WTM=$(awk '$1~/^#docx$/  {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $SRC)
+WCS=$(awk '$1~/^#css$/   {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $SRC)
+NGN=$(awk '$1~/^#engine$/{$1="";gsub(/^[ \t]+/,"",$0);print $0}' $SRC)
 
-[[ -z $BIB ]] && BIB="$HOME/global.bib"
-[[ -z $YML ]] && FYL="${PDDR}/settings.yaml" || FYL="${YML}"
-[[ -z $WTM ]] && DXR="$PDDR/reference.docx"
-[[ -n $WCS ]] && CSS="-c ${WCS}"         || CSS="-c ${CSDR}/themer.css"
-[[ -n $NGN ]] && NGN="--pdf-engine=$NGN" || NGN=""
+BIB="${BIB:-"${HOME}/global.bib"}"
+FYL="${YML:-"${PDDR}/settings.yaml"}"
+DXR="${WTM:-"${PDDR}/reference.docx"}"
+CSS="-c ${WCS:-"${CSDR}/themer.css"}"
+#[[ -z $BIB ]] && BIB="${HOME}/global.bib"
+#[[ -z $YML ]] && FYL="" || FYL="${YML}"
+#[[ -z $WTM ]] && DXR="${PDDR}/reference.docx"
+#[[ -n $WCS ]] && CSS="-c ${WCS}" || CSS="-c ${CSDR}/themer.css"
+[[ -n $NGN ]] && NGN="--pdf-engine=${NGN}" || NGN=""
 
 REF="-F pandoc-crossref --metadata-file ${FYL}"
 CIT="--bibliography ${BIB} -F pandoc-citeproc"
 WTS="--reference-doc ${DXR}"
 NSC="--number-sections"
 
-pdf    () { pandoc $REF $CIT $NGN $NSC -o ${TRG%.*}.pdf ${TRG} ; }
-word   () { pandoc $REF $CIT $WTS -o ${TRG%.*}.docx ${TRG} ; }
-html   () { pandoc $REF $CIT -s --toc $CSS -o ${TRG%.*}.html ${TRG} ; }
-beamer () { pandoc $CIT -t beamer --incremental -o ${TRG%.*}_beamer.pdf ${TRG} ; }
+epub()   { pandoc $REF $CIT $NSC -o ${TRG}.epub $SRC ; }
+pdf()    { pandoc $REF $CIT $NGN $NSC -o ${TRG}.pdf $SRC ; }
+word()   { pandoc $REF $CIT $WTS -o ${TRG}.docx $SRC ; }
+html()   { pandoc $REF $CIT -s --toc $CSS -o ${TRG}.html $SRC ; }
+beamer() { pandoc $CIT -t beamer --incremental -o ${TRG}_beamer.pdf $SRC ; }
 
-for i in $(awk '$1 ~ /^#output$/ {$1="";gsub(/^[ \t]+/, "", $0);print $0}' $TRG ); do
+for i in $OPT; do
 	$i
 done

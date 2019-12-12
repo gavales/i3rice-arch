@@ -4,6 +4,12 @@
 !red #FF4971
 !blu #556FFF
 !ylw #FF8037
+TOPPAD    30
+LEFTPAD   200
+RIGHTPAD  200
+BOTTOMPAD 30
+BORDER    4
+GAP       8
 bg0 #fafafa
 fg0 #282A36
 acc #414458

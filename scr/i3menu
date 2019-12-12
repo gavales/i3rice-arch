@@ -179,13 +179,13 @@ exit
 }
 
 mode_run   () {
-	WINSTR+=" lines: ${LNS:-"15"};"
+	LSTSTR+=" lines: ${LNS:-"15"};"
 	rofi -show run -p "${PROMPT:-"run"} " \
 		-theme-str "*{$GLOSTR} #window{$WINSTR}
 #horibox{$HRISTR} #listview{$LSTSTR} #entry{$ENTSTR}" $OPTS
 }
 mode_drun  () {
-	WINSTR+=" lines: ${LNS:-"15"};"
+	LSTSTR+=" lines: ${LNS:-"15"};"
 	rofi -show drun -p "${PROMPT:-"drun"} " \
 		-theme-str "*{$GLOSTR} #window{$WINSTR}
 #horibox{$HRISTR} #listview{$LSTSTR} #entry{$ENTSTR}" $OPTS
@@ -196,13 +196,13 @@ mode_dmenu () {
 	STSZ=$(du -k $STDIN | cut -f1)
 	((STSZ==1)) && rm $STDIN && touch $STDIN
 	ROWS=$(cat $STDIN | wc -l) ; ((ROWS>99)) && ROWS=99
-	WINSTR+=" lines: ${LNS:-$ROWS};"
+	LSTSTR+=" lines: ${LNS:-$ROWS};"
 	if [[ -n $MESG ]]; then
-		cat $STDIN | rofi -dmenu -p "${PROMPT:-} " -mesg "${MESG}" \
+		cat $STDIN | rofi -dmenu -markup-rows -p "${PROMPT:-} " -mesg "${MESG}" \
 		-theme-str "*{$GLOSTR} #window{$WINSTR}
 		#horibox{$HRISTR} #listview{$LSTSTR} #entry{$ENTSTR}" $OPTS
 	else
-		cat $STDIN | rofi -dmenu -p "${PROMPT:-} " \
+		cat $STDIN | rofi -dmenu -markup-rows -p "${PROMPT:-} " \
 		-theme-str "*{$GLOSTR} #window{$WINSTR}
 		#horibox{$HRISTR} #listview{$LSTSTR} #entry{$ENTSTR}" $OPTS
 	fi

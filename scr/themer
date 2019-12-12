@@ -706,7 +706,7 @@ O_list () {
 			;;
 		varmenu)
 			echo -n $(themer -v "$(cat $ALR | \
-					i3menu --prompt "$(themer -v name)" -l 25 -c 3 -n | \
+					i3menu --prompt "$(themer -v name)" -l 25 -C 3 -n | \
 					awk '{print $NF}') ") | \
 				xsel -i; xsel -o | xsel -i -b 
 			;;

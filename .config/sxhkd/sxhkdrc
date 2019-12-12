@@ -13,23 +13,21 @@
 #alt + shift + Tab
 #	gwmfocus prev
 
-alt + grave
-	rofind
-
-alt + i
-	notify-send "$(gwmunder) $(gwmtest $(pfw))" "$(gwmdeet c $(pfw)) $(gwmdeet i $(pfw)) $(gwmdeet n $(pfw))"
-
-alt + shift + q
-	gwmsbar --delete "$(pfw)"
-
-alt + 1
-	gwmsbar --focus $(pfw)
-alt + 2
-	gwmsbar --stack $(pfw)
-alt + 3
-	gwmsbar --major $(pfw)
-alt + 4
-	gwmsbar --minor $(pfw)
+#
+#alt + i
+#	notify-send "$(gwmunder) $(gwmtest $(pfw))" "$(gwmdeet c $(pfw)) $(gwmdeet i $(pfw)) $(gwmdeet n $(pfw))"
+#
+#alt + shift + q
+#	gwmsbar --delete "$(pfw)"
+#
+#alt + 1
+#	gwmsbar --focus $(pfw)
+#alt + 2
+#	gwmsbar --stack $(pfw)
+#alt + 3
+#	gwmsbar --major $(pfw)
+#alt + 4
+#	gwmsbar --minor $(pfw)
 
 # ━  misc
 Print
@@ -58,6 +56,8 @@ super + 7
 	$EDITOR -s doots $HOME/.config/polybar/.themer/template_config
 super + 8
 	$EDITOR -s doots $HOME/.config/qutebrowser/.themer/template_config.py
+super + equal
+	rofind
 
 super + shift + grave
 	gencvl
@@ -93,7 +93,7 @@ super + shift + p
 super + s
 	lch -i ncmpcpp -e "$TWOMINAL -name ncmpcpp -e ncmpcpp"
 super + d
-	i3menu -d
+	i3menu -d -F
 super + f
 	thunar
 super + g
@@ -108,7 +108,8 @@ super + Return
 super + shift + s
 	lch -c Spotify -e "spotify"
 super + shift + d
-	i3menu -r -L 1 -w 100 -o
+	themer --list varmenu
+#	i3menu -r -L 1 -w 100 -o
 super + shift + f
 	gksu thunar
 super + shift + g

@@ -5545,3 +5545,73 @@ Dec 04 15:14 : client: [21] closed
 Dec 04 15:14 : client: [22] opened from [::1]:42820
 Dec 04 15:14 : client: [22] closed
 Dec 04 15:14 : client: [20] closed
+Dec 12 19:03 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Dec 12 19:03 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Dec 12 19:03 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Dec 12 19:03 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Dec 12 19:08 : client: [23] opened from [::1]:56212
+Dec 12 19:08 : client: [24] opened from [::1]:56214
+Dec 12 19:08 : client: [24] closed
+Dec 12 19:08 : client: [25] opened from [::1]:56216
+Dec 12 19:08 : client: [25] closed
+Dec 12 19:08 : client: [23] closed
+Dec 12 19:08 : client: [26] opened from [::1]:56224
+Dec 12 19:08 : client: [27] opened from [::1]:56226
+Dec 12 19:08 : client: [27] closed
+Dec 12 19:08 : client: [28] opened from [::1]:56228
+Dec 12 19:08 : client: [28] closed
+Dec 12 19:08 : client: [29] opened from [::1]:56230
+Dec 12 19:08 : client: [29] closed
+Dec 12 19:08 : client: [30] opened from [::1]:56232
+Dec 12 19:08 : client: [30] closed
+Dec 12 19:08 : client: [31] opened from [::1]:56234
+Dec 12 19:08 : client: [31] closed
+Dec 12 19:08 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Dec 12 19:08 : client: [32] opened from [::1]:56236
+Dec 12 19:08 : client: [32] closed
+Dec 12 19:08 : client: [33] opened from [::1]:56238
+Dec 12 19:08 : client: [33] closed
+Dec 12 19:08 : client: [34] opened from [::1]:56240
+Dec 12 19:08 : client: [34] closed
+Dec 12 19:08 : client: [35] opened from [::1]:56242
+Dec 12 19:08 : client: [35] closed
+Dec 12 19:08 : client: [36] opened from [::1]:56244
+Dec 12 19:08 : client: [36] closed
+Dec 12 19:08 : client: [37] opened from [::1]:56246
+Dec 12 19:08 : client: [37] closed
+Dec 12 19:08 : client: [38] opened from [::1]:56248
+Dec 12 19:08 : client: [38] closed
+Dec 12 19:08 : client: [39] opened from [::1]:56250
+Dec 12 19:08 : client: [39] closed
+Dec 12 19:08 : client: [40] opened from [::1]:56252
+Dec 12 19:08 : client: [40] closed
+Dec 12 19:08 : client: [41] opened from [::1]:56254
+Dec 12 19:08 : client: [41] closed
+Dec 12 19:08 : client: [42] opened from [::1]:56256
+Dec 12 19:08 : client: [42] closed
+Dec 12 19:08 : client: [43] opened from [::1]:56258
+Dec 12 19:08 : client: [43] closed
+Dec 12 19:08 : client: [44] opened from [::1]:56260
+Dec 12 19:08 : client: [44] closed
+Dec 12 19:08 : client: [45] opened from [::1]:56262
+Dec 12 19:08 : client: [45] closed
+Dec 12 19:08 : client: [46] opened from [::1]:56264
+Dec 12 19:08 : client: [46] closed
+Dec 12 19:10 : client: [26] closed
+Dec 12 21:07 : player: played "Afroman/00 Colt 45.mp3"
+Dec 12 21:07 : player: played "Afroman/00 Colt 45.mp3"
+Dec 12 21:07 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Dec 12 21:07 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Dec 12 21:07 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Dec 12 21:07 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Dec 12 21:13 : player: played "Afroman/00 Colt 45.mp3"
+Dec 12 21:16 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Dec 12 21:16 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Dec 12 21:16 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Dec 12 21:16 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Dec 12 21:16 : client: [0] opened from [::1]:38110
+Dec 12 21:16 : client: [1] opened from [::1]:38112
+Dec 12 21:16 : client: [1] closed
+Dec 12 21:16 : client: [2] opened from [::1]:38116
+Dec 12 21:16 : client: [2] closed
+Dec 12 21:17 : client: [0] closed

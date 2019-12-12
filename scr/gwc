@@ -13,8 +13,7 @@ CURR="${WDIR}/current"
 WHT="white-drops"
 CRLN="$(readlink -f $CURR)"
 HIST="${WDIR}/.history"
-eval "$(mattr xywh $(pfm) | \
-	awk '{print "MX="$1 "MY="$2 "MW="$3 "MH="$4}')"
+eval "$(mattr wh $(pfm) | awk '{print "MW="$1"\nMH="$2}')"
 blr=0x16
 [[ -n $(command -v parallel) ]] && \
 	ADDCMD="| parallel gwc --add \"{}\"" || \
@@ -102,21 +101,23 @@ echo "$1"
 exit
 }
 
-add-wall () {
+tile-wall() { feh --bg-tile $CURR ; echo "${CRLN##*/}" ; }
+random()    { _WPP=$(ls $NORM | shuf -n 1) ; }
+set-wall()  { feh --bg-center $CURR ; echo "${CRLN##*/}" ; }
+add-wall()       {
 	SRC="$1"
 	TRG="${1##*/}"
 	TRG="${TRG%.*}"
 	TRG="$(echo $TRG | sed -e "s/1920x1080//g;s/,//g;s/\ //g")"
 	echo "$SRC >> $NORM/$TRG"
 	[[ -f ${NORM}/${TRG} ]] || {
-		convert "${SRC}" -resize "${MX}x${MY}^" -gravity center \
-			-extent "${MX}x${MY}" "${NORM}/${TRG}"
+		convert "${SRC}" -resize "${MW}x${MH}^" -gravity center \
+			-extent "${MW}x${MH}" "${NORM}/${TRG}"
 		convert "${NORM}/${TRG}" -blur $blr "${BLUR}/${TRG}"
 		}
 	_WPP="$TRG"
 }
-
-tint () {
+tint()           {
 	CRTNT="${CRLN##*/}-${_TNT/\#/}"
 	[[ -f ${NORM}/${CRTNT} ]] || {
 		convert "${NORM}/${CRLN##*/}" -fill "${_TNT}" -tint 100 "${NORM}/${CRTNT}"
@@ -125,10 +126,7 @@ tint () {
 	ln -sf "${NWFD}/${CRTNT}" $CURR
 	CRLN=$(readlink -f $CURR)
 }
-
-tile-wall () { feh --bg-tile $CURR ; echo "${CRLN##*/}" ; }
-
-colour () {
+colour()         {
 #		convert $WHT -fill $1 -draw 'color 0,0 replace' "${COLS}/${1/\#/}"
 
 	[[ -f ${COLS}/${1/\#/}.png ]] && \
@@ -167,35 +165,26 @@ colour () {
 
 exit
 }
-
-change-current () {
+change-current() {
 	ln -sf "${NWFD}/${_WPP}" $CURR
 	CRLN="$(readlink -f $CURR)"
 }
-
-history () {
+history()        {
 	[[ ! -f $HIST ]] && touch $HIST
 	sed -e "/"${1}"/d" -i $HIST
 	echo -e "${1}\n$(cat $HIST)" > $HIST
 }
-
-random () { _WPP=$(ls $NORM | shuf -n 1) ; }
-
-previous () {
+previous()       {
 	_WPP="$(sed -n "/"${CRLN##*/}"/{n;p;}" $HIST)"
 	[[ -z $_WPP ]] && _WPP="$(head -n 1 $HIST)"
 }
-
-next () {
+next()           {
 	_WPP="$(sed -n "/"${CRLN##*/}"/{g;1!p;};h" $HIST)"
 	[[ -z $_WPP ]] && _WPP="$(tail -n 1 $HIST)"
 }
 
-set-wall () { feh --bg-center $CURR ; echo "${CRLN##*/}" ; }
-
-O_list () { cd ${NORM} ; sxiv -a -b ${CRLN##*/} * ; exit ; }
-
-O_add () {
+O_list() { cd ${NORM} ; sxiv -a -b ${CRLN##*/} * ; exit ; }
+O_add()    {
 	if [[ -z $1 ]]; then
 		echo "No argument, checking for pictures in current dir to add"
 		[[ -n $(ls *.jpg)  ]] && echo Found .jpgs  ; eval "ls *.jpg  $ADDCMD"
@@ -220,8 +209,7 @@ O_add () {
 	fi
 	exit
 }
-
-O_rename () {
+O_rename() {
 	eval "$(echo "${1}" | awk '{
 		print "OLD=\"" $1 "\" " "NEW=\"" $2 "\""
 		}')"
@@ -236,8 +224,7 @@ O_rename () {
 	fi
 	exit
 }
-
-O_delete () {
+O_delete() {
 	DEL="${1}"
 	if [[ -z $DEL ]]; then
 		rm "${NORM}/${CRLN##*/}"
@@ -263,7 +250,11 @@ while true; do
 		--rename    | -R ) O_rename "${2:-}" ; shift ;;
 		--delete    | -d ) O_delete "${2:-}" ; shift ;;
 		--help ) help ;;
-		-h     ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
+		-h     ) help | \
+			sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | \
+			sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g'
+			exit
+			;;
 		-- ) shift ; break ;;
 		*  ) break ;;
 	esac
@@ -274,19 +265,16 @@ _WPP=${CRLN##*/}
 
 if [[ -n $_WPO ]]; then
 	_WPP="$_WPO"
-	echo $_WPP
 	[[ $_WPP =~ "#" ]] && colour "$_WPP"
-	WPC=${_WPP##*/}
+	WPC=${_WPP##*/} ; WPC=${WPC%.*} #; WPC=${WPC%(*}
+	WPC=$(echo "$WPC" | sed "s/1920x1080//g;s/,//g;s/\ //g")
 
 	if   [[ $_WPO == "random"   ]]; then random
 	elif [[ $_WPO == "previous" ]]; then previous
 	elif [[ $_WPO == "next"     ]]; then next
-	elif [[ ! -f $NORM/${WPC%.*} ]]; then
-		if [[ ! -f "$_WPP" ]]; then
-			help "Wallpaper doesn't exist anywhere"
-		else
-			echo "Adding ${WPC%.*}"
-			add-wall "$_WPP"
+	elif [[ ! -f $NORM/${WPC}   ]]; then
+		if [[ ! -f "$_WPP" ]]; then echo "Wallpaper doesn't exist" ; gwc -h ; exit
+		else                        echo "Adding ${WPC}" ; add-wall "$_WPP"
 		fi
 	fi
 

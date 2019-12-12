@@ -70,7 +70,7 @@ flist () {
 		/.mp4$|.mkv$|.mov$/             {gsub(/^\.\//,HOME,$0);print"VID "$0}
 		/.mp3$/                         {gsub(/^\.\//,HOME,$0);print"MUS "$0}
 		/.xbm$/                         {gsub(/^\.\//,HOME,$0);print"XBM "$0}
-		/.pdf$|.epub$/                  {gsub(/^\.\//,HOME,$0);print"BKK "$0}
+		/.pdf$|.epub$/                  {gsub(/^\.\//,HOME,$0);print"PDF "$0}
 		/.1$/                           {gsub(/^\.\//,HOME,$0);print"MAN "$0}
 		!/.png$|.jpeg$|.jpg$|.svg$|.xpm$|.mp4$|.mkv$|.mov$|.mp3$|.xbm$|.pdf$|.epub$|.1$/ {
 			gsub(/^\.\//,HOME,$0);print$0
@@ -86,7 +86,7 @@ case $TRG in
 	VID*) $VIDOPEN "${TRG/'VID ~'/${HOME}}" ;;
 	MUS*) $MUSOPEN "${TRG/'MUS ~'/${HOME}}" ;;
 	XBM*) $XBMOPEN "${TRG/'XBM ~'/${HOME}}" ;;
-	BKK*) $PDFOPEN "${TRG/'BKK ~'/${HOME}}" ;;
+	PDF*) $PDFOPEN "${TRG/'PDF ~'/${HOME}}" ;;
 	MAN*) $MANOPEN "${TRG/'MAN ~'/${HOME}}" ;;
 	*)    NORMAL   "${TRG/'~'/${HOME}}" ;;
 esac

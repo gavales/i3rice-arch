@@ -1,0 +1,27 @@
+* {
+	fg0:     #085175;
+	bg0:     #a4dfe5;
+	fg1:     #1c6589;
+	bg1:     #90cbd1;
+	fg2:     #30799d;
+	bg2:     #7cb7bd;
+	fg3:     #448db1;
+	bg3:     #68a3a9;
+	red:     #56c0cd;
+	green:   #55b7da;
+	yellow:  #55c7d8;
+	blue:    #64bde2;
+	magenta: #84c8e6;
+	cyan:    #60d4dd;
+	black:   @bg1;
+	white:   @fg1;
+
+	text-color:       @fg0;
+	background-color: @accent;
+	border-color:     @accent;
+	
+	spacing: 0;
+	border: 0;
+	
+	font: "Luxi Mono 12";
+	}

@@ -1,3 +1,4 @@
+#
 #   ██ ██████                             ████ ██
 #  ▒▒ ▒█▒▒▒▒█                            ▒██▒ ▒▒   █████
 #   ██▒    ▒█  █████   ██████  ███████  ██████ ██ ██▒▒▒██
@@ -21,10 +22,15 @@ set $MON1 %%MON1%%
 set $MON3 %%MON3%%
 set $MON2 %%MON2%%
 
-set $W69 492
-set $W43 492
-set $H69 299
-set $H43 389
+set $W69 %30
+set $H69 %30
+set $W43 %30
+set $H43 %35
+set $TPAD %%TOPPAD%%
+set $LPAD %%LEFTPAD%%
+set $RPAD %%RIGHTPAD%%
+set $BPAD %%BOTTOMPAD%%
+set $GAP %%GAP%%
 
 # ━━ i3
 set $ALI Mod1
@@ -112,17 +118,17 @@ $ALT+e           layout toggle tabbed split
 $ALT+y           $QUD --resize '1 -5 -5'
 $ALT+u           $QUD --resize '1 $W43 $H43'
 $ALT+i           $QUD --resize '1 $W69 $H69'
-$ALT+o           $QUD --resize '1 +5 +5'
+$ALT+o           $QUD --resize '1 +5  +5'
 $ALT+p           $QUD --resize '1 %40 %20'
-$ALT+bracketleft $QUD --resize '1  *  98'
+$ALT+bracketleft $QUD --resize '1 *   98'
 
 $ALT+Shift+Tab   focus left
 $ALT+Shift+q     kill
 $ALT+Shift+r     restart
-$ALT+Shift+y     gaps inner current set    0; gaps outer current set    0
-$ALT+Shift+u     gaps inner current minus 10; gaps outer current minus 10
-$ALT+Shift+i     gaps inner current plus  10; gaps outer current plus  10
-$ALT+Shift+o     gaps inner current set   40; gaps outer current set   40
+$ALT+Shift+y     gaps top all set 0; gaps left all set 0; gaps bottom all set 0; gaps right all set 0
+$ALT+Shift+u     gaps horizontal all plus 10
+$ALT+Shift+i     gaps horizontal all minus 10
+$ALT+Shift+o     gaps top all set $TPAD; gaps left all set $LPAD; gaps bottom all set $BPAD; gaps right all set $RPAD
 
 $ALT+Control+y   resize shrink width  5 px or 5 ppt
 $ALT+Control+u   resize shrink height 5 px or 5 ppt
@@ -255,28 +261,26 @@ $fw [instance="visualiser"]              focus;$QUD -m 4;focus;$tf "visualiser"
 $fw [class="Glava"]                      focus;$QUD -m 4;focus;border pixel 0
 
 # ━  GAPS
-gaps inner 20
-gaps outer 40
-workspace 1 gaps inner  5
-workspace 1 gaps outer  5
-workspace 1 gaps top   30
+gaps inner 0
+gaps top    $TPAD
+gaps left   $LPAD
+gaps bottom $BPAD
+gaps right  $RPAD
 
 # ━  STARTUP
-#$exn urxvtd -q -o -f
-#$exn reloadconfs
-#$exn mpd
-#$exn xautolock -corners 0-0- -cornersize 30 -time 5 -locker lockscreen
-#$exn /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-#$exn nm-applet
-#$exn xfce4-power-manager
-#$exn pamac-tray
-#$exn clipit
-#$exn blueman-applet
-#$exn compton
-#$ena ff-theme-util
-#$ena fix_xcursor
-$exn i3listen-toggle
+$exn urxvtd -q -o -f
+$exn mpd
+$exn xautolock -corners 0-0- -cornersize 30 -time 5 -locker lscr
+$exn /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+$exn nm-applet
+$exn xfce4-power-manager
+$exn pamac-tray
+$exn clipit
+$exn blueman-applet
+$exn ff-theme-util
+$exn fix_xcursor
+$exn reloadconfs
+$exn sxhkd
 
 $ena mpv %%HOME%%/scrmus/A\ Tone\ His\ Self.mp3
 $ena notify-send 'i3 (re)loaded!' -i %%HOME%%/scrpic/i3white.png
-

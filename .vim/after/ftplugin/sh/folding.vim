@@ -61,7 +61,7 @@ setlocal foldmethod=expr
 setlocal foldexpr=Folds()
 
 setlocal foldtext=FoldText()
-function FoldText()
+function! FoldText()
 	let nucolwidth = &fdc + &number * &numberwidth
 	let windowwidth = winwidth(0) - nucolwidth - 3
 	let foldsize = (v:foldend-v:foldstart)
