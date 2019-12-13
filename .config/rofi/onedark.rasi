@@ -6,7 +6,7 @@
 #inputbar { margin: 1 1 1 1; children: [prompt, entry, case-indicator]; }
 #prompt {
 	padding: 10;
-	text-color: @fg0;
+	text-color: @bg0;
 	background-color: @acf;
 	border-radius: 5;
 }
