@@ -1,0 +1,61 @@
+configuration {
+  font: "Iosevka Medium 13";
+  fullscreen: true;
+  show-icons: true;
+  window-format: "{t}";
+}
+
+* {
+  background-color: rgba(0, 0, 0, 0%);
+  text-color: #fff;
+}
+
+window {
+  background-color: rgba(32, 23, 50, 90%);
+  location: north;
+}
+
+mainbox {
+  children: [ listview, inputbar ];
+  padding: 60;
+}
+
+listview {
+  columns: 6;
+  layout: vertical;
+  spacing: 60;
+}
+
+element {
+  border-radius: 4;
+  orientation: vertical;
+  padding: 36 0;
+}
+
+element selected {
+  background-color: rgba(62, 54, 77, 90%);
+  text-color: #f92672; 
+}
+
+element-icon {
+  size: 64;
+}
+
+element-text {
+  horizontal-align: 0.5;
+  padding: 10 0 0 0;
+  text-color: inherit;
+}
+
+inputbar {
+  background-color: rgba(62, 54, 77, 90%);
+  border-radius: 4;
+  margin: 0 800;
+  /* margin: 0 1100; */
+  padding: 10 12;
+  position: south;
+}
+
+prompt {
+  enabled: false;
+}

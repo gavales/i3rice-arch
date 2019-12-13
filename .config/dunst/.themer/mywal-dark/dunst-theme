@@ -1,0 +1,19 @@
+[frame]
+width = 1
+color = "#262a3b"
+
+[urgency_low]
+background = "#96B3E0"
+foreground = "#262a3b"
+timeout = 3
+
+[urgency_normal]
+background = "#96B3E0"
+foreground = "#262a3b"
+timeout = 3
+
+[urgency_critical]
+background = "#6D86A9"
+foreground = "#262a3b"
+timeout = 3
+

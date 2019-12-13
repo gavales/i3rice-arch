@@ -3,34 +3,35 @@
 #window { background-color: @accent; }
 #mainbox { padding: 10 10; }
 
-#inputbar {
-	margin: 1 1 1 1;
-	children: [prompt, textbox-prompt-colon, entry, case-indicator];
+#inputbar { margin: 1 1 1 1; children: [prompt, entry, case-indicator]; }
+#prompt {
+	padding: 10;
+	text-color: @fg0;
+	background-color: @acf;
+	border-radius: 5;
 }
-#prompt { text-color: @fg0; }
-#textbox-prompt-colon { expand: false; str: ":"; text-color: @fg3; }
-#entry { margin: 0px 10px; }
+#entry { padding: 10; background-color: @acb; border-radius: 5; }
 #listview { spacing: 5px; dynamic: true; scrollbar: false; }
 
 #element {
-	padding: 5;
+	padding: 20;
 	background-color: @accent;
+	border-radius: 5;
 	text-color: @fg0;
-	border-radius: @cornerrad;
 }
-#element selected { background-color: @bg1; text-color: @fg1; }
+#element selected { background-color: @acb; text-color: @fg1; }
 #element urgent, element selected urgent { text-color: @red; }
 #element active, element selected active { text-color: @blue; }
 
 #message {
 	padding: 2;
-	border-radius: @cornerrad;
+	border-radius: 5;
 	background-color: @bg2;
 	border: 0;
 }
 
 #button selected {
 	padding: 5;
-	border-radius: @cornerrad;
+	border-radius: 5;
 	background-color: @bg1;
 }
