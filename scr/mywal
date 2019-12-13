@@ -5,7 +5,7 @@
 
 thmDir=$HOME/.config/themer
 TRG=${thmDir}/mywal
-wal -q -e -n -s -t -i "${1}"
+wal -q -l -e -n -s -t -i "${1}"
 WALL="${1}"
 gwc --add "$WALL" &>/dev/null &
 
@@ -20,8 +20,8 @@ echo "wallpaper ${NME}" >> $TRG
 cat $HOME/.cache/wal/colors-kitty.conf | grep 'color' | \
 sed "/color10/d;/color11/d;/color12/d;/color13/d;\
 /color14/d;/color9/d;/color8/d;\
-s/color15/bg0\ /g;\
-s/color0/fg0/g;\
+s/color15/fg0\ /g;\
+s/color0/bg0/g;\
 s/color1/red/g;\
 s/color2/grn/g;\
 s/color3/ylw/g;\

@@ -1,22 +1,22 @@
 !! vim:ft=xdefaults
 ! ━  themer theme: mywal
 
-#define tfg0 #0F1610
-#define tacb #94a0a5
-#define tred #4c4b3f
-#define redl #4c4b3f
-#define tgrn #263f48
-#define grnl #263f48
-#define tylw #30464c
-#define ylwl #30464c
-#define tblu #1b4a64
-#define blul #1b4a64
-#define tgnt #3f5052
-#define gntl #3f5052
-#define tcyn #395156
-#define cynl #395156
-#define tbg0 #c2c6c4
-#define tbg1 #aeb2b0
+#define tfg0 #050406
+#define tacb #d1c8d1
+#define tred #1e3c56
+#define redl #1e3c56
+#define tgrn #1b4861
+#define grnl #1b4861
+#define tylw #34485b
+#define ylwl #34485b
+#define tblu #16415f
+#define blul #16415f
+#define tgnt #745554
+#define gntl #745554
+#define tcyn #806b56
+#define cynl #806b56
+#define tbg0 #fdf9f7
+#define tbg1 #e9e5e3
 
 ! ━  default theme: i3
 

@@ -3,57 +3,57 @@
 	\centering
 	\begin{tabular}{cSNYP}
 		\toprule
-		\textbf{<++>} \\
+		\textbf{SNYP} \\
 		\midrule
-		<++> \\
+		SNYP \\
 		\bottomrule
 	\end{tabular}
-	\caption{<++>
-	\label{tab:<++>}}
+	\caption{SNYP
+	\label{tab:SNYP}}
 \end{table}
 %%% END
 
 %%% BEGIN figure
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=SNYP]{<++>}
-	\caption{<++>
-	\label{fig:<++>}}
+	\includegraphics[width=SNYP]{SNYP}
+	\caption{SNYP
+	\label{fig:SNYP}}
 \end{figure}
 %%% END
 
 %%% BEGIN begin
 \begin{SNYP}
-	<++>
+	SNYP
 \end{SNYP}
 
-<++>
+SNYP
 %%% END
 
 %%% BEGIN multicol
 \begin{multicols}{SNYP}
 
-<++>
+SNYP
 
 \end{multicols}
 
-<++>
+SNYP
 %%% END
 
-%%% BEGIN neq
+%%% BEGIN numeqn
 \begin{equation}
 SNYP
 \end{equation}
 
-<++>
+SNYP
 %%% END
 
 %%% BEGIN stretch
 {\setstretch{SNYP}
 
-<++>
+SNYP
 
 }
-<++>
+SNYP
 %%% END
 

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# To run after applying theme
+for i in $(ls /home/gavarch/.config/sublime-text-3/Packages/THEMES/.themer | grep '^template_'); do
+	cp "/home/gavarch/.config/sublime-text-3/Packages/THEMES/.themer/${1}/${i/template_}" "/home/gavarch/.config/sublime-text-3/Packages/THEMES/${i/template_}"
+done

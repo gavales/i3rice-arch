@@ -1,18 +1,18 @@
 * {
-	fg0:     #0F1610;
-	bg0:     #c2c6c4;
-	fg1:     #232a24;
-	bg1:     #aeb2b0;
-	fg2:     #373e38;
-	bg2:     #9a9e9c;
-	fg3:     #4b524c;
-	bg3:     #868a88;
-	red:     #a6a399;
-	green:   #8097a2;
-	yellow:  #899ea6;
-	blue:    #74a2be;
-	magenta: #98a8ac;
-	cyan:    #92a9b0;
+	fg0:     #050406;
+	bg0:     #fdf9f7;
+	fg1:     #19181a;
+	bg1:     #e9e5e3;
+	fg2:     #2d2c2e;
+	bg2:     #d5d1cf;
+	fg3:     #414042;
+	bg3:     #c1bdbb;
+	red:     #9ab6ce;
+	green:   #97c2da;
+	yellow:  #b0c2d4;
+	blue:    #92bbd7;
+	magenta: #f0cfcd;
+	cyan:    #fce5cf;
 	black:   @bg1;
 	white:   @fg1;
 

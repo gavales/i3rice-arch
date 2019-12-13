@@ -1,20 +1,20 @@
 %%% BEGIN if
 if [[ SNYP ]]; then
-	<++>
+	SNYP
 fi
 %%% END
 
 %%% BEGIN case
 case $SNYP in
-	<++>) <++> ;;
+	SNYP) SNYP ;;
 esac
 %%% END
 
 %%% BEGIN opt
-while getopts :SNYP:<++> opts; do
+while getopts :SNYP:SNYP opts; do
 	case $opts in
-		<++>)
-			<++>
+		SNYP)
+			SNYP
 			;;
 	esac
 done
@@ -23,7 +23,7 @@ done
 %%% BEGIN lop
 while true; do
 	case $1 in
-		--SNYP | -<++> ) <++>="${2:-}" ; shift ;;
+		--SNYP | -SNYP ) SNYP="${2:-}" ; shift ;;
 		--help ) help ;;
 		-h ) help | \
 			sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | \
@@ -37,20 +37,20 @@ done
 
 %%% BEGIN whi
 while SNYP; do
-	<++>
+	SNYP
 done
 %%% END
 
 %%% BEGIN fun
 SNYP () {
-	<++>
+	SNYP
 	exit
 }
 %%% END
 
 %%% BEGIN for
 for i in SNYP; do
-	<++>
+	SNYP
 done
 %%% END
 

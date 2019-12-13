@@ -4,83 +4,66 @@ map ;b :!biber <C-r>%<BS><BS><BS>bcf<CR><CR>
 map ;n :!makeindex <C-r>%<BS><BS><BS>nlo -s nomencl.ist -o <C-r>%<BS><BS><BS>nls<CR><CR>
 
 inoremap $$      $$<++><Esc>F$i
-inoremap <Tab>(  \left(\right)<++><Esc>T(i
-inoremap <Tab>{{ \left\{\right\}<++><Esc>T{i
-inoremap <Tab>[  \left[\right]<++><Esc>T[i
-inoremap <Tab>bar \left\right<++><Esc>F\i
-inoremap <Tab>bf \textbf{}<++><Esc>T{i
-inoremap <Tab>ci \cite{}<++><Esc>T{i
-inoremap <Tab>ct \citet{}<++><Esc>T{i
-inoremap <Tab>cp \citep{}<++><Esc>T{i
-inoremap <Tab>ch \chapter{}<CR><++><Esc>kf}i
-inoremap <Tab>eq $$<CR><CR>$$<CR><++><Esc>03ki
-inoremap <Tab>it \textit{}<++><Esc>T{i
-inoremap <Tab>lf \label{fig:}<Esc>T:i
-inoremap <Tab>lt \label{tab:}<Esc>T:i
-inoremap <Tab>le \label{eq:}<Esc>T:i
-inoremap <Tab>ls \label{sec:}<Esc>T:i
-inoremap <Tab>nc \newcommand{}[<++>]<++>{<++>}<Esc>2F}i
-inoremap <Tab>pc \parencite{}<++><Esc>T{i
-inoremap <Tab>pt \item<space>
-inoremap <Tab>rf \figref{fig:}<++><Esc>T:i
-inoremap <Tab>rt \tabref{tab:}<++><Esc>T:i
-inoremap <Tab>re \eqnref{eq:}<++><Esc>T:i
-inoremap <Tab>rs \secref{sec:}<++><Esc>T:i
-inoremap <Tab>sc \textsc{}<++><Esc>T{i
-inoremap <Tab>s1 \section{}<CR><++><Esc>kf}i
-inoremap <Tab>s2 \subsection{}<CR><++><Esc>kf}i
-inoremap <Tab>s3 \subsubsection{}<CR><++><Esc>kf}i
-inoremap <Tab>tt \texttt{}<++><Esc>T{i
-inoremap <Tab>tc \textcite{}<++><Esc>T{i
-inoremap <Tab>up \usepackage[]<++>{<++>}<Esc>T[i
-inoremap <Tab>ul \underline{}<++><Esc>T{i
+inoremap (<Tab>  \left(\right)<++><Esc>T(i
+inoremap {{<Tab> \left\{\right\}<++><Esc>T{i
+inoremap [<Tab>  \left[\right]<++><Esc>T[i
+inoremap bar<Tab> \left\right<++><Esc>F\i
+inoremap bf<Tab> \textbf{}<++><Esc>T{i
+inoremap ci<Tab> \cite{}<++><Esc>T{i
+inoremap ct<Tab> \citet{}<++><Esc>T{i
+inoremap cp<Tab> \citep{}<++><Esc>T{i
+inoremap ch<Tab> \chapter{}<CR><++><Esc>kf}i
+inoremap eq<Tab> $$<CR><CR>$$<CR><++><Esc>03ki
+inoremap it<Tab> \textit{}<++><Esc>T{i
+inoremap lf<Tab> \label{fig:}<Esc>T:i
+inoremap lt<Tab> \label{tab:}<Esc>T:i
+inoremap le<Tab> \label{eq:}<Esc>T:i
+inoremap ls<Tab> \label{sec:}<Esc>T:i
+inoremap nc<Tab> \newcommand{}[<++>]<++>{<++>}<Esc>2F}i
+inoremap pc<Tab> \parencite{}<++><Esc>T{i
+inoremap pt<Tab> \item<space>
+inoremap rf<Tab> \figref{fig:}<++><Esc>T:i
+inoremap rt<Tab> \tabref{tab:}<++><Esc>T:i
+inoremap re<Tab> \eqnref{eq:}<++><Esc>T:i
+inoremap rs<Tab> \secref{sec:}<++><Esc>T:i
+inoremap sc<Tab> \textsc{}<++><Esc>T{i
+inoremap s1<Tab> \section{}<CR><++><Esc>kf}i
+inoremap s2<Tab> \subsection{}<CR><++><Esc>kf}i
+inoremap s3<Tab> \subsubsection{}<CR><++><Esc>kf}i
+inoremap tt<Tab> \texttt{}<++><Esc>T{i
+inoremap tc<Tab> \textcite{}<++><Esc>T{i
+inoremap up<Tab> \usepackage[]<++>{<++>}<Esc>T[i
+inoremap ul<Tab> \underline{}<++><Esc>T{i
+inoremap bg<Tab> \begin{DELRN}<CR><++><CR>\end{DELRN}<CR><CR><++><Esc>4k0fR:MultipleCursorsFind DELRN<CR>c
+inoremap bm<Tab> \begin{multicols}{2}<CR><CR><CR><CR>\end{multicols}<CR><CR><++><Esc>4k0fR
+inoremap en<Tab> \begin{equation}<CR><CR>\end{equation}<CR><++><Esc>02ki
+inoremap pi<Tab> \begin{figure}[H]<CR>
+	\\centering<CR>
+	\\includegraphics[width=]{<++>}<CR>
+	\\caption{<++><CR>
+	\\label{fig:<++>}}<CR>
+	\<BS>\end{figure}<Esc>03kf=a
+inoremap st<Tab> {\setstretch{}<CR><++><CR><CR>}<CR><CR><++><Esc>5k0f{a
+inoremap ta<Tab> \begin{table}[H]<CR>
+	\\centering<CR>
+	\<Tab>\begin{tabular}{c}<CR>
+	\<Tab>\toprule<CR>
+	\\textbf{<++>} \\<CR>
+	\\midrule<CR>
+	\<++> \\<CR>
+	\\bottomrule<CR>
+	\<BS>\end{tabular}<CR>
+	\<BS>\caption{<++><CR>
+	\\label{tab:<++>}}<CR>
+	\<BS>\end{table}<Esc>09kfca
 
-vnoremap <Tab>bf xi\textbf{<Esc>pa}<Esc>
-vnoremap <Tab>it xi\textit{<Esc>pa}<Esc>
-vnoremap <Tab>sc xi\textsc{<Esc>pa}<Esc>
-vnoremap <Tab>tt xi\texttt{<Esc>pa}<Esc>
-vnoremap <Tab>ul xi\underline{<Esc>pa}<Esc>
-
-if has("win32")
-	inoremap <Tab>bg \begin{DELRN}<CR><++><CR>\end{DELRN}<CR><CR><++><Esc>4k0fR:MultipleCursorsFind DELRN<CR>c
-	inoremap <Tab>bm \begin{multicols}{2}<CR><CR><CR><CR>\end{multicols}<CR><CR><++><Esc>4k0fR
-	inoremap <Tab>en \begin{equation}<CR><CR>\end{equation}<CR><++><Esc>02ki
-	inoremap <Tab>pi \begin{figure}[H]<CR>
-		\\centering<CR>
-		\\includegraphics[width=]{<++>}<CR>
-		\\caption{<++><CR>
-		\\label{fig:<++>}}<CR>
-		\<BS>\end{figure}<Esc>03kf=a
-	inoremap <Tab>st {\setstretch{}<CR><++><CR><CR>}<CR><CR><++><Esc>5k0f{a
-	inoremap <Tab>ta \begin{table}[H]<CR>
-		\\centering<CR>
-		\<Tab>\begin{tabular}{c}<CR>
-		\<Tab>\toprule<CR>
-		\\textbf{<++>} \\<CR>
-		\\midrule<CR>
-		\<++> \\<CR>
-		\\bottomrule<CR>
-		\<BS>\end{tabular}<CR>
-		\<BS>\caption{<++><CR>
-		\\label{tab:<++>}}<CR>
-		\<BS>\end{table}<Esc>09kfca
-
-	vnoremap <Tab>st xi{\setstretch{1.0}<CR><Esc>pa}<Esc>
-	vnoremap <Tab>bm xi\begin{multicols}{2}<CR><Esc>pa<CR>\end{multicols}<Esc>
-
-else
-	inoremap <Tab>bg <Esc>:read !snyp -t tex -g begin<CR>:MultipleCursorsFind SNYP<CR>c
-	inoremap <Tab>bm <Esc>:read !snyp -t tex -g multicol<CR>/SNYP<CR>zo4xi
-	inoremap <Tab>en <Esc>:read !snyp -t tex -g neq<CR>/SNYP<CR>zo4xi
-	inoremap <Tab>pi <Esc>:read !snyp -t tex -g figure<CR>/SNYP<CR>zo4xi
-	inoremap <Tab>st <Esc>:read !snyp -t tex -g stretch<CR>/SNYP<CR>zo4xi
-	inoremap <Tab>ta <Esc>:read !snyp -t tex -g table<CR>/SNYP<CR>zo4xi
-
-	vnoremap <Tab>st x:read !snyp -t tex -g stretch<CR>/<++><CR>v3lp/SNYP<CR>zo4xi
-	vnoremap <Tab>bm x:read !snyp -t tex -g multicol<CR>/<++><CR>v3lp/SNYP<CR>zo4xi
-
-endif
-
+vnoremap bf<Tab> xi\textbf{<Esc>pa}<Esc>
+vnoremap it<Tab> xi\textit{<Esc>pa}<Esc>
+vnoremap sc<Tab> xi\textsc{<Esc>pa}<Esc>
+vnoremap tt<Tab> xi\texttt{<Esc>pa}<Esc>
+vnoremap ul<Tab> xi\underline{<Esc>pa}<Esc>
+vnoremap st<Tab> xi{\setstretch{1.0}<CR><Esc>pa}<Esc>
+vnoremap bm<Tab> xi\begin{multicols}{2}<CR><Esc>pa<CR>\end{multicols}<Esc>
 
 function! Folds()
 	let thisline = getline(v:lnum)
@@ -133,7 +116,7 @@ setlocal foldmethod=expr
 setlocal foldexpr=Folds()
 setlocal foldtext=FoldText()
 
-function FoldText()
+function! FoldText()
 	let nucolwidth = &fdc + &number * &numberwidth
 	let windowwidth = winwidth(0) - nucolwidth - 3
 	let foldsize = (v:foldend-v:foldstart)

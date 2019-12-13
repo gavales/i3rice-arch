@@ -20,11 +20,48 @@ matches:
         params:
           format: "%m/%d/%Y"
 
-  # Shell commands
-  - trigger: ":shell"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: shell
-        params:
-          cmd: "echo Hello from your shell"
+  # ━  SNIPPETS
+  # ━━ bib
+  - trigger: ":bibonline"
+    replace: "@online{SNYP,\n  title = {SNYP},\n  author = {SNYP},\n  publisher = {SNYP}\n  }\n\nSNYP"
+
+  # ━━ sh
+  - trigger: ":shif"
+    replace: "if [[ SNYP ]]; then\n  SNYP\nfi"
+
+  - trigger: ":shcase"
+    replace: "case $SNYP in\n  SNYP) SNYP ;;\nesac"
+
+  - trigger: ":shopt"
+    replace: "while getopts :SNYP:SNYP opts; do\n  case $opts in\n    SNYP)\n      SNYP\n      ;;\n  esacdone"
+
+  - trigger: ":shlop"
+    replace: "while true; do\n  case $1 in\n    --SNYP | -SNYP ) SNYP=${2:-} ; shift ;;\n    --help ) help ;;\n    -h ) help | \\n      sed -n '/^__/,/^$/p;/# SYNOPSIS/,/#/p' | \\n      sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;\n    -- ) shift ; break ;;\n    *  ) break         ;;\n  esac\n  shift\ndone"
+
+  - trigger: ":shwhi"
+    replace: "while SNYP; do\n  SNYP\ndone"
+
+  - trigger: ":shfun"
+    replace: "SNYP () {\n  SNYP\n  exit\n}"
+
+  - trigger: ":shfor"
+    replace: "for i in SNYP; do\n  SNYP\ndone"
+
+  # ━━ tex
+  - trigger: ":textable"
+    replace: '\begin{table}[H]\n  \centering\n  \begin{tabular}{cSNYP}\n    \toprule\n    \textbf{SNYP} \\\n    \midrule\n    SNYP \\\n    \bottomrule\n  \end{tabular}\n  \caption{SNYP\n  \label{tab:SNYP}}\n\end{table}'
+
+  - trigger: ":texfigure"
+    replace: "read !snyp -t tex -g figure"
+
+  - trigger: ":texbegin"
+    replace: "read !snyp -t tex -g begin"
+
+  - trigger: ":texmulticol"
+    replace: "read !snyp -t tex -g multicol"
+
+  - trigger: ":texnumeqn"
+    replace: "read !snyp -t tex -g numeqn"
+
+  - trigger: ":texstretch"
+    replace: "read !snyp -t tex -g stretch"

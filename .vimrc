@@ -125,6 +125,7 @@ vnoremap \> :s/^/\=b:comment_start/ \| :'<,'>s/$/\=b:comment_end/ \| :noh<CR><CR
 autocmd BufWritePost *sxhkdrc !kill -10 $(pidof sxhkd)
 autocmd BufWritePost _dots,_flds,_scrs,_tmps !scgen
 autocmd BufWritePost .dots,.flds,.scrs,.tmps !scgen
+autocmd BufWritePost default.yml !espanso restart
 
 " ━━ CURSOR
 autocmd CursorHold,CursorHoldI * update

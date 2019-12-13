@@ -26,10 +26,10 @@ set $W69 %30
 set $H69 %30
 set $W43 %30
 set $H43 %35
-set $TPAD 30
-set $LPAD 200
-set $RPAD 200
-set $BPAD 30
+set $TPAD 40
+set $LPAD 100
+set $RPAD 100
+set $BPAD 40
 set $GAP 8
 
 # ━━ i3

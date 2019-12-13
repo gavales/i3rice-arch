@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 cd ${HOME}
-FOLDOPEN="thunar" FILEOPEN="edtr"
+FOLDOPEN="thunar" FILEOPEN="$EDITOR"
 IMGOPEN="openimage" VIDOPEN="openvid" MUSOPEN="mpc insert"
 XBMOPEN="gthumb"    PDFOPEN="zathura" MANOPEN="${TERMINAL:-"urxvt"} -e man"
 LST="${HOME}/.config/rofi/.rofindlist"

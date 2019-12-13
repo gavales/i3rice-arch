@@ -1,5 +1,3 @@
-shell 
-rename sbarmaincurrent
 shell git clone https://github.com/StillANixRookie/gwm.wiki.git
 rename sbarminor
 rename sbarminordefault
@@ -23,7 +21,6 @@ shell git clone https://github.com/budRich/budlime.git
 shell s
 rename Packages
 sel
-open_with subl
 open_with b
 shell hugo
 rename %%home%%gavarch%%git%%i3rice-arch%%scr%%wrdc.swp
@@ -48,3 +45,6 @@ rename Great Bahama Bank, Bahamas 1920x1080.jpg
 rename book.yaml
 rename template_book.yaml
 rename sintra
+open_with 1
+open_with subl
+rename sanlucas
