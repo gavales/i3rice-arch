@@ -1,8 +1,3 @@
-shell git clone https://github.com/StillANixRookie/gwm.wiki.git
-rename sbarminor
-rename sbarminordefault
-rename sbarmajor
-rename sbarmajordefault
 rename sbarmajorcurrent
 rename sbardefaults
 rename sbarconf
@@ -48,3 +43,8 @@ rename sintra
 open_with 1
 open_with subl
 rename sanlucas
+rename Overnight Winter Camping in a Quinzee.mkv
+open_with 3
+rename hallstatt
+shell wget https://raw.githubusercontent.com/jgm/pandoc/master/data/epub.css
+rename template_epub.css

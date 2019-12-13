@@ -84,10 +84,6 @@ BIB="${BIB:-"${HOME}/global.bib"}"
 FYL="${YML:-"${PDDR}/settings.yaml"}"
 DXR="${WTM:-"${PDDR}/reference.docx"}"
 CSS="-c ${WCS:-"${CSDR}/themer.css"}"
-#[[ -z $BIB ]] && BIB="${HOME}/global.bib"
-#[[ -z $YML ]] && FYL="" || FYL="${YML}"
-#[[ -z $WTM ]] && DXR="${PDDR}/reference.docx"
-#[[ -n $WCS ]] && CSS="-c ${WCS}" || CSS="-c ${CSDR}/themer.css"
 [[ -n $NGN ]] && NGN="--pdf-engine=${NGN}" || NGN=""
 
 REF="-F pandoc-crossref --metadata-file ${FYL}"
@@ -95,7 +91,7 @@ CIT="--bibliography ${BIB} -F pandoc-citeproc"
 WTS="--reference-doc ${DXR}"
 NSC="--number-sections"
 
-epub()   { pandoc $REF $CIT $NSC -o ${TRG}.epub $SRC ; }
+epub()   { pandoc $REF $CIT $NSC $CSS -o ${TRG}.epub $SRC ; }
 pdf()    { pandoc $REF $CIT $NGN $NSC -o ${TRG}.pdf $SRC ; }
 word()   { pandoc $REF $CIT $WTS -o ${TRG}.docx $SRC ; }
 html()   { pandoc $REF $CIT -s --toc $CSS -o ${TRG}.html $SRC ; }

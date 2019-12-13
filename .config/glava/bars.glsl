@@ -7,7 +7,7 @@
 /* Width (in pixels) of each bar gap */
 #define BAR_GAP 2
 /* Outline color */
-#define BAR_OUTLINE #19181a
+#define BAR_OUTLINE #262a3b
 /* Outline width (in pixels, set to 0 to disable outline drawing) */
 #define BAR_OUTLINE_WIDTH 0
 /* Amplify magnitude of the results each bar displays */
@@ -21,7 +21,7 @@
 /* Bar color changes with height */
 #define GRADIENT (d / GRADIENT_POWER + 1)
 /* Bar color */
-#define COLOR (#A697AB * GRADIENT)
+#define COLOR (#9299A9 * GRADIENT)
 /* Direction that the bars are facing, 0 for inward, 1 for outward */
 #define DIRECTION 0
 /* Whether to switch left/right audio buffers */
