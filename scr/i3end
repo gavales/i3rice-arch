@@ -60,7 +60,7 @@ OPT=${1}
 
 [[ -z $OPT ]] && OPT=$(printf "%s\n" "l lock" "e logout" \
 	"s suspend" "r reboot" "h hibernate" "x shutdown" | \
-	i3menu --prompt "SHUTDOWN [<ESC> to cancel]" -c red -F | \
+	i3menu --prompt "SHUTDOWN [<ESC> to cancel]" -F -t onedark | \
 	awk '{print $1}')
 
 [[ -z $OPT ]] && exit

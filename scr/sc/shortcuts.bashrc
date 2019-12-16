@@ -174,9 +174,10 @@ MW() { mv "$1" /mnt/media/Users/test/"$1" ; }
 alias gx="cd ~/xrs"
 Yx() { cp -r "$1" ~/xrs/"$1" ; }
 Mx() { mv "$1" ~/xrs/"$1" ; }
-Tc() { cp -r "~/plt/md/cvl.md" "$1" ; }
+Tb() { cp -r "~/plt/md/book" "$1" ; }
+Tc() { cp -r "~/plt/md/cvl" "$1" ; }
 TC() { cp -r "~/plt/tex/cvl" "$1" ; }
 Tg() { cp -r "~/plt/groff" "$1" ; }
-Tn() { cp -r "~/plt/md/normal.md" "$1" ; }
+Tn() { cp -r "~/plt/md/normal" "$1" ; }
 Tr() { cp -r "~/plt/tex/report" "$1" ; }
 Tt() { cp -r "~/plt/tex/thesis" "$1" ; }

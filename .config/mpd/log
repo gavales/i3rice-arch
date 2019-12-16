@@ -5629,3 +5629,21 @@ Dec 13 18:16 : player: played "Afroman/00 Colt 45.mp3"
 Dec 13 18:16 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Dec 13 18:16 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Dec 13 18:16 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Dec 14 13:54 : client: [0] opened from [::1]:34424
+Dec 14 13:54 : client: [1] opened from [::1]:34426
+Dec 14 13:54 : client: [1] closed
+Dec 14 13:54 : client: [2] opened from [::1]:34428
+Dec 14 13:54 : client: [2] closed
+Dec 14 13:54 : player: played "Afroman/00 Colt 45.mp3"
+Dec 14 13:56 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Dec 14 13:56 : client: [3] opened from [::1]:34464
+Dec 14 13:56 : client: [3] closed
+Dec 14 13:56 : client: [4] opened from [::1]:34466
+Dec 14 13:56 : client: [4] closed
+Dec 14 13:56 : client: [5] opened from [::1]:34468
+Dec 14 13:56 : client: [5] closed
+Dec 14 13:56 : client: [6] opened from [::1]:34470
+Dec 14 13:56 : client: [6] closed
+Dec 14 13:56 : client: [7] opened from [::1]:34472
+Dec 14 13:56 : client: [7] closed
+Dec 14 20:04 : client: [0] closed

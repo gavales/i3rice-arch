@@ -1,4 +1,5 @@
 -x
+-i
 -f bestaudio
 --embed-thumbnail
--o ~/mus/ytdl/%(title)s.%(ext)s
+-o ~/mus/%(channel)s/%(title)s.%(ext)s

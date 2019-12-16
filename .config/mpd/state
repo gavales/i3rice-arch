@@ -3,7 +3,7 @@ audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
 state: pause
 current: 0
-time: 8.127000
+time: 4.701000
 random: 0
 repeat: 0
 single: 0
@@ -12,5 +12,43 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Afroman/00 Colt 45.mp3
+0:Marcus Miller/00 Power.mp3
+1:Marcus Miller/The Sun Don't Lie/05 Scoop.mp3
+2:Marcus Miller/M2/03 Boomerang (feat_ Raphael Saadi.mp3
+3:Marcus Miller/M2/04 Nikki's Groove.mp3
+4:Marcus Miller/M2/07 Burning Down the House.mp3
+5:Marcus Miller/M2/09 Cousin John.mp3
+6:Marcus Miller/M2/11 3 Deuces.mp3
+7:Marcus Miller/M2/12 Red Baron.mp3
+8:Marcus Miller/Silver Rain/01 Intro Duction.mp3
+9:Marcus Miller/Silver Rain/02 Bruce Lee.mp3
+10:Marcus Miller/Silver Rain/03 La Villette (feat_ Lalah Hatha.mp3
+11:Marcus Miller/Silver Rain/04 Behind the Smile.mp3
+12:Marcus Miller/Silver Rain/05 Frankenstein.mp3
+13:Marcus Miller/Silver Rain/06 Moonlight Sonata.mp3
+14:Marcus Miller/Silver Rain/07 Boogie on Reggae Woman.mp3
+15:Marcus Miller/Silver Rain/08 Paris (Interlude).mp3
+16:Marcus Miller/Silver Rain/09 Silver Rain (feat_ Eric Clapto.mp3
+17:Marcus Miller/Silver Rain/10 Make Up My Mind.mp3
+18:Marcus Miller/Silver Rain/11 Girls and Boys.mp3
+19:Marcus Miller/Silver Rain/12 Sophisticated Lady.mp3
+20:Marcus Miller/Silver Rain/13 Power of Soul.mp3
+21:Marcus Miller/Silver Rain/14 Outro Duction.mp3
+22:Marcus Miller/Silver Rain/15 The Lord's Prayer (Bonus Track.mp3
+23:Marcus Miller/Silver Rain/16 Silver Rain (feat_ Joe Kibble).mp3
+24:Marcus Miller/Power _ The Essential/02 Power.mp3
+25:Marcus Miller/Free/01 Blast.mp3
+26:Marcus Miller/Free/02 Funk Joint.mp3
+27:Marcus Miller/Free/03 Free (feat_ Corinne Bailey Rae.mp3
+28:Marcus Miller/Free/04 Strum.mp3
+29:Marcus Miller/Free/05 Milky Way (feat_ Keb' Mo').mp3
+30:Marcus Miller/Free/06 Pluck (Interlude).mp3
+31:Marcus Miller/Free/07 When I Fall In Love.mp3
+32:Marcus Miller/Free/08 Jean Pierre.mp3
+33:Marcus Miller/Free/09 Higher Ground.mp3
+34:Marcus Miller/Free/10 What Is Hip _.mp3
+35:Marcus Miller/3 Original Album Classics/3-02 Bruce Lee.mp3
+36:Marcus Miller/Renaissance/01 Detroit.mp3
+37:Marcus Miller/Afrodeezia/01 Hylife.mp3
+38:Marcus Miller/Afrodeezia/11 I Can’t Breathe (feat_ Chuck.mp3
 playlist_end

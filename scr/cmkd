@@ -71,9 +71,13 @@ FLE=$1
 [[ $FLE =~ "/" ]] && SRCDIR=${FLE%/*} || SRCDIR=$(pwd)
 cd $SRCDIR
 SRC=${FLE##*/} ; TRG=${SRC%.*}
+echo SRCDIR $SRCDIR
+echo SRC    $SRC
+echo TRG    $TRG
 [[ -z $1 ]] && echo 'No input file!' && cmkd -h && exit
 
 OPT=$(awk '$1~/^#output$/{$1="";gsub(/^[ \t]+/,"",$0);print $0}' $SRC)
+[[ -z $OPT ]] && exit
 BIB=$(awk '$1~/^#bib$/   {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $SRC)
 YML=$(awk '$1~/^#yaml$/  {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $SRC)
 WTM=$(awk '$1~/^#docx$/  {$1="";gsub(/^[ \t]+/,"",$0);print $0}' $SRC)
@@ -91,7 +95,7 @@ CIT="--bibliography ${BIB} -F pandoc-citeproc"
 WTS="--reference-doc ${DXR}"
 NSC="--number-sections"
 
-epub()   { pandoc $REF $CIT $NSC $CSS -o ${TRG}.epub $SRC ; }
+epub()   { pandoc $REF $CIT $NSC $CSS --epub-embed-font=*.ttf -o ${TRG}.epub $SRC ; }
 pdf()    { pandoc $REF $CIT $NGN $NSC -o ${TRG}.pdf $SRC ; }
 word()   { pandoc $REF $CIT $WTS -o ${TRG}.docx $SRC ; }
 html()   { pandoc $REF $CIT -s --toc $CSS -o ${TRG}.html $SRC ; }

@@ -1,15 +1,11 @@
 ! vim:ft=perl
-name      mywal
-wallpaper HallstattAustria(2)
-fg0  #262a3b
-!#121627
-!#262a3b
-!#3a3e4f
-!#4e5263
-bg0  #f8fafd
-acc  #9299A9
-red  #6D86A9
-grn  #388CE8
-ylw  #6A9ADC
-gnt  #DAB9AD
-cyn  #96B3E0
+name      sintra
+wallpaper SintraPortugal
+fg0       #0F1610
+red       #8A806F
+grn       #3E6881
+ylw       #517689
+acc       #667B86
+gnt       #6F8B94
+cyn       #638D9C
+bg0       #c2c6c4

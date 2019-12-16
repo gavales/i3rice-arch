@@ -1,50 +1,50 @@
-rename sbarmajorcurrent
-rename sbardefaults
-rename sbarconf
-rename rekt
-mkdir gwmdemoframes
-rename gwm_
-shell git clone https://github.com/StillANixRookie/gwm.git
-
-rename pulsecolors_old
-rename pulsecolors
-open_with mppipe
-open_with mpv
-search preview
-w
-shell git clone https://github.com/budRich/budlime.git
-shell s
-rename Packages
-sel
-open_with b
-shell hugo
-rename %%home%%gavarch%%git%%i3rice-arch%%scr%%wrdc.swp
-open_with evince
-open_with 4
-open_with acroread
-open_with 
-open_with gthumb
-search 
-open_with gedtr
-shell chmod +x %f
+rename Figure74D.png
+rename Figure75A.png
+rename Figure75B.png
+rename Figure75C.png
+rename Figure75D.png
+rename Figure75E.png
+rename Figure76A.png
+rename Figure76B.png
+rename Figure76C.png
+rename Figure77A.png
+rename Figure77B.png
+rename Figure77C.png
+rename Figure77D.png
+rename Figure77E.png
+rename Figure77F.png
+rename Figure78.png
+rename Figure79.png
+rename Figure80.png
+rename Figure81A.png
+rename Figure81B.png
+rename Figure81C.png
+rename Figure81D.png
+rename Figure81E.png
+rename Figure82A.png
+rename Figure82B.png
+rename Figure83A.png
+rename Figure83B.png
+rename Figure83C.png
+rename Figure84A.png
+rename Figure84B.png
+rename Figure85A.png
+rename Figure85B.png
+rename Figure86A.png
+rename Figure86B.png
+rename Figure87.png
+open_with surf
+rename DonQuixote.epub
+mkdir epub
+rename book
+rename book.md
+rename ChampionshipFighting
 open_with 0
-rename i3menu_old_
-rename i3menu_old
-rename i3menu_old_old
-rename i3menu_
-rename i3menu_1
-rename i3menu_2
-rename i3menu
-rename patterns
-rename Great Bahama Bank, Bahamas 1920x1080.jpg
-rename book.yaml
-rename template_book.yaml
-rename sintra
+rename PureShBible.epub
+shell pdftotext %f
+search Foundation
+open_with edtr
+
+shell cp -r ~/plt/md/normal startpage
+shell 
 open_with 1
-open_with subl
-rename sanlucas
-rename Overnight Winter Camping in a Quinzee.mkv
-open_with 3
-rename hallstatt
-shell wget https://raw.githubusercontent.com/jgm/pandoc/master/data/epub.css
-rename template_epub.css
