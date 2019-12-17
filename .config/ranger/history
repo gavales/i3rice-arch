@@ -1,4 +1,3 @@
-rename Figure74D.png
 rename Figure75A.png
 rename Figure75B.png
 rename Figure75C.png
@@ -42,9 +41,10 @@ rename ChampionshipFighting
 open_with 0
 rename PureShBible.epub
 shell pdftotext %f
-search Foundation
 open_with edtr
 
 shell cp -r ~/plt/md/normal startpage
 shell 
 open_with 1
+open_with vim
+search Foundation

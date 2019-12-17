@@ -33,6 +33,7 @@ set cmdheight=1
 set splitbelow splitright
 set t_Co=16
 set autoread
+set timeoutlen=500
 function! CHKWW()
 	if &winwidth < 40
 		set foldcolumn=0
@@ -62,10 +63,12 @@ map <F10>         :echo "hi<"
 
 nnoremap \ll   :!compiler <C-r>%<CR><CR>
 nnoremap \ph   <Esc>i<++>
-nnoremap <C-T> :tabnew<CR>
-nnoremap <C-W> :tabclose<CR>
-nnoremap <C-H> :tabprevious<CR>
-nnoremap <C-L> :tabNext<CR>
+nnoremap <C-t> :tabnew<CR>
+nnoremap <C-w> :tabclose<CR>
+"nnoremap <C-[> :tabr<CR>
+"nnoremap <C-]> :tabl<CR>
+nnoremap <C-h> :tabp<CR>
+nnoremap <C-l> :tabn<CR>
 nnoremap \r(   di(hPl2x
 nnoremap \r(   di(hPl2x
 nnoremap \r[   di[hPl2x
@@ -76,7 +79,7 @@ nnoremap \r<   di<hPl2x
 nnoremap \r"   di"hPl2x
 
 inoremap <space>i<space> <space>I<space>
-inoremap \ph <++>
+inoremap \ph <++><space>
 inoremap ()  ()<++><Esc>F)i
 inoremap []  []<++><Esc>F]i
 inoremap {}  {}<++><Esc>F}i
