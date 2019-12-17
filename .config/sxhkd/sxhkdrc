@@ -129,10 +129,10 @@ super + x
 	surf docs.google.com/spreadsheets/u/0/
 super + c
 	lch -c Firefox -e "$BROWSER"
-super + v
-	glach
 #super + v
-	#lch -i visualiser -e "$TWOMINAL -name visualiser -e vis"
+#	glach
+super + v
+	lch -i visualiser -e "$TWOMINAL -name visualiser -e vis"
 super + b
 	lch -i references -e "$EDITOR $HOME/Drive/global.bib"
 super + n

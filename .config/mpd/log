@@ -5647,3 +5647,98 @@ Dec 14 13:56 : client: [6] closed
 Dec 14 13:56 : client: [7] opened from [::1]:34472
 Dec 14 13:56 : client: [7] closed
 Dec 14 20:04 : client: [0] closed
+Dec 16 21:29 : player: played "Marcus Miller/00 Power.mp3"
+Dec 16 21:30 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Dec 16 21:30 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Dec 16 21:30 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Dec 16 23:48 : client: [0] opened from [::1]:38576
+Dec 16 23:48 : client: [1] opened from [::1]:38578
+Dec 16 23:48 : client: [1] closed
+Dec 16 23:48 : client: [2] opened from [::1]:38580
+Dec 16 23:48 : client: [2] closed
+Dec 16 23:48 : client: [3] opened from [::1]:38584
+Dec 16 23:48 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Dec 16 23:48 : client: [3] closed
+Dec 16 23:48 : client: [4] opened from [::1]:38586
+Dec 16 23:48 : client: [4] closed
+Dec 16 23:48 : client: [5] opened from [::1]:38588
+Dec 16 23:48 : client: [5] closed
+Dec 16 23:48 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Dec 16 23:48 : player: played "Marcus Miller/00 Power.mp3"
+Dec 16 23:49 : client: [0] closed
+Dec 16 23:51 : client: [6] opened from [::1]:38618
+Dec 16 23:51 : update: added IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation1Of8.mp3
+Dec 16 23:51 : update: added IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation1Of8_64kb.mp3
+Dec 16 23:51 : update: added IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation2Of8.mp3
+Dec 16 23:51 : update: added IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation2Of8_64kb.mp3
+Dec 16 23:51 : update: added IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation3Of8.mp3
+Dec 16 23:51 : update: added IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation3Of8_64kb.mp3
+Dec 16 23:51 : update: added IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation4Of8.mp3
+Dec 16 23:51 : update: added IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation4Of8_64kb.mp3
+Dec 16 23:51 : update: added IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation5Of8.mp3
+Dec 16 23:51 : update: added IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation5Of8_64kb.mp3
+Dec 16 23:51 : update: added IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation6Of8.mp3
+Dec 16 23:51 : update: added IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation6Of8_64kb.mp3
+Dec 16 23:51 : update: added IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation7Of8.mp3
+Dec 16 23:51 : update: added IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation7Of8_64kb.mp3
+Dec 16 23:51 : update: added IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation8Of8.mp3
+Dec 16 23:51 : update: added IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation8Of8_64kb.mp3
+Dec 16 23:52 : client: [7] opened from [::1]:38620
+Dec 16 23:52 : client: [7] closed
+Dec 16 23:52 : client: [8] opened from [::1]:38622
+Dec 16 23:52 : client: [8] closed
+Dec 16 23:52 : client: [9] opened from [::1]:38626
+Dec 16 23:52 : client: [9] closed
+Dec 16 23:52 : client: [10] opened from [::1]:38628
+Dec 16 23:52 : client: [10] closed
+Dec 16 23:52 : client: [11] opened from [::1]:38630
+Dec 16 23:52 : client: [11] closed
+Dec 17 00:06 : update: removing IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation1Of8_64kb.mp3
+Dec 17 00:06 : update: removing IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation2Of8_64kb.mp3
+Dec 17 00:06 : update: removing IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation3Of8_64kb.mp3
+Dec 17 00:06 : update: removing IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation4Of8_64kb.mp3
+Dec 17 00:06 : update: removing IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation6Of8_64kb.mp3
+Dec 17 00:06 : update: removing IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation5Of8_64kb.mp3
+Dec 17 00:06 : update: removing IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation8Of8_64kb.mp3
+Dec 17 00:06 : update: removing IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation7Of8_64kb.mp3
+Dec 17 00:06 : update: removing IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation2Of8.mp3
+Dec 17 00:06 : update: removing IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation1Of8.mp3
+Dec 17 00:06 : update: removing IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation4Of8.mp3
+Dec 17 00:06 : update: removing IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation3Of8.mp3
+Dec 17 00:06 : update: removing IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation6Of8.mp3
+Dec 17 00:06 : update: removing IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation5Of8.mp3
+Dec 17 00:06 : update: removing IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation7Of8.mp3
+Dec 17 00:06 : update: removing IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation8Of8.mp3
+Dec 17 00:06 : update: added IsaacAsimov-TheFoundationTrilogy/Part1.mp3
+Dec 17 00:06 : update: added IsaacAsimov-TheFoundationTrilogy/Part1_64kb.mp3
+Dec 17 00:06 : update: added IsaacAsimov-TheFoundationTrilogy/Part2.mp3
+Dec 17 00:06 : update: added IsaacAsimov-TheFoundationTrilogy/Part2_64kb.mp3
+Dec 17 00:06 : update: added IsaacAsimov-TheFoundationTrilogy/Part3.mp3
+Dec 17 00:06 : update: added IsaacAsimov-TheFoundationTrilogy/Part3_64kb.mp3
+Dec 17 00:06 : update: added IsaacAsimov-TheFoundationTrilogy/Part4.mp3
+Dec 17 00:06 : update: added IsaacAsimov-TheFoundationTrilogy/Part4_64kb.mp3
+Dec 17 00:06 : update: added IsaacAsimov-TheFoundationTrilogy/Part5.mp3
+Dec 17 00:06 : update: added IsaacAsimov-TheFoundationTrilogy/Part5_64kb.mp3
+Dec 17 00:06 : update: added IsaacAsimov-TheFoundationTrilogy/Part6.mp3
+Dec 17 00:06 : update: added IsaacAsimov-TheFoundationTrilogy/Part6_64kb.mp3
+Dec 17 00:06 : update: added IsaacAsimov-TheFoundationTrilogy/Part7.mp3
+Dec 17 00:06 : update: added IsaacAsimov-TheFoundationTrilogy/Part7_64kb.mp3
+Dec 17 00:06 : update: added IsaacAsimov-TheFoundationTrilogy/Part8.mp3
+Dec 17 00:06 : update: added IsaacAsimov-TheFoundationTrilogy/Part8_64kb.mp3
+Dec 17 00:06 : player: played "IsaacAsimov-TheFoundationTrilogy/IsaacAsimov-Foundation1Of8_64kb.mp3"
+Dec 17 00:07 : client: [12] opened from [::1]:38658
+Dec 17 00:07 : client: [12] closed
+Dec 17 00:07 : client: [13] opened from [::1]:38660
+Dec 17 00:07 : client: [13] closed
+Dec 17 00:07 : client: [14] opened from [::1]:38662
+Dec 17 00:07 : client: [14] closed
+Dec 17 00:07 : client: [15] opened from [::1]:38664
+Dec 17 00:07 : client: [15] closed
+Dec 17 00:07 : client: [16] opened from [::1]:38666
+Dec 17 00:07 : client: [16] closed
+Dec 17 00:07 : client: [17] opened from [::1]:38668
+Dec 17 00:07 : client: [17] closed
+Dec 17 00:07 : client: [18] opened from [::1]:38670
+Dec 17 00:07 : client: [18] closed
+Dec 17 00:07 : client: [19] opened from [::1]:38672
+Dec 17 00:07 : client: [19] closed

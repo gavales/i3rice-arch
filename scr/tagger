@@ -3,8 +3,20 @@
 # OA: Gavin Vales
 # CREATED: Mon 18 Feb 19:46:53 GMT 2019
 
-ART="${1}"
-ALB="${2}"
+while true; do
+	case $1 in
+		--artist | -a ) ART="${2:-}" ; shift ;;
+		--album  | -b ) ALB="${2:-}" ; shift ;;
+		--cover  | -c ) COV="${2:-}" ; shift ;;
+		--help ) help ;;
+		-h ) help | \
+			sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | \
+			sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
 TOT=$(ls | grep .mp3 | wc -l)
 
 echo "
