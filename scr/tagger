@@ -3,6 +3,25 @@
 # OA: Gavin Vales
 # CREATED: Mon 18 Feb 19:46:53 GMT 2019
 
+help() {
+cat << 'EOB'
+# NAME
+
+__tagger__ - change artist, album name, and title of mp3's in
+a directory
+
+# SYNOPSIS
+
+```
+tagger [--artist|-a <text>]
+       [--album|-b <text>]
+       [--cover|-c <imagefile>]
+tagger --help|-h
+```
+EOB
+exit
+}
+
 while true; do
 	case $1 in
 		--artist | -a ) ART="${2:-}" ; shift ;;
