@@ -71,7 +71,7 @@
 
 ! ━  1vars
 
-#define fontname  %%font%%
+#define fontname  %%termfont%%
 #define fontsize  %%rxvtsize%%
 #define fontsize2 %%rxvtsize%%
 
@@ -162,7 +162,7 @@ Xft.lcdfilter: lcddefault
 
 XTerm*foreground:        tfg0
 XTerm*background:        tbg0
-XTerm*faceName:          %%monofont%%
+XTerm*faceName:          %%termfont%%
 XTerm*faceSize:          15
 XTerm*selectToClipboard: true
 XTerm.vt100.geometry:    79x25

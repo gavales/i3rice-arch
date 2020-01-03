@@ -1,46 +1,46 @@
-<span background="#0F1610">   </span> #0F1610         bg0
+<span background="#232a24">   </span> #232a24         bg0
+<span background="#f7f4f1">   </span> #f7f4f1         fg0
 <span background="#667B86">   </span> #667B86         acc
-<span background="#c2c6c4">   </span> #c2c6c4         fg0
-<span background="#868a88">   </span> #868a88         fg3
-<span background="#9a9e9c">   </span> #9a9e9c         fg2
-<span background="#aeb2b0">   </span> #aeb2b0         fg1
-<span background="#94a0a5">   </span> #94a0a5         acf
-<span background="#3a484b">   </span> #3a484b         acb
-<span background="#232a24">   </span> #232a24         bg1
-<span background="#373e38">   </span> #373e38         bg2
-<span background="#4b524c">   </span> #4b524c         bg3
-<span background="#b6bdbc">   </span> #b6bdbc         ac88f
-<span background="#abb3b4">   </span> #abb3b4         ac75f
-<span background="#9faaad">   </span> #9faaad         ac63f
-<span background="#94a0a5">   </span> #94a0a5         ac50f
-<span background="#88969c">   </span> #88969c         ac37f
-<span background="#7d8d95">   </span> #7d8d95         ac25f
-<span background="#71848d">   </span> #71848d         ac12f
-<span background="#5b6e77">   </span> #5b6e77         ac12b
-<span background="#506168">   </span> #506168         ac25b
-<span background="#45555a">   </span> #45555a         ac37b
-<span background="#3a484b">   </span> #3a484b         ac50b
-<span background="#2f3b3b">   </span> #2f3b3b         ac63b
-<span background="#242f2d">   </span> #242f2d         ac75b
-<span background="#19221e">   </span> #19221e         ac88b
-<span background="#8A806F">   </span> #8A806F         red
-<span background="#3E6881">   </span> #3E6881         grn
-<span background="#517689">   </span> #517689         ylw
-<span background="#6F8B94">   </span> #6F8B94         gnt
-<span background="#638D9C">   </span> #638D9C         cyn
+<span background="#bbb8b5">   </span> #bbb8b5         fg3
+<span background="#cfccc9">   </span> #cfccc9         fg2
+<span background="#e3e0dd">   </span> #e3e0dd         fg1
+<span background="#aeb7bb">   </span> #aeb7bb         acf
+<span background="#445255">   </span> #445255         acb
+<span background="#373e38">   </span> #373e38         bg1
+<span background="#4b524c">   </span> #4b524c         bg2
+<span background="#5f6660">   </span> #5f6660         bg3
+<span background="#e5e5e4">   </span> #e5e5e4         ac88f
+<span background="#d2d5d6">   </span> #d2d5d6         ac75f
+<span background="#c1c7c9">   </span> #c1c7c9         ac63f
+<span background="#aeb7bb">   </span> #aeb7bb         ac50f
+<span background="#9ba7ad">   </span> #9ba7ad         ac37f
+<span background="#8a99a0">   </span> #8a99a0         ac25f
+<span background="#778992">   </span> #778992         ac12f
+<span background="#5d717a">   </span> #5d717a         ac12b
+<span background="#55666d">   </span> #55666d         ac25b
+<span background="#4d5d61">   </span> #4d5d61         ac37b
+<span background="#445255">   </span> #445255         ac50b
+<span background="#3b4748">   </span> #3b4748         ac63b
+<span background="#333e3c">   </span> #333e3c         ac75b
+<span background="#2b332f">   </span> #2b332f         ac88b
+<span background="#b85227">   </span> #b85227         red
 <span background="#277eb8">   </span> #277eb8         blu
-<span background="#a6a399">   </span> #a6a399         darkred
-<span background="#4c4b3f">   </span> #4c4b3f         lightred
-<span background="#8097a2">   </span> #8097a2         darkgrn
-<span background="#263f48">   </span> #263f48         lightgrn
-<span background="#899ea6">   </span> #899ea6         darkylw
-<span background="#30464c">   </span> #30464c         lightylw
-<span background="#98a8ac">   </span> #98a8ac         darkgnt
-<span background="#3f5052">   </span> #3f5052         lightgnt
-<span background="#92a9b0">   </span> #92a9b0         darkcyn
-<span background="#395156">   </span> #395156         lightcyn
-<span background="#74a2be">   </span> #74a2be         darkblu
-<span background="#1b4a64">   </span> #1b4a64         lightblu
+<span background="#DDB700">   </span> #DDB700         ylw
+<span background="#18E3C8">   </span> #18E3C8         grn
+<span background="#B043D1">   </span> #B043D1         gnt
+<span background="#3FDCEE">   </span> #3FDCEE         cyn
+<span background="#d7a38c">   </span> #d7a38c         darkred
+<span background="#6d3e25">   </span> #6d3e25         lightred
+<span background="#8fb9d4">   </span> #8fb9d4         darkblu
+<span background="#25546e">   </span> #25546e         lightblu
+<span background="#ead578">   </span> #ead578         darkylw
+<span background="#807012">   </span> #807012         lightylw
+<span background="#87ebdc">   </span> #87ebdc         darkgrn
+<span background="#1d8676">   </span> #1d8676         lightgrn
+<span background="#d39be1">   </span> #d39be1         darkgnt
+<span background="#69367a">   </span> #69367a         lightgnt
+<span background="#9be8ef">   </span> #9be8ef         darkcyn
+<span background="#318389">   </span> #318389         lightcyn
 SintraPortugal wallpaper
 40             TOPPAD
 100            LEFTPAD
@@ -53,18 +53,19 @@ gb             xkb
 eDP1           MON1
 VGA1           MON2
 HDMI1          MON3
-Luxi Mono      guifont
-Iosevka        font
-Lucida Sans    sansfont
-CMU Typewriter Text monofont
-monaco         monofnt2
-Luxi Mono      romanfont
+Product Sans   guifont
+Iosevka        termfont
+Luxi Mono      editfont
 Luxi\\ Mono    gvimfont
+Times New Roman romanfont
+Lucida Sans    sansfont
+Iosevka        monofont
+monaco         monofnt2
 1              ltimex
 90             ltimey
 11             size
 12             rxvtsize
-12             rofifsize
+13             rofifsize
 Themer         gtk
 Tela-red-dark  gtk-icon
 Bibata_Dark_Red cursor

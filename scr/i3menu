@@ -195,7 +195,7 @@ mode_dmenu () {
 	cat /dev/stdin > $STDIN
 	STSZ=$(du -k $STDIN | cut -f1)
 	((STSZ==1)) && rm $STDIN && touch $STDIN
-	ROWS=$(cat $STDIN | wc -l) ; ((ROWS>99)) && ROWS=99
+	ROWS=$(cat $STDIN | wc -l) ; ((ROWS>20)) && ROWS=20
 	LSTSTR+=" lines: ${LNS:-$ROWS};"
 	if [[ -n $MESG ]]; then
 		cat $STDIN | rofi -dmenu -markup-rows -p "${PROMPT:-} " -mesg "${MESG}" \

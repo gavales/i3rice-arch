@@ -1,0 +1,117 @@
+#!/usr/bin/env bash
+
+help () {
+echo help
+cat << 'EOB'
+# NAME
+
+__bkman__ - Bookmark manager
+
+# SYNOPSIS
+
+```
+bkman
+bkman --help|-h
+```
+EOB
+echo $@
+exit
+}
+
+BKMDIR="${XDG_DOCUMENTS_DIR:-"$HOME/Documents"}/bookmarks"
+HSTDIR="${BKMDIR}/.history"
+iDIR=" " iFLE=" " iLNK=" " iHST=" "
+format="<span lang='%s'></span>%s\n"
+menopts="-L 1 -H 100 -w 25"
+
+newlink()  {
+	local URL="${1}"
+	NAME="${O_name:-$(echo "" | i3menu $menopts -p 'choose name')}"
+	CAT="${O_cat:-$(find "$BKMDIR" -type f \
+		| sed '/\/\./d' | sed "s;${BKMDIR};${iFLE};g" \
+		| i3menu $menopts -p 'choose category')}"
+	TRG="${BKMDIR}${CAT#* }"
+	mkdir -p "${TRG%/*}"
+	printf "[%s]: %s\n" "$NAME" "$URL" >> ${TRG}
+	exit
+}
+parsesel() {
+	local SEL="${1}"
+	[[ -z $SEL ]] && exit
+	if [[ $SEL =~ \< ]]; then        linksel  "$SEL"
+	elif [[ -f $BKMDIR/$SEL ]]; then filelist "$SEL"
+	elif [[ -d $BKMDIR/$SEL ]]; then dirlist  "$SEL"
+	fi
+}
+linksel()  {
+	eval "$(echo $1 | awk -F "['><]" '{ print "LINK=\""$2"\"\nNAME=\""$NF"\"" }')"
+	echo -n "$LINK" | xclip
+	echo -n "$LINK" | xclip -selection clipboard
+	echo "[${NAME#* }]: $LINK" >> "$HSTDIR"
+}
+filelist() {
+	local CHOSEN
+	CHOSEN="$(cat ${BKMDIR}${1} | sed '/\/\./d' \
+		| awk -F "[]]: " -v format="$format" -v icon="$iLNK" '{
+			gsub(/^[[]/,"",$1)
+			gsub(/&/,"&amp;",$2)
+			if(!a[$1]++){printf(format,$2,icon $1)}
+		}' | i3menu $menopts)"
+	CHOSEN="${CHOSEN#* }"
+	parsesel "${CHOSEN}"
+}
+dirlist()  {
+	local CHOSEN
+	local DIR="${1}"
+	local fDIR="${BKMDIR}${DIR}"
+	count+=1
+
+	CHOSEN="$({
+		((count=1)) && cat "$HSTDIR" \
+			| awk -F "[]]: " -v format="$format" -v icon="$iHST" '{
+					gsub(/^[[]/,"",$1)
+					gsub(/&/,"&amp;",$2)
+					if(!a[$1]++){printf(format,$2,icon $1)}
+				}'
+
+		find "$fDIR" -type d | sed 1d | sed '/\/\./d' \
+			| awk -F "[]]: " -v DIR="$BKMDIR" -v icon="$iDIR" '{
+				gsub(DIR,icon,$0);print $0
+				}'
+
+		find "$fDIR" -type f | sed '/\/\./d' \
+			| awk -F "[]]: " -v DIR="$BKMDIR" -v icon="$iFLE" '{
+				gsub(DIR,icon,$0);print $0
+				}'
+
+		find "$fDIR" -type f | sed '/\/\./d' \
+			| xargs -I {} cat "{}" \
+			| awk -F "[]]: " -v format="$format" -v icon="$iLNK" '{
+					gsub(/^[[]/,"",$1)
+					gsub(/&/,"&amp;",$2)
+					if(!a[$1]++){printf(format,$2,icon $1)}
+				}'
+	} | i3menu $menopts)"
+	CHOSEN="${CHOSEN#* }"
+	parsesel "${CHOSEN}"
+}
+
+[[ -n $1 ]] && \
+while true; do
+	case $1 in
+		--name     | -n ) O_name="${2:-}"  ; shift ;;
+		--category | -c ) O_cat="${2:-}"   ; shift ;;
+		--newlink  | -u ) newlink "${2:-}" ; shift ;;
+		--help ) help ;;
+		-h )
+			help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | \
+				sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g'
+			exit
+			;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+dirlist

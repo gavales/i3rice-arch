@@ -60,7 +60,7 @@ sticky      no
 moveamount  20
 borderwidth 4
 #gap         10 10 10 50
-fontname    '%%romanfont%%:size=12'
+fontname    '%%guifont%%:size=12'
 
 # ━  colors
 

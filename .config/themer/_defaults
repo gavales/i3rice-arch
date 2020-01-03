@@ -25,18 +25,20 @@ xkb        gb
 MON1       eDP1
 MON2       VGA1
 MON3       HDMI1
-guifont    $romanfont
-font       Iosevka
-sansfont   Lucida Sans
-monofont   CMU Typewriter Text
-monofnt2   monaco
-romanfont  Luxi Mono
+guifont    Product Sans
+termfont   Iosevka
+editfont   Luxi Mono
 gvimfont   Luxi\\ Mono
+romanfont  Times New Roman
+sansfont   Lucida Sans
+!monofont   CMU Typewriter Text
+monofont   $termfont
+monofnt2   monaco
 ltimex     1
 ltimey     90
 size       11
 rxvtsize   12
-rofifsize  12
+rofifsize  13
 gtk        Themer
 gtk-icon   Tela-red-dark
 cursor     Bibata_Dark_Red

@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# OA: Gavin Vales
+# CREATED: Wed 28 Aug 16:27:25 BST 2019
+
+CHO=$(cat $HOME/.config/rofi/.menunicon | \
+	i3menu -l 15 -w 50 -C 4)
+
+if [[ $CHO =~ ^\<span ]]; then
+	echo -ne $(echo "$CHO" | awk -F';' -v RS='>' '
+		NR==2{sub("&#x","",$1);print "\\u" $1;exit}') | \
+		xclip -selection clipboard
+else
+	echo -n ${CHO:0:1} | xsel -i; xsel -o | xsel -i -b
+fi

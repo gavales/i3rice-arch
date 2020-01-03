@@ -34,7 +34,7 @@ grn=$(themer -v "grn ") ylw=$(themer -v "ylw ") red=$(themer -v "red ")
 SCR=$(xdpyinfo | grep 'name of display:' | awk '{print $2}')
 SCR=${SCR/:/}
 RES=$(xdpyinfo  | grep 'dimensions:' | awk '{print $2}')
-FNT=$(themer -v "font ")
+FNT=$(themer -v "guifont ")
 XP=$(themer -v "ltimex") YP=$(themer -v "ltimey")
 XRES=${RES%x*} YRES=${RES#*x}
 X=$(echo "(${XRES}*${XP})/100" | bc)
@@ -61,40 +61,23 @@ i3lock \
 	--bar-orientation=horizontal \
 	--indpos="$X:$Y" \
 	--image=${IMG/\/normal\//\/blur\/} \
-	--insidevercolor=$V \
-	--ringvercolor=$V \
 	\
-	--insidewrongcolor=$W \
-	--ringwrongcolor=$W \
+	--insidevercolor=$V --ringvercolor=$V \
+	--insidewrongcolor=$W --ringwrongcolor=$W \
 	\
-	--insidecolor=$D \
-	--ringcolor=$D \
-	--linecolor=$D \
-	--separatorcolor=$D \
+	--insidecolor=$D --ringcolor=$D \
+	--linecolor=$D --separatorcolor=$D \
 	\
-	--verifcolor=$V \
-	--wrongcolor=$W \
-	--timecolor=$T \
-	--datecolor=$T \
-	--layoutcolor=$T \
-	--keyhlcolor=$W \
+	--verifcolor=$V --wrongcolor=$W --timecolor=$T \
+	--datecolor=$T --layoutcolor=$T --keyhlcolor=$W \
 	--bshlcolor=$W \
 	\
-	--verif-align=1 \
-	--wrong-align=1 \
-	--time-align=1 \
-	--date-align=1 \
-	--layout-align=1 \
-	--verif-font=$FNT \
-	--wrong-font=$FNT \
-	--time-font=$FNT \
-	--date-font=$FNT \
-	--layout-font=$FNT \
-	--verifsize=75 \
-	--wrongsize=75 \
-	--timesize=75 \
-	--datesize=30 \
-	--layoutsize=25 \
+	--verif-align=1 --wrong-align=1 --time-align=1 \
+	--date-align=1 --layout-align=1 \
+	--verif-font=$FNT --wrong-font=$FNT --time-font=$FNT \
+	--date-font=$FNT --layout-font=$FNT \
+	--verifsize=75 --wrongsize=75 --timesize=75 \
+	--datesize=30 --layoutsize=25 \
 	\
 	--radius 120 \
 	--screen $SCR \

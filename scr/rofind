@@ -4,6 +4,8 @@ cd ${HOME}
 FOLDOPEN="thunar" FILEOPEN="$EDITOR"
 IMGOPEN="openimage" VIDOPEN="openvid" MUSOPEN="mpc insert"
 XBMOPEN="gthumb"    PDFOPEN="zathura" MANOPEN="${TERMINAL:-"urxvt"} -e man"
+iIMG="IMG" iVID="VID" iMUS="MUS"
+iXBM="XBM" iPDF="PDF" iMAN="MAN"
 LST="${HOME}/.config/rofi/.rofindlist"
 IGN="${HOME}/.config/rofi/.rofindignore"
 #find . -type d \( -path dir1 -o -path dir2 -o -path dir3 \) -prune -o -print
@@ -55,7 +57,7 @@ NORMAL () {
 	[[ -f "${1}" ]] && echo File   && eval "$FILEOPEN \"${1}\""
 }
 
-list () {
+list   () {
 	[[ -s $IGN ]] && CMD="$(awk '
 		BEGIN{print "find -L . -type d \\( "}
 		{ print "-path \""$0"\" -o" }
@@ -63,8 +65,7 @@ list () {
 	' $IGN)" || CMD="find -L . -type d"
 	eval "$(echo ${CMD} | sed 's/-o \\)/\\)/g')"
 }
-
-flist () {
+flist  () {
 	list | awk -v HOME="~/" '
 		/.png$|.jpeg$|.jpg$|.svg$|.xpm$/{gsub(/^\.\//,HOME,$0);print"PIC "$0}
 		/.mp4$|.mkv$|.mov$/             {gsub(/^\.\//,HOME,$0);print"VID "$0}

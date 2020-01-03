@@ -52,5 +52,5 @@
 	border: 0;
 	cornerrad: 5;
 	
-	font: "%%romanfont%% %%rofifsize%%";
+	font: "%%guifont%% %%rofifsize%%";
 	}

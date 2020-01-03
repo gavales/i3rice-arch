@@ -1,2 +1,2 @@
 -f bestvideo+bestaudio
--o ~/vid/yt/%(channel)s/%(title)s.%(ext)s
+-o %(title)s.%(ext)s

@@ -2,8 +2,8 @@ sw_volume: 100
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
 state: pause
-current: 0
-time: 30.461000
+current: 1
+time: 4.906000
 random: 0
 repeat: 0
 single: 0
@@ -12,12 +12,15 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:IsaacAsimov-TheFoundationTrilogy/Part1_64kb.mp3
-1:IsaacAsimov-TheFoundationTrilogy/Part2_64kb.mp3
-2:IsaacAsimov-TheFoundationTrilogy/Part3_64kb.mp3
-3:IsaacAsimov-TheFoundationTrilogy/Part4_64kb.mp3
-4:IsaacAsimov-TheFoundationTrilogy/Part5_64kb.mp3
-5:IsaacAsimov-TheFoundationTrilogy/Part6_64kb.mp3
-6:IsaacAsimov-TheFoundationTrilogy/Part7_64kb.mp3
-7:IsaacAsimov-TheFoundationTrilogy/Part8_64kb.mp3
+0:Jaco Pastorius/Jaco Pastorius/01 Donna Lee.mp3
+1:Jaco Pastorius/Jaco Pastorius/02 Come On_ Come Over.mp3
+2:Jaco Pastorius/Jaco Pastorius/03 Continuum.mp3
+3:Jaco Pastorius/Jaco Pastorius/04 Kuru_Speak Like A Child.mp3
+4:Jaco Pastorius/Jaco Pastorius/05 Portrait of Tracy.mp3
+5:Jaco Pastorius/Jaco Pastorius/06 Opus Pocus.mp3
+6:Jaco Pastorius/Jaco Pastorius/07 Okonkole y Trompa.mp3
+7:Jaco Pastorius/Jaco Pastorius/08 (Used To Be A) Cha-Cha.mp3
+8:Jaco Pastorius/Jaco Pastorius/09 Forgotten Love.mp3
+9:Jaco Pastorius/Jaco Pastorius/10 (Used To Be A) Cha-Cha.mp3
+10:Jaco Pastorius/Jaco Pastorius/11 6_4 Jam.mp3
 playlist_end

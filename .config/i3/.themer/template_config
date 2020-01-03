@@ -12,7 +12,7 @@
 
 # ━  VARS
 # ━━ MAIN
-set $FTM %%romanfont%%
+set $FTM %%guifont%%
 set $FTI FontAwesome
 set $FSZ %%size%%
 

@@ -3,7 +3,7 @@
 	close_all = ctrl+shift+space
 
 [global]
-	font = %%romanfont%% %%size%%
+	font = %%guifont%% %%size%%
 	
 	allow_markup = yes
 	

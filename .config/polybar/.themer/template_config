@@ -37,7 +37,7 @@ padding-left        = 0
 padding-right       = 0
 module-margin-left  = 0
 module-margin-right = 0
-font-0              = %%monofont%%:size=12;3
+font-0              = %%guifont%%:size=13;3
 font-1              = FontAwesome5Free:style=Solid:size=12;2
 font-2              = FontAwesome5Brands:style=Solid:size=12;2
 font-3              = Inconsolata Nerd Font:style=Regular:size=21;6
@@ -72,7 +72,7 @@ padding-left        = 0
 padding-right       = 0
 module-margin-left  = 0
 module-margin-right = 0
-font-0              = %%monofont%%:style=Semibold Oblique:size=12;3
+font-0              = %%guifont%%:style=Semibold Oblique:size=12;3
 font-1              = FontAwesome5Free:style=Solid:size=14;3
 font-2              = FontAwesome5Brands:style=Solid:size=12;3
 font-3              = Inconsolata Nerd Font:style=Regular:size=21;6

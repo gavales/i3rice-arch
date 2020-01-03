@@ -5785,3 +5785,107 @@ Dec 17 15:49 : client: [39] closed
 Dec 17 15:49 : client: [40] opened from [::1]:40728
 Dec 17 15:49 : client: [40] closed
 Dec 17 17:47 : client: [23] closed
+Dec 17 22:35 : client: [41] opened from [::1]:47352
+Dec 17 22:35 : client: [42] opened from [::1]:47354
+Dec 17 22:35 : client: [42] closed
+Dec 17 22:35 : client: [43] opened from [::1]:47356
+Dec 17 22:35 : client: [43] closed
+Dec 17 22:35 : player: played "IsaacAsimov-TheFoundationTrilogy/Part1_64kb.mp3"
+Dec 17 22:35 : client: [44] opened from [::1]:47358
+Dec 17 22:35 : client: [44] closed
+Dec 17 22:35 : client: [45] opened from [::1]:47360
+Dec 17 22:35 : client: [45] closed
+Dec 17 22:35 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Dec 17 22:36 : client: [46] opened from [::1]:47366
+Dec 17 22:36 : client: [46] closed
+Dec 17 22:36 : client: [47] opened from [::1]:47368
+Dec 17 22:36 : client: [47] closed
+Dec 17 22:36 : client: [48] opened from [::1]:47370
+Dec 17 22:36 : client: [48] closed
+Dec 17 22:36 : client: [49] opened from [::1]:47382
+Dec 17 22:36 : client: [49] closed
+Dec 17 22:36 : client: [50] opened from [::1]:47384
+Dec 17 22:36 : client: [50] closed
+Dec 17 22:36 : client: [51] opened from [::1]:47386
+Dec 17 22:36 : client: [51] closed
+Dec 17 22:36 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Dec 17 22:37 : client: [52] opened from [::1]:47390
+Dec 17 22:37 : client: [52] closed
+Dec 17 22:37 : client: [53] opened from [::1]:47392
+Dec 17 22:37 : client: [53] closed
+Dec 17 22:37 : client: [54] opened from [::1]:47394
+Dec 17 22:37 : client: [54] closed
+Dec 18 13:53 : client: [41] closed
+Dec 18 13:54 : player: played "Jaco Pastorius/Jaco Pastorius/01 Donna Lee.mp3"
+Dec 18 13:55 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Dec 18 13:55 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Dec 18 13:55 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Dec 18 16:48 : client: [0] opened from [::1]:40942
+Dec 18 16:48 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Dec 18 16:48 : client: [0] closed
+Dec 18 16:48 : client: [1] opened from [::1]:40944
+Dec 18 16:48 : client: [1] closed
+Dec 18 16:48 : client: [2] opened from [::1]:40946
+Dec 18 16:48 : client: [2] closed
+Dec 18 16:48 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Dec 18 16:48 : client: [3] opened from [::1]:40948
+Dec 18 16:48 : client: [3] closed
+Dec 18 16:48 : client: [4] opened from [::1]:40950
+Dec 18 16:48 : client: [4] closed
+Dec 18 16:48 : client: [5] opened from [::1]:40952
+Dec 18 16:48 : client: [5] closed
+Dec 18 23:23 : client: [6] opened from [::1]:43030
+Dec 18 23:23 : client: [7] opened from [::1]:43032
+Dec 18 23:23 : client: [7] closed
+Dec 18 23:23 : client: [8] opened from [::1]:43034
+Dec 18 23:23 : client: [8] closed
+Dec 18 23:23 : update: added Barry White/Can't Get Enough/Can't Get Enough Of Your Love Baby.mp3
+Dec 18 23:23 : update: added Barry White/Can't Get Enough/I can't believe you love me.mp3
+Dec 18 23:23 : update: added Barry White/Can't Get Enough/I Love You More Than Anything (In This World Girl).mp3
+Dec 18 23:23 : update: added Barry White/Can't Get Enough/Mellow Mood Part 1.mp3
+Dec 18 23:23 : update: added Barry White/Can't Get Enough/Mellow Mood Part 2.mp3
+Dec 18 23:23 : update: added Barry White/Can't Get Enough/Oh Love, Well We Finally Made It.mp3
+Dec 18 23:23 : update: added Barry White/Can't Get Enough/You're the First, the Last, My Everything.mp3
+Dec 18 23:24 : client: [6] closed
+Dec 20 19:52 : client: [9] opened from [::1]:47828
+Dec 20 19:52 : client: [10] opened from [::1]:47830
+Dec 20 19:52 : client: [10] closed
+Dec 20 19:52 : client: [11] opened from [::1]:47832
+Dec 20 19:52 : client: [11] closed
+Dec 20 19:52 : client: [12] opened from [::1]:47834
+Dec 20 19:52 : client: [12] closed
+Dec 20 19:52 : client: [13] opened from [::1]:47836
+Dec 20 19:52 : client: [13] closed
+Dec 20 19:52 : client: [14] opened from [::1]:47838
+Dec 20 19:52 : client: [14] closed
+Dec 20 19:52 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Dec 20 19:53 : client: [15] opened from [::1]:47844
+Dec 20 19:53 : client: [15] closed
+Dec 20 19:53 : client: [16] opened from [::1]:47846
+Dec 20 19:53 : client: [16] closed
+Dec 20 19:53 : client: [17] opened from [::1]:47848
+Dec 20 19:53 : client: [17] closed
+Dec 24 18:47 : client: [9] closed
+Dec 25 20:40 : client: [18] opened from [::1]:36302
+Dec 25 20:40 : client: [19] opened from [::1]:36304
+Dec 25 20:40 : client: [19] closed
+Dec 25 20:40 : client: [20] opened from [::1]:36306
+Dec 25 20:40 : client: [20] closed
+Jan 01 20:50 : client: [21] opened from [::1]:38438
+Jan 01 20:50 : client: [21] closed
+Jan 01 20:50 : client: [22] opened from [::1]:38440
+Jan 01 20:50 : client: [22] closed
+Jan 01 20:50 : client: [23] opened from [::1]:38442
+Jan 01 20:50 : client: [23] closed
+Jan 01 20:50 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jan 01 20:51 : player: played "Jaco Pastorius/Jaco Pastorius/01 Donna Lee.mp3"
+Jan 01 20:51 : client: [24] opened from [::1]:38446
+Jan 01 20:51 : client: [24] closed
+Jan 01 20:51 : client: [25] opened from [::1]:38448
+Jan 01 20:51 : client: [25] closed
+Jan 01 20:51 : client: [26] opened from [::1]:38450
+Jan 01 20:51 : client: [26] closed
+Jan 01 20:51 : client: [27] opened from [::1]:38452
+Jan 01 20:51 : client: [27] closed
+Jan 01 20:51 : client: [28] opened from [::1]:38454
+Jan 01 20:51 : client: [28] closed

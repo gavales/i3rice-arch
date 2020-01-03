@@ -1,5 +1,4 @@
--x
+--extract-audio
+--audio-format mp3
 -i
--f bestaudio
---embed-thumbnail
--o ~/mus/%(channel)s/%(title)s.%(ext)s
+-o "%(title)s.%(ext)s"

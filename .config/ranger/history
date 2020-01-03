@@ -1,16 +1,3 @@
-rename Figure75A.png
-rename Figure75B.png
-rename Figure75C.png
-rename Figure75D.png
-rename Figure75E.png
-rename Figure76A.png
-rename Figure76B.png
-rename Figure76C.png
-rename Figure77A.png
-rename Figure77B.png
-rename Figure77C.png
-rename Figure77D.png
-rename Figure77E.png
 rename Figure77F.png
 rename Figure78.png
 rename Figure79.png
@@ -45,6 +32,19 @@ open_with edtr
 
 shell cp -r ~/plt/md/normal startpage
 shell 
-open_with 1
 open_with vim
 search Foundation
+open_with evince
+rename Caspar_David_Friedrich_-View_of_Arkona_with_Rising_Moon_and_Nets.jpg
+rename Caspar_David_Friedrich_Wreck_in_the_Icesea.jpg
+rename CTB_1994_15BarcoPescaEntreDosRocasPlayaMarBaltico.zip
+rename CTB_1994_15BarcoPescaEntreDosRocasPlayaMarBaltico(1).zip
+rename CasparDavidFriedrich
+search Wand
+mkdir ringtones
+search Man
+search man
+search Wanderer
+shell tagger -h
+open_with 1
+rename sintra
