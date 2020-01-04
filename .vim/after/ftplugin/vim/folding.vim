@@ -33,6 +33,7 @@ function FText()
 	let windowwidth = winwidth(0) - nucolwidth - 3
 	let foldsize = (v:foldend-v:foldstart)
 	let foldline = getline(v:foldstart)
+	let foldline = substitute(foldline, '\t', repeat("┈",&tabstop), "g")
 	let foldline = substitute(foldline, '^" ━  ', "  ┫  ", "")
 	let foldline = substitute(foldline, '^" ━━ ', "  ┣━ ", "")
 	let text = foldline.foldsize.'lines'

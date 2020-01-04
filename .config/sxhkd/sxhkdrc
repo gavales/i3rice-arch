@@ -56,9 +56,13 @@ super + 7
 	$EDITOR -s doots $HOME/.config/polybar/.themer/template_config
 super + 8
 	$EDITOR -s doots $HOME/.config/qutebrowser/.themer/template_config.py
+super + minus
+	bkman
 super + equal
 	rofind
 
+super + shift + equal
+	menunicon
 super + shift + grave
 	gencvl
 

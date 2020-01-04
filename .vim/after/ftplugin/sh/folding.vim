@@ -66,6 +66,7 @@ function! FoldText()
 	let windowwidth = winwidth(0) - nucolwidth - 3
 	let foldsize = (v:foldend-v:foldstart)
 	let foldline = getline(v:foldstart)
+	let foldline = substitute(foldline, '\t', repeat("┈",&tabstop), "g")
 	let text = foldline.foldsize.'line    '
 	let spacecharcount = windowwidth - strdisplaywidth(text)
 	return foldline.' '.repeat("┈",spacecharcount).'  ('.foldsize.' lines)'

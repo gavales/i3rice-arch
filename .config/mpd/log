@@ -5889,3 +5889,27 @@ Jan 01 20:51 : client: [27] opened from [::1]:38452
 Jan 01 20:51 : client: [27] closed
 Jan 01 20:51 : client: [28] opened from [::1]:38454
 Jan 01 20:51 : client: [28] closed
+Jan 03 22:57 : client: [18] closed
+Jan 03 22:57 : player: played "Jaco Pastorius/Jaco Pastorius/02 Come On_ Come Over.mp3"
+Jan 03 23:19 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 03 23:19 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 03 23:19 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jan 03 23:19 : client: [0] opened from [::1]:34744
+Jan 03 23:19 : client: [1] opened from [::1]:34746
+Jan 03 23:19 : client: [1] closed
+Jan 03 23:19 : client: [2] opened from [::1]:34748
+Jan 03 23:19 : client: [2] closed
+Jan 04 22:40 : client: [3] opened from [::1]:37804
+Jan 04 22:40 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 04 22:40 : client: [3] closed
+Jan 04 22:40 : client: [4] opened from [::1]:37806
+Jan 04 22:40 : client: [4] closed
+Jan 04 22:40 : client: [5] opened from [::1]:37808
+Jan 04 22:40 : client: [5] closed
+Jan 04 22:40 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jan 04 22:40 : client: [6] opened from [::1]:37810
+Jan 04 22:40 : client: [6] closed
+Jan 04 22:40 : client: [7] opened from [::1]:37812
+Jan 04 22:40 : client: [7] closed
+Jan 04 22:40 : client: [8] opened from [::1]:37814
+Jan 04 22:40 : client: [8] closed

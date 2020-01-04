@@ -15,6 +15,7 @@ function FoldText()
 	let windowwidth = winwidth(0) - nucolwidth - 3
 	let foldsize = (v:foldend-v:foldstart)
 	let foldline = getline(v:foldstart)
+	let foldline = substitute(foldline, '\t', repeat("┈",&tabstop), "g")
 	let foldline = substitute(foldline, '^[bar/',    "┫BAR ",   "")
 	let foldline = substitute(foldline, '^[module/', "┫MOD    ", "")
 	let foldline = substitute(foldline, '^[global/', "┫GBL    ", "")

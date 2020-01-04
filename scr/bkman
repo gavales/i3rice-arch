@@ -47,6 +47,9 @@ linksel()  {
 	eval "$(echo $1 | awk -F "['><]" '{ print "LINK=\""$2"\"\nNAME=\""$NF"\"" }')"
 	echo -n "$LINK" | xclip
 	echo -n "$LINK" | xclip -selection clipboard
+	xdotool key 'ctrl+l'
+	xdotool key 'ctrl+v'
+	xdotool key 'KP_Enter'
 	echo "[${NAME#* }]: $LINK" >> "$HSTDIR"
 }
 filelist() {
