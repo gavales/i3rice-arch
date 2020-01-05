@@ -23,6 +23,7 @@ exit
 BKMDIR="${XDG_DOCUMENTS_DIR:-"$HOME/Documents"}/bookmarks"
 HSTDIR="${BKMDIR}/.history"
 iDIR=" " iFLE=" " iLNK=" " iHST=" "
+CRWN=$(pfw) ; CRWNT=$(xprop -id $CRWN | sed '/WINDOW_ROLE/!d')
 format="<span lang='%s'></span>%s\n"
 menopts="-L 1 -H 100 -w 25"
 
@@ -49,9 +50,11 @@ linksel()  {
 	eval "$(echo $1 | awk -F "['><]" '{ print "LINK=\""$2"\"\nNAME=\""$NF"\"" }')"
 	echo -n "$LINK" | xclip
 	echo -n "$LINK" | xclip -selection clipboard
-	xdotool key 'ctrl+l'
-	xdotool key 'ctrl+v'
-	xdotool key 'KP_Enter'
+	[[ $CRWNT =~ browser ]] && {
+		xdotool key 'ctrl+l'
+		xdotool key 'ctrl+v'
+		xdotool key 'KP_Enter'
+	}
 	echo "[${NAME#* }]: $LINK" >> "$HSTDIR"
 }
 filelist() {
