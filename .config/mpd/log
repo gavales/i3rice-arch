@@ -5913,3 +5913,8 @@ Jan 04 22:40 : client: [7] opened from [::1]:37812
 Jan 04 22:40 : client: [7] closed
 Jan 04 22:40 : client: [8] opened from [::1]:37814
 Jan 04 22:40 : client: [8] closed
+Jan 05 11:45 : client: [0] closed
+Jan 05 11:45 : player: played "Jaco Pastorius/Jaco Pastorius/02 Come On_ Come Over.mp3"
+Jan 05 11:55 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 05 11:55 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 05 11:55 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.

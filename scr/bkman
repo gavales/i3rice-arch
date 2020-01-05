@@ -11,6 +11,8 @@ __bkman__ - Bookmark manager
 
 ```
 bkman
+bkamn [--name|-n <name>] [--category|-c <directory>]
+      [--newlink|-u <url>]
 bkman --help|-h
 ```
 EOB
@@ -30,7 +32,7 @@ newlink()  {
 	CAT="${O_cat:-$(find "$BKMDIR" -type f \
 		| sed '/\/\./d' | sed "s;${BKMDIR};${iFLE};g" \
 		| i3menu $menopts -p 'choose category')}"
-	TRG="${BKMDIR}${CAT#* }"
+	TRG="${BKMDIR}/${CAT#* }"
 	mkdir -p "${TRG%/*}"
 	printf "[%s]: %s\n" "$NAME" "$URL" >> ${TRG}
 	exit
