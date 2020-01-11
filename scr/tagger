@@ -38,22 +38,24 @@ while true; do
 done
 TOT=$(ls | grep .mp3 | wc -l)
 
-echo "
+cat << 'EOB'
 ==================================================
-Applying title..."
+Applying title...
+EOB
 CNT=0
 for i in *.mp3 ; do
 	CNT=$(($CNT + 1))
 	resto=${i%.*}
 	id3v2 -t "${resto}" "${i}"
-	echo -ne "\r($CNT/$TOT) ${i}\r"
+	echo "($CNT/$TOT) ${i}"
 done
 
 CNT=0
 if [[ -n $ART ]]; then
-	echo "
+cat << 'EOB'
 ==================================================
-Changing artist to $ART..."
+Changing artist to $ART...
+EOB
 	for i in *.mp3 ; do
 		CNT=$(($CNT + 1))
 		resto=${i%.*}
@@ -64,9 +66,10 @@ fi
 
 CNT=0
 if [[ -n $ALB ]]; then
-	echo "
+cat << 'EOB'
 ==================================================
-Changing album name to $ALB..."
+Changing album name to $ALB...
+EOB
 	for i in *.mp3 ; do
 		CNT=$(($CNT + 1))
 		resto=${i%.*}

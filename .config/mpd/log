@@ -5918,3 +5918,154 @@ Jan 05 11:45 : player: played "Jaco Pastorius/Jaco Pastorius/02 Come On_ Come Ov
 Jan 05 11:55 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Jan 05 11:55 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Jan 05 11:55 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jan 09 16:41 : player: played "Jaco Pastorius/Jaco Pastorius/02 Come On_ Come Over.mp3"
+Jan 09 18:56 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 09 18:56 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 09 18:56 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jan 09 18:57 : client: [0] opened from [::1]:57408
+Jan 09 18:57 : client: [1] opened from [::1]:57410
+Jan 09 18:57 : client: [1] closed
+Jan 09 18:57 : client: [2] opened from [::1]:57412
+Jan 09 18:57 : client: [2] closed
+Jan 09 18:57 : client: [3] opened from [::1]:57414
+Jan 09 18:57 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 09 18:57 : client: [3] closed
+Jan 09 18:57 : client: [4] opened from [::1]:57416
+Jan 09 18:57 : client: [4] closed
+Jan 09 18:57 : client: [5] opened from [::1]:57418
+Jan 09 18:57 : client: [5] closed
+Jan 09 18:57 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jan 09 18:57 : client: [6] opened from [::1]:57420
+Jan 09 18:57 : client: [6] closed
+Jan 09 18:57 : client: [7] opened from [::1]:57422
+Jan 09 18:57 : client: [7] closed
+Jan 09 18:57 : client: [8] opened from [::1]:57424
+Jan 09 18:57 : client: [8] closed
+Jan 09 18:57 : client: [9] opened from [::1]:57426
+Jan 09 18:57 : client: [9] closed
+Jan 09 18:57 : client: [10] opened from [::1]:57428
+Jan 09 18:57 : client: [10] closed
+Jan 09 18:57 : client: [11] opened from [::1]:57430
+Jan 09 18:57 : client: [11] closed
+Jan 09 18:57 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jan 09 18:57 : client: [0] closed
+Jan 09 18:57 : client: [12] opened from [::1]:57556
+Jan 09 18:57 : client: [12] closed
+Jan 09 18:57 : client: [13] opened from [::1]:57560
+Jan 09 18:57 : client: [13] closed
+Jan 09 18:57 : client: [14] opened from [::1]:57562
+Jan 09 18:57 : client: [14] closed
+Jan 09 18:57 : client: [15] opened from [::1]:57564
+Jan 09 18:57 : client: [15] closed
+Jan 09 18:57 : client: [16] opened from [::1]:57566
+Jan 09 18:57 : client: [16] closed
+Jan 09 18:57 : client: [17] opened from [::1]:57568
+Jan 09 18:57 : client: [17] closed
+Jan 09 18:57 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jan 09 18:58 : client: [18] opened from [::1]:57574
+Jan 09 18:58 : client: [19] opened from [::1]:57576
+Jan 09 18:58 : client: [19] closed
+Jan 09 18:58 : client: [20] opened from [::1]:57578
+Jan 09 18:58 : client: [20] closed
+Jan 09 18:58 : client: [21] opened from [::1]:57766
+Jan 09 18:58 : client: [21] closed
+Jan 09 18:58 : client: [22] opened from [::1]:57768
+Jan 09 18:58 : client: [22] closed
+Jan 09 18:58 : client: [23] opened from [::1]:57770
+Jan 09 18:58 : client: [23] closed
+Jan 09 18:58 : client: [24] opened from [::1]:57772
+Jan 09 18:58 : client: [24] closed
+Jan 09 18:58 : client: [25] opened from [::1]:57774
+Jan 09 18:58 : client: [25] closed
+Jan 09 18:58 : client: [26] opened from [::1]:57776
+Jan 09 18:58 : client: [26] closed
+Jan 09 18:58 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jan 09 18:59 : client: [27] opened from [::1]:57778
+Jan 09 18:59 : client: [27] closed
+Jan 09 18:59 : client: [28] opened from [::1]:57780
+Jan 09 18:59 : client: [28] closed
+Jan 09 18:59 : client: [29] opened from [::1]:57782
+Jan 09 18:59 : client: [29] closed
+Jan 09 18:59 : client: [30] opened from [::1]:57784
+Jan 09 18:59 : client: [30] closed
+Jan 09 18:59 : client: [31] opened from [::1]:57786
+Jan 09 18:59 : client: [31] closed
+Jan 09 18:59 : client: [32] opened from [::1]:57788
+Jan 09 18:59 : client: [32] closed
+Jan 09 18:59 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jan 09 18:59 : client: [18] closed
+Jan 09 18:59 : player: played "Jaco Pastorius/Jaco Pastorius/02 Come On_ Come Over.mp3"
+Jan 09 18:59 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 09 18:59 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 09 18:59 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 09 18:59 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jan 09 18:59 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jan 09 18:59 : client: [0] opened from [::1]:57790
+Jan 09 18:59 : client: [1] opened from [::1]:57792
+Jan 09 18:59 : client: [1] closed
+Jan 09 18:59 : client: [2] opened from [::1]:57794
+Jan 09 18:59 : client: [2] closed
+Jan 09 18:59 : player: played "Jaco Pastorius/Jaco Pastorius/02 Come On_ Come Over.mp3"
+Jan 09 19:00 : client: [0] closed
+Jan 09 19:01 : client: [3] opened from [::1]:57932
+Jan 09 19:04 : client: [4] opened from [::1]:58354
+Jan 09 19:04 : client: [4] closed
+Jan 09 19:04 : client: [5] opened from [::1]:58356
+Jan 09 19:04 : client: [5] closed
+Jan 09 19:04 : client: [6] opened from [::1]:58358
+Jan 09 19:04 : client: [6] closed
+Jan 09 19:04 : client: [7] opened from [::1]:58360
+Jan 09 19:04 : client: [7] closed
+Jan 09 19:04 : client: [8] opened from [::1]:58362
+Jan 09 19:04 : client: [8] closed
+Jan 09 19:04 : client: [9] opened from [::1]:58364
+Jan 09 19:04 : client: [9] closed
+Jan 09 19:05 : client: [10] opened from [::1]:58366
+Jan 09 19:05 : client: [10] closed
+Jan 09 19:05 : client: [11] opened from [::1]:58368
+Jan 09 19:05 : client: [11] closed
+Jan 09 19:05 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jan 09 19:05 : client: [12] opened from [::1]:58426
+Jan 09 19:05 : client: [12] closed
+Jan 09 19:05 : client: [13] opened from [::1]:58428
+Jan 09 19:05 : client: [13] closed
+Jan 09 19:05 : client: [14] opened from [::1]:58430
+Jan 09 19:05 : client: [14] closed
+Jan 09 19:05 : client: [15] opened from [::1]:58432
+Jan 09 19:05 : client: [15] closed
+Jan 09 19:05 : client: [16] opened from [::1]:58434
+Jan 09 19:05 : client: [16] closed
+Jan 09 19:05 : client: [17] opened from [::1]:58436
+Jan 09 19:05 : client: [17] closed
+Jan 09 19:05 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jan 09 19:05 : client: [18] opened from [::1]:58442
+Jan 09 19:05 : client: [18] closed
+Jan 09 19:05 : client: [19] opened from [::1]:58444
+Jan 09 19:05 : client: [19] closed
+Jan 09 19:05 : client: [20] opened from [::1]:58446
+Jan 09 19:05 : client: [20] closed
+Jan 09 19:05 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jan 09 19:05 : player: played "Sleep/Dopesmoker/01 - Dopesmoker.mp3"
+Jan 09 19:06 : client: [21] opened from [::1]:58452
+Jan 09 19:06 : client: [21] closed
+Jan 09 19:06 : client: [22] opened from [::1]:58454
+Jan 09 19:06 : client: [22] closed
+Jan 09 19:06 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jan 09 19:06 : client: [23] opened from [::1]:58458
+Jan 09 19:06 : client: [23] closed
+Jan 09 19:06 : client: [24] opened from [::1]:58460
+Jan 09 19:06 : client: [24] closed
+Jan 09 19:06 : client: [25] opened from [::1]:58462
+Jan 09 19:06 : client: [25] closed
+Jan 09 19:06 : player: played "Synthspiria/30 Years Later - An AKIRA Tribute/Synthspiria - 30 Years Later - An AKIRA Tribute - 01 Wolf Arm - The Singularity.mp3"
+Jan 09 19:06 : client: [3] closed
+Jan 09 19:09 : client: [26] opened from [::1]:58668
+Jan 09 19:09 : client: [27] opened from [::1]:58670
+Jan 09 19:09 : client: [27] closed
+Jan 09 19:09 : client: [28] opened from [::1]:58672
+Jan 09 19:09 : client: [28] closed
+Jan 09 19:09 : client: [29] opened from [::1]:58674
+Jan 09 19:09 : client: [29] closed
+Jan 09 19:09 : client: [26] closed
+Jan 10 12:52 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 10 12:52 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.

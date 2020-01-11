@@ -4,11 +4,11 @@
 		"/home/gavarch/.config/sublime-text-3/Packages"
 	],
 	"last_version": 3211,
-	"last_window_id": 13,
+	"last_window_id": 14,
 	"log_indexing": false,
 	"settings":
 	{
-		"new_window_height": 1004.0,
+		"new_window_height": 976.0,
 		"new_window_settings":
 		{
 			"auto_complete":
@@ -28,16 +28,32 @@
 				"selected_items":
 				[
 					[
+						"Install",
+						"Package Control: Install Package"
+					],
+					[
+						":insta",
+						"Package Control: Install Package"
+					],
+					[
+						":sel",
+						"UI: Select Theme"
+					],
+					[
+						":select",
+						"UI: Select Theme"
+					],
+					[
+						"insta",
+						"Package Control: Install Package"
+					],
+					[
 						"fil",
 						"Preferences: A File Icon Settings"
 					],
 					[
 						"set ui ",
 						"UI: Select Theme"
-					],
-					[
-						":insta",
-						"Package Control: Install Package"
 					],
 					[
 						":install",
@@ -88,12 +104,13 @@
 			},
 			"file_history":
 			[
+				"/home/gavarch/plt/tex/report/report.tex",
+				"/home/gavarch/global.bib",
+				"/home/gavarch/.config/sublime-text-3/Packages/THEMES/.themer/template_Ascetic.tmTheme",
 				"/home/gavarch/dwn/budlime/packages/zublime/Preferences.sublime-settings",
 				"/home/gavarch/plt/md/normal/normal.md",
-				"/home/gavarch/.config/sublime-text-3/Packages/THEMES/.themer/template_Ascetic.tmTheme",
 				"/home/gavarch/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-				"/home/gavarch/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-				"/home/gavarch/global.bib"
+				"/home/gavarch/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings"
 			],
 			"find":
 			{
@@ -111,6 +128,7 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"Ascetic"
 				],
 				"highlight": true,
 				"in_selection": false,
@@ -127,7 +145,7 @@
 			},
 			"incremental_find":
 			{
-				"height": 47.0
+				"height": 34.0
 			},
 			"input":
 			{
@@ -175,13 +193,13 @@
 			"show_open_files": true,
 			"show_tabs": true,
 			"side_bar_visible": true,
-			"side_bar_width": 237.0,
+			"side_bar_width": 185.0,
 			"status_bar_visible": true,
 			"template_settings":
 			{
 			}
 		},
-		"new_window_width": 1126.0
+		"new_window_width": 1224.0
 	},
 	"windows":
 	[
@@ -206,6 +224,10 @@
 				"last_filter": "",
 				"selected_items":
 				[
+					[
+						"Install",
+						"Package Control: Install Package"
+					],
 					[
 						":insta",
 						"Package Control: Install Package"
@@ -374,7 +396,7 @@
 				"height": 0.0
 			},
 			"pinned_build_system": "",
-			"position": "0,0,0,0,0,1248,400,1816,1038,1920,1080",
+			"position": "0,0,0,0,0,100,62,1324,1038,1920,1080",
 			"project": "",
 			"replace":
 			{

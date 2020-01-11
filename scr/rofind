@@ -56,7 +56,7 @@ done
 
 NORMAL () {
 #	[[ -d "${1}" ]] && eval "$FOLDOPEN \"${1}\""
-	[[ -d "${1}" ]] && flist "${1}" "${1/$HOME/}"
+	[[ -d "${1}" ]] && FLIST "${1}" "${1/$HOME/}"
 	[[ -f "${1}" ]] && eval "$FILEOPEN \"${1}\""
 }
 FLIST  () {
@@ -65,7 +65,7 @@ FLIST  () {
 #			if(c!=LEN){printf("%s","! ")}}
 #		END{print ""}
 	local DIR="$1"
-	cd $DIR
+	cd "$DIR"
 	[[ -s $IGN ]] && CMD="$(awk '
 		BEGIN{print "find -L . -type d \\( "}
 		{ print "-path \""$0"\" -o" }

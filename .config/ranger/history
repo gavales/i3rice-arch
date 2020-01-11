@@ -1,10 +1,3 @@
-rename Figure78.png
-rename Figure79.png
-rename Figure80.png
-rename Figure81A.png
-rename Figure81B.png
-rename Figure81C.png
-rename Figure81D.png
 rename Figure81E.png
 rename Figure82A.png
 rename Figure82B.png
@@ -45,6 +38,13 @@ search Man
 search man
 search Wanderer
 shell tagger -h
-open_with 1
 rename sintra
 w
+h
+open_with 1
+mkdir Platina Jazz
+mkdir Anime Standards, Vol. 6
+rename Itadaki Mambo (From 'Itadakiman') (feat. Niklas Gabrielsson).mp3
+shell cp -r ~/plt/tex/report 9-Client\ Information 
+rename 9-ClientInformation
+rename 9-ClientInformation.synctex.gz

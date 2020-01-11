@@ -75,13 +75,14 @@ O_create () {
 
 O_open () {
 	_OPN="${1}"
-	[[ -n ${_OPN} ]] && OPN="${NOTEDIR}/${1}.goste" || {
+	[[ -n $_OPN ]] && OPN="${NOTEDIR}/${1}.goste" || {
 		_OPN="$(goste -L | i3menu -c blue)"
 		OPN="${NOTEDIR}/${_OPN}.goste"
 		}
-	[[ -z ${_OPN} ]] && exit 1
-	edtr -s "${_OPN}" -S '11' "${OPN}"
-	exit 1
+	[[ -z $_OPN ]] && exit
+	[[ -f $OPN ]] || goste -c "$_OPN"
+	$EDITOR -s "$_OPN" "$OPN"
+	exit
 }
 
 while true; do
