@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+
+
+help() {
+cat << 'EOB'
+# NAME
+
+__reddit__ - search reddit, or open a subreddit, in a new tab
+of the currently focussed web browser
+
+# USAGE
+
+```
+reddit [--search|-s|--subreddit|-S] "<url>"
+reddit --help|-h
+```
+EOB
+exit
+}
+
+CRWN=$(pfw) ; CRWNT=$(xprop -id $CRWN | sed '/WINDOW_ROLE/!d')
+menopts="-L 1 -H 100 -w 25"
+
+while true; do
+	case $1 in
+		--search    | -s ) SEARCH=1 ;;
+		--subreddit | -S ) SUBREDDIT=1 ;;
+		--help ) help ;;
+		-h ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+QUERY="${@:-}"
+
+prefix() {
+	if [[ -n $SEARCH ]]; then
+		PREFIX="https://www.reddit.com/search/?q="
+		PROMPT="Search "
+	elif [[ -n $SUBREDDIT ]]; then
+		PREFIX="https://www.reddit.com/r/"
+		SUFFIX="/new"
+		PROMPT="Name of Subreddit "
+	else
+		TYPE=$(printf "%s\n" SEARCH SUBREDDIT | i3menu $menopts -p "Action")
+		[[ -z $TYPE ]] && SEARCH=1 || eval "$TYPE=1"
+		prefix
+	fi
+}
+query() {
+	[[ -z $QUERY ]] && QUERY=$(echo "" | i3menu $menopts -p "$PROMPT")
+	[[ -z $QUERY ]] && exit 1
+}
+
+prefix
+query
+URL="$PREFIX$QUERY$SUFFIX"
+[[ $CRWNT =~ browser ]] && {
+	echo -n "$URL" | xclip
+	echo -n "$URL" | xclip -selection clipboard
+	xdotool key 'ctrl+t'
+	xdotool key 'ctrl+l'
+	xdotool key 'ctrl+v'
+	xdotool key 'KP_Enter'
+}

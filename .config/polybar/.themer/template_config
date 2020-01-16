@@ -49,9 +49,9 @@ tray-background-0   = #ff@@acc@@
 tray-background-1   = #00@@acc@@
 cursor-click        = pointer
 cursor-scroll       = ns-resize
-modules-left        = start td ws xkeyboard gwc
-modules-center      = i3media
-modules-right       = disk memory cpu temperature i3light i3vol battery
+modules-left        = ws xkeyboard gwc
+modules-center      = i3light td battery i3vol
+modules-right       = disk memory cpu temperature 
 
 [bar/fvwm]
 ;monitor             = ${env:MONITOR:HDMI-1}

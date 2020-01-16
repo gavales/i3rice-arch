@@ -26,6 +26,7 @@ iDIR=" " iFLE=" " iLNK=" " iHST=" "
 CRWN=$(pfw) ; CRWNT=$(xprop -id $CRWN | sed '/WINDOW_ROLE/!d')
 format="<span lang='%s'></span>%s\n"
 menopts="-L 1 -H 100 -w 25"
+CMDLST="reddit"
 
 newlink()  {
 	local URL="${1}"
@@ -40,10 +41,12 @@ newlink()  {
 }
 parsesel() {
 	local SEL="${1}"
+	local RAW="${1#* }"
 	[[ -z $SEL ]] && exit
-	if [[ $SEL =~ \< ]]; then        linksel  "$SEL"
-	elif [[ -f $BKMDIR/$SEL ]]; then filelist "$SEL"
-	elif [[ -d $BKMDIR/$SEL ]]; then dirlist  "$SEL"
+	if   [[ $RAW =~ \< ]]; then linksel "$SEL"
+	elif [[ $SEL =~ ^! ]]; then $RAW
+	elif [[ -f $BKMDIR/$RAW ]]; then filelist "$SEL"
+	elif [[ -d $BKMDIR/$RAW ]]; then dirlist  "$SEL"
 	fi
 }
 linksel()  {
@@ -75,6 +78,7 @@ dirlist()  {
 	count+=1
 
 	CHOSEN="$({
+		echo $CMDLST | xargs -I {} echo "! {}"
 		((count=1)) && cat "$HSTDIR" \
 			| awk -F "[]]: " -v format="$format" -v icon="$iHST" '{
 					gsub(/^[[]/,"",$1)
@@ -100,7 +104,6 @@ dirlist()  {
 					if(!a[$1]++){printf(format,$2,icon $1)}
 				}'
 	} | i3menu $menopts)"
-	CHOSEN="${CHOSEN#* }"
 	parsesel "${CHOSEN}"
 }
 

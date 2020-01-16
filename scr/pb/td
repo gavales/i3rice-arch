@@ -3,4 +3,4 @@
 _ID="%{T1}%{T-}"
 _IT="%{T1}%{T-}"
 
-echo "$_IT $(date '+%T'), $(date '+%a %d %b')"
+echo " $(date '+%T') $_IT $(date '+%a %d %b')  "

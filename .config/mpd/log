@@ -6069,3 +6069,18 @@ Jan 09 19:09 : client: [29] closed
 Jan 09 19:09 : client: [26] closed
 Jan 10 12:52 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Jan 10 12:52 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jan 11 21:31 : client: [0] opened from [::1]:47188
+Jan 11 21:32 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 11 21:32 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 11 21:32 : client: [1] opened from [::1]:47194
+Jan 11 21:32 : client: [1] closed
+Jan 11 21:32 : client: [2] opened from [::1]:47196
+Jan 11 21:32 : client: [2] closed
+Jan 11 21:33 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jan 11 21:33 : client: [3] opened from [::1]:47200
+Jan 11 21:33 : client: [3] closed
+Jan 11 21:33 : client: [4] opened from [::1]:47202
+Jan 11 21:33 : client: [4] closed
+Jan 11 21:33 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jan 11 21:36 : player: played "The Reddings/The Awakening/05 The Awakening.mp3"
+Jan 11 21:39 : client: [0] closed
