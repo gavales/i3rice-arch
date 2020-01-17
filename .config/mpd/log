@@ -6084,3 +6084,7 @@ Jan 11 21:33 : client: [4] closed
 Jan 11 21:33 : alsa_output: Decoder is too slow; playing silence to avoid xrun
 Jan 11 21:36 : player: played "The Reddings/The Awakening/05 The Awakening.mp3"
 Jan 11 21:39 : client: [0] closed
+Jan 17 17:47 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 17 17:47 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jan 17 19:07 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 17 19:07 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
