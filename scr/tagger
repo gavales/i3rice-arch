@@ -60,7 +60,7 @@ EOB
 		CNT=$(($CNT + 1))
 		resto=${i%.*}
 		id3v2 -a "${ART}" "${i}"
-		echo -ne "\r($CNT/$TOT) ${i}\r"
+		echo "($CNT/$TOT) ${i}"
 	done
 fi
 
@@ -74,6 +74,6 @@ EOB
 		CNT=$(($CNT + 1))
 		resto=${i%.*}
 		id3v2 -A "${ALB}" "${i}"
-		echo -ne "\r($CNT/$TOT) ${i}\r"
+		echo "($CNT/$TOT) ${i}"
 	done
 fi

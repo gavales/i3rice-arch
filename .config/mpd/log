@@ -6088,3 +6088,65 @@ Jan 17 17:47 : exception: RTIOThread could not get realtime scheduling, continui
 Jan 17 17:47 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
 Jan 17 19:07 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Jan 17 19:07 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jan 21 01:37 : client: [0] opened from [::1]:43018
+Jan 21 01:37 : update: added Fourplay/Fourplay/101 Eastbound.mp3
+Jan 21 01:37 : update: added Fourplay/Fourplay/After The Dance (feat. El DeBarge).mp3
+Jan 21 01:37 : update: added Fourplay/Fourplay/Bali Run.mp3
+Jan 21 01:37 : update: added Fourplay/Fourplay/Foreplay.mp3
+Jan 21 01:37 : update: added Fourplay/Fourplay/Max-O-Man.mp3
+Jan 21 01:37 : update: added Fourplay/Fourplay/Midnight Stroll.mp3
+Jan 21 01:37 : update: added Fourplay/Fourplay/Moonjogger.mp3
+Jan 21 01:37 : update: added Fourplay/Fourplay/October Morning.mp3
+Jan 21 01:37 : update: added Fourplay/Fourplay/Quadrille.mp3
+Jan 21 01:37 : update: added Fourplay/Fourplay/Rain Forest.mp3
+Jan 21 01:37 : update: added Fourplay/Fourplay/Wish You Were Here.mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/Free Range.mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/101 Eastbound.mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/After The Dance (ft. El DeBarge).mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/Amazing Grace.mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/Auld Lang Syne.mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/Bali Run.mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/Between The Sheets (ft. Chaka Khan, Nathan East).mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/Blues Force.mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/Chant.mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/Charmed I'm Sure.mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/Christmas Time Is Here.mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/Foreplay.mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/Higher Ground (ft. Take 6).mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/Max-O-Man.mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/Merry Little Stroll Medley - Have Yourself a Merry Little Christmas and Midni.mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/Moonjogger.mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/Piece Of My Heart.mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/Play Lady Play.mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/Rio Rush.mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/Someone To Love ft. Babyface, Shanice.mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/Still The One.mp3
+Jan 21 01:37 : update: added Fourplay/FourplayVEVO/Why Can't It Wait 'Till Morning (ft. Phil Collins).mp3
+Jan 21 01:37 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 21 01:37 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 21 01:37 : client: [1] opened from [::1]:43020
+Jan 21 01:37 : client: [1] closed
+Jan 21 01:37 : client: [2] opened from [::1]:43022
+Jan 21 01:37 : client: [2] closed
+Jan 21 01:37 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jan 21 01:38 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jan 21 01:38 : client: [0] closed
+Jan 21 01:38 : client: [3] opened from [::1]:43024
+Jan 21 01:38 : client: [4] opened from [::1]:43026
+Jan 21 01:38 : client: [4] closed
+Jan 21 01:38 : client: [5] opened from [::1]:43028
+Jan 21 01:38 : client: [5] closed
+Jan 21 01:38 : player: played "Fourplay/Fourplay/101 Eastbound.mp3"
+Jan 21 01:38 : client: [3] closed
+Jan 23 20:23 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 23 20:23 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jan 23 21:04 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 23 21:04 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jan 24 16:44 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 24 16:44 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jan 25 15:10 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 25 15:10 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jan 27 14:27 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 27 14:27 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Feb 04 21:03 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 04 21:03 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.

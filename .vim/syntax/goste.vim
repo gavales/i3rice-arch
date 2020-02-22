@@ -4,10 +4,12 @@ endif
 
 syn match gosteUrg /\[×\]/
 syn match gosteDon /\[✔\].*$/
+syn match gosteTic /\[✔\]/
 syn match gostePen /\[\ \]/
 
 syn keyword gosteFunc colmix :
 
+hi def link gosteTic  usrgrn
 hi def link gosteUrg  usrred
 hi def link gosteDon  usrgry
 hi def link gostePen  usrylw

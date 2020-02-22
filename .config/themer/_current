@@ -1,20 +1,19 @@
 ! vim:ft=perl
-name      satsuki
-wallpaper Satsuki2
-fg0 #383436
-bg0 #fbf4f1
-acc #df8578
-!acc #EEC3B7
-!ac12b #efc9bf
-!ac25b #f1d1c7
-!ac37b #f3d7cf
-!ac50b #f5dfd8
-!ac63b #f7e6e1
-!ac75b #f9ede9
-!ac88b #fbf4f1
-!bg0   #fdfbfa
-!red #AA999C
-!grn #E2B6AF
-!ylw #D3C4BB
-!gnt #DDCFD0
-!cyn #F6D7D7
+name      sintra
+wallpaper SintraPortugal
+!#bbb8b5
+!#cfccc9
+!#e3e0dd
+!#f7f4f1
+!#0F1610
+!#232a24
+!#373e38
+!#4b524c
+fg0  #232a24
+bg0  #f7f4f1
+acc  #667B86
+!red  #8A806F
+!grn  #3E6881
+!ylw  #517689
+!gnt  #6F8B94
+!cyn  #638D9C

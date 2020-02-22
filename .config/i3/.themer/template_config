@@ -241,6 +241,7 @@ $fw [class="Gvim"]                       focus;$QUD -m 3;focus
 $fw [class="Pamac-manager"]              focus;$QUD -m 3;focus;$tf "software"
 $fw [class="Slack"]                      focus;$QUD -m 3;focus;$tf "slack"
 $fw [class="qutebrowser"]                focus;$QUD -m 3;focus;$tf "qute"
+$fw [class="Brave-browser"]              focus;$QUD -m 3;focus;$tf "qute"
 $fw [title="Google Chrome$"]             focus;$QUD -m 3;focus;$tf "chrome"
 $fw [title="^EDTR$"]                     focus;$QUD -m 3;focus;$tf "edtr"
 $fw [title="^EDTR-BASH$"]                focus;$QUD -m 3;focus;$tf "bash - edtr"
@@ -261,11 +262,11 @@ $fw [instance="visualiser"]              focus;$QUD -m 4;focus;$tf "visualiser"
 $fw [class="Glava"]                      focus;$QUD -m 4;focus;border pixel 0
 
 # ━  GAPS
-gaps inner 0
-gaps top    $TPAD
-gaps left   $LPAD
-gaps bottom $BPAD
-gaps right  $RPAD
+#gaps inner 0
+#gaps top    $TPAD
+#gaps left   $LPAD
+#gaps bottom $BPAD
+#gaps right  $RPAD
 
 # ━  STARTUP
 $exn urxvtd -q -o -f

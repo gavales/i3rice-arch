@@ -90,47 +90,76 @@ history () {
 	[[ -z $CHK ]] && echo "$XID    ${1}" >> $I3QTMP
 }
 
-CMK3 () {
+CMK3() {
 	$I3 floating disable
 	$I3 split h
 	$I3 layout tabbed
 	$I3 focus parent
 	$I3 mark _W3
 	$I3 focus child
-	$I3 "mark --add _3"
 }
-CMK1 () {
-	$I3 floating disable
-	$I3 move to mark _W3
-	$I3 [con_mark="_W3"] focus
-	$I3 focus child
-	$I3 move up
-	$I3 move right
-	$I3 split v
-	$I3 layout tabbed
-	$I3 focus parent
-	$I3 mark _W1
-	$I3 focus child
-	$I3 "mark --add _1"
-	$I3 [con_mark="_W1"] resize set 492 402
+CMK1() {
+	if [[ $MKS =~ "_W2" ]]; then
+		$I3 floating disable
+		$I3 move to mark _W2
+		$I3 [con_mark="_W2"] focus
+		$I3 split v
+		$I3 focus child
+		$I3 move up
+		$I3 split h
+		$I3 split v
+		$I3 layout tabbed
+		$I3 focus parent
+		$I3 mark _W1
+		$I3 focus child
+		$I3 [con_mark="_W1"] resize set 492 402
+	else
+		$I3 floating disable
+		$I3 move to mark _W3
+		$I3 [con_mark="_W3"] focus
+		$I3 focus child
+		$I3 move up
+		$I3 move right
+		$I3 split v
+		$I3 layout tabbed
+		$I3 focus parent
+		$I3 mark _W1
+		$I3 focus child
+		$I3 [con_mark="_W1"] resize set 492 402
+	fi
 }
-CMK2 () {
-	$I3 floating disable
-	$I3 move to mark _W1
-	$I3 [con_mark="_W1"] focus
-	$I3 split v
-	$I3 focus child
-	$I3 move down
-	$I3 split h
-	$I3 split v
-	$I3 layout tabbed
-	$I3 focus parent
-	$I3 mark _W2
-	$I3 focus child
-	$I3 "mark --add _2"
-	$I3 [con_mark="_W1"] resize set 492 402
+CMK2() {
+	if [[ $MKS =~ "_W1" ]]; then
+		$I3 floating disable
+		$I3 move to mark _W1
+		$I3 [con_mark="_W1"] focus
+		$I3 split v
+		$I3 focus child
+		$I3 move down
+		$I3 split h
+		$I3 split v
+		$I3 layout tabbed
+		$I3 focus parent
+		$I3 mark _W2
+		$I3 focus child
+		$I3 [con_mark="_W1"] resize set 492 402
+	else
+		$I3 floating disable
+		$I3 move to mark _W3
+		$I3 [con_mark="_W3"] focus
+		$I3 focus child
+		$I3 move up
+		$I3 move right
+		$I3 split h
+		$I3 split v
+		$I3 layout tabbed
+		$I3 focus parent
+		$I3 mark _W2
+		$I3 focus child
+		$I3 [con_mark="_W1"] resize set 492 402
+	fi
 }
-CMK4 () {
+CMK4() {
 	$I3 floating disable
 	$I3 move to mark _W3
 	$I3 [con_mark="_W3"] focus
@@ -142,12 +171,11 @@ CMK4 () {
 	$I3 focus parent
 	$I3 mark _W4
 	$I3 focus child
-	$I3 "mark --add _4"
 	$I3 resize set height 150
 	$I3 [con_mark="_W3"] split h
 }
 
-O_resize () {
+O_resize() {
 	MRK=_W${1%% *} CMD="i3-msg [con_mark=$MRK] resize "
 	W=${1% *}
 	W=${W#* }  WD=${W:0:1}
@@ -157,20 +185,22 @@ O_resize () {
 	elif [[ $WD == "-" ]]; then WDT="${CMD}shrink width ${W/-/} px or ${W/-/} ppt"
 	elif [[ $WD == "%" ]]; then WDT="${CMD}set width ${W/\%/} ppt"
 	elif [[ $WD == "*" ]]; then WDT=""
-	else                        WDT="${CMD}set width  $W"  ; fi
+	else                        WDT="${CMD}set width  $W"
+	fi
 
 	if   [[ $HD == "+" ]]; then HDT="${CMD}grow height ${H/+/} px or ${H/+/} ppt"
 	elif [[ $HD == "-" ]]; then HDT="${CMD}shrink height ${H/-/} px or ${H/-/} ppt"
 	elif [[ $HD == "%" ]]; then HDT="${CMD}set height ${H/\%/} ppt"
 	elif [[ $HD == "*" ]]; then HDT=""
-	else                        HDT="${CMD}set height $H"  ; fi
+	else                        HDT="${CMD}set height $H"
+	fi
 
 	eval "$(echo $WDT)"
 	eval "$(echo $HDT)"
 	exit
 }
 
-EXISTS () {
+EXISTS() {
 	$I3 floating disable
 	$I3 move to mark $MRK
 	$I3 [con_mark="$MRK"] focus
@@ -180,9 +210,9 @@ EXISTS () {
 	exit
 }
 
-O_tile       () { $I3 floating disable && history "_tiled" ; exit ; }
-O_fullscreen () { $I3 "[con_mark=_W${1}] focus; fullscreen toggle; focus child" ; exit ; }
-O_focus      () { $I3 "[con_mark=_W${1}] focus; focus child" ; exit ; }
+O_tile()       { $I3 floating disable && history "_tiled" ; exit ; }
+O_fullscreen() { $I3 "[con_mark=_W${1}] focus; fullscreen toggle; focus child" ; exit ; }
+O_focus()      { $I3 "[con_mark=_W${1}] focus; focus child" ; exit ; }
 
 while true; do
 	case $1 in
@@ -192,13 +222,16 @@ while true; do
 		--resize     | -r ) O_resize      "${2:-}" ;;
 		--tile       | -t ) O_tile ;;
 		--help ) help ;;
-		-h     ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
+		-h ) help | \
+			sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | \
+			sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g'
+			exit
+			;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac
 	shift
 done
-
 
 [[ $MKS =~ "$MRK" ]] && EXISTS || {
 	notify-send "no $MRK, making $MRK"

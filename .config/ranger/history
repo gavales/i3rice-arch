@@ -1,25 +1,8 @@
-rename Figure82A.png
-rename Figure82B.png
-rename Figure83A.png
-rename Figure83B.png
-rename Figure83C.png
-rename Figure84A.png
-rename Figure84B.png
-rename Figure85A.png
-rename Figure85B.png
-rename Figure86A.png
-rename Figure86B.png
-rename Figure87.png
-open_with surf
-rename DonQuixote.epub
-mkdir epub
-rename book
 rename book.md
 rename ChampionshipFighting
 open_with 0
 rename PureShBible.epub
 shell pdftotext %f
-open_with edtr
 
 shell cp -r ~/plt/md/normal startpage
 shell 
@@ -48,3 +31,20 @@ shell cp -r ~/plt/tex/report 9-Client\ Information
 rename 9-ClientInformation
 rename 9-ClientInformation.synctex.gz
 rename satsuki
+open_with 3
+rename 3-passport.pdf
+rename 3-passport.tex
+shell cp -r ~/plt/tex/report 3-passport
+open_with edtr
+open_with 
+mkdir Messages
+rename Message1-IMM5739_2-T21VTHM.pdf
+rename applicationfeertransactionconfirmation.pdf
+rename applicantinfo.png
+rename (2019) Uncut Gems.mp4
+rename Message3-IMM5756_2-T21GNSD.pdf
+rename Message2-IMM5739_2-T21VTHM.pdf
+rename Message1.png
+rename BIOAPP-LOND331433770268_1.pdf
+rename (2019) Uncut Gems.srt
+open_with 4

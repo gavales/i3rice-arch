@@ -70,7 +70,7 @@ super + shift + grave
 super + q
 	lch -t -i calculator -e "$TWOMINAL -name calculator -e R"
 super + w
-	chrap https://ww2.watch-series.co/
+	chrap http://www1.watchserieshd.tv/
 super + r
 	lch -n newsboat -e "$TWOMINAL -name newsboat -e newsboat"
 super + t
@@ -80,7 +80,8 @@ super + y
 super + u
 	chrap https://outlook.office.com/mail/inbox/id/AAQkAGZjZGU2MmYyLTc5ZDctNDI1My05MzU4LWRjYTc3NjdhN2NkOAAQAOwToE4JkJhIgjz322aPjPU%3D
 super + i
-	chrap https://www.bbc.co.uk/iplayer/
+	chrap https://www.amazon.co.uk/gp/video/storefront?filterId=OFFER_FILTER=PRIME
+#	chrap https://www.bbc.co.uk/iplayer/
 super + {p,bracketright,bracketleft,backslash}
 	i3media {togg,next,prev,stop}
 
@@ -90,6 +91,8 @@ super + shift + t
 	compton
 super + shift + y
 	pkill compton
+super + shift + i
+	chrap https://www.bbc.co.uk/iplayer/
 super + shift + p
 	snapper
 

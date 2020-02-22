@@ -53,7 +53,7 @@ EOB
 exit
 }
 
-FNT=$(themer -v  'romanfont ')
+FNT=$(themer -v 'editfont ')
 SZE=13
 SVR=edtr
 INS=edtr

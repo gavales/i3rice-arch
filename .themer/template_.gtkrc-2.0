@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/gavarch/.gtkrc-2.0.mine"
-gtk-theme-name="%%gtk%%"
+gtk-theme-name="%%name%%"
 gtk-icon-theme-name="%%gtk-icon%%"
 gtk-font-name="%%guifont%% 13"
 gtk-cursor-theme-name="Xcursor.theme:	%%cursor%%"
