@@ -142,7 +142,7 @@ CMK2() {
 		$I3 focus parent
 		$I3 mark _W2
 		$I3 focus child
-		$I3 [con_mark="_W1"] resize set 492 402
+#		$I3 [con_mark="_W1"] resize set 492 402
 	else
 		$I3 floating disable
 		$I3 move to mark _W3
@@ -156,7 +156,7 @@ CMK2() {
 		$I3 focus parent
 		$I3 mark _W2
 		$I3 focus child
-		$I3 [con_mark="_W1"] resize set 492 402
+#		$I3 [con_mark="_W1"] resize set 492 402
 	fi
 }
 CMK4() {

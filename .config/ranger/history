@@ -1,50 +1,50 @@
-rename book.md
-rename ChampionshipFighting
-open_with 0
-rename PureShBible.epub
-shell pdftotext %f
-
-shell cp -r ~/plt/md/normal startpage
-shell 
-open_with vim
-search Foundation
-open_with evince
-rename Caspar_David_Friedrich_-View_of_Arkona_with_Rising_Moon_and_Nets.jpg
-rename Caspar_David_Friedrich_Wreck_in_the_Icesea.jpg
-rename CTB_1994_15BarcoPescaEntreDosRocasPlayaMarBaltico.zip
-rename CTB_1994_15BarcoPescaEntreDosRocasPlayaMarBaltico(1).zip
-rename CasparDavidFriedrich
-search Wand
-mkdir ringtones
-search Man
-search man
-search Wanderer
-shell tagger -h
-rename sintra
-w
-h
-open_with 1
-mkdir Platina Jazz
-mkdir Anime Standards, Vol. 6
-rename Itadaki Mambo (From 'Itadakiman') (feat. Niklas Gabrielsson).mp3
-shell cp -r ~/plt/tex/report 9-Client\ Information 
-rename 9-ClientInformation
-rename 9-ClientInformation.synctex.gz
-rename satsuki
-open_with 3
-rename 3-passport.pdf
-rename 3-passport.tex
-shell cp -r ~/plt/tex/report 3-passport
-open_with edtr
-open_with 
-mkdir Messages
-rename Message1-IMM5739_2-T21VTHM.pdf
-rename applicationfeertransactionconfirmation.pdf
-rename applicantinfo.png
-rename (2019) Uncut Gems.mp4
-rename Message3-IMM5756_2-T21GNSD.pdf
-rename Message2-IMM5739_2-T21VTHM.pdf
 rename Message1.png
 rename BIOAPP-LOND331433770268_1.pdf
 rename (2019) Uncut Gems.srt
 open_with 4
+rename IFLIGHT-1408-4300KV-2-4S.pdf
+mkdir LittleAlpha
+mkdir GARETH
+rename GARETH7.AVI
+rename GARETH8.AVI
+rename Message5-IMM5813_2-T8YNW92.pdf
+rename Message4-IMM5825_2-T7VH91F.pdf
+rename Themer-dark.colors
+open_with 
+
+shell cp -r ~/plt/tex/report faaremoteidproposalcomment.tex
+rename faaremoteidproposalcomment
+rename Godzilla: King of the Monsters.mp4
+open_with 3
+open_with 7
+mkdir ProDVR
+rename PICT0004.AVI
+rename PICT0012.AVI
+rename PICT0011.AVI
+rename PICT0009.AVI
+rename _GARETH1.AVI
+rename _GARETH2.AVI
+rename GARETH1.AVI
+rename GARETH2.AVI
+rename GARETH3.AVI
+rename GARETH4.AVI
+rename GARETH5.AVI
+rename GARETH6.AVI
+rename PICT0007.AVI
+rename PICT008.AVI
+rename PICT009.AVI
+rename PICT0010.AVI
+rename _ProDVR7.AVI
+rename _ProDVR8.AVI
+rename LA7-CORRUPT.AVI
+rename 4-LetterOfAcceptance.pdf
+mkdir texsource
+rename 6-mugshot.jpg
+rename _ProDVR1.AVI
+rename _ProDVR2.AVI
+rename _GARETH01.AVI
+rename _GARETH02.AVI
+rename _ProDVR01.AVI
+rename _ProDVR02.AVI
+mkdir
+mkdir passport
