@@ -20,4 +20,4 @@ FORCE $USER_REPO_DIR/i3rice-arch
 $XDG_TEMPLATES_DIR/css
 $XDG_TEMPLATES_DIR/pandoc
 FORCE $HOME/.config/glava
-/home/gavarch/.config/sublime-text-3/Packages/THEMES
+$HOME/.config/sublime-text-3/Packages/THEMES

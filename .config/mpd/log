@@ -6160,3 +6160,7 @@ Mar 16 16:58 : exception: RTIOThread could not get realtime scheduling, continui
 Mar 16 16:58 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
 Mar 17 08:15 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Mar 17 08:15 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Mar 18 08:55 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 18 08:55 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Mar 22 21:45 : client: [0] opened from [::1]:42644
+Mar 22 21:45 : client: [0] closed

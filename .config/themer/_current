@@ -1,19 +1,12 @@
 ! vim:ft=perl
-name      sintra
-wallpaper SintraPortugal
-!#bbb8b5
-!#cfccc9
-!#e3e0dd
-!#f7f4f1
-!#0F1610
-!#232a24
-!#373e38
-!#4b524c
-fg0  #232a24
-bg0  #f7f4f1
-acc  #667B86
-!red  #8A806F
-!grn  #3E6881
-!ylw  #517689
-!gnt  #6F8B94
-!cyn  #638D9C
+name            solarized
+wallpaper       WW_128000000001428569_EN
+fg0             #002b36
+bg0             #fdf6e3
+acc             $blu
+red             #dc322f
+grn             #859900
+ylw             #b58900
+blu             #2aa198
+gnt             #d33682
+cyn             #268bd2

@@ -1,20 +1,3 @@
-rename Message1.png
-rename BIOAPP-LOND331433770268_1.pdf
-rename (2019) Uncut Gems.srt
-open_with 4
-rename IFLIGHT-1408-4300KV-2-4S.pdf
-mkdir LittleAlpha
-mkdir GARETH
-rename GARETH7.AVI
-rename GARETH8.AVI
-rename Message5-IMM5813_2-T8YNW92.pdf
-rename Message4-IMM5825_2-T7VH91F.pdf
-rename Themer-dark.colors
-open_with 
-
-shell cp -r ~/plt/tex/report faaremoteidproposalcomment.tex
-rename faaremoteidproposalcomment
-rename Godzilla: King of the Monsters.mp4
 open_with 3
 open_with 7
 mkdir ProDVR
@@ -48,3 +31,20 @@ rename _ProDVR01.AVI
 rename _ProDVR02.AVI
 mkdir
 mkdir passport
+rename CV_Ladner.tex_
+rename CV_Ladner.tex
+mkdir Uni
+mkdir Rent
+mkdir Preet
+rename 5416-Maple-Crescent-V4K_1G2-Preet
+rename PPL-docs
+mkdir PPL
+rename PPFC_STUDENT_HANDBOOK_2019.pdf
+rename RADIO-OPERATOR-STUDY-GUIDE-2011.pdf
+rename TP119.pdf
+rename STUDENT-PILOT-PERMIT-STUDY-GUIDE-2017.pdf
+mkdir docs
+rename LessonPlan5-Sim-Takeoff_Circuit_Landing.pdf
+rename PSTAR.tex
+rename PSTAR-learn.pdf
+rename PSTAR-learn.tex

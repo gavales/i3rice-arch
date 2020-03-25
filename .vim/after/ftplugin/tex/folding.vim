@@ -57,6 +57,9 @@ inoremap ta<Tab> \begin{table}[H]<CR>
 	\\label{tab:<++>}}<CR>
 	\<BS>\end{table}<Esc>09kfca
 
+vnoremap s1<Tab> xi\section{<Esc>pa}<Esc>
+vnoremap s2<Tab> xi\subsection{<Esc>pa}<Esc>
+vnoremap s3<Tab> xi\subsubsection{<Esc>pa}<Esc>
 vnoremap bf<Tab> xi\textbf{<Esc>pa}<Esc>
 vnoremap it<Tab> xi\textit{<Esc>pa}<Esc>
 vnoremap sc<Tab> xi\textsc{<Esc>pa}<Esc>
@@ -125,22 +128,22 @@ function! FoldText()
 	let foldline = substitute(foldline, '^━ ',                "╢    ",     "")
 	let foldline = substitute(foldline, '^━━',                "╫    ",     "")
 	let foldline = substitute(foldline, '\\documentclass',    "┫ PAmble ", "")
-	let foldline = substitute(foldline, '\\section{',         "┫    ",     "")
-	let foldline = substitute(foldline, '\\subsection{',      "╋━   ",     "")
-	let foldline = substitute(foldline, '\\subsubsection{',   "╋━━━ ",     "")
-	let foldline = substitute(foldline, '\\section\*{',       "┫    ",     "")
-	let foldline = substitute(foldline, '\\subsection\*{',    "╋┅   ",     "")
-	let foldline = substitute(foldline, '\\subsubsection\*{', "╋┅┅┅ ",     "")
-	let foldline = substitute(foldline, '\\block{',           "┫    ",     "")
+	let foldline = substitute(foldline, '\\section{',         "┫       ",     "")
+	let foldline = substitute(foldline, '\\subsection{',      "╋━┅┅┅┅┅┅┅┅ ",     "")
+	let foldline = substitute(foldline, '\\subsubsection{',   "╋━━━┅┅┅┅┅┅┅┅┅ ",     "")
+	let foldline = substitute(foldline, '\\section\*{',       "┫       ",     "")
+	let foldline = substitute(foldline, '\\subsection\*{',    "╋┅┈┈┈┈┈┈┈┈ ",     "")
+	let foldline = substitute(foldline, '\\subsubsection\*{', "╋┅┅┅┈┈┈┈┈┈┈┈┈ ",     "")
+	let foldline = substitute(foldline, '\\block{',           "┫      ",     "")
 	let foldline = substitute(foldline, '\\column{',          "Column:",   "")
 	let foldline = substitute(foldline, '\[',                 "",          "")
 	let foldline = substitute(foldline, '\]',                 ",",         "")
 	let foldline = substitute(foldline, '{',                  "",          "")
 	let foldline = substitute(foldline, '}.*',                "",          "")
-	let text = foldline.foldsize.'line     '
-	let barcharcount = ((windowwidth * 2)/ 3) - strdisplaywidth(foldsize.'lines     ')
-	let spacecharcount = windowwidth - strdisplaywidth(text) - barcharcount
-	return ' '.foldline.repeat(" ",spacecharcount).'┣'.repeat("━",barcharcount).'  ('.foldsize.' lines)'
+	let text = foldline.foldsize.'line    '
+	let barcharcount = strdisplaywidth(foldsize.'lines     ')
+	let spacecharcount = windowwidth - strdisplaywidth(text)
+	return ' '.foldline.' '.repeat("┈",spacecharcount).' ('.foldsize.' lines)'
 endfunction
 
 setlocal spell spelllang=en_gb

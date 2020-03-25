@@ -163,6 +163,6 @@ super + shift + {comma,period,slash}
 super + control + c
 	xtheme --auto-dark 7:17 --change
 super + control + b
-	polybar-msg cmd hide
+	polybar-msg cmd toggle
 super + control + m
 	mmon

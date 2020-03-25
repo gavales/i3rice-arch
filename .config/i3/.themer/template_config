@@ -120,7 +120,7 @@ $ALT+u           $QUD --resize '1 $W43 $H43'
 $ALT+i           $QUD --resize '1 $W69 $H69'
 $ALT+o           $QUD --resize '1 +5  +5'
 $ALT+p           $QUD --resize '1 %40 %20'
-$ALT+bracketleft $QUD --resize '1 *   98'
+$ALT+bracketleft $QUD --resize '1 *   90'
 
 $ALT+Shift+Tab   focus left
 $ALT+Shift+q     kill
@@ -281,6 +281,7 @@ $exn blueman-applet
 $exn ff-theme-util
 $exn fix_xcursor
 $exn reloadconfs
+$exn xfsettingsd
 $exn sxhkd
 
 $ena mpv %%HOME%%/scrmus/A\ Tone\ His\ Self.mp3
