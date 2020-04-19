@@ -136,20 +136,20 @@ $ALT+Control+i   resize grow   height 5 px or 5 ppt
 $ALT+Control+o   resize grow   width  5 px or 5 ppt
 
 # ━━ 2nd Row
-$ALT+a               focus parent
 $ALT+g               split toggle
 $ALT+h               $exn i3viswiz left
 $ALT+j               $exn i3viswiz down
 $ALT+k               $exn i3viswiz up
 $ALT+l               $exn i3viswiz right
 
-$ALT+Shift+a         focus child
+$ALT+Shift+a         focus parent
 $ALT+Shift+f         fullscreen toggle
 $ALT+Shift+h         $exn i3move left
 $ALT+Shift+j         $exn i3move down
 $ALT+Shift+k         $exn i3move up
 $ALT+Shift+l         $exn i3move right
 
+$ALT+Control+a       focus child
 $ALT+Control+s       sticky toggle
 $ALT+Control+d       move workspace to output $MON2
 $ALT+Control+h       focus left
@@ -185,6 +185,7 @@ $fw [title="Open Files"]                 resize set 750 500
 $fw [title="Select a download location"] resize set 750 500
 $fw [class="Pavucontrol"]                resize set 525 300
 $fw [class="Rofi"]                       border pixel 1
+$fw [class="FlightOne"]                  $FEN
 
 # ━━ QUAD
 $fw [title="Log in with PayPal"]         $tf "paypal"
@@ -208,6 +209,7 @@ $fw [title="^BBC iPlayer$"]              focus;$QUD -m 1;focus;$tf "iplayer"
 $fw [title="^Netflix$"]                  focus;$QUD -m 1;focus;$tf "netflix"
 $fw [title="^Funimation"]                focus;$QUD -m 1;focus;$tf "funimation"
 $fw [title="Amazon.co.uk: Prime Video"]  focus;$QUD -m 1;focus;$tf "prime"
+$fw [class="zoom" title="^Participants"]  focus;$QUD -m 1;focus
 
 $fw [class="Surf"]                       focus;$QUD -m 2;focus
 $fw [class="Zathura"]                    focus;$QUD -m 2;focus
@@ -233,7 +235,9 @@ $fw [title="^TODO$"]                     focus;$QUD -m 2;focus;$tf "TODO"
 $fw [title="^WATCHLIST$"]                focus;$QUD -m 2;focus;$tf "WATCHLIST"
 $fw [title="^SCRT$"]                     focus;$QUD -m 2;focus;$tf "SCRT"
 $fw [title="^PROJECTS$"]                 focus;$QUD -m 2;focus;$tf "PROJECTS"
+$fw [class="zoom"]                       focus;$QUD -m 2;focus
 
+$fw [class="zoom" title="Zoom Meeting ID"] focus;$QUD -m 3;focus
 $fw [class="Emacs"]                      focus;$QUD -m 3;focus
 $fw [class="firefox"]                    focus;$QUD -m 3;focus
 $fw [class="Firefox"]                    focus;$QUD -m 3;focus

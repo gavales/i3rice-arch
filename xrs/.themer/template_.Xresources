@@ -112,6 +112,7 @@
 !rofi.yoffset:         20
 !rofi.xoffset:         0
 rofi.show-icons:       true
+rofi.icon-theme:       "DamaDamas"
 !rofi.line-margin:     10
 !rofi.hide-scrollbar:  true
 !

@@ -41,27 +41,27 @@ inoremap rs<Tab> [@sec:]<Esc>i
 inoremap re<Tab> [@eq:]<Esc>i
 inoremap rt<Tab> [@tbl:]<Esc>i
 
-vnoremap \b xa**<Esc>pa**<Esc>
-vnoremap \i xa_<Esc>pa_<Esc>
-vnoremap \s xa~~<Esc>pa~~<Esc>
-vnoremap \p :'<,'>norm 0i-<space><Esc>
-vnoremap \n :'<,'>norm 0i1.<space><Esc>
+vnoremap b<Tab> xa**<Esc>pa**<Esc>
+vnoremap i<Tab> xa_<Esc>pa_<Esc>
+vnoremap s<Tab> xa~~<Esc>pa~~<Esc>
+vnoremap p<Tab> :'<,'>norm 0i-<space><Esc>
+vnoremap n<Tab> :'<,'>norm 0i1.<space><Esc>
 
-vnoremap \1p :'<,'>norm 0dt+<Enter>
-vnoremap \2p :'<,'>norm 0dt+i<Tab><Esc>
-vnoremap \3p :'<,'>norm 0dt+i<Tab><Tab><Esc>
-vnoremap \4p :'<,'>norm 0dt+i<Tab><Tab><Tab><Esc>
-vnoremap \5p :'<,'>norm 0dt+i<Tab><Tab><Tab><Tab><Esc>
-vnoremap \6p :'<,'>norm 0dt+i<Tab><Tab><Tab><Tab><Tab><Esc>
-vnoremap \7p :'<,'>norm 0dt+i<Tab><Tab><Tab><Tab><Tab><Tab><Esc>
+vnoremap 1p<Tab> :'<,'>norm 0dt+<Enter>
+vnoremap 2p<Tab> :'<,'>norm 0dt+i<Tab><Esc>
+vnoremap 3p<Tab> :'<,'>norm 0dt+i<Tab><Tab><Esc>
+vnoremap 4p<Tab> :'<,'>norm 0dt+i<Tab><Tab><Tab><Esc>
+vnoremap 5p<Tab> :'<,'>norm 0dt+i<Tab><Tab><Tab><Tab><Esc>
+vnoremap 6p<Tab> :'<,'>norm 0dt+i<Tab><Tab><Tab><Tab><Tab><Esc>
+vnoremap 7p<Tab> :'<,'>norm 0dt+i<Tab><Tab><Tab><Tab><Tab><Tab><Esc>
 
-vnoremap \1n :'<,'>norm 0dt1.<Enter>
-vnoremap \2n :'<,'>norm 0dt1.i<Tab><Esc>
-vnoremap \3n :'<,'>norm 0dt1.i<Tab><Tab><Esc>
-vnoremap \4n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Esc>
-vnoremap \5n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Esc>
-vnoremap \6n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Tab><Esc>
-vnoremap \7n :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Tab><Tab><Esc>
+vnoremap 1n<Tab> :'<,'>norm 0dt1.<Enter>
+vnoremap 2n<Tab> :'<,'>norm 0dt1.i<Tab><Esc>
+vnoremap 3n<Tab> :'<,'>norm 0dt1.i<Tab><Tab><Esc>
+vnoremap 4n<Tab> :'<,'>norm 0dt1.i<Tab><Tab><Tab><Esc>
+vnoremap 5n<Tab> :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Esc>
+vnoremap 6n<Tab> :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Tab><Esc>
+vnoremap 7n<Tab> :'<,'>norm 0dt1.i<Tab><Tab><Tab><Tab><Tab><Tab><Esc>
 
 function! Folds()
 	let thisline = getline(v:lnum)

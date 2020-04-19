@@ -100,7 +100,8 @@ super + shift + p
 super + s
 	lch -i ncmpcpp -e "$TWOMINAL -name ncmpcpp -e ncmpcpp"
 super + d
-	i3menu -d -F -t onedark -C 4 -D 200
+	i3menu -d -t apps -C 4 -l 5 -w 75
+#	i3menu -d -F -t onedark -C 4 -D 200
 super + f
 	thunar
 super + g

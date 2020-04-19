@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+ffmpeg -i "${1}" -vf vidstabdetect -f null -
+
+ffmpeg -i "${1}" -vf vidstabtransform=zoom=-5:input="transforms.trf" ${1%.*}-STAB.mp4
+
+ffmpeg -i "${1}" -i "${1%.*}"-STAB.mp4 -filter_complex hstack ${1%.*}-SBS.mp4

@@ -16,7 +16,7 @@ declare -A PRMA
 LCTN[1]="northwest" LCTN[2]="north"  LCTN[3]="northeast"
 LCTN[8]="west"      LCTN[0]="center" LCTN[4]="east"
 LCTN[7]="southwest" LCTN[6]="south"  LCTN[5]="southeast"
-PRMA[p]="prompt" PRMA[e]="entry" PRMA[l]="listview"
+PRMA[p]="prompt"    PRMA[e]="entry"  PRMA[l]="listview"
 WIDTH=300
 MODE="mode_dmenu"
 eval "$(wattr xywh $(pfw) | awk '{print"WX="$1 "\nWY="$2 "\nWW="$3 "\nWH="$4}')"

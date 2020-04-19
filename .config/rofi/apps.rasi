@@ -1,0 +1,41 @@
+@import "globals.rasi"
+
+#window { background-color: @accent; }
+#mainbox { padding: 10 10; }
+
+#inputbar { margin: 1 1 1 1; children: [prompt, entry, case-indicator]; }
+#prompt {
+	padding: 10;
+	text-color: @bg0;
+	background-color: @acf;
+	border-radius: 5;
+}
+#entry { padding: 10; background-color: @acb; border-radius: 5; }
+#listview { spacing: 5px; dynamic: true; scrollbar: false; }
+
+#element {
+	border: 1;
+	background-color: @accent;
+	text-color: @fg0;
+	orientation: vertical;
+//	padding: 8 12 8 12;
+	border-radius: 5;
+}
+#element selected { background-color: @acb; text-color: @fg1; }
+#element urgent, element selected urgent { text-color: @red; }
+#element active, element selected active { text-color: @blue; }
+#element-icon { size: 120; horizontal-align: 0.5; vertical-align: 0.5; }
+#element-text { horizontal-align: 0.5; vertical-align: 0.5; text-color: inherit; }
+
+#message {
+	padding: 2;
+	border-radius: 5;
+	background-color: @bg2;
+	border: 0;
+}
+
+#button selected {
+	padding: 5;
+	border-radius: 5;
+	background-color: @bg1;
+}

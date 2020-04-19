@@ -1,0 +1,318 @@
+;                    ██          ██
+;  ██████           ▒██  ██   ██▒██
+; ▒██▒▒▒██  ██████  ▒██ ▒▒██ ██ ▒██       ██████   ██████
+; ▒██  ▒██ ██▒▒▒▒██ ▒██  ▒▒███  ▒██████  ▒▒▒▒▒▒██ ▒▒██▒▒█
+; ▒██████ ▒██   ▒██ ▒██   ▒██   ▒██▒▒▒██  ███████  ▒██ ▒
+; ▒██▒▒▒  ▒██   ▒██ ▒██   ██    ▒██  ▒██ ██▒▒▒▒██  ▒██
+; ▒██     ▒▒██████  ███  ██     ▒██████ ▒▒████████▒███
+; ▒▒       ▒▒▒▒▒▒  ▒▒▒  ▒▒      ▒▒▒▒▒    ▒▒▒▒▒▒▒▒ ▒▒▒
+
+[colors]
+tr = #000000ff
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+[bar/i3]
+;monitor             = ${env:MONITOR:HDMI-1}
+override-redirect   = true
+;bottom              = true
+height              = 22
+width               = 100%
+radius              = 0.0
+fixed-center        = false
+enable-ipc          = true
+background-0        = #e06a26
+background-1        = #854a28
+foreground          = #2b2b2b
+line-size           = 0
+border-size         = 0
+line-color          = #e06a26
+border-color        = ${colors.tr}
+padding-left        = 0
+padding-right       = 0
+module-margin-left  = 0
+module-margin-right = 0
+font-0              = Iosevka:size=10;3
+font-1              = FontAwesome5Free:style=Solid:size=12;2
+font-2              = FontAwesome5Brands:style=Solid:size=12;2
+font-3              = Inconsolata Nerd Font:style=Regular:size=21;6
+tray-position       = right
+tray-padding        = 2
+tray-maxsize        = 16
+tray-transparent    = true
+tray-background-0   = #ffe06a26
+tray-background-1   = #00e06a26
+cursor-click        = pointer
+cursor-scroll       = ns-resize
+modules-left        = ws xkeyboard gwc i3light disk
+modules-center      = td
+modules-right       = battery i3vol memory cpu temperature
+
+[bar/fvwm]
+;monitor             = ${env:MONITOR:HDMI-1}
+;bottom              = true
+;override-redirect   = true
+height              = 40
+width               = 100%
+radius              = 0.0
+fixed-center        = false
+enable-ipc          = true
+background          = ${colors.tr}
+foreground          = #2b2b2b
+line-size           = 0
+border-size         = 10
+line-color          = #e06a26
+border-color        = ${colors.tr}
+padding-left        = 0
+padding-right       = 0
+module-margin-left  = 0
+module-margin-right = 0
+font-0              = Iosevka:style=Semibold Oblique:size=12;3
+font-1              = FontAwesome5Free:style=Solid:size=14;3
+font-2              = FontAwesome5Brands:style=Solid:size=12;3
+font-3              = Inconsolata Nerd Font:style=Regular:size=21;6
+tray-position       = right
+tray-padding        = 2
+tray-background     = #e06a26
+cursor-click        = pointer
+cursor-scroll       = ns-resize
+modules-left        = startfvwm fvwmtd xkeyboard wintitle
+modules-center      = 
+modules-right       = i3media disk memory cpu temperature nm i3light i3vol battery
+
+[global/wm]
+margin-top    = 5
+margin-bottom = 5
+
+[module/start]
+type = custom/text
+content = %{T1}  %{T-}
+click-left = i3menu -l 1 -y 27 -s -c blue
+click-right = i3shutdown
+content-background = #e06a26
+content-foreground = #fffff0
+content-padding = 0
+
+[module/startfvwm]
+type = custom/text
+content = %{T1}  %{T-}
+click-left = i3menu -s -y 50 -x 10 -c blue -l 1
+click-right = menunicode
+content-background = #e06a26
+content-foreground = #fffff0
+content-padding = 1
+
+[module/td]
+type = custom/script
+exec = bash ~/scr/pb/td
+;format-background = #e06a26
+format-foreground = #fffff0
+format-padding = 1
+interval = 1
+
+[module/fvwmtd]
+type = custom/script
+exec = bash ~/scr/pb/td
+format-background = #e06a26
+format-foreground = #2b2b2b
+format-padding = 1
+interval = 1
+
+[module/ws]
+type = custom/ipc
+hook-0 = ~/scr/pb/ws
+initial = 1
+click-left  = i3-msg workspace back_and_forth
+scroll-up   = i3-msg workspace prev
+scroll-down = i3-msg workspace next
+;format-background = #e37b3e
+format-foreground = #2b2b2b
+format-padding = 1
+
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+format-prefix = %{T1}  %{T-}
+label-layout = %layout%
+;format-background = #e78f58
+format-foreground = #2b2b2b
+format-prefix-foreground = #2b2b2b
+label-indicator-background = #a26fbf
+format-padding = 0
+label-indicator-padding = 0
+label-indicator-margin = 1
+format-prefix-underline    = #e78f58
+label-layout-underline     = #e78f58
+label-indicator-underline  = #a26fbf
+
+[module/gwc]
+type = custom/ipc
+hook-0 = pbcat -m gwc
+format = %{T1} %{T-}<output>
+initial = 1
+click-left  = gwcmod show
+click-right = gwcmod blur
+;format-background = #eba170
+format-foreground = #2b2b2b
+format-padding = 0
+
+[module/shot]
+type = custom/text
+content = %{T1}%{T-}
+click-left = screenshot
+;content-background = #e06a26
+content-foreground = #2b2b2b
+content-padding = 1
+interval = 1
+
+[module/wintitle]
+type = custom/ipc
+hook-0 = ~/scr/pb/wintitle
+initial = 1
+click-left = polybar-msg cmd hide
+format-background = #2b2b2b
+format-foreground = #fffff0
+format-padding = 1
+
+[module/arrow1]
+type = custom/text
+content = %{T4}  %{T-}
+content-foreground = #eba170
+content-background = ${colors.tr}
+
+[module/arrow2]
+type = custom/text
+content = %{T4} %{T-}
+content-foreground = #f3c7a5
+content-background = ${colors.tr}
+ 
+[module/i3media]
+type = custom/ipc
+hook-0 = pbcat -m i3media
+initial = 1
+click-left = i3media
+;format-background = #f3c7a5
+format-foreground = #2b2b2b
+format-padding = 1
+
+[module/arrow3]
+type = custom/text
+content = %{T4}  %{T-}
+content-foreground = #f3c7a5
+content-background = ${colors.tr}
+ 
+[module/arrow4]
+type = custom/text
+content = %{T4} %{T-}
+content-foreground = #efb48b
+content-background = ${colors.tr}
+ 
+[module/disk]
+type = custom/script
+exec = bash ~/scr/pb/disk
+;format-background = #efb48b
+format-foreground = #fffff0
+format-padding = 1
+interval = 60
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "%{T1} %{T-}"
+format-prefix-foreground = #2b2b2b
+;format-background = #eba170
+format-foreground = #2b2b2b
+format-underline = #2b2b2b
+format-padding = 1
+label = %percentage_used%
+
+[module/cpu]
+type = internal/cpu
+label = %{T1} %{T-}%percentage%
+format = <label>
+interval = 2
+;format-background = #e78f58
+format-foreground = #2b2b2b
+format-padding = 1
+
+[module/temperature]
+type = custom/script
+exec = bash ~/scr/pb/temp
+;format-background = #e37b3e
+format-foreground = #2b2b2b
+format-padding = 1
+interval = 10
+
+[module/i3light]
+type = custom/ipc
+hook-0 = pbcat -m i3light
+initial = 1
+click-left  = i3light
+;format-background = #e06a26
+format-foreground = #fffff0
+format-padding = 1
+
+[module/i3vol]
+type = custom/ipc
+hook-0 = pbcat -m i3vol
+initial = 1
+click-left  = i3vol mute
+;format-background = #e06a26
+format-foreground = #fffff0
+format-padding = 0
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 100
+format-padding = 1
+label-charging-padding = 1
+label-discharging-padding = 1
+format-full-padding = 1
+format-full-prefix-padding = 1
+format-full-foreground = #fffff0
+;format-full-background = #e06a26
+format-full-prefix-foreground = #fffff0
+;format-full-prefix-background = #e06a26
+label-charging-foreground = #fffff0
+;label-charging-background = #e06a26
+label-discharging-foreground = #fffff0
+;label-discharging-background = #e06a26
+format-discharging-padding = 0
+format-discharging-prefix-padding = 1
+format-discharging-foreground = #fffff0
+;format-discharging-background = #e06a26
+format-discharging-prefix-foreground = #fffff0
+;format-discharging-prefix-background = #e06a26
+format-charging-padding-foreground = #fffff0
+;format-charging-padding-background = #e06a26
+format-discharging-padding-foreground = #fffff0
+;format-discharging-padding-background = #e06a26
+format-charging = <animation-charging><label-charging>
+format-charging-underline = #fffff0
+format-discharging = <ramp-capacity><label-discharging>
+format-discharging-underline = ${self.format-charging-underline}
+format-full-prefix = "%{T1}%{T-}"
+format-full-underline = ${self.format-charging-underline}
+ramp-capacity-0 = %{T1}%{T-}
+ramp-capacity-1 = %{T1}%{T-}
+ramp-capacity-2 = %{T1}%{T-}
+ramp-capacity-3 = %{T1}%{T-}
+ramp-capacity-4 = %{T1}%{T-}
+ramp-capacity-foreground = #fffff0
+;ramp-capacity-background = #e06a26
+animation-charging-0 = %{T1}%{T-}
+animation-charging-1 = %{T1}%{T-}
+animation-charging-2 = %{T1}%{T-}
+animation-charging-3 = %{T1}%{T-}
+animation-charging-4 = %{T1}%{T-}
+animation-charging-foreground = #fffff0
+;animation-charging-background = #e06a26
+animation-charging-framerate = 500

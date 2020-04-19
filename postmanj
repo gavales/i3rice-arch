@@ -55,6 +55,7 @@ $blu
 	urxvt-config-reload-git urxvt-resize-font-git i3ipc-python-git
 	cli-visualizer          pamac-aur             gtkrc-reload
 	ranger-git              wordgrinder           vim-live-latex-preview
+	fontpreview-git
 $wtl
 EOB
 

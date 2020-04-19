@@ -112,7 +112,7 @@ handle_image() {
             ebook-meta --get-cover="${IMAGE_CACHE_PATH}" -- "${FILE_PATH}" > /dev/null \
                 && exit 6 || exit 1;;
         # Video
-        video/*)
+        video/*|audio/*)
             # Thumbnail
             ffmpegthumbnailer -i "${FILE_PATH}" -o "${IMAGE_CACHE_PATH}" -s 0 && exit 6
             exit 1;;
@@ -125,25 +125,27 @@ handle_image() {
                      -jpeg -tiffcompression jpeg \
                      -- "${FILE_PATH}" "${IMAGE_CACHE_PATH%.*}" \
                 && exit 6 || exit 1;;
-        application/font*|application/*opentype)
-            preview_png="/tmp/$(basename "${IMAGE_CACHE_PATH%.*}").png"
-            if fontimage -o "${preview_png}" \
-                         --pixelsize "120" \
-                         --fontname \
-                         --pixelsize "80" \
-                         --text "  ABCDEFGHIJKLMNOPQRSTUVWXYZ  " \
-                         --text "  abcdefghijklmnopqrstuvwxyz  " \
-                         --text "  0123456789.:,;(*!?') ff fl fi ffi ffl  " \
-                         --text "  The quick brown fox jumps over the lazy dog.  " \
-                         "${FILE_PATH}";
-            then
-                convert -- "${preview_png}" "${IMAGE_CACHE_PATH}" \
-                    && rm "${preview_png}" \
-                    && exit 6
-            else
-                exit 1
-            fi
+        application/font*|application/*opentype|font/sfnt)
+            fontpreview -i "${FILE_PATH}" -o "${IMAGE_CACHE_PATH}"
+#            preview_png="/tmp/$(basename "${IMAGE_CACHE_PATH%.*}").png"
+#            if fontimage -o "${preview_png}" \
+#                         --pixelsize "120" \
+#                         --fontname \
+#                         --pixelsize "80" \
+#                         --text "  ABCDEFGHIJKLMNOPQRSTUVWXYZ  " \
+#                         --text "  abcdefghijklmnopqrstuvwxyz  " \
+#                         --text "  0123456789.:,;(*!?') ff fl fi ffi ffl  " \
+#                         --text "  The quick brown fox jumps over the lazy dog.  " \
+#                         "${FILE_PATH}";
+#            then
+#                convert -- "${preview_png}" "${IMAGE_CACHE_PATH}" \
+#                    && rm "${preview_png}" \
+#                    && exit 6
+#            else
+#                exit 1
+#            fi
             ;;
+
     esac
 }
 

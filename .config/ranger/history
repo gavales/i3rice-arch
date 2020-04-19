@@ -1,38 +1,3 @@
-open_with 3
-open_with 7
-mkdir ProDVR
-rename PICT0004.AVI
-rename PICT0012.AVI
-rename PICT0011.AVI
-rename PICT0009.AVI
-rename _GARETH1.AVI
-rename _GARETH2.AVI
-rename GARETH1.AVI
-rename GARETH2.AVI
-rename GARETH3.AVI
-rename GARETH4.AVI
-rename GARETH5.AVI
-rename GARETH6.AVI
-rename PICT0007.AVI
-rename PICT008.AVI
-rename PICT009.AVI
-rename PICT0010.AVI
-rename _ProDVR7.AVI
-rename _ProDVR8.AVI
-rename LA7-CORRUPT.AVI
-rename 4-LetterOfAcceptance.pdf
-mkdir texsource
-rename 6-mugshot.jpg
-rename _ProDVR1.AVI
-rename _ProDVR2.AVI
-rename _GARETH01.AVI
-rename _GARETH02.AVI
-rename _ProDVR01.AVI
-rename _ProDVR02.AVI
-mkdir
-mkdir passport
-rename CV_Ladner.tex_
-rename CV_Ladner.tex
 mkdir Uni
 mkdir Rent
 mkdir Preet
@@ -48,3 +13,38 @@ rename LessonPlan5-Sim-Takeoff_Circuit_Landing.pdf
 rename PSTAR.tex
 rename PSTAR-learn.pdf
 rename PSTAR-learn.tex
+open_with%space
+shell git clone https://github.com/morpheusthewhite/spicetify-themes.git
+shell edtr %s
+rename PSTAR-learn4.jpg
+rename PSTAR-learn43.jpg
+rename PSTAR-learn42.jpg
+shell cp -r ~/plt/md/normal PSTAR_learn.md
+rename PSTAR_learn.md
+open_with google-chrome-beta
+open_with%spaceedtr
+mkdir CaliMove
+mkdir stretches
+mkdir muscleup
+rename strength
+open_with%spaceb
+rename efficient.yaml_
+rename efficient.yaml
+rename valbadia
+search time
+shell 
+rename CV_WalMart.tex
+open_with edtr
+rename (1998) Spriggan.mp4
+rename (1986) They Were Eleven.mkv
+rename (1986) Grey Digital Target.mkv
+rename (2019) Godzilla: King of the Monsters.mp4
+rename (1988) Demon City Shinjuku.mp4
+rename (2001) Cowboy Bebop Knockin' on Heaven's Door.mp4
+rename (2007) Afro Samurai [DC].mkv
+rename (2009) Afro Samurai Resurrection.mkv
+rename Dune
+rename Dune 2000
+rename (2000) Dune
+rename Frank Herbert's Dune
+search otf
