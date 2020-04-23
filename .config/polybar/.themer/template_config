@@ -19,7 +19,7 @@ screenchange-reload = true
 
 [bar/i3]
 ;monitor             = ${env:MONITOR:HDMI-1}
-override-redirect   = true
+override-redirect   = false
 ;bottom              = true
 height              = 22
 width               = 100%

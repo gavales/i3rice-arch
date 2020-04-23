@@ -6172,3 +6172,24 @@ Apr 07 19:42 : exception: RTIOThread could not get realtime scheduling, continui
 Apr 07 19:42 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
 Apr 19 11:03 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Apr 19 11:03 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Apr 21 12:30 : client: [0] opened from [::1]:51890
+Apr 21 12:30 : client: [0] closed
+Apr 21 12:31 : client: [1] opened from [::1]:51944
+Apr 21 12:32 : client: [1] closed
+Apr 21 12:38 : client: [2] opened from [::1]:51998
+Apr 21 12:38 : update: added AmaLee/07 - Red Fraction (From _Black Lagoon_).mp3
+Apr 21 12:38 : update: added Yes/01 - Roundabout (2008 Remastered Version).mp3
+Apr 21 12:38 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 21 12:38 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 21 12:38 : client: [3] opened from [::1]:52000
+Apr 21 12:38 : client: [3] closed
+Apr 21 12:38 : client: [4] opened from [::1]:52002
+Apr 21 12:38 : client: [4] closed
+Apr 21 12:40 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 21 12:42 : player: played "Yes/01 - Roundabout (2008 Remastered Version).mp3"
+Apr 21 12:42 : client: [2] closed
+Apr 21 12:44 : client: [5] opened from [::1]:52038
+Apr 21 12:44 : update: added The Champs/01 - Tequila.mp3
+Apr 21 12:44 : update: added Frank Sinatra/Nothing But the Best (Remasteres)/09 - Summer Wind (Remastered 2008).mp3
+Apr 21 12:44 : update: added Nina Simone/01 - Sinnerman.mp3
+Apr 21 12:45 : client: [5] closed
