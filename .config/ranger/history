@@ -1,37 +1,3 @@
-rename CV_Ladner.tex
-mkdir Uni
-mkdir Rent
-mkdir Preet
-rename 5416-Maple-Crescent-V4K_1G2-Preet
-rename PPL-docs
-mkdir PPL
-rename PPFC_STUDENT_HANDBOOK_2019.pdf
-rename RADIO-OPERATOR-STUDY-GUIDE-2011.pdf
-rename TP119.pdf
-rename STUDENT-PILOT-PERMIT-STUDY-GUIDE-2017.pdf
-mkdir docs
-rename LessonPlan5-Sim-Takeoff_Circuit_Landing.pdf
-rename PSTAR.tex
-rename PSTAR-learn.pdf
-rename PSTAR-learn.tex
-open_with%space
-shell git clone https://github.com/morpheusthewhite/spicetify-themes.git
-shell edtr %s
-rename PSTAR-learn4.jpg
-rename PSTAR-learn43.jpg
-rename PSTAR-learn42.jpg
-shell cp -r ~/plt/md/normal PSTAR_learn.md
-rename PSTAR_learn.md
-open_with google-chrome-beta
-open_with%spaceedtr
-mkdir CaliMove
-mkdir stretches
-mkdir muscleup
-rename strength
-open_with%spaceb
-rename efficient.yaml_
-rename efficient.yaml
-rename valbadia
 search time
 shell 
 rename CV_WalMart.tex
@@ -48,3 +14,37 @@ rename Dune
 rename Dune 2000
 rename (2000) Dune
 rename Frank Herbert's Dune
+search otf
+open_with 2
+open_with
+rename JoJo no Kimyou na Bouken- Diamond wa Kudakenai Episode 5.mp4
+rename JoJo no Kimyou na Bouken- Diamond wa Kudakenai Episode 4.mp4
+touch Episode List.txt
+mkdir Jojo's Bizarre Adventure - Diamond is Unbreakable
+rename Part 3 - Diamond is Unbreakable
+rename Part 4 - Golden Wind
+rename Part 1 - Jojo's Bizarre Adventure
+rename Part 2 - Stardust Crusaders
+rename EpisodeList.txt
+open_with 0
+open_with gedtr
+open_with vim
+rename JoJo no Kimyou na Bouken- Diamond wa Kudakenai Episode 1.mp4
+rename Part 4 - Diamond is Unbreakable
+mkdir media
+open_with%space
+mkdir 
+mkdir Yes
+mkdir AmaLee
+
+mkdir Nina Simone
+mkdir The Champs
+mkdir Nothing But the Best (Remasteres)
+mkdir Frank Sinatra
+mkdir jobs
+mkdir WalmartTsawwassen
+mkdir OrientationDocs
+rename walmartassociateonlineorientationc133
+rename Peter Symonds College _ Online Store & Payments
+delete
+open_with mpv

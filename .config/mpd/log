@@ -6193,3 +6193,7 @@ Apr 21 12:44 : update: added The Champs/01 - Tequila.mp3
 Apr 21 12:44 : update: added Frank Sinatra/Nothing But the Best (Remasteres)/09 - Summer Wind (Remastered 2008).mp3
 Apr 21 12:44 : update: added Nina Simone/01 - Sinnerman.mp3
 Apr 21 12:45 : client: [5] closed
+May 03 12:02 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 03 12:02 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 05 08:33 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 05 08:33 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.

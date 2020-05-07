@@ -45,8 +45,8 @@ parsesel() {
 	[[ -z $SEL ]] && exit
 	if   [[ $RAW =~ \< ]]; then linksel "$RAW"
 	elif [[ $SEL =~ ^! ]]; then $RAW
-	elif [[ -f $BKMDIR/$RAW ]]; then filelist "$SEL"
-	elif [[ -d $BKMDIR/$RAW ]]; then dirlist  "$SEL"
+	elif [[ -f $BKMDIR/$RAW ]]; then filelist "$RAW"
+	elif [[ -d $BKMDIR/$RAW ]]; then dirlist  "$RAW"
 	fi
 }
 linksel()  {
