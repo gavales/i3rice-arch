@@ -1,6 +1,3 @@
-search time
-shell 
-rename CV_WalMart.tex
 open_with edtr
 rename (1998) Spriggan.mp4
 rename (1986) They Were Eleven.mkv
@@ -48,3 +45,6 @@ rename walmartassociateonlineorientationc133
 rename Peter Symonds College _ Online Store & Payments
 delete
 open_with mpv
+rename (2004) Speak.mp4
+open_with pin
+open_with pinta

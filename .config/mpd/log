@@ -6197,3 +6197,149 @@ May 03 12:02 : exception: RTIOThread could not get realtime scheduling, continui
 May 03 12:02 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
 May 05 08:33 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 May 05 08:33 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 09 11:17 : client: [0] opened from [::1]:34012
+May 09 11:18 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 09 11:18 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 09 11:18 : client: [1] opened from [::1]:34014
+May 09 11:18 : client: [1] closed
+May 09 11:18 : client: [2] opened from [::1]:34016
+May 09 11:18 : client: [2] closed
+May 09 11:18 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 09 14:01 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 10 21:51 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 11 19:28 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 11 19:29 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 11 19:38 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 11 19:38 : player: played "Jaco Pastorius/Twins Live In Japan 1982/01 Invitation (Live 1982) (Remast.mp3"
+May 11 19:38 : client: [3] opened from [::1]:42212
+May 11 19:38 : client: [3] closed
+May 11 19:38 : client: [4] opened from [::1]:42214
+May 11 19:38 : client: [4] closed
+May 13 16:56 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 14 13:39 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 14 13:40 : player: played "Jaco Pastorius/Twins Live In Japan 1982/03 Continuum (Live in Japan 1982).mp3"
+May 14 13:40 : client: [5] opened from [::1]:32776
+May 14 13:40 : client: [5] closed
+May 14 13:40 : client: [6] opened from [::1]:32778
+May 14 13:40 : client: [6] closed
+May 14 13:40 : client: [7] opened from [::1]:32782
+May 14 13:40 : client: [7] closed
+May 14 13:40 : client: [8] opened from [::1]:32784
+May 14 13:40 : client: [8] closed
+May 14 13:40 : client: [9] opened from [::1]:32786
+May 14 13:40 : client: [9] closed
+May 14 13:40 : client: [10] opened from [::1]:32788
+May 14 13:40 : client: [10] closed
+May 14 13:40 : client: [11] opened from [::1]:32790
+May 14 13:40 : client: [11] closed
+May 14 13:40 : client: [12] opened from [::1]:32792
+May 14 13:40 : client: [12] closed
+May 14 13:41 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 14 19:55 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 15 08:39 : client: [0] closed
+May 15 08:39 : player: played "Jaco Pastorius/Twins Live In Japan 1982/04 Liberty City (Live in Japan 19.mp3"
+May 15 08:39 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 15 08:39 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 15 08:39 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 15 13:38 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 15 13:38 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 15 13:38 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 17 17:13 : client: [0] opened from [::1]:54518
+May 17 17:13 : client: [1] opened from [::1]:54520
+May 17 17:13 : client: [1] closed
+May 17 17:13 : client: [2] opened from [::1]:54522
+May 17 17:13 : client: [2] closed
+May 17 17:16 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 17 17:16 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 17 17:16 : client: [3] opened from [::1]:54618
+May 17 17:16 : client: [3] closed
+May 17 17:16 : client: [4] opened from [::1]:54620
+May 17 17:16 : client: [4] closed
+May 17 17:22 : player: played "Jaco Pastorius/Twins Live In Japan 1982/05 Three Views Of A Secret (Live.mp3"
+May 17 17:22 : client: [5] opened from [::1]:54638
+May 17 17:22 : client: [5] closed
+May 17 17:22 : client: [6] opened from [::1]:54640
+May 17 17:22 : client: [6] closed
+May 18 10:45 : client: [0] closed
+May 20 16:33 : client: [7] opened from [::1]:40680
+May 20 16:33 : client: [8] opened from [::1]:40682
+May 20 16:33 : client: [8] closed
+May 20 16:33 : client: [9] opened from [::1]:40684
+May 20 16:33 : client: [9] closed
+May 20 16:35 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 20 16:35 : client: [10] opened from [::1]:40734
+May 20 16:35 : client: [10] closed
+May 20 16:35 : client: [11] opened from [::1]:40736
+May 20 16:35 : client: [11] closed
+May 20 16:35 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 20 16:36 : player: played "Jaco Pastorius/Twins Live In Japan 1982/07 Amerika (Live in Japan 1982).mp3"
+May 20 16:36 : client: [12] opened from [::1]:40744
+May 20 16:36 : client: [12] closed
+May 20 16:36 : client: [13] opened from [::1]:40746
+May 20 16:36 : client: [13] closed
+May 21 15:13 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 21 15:13 : player: played "Jaco Pastorius/Twins Live In Japan 1982/08 Okonkole' Y Trompa (Live in Ja.mp3"
+May 21 15:13 : client: [14] opened from [::1]:44554
+May 21 15:13 : client: [14] closed
+May 21 15:13 : client: [15] opened from [::1]:44556
+May 21 15:13 : client: [15] closed
+May 21 17:52 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 21 17:58 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 21 18:01 : client: [7] closed
+May 21 18:02 : client: [16] opened from [::1]:47196
+May 21 18:02 : client: [17] opened from [::1]:47198
+May 21 18:02 : client: [17] closed
+May 21 18:02 : client: [18] opened from [::1]:47200
+May 21 18:02 : client: [18] closed
+May 21 18:03 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 21 18:05 : client: [16] closed
+May 21 18:05 : client: [19] opened from [::1]:47280
+May 21 18:05 : client: [20] opened from [::1]:47282
+May 21 18:05 : client: [20] closed
+May 21 18:05 : client: [21] opened from [::1]:47284
+May 21 18:05 : client: [21] closed
+May 21 18:06 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 25 18:39 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 25 18:39 : player: played "Jaco Pastorius/Twins Live In Japan 1982/09 Reza_Giant Steps_Reza (Live in.mp3"
+May 25 18:39 : client: [22] opened from [::1]:36076
+May 25 18:39 : client: [22] closed
+May 25 18:39 : client: [23] opened from [::1]:36080
+May 25 18:39 : client: [23] closed
+May 26 08:50 : player: played "Jaco Pastorius/Twins Live In Japan 1982/10 Elegant People (Live in Japan.mp3"
+May 26 08:50 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 26 08:50 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 26 08:50 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 26 15:41 : client: [0] opened from [::1]:54740
+May 26 15:41 : client: [1] opened from [::1]:54742
+May 26 15:41 : client: [1] closed
+May 26 15:41 : client: [2] opened from [::1]:54744
+May 26 15:41 : client: [2] closed
+May 26 15:42 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 26 15:42 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 26 15:43 : client: [3] opened from [::1]:54758
+May 26 15:43 : client: [3] closed
+May 26 15:43 : client: [4] opened from [::1]:54760
+May 26 15:43 : client: [4] closed
+May 26 15:43 : client: [5] opened from [::1]:54764
+May 26 15:43 : client: [5] closed
+May 26 15:43 : client: [6] opened from [::1]:54766
+May 26 15:43 : client: [6] closed
+May 26 15:43 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 26 15:46 : player: played "Jaco Pastorius/Jaco Pastorius/01 Donna Lee.mp3"
+May 26 15:46 : client: [7] opened from [::1]:54774
+May 26 15:46 : client: [7] closed
+May 26 15:46 : client: [8] opened from [::1]:54776
+May 26 15:46 : client: [8] closed
+May 26 15:50 : player: played "Jaco Pastorius/Jaco Pastorius/02 Come On_ Come Over.mp3"
+May 26 15:50 : client: [9] opened from [::1]:54784
+May 26 15:50 : client: [9] closed
+May 26 15:50 : client: [10] opened from [::1]:54786
+May 26 15:50 : client: [10] closed
+May 27 13:21 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 27 15:58 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 27 15:59 : player: played "Jaco Pastorius/Jaco Pastorius/03 Continuum.mp3"
+May 27 15:59 : client: [11] opened from [::1]:60144
+May 27 15:59 : client: [11] closed
+May 27 15:59 : client: [12] opened from [::1]:60146
+May 27 15:59 : client: [12] closed
+May 27 18:16 : client: [0] closed

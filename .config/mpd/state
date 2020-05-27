@@ -1,7 +1,9 @@
-sw_volume: 100
+sw_volume: 88
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
-state: stop
+state: pause
+current: 22
+time: 90.838000
 random: 0
 repeat: 0
 single: 0
@@ -10,4 +12,46 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
+0:Jaco Pastorius/Twins Live In Japan 1982/01 Invitation (Live 1982) (Remast.mp3
+1:Jaco Pastorius/Twins Live In Japan 1982/03 Continuum (Live in Japan 1982).mp3
+2:Jaco Pastorius/Twins Live In Japan 1982/04 Liberty City (Live in Japan 19.mp3
+3:Jaco Pastorius/Twins Live In Japan 1982/05 Three Views Of A Secret (Live.mp3
+4:Jaco Pastorius/Twins Live In Japan 1982/06 Sophisticated Lady (Live in Ja.mp3
+5:Jaco Pastorius/Twins Live In Japan 1982/07 Amerika (Live in Japan 1982).mp3
+6:Jaco Pastorius/Twins Live In Japan 1982/08 Okonkole' Y Trompa (Live in Ja.mp3
+7:Jaco Pastorius/Twins Live In Japan 1982/09 Reza_Giant Steps_Reza (Live in.mp3
+8:Jaco Pastorius/Twins Live In Japan 1982/10 Elegant People (Live in Japan.mp3
+9:Jaco Pastorius/Twins Live In Japan 1982/11 Twins (Live in Japan 1982).mp3
+10:Jaco Pastorius/Twins Live In Japan 1982/12 Pac-Man Blues (Fannie Mae) _Li.mp3
+11:Jaco Pastorius/Twins Live In Japan 1982/13 Eleven (Live in Japan 1982).mp3
+12:Jaco Pastorius/Word Of Mouth/01 Crisis.mp3
+13:Jaco Pastorius/Word Of Mouth/02 Three Views Of A Secret (Live.mp3
+14:Jaco Pastorius/Word Of Mouth/03 Liberty City (feat_ Herbie Han.mp3
+15:Jaco Pastorius/Word Of Mouth/04 Chromatic Fantasy.mp3
+16:Jaco Pastorius/Word Of Mouth/05 Blackbird.mp3
+17:Jaco Pastorius/Word Of Mouth/06 Word Of Mouth.mp3
+18:Jaco Pastorius/Word Of Mouth/07 John And Mary.mp3
+19:Jaco Pastorius/Jaco Pastorius/01 Donna Lee.mp3
+20:Jaco Pastorius/Jaco Pastorius/02 Come On_ Come Over.mp3
+21:Jaco Pastorius/Jaco Pastorius/03 Continuum.mp3
+22:Jaco Pastorius/Jaco Pastorius/04 Kuru_Speak Like A Child.mp3
+23:Jaco Pastorius/Jaco Pastorius/05 Portrait of Tracy.mp3
+24:Jaco Pastorius/Jaco Pastorius/06 Opus Pocus.mp3
+25:Jaco Pastorius/Jaco Pastorius/07 Okonkole y Trompa.mp3
+26:Jaco Pastorius/Jaco Pastorius/08 (Used To Be A) Cha-Cha.mp3
+27:Jaco Pastorius/Jaco Pastorius/09 Forgotten Love.mp3
+28:Jaco Pastorius/Jaco Pastorius/10 (Used To Be A) Cha-Cha.mp3
+29:Jaco Pastorius/Jaco Pastorius/11 6_4 Jam.mp3
+30:Ini Kamoze/Here Comes The Hotstepper/01 Call the Police.mp3
+31:Ini Kamoze/Here Comes The Hotstepper/02 Rough.mp3
+32:Ini Kamoze/Here Comes The Hotstepper/03 Here Comes the Hotstepper (Hea.mp3
+33:Ini Kamoze/Here Comes The Hotstepper/04 Gunshot.mp3
+34:Ini Kamoze/Here Comes The Hotstepper/05 World-A-Music.mp3
+35:Ini Kamoze/Here Comes The Hotstepper/06 Trouble You A Trouble Me.mp3
+36:Ini Kamoze/Here Comes The Hotstepper/07 General.mp3
+37:Ini Kamoze/Here Comes The Hotstepper/08 Pull Up the Cork.mp3
+38:Ini Kamoze/Here Comes The Hotstepper/09 Pirate.mp3
+39:Ini Kamoze/Here Comes The Hotstepper/10 Babylon_ Babylon.mp3
+40:Ini Kamoze/Here Comes The Hotstepper/11 I Want Ital.mp3
+41:Ini Kamoze/Here Comes The Hotstepper/12 Burnin'.mp3
 playlist_end
