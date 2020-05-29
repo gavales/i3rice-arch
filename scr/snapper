@@ -20,6 +20,8 @@ exit
 
 while true; do
 	case $1 in
+		--full | -f ) SCRTPE="Fullscreen" ;;
+		--sel  | -s ) SCRTPE="Selection" ;;
 		--help ) help ;;
 		-h     ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
 		-- ) shift ; break ;;
@@ -28,19 +30,20 @@ while true; do
 	shift
 done
 
+MENOPS="--location 1 -w 50 --theme dmenu --color blue"
 SCD=$XDG_PICTURES_DIR/shot
 TMP=${SCD}/tmp.png
 [[ -d $SCD ]] || mkdir $SCD
 
 scrotname () {
 	TME="`date +%Y-%m-%d_%H:%M:%S`.png"
-	NME=$(echo "" | i3menu --prompt "Choose scrot name " -w 200)
+	NME=$(echo "" | i3menu --prompt "Choose scrot name " $MENOPS)
 	[[ -z $NME ]] && SCRNME=$TME || SCRNME="$NME.png"
 }
 
 confirmscrot () {
 	ACT=$(printf "%s\n" Save New Clipboard | \
-		i3menu --prompt "Save? " -w 200)
+		i3menu --prompt "Save? " $MENOPS)
 	if [[ $ACT == "Save" ]]; then
 		scrotname
 		mv $TMP $SCD/${SCRNME}
@@ -55,8 +58,8 @@ confirmscrot () {
 }
 
 tmpscrot () {
-	SCRTPE=$(printf "%s\n" Fullscreen Selection | \
-		i3menu --prompt "Screenshot " -w 200)
+	[[ -n $SCRTPE ]] || SCRTPE=$(printf "%s\n" Fullscreen Selection | \
+		i3menu --prompt "Screenshot " $MENOPS)
 	if [[ $SCRTPE == "Fullscreen" ]]; then
 		sleep .25
 		maim --hidecursor $TMP

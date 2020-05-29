@@ -22,10 +22,10 @@ set $MON1 eDP1
 set $MON3 HDMI1
 set $MON2 VGA1
 
-set $W69 %30
-set $H69 %30
-set $W43 %30
-set $H43 %35
+set $W69 528
+set $H69 286
+set $W43 528
+set $H43 318
 set $TPAD 40
 set $LPAD 100
 set $RPAD 100
@@ -51,12 +51,12 @@ set $BNR border normal
 
 # ━  DECORATIONS
 # class                 brdr      bkgr      text    indi      chlb
-client.focused          #156667 #053941 #fdf6e3 #156667 #156667
-client.focused_inactive #156667 #156667 #fdf6e3 #156667 #156667
-client.unfocused        #156667 #156667 #fdf6e3 #156667 #156667
-client.urgent           #dc322f   #dc322f   #fdf6e3 #dc322f   #dc322f
-client.placeholder      #002b36   #002b36   #fdf6e3 #002b36   #002b36
-client.background       #002b36
+client.focused          #b1c798 #e9e6bb #282828 #b1c798 #b1c798
+client.focused_inactive #b1c798 #b1c798 #282828 #b1c798 #b1c798
+client.unfocused        #b1c798 #b1c798 #282828 #b1c798 #b1c798
+client.urgent           #cc241d   #cc241d   #282828 #cc241d   #cc241d
+client.placeholder      #fbf1c7   #fbf1c7   #282828 #fbf1c7   #fbf1c7
+client.background       #fbf1c7
 
 # ━  BINDINGS
 # ━━ Misc
@@ -287,6 +287,7 @@ $exn fix_xcursor
 $exn reloadconfs
 $exn xfsettingsd
 $exn sxhkd
+$exn spicetify
 
 $ena mpv /home/gavarch/scrmus/A\ Tone\ His\ Self.mp3
 $ena notify-send 'i3 (re)loaded!' -i /home/gavarch/scrpic/i3white.png

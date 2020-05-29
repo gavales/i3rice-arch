@@ -22,10 +22,10 @@ set $MON1 %%MON1%%
 set $MON3 %%MON3%%
 set $MON2 %%MON2%%
 
-set $W69 %30
-set $H69 %30
-set $W43 %30
-set $H43 %35
+set $WUW 528
+set $HUW 286
+set $WWS 528
+set $HWS 318
 set $TPAD %%TOPPAD%%
 set $LPAD %%LEFTPAD%%
 set $RPAD %%RIGHTPAD%%
@@ -116,8 +116,8 @@ $ALT+Control+Shift+0 move container to workspace 10; workspace 10
 $ALT+Tab         focus right
 $ALT+e           layout toggle tabbed split
 $ALT+y           $QUD --resize '1 -5 -5'
-$ALT+u           $QUD --resize '1 $W43 $H43'
-$ALT+i           $QUD --resize '1 $W69 $H69'
+$ALT+u           $QUD --resize '1 $WWS $HWS'
+$ALT+i           $QUD --resize '1 $WUW $HUW'
 $ALT+o           $QUD --resize '1 +5  +5'
 $ALT+p           $QUD --resize '1 %40 %20'
 $ALT+bracketleft $QUD --resize '1 *   90'
@@ -287,6 +287,7 @@ $exn fix_xcursor
 $exn reloadconfs
 $exn xfsettingsd
 $exn sxhkd
+$exn spicetify
 
 $ena mpv %%HOME%%/scrmus/A\ Tone\ His\ Self.mp3
 $ena notify-send 'i3 (re)loaded!' -i %%HOME%%/scrpic/i3white.png

@@ -10,7 +10,8 @@ GLBL="$RFDIR/globals.rasi"
 BASE="$RFDIR/i3menu.rasi"
 TITLEBAR_HEIGHT=0
 PRTSTR=pel
-WINDOW_BORDER=$(gwmget BORDER)
+#WINDOW_BORDER=$(gwmget BORDER)
+WINDOW_BORDER=0
 declare -A LCTN
 declare -A PRMA
 LCTN[1]="northwest" LCTN[2]="north"  LCTN[3]="northeast"
@@ -292,7 +293,7 @@ else
 	WINSTR+="children: [ horibox ]; "
 	HRISTR+="orientation: horizontal; "
 	LSTSTR+="layout: horizontal; lines: 100; "
-	ENTSTR+="expand: false; width: 10em; "
+	ENTSTR+="expand: false; width: 20em; "
 fi
 HRISTR+="children: [ $(parseprmt) ]; "
 LSTSTR+="spacing: 5px; "

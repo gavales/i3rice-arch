@@ -22,10 +22,10 @@ set $MON1 eDP1
 set $MON3 HDMI1
 set $MON2 VGA1
 
-set $W69 %30
-set $H69 %30
-set $W43 %30
-set $H43 %35
+set $W69 528
+set $H69 286
+set $W43 528
+set $H43 318
 set $TPAD 40
 set $LPAD 100
 set $RPAD 100
@@ -287,6 +287,7 @@ $exn fix_xcursor
 $exn reloadconfs
 $exn xfsettingsd
 $exn sxhkd
+$exn spicetify
 
 $ena mpv /home/gavarch/scrmus/A\ Tone\ His\ Self.mp3
 $ena notify-send 'i3 (re)loaded!' -i /home/gavarch/scrpic/i3white.png

@@ -99,91 +99,91 @@ CMK3() {
 	$I3 focus child
 }
 CMK1() {
-	$I3 floating disable
-	$I3 move to mark _W3
-	$I3 [con_mark="_W3"] focus
-	$I3 focus child
-	$I3 move up
-	$I3 move right
-	$I3 split v
-	$I3 layout tabbed
-	$I3 focus parent
-	$I3 mark _W1
-	$I3 focus child
-	$I3 [con_mark="_W1"] resize set 400 402
-	$I3 [con_mark="_W2"] resize set 300 402
-#	if [[ $MKS =~ "_W2" ]]; then
-#		$I3 floating disable
-#		$I3 move to mark _W2
-#		$I3 [con_mark="_W2"] focus
-#		$I3 split v
-#		$I3 focus child
-#		$I3 move up
-#		$I3 split h
-#		$I3 split v
-#		$I3 layout tabbed
-#		$I3 focus parent
-#		$I3 mark _W1
-#		$I3 focus child
-#		$I3 [con_mark="_W1"] resize set 492 402
-#	else
-#		$I3 floating disable
-#		$I3 move to mark _W3
-#		$I3 [con_mark="_W3"] focus
-#		$I3 focus child
-#		$I3 move up
-#		$I3 move right
-#		$I3 split v
-#		$I3 layout tabbed
-#		$I3 focus parent
-#		$I3 mark _W1
-#		$I3 focus child
-#		$I3 [con_mark="_W1"] resize set 492 402
-#	fi
+#	$I3 floating disable
+#	$I3 move to mark _W3
+#	$I3 [con_mark="_W3"] focus
+#	$I3 focus child
+#	$I3 move up
+#	$I3 move right
+#	$I3 split v
+#	$I3 layout tabbed
+#	$I3 focus parent
+#	$I3 mark _W1
+#	$I3 focus child
+#	$I3 [con_mark="_W1"] resize set 572 286
+#	$I3 [con_mark="_W2"] resize set 572 286
+	if [[ $MKS =~ "_W2" ]]; then
+		$I3 floating disable
+		$I3 move to mark _W2
+		$I3 [con_mark="_W2"] focus
+		$I3 split v
+		$I3 focus child
+		$I3 move up
+		$I3 split h
+		$I3 split v
+		$I3 layout tabbed
+		$I3 focus parent
+		$I3 mark _W1
+		$I3 focus child
+		$I3 [con_mark="_W1"] resize set 572 286
+	else
+		$I3 floating disable
+		$I3 move to mark _W3
+		$I3 [con_mark="_W3"] focus
+		$I3 focus child
+		$I3 move up
+		$I3 move left
+		$I3 split v
+		$I3 layout tabbed
+		$I3 focus parent
+		$I3 mark _W1
+		$I3 focus child
+		$I3 [con_mark="_W1"] resize set 572 286
+	fi
 }
 CMK2() {
-	$I3 floating disable
-	$I3 move to mark _W3
-	$I3 [con_mark="_W3"] focus
-	$I3 focus child
-	$I3 move up
-	$I3 move left
-	$I3 split v
-	$I3 layout tabbed
-	$I3 focus parent
-	$I3 mark _W2
-	$I3 focus child
-	$I3 [con_mark="_W1"] resize set 400 402
-	$I3 [con_mark="_W2"] resize set 300 402
-#	if [[ $MKS =~ "_W1" ]]; then
-#		$I3 floating disable
-#		$I3 move to mark _W1
-#		$I3 [con_mark="_W1"] focus
-#		$I3 split v
-#		$I3 focus child
-#		$I3 move down
-#		$I3 split h
-#		$I3 split v
-#		$I3 layout tabbed
-#		$I3 focus parent
-#		$I3 mark _W2
-#		$I3 focus child
-##		$I3 [con_mark="_W1"] resize set 492 402
-#	else
-#		$I3 floating disable
-#		$I3 move to mark _W3
-#		$I3 [con_mark="_W3"] focus
-#		$I3 focus child
-#		$I3 move up
-#		$I3 move right
-#		$I3 split h
-#		$I3 split v
-#		$I3 layout tabbed
-#		$I3 focus parent
-#		$I3 mark _W2
-#		$I3 focus child
-##		$I3 [con_mark="_W1"] resize set 492 402
-#	fi
+#	$I3 floating disable
+#	$I3 move to mark _W3
+#	$I3 [con_mark="_W3"] focus
+#	$I3 focus child
+#	$I3 move up
+#	$I3 move left
+#	$I3 split v
+#	$I3 layout tabbed
+#	$I3 focus parent
+#	$I3 mark _W2
+#	$I3 focus child
+#	$I3 [con_mark="_W1"] resize set 572 286
+#	$I3 [con_mark="_W2"] resize set 572 286
+	if [[ $MKS =~ "_W1" ]]; then
+		$I3 floating disable
+		$I3 move to mark _W1
+		$I3 [con_mark="_W1"] focus
+		$I3 split v
+		$I3 focus child
+		$I3 move down
+		$I3 split h
+		$I3 split v
+		$I3 layout tabbed
+		$I3 focus parent
+		$I3 mark _W2
+		$I3 focus child
+#		$I3 [con_mark="_W1"] resize set 572 286
+	else
+		$I3 floating disable
+		$I3 move to mark _W3
+		$I3 [con_mark="_W3"] focus
+		$I3 focus child
+		$I3 move up
+		$I3 move left
+		$I3 split h
+		$I3 split v
+		$I3 layout tabbed
+		$I3 focus parent
+		$I3 mark _W2
+		$I3 focus child
+#		$I3 [con_mark="_W1"] resize set 572 286
+	fi
 }
 CMK4() {
 	$I3 floating disable
