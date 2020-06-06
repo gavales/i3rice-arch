@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+help () {
+cat << 'EOB'
+# NAME
+
+__difrap__ - generate diff file
+
+# USAGE
+
+```
+difrap <directory>
+difrap --help|-h
+```
+EOB
+exit
+}
+
+while true; do
+	case $1 in
+		--directory | -d ) DIR=${2:-} ;;
+		--name | -n ) NME="${2:-}" ; shift ;;
+#		--patch | -d ) diffgen ;;
+		--help ) help ;;
+		-h ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+DIR="${DIR:-$(pwd)}"
+cd $DIR
+
+for i in $(ls); do
+	[[ -f ${i}-patched ]] && {
+		echo $i has a patch
+		diff -u ${i} "${i}-patched" >> "${NME:-${DIR##*/}}.diff"
+	}
+done

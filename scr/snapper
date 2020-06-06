@@ -20,8 +20,9 @@ exit
 
 while true; do
 	case $1 in
-		--full | -f ) SCRTPE="Fullscreen" ;;
-		--sel  | -s ) SCRTPE="Selection" ;;
+		--full      | -f ) SCRTPE="Fullscreen" ;;
+		--sel       | -s ) SCRTPE="Selection"  ;;
+		--noconfirm | -n ) NOCNFM=1 ;;
 		--help ) help ;;
 		-h     ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
 		-- ) shift ; break ;;
@@ -30,10 +31,14 @@ while true; do
 	shift
 done
 
-MENOPS="--location 1 -w 50 --theme dmenu --color blue"
+MENOPS="--location 1 -w 50 --color green"
 SCD=$XDG_PICTURES_DIR/shot
 TMP=${SCD}/tmp.png
-[[ -d $SCD ]] || mkdir $SCD
+[[ -d $SCD ]] || {
+	mkdir $SCD
+	mkdir $SCD/FULL
+	mkdir $SCD/SEL
+}
 
 scrotname () {
 	TME="`date +%Y-%m-%d_%H:%M:%S`.png"
@@ -42,12 +47,19 @@ scrotname () {
 }
 
 confirmscrot () {
+	[[ -n $NOCNFM ]] && {
+		TME="`date +%Y-%m-%d_%H:%M:%S`.png"
+		mv $TMP ${SCD}/${SDR}/${TME}
+		notify-send "$SCRTPE" "${TME} saved to ${SCD}/${SDR}" -i ${SCD}/${SDR}/${TME}
+		exit
+		}
+	sxiv $TMP
 	ACT=$(printf "%s\n" Save New Clipboard | \
 		i3menu --prompt "Save? " $MENOPS)
 	if [[ $ACT == "Save" ]]; then
 		scrotname
-		mv $TMP $SCD/${SCRNME}
-		notify-send "${SCRNME} saved to $SCD" -i ${SCD}/${SCRNME}
+		mv $TMP ${SCD}/${SDR}/${SCRNME}
+		notify-send "$SCRTPE" "${SCRNME} saved to ${SCD}/${SDR}" -i ${SCD}/${SDR}/${SCRNME}
 	elif [[ $ACT == "New" ]]; then
 		tmpscrot
 	elif [[ $ACT == "Clipboard" ]]; then
@@ -63,13 +75,13 @@ tmpscrot () {
 	if [[ $SCRTPE == "Fullscreen" ]]; then
 		sleep .25
 		maim --hidecursor $TMP
+		SDR=FULL
 	elif [[ $SCRTPE == "Selection" ]]; then
 		maim --select --hidecursor $TMP
+		SDR=SEL
 	else
 		:
 	fi
-
-	sxiv $TMP 
 	[[ -n $SCRTPE ]] && confirmscrot
 }
 

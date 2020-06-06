@@ -2,8 +2,8 @@ sw_volume: 88
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
 state: pause
-current: 22
-time: 90.838000
+current: 24
+time: 209.052000
 random: 0
 repeat: 0
 single: 0
@@ -54,4 +54,5 @@ playlist_begin
 39:Ini Kamoze/Here Comes The Hotstepper/10 Babylon_ Babylon.mp3
 40:Ini Kamoze/Here Comes The Hotstepper/11 I Want Ital.mp3
 41:Ini Kamoze/Here Comes The Hotstepper/12 Burnin'.mp3
+42:Manfred Mann/Doo Wah Diddy.mp3
 playlist_end

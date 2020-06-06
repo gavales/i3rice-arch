@@ -31,7 +31,13 @@
 
 # ━  misc
 Print
-	snapper
+	snapper -f -n
+shift + Print
+	snapper -s -n
+super + Print
+	snapper -f
+super + shift + Print
+	snapper -s
 super + Escape
 	i3end
 super + Home

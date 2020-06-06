@@ -64,6 +64,12 @@ hi usrgrn           ctermfg=black    ctermbg=green    cterm=none
 hi usrgry           ctermfg=Gray     ctermbg=Darkgray cterm=none
 hi usrblu           ctermfg=black    ctermbg=blue     cterm=none
 hi usrgnt           ctermfg=black    ctermbg=magenta  cterm=none
+hi USRred           ctermfg=red      ctermbg=black    cterm=bold
+hi USRylw           ctermfg=yellow   ctermbg=black    cterm=bold
+hi USRgrn           ctermfg=green    ctermbg=black    cterm=bold
+hi USRgry           ctermfg=Darkgray ctermbg=Gray     cterm=bold
+hi USRblu           ctermfg=blue     ctermbg=black    cterm=bold
+hi USRgnt           ctermfg=magenta  ctermbg=black    cterm=bold
 
 " ━  GUI
 hi Normal           guifg=%%fg0%% guibg=%%bg0%%
@@ -122,3 +128,9 @@ hi usrred           guifg=%%bg0%% guibg=%%lightred%% gui=none
 hi usrylw           guifg=%%bg0%% guibg=%%lightylw%% gui=none
 hi usrgrn           guifg=%%bg0%% guibg=%%lightgrn%% gui=none
 hi usrgnt           guifg=%%bg0%% guibg=%%lightgnt%% gui=none
+hi USRgry           guifg=%%bg1%% guibg=%%acb%% gui=bold
+hi USRblu           guifg=%%acb%% guibg=%%bg0%% gui=bold
+hi USRred           guifg=%%lightred%% guibg=%%bg0%% gui=bold
+hi USRylw           guifg=%%lightylw%% guibg=%%bg0%% gui=bold
+hi USRgrn           guifg=%%lightgrn%% guibg=%%bg0%% gui=bold
+hi USRgnt           guifg=%%lightgnt%% guibg=%%bg0%% gui=bold

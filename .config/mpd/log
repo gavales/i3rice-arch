@@ -6343,3 +6343,67 @@ May 27 15:59 : client: [11] closed
 May 27 15:59 : client: [12] opened from [::1]:60146
 May 27 15:59 : client: [12] closed
 May 27 18:16 : client: [0] closed
+May 29 19:52 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 29 19:52 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+May 29 19:52 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+May 31 11:34 : client: [13] opened from [::1]:54760
+May 31 11:34 : client: [14] opened from [::1]:54762
+May 31 11:34 : client: [14] closed
+May 31 11:34 : client: [15] opened from [::1]:54764
+May 31 11:34 : client: [15] closed
+May 31 11:35 : update: added Manfred Mann/Doo Wah Diddy.mp3
+May 31 11:35 : client: [16] opened from [::1]:54766
+May 31 11:35 : client: [16] closed
+May 31 11:35 : client: [17] opened from [::1]:54768
+May 31 11:35 : client: [17] closed
+May 31 11:35 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+May 31 12:03 : update: updating Manfred Mann/Doo Wah Diddy.mp3
+May 31 12:19 : update: added Manfred Mann/Doo Wah Diddy.mp3.mp3
+May 31 13:09 : update: updating Manfred Mann/Doo Wah Diddy.mp3
+May 31 13:09 : update: updating Manfred Mann/Doo Wah Diddy.mp3.mp3
+May 31 13:09 : update: removing Manfred Mann/Doo Wah Diddy.mp3.mp3
+Jun 01 13:21 : client: [13] closed
+Jun 04 15:39 : client: [18] opened from [::1]:41350
+Jun 04 15:39 : client: [19] opened from [::1]:41352
+Jun 04 15:39 : client: [19] closed
+Jun 04 15:39 : client: [20] opened from [::1]:41354
+Jun 04 15:39 : client: [20] closed
+Jun 04 15:39 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 04 15:39 : client: [21] opened from [::1]:41358
+Jun 04 15:39 : client: [21] closed
+Jun 04 15:39 : client: [22] opened from [::1]:41360
+Jun 04 15:39 : client: [22] closed
+Jun 04 15:40 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 04 15:56 : client: [18] closed
+Jun 04 15:56 : client: [23] opened from [::1]:41630
+Jun 04 15:56 : client: [24] opened from [::1]:41632
+Jun 04 15:56 : client: [24] closed
+Jun 04 15:56 : client: [25] opened from [::1]:41634
+Jun 04 15:56 : client: [25] closed
+Jun 04 15:56 : client: [23] closed
+Jun 04 15:56 : client: [26] opened from [::1]:41638
+Jun 04 15:56 : client: [27] opened from [::1]:41640
+Jun 04 15:56 : client: [27] closed
+Jun 04 15:56 : client: [28] opened from [::1]:41642
+Jun 04 15:56 : client: [28] closed
+Jun 04 15:57 : client: [26] closed
+Jun 04 15:57 : client: [29] opened from [::1]:41648
+Jun 04 15:57 : client: [30] opened from [::1]:41650
+Jun 04 15:57 : client: [30] closed
+Jun 04 15:57 : client: [31] opened from [::1]:41652
+Jun 04 15:57 : client: [31] closed
+Jun 04 15:59 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 04 16:01 : client: [29] closed
+Jun 04 16:01 : client: [32] opened from [::1]:41670
+Jun 04 16:01 : client: [33] opened from [::1]:41672
+Jun 04 16:01 : client: [33] closed
+Jun 04 16:01 : client: [34] opened from [::1]:41674
+Jun 04 16:01 : client: [34] closed
+Jun 04 16:01 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 04 16:01 : client: [32] closed
+Jun 04 16:01 : client: [35] opened from [::1]:41682
+Jun 04 16:01 : client: [36] opened from [::1]:41684
+Jun 04 16:01 : client: [36] closed
+Jun 04 16:01 : client: [37] opened from [::1]:41686
+Jun 04 16:01 : client: [37] closed
+Jun 04 16:01 : alsa_output: Decoder is too slow; playing silence to avoid xrun

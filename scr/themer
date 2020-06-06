@@ -447,8 +447,8 @@ variations () {
 	awk -i <(awklib) -v bg0="$bg0" -v fg0="$fg0" '
 		/#/ && !/^fg0|^bg0|^acc/ {
 			key=$1;val=$2;
-			mixer("dark"key,val,fg0,50,50)
-			mixer("light"key,val,bg0,50,50)
+			mixer("dark"key,val,fg0,75,25)
+			mixer("light"key,val,bg0,75,25)
 		}' $ALL >> $ALL
 
 	awk -i <(awklib) -v VRT="$vrt" -v INC="20" \
@@ -692,6 +692,11 @@ O_list () {
 				else {
 					printf "%-19s%s\n", "%%" key "%%", $0
 				}
+				}' $ALL
+			;;
+		varsh) awk ' !/!/ {
+				key=$1;$1="";gsub(/^[ \t]+/, "", $0)
+				printf "TMR[%s]=%s\n", key, "\""$0"\""
 				}' $ALL
 			;;
 		current) awk '!/!/ {

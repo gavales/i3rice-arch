@@ -1,30 +1,4 @@
-open_with edtr
-rename (1998) Spriggan.mp4
-rename (1986) They Were Eleven.mkv
-rename (1986) Grey Digital Target.mkv
-rename (2019) Godzilla: King of the Monsters.mp4
-rename (1988) Demon City Shinjuku.mp4
-rename (2001) Cowboy Bebop Knockin' on Heaven's Door.mp4
-rename (2007) Afro Samurai [DC].mkv
-rename (2009) Afro Samurai Resurrection.mkv
-rename Dune
-rename Dune 2000
-rename (2000) Dune
-rename Frank Herbert's Dune
-search otf
-open_with 2
-open_with
-rename JoJo no Kimyou na Bouken- Diamond wa Kudakenai Episode 5.mp4
-rename JoJo no Kimyou na Bouken- Diamond wa Kudakenai Episode 4.mp4
-touch Episode List.txt
-mkdir Jojo's Bizarre Adventure - Diamond is Unbreakable
-rename Part 3 - Diamond is Unbreakable
-rename Part 4 - Golden Wind
-rename Part 1 - Jojo's Bizarre Adventure
-rename Part 2 - Stardust Crusaders
-rename EpisodeList.txt
 open_with 0
-open_with gedtr
 open_with vim
 rename JoJo no Kimyou na Bouken- Diamond wa Kudakenai Episode 1.mp4
 rename Part 4 - Diamond is Unbreakable
@@ -48,3 +22,29 @@ open_with mpv
 rename (2004) Speak.mp4
 open_with pin
 open_with pinta
+rename addypaper
+open_with gedtr
+shell git clone 
+rename numixold
+shell git clone https://github.com/StillANixRookie/numix.git
+rename .oldthemer_post
+rename Outlaw Star
+shell wget https://raw.githubusercontent.com/manjaro/packages-community/master/dmenu-manjaro/003-dmenu-4.8-xyw-manjaro.diff
+rename dmenu-49.tar.gz
+shell wget https://tools.suckless.org/dmenu/patches/xyw/dmenu-xyw-4.7.diff
+shell wget https://tools.suckless.org/dmenu/patches/line-height/dmenu-lineheight-4.7.diff
+shell wget https://tools.suckless.org/dmenu/patches/scroll/dmenu-scroll-20180607-a314412.diff
+shell 
+shell git clone https://github.com/Cloudef/dmenu-pango-imlib.git
+rename dmenu-
+rename README.md
+w
+rename 1
+shell git clone https://github.com/StillANixRookie/dmenu-gavin.git
+shell git clone https://github.com/cipriancraciun/dmenu.git
+rename dmenu-gavin-
+rename dmenu-gavin
+shell sudo make install
+shell git clone https://git.suckless.org/dmenu
+rename diff.vim_
+rename diff.vim

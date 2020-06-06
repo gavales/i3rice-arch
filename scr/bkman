@@ -25,7 +25,7 @@ HSTDIR="${BKMDIR}/.history"
 iDIR=" " iFLE=" " iLNK=" " iHST=" "
 CRWN=$(pfw) ; CRWNT=$(xprop -id $CRWN | sed '/WINDOW_ROLE/!d')
 format="<span lang='%s'></span>%s\n"
-menopts="-L 1 -H 100 -w 25"
+menopts="-L 2 -H 60 -w 30 --color blue"
 CMDLST="reddit"
 
 newlink()  {

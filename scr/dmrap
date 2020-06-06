@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+#while true; do
+#	case $1 in
+##		--<++> | -<++> ) <++>="${2:-}" ; shift ;;
+#		--help ) help ;;
+#		-h ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
+#		-- ) shift ; break ;;
+#		*  ) break         ;;
+#	esac
+#	shift
+#done
+
+declare -A themer
+eval "$(themer --list varsh)"
+dmenu -fn "luximono:size=15" -l 20 -F \
+	-nb "${TMR[bg1]}" -nf "${TMR[fg1]}" -sb "${TMR[acf]}" -sf "${TMR[bg1]}" \
+	-nhb "${TMR[bg1]}" -nhf "${TMR[ylw]}" -shb "${TMR[acf]}" -shf "${TMR[ylw]}"
