@@ -80,6 +80,11 @@ O_delete () { ls ${MDR} | xargs -I {} sudo rm ${MANDIR}/"{}" ; exit ; }
 
 while true; do
 	case $1 in
+		--file | -f )
+			file="${2:-}"
+			[[ -f $file ]] && pandoc -s -t man "$file" -o "${file%.*}.1"
+			exit
+			;;
 		--source-directory | -d ) SDR="${2:-}" ; shift ;;
 		--man-directory    | -m ) MDR="${2:-}" ; shift ;;
 		--install          | -i ) INS="${2:-}" ; shift ;;

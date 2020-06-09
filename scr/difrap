@@ -35,6 +35,6 @@ cd $DIR
 for i in $(ls); do
 	[[ -f ${i}-patched ]] && {
 		echo $i has a patch
-		diff -u ${i} "${i}-patched" >> "${NME:-${DIR##*/}}.diff"
+		diff -Naur ${i} "${i}-patched" >> "${NME:-${DIR##*/}}.diff"
 	}
 done

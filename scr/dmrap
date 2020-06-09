@@ -11,8 +11,16 @@
 #	shift
 #done
 
-declare -A themer
+declare -A TMR
 eval "$(themer --list varsh)"
-dmenu -fn "luximono:size=15" -l 20 -F \
-	-nb "${TMR[bg1]}" -nf "${TMR[fg1]}" -sb "${TMR[acf]}" -sf "${TMR[bg1]}" \
-	-nhb "${TMR[bg1]}" -nhf "${TMR[ylw]}" -shb "${TMR[acf]}" -shf "${TMR[ylw]}"
+#echo "${TMR[bg1]}"
+#echo "${TMR[fg1]}"
+#echo "${TMR[acf]}"
+#echo "${TMR[bg1]}"
+#echo "${TMR[bg1]}"
+#echo "${TMR[ylw]}"
+#echo "${TMR[acf]}"
+#echo "${TMR[ylw]}"
+dmenu_run -fn "luximono:size=15" ${@:-} \
+	-nb  "${TMR[acb]}" -nf  "${TMR[fg1]}" -sb  "${TMR[acf]}" -sf  "${TMR[acb]}" \
+	-nhb "${TMR[acb]}" -nhf "${TMR[ylw]}" -shb "${TMR[acf]}" -shf "${TMR[ylw]}"
