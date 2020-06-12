@@ -90,7 +90,7 @@ FLIST  () {
 			else if($0 ~ /.xlsx$/)           {print iXLS" "$0}
 			else if($0 ~ /.pptx$/)           {print iPPT" "$0}
 			else {print $0}
-		}' | i3menu --prompt "${2:-"rofind"}" -H 30 -w 30 -L 2 --color green)"
+		}' | dmrap -a lightblu -p "${2:-"rofind"}" -w 600 -L tc -l 15)"
 
 	[[ -z $TRG ]] && exit || \
 	case $TRG in

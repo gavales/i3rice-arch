@@ -67,7 +67,7 @@ super + minus
 super + equal
 	rofind
 
-super + shift + equal
+super + shift + minus
 	menunicon
 super + shift + grave
 	gencvl

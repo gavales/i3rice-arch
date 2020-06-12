@@ -26,6 +26,7 @@ iDIR=" " iFLE=" " iLNK=" " iHST=" "
 CRWN=$(pfw) ; CRWNT=$(xprop -id $CRWN | sed '/WINDOW_ROLE/!d')
 format="<span lang='%s'></span>%s\n"
 menopts="-L 2 -H 60 -w 30 --color blue"
+#menopts="-a lightblu -l 15 -L tc -H 30 -w 500"
 CMDLST="reddit"
 
 newlink()  {

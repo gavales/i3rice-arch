@@ -31,7 +31,7 @@ while true; do
 	shift
 done
 
-MENOPS="--location 1 -w 50 --color green"
+MENOPS="-a lightgrn -L tc -w 700"
 SCD=$XDG_PICTURES_DIR/shot
 TMP=${SCD}/tmp.png
 [[ -d $SCD ]] || {
@@ -42,7 +42,7 @@ TMP=${SCD}/tmp.png
 
 scrotname () {
 	TME="`date +%Y-%m-%d_%H:%M:%S`.png"
-	NME=$(echo "" | i3menu --prompt "Choose scrot name " $MENOPS)
+	NME=$(echo "" | dmrap $MENOPS -p "Choose scrot name ")
 	[[ -z $NME ]] && SCRNME=$TME || SCRNME="$NME.png"
 }
 
@@ -55,7 +55,7 @@ confirmscrot () {
 		}
 	sxiv $TMP
 	ACT=$(printf "%s\n" Save New Clipboard | \
-		i3menu --prompt "Save? " $MENOPS)
+		dmrap $MENOPS -p "Save? ")
 	if [[ $ACT == "Save" ]]; then
 		scrotname
 		mv $TMP ${SCD}/${SDR}/${SCRNME}
@@ -71,7 +71,7 @@ confirmscrot () {
 
 tmpscrot () {
 	[[ -n $SCRTPE ]] || SCRTPE=$(printf "%s\n" Fullscreen Selection | \
-		i3menu --prompt "Screenshot " $MENOPS)
+		dmrap $MENOPS -p "Screenshot ")
 	if [[ $SCRTPE == "Fullscreen" ]]; then
 		sleep .25
 		maim --hidecursor $TMP

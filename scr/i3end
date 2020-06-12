@@ -58,10 +58,9 @@ done
 
 OPT=${1}
 
-[[ -z $OPT ]] && OPT=$(printf "%s\n" "l lock" "e logout" \
-	"s suspend" "r reboot" "h hibernate" "x shutdown" | \
-	i3menu --prompt "SHUTDOWN [<ESC> to cancel]" -F -t onedark | \
-	awk '{print $1}')
+[[ -z $OPT ]] && \
+	OPT=$(echo -e "l lock\ne logout\ns suspend\nr reboot\nh hibernate\nx shutdown" | \
+	dmrap -p 'SHUTDOWN' -w 500 -H 50 -l 15 -L mc | awk '{print $1}')
 
 [[ -z $OPT ]] && exit
 

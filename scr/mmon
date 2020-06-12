@@ -31,7 +31,7 @@ ALL=$(xrandr -q | grep 'connected'    | awk '{print $1}')
 CNN=$(xrandr -q | grep ' connected'   | awk '{print $1}')
 DCN=$(xrandr -q | grep 'disconnected' | awk '{print $1}')
 LCN=$(echo $CNN | wc -w)
-MNOP="-w 100"
+MNOP="-a lightblu -H 35"
 
 onecon () {
 	xrandr --output "${CNN/ /}" --primary --auto
@@ -44,21 +44,21 @@ onecon () {
 }
 
 1_mon () {
-	MN1=$(printf "%s\n" $CNN | i3menu --prompt "Choose primary monitor " $MNOP)
+	MN1=$(printf "%s\n" $CNN | dmrap $MNOP -p "Choose primary monitor ")
 	xrandr --output "$MN1" --primary --auto
 	OFF=${ALL/${MN1}/}
 	echo ${OFF} | xargs -I {} xrandr --output "{}" --off
 }
 
 2_mon () {
-	MN1=$(printf "%s\n" $CNN | i3menu --prompt "Choose primary monitor " $MNOP)
+	MN1=$(printf "%s\n" $CNN | dmrap $MNOP -p "Choose primary monitor ")
 	CNN=${CNN/${MN1}/}
 	OFF=${ALL/${MN1}/}
 
-	MN2=$(printf "%s\n" $CNN | i3menu --prompt "Choose 2nd monitor " $MNOP)
+	MN2=$(printf "%s\n" $CNN | dmrap $MNOP -p "Choose 2nd monitor ")
 	OFF=${OFF/${MN2}/}
 	M2D=$(printf "%s\n" left-of right-of above below same-as | \
-		i3menu --prompt "2nd monitor position from 1st " $MNOP)
+		dmrap $MNOP -p "2nd monitor position from 1st ")
 
 	xrandr --output "$MN1" --primary --auto --output "$MN2" --"$M2D" "$MN1" --auto
 
@@ -66,21 +66,21 @@ onecon () {
 }
 
 3_mon () {
-	MN1=$(printf "%s\n" $CNN | i3menu --prompt "Choose primary monitor " $MNOP)
+	MN1=$(printf "%s\n" $CNN | dmrap $MNOP -p "Choose primary monitor ")
 	CNN=${CNN/${MN1}/}
 	OFF=${ALL/${MN1}/}
 
-	MN2=$(printf "%s\n" $CNN | i3menu --prompt "Choose 2nd monitor " $MNOP)
+	MN2=$(printf "%s\n" $CNN | dmrap $MNOP -p "Choose 2nd monitor ")
 	CNN=${CNN/${MN2}/}
 	OFF=${OFF/${MN2}/}
 	M2D=$(printf "%s\n" left-of right-of above below same-as | \
-		i3menu --prompt "2nd monitor position from 1st " $MNOP)
+		dmrap $MNOP -p "2nd monitor position from 1st ")
 
-	MN3=$(printf "%s\n" $CNN | i3menu --prompt "Choose 3nd monitor " $MNOP)
+	MN3=$(printf "%s\n" $CNN | dmrap $MNOP -p "Choose 3nd monitor ")
 	OFF=${OFF/${MN3}/}
 	M3D=$(printf "%s\n" left-of right-of above below same-as | \
-		i3menu --prompt "3rd monitor position " $MNOP)
-	WCH=$(printf "%s\n" $MN1 $MN2 | i3menu --prompt "Which monitor? " $MNOP)
+		dmrap $MNOP -p "3rd monitor position ")
+	WCH=$(printf "%s\n" $MN1 $MN2 | dmrap $MNOP -p "Which monitor? ")
 
 	xrandr --output "$MN1" --primary --auto --output "$MN2" \
 		--"$M2D" "$MN1" --auto --output "$MN3" --"$M3D" "$WCH" --auto
@@ -92,6 +92,6 @@ A_mon () { arandr && exit ; }
 
 [[ $LCN == 1 ]] && notify-send "Only one monitor connected!" && onecon
 MDE=$(printf "%s\n" "1 Monitor" "2 Monitors" "3 Monitors" "A ARandR" \
-	| i3menu --prompt "Choose mode" $MNOP | awk '{print $1}')
+	| dmrap $MNOP -p "Choose mode" | awk '{print $1}')
 ${MDE}_mon
 feh --bg-fill $HOME/pic/i3wallpaper/current

@@ -9,6 +9,7 @@ CHO=$(cat ${RFDR}/.menunicon \
 		${RFDR}/rofi-fontawesome/fa5-icon-list.txt \
 		${RFDR}/rofi-fontawesome/unicode-list.txt | \
 	i3menu -l 15 -w 50 -C 4)
+#	dmrap -l 15 -w 500 -L mc)
 
 if [[ $CHO =~ ^\<span ]]; then
 	echo -ne $(echo "$CHO" | awk -F';' -v RS='>' '
