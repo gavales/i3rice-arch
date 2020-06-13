@@ -108,7 +108,7 @@ themer
 
 # DEPENDENCIES
 
-`rofi`, `i3menu` - for gui menus
+`dmenu` (my build), `dmrap` - for gui menus
 `xsel` - copying variable for `--list varmenu`
 
 # EXAMPLES
@@ -711,13 +711,13 @@ O_list () {
 			;;
 		varmenu)
 			echo -n $(themer -v "$(cat $ALR | \
-					i3menu --prompt "$(themer -v name)" -l 25 -C 3 -n | \
+					dmrap -a bg1 -l 25 -L mc -w 600 -p "$(themer -v name)" | \
 					awk '{print $NF}') ") | \
 				xsel -i; xsel -o | xsel -i -b 
 			;;
 		themes)  ls ${TDR} | grep -v '^_';;
 		thememenu)
-			cat $LST | i3menu --prompt "Choose theme" -w 250 | \
+			cat $LST | dmrap -a bg1 -l 15 -L mc -w 600 | \
 				awk '{print $6}'
 			;;
 	esac

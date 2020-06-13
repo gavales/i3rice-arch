@@ -25,16 +25,16 @@ HSTDIR="${BKMDIR}/.history"
 iDIR=" " iFLE=" " iLNK=" " iHST=" "
 CRWN=$(pfw) ; CRWNT=$(xprop -id $CRWN | sed '/WINDOW_ROLE/!d')
 format="<span lang='%s'></span>%s\n"
-menopts="-L 2 -H 60 -w 30 --color blue"
-#menopts="-a lightblu -l 15 -L tc -H 30 -w 500"
+#menopts="-L 2 -H 60 -w 30 --color blue"
+menopts="-a lightblu -l 15 -L tc -H 30 -w 500"
 CMDLST="reddit"
 
 newlink()  {
 	local URL="${1}"
-	NAME="${O_name:-$(echo "" | i3menu $menopts -p 'choose name')}"
+	NAME="${O_name:-$(echo "" | dmrap $menopts -p 'choose name')}"
 	CAT="${O_cat:-$(find "$BKMDIR" -type f \
 		| sed '/\/\./d' | sed "s;${BKMDIR};${iFLE};g" \
-		| i3menu $menopts -p 'choose category')}"
+		| dmrap $menopts -p 'choose category')}"
 	TRG="${BKMDIR}/${CAT#* }"
 	mkdir -p "${TRG%/*}"
 	printf "[%s]: %s\n" "$NAME" "$URL" >> ${TRG}
@@ -69,7 +69,7 @@ filelist() {
 			gsub(/^[[]/,"",$1)
 			gsub(/&/,"&amp;",$2)
 			if(!a[$1]++){printf(format,$2,icon $1)}
-		}' | i3menu $menopts)"
+		}' | dmrap $menopts)"
 	CHOSEN="${CHOSEN#* }"
 	parsesel "${CHOSEN}"
 }
@@ -105,7 +105,7 @@ dirlist()  {
 					gsub(/&/,"&amp;",$2)
 					if(!a[$1]++){printf(format,$2,icon $1)}
 				}'
-	} | i3menu $menopts)"
+	} | dmrap $menopts)"
 	parsesel "${CHOSEN}"
 }
 
