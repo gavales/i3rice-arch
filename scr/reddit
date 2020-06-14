@@ -19,7 +19,7 @@ exit
 }
 
 CRWN=$(pfw) ; CRWNT=$(xprop -id $CRWN | sed '/WINDOW_ROLE/!d')
-menopts="-L 1 -H 100 -w 25"
+MENOPS="-L mc -w 500"
 
 while true; do
 	case $1 in
@@ -38,19 +38,19 @@ QUERY="${@:-}"
 prefix() {
 	if [[ -n $SEARCH ]]; then
 		PREFIX="https://www.reddit.com/search/?q="
-		PROMPT="Search "
+		PROMPT="Search"
 	elif [[ -n $SUBREDDIT ]]; then
 		PREFIX="https://www.reddit.com/r/"
 		SUFFIX="/new"
-		PROMPT="Name of Subreddit "
+		PROMPT="Subreddit"
 	else
-		TYPE=$(printf "%s\n" SEARCH SUBREDDIT | i3menu $menopts -p "Action")
+		TYPE=$(printf "%s\n" SEARCH SUBREDDIT | dmrap $MENOPS -p "Action")
 		[[ -z $TYPE ]] && SEARCH=1 || eval "$TYPE=1"
 		prefix
 	fi
 }
 query() {
-	[[ -z $QUERY ]] && QUERY=$(echo "" | i3menu $menopts -p "$PROMPT")
+	[[ -z $QUERY ]] && QUERY=$(echo "" | dmrap $MENOPS -p "$PROMPT")
 	[[ -z $QUERY ]] && exit 1
 }
 

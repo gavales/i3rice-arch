@@ -36,12 +36,16 @@ if [[ $CMD == "dmenu" ]]; then
 	cat /dev/stdin | dmenu ${@} \
 		-nb "${TMR[$ACC]}" -nf "${TMR[fg1]}" \
 		-sb "${TMR[fg1]}" -sf "${TMR[$ACC]}" \
-		-nhb "${TMR[$ACC]}" -nhf "${TMR[ylw]}" \
-		-shb "${TMR[fg1]}" -shf "${TMR[ylw]}"
+		-nhb "${TMR[$ACC]}" -nhf "${TMR[bg1]}" \
+		-shb "${TMR[fg1]}" -shf "${TMR[bg1]}" \
+		-hb "${TMR[$ACC]}" -hf "${TMR[acf]}" \
+		-ib "${TMR[$ACC]}" -if "${TMR[bg1]}"
 else
 	dmenu_run -p "run " ${@} \
 		-nb "${TMR[$ACC]}" -nf "${TMR[fg1]}" \
 		-sb "${TMR[fg1]}" -sf "${TMR[$ACC]}" \
-		-nhb "${TMR[$ACC]}" -nhf "${TMR[ylw]}" \
-		-shb "${TMR[fg1]}" -shf "${TMR[ylw]}"
+		-nhb "${TMR[$ACC]}" -nhf "${TMR[bg1]}" \
+		-shb "${TMR[fg1]}" -shf "${TMR[bg1]}" \
+		-hb "${TMR[$ACC]}" -hf "${TMR[acf]}" \
+		-ib "${TMR[$ACC]}" -if "${TMR[bg1]}"
 fi

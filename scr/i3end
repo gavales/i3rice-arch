@@ -60,7 +60,7 @@ OPT=${1}
 
 [[ -z $OPT ]] && \
 	OPT=$(echo -e "l lock\ne logout\ns suspend\nr reboot\nh hibernate\nx shutdown" | \
-	dmrap -p 'SHUTDOWN' -w 500 -H 50 -l 15 -L mc | awk '{print $1}')
+	dmrap -a darkred -p 'SHUTDOWN' -d 100 -w 1720 -H 150 -l 15 -L mc | awk '{print $1}')
 
 [[ -z $OPT ]] && exit
 

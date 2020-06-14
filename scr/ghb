@@ -56,7 +56,7 @@ exit
 
 new () {
 	[[ -n $1 ]] && POST="$1" || \
-		POST=$(ls content/posts | sed '/.md$/!d;s/.md//g' | i3menu -c green)
+		POST=$(ls content/posts | sed '/.md$/!d;s/.md//g' | dmrap -a lightgrn -L mc -w 400)
 	[[ -z $POST ]] && exit 1
 	[[ -f content/posts/${POST}.md ]] || hugo new posts/${POST}.md
 	hugo server &>/dev/null &

@@ -21,8 +21,8 @@ __rofind__  - `find` wrapper with `rofi`
 # DEPENDENCIES
 
 ```
-rofi
-i3menu
+dmenu-gavin
+dmrap
 ```
 
 # SYNOPSIS

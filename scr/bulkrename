@@ -7,6 +7,7 @@ EDITOR="gvim -f"
 NEWNME="$USER_TMP_DIR/.bulkrenamenew"
 OLDNME="$USER_TMP_DIR/.bulkrenameold"
 FINCMD="$USER_TMP_DIR/.finalcommands"
+MENOPS="-a lightblu -l 15 -L mc -w 1000"
 FILES="${1}"
 echo "$FILES" > $OLDNME
 sed -e "s/^'//g;s/'$//g;s/'\ '/\n/g" -i $OLDNME
@@ -17,10 +18,8 @@ sed -e "s/$/\"/g;s/^/\"/g" -i $NEWNME
 sed -e "s/$/\"/g;s/^/mv\ \"/g" -i $OLDNME
 paste $OLDNME $NEWNME > $FINCMD
 confirm () {
-	cat $FINCMD | i3menu -T -c white \
-		--prompt "FINALCOMMANDS [<Esc> to confirm] "
-	confirm=$(echo -e "Yes\nNo" | \
-		i3menu -T -c magenta -o --prompt "CONFIRM RENAME? ")
+	cat $FINCMD | dmrap $MENOPS -p 'Correct?'
+	confirm=$(echo -e "Yes\nNo" | dmrap $MENOPS -p 'RENAME?')
 	[[ $confirm == "Yes" ]] && source $FINCMD
 }
 confirm
