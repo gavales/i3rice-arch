@@ -21,6 +21,9 @@ Mc() { mv "$1" ~/.config/"$1" ; }
 alias gdh="cd ~/doc"
 Ydh() { cp -r "$1" ~/doc/"$1" ; }
 Mdh() { mv "$1" ~/doc/"$1" ; }
+alias gdb="cd ~/doc/bookmarks"
+Ydb() { cp -r "$1" ~/doc/bookmarks/"$1" ; }
+Mdb() { mv "$1" ~/doc/bookmarks/"$1" ; }
 alias gde="cd ~/doc/ebks"
 Yde() { cp -r "$1" ~/doc/ebks/"$1" ; }
 Mde() { mv "$1" ~/doc/ebks/"$1" ; }
@@ -30,6 +33,12 @@ Mdl() { mv "$1" ~/doc/lit/"$1" ; }
 alias gdm="cd ~/doc/mine"
 Ydm() { cp -r "$1" ~/doc/mine/"$1" ; }
 Mdm() { mv "$1" ~/doc/mine/"$1" ; }
+alias gdp="cd ~/doc/py"
+Ydp() { cp -r "$1" ~/doc/py/"$1" ; }
+Mdp() { mv "$1" ~/doc/py/"$1" ; }
+alias gdq="cd ~/doc/quads"
+Ydq() { cp -r "$1" ~/doc/quads/"$1" ; }
+Mdq() { mv "$1" ~/doc/quads/"$1" ; }
 alias gD="cd ~/dtp"
 YD() { cp -r "$1" ~/dtp/"$1" ; }
 MD() { mv "$1" ~/dtp/"$1" ; }

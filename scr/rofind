@@ -1,15 +1,25 @@
 #!/usr/bin/env bash
 
+ROFDIR=${HOME}/.config/rofi/rofind
+MNOP="-a lightblu -w 600 -L tc -l 15 -H 40"
+[[ -d $ROFDIR ]] || mkdir -p $ROFDIR
 cd ${HOME}
-LST="${HOME}/.config/rofi/.rofindlist"
-IGN="${HOME}/.config/rofi/.rofindignore"
-FOLDOPEN="thunar" FILEOPEN="$EDITOR"
-IMGOPEN="openimage" VIDOPEN="openvid" MUSOPEN="mpc insert"
-XBMOPEN="gthumb" PDFOPEN="zathura"
-MANOPEN="${TERMINAL:-"urxvt"} -e man"
-iIMG="" iVID="" iMUS="♫" iSCR=""
-iXBM="🖻" iPDF="" iMAN=""
-iDOC="" iXLS="" iPPT=""
+LSTNRM=${ROFDIR}/NRM LSTSCR=${ROFDIR}/SCR LSTIMG=${ROFDIR}/IMG
+LSTVID=${ROFDIR}/VID LSTMUS=${ROFDIR}/MUS LSTXBM=${ROFDIR}/XBM
+LSTPDF=${ROFDIR}/PDF LSTMAN=${ROFDIR}/MAN LSTDOC=${ROFDIR}/DOC
+LSTXLS=${ROFDIR}/XLS LSTPPT=${ROFDIR}/PPT IGN=${ROFDIR}/.ignore
+
+FOLDOPEN="thunar"    FILEOPEN="$EDITOR"
+IMGOPEN="openimage"  VIDOPEN="mpv"
+MUSOPEN="mpc add"    XBMOPEN="gthumb"
+PDFOPEN="zathura"    MANOPEN="${TERMINAL:-"urxvt"} -e man"
+
+iIMG="IMG " iVID="VID " iMUS="MUS " iSCR="SCR "
+iXBM="XBM " iPDF="PDF " iMAN="MAN "
+iDOC="DOC " iXLS="XLS " iPPT="PPT "
+#iIMG=" " iVID=" " iMUS="♫ " iSCR=" "
+#iXBM="🖻 " iPDF=" " iMAN=" "
+#iDOC=" " iXLS=" " iPPT=" "
 #find . -type d \( -path dir1 -o -path dir2 -o -path dir3 \) -prune -o -print
 
 help () {
@@ -41,22 +51,44 @@ EOB
 exit
 }
 
-while true; do
-	case $1 in
-#		--<++> | -<++> ) <++>="${2:-}" ; shift ;;
-		--help ) help ;;
-		-h ) help | \
-			sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | \
-			sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
-		-- ) shift ; break ;;
-		*  ) break         ;;
-	esac
-	shift
-done
+UPDATE () {
+	local CMD
+	cd "$HOME"
+	[[ -s $IGN ]] && CMD="$(awk '
+		BEGIN{print "find -L . -type d \\( "}
+		{ print "-path \""$0"\" -o" }
+		END{print " \\) -prune -o -print"}
+	' $IGN)" || CMD="find -L . -type d "
 
+	eval "$(echo ${CMD} | sed 's/-o \\)/\\)/g')" | \
+		awk -v HOME="~/" -v iSCR="$iSCR" \
+		-v iIMG="$iIMG" -v iVID="$iVID" -v iMUS="$iMUS" \
+		-v iXBM="$iXBM" -v iPDF="$iPDF" -v iMAN="$iMAN" \
+		-v iDOC="$iDOC" -v iXLS="$iXLS" -v iPPT="$iPPT" \
+		-v LSTSCR="$LSTSCR" -v LSTNRM="$LSTNRM" \
+		-v LSTIMG="$LSTIMG" -v LSTVID="$LSTVID" -v LSTMUS="$LSTMUS" \
+		-v LSTXBM="$LSTXBM" -v LSTPDF="$LSTPDF" -v LSTMAN="$LSTMAN" \
+		-v LSTDOC="$LSTDOC" -v LSTXLS="$LSTXLS" -v LSTPPT="$LSTPPT" '{
+#			gsub(/^\.\//,HOME,$0)
+			gsub(/^\.\//,"",$0)
+			if($0 ~ /.png$|.jpeg$|.jpg$|.svg$|.xpm$/){print iIMG $0 > LSTIMG}
+			else if($0 ~ /.mp4$|.mkv$|.mov$/){print iVID $0 > LSTVID}
+			else if($0 ~ /.mp3$/)            {print iMUS $0 > LSTMUS}
+			else if($0 ~ /.xbm$/)            {print iXBM $0 > LSTXBM}
+			else if($0 ~ /.pdf$|.epub$/)     {print iPDF $0 > LSTPDF}
+			else if($0 ~ /.sh$|.py$|.cpp$/)  {print iSCR $0 > LSTSCR}
+			else if($0 ~ /.1$/)              {print iMAN $0 > LSTMAN}
+			else if($0 ~ /.docx$/)           {print iDOC $0 > LSTDOC}
+			else if($0 ~ /.xlsx$/)           {print iXLS $0 > LSTXLS}
+			else if($0 ~ /.pptx$/)           {print iPPT $0 > LSTPPT}
+			else {print $0 > LSTNRM}
+		}'
+
+	exit 1
+}
 NORMAL () {
 #	[[ -d "${1}" ]] && eval "$FOLDOPEN \"${1}\""
-	[[ -d "${1}" ]] && FLIST "${1}" "${1/$HOME/}"
+	[[ -d "${1}" ]] && FLIST "${1}" "${1/$HOME/'~'}"
 	[[ -f "${1}" ]] && eval "$FILEOPEN \"${1}\""
 }
 FLIST  () {
@@ -64,15 +96,16 @@ FLIST  () {
 #		{c++;gsub(/\.\//,"",$0);printf("-name \"%s\" ",$0)
 #			if(c!=LEN){printf("%s","! ")}}
 #		END{print ""}
-	local DIR="$1"
-	cd "$DIR"
-	[[ -s $IGN ]] && CMD="$(awk '
-		BEGIN{print "find -L . -type d \\( "}
-		{ print "-path \""$0"\" -o" }
-		END{print " \\) -prune -o -print"}
-	' $IGN)" || CMD="find -L . -type d "
+	local CMD DIR="$1"
+	if [[ -d "$DIR" ]]; then
+		cd "$DIR"
+		[[ -s $IGN ]] && CMD="$(awk '
+			BEGIN{print "find -L . -type d \\( "}
+			{ print "-path \""$0"\" -o" }
+			END{print " \\) -prune -o -print"}
+		' $IGN)" || CMD="find -L . -type d "
 
-	TRG="$(eval "$(echo ${CMD} | sed 's/-o \\)/\\)/g')" | \
+		TRG="$(eval "$(echo ${CMD} | sed 's/-o \\)/\\)/g')" | \
 		awk -v HOME="~/" -v iSCR="$iSCR" \
 		-v iIMG="$iIMG" -v iVID="$iVID" -v iMUS="$iMUS" \
 		-v iXBM="$iXBM" -v iPDF="$iPDF" -v iMAN="$iMAN" \
@@ -90,24 +123,41 @@ FLIST  () {
 			else if($0 ~ /.xlsx$/)           {print iXLS" "$0}
 			else if($0 ~ /.pptx$/)           {print iPPT" "$0}
 			else {print $0}
-		}' | dmrap -a lightblu -p "${2:-"rofind"}" -w 600 -L tc -l 15)"
+		}' | dmrap $MNOP -p "${2:-"rofind"}")"
+
+	else
+		TPE="$(ls $ROFDIR | dmrap $MNOP -p "${2:-"rofind"}")"
+		[[ -z $TPE ]] && exit 1 || \
+			TRG="$(cat "${ROFDIR}/${TPE}" | dmrap $MNOP -p "${2:-"rofind"}")"
+	fi
 
 	[[ -z $TRG ]] && exit || \
 	case $TRG in
-		$iSCR*) $FILEOPEN "${TRG/"$iSCR "/${HOME}\/}" ;;
-		$iIMG*) $IMGOPEN  "${TRG/"$iIMG "/${HOME}\/}" ;;
-		$iVID*) $VIDOPEN  "${TRG/"$iVID "/${HOME}\/}" ;;
-		$iMUS*) $MUSOPEN  "${TRG/"$iMUS "/${HOME}\/}" ;;
-		$iXBM*) $XBMOPEN  "${TRG/"$iXBM "/${HOME}\/}" ;;
-		$iPDF*) $PDFOPEN  "${TRG/"$iPDF "/${HOME}\/}" ;;
-		$iMAN*) $MANOPEN  "${TRG/"$iMAN "/${HOME}\/}" ;;
-		$iDOC*) lowriter  "${TRG/"$iDOC "/${HOME}\/}" ;;
-		$iXLS*) localc    "${TRG/"$iXLS "/${HOME}\/}" ;;
-		$iPPT*) loimpress "${TRG/"$iPPT "/${HOME}\/}" ;;
+		$iSCR*) $FILEOPEN "${TRG/$iSCR/${HOME}\/}" ;;
+		$iIMG*) $IMGOPEN  "${TRG/$iIMG/${HOME}\/}" ;;
+		$iVID*) $VIDOPEN  "${TRG/$iVID/${HOME}\/}" ;;
+		$iMUS*) $MUSOPEN  "${TRG/$iMUS/${HOME}\/}" ;;
+		$iXBM*) $XBMOPEN  "${TRG/$iXBM/${HOME}\/}" ;;
+		$iPDF*) $PDFOPEN  "${TRG/$iPDF/${HOME}\/}" ;;
+		$iMAN*) $MANOPEN  "${TRG/$iMAN/${HOME}\/}" ;;
+		$iDOC*) lowriter  "${TRG/$iDOC/${HOME}\/}" ;;
+		$iXLS*) localc    "${TRG/$iXLS/${HOME}\/}" ;;
+		$iPPT*) loimpress "${TRG/$iPPT/${HOME}\/}" ;;
 		*)      NORMAL    "${HOME}/${TRG}" ;;
-#		*)      NORMAL    "${TRG/''/${HOME}}" ;;
 	esac
 }
 
-FLIST "${HOME}"
+while true; do
+	case $1 in
+		--update | -u ) UPDATE ;;
+		--help ) help ;;
+		-h ) help | \
+			sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | \
+			sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
 
+[[ -z $@ ]] && FLIST || exit 1

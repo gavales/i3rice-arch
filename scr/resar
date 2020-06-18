@@ -1,0 +1,108 @@
+#!/usr/bin/env bash
+
+I3="i3-msg -q"
+TTLB=22 BRDR=2 POR=0
+DECH=$((TTLB + BRDR)) DECW=$((2*BRDR))
+CMD="$I3 resize"
+
+while true; do
+	case $1 in
+		--incar    | -i | i ) INC=1 ;;
+		--decar    | -d | d ) DEC=1 ;;
+		--archange | -a | a ) ARC="${2:-}" ; shift ;;
+		--mark     | -m | m ) MRK="${2:-}" ; shift ;;
+		--help ) help ;;
+		-h ) help | \
+			sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | \
+			sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g'
+			exit
+			;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+getaspect() {
+	local W H
+	W=$1 H=$2
+	W=$((W - DECW)) H=$((H - DECH))
+	((W<H)) && POR=1
+	awk -v WD="$W" -v HD="$H" 'BEGIN{
+		if (WD<HD){AR=HD/WD;}
+		else{AR=WD/HD;}
+		print AR
+	}'
+}
+
+omark() {
+	$I3 [con_mark=$1] focus
+	$I3 focus child
+}
+
+archange() {
+	local W H WD HD ARN DIR
+	ARN=$1 FIX=$2
+}
+
+main() {
+	local FST SND W H WD HD OW OH
+	FST=$1 SND=$2
+	eval "$(wmctrl -lG | awk -v FOC="$(pfw)" '$1 ~ FOC {print "OW="$5"\nOH="$6}')"
+	WD=${FST:0:1} HD=${SND:0:1}
+	[[ $WD =~ ^[0-9] ]] && W=$FST || W=${FST/$WD/}
+	[[ $HD =~ ^[0-9] ]] && H=$SND || H=${SND/$HD/}
+	W=$((W-DECW)) H=$((H-DECH))
+	echo $FST $SND
+	echo $OW $OH
+	echo $W $H
+
+	if   [[ -n $INC ]]; then
+		awk -v DW="$DECW" -v DH="$DECH" \
+			-v INC="$OW" -v DIR="$SND" -v W="$OW" -v H="$OH" 'BEGIN{
+			if(W<H){ AR=H/W;POR=1 }
+			else{ AR=W/H;POR=0 }
+			if(DIR=="h"){
+				NH=H+INC
+				if(POR==1){NW=NH/AR}
+				else{NW=NH*AR}
+				print "i3-msg -q resize set "NW" "NH
+			}
+			else {
+				NW=W+INC
+				if(POR==1){NH=NW*AR}
+				else{NH=NW/AR}
+				print "i3-msg -q resize set "NW" "NH
+			}
+		}'
+
+	elif [[ -n $DEC ]]; then
+		:
+	elif [[ -n $ARC ]]; then
+		:
+	else
+		if   [[ $WD == "+" ]]; then WDT="$CMD grow width $W px or $W ppt"
+		elif [[ $WD == "-" ]]; then WDT="$CMD shrink width $W px or $W ppt"
+		elif [[ $WD == "%" ]]; then WDT="$CMD set width $W ppt"
+		elif [[ $WD == "*" ]]; then WDT=""
+		else                        WDT="$CMD set width  $W"
+		fi
+
+		if   [[ $HD == "+" ]]; then HDT="$CMD grow height $H px or $H ppt"
+		elif [[ $HD == "-" ]]; then HDT="$CMD shrink height $H px or $H ppt"
+		elif [[ $HD == "%" ]]; then HDT="$CMD set height $H ppt"
+		elif [[ $HD == "*" ]]; then HDT=""
+		else                        HDT="$CMD set height $H"
+		fi
+
+#		eval "$(echo $WDT)"
+#		eval "$(echo $HDT)"
+		echo $WDT
+		echo $HDT
+	fi
+
+
+	exit
+}
+
+main $@

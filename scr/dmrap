@@ -23,7 +23,8 @@ exit
 while true; do
 	case $1 in
 		--run    | -r ) CMD=dmenu_run ;;
-		--accent | -a ) ACC="${2:-}" ; shift ;;
+		--font   | -f ) FONT="${2:-}" ; shift ;;
+		--accent | -a ) ACC="${2:-}"  ; shift ;;
 		--help ) help ;;
 		-h ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
 		-- ) shift ; break ;;
@@ -33,19 +34,19 @@ while true; do
 done
 
 if [[ $CMD == "dmenu" ]]; then
-	cat /dev/stdin | dmenu ${@} \
-		-nb "${TMR[$ACC]}" -nf "${TMR[fg1]}" \
-		-sb "${TMR[fg1]}" -sf "${TMR[$ACC]}" \
+	cat /dev/stdin | dmenu ${@} -fn "${FONT:-"Iosevka 15"}" \
+		-nb  "${TMR[$ACC]}" -nf  "${TMR[fg1]}" \
+		-sb  "${TMR[fg1]}"  -sf  "${TMR[$ACC]}" \
 		-nhb "${TMR[$ACC]}" -nhf "${TMR[bg1]}" \
-		-shb "${TMR[fg1]}" -shf "${TMR[bg1]}" \
-		-hb "${TMR[$ACC]}" -hf "${TMR[acf]}" \
-		-ib "${TMR[$ACC]}" -if "${TMR[bg1]}"
+		-shb "${TMR[fg1]}"  -shf "${TMR[bg1]}" \
+		-hb  "${TMR[$ACC]}" -hf  "${TMR[acf]}" \
+		-ib  "${TMR[$ACC]}" -if  "${TMR[bg1]}"
 else
-	dmenu_run -p "run " ${@} \
-		-nb "${TMR[$ACC]}" -nf "${TMR[fg1]}" \
-		-sb "${TMR[fg1]}" -sf "${TMR[$ACC]}" \
+	dmenu_run -p "run " ${@} -fn "${FONT:-"Iosevka 15"}" \
+		-nb  "${TMR[$ACC]}" -nf  "${TMR[fg1]}" \
+		-sb  "${TMR[fg1]}"  -sf  "${TMR[$ACC]}" \
 		-nhb "${TMR[$ACC]}" -nhf "${TMR[bg1]}" \
-		-shb "${TMR[fg1]}" -shf "${TMR[bg1]}" \
-		-hb "${TMR[$ACC]}" -hf "${TMR[acf]}" \
-		-ib "${TMR[$ACC]}" -if "${TMR[bg1]}"
+		-shb "${TMR[fg1]}"  -shf "${TMR[bg1]}" \
+		-hb  "${TMR[$ACC]}" -hf  "${TMR[acf]}" \
+		-ib  "${TMR[$ACC]}" -if  "${TMR[bg1]}"
 fi

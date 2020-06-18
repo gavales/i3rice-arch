@@ -6407,3 +6407,13 @@ Jun 04 16:01 : client: [36] closed
 Jun 04 16:01 : client: [37] opened from [::1]:41686
 Jun 04 16:01 : client: [37] closed
 Jun 04 16:01 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 16 19:50 : client: [38] opened from [::1]:48746
+Jun 16 19:50 : exception: Access denied
+Jun 16 19:50 : client: [38] closed
+Jun 16 20:24 : client: [39] opened from [::1]:48952
+Jun 16 20:24 : client: [39] closed
+Jun 16 20:26 : player: played "Jaco Pastorius/Jaco Pastorius/06 Opus Pocus.mp3"
+Jun 17 14:25 : player: played "Jaco Pastorius/Jaco Pastorius/04 Kuru_Speak Like A Child.mp3"
+Jun 17 14:26 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 17 14:26 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 17 14:26 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.

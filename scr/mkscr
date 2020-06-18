@@ -83,7 +83,11 @@ while true; do
 	case $1 in
 #		--<++> | -<++> ) <++>="${2:-}" ; shift ;;
 		--help ) help ;;
-		-h ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
+		-h ) help | \
+			sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | \
+			sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g'
+			exit
+			;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac

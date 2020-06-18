@@ -205,26 +205,30 @@ CMK4() {
 
 O_resize() {
 	MRK=_W${1%% *} CMD="i3-msg [con_mark=$MRK] resize "
-	W=${1% *}
-	W=${W#* }  WD=${W:0:1}
-	H=${1##* } HD=${H:0:1}
+	W=${1% *} H=${1##* }
+	W=${W#* }
+	WD=${W:0:1} HD=${H:0:1}
+	[[ $WD =~ ^[0-9] ]] || W=${W/$WD/}
+	[[ $HD =~ ^[0-9] ]] || H=${H/$HD/}
 
-	if   [[ $WD == "+" ]]; then WDT="${CMD}grow width ${W/+/} px or ${W/+/} ppt"
-	elif [[ $WD == "-" ]]; then WDT="${CMD}shrink width ${W/-/} px or ${W/-/} ppt"
-	elif [[ $WD == "%" ]]; then WDT="${CMD}set width ${W/\%/} ppt"
+	if   [[ $WD == "+" ]]; then WDT="$CMD grow width $W px or $W ppt"
+	elif [[ $WD == "-" ]]; then WDT="$CMD shrink width $W px or $W ppt"
+	elif [[ $WD == "%" ]]; then WDT="$CMD set width $W ppt"
 	elif [[ $WD == "*" ]]; then WDT=""
-	else                        WDT="${CMD}set width  $W"
+	else                        WDT="$CMD set width  $W"
 	fi
 
-	if   [[ $HD == "+" ]]; then HDT="${CMD}grow height ${H/+/} px or ${H/+/} ppt"
-	elif [[ $HD == "-" ]]; then HDT="${CMD}shrink height ${H/-/} px or ${H/-/} ppt"
-	elif [[ $HD == "%" ]]; then HDT="${CMD}set height ${H/\%/} ppt"
+	if   [[ $HD == "+" ]]; then HDT="$CMD grow height $H px or $H ppt"
+	elif [[ $HD == "-" ]]; then HDT="$CMD shrink height $H px or $H ppt"
+	elif [[ $HD == "%" ]]; then HDT="$CMD set height $H ppt"
 	elif [[ $HD == "*" ]]; then HDT=""
-	else                        HDT="${CMD}set height $H"
+	else                        HDT="$CMD set height $H"
 	fi
 
 	eval "$(echo $WDT)"
 	eval "$(echo $HDT)"
+#	echo $WDT
+#	echo $HDT
 	exit
 }
 
