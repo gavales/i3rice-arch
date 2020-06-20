@@ -6417,3 +6417,7 @@ Jun 17 14:25 : player: played "Jaco Pastorius/Jaco Pastorius/04 Kuru_Speak Like 
 Jun 17 14:26 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Jun 17 14:26 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Jun 17 14:26 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Jun 20 13:52 : player: played "Jaco Pastorius/Jaco Pastorius/04 Kuru_Speak Like A Child.mp3"
+Jun 20 15:26 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 20 15:26 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 20 15:26 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.

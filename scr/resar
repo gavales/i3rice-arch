@@ -23,18 +23,6 @@ while true; do
 	shift
 done
 
-getaspect() {
-	local W H
-	W=$1 H=$2
-	W=$((W - DECW)) H=$((H - DECH))
-	((W<H)) && POR=1
-	awk -v WD="$W" -v HD="$H" 'BEGIN{
-		if (WD<HD){AR=HD/WD;}
-		else{AR=WD/HD;}
-		print AR
-	}'
-}
-
 omark() {
 	$I3 [con_mark=$1] focus
 	$I3 focus child
@@ -52,32 +40,53 @@ main() {
 	WD=${FST:0:1} HD=${SND:0:1}
 	[[ $WD =~ ^[0-9] ]] && W=$FST || W=${FST/$WD/}
 	[[ $HD =~ ^[0-9] ]] && H=$SND || H=${SND/$HD/}
-	W=$((W-DECW)) H=$((H-DECH))
+#	W=$((W-DECW)) H=$((H-DECH))
 	echo $FST $SND
+	echo $OW $OH
+	OW=$((OW-DECW)) OH=$((OH-DECH))
 	echo $OW $OH
 	echo $W $H
 
 	if   [[ -n $INC ]]; then
 		awk -v DW="$DECW" -v DH="$DECH" \
-			-v INC="$OW" -v DIR="$SND" -v W="$OW" -v H="$OH" 'BEGIN{
+			-v INC="$FST" -v DIR="$SND" -v W="$OW" -v H="$OH" 'BEGIN{
 			if(W<H){ AR=H/W;POR=1 }
 			else{ AR=W/H;POR=0 }
+			print AR" "POR
 			if(DIR=="h"){
-				NH=H+INC
-				if(POR==1){NW=NH/AR}
-				else{NW=NH*AR}
+				NH=H+INC+DH
+				if(POR==1){NW=int(NH/AR)+DW}
+				else{NW=int(NH*AR)+DW}
 				print "i3-msg -q resize set "NW" "NH
 			}
 			else {
-				NW=W+INC
-				if(POR==1){NH=NW*AR}
-				else{NH=NW/AR}
+				NW=W+INC+DW
+				if(POR==1){NH=int(NW*AR)+DH}
+				else{NH=int(NW/AR)+DH}
 				print "i3-msg -q resize set "NW" "NH
 			}
 		}'
 
 	elif [[ -n $DEC ]]; then
-		:
+		awk -v DW="$DECW" -v DH="$DECH" \
+			-v INC="$FST" -v DIR="$SND" -v W="$OW" -v H="$OH" 'BEGIN{
+			if(H>W){ AR=H/W;POR=1 }
+			else{ AR=W/H;POR=0 }
+			print AR" "POR
+			if(DIR=="h"){
+				NH=H-INC+DH
+				if(POR==1){NW=int(NH/AR)+DW}
+				else{NW=int(NH*AR)+DW}
+				print "i3-msg -q resize set "NW" "NH
+			}
+			else {
+				NW=W-INC+DW
+				if(POR==1){NH=int(NW*AR)+DH}
+				else{NH=int(NW/AR)+DH}
+				print "i3-msg -q resize set "NW" "NH
+			}
+		}'
+
 	elif [[ -n $ARC ]]; then
 		:
 	else

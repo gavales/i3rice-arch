@@ -1,8 +1,3 @@
-rename (2007) Afro Samurai [DC].mkv
-rename (2009) Afro Samurai Resurrection.mkv
-rename Dune
-rename Dune 2000
-rename (2000) Dune
 rename Frank Herbert's Dune
 search otf
 open_with 2
@@ -47,4 +42,9 @@ rename Dragon Ball Super
 rename [Funimation DUB] Dragon Ball Super Season 3 [1080p][x265][EXIL3]
 rename 3
 rename [Funimation DUB] Dragon Ball Super Season 4 [1080p][x265][EXIL3]
+rename giorno.png
+rename giorno
+open_with mov
 open_with mpv
+rename .xmonad.orig
+shell git clone https://github.com/randomthought/xmonad-config.git .xmonad
