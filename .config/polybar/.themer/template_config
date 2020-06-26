@@ -98,28 +98,11 @@ content-background = %%acc%%
 content-foreground = %%fg0%%
 content-padding = 0
 
-[module/startfvwm]
-type = custom/text
-content = %{T1}  %{T-}
-click-left = i3menu -s -y 50 -x 10 -c blue -l 1
-click-right = menunicode
-content-background = %%acc%%
-content-foreground = %%fg0%%
-content-padding = 1
-
 [module/td]
 type = custom/script
 exec = bash ~/scr/pb/td
 ;format-background = %%acc%%
 format-foreground = %%fg0%%
-format-padding = 1
-interval = 1
-
-[module/fvwmtd]
-type = custom/script
-exec = bash ~/scr/pb/td
-format-background = %%acc%%
-format-foreground = %%bg0%%
 format-padding = 1
 interval = 1
 
@@ -180,18 +163,6 @@ format-background = %%bg0%%
 format-foreground = %%fg0%%
 format-padding = 1
 
-[module/arrow1]
-type = custom/text
-content = %{T4}  %{T-}
-content-foreground = %%ac37f%%
-content-background = ${colors.tr}
-
-[module/arrow2]
-type = custom/text
-content = %{T4} %{T-}
-content-foreground = %%ac63f%%
-content-background = ${colors.tr}
- 
 [module/i3media]
 type = custom/ipc
 hook-0 = pbcat -m i3media
@@ -201,18 +172,6 @@ click-left = i3media
 format-foreground = %%bg0%%
 format-padding = 1
 
-[module/arrow3]
-type = custom/text
-content = %{T4}  %{T-}
-content-foreground = %%ac63f%%
-content-background = ${colors.tr}
- 
-[module/arrow4]
-type = custom/text
-content = %{T4} %{T-}
-content-foreground = %%ac50f%%
-content-background = ${colors.tr}
- 
 [module/disk]
 type = custom/script
 exec = bash ~/scr/pb/disk

@@ -8,3 +8,4 @@ XRS=$HOME/.Xresources
 cat ".themer/${1}/.Xresources" | sed "s/\%\%.*\%\%//g" > $XRS
 xrdb -load $XRS
 kill -1 $(pidof urxvtd)
+pidof st | xargs kill -SIGUSR1

@@ -45,18 +45,33 @@ MD() { mv "$1" ~/dtp/"$1" ; }
 alias ggh="cd ~/git"
 Ygh() { cp -r "$1" ~/git/"$1" ; }
 Mgh() { mv "$1" ~/git/"$1" ; }
-alias ggd="cd ~/git/i3rice-arch"
-Ygd() { cp -r "$1" ~/git/i3rice-arch/"$1" ; }
-Mgd() { mv "$1" ~/git/i3rice-arch/"$1" ; }
-alias ggi="cd ~/git/icons_themer"
-Ygi() { cp -r "$1" ~/git/icons_themer/"$1" ; }
-Mgi() { mv "$1" ~/git/icons_themer/"$1" ; }
+alias ggb="cd ~/git/public"
+Ygb() { cp -r "$1" ~/git/public/"$1" ; }
+Mgb() { mv "$1" ~/git/public/"$1" ; }
+alias ggd="cd ~/git/dwm"
+Ygd() { cp -r "$1" ~/git/dwm/"$1" ; }
+Mgd() { mv "$1" ~/git/dwm/"$1" ; }
+alias ggf="cd ~/git/farbfeld"
+Ygf() { cp -r "$1" ~/git/farbfeld/"$1" ; }
+Mgf() { mv "$1" ~/git/farbfeld/"$1" ; }
 alias ggg="cd ~/git/ghb"
 Ygg() { cp -r "$1" ~/git/ghb/"$1" ; }
 Mgg() { mv "$1" ~/git/ghb/"$1" ; }
-alias ggp="cd ~/git/public"
-Ygp() { cp -r "$1" ~/git/public/"$1" ; }
-Mgp() { mv "$1" ~/git/public/"$1" ; }
+alias ggi="cd ~/git/i3rice-arch"
+Ygi() { cp -r "$1" ~/git/i3rice-arch/"$1" ; }
+Mgi() { mv "$1" ~/git/i3rice-arch/"$1" ; }
+alias ggm="cd ~/git/dmenu-gavin"
+Ygm() { cp -r "$1" ~/git/dmenu-gavin/"$1" ; }
+Mgm() { mv "$1" ~/git/dmenu-gavin/"$1" ; }
+alias ggn="cd ~/git/numix"
+Ygn() { cp -r "$1" ~/git/numix/"$1" ; }
+Mgn() { mv "$1" ~/git/numix/"$1" ; }
+alias ggw="cd ~/git/i3rice-arch.wiki"
+Ygw() { cp -r "$1" ~/git/i3rice-arch.wiki/"$1" ; }
+Mgw() { mv "$1" ~/git/i3rice-arch.wiki/"$1" ; }
+alias ggs="cd ~/git/sent"
+Ygs() { cp -r "$1" ~/git/sent/"$1" ; }
+Mgs() { mv "$1" ~/git/sent/"$1" ; }
 alias glh="cd /run/media/gavarch/LILPRECIOUS"
 Ylh() { cp -r "$1" /run/media/gavarch/LILPRECIOUS/"$1" ; }
 Mlh() { mv "$1" /run/media/gavarch/LILPRECIOUS/"$1" ; }

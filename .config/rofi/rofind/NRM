@@ -1872,15 +1872,24 @@ git/public/css/syntax.css
 git/public/css/.themer_post
 git/public/css/.themer
 git/public/css/.themer/template_hyde.css
+git/public/css/.themer/mywal-dark
+git/public/css/.themer/mywal-dark/hyde.css
+git/public/css/.themer/mywal-dark/poole.css
 git/public/css/.themer/gruvbox-dark
 git/public/css/.themer/gruvbox-dark/hyde.css
 git/public/css/.themer/gruvbox-dark/poole.css
 git/public/css/.themer/addypaper-dark
 git/public/css/.themer/addypaper-dark/hyde.css
 git/public/css/.themer/addypaper-dark/poole.css
+git/public/css/.themer/giorno-dark
+git/public/css/.themer/giorno-dark/hyde.css
+git/public/css/.themer/giorno-dark/poole.css
 git/public/css/.themer/i3
 git/public/css/.themer/i3/hyde.css
 git/public/css/.themer/i3/poole.css
+git/public/css/.themer/giorno
+git/public/css/.themer/giorno/hyde.css
+git/public/css/.themer/giorno/poole.css
 git/public/css/.themer/addypaper
 git/public/css/.themer/addypaper/hyde.css
 git/public/css/.themer/addypaper/poole.css
@@ -1919,15 +1928,24 @@ git/ghb/public/css/syntax.css
 git/ghb/public/css/.themer_post
 git/ghb/public/css/.themer
 git/ghb/public/css/.themer/template_hyde.css
+git/ghb/public/css/.themer/mywal-dark
+git/ghb/public/css/.themer/mywal-dark/hyde.css
+git/ghb/public/css/.themer/mywal-dark/poole.css
 git/ghb/public/css/.themer/gruvbox-dark
 git/ghb/public/css/.themer/gruvbox-dark/hyde.css
 git/ghb/public/css/.themer/gruvbox-dark/poole.css
 git/ghb/public/css/.themer/addypaper-dark
 git/ghb/public/css/.themer/addypaper-dark/hyde.css
 git/ghb/public/css/.themer/addypaper-dark/poole.css
+git/ghb/public/css/.themer/giorno-dark
+git/ghb/public/css/.themer/giorno-dark/hyde.css
+git/ghb/public/css/.themer/giorno-dark/poole.css
 git/ghb/public/css/.themer/i3
 git/ghb/public/css/.themer/i3/hyde.css
 git/ghb/public/css/.themer/i3/poole.css
+git/ghb/public/css/.themer/giorno
+git/ghb/public/css/.themer/giorno/hyde.css
+git/ghb/public/css/.themer/giorno/poole.css
 git/ghb/public/css/.themer/addypaper
 git/ghb/public/css/.themer/addypaper/hyde.css
 git/ghb/public/css/.themer/addypaper/poole.css
@@ -1978,22 +1996,10 @@ git/ghb/themes/hyde/static/css/syntax.css
 git/ghb/themes/hyde/static/css/.themer_post
 git/ghb/themes/hyde/static/css/.themer
 git/ghb/themes/hyde/static/css/.themer/template_hyde.css
-git/ghb/themes/hyde/static/css/.themer/gruvbox-dark
-git/ghb/themes/hyde/static/css/.themer/gruvbox-dark/hyde.css
-git/ghb/themes/hyde/static/css/.themer/gruvbox-dark/poole.css
-git/ghb/themes/hyde/static/css/.themer/addypaper-dark
-git/ghb/themes/hyde/static/css/.themer/addypaper-dark/hyde.css
-git/ghb/themes/hyde/static/css/.themer/addypaper-dark/poole.css
-git/ghb/themes/hyde/static/css/.themer/i3
-git/ghb/themes/hyde/static/css/.themer/i3/hyde.css
-git/ghb/themes/hyde/static/css/.themer/i3/poole.css
-git/ghb/themes/hyde/static/css/.themer/addypaper
-git/ghb/themes/hyde/static/css/.themer/addypaper/hyde.css
-git/ghb/themes/hyde/static/css/.themer/addypaper/poole.css
+git/ghb/themes/hyde/static/css/.themer/giorno-dark
+git/ghb/themes/hyde/static/css/.themer/giorno-dark/hyde.css
+git/ghb/themes/hyde/static/css/.themer/giorno-dark/poole.css
 git/ghb/themes/hyde/static/css/.themer/template_poole.css
-git/ghb/themes/hyde/static/css/.themer/gruvbox
-git/ghb/themes/hyde/static/css/.themer/gruvbox/hyde.css
-git/ghb/themes/hyde/static/css/.themer/gruvbox/poole.css
 git/ghb/themes/hyde/README.md
 git/ghb/themes/hyde/layouts
 git/ghb/themes/hyde/layouts/404.html
@@ -2220,12 +2226,16 @@ git/numix/README.md
 git/numix/.themer_post
 git/numix/.hound.yml
 git/numix/.themer
+git/numix/.themer/mywal-dark
+git/numix/.themer/mywal-dark/Themer.colors
 git/numix/.themer/Themer-dark.colors
 git/numix/.themer/gruvbox-dark
 git/numix/.themer/gruvbox-dark/Themer.colors
 git/numix/.themer/template_Themer.colors
 git/numix/.themer/addypaper-dark
 git/numix/.themer/addypaper-dark/Themer.colors
+git/numix/.themer/giorno-dark
+git/numix/.themer/giorno-dark/Themer.colors
 git/numix/.themer/i3
 git/numix/.themer/i3/Themer.colors
 git/numix/.themer/addypaper
@@ -2367,17 +2377,9 @@ xrs/old/0theme.Xresources
 xrs/old/template_0theme.Xresources
 xrs/.themer_post
 xrs/.themer
-xrs/.themer/gruvbox-dark
-xrs/.themer/gruvbox-dark/.Xresources
 xrs/.themer/template_.Xresources
-xrs/.themer/addypaper-dark
-xrs/.themer/addypaper-dark/.Xresources
-xrs/.themer/i3
-xrs/.themer/i3/.Xresources
-xrs/.themer/addypaper
-xrs/.themer/addypaper/.Xresources
-xrs/.themer/gruvbox
-xrs/.themer/gruvbox/.Xresources
+xrs/.themer/giorno-dark
+xrs/.themer/giorno-dark/.Xresources
 pic
 pic/alba
 pic/alba/test
@@ -2475,6 +2477,7 @@ pic/gwc/blur/Galápagossealion
 pic/gwc/blur/GeneralGrantGroveCalifornia
 pic/gwc/blur/gentoopenguin
 pic/gwc/blur/GhentBelgium
+pic/gwc/blur/giorno
 pic/gwc/blur/GlencoeHIghlandsScotlandUK
 pic/gwc/blur/GreatBahamaBankBahamas
 pic/gwc/blur/HallstattAustria(2)
@@ -2714,6 +2717,7 @@ pic/gwc/normal/Galápagossealion
 pic/gwc/normal/GeneralGrantGroveCalifornia
 pic/gwc/normal/gentoopenguin
 pic/gwc/normal/GhentBelgium
+pic/gwc/normal/giorno
 pic/gwc/normal/GlencoeHIghlandsScotlandUK
 pic/gwc/normal/GreatBahamaBankBahamas
 pic/gwc/normal/HallstattAustria(2)
@@ -10846,16 +10850,8 @@ scr2/bandwidth
 .vim/colors/.themer_post
 .vim/colors/.themer
 .vim/colors/.themer/template_themer.vim
-.vim/colors/.themer/gruvbox-dark
-.vim/colors/.themer/gruvbox-dark/themer.vim
-.vim/colors/.themer/addypaper-dark
-.vim/colors/.themer/addypaper-dark/themer.vim
-.vim/colors/.themer/i3
-.vim/colors/.themer/i3/themer.vim
-.vim/colors/.themer/addypaper
-.vim/colors/.themer/addypaper/themer.vim
-.vim/colors/.themer/gruvbox
-.vim/colors/.themer/gruvbox/themer.vim
+.vim/colors/.themer/giorno-dark
+.vim/colors/.themer/giorno-dark/themer.vim
 .vim/colors/themer.vim
 .vim/syntax
 .vim/syntax/goste.vim
@@ -11684,6 +11680,7 @@ dtp/goste/yt.goste
 .zoom/data/conf_avatar_6197d6a7d26f43e099809f747c6226b4_2
 .zoom/data/conf_avatar_36bb12061e9f20746f7521a8e4f2a6cb_2
 .zoom/data/conf_avatar_2f1a75846cf9bae1c33257c184ed6f67_2
+.zoom/data/conf_avatar_21b8869c16d750b356ea78a531ec8cf5_2
 .zoom/shareItems
 .zoom/screenCapture
 .zoom/logs
@@ -11695,17 +11692,9 @@ dtp/goste/yt.goste
 .config/zathura/zathurarc
 .config/zathura/.themer_post
 .config/zathura/.themer
-.config/zathura/.themer/gruvbox-dark
-.config/zathura/.themer/gruvbox-dark/zathurarc
-.config/zathura/.themer/addypaper-dark
-.config/zathura/.themer/addypaper-dark/zathurarc
-.config/zathura/.themer/i3
-.config/zathura/.themer/i3/zathurarc
+.config/zathura/.themer/giorno-dark
+.config/zathura/.themer/giorno-dark/zathurarc
 .config/zathura/.themer/template_zathurarc
-.config/zathura/.themer/addypaper
-.config/zathura/.themer/addypaper/zathurarc
-.config/zathura/.themer/gruvbox
-.config/zathura/.themer/gruvbox/zathurarc
 .config/nvim-qt
 .config/nvim-qt/window-geometry.conf
 .config/sublime-text-3
@@ -11717,17 +11706,9 @@ dtp/goste/yt.goste
 .config/sublime-text-3/Packages/THEMES/Themer.tmTheme
 .config/sublime-text-3/Packages/THEMES/.themer_post
 .config/sublime-text-3/Packages/THEMES/.themer
-.config/sublime-text-3/Packages/THEMES/.themer/gruvbox-dark
-.config/sublime-text-3/Packages/THEMES/.themer/gruvbox-dark/Themer.tmTheme
-.config/sublime-text-3/Packages/THEMES/.themer/addypaper-dark
-.config/sublime-text-3/Packages/THEMES/.themer/addypaper-dark/Themer.tmTheme
-.config/sublime-text-3/Packages/THEMES/.themer/i3
-.config/sublime-text-3/Packages/THEMES/.themer/i3/Themer.tmTheme
+.config/sublime-text-3/Packages/THEMES/.themer/giorno-dark
+.config/sublime-text-3/Packages/THEMES/.themer/giorno-dark/Themer.tmTheme
 .config/sublime-text-3/Packages/THEMES/.themer/template_Themer.tmTheme
-.config/sublime-text-3/Packages/THEMES/.themer/addypaper
-.config/sublime-text-3/Packages/THEMES/.themer/addypaper/Themer.tmTheme
-.config/sublime-text-3/Packages/THEMES/.themer/gruvbox
-.config/sublime-text-3/Packages/THEMES/.themer/gruvbox/Themer.tmTheme
 .config/sublime-text-3/Packages/.logs
 .config/sublime-text-3/Packages/.logs/Vintageous.log
 .config/sublime-text-3/Packages/LaTeXBox
@@ -11789,22 +11770,10 @@ dtp/goste/yt.goste
 .config/dunst/.themer_post
 .config/dunst/.themer
 .config/dunst/.themer/template_dunst-theme
-.config/dunst/.themer/gruvbox-dark
-.config/dunst/.themer/gruvbox-dark/dunst-theme
-.config/dunst/.themer/gruvbox-dark/dunst-settings
 .config/dunst/.themer/template_dunst-settings
-.config/dunst/.themer/addypaper-dark
-.config/dunst/.themer/addypaper-dark/dunst-theme
-.config/dunst/.themer/addypaper-dark/dunst-settings
-.config/dunst/.themer/i3
-.config/dunst/.themer/i3/dunst-theme
-.config/dunst/.themer/i3/dunst-settings
-.config/dunst/.themer/addypaper
-.config/dunst/.themer/addypaper/dunst-theme
-.config/dunst/.themer/addypaper/dunst-settings
-.config/dunst/.themer/gruvbox
-.config/dunst/.themer/gruvbox/dunst-theme
-.config/dunst/.themer/gruvbox/dunst-settings
+.config/dunst/.themer/giorno-dark
+.config/dunst/.themer/giorno-dark/dunst-theme
+.config/dunst/.themer/giorno-dark/dunst-settings
 .config/dconf
 .config/dconf/user
 .config/compton_fvwm.conf
@@ -12080,10 +12049,10 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Safe Browsing Cookies-journal
 .config/BraveSoftware/Brave-Browser/BrowserMetrics-spare.pma
 .config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige
-.config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.72
-.config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.72/photo.json
-.config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.72/manifest.json
-.config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.72/manifest.fingerprint
+.config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.75
+.config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.75/photo.json
+.config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.75/manifest.json
+.config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.75/manifest.fingerprint
 .config/BraveSoftware/Brave-Browser/Local State
 .config/BraveSoftware/Brave-Browser/Subresource Filter
 .config/BraveSoftware/Brave-Browser/Subresource Filter/Unindexed Rules
@@ -12469,9 +12438,9 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/Bookmarks
 .config/BraveSoftware/Brave-Browser/Default/data_reduction_proxy_leveldb
 .config/BraveSoftware/Brave-Browser/Default/data_reduction_proxy_leveldb/LOCK
-.config/BraveSoftware/Brave-Browser/Default/data_reduction_proxy_leveldb/MANIFEST-000062
+.config/BraveSoftware/Brave-Browser/Default/data_reduction_proxy_leveldb/000073.log
 .config/BraveSoftware/Brave-Browser/Default/data_reduction_proxy_leveldb/CURRENT
-.config/BraveSoftware/Brave-Browser/Default/data_reduction_proxy_leveldb/000063.log
+.config/BraveSoftware/Brave-Browser/Default/data_reduction_proxy_leveldb/MANIFEST-000072
 .config/BraveSoftware/Brave-Browser/Default/data_reduction_proxy_leveldb/LOG.old
 .config/BraveSoftware/Brave-Browser/Default/data_reduction_proxy_leveldb/LOG
 .config/BraveSoftware/Brave-Browser/Default/Sync Extension Settings
@@ -12481,6 +12450,7 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/Sync Extension Settings/pkedcjkdefgpdelpbcmbmeomcjbeemfm/CURRENT
 .config/BraveSoftware/Brave-Browser/Default/Sync Extension Settings/pkedcjkdefgpdelpbcmbmeomcjbeemfm/LOG.old
 .config/BraveSoftware/Brave-Browser/Default/Sync Extension Settings/pkedcjkdefgpdelpbcmbmeomcjbeemfm/LOG
+.config/BraveSoftware/Brave-Browser/Default/History Provider Cache
 .config/BraveSoftware/Brave-Browser/Default/Extensions
 .config/BraveSoftware/Brave-Browser/Default/Extensions/aapbdbdomjkkjkaonfhkkikfgjllcleb
 .config/BraveSoftware/Brave-Browser/Default/Extensions/aapbdbdomjkkjkaonfhkkikfgjllcleb/2.0.9_0
@@ -12749,7 +12719,7 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/000312.ldb
 .config/BraveSoftware/Brave-Browser/Default/Current Session
 .config/BraveSoftware/Brave-Browser/Default/blob_storage
-.config/BraveSoftware/Brave-Browser/Default/blob_storage/e2a88342-ebe9-4b06-8599-ee026bdede20
+.config/BraveSoftware/Brave-Browser/Default/blob_storage/de0c7553-ce8a-4aa4-9183-366d4e7cf1ac
 .config/BraveSoftware/Brave-Browser/Default/heavy_ad_intervention_opt_out.db-journal
 .config/BraveSoftware/Brave-Browser/Default/Extension Cookies
 .config/BraveSoftware/Brave-Browser/Default/Extension State
@@ -13105,149 +13075,156 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/ce5da259efb49d83e8075fd72342605941a7a483/4ced8aaf-8570-41b7-818b-320e32c64952/index-dir/the-real-index
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/ce5da259efb49d83e8075fd72342605941a7a483/index.txt
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/dc7e7fe9-8281-4212-8c89-8a406b896eb4
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/dc7e7fe9-8281-4212-8c89-8a406b896eb4/7186eb74d841844a_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/dc7e7fe9-8281-4212-8c89-8a406b896eb4/index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/dc7e7fe9-8281-4212-8c89-8a406b896eb4/3bffa8a77cb7d777_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/dc7e7fe9-8281-4212-8c89-8a406b896eb4/ce7afd0770fb0bb3_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/dc7e7fe9-8281-4212-8c89-8a406b896eb4/index-dir
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/dc7e7fe9-8281-4212-8c89-8a406b896eb4/index-dir/the-real-index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/94473019-d6ea-4cfe-8cde-a6fa5da7edf3
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/94473019-d6ea-4cfe-8cde-a6fa5da7edf3/cbc38e120d8d8c2b_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/94473019-d6ea-4cfe-8cde-a6fa5da7edf3/index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/94473019-d6ea-4cfe-8cde-a6fa5da7edf3/index-dir
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/94473019-d6ea-4cfe-8cde-a6fa5da7edf3/index-dir/the-real-index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/94473019-d6ea-4cfe-8cde-a6fa5da7edf3/8b7893215bfe7d8e_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/94473019-d6ea-4cfe-8cde-a6fa5da7edf3/21f553159dba351c_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/2c5cb068-6537-4128-86a1-d598fe74a65f
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/2c5cb068-6537-4128-86a1-d598fe74a65f/68308e4262639569_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/2c5cb068-6537-4128-86a1-d598fe74a65f/index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/2c5cb068-6537-4128-86a1-d598fe74a65f/4ae6e115fd6be4ca_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/2c5cb068-6537-4128-86a1-d598fe74a65f/4fe55249ad55a150_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/2c5cb068-6537-4128-86a1-d598fe74a65f/index-dir
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/2c5cb068-6537-4128-86a1-d598fe74a65f/index-dir/the-real-index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/b34670e176b8dbc4_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/632cb92972d6aa76_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/7c3e4aaf79976db5_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/27b4883ba3ac502b_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/15e15d6ee4cbbffe_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/5230f4c8154cca13_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/e37ced1ca173c849_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/6db828307fb98e07_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/1b92fcfe3243014c_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/e476969e97b2a613_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/0bb904692cfa4173_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/c6065eaf21e0609b_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/d5035fb2c16148de_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/b2f519595582147f_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/e250918295dd71c7_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/94f9b861d14cf8c4_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/bc814c48b82e3294_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/2ff3c34e73287ab5_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/626ab8c32802200a_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/9fa32424bd7274ab_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/3e01edf8d410b1de_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/4164883a5a9313eb_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/b1f60f0e5620f110_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/ae253d9b96ef00b5_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/45f7025961b83643_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/61ca1f21a443db69_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/7e21e3700a0db809_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/index-dir
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/index-dir/the-real-index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/8225641e9a487f44_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/349e6106657b402d_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/eef95a4f51041d9d_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/03430c0270c84b60_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/b412e8578074c501_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/e94db57ed1534ea6_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/260fe75c2c61d6e5_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/ebe296fa1a90f1a9_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/ddc64ab394ab2abc_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/a678696810db3171_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/1151e5dc6d5cec56_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/93237fe8ea71fc22_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/469782379438361a_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/842450aa1ec79899_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/02becb7ea38464ec_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/ec49324d-09d4-4d63-b367-3679039d9f49/ee3342ac3f3fafb8_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/9df0495e-0eff-4645-88d3-964121dbbd78
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/9df0495e-0eff-4645-88d3-964121dbbd78/index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/9df0495e-0eff-4645-88d3-964121dbbd78/975a62cd5675cbce_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/9df0495e-0eff-4645-88d3-964121dbbd78/da62c9148e9a2865_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/9df0495e-0eff-4645-88d3-964121dbbd78/71ec399453bf6559_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/9df0495e-0eff-4645-88d3-964121dbbd78/74b9f1ed6220f744_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/9df0495e-0eff-4645-88d3-964121dbbd78/index-dir
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/9df0495e-0eff-4645-88d3-964121dbbd78/index-dir/the-real-index
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/613710f42eaf99e7_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/baf69a528f64514e_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/541de3030296100d_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/88a4466fbc36ed9b_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/f47d596b3bb22bde_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/f519555a6f8d691d_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/5c2cba1b4ab32c86_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/09a53a79f77a039b_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/104c1d79dd3510b4_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/3e0fae631b45707a_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/06fbcf71311a4179_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/b65610d8b73d1d64_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/65114e588dffb125_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/46c79ad613331e11_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/56ae1a6111f2c46c_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/6173befafa9c8c25_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/88fa2b1e23b6b236_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/2d3c7c22f880c895_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/a4f3194535d2bdc8_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/87b74326986147e7_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/88c76efe193e14fb_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/d5c83b26ae6e341e_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/f10b46e7357e2357_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/8f1e0309e89c2def_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/e1a84c52188d6f4c_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/index
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/122e0e99e3a3c139_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/de00918b3c82568e_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/e24bbfc00b949f4d_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/0e4c5026abdb19ac_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/b69e2d12417a352b_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/1fe471229f7312c9_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/86583f2fd1376f72_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/a65f3707de8b9485_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/e619d6efb60adcd0_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/effe8230b0d41e96_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/b601d04109a92015_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/57884b26784c0b9c_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/136983f63428351a_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/095b3e2793bf1d49_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/2aa6d86fcd53a0c9_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/5b07290416b0f5e2_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/b12a583249fb0ce4_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/4f8daa51a17a6717_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/index-dir
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/index-dir/the-real-index
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/2735581c39c747aa_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/e73ab6bd1649c26a_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/c797546207a9e89d_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/2fd7bcbd80d08534_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/8967b6ac587ede88_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/34e70b5e7d2db9d8_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/9ef9eea7a42ae0cc_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/8ffa7676ce255e1b_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/ec8737d12024023f_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/988be76fa10be768_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/bcf6475b7ec9955d_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/c215fe5ef1ad7b44_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/4acca9ddf9e94e83_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/30c1a65e9152d3f6_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/03ea87a47cc11647_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/a55edea0-7a0c-4059-b37b-9ba8ef990df7/29aa0f6de87e91f4_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/5bf25573755b7b0b_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/ac0089acb8d66869_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/0dc04f40f38ec967_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/9dc67a15cc1bc2bd_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/f2b11ea5bfada342_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/15554ffbe8d1dc13_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/5365c03d47c07586_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/85ef85a7ddf6bff5_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/9ac7c42df6197af9_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/df7aca6238195e2c_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/469b9546e0d4c206_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/6b9174d76828e2b5_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/db600fb008fc8aa9_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/ef27fc28d3a10f8f_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/101cc3941b95886f_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/a20b4a4be51d2108_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/888925a1254cbb3b_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/e7c787ba3e812f7d_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/8f5a50119c1e9c7c_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/index
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/78a46c9a7393e856_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/9979d47bebefd1c0_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/8bc54be9f2d998e2_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/f64ae626b52bae2d_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/5819951d6c7ad223_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/8e8ae24f33169683_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/ae806a7d0c55d43b_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/0c00ba000e1e27df_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/f360345d49e7cf6a_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/bf851aab3d436258_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/cc5018e45e3a4233_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/673a879aa07a4945_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/5cdcec2a705f0a10_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/b0c6d84407886e73_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/23abf42296e93059_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/2a333f38cea700d8_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/f9c2f4020b6f0904_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/e238aa1439be895c_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/73409f9e423c3f70_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/2b7b0cba868fdb42_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/da823e53a13019e8_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/index-dir
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/index-dir/the-real-index
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/e0d36d09c219a3a5_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/c64b1bcc9b54a019_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/c726d9fe05b5089f_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/102f7690eade06f6_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/cde72aae8308cfcf_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/e9a886c075954060_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/1af31f9e5151161a_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/b8f117baf8c9e568_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/331589db5732959c_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/b0cc19c8dc0fd208_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/d3261ea872f15d5a_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/3c5aa614880cf74e_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/afaa7a4013182445_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/69b808736ecc55a9_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/d1031c663b6370b1_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/07ef356dea05fffa_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/51c92d585a922764_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/86b56cb608faf3e1_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/b2cecbcc08060a01_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/f794ed7379dda58b_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/3d17dcfe1773a4c6_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/ae5983c4dfc8b141_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d09c8c9c-727c-43eb-a0e8-de6b1dafb93a/87f0f01ca1c7e82d_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/f1aebe14-c99e-4270-a33d-af0aefb33db5
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/f1aebe14-c99e-4270-a33d-af0aefb33db5/index
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/f1aebe14-c99e-4270-a33d-af0aefb33db5/708f2485555702eb_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/f1aebe14-c99e-4270-a33d-af0aefb33db5/04169ef0f11a3ea5_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/f1aebe14-c99e-4270-a33d-af0aefb33db5/index-dir
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/f1aebe14-c99e-4270-a33d-af0aefb33db5/index-dir/the-real-index
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/f1aebe14-c99e-4270-a33d-af0aefb33db5/0c6116b862240b11_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/index.txt
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/6ec46ed5-50fb-4d49-96c9-34ee668758ba
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/6ec46ed5-50fb-4d49-96c9-34ee668758ba/index
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/6ec46ed5-50fb-4d49-96c9-34ee668758ba/0df3fc8538673082_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/6ec46ed5-50fb-4d49-96c9-34ee668758ba/index-dir
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/6ec46ed5-50fb-4d49-96c9-34ee668758ba/index-dir/the-real-index
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/6ec46ed5-50fb-4d49-96c9-34ee668758ba/cba038c1926f0f31_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/6ec46ed5-50fb-4d49-96c9-34ee668758ba/305733d989aea2c9_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7274544c-f46e-4802-94ca-7ef5bf666d45
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7274544c-f46e-4802-94ca-7ef5bf666d45/index
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7274544c-f46e-4802-94ca-7ef5bf666d45/29213d2ab33b53bc_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7274544c-f46e-4802-94ca-7ef5bf666d45/index-dir
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7274544c-f46e-4802-94ca-7ef5bf666d45/index-dir/the-real-index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/af686b9aefd32674_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/d5008c45397adcb5_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/d2a2f7ecf66f9e62_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/67cc10f99f80b9b9_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/cc59d088badfa2ea_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/c845e1f6c02bfb2f_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/b45f6418e7f06b26_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/d0795b34201727c1_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/af8ff9bf6a5cfd0b_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/51e2a801cd78a641_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/e990637b81f7f48f_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/8548afd48abd8eb6_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/258a877a60272bc4_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/23a89140a9b21c41_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/65afb0e3eeba7b58_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/bf722c294613690a_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/6f55402cf3d533f6_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/e5230026d90988fa_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/803e22437ecae3f6_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/d2a1ba34b620477f_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/98e8c4dd5bf55acf_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/0427392912d27b2e_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/024bcf3ccb4814aa_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/c9c084a55dbbcd13_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/681d7f5d1205eed6_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/895fae80d6da7bd1_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/16206fb5e800a6ce_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/c26e62524d39bbf3_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/593c6b90eb90310d_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/d48f5edf6d0128f7_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/index-dir
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/index-dir/the-real-index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/d85fbb54e1d722a5_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/477a08157c3d8bac_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/a56202f4acdd13b8_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/1f37164797289703_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/c00277b189d8ee7a_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/ec2cec6863f2bda1_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/bf0057acbd3c8c8f_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/83eb6124709302e2_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/961d9e02eedf1d7f_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/847874cb8c01ad33_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/3b3a169e10ca6b7d_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/7906a21c-51f8-4d5b-86bd-2e7b3857126e/fe6f4ef3ad47b7d7_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/b9ae684a-4718-49ad-baf7-16e0dfb583c6
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/b9ae684a-4718-49ad-baf7-16e0dfb583c6/ada445914047a94e_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/b9ae684a-4718-49ad-baf7-16e0dfb583c6/f5301595dc7de04d_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/b9ae684a-4718-49ad-baf7-16e0dfb583c6/684733a0d91fe0ef_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/b9ae684a-4718-49ad-baf7-16e0dfb583c6/index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/b9ae684a-4718-49ad-baf7-16e0dfb583c6/index-dir
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/b9ae684a-4718-49ad-baf7-16e0dfb583c6/index-dir/the-real-index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/4b541c91-1baa-4c68-a9d5-b9b1d3090602
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/4b541c91-1baa-4c68-a9d5-b9b1d3090602/index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/4b541c91-1baa-4c68-a9d5-b9b1d3090602/965f810375e18b3f_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/4b541c91-1baa-4c68-a9d5-b9b1d3090602/b039758ef731e2ab_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/4b541c91-1baa-4c68-a9d5-b9b1d3090602/index-dir
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/4b541c91-1baa-4c68-a9d5-b9b1d3090602/index-dir/the-real-index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/4b541c91-1baa-4c68-a9d5-b9b1d3090602/6d7bddc06dfb0a9c_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/4b541c91-1baa-4c68-a9d5-b9b1d3090602/ca71e3316079eca9_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/e5d9af06-2485-4c52-9f72-94ef22eb1baf
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/e5d9af06-2485-4c52-9f72-94ef22eb1baf/index
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/e5d9af06-2485-4c52-9f72-94ef22eb1baf/0d5464b878603ddb_0
@@ -13282,48 +13259,43 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/53308508-e2c3-47e9-9976-b702712ef54e/f343d53f5e6ab021_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/53308508-e2c3-47e9-9976-b702712ef54e/a8330b657615da6c_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/53308508-e2c3-47e9-9976-b702712ef54e/c016a5d84f529c19_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/53308508-e2c3-47e9-9976-b702712ef54e/4e80e2bd0b6a8bd5_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/53308508-e2c3-47e9-9976-b702712ef54e/e17299f2dc7d36fd_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/53308508-e2c3-47e9-9976-b702712ef54e/441775ff31a61b47_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/53308508-e2c3-47e9-9976-b702712ef54e/8e2636ab81c7d6d6_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9a09ae1f-9c77-4dfd-a843-73a07facb204
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9a09ae1f-9c77-4dfd-a843-73a07facb204/index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9a09ae1f-9c77-4dfd-a843-73a07facb204/index-dir
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9a09ae1f-9c77-4dfd-a843-73a07facb204/index-dir/the-real-index
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/6fae1ef9c522d8c0_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/3009b240d9905899_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/c4196b141c3ec4fe_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/5b3372747722fd33_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/058190b6bc506b6a_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/79192c3adf4730d6_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/8d44bd37102f9e80_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/5c5e3c8e0be66257_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/b0077b7cb3626797_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/82e1d3a9327e4d03_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/index
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/15f064e079cd9e2c_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/98105303aeea417a_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/58f1297ad70f2153_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/a31a37df05f64649_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/4010d1c79646ff0b_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/f917e814bdf534be_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/5662bb32cd7581a8_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/0f518df62c5109cf_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/0e07735d61bafcf7_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/5d7faa53caed4886_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/index-dir
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/index-dir/the-real-index
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/1334a2ab3fd07657_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/56954c181b5b4819_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/0a4226030b74c105_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/62a5306b0628909a_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/6a05075def4a8d4e_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/c28852af80209667_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/742f177b143d2eb1_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/95af8bc3ee904fc8_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/1885de53f228e4fb_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/index.txt
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/54fd0e8e0f7ef5e6_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/6fae1ef9c522d8c0_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/3009b240d9905899_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/c4196b141c3ec4fe_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/0546a6c649f55aac_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/5b3372747722fd33_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/058190b6bc506b6a_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/5a0c1cbcc2b727bc_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/79192c3adf4730d6_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/b0077b7cb3626797_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/82e1d3a9327e4d03_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/15f064e079cd9e2c_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/af2605e9ad94d94c_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/1e37d255ecd2bea3_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/7f5ec8d09b92c79b_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/4010d1c79646ff0b_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/f917e814bdf534be_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/07240cd681e096ae_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/bdb4f06e146031d5_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/5662bb32cd7581a8_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/81b6d6607c19ef7c_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/a882f21de5e3908e_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/0f518df62c5109cf_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/0e07735d61bafcf7_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/5d7faa53caed4886_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/index-dir
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/index-dir/the-real-index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/62a5306b0628909a_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/6a05075def4a8d4e_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/d1c98c40668dc935_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/742f177b143d2eb1_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/13833c0e-851d-4fec-9a45-2a5441f21784/95af8bc3ee904fc8_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/ebe2f97a-8295-4f8c-af19-50fd6dd4e0d8
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/ebe2f97a-8295-4f8c-af19-50fd6dd4e0d8/index
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/ebe2f97a-8295-4f8c-af19-50fd6dd4e0d8/66fcc3e2f4b8dec9_0
@@ -13374,13 +13346,13 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/4c0d2fa7-57af-4fda-97e0-503001082a7a/fcdc1b173a2d384c_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/4c0d2fa7-57af-4fda-97e0-503001082a7a/993e7b40f2b26864_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/4c0d2fa7-57af-4fda-97e0-503001082a7a/4d08f4fbef80f547_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/4c0d2fa7-57af-4fda-97e0-503001082a7a/33b78657f9f54c01_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/4c0d2fa7-57af-4fda-97e0-503001082a7a/5d18f46ad505f4c4_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/4c0d2fa7-57af-4fda-97e0-503001082a7a/3b839d1486c696fc_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/4c0d2fa7-57af-4fda-97e0-503001082a7a/bd23707a1931bfed_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/4c0d2fa7-57af-4fda-97e0-503001082a7a/c9ddb068592c9e3f_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/4c0d2fa7-57af-4fda-97e0-503001082a7a/5045a5d17545de13_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/4c0d2fa7-57af-4fda-97e0-503001082a7a/08e07a8987521af4_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/4c0d2fa7-57af-4fda-97e0-503001082a7a/0f1b84252e365d7a_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/4c0d2fa7-57af-4fda-97e0-503001082a7a/9a21d25b4d89084b_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/4c0d2fa7-57af-4fda-97e0-503001082a7a/dc441780c688f0db_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/4c0d2fa7-57af-4fda-97e0-503001082a7a/52e31b73a08a01ef_0
@@ -13499,16 +13471,17 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/08aa1bd9-9f7d-4b18-99ec-fb187d22c8c6
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/08aa1bd9-9f7d-4b18-99ec-fb187d22c8c6/8222bb7087903cd2_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/08aa1bd9-9f7d-4b18-99ec-fb187d22c8c6/70b3bdfe890a6469_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/08aa1bd9-9f7d-4b18-99ec-fb187d22c8c6/05313088898ea542_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/08aa1bd9-9f7d-4b18-99ec-fb187d22c8c6/019257a2f5acb5c9_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/08aa1bd9-9f7d-4b18-99ec-fb187d22c8c6/index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/08aa1bd9-9f7d-4b18-99ec-fb187d22c8c6/31b5a5b4944840e9_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/08aa1bd9-9f7d-4b18-99ec-fb187d22c8c6/5c988b2a0db304bc_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/08aa1bd9-9f7d-4b18-99ec-fb187d22c8c6/773d7d4fae2fce94_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/08aa1bd9-9f7d-4b18-99ec-fb187d22c8c6/a11d9b0da6d6fe5e_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/08aa1bd9-9f7d-4b18-99ec-fb187d22c8c6/738055a966e28131_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/08aa1bd9-9f7d-4b18-99ec-fb187d22c8c6/index-dir
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/08aa1bd9-9f7d-4b18-99ec-fb187d22c8c6/index-dir/the-real-index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/08aa1bd9-9f7d-4b18-99ec-fb187d22c8c6/fb8b1a57cade1994_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/08aa1bd9-9f7d-4b18-99ec-fb187d22c8c6/7a0cba7827e671e7_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/08aa1bd9-9f7d-4b18-99ec-fb187d22c8c6/3561b163830bb37e_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/08aa1bd9-9f7d-4b18-99ec-fb187d22c8c6/2378602c2eddaff0_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/a60d73fe3c66da79_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/3fdaedeaa99a9609_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/9a9fc80268d3925f_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/2739fc6ead20937f_0
@@ -13533,6 +13506,7 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/462de7937ade8740_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/b3a38c8c3808addb_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/720fa78013f953c9_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/3dff91ee9d2da9cc_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/0737b4da31205542_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/978cb01094d124b6_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/0720ccb42813dec1_0
@@ -13583,6 +13557,7 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/019257a2f5acb5c9_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/index
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/132762930d0d7b58_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/ccc416f22d40dca4_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/a89c8fe89329e2fc_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/0b5da04a08dc684e_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/fe2094261623d9b8_0
@@ -13613,6 +13588,7 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/02f3b7a2b81be56f_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/29e6b4289926b7b8_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/5052330a765c9399_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/a11d9b0da6d6fe5e_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/ec66f89d44a00a9a_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/ef432d51c7ac1152_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/2ad7cbfcb7524be4_0
@@ -13636,8 +13612,10 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/6cdc37bf277fd050_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/9bf771e999e30719_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/8c6cf1fe3a7136df_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/738055a966e28131_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/543519e49976b821_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/ad2badcfde8ae065_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/413b7db55385c8fd_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/36ee726e0b35df69_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/87b920a67c3ebe93_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/7d4b6d2bcc5dbed0_0
@@ -13668,6 +13646,7 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/efe34f9139dbdc69_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/fb8b1a57cade1994_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/17eed3909c2dc13e_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/2378602c2eddaff0_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/c1d22c206b2573dc_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/81c44a5c5a39922e_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/19ba197eb9ce87e7_0
@@ -14055,15 +14034,14 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/0a716f75-a31e-43e7-b1bf-9f9d6590ef39/index
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/0a716f75-a31e-43e7-b1bf-9f9d6590ef39/1a61301642a839a1_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/0a716f75-a31e-43e7-b1bf-9f9d6590ef39/10145ec2a1908c7d_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/0a716f75-a31e-43e7-b1bf-9f9d6590ef39/ad965a380154ef2d_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/0a716f75-a31e-43e7-b1bf-9f9d6590ef39/d9f0feabadcf378a_0
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/0a716f75-a31e-43e7-b1bf-9f9d6590ef39/67970dfcfbd84ec6_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/0a716f75-a31e-43e7-b1bf-9f9d6590ef39/8ce216ee046ac7dc_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/0a716f75-a31e-43e7-b1bf-9f9d6590ef39/a0e7ba994a5dae12_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/0a716f75-a31e-43e7-b1bf-9f9d6590ef39/62dfd795177f9a91_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/0a716f75-a31e-43e7-b1bf-9f9d6590ef39/88c7056cb20745ee_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/0a716f75-a31e-43e7-b1bf-9f9d6590ef39/index-dir
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/0a716f75-a31e-43e7-b1bf-9f9d6590ef39/index-dir/the-real-index
-.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/0a716f75-a31e-43e7-b1bf-9f9d6590ef39/4f85a8e7a033135d_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/0a716f75-a31e-43e7-b1bf-9f9d6590ef39/b55ceb143f783ae9_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/0a716f75-a31e-43e7-b1bf-9f9d6590ef39/2ae30e2077e29fb6_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/0a716f75-a31e-43e7-b1bf-9f9d6590ef39/e529a9e458f3a729_0
@@ -14072,6 +14050,7 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/0a716f75-a31e-43e7-b1bf-9f9d6590ef39/53e457e6f983605d_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/2a4516b5be8b6607_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/b54d1654a1af5960_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/158ea817af6c87e2_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/6b86bb68d2d627fa_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/ef9778dfd4ad5da2_0
@@ -14099,32 +14078,48 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/index.txt
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/627565907b396dc1_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/5918ed7b38e7620c_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/9fc8248bbc9d514d_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/5faece24b9cc151c_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/2d2f877a327b5c74_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/8e26c8c0dae6e1a1_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/909909a1ab238c84_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/5019ea9dc3422d96_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/9c1c894d9a4287d9_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/9f1bbc70e19f6ac6_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/af29aedc30c50406_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/226f94afd1940eef_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/index
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/75d87ac49bfa0f96_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/e28bd4522102b507_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/cd77c72eff697fa2_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/ba28e2c69bbcafb9_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/1f1c593d05049356_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/06c63baa8c83d9b3_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/04c3521bf417d4fd_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/54f9c747e089f0a4_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/b22776609a6b50e2_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/5ec4bd6b366839a1_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/964a6922c893db5e_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/1e45709bd6bd1619_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/41550342a7f2edbf_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/b1b0c0fca3c2dd14_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/5232e3a98f5365ce_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/10770ec5c8c591d7_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/7a12a481d9a239d0_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/index-dir
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/index-dir/the-real-index
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/dd75fecf1c07c9d6_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/a355f108889f0c75_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/7fdd579f8fa0f2c9_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/73c7b875850fa4ca_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/0fc2d9143aaa40bb_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/a608db5c8d1b2887_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/db0612fedc1809bb_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/daa0818b8f48f202_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/4889baa940984860_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/044cac0a104dc138_0
+.config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/4266cedcd8f71a5b_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/f23d24d8713469f7_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/4eb58069-b09f-4959-ac8c-e579db979134/b4e2e14facd7de34_0
 .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5
@@ -14357,11 +14352,11 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.okcoin.com_0.indexeddb.leveldb/LOG
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.amazon.ca_0.indexeddb.leveldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.amazon.ca_0.indexeddb.leveldb/LOCK
+.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.amazon.ca_0.indexeddb.leveldb/000925.ldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.amazon.ca_0.indexeddb.leveldb/CURRENT
+.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.amazon.ca_0.indexeddb.leveldb/000923.log
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.amazon.ca_0.indexeddb.leveldb/LOG.old
-.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.amazon.ca_0.indexeddb.leveldb/000919.log
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.amazon.ca_0.indexeddb.leveldb/LOG
-.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.amazon.ca_0.indexeddb.leveldb/000921.ldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.lenovo.com_0.indexeddb.leveldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.lenovo.com_0.indexeddb.leveldb/LOCK
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.lenovo.com_0.indexeddb.leveldb/CURRENT
@@ -14416,11 +14411,11 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/000022.log
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/LOCK
-.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/000227.log
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/CURRENT
+.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/000235.log
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/LOG.old
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/LOG
-.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/000229.ldb
+.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/000237.ldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.office.com_0.indexeddb.leveldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.office.com_0.indexeddb.leveldb/LOCK
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.office.com_0.indexeddb.leveldb/000003.log
@@ -14428,12 +14423,12 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.office.com_0.indexeddb.leveldb/LOG.old
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.office.com_0.indexeddb.leveldb/LOG
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb
-.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000451.ldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/LOCK
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/CURRENT
-.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000449.log
+.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000461.ldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/LOG.old
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/LOG
+.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000459.log
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.fatshark.com_0.indexeddb.leveldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.fatshark.com_0.indexeddb.leveldb/LOCK
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.fatshark.com_0.indexeddb.leveldb/000005.ldb
@@ -14511,11 +14506,11 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.amazon.in_0.indexeddb.leveldb/LOG
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.banggood.com_0.indexeddb.leveldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.banggood.com_0.indexeddb.leveldb/LOCK
-.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.banggood.com_0.indexeddb.leveldb/000013.ldb
+.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.banggood.com_0.indexeddb.leveldb/000015.log
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.banggood.com_0.indexeddb.leveldb/CURRENT
-.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.banggood.com_0.indexeddb.leveldb/000011.log
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.banggood.com_0.indexeddb.leveldb/LOG.old
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.banggood.com_0.indexeddb.leveldb/LOG
+.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.banggood.com_0.indexeddb.leveldb/000017.ldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.westjet.com_0.indexeddb.leveldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.westjet.com_0.indexeddb.leveldb/LOCK
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.westjet.com_0.indexeddb.leveldb/000003.log
@@ -14587,11 +14582,11 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.tradingview.com_0.indexeddb.leveldb/LOG
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/LOCK
+.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000066.log
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/CURRENT
-.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000062.log
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/LOG.old
+.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000068.ldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/LOG
-.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000064.ldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_nordpass.com_0.indexeddb.leveldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_nordpass.com_0.indexeddb.leveldb/LOCK
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_nordpass.com_0.indexeddb.leveldb/000013.ldb
@@ -14601,11 +14596,12 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_nordpass.com_0.indexeddb.leveldb/LOG
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/LOCK
-.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/000005.ldb
-.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/000004.log
+.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/000013.ldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/CURRENT
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/LOG.old
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/LOG
+.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/000012.log
+.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/000010.ldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_photos.google.com_0.indexeddb.leveldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_photos.google.com_0.indexeddb.leveldb/LOCK
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_photos.google.com_0.indexeddb.leveldb/CURRENT
@@ -14616,10 +14612,10 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_messages.google.com_0.indexeddb.leveldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_messages.google.com_0.indexeddb.leveldb/LOCK
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_messages.google.com_0.indexeddb.leveldb/CURRENT
+.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_messages.google.com_0.indexeddb.leveldb/000063.log
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_messages.google.com_0.indexeddb.leveldb/LOG.old
-.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_messages.google.com_0.indexeddb.leveldb/000027.log
-.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_messages.google.com_0.indexeddb.leveldb/000029.ldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_messages.google.com_0.indexeddb.leveldb/LOG
+.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_messages.google.com_0.indexeddb.leveldb/000065.ldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_play.google.com_0.indexeddb.leveldb
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_play.google.com_0.indexeddb.leveldb/LOCK
 .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_play.google.com_0.indexeddb.leveldb/000003.log
@@ -14659,13 +14655,14 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/Session Storage
 .config/BraveSoftware/Brave-Browser/Default/Session Storage/LOCK
 .config/BraveSoftware/Brave-Browser/Default/Session Storage/000005.ldb
-.config/BraveSoftware/Brave-Browser/Default/Session Storage/003324.ldb
-.config/BraveSoftware/Brave-Browser/Default/Session Storage/003328.log
+.config/BraveSoftware/Brave-Browser/Default/Session Storage/003342.ldb
+.config/BraveSoftware/Brave-Browser/Default/Session Storage/003334.ldb
+.config/BraveSoftware/Brave-Browser/Default/Session Storage/003341.log
 .config/BraveSoftware/Brave-Browser/Default/Session Storage/CURRENT
-.config/BraveSoftware/Brave-Browser/Default/Session Storage/003329.ldb
 .config/BraveSoftware/Brave-Browser/Default/Session Storage/LOG.old
+.config/BraveSoftware/Brave-Browser/Default/Session Storage/003340.ldb
 .config/BraveSoftware/Brave-Browser/Default/Session Storage/LOG
-.config/BraveSoftware/Brave-Browser/Default/Session Storage/003326.ldb
+.config/BraveSoftware/Brave-Browser/Default/Session Storage/003337.ldb
 .config/BraveSoftware/Brave-Browser/Default/000311.log
 .config/BraveSoftware/Brave-Browser/Default/heavy_ad_intervention_opt_out.db
 .config/BraveSoftware/Brave-Browser/Default/Last Session
@@ -14682,14 +14679,14 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb
 .config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/LOCK
 .config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/000005.ldb
-.config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/003207.ldb
+.config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/003253.log
+.config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/003248.ldb
 .config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/CURRENT
-.config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/003210.ldb
+.config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/003251.ldb
+.config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/003254.ldb
 .config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/LOG.old
-.config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/003206.ldb
-.config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/003212.ldb
+.config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/003249.ldb
 .config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/LOG
-.config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/003211.log
 .config/BraveSoftware/Brave-Browser/Default/databases
 .config/BraveSoftware/Brave-Browser/Default/databases/Databases.db
 .config/BraveSoftware/Brave-Browser/Default/databases/https_www.ebay.ca_0
@@ -14962,20 +14959,13 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/FileTypePolicies
 .config/BraveSoftware/Brave-Browser/First Run
 .config/BraveSoftware/Brave-Browser/CertificateRevocation
-.config/BraveSoftware/Brave-Browser/CertificateRevocation/5940
-.config/BraveSoftware/Brave-Browser/CertificateRevocation/5940/manifest.json
-.config/BraveSoftware/Brave-Browser/CertificateRevocation/5940/LICENSE
-.config/BraveSoftware/Brave-Browser/CertificateRevocation/5940/manifest.fingerprint
-.config/BraveSoftware/Brave-Browser/CertificateRevocation/5940/crl-set
-.config/BraveSoftware/Brave-Browser/CertificateRevocation/5940/_metadata
-.config/BraveSoftware/Brave-Browser/CertificateRevocation/5940/_metadata/verified_contents.json
-.config/BraveSoftware/Brave-Browser/CertificateRevocation/5935
-.config/BraveSoftware/Brave-Browser/CertificateRevocation/5935/manifest.json
-.config/BraveSoftware/Brave-Browser/CertificateRevocation/5935/LICENSE
-.config/BraveSoftware/Brave-Browser/CertificateRevocation/5935/manifest.fingerprint
-.config/BraveSoftware/Brave-Browser/CertificateRevocation/5935/crl-set
-.config/BraveSoftware/Brave-Browser/CertificateRevocation/5935/_metadata
-.config/BraveSoftware/Brave-Browser/CertificateRevocation/5935/_metadata/verified_contents.json
+.config/BraveSoftware/Brave-Browser/CertificateRevocation/5946
+.config/BraveSoftware/Brave-Browser/CertificateRevocation/5946/manifest.json
+.config/BraveSoftware/Brave-Browser/CertificateRevocation/5946/LICENSE
+.config/BraveSoftware/Brave-Browser/CertificateRevocation/5946/manifest.fingerprint
+.config/BraveSoftware/Brave-Browser/CertificateRevocation/5946/crl-set
+.config/BraveSoftware/Brave-Browser/CertificateRevocation/5946/_metadata
+.config/BraveSoftware/Brave-Browser/CertificateRevocation/5946/_metadata/verified_contents.json
 .config/BraveSoftware/Brave-Browser/WidevineCdm
 .config/BraveSoftware/Brave-Browser/WidevineCdm/manifest.json
 .config/BraveSoftware/Brave-Browser/WidevineCdm/_platform_specific
@@ -15060,13 +15050,13 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/SafetyTips
 .config/BraveSoftware/Brave-Browser/odlameecjipmbmbejkplpemijjgpljce
 .config/BraveSoftware/Brave-Browser/cffkpbalmllkdoenhmdmpbkajipdjfam
-.config/BraveSoftware/Brave-Browser/cffkpbalmllkdoenhmdmpbkajipdjfam/1.0.606
-.config/BraveSoftware/Brave-Browser/cffkpbalmllkdoenhmdmpbkajipdjfam/1.0.606/4
-.config/BraveSoftware/Brave-Browser/cffkpbalmllkdoenhmdmpbkajipdjfam/1.0.606/4/ABPFilterParserData.dat
-.config/BraveSoftware/Brave-Browser/cffkpbalmllkdoenhmdmpbkajipdjfam/1.0.606/resources.json
-.config/BraveSoftware/Brave-Browser/cffkpbalmllkdoenhmdmpbkajipdjfam/1.0.606/manifest.json
-.config/BraveSoftware/Brave-Browser/cffkpbalmllkdoenhmdmpbkajipdjfam/1.0.606/manifest.fingerprint
-.config/BraveSoftware/Brave-Browser/cffkpbalmllkdoenhmdmpbkajipdjfam/1.0.606/rs-ABPFilterParserData.dat
+.config/BraveSoftware/Brave-Browser/cffkpbalmllkdoenhmdmpbkajipdjfam/1.0.609
+.config/BraveSoftware/Brave-Browser/cffkpbalmllkdoenhmdmpbkajipdjfam/1.0.609/4
+.config/BraveSoftware/Brave-Browser/cffkpbalmllkdoenhmdmpbkajipdjfam/1.0.609/4/ABPFilterParserData.dat
+.config/BraveSoftware/Brave-Browser/cffkpbalmllkdoenhmdmpbkajipdjfam/1.0.609/resources.json
+.config/BraveSoftware/Brave-Browser/cffkpbalmllkdoenhmdmpbkajipdjfam/1.0.609/manifest.json
+.config/BraveSoftware/Brave-Browser/cffkpbalmllkdoenhmdmpbkajipdjfam/1.0.609/manifest.fingerprint
+.config/BraveSoftware/Brave-Browser/cffkpbalmllkdoenhmdmpbkajipdjfam/1.0.609/rs-ABPFilterParserData.dat
 .config/BraveSoftware/Brave-Browser/OriginTrials
 .config/BraveSoftware/Brave-Browser/oofiananboodjbbmdelgdommihjbkfag
 .config/BraveSoftware/Brave-Browser/oofiananboodjbbmdelgdommihjbkfag/1.0.16
@@ -15078,8 +15068,8 @@ dtp/goste/yt.goste
 .config/BraveSoftware/Brave-Browser/oofiananboodjbbmdelgdommihjbkfag/1.0.16/6.0/httpse.leveldb/MANIFEST-000004
 .config/BraveSoftware/Brave-Browser/oofiananboodjbbmdelgdommihjbkfag/1.0.16/6.0/httpse.leveldb/CURRENT
 .config/BraveSoftware/Brave-Browser/oofiananboodjbbmdelgdommihjbkfag/1.0.16/6.0/httpse.leveldb/LOG.old
+.config/BraveSoftware/Brave-Browser/oofiananboodjbbmdelgdommihjbkfag/1.0.16/6.0/httpse.leveldb/000024.log
 .config/BraveSoftware/Brave-Browser/oofiananboodjbbmdelgdommihjbkfag/1.0.16/6.0/httpse.leveldb/LOG
-.config/BraveSoftware/Brave-Browser/oofiananboodjbbmdelgdommihjbkfag/1.0.16/6.0/httpse.leveldb/000019.log
 .config/BraveSoftware/Brave-Browser/oofiananboodjbbmdelgdommihjbkfag/1.0.16/manifest.json
 .config/BraveSoftware/Brave-Browser/oofiananboodjbbmdelgdommihjbkfag/1.0.16/manifest.fingerprint
 .config/BraveSoftware/Brave-Browser/Dictionaries
@@ -15107,11 +15097,7 @@ dtp/goste/yt.goste
 .config/qutebrowser/bookmarks/urls
 .config/qutebrowser/quickmarks
 .config/qutebrowser/.themer
-.config/qutebrowser/.themer/gruvbox-dark
-.config/qutebrowser/.themer/addypaper-dark
-.config/qutebrowser/.themer/i3
-.config/qutebrowser/.themer/addypaper
-.config/qutebrowser/.themer/gruvbox
+.config/qutebrowser/.themer/giorno-dark
 .config/user-dirs.locale
 .config/rofi
 .config/rofi/sidetab.rasi
@@ -15171,8 +15157,6 @@ dtp/goste/yt.goste
 .config/rofi/material.rasi
 .config/rofi/c64.rasi
 .config/rofi/.themer
-.config/rofi/.themer/gruvbox-dark
-.config/rofi/.themer/gruvbox-dark/globals.rasi
 .config/rofi/.themer/.old
 .config/rofi/.themer/.old/template_cyan.rasi
 .config/rofi/.themer/.old/template_blue.rasi
@@ -15183,14 +15167,8 @@ dtp/goste/yt.goste
 .config/rofi/.themer/.old/template_green.rasi
 .config/rofi/.themer/.old/template_magenta.rasi
 .config/rofi/.themer/template_globals.rasi
-.config/rofi/.themer/addypaper-dark
-.config/rofi/.themer/addypaper-dark/globals.rasi
-.config/rofi/.themer/i3
-.config/rofi/.themer/i3/globals.rasi
-.config/rofi/.themer/addypaper
-.config/rofi/.themer/addypaper/globals.rasi
-.config/rofi/.themer/gruvbox
-.config/rofi/.themer/gruvbox/globals.rasi
+.config/rofi/.themer/giorno-dark
+.config/rofi/.themer/giorno-dark/globals.rasi
 .config/rofi/Arc.rasi
 .config/rofi/rofind
 .config/rofi/rofind/PDF
@@ -15240,21 +15218,9 @@ dtp/goste/yt.goste
 .config/vis/colors/.themer
 .config/vis/colors/.themer/template_term-rainbow
 .config/vis/colors/.themer/template_term
-.config/vis/colors/.themer/gruvbox-dark
-.config/vis/colors/.themer/gruvbox-dark/term
-.config/vis/colors/.themer/gruvbox-dark/term-rainbow
-.config/vis/colors/.themer/addypaper-dark
-.config/vis/colors/.themer/addypaper-dark/term
-.config/vis/colors/.themer/addypaper-dark/term-rainbow
-.config/vis/colors/.themer/i3
-.config/vis/colors/.themer/i3/term
-.config/vis/colors/.themer/i3/term-rainbow
-.config/vis/colors/.themer/addypaper
-.config/vis/colors/.themer/addypaper/term
-.config/vis/colors/.themer/addypaper/term-rainbow
-.config/vis/colors/.themer/gruvbox
-.config/vis/colors/.themer/gruvbox/term
-.config/vis/colors/.themer/gruvbox/term-rainbow
+.config/vis/colors/.themer/giorno-dark
+.config/vis/colors/.themer/giorno-dark/term
+.config/vis/colors/.themer/giorno-dark/term-rainbow
 .config/vis/config
 .config/vis/vis.log
 .config/calibre
@@ -15332,6 +15298,7 @@ dtp/goste/yt.goste
 .config/spotify/Users/gvales97-user/ad-state-storage.bnk
 .config/spotify/Users/gvales97-user/recently_played.bnk
 .config/spotify/Users/gvales97-user/log
+.config/spotify/Users/gvales97-user/log-tracked
 .config/spotify/Users/gvales97-user/social_manager.bnk
 .config/spotify/Users/gvales97-user/local-files.bnk
 .config/Kvantum
@@ -15424,23 +15391,11 @@ dtp/goste/yt.goste
 .config/spicetify/Themes/Themer/README.md
 .config/spicetify/Themes/Themer/.themer_post
 .config/spicetify/Themes/Themer/.themer
-.config/spicetify/Themes/Themer/.themer/gruvbox-dark
-.config/spicetify/Themes/Themer/.themer/gruvbox-dark/color.ini
-.config/spicetify/Themes/Themer/.themer/gruvbox-dark/user.css
 .config/spicetify/Themes/Themer/.themer/template_color.ini
-.config/spicetify/Themes/Themer/.themer/addypaper-dark
-.config/spicetify/Themes/Themer/.themer/addypaper-dark/color.ini
-.config/spicetify/Themes/Themer/.themer/addypaper-dark/user.css
-.config/spicetify/Themes/Themer/.themer/i3
-.config/spicetify/Themes/Themer/.themer/i3/color.ini
-.config/spicetify/Themes/Themer/.themer/i3/user.css
-.config/spicetify/Themes/Themer/.themer/addypaper
-.config/spicetify/Themes/Themer/.themer/addypaper/color.ini
-.config/spicetify/Themes/Themer/.themer/addypaper/user.css
+.config/spicetify/Themes/Themer/.themer/giorno-dark
+.config/spicetify/Themes/Themer/.themer/giorno-dark/color.ini
+.config/spicetify/Themes/Themer/.themer/giorno-dark/user.css
 .config/spicetify/Themes/Themer/.themer/template_user.css
-.config/spicetify/Themes/Themer/.themer/gruvbox
-.config/spicetify/Themes/Themer/.themer/gruvbox/color.ini
-.config/spicetify/Themes/Themer/.themer/gruvbox/user.css
 .config/spicetify/Themes/ShadowCustom
 .config/spicetify/Themes/ShadowCustom/color.ini
 .config/spicetify/Themes/ShadowCustom/user.css
@@ -16077,17 +16032,9 @@ dtp/goste/yt.goste
 .config/polybar/config
 .config/polybar/.themer_post
 .config/polybar/.themer
-.config/polybar/.themer/gruvbox-dark
-.config/polybar/.themer/gruvbox-dark/config
-.config/polybar/.themer/addypaper-dark
-.config/polybar/.themer/addypaper-dark/config
-.config/polybar/.themer/i3
-.config/polybar/.themer/i3/config
+.config/polybar/.themer/giorno-dark
+.config/polybar/.themer/giorno-dark/config
 .config/polybar/.themer/template_config
-.config/polybar/.themer/addypaper
-.config/polybar/.themer/addypaper/config
-.config/polybar/.themer/gruvbox
-.config/polybar/.themer/gruvbox/config
 .config/i3
 .config/i3/.unused
 .config/i3/.unused/main_.json
@@ -16098,17 +16045,9 @@ dtp/goste/yt.goste
 .config/i3/config
 .config/i3/.themer_post
 .config/i3/.themer
-.config/i3/.themer/gruvbox-dark
-.config/i3/.themer/gruvbox-dark/config
-.config/i3/.themer/addypaper-dark
-.config/i3/.themer/addypaper-dark/config
-.config/i3/.themer/i3
-.config/i3/.themer/i3/config
+.config/i3/.themer/giorno-dark
+.config/i3/.themer/giorno-dark/config
 .config/i3/.themer/template_config
-.config/i3/.themer/addypaper
-.config/i3/.themer/addypaper/config
-.config/i3/.themer/gruvbox
-.config/i3/.themer/gruvbox/config
 .config/xfce4
 .config/xfce4/xfconf
 .config/xfce4/xfconf/xfce-perchannel-xml
@@ -16164,6 +16103,7 @@ dtp/goste/yt.goste
 .config/themer/_dirs
 .config/themer/.allvarsrofi
 .config/themer/i3
+.config/themer/giorno
 .config/themer/grayscale
 .config/themer/.regex
 .config/themer/banff
@@ -16383,7 +16323,6 @@ dtp/goste/yt.goste
 .config/mpv/watch_later/D741EEC2C2D49F05FC89AA723C8B79FC
 .config/mpv/watch_later/60B213A12E643E633FD3F523796CE776
 .config/mpv/watch_later/99F0CD9B79B4980D534EBA5C7FDCCF64
-.config/mpv/watch_later/43C07779C5A928DEFBBB521CAE7A2E14
 .config/mpv/watch_later/B4A026985FEE2D547BFA1DBC51652324
 .config/mpv/watch_later/A0F0C633B2789B4216B0511D4001A308
 .config/mpv/watch_later/04159E8EA6665CDB2811F04725A02B7C
@@ -16405,6 +16344,7 @@ dtp/goste/yt.goste
 .config/mpv/watch_later/F864B11F8AD7BF6310D073806DFBE505
 .config/mpv/watch_later/D364BDECA5DAD9DBDDE9E3F3165272F8
 .config/mpv/watch_later/21542DA8D67A4B3DC4F655B5CA1319B0
+.config/mpv/watch_later/F5A507C688A1FA7ACCDBF0993B4DDD23
 .config/mpv/watch_later/D942FBEDDACBC02E1EFF8B51926C05B7
 .config/mpv/watch_later/8C330A10BFF26E85738C52F716567B63
 .config/mpv/watch_later/1C473E051931E187F02AC4FC3452642C
@@ -16455,6 +16395,7 @@ dtp/goste/yt.goste
 .config/mpv/watch_later/39D10CBB099E77F552313F5BEB96C3DE
 .config/mpv/watch_later/85CE75316B396C813C38A166EAA8A8F0
 .config/mpv/watch_later/7B377F3B727E8A6549451C2925D68674
+.config/mpv/watch_later/33A438CC3EF598E8C3BFA41004281150
 .config/mpv/watch_later/4CDC06A8BC283E0F6CBD1FDA0BD13028
 .config/mpv/watch_later/0C0C0F561B10580B6765CDFD4A08D07E
 .config/mpv/watch_later/22F18EBEBFB02541C59DEE460024170E
@@ -16462,17 +16403,9 @@ dtp/goste/yt.goste
 .config/mpv/.openvidfiles
 .config/mpv/mpv.conf
 .config/mpv/.themer
-.config/mpv/.themer/gruvbox-dark
-.config/mpv/.themer/gruvbox-dark/mpv.conf
 .config/mpv/.themer/template_mpv.conf
-.config/mpv/.themer/addypaper-dark
-.config/mpv/.themer/addypaper-dark/mpv.conf
-.config/mpv/.themer/i3
-.config/mpv/.themer/i3/mpv.conf
-.config/mpv/.themer/addypaper
-.config/mpv/.themer/addypaper/mpv.conf
-.config/mpv/.themer/gruvbox
-.config/mpv/.themer/gruvbox/mpv.conf
+.config/mpv/.themer/giorno-dark
+.config/mpv/.themer/giorno-dark/mpv.conf
 .config/glava
 .config/glava/env_Xfwm4.glsl
 .config/glava/smooth_parameters.glsl
@@ -16507,38 +16440,14 @@ dtp/goste/yt.goste
 .config/glava/.themer
 .config/glava/.themer/template_bars.glsl
 .config/glava/.themer/template_graph.glsl
-.config/glava/.themer/gruvbox-dark
-.config/glava/.themer/gruvbox-dark/bars.glsl
-.config/glava/.themer/gruvbox-dark/graph.glsl
-.config/glava/.themer/gruvbox-dark/wave.glsl
-.config/glava/.themer/gruvbox-dark/circle.glsl
-.config/glava/.themer/gruvbox-dark/radial.glsl
 .config/glava/.themer/template_wave.glsl
-.config/glava/.themer/addypaper-dark
-.config/glava/.themer/addypaper-dark/bars.glsl
-.config/glava/.themer/addypaper-dark/graph.glsl
-.config/glava/.themer/addypaper-dark/wave.glsl
-.config/glava/.themer/addypaper-dark/circle.glsl
-.config/glava/.themer/addypaper-dark/radial.glsl
-.config/glava/.themer/i3
-.config/glava/.themer/i3/bars.glsl
-.config/glava/.themer/i3/graph.glsl
-.config/glava/.themer/i3/wave.glsl
-.config/glava/.themer/i3/circle.glsl
-.config/glava/.themer/i3/radial.glsl
+.config/glava/.themer/giorno-dark
+.config/glava/.themer/giorno-dark/bars.glsl
+.config/glava/.themer/giorno-dark/graph.glsl
+.config/glava/.themer/giorno-dark/wave.glsl
+.config/glava/.themer/giorno-dark/circle.glsl
+.config/glava/.themer/giorno-dark/radial.glsl
 .config/glava/.themer/template_circle.glsl
-.config/glava/.themer/addypaper
-.config/glava/.themer/addypaper/bars.glsl
-.config/glava/.themer/addypaper/graph.glsl
-.config/glava/.themer/addypaper/wave.glsl
-.config/glava/.themer/addypaper/circle.glsl
-.config/glava/.themer/addypaper/radial.glsl
-.config/glava/.themer/gruvbox
-.config/glava/.themer/gruvbox/bars.glsl
-.config/glava/.themer/gruvbox/graph.glsl
-.config/glava/.themer/gruvbox/wave.glsl
-.config/glava/.themer/gruvbox/circle.glsl
-.config/glava/.themer/gruvbox/radial.glsl
 .config/glava/.themer/template_radial.glsl
 .config/glava/util
 .config/glava/util/premultiply.frag
@@ -16629,6 +16538,7 @@ dtp/goste/yt.goste
 .texlive/texmf-var/fonts/tfm/monotype
 .texlive/texmf-var/fonts/tfm/monotype/corona
 .dmrc
+.xmonad.orig
 .urxvt
 .urxvt/urxvtd-ThinkPadT440p
 .tmp
@@ -16816,6 +16726,20 @@ scrmus/Robot blip.wav
 scrmus/A Tone His Self.wav
 .Xresources
 .xmonad
+.xmonad/xmonad.hs
+.xmonad/.gitignore
+.xmonad/xmobar-single.hs
+.xmonad/xmonad.errors
+.xmonad/README.markdown
+.xmonad/stalonetrayrc-dual
+.xmonad/stalonetrayrc-single
+.xmonad/bin
+.xmonad/bin/getMasterVolume
+.xmonad/bin/select-screenshot
+.xmonad/bin/screenshot
+.xmonad/bin/fixscreens
+.xmonad/xmonad-session-rc
+.xmonad/xmobar-dual.hs
 .gitconfig
 .surf
 .surf/styles
@@ -16839,12 +16763,16 @@ numix/README.md
 numix/.themer_post
 numix/.hound.yml
 numix/.themer
+numix/.themer/mywal-dark
+numix/.themer/mywal-dark/Themer.colors
 numix/.themer/Themer-dark.colors
 numix/.themer/gruvbox-dark
 numix/.themer/gruvbox-dark/Themer.colors
 numix/.themer/template_Themer.colors
 numix/.themer/addypaper-dark
 numix/.themer/addypaper-dark/Themer.colors
+numix/.themer/giorno-dark
+numix/.themer/giorno-dark/Themer.colors
 numix/.themer/i3
 numix/.themer/i3/Themer.colors
 numix/.themer/addypaper
@@ -17348,22 +17276,10 @@ Dropbox/negaDrive/plt/css/pandoc.css
 Dropbox/negaDrive/plt/css/themer.css
 Dropbox/negaDrive/plt/css/.themer
 Dropbox/negaDrive/plt/css/.themer/template_epub.css
-Dropbox/negaDrive/plt/css/.themer/gruvbox-dark
-Dropbox/negaDrive/plt/css/.themer/gruvbox-dark/epub.css
-Dropbox/negaDrive/plt/css/.themer/gruvbox-dark/themer.css
 Dropbox/negaDrive/plt/css/.themer/template_themer.css
-Dropbox/negaDrive/plt/css/.themer/addypaper-dark
-Dropbox/negaDrive/plt/css/.themer/addypaper-dark/epub.css
-Dropbox/negaDrive/plt/css/.themer/addypaper-dark/themer.css
-Dropbox/negaDrive/plt/css/.themer/i3
-Dropbox/negaDrive/plt/css/.themer/i3/epub.css
-Dropbox/negaDrive/plt/css/.themer/i3/themer.css
-Dropbox/negaDrive/plt/css/.themer/addypaper
-Dropbox/negaDrive/plt/css/.themer/addypaper/epub.css
-Dropbox/negaDrive/plt/css/.themer/addypaper/themer.css
-Dropbox/negaDrive/plt/css/.themer/gruvbox
-Dropbox/negaDrive/plt/css/.themer/gruvbox/epub.css
-Dropbox/negaDrive/plt/css/.themer/gruvbox/themer.css
+Dropbox/negaDrive/plt/css/.themer/giorno-dark
+Dropbox/negaDrive/plt/css/.themer/giorno-dark/epub.css
+Dropbox/negaDrive/plt/css/.themer/giorno-dark/themer.css
 Dropbox/negaDrive/plt/md
 Dropbox/negaDrive/plt/md/book
 Dropbox/negaDrive/plt/md/book/iosevka-regular.ttf
@@ -17409,29 +17325,13 @@ Dropbox/negaDrive/plt/pandoc/efficient.yaml
 Dropbox/negaDrive/plt/pandoc/book.yaml
 Dropbox/negaDrive/plt/pandoc/settings.yaml
 Dropbox/negaDrive/plt/pandoc/.themer
-Dropbox/negaDrive/plt/pandoc/.themer/gruvbox-dark
-Dropbox/negaDrive/plt/pandoc/.themer/gruvbox-dark/cvl.yaml
-Dropbox/negaDrive/plt/pandoc/.themer/gruvbox-dark/book.yaml
-Dropbox/negaDrive/plt/pandoc/.themer/gruvbox-dark/settings.yaml
 Dropbox/negaDrive/plt/pandoc/.themer/template_settings.yaml
-Dropbox/negaDrive/plt/pandoc/.themer/addypaper-dark
-Dropbox/negaDrive/plt/pandoc/.themer/addypaper-dark/cvl.yaml
-Dropbox/negaDrive/plt/pandoc/.themer/addypaper-dark/book.yaml
-Dropbox/negaDrive/plt/pandoc/.themer/addypaper-dark/settings.yaml
-Dropbox/negaDrive/plt/pandoc/.themer/i3
-Dropbox/negaDrive/plt/pandoc/.themer/i3/cvl.yaml
-Dropbox/negaDrive/plt/pandoc/.themer/i3/book.yaml
-Dropbox/negaDrive/plt/pandoc/.themer/i3/settings.yaml
+Dropbox/negaDrive/plt/pandoc/.themer/giorno-dark
+Dropbox/negaDrive/plt/pandoc/.themer/giorno-dark/cvl.yaml
+Dropbox/negaDrive/plt/pandoc/.themer/giorno-dark/book.yaml
+Dropbox/negaDrive/plt/pandoc/.themer/giorno-dark/settings.yaml
 Dropbox/negaDrive/plt/pandoc/.themer/template_book.yaml
-Dropbox/negaDrive/plt/pandoc/.themer/addypaper
-Dropbox/negaDrive/plt/pandoc/.themer/addypaper/cvl.yaml
-Dropbox/negaDrive/plt/pandoc/.themer/addypaper/book.yaml
-Dropbox/negaDrive/plt/pandoc/.themer/addypaper/settings.yaml
 Dropbox/negaDrive/plt/pandoc/.themer/template_cvl.yaml
-Dropbox/negaDrive/plt/pandoc/.themer/gruvbox
-Dropbox/negaDrive/plt/pandoc/.themer/gruvbox/cvl.yaml
-Dropbox/negaDrive/plt/pandoc/.themer/gruvbox/book.yaml
-Dropbox/negaDrive/plt/pandoc/.themer/gruvbox/settings.yaml
 Dropbox/negaDrive/plt/groff
 Dropbox/negaDrive/plt/groff/settings
 Dropbox/negaDrive/plt/groff/name.ms
@@ -22414,22 +22314,10 @@ plt/css/pandoc.css
 plt/css/themer.css
 plt/css/.themer
 plt/css/.themer/template_epub.css
-plt/css/.themer/gruvbox-dark
-plt/css/.themer/gruvbox-dark/epub.css
-plt/css/.themer/gruvbox-dark/themer.css
 plt/css/.themer/template_themer.css
-plt/css/.themer/addypaper-dark
-plt/css/.themer/addypaper-dark/epub.css
-plt/css/.themer/addypaper-dark/themer.css
-plt/css/.themer/i3
-plt/css/.themer/i3/epub.css
-plt/css/.themer/i3/themer.css
-plt/css/.themer/addypaper
-plt/css/.themer/addypaper/epub.css
-plt/css/.themer/addypaper/themer.css
-plt/css/.themer/gruvbox
-plt/css/.themer/gruvbox/epub.css
-plt/css/.themer/gruvbox/themer.css
+plt/css/.themer/giorno-dark
+plt/css/.themer/giorno-dark/epub.css
+plt/css/.themer/giorno-dark/themer.css
 plt/md
 plt/md/book
 plt/md/book/iosevka-regular.ttf
@@ -22475,29 +22363,13 @@ plt/pandoc/efficient.yaml
 plt/pandoc/book.yaml
 plt/pandoc/settings.yaml
 plt/pandoc/.themer
-plt/pandoc/.themer/gruvbox-dark
-plt/pandoc/.themer/gruvbox-dark/cvl.yaml
-plt/pandoc/.themer/gruvbox-dark/book.yaml
-plt/pandoc/.themer/gruvbox-dark/settings.yaml
 plt/pandoc/.themer/template_settings.yaml
-plt/pandoc/.themer/addypaper-dark
-plt/pandoc/.themer/addypaper-dark/cvl.yaml
-plt/pandoc/.themer/addypaper-dark/book.yaml
-plt/pandoc/.themer/addypaper-dark/settings.yaml
-plt/pandoc/.themer/i3
-plt/pandoc/.themer/i3/cvl.yaml
-plt/pandoc/.themer/i3/book.yaml
-plt/pandoc/.themer/i3/settings.yaml
+plt/pandoc/.themer/giorno-dark
+plt/pandoc/.themer/giorno-dark/cvl.yaml
+plt/pandoc/.themer/giorno-dark/book.yaml
+plt/pandoc/.themer/giorno-dark/settings.yaml
 plt/pandoc/.themer/template_book.yaml
-plt/pandoc/.themer/addypaper
-plt/pandoc/.themer/addypaper/cvl.yaml
-plt/pandoc/.themer/addypaper/book.yaml
-plt/pandoc/.themer/addypaper/settings.yaml
 plt/pandoc/.themer/template_cvl.yaml
-plt/pandoc/.themer/gruvbox
-plt/pandoc/.themer/gruvbox/cvl.yaml
-plt/pandoc/.themer/gruvbox/book.yaml
-plt/pandoc/.themer/gruvbox/settings.yaml
 plt/groff
 plt/groff/settings
 plt/groff/name.ms

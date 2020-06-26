@@ -268,11 +268,7 @@ SCR .config/sublime-text-3/Packages/LaTeXBox/parser.py
 SCR .config/qutebrowser/config_.py
 SCR .config/qutebrowser/config.py
 SCR .config/qutebrowser/.themer/template_config.py
-SCR .config/qutebrowser/.themer/gruvbox-dark/config.py
-SCR .config/qutebrowser/.themer/addypaper-dark/config.py
-SCR .config/qutebrowser/.themer/i3/config.py
-SCR .config/qutebrowser/.themer/addypaper/config.py
-SCR .config/qutebrowser/.themer/gruvbox/config.py
+SCR .config/qutebrowser/.themer/giorno-dark/config.py
 SCR .config/calibre/conversion/search_and_replace.py
 SCR .config/calibre/conversion/metadata.py
 SCR .config/calibre/conversion/mobi_output.py

@@ -26,7 +26,7 @@ MON1       eDP1
 MON2       VGA1
 MON3       HDMI1
 guifont    Product Sans
-termfont   Iosevka
+termfont   CMU Typewriter Text
 editfont   Luxi Mono
 gvimfont   Luxi\\ Mono
 romanfont  Times New Roman
@@ -37,7 +37,7 @@ monofnt2   monaco
 ltimex     1
 ltimey     90
 size       11
-rxvtsize   12
+rxvtsize   15
 rofifsize  13
 gtk        Themer
 gtk-icon   Tela-red-dark

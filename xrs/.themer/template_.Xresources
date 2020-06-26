@@ -2,20 +2,20 @@
 ! ━  themer theme: %%name%%
 
 #define tfg0 %%fg0%%
-#define tacb %%acb%%
 #define tred %%darkred%%
-#define redl %%darkred%%
 #define tgrn %%darkgrn%%
-#define grnl %%darkgrn%%
 #define tylw %%darkylw%%
-#define ylwl %%darkylw%%
 #define tblu %%darkblu%%
-#define blul %%darkblu%%
 #define tgnt %%darkgnt%%
-#define gntl %%darkgnt%%
 #define tcyn %%darkcyn%%
-#define cynl %%darkcyn%%
+#define tacb %%acb%%
 #define tbg0 %%bg0%%
+#define redl %%darkred%%
+#define grnl %%darkgrn%%
+#define ylwl %%darkylw%%
+#define blul %%darkblu%%
+#define gntl %%darkgnt%%
+#define cynl %%darkcyn%%
 #define tbg1 %%bg1%%
 
 ! ━  default theme: i3
@@ -75,35 +75,37 @@
 #define fontsize  %%rxvtsize%%
 #define fontsize2 %%rxvtsize%%
 
-! ━  2colorvars
+*.font:                   fontname:size=fontsize
+*.chscale:                1.15
 
-*background:             tbg0
-*foreground:             tfg0
-*fading:                 30
-*fadeColor:              black
-*cursorColor:            tred
-*pointerColorBackground: tbg0
-*pointerColorForeground: tcyn
-*border:                 tbg0
+*.fading:                 30
+*.fadeColor:              black
+*.pointerColorBackground: tbg0
+*.pointerColorForeground: tcyn
+*.border:                 tbg0
 
-*color0:                 tbg0
-*color1:                 tred
-*color2:                 tgrn
-*color3:                 tylw
-*color4:                 tblu
-*color5:                 tgnt
-*color6:                 tcyn
-*color7:                 tacb
-*color8:                 tbg1
-*color9:                 redl
-*color10:                grnl
-*color11:                ylwl
-*color12:                blul
-*color13:                gntl
-*color14:                cynl
-*color15:                tfg0
+*.background:             tbg0
+*.foreground:             tfg0
+*.cursorColor:            tred
 
-! ━  3rofi
+*.color0:                 tbg0
+*.color1:                 tred
+*.color2:                 tgrn
+*.color3:                 tylw
+*.color4:                 tblu
+*.color5:                 tgnt
+*.color6:                 tcyn
+*.color7:                 tacb
+*.color8:                 tbg1
+*.color9:                 redl
+*.color10:                grnl
+*.color11:                ylwl
+*.color12:                blul
+*.color13:                gntl
+*.color14:                cynl
+*.color15:                tfg0
+
+! ━  2rofi
 
 !rofi.width:           400
 !rofi.lines:           15
@@ -149,7 +151,7 @@ rofi.fuzzy:            true
 rofi.separator-style:  none
 rofi.markup-rows:      true
 
-! ━  4xft
+! ━  3xft
 
 Xft.dpi:       96
 Xft.antialias: true
@@ -159,7 +161,7 @@ Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-! ━  5xterm
+! ━  4xterm
 
 XTerm*foreground:        tfg0
 XTerm*background:        tbg0
@@ -170,12 +172,12 @@ XTerm.vt100.geometry:    79x25
 ! XTerm*pointerColor:    tcyn
 ! XTerm*reverseVideo:    on
 
-! ━  6xcursor
+! ━  5xcursor
 
 Xcursor.theme: Bibata_Dark_Red
 Xcursor.size:  48
 
-! ━  7urxvt
+! ━  6urxvt
 
 URxvt.font:                 xft:fontname:size=fontsize, xft:FontAwesome:size=9
 
@@ -201,7 +203,7 @@ URxvt.geometry:             60x17
 !URxvt*transparent:          true
 !URxvt*shading:              138
 
-! ━  8urxvtext
+!  urxvtext  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 URxvt*perl-ext-common:      default,matcher,resize-font,config-reload
 !URxvt*perl-lib:            /home/gavarch/.urxvt/ext

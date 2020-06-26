@@ -1,6 +1,3 @@
-rename Frank Herbert's Dune
-search otf
-open_with 2
 open_with
 rename JoJo no Kimyou na Bouken- Diamond wa Kudakenai Episode 5.mp4
 rename JoJo no Kimyou na Bouken- Diamond wa Kudakenai Episode 4.mp4
@@ -46,5 +43,8 @@ rename giorno.png
 rename giorno
 open_with mov
 open_with mpv
-rename .xmonad.orig
 shell git clone https://github.com/randomthought/xmonad-config.git .xmonad
+rename .xmonad.orig
+shell git clone https://github.com/vicfryzel/xmonad-config.git
+rename .xmonad
+w

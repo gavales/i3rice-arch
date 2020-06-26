@@ -42,12 +42,11 @@ if [[ $CMD == "dmenu" ]]; then
 		-hb  "${TMR[$ACC]}" -hf  "${TMR[acf]}" \
 		-ib  "${TMR[$ACC]}" -if  "${TMR[bg1]}"
 else
-	echo $PATH | tr ':' '\n' | xargs stest -flx | sort -u | \
-		dmenu -p run ${@} -fn "${FONT:-"Iosevka 15"}" \
-			-nb  "${TMR[$ACC]}" -nf  "${TMR[fg1]}" \
-			-sb  "${TMR[fg1]}"  -sf  "${TMR[$ACC]}" \
-			-nhb "${TMR[$ACC]}" -nhf "${TMR[bg1]}" \
-			-shb "${TMR[fg1]}"  -shf "${TMR[bg1]}" \
-			-hb  "${TMR[$ACC]}" -hf  "${TMR[acf]}" \
-			-ib  "${TMR[$ACC]}" -if  "${TMR[bg1]}"
+	dmenu_run -p run ${@} -fn "${FONT:-"Iosevka 15"}" \
+		-nb  "${TMR[$ACC]}" -nf  "${TMR[fg1]}" \
+		-sb  "${TMR[fg1]}"  -sf  "${TMR[$ACC]}" \
+		-nhb "${TMR[$ACC]}" -nhf "${TMR[bg1]}" \
+		-shb "${TMR[fg1]}"  -shf "${TMR[bg1]}" \
+		-hb  "${TMR[$ACC]}" -hf  "${TMR[acf]}" \
+		-ib  "${TMR[$ACC]}" -if  "${TMR[bg1]}"
 fi

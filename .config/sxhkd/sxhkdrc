@@ -73,12 +73,16 @@ super + shift + grave
 	gencvl
 
 # ━  ROW1
+#super + q
+#	lch -t -i calculator -e "$TWOMINAL -name calculator -e R"
 super + q
-	lch -t -i calculator -e "$TWOMINAL -name calculator -e R"
+	lch -t -i calculator -e "$TERMINAL -n calculator -e R"
 super + w
 	chrap http://www1.watchserieshd.tv/
+#super + r
+#	lch -n newsboat -e "$TWOMINAL -name newsboat -e newsboat"
 super + r
-	lch -n newsboat -e "$TWOMINAL -name newsboat -e newsboat"
+	lch -n newsboat -e "$TERMINAL -n newsboat -e newsboat"
 super + t
 	mkwalrando
 super + y
@@ -91,8 +95,10 @@ super + i
 super + {p,bracketright,bracketleft,backslash}
 	i3media {togg,next,prev,stop}
 
+#super + shift + r
+#	lch -i reddit -e "$TWOMINAL -name reddit -e rtv"
 super + shift + r
-	lch -i reddit -e "$TWOMINAL -name reddit -e rtv"
+	lch -i reddit -e "$TERMINAL -n reddit -e rtv"
 super + shift + t
 	compton
 super + shift + y
@@ -110,14 +116,18 @@ super + d
 #	i3menu -d -F -t onedark -C 4 -D 200
 super + f
 	thunar
+#super + g
+#	$TWOMINAL -name gitcommit -e gitcommit
 super + g
-	$TWOMINAL -name gitcommit -e gitcommit
+	$TERMINAL -n gitcommit -e gitcommit
 super + semicolon
 	$TREMINAL
 super + apostrophe
 	$TWOMINAL -name noterm
+#super + Return
+#	$TWOMINAL -name terminal
 super + Return
-	$TWOMINAL -name terminal
+	$TERMINAL -n terminal
 
 super + shift + s
 	lch -c Spotify -e "spotify"
@@ -126,15 +136,21 @@ super + shift + d
 #	i3menu -r -L 1 -w 100 -o
 super + shift + f
 	gksu thunar
+#super + shift + g
+#	$TWOMINAL -name drive_sync -e grivesync
+#super + shift + Return
+#	$TWOMINAL -name ranger -e ranger
 super + shift + g
-	$TWOMINAL -name drive_sync -e grivesync
+	$TERMINAL -n drive_sync -e grivesync
 super + shift + Return
-	$TWOMINAL -name ranger -e ranger
+	$TERMINAL -n ranger -e ranger
 
 super + control + s
 	slack
+#super + control + Return
+#	$TWOMINAL -name ranger_root -e sudo ranger
 super + control + Return
-	$TWOMINAL -name ranger_root -e sudo ranger
+	$TERMINAL -n ranger_root -e sudo ranger
 
 # ━  ROW3
 super + z
@@ -145,8 +161,10 @@ super + c
 	lch -c Firefox -e "$BROWSER"
 #super + v
 #	glach
+#super + v
+#	lch -i visualiser -e "$TWOMINAL -name visualiser -e vis"
 super + v
-	lch -i visualiser -e "$TWOMINAL -name visualiser -e vis"
+	lch -i visualiser -e "$TERMINAL -n visualiser -e vis"
 super + b
 	lch -i references -e "$EDITOR $HOME/Drive/global.bib"
 super + n
@@ -160,8 +178,10 @@ super + shift + c
 	reloadconfs
 super + shift + v
 	projectM-pulseaudio
+#super + shift + b
+#	lch -i bashmount -e "$TWOMINAL -name bashmount -e bashmount"
 super + shift + b
-	lch -i bashmount -e "$TWOMINAL -name bashmount -e bashmount"
+	lch -i bashmount -e "$TERMINAL -n bashmount -e bashmount"
 super + shift + m
 	chrap https://play.google.com/movies/
 super + shift + {comma,period,slash}

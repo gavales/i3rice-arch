@@ -54,7 +54,7 @@ exit
 }
 
 FNT=$(themer -v 'editfont ')
-SZE=13
+SZE=15
 SVR=edtr
 INS=edtr
 
@@ -98,6 +98,7 @@ esac
 [[ -n $EXF ]] && SVR="edtr-$EXF" INS="$EXF - edtr"
 [[ -n $SVO ]] && SVR="$SVO"      INS="$SVO"
 
-urxvtc -name "${INS}" -fn "xft:${FNT}:size=${SZE}" \
+#urxvtc -name "${INS}" -fn "xft:${FNT}:size=${SZE}" \
+st -n "${INS}" -f "${FNT}:size=${SZE}" \
 	-e vim --servername "${SVR}" --remote-tab \
 	"${TRG}" &>/dev/null &

@@ -9,7 +9,7 @@ __snapper__ - take screenshot with `maim`
 # SYNOPSIS
 
 ```
-snapper
+snapper [--full|-f] [--sel|-s] [--noconfirm|-n]
 snapper --help|-h
 ```
 
