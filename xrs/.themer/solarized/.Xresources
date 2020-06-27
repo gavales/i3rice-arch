@@ -71,7 +71,7 @@
 
 ! ━  1vars
 
-#define fontname  CMU Typewriter Text
+#define fontname  Iosevka
 #define fontsize  15
 #define fontsize2 15
 
@@ -165,7 +165,7 @@ Xft.lcdfilter: lcddefault
 
 XTerm*foreground:        tfg0
 XTerm*background:        tbg0
-XTerm*faceName:          CMU Typewriter Text
+XTerm*faceName:          Iosevka
 XTerm*faceSize:          15
 XTerm*selectToClipboard: true
 XTerm.vt100.geometry:    79x25

@@ -1,26 +1,9 @@
-rename giorno
-open_with mov
-open_with mpv
-shell git clone https://github.com/randomthought/xmonad-config.git .xmonad
-rename .xmonad.orig
-shell git clone https://github.com/vicfryzel/xmonad-config.git
-rename .xmonad
-shell wget https://dwm.suckless.org/patches/selectivefakefullscreen/dwm-selectivefakefullscreen-20200513-f09418b.diff
-shell wget https://dwm.suckless.org/patches/cool_autostart/dwm-cool-autostart-6.2.diff
-shell wget https://dwm.suckless.org/patches/combo/dwm-combo-6.1.diff
-shell wget https://dwm.suckless.org/patches/dragmfact/dwm-dragmfact-6.2.diff
-shell wget https://dwm.suckless.org/patches/dwmc/dwm-dwmc-6.2.diff
-shell wget https://dwm.suckless.org/patches/movestack/dwm-movestack-6.1.diff
-shell wget https://dwm.suckless.org/patches/nmaster/nmaster-ncol.c
-shell wget https://dwm.suckless.org/patches/restartsig/dwm-restartsig-20180523-6.2.diff
 shell wget https://dwm.suckless.org/patches/rmaster/dwm-rmaster-6.1.diff
-rename README.md
 shell git clone https://github.com/StillANixRookie/st.git
 rename st-mine
 rename st-luke
 rename st
 shell git clone https://github.com/StillANixRookie/st.git st-old
-mkdir old
 open_with%spacem
 shell rm *orig *ref
 shell rm *orig *reg
@@ -32,13 +15,11 @@ rename st.c.before.xres
 rename x.c.before.xres
 rename st-simple_plumb.diff
 rename config.def.h.before.xres
-mkdir diffs
 rename config.def.h
 rename x.c
 shell git clone https://github.com/gnotclub/xst.git
 open_with gedtr
 shell wget https://st.suckless.org/patches/font2/st-font2-20190416-ba72400.diff
-shell rm *orig *rej
 w
 open_with xst -e vim
 open_with vim
@@ -48,3 +29,22 @@ rename st-xresources-xst-version-20200626.diff
 rename st-xresources-20200604-9ba7ecf.diff
 rename st-xresources-xst-20200626.diff
 rename xst-xresources-20200626.diff
+shell git clone https://github.com/StillANixRookie/surf.git
+rename surf-me
+shell git clonegit clone https://git.suckless.org/surf
+shell git clone https://git.suckless.org/surf
+rename surf
+shell convert %f st.png
+open_with%space
+shell rm *orig *rej
+mkdir diffs
+open_with pinta
+rename dwm-gavin
+shell git clone https://git.suckless.org/dwm
+mkdir old
+rename dwm
+rename dwm-old
+shell git clone https://github.com/StillANixRookie/dwm.git
+rename dmenu-4.9
+rename dmenu
+rename README.md

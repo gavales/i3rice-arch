@@ -19,7 +19,7 @@ screenchange-reload = true
 
 [bar/i3]
 ;monitor             = ${env:MONITOR:HDMI-1}
-override-redirect   = false
+override-redirect   = true
 ;bottom              = true
 height              = 22
 width               = 100%
@@ -52,38 +52,6 @@ cursor-scroll       = ns-resize
 modules-left        = ws xkeyboard gwc i3light disk
 modules-center      = td
 modules-right       = battery i3vol memory cpu temperature
-
-[bar/fvwm]
-;monitor             = ${env:MONITOR:HDMI-1}
-;bottom              = true
-;override-redirect   = true
-height              = 40
-width               = 100%
-radius              = 0.0
-fixed-center        = false
-enable-ipc          = true
-background          = ${colors.tr}
-foreground          = %%bg0%%
-line-size           = 0
-border-size         = 10
-line-color          = %%acc%%
-border-color        = ${colors.tr}
-padding-left        = 0
-padding-right       = 0
-module-margin-left  = 0
-module-margin-right = 0
-font-0              = %%termfont%%:style=Semibold Oblique:size=12;3
-font-1              = FontAwesome5Free:style=Solid:size=14;3
-font-2              = FontAwesome5Brands:style=Solid:size=12;3
-font-3              = Inconsolata Nerd Font:style=Regular:size=21;6
-tray-position       = right
-tray-padding        = 2
-tray-background     = %%acc%%
-cursor-click        = pointer
-cursor-scroll       = ns-resize
-modules-left        = startfvwm fvwmtd xkeyboard wintitle
-modules-center      = 
-modules-right       = i3media disk memory cpu temperature nm i3light i3vol battery
 
 [global/wm]
 margin-top    = 5
