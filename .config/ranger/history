@@ -1,45 +1,3 @@
-open_with
-rename JoJo no Kimyou na Bouken- Diamond wa Kudakenai Episode 5.mp4
-rename JoJo no Kimyou na Bouken- Diamond wa Kudakenai Episode 4.mp4
-touch Episode List.txt
-mkdir Jojo's Bizarre Adventure - Diamond is Unbreakable
-rename Part 3 - Diamond is Unbreakable
-rename Part 4 - Golden Wind
-rename Part 1 - Jojo's Bizarre Adventure
-rename Part 2 - Stardust Crusaders
-rename EpisodeList.txt
-open_with 0
-open_with gedtr
-open_with vim
-rename JoJo no Kimyou na Bouken- Diamond wa Kudakenai Episode 1.mp4
-rename Part 4 - Diamond is Unbreakable
-mkdir media
-open_with%space
-mkdir 
-mkdir Yes
-mkdir AmaLee
-
-mkdir Nina Simone
-mkdir The Champs
-mkdir Nothing But the Best (Remasteres)
-mkdir Frank Sinatra
-mkdir jobs
-mkdir WalmartTsawwassen
-mkdir OrientationDocs
-rename walmartassociateonlineorientationc133
-rename Peter Symonds College _ Online Store & Payments
-delete
-rename (2004) Speak.mp4
-open_with pin
-open_with pinta
-rename Doo Wah Diddyeda.mp3
-rename Doo Wah Diddy.mp3
-rename 128 - Noble Pride to the End! Vegeta Falls!!.mkv
-rename Dragon Ball Super
-rename [Funimation DUB] Dragon Ball Super Season 3 [1080p][x265][EXIL3]
-rename 3
-rename [Funimation DUB] Dragon Ball Super Season 4 [1080p][x265][EXIL3]
-rename giorno.png
 rename giorno
 open_with mov
 open_with mpv
@@ -47,4 +5,46 @@ shell git clone https://github.com/randomthought/xmonad-config.git .xmonad
 rename .xmonad.orig
 shell git clone https://github.com/vicfryzel/xmonad-config.git
 rename .xmonad
+shell wget https://dwm.suckless.org/patches/selectivefakefullscreen/dwm-selectivefakefullscreen-20200513-f09418b.diff
+shell wget https://dwm.suckless.org/patches/cool_autostart/dwm-cool-autostart-6.2.diff
+shell wget https://dwm.suckless.org/patches/combo/dwm-combo-6.1.diff
+shell wget https://dwm.suckless.org/patches/dragmfact/dwm-dragmfact-6.2.diff
+shell wget https://dwm.suckless.org/patches/dwmc/dwm-dwmc-6.2.diff
+shell wget https://dwm.suckless.org/patches/movestack/dwm-movestack-6.1.diff
+shell wget https://dwm.suckless.org/patches/nmaster/nmaster-ncol.c
+shell wget https://dwm.suckless.org/patches/restartsig/dwm-restartsig-20180523-6.2.diff
+shell wget https://dwm.suckless.org/patches/rmaster/dwm-rmaster-6.1.diff
+rename README.md
+shell git clone https://github.com/StillANixRookie/st.git
+rename st-mine
+rename st-luke
+rename st
+shell git clone https://github.com/StillANixRookie/st.git st-old
+mkdir old
+open_with%spacem
+shell rm *orig *ref
+shell rm *orig *reg
+rename st-right_click_to_plumb.diff
+rename st.c.before.plumb
+rename x.c.before.plumb
+rename st.c
+rename st.c.before.xres
+rename x.c.before.xres
+rename st-simple_plumb.diff
+rename config.def.h.before.xres
+mkdir diffs
+rename config.def.h
+rename x.c
+shell git clone https://github.com/gnotclub/xst.git
+open_with gedtr
+shell wget https://st.suckless.org/patches/font2/st-font2-20190416-ba72400.diff
+shell rm *orig *rej
 w
+open_with xst -e vim
+open_with vim
+
+rename music
+rename st-xresources-xst-version-20200626.diff
+rename st-xresources-20200604-9ba7ecf.diff
+rename st-xresources-xst-20200626.diff
+rename xst-xresources-20200626.diff

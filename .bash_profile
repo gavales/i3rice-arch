@@ -9,7 +9,7 @@ export EDITOR=$HOME/scr/edtr
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 # fix "xdg-open fork-bomb" export your preferred browser from here
 export BROWSER=/usr/bin/brave
-export TERMINAL=/usr/bin/st
+export TERMINAL=/usr/local/bin/st
 #export TERMINAL=/usr/bin/urxvt
 #export TWOMINAL=/usr/bin/urxvtc
 export TWOMINAL=/usr/bin/urxvt
