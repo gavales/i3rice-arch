@@ -1,8 +1,10 @@
 #!/bin/bash
 
+[[ -n $(pidof dwm) ]] && WM=dwm || WM=i3
+
 cp ".themer/${1}/config" config
 killall -q polybar
-polybar i3 &>/dev/null &
+polybar $WM &>/dev/null &
 #sleep 0.5
 #hideIt.sh --name "^polybar-i3_eDP1$" --wait --hover --direction top --peek 1 &>/dev/null &
 #hideIt.sh --name "^polybar-fvwm_eDP1$" --wait --hover --direction top --peek 1 &>/dev/null &

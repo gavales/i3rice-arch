@@ -64,15 +64,15 @@ fontname    'Product Sans:size=12'
 
 # ━  colors
 
-color activeborder   "#4c3d3d"
-color inactiveborder "#4c3d3d"
-color groupborder    "#4c3d3d"
-color ungroupborder  "#4c3d3d"
-color font           "#fbf4f1"
-color selfont        "#fbf4f1"
-color menubg         "#383436"
-color menufg         "#8b5c57"
-color urgentborder   "#b85227"
+color activeborder   "#2f362f"
+color inactiveborder "#2f362f"
+color groupborder    "#2f362f"
+color ungroupborder  "#2f362f"
+color font           "#fbf1c7"
+color selfont        "#fbf1c7"
+color menubg         "#282828"
+color menufg         "#486249"
+color urgentborder   "#cc241d"
 
 # ━  groups apps
 #autogroup 2 "qutebrowser,qutebrowser"

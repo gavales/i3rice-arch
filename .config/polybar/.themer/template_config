@@ -19,6 +19,42 @@ screenchange-reload = true
 
 [bar/i3]
 ;monitor             = ${env:MONITOR:HDMI-1}
+override-redirect   = false
+;bottom              = true
+height              = 22
+width               = 100%
+radius              = 0.0
+fixed-center        = false
+enable-ipc          = true
+background-0        = #@@acc@@
+background-1        = #@@acb@@
+foreground          = %%bg0%%
+line-size           = 0
+border-size         = 0
+line-color          = %%acc%%
+border-color        = ${colors.tr}
+padding-left        = 0
+padding-right       = 0
+module-margin-left  = 0
+module-margin-right = 0
+font-0              = %%termfont%%:size=10;3
+font-1              = FontAwesome5Free:style=Solid:size=12;2
+font-2              = FontAwesome5Brands:style=Solid:size=12;2
+font-3              = Inconsolata Nerd Font:style=Regular:size=21;6
+tray-position       = right
+tray-padding        = 2
+tray-maxsize        = 16
+tray-transparent    = true
+tray-background-0   = #ff@@acc@@
+tray-background-1   = #00@@acc@@
+cursor-click        = pointer
+cursor-scroll       = ns-resize
+modules-left        = ws xkeyboard gwc i3light disk
+modules-center      = td
+modules-right       = battery i3vol memory cpu temperature
+
+[bar/dwm]
+;monitor             = ${env:MONITOR:HDMI-1}
 override-redirect   = true
 ;bottom              = true
 height              = 22

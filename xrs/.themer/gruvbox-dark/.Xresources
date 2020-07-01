@@ -72,10 +72,12 @@
 ! ━  1vars
 
 #define fontname  Iosevka
-#define fontsize  12
-#define fontsize2 12
+#define fontsize  15
+#define fontsize2 15
 
 *.font:                   fontname:size=fontsize
+*.chscale:                1.15
+*.borderpx:               0
 
 *.fading:                 30
 *.fadeColor:              black

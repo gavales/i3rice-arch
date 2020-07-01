@@ -20,8 +20,11 @@ IMG scrpic/brightness-empty.png
 IMG scrpic/theme.png
 IMG scrpic/speaker-empty.png
 IMG scrpic/gitblack.png
+IMG git/st/st.svg
+IMG git/st/st.png
 IMG git/sent/nyan.png
 IMG git/dwm/dwm.png
+IMG git/dwm/old/dwm.png
 IMG git/public/favicon.png
 IMG git/public/about.png
 IMG git/public/apple-touch-icon-144-precomposed.png
@@ -32,6 +35,16 @@ IMG git/ghb/themes/hyde/images/screenshot.png
 IMG git/ghb/themes/hyde/images/tn.png
 IMG git/ghb/themes/hyde/static/favicon.png
 IMG git/ghb/themes/hyde/static/apple-touch-icon-144-precomposed.png
+IMG git/dmenu/horinopad.png
+IMG git/dmenu/dmenu.png
+IMG git/dmenu/badpango.png
+IMG git/dmenu/lineheight3.png
+IMG git/dmenu/vertnopad.png
+IMG git/dmenu/horipad.png
+IMG git/dmenu/lineheight1.png
+IMG git/dmenu/lineheight2.png
+IMG git/dmenu/lineheight4.png
+IMG git/dmenu/vertpad.png
 IMG git/numix/themer-redrock.png
 IMG git/numix/WW_128000000001428569_EN.jpg
 IMG git/numix/JericoacoaraBrazil.jpg
@@ -423,15 +436,6 @@ IMG git/numix/themer-solarized.png
 IMG git/numix/MunnarKeralaIndia.jpg
 IMG git/farbfeld/ff2png
 IMG git/farbfeld/ff2jpg
-IMG git/dmenu-gavin/horinopad.png
-IMG git/dmenu-gavin/badpango.png
-IMG git/dmenu-gavin/lineheight3.png
-IMG git/dmenu-gavin/vertnopad.png
-IMG git/dmenu-gavin/horipad.png
-IMG git/dmenu-gavin/lineheight1.png
-IMG git/dmenu-gavin/lineheight2.png
-IMG git/dmenu-gavin/lineheight4.png
-IMG git/dmenu-gavin/vertpad.png
 IMG git/i3rice-arch.wiki/images/themer-redrock.png
 IMG git/i3rice-arch.wiki/images/varmenu.png
 IMG git/i3rice-arch.wiki/images/WW_128000000001428569_EN.jpg
@@ -860,6 +864,7 @@ IMG pic/favs/Durdevica Tara Bridge, Montenegro 1920x1080.jpg
 IMG pic/favs/Edinburgh, Scotland 1920x1080.jpg
 IMG pic/favs/Elizabeth Quay Bridge, Western Australia 1920x1080.jpg
 IMG pic/favs/Elk 1920x1080.jpg
+IMG pic/gwc/cols/2e3841-oldtile.png
 IMG pic/gwc/cols/4c332e-dirt.png
 IMG pic/gwc/cols/525252-paper.png
 IMG pic/gwc/cols/a3adb7-oldtile.png
@@ -1306,6 +1311,10 @@ IMG pic/shot/SEL/2020-06-05_10:23:46.png
 IMG pic/shot/SEL/2020-06-12_09:25:36.png
 IMG pic/shot/SEL/2020-06-15_23:26:49.png
 IMG pic/shot/SEL/2020-06-19_09:51:59.png
+IMG pic/shot/SEL/2020-06-24_19:34:23.png
+IMG pic/shot/SEL/2020-06-24_19:42:49.png
+IMG pic/shot/SEL/2020-06-24_19:44:41.png
+IMG pic/shot/SEL/2020-06-27_23:19:41.png
 IMG pic/shot/SEL/drivingtest1.png
 IMG pic/shot/SEL/ORderconfirmationflight.png
 IMG pic/shot/SEL/VFS1.png
@@ -3189,6 +3198,39 @@ IMG dwn/flightone_1275_linux64/icon.png
 IMG dwn/fourplay-fourplay.png
 IMG dwn/fourplayvevo.jpg
 IMG dwn/garila2406.jpeg
+IMG dwn/Germany Tour 2015_files/P1010153.jpg
+IMG dwn/Germany Tour 2015_files/P1010169.jpg
+IMG dwn/Germany Tour 2015_files/P1010181.jpg
+IMG dwn/Germany Tour 2015_files/P1010184.jpg
+IMG dwn/Germany Tour 2015_files/P1010185.jpg
+IMG dwn/Germany Tour 2015_files/P1010187.jpg
+IMG dwn/Germany Tour 2015_files/P1010189.jpg
+IMG dwn/Germany Tour 2015_files/P1010193.jpg
+IMG dwn/Germany Tour 2015_files/P1010195 mannheim.jpg
+IMG dwn/Germany Tour 2015_files/P1010200.jpg
+IMG dwn/Germany Tour 2015_files/P1010202.jpg
+IMG dwn/Germany Tour 2015_files/P1010204(1).jpg
+IMG dwn/Germany Tour 2015_files/P1010204.jpg
+IMG dwn/Germany Tour 2015_files/P1010205(1).jpg
+IMG dwn/Germany Tour 2015_files/P1010205.jpg
+IMG dwn/Germany Tour 2015_files/P1010206(1).jpg
+IMG dwn/Germany Tour 2015_files/P1010206.jpg
+IMG dwn/Germany Tour 2015_files/P1010207a.jpg
+IMG dwn/Germany Tour 2015_files/P1010207b.jpg
+IMG dwn/Germany Tour 2015_files/P1010207c.jpg
+IMG dwn/Germany Tour 2015_files/P1010207d.jpg
+IMG dwn/Germany Tour 2015_files/P1010207e.jpg
+IMG dwn/Germany Tour 2015_files/P1010208.jpg
+IMG dwn/Germany Tour 2015_files/P1010209.jpg
+IMG dwn/Germany Tour 2015_files/P1010210.jpg
+IMG dwn/Germany Tour 2015_files/P1010211.jpg
+IMG dwn/Germany Tour 2015_files/P1010212.jpg
+IMG dwn/Germany Tour 2015_files/P1010214.jpg
+IMG dwn/Germany Tour 2015_files/P1010215.jpg
+IMG dwn/Germany Tour 2015_files/P1010217.jpg
+IMG dwn/Germany Tour 2015_files/P1010230a.jpg
+IMG dwn/Germany Tour 2015_files/P1010230b.jpg
+IMG dwn/Germany Tour 2015_files/P1010230c.jpg
 IMG dwn/iflightxl7lowriderv3frame.jpg
 IMG dwn/unnamed.jpg
 IMG dwn/WhatsApp Image 2020-05-27 at 21.44.49.jpeg
@@ -3266,19 +3308,19 @@ IMG Calibre Library/Pierre Christin/Valerian (english version) - volume 4 - Welc
 IMG Calibre Library/Pierre Christin/Valerian et Laureline (english version) - volume 6 - Ambassador of the Shadows (9)/cover.jpg
 IMG Calibre Library/Pierre Christin/Valerian & Laureline - Volume 11 - The Ghosts of Inverloch (15)/cover.jpg
 IMG Calibre Library/Pierre Christin/Valerian et Laureline (english version) - Volume 9 - Chatelet Station, Destination Cassiopeia (33)/cover.jpg
-IMG .dropbox-dist/dropbox-lnx.x86_64-99.4.501/images/hicolor/16x16/status/dropboxstatus-busy2.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-99.4.501/images/hicolor/16x16/status/dropboxstatus-x.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-99.4.501/images/hicolor/16x16/status/dropboxstatus-logo.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-99.4.501/images/hicolor/16x16/status/dropboxstatus-blank.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-99.4.501/images/hicolor/16x16/status/dropboxstatus-idle.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-99.4.501/images/hicolor/16x16/status/dropboxstatus-busy.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-99.4.501/images/emblems/emblem-dropbox-app.svg
-IMG .dropbox-dist/dropbox-lnx.x86_64-99.4.501/images/emblems/emblem-dropbox-syncing.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-99.4.501/images/emblems/emblem-dropbox-infinite.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-99.4.501/images/emblems/emblem-dropbox-unsyncable.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-99.4.501/images/emblems/emblem-dropbox-mixedstate.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-99.4.501/images/emblems/emblem-dropbox-uptodate.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-99.4.501/images/emblems/emblem-dropbox-selsync.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-100.4.409/images/hicolor/16x16/status/dropboxstatus-busy2.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-100.4.409/images/hicolor/16x16/status/dropboxstatus-x.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-100.4.409/images/hicolor/16x16/status/dropboxstatus-logo.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-100.4.409/images/hicolor/16x16/status/dropboxstatus-blank.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-100.4.409/images/hicolor/16x16/status/dropboxstatus-idle.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-100.4.409/images/hicolor/16x16/status/dropboxstatus-busy.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-100.4.409/images/emblems/emblem-dropbox-app.svg
+IMG .dropbox-dist/dropbox-lnx.x86_64-100.4.409/images/emblems/emblem-dropbox-syncing.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-100.4.409/images/emblems/emblem-dropbox-infinite.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-100.4.409/images/emblems/emblem-dropbox-unsyncable.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-100.4.409/images/emblems/emblem-dropbox-mixedstate.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-100.4.409/images/emblems/emblem-dropbox-uptodate.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-100.4.409/images/emblems/emblem-dropbox-selsync.png
 IMG .cargo/registry/src/github.com-1ecc6299db9ec823/term-0.6.1/tests/data/rxvt-xpm
 IMG .cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.10.1/icon_CLion.svg
 IMG mus/Live from the Wild!.jpg
@@ -3291,6 +3333,10 @@ IMG .config/BraveSoftware/Brave-Browser-Beta/Default/Extensions/efmjfjelnicpmdcm
 IMG .config/BraveSoftware/Brave-Browser-Beta/Default/Extensions/efmjfjelnicpmdcmfikempdhlmainjcb/2020.2.20.52370_0/icons/48.png
 IMG .config/BraveSoftware/Brave-Browser-Beta/Default/Extensions/efmjfjelnicpmdcmfikempdhlmainjcb/2020.2.20.52370_0/icons/128.png
 IMG .config/BraveSoftware/Brave-Browser-Beta/Default/Extensions/efmjfjelnicpmdcmfikempdhlmainjcb/2020.2.20.52370_0/icons/32.png
+IMG .config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.82/background-1.jpg
+IMG .config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.82/background-3.jpg
+IMG .config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.82/background-2.jpg
+IMG .config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.82/logo.png
 IMG .config/BraveSoftware/Brave-Browser/odbfpeeihdkbihmopkbjmoonfanlbfcl/1.0.19/images/icon-16.png
 IMG .config/BraveSoftware/Brave-Browser/odbfpeeihdkbihmopkbjmoonfanlbfcl/1.0.19/images/webcam.svg
 IMG .config/BraveSoftware/Brave-Browser/odbfpeeihdkbihmopkbjmoonfanlbfcl/1.0.19/images/404.png
@@ -4077,7 +4123,6 @@ IMG doc/ebks/vortexblaster.jpg
 IMG doc/ebks/GalacticPatrol-covers1.png
 IMG doc/ebks/triplanetary.jpg
 IMG doc/qr/trump2020.png
-IMG .xmonad/screenshot.png
 IMG numix/themer-redrock.png
 IMG numix/WW_128000000001428569_EN.jpg
 IMG numix/JericoacoaraBrazil.jpg

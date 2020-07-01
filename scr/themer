@@ -407,21 +407,21 @@ directory structure for our dosnerd theme `.Xresources`
 example. Both options will also run the `.themer_pre`
 & `.themer_post` scripts too.
 
-```sh
-$ cd $HOME
-$ tree $HOME
-  /home/user
-  ├── .themer
-  │   ├── dosnerd
-  │   │   └── .Xresources
-  │   ├── dosnerd-dark
-  │   │   └── .Xresources
-  │   └── template_.Xresources
-  ├── .Xresources_old
-  ├── .Xresources               # the new .Xresources!
-  ├── .themer_pre
-  ├── .themer_post
-  ┊
+```sh                          │
+$ cd $HOME                     │
+$ tree $HOME                   │
+  /home/user                   │
+  ├── .themer                  │
+  │   ├── dosnerd              │
+  │   │   └── .Xresources      │
+  │   ├── dosnerd-dark         │
+  │   │   └── .Xresources      │
+  │   └── template_.Xresources │
+  ├── .Xresources_old          │
+  ├── .Xresources              │ # the new .Xresources!
+  ├── .themer_pre              │
+  ├── .themer_post             │
+  ┊                            │
 ```
 
 # WALLS

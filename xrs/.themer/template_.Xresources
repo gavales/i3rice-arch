@@ -77,6 +77,7 @@
 
 *.font:                   fontname:size=fontsize
 *.chscale:                1.15
+*.borderpx:               0
 
 *.fading:                 30
 *.fadeColor:              black
