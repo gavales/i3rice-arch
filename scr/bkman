@@ -31,10 +31,10 @@ CMDLST="reddit"
 
 newlink()  {
 	local URL="${1}"
-	NAME="${O_name:-$(echo "" | dmrap $menopts -p 'choose name')}"
+	NAME="${O_name:-$(echo "" | dmrap $menopts -p name)}"
 	CAT="${O_cat:-$(find "$BKMDIR" -type f \
 		| sed '/\/\./d' | sed "s;${BKMDIR};${iFLE};g" \
-		| dmrap $menopts -p 'choose category')}"
+		| dmrap $menopts -p category)}"
 	TRG="${BKMDIR}/${CAT#* }"
 	mkdir -p "${TRG%/*}"
 	printf "[%s]: %s\n" "$NAME" "$URL" >> ${TRG}

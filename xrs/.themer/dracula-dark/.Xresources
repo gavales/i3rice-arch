@@ -71,12 +71,13 @@
 
 ! ━  1vars
 
-#define fontname  CMU Typewriter Text
+#define fontname  sharetechmono
 #define fontsize  15
 #define fontsize2 15
 
 *.font:                   fontname:size=fontsize
 *.chscale:                1.15
+*.borderpx:               0
 
 *.fading:                 30
 *.fadeColor:              black
@@ -165,7 +166,7 @@ Xft.lcdfilter: lcddefault
 
 XTerm*foreground:        tfg0
 XTerm*background:        tbg0
-XTerm*faceName:          CMU Typewriter Text
+XTerm*faceName:          sharetechmono
 XTerm*faceSize:          15
 XTerm*selectToClipboard: true
 XTerm.vt100.geometry:    79x25
