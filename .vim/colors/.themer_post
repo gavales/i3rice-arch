@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
+declare -A TMR
+eval "$(themer --list varsh)"
 
-cp ".themer/${1}/themer.vim" "themer.vim"
+cp ".themer/${TMR[name]}/themer.vim" "themer.vim"
 PID=$(pidof gvim)
 [[ -n $PID ]] && \
 	gvim --serverlist | \

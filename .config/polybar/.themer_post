@@ -1,8 +1,10 @@
 #!/bin/bash
+declare -A TMR
+eval "$(themer --list varsh)"
 
 [[ -n $(pidof dwm) ]] && WM=dwm || WM=i3
 
-cp ".themer/${1}/config" config
+cp ".themer/${TMR[name]}/config" config
 killall -q polybar
 polybar $WM &>/dev/null &
 #sleep 0.5

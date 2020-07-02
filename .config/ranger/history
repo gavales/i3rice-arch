@@ -35,6 +35,7 @@ shell git clone https://git.suckless.org/surf
 rename surf
 shell convert %f st.png
 open_with%space
+shell rm *orig *rej
 mkdir diffs
 open_with pinta
 rename dwm-gavin
@@ -47,4 +48,3 @@ rename dmenu-4.9
 rename dmenu
 rename README.md
 rename JojoPart5Eps
-shell rm *orig *rej

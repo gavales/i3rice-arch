@@ -637,13 +637,7 @@ O_apply-single () {
 		fi
 	done
 	cd $DIR
-	if [[ -f "${DIR}/.themer_post" ]]; then
-		./.themer_post "$CTHM" &>/dev/null &
-	else
-		for i in $(ls ".themer/${CTHM}"); do
-			cp ".themer/${CTHM}/${i}" "${i}"
-		done
-	fi
+	[[ -f "${DIR}/.themer_post" ]] && ./.themer_post &>/dev/null &
 	cd
 }
 O_apply-all () {
@@ -739,15 +733,23 @@ O_init () {
 cat > "${DIR}/.themer_pre" << 'EOB'
 #!/usr/bin/env bash
 # To run before applying theme
+declare -A TMR
+eval "$(themer --list varsh)"
+
 EOB
 }
 	[[ -f "${DIR}/.themer_post" ]] || {
 cat > "${DIR}/.themer_post" <<EOB
 #!/usr/bin/env bash
 # To run after applying theme
-for i in \$(ls ${DIR}/.themer | grep '^template_'); do
-	cp "${DIR}/.themer/\${1}/\${i/template_}" "${DIR}/\${i/template_}"
-done
+
+declare -A TMR
+eval "$(themer --list varsh)"
+
+notify-send "THEMER" "Don't forget to edit ${PWD/$HOME/'~'}/.themer_post"
+#for i in \$(ls ${DIR}/.themer | grep '^template_'); do
+#	cp "${DIR}/.themer/\${TMR[name]}/\${i/template_}" "${DIR}/\${i/template_}"
+#done
 EOB
 }
 chmod +x "${DIR}/.themer_pre"

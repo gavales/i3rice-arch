@@ -225,6 +225,10 @@
 				"selected_items":
 				[
 					[
+						":q",
+						"Set Syntax: SQL"
+					],
+					[
 						"Install",
 						"Package Control: Install Package"
 					],
@@ -307,6 +311,7 @@
 			],
 			"file_history":
 			[
+				"/home/gavarch/.config/themer/miramare",
 				"/home/gavarch/plt/tex/report/report.tex",
 				"/home/gavarch/global.bib",
 				"/home/gavarch/.config/sublime-text-3/Packages/THEMES/.themer/template_Ascetic.tmTheme",
@@ -396,7 +401,7 @@
 				"height": 0.0
 			},
 			"pinned_build_system": "",
-			"position": "0,0,0,0,0,0,22,1916,1078,1920,1080",
+			"position": "0,0,0,0,0,720,44,1916,1078,1920,1080",
 			"project": "",
 			"replace":
 			{

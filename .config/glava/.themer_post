@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 # To run after applying theme
+declare -A TMR
+eval "$(themer --list varsh)"
+
 for i in $(ls /home/gavarch/.config/glava/.themer | grep '^template_'); do
-	cp "/home/gavarch/.config/glava/.themer/${1}/${i/template_}" "/home/gavarch/.config/glava/${i/template_}"
+	cp "/home/gavarch/.config/glava/.themer/${TMR[name]}/${i/template_}" "/home/gavarch/.config/glava/${i/template_}"
 done
 
 PID=$(pidof glava)

@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
+declare -A TMR
+eval "$(themer --list varsh)"
 
-cp ".themer/${1}/color.ini" color.ini
-cp ".themer/${1}/user.css" user.css
+cp ".themer/${TMR[name]}/color.ini" color.ini
+cp ".themer/${TMR[name]}/user.css" user.css
 
 SPD=$(wmctrl -lx | awk '/.Spotify/ {print $1}')
 

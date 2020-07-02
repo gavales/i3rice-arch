@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+declare -A TMR
+eval "$(themer --list varsh)"
 
-cat ".themer/${1}/dunst-theme" ".themer/${1}/dunst-settings" > dunstrc
+cat ".themer/${TMR[name]}/dunst-theme" ".themer/${TMR[name]}/dunst-settings" > dunstrc
 killall dunst

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+declare -A TMR
+eval "$(themer --list varsh)"
+
+cp ".themer/${TMR[name]}/globals.rasi" globals.rasi

@@ -18,14 +18,14 @@ wallpaper ${NME}
 EOB
 awk '
 	/\*color15:/{gsub(/\*color15:/,"fg0",$0);fg0=$0}
-	/\*color0:/ {gsub(/\*color0:/ ,"bg0",$0);bg0=$0}
-	/\*color1:/ {gsub(/\*color1:/ ,"red",$0);red=$0}
-	/\*color2:/ {gsub(/\*color2:/ ,"grn",$0);grn=$0}
-	/\*color3:/ {gsub(/\*color3:/ ,"ylw",$0);ylw=$0}
-	/\*color4:/ {gsub(/\*color4:/ ,"acc",$0);acc=$0}
-	/\*color5:/ {gsub(/\*color5:/ ,"gnt",$0);gnt=$0}
-	/\*color6:/ {gsub(/\*color6:/ ,"cyn",$0);cyn=$0}
+	/\*color0:/ {gsub(/\*color0:/, "bg0",$0);bg0=$0}
+	/\*color1:/ {gsub(/\*color1:/, "red",$0);red=$0}
+	/\*color2:/ {gsub(/\*color2:/, "grn",$0);grn=$0}
+	/\*color3:/ {gsub(/\*color3:/, "ylw",$0);ylw=$0}
+	/\*color4:/ {gsub(/\*color4:/, "acc",$0);acc=$0}
+	/\*color5:/ {gsub(/\*color5:/, "gnt",$0);gnt=$0}
+	/\*color6:/ {gsub(/\*color6:/, "cyn",$0);cyn=$0}
 	END {print fg0"\n"bg0"\n"acc"\n"red"\n"grn"\n"ylw"\n"gnt"\n"cyn}
 ' ${HOME}/.cache/wal/colors.Xresources >> $TRG
 
-xtheme --auto-dark 8:18 --change ${TRG##*/} &>/dev/null &
+xtheme --force --auto-dark 8:18 --change ${TRG##*/} &>/dev/null &

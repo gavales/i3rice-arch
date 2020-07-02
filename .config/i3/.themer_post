@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-# OA: Gavin Vales
-# CREATED: Fri  4 Jan 15:35:36 GMT 2019
+declare -A TMR
+eval "$(themer --list varsh)"
 
 i3Dir=$HOME/.config/i3
 
 cd $i3Dir
 
-cp ".themer/${1}/config" config
+cp ".themer/${TMR[name]}/config" config
 
 i3-msg reload
 #killall i3bar

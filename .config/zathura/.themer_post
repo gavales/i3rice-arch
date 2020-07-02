@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
+declare -A TMR
+eval "$(themer --list varsh)"
 
-cp ".themer/${1}/zathurarc" zathurarc
+cp ".themer/${TMR[name]}/zathurarc" zathurarc
 
 main () {
 	pdf=$(ps -fp $(pgrep -d, -x zathura) -o command | \
