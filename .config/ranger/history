@@ -1,4 +1,3 @@
-shell git clone https://github.com/StillANixRookie/st.git
 rename st-mine
 rename st-luke
 rename st
@@ -17,7 +16,6 @@ rename config.def.h.before.xres
 rename config.def.h
 rename x.c
 shell git clone https://github.com/gnotclub/xst.git
-open_with gedtr
 shell wget https://st.suckless.org/patches/font2/st-font2-20190416-ba72400.diff
 w
 open_with xst -e vim
@@ -48,3 +46,5 @@ rename dmenu-4.9
 rename dmenu
 rename README.md
 rename JojoPart5Eps
+rename popcherry
+open_with gedtr
