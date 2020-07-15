@@ -4,23 +4,23 @@
 # CREATED: Sat 26 Jan 21:59:12 GMT 2019
 
 VID="$1"
-open="$(pidof mpv)"
-fifo="$USER_TMP_DIR/mppipe"
+PID="$(pidof mpv)"
+FIFO="${2:-"$USER_TMP_DIR/MPVMAIN"}"
 
-if [[ ${VID} =~ 'youtube.com' ]]; then
-	if [[ -n ${open} ]]; then
-		echo "loadfile \"${VID}\"" append-play > "${fifo}"
-	else
-		rm "${fifo}"
-		mkfifo "${fifo}"
-		mpv --geometry=35%-10-10 --ytdl-format=bestvideo+bestaudio --input-file="${fifo}" "${VID}" &>/dev/null &
-	fi
+#if [[ ${VID} =~ 'youtube.com' ]]; then
+#	if [[ -n ${PID} ]]; then
+#		echo "loadfile \"${VID}\"" append-play > "${FIFO}"
+#	else
+#		rm "${FIFO}"
+#		mkfifo "${FIFO}"
+#		mpv --geometry=35%-10-10 --ytdl-format=bestvideo+bestaudio --input-file="${FIFO}" "${VID}" &>/dev/null &
+#	fi
+#else
+if [[ -n ${PID} ]]; then
+	echo "loadfile \"${VID}\"" append-play > "${FIFO}"
 else
-	if [[ -n ${open} ]]; then
-		echo "loadfile \"${VID}\"" append-play > "${fifo}"
-	else
-		rm "${fifo}"
-		mkfifo "${fifo}"
-		mpv --input-file="${fifo}" "${VID}" &>/dev/null &
-	fi
+	rm "${FIFO}"
+	mkfifo "${FIFO}"
+	mpv --input-file="${FIFO}" "${VID}" &>/dev/null &
 fi
+#fi

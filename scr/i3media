@@ -46,19 +46,19 @@ update () {
 
 case $1 in
 	togg)
-		[[ $CRPL == "mpmpv" ]] && echo "cycle pause" > $USER_TMP_DIR/mppipe
+		[[ $CRPL == "mpmpv" ]] && echo "cycle pause" > $USER_TMP_DIR/MPVMAIN
 		[[ $CRPL == "mpgui" ]] && playerctl play-pause
 		[[ $CRPL == "mpmpd" ]] && mpc toggle && \
 			dunstify -r 1234 --raw_icon=$USER_TMP_DIR/cover.jpg "Toggle Playback" "$(mpc current)"
 		;;
 	next)
-		[[ $CRPL == "mpmpv" ]] && echo "seek 10"     > $USER_TMP_DIR/mppipe
+		[[ $CRPL == "mpmpv" ]] && echo "seek 10"     > $USER_TMP_DIR/MPVMAIN
 		[[ $CRPL == "mpgui" ]] && playerctl next
 		[[ $CRPL == "mpmpd" ]] && mpc next && \
 			dunstify -r 1234 --raw_icon=$USER_TMP_DIR/cover.jpg "Next Song" "$(mpc current)"
 		;;
 	prev)
-		[[ $CRPL == "mpmpv" ]] && echo "seek -10"    > $USER_TMP_DIR/mppipe
+		[[ $CRPL == "mpmpv" ]] && echo "seek -10"    > $USER_TMP_DIR/MPVMAIN
 		[[ $CRPL == "mpgui" ]] && playerctl previous
 		[[ $CRPL == "mpmpd" ]] && mpc prev && \
 			dunstify -r 1234 --raw_icon=$USER_TMP_DIR/cover.jpg "Previous Song" "$(mpc current)"

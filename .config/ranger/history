@@ -1,50 +1,50 @@
-rename st-mine
-rename st-luke
-rename st
-shell git clone https://github.com/StillANixRookie/st.git st-old
-open_with%spacem
-shell rm *orig *ref
-shell rm *orig *reg
-rename st-right_click_to_plumb.diff
-rename st.c.before.plumb
-rename x.c.before.plumb
-rename st.c
-rename st.c.before.xres
-rename x.c.before.xres
-rename st-simple_plumb.diff
-rename config.def.h.before.xres
-rename config.def.h
-rename x.c
-shell git clone https://github.com/gnotclub/xst.git
-shell wget https://st.suckless.org/patches/font2/st-font2-20190416-ba72400.diff
-w
-open_with xst -e vim
-open_with vim
-
-rename music
-rename st-xresources-xst-version-20200626.diff
-rename st-xresources-20200604-9ba7ecf.diff
-rename st-xresources-xst-20200626.diff
-rename xst-xresources-20200626.diff
-shell git clone https://github.com/StillANixRookie/surf.git
-rename surf-me
-shell git clonegit clone https://git.suckless.org/surf
-shell git clone https://git.suckless.org/surf
-rename surf
-shell convert %f st.png
-open_with%space
-shell rm *orig *rej
-mkdir diffs
-open_with pinta
-rename dwm-gavin
-shell git clone https://git.suckless.org/dwm
-mkdir old
-rename dwm
-rename dwm-old
-shell git clone https://github.com/StillANixRookie/dwm.git
-rename dmenu-4.9
-rename dmenu
 rename README.md
 rename JojoPart5Eps
-rename popcherry
-open_with gedtr
+shell rm *orig *rej
+rename branch.jpg
+rename pillarsincloud.jpg
+rename dames.jpg
+rename retrocity.jpg
+rename snowymountainlines.jpg
+rename garden-bridge.jpg
+rename goldfish.jpg
+rename pattern-birds.jpg
+rename pop-cherryblossom.jpg
+rename cyber-city.jpg
+rename lake-island.jpg
+rename pop-portrait.jpg
+rename overhang-fishing.jpg
+rename valleylake.jpg
+rename fantasycastle.jpg
+rename valleyriver.jpg
+rename highcastle.jpg
+rename bridge-fabric.jpg
+rename waterlily.jpg
+rename rainy-cherry.jpg
+rename yellow-branc.jpg
+rename wp2154241-chinese-art-wallpapers.jpg
+rename yellow-branch.jpg
+rename bwbamboo.jpg
+rename garden-lake.jpg
+rename pillars.jpg
+rename garden-pond.jpg
+rename branch-in-water.jpg
+open_with sublime
+open_with sublime-text
+rename miramare
+open_with subl
+shell wget https://gist.github.com/Who23/9e1a74c0291cc5179d45dabae4814d18/raw/af49c916df14abe4b55edd3eda210671702a2046/statify
+shell chmod +x %f
+mkdir Airframes
+shell convert -trim -transparent black '2020-07-02_21-44-25.png' '2020-07-02_21-44-25.png'
+shell convert -trim -transparent black '2020-07-02_21-44-25.png' '2020-07-02_21-44-25.png'j
+rename Airframes.md
+rename Airframes
+shell pinta %f
+rename vidlinks
+rename vidlinks.md
+shell edtr
+open_with vim
+
+open_with mpv
+open_with pinta
