@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# To run before applying theme
+declare -A TMR
+eval "$(themer --list varsh)"
+

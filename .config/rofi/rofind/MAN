@@ -59,23 +59,33 @@ MAN git/farbfeld/ff2ppm.1
 MAN git/farbfeld/ff2jpg.1
 MAN git/farbfeld/png2ff.1
 MAN git/farbfeld/ff2png.1
-MAN xrs/.themer/redrock1
+MAN pic/gwc/blur/00104601
+MAN pic/gwc/blur/1024px_051
+MAN pic/gwc/blur/144365v_0001
+MAN pic/gwc/blur/247218v_0001
 MAN pic/gwc/blur/invasive1
 MAN pic/gwc/blur/by_dust01
 MAN pic/gwc/blur/Satsuki1
 MAN pic/gwc/blur/Teens-1
+MAN pic/gwc/blur/Caspar_David_Friedrich_021
+MAN pic/gwc/normal/00104601
+MAN pic/gwc/normal/1024px_051
+MAN pic/gwc/normal/144365v_0001
+MAN pic/gwc/normal/247218v_0001
 MAN pic/gwc/normal/invasive1
 MAN pic/gwc/normal/by_dust01
 MAN pic/gwc/normal/Satsuki1
 MAN pic/gwc/normal/Teens-1
+MAN pic/gwc/normal/Caspar_David_Friedrich_021
 MAN scr/.unused/i3menu_1
 MAN .mozilla/firefox/eodbxk26.default-release/sessionstore-backups/upgrade.jsonlz4-20200509015111
 MAN .mozilla/firefox/eodbxk26.default-release/gmp-gmpopenh264/1.8.1.1
 MAN .mozilla/firefox/Crash Reports/InstallTime20200509015111
-MAN .dropbox-dist/dropbox-lnx.x86_64-100.4.409/libatomic.so.1
-MAN .dropbox-dist/dropbox-lnx.x86_64-100.4.409/libX11-xcb.so.1
-MAN .dropbox-dist/dropbox-lnx.x86_64-100.4.409/libGL.so.1
-MAN .dropbox-dist/dropbox-lnx.x86_64-100.4.409/librsync.so.1
+MAN .dropbox-dist/dropbox-lnx.x86_64-102.4.431
+MAN .dropbox-dist/dropbox-lnx.x86_64-102.4.431/libatomic.so.1
+MAN .dropbox-dist/dropbox-lnx.x86_64-102.4.431/libX11-xcb.so.1
+MAN .dropbox-dist/dropbox-lnx.x86_64-102.4.431/libGL.so.1
+MAN .dropbox-dist/dropbox-lnx.x86_64-102.4.431/librsync.so.1
 MAN .cargo/registry/src/github.com-1ecc6299db9ec823/mime_guess-2.0.1
 MAN .cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1
 MAN .cargo/registry/src/github.com-1ecc6299db9ec823/termios-0.3.1
@@ -164,7 +174,7 @@ MAN .config/BraveSoftware/Brave-Browser-Beta/Default/Feature Engagement Tracker/
 MAN .config/BraveSoftware/Brave-Browser-Beta/Default/Feature Engagement Tracker/EventDB/MANIFEST-000001
 MAN .config/BraveSoftware/Brave-Browser-Beta/Default/Platform Notifications/MANIFEST-000001
 MAN .config/BraveSoftware/Brave-Browser-Beta/afalakplffnnnlkncjhbmahjfjhmlkal/1.0.22/1
-MAN .config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.81
+MAN .config/BraveSoftware/Brave-Browser/jicbkmdloagakknpihibphagfckhjdih/1.0.8/1
 MAN .config/BraveSoftware/Brave-Browser/Default/Sync Data/LevelDB/MANIFEST-000001
 MAN .config/BraveSoftware/Brave-Browser/Default/Local Extension Settings/odbfpeeihdkbihmopkbjmoonfanlbfcl/MANIFEST-000001
 MAN .config/BraveSoftware/Brave-Browser/Default/Local Extension Settings/jidkidbbcafjabdphckchenhfomhnfma/MANIFEST-000001
@@ -175,48 +185,47 @@ MAN .config/BraveSoftware/Brave-Browser/Default/Site Characteristics Database/MA
 MAN .config/BraveSoftware/Brave-Browser/Default/Sync Extension Settings/pkedcjkdefgpdelpbcmbmeomcjbeemfm/MANIFEST-000001
 MAN .config/BraveSoftware/Brave-Browser/Default/shared_proto_db/metadata/MANIFEST-000001
 MAN .config/BraveSoftware/Brave-Browser/Default/Extension State/MANIFEST-000001
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/1fe3814d38525759_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/28af751669894e6e_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/7c77e7dae9ecfc82_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/8197de118230d530_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/a457a26020986f3d_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/94c5001e0cf83ce2_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/64d1d59eb8640aab_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/6544006cc86a612a_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/311d98999e1fced2_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/07c522c407be8f5d_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/a23f3f37c53a6970_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/cbecb046b29e7e81_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/b319e73d087dd9a3_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/c32da5b45f9ace5e_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/d966ccd47b0da3ef_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/3bb51bc771b4fa57_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/e1f1d5f0240f3139_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/128e13de69d6d417_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/91a717c16c7832ca_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/f0c31b8fefb964b4_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/befa7160cecf9f16_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/68391f6faf5b4ce3_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/35ccd1b940e00dd0_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/33da8fa2547fb2aa_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/8b28265259a4582a_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/ecfcb942e77b6209_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/2fefe9fe3534adc5_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/7b595d2fd83e383f_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/3f0dae702dca3800_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/9e3cb70f5d618695_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/b441e2e5b9d18c37_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/325d92e7a786b9ea_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/4b5050d4660105a9_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/9eb950a923211f2a_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/1e4af019a2a4690e_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/aaf120acc52d1bf3_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/cca3f0d9ad2c35cb718c129cd3407b7abf527ae2/ec29af07-8faa-4df8-b198-110f588aef6a/d45da56731aab0f2_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0144b5da9286cfa522f201654fd3479e9284b488/17a6caf7-b82e-47cd-a2ba-e68329bc5621
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/d6dbc38d-eca4-4e6c-929e-8b7c7fffe761
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/372f41e5-c9b6-411f-bc15-2e7aa2b32867/4ba187ee5f093180_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/372f41e5-c9b6-411f-bc15-2e7aa2b32867/7b6b2c7141e5d394_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/372f41e5-c9b6-411f-bc15-2e7aa2b32867/0972a4f92c716687_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/372f41e5-c9b6-411f-bc15-2e7aa2b32867/9b393a2935752b4b_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/372f41e5-c9b6-411f-bc15-2e7aa2b32867/fedba7ca4691cd77_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/372f41e5-c9b6-411f-bc15-2e7aa2b32867/874cc0e5a0941997_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/058190b6bc506b6a_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/a31a37df05f64649_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/56954c181b5b4819_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/5c5e3c8e0be66257_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/4010d1c79646ff0b_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/5d7faa53caed4886_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/6a05075def4a8d4e_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/8d44bd37102f9e80_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/b0077b7cb3626797_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/1885de53f228e4fb_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/1334a2ab3fd07657_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/c28852af80209667_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/0a4226030b74c105_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/9b8dfade-4833-4948-8889-285405b13c91/f917e814bdf534be_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/c9dfdb9e989bbb6803e8a39a2779a15ba615f071
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/2a9b0e65-094e-4806-a9ac-94dc6a0a52e6/31fa4519bc99e7d9_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/2a9b0e65-094e-4806-a9ac-94dc6a0a52e6/dae6179cb8e932c6_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/2a9b0e65-094e-4806-a9ac-94dc6a0a52e6/535917168b907bea_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/2a9b0e65-094e-4806-a9ac-94dc6a0a52e6/15cc0d81f5cdd454_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/2a9b0e65-094e-4806-a9ac-94dc6a0a52e6/95368dde437ad665_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/579544fd7d0441717f082c9eb123588966aa57ac/2a9b0e65-094e-4806-a9ac-94dc6a0a52e6/413e291801417781_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/1caf79b1-c235-4c36-876f-f2ec60b400ba/f174770d2052ed47_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/1caf79b1-c235-4c36-876f-f2ec60b400ba/118b4225e0e09189_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/1caf79b1-c235-4c36-876f-f2ec60b400ba/275094078d69d23c_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/1caf79b1-c235-4c36-876f-f2ec60b400ba/1388da518269e63e_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/1caf79b1-c235-4c36-876f-f2ec60b400ba/43ca07ab9c3a69ce_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/1caf79b1-c235-4c36-876f-f2ec60b400ba/4a8aeb348d3daca6_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/1caf79b1-c235-4c36-876f-f2ec60b400ba/faf7934e2156a4b2_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/1caf79b1-c235-4c36-876f-f2ec60b400ba/cf6b2333623ac678_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/1caf79b1-c235-4c36-876f-f2ec60b400ba/8e3a00ca842c95ab_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/1caf79b1-c235-4c36-876f-f2ec60b400ba/04a6ac13495648fa_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/1caf79b1-c235-4c36-876f-f2ec60b400ba/d8868d4ed93d5afb_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/1caf79b1-c235-4c36-876f-f2ec60b400ba/fad94dc64a0889ba_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/1caf79b1-c235-4c36-876f-f2ec60b400ba/f12d1b81f06d829c_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/1caf79b1-c235-4c36-876f-f2ec60b400ba/795b06c889f9716a_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/0bf6ab7f94a21cdc9c1649f884333ec20f40a544/f30672e9-77bf-478b-9778-99cf4ec35921
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/7a80f2ef716ca8dbedac7d00a88f7f590b7da93e/3e9659fc-d558-4d45-8477-a0d72f00b62b/fb5fea31e3e4ae6d_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/7a80f2ef716ca8dbedac7d00a88f7f590b7da93e/3e9659fc-d558-4d45-8477-a0d72f00b62b/878ce7caffb5b92f_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/7a80f2ef716ca8dbedac7d00a88f7f590b7da93e/3e9659fc-d558-4d45-8477-a0d72f00b62b/a68a97c66564dc4f_1
@@ -231,6 +240,7 @@ MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e28
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/a543bd3a85856a24_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/396cafaf04cfac92_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/2e283a17e57044c970285afde647cb5de25cb36f/fed79624-596a-4c2f-86d3-4f4719c2a0b8/4013af4abb012694_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/184a5a611092291279126b18c0e31e3aedaef6a6/cab41631-74ca-40af-9995-e59e765772b5/822d928ca87919e4_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/776d9d475d2481e4a837fa3e2d287aeb2a2d96ca/93208712-ce63-4141-b7a5-e77764d5e02e/a1e36f3d00ee01e1_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/776d9d475d2481e4a837fa3e2d287aeb2a2d96ca/93208712-ce63-4141-b7a5-e77764d5e02e/80c5d7ccb79ee292_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/776d9d475d2481e4a837fa3e2d287aeb2a2d96ca/93208712-ce63-4141-b7a5-e77764d5e02e/009eae24586b086f_1
@@ -274,6 +284,29 @@ MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/3e37
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/3e37d9661a978a72d4376afc56a3030c984e7154/8c595c2a-852c-414a-8a96-3652b39ede7b/1e4af019a2a4690e_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/3e37d9661a978a72d4376afc56a3030c984e7154/8c595c2a-852c-414a-8a96-3652b39ede7b/d45da56731aab0f2_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/a18af69cb482e973c8b79c06774e440fc0d4459e/36bd09be-eb80-4884-8c96-070690a8eca1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/cf73249f8891500c_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/5891da8c7751d1e8_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/70c40c2a28ffb973_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/1c6ba916f9f3ebe2_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/d55c1ac320396996_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/8f12d5e969d4827b_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/2fbfb19862ffdf21_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/04860de81381925d_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/4683e7e971316b4e_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/74d65d5123790d9e_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/5dd5240371a1e2d6_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/e11c792ce60edbf0_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/98d80170d35a6676_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/da0eec71b1934667_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/2f1c448b4676879d_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/ec15c1b6a5da027a_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/b341928f554ff631_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/9900d291e303f4d1_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/71062e16b701aef2_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/3779ee9926473215_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/19836ce694e04b68_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/a2643a746056ac6e_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8d336fde154cdcd08721b9a6c84495d88c2b86e0/1647ea6f-d47d-427c-a712-905917312bf2/ebab11bb38e95286_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/29eb5eacb05363703a494bbad16a2cdd1da1fb81
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/29eb5eacb05363703a494bbad16a2cdd1da1fb81/158d2e69-fd69-4760-b833-9573b9530665/0b650943302a8bda_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/29eb5eacb05363703a494bbad16a2cdd1da1fb81/158d2e69-fd69-4760-b833-9573b9530665/626983a94f872b16_1
@@ -335,121 +368,131 @@ MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/29eb
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/29eb5eacb05363703a494bbad16a2cdd1da1fb81/158d2e69-fd69-4760-b833-9573b9530665/74b52dcca1927adb_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/29eb5eacb05363703a494bbad16a2cdd1da1fb81/158d2e69-fd69-4760-b833-9573b9530665/6ea00e48dd574130_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/29eb5eacb05363703a494bbad16a2cdd1da1fb81/158d2e69-fd69-4760-b833-9573b9530665/37f99287ab8d284e_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/0a716f75-a31e-43e7-b1bf-9f9d6590ef39/a9561fee0e852901_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/0a716f75-a31e-43e7-b1bf-9f9d6590ef39/78d0fbfe693065fe_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/0a716f75-a31e-43e7-b1bf-9f9d6590ef39/521214d373c5773f_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/0a716f75-a31e-43e7-b1bf-9f9d6590ef39/15397bdeadbf2b1a_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/09a9d3a8e0ceefe4_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/71afcc32e8818565_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/2940195bd9870d6e_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/100cbdab36668e46_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/08223f81cb1ee349_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/51d914faa11e1fdb_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/9e9477b81ce99a56_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/8c4232a835e85ef8_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/6b86bb68d2d627fa_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/d0d0073902a8a591_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/80f0bb03787f8a94_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/6615050e1fe8299c_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/9411f603dcdf1cc3_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/fea5f41325a58cc8_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/570845a38ce64053_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/c2f1481d5d6aa7b3_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/c760b03f61d66c5b_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/dcb4b1b465884de9_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/628913816620dac9_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/088b3cfc179ca702_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/217a98f908e7835d_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/6be29dbb6835ac60_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/e393b96905ea6a3c_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/426717906e2fbfb3_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/d015082a5aaa5cc6_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/4f94391801b41def_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/a95c0803afdd37b8_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/c1a3263eac8da703_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/8c82042f83fb2f3f_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/a0606be0cf408519_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/ce5d3b5240d0de3f_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/550f629beafe0bd2_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/12551bab589fe3e9_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/1f6a26733945abd5_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/e8d2d97dca98a9f5_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/dfccec63ed198a87_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/d9f02ec361e44ab9_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/158e7a9e9e23288e_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/0e5aaa0f091d5d75_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/4400d9e820903277_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/033038ff92558c75_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/02c8da685586d98d_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/7cd65e0f6ee19b35_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/5e34b6d476a50c47_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/c08e9431aef131e1_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/57b58da54f9c836f_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/b0ff0bc0bc328505_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/145158e5805532a3_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/26dfee9aa2a891d7_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/ff249a1668d179a6_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/58a9d7f4c941669a_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/36ef1f0f0bf6a40b_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/80b19b5683d29f2b_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/f86af624ef014be0_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/57f75f92b6d5fe99_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/e335a11252058681_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/c193a54a79175c0f_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/9112592d4247bcfe_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/99c1001e1ba7495c_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/a77b78350f6a5655_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/1683f4a9ade4cf71_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/f922a0bb86a99f6e_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/fc62cea4462e6a87_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/294fedc3df18f9e4_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/b210cbb0c513ed30_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/1a470f7d7eca70a1_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/9ef67b52f302fcbf_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/53847f3fdcb2dce4_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/c91191538db03b1c_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/d85fbcae64a4fdde_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/c889e3b8b6e1d80b_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/4bc955ae875c0215_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/32886d50b96c7bd1_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/784e25a880fddff7_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/3711dca3c5a433fd_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/72203989f9c695bb_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/04332eaeb7d161ca_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/495ecbca1d1669ce_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/c3127ccd1d8dac94_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/042d71718a693b11_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/fc1ac9d5ea159cc3_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/f55971a1a7a074fb_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/afb1745d8ff36ef5_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/2974d75bdb334f90_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/d749f1cca9ac4365_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/b63b5f63cea3c70e_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/57f070c89c171922_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/2168e07519574b9b_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/bcc2f85988c2226d_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/c40b41938ac91726_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/9d8d8f632795182d_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/81bc7c3a69ff343b_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/885eef233118c851_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/d5a8706425d1c980_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/0ce8b14537115b46_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/1cb451d1d46093f2_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/49808b8b3ec6adf2_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/bd350523c27b26af_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/27553b58d8a22023_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/8bdf8fb4320da417_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/6200dcd5fed83a61_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/d20ce53896cc38e2_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/2db53ff8db775dcd_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/b101abf545434554_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/e506eeb2611fc54b_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/24f6dbcca27fa01b_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/d851595a552718cb_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/201cb900383c7285_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/0a9cbca23bb47a69_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/f1ff16421ef98252_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/dfc40b1770d874ee_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/b25299cf06f2e081_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/9b89d84de7fad54e_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/a446ef02b3a31394_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/7becbbf17b7c5597_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/10fa66e0ccbf192c_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/099381659122d1fe_1
-MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/8bf159774284a73a_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/856f90774f2f37e1_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/891464d21f6c7fe71fbbba49ce73fe521e864679/e48320f8-39d7-47c2-9b7e-c4f254dda033/1f6f9f3fe69b80c1_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/5a79e321765d80bd_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/5927256e832af3cd_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/eef1a8fe48b25e4a_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/2acfda111ccbef25_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/0835a6171bd0716b_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/5ef6ecca1e6db3a6_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/9e5e5ece4229a945_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/f867a883ab1e06b4_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/717fa8d7839428a4_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/81926f784d61b1c2_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/2f2657b06c4c6715_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/0c648be2f5230ed5_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/ec5f18cc989cc55a_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/58ddd54990238539_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/e5bed03768febe6a_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/8effcc64cd3ad61f_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/251fbd8f868391d9_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/59bc498793751600_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/dc4f04f5e4cfe82d_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/24fe5ab696fd3b0a_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/3d78415f63f5d5e2_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/e81c1eea1880f4ac_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/af6df7498200bab8_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/c0b64942b23a44a3_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/bbb9e58a4dab0776_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/6227fcb0dfc06a90_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/8e8633dbea6eee06_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/878143e01da5835c_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/db15fca0d022e5f8_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/7b273ab15d507881_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/c7fd753a8553a73c_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/8e0894bb61562621_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/e0e9fcdd6bdc52ac_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/a862c7805e1a72a6_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/5cf133afa2706c9c_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/162be4dd23670067_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/3eb513925e2b1eb7_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/0da549235e42d9e4_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/4d5c5522e38fa539_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/75e54c00f6424369_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/30fdb94570ffd2d1_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/384f237ece7ebd9f_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/d6c086a5a3f1d55f_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/5101c3916eb110ad_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/441490469e1b5969_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/176a1c17a9b5b0be_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/d89e768e9f0d3cec_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/142141435b02b39c_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/447285f44e830bc2_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/535c25642654a029_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/979af87f1f978af3_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/a97c2fd4079aafa5_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/1d387d98071821f6_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/086dfc784adca9d0_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/6b212473165efcb2_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/23afa10edd35b786_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/e1c36ad7d2305c85_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/381636291bb9bad7_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/92af2797b1c771a8_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/f00845b996c41e0b_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/12c40e5ce875a9ee_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/88e26bc61306997b_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/d7c8a0bcdcb0bac7_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/24f4836818f9e254_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/f5edf44a6b85afca_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/82fc4b72b481aea5_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/5592615c596e4dfc_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/576b11d57aa90655_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/957a7279bd01097d_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/49bf4862bbe1ed0e_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/1872c448663119ae_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/9e4b1fa9864d0d3c_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/6579c157dcc2ce7a_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/f39eb647b98ae651_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/5fd128d0c0747bc2_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/b39aa74b6684a223_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/3eab0ead6bc4c352_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/3902f101f2b40b3a_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/6258bf5a9cc8f50e_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/e7e8f6f46f7d8812_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/c480b58b012b6bab_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/ce5ca6b798e07bf2_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/58371eca96d0572a_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/01c633b49222386a_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/26abb746b0e8b52a_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/ed6aa677689df618_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/b59789fd0894fdbd_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/16f3aace83ca2abe_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/60a737ec171ec1b2_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/36faa6f9d6a7ed4d_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/05e781af682cf574_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/24eddefe15a03c50_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/7e0987af686d2ede_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/97eba7258095773d_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/b1d3b4a621dca75c_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/f4cb8369a3a2c3a5_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/7667e6f65462f7b7_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/e267ce84a8fdaff6_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/e81a97c563690763_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/2589deae410515fe_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/45e7143f21dfe9fd_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/8cc4b288531f2925_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/39233318558779df_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/5b43d8ba8fd02897_1
+MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/CacheStorage/8f7abdeb3486c1b8780fede76afc20e044eff1b5/7f784f87-13f7-42de-8793-c009ae40d935/148b13dc9b9a237e_1
 MAN .config/BraveSoftware/Brave-Browser/Default/Service Worker/Database/MANIFEST-000001
 MAN .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.timhortons.com_0.indexeddb.leveldb/MANIFEST-000001
 MAN .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.whathifi.com_0.indexeddb.leveldb/MANIFEST-000001
@@ -488,6 +531,7 @@ MAN .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.netflix.com_
 MAN .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.rottentomatoes.com_0.indexeddb.leveldb/MANIFEST-000001
 MAN .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_docs.google.com_0.indexeddb.leveldb/MANIFEST-000001
 MAN .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.timhortons.ca_0.indexeddb.leveldb/MANIFEST-000001
+MAN .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.technadu.com_0.indexeddb.leveldb/MANIFEST-000001
 MAN .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.rickandmorty.com_0.indexeddb.leveldb/MANIFEST-000001
 MAN .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.imdb.com_0.indexeddb.leveldb/MANIFEST-000001
 MAN .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_forum.manjaro.org_0.indexeddb.leveldb/MANIFEST-000001
@@ -499,6 +543,7 @@ MAN .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_photos.google.co
 MAN .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_messages.google.com_0.indexeddb.leveldb/MANIFEST-000001
 MAN .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_play.google.com_0.indexeddb.leveldb/MANIFEST-000001
 MAN .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.freeads.co.uk_0.indexeddb.leveldb/MANIFEST-000001
+MAN .config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.cybrhome.com_0.indexeddb.leveldb/MANIFEST-000001
 MAN .config/BraveSoftware/Brave-Browser/Default/VideoDecodeStats/MANIFEST-000001
 MAN .config/BraveSoftware/Brave-Browser/Default/BudgetDatabase/MANIFEST-000001
 MAN .config/BraveSoftware/Brave-Browser/Default/Extension Rules/MANIFEST-000001
@@ -537,8 +582,8 @@ MAN .config/BraveSoftware/Brave-Browser/Default/File System/010/t/Paths/MANIFEST
 MAN .config/BraveSoftware/Brave-Browser/Default/File System/015/t/Paths/MANIFEST-000001
 MAN .config/BraveSoftware/Brave-Browser/Default/File System/009/t/Paths/MANIFEST-000001
 MAN .config/BraveSoftware/Brave-Browser/Default/File System/016/t/Paths/MANIFEST-000001
-MAN .config/BraveSoftware/Brave-Browser/afalakplffnnnlkncjhbmahjfjhmlkal/1.0.24/1
-MAN .config/BraveSoftware/Brave-Browser/biahpgbdmdkfgndcmfiipgcebobojjkp/1.0.11
+MAN .config/BraveSoftware/Brave-Browser/Default/MANIFEST-000331
+MAN .config/BraveSoftware/Brave-Browser/afalakplffnnnlkncjhbmahjfjhmlkal/1.0.25/1
 MAN .config/BraveSoftware/Brave-Browser/Crowd Deny/2020.4.27.1141
 MAN .config/BraveSoftware/Brave-Browser/System Profile/Sync Data/LevelDB/MANIFEST-000001
 MAN .config/BraveSoftware/Brave-Browser/System Profile/Site Characteristics Database/MANIFEST-000001

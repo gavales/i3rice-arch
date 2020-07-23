@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+NMFL=$USER_TMP_DIR/nightmode
+
 help () {
 cat << 'EOB'
 # NAME
@@ -30,7 +32,6 @@ done
 [[ -z $1 ]] && help "Nothing to do!"
 
 nightmode () {
-	NMFL=$USER_TMP_DIR/nightmode
 	[[ -f $NMFL ]] || echo off > $NMFL
 	CRMD=$(cat $NMFL)
 
@@ -57,13 +58,14 @@ BL=${BLR%.*}
 update () {
 	NM=$(cat $USER_TMP_DIR/nightmode)
 	_NM="%{T1} %{T-}"
-	[[ $NM == "on" ]] && _NM="%{T1} %{T-}"
+	[[ $NM == "on" ]] && _NM="%{T1} %{T-}" && ALT='!'
 	_MS="%{A1:i3light nm:}%{A4:i3light inc:}%{A5:i3light dec:}${_NM}${BL}%{A}%{A}%{A}"
 	pbcat --module i3light "${_MS}"
 }
 
-BBL=$(echo "(2*$BL)/10" | bc)
-BAR="$(printf '█%.0s' $(seq 1 $BBL))"
+#BBL=$(echo "(2*$BL)/10" | bc)
+#BAR="$(printf '█%.0s' $(seq 1 $BBL))"
 
+#dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png " ${BL}% $BAR "
+echo $BL$ALT > $USER_TMP_DIR/XOBBKL
 update
-dunstify -r 1234 --raw_icon=${USER_SCR_DIR}pic/brightness-full.png " ${BL}% $BAR "

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+#pkill -f xob
+#pkill -f "tail -f"
+XOBPID="$(pidof xob)"
+
+[[ -f "$USER_TMP_DIR/XOBVOL" ]] || mkfifo $USER_TMP_DIR/XOBVOL
+[[ -f "$USER_TMP_DIR/XOBBKL" ]] || mkfifo $USER_TMP_DIR/XOBBKL
+
+[[ -z $XOBPID ]] && {
+	tail -f $USER_TMP_DIR/XOBVOL | xob -s volume    -t 2000 &>/dev/null &
+	tail -f $USER_TMP_DIR/XOBBKL | xob -s backlight -t 2000 &>/dev/null &
+}

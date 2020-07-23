@@ -1,44 +1,3 @@
-rename README.md
-rename JojoPart5Eps
-shell rm *orig *rej
-rename branch.jpg
-rename pillarsincloud.jpg
-rename dames.jpg
-rename retrocity.jpg
-rename snowymountainlines.jpg
-rename garden-bridge.jpg
-rename goldfish.jpg
-rename pattern-birds.jpg
-rename pop-cherryblossom.jpg
-rename cyber-city.jpg
-rename lake-island.jpg
-rename pop-portrait.jpg
-rename overhang-fishing.jpg
-rename valleylake.jpg
-rename fantasycastle.jpg
-rename valleyriver.jpg
-rename highcastle.jpg
-rename bridge-fabric.jpg
-rename waterlily.jpg
-rename rainy-cherry.jpg
-rename yellow-branc.jpg
-rename wp2154241-chinese-art-wallpapers.jpg
-rename yellow-branch.jpg
-rename bwbamboo.jpg
-rename garden-lake.jpg
-rename pillars.jpg
-rename garden-pond.jpg
-rename branch-in-water.jpg
-open_with sublime
-open_with sublime-text
-rename miramare
-open_with subl
-shell wget https://gist.github.com/Who23/9e1a74c0291cc5179d45dabae4814d18/raw/af49c916df14abe4b55edd3eda210671702a2046/statify
-shell chmod +x %f
-mkdir Airframes
-shell convert -trim -transparent black '2020-07-02_21-44-25.png' '2020-07-02_21-44-25.png'
-shell convert -trim -transparent black '2020-07-02_21-44-25.png' '2020-07-02_21-44-25.png'j
-rename Airframes.md
 rename Airframes
 shell pinta %f
 rename vidlinks
@@ -46,5 +5,46 @@ rename vidlinks.md
 shell edtr
 open_with vim
 
-open_with mpv
 open_with pinta
+rename 01-Airframes_Engines
+rename 02-EnginesI–Systems
+rename 03-EnginesII–FuelSystems
+rename 04-EnginesIII–OtherSystems
+rename 05-FlightInstruments
+rename 3EnginesII
+rename 4EnginesIII
+shell mpv %d
+shell mpv %d &>/dev/null &
+rename 5FltInst
+rename 6FltInst
+rename 6FlightTheory
+rename 5FOPSAerodrome
+rename 7FOPSAerodrome
+rename 7AirportOps
+rename 8FOPSPlans
+rename 8FltPlansItins
+rename 9AeroMed
+rename 10-CARSLicenses
+rename 10CARSLicences
+rename 10CARSLicenses
+rename 11CARSAirspace
+rename 12CARSRulesRegs
+rename 13-MeteorologyI–BasicMeteorology
+rename 13MetBasics
+rename 14MetWeather
+rename 15MetActiveWeather
+rename 18NavII
+rename 6NavComms
+rename 19NavComms
+rename 17NavIntro
+rename 18NavLogsCalcs
+rename 20-Navigati
+rename 20NavRadioNav
+rename 21Review
+rename 08-FlightOpsII–Plans_Itineraries
+rename 09-FlightOpsIII–AeroMed_HumanFacts
+rename 16-PDM
+rename 01-Airframes
+rename 19-NAVIII–RadioTheory_Comms
+rename 20-NAVIV–RadioNav
+open_with mpv

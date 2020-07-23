@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# To run after applying theme
+
+declare -A TMR
+eval "$(themer --list varsh)"
+
+cp ".themer/${TMR[name]}/styles.cfg" "styles.cfg"
+
+killall xob
+killall tail
+xoblstn
