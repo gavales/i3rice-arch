@@ -1,20 +1,20 @@
 [frame]
-width = 1
-color = "#282828"
+width = 0
+color = "#2A2426"
 
 [urgency_low]
-background = "#458588"
-foreground = "#282828"
+background = "#87c095"
+foreground = "#2A2426"
 timeout = 3
 
 [urgency_normal]
-background = "#458588"
-foreground = "#282828"
+background = "#87c095"
+foreground = "#2A2426"
 timeout = 3
 
 [urgency_critical]
-background = "#cc241d"
-foreground = "#282828"
+background = "#e68183"
+foreground = "#2A2426"
 timeout = 3
 
 [shortcuts]
@@ -55,8 +55,8 @@ timeout = 3
 	line_height = 0
 	separator_height = 0
 	separator_width = 5
-	padding = 1
-	horizontal_padding = 1
+	padding = 5
+	horizontal_padding = 5
 	separator_color = frame
 	startup_notification = true
 	# dmenu = /usr/bin/dmenu -p dunst:
