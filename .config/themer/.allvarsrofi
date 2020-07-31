@@ -1,28 +1,28 @@
-<span background="#231F20">   </span> #231F20         fg0
-<span background="#e9f1f1">   </span> #e9f1f1         bg0
+<span background="#231F20">   </span> #231F20         bg0
+<span background="#e9f1f1">   </span> #e9f1f1         fg0
 <span background="#65A9AA">   </span> #65A9AA         acc
-<span background="#5f5b5c">   </span> #5f5b5c         fg3
-<span background="#4b4748">   </span> #4b4748         fg2
-<span background="#373334">   </span> #373334         fg1
-<span background="#446465">   </span> #446465         acf
-<span background="#a7cdcd">   </span> #a7cdcd         acb
-<span background="#d5dddd">   </span> #d5dddd         bg1
-<span background="#c1c9c9">   </span> #c1c9c9         bg2
-<span background="#adb5b5">   </span> #adb5b5         bg3
-<span background="#2a2f30">   </span> #2a2f30         ac88f
-<span background="#334142">   </span> #334142         ac75f
-<span background="#3b5253">   </span> #3b5253         ac63f
-<span background="#446465">   </span> #446465         ac50f
-<span background="#4c7576">   </span> #4c7576         ac37f
-<span background="#548687">   </span> #548687         ac25f
-<span background="#5d9899">   </span> #5d9899         ac12f
-<span background="#74b1b2">   </span> #74b1b2         ac12b
-<span background="#86bbbb">   </span> #86bbbb         ac25b
-<span background="#95c3c4">   </span> #95c3c4         ac37b
-<span background="#a7cdcd">   </span> #a7cdcd         ac50b
-<span background="#b8d6d6">   </span> #b8d6d6         ac63b
-<span background="#c8dfdf">   </span> #c8dfdf         ac75b
-<span background="#d9e8e8">   </span> #d9e8e8         ac88b
+<span background="#adb5b5">   </span> #adb5b5         fg3
+<span background="#c1c9c9">   </span> #c1c9c9         fg2
+<span background="#d5dddd">   </span> #d5dddd         fg1
+<span background="#a7cdcd">   </span> #a7cdcd         acf
+<span background="#446465">   </span> #446465         acb
+<span background="#373334">   </span> #373334         bg1
+<span background="#4b4748">   </span> #4b4748         bg2
+<span background="#5f5b5c">   </span> #5f5b5c         bg3
+<span background="#d9e8e8">   </span> #d9e8e8         ac88f
+<span background="#c8dfdf">   </span> #c8dfdf         ac75f
+<span background="#b8d6d6">   </span> #b8d6d6         ac63f
+<span background="#a7cdcd">   </span> #a7cdcd         ac50f
+<span background="#95c3c4">   </span> #95c3c4         ac37f
+<span background="#86bbbb">   </span> #86bbbb         ac25f
+<span background="#74b1b2">   </span> #74b1b2         ac12f
+<span background="#5d9899">   </span> #5d9899         ac12b
+<span background="#548687">   </span> #548687         ac25b
+<span background="#4c7576">   </span> #4c7576         ac37b
+<span background="#446465">   </span> #446465         ac50b
+<span background="#3b5253">   </span> #3b5253         ac63b
+<span background="#334142">   </span> #334142         ac75b
+<span background="#2a2f30">   </span> #2a2f30         ac88b
 <span background="#b85227">   </span> #b85227         red
 <span background="#ff5511">   </span> #ff5511         rng
 <span background="#277eb8">   </span> #277eb8         blu
@@ -30,20 +30,20 @@
 <span background="#18E3C8">   </span> #18E3C8         grn
 <span background="#B043D1">   </span> #B043D1         gnt
 <span background="#3FDCEE">   </span> #3FDCEE         cyn
-<span background="#924525">   </span> #924525         darkred
-<span background="#c47959">   </span> #c47959         lightred
-<span background="#c84714">   </span> #c84714         darkrng
-<span background="#f97c49">   </span> #f97c49         lightrng
-<span background="#266692">   </span> #266692         darkblu
-<span background="#579ac6">   </span> #579ac6         lightblu
-<span background="#ae9108">   </span> #ae9108         darkylw
-<span background="#e0c53c">   </span> #e0c53c         lightylw
-<span background="#1ab29e">   </span> #1ab29e         darkgrn
-<span background="#4ce6d2">   </span> #4ce6d2         lightgrn
-<span background="#8c3aa4">   </span> #8c3aa4         darkgnt
-<span background="#be6ed9">   </span> #be6ed9         lightgnt
-<span background="#38acba">   </span> #38acba         darkcyn
-<span background="#69e1ee">   </span> #69e1ee         lightcyn
+<span background="#c47959">   </span> #c47959         darkred
+<span background="#924525">   </span> #924525         lightred
+<span background="#f97c49">   </span> #f97c49         darkrng
+<span background="#c84714">   </span> #c84714         lightrng
+<span background="#579ac6">   </span> #579ac6         darkblu
+<span background="#266692">   </span> #266692         lightblu
+<span background="#e0c53c">   </span> #e0c53c         darkylw
+<span background="#ae9108">   </span> #ae9108         lightylw
+<span background="#4ce6d2">   </span> #4ce6d2         darkgrn
+<span background="#1ab29e">   </span> #1ab29e         lightgrn
+<span background="#be6ed9">   </span> #be6ed9         darkgnt
+<span background="#8c3aa4">   </span> #8c3aa4         lightgnt
+<span background="#69e1ee">   </span> #69e1ee         darkcyn
+<span background="#38acba">   </span> #38acba         lightcyn
 pop-cherryblossom wallpaper
 40             TOPPAD
 100            LEFTPAD
@@ -51,7 +51,6 @@ pop-cherryblossom wallpaper
 40             BOTTOMPAD
 4              BORDER
 8              GAP
-\/home\/gavarch HOME
 gb             xkb
 eDP1           MON1
 VGA1           MON2

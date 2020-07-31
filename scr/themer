@@ -690,7 +690,7 @@ O_list () {
 			;;
 		varsh) awk ' !/!/ {
 				key=$1;$1="";gsub(/^[ \t]+/, "", $0)
-				printf "TMR[%s]=%s\n", key, "\""$0"\""
+				printf "TMR[%s]=\"%s\"\n", key, $0
 				}' $ALL
 			;;
 		current) awk '!/!/ {

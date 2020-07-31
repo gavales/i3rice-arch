@@ -1,14 +1,3 @@
-rename Airframes
-shell pinta %f
-rename vidlinks
-rename vidlinks.md
-shell edtr
-open_with vim
-
-open_with pinta
-rename 01-Airframes_Engines
-rename 02-EnginesI–Systems
-rename 03-EnginesII–FuelSystems
 rename 04-EnginesIII–OtherSystems
 rename 05-FlightInstruments
 rename 3EnginesII
@@ -47,4 +36,15 @@ rename 16-PDM
 rename 01-Airframes
 rename 19-NAVIII–RadioTheory_Comms
 rename 20-NAVIV–RadioNav
+mkdir xob
+touch styles.cfg
+shell themer --init
+rename template_styles.cfg
+rename NCOP1`.mkv
 open_with mpv
+mkdir lf
+shell wget https://raw.githubusercontent.com/gokcehan/lf/master/etc/lfrc.example
+rename lfr.example
+rename lfrc
+open_with%space
+open_with gedtr
