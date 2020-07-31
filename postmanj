@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 bkd="\033[1;30m"
 bkl="\033[1;30m"
@@ -13,65 +13,79 @@ wtd="\033[1;37m"
 wtl="\033[0m"
 cd ~
 
-cat <<EOB
-$blu
-================================================================================
-============================ INSTALLING YOUR PROGRAMS ==========================
-================================================================================
-$wtl
-sudo pacman -S rofi otf-font-awesome ttf-font-awesome nautilus evince mupdf \
-	pinta redshift playerctl mplayer r tk gcc-fortran newsboat opencv \
-	python-matplotlib python2-matplotlib python-numpy python2-numpy hdf5 \
-	libreoffice pandoc pandoc-crossref pandoc-citeproc python-pygments \
-	python2-pygments biber texlive-most acpi lm_sensors sysstat ntfs-3g \
-	libmpdclient lxappearance sxiv ncurses fftw w3m mpd mpc ncmpcpp feh dunst \
-	unrar perl-anyevent perl-anyevent-i3 lolcat figlet youtube-dl urxvt-perls \
-	trash-cli atom python-pywal vim-latexsuite calibre jq wmctrl polybar \
-	vim-runtime gvim neovim xclip xsel firefox maim zathura-pdf-mupdf id3v2 \
-	hsetroot xorg-xsetroot xautolock xorg-xev sxhkd wmutils i3lock-color \
-	glib2 gdk-pixbuf2 ruby-sass inkscape glava gthumb xfce4-settings
-sudo cpan AnyEvent Linux::FD common::sense
+cat << 'EOB'
+
+
+==============================================
+========= INSTALLING YOUR PROGRAMS ===========
+==============================================
+
+
+sudo pacman -S rofi otf-font-awesome ttf-font-awesome \
+  nautilus evince mupdf pinta redshift playerctl mplayer \
+  r tk gcc-fortran newsboat opencv python-matplotlib \
+  python2-matplotlib python-numpy python2-numpy hdf5 \
+  libreoffice pandoc pandoc-crossref pandoc-citeproc \
+  python-pygments python2-pygments biber texlive-most \
+  acpi lm_sensors sysstat ntfs-3g libmpdclient \
+  lxappearance sxiv ncurses fftw w3m mpd mpc ncmpcpp \
+  feh dunst unrar perl-anyevent perl-anyevent-i3 \
+  lolcat figlet youtube-dl urxvt-perls trash-cli \
+  atom python-pywal vim-latexsuite calibre jq wmctrl \
+  polybar vim-runtime gvim neovim xclip xsel firefox \
+  maim zathura-pdf-mupdf id3v2 hsetroot xorg-xsetroot \
+  xautolock xorg-xev sxhkd wmutils i3lock-color glib2 \
+  gdk-pixbuf2 ruby-sass inkscape glava gthumb xfce4-settings
+#sudo cpan AnyEvent Linux::FD common::sense
 cd ~
 xfconf-query --channel thunar --property /misc-full-path-in-title --create --type bool --set true
 EOB
 
 
-cat <<EOB
-$blu
-================================================================================
-================================= FINAL STEPS! =================================
-================================================================================
+cat << 'EOB'
+
+
+==============================================
+=============== FINAL STEPS! =================
+==============================================
+
 
 - GET CONFIGS FROM GITHUB:
-- OPEN RANGER OR OTHER FILE MANAGER AND COPY SYMLINKS OF THE NECESSARY
-	FOLDERS AND FILES
+- OPEN RANGER OR OTHER FILE MANAGER AND COPY
+  SYMLINKS OF THE NECESSARY FOLDERS AND FILES
+
 - AUR APPS I GET TOO:
-	slack-desktop
-	mmutils-git             thunar-gtk2           google-chrome-beta
-	chrome-remote-desktop   spotify               grive
-	clipit                  pulseaudio-ctl        zathura-pdf-mupdf
-	xorg-xbacklight         light                 bashmount
-	acroread                mpris-ctl             figlet-fonts
-	urxvt-config-reload-git urxvt-resize-font-git i3ipc-python-git
-	cli-visualizer          pamac-aur             gtkrc-reload
-	ranger-git              wordgrinder           vim-live-latex-preview
-	fontpreview-git
-$wtl
+  mmutils-git     : google-chrome-beta
+  slack-desktop   : chrome-remote-desktop
+  spotify         : zathura-pdf-mupdf
+  clipit          : pulseaudio-ctl
+  xorg-xbacklight : light
+  bashmount       : i3ipc-python-git
+  mpris-ctl       : figlet-fonts
+  cli-visualizer  : pamac-aur
+  gtkrc-reload    : xob
+  ranger-git      : vim-live-latex-preview
+  fontpreview-git : lf
+
+# thunar-gtk2 # wordgrinder # grive # acroread
+# urxvt-config-reload-git # urxvt-resize-font-git
 EOB
 
 
-cat <<EOB
-$blu
-================================================================================
-============================= UPDATE & GET MY REPOS ============================
-================================================================================
-$wtl
+cat << 'EOB'
+
+
+=============================================
+========= UPDATE & GET MY REPOS =============
+=============================================
+
+
 sudo pacman -Syyu
 mkdir ~/Drive
 mkdir ~/.tmp
 mkdir ~/git
 cd ~/git
-git clone https://github.com/StillANixRookie/icons_themer.git
+#git clone https://github.com/StillANixRookie/icons_themer.git
 git clone https://github.com/StillANixRookie/numix-solarized-gtk-theme.git
 cd
 EOB
