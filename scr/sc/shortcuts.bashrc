@@ -60,18 +60,21 @@ Mgg() { mv "$1" ~/git/ghb/"$1" ; }
 alias ggi="cd ~/git/i3rice-arch"
 Ygi() { cp -r "$1" ~/git/i3rice-arch/"$1" ; }
 Mgi() { mv "$1" ~/git/i3rice-arch/"$1" ; }
-alias ggm="cd ~/git/dmenu-gavin"
-Ygm() { cp -r "$1" ~/git/dmenu-gavin/"$1" ; }
-Mgm() { mv "$1" ~/git/dmenu-gavin/"$1" ; }
+alias ggm="cd ~/git/dmenu"
+Ygm() { cp -r "$1" ~/git/dmenu/"$1" ; }
+Mgm() { mv "$1" ~/git/dmenu/"$1" ; }
 alias ggn="cd ~/git/numix"
 Ygn() { cp -r "$1" ~/git/numix/"$1" ; }
 Mgn() { mv "$1" ~/git/numix/"$1" ; }
-alias ggw="cd ~/git/i3rice-arch.wiki"
-Ygw() { cp -r "$1" ~/git/i3rice-arch.wiki/"$1" ; }
-Mgw() { mv "$1" ~/git/i3rice-arch.wiki/"$1" ; }
 alias ggs="cd ~/git/sent"
 Ygs() { cp -r "$1" ~/git/sent/"$1" ; }
 Mgs() { mv "$1" ~/git/sent/"$1" ; }
+alias ggt="cd ~/git/st"
+Ygt() { cp -r "$1" ~/git/st/"$1" ; }
+Mgt() { mv "$1" ~/git/st/"$1" ; }
+alias ggw="cd ~/git/i3rice-arch.wiki"
+Ygw() { cp -r "$1" ~/git/i3rice-arch.wiki/"$1" ; }
+Mgw() { mv "$1" ~/git/i3rice-arch.wiki/"$1" ; }
 alias glh="cd /run/media/gavarch/LILPRECIOUS"
 Ylh() { cp -r "$1" /run/media/gavarch/LILPRECIOUS/"$1" ; }
 Mlh() { mv "$1" /run/media/gavarch/LILPRECIOUS/"$1" ; }

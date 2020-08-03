@@ -1,25 +1,3 @@
-rename 04-EnginesIII–OtherSystems
-rename 05-FlightInstruments
-rename 3EnginesII
-rename 4EnginesIII
-shell mpv %d
-shell mpv %d &>/dev/null &
-rename 5FltInst
-rename 6FltInst
-rename 6FlightTheory
-rename 5FOPSAerodrome
-rename 7FOPSAerodrome
-rename 7AirportOps
-rename 8FOPSPlans
-rename 8FltPlansItins
-rename 9AeroMed
-rename 10-CARSLicenses
-rename 10CARSLicences
-rename 10CARSLicenses
-rename 11CARSAirspace
-rename 12CARSRulesRegs
-rename 13-MeteorologyI–BasicMeteorology
-rename 13MetBasics
 rename 14MetWeather
 rename 15MetActiveWeather
 rename 18NavII
@@ -36,15 +14,37 @@ rename 16-PDM
 rename 01-Airframes
 rename 19-NAVIII–RadioTheory_Comms
 rename 20-NAVIV–RadioNav
-mkdir xob
-touch styles.cfg
-shell themer --init
-rename template_styles.cfg
-rename NCOP1`.mkv
+rename Ground School Videos - FlightOp -> 140.mp4
+rename Ground School Videos - FlightOp -> 166.mp4
+rename Ground School Videos - FlightOp -> 189.mp4
+open_with
+mkdir
+mkdir S1
+rename S2
+rename S3
+rename S4
+rename S5
+rename S6
+rename S7
+rename S8
 open_with mpv
-mkdir lf
-shell wget https://raw.githubusercontent.com/gokcehan/lf/master/etc/lfrc.example
-rename lfr.example
-rename lfrc
-open_with%space
-open_with gedtr
+rename S6A
+rename S6B
+rename S7A
+rename S7B
+mkdir S5
+rename S6Part1
+rename 14-Met2–BasicWXTheory
+rename 15-Met3–ActiveWX
+rename 10-CARS1–LicensingRqts
+rename 12-CARS3–Rules_Regs
+rename 12-CARS3–Rules_Regls
+rename 12-CARS3–RulesRegs
+rename 11-CARS2–CadAirspace
+rename 06-TheoryofFlight
+rename 17-Nav1–NavIntro
+rename 08-Flt_PlansIts
+rename 09-AeroMed
+rename 09-Aeromed
+rename 10-CARS1–LicenseRqts
+rename ProFunds.csv
