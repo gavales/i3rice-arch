@@ -1,0 +1,14 @@
+set recolor true
+set window-title-basename true
+set default-bg "#e6d6ac"
+set default-fg "#2A2426"
+set font "Product Sans 11"
+set inputbar-bg "#2A2426"
+set inputbar-fg "#e6d6ac"
+set statusbar-bg "#2A2426"
+set statusbar-fg "#e6d6ac"
+set completion-bg "#2A2426"
+set completion-fg "#e6d6ac"
+set show-scrollbars false
+set recolor-darkcolor "#b6cba0"
+set recolor-lightcolor "#2A2426"

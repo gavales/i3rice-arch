@@ -1,0 +1,7 @@
+#!/bin/bash
+declare -A TMR
+eval "$(themer --list varsh)"
+
+cp ".themer/${TMR[name]}/config.py" config.py
+
+[[ -n $(pgrep qutebrowser) ]] && qutebrowser :config-source

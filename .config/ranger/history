@@ -1,33 +1,7 @@
-rename 14MetWeather
-rename 15MetActiveWeather
-rename 18NavII
-rename 6NavComms
-rename 19NavComms
-rename 17NavIntro
-rename 18NavLogsCalcs
-rename 20-Navigati
-rename 20NavRadioNav
-rename 21Review
-rename 08-FlightOpsII–Plans_Itineraries
-rename 09-FlightOpsIII–AeroMed_HumanFacts
-rename 16-PDM
-rename 01-Airframes
-rename 19-NAVIII–RadioTheory_Comms
-rename 20-NAVIV–RadioNav
-rename Ground School Videos - FlightOp -> 140.mp4
-rename Ground School Videos - FlightOp -> 166.mp4
-rename Ground School Videos - FlightOp -> 189.mp4
-open_with
-mkdir
-mkdir S1
-rename S2
-rename S3
-rename S4
 rename S5
 rename S6
 rename S7
 rename S8
-open_with mpv
 rename S6A
 rename S6B
 rename S7A
@@ -48,3 +22,29 @@ rename 09-AeroMed
 rename 09-Aeromed
 rename 10-CARS1–LicenseRqts
 rename ProFunds.csv
+rename config_.py
+rename config.py
+rename config_old.py
+rename sessi.html
+rename session
+open_with sc-im
+mkdir Germany Tour 2015
+touch .themer_post
+shell chmod +x %f
+shell convert -trim -transparent white -fuzz 10%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
+shell convert -trim -transparent white -fuzz 20%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
+shell convert -trim -transparent white -fuzz 30%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
+shell convert -trim -transparent white -fuzz 50%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
+shell convert -trim -transparent gray 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
+shell convert -trim -transparent grey 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
+shell convert -trim -transparent gray -fuzz 50%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
+shell convert -trim -transparent Gray -fuzz 50%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
+open_with pinta
+
+shell convert -trim -transparent black -fuzz 50%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
+shell convert -trim -transparent grey -fuzz 50%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
+rename css
+open_with%space
+open_with edtr
+open_with mpv
+rename seestck_bei_mondschein.jpg

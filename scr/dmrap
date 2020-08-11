@@ -34,7 +34,7 @@ while true; do
 done
 
 if [[ $CMD == "dmenu" ]]; then
-	cat /dev/stdin | dmenu ${@} -fn "${FONT:-"cozettevector 18"}" \
+	cat /dev/stdin | dmenu ${@} -fn "${FONT:-"Iosevka 18"}" \
 		-nb  "${TMR[$ACC]}" -nf  "${TMR[fg1]}" \
 		-sb  "${TMR[fg1]}"  -sf  "${TMR[$ACC]}" \
 		-nhb "${TMR[$ACC]}" -nhf "${TMR[bg1]}" \
@@ -42,7 +42,7 @@ if [[ $CMD == "dmenu" ]]; then
 		-hb  "${TMR[$ACC]}" -hf  "${TMR[acf]}" \
 		-ib  "${TMR[$ACC]}" -if  "${TMR[bg1]}"
 else
-	dmenu_run -p run ${@} -fn "${FONT:-"cozettevector 18"}" \
+	dmenu_run -p run ${@} -fn "${FONT:-"Iosevka 18"}" \
 		-nb  "${TMR[$ACC]}" -nf  "${TMR[fg1]}" \
 		-sb  "${TMR[fg1]}"  -sf  "${TMR[$ACC]}" \
 		-nhb "${TMR[$ACC]}" -nhf "${TMR[bg1]}" \
