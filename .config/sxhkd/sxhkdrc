@@ -90,7 +90,7 @@ super + y
 super + u
 	chrap https://outlook.office.com/mail/inbox/id/AAQkAGZjZGU2MmYyLTc5ZDctNDI1My05MzU4LWRjYTc3NjdhN2NkOAAQAOwToE4JkJhIgjz322aPjPU%3D
 super + i
-	chrap https://www.amazon.co.uk/gp/video/storefront?filterId=OFFER_FILTER=PRIME
+	chrap https://www.primevideo.com/region/na/ref=av_auth_return_redir
 #	chrap https://www.bbc.co.uk/iplayer/
 super + {p,bracketright,bracketleft,backslash}
 	i3media {togg,next,prev,stop}
