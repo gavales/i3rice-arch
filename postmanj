@@ -65,7 +65,8 @@ cat << 'EOB'
   cli-visualizer  : pamac-aur
   gtkrc-reload    : xob
   ranger-git      : vim-live-latex-preview
-  fontpreview-git : lf
+  fontpreview-git : dragon-drag-and-drop
+  lf
 
 # thunar-gtk2 # wordgrinder # grive # acroread
 # urxvt-config-reload-git # urxvt-resize-font-git

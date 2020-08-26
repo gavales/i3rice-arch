@@ -7,12 +7,6 @@
 
 #" "
 #"Journals"
-#http://rsob.royalsocietypublishing.org/rss/current.xml "Journals" "~The Royal Society: Open Biology Current"
-#http://rspb.royalsocietypublishing.org/rss/current.xml "Journals" "~The Royal Society: Proceedings B Current"
-#http://rspa.royalsocietypublishing.org/rss/current.xml "Journals" "~The Royal Society: Proceedings A Current"
-#http://rspb.royalsocietypublishing.org/rss/recent.xml  "Journals" "~The Royal Society: Proceedings B Recent"
-#http://rsob.royalsocietypublishing.org/rss/recent.xml  "Journals" "~The Royal Society: Open Biology Recent"
-#http://rspa.royalsocietypublishing.org/rss/recent.xml  "Journals" "~The Royal Society: Proceedings A Recent"
 
 "--- BLOGS ---"
 http://www.factfiend.com/feed/                         "Blogs" "~Fact Fiend"
@@ -34,6 +28,7 @@ http://www.jpl.nasa.gov/multimedia/rss/slideshows.xml  "JPL" "~Slide Shows & Int
 
 " "
 "--- SUBREDDITS ---"
+https://www.reddit.com/r/dune/new.rss             "subreddits" "~dune"
 https://www.reddit.com/r/history/new.rss          "subreddits" "~history"
 https://www.reddit.com/r/IAmA/new.rss             "subreddits" "~IAmA"
 https://www.reddit.com/r/i3wm/new.rss             "subreddits" "~i3wm"

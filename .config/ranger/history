@@ -1,8 +1,3 @@
-rename S5
-rename S6
-rename S7
-rename S8
-rename S6A
 rename S6B
 rename S7A
 rename S7B
@@ -46,5 +41,10 @@ shell convert -trim -transparent grey -fuzz 50%% 'PSTAR-learn42.jpg' 'PSTAR-lear
 rename css
 open_with%space
 open_with edtr
-open_with mpv
 rename seestck_bei_mondschein.jpg
+rename I am become Death the destroyer of worlds.mkv
+open_with mpv
+rename reddit
+mkdir Pirates of the Caribbean
+rename public
+rename website_new
