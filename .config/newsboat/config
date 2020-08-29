@@ -22,12 +22,13 @@ bind-key D pb-download
 bind-key U show-urls
 bind-key x pb-delete
 
-color listnormal cyan default
-color listfocus black yellow standout bold
-color listnormal_unread blue default
-color listfocus_unread yellow default bold
-color info red black bold
-color article magenta default bold
+color background          color15  color0
+color listnormal          color15  color0
+color listfocus           color9   color0   bold
+color listnormal_unread   color15  color0   bold
+color listfocus_unread    color9   color0   bold
+color info                color9   color0   bold
+color article             color15  color0
 
 browser linkhandler
 macro , open-in-browser
@@ -39,15 +40,17 @@ macro p set browser "dmenuhandler"                 ; open-in-browser ; set brows
 macro c set browser "xsel -b <<<"                  ; open-in-browser ; set browser linkhandler
 macro C set browser "youtube-viewer --comments=%u" ; open-in-browser ; set browser linkhandler
 
-highlight all "---.*---" yellow
-highlight feedlist ".*(0/0))" black
-highlight article "(^Feed:.*|^Title:.*|^Author:.*)" cyan default bold
-highlight article "(^Link:.*|^Date:.*)" default default
-highlight article "https?://[^ ]+" green default
-highlight article "^(Title):.*$" blue default
-highlight article "\\[[0-9][0-9]*\\]" magenta default bold
-highlight article "\\[image\\ [0-9]+\\]" green default bold
-highlight article "\\[embedded flash: [0-9][0-9]*\\]" green default bold
-highlight article ":.*\\(link\\)$" cyan default
-highlight article ":.*\\(image\\)$" blue default
-highlight article ":.*\\(embedded flash\\)$" magenta default
+highlight all "---.*---"                              color3  default bold
+highlight feedlist ".*(0/0))"                         color0
+highlight article "(^Feed:.*)"                        color15 default
+highlight article "(^Title:.*)"                       color1  default bold
+highlight article "(^Author:.*)"                      color1  default bold
+highlight article "(^Link:.*|^Date:.*)"               color15 default
+highlight article "https?://[^ ]+"                    color4  default
+highlight article "^(Title):.*$"                      color4  default bold
+highlight article "\\[[0-9][0-9]*\\]"                 color5  default bold
+highlight article "\\[image\\ [0-9]+\\]"              color2  default underline
+highlight article "\\[embedded flash: [0-9][0-9]*\\]" color6  default underline
+highlight article ":.*\\(link\\)$"                    color4  default underline
+highlight article ":.*\\(image\\)$"                   color2  default underline
+highlight article ":.*\\(embedded flash\\)$"          color6  default underline
