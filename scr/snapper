@@ -41,14 +41,14 @@ TMP=${SCD}/tmp.png
 }
 
 scrotname () {
-	TME="`date +%Y-%m-%d_%H:%M:%S`.png"
+	TME="`date +%Y%m%d_%H%M%S`.png"
 	NME=$(echo "" | dmrap $MENOPS -p "Choose scrot name ")
 	[[ -z $NME ]] && SCRNME=$TME || SCRNME="$NME.png"
 }
 
 confirmscrot () {
 	[[ -n $NOCNFM ]] && {
-		TME="`date +%Y-%m-%d_%H:%M:%S`.png"
+		TME="`date +%Y%m%d_%H%M%S`.png"
 		mv $TMP ${SCD}/${SDR}/${TME}
 		notify-send "$SCRTPE" "${TME} saved to ${SCD}/${SDR}" -i ${SCD}/${SDR}/${TME}
 		exit

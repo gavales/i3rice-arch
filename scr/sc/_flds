@@ -11,7 +11,6 @@ dp  ~/doc/py
 dq  ~/doc/quads
 D   ~/dtp
 gh  ~/git
-gb  ~/git/public
 gd  ~/git/dwm
 gf  ~/git/farbfeld
 gg  ~/git/ghb
@@ -20,7 +19,8 @@ gm  ~/git/dmenu
 gn  ~/git/numix
 gs  ~/git/sent
 gt  ~/git/st
-gw  ~/git/i3rice-arch.wiki
+gw  ~/git/website
+gW  ~/git/i3rice-arch.wiki
 lh  /run/media/gavarch/LILPRECIOUS
 l1  /run/media/gavarch/LILPRECIOUS/Part1
 l2  /run/media/gavarch/LILPRECIOUS/Part2

@@ -45,9 +45,6 @@ MD() { mv "$1" ~/dtp/"$1" ; }
 alias ggh="cd ~/git"
 Ygh() { cp -r "$1" ~/git/"$1" ; }
 Mgh() { mv "$1" ~/git/"$1" ; }
-alias ggb="cd ~/git/public"
-Ygb() { cp -r "$1" ~/git/public/"$1" ; }
-Mgb() { mv "$1" ~/git/public/"$1" ; }
 alias ggd="cd ~/git/dwm"
 Ygd() { cp -r "$1" ~/git/dwm/"$1" ; }
 Mgd() { mv "$1" ~/git/dwm/"$1" ; }
@@ -72,9 +69,12 @@ Mgs() { mv "$1" ~/git/sent/"$1" ; }
 alias ggt="cd ~/git/st"
 Ygt() { cp -r "$1" ~/git/st/"$1" ; }
 Mgt() { mv "$1" ~/git/st/"$1" ; }
-alias ggw="cd ~/git/i3rice-arch.wiki"
-Ygw() { cp -r "$1" ~/git/i3rice-arch.wiki/"$1" ; }
-Mgw() { mv "$1" ~/git/i3rice-arch.wiki/"$1" ; }
+alias ggw="cd ~/git/website"
+Ygw() { cp -r "$1" ~/git/website/"$1" ; }
+Mgw() { mv "$1" ~/git/website/"$1" ; }
+alias ggW="cd ~/git/i3rice-arch.wiki"
+YgW() { cp -r "$1" ~/git/i3rice-arch.wiki/"$1" ; }
+MgW() { mv "$1" ~/git/i3rice-arch.wiki/"$1" ; }
 alias glh="cd /run/media/gavarch/LILPRECIOUS"
 Ylh() { cp -r "$1" /run/media/gavarch/LILPRECIOUS/"$1" ; }
 Mlh() { mv "$1" /run/media/gavarch/LILPRECIOUS/"$1" ; }
