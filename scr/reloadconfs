@@ -5,13 +5,7 @@ case $WPP in
 	*xbm*) eval "$(echo $WPP | \
 		awk '{print "xbmer -p \""$1"\" -b \""$2"\" -f \""$3"\""}')"
 		;;
-	*)
-		[[ -n $WPP ]] && {
-			TNT="$(themer -v 'tint ')"
-			[[ -n $TNT ]] && TINT="-t $TNT" || TINT=" "
-		} || WPP=$(themer -v 'acc ')
-		gwc -w "$WPP" $TINT
-		;;
+	*) [[ -n $WPP ]] || WPP=$(themer -v 'acc ') ; gwc -w "$WPP" ;;
 esac
 
 i3listen-toggle

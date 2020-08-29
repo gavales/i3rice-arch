@@ -1,3 +1,30 @@
+rename S7
+rename S8
+rename S6A
+rename S6B
+rename S7A
+rename S7B
+mkdir S5
+rename S6Part1
+rename 14-Met2–BasicWXTheory
+rename 15-Met3–ActiveWX
+rename 10-CARS1–LicensingRqts
+rename 12-CARS3–Rules_Regs
+rename 12-CARS3–Rules_Regls
+rename 12-CARS3–RulesRegs
+rename 11-CARS2–CadAirspace
+rename 06-TheoryofFlight
+rename 17-Nav1–NavIntro
+rename 08-Flt_PlansIts
+rename 09-AeroMed
+rename 09-Aeromed
+rename 10-CARS1–LicenseRqts
+rename ProFunds.csv
+rename config_.py
+rename config.py
+rename config_old.py
+rename sessi.html
+rename session
 open_with sc-im
 mkdir Germany Tour 2015
 touch .themer_post
@@ -11,40 +38,13 @@ shell convert -trim -transparent grey 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
 shell convert -trim -transparent gray -fuzz 50%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
 shell convert -trim -transparent Gray -fuzz 50%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
 open_with pinta
+
 shell convert -trim -transparent black -fuzz 50%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
 shell convert -trim -transparent grey -fuzz 50%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
 rename css
 open_with%space
-rename seestck_bei_mondschein.jpg
-rename I am become Death the destroyer of worlds.mkv
-open_with mpv
-rename reddit
-mkdir Pirates of the Caribbean
-rename public
-rename website_new
-rename website
-rename images.png
-shell convert 'images.png' -resize 64x64 'images_.png'
-rename favicon.png
-w
-rename posts
-rename about.png
-rename about_.png
-shell convert -trim -transparent white -fuzz 30%% 'images.png' 'images_.png'
-shell convert -trim -fill black -opaque "$(themer -v 'fg0 ')" -fuzz 50%% 'about_.png' 'about.png'
-shell convert -trim -fill black -opaque "#3e443e" -fuzz 50%% 'about_.png' 'about.png'
-shell convert -trim -fill '#3e443e' -opaque black -fuzz 50%% 'about_.png' 'about.png'
-rename about_black.png
-mkdir pages
-rename hoe.html
-rename home.html
-rename rss.xml
-rename index.html
-rename uni-work.html
-rename star
-rename startpage.html
-rename cv.html
 open_with edtr
-
-rename ryuko
-q
+rename seestck_bei_mondschein.jpg
+rename [AnimeRG] One Piece - 540 [1080p] [Dual-Audio] [Multi-Sub] [x265] [pseudo].mkv
+rename [AnimeRG] One Piece - 543 [1080p] [Dual-Audio] [Multi-Sub] [x265] [pseudo].mkv
+open_with mpv
