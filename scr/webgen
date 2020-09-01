@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+
+PNDCMD="pandoc -F pandoc-crossref -s --toc -o"
+WBST="$HOME/git/website"
+
+O_mkpage() {
+	local SRC TRG FLD TPE
+	SRC="$1"
+	FLD=${PWD/"${WBST}/content/"/} ; TPE=${FLD%%/*}
+	[[ $TPE == "pages" ]] && TRG=${WBST}/pages/${SRC%.*}.html || {
+		FLD=${FLD#*/} ; MNTH=${FLD#*/} ; YEAR=${FLD%/*}
+		TRG=${WBST}/posts/${YEAR}/${MNTH}/${SRC%.*}.html
+	}
+	$PNDCMD $TRG $SRC
+	exit
+}
+
+O_gensite() {
+
+	exit
+}
+
+O_newpage() {
+	exit
+}
+
+O_newpost() {
+	exit
+}
+
+while true; do
+	case $1 in
+		--mkpage  | -m ) O_mkpage  "${2:-}" ; shift ;;
+		--gensite | -g ) O_gensite "${2:-}" ; shift ;;
+		--newpage | -n ) O_newpage "${2:-}" ; shift ;;
+		--newpost | -p ) O_newpost "${2:-}" ; shift ;;
+		--help ) help ;;
+		-h ) help | \
+			sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | \
+			sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g'
+			exit
+			;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
