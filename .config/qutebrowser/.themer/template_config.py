@@ -473,7 +473,7 @@ c.tabs.background = True                                    # Open middleclick t
 c.tabs.close_mouse_button = 'middle'                        # right , middle , none
 c.tabs.close_mouse_button_on_bar = 'ignore'                 # new-tab close-current close-last ignore
 c.tabs.favicons.scale = 1.0
-c.tabs.favicons.show = 'pinned'                             # always never pinned
+c.tabs.favicons.show = 'always'                             # always never pinned
 
 # Maximum stack size to remember for tab switches (-1 for no maximum).
 c.tabs.focus_stack_size = 10

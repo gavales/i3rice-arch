@@ -1,20 +1,20 @@
 [frame]
 width = 0
-color = "#002b36"
+color = "#fbf1c7"
 
 [urgency_low]
-background = "#268bd2"
-foreground = "#002b36"
+background = "#458588"
+foreground = "#fbf1c7"
 timeout = 3
 
 [urgency_normal]
-background = "#268bd2"
-foreground = "#002b36"
+background = "#458588"
+foreground = "#fbf1c7"
 timeout = 3
 
 [urgency_critical]
-background = "#dc322f"
-foreground = "#002b36"
+background = "#cc241d"
+foreground = "#fbf1c7"
 timeout = 3
 
 [shortcuts]
@@ -22,7 +22,7 @@ timeout = 3
 	close_all = ctrl+shift+space
 
 [global]
-	font = Product Sans 11
+	font = Lucida Sans 11
 	
 	allow_markup = yes
 	

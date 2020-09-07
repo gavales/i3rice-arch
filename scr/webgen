@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
-PNDCMD="pandoc -F pandoc-crossref -s --toc -o"
 WBST="$HOME/git/website"
 DMN="https://gavales.github.io"
+
+PNDCMD="pandoc -F pandoc-crossref -s --toc -o"
+ROOT="file://$WBST"
+RTLC="${ROOT}/local"
 
 cssprint()    {
 	PGPT="pagepost"
@@ -103,6 +106,7 @@ O_mkpage()   {
 }
 O_gensite()  {
 	cd $WBST
+	[[ -d local ]] || mkdir local
 	genbloghome > $WBST/content/pages/blog.md
 	find content -type d | \
 		sed '/^content$/d;s/content\///g' | \
@@ -135,7 +139,15 @@ O_gensite()  {
 }
 O_pushsite() {
 	cd $WBST
-	./.webgen_push
+
+	find local -type d | \
+		sed '/^local$/d;s/local\///g' | \
+		xargs -I {} mkdir -p {}
+
+	for i in $(find local -type f); do
+		sed "s;${RTLC};${DMN};g" $i > ${i/local\//}
+		sed -i "s;${ROOT};${DMN};g" ${i/local\//}
+	done
 	exit
 }
 O_newpage()  {
