@@ -1,4 +1,4 @@
-! vim:ft=perl
+# vim:ft=perl
 name        grayscale
 gtk-icon    Tela-black-dark
 wallpaper   BanffNationalParkCanada(2)
@@ -12,16 +12,16 @@ ylw         colmix 60:#DDB700 40:$bg0
 grn         colmix 60:#18E3C8 40:$bg0
 gnt         colmix 60:#B043D1 40:$bg0
 cyn         colmix 60:#3FDCEE 40:$bg0
-!wallpaper   spheres.xbm $acb $acf
-!red         #FF4971
-!grn         #18E3C8
-!ylw         #FF8037
-!blu         #556FFF
-!gnt         #B043D1
-!cyn         #3FDCEE
-!lightred    #F37F97
-!lightgrn    #5ADECD
-!lightylw    #F2A272
-!lightblu    #8897F4
-!lightgnt    #C574DD
-!lightcyn    #79E6F3
+#wallpaper   spheres.xbm $acb $acf
+#red         #FF4971
+#grn         #18E3C8
+#ylw         #FF8037
+#blu         #556FFF
+#gnt         #B043D1
+#cyn         #3FDCEE
+#lightred    #F37F97
+#lightgrn    #5ADECD
+#lightylw    #F2A272
+#lightblu    #8897F4
+#lightgnt    #C574DD
+#lightcyn    #79E6F3

@@ -11,10 +11,10 @@ $HOME/.config/vis/colors
 $HOME/.config/mpv
 FORCE $HOME/.config/qutebrowser
 $HOME/.config/spicetify/Themes/Themer
+$HOME/.config/sublime-text-3/Packages/THEMES
+$HOME/.config/xob
 $USER_REPO_DIR/website/css
 FORCE $USER_REPO_DIR/i3rice-arch
 $XDG_TEMPLATES_DIR/css
 $XDG_TEMPLATES_DIR/pandoc
-$HOME/.config/sublime-text-3/Packages/THEMES
 $HOME/numix
-/home/gavarch/.config/xob

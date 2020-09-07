@@ -1,9 +1,9 @@
-! vim:ft=perl
-!fg0 #212121
-!bg0 #FDFDFD
-!red #FF4971
-!blu #556FFF
-!ylw #FF8037
+# vim:ft=perl
+#fg0 #212121
+#bg0 #FDFDFD
+#red #FF4971
+#blu #556FFF
+#ylw #FF8037
 TOPPAD    40
 LEFTPAD   100
 RIGHTPAD  100
@@ -25,15 +25,17 @@ xkb        gb
 MON1       eDP1
 MON2       VGA1
 MON3       HDMI1
-guifont    Product Sans
+guifont    $sansfont
 termfont   Iosevka
-editfont   Luxi Mono
-gvimfont   Luxi\\ Mono
-romanfont  Garamond
-shromanfont Garamond
+#editfont   Luxi Mono
+#gvimfont   Luxi\\ Mono
+editfont   Century Schoolbook Monospace
+gvimfont   Century\\ Schoolbook\\ Monospace
+romanfont  Century Schoolbook Monospace
+shromanfont CenturySchoolbookMonospace
 sansfont   Lucida Sans
 shsansfont LucidaSans
-!monofont   CMU Typewriter Text
+#monofont   CMU Typewriter Text
 monofont   $termfont
 monofnt2   monaco
 ltimex     1
@@ -44,6 +46,6 @@ rofifsize  13
 gtk        Themer
 gtk-icon   Tela-red-dark
 cursor     Bibata_Dark_Red
-!cursor     Breeze
+#cursor     Breeze
 conky_loc1 top_left
 conky_loc2 bottom_right

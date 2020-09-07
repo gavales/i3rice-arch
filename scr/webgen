@@ -54,6 +54,10 @@ navgen()    {
 	}
 	END {print "  </ul>";print "  </nav>";print ""}'
 }
+genblog()   {
+	cd $WBST
+	ls posts/*.html
+}
 
 O_mkpage()   {
 	local SRC TRG FLD TPE

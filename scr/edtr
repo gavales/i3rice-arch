@@ -53,8 +53,8 @@ EOB
 exit
 }
 
-FNT=$(themer -v 'editfont ')
-SZE=15
+FNT="Iosevka"
+SZE=18
 SVR=edtr
 INS=edtr
 
@@ -79,19 +79,19 @@ TYP="${TYP#*:}" ; TYP="${TYP#* }" ; TYP="${TYP%% *}"
 [[ $TYP == "Bourne-Again" ]] && TPF=bash
 
 case $EXT in
-	Xres*|Xdef*) EXF=Xfiles  ;;
-	*conf*)      EXF=configs ;;
-	*bash*)      EXF=bash    ;;
-	sh)          EXF=sh      ;;
-	*vim*)       EXF=vim     ;;
-	yaml)        EXF=yaml    ;;
-	html)        EXF=html    ;;
-	py)          EXF=py      ;;
-	ms)          EXF=groff   ;;
-	css)         EXF=css     ;;
-	md|rmd)      EXF=md      ;;
-	bib)         EXF=bib     ;;
-	tex)         EXF=tex     ;;
+	Xres*|Xdef*) EXF=Xfiles  ; FNT="Iosevka" ;;
+	*conf*)      EXF=configs ; FNT="Iosevka" ;;
+	*bash*)      EXF=bash    ; FNT="Iosevka" ;;
+	sh)          EXF=sh      ; FNT="Iosevka" ;;
+	*vim*)       EXF=vim     ; FNT="Iosevka" ;;
+	yaml)        EXF=yaml    ; FNT="Iosevka" ;;
+	html)        EXF=html    ; FNT="Iosevka" ;;
+	py)          EXF=py      ; FNT="Iosevka" ;;
+	ms)          EXF=groff   ; FNT="Iosevka" ;;
+	css)         EXF=css     ; FNT="Iosevka" ;;
+	bib)         EXF=bib     ; FNT="Iosevka" ;;
+	md|rmd)      EXF=md  ; FNT="$(themer -v 'editfont ')" ;;
+	tex)         EXF=tex ; FNT="$(themer -v 'editfont ')" ;;
 esac
 
 [[ -n $TPF ]] && SVR="edtr-$TPF" INS="$TPF - edtr"

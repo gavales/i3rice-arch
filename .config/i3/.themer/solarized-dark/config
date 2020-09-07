@@ -12,24 +12,24 @@
 
 # ━  VARS
 # ━━ MAIN
-set $FTM %%sansfont%%
-set $FSZ 15
+set $FTM Garamond
+set $FSZ 17
 
 font pango:$FTM $FSZ
 
-set $MON1 %%MON1%%
-set $MON3 %%MON3%%
-set $MON2 %%MON2%%
+set $MON1 eDP1
+set $MON3 HDMI1
+set $MON2 VGA1
 
 set $WUW 528
 set $HUW 286
 set $WWS 528
 set $HWS 318
-set $TPAD %%TOPPAD%%
-set $LPAD %%LEFTPAD%%
-set $RPAD %%RIGHTPAD%%
-set $BPAD %%BOTTOMPAD%%
-set $GAP %%GAP%%
+set $TPAD 40
+set $LPAD 100
+set $RPAD 100
+set $BPAD 40
+set $GAP 8
 
 # ━━ i3
 set $ALI Mod1
@@ -50,12 +50,12 @@ set $BNR border normal
 
 # ━  DECORATIONS
 # class                 brdr      bkgr      text    indi      chlb
-client.focused          %%ac50b%% %%ac88b%% %%fg0%% %%ac50b%% %%ac50b%%
-client.focused_inactive %%ac50b%% %%ac50b%% %%fg0%% %%ac50b%% %%ac50b%%
-client.unfocused        %%ac50b%% %%ac50b%% %%fg0%% %%ac50b%% %%ac50b%%
-client.urgent           %%red%%   %%red%%   %%fg0%% %%red%%   %%red%%
-client.placeholder      %%bg0%%   %%bg0%%   %%fg0%% %%bg0%%   %%bg0%%
-client.background       %%bg0%%
+client.focused          #156667 #053941 #fdf6e3 #156667 #156667
+client.focused_inactive #156667 #156667 #fdf6e3 #156667 #156667
+client.unfocused        #156667 #156667 #fdf6e3 #156667 #156667
+client.urgent           #dc322f   #dc322f   #fdf6e3 #dc322f   #dc322f
+client.placeholder      #002b36   #002b36   #fdf6e3 #002b36   #002b36
+client.background       #002b36
 
 # ━  BINDINGS
 # ━━ Misc

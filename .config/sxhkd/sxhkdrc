@@ -83,10 +83,8 @@ super + q
 	lch -t -i calculator -e "$TERMINAL -n calculator -e R"
 super + w
 	chrap http://www1.watchserieshd.tv/
-#super + r
-#	lch -n newsboat -e "$TWOMINAL -name newsboat -e newsboat"
 super + r
-	lch -n newsboat -e "$TERMINAL -n newsboat -e newsboat"
+	$TERMINAL -n newsboat -e newsboat
 super + t
 	mkwalrando
 super + y
