@@ -4,7 +4,7 @@ PNDCMD="pandoc -F pandoc-crossref -s --toc -o"
 WBST="$HOME/git/website"
 DMN="https://gavales.github.io"
 
-cssprint()  {
+cssprint()    {
 	PGPT="pagepost"
 	ls $WBST/css/*.css | sed "/${PGPT/$1/}/d;s/^.*css\///g;s/\.css$//g" | \
 	awk -v ROOT="$WBST" '
@@ -16,7 +16,7 @@ cssprint()  {
 	}
 	'
 }
-jsonprint() {
+jsonprint()   {
 cat << 'EOB'
 
   <script>
@@ -35,7 +35,7 @@ cat << 'EOB'
 
 EOB
 }
-navgen()    {
+navgen()      {
 	ls pages/*.html | \
 		sed '/_pre\.html/d;s/^pages\///g;s/\.html$//g' | \
 		awk -v PGE="$1" -v ROOT="$WBST/local" '
@@ -54,9 +54,40 @@ navgen()    {
 	}
 	END {print "  </ul>";print "  </nav>";print ""}'
 }
-genblog()   {
+genbloghome() {
 	cd $WBST
-	ls posts/*.html
+	cd content/posts
+cat <<EOB
+---
+title: Blog Posts
+date: Updated $(date)
+---
+
+EOB
+	for i in $(find . -maxdepth 1 -type d | sed 's/^\.$//g;s/\.\///g'); do
+		printf "%s\n\n" "# $i"
+		cd $i
+		for i in $(find . -maxdepth 1 -type d | sed 's/^\.$//g;s/\.\///g'); do
+			printf "%s\n\n" "## $i"
+			cd $i
+			for i in $(ls *.md); do
+				awk -v NAME="${PWD/content\//local\/}/${i%.*}.html" '
+					/^title:|^date:/{
+						gsub(/^title:/, "+ [", $0)
+						gsub(/^date:/, " ]("NAME") <date>", $0)
+						printf "%s", $0
+					}
+					/^time:/{
+						gsub(/^time:/, ", </date> <time>", $0)
+						printf "%s", $0
+						printf "%s\n\n", " </time>"
+					}' $i
+			done
+			cd ../
+		done
+		cd ../
+	done
+	cd $WBST
 }
 
 O_mkpage()   {
@@ -72,6 +103,7 @@ O_mkpage()   {
 }
 O_gensite()  {
 	cd $WBST
+	genbloghome > $WBST/content/pages/blog.md
 	find content -type d | \
 		sed '/^content$/d;s/content\///g' | \
 		xargs -I {} mkdir -p local/{}
