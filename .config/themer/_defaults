@@ -29,8 +29,10 @@ guifont    Product Sans
 termfont   Iosevka
 editfont   Luxi Mono
 gvimfont   Luxi\\ Mono
-romanfont  Times New Roman
+romanfont  Garamond
+shromanfont Garamond
 sansfont   Lucida Sans
+shsansfont LucidaSans
 !monofont   CMU Typewriter Text
 monofont   $termfont
 monofnt2   monaco

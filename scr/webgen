@@ -2,8 +2,60 @@
 
 PNDCMD="pandoc -F pandoc-crossref -s --toc -o"
 WBST="$HOME/git/website"
+DMN="https://gavales.github.io"
 
-O_mkpage() {
+cssprint()  {
+	PGPT="pagepost"
+	ls $WBST/css/*.css | sed "/${PGPT/$1/}/d;s/^.*css\///g;s/\.css$//g" | \
+	awk -v ROOT="$WBST" '
+	BEGIN {
+		print "  <link rel=\"stylesheet\" href=\"file://" ROOT "/css/print.css\" media=\"print\"/>"
+	}
+	!/print/ {
+		print "  <link rel=\"stylesheet\" href=\"file://" ROOT "/css/" $0 ".css\"/>"
+	}
+	'
+}
+jsonprint() {
+cat << 'EOB'
+
+  <script>
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  	if (prevScrollpos > currentScrollPos) {
+  		document.getElementById("TOC").style.left = "0";
+  	}
+  	else {
+  		document.getElementById("TOC").style.left = "-250px";
+  	}
+  	prevScrollpos = currentScrollPos;
+  }
+  </script>
+
+EOB
+}
+navgen()    {
+	ls pages/*.html | \
+		sed '/_pre\.html/d;s/^pages\///g;s/\.html$//g' | \
+		awk -v PGE="$1" -v ROOT="$WBST/local" '
+	BEGIN {
+		print "  <nav id=\"HORNAV\" role=\"doc-toc\">"
+		print "  <ul>"
+		print "  <li id=\"home\"><a href=\"file://" ROOT "\"> HOME </a></li>"
+	}
+	!/home/ {
+		if($0 ~ PGE) {
+			print "  <li id=\"select\"><a href=\"file://" ROOT "/pages/" $0 ".html\"> " $0 " </a></li>"
+		}
+		else {
+			print "  <li><a href=\"file://" ROOT "/pages/" $0 ".html\"> " $0 " </a></li>"
+		}
+	}
+	END {print "  </ul>";print "  </nav>";print ""}'
+}
+
+O_mkpage()   {
 	local SRC TRG FLD TPE
 	SRC="$1"
 	FLD=${PWD/"${WBST}/content/"/} ; TPE=${FLD%%/*}
@@ -14,24 +66,54 @@ O_mkpage() {
 	$PNDCMD $TRG $SRC
 	exit
 }
-
-O_gensite() {
-
+O_gensite()  {
+	cd $WBST
+	find content -type d | \
+		sed '/^content$/d;s/content\///g' | \
+		xargs -I {} mkdir -p local/{}
+	for i in $(find content -type f | sed 's;content/;local/;g'); do
+		$PNDCMD "${i%.*}"_pre.html "content/${i/local\//}"
+		sed -i '/<\!DOCTYPE html>/,/<title>/{/<\!DOCTYPE html>/!{/<title>/!d;};}' "${i%.*}_pre.html"
+		sed -i '/<title>/,/<\/head>/{/<title>/!{/<\/head>/!d;};}' "${i%.*}_pre.html"
+		sed -i '/<\!DOCTYPE html>/d' "${i%.*}_pre.html"
+	done
+	cd local
+	for i in $(find pages -type f | sed '/_pre\.html$/!d'); do
+		FLE=${i##*/}
+		cat $WBST/resources/header > "${i%_pre*}".html
+		cssprint page             >> "${i%_pre*}".html
+		jsonprint                 >> "${i%_pre*}".html
+		navgen "${FLE%_pre*}"     >> "${i%_pre*}".html
+		cat "${i}"                >> "${i%_pre*}".html
+	done
+	for i in $(find posts -type f | sed '/_pre\.html$/!d'); do
+		cat $WBST/resources/header > "${i%_pre*}".html
+		cssprint post             >> "${i%_pre*}".html
+		jsonprint                 >> "${i%_pre*}".html
+		navgen "blog"             >> "${i%_pre*}".html
+		cat "${i}"                >> "${i%_pre*}".html
+	done
+	find pages -type f | sed '/_pre\.html/!d' | xargs rm
+	find posts -type f | sed '/_pre\.html/!d' | xargs rm
 	exit
 }
-
-O_newpage() {
+O_pushsite() {
+	cd $WBST
+	./.webgen_push
 	exit
 }
-
-O_newpost() {
+O_newpage()  {
+	exit
+}
+O_newpost()  {
 	exit
 }
 
 while true; do
 	case $1 in
+		--gensite  | -g ) O_gensite ;;
+		--pushsite | -s ) O_pushsite ;;
 		--mkpage  | -m ) O_mkpage  "${2:-}" ; shift ;;
-		--gensite | -g ) O_gensite "${2:-}" ; shift ;;
 		--newpage | -n ) O_newpage "${2:-}" ; shift ;;
 		--newpost | -p ) O_newpost "${2:-}" ; shift ;;
 		--help ) help ;;

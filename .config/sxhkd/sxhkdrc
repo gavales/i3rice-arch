@@ -62,6 +62,10 @@ super + 7
 	$EDITOR -s doots $HOME/.config/polybar/.themer/template_config
 super + 8
 	$EDITOR -s doots $HOME/.config/qutebrowser/.themer/template_config.py
+super + 9
+	$EDITOR -s doots $HOME/.config/newsboat/config
+super + 0
+	$EDITOR -s doots $HOME/.config/newsboat/urls
 super + minus
 	bkman
 super + equal

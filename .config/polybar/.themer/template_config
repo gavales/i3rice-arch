@@ -21,7 +21,7 @@ screenchange-reload = true
 ;monitor             = ${env:MONITOR:HDMI-1}
 override-redirect   = false
 ;bottom              = true
-height              = 22
+height              = 30
 width               = 100%
 radius              = 0.0
 fixed-center        = false
@@ -37,7 +37,7 @@ padding-left        = 0
 padding-right       = 0
 module-margin-left  = 0
 module-margin-right = 0
-font-0              = %%termfont%%:size=10;3
+font-0              = %%romanfont%%:size=15;3
 font-1              = FontAwesome5Free:style=Solid:size=12;2
 font-2              = FontAwesome5Brands:style=Solid:size=12;2
 font-3              = Inconsolata Nerd Font:style=Regular:size=21;6
@@ -49,15 +49,15 @@ tray-background-0   = #ff@@acc@@
 tray-background-1   = #00@@acc@@
 cursor-click        = pointer
 cursor-scroll       = ns-resize
-modules-left        = ws xkeyboard gwc i3light disk
+modules-left        = ws xkeyboard gwc disk
 modules-center      = td
-modules-right       = battery i3vol memory cpu temperature
+modules-right       = battery memory cpu temperature
 
 [bar/dwm]
 ;monitor             = ${env:MONITOR:HDMI-1}
 override-redirect   = true
 ;bottom              = true
-height              = 22
+height              = 30
 width               = 100%
 radius              = 0.0
 fixed-center        = false
@@ -73,7 +73,7 @@ padding-left        = 0
 padding-right       = 0
 module-margin-left  = 0
 module-margin-right = 0
-font-0              = %%termfont%%:size=10;3
+font-0              = %%romanfont%%:size=15;3
 font-1              = FontAwesome5Free:style=Solid:size=12;2
 font-2              = FontAwesome5Brands:style=Solid:size=12;2
 font-3              = Inconsolata Nerd Font:style=Regular:size=21;6
@@ -85,9 +85,9 @@ tray-background-0   = #ff@@acc@@
 tray-background-1   = #00@@acc@@
 cursor-click        = pointer
 cursor-scroll       = ns-resize
-modules-left        = ws xkeyboard gwc i3light disk
+modules-left        = ws xkeyboard gwc disk
 modules-center      = td
-modules-right       = battery i3vol memory cpu temperature
+modules-right       = battery memory cpu temperature
 
 [global/wm]
 margin-top    = 5

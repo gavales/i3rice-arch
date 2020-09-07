@@ -12,11 +12,10 @@
 
 # ━  VARS
 # ━━ MAIN
-set $FTM %%guifont%%
-set $FTI FontAwesome
-set $FSZ %%size%%
+set $FTM %%romanfont%%
+set $FSZ 17
 
-font pango:$FTM,$FTI $FSZ
+font pango:$FTM $FSZ
 
 set $MON1 %%MON1%%
 set $MON3 %%MON3%%
@@ -175,6 +174,7 @@ $ALT+n  move workspace to output $MON1
 focus_wrapping force
 workspace_auto_back_and_forth yes
 $fw [urgent=latest] focus
+title_align center
 #hide_edge_borders both
 #focus_follows_mouse no
 
