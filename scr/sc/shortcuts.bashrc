@@ -195,9 +195,9 @@ MV() { mv "$1" /var/"$1" ; }
 alias gw="cd ~/dwn"
 Yw() { cp -r "$1" ~/dwn/"$1" ; }
 Mw() { mv "$1" ~/dwn/"$1" ; }
-alias gW="cd /mnt/media/Users/test"
-YW() { cp -r "$1" /mnt/media/Users/test/"$1" ; }
-MW() { mv "$1" /mnt/media/Users/test/"$1" ; }
+alias gW="cd /mnt/win10/Users/test"
+YW() { cp -r "$1" /mnt/win10/Users/test/"$1" ; }
+MW() { mv "$1" /mnt/win10/Users/test/"$1" ; }
 alias gx="cd ~/xrs"
 Yx() { cp -r "$1" ~/xrs/"$1" ; }
 Mx() { mv "$1" ~/xrs/"$1" ; }

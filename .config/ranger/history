@@ -1,50 +1,50 @@
-rename about.png
-rename about_.png
-shell convert -trim -transparent white -fuzz 30%% 'images.png' 'images_.png'
-shell convert -trim -fill black -opaque "$(themer -v 'fg0 ')" -fuzz 50%% 'about_.png' 'about.png'
-shell convert -trim -fill black -opaque "#3e443e" -fuzz 50%% 'about_.png' 'about.png'
-shell convert -trim -fill '#3e443e' -opaque black -fuzz 50%% 'about_.png' 'about.png'
-rename about_black.png
-mkdir pages
-rename hoe.html
-rename home.html
-rename rss.xml
-rename uni-work.html
-rename star
-rename startpage.html
-rename cv.html
-rename ryuko
-q
-mkdir 2019
-mkdir December
-rename home.md_
-rename home.md
-mkdir 2020
-rename old_uni-work.html
-rename old_startpage.html
-rename page.css
-rename template_post.css_
-open_with google-chrome-beta
-rename template_post.css
-rename template_page.css_
-rename template_page.css
-rename template_hornav.css_
-rename template_hornav.css
-rename template_toc.css_
-rename template_toc.css
-rename pages
-rename pages_old
-rename posts_old
-rename DemoPanamaMonospace
-search Panama
-rename Panama Monospace Demo Bold.otf
-rename Panama Monospace Demo Iranic.otf
-rename Panama Monospace Demo Italic.otf
-rename Panama Monospace Demo Regular.otf
+rename S6Part1
+rename 14-Met2–BasicWXTheory
+rename 15-Met3–ActiveWX
+rename 10-CARS1–LicensingRqts
+rename 12-CARS3–Rules_Regs
+rename 12-CARS3–Rules_Regls
+rename 12-CARS3–RulesRegs
+rename 11-CARS2–CadAirspace
+rename 06-TheoryofFlight
+rename 17-Nav1–NavIntro
+rename 08-Flt_PlansIts
+rename 09-AeroMed
+rename 09-Aeromed
+rename 10-CARS1–LicenseRqts
+rename ProFunds.csv
+rename config_.py
+rename config.py
+rename config_old.py
+rename sessi.html
+rename session
+open_with sc-im
+mkdir Germany Tour 2015
+touch .themer_post
+shell chmod +x %f
+shell convert -trim -transparent white -fuzz 10%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
+shell convert -trim -transparent white -fuzz 20%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
+shell convert -trim -transparent white -fuzz 30%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
+shell convert -trim -transparent white -fuzz 50%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
+shell convert -trim -transparent gray 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
+shell convert -trim -transparent grey 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
+shell convert -trim -transparent gray -fuzz 50%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
+shell convert -trim -transparent Gray -fuzz 50%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
+open_with pinta
 
-open_with fontforge
-rename index.html
-w
+shell convert -trim -transparent black -fuzz 50%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
+shell convert -trim -transparent grey -fuzz 50%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
+rename css
+open_with%space
 open_with edtr
-mkdir September
-search 
+rename seestck_bei_mondschein.jpg
+rename thinkpad
+rename 05 Why Must I Be a Crustacean in Love.mkv
+rename 16 T The Terrestrial
+rename E02 Who Will Be the Judge.mkv
+shell sudo vim
+shell sudo vim fstab
+search fstab
+open_with openvid
+open_with mppipe
+open_with mpv
