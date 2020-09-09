@@ -603,7 +603,7 @@ O_change () {
 	[[ -n $1 ]] && cat ${TDR}/${1} > $CUR || gui-change
 	cat $CUR | sed '/^\#/d' > $ALL
 	[[ -n $DARK ]] && \
-		sed -i "s/"$(themer -v name)"/"$(themer -v name)"-dark/g;s/fg0/bgint/g;s/bg0/fg0/g;s/bgint/bg0/g" $ALL
+		sed -i "s/name \+"$(themer -v name)"/name "$(themer -v name)"-dark/g;s/fg0/bgint/g;s/bg0/fg0/g;s/bgint/bg0/g" $ALL
 	awk 'NR==FNR{a[$1]=$1;b[$1]=$0;next} $1!=a[$1]{print$0}' \
 		$ALL $DEF | sed '/^#/d' >> $ALL
 	parse-vars
