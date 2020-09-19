@@ -7,6 +7,51 @@ PNDCMD="pandoc -F pandoc-crossref -s --toc -o"
 ROOT="file://$WBST"
 RTLC="${ROOT}/local"
 
+help() {
+cat << 'EOB'
+# NAME
+
+__webgen__ - manage a static website,
+               using `pandoc` + `markdown`
+
+# DEPENDENCIES
+
+```
+pandoc
+```
+
+# SYNOPSIS
+
+```
+webgen --gensite|-g|--pushsite|-s
+webgen --newpage|-n|--newpost|-p <name>
+webgen --help|-h
+```
+
+# OPTIONS
+
+`--gensite|-g`  
+Generates website in `local/` folder.  
+The links will still be local so you can still
+view your changes locally.
+
+`--pushsite|-s`  
+Runs `.webgen` script to upload the site to
+wherever you want. Put anything you want in the script
+
+`--newpage|-n <name>`  
+Create a new page
+
+`--newpost|-p <name>`  
+Create a new blog post
+
+`--help`  
+Displays this help
+
+EOB
+exit
+}
+
 cssprint()    {
 	PGPT="pagepost"
 	ls $WBST/css/*.css | sed "/${PGPT/$1/}/d;s/^.*css\///g;s/\.css$//g" | \
@@ -139,15 +184,7 @@ O_gensite()  {
 }
 O_pushsite() {
 	cd $WBST
-
-	find local -type d | \
-		sed '/^local$/d;s/local\///g' | \
-		xargs -I {} mkdir -p {}
-
-	for i in $(find local -type f); do
-		sed "s;${RTLC};${DMN};g" $i > ${i/local\//}
-		sed -i "s;${ROOT};${DMN};g" ${i/local\//}
-	done
+	./.webgen
 	exit
 }
 O_newpage()  {

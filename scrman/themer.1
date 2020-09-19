@@ -1,4 +1,4 @@
-.TH THEMER 1 2020\-01\-03 Linux "User Manuals"
+.TH THEMER 1 2020\-09\-19 Linux "User Manuals"
 .hy
 .SH NAME
 .PP
@@ -26,8 +26,8 @@ themer
 .fi
 .SH DEPENDENCIES
 .PP
-\f[B]rofi\f[R], \f[B]i3menu\f[R] - for gui menus \f[B]xsel\f[R] -
-copying variable for \f[B]--list varmenu\f[R]
+\f[B]dmenu\f[R] (my build), \f[B]dmrap\f[R] - for gui menus
+\f[B]xsel\f[R] - copying variable for \f[B]--list varmenu\f[R]
 .SH EXAMPLES
 .PP
 [[/images/themer-gruvbox.png|gruvbox]] [[/images/themer-i3.png|i3]]
@@ -404,25 +404,8 @@ Both of the above options will result in the following directory
 structure for our dosnerd theme \f[B].Xresources\f[R] example.
 Both options will also run the \f[B].themer_pre\f[R] &
 \f[B].themer_post\f[R] scripts too.
-.IP
-.nf
-\f[B]
-$ cd $HOME
-$ tree $HOME
-  /home/user
-  \[u251C]\[u2500]\[u2500] .themer
-  \[br]\ \  \[u251C]\[u2500]\[u2500] dosnerd
-  \[br]\ \  \[br]\ \  \[u2514]\[u2500]\[u2500] .Xresources
-  \[br]\ \  \[u251C]\[u2500]\[u2500] dosnerd-dark
-  \[br]\ \  \[br]\ \  \[u2514]\[u2500]\[u2500] .Xresources
-  \[br]\ \  \[u2514]\[u2500]\[u2500] template_.Xresources
-  \[u251C]\[u2500]\[u2500] .Xresources_old
-  \[u251C]\[u2500]\[u2500] .Xresources               # the new .Xresources!
-  \[u251C]\[u2500]\[u2500] .themer_pre
-  \[u251C]\[u2500]\[u2500] .themer_post
-  \[u250A]
-\f[R]
-.fi
+.PP
+\f[B]sh                          \[br] $ cd $HOME                     \[br] $ tree $HOME                   \[br]   /home/user                   \[br]   \[u251C]\[u2500]\[u2500] .themer                  \[br]   \[br]\ \  \[u251C]\[u2500]\[u2500] dosnerd              \[br]   \[br]\ \  \[br]\ \  \[u2514]\[u2500]\[u2500] .Xresources      \[br]   \[br]\ \  \[u251C]\[u2500]\[u2500] dosnerd-dark         \[br]   \[br]\ \  \[br]\ \  \[u2514]\[u2500]\[u2500] .Xresources      \[br]   \[br]\ \  \[u2514]\[u2500]\[u2500] template_.Xresources \[br]   \[u251C]\[u2500]\[u2500] .Xresources_old          \[br]   \[u251C]\[u2500]\[u2500] .Xresources              \[br] # the new .Xresources!   \[u251C]\[u2500]\[u2500] .themer_pre              \[br]   \[u251C]\[u2500]\[u2500] .themer_post             \[br]   \[u250A]                            \[br]\f[R]
 .SH WALLS
 .PP
 [[/images/MunnarKeralaIndia.jpg|gruvbox]]

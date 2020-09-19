@@ -73,8 +73,10 @@ done
 [[ -z ${TRG} ]] && TRG="${USER_REPO_DIR:-"${HOME}/git"}/${RPO}.wiki"
 [[ -d ${TRG} ]] || mkdir -p ${TRG}
 BSE="${TRG}/${_BSE}"
+HME="${TRG}/Home.md_base"
 cd "$SRC"
 cat "$BSE" > "${BSE/_base/}"
+cat "$HME" > "${HME/_base/}"
 
 echo $SRC
 echo $TRG
@@ -83,12 +85,16 @@ echo $RPO
 
 for i in $(ls -l | sed '/^d/d;/^total/d' | awk '{print $NF}'); do
 	[[ -n $(grep '\-\-help' $i) ]] && {
+		echo "__${i}__  " >> ${HME/_base/}
+		$i --help | sed -n "/^__/,/^$/p" | sed '/^$/d;s/^__.*\ - //' >> ${HME/_base/}
+		echo "" >> ${HME/_base/}
 #			print "<div align=\"center\">" > TRG
 #			print "	<h1>"SCR"</h1>"       >> TRG
 #			print "</div>\n"              >> TRG
 		$i --help | \
 			awk -v RPO="${RPO}" -v USR="${USR}" -v RTARG="${SRC##*/}" \
-			-v SCR="${i}" -v TRG="${TRG}/doc/${i}.md" -v BSE="${BSE/_base/}" '
+			-v SCR="${i}" -v TRG="${TRG}/doc/${i}.md" \
+			-v BSE="${BSE/_base/}" -v HME="${HME/_base/}" '
 		BEGIN {
 			c=0
 			print "### _[ master/"RTARG"/"SCR"](https://github.com/"USR"/"RPO"/blob/master/"RTARG"/"SCR")_" > TRG
