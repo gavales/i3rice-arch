@@ -1,26 +1,3 @@
-rename S6Part1
-rename 14-Met2–BasicWXTheory
-rename 15-Met3–ActiveWX
-rename 10-CARS1–LicensingRqts
-rename 12-CARS3–Rules_Regs
-rename 12-CARS3–Rules_Regls
-rename 12-CARS3–RulesRegs
-rename 11-CARS2–CadAirspace
-rename 06-TheoryofFlight
-rename 17-Nav1–NavIntro
-rename 08-Flt_PlansIts
-rename 09-AeroMed
-rename 09-Aeromed
-rename 10-CARS1–LicenseRqts
-rename ProFunds.csv
-rename config_.py
-rename config.py
-rename config_old.py
-rename sessi.html
-rename session
-open_with sc-im
-mkdir Germany Tour 2015
-touch .themer_post
 shell chmod +x %f
 shell convert -trim -transparent white -fuzz 10%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
 shell convert -trim -transparent white -fuzz 20%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
@@ -42,9 +19,32 @@ rename thinkpad
 rename 05 Why Must I Be a Crustacean in Love.mkv
 rename 16 T The Terrestrial
 rename E02 Who Will Be the Judge.mkv
+search fstab
 shell sudo vim
 shell sudo vim fstab
-search fstab
-open_with openvid
-open_with mppipe
+rename monet
+rename monet.png
+rename about.png
+rename about_black.jpg
+rename about_black_old.png
+rename about_black.png
 open_with mpv
+open_with gedtr
+shell convert -trim -fill white -opaque black -fuzz 50%% 'about_black.png' 'about_white.png'
+rename issho.png
+rename lucy.png
+rename .png
+rename rosinante.png
+rename cora.png
+rename doffy.png
+rename sol_becca.png
+rename becca.png
+rename violet1.png
+rename violet2.png
+rename joker.png
+rename monet1.png
+rename monet2.png
+rename monet3.png
+rename monet4.png
+rename smoky.png
+rename usopp.png

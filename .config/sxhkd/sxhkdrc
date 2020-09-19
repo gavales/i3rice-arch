@@ -77,8 +77,6 @@ super + shift + grave
 	gencvl
 
 # ━  ROW1
-#super + q
-#	lch -t -i calculator -e "$TWOMINAL -name calculator -e R"
 super + q
 	lch -t -i calculator -e "$TERMINAL -n calculator -e R"
 super + w
@@ -97,10 +95,8 @@ super + i
 super + {p,bracketright,bracketleft,backslash}
 	i3media {togg,next,prev,stop}
 
-#super + shift + r
-#	lch -i reddit -e "$TWOMINAL -name reddit -e rtv"
 super + shift + r
-	lch -i reddit -e "$TERMINAL -n reddit -e rtv"
+	$TERMINAL -n reddit -e rtv
 super + shift + t
 	compton
 super + shift + y
@@ -112,45 +108,31 @@ super + shift + p
 
 # ━  ROW2
 super + s
-	lch -i ncmpcpp -e "$TWOMINAL -name ncmpcpp -e ncmpcpp"
+	$TERMINAL -n ncmpcpp -e ncmpcpp
 super + d
 	i3menu -d -t apps -C 4 -l 5 -w 75
-#	i3menu -d -F -t onedark -C 4 -D 200
 super + f
 	thunar
-#super + g
-#	$TWOMINAL -name gitcommit -e gitcommit
 super + g
 	$TERMINAL -n gitcommit -e gitcommit
 super + semicolon
 	$TREMINAL
 super + apostrophe
 	$TWOMINAL -name noterm
-#super + Return
-#	$TWOMINAL -name terminal
 super + Return
 	$TERMINAL -n terminal
 
 super + shift + s
-	lch -c Spotify -e "spotify"
+	spotify
 super + shift + d
 	themer --list varmenu
-#	i3menu -r -L 1 -w 100 -o
 super + shift + f
 	gksu thunar
-#super + shift + g
-#	$TWOMINAL -name drive_sync -e grivesync
-#super + shift + Return
-#	$TWOMINAL -name ranger -e ranger
-super + shift + g
-	$TERMINAL -n drive_sync -e grivesync
 super + shift + Return
 	$TERMINAL -n ranger -e ranger
 
 super + control + s
 	slack
-#super + control + Return
-#	$TWOMINAL -name ranger_root -e sudo ranger
 super + control + Return
 	$TERMINAL -n ranger_root -e sudo ranger
 
@@ -160,15 +142,11 @@ super + z
 super + x
 	surf docs.google.com/spreadsheets/u/0/
 super + c
-	lch -c Firefox -e "$BROWSER"
-#super + v
-#	glach
-#super + v
-#	lch -i visualiser -e "$TWOMINAL -name visualiser -e vis"
+	$BROWSER
 super + v
-	lch -i visualiser -e "$TERMINAL -n visualiser -e vis"
+	$TERMINAL -n visualiser -e vis
 super + b
-	lch -i references -e "$EDITOR $HOME/Drive/global.bib"
+	$EDITOR -s bib $HOME/global.bib
 super + n
 	chrap https://www.netflix.com/
 super + m
@@ -180,10 +158,8 @@ super + shift + c
 	reloadconfs
 super + shift + v
 	projectM-pulseaudio
-#super + shift + b
-#	lch -i bashmount -e "$TWOMINAL -name bashmount -e bashmount"
 super + shift + b
-	lch -i bashmount -e "$TERMINAL -n bashmount -e bashmount"
+	$TERMINAL -n bashmount -e bashmount
 super + shift + m
 	chrap https://play.google.com/movies/
 super + shift + {comma,period,slash}

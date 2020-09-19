@@ -6581,3 +6581,9 @@ Sep 09 15:57 : player: played "Jaco Pastorius/Jaco Pastorius/04 Kuru_Speak Like 
 Sep 09 16:02 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Sep 09 16:02 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Sep 09 16:02 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Sep 19 12:20 : client: [0] opened from [::1]:60602
+Sep 19 12:20 : client: [1] opened from [::1]:60604
+Sep 19 12:20 : client: [1] closed
+Sep 19 12:20 : client: [2] opened from [::1]:60606
+Sep 19 12:20 : client: [2] closed
+Sep 19 12:20 : client: [0] closed

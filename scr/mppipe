@@ -4,7 +4,7 @@
 # CREATED: Sat 26 Jan 21:59:12 GMT 2019
 
 VID="$1"
-PID="$(pgrep -f mppipe)"
+PID="$(pidof mpv)"
 FIFO="${2:-"$USER_TMP_DIR/MPVMAIN"}"
 
 #if [[ ${VID} =~ 'youtube.com' ]]; then

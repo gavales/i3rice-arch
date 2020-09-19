@@ -81,7 +81,7 @@ DIRS=${TDR}/_dirs LST=${TDR}/.themelist
 TIME=$(date | awk '{print $4}')
 TIME=${TIME%%:*}
 
-help () {
+help() {
 cat << 'EOB'
 # NAME
 
@@ -436,20 +436,13 @@ EOB
 exit
 }
 
-variations () {
+variations()       {
 	bg0=$(sed '/^bg0 /!d;s/[^ ]* *//' $ALL)
 	fg0=$(sed '/^fg0 /!d;s/[^ ]* *//' $ALL)
 	acc=$(sed '/^acc /!d;s/[^ ]* *//' $ALL)
 	hexrgbraw $bg0 bg0
 	hexrgbraw $fg0 fg0
 	((bg0R<=127)) || ((bg0G<=127)) || ((bg0B<=127)) && vrt=dark
-
-	awk -i <(awklib) -v bg0="$bg0" -v fg0="$fg0" '
-		/#/ && !/^fg0|^bg0|^acc/ {
-			key=$1;val=$2;
-			mixer("dark"key,val,fg0,75,25)
-			mixer("light"key,val,bg0,75,25)
-		}' $ALL >> $ALL
 
 	awk -i <(awklib) -v VRT="$vrt" -v INC="20" \
 		-v bg0R="$bg0R" -v bg0G="$bg0G" -v bg0B="$bg0B" \
@@ -527,8 +520,18 @@ variations () {
 			mixer("ac75b",acc,bg0,25,75)
 			mixer("ac88b",acc,bg0,12,88)
 		}' >> $ALL
+
+	acf=$(sed '/^acf /!d;s/[^ ]* *//' $ALL)
+	acb=$(sed '/^acb /!d;s/[^ ]* *//' $ALL)
+	awk -i <(cat $HOME/awklib) -v acb="$acb" -v acf="$acf" '
+		/#/ && !/fg[0-9]\s|bg[0-9]\s|ac[0-9][0-9][a-z]\s|ac[a-z]\s/ {
+			key=$1;val=$2;
+			mixer("dark"key,val,acf,66,34)
+			mixer("light"key,val,acb,66,34)
+		}' $ALL >> $ALL
+
 }
-hexrgbraw () {
+hexrgbraw()        {
 	eval $(echo $1 | awk -F "" -v NME="$2" '{
 			R=$2$3;G=$4$5;B=$6$7;
 			print NME "R=" strtonum( "0x" R ) "";
@@ -536,14 +539,14 @@ hexrgbraw () {
 			print NME "B=" strtonum( "0x" B ) "";
 			}')
 }
-parse-vars () {
+parse-vars()       {
 	REPLACE=$(awk '!/\$/ {
 			key=$1;$1="";gsub(/^[ \t]+/, "", $0);val=$0;
 			print ";s/$" key "/" val "/g";
 		}' $ALL | tr -d "\n")
 	sed -i "${REPLACE:1}" $ALL
 }
-create-regex () {
+create-regex()     {
 	regex="$(awk '{
 			key=$1; $1=""; gsub(/^[ \t]+/, "", $0);
 			print ";s/\\%\\%" key "\\%\\%/" $0 "/g";
@@ -552,7 +555,7 @@ create-regex () {
 	regex="${regex:1}"
 	echo "$regex" > $RGX
 }
-create-rofi-list () {
+create-rofi-list() {
 	bg0=$(sed '/^bg0 /!d;s/[^ ]* *//'       $ALL)
 	fg0=$(sed '/^fg0 /!d;s/[^ ]* *//'       $ALL)
 	acc=$(sed '/^acc /!d;s/[^ ]* *//'       $ALL)
@@ -575,7 +578,7 @@ create-rofi-list () {
 	cat $CLST1 $CLST2 $VLST1 > $ALR
 	rm $CLST1 $CLST2 $VLST1
 }
-colmix-parse () {
+colmix-parse()     {
 	CMRX="$(awk -i <(awklib) ' $2 ~ /^colmix/ {
 			key=$1;$1="";$2="";gsub(/^[ \t]+/, "", $0);mix=$0;
 			ONE=substr($0,4,length($0)-14);TWO=substr($0,15,length($0)-1);
@@ -584,13 +587,13 @@ colmix-parse () {
 		}' $ALL | tr -d "\n")"
 	sed -i "${CMRX:1}" $ALL
 }
-create-rgb () {
+create-rgb()       {
 	awk -i <(awklib) '$2 ~ /#/ {
 			key=$1;$1="";gsub(/^[ \t]+/, "", $0);
 			hextorgb($0,key);
 		}' $ALL >> $ALL
 }
-gui-change () {
+gui-change()       {
 	THM=$(themer --list thememenu)
 	notify-send "Chosen theme is $THM" -i "${SCR_DIR}pic/theme.png"
 	cd ${TDR}
@@ -599,7 +602,7 @@ gui-change () {
 	notify-send "Theme exists" && cat ${THM} > ${CUR}
 }
 
-O_change () {
+O_change()       {
 	[[ -n $1 ]] && cat ${TDR}/${1} > $CUR || gui-change
 	cat $CUR | sed '/^\#/d' > $ALL
 	[[ -n $DARK ]] && \
@@ -616,11 +619,11 @@ O_change () {
 		key=$1;$1="";gsub(/^[ \t]+/, "", $0); printf "%-19s%s\n", key, $0;
 		}' $ALL > ${TDR}/.tmp && mv ${TDR}/.tmp $ALL
 }
-O_auto-dark () {
+O_auto-dark()    {
 	PM=${1#*:} ; ((TIME>=PM)) && DARK=1
 	AM=${1%:*} ; ((TIME<AM))  && DARK=1
 }
-O_apply-single () {
+O_apply-single() {
 	regex=$(cat $RGX)
 	DIR="$1"
 	[[ -d $DIR ]] || exit
@@ -640,7 +643,7 @@ O_apply-single () {
 	[[ -f "${DIR}/.themer_post" ]] && ./.themer_post &>/dev/null &
 	cd
 }
-O_apply-all () {
+O_apply-all()    {
 	eval "$(awk '!/#/{
 		if($1=="FORCE"){
 			gsub(/^FORCE/, "", $0);
@@ -652,9 +655,9 @@ O_apply-all () {
 		}' $DIRS)"
 	exit
 }
-O_delete () { mv ${TDR}/${1} ${TDR}/.unused/${1} ; exit ; }
-O_getvar () { [[ -n $1 ]] && cat $ALL | sed "/^$1/!d;s/[^ ]* *//" ; }
-O_updatelist () {
+O_delete() { mv ${TDR}/${1} ${TDR}/.unused/${1} ; exit ; }
+O_getvar() { [[ -n $1 ]] && cat $ALL | sed "/^$1/!d;s/[^ ]* *//" ; }
+O_updatelist()   {
 	cd $TDR
 	thms=$(ls | grep -v '_')
 	rm $LST
@@ -674,7 +677,7 @@ O_updatelist () {
 <span foreground=\"$fg0\" background=\"$bg0\"> $i </span>" >> $LST
 	done
 }
-O_list () {
+O_list()         {
 	[[ -z $1 ]] && exit
 	case $1 in
 		vars) awk ' !/!/ {
@@ -716,7 +719,7 @@ O_list () {
 			;;
 	esac
 }
-O_new () {
+O_new()          {
 	NTHM="${TDR}/${1}"
 	echo "! vim:ft=perl" > $NTHM
 	echo "name    ${1}" > $NTHM
@@ -725,7 +728,7 @@ O_new () {
 	echo "Enter foreground colour..." && read FG0 && echo "fg0    $FG0" >> $NTHM
 	echo "Theme ${NTHM##*/} created"
 }
-O_init () {
+O_init()         {
 	[[ -z ${1} ]] && DIR="$(pwd)" || DIR="${1}"
 	cd $DIR
 	[[ -f "${DIR}/.themer" ]] || mkdir "${DIR}/.themer"
@@ -757,7 +760,7 @@ chmod +x "${DIR}/.themer_post"
 [[ -n $FORCE ]] && _DIR="FORCE ${DIR}" || _DIR="${DIR}"
 echo "${_DIR}" >> ${DIRS}
 }
-O_clean () {
+O_clean()        {
 	if [[ -n ${1} ]]; then
 		cd "${1}/.themer"
 		ls -d */ | xargs rm -rf

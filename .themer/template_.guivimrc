@@ -1,7 +1,7 @@
 if has('gui_win32')
-	set guifont=monaco:h14
+	set guifont=monaco:h17
 else
-	set guifont=%%gvimfont%%\ 14
+	set guifont=%%gvimfont%%\ 17
 endif
 set guioptions-=m "remove menu bar
 set guioptions-=T "remove toolbar
