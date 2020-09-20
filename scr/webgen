@@ -234,10 +234,38 @@ O_pushsite() {
 }
 O_newpage()  {
 	local TTL="$1"
-	
+	NME=$(echo $TTL | tr ' ' '-' | tr -d "\'").md
+	cd $WBST/content/pages
+cat > ${NME} <<EOB
+---
+title: $TTL
+---
+
+EOB
+	$EDITOR "$NME"
+	cd $WBST
 	exit
 }
 O_newpost()  {
+	local TTL="$1"
+	NME=$(echo $TTL | tr ' ' '-' | tr -d "\'").md
+	cd $WBST/content/posts
+	DIR="$(date '+%Y/%B')"
+	[[ -d $DIR ]] || mkdir -p $DIR
+	cd $DIR
+cat > $NME <<EOB
+---
+title: $TTL
+subtitle: <++>
+author: <++>
+date: $(date '+%a, %d %b %Y')
+time: $(date '+%X %z')
+---
+
+<++>
+EOB
+	$EDITOR "$NME"
+	cd $WBST
 	exit
 }
 
