@@ -1,19 +1,17 @@
 PDF git/sent/example.pdf
-PDF git/public/posts/cv.files/CV.pdf
-PDF git/public/posts/uni-work.files/2nd Year Group Project.pdf
-PDF git/public/posts/uni-work.files/3rd Year Dissertation.pdf
 PDF git/ghb/public/posts/cv.files/CV.pdf
 PDF git/ghb/public/posts/uni-work.files/2nd Year Group Project.pdf
 PDF git/ghb/public/posts/uni-work.files/3rd Year Dissertation.pdf
-PDF git/ghb/content/posts/cv.files/CV.pdf
-PDF git/ghb/content/posts/uni-work.files/2nd Year Group Project.pdf
-PDF git/ghb/content/posts/uni-work.files/3rd Year Dissertation.pdf
+PDF git/website/resources/CV.pdf
+PDF git/website/resources/2nd Year Group Project.pdf
+PDF git/website/resources/3rd Year Dissertation.pdf
 PDF scr/openpdf
 PDF scr/wcpdf
-PDF dwn/online-and-mobile-banking--online-banking--payroll_form.pdf
 PDF dwn/EndymionDanSimmons%2FEndymion+-+Dan+Simmons.epub
 PDF dwn/epdf.pub_ringworld-throne.epub
+PDF dwn/Herbert_-_The_Dune_Encyclopedia.pdf
 PDF dwn/HyperionDanSimmons%2FHyperion+-+Dan+Simmons.epub
+PDF dwn/online-and-mobile-banking--online-banking--payroll_form.pdf
 PDF dwn/TuringBurroughs.epub
 PDF dwn/Vancity Transfer info.pdf
 PDF dwn/ware_tetralogy (1).epub
@@ -49,6 +47,8 @@ PDF Calibre Library/Steve Oualline/Vim (Vi Improved) (4)/Vim (Vi Improved) - Ste
 PDF Calibre Library/Steve Oualline/Vim (Vi Improved) (4)/Vim (Vi Improved) - Steve Oualline.epub
 PDF Calibre Library/Peter Fortescue/Spacecraft Systems Engineering (21)/Spacecraft Systems Engineering - Peter Fortescue.epub
 PDF Calibre Library/Graham Swinerd/How Spacecraft Fly (27)/How Spacecraft Fly - Graham Swinerd.epub
+PDF Calibre Library/COMPILED BY DR. WILLIS E. McNELLY/THE DUNE ENCYCLOPEDIA (97)/THE DUNE ENCYCLOPEDIA - COMPILED BY DR. WILLIS E. McNELLY.pdf
+PDF Calibre Library/COMPILED BY DR. WILLIS E. McNELLY/THE DUNE ENCYCLOPEDIA (97)/THE DUNE ENCYCLOPEDIA - COMPILED BY DR. WILLIS E. McNELLY.epub
 PDF Calibre Library/Rudy Rucker/The Ware Tetralogy (94)/The Ware Tetralogy - Rudy Rucker.epub
 PDF Calibre Library/Rudy Rucker/The Hollow Earth (95)/The Hollow Earth - Rudy Rucker.epub
 PDF Calibre Library/Rudy Rucker/The Big Aha (96)/The Big Aha - Rudy Rucker.epub
@@ -138,6 +138,7 @@ PDF doc/mine/canada/PlaneTickets/Canada1.pdf
 PDF doc/mine/canada/Rent/5416-Maple-Crescent-V4K_1G2-Preet/Condition-Inspection-Report.pdf
 PDF doc/mine/canada/Rent/5416-Maple-Crescent-V4K_1G2-Preet/Residential-Tenancy-Agreement.pdf
 PDF doc/mine/canada/Rent/5416-Maple-Crescent-V4K_1G2-Preet/Guarantor-Form.pdf
+PDF doc/mine/canada/MSP.pdf
 PDF doc/mine/canada/jobs/WalmartTsawwassen/CV_WalMart.pdf
 PDF doc/mine/canada/jobs/WalmartTsawwassen/Canada Post Off-Ramp Form.pdf
 PDF doc/mine/canada/jobs/WalmartTsawwassen/Vales  Gavin 1414251BR 04092020.pdf
@@ -257,27 +258,29 @@ PDF doc/ebks/The Hitchhiker's Guide to the G - Douglas Adams.epub
 PDF doc/ebks/Gone Girl - Gillian Flynn.epub
 PDF doc/ebks/Galactic Patrol.epub
 PDF doc/ebks/The Land Without Stars - Jean-Claude Mezieres.pdf
-PDF doc/gs/17-Nav1–IntroductiontoNav/17NavIntro.pdf
+PDF doc/gs/07-AirportOps/7AirportOps.pdf
 PDF doc/gs/16-PDM/16PDM.pdf
-PDF doc/gs/11-CARS2–CanadianAirspace/11CARSAirspace.pdf
-PDF doc/gs/06-Aerodynamics_TheoryofFlight/6FlightTheory.pdf
-PDF doc/gs/12-CARS3–Rules_Regulations/12CARSRulesRegs.pdf
-PDF doc/gs/15-Met3–ActiveWeather/15MetActiveWeather.pdf
-PDF doc/gs/13-Met1–BasicMet/13MetBasics.pdf
+PDF doc/gs/14-Met2–BasicWXTheory/14WXTheory.pdf
+PDF doc/gs/06-TheoryofFlight/6FlightTheory.pdf
+PDF doc/gs/17-Nav1–NavIntro/17NavIntro.pdf
+PDF doc/gs/13-Met1–BasicMet/13BasicMet.pdf
 PDF doc/gs/03-Engines2–FuelSystems/3EnginesII.pdf
+PDF doc/gs/11-CARS2–CadAirspace/11CARSAirspace.pdf
 PDF doc/gs/19-Nav3–RadioTheory_Comms/19NavComms.pdf
+PDF doc/gs/19-Nav3–RadioTheory_Comms/TP11919E.pdf
 PDF doc/gs/01-Airframes/1Airframes.pdf
-PDF doc/gs/10-CARS1–LicensingRequirements/10CARSLicenses.pdf
+PDF doc/gs/12-CARS3–RulesRegs/12CARSRulesRegs.pdf
 PDF doc/gs/05-FlightInstruments/5FltInst.pdf
 PDF doc/gs/02-Engines1–Systems/2EnginesI.pdf
-PDF doc/gs/08-FltOps2–Plans_Itineraries/8FltPlansItins.pdf
+PDF doc/gs/09-Aeromed/9AeroMed.pdf
 PDF doc/gs/21-Review/21Review.pdf
-PDF doc/gs/14-Met2–BasicWeatherTheory/14MetWeather.pdf
+PDF doc/gs/10-CARS1–LicenseRqts/10CARSLicenses.pdf
 PDF doc/gs/04-Engines3–OtherSystems/4EnginesIII.pdf
+PDF doc/gs/18-Nav2–NavLogs_Calcs_Comps/18XC_CZBB_CYFF.pdf
 PDF doc/gs/18-Nav2–NavLogs_Calcs_Comps/18NavLogsCalcs.pdf
 PDF doc/gs/20-Nav4–RadioNav/20NavRadioNav.pdf
-PDF doc/gs/07-FltOps1–AirportOperations/7AirportOps.pdf
-PDF doc/gs/09-FltOps3–AeroMed_HumanFacts/9AeroMed.pdf
+PDF doc/gs/15-Met3–ActiveWX/15ActiveWX.pdf
+PDF doc/gs/08-Flt_PlansIts/8FltPlanIts.pdf
 PDF Dropbox/negaDrive/Telephone interview advice.pdf
 PDF Dropbox/negaDrive/Scanned_20190329-1116.pdf
 PDF Dropbox/negaDrive/Scanned_20190515-1957.pdf
@@ -355,6 +358,7 @@ PDF Dropbox/negaDrive/doc/mine/canada/PlaneTickets/Canada1.pdf
 PDF Dropbox/negaDrive/doc/mine/canada/Rent/5416-Maple-Crescent-V4K_1G2-Preet/Condition-Inspection-Report.pdf
 PDF Dropbox/negaDrive/doc/mine/canada/Rent/5416-Maple-Crescent-V4K_1G2-Preet/Residential-Tenancy-Agreement.pdf
 PDF Dropbox/negaDrive/doc/mine/canada/Rent/5416-Maple-Crescent-V4K_1G2-Preet/Guarantor-Form.pdf
+PDF Dropbox/negaDrive/doc/mine/canada/MSP.pdf
 PDF Dropbox/negaDrive/doc/mine/canada/jobs/WalmartTsawwassen/CV_WalMart.pdf
 PDF Dropbox/negaDrive/doc/mine/canada/jobs/WalmartTsawwassen/Canada Post Off-Ramp Form.pdf
 PDF Dropbox/negaDrive/doc/mine/canada/jobs/WalmartTsawwassen/Vales  Gavin 1414251BR 04092020.pdf
@@ -474,27 +478,29 @@ PDF Dropbox/negaDrive/doc/ebks/The Hitchhiker's Guide to the G - Douglas Adams.e
 PDF Dropbox/negaDrive/doc/ebks/Gone Girl - Gillian Flynn.epub
 PDF Dropbox/negaDrive/doc/ebks/Galactic Patrol.epub
 PDF Dropbox/negaDrive/doc/ebks/The Land Without Stars - Jean-Claude Mezieres.pdf
-PDF Dropbox/negaDrive/doc/gs/17-Nav1–IntroductiontoNav/17NavIntro.pdf
+PDF Dropbox/negaDrive/doc/gs/07-AirportOps/7AirportOps.pdf
 PDF Dropbox/negaDrive/doc/gs/16-PDM/16PDM.pdf
-PDF Dropbox/negaDrive/doc/gs/11-CARS2–CanadianAirspace/11CARSAirspace.pdf
-PDF Dropbox/negaDrive/doc/gs/06-Aerodynamics_TheoryofFlight/6FlightTheory.pdf
-PDF Dropbox/negaDrive/doc/gs/12-CARS3–Rules_Regulations/12CARSRulesRegs.pdf
-PDF Dropbox/negaDrive/doc/gs/15-Met3–ActiveWeather/15MetActiveWeather.pdf
-PDF Dropbox/negaDrive/doc/gs/13-Met1–BasicMet/13MetBasics.pdf
+PDF Dropbox/negaDrive/doc/gs/14-Met2–BasicWXTheory/14WXTheory.pdf
+PDF Dropbox/negaDrive/doc/gs/06-TheoryofFlight/6FlightTheory.pdf
+PDF Dropbox/negaDrive/doc/gs/17-Nav1–NavIntro/17NavIntro.pdf
+PDF Dropbox/negaDrive/doc/gs/13-Met1–BasicMet/13BasicMet.pdf
 PDF Dropbox/negaDrive/doc/gs/03-Engines2–FuelSystems/3EnginesII.pdf
+PDF Dropbox/negaDrive/doc/gs/11-CARS2–CadAirspace/11CARSAirspace.pdf
 PDF Dropbox/negaDrive/doc/gs/19-Nav3–RadioTheory_Comms/19NavComms.pdf
+PDF Dropbox/negaDrive/doc/gs/19-Nav3–RadioTheory_Comms/TP11919E.pdf
 PDF Dropbox/negaDrive/doc/gs/01-Airframes/1Airframes.pdf
-PDF Dropbox/negaDrive/doc/gs/10-CARS1–LicensingRequirements/10CARSLicenses.pdf
+PDF Dropbox/negaDrive/doc/gs/12-CARS3–RulesRegs/12CARSRulesRegs.pdf
 PDF Dropbox/negaDrive/doc/gs/05-FlightInstruments/5FltInst.pdf
 PDF Dropbox/negaDrive/doc/gs/02-Engines1–Systems/2EnginesI.pdf
-PDF Dropbox/negaDrive/doc/gs/08-FltOps2–Plans_Itineraries/8FltPlansItins.pdf
+PDF Dropbox/negaDrive/doc/gs/09-Aeromed/9AeroMed.pdf
 PDF Dropbox/negaDrive/doc/gs/21-Review/21Review.pdf
-PDF Dropbox/negaDrive/doc/gs/14-Met2–BasicWeatherTheory/14MetWeather.pdf
+PDF Dropbox/negaDrive/doc/gs/10-CARS1–LicenseRqts/10CARSLicenses.pdf
 PDF Dropbox/negaDrive/doc/gs/04-Engines3–OtherSystems/4EnginesIII.pdf
+PDF Dropbox/negaDrive/doc/gs/18-Nav2–NavLogs_Calcs_Comps/18XC_CZBB_CYFF.pdf
 PDF Dropbox/negaDrive/doc/gs/18-Nav2–NavLogs_Calcs_Comps/18NavLogsCalcs.pdf
 PDF Dropbox/negaDrive/doc/gs/20-Nav4–RadioNav/20NavRadioNav.pdf
-PDF Dropbox/negaDrive/doc/gs/07-FltOps1–AirportOperations/7AirportOps.pdf
-PDF Dropbox/negaDrive/doc/gs/09-FltOps3–AeroMed_HumanFacts/9AeroMed.pdf
+PDF Dropbox/negaDrive/doc/gs/15-Met3–ActiveWX/15ActiveWX.pdf
+PDF Dropbox/negaDrive/doc/gs/08-Flt_PlansIts/8FltPlanIts.pdf
 PDF Dropbox/negaDrive/plt/md/book/book.pdf
 PDF Dropbox/negaDrive/plt/md/book/book.epub
 PDF Dropbox/negaDrive/plt/md/cvl/cvl.pdf
@@ -1611,6 +1617,8 @@ PDF Dropbox/Calibre Library/Steve Oualline/Vim (Vi Improved) (4)/Vim (Vi Improve
 PDF Dropbox/Calibre Library/Steve Oualline/Vim (Vi Improved) (4)/Vim (Vi Improved) - Steve Oualline.epub
 PDF Dropbox/Calibre Library/Peter Fortescue/Spacecraft Systems Engineering (21)/Spacecraft Systems Engineering - Peter Fortescue.epub
 PDF Dropbox/Calibre Library/Graham Swinerd/How Spacecraft Fly (27)/How Spacecraft Fly - Graham Swinerd.epub
+PDF Dropbox/Calibre Library/COMPILED BY DR. WILLIS E. McNELLY/THE DUNE ENCYCLOPEDIA (97)/THE DUNE ENCYCLOPEDIA - COMPILED BY DR. WILLIS E. McNELLY.pdf
+PDF Dropbox/Calibre Library/COMPILED BY DR. WILLIS E. McNELLY/THE DUNE ENCYCLOPEDIA (97)/THE DUNE ENCYCLOPEDIA - COMPILED BY DR. WILLIS E. McNELLY.epub
 PDF Dropbox/Calibre Library/Rudy Rucker/The Ware Tetralogy (94)/The Ware Tetralogy - Rudy Rucker.epub
 PDF Dropbox/Calibre Library/Rudy Rucker/The Hollow Earth (95)/The Hollow Earth - Rudy Rucker.epub
 PDF Dropbox/Calibre Library/Rudy Rucker/The Big Aha (96)/The Big Aha - Rudy Rucker.epub
@@ -1816,11 +1824,14 @@ PDF Dropbox/proifr/CFS/2020-04-21-BC.pdf
 PDF Dropbox/proifr/PPL-docs/TP12880E.pdf
 PDF Dropbox/proifr/PPL-docs/STUDENT-PILOT-PERMIT-STUDY-GUIDE-2017.pdf
 PDF Dropbox/proifr/PPL-docs/GeneralRadiotelephoneOperatingProcedures.pdf
+PDF Dropbox/proifr/PPL-docs/VFRPhraseology.pdf
 PDF Dropbox/proifr/PPL-docs/PPL-Syllabus.pdf
 PDF Dropbox/proifr/PPL-docs/Professional-Flight-Centre-Ground-School-Syllabus_v1.0.pdf
 PDF Dropbox/proifr/PPL-docs/PPFC_STUDENT_HANDBOOK_2019.pdf
+PDF Dropbox/proifr/PPL-docs/PROIFR-GS-Syllabus.pdf
 PDF Dropbox/proifr/PPL-docs/TP13723.pdf
 PDF Dropbox/proifr/PPL-docs/RADIO-OPERATOR-STUDY-GUIDE-2011.pdf
+PDF Dropbox/proifr/CPL-docs/NAV_19-108_Phraseology_IFR-E6_WEB.pdf
 PDF Dropbox/proifr/PSTAR_learn.pdf
 PDF Dropbox/proifr/PPL/LessonPlan5-Sim-Takeoff_Circuit_Landing.pdf
 PDF Dropbox/proifr/PPL/LessonPlan2-Sim-S_L_Flight.pdf

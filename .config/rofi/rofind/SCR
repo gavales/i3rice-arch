@@ -197,14 +197,6 @@ SCR scr/.unused/googleplaylist.py
 SCR scr/listeners/i3-sticky.py
 SCR scr/listeners/i3listen.py
 SCR scr/mkpy
-SCR dwn/paper-openbox-200409/.config/fish
-SCR dwn/paper-openbox-200409/.config/fish/functions/fish_prompt.fish
-SCR dwn/paper-openbox-200409/.config/ranger/colorschemes/tofu.py
-SCR dwn/paper-openbox-200409/.config/ranger/colorschemes/__init__.py
-SCR dwn/paper-openbox-200409/.config/ranger/commands.py
-SCR dwn/paper-openbox-200409/.config/ranger/commands_full.py
-SCR dwn/paper-openbox-200409/.config/ranger/scope.sh
-SCR dwn/paper-openbox-200409/.scripts/gitpush
 SCR .mozilla/firefox/Crash Reports/LastCrash
 SCR .cargo/registry/src/github.com-1ecc6299db9ec823/idna-0.2.0/src/make_uts46_mapping_table.py
 SCR .cargo/registry/src/github.com-1ecc6299db9ec823/unicode-width-0.1.6/scripts/unicode.py
@@ -267,10 +259,10 @@ SCR .config/sublime-text-3/Packages/LaTeXBox/autolrpair.py
 SCR .config/sublime-text-3/Packages/LaTeXBox/parser.py
 SCR .config/qutebrowser/config_.py
 SCR .config/qutebrowser/config.py
-SCR .config/qutebrowser/.themer/redrock1-dark/config.py
+SCR .config/qutebrowser/.themer/ryuko/config.py
+SCR .config/qutebrowser/.themer/solarized/config.py
 SCR .config/qutebrowser/.themer/template_config.py
-SCR .config/qutebrowser/.themer/gruvbox-dark/config.py
-SCR .config/qutebrowser/.themer/miramare-dark/config.py
+SCR .config/qutebrowser/.themer/config_old.py
 SCR .config/calibre/conversion/search_and_replace.py
 SCR .config/calibre/conversion/metadata.py
 SCR .config/calibre/conversion/mobi_output.py
@@ -288,7 +280,10 @@ SCR .config/ranger/commands_full.py
 SCR .config/ranger/plugins/__init__.py
 SCR .config/ranger/plugins/devicons_linemode.py
 SCR .config/ranger/devicons.py
+SCR .config/ranger/colorschemes/__init__.py
+SCR .config/ranger/colorschemes/zebra.py
 SCR .config/ranger/commands.py
+SCR .config/canto/plugins/__init__.py
 SCR .config/ranger_/scope.sh
 SCR .config/ranger_/plugins/__init__.py
 SCR .config/ranger_/plugins/devicons_linemode.py

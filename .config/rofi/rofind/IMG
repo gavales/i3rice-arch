@@ -25,9 +25,6 @@ IMG git/st/st.png
 IMG git/sent/nyan.png
 IMG git/dwm/dwm.png
 IMG git/dwm/old/dwm.png
-IMG git/public/favicon.png
-IMG git/public/about.png
-IMG git/public/apple-touch-icon-144-precomposed.png
 IMG git/ghb/public/favicon.png
 IMG git/ghb/public/about.png
 IMG git/ghb/public/apple-touch-icon-144-precomposed.png
@@ -35,6 +32,12 @@ IMG git/ghb/themes/hyde/images/screenshot.png
 IMG git/ghb/themes/hyde/images/tn.png
 IMG git/ghb/themes/hyde/static/favicon.png
 IMG git/ghb/themes/hyde/static/apple-touch-icon-144-precomposed.png
+IMG git/website/resources/about_black.png
+IMG git/website/resources/about_white.png
+IMG git/website/resources/favicon.png
+IMG git/website/resources/Luoping, China 1920x1080.jpg
+IMG git/website/resources/about.png
+IMG git/website/resources/about_black_old.png
 IMG git/dmenu/horinopad.png
 IMG git/dmenu/dmenu.png
 IMG git/dmenu/badpango.png
@@ -457,6 +460,7 @@ IMG pic/CasparDavidFriedrich/048L13102_76K8J.jpg
 IMG pic/CasparDavidFriedrich/1024px _051.jpg
 IMG pic/CasparDavidFriedrich/1126L14004_78K88.jpg
 IMG pic/CasparDavidFriedrich/113865966_o.jpg
+IMG pic/CasparDavidFriedrich/144365v_0001.jpg
 IMG pic/CasparDavidFriedrich/228902.jpg
 IMG pic/CasparDavidFriedrich/247218v_0001.jpg
 IMG pic/CasparDavidFriedrich/41_00040318_caspar david friedrich_seest}ck bei mondschein.jpg
@@ -465,17 +469,17 @@ IMG pic/CasparDavidFriedrich/800px Pilgrimage_at_Sunset_(Sunrise).jpg
 IMG pic/CasparDavidFriedrich/A Walk at Dusk oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/A Walk at Dusk.jpg
 IMG pic/CasparDavidFriedrich/Adam Elsheimer _Flight into Egypt 1609 oil on copper.jpg
-IMG pic/CasparDavidFriedrich/Altar Design pencil, ink, watercolour.jpg
 IMG pic/CasparDavidFriedrich/Angels in Adoration sepia.jpg
 IMG pic/CasparDavidFriedrich/artwork-fantasy-art-digital-art-astronaut-wallpaper.jpg
 IMG pic/CasparDavidFriedrich/barco pesca entre dos rocas playa mar baltico.jpg
-IMG pic/CasparDavidFriedrich/northern landscape spring.jpg
-IMG pic/CasparDavidFriedrich/northern sea in the moonlight.jpg
-IMG pic/CasparDavidFriedrich/Oak Tree in the Snow.jpg
-IMG pic/CasparDavidFriedrich/Oak_Tree_in_the_Snow.jpg
-IMG pic/CasparDavidFriedrich/Old Heroes' Graves oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/On_the_Sailing_Boat.jpg
-IMG pic/CasparDavidFriedrich/Owl in a Gothic Window pencil & sepia wash.jpg
+IMG pic/CasparDavidFriedrich/bea0a038383387.575feee24f014.jpg
+IMG pic/CasparDavidFriedrich/Bohemian Landscape with Mount Milleschauer oil on canvas.jpg
+IMG pic/CasparDavidFriedrich/Bre Oak Tree pencil.jpg
+IMG pic/CasparDavidFriedrich/Caspar David Friedrich grande.jpg
+IMG pic/CasparDavidFriedrich/caspar david friedrich.jpg
+IMG pic/CasparDavidFriedrich/Caspar_David_Friedrich's_Chalk_Cliffs_on_Rügen.jpg
+IMG pic/CasparDavidFriedrich/Caspar_David_Friedrich_-View_of_Arkona_with_Rising_Moon_and_Nets.jpg
+IMG pic/CasparDavidFriedrich/Caspar_David_Friedrich_-_Das_Eismeer_-_Hamburger_Kunsthalle_-_02.jpg
 IMG pic/CasparDavidFriedrich/P 2 600 242.jpg
 IMG pic/CasparDavidFriedrich/periods of life.jpg
 IMG pic/CasparDavidFriedrich/Picture in Remembrance of Johann Emanuel Bermer oil on canvas.jpg
@@ -488,25 +492,7 @@ IMG pic/CasparDavidFriedrich/Riesengebirge Landscape with Rising Fog.jpg
 IMG pic/CasparDavidFriedrich/Rock Surface.jpg
 IMG pic/CasparDavidFriedrich/Rocks and Trees pencil & watercolour.jpg
 IMG pic/CasparDavidFriedrich/Rocky landscape in the Elbe Sandstone Mountains oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/144365v_0001.jpg
-IMG pic/CasparDavidFriedrich/bea0a038383387.575feee24f014.jpg
-IMG pic/CasparDavidFriedrich/Cemetery Entrance oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/Dolmen by the Sea pencil & sepia.jpg
-IMG pic/CasparDavidFriedrich/friedrich.jpg
-IMG pic/CasparDavidFriedrich/Meadows near Greifswald oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/Neubrandenburg oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/Rocky Reef on the Sea Shore.jpg
-IMG pic/CasparDavidFriedrich/The Cathedral oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/The_Grosse_Gehege_near_Dresden_ _Google_Art_Project.jpg
-IMG pic/CasparDavidFriedrich/Winter Landscape oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/chalk cliffs at rugen.jpg
-IMG pic/CasparDavidFriedrich/Chalk Cliffs on Rügen oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/Christian August Lorentzen Silke Saugen oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/City at Moonrise oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/Coffin and Grave pencil & sepia.jpg
-IMG pic/CasparDavidFriedrich/cole evening in arcadia.jpg
-IMG pic/CasparDavidFriedrich/Cross and Cathedral in the Mountains oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/Cross in the Mountains.jpg
 IMG pic/CasparDavidFriedrich/The Cemetery Gate oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/The Chasseur in the Forest oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/The Cross Beside The Baltic oil on canvas.jpg
@@ -518,12 +504,7 @@ IMG pic/CasparDavidFriedrich/The Garden Terrace oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/The Marketplace in Greifswald watercolour.jpg
 IMG pic/CasparDavidFriedrich/The Morning oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/The Musician's Dream sepia.jpg
-IMG pic/CasparDavidFriedrich/The North Sea in Moonlight oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/The Ruins of Eldena watercolour.jpg
-IMG pic/CasparDavidFriedrich/the sea of ice 1824 web gallery of art.jpg
-IMG pic/CasparDavidFriedrich/The Solitary Tree oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/The Temple of Juno in Agrigento oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/The Woman with the Raven at the Abyss woodcut.jpg
+IMG pic/CasparDavidFriedrich/Dolmen by the Sea pencil & sepia.jpg
 IMG pic/CasparDavidFriedrich/Dolmen in Snow oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/download.jpg
 IMG pic/CasparDavidFriedrich/Drifting Clouds.jpg
@@ -537,7 +518,18 @@ IMG pic/CasparDavidFriedrich/Eule am Grab [Owl on a Grave] pencil & sepia wash.j
 IMG pic/CasparDavidFriedrich/Evening 1824.jpg
 IMG pic/CasparDavidFriedrich/Evening oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/f46067ce20b13d755eecfe5d01823f95.jpg
+IMG pic/CasparDavidFriedrich/Altar Design pencil, ink, watercolour.jpg
+IMG pic/CasparDavidFriedrich/Caspar_David_Friedrich_-_Graveyard_under_Snow_-_Museum_der_bildenden_Künste.jpg
+IMG pic/CasparDavidFriedrich/Cross in the Mountains.jpg
 IMG pic/CasparDavidFriedrich/Fallen Rocks pencil & watercolour.jpg
+IMG pic/CasparDavidFriedrich/Greifswald in Moonlight oil on canvas.jpg
+IMG pic/CasparDavidFriedrich/Largeness.jpg
+IMG pic/CasparDavidFriedrich/Morning Fog in the Mountains oil on canvas.jpg
+IMG pic/CasparDavidFriedrich/Owl in a Gothic Window pencil & sepia wash.jpg
+IMG pic/CasparDavidFriedrich/Sailing Boat pencil.jpg
+IMG pic/CasparDavidFriedrich/The Cathedral oil on canvas.jpg
+IMG pic/CasparDavidFriedrich/The North Sea in Moonlight oil on canvas.jpg
+IMG pic/CasparDavidFriedrich/Winter Landscape oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/Figura 11 GD Friedrich Bruma matinal en la montana 1808 Figure 11 GD Friedrich.png
 IMG pic/CasparDavidFriedrich/Fir Trees in the Snow oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/Flat Country Shank at Bay of Greifswald.jpg
@@ -545,11 +537,11 @@ IMG pic/CasparDavidFriedrich/Fog in the Elbe Valley oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/Fog oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/Forest in Autumn oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/FRC028.jpg
+IMG pic/CasparDavidFriedrich/friedrich.jpg
 IMG pic/CasparDavidFriedrich/fter Doorway in the Fürstenschule Meissen pencil & sepia wash.jpg
 IMG pic/CasparDavidFriedrich/Gazebo in Greifswald.jpg
 IMG pic/CasparDavidFriedrich/Gerhard von Kügelgen portrait of Friedrich.jpg
 IMG pic/CasparDavidFriedrich/Graveyard in the Snow oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/Greifswald in Moonlight oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/Greifswald_in_Moonlight_Google_Art_Project.jpg
 IMG pic/CasparDavidFriedrich/hb_2002.260.jpg
 IMG pic/CasparDavidFriedrich/Hill and Ploughed Field near Dresden oil on canvas.jpg
@@ -562,18 +554,6 @@ IMG pic/CasparDavidFriedrich/Landscape with Pavilion pen, ink, watercolour.jpg
 IMG pic/CasparDavidFriedrich/Landscape with Rainbow] oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/LandscapewithTempleinRuin1797.jpg
 IMG pic/CasparDavidFriedrich/landschaft mit gebirgssee am morgen.jpg
-IMG pic/CasparDavidFriedrich/Largeness.jpg
-IMG pic/CasparDavidFriedrich/Lime Tree Branch pencil & wash.jpg
-IMG pic/CasparDavidFriedrich/Man and Woman Contemplating the Moon oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/man and woman contemplating the moon.jpg
-IMG pic/CasparDavidFriedrich/Bohemian Landscape with Mount Milleschauer oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/Bre Oak Tree pencil.jpg
-IMG pic/CasparDavidFriedrich/Caspar David Friedrich grande.jpg
-IMG pic/CasparDavidFriedrich/caspar david friedrich.jpg
-IMG pic/CasparDavidFriedrich/Caspar_David_Friedrich's_Chalk_Cliffs_on_Rügen.jpg
-IMG pic/CasparDavidFriedrich/Caspar_David_Friedrich_-View_of_Arkona_with_Rising_Moon_and_Nets.jpg
-IMG pic/CasparDavidFriedrich/Caspar_David_Friedrich_-_Das_Eismeer_-_Hamburger_Kunsthalle_-_02.jpg
-IMG pic/CasparDavidFriedrich/Caspar_David_Friedrich_-_Graveyard_under_Snow_-_Museum_der_bildenden_Künste.jpg
 IMG pic/CasparDavidFriedrich/Caspar_David_Friedrich_-_Kreuz_an_der_Ostsee_(Schloss_Carlottenburg,_Neuer_Pavillon).jpg
 IMG pic/CasparDavidFriedrich/Caspar_David_Friedrich_-_Küste_bei_Mondschein.jpg
 IMG pic/CasparDavidFriedrich/Caspar_David_Friedrich_-_Mondaufgang_am_Meer_-_Google_Art_Project.jpg
@@ -583,18 +563,20 @@ IMG pic/CasparDavidFriedrich/Caspar_David_Friedrich_016.jpg
 IMG pic/CasparDavidFriedrich/Caspar_David_Friedrich_021.jpg
 IMG pic/CasparDavidFriedrich/Caspar_David_Friedrich_065.jpg
 IMG pic/CasparDavidFriedrich/Caspar_David_Friedrich_Wreck_in_the_Icesea.jpg
-IMG pic/CasparDavidFriedrich/Winter Landscape with Church oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/Woman at the Window oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/Woman in a Shawl sepia.jpg
-IMG pic/CasparDavidFriedrich/Woman in front of the setting sun oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/Woman on the Beach of Rügen.jpg
-IMG pic/CasparDavidFriedrich/Woman with Candlestick oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/Woman with Spider's Web Between Bare Trees woodcut.jpg
-IMG pic/CasparDavidFriedrich/Woman_at_a_Window.jpg
-IMG pic/CasparDavidFriedrich/Wreck in the Arctic Ocean oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/Wreck in the Moonlight oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/wreck in the moonlight.jpg
-IMG pic/CasparDavidFriedrich/Young Man Lying on a Grave woodcut.jpg
+IMG pic/CasparDavidFriedrich/Cemetery Entrance oil on canvas.jpg
+IMG pic/CasparDavidFriedrich/chalk cliffs at rugen.jpg
+IMG pic/CasparDavidFriedrich/Chalk Cliffs on Rügen oil on canvas.jpg
+IMG pic/CasparDavidFriedrich/Christian August Lorentzen Silke Saugen oil on canvas.jpg
+IMG pic/CasparDavidFriedrich/City at Moonrise oil on canvas.jpg
+IMG pic/CasparDavidFriedrich/Coffin and Grave pencil & sepia.jpg
+IMG pic/CasparDavidFriedrich/cole evening in arcadia.jpg
+IMG pic/CasparDavidFriedrich/Cross and Cathedral in the Mountains oil on canvas.jpg
+IMG pic/CasparDavidFriedrich/The Ruins of Eldena watercolour.jpg
+IMG pic/CasparDavidFriedrich/the sea of ice 1824 web gallery of art.jpg
+IMG pic/CasparDavidFriedrich/The Solitary Tree oil on canvas.jpg
+IMG pic/CasparDavidFriedrich/The Temple of Juno in Agrigento oil on canvas.jpg
+IMG pic/CasparDavidFriedrich/The Woman with the Raven at the Abyss woodcut.jpg
+IMG pic/CasparDavidFriedrich/The_Grosse_Gehege_near_Dresden_ _Google_Art_Project.jpg
 IMG pic/CasparDavidFriedrich/The_North_Sea_in_Moonlight.jpg
 IMG pic/CasparDavidFriedrich/The_Oaktree_in_the_Snow.jpg
 IMG pic/CasparDavidFriedrich/The_Tree_of_Crows.jpg
@@ -608,6 +590,22 @@ IMG pic/CasparDavidFriedrich/View of Arkona with Rising Moon and Nets oil on can
 IMG pic/CasparDavidFriedrich/Vision of the Christian Church oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/Wanderer_above_the_sea_of_fog.jpg
 IMG pic/CasparDavidFriedrich/Window Looking over the Park pencil & sepia wash.jpg
+IMG pic/CasparDavidFriedrich/Winter Landscape with Church oil on canvas.jpg
+IMG pic/CasparDavidFriedrich/Woman at the Window oil on canvas.jpg
+IMG pic/CasparDavidFriedrich/Woman in a Shawl sepia.jpg
+IMG pic/CasparDavidFriedrich/Woman in front of the setting sun oil on canvas.jpg
+IMG pic/CasparDavidFriedrich/Woman on the Beach of Rügen.jpg
+IMG pic/CasparDavidFriedrich/Woman with Candlestick oil on canvas.jpg
+IMG pic/CasparDavidFriedrich/Woman with Spider's Web Between Bare Trees woodcut.jpg
+IMG pic/CasparDavidFriedrich/Woman_at_a_Window.jpg
+IMG pic/CasparDavidFriedrich/Wreck in the Arctic Ocean oil on canvas.jpg
+IMG pic/CasparDavidFriedrich/Wreck in the Moonlight oil on canvas.jpg
+IMG pic/CasparDavidFriedrich/wreck in the moonlight.jpg
+IMG pic/CasparDavidFriedrich/Young Man Lying on a Grave woodcut.jpg
+IMG pic/CasparDavidFriedrich/Lime Tree Branch pencil & wash.jpg
+IMG pic/CasparDavidFriedrich/Man and Woman Contemplating the Moon oil on canvas.jpg
+IMG pic/CasparDavidFriedrich/man and woman contemplating the moon.jpg
+IMG pic/CasparDavidFriedrich/Meadows near Greifswald oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/meeresufer im mondschein 910421.jpg
 IMG pic/CasparDavidFriedrich/Megalithic tomb in Autumn.jpg
 IMG pic/CasparDavidFriedrich/Memories of the Sudeten Mountains oil on canvas.jpg
@@ -617,13 +615,18 @@ IMG pic/CasparDavidFriedrich/Moonrise by the Sea.jpg
 IMG pic/CasparDavidFriedrich/Moonrise over the Sea oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/moonrise over the sea.jpg
 IMG pic/CasparDavidFriedrich/moonrise.jpg
-IMG pic/CasparDavidFriedrich/Morning Fog in the Mountains oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/morning in riesengebirge_caspar david friedrich.jpg
 IMG pic/CasparDavidFriedrich/Morning in the Mountains oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/Mountain landscape near Teplitz (graphite and wash)   (MeisterDrucke 76384).jpg
 IMG pic/CasparDavidFriedrich/Mountain Landscape with Rainbow oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/Mountain Peak with Drifting Clouds oil on canvas.jpg
-IMG pic/CasparDavidFriedrich/Sailing Boat pencil.jpg
+IMG pic/CasparDavidFriedrich/Neubrandenburg oil on canvas.jpg
+IMG pic/CasparDavidFriedrich/northern landscape spring.jpg
+IMG pic/CasparDavidFriedrich/northern sea in the moonlight.jpg
+IMG pic/CasparDavidFriedrich/Oak Tree in the Snow.jpg
+IMG pic/CasparDavidFriedrich/Oak_Tree_in_the_Snow.jpg
+IMG pic/CasparDavidFriedrich/Old Heroes' Graves oil on canvas.jpg
+IMG pic/CasparDavidFriedrich/On_the_Sailing_Boat.jpg
 IMG pic/CasparDavidFriedrich/Sailing Ship oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/Sea Beach with Fisherman oil on canvas.jpg
 IMG pic/CasparDavidFriedrich/Seashore by Moonlight oil on canvas.jpg
@@ -688,7 +691,6 @@ IMG pic/favs/Banff National Park, Canada 1920x1080 (2).jpg
 IMG pic/favs/Beech tree 1920x1080.jpg
 IMG pic/favs/Belogradchik, Bulgaria 1920x1080.jpg
 IMG pic/favs/Big Sur, California 1920x1080 (3).jpg
-IMG pic/favs/Biogradska Gora National Park, Montenegro 1920x1080.jpg
 IMG pic/favs/Birmingham, England 1920x1080.jpg
 IMG pic/favs/blossom.jpg
 IMG pic/favs/Brooklyn, New York 1920x1080.jpg
@@ -697,27 +699,26 @@ IMG pic/favs/Bungle Bungles, Australia 1920x1080.jpg
 IMG pic/favs/by_billboards2.jpg
 IMG pic/favs/by_border.jpg
 IMG pic/favs/by_burned.jpg
-IMG pic/favs/Maui, Hawaii 1920x1080.jpg
-IMG pic/favs/Mendoza, Argentina 1920x1080.jpg
-IMG pic/favs/Metéora, Greece 1920x1080.jpg
-IMG pic/favs/Miami, FL 1920x1080 (2).jpg
-IMG pic/favs/Miami, FL 1920x1080.jpg
-IMG pic/favs/Moeraki, New Zealand 1920x1080.jpg
-IMG pic/favs/Monument Valley, Arizona, USA 1920x1080.jpg
+IMG pic/favs/by_dust01.jpg
+IMG pic/favs/by_dust02.jpg
+IMG pic/favs/by_waiters.jpg
+IMG pic/favs/by_warmachines5.jpg
+IMG pic/favs/by_warmachines7.jpg
+IMG pic/favs/Canadian Geese 1920x1080.jpg
+IMG pic/favs/Canton of Vaud, Switzerland 1920x1080.jpg
 IMG pic/favs/moonwalk.jpg
 IMG pic/favs/Moosehead Lake, Maine 1920x1080.jpg
 IMG pic/favs/Moraine Lake, Canada 1920x1080 (2).jpg
 IMG pic/favs/Moscow, Russia 1920x1080.jpg
 IMG pic/favs/Mount Fuji, Japan 1920x1080.jpg
+IMG pic/favs/Mountain road, Fuji-Hakone Izu, Japan​ 1920x1080.jpg
 IMG pic/favs/Mui Ne, Vietnam 1920x1080.jpg
 IMG pic/favs/Munnar, Kerala, India 1920x1080.jpg
 IMG pic/favs/Møre og Romsdal, Norway 1920x1080.jpg
 IMG pic/favs/Navarre, Spain 1920x1080.jpg
-IMG pic/favs/Scheendijk, Netherlands 1920x1080.jpg
-IMG pic/favs/Shanghai, China 1920x1080 (2).jpg
-IMG pic/favs/Sidmouth, England 1920x1080.jpg
-IMG pic/favs/Sintra, Portugal 1920x1080.jpg
-IMG pic/favs/Skaftafell, Iceland 1920x1080.jpg
+IMG pic/favs/New York, New York 1920x1080.jpg
+IMG pic/favs/noworries.jpg
+IMG pic/favs/Nullarbor Plain, Australia 1920x1080.jpg
 IMG pic/favs/Sommarøy, Norway 1920x1080.jpg
 IMG pic/favs/South Australia 1920x1080.jpg
 IMG pic/favs/St.Ulrich, Groeden, Italy 1920x1080.jpg
@@ -731,16 +732,6 @@ IMG pic/favs/Teriberka, Murmansk Oblast, Russia 1920x1080.jpg
 IMG pic/favs/The Cotswolds, England 1920x1080.jpg
 IMG pic/favs/The Ozarks, Missouri 1920x1080.jpg
 IMG pic/favs/The Pilbara, Western Australia 1920x1080.jpg
-IMG pic/favs/Tobermory, Canada 1920x1080.jpg
-IMG pic/favs/Trentino-Alto Adige_Südtirol, Italy 1920x1080.jpg
-IMG pic/favs/Tsitsikamma National Park, South Africa 1920x1080.jpg
-IMG pic/favs/forest-fog-hill.jpg
-IMG pic/favs/forest-fog-mist-pine.jpg
-IMG pic/favs/forest-fog-nature-landscape.jpg
-IMG pic/favs/forest-fog-tree.jpg
-IMG pic/favs/Galápagos sea lion 1920x1080.jpg
-IMG pic/favs/General Grant Grove, California 1920x1080.jpg
-IMG pic/favs/gentoo penguin 1920x1080.jpg
 IMG pic/favs/Ghent, Belgium 1920x1080.jpg
 IMG pic/favs/Glacier National Park, Montana 1920x1080.jpg
 IMG pic/favs/Glencoe, HIghlands, Scotland, UK  1920x1080.jpg
@@ -754,49 +745,45 @@ IMG pic/favs/Isalo National Park, Madagascar 1920x1080.jpg
 IMG pic/favs/Izu Peninsula, Japan 1920x1080.jpg
 IMG pic/favs/Japanese maple tree 1920x1080.jpg
 IMG pic/favs/Jericoacoara, Brazil 1920x1080.jpg
-IMG pic/favs/Jericoacoara, Ceará, Brazil 1920x1080.jpg
-IMG pic/favs/Kassel, Germany 1920x1080.jpg
-IMG pic/favs/by_dust01.jpg
-IMG pic/favs/China 1920x1080.jpg
-IMG pic/favs/flowy-hair.jpg
-IMG pic/favs/Kauai, Hawaii 1920x1080 (3).jpg
-IMG pic/favs/Marrakesh-Safi, Morocco 1920x1080.jpg
-IMG pic/favs/New York, New York 1920x1080.jpg
-IMG pic/favs/RedRocksStateParkSedonaArizona.jpg
-IMG pic/favs/SaxonyGermany.jpg
-IMG pic/favs/Tulum, Mexico 1920x1080.jpg
-IMG pic/favs/waterfall-fog-mountains.jpg
-IMG pic/favs/WW_128000000001396849_EN 1920x1080.jpg
-IMG pic/favs/by_dust02.jpg
-IMG pic/favs/by_waiters.jpg
-IMG pic/favs/by_warmachines5.jpg
-IMG pic/favs/by_warmachines7.jpg
-IMG pic/favs/Canadian Geese 1920x1080.jpg
-IMG pic/favs/Canton of Vaud, Switzerland 1920x1080.jpg
+IMG pic/favs/Biogradska Gora National Park, Montenegro 1920x1080.jpg
 IMG pic/favs/Canyonlands NP, Utah 1920x1080.jpg
+IMG pic/favs/Derbyshire, England 1920x1080 (2).jpg
+IMG pic/favs/gentoo penguin 1920x1080.jpg
+IMG pic/favs/Jericoacoara, Ceará, Brazil 1920x1080.jpg
+IMG pic/favs/Lofoton, Flakstad, Norland, Norway 1920x1080.jpg
+IMG pic/favs/Monument Valley, Arizona, USA 1920x1080.jpg
+IMG pic/favs/Oahu, Hawaii 1920x1080 (4).jpg
+IMG pic/favs/Rock climbers 1920x1080.jpg
+IMG pic/favs/Skaftafell, Iceland 1920x1080.jpg
+IMG pic/favs/Tobermory, Canada 1920x1080.jpg
+IMG pic/favs/Vieste, Italy 1920x1080.jpg
+IMG pic/favs/WW_128000000001322569_EN 1920x1080.jpg
 IMG pic/favs/Cape Town, South Africa 1920x1080 (2).jpg
 IMG pic/favs/Cape Woolamai, Australia 1920x1080.jpg
 IMG pic/favs/Caño Cristales River, Colombia 1920x1080.jpg
 IMG pic/favs/Chamarel, Mauritius 1920x1080 (2).jpg
 IMG pic/favs/Chamarel, Mauritius 1920x1080.jpg
 IMG pic/favs/cheetah 1920x1080 (2).jpg
-IMG pic/favs/Weligama, Sri Lanka 1920x1080.jpg
-IMG pic/favs/West Montrose, Canada 1920x1080.jpg
-IMG pic/favs/Wildflowers, Heber Valley, Utah 1920x1080.jpg
-IMG pic/favs/Wiltshire, England 1920x1080.jpg
-IMG pic/favs/Windjana Gorge, Kimberley, Australia 1920x1080.jpg
-IMG pic/favs/Wooden footpath in dense jungle 1920x1080.jpg
-IMG pic/favs/WW_128000000000408974_EN 1920x1080.jpg
-IMG pic/favs/WW_128000000001173149_EN 1920x1080.jpg
-IMG pic/favs/WW_128000000001322569_EN 1920x1080.jpg
-IMG pic/favs/WW_128000000001322589_EN 1920x1080.jpg
-IMG pic/favs/WW_128000000001322629_EN 1920x1080.jpg
-IMG pic/favs/WW_128000000001338989_EN 1920x1080.jpg
-IMG pic/favs/WW_128000000001339009_EN 1920x1080.jpg
-IMG pic/favs/WW_128000000001365289_EN 1920x1080.jpg
-IMG pic/favs/RhoOphiuchus.jpg
-IMG pic/favs/RiverThjorsaIceland.jpg
-IMG pic/favs/Rock climbers 1920x1080.jpg
+IMG pic/favs/China 1920x1080.jpg
+IMG pic/favs/Chinle, Arizona 1920x1080.jpg
+IMG pic/favs/Colorado River, Grand Canyon 1920x1080.jpg
+IMG pic/favs/Corsica, France 1920x1080.jpg
+IMG pic/favs/Costa Brava, Spain 1920x1080.jpg
+IMG pic/favs/Dalian, China 1920x1080.jpg
+IMG pic/favs/Denali National Park, Alaska 1920x1080.jpg
+IMG pic/favs/Trentino-Alto Adige_Südtirol, Italy 1920x1080.jpg
+IMG pic/favs/Tsitsikamma National Park, South Africa 1920x1080.jpg
+IMG pic/favs/Tulum, Mexico 1920x1080.jpg
+IMG pic/favs/Tuvalu Mainland, Tuvalu 1920x1080.jpg
+IMG pic/favs/Uchisar, Turkey 1920x1080.jpg
+IMG pic/favs/Umaria, India 1920x1080.jpg
+IMG pic/favs/Ural owl 1920x1080.jpg
+IMG pic/favs/Valle de la Luna, Chile 1920x1080.jpg
+IMG pic/favs/Valley of Fire State Park, Overton, NV 1920x1080.jpg
+IMG pic/favs/Vatnsnes, Iceland 1920x1080.jpg
+IMG pic/favs/veranda.jpg
+IMG pic/favs/Verona, Italy 1920x1080.jpg
+IMG pic/favs/VictoriaAustralia.jpg
 IMG pic/favs/rollingeyes.png
 IMG pic/favs/Ronda, Spain 1920x1080.jpg
 IMG pic/favs/Rotenberg, Germany 1920x1080.jpg
@@ -811,6 +798,13 @@ IMG pic/favs/SanRafaelSwellUtah.jpg
 IMG pic/favs/Sardinia, Italy 1920x1080 (2).jpg
 IMG pic/favs/Sarek National Park, Sweden 1920x1080.jpg
 IMG pic/favs/SawtoothNationalRecreationAreaUSA.jpg
+IMG pic/favs/SaxonyGermany.jpg
+IMG pic/favs/Scheendijk, Netherlands 1920x1080.jpg
+IMG pic/favs/Shanghai, China 1920x1080 (2).jpg
+IMG pic/favs/Sidmouth, England 1920x1080.jpg
+IMG pic/favs/Sintra, Portugal 1920x1080.jpg
+IMG pic/favs/Kassel, Germany 1920x1080.jpg
+IMG pic/favs/Kauai, Hawaii 1920x1080 (3).jpg
 IMG pic/favs/Kiama, Australia 1920x1080.jpg
 IMG pic/favs/Ko Tarutao. Thailand 1920x1080.jpg
 IMG pic/favs/Komodo National Park, Indonesia 1920x1080.jpg
@@ -822,7 +816,6 @@ IMG pic/favs/Landmannalaugar, Iceland 1920x1080.jpg
 IMG pic/favs/Landsort, Sweden 1920x1080.jpg
 IMG pic/favs/Llanes, Spain 1920x1080.jpg
 IMG pic/favs/Lofoten Islands, Norway 1920x1080.jpg
-IMG pic/favs/Lofoton, Flakstad, Norland, Norway 1920x1080.jpg
 IMG pic/favs/Loire Valley, France 1920x1080.jpg
 IMG pic/favs/Lone Pine, California 1920x1080.jpg
 IMG pic/favs/Los Glaciares National Park, Argentina 1920x1080.jpg
@@ -831,6 +824,19 @@ IMG pic/favs/Maldives 1920x1080 (2).jpg
 IMG pic/favs/Mallorca, Spain 1920x1080.jpg
 IMG pic/favs/Manarola, Italy 1920x1080.jpg
 IMG pic/favs/Maranhão, Brazil 1920x1080.jpg
+IMG pic/favs/Marrakesh-Safi, Morocco 1920x1080.jpg
+IMG pic/favs/Maui, Hawaii 1920x1080.jpg
+IMG pic/favs/Mendoza, Argentina 1920x1080.jpg
+IMG pic/favs/Metéora, Greece 1920x1080.jpg
+IMG pic/favs/Miami, FL 1920x1080 (2).jpg
+IMG pic/favs/Miami, FL 1920x1080.jpg
+IMG pic/favs/Moeraki, New Zealand 1920x1080.jpg
+IMG pic/favs/WW_128000000001322589_EN 1920x1080.jpg
+IMG pic/favs/WW_128000000001322629_EN 1920x1080.jpg
+IMG pic/favs/WW_128000000001338989_EN 1920x1080.jpg
+IMG pic/favs/WW_128000000001339009_EN 1920x1080.jpg
+IMG pic/favs/WW_128000000001365289_EN 1920x1080.jpg
+IMG pic/favs/WW_128000000001396849_EN 1920x1080.jpg
 IMG pic/favs/WW_128000000001396909_EN 1920x1080.jpg
 IMG pic/favs/WW_128000000001396969_EN 1920x1080.jpg
 IMG pic/favs/WW_128000000001428569_EN 1920x1080.jpg
@@ -848,27 +854,21 @@ IMG pic/favs/zbrahmountain.png
 IMG pic/favs/Zhangjiajie, Hunan, China 1920x1080.jpg
 IMG pic/favs/Zhangye, China 1920x1080.jpg
 IMG pic/favs/Zhangye, Gansu Province, China 1920x1080.jpg
-IMG pic/favs/​Mountain road, Fuji-Hakone Izu, Japan​ 1920x1080.jpg
-IMG pic/favs/Tuvalu Mainland, Tuvalu 1920x1080.jpg
-IMG pic/favs/Uchisar, Turkey 1920x1080.jpg
-IMG pic/favs/Umaria, India 1920x1080.jpg
-IMG pic/favs/Ural owl 1920x1080.jpg
-IMG pic/favs/Valle de la Luna, Chile 1920x1080.jpg
-IMG pic/favs/Valley of Fire State Park, Overton, NV 1920x1080.jpg
-IMG pic/favs/Vatnsnes, Iceland 1920x1080.jpg
-IMG pic/favs/veranda.jpg
-IMG pic/favs/Verona, Italy 1920x1080.jpg
-IMG pic/favs/VictoriaAustralia.jpg
-IMG pic/favs/Vieste, Italy 1920x1080.jpg
 IMG pic/favs/Virgin Gorda National Park 1920x1080.jpg
 IMG pic/favs/Wadi Rum, Jordan 1920x1080 (3).jpg
 IMG pic/favs/Waitomo, New Zealand 1920x1080.jpg
 IMG pic/favs/Wallace’s flying frog 1920x1080.jpg
 IMG pic/favs/wallhaven-q6omvd.jpg
 IMG pic/favs/Wallonia, Belgium 1920x1080.jpg
-IMG pic/favs/noworries.jpg
-IMG pic/favs/Nullarbor Plain, Australia 1920x1080.jpg
-IMG pic/favs/Oahu, Hawaii 1920x1080 (4).jpg
+IMG pic/favs/waterfall-fog-mountains.jpg
+IMG pic/favs/Weligama, Sri Lanka 1920x1080.jpg
+IMG pic/favs/West Montrose, Canada 1920x1080.jpg
+IMG pic/favs/Wildflowers, Heber Valley, Utah 1920x1080.jpg
+IMG pic/favs/Wiltshire, England 1920x1080.jpg
+IMG pic/favs/Windjana Gorge, Kimberley, Australia 1920x1080.jpg
+IMG pic/favs/Wooden footpath in dense jungle 1920x1080.jpg
+IMG pic/favs/WW_128000000000408974_EN 1920x1080.jpg
+IMG pic/favs/WW_128000000001173149_EN 1920x1080.jpg
 IMG pic/favs/OldBoats.jpg
 IMG pic/favs/Paparoa NP, New Zealand 1920x1080.jpg
 IMG pic/favs/Paris, France 1920x1080 (5).jpg
@@ -880,13 +880,9 @@ IMG pic/favs/Pumpkin patch, Vancouver Island, Canada 1920x1080.jpg
 IMG pic/favs/Pūpūkea, Hawaii 1920x1080.jpg
 IMG pic/favs/Raja Ampat, Indonesia 1920x1080.jpg
 IMG pic/favs/RedRock-SecretMountainWilderness.jpg
-IMG pic/favs/Chinle, Arizona 1920x1080.jpg
-IMG pic/favs/Colorado River, Grand Canyon 1920x1080.jpg
-IMG pic/favs/Corsica, France 1920x1080.jpg
-IMG pic/favs/Costa Brava, Spain 1920x1080.jpg
-IMG pic/favs/Dalian, China 1920x1080.jpg
-IMG pic/favs/Denali National Park, Alaska 1920x1080.jpg
-IMG pic/favs/Derbyshire, England 1920x1080 (2).jpg
+IMG pic/favs/RedRocksStateParkSedonaArizona.jpg
+IMG pic/favs/RhoOphiuchus.jpg
+IMG pic/favs/RiverThjorsaIceland.jpg
 IMG pic/favs/drone.png
 IMG pic/favs/Dubrovnik, Croatia 1920x1080.jpg
 IMG pic/favs/Durango, Mexico 1920x1080.jpg
@@ -894,6 +890,13 @@ IMG pic/favs/Durdevica Tara Bridge, Montenegro 1920x1080.jpg
 IMG pic/favs/Edinburgh, Scotland 1920x1080.jpg
 IMG pic/favs/Elizabeth Quay Bridge, Western Australia 1920x1080.jpg
 IMG pic/favs/Elk 1920x1080.jpg
+IMG pic/favs/flowy-hair.jpg
+IMG pic/favs/forest-fog-hill.jpg
+IMG pic/favs/forest-fog-mist-pine.jpg
+IMG pic/favs/forest-fog-nature-landscape.jpg
+IMG pic/favs/forest-fog-tree.jpg
+IMG pic/favs/Galápagos sea lion 1920x1080.jpg
+IMG pic/favs/General Grant Grove, California 1920x1080.jpg
 IMG pic/gwc/cols/2e3841-oldtile.png
 IMG pic/gwc/cols/4c332e-dirt.png
 IMG pic/gwc/cols/525252-paper.png
@@ -917,7 +920,6 @@ IMG pic/patterns/bars.png
 IMG pic/patterns/bathroom-floor.png
 IMG pic/patterns/bats.png
 IMG pic/patterns/bed_weave.png
-IMG pic/patterns/bevel-circle.png
 IMG pic/patterns/bitwize.png
 IMG pic/patterns/bowtile.png
 IMG pic/patterns/bowtile_line.png
@@ -925,9 +927,9 @@ IMG pic/patterns/boxes.png
 IMG pic/patterns/brain.png
 IMG pic/patterns/brick-wall.png
 IMG pic/patterns/Brick.png
-IMG pic/patterns/brick.png
 IMG pic/patterns/bricks.png
 IMG pic/patterns/bricks_weave.png
+IMG pic/patterns/brick_2.png
 IMG pic/patterns/brick_block.png
 IMG pic/patterns/brick_cobble.png
 IMG pic/patterns/brick_diag.png
@@ -935,7 +937,6 @@ IMG pic/patterns/brick_diag_block.png
 IMG pic/patterns/brick_diag_hering.png
 IMG pic/patterns/brick_hering.png
 IMG pic/patterns/brick_overlap.png
-IMG pic/patterns/brick_pat1.png
 IMG pic/patterns/bubbles.png
 IMG pic/patterns/bubbles_orig.png
 IMG pic/patterns/bumps.png
@@ -946,6 +947,7 @@ IMG pic/patterns/buttons64.png
 IMG pic/patterns/cage.png
 IMG pic/patterns/cane_fancy.png
 IMG pic/patterns/cane_fancy2.png
+IMG pic/patterns/cane_seat.png
 IMG pic/patterns/cane_square.png
 IMG pic/patterns/cane_true.png
 IMG pic/patterns/cardback.png
@@ -954,7 +956,6 @@ IMG pic/patterns/charlie-brown.png
 IMG pic/patterns/charlie.png
 IMG pic/patterns/charlie2.png
 IMG pic/patterns/check.png
-IMG pic/patterns/checkers_bump.png
 IMG pic/patterns/check_stag.png
 IMG pic/patterns/chev_box.png
 IMG pic/patterns/chev_circle.png
@@ -967,12 +968,12 @@ IMG pic/patterns/cinder_block.png
 IMG pic/patterns/circles-and-squares.png
 IMG pic/patterns/circles.png
 IMG pic/patterns/circles2.png
+IMG pic/patterns/circle_hex.png
 IMG pic/patterns/circle_ripple.png
 IMG pic/patterns/circle_tile.png
 IMG pic/patterns/circle_weave.png
 IMG pic/patterns/circuit-board.png
 IMG pic/patterns/clouds.png
-IMG pic/patterns/connections.png
 IMG pic/patterns/cork-screw.png
 IMG pic/patterns/corn.png
 IMG pic/patterns/crabcan.png
@@ -990,10 +991,10 @@ IMG pic/patterns/death-star.png
 IMG pic/patterns/diagonal-lines.png
 IMG pic/patterns/diagonal-stripes.png
 IMG pic/patterns/diamonds.png
-IMG pic/patterns/dolphins.png
 IMG pic/patterns/dominos.png
 IMG pic/patterns/dots.png
 IMG pic/patterns/dots_big.png
+IMG pic/patterns/dots_big_diag.png
 IMG pic/patterns/dots_diag.png
 IMG pic/patterns/dots_diag_wide.png
 IMG pic/patterns/dots_hex.png
@@ -1007,28 +1008,32 @@ IMG pic/patterns/dots_wide.png
 IMG pic/patterns/dotwave.png
 IMG pic/patterns/dune.png
 IMG pic/patterns/endless-clouds.png
+IMG pic/patterns/bevel-circle.png
+IMG pic/patterns/brick_pat1.png
+IMG pic/patterns/checkers_bump.png
+IMG pic/patterns/connections.png
+IMG pic/patterns/dolphins.png
 IMG pic/patterns/escher_ducks.png
+IMG pic/patterns/fence_link2.png
+IMG pic/patterns/granite.png
+IMG pic/patterns/grey_32_16.png
+IMG pic/patterns/grey_9_1.png
+IMG pic/patterns/happy-intersection.png
+IMG pic/patterns/itchy_scratchy.png
+IMG pic/patterns/line_diag8_4.png
+IMG pic/patterns/lozenges.png
+IMG pic/patterns/overlapping-diamonds.png
+IMG pic/patterns/plaid4.png
+IMG pic/patterns/rounded-plus-connected.png
+IMG pic/patterns/spiral.png
+IMG pic/patterns/suntile.png
+IMG pic/patterns/tweed2_2.png
+IMG pic/patterns/wave_tiles.png
 IMG pic/patterns/escher_encounter.png
 IMG pic/patterns/escher_fish.png
 IMG pic/patterns/escher_fish_med.png
 IMG pic/patterns/escher_fish_small.png
-IMG pic/patterns/brick_2.png
-IMG pic/patterns/cane_seat.png
-IMG pic/patterns/circle_hex.png
-IMG pic/patterns/dots_big_diag.png
 IMG pic/patterns/escher_fish_tiny.png
-IMG pic/patterns/fly_eye.png
-IMG pic/patterns/grey_32_14.png
-IMG pic/patterns/grey_9_0.png
-IMG pic/patterns/hearts.png
-IMG pic/patterns/line_diag3_1.png
-IMG pic/patterns/line_vert5_1.png
-IMG pic/patterns/pakistan_star.png
-IMG pic/patterns/random_3.png
-IMG pic/patterns/speckled.png
-IMG pic/patterns/Swamp.png
-IMG pic/patterns/tweed_cross.png
-IMG pic/patterns/weave_diag_1.png
 IMG pic/patterns/escher_reptiles.png
 IMG pic/patterns/escher_reptiles2.png
 IMG pic/patterns/escher_swans.png
@@ -1040,7 +1045,6 @@ IMG pic/patterns/fence_chain.png
 IMG pic/patterns/fence_chain_half.png
 IMG pic/patterns/fence_knitting.png
 IMG pic/patterns/fence_link1.png
-IMG pic/patterns/fence_link2.png
 IMG pic/patterns/fence_sqknot.png
 IMG pic/patterns/Fish.png
 IMG pic/patterns/fishes.png
@@ -1052,12 +1056,12 @@ IMG pic/patterns/floral_4.png
 IMG pic/patterns/floral_5.png
 IMG pic/patterns/floral_6.png
 IMG pic/patterns/flowers.png
+IMG pic/patterns/fly_eye.png
 IMG pic/patterns/formal-invitation.png
 IMG pic/patterns/fuji.png
 IMG pic/patterns/geiger.png
 IMG pic/patterns/glamorous.png
 IMG pic/patterns/grainy.png
-IMG pic/patterns/granite.png
 IMG pic/patterns/graph-paper.png
 IMG pic/patterns/grey_32_00.png
 IMG pic/patterns/grey_32_01.png
@@ -1073,8 +1077,8 @@ IMG pic/patterns/grey_32_10.png
 IMG pic/patterns/grey_32_11.png
 IMG pic/patterns/grey_32_12.png
 IMG pic/patterns/grey_32_13.png
+IMG pic/patterns/grey_32_14.png
 IMG pic/patterns/grey_32_15.png
-IMG pic/patterns/grey_32_16.png
 IMG pic/patterns/grey_32_17.png
 IMG pic/patterns/grey_32_18.png
 IMG pic/patterns/grey_32_19.png
@@ -1091,7 +1095,7 @@ IMG pic/patterns/grey_32_29.png
 IMG pic/patterns/grey_32_30.png
 IMG pic/patterns/grey_32_31.png
 IMG pic/patterns/grey_32_32.png
-IMG pic/patterns/grey_9_1.png
+IMG pic/patterns/grey_9_0.png
 IMG pic/patterns/grey_9_2.png
 IMG pic/patterns/grey_9_3.png
 IMG pic/patterns/grey_9_4.png
@@ -1110,7 +1114,7 @@ IMG pic/patterns/grid_diag4.png
 IMG pic/patterns/grid_diag8.png
 IMG pic/patterns/grid_penta.png
 IMG pic/patterns/groovy.png
-IMG pic/patterns/happy-intersection.png
+IMG pic/patterns/hearts.png
 IMG pic/patterns/heavy-rain.png
 IMG pic/patterns/hex14.png
 IMG pic/patterns/hex16.png
@@ -1128,7 +1132,6 @@ IMG pic/patterns/interferance.png
 IMG pic/patterns/intersecting-circles.png
 IMG pic/patterns/ironcoat.png
 IMG pic/patterns/iso-tile.png
-IMG pic/patterns/itchy_scratchy.png
 IMG pic/patterns/jigsaw.png
 IMG pic/patterns/jupiter.png
 IMG pic/patterns/kapow.png
@@ -1138,6 +1141,7 @@ IMG pic/patterns/leaf.png
 IMG pic/patterns/leaves.png
 IMG pic/patterns/line-in-motion.png
 IMG pic/patterns/linen.png
+IMG pic/patterns/line_diag3_1.png
 IMG pic/patterns/line_diag3_2.png
 IMG pic/patterns/line_diag4_1.png
 IMG pic/patterns/line_diag4_2.png
@@ -1145,7 +1149,6 @@ IMG pic/patterns/line_diag4_3.png
 IMG pic/patterns/line_diag8_1.png
 IMG pic/patterns/line_diag8_2.png
 IMG pic/patterns/line_diag8_3.png
-IMG pic/patterns/line_diag8_4.png
 IMG pic/patterns/line_hex.png
 IMG pic/patterns/line_hex_small.png
 IMG pic/patterns/line_horz2_1.png
@@ -1155,6 +1158,7 @@ IMG pic/patterns/line_vert3_2.png
 IMG pic/patterns/line_vert4_1.png
 IMG pic/patterns/line_vert4_2.png
 IMG pic/patterns/line_vert4_3.png
+IMG pic/patterns/line_vert5_1.png
 IMG pic/patterns/line_vert5_2.png
 IMG pic/patterns/line_vert8_4.png
 IMG pic/patterns/line_wave.png
@@ -1162,7 +1166,6 @@ IMG pic/patterns/line_waves.png
 IMG pic/patterns/lips.png
 IMG pic/patterns/lisbon.png
 IMG pic/patterns/loops.png
-IMG pic/patterns/lozenges.png
 IMG pic/patterns/Madness.png
 IMG pic/patterns/marble.png
 IMG pic/patterns/maze.png
@@ -1180,8 +1183,8 @@ IMG pic/patterns/ovals.png
 IMG pic/patterns/overcast.png
 IMG pic/patterns/overlap.png
 IMG pic/patterns/overlapping-circles.png
-IMG pic/patterns/overlapping-diamonds.png
 IMG pic/patterns/overlapping-hexagons.png
+IMG pic/patterns/pakistan_star.png
 IMG pic/patterns/pakistan_weave.png
 IMG pic/patterns/parkay-floor.png
 IMG pic/patterns/pattern1.png
@@ -1197,7 +1200,6 @@ IMG pic/patterns/pigeon_holes.png
 IMG pic/patterns/pipes.png
 IMG pic/patterns/pixel-dots.png
 IMG pic/patterns/plaid.png
-IMG pic/patterns/plaid4.png
 IMG pic/patterns/plaid8.png
 IMG pic/patterns/plasma_maze.png
 IMG pic/patterns/plus.png
@@ -1208,13 +1210,13 @@ IMG pic/patterns/rain.png
 IMG pic/patterns/random-shapes.png
 IMG pic/patterns/random_1.png
 IMG pic/patterns/random_2.png
+IMG pic/patterns/random_3.png
 IMG pic/patterns/random_4.png
 IMG pic/patterns/rings.png
 IMG pic/patterns/rings2.png
 IMG pic/patterns/rocktiles.png
 IMG pic/patterns/rods.png
 IMG pic/patterns/rose_vines.png
-IMG pic/patterns/rounded-plus-connected.png
 IMG pic/patterns/Sandy_Waves.png
 IMG pic/patterns/Sand_Waves.png
 IMG pic/patterns/scales.png
@@ -1230,9 +1232,9 @@ IMG pic/patterns/snake.png
 IMG pic/patterns/southwest.png
 IMG pic/patterns/spain_vine.png
 IMG pic/patterns/spain_weave.png
+IMG pic/patterns/speckled.png
 IMG pic/patterns/spheres.png
 IMG pic/patterns/spin.png
-IMG pic/patterns/spiral.png
 IMG pic/patterns/spirals.png
 IMG pic/patterns/Spotty.png
 IMG pic/patterns/Spotty_orig.png
@@ -1251,7 +1253,7 @@ IMG pic/patterns/stich_horz.png
 IMG pic/patterns/stich_vert.png
 IMG pic/patterns/stripes.png
 IMG pic/patterns/subliminal.png
-IMG pic/patterns/suntile.png
+IMG pic/patterns/Swamp.png
 IMG pic/patterns/swirl.png
 IMG pic/patterns/tellipse.png
 IMG pic/patterns/temple.png
@@ -1269,12 +1271,12 @@ IMG pic/patterns/turkish_flowers.png
 IMG pic/patterns/turkish_hex.png
 IMG pic/patterns/turkish_weave.png
 IMG pic/patterns/tweed.png
-IMG pic/patterns/tweed2_2.png
 IMG pic/patterns/tweed4_3.png
 IMG pic/patterns/tweed4_4.png
 IMG pic/patterns/tweed5_5.png
 IMG pic/patterns/tweeddish.png
 IMG pic/patterns/tweed_crab.png
+IMG pic/patterns/tweed_cross.png
 IMG pic/patterns/twister.png
 IMG pic/patterns/tyres.png
 IMG pic/patterns/ubalu.png
@@ -1287,11 +1289,11 @@ IMG pic/patterns/wallpaper.png
 IMG pic/patterns/wave.png
 IMG pic/patterns/waves.png
 IMG pic/patterns/wave_mesh.png
-IMG pic/patterns/wave_tiles.png
 IMG pic/patterns/weave.png
 IMG pic/patterns/weave_crazy.png
 IMG pic/patterns/weave_crazy_long.png
 IMG pic/patterns/weave_diag.png
+IMG pic/patterns/weave_diag_1.png
 IMG pic/patterns/weave_diag_2.png
 IMG pic/patterns/weave_diag_3.png
 IMG pic/patterns/weave_diag_4.png
@@ -1313,45 +1315,75 @@ IMG pic/patterns/x-equals.png
 IMG pic/patterns/yyy.png
 IMG pic/patterns/zig-zag.png
 IMG pic/patterns/zigzag.png
-IMG pic/shot/ragyou.png
-IMG pic/shot/2020-05-19_11:23:26.png
-IMG pic/shot/2020-05-21_14:52:59.png
-IMG pic/shot/FULL/2019-09-04_17:41:50.png
-IMG pic/shot/FULL/2020-06-10_19:52:33.png
-IMG pic/shot/FULL/2020-07-02_21:42:10.png
-IMG pic/shot/FULL/2020-07-02_23:27:07.png
-IMG pic/shot/FULL/2020-07-02_23:27:11.png
-IMG pic/shot/FULL/2020-07-02_23:27:15.png
-IMG pic/shot/FULL/2020-07-02_23:27:23.png
-IMG pic/shot/FULL/2020-07-02_23:27:29.png
-IMG pic/shot/FULL/2020-07-02_23:27:33.png
-IMG pic/shot/FULL/2020-07-03_09:32:46.png
-IMG pic/shot/FULL/2020-07-03_09:32:55.png
-IMG pic/shot/FULL/2020-07-15_00:01:13.png
-IMG pic/shot/FULL/2020-07-15_00:01:28.png
-IMG pic/shot/FULL/2020-07-15_00:01:32.png
-IMG pic/shot/FULL/2020-07-15_00:02:23.png
+IMG pic/shot/20200519_112326.png
+IMG pic/shot/20200521_145259.png
+IMG pic/shot/FULL/becca.png
+IMG pic/shot/FULL/20190904_174150.png
+IMG pic/shot/FULL/20200610_195233.png
+IMG pic/shot/FULL/20200702_214210.png
+IMG pic/shot/FULL/20200702_232707.png
+IMG pic/shot/FULL/20200702_232711.png
+IMG pic/shot/FULL/20200702_232715.png
+IMG pic/shot/FULL/20200702_232723.png
+IMG pic/shot/FULL/20200702_232729.png
+IMG pic/shot/FULL/20200702_232733.png
+IMG pic/shot/FULL/20200703_093246.png
+IMG pic/shot/FULL/20200703_093255.png
+IMG pic/shot/FULL/20200728_093129.png
+IMG pic/shot/FULL/20200728_094340.png
+IMG pic/shot/FULL/20200803_193946.png
+IMG pic/shot/FULL/20200803_222017.png
+IMG pic/shot/FULL/20200806_102526.png
+IMG pic/shot/FULL/20200816_110246.png
+IMG pic/shot/FULL/cora.png
+IMG pic/shot/FULL/doffy.png
 IMG pic/shot/FULL/giorno.png
+IMG pic/shot/FULL/issho.png
+IMG pic/shot/FULL/joker.png
+IMG pic/shot/FULL/lucy.png
+IMG pic/shot/FULL/monet1.png
+IMG pic/shot/FULL/monet2.png
+IMG pic/shot/FULL/monet3.png
+IMG pic/shot/FULL/monet4.png
+IMG pic/shot/FULL/rosinante.png
+IMG pic/shot/FULL/smoky.png
+IMG pic/shot/FULL/sol_becca.png
+IMG pic/shot/FULL/usopp.png
+IMG pic/shot/FULL/ussopbad.png
+IMG pic/shot/FULL/ussopfar.png
+IMG pic/shot/FULL/ussopfight.png
+IMG pic/shot/FULL/ussopvluffy.png
+IMG pic/shot/FULL/violet1.png
+IMG pic/shot/FULL/violet2.png
+IMG pic/shot/ragyou.png
 IMG pic/shot/Ryuko1.png
 IMG pic/shot/Ryuko2.png
 IMG pic/shot/Satsuki1.png
 IMG pic/shot/Satsuki2.png
 IMG pic/shot/Satsuki3.png
 IMG pic/shot/Satsuki4.png
-IMG pic/shot/SEL/2019-09-03_19:23:22.png
-IMG pic/shot/SEL/2019-09-03_19:41:27.png
-IMG pic/shot/SEL/2019-09-03_19:47:38.png
-IMG pic/shot/SEL/2019-10-14_17:55:27.png
-IMG pic/shot/SEL/2020-05-07_09:32:40.png
-IMG pic/shot/SEL/2020-06-05_10:23:30.png
-IMG pic/shot/SEL/2020-06-05_10:23:46.png
-IMG pic/shot/SEL/2020-06-12_09:25:36.png
-IMG pic/shot/SEL/2020-06-15_23:26:49.png
-IMG pic/shot/SEL/2020-06-19_09:51:59.png
-IMG pic/shot/SEL/2020-06-24_19:34:23.png
-IMG pic/shot/SEL/2020-06-24_19:42:49.png
-IMG pic/shot/SEL/2020-06-24_19:44:41.png
-IMG pic/shot/SEL/2020-06-27_23:19:41.png
+IMG pic/shot/SEL/20190903_192322.png
+IMG pic/shot/SEL/20190903_194127.png
+IMG pic/shot/SEL/20190903_194738.png
+IMG pic/shot/SEL/20191014_175527.png
+IMG pic/shot/SEL/20200507_093240.png
+IMG pic/shot/SEL/20200605_102330.png
+IMG pic/shot/SEL/20200605_102346.png
+IMG pic/shot/SEL/20200612_092536.png
+IMG pic/shot/SEL/20200615_232649.png
+IMG pic/shot/SEL/20200619_095159.png
+IMG pic/shot/SEL/20200624_193423.png
+IMG pic/shot/SEL/20200624_194249.png
+IMG pic/shot/SEL/20200624_194441.png
+IMG pic/shot/SEL/20200627_231941.png
+IMG pic/shot/SEL/20200723_102217.png
+IMG pic/shot/SEL/20200731_094519.png
+IMG pic/shot/SEL/20200731_100330.png
+IMG pic/shot/SEL/20200803_192717.png
+IMG pic/shot/SEL/20200804_093349.png
+IMG pic/shot/SEL/20200805_235647.png
+IMG pic/shot/SEL/20200806_000320.png
+IMG pic/shot/SEL/20200828_152615.png
 IMG pic/shot/SEL/drivingtest1.png
 IMG pic/shot/SEL/E6BEx1.png
 IMG pic/shot/SEL/E6BEx2.png
@@ -1375,27 +1407,29 @@ IMG pic/sptl/Abstract background 1920x1080.jpg
 IMG pic/sptl/Abu Dhabi, UAE 1920x1080.jpg
 IMG pic/sptl/Abu Simbel temples, Aswan, Nubia, Egypt   1920x1080 (2).jpg
 IMG pic/sptl/Abu Simbel temples, Aswan, Nubia, Egypt   1920x1080.jpg
+IMG pic/sptl/Acadia National Park, Maine 1920x1080 (2).jpg
 IMG pic/sptl/Acadia National Park, Maine 1920x1080.jpg
 IMG pic/sptl/Adventdalen, Norway 1920x1080.jpg
 IMG pic/sptl/African bush elephants 1920x1080.jpg
 IMG pic/sptl/African lion 1920x1080.jpg
 IMG pic/sptl/African penguins 1920x1080.jpg
 IMG pic/sptl/Agra, India 1920x1080.jpg
-IMG pic/sptl/Agüero, Spain 1920x1080.jpg
 IMG pic/sptl/Aiguille du Midi, France 1920x1080.jpg
 IMG pic/sptl/Akershus, Norway 1920x1080.jpg
 IMG pic/sptl/Al-Ayn, Oman 1920x1080.jpg
+IMG pic/sptl/Alberta, Canada 1920x1080 (2).jpg
 IMG pic/sptl/Alberta, Canada 1920x1080.jpg
 IMG pic/sptl/Alexander Archipelago 1920x1080.jpg
 IMG pic/sptl/Algarves, Portugal 1920x1080.jpg
+IMG pic/sptl/Almodovar del Rio, Cordoba, Spain 1920x1080.jpg
 IMG pic/sptl/Alor Islands, Indonesia 1920x1080.jpg
+IMG pic/sptl/Amboseli National Park, Kenya 1920x1080.jpg
 IMG pic/sptl/Amboseli NP, Kenya 1920x1080.jpg
 IMG pic/sptl/Amboseli, Kenya 1920x1080.jpg
 IMG pic/sptl/Ambrym island, Vanuatu 1920x1080.jpg
 IMG pic/sptl/Amer, India 1920x1080.jpg
 IMG pic/sptl/American bison 1920x1080 (2).jpg
 IMG pic/sptl/American bison 1920x1080.jpg
-IMG pic/sptl/Amorgos island, Greece 1920x1080.jpg
 IMG pic/sptl/Andalusia, Spain 1920x1080.jpg
 IMG pic/sptl/Andean flamingos 1920x1080.jpg
 IMG pic/sptl/Andromeda Galaxy 1920x1080.jpg
@@ -1405,25 +1439,28 @@ IMG pic/sptl/Angkor, Cambodia 1920x1080.jpg
 IMG pic/sptl/Anhui, China 1920x1080.jpg
 IMG pic/sptl/Antarctic Peninsula 1920x1080.jpg
 IMG pic/sptl/Antarctica 1920x1080 (2).jpg
+IMG pic/sptl/Antarctica 1920x1080.jpg
 IMG pic/sptl/Antigua and Barbuda 1920x1080.jpg
 IMG pic/sptl/Antigua, Guatemala 1920x1080.jpg
 IMG pic/sptl/Antongil Bay, Madagascar 1920x1080.jpg
 IMG pic/sptl/Antrim Coast Road Northern Ireland, UK​ 1920x1080.jpg
-IMG pic/sptl/Antrim, Northern Ireland 1920x1080.jpg
 IMG pic/sptl/Antwerp, Belgium 1920x1080.jpg
 IMG pic/sptl/Aphrodite's Rock, Cyprus 1920x1080.jpg
 IMG pic/sptl/Apostle Islands, WI 1920x1080.jpg
 IMG pic/sptl/Apulia, Italy 1920x1080.jpg
 IMG pic/sptl/Arashiyama, Japan 1920x1080.jpg
 IMG pic/sptl/Arches National Park, Utah 1920x1080.jpg
+IMG pic/sptl/Arequipa, Peru 1920x1080.jpg
 IMG pic/sptl/Arizona 1920x1080.jpg
 IMG pic/sptl/Arosa, Switzerland 1920x1080.jpg
 IMG pic/sptl/Ashland, Delaware 1920x1080.jpg
 IMG pic/sptl/Assiniboine, Canada 1920x1080.jpg
 IMG pic/sptl/Athabasca Glacier 1920x1080.jpg
+IMG pic/sptl/Athens, Greece 1920x1080.jpg
 IMG pic/sptl/Atitlan Lake, Guatemala 1920x1080.jpg
+IMG pic/sptl/Atlantic Forest in Brazil 1920x1080.jpg
 IMG pic/sptl/Atuel Canyon, Argentina 1920x1080.jpg
-IMG pic/sptl/Aupouri Peninsula, New Zealand 1920x1080.jpg
+IMG pic/sptl/Auckland, New Zealand 1920x1080.jpg
 IMG pic/sptl/Aurora, Canada 1920x1080.jpg
 IMG pic/sptl/Austin, Texas 1920x1080.jpg
 IMG pic/sptl/Australian pelican 1920x1080.jpg
@@ -1431,52 +1468,59 @@ IMG pic/sptl/Austria 1920x1080.jpg
 IMG pic/sptl/Avenue of the Giants, CA 1920x1080.jpg
 IMG pic/sptl/Azadi Tower, Iran 1920x1080.jpg
 IMG pic/sptl/Bac Son, Vietnam 1920x1080.jpg
+IMG pic/sptl/Badajoz, Spain 1920x1080.jpg
 IMG pic/sptl/Baden-Württemberg 1920x1080.jpg
 IMG pic/sptl/Badlands National Park 1920x1080.jpg
 IMG pic/sptl/Badlands National Park, South Dakota 1920x1080.jpg
 IMG pic/sptl/Bahia, Brazil 1920x1080 (2).jpg
 IMG pic/sptl/Bahia, Brazil 1920x1080.jpg
 IMG pic/sptl/Baja California Sur, Mexico 1920x1080.jpg
+IMG pic/sptl/Agüero, Spain 1920x1080.jpg
+IMG pic/sptl/Amorgos island, Greece 1920x1080.jpg
+IMG pic/sptl/Antrim, Northern Ireland 1920x1080.jpg
+IMG pic/sptl/Aupouri Peninsula, New Zealand 1920x1080.jpg
 IMG pic/sptl/Balearic Islands 1920x1080.jpg
+IMG pic/sptl/Bath, England 1920x1080.jpg
+IMG pic/sptl/Berwickshire, Scotland 1920x1080.jpg
+IMG pic/sptl/Blue Nebula 1920x1080.jpg
+IMG pic/sptl/Bosnia and Herzegovina 1920x1080.jpg
+IMG pic/sptl/Brooks Range mountains, Alaska, USA 1920x1080.jpg
+IMG pic/sptl/Cabo de Gata-Níjar Natural Park, Spain 1920x1080.jpg
+IMG pic/sptl/Cancún, Mexico 1920x1080.jpg
 IMG pic/sptl/Baler, Philippines 1920x1080.jpg
+IMG pic/sptl/Bali, Indonesia 1920x1080.jpg
 IMG pic/sptl/Baltic seashore, Germany 1920x1080.jpg
 IMG pic/sptl/Ban Gioc Detian Falls 1920x1080.jpg
 IMG pic/sptl/Banff National Park, Canada 1920x1080 (2).jpg
 IMG pic/sptl/Banff National Park, Canada 1920x1080.jpg
 IMG pic/sptl/Banff, Alberta, Canada 1920x1080.jpg
 IMG pic/sptl/Bangkok, Thailand 1920x1080.jpg
+IMG pic/sptl/Barberino Val d'Elsa, Italy 1920x1080.jpg
+IMG pic/sptl/Barcelona, Spain 1920x1080 (2).jpg
 IMG pic/sptl/Barcelona, Spain 1920x1080.jpg
 IMG pic/sptl/Bardenas Reales, Spain 1920x1080.jpg
 IMG pic/sptl/Barrika, Spain 1920x1080.jpg
 IMG pic/sptl/Bartolomé Island, Ecuador 1920x1080.jpg
-IMG pic/sptl/Bath, England 1920x1080.jpg
 IMG pic/sptl/Bavaria, Germany 1920x1080 (2).jpg
 IMG pic/sptl/Bavaria, Germany 1920x1080 (3).jpg
 IMG pic/sptl/Bavaria, Germany 1920x1080.jpg
+IMG pic/sptl/Bavarian Rhön Nature Park, Germany 1920x1080.jpg
 IMG pic/sptl/Bay of Cádiz, Spain 1920x1080.jpg
 IMG pic/sptl/Bearded seal 1920x1080.jpg
+IMG pic/sptl/Beaumaris, Wales 1920x1080.jpg
 IMG pic/sptl/Bedruthan Steps, England 1920x1080.jpg
-IMG pic/sptl/Almodovar del Rio, Cordoba, Spain 1920x1080.jpg
-IMG pic/sptl/Antarctica 1920x1080.jpg
-IMG pic/sptl/Auckland, New Zealand 1920x1080.jpg
-IMG pic/sptl/Bali, Indonesia 1920x1080.jpg
 IMG pic/sptl/Beech tree 1920x1080.jpg
-IMG pic/sptl/Blue Nebula 1920x1080.jpg
-IMG pic/sptl/Brazil 1920x1080.jpg
-IMG pic/sptl/Bulgaria 1920x1080.jpg
-IMG pic/sptl/Cannon Beach, Oregon 1920x1080.jpg
-IMG pic/sptl/Capri, Italy 1920x1080.jpg
-IMG pic/sptl/Charleston, South Carolina 1920x1080.jpg
-IMG pic/sptl/Cierva Cove, Antarctica 1920x1080.jpg
 IMG pic/sptl/Behrensdorf, Germany 1920x1080.jpg
+IMG pic/sptl/Beilstein, Germany 1920x1080.jpg
 IMG pic/sptl/Bekal, India 1920x1080.jpg
 IMG pic/sptl/Belcastel, France 1920x1080.jpg
 IMG pic/sptl/Bellevue Beach, Denmark 1920x1080.jpg
 IMG pic/sptl/Belogradchik, Bulgaria 1920x1080.jpg
+IMG pic/sptl/Bernese Highlands, Switzerland 1920x1080.jpg
 IMG pic/sptl/Berry Pomeroy, England 1920x1080.jpg
-IMG pic/sptl/Berwickshire, Scotland 1920x1080.jpg
 IMG pic/sptl/Betty’s Bay, SA 1920x1080.jpg
 IMG pic/sptl/Biei, Hokkaido, Japan 1920x1080.jpg
+IMG pic/sptl/Bieszczady National Park, Poland 1920x1080.jpg
 IMG pic/sptl/Big Sur, California 1920x1080 (2).jpg
 IMG pic/sptl/Big Sur, California 1920x1080 (3).jpg
 IMG pic/sptl/Big Sur, California 1920x1080.jpg
@@ -1492,6 +1536,7 @@ IMG pic/sptl/Bluebonnets, Stonewall, Texas 1920x1080.jpg
 IMG pic/sptl/Blyde River Canyon 1920x1080.jpg
 IMG pic/sptl/Bodie Island, NC 1920x1080.jpg
 IMG pic/sptl/Bojnice, Slovakia 1920x1080.jpg
+IMG pic/sptl/Bolivar, Venezuela 1920x1080.jpg
 IMG pic/sptl/Bondi Beach, Australia 1920x1080.jpg
 IMG pic/sptl/Bondi to Bronte coastal walk, Australia 1920x1080.jpg
 IMG pic/sptl/Bonifacio, Corsica 1920x1080.jpg
@@ -1499,11 +1544,12 @@ IMG pic/sptl/Bora Bora 1920x1080 (2).jpg
 IMG pic/sptl/Bora Bora 1920x1080.jpg
 IMG pic/sptl/Boracay, Philippines 1920x1080 (2).jpg
 IMG pic/sptl/Boracay, Philippines 1920x1080.jpg
-IMG pic/sptl/Bosnia and Herzegovina 1920x1080.jpg
 IMG pic/sptl/Boston Public Garden 1920x1080.jpg
 IMG pic/sptl/bottlenose dolphins 1920x1080.jpg
 IMG pic/sptl/Bow Lake, Alberta, Canada 1920x1080.jpg
 IMG pic/sptl/Boyle River, New Zealand 1920x1080.jpg
+IMG pic/sptl/Brazil 1920x1080.jpg
+IMG pic/sptl/Brela, Croatia 1920x1080.jpg
 IMG pic/sptl/Brihuega, Spain 1920x1080.jpg
 IMG pic/sptl/Bristol, England 1920x1080.jpg
 IMG pic/sptl/Bristol, Maine 1920x1080.jpg
@@ -1511,7 +1557,7 @@ IMG pic/sptl/British Columbia, Canada 1920x1080 (2).jpg
 IMG pic/sptl/British Columbia, Canada 1920x1080 (3).jpg
 IMG pic/sptl/British Columbia, Canada 1920x1080.jpg
 IMG pic/sptl/Brooklyn, New York 1920x1080.jpg
-IMG pic/sptl/Brooks Range mountains, Alaska, USA 1920x1080.jpg
+IMG pic/sptl/Brooks Range, Alaska 1920x1080.jpg
 IMG pic/sptl/brown booby seabirds 1920x1080.jpg
 IMG pic/sptl/Bruges, Belgium 1920x1080 (2).jpg
 IMG pic/sptl/Bruges, Belgium 1920x1080 (3).jpg
@@ -1521,10 +1567,10 @@ IMG pic/sptl/Budapest, Hungary 1920x1080 (2).jpg
 IMG pic/sptl/Budapest, Hungary 1920x1080.jpg
 IMG pic/sptl/Bugaboo Mountains, Canada 1920x1080.jpg
 IMG pic/sptl/Bukhansan National Park, South Korea 1920x1080.jpg
+IMG pic/sptl/Bulgaria 1920x1080.jpg
 IMG pic/sptl/Bungle Bungles, Australia 1920x1080.jpg
 IMG pic/sptl/Burano, Italy 1920x1080.jpg
 IMG pic/sptl/Búzios, Brazil 1920x1080.jpg
-IMG pic/sptl/Cabo de Gata-Níjar Natural Park, Spain 1920x1080.jpg
 IMG pic/sptl/Cabo Polonio, Uruguay 1920x1080.jpg
 IMG pic/sptl/Cabo San Lucas, Mexico 1920x1080.jpg
 IMG pic/sptl/Caddo Lake, Texas 1920x1080.jpg
@@ -1532,66 +1578,80 @@ IMG pic/sptl/Cadini di Misurina, Italy 1920x1080.jpg
 IMG pic/sptl/Cambridge Gulf, Australia 1920x1080.jpg
 IMG pic/sptl/Cambridge, England 1920x1080 (2).jpg
 IMG pic/sptl/Cambridge, England 1920x1080.jpg
+IMG pic/sptl/Cameron Highlands, Malaysia 1920x1080 (2).jpg
 IMG pic/sptl/Cameron Highlands, Malaysia 1920x1080.jpg
 IMG pic/sptl/Camps Bay, South Africa 1920x1080.jpg
 IMG pic/sptl/Canadian Geese 1920x1080.jpg
 IMG pic/sptl/Canary Islands 1920x1080.jpg
 IMG pic/sptl/Canary Islands, Spain 1920x1080.jpg
-IMG pic/sptl/Cancún, Mexico 1920x1080.jpg
 IMG pic/sptl/Caniçal, Madeira 1920x1080.jpg
 IMG pic/sptl/Cannon Beach, Oregon 1920x1080 (2).jpg
+IMG pic/sptl/Cannon Beach, Oregon 1920x1080.jpg
 IMG pic/sptl/Canton of Vaud, Switzerland 1920x1080.jpg
 IMG pic/sptl/Cantwell, Alaska 1920x1080.jpg
+IMG pic/sptl/Canyon de Chelly, Arizona 1920x1080.jpg
 IMG pic/sptl/Canyonlands NP, Utah 1920x1080.jpg
+IMG pic/sptl/Cape Breton Island, Canada 1920x1080.jpg
 IMG pic/sptl/Cape Elizabeth, Maine 1920x1080.jpg
 IMG pic/sptl/Cape Flattery, WA 1920x1080.jpg
 IMG pic/sptl/Cape Hillsborough National Park, Australia 1920x1080.jpg
+IMG pic/sptl/Cape Peninsula, South Africa 1920x1080.jpg
 IMG pic/sptl/Cape Town, South Africa 1920x1080 (2).jpg
 IMG pic/sptl/Cape Town, South Africa 1920x1080.jpg
 IMG pic/sptl/Cape Woolamai, Australia 1920x1080.jpg
-IMG pic/sptl/Capitol Reef NP, Utah 1920x1080.jpg
 IMG pic/sptl/Capo Testa, Sardinia 1920x1080.jpg
 IMG pic/sptl/Capri, Italy 1920x1080 (2).jpg
+IMG pic/sptl/Capri, Italy 1920x1080.jpg
 IMG pic/sptl/Carlsbad, New Mexico 1920x1080.jpg
 IMG pic/sptl/Carpathian Mountains 1920x1080.jpg
 IMG pic/sptl/Carpathian, Ukraine, Europe 1920x1080.jpg
 IMG pic/sptl/Castelluccio, Italy 1920x1080.jpg
 IMG pic/sptl/Castelmezzano, Italy 1920x1080.jpg
+IMG pic/sptl/Castlerock, Northern Ireland 1920x1080.jpg
 IMG pic/sptl/Catalina, California 1920x1080.jpg
 IMG pic/sptl/Cathedral Cove, NZ 1920x1080.jpg
+IMG pic/sptl/Cayo District, Belize 1920x1080.jpg
 IMG pic/sptl/Caño Cristales River, Colombia 1920x1080.jpg
+IMG pic/sptl/Ceahlau Massif, Romania 1920x1080.jpg
 IMG pic/sptl/Central Moravia, Czech Republic 1920x1080.jpg
-IMG pic/sptl/Central Park, New York City 1920x1080.jpg
 IMG pic/sptl/Cephalonia, Greece 1920x1080.jpg
 IMG pic/sptl/Chae Son Park, Thailand 1920x1080.jpg
 IMG pic/sptl/Chamarel, Mauritius 1920x1080 (2).jpg
 IMG pic/sptl/Chamarel, Mauritius 1920x1080.jpg
+IMG pic/sptl/Chamonix, France 1920x1080.jpg
 IMG pic/sptl/Chapman's Peak Drive, South Africa​ 1920x1080.jpg
+IMG pic/sptl/Chapman’s Peak, South Africa 1920x1080.jpg
+IMG pic/sptl/Charleston, South Carolina 1920x1080.jpg
 IMG pic/sptl/Chattooga River 1920x1080.jpg
 IMG pic/sptl/cheetah 1920x1080 (2).jpg
 IMG pic/sptl/cheetah 1920x1080.jpg
 IMG pic/sptl/Chefchaouen, Morocco 1920x1080.jpg
+IMG pic/sptl/Chia, Italy 1920x1080.jpg
 IMG pic/sptl/Chiang Dao, Thailand 1920x1080.jpg
 IMG pic/sptl/Chiang Mai, Thailand 1920x1080.jpg
 IMG pic/sptl/Chiang Rai, Thailand 1920x1080.jpg
-IMG pic/sptl/Chiapas, Mexico 1920x1080.jpg
 IMG pic/sptl/Chiayi County, Taiwan 1920x1080.jpg
 IMG pic/sptl/Chicago, Illinois 1920x1080.jpg
 IMG pic/sptl/Chief Lake, California 1920x1080.jpg
+IMG pic/sptl/Chifeng, China 1920x1080.jpg
 IMG pic/sptl/China 1920x1080.jpg
 IMG pic/sptl/Chinle, Arizona 1920x1080.jpg
 IMG pic/sptl/Chongming, China 1920x1080.jpg
 IMG pic/sptl/Chornohora, Ukraine 1920x1080.jpg
 IMG pic/sptl/Cierva Cove, Antarctica 1920x1080 (2).jpg
+IMG pic/sptl/Cierva Cove, Antarctica 1920x1080.jpg
 IMG pic/sptl/Civita, Italy 1920x1080.jpg
 IMG pic/sptl/Clearwater County, Alberta, Canada 1920x1080.jpg
 IMG pic/sptl/Cliff Lake, Montana 1920x1080.jpg
-IMG pic/sptl/Cliff Palace, Mesa Verde Park, Colorado 1920x1080.jpg
 IMG pic/sptl/Co Thach beach, Vietnam 1920x1080.jpg
 IMG pic/sptl/Coast of Spain 1920x1080.jpg
+IMG pic/sptl/Cocos Island, Costa Rica 1920x1080.jpg
 IMG pic/sptl/Coffee Bay, South Africa 1920x1080.jpg
+IMG pic/sptl/Colares, Portugal 1920x1080.jpg
+IMG pic/sptl/Colca Canyon, Peru 1920x1080.jpg
 IMG pic/sptl/Colorado River, Arizona 1920x1080.jpg
 IMG pic/sptl/Colorado River, Grand Canyon 1920x1080.jpg
+IMG pic/sptl/Columbia River Gorge, Oregon 1920x1080.jpg
 IMG pic/sptl/Conguillio National Park, Chile 1920x1080.jpg
 IMG pic/sptl/Coniston Water, England 1920x1080.jpg
 IMG pic/sptl/Connemara, Ireland 1920x1080.jpg
@@ -1599,23 +1659,28 @@ IMG pic/sptl/Consuegra, Spain 1920x1080.jpg
 IMG pic/sptl/Convict Lake, California 1920x1080.jpg
 IMG pic/sptl/Copenhagen, Denmark 1920x1080 (2).jpg
 IMG pic/sptl/Copenhagen, Denmark 1920x1080.jpg
-IMG pic/sptl/Cordillera Paine, Chile 1920x1080.jpg
+IMG pic/sptl/Cordillera Huayhuash, Peru 1920x1080.jpg
+IMG pic/sptl/Corinthia, Greece 1920x1080.jpg
 IMG pic/sptl/Cornwall, England 1920x1080 (2).jpg
 IMG pic/sptl/Cornwall, England 1920x1080 (3).jpg
+IMG pic/sptl/Cornwall, England 1920x1080 (4).jpg
 IMG pic/sptl/Cornwall, England 1920x1080.jpg
+IMG pic/sptl/Cornwall, United Kingdom 1920x1080.jpg
+IMG pic/sptl/Corsica, France 1920x1080 (2).jpg
 IMG pic/sptl/Corsica, France 1920x1080.jpg
 IMG pic/sptl/Cortina d'Ampezzo, Belluno, Italy  1920x1080.jpg
 IMG pic/sptl/Cortina d'Ampezzo, South Tyrol, Italy 1920x1080.jpg
 IMG pic/sptl/Costa Brava, Spain 1920x1080.jpg
+IMG pic/sptl/County Donegal, Ireland 1920x1080.jpg
 IMG pic/sptl/Coyote Buttes, Arizona 1920x1080.jpg
 IMG pic/sptl/Cremona, Italy 1920x1080.jpg
 IMG pic/sptl/Crescent City, California, USA 1920x1080.jpg
 IMG pic/sptl/Crested Butte, Colorado 1920x1080.jpg
 IMG pic/sptl/Crown Point, Oregon 1920x1080.jpg
-IMG pic/sptl/Crystal, Colorado 1920x1080.jpg
 IMG pic/sptl/Cuiping, Yangshuo, China 1920x1080.jpg
 IMG pic/sptl/Cullera, Spain 1920x1080.jpg
 IMG pic/sptl/Cumbria, England 1920x1080.jpg
+IMG pic/sptl/Cuyahoga Valley National Park, Ohio 1920x1080.jpg
 IMG pic/sptl/Czech Republic 1920x1080.jpg
 IMG pic/sptl/Dalarna, Sweden 1920x1080.jpg
 IMG pic/sptl/Dalian, China 1920x1080.jpg
@@ -1626,81 +1691,93 @@ IMG pic/sptl/Davenport, California 1920x1080.jpg
 IMG pic/sptl/Death Valley, CA 1920x1080.jpg
 IMG pic/sptl/Death Valley, California 1920x1080 (2).jpg
 IMG pic/sptl/Death Valley, California 1920x1080.jpg
-IMG pic/sptl/Dedham Vale, England 1920x1080.jpg
 IMG pic/sptl/Deià, Spain 1920x1080.jpg
 IMG pic/sptl/Del Toro Lake, Chile 1920x1080.jpg
 IMG pic/sptl/Delphi, Greece 1920x1080.jpg
+IMG pic/sptl/Delta Junction, Alaska 1920x1080.jpg
 IMG pic/sptl/Denali National Park, Alaska 1920x1080 (2).jpg
+IMG pic/sptl/Denali National Park, Alaska 1920x1080 (3).jpg
 IMG pic/sptl/Denali National Park, Alaska 1920x1080.jpg
 IMG pic/sptl/Derbyshire, England 1920x1080 (2).jpg
+IMG pic/sptl/Derbyshire, England 1920x1080 (3).jpg
 IMG pic/sptl/Derbyshire, England 1920x1080.jpg
 IMG pic/sptl/desert bighorn sheep 1920x1080 (2).jpg
 IMG pic/sptl/desert bighorn sheep 1920x1080.jpg
 IMG pic/sptl/Devil’s Garden, Utah 1920x1080.jpg
 IMG pic/sptl/Dhigurah, Maldives 1920x1080.jpg
 IMG pic/sptl/Dhërmi, Albania 1920x1080.jpg
-IMG pic/sptl/Disko Bay, Greenland 1920x1080.jpg
 IMG pic/sptl/Distant cliffs 1920x1080.jpg
 IMG pic/sptl/Dobrogea, Moldova 1920x1080.jpg
 IMG pic/sptl/Doi Inthanon, Thailand 1920x1080.jpg
+IMG pic/sptl/Dolomite Alps, Italy 1920x1080.jpg
 IMG pic/sptl/Dolomites of Italy 1920x1080.jpg
+IMG pic/sptl/Dominical, Costa Rica 1920x1080.jpg
+IMG pic/sptl/Dongchuan District, China 1920x1080.jpg
 IMG pic/sptl/Dorfgastein, Austria 1920x1080.jpg
 IMG pic/sptl/Dorset, England 1920x1080 (2).jpg
 IMG pic/sptl/Dorset, England 1920x1080.jpg
 IMG pic/sptl/Dovestone Reservoir, England 1920x1080.jpg
+IMG pic/sptl/Downpatrick Head Wild Atlantic Way Ireland 1920x1080.jpg
 IMG pic/sptl/Drangarnir, Faroe Islands 1920x1080.jpg
 IMG pic/sptl/Dubai, UAE 1920x1080 (2).jpg
 IMG pic/sptl/Dubai, UAE 1920x1080.jpg
 IMG pic/sptl/Dubrovnik, Croatia 1920x1080.jpg
 IMG pic/sptl/Dugi Otok, Croatia 1920x1080.jpg
-IMG pic/sptl/Duisburg, Germany 1920x1080.jpg
 IMG pic/sptl/Dukhan, Qatar 1920x1080.jpg
 IMG pic/sptl/Dunluce Castle, Northern Ireland 1920x1080.jpg
 IMG pic/sptl/Dunquin, Ireland 1920x1080.jpg
 IMG pic/sptl/Durango, Mexico 1920x1080.jpg
+IMG pic/sptl/Durdevica Tara Bridge, Montenegro 1920x1080.jpg
 IMG pic/sptl/Dzitnup, Mexico 1920x1080.jpg
 IMG pic/sptl/East Sussex, England 1920x1080.jpg
 IMG pic/sptl/Easter Island 1920x1080.jpg
+IMG pic/sptl/Eastern Cape, South Africa 1920x1080.jpg
 IMG pic/sptl/eastern great egrets 1920x1080.jpg
 IMG pic/sptl/Echeveria plant 1920x1080 (2).jpg
 IMG pic/sptl/Echeveria plant 1920x1080.jpg
 IMG pic/sptl/Ecola State Park, Oregon 1920x1080 (2).jpg
 IMG pic/sptl/Ecola State Park, Oregon 1920x1080.jpg
 IMG pic/sptl/Edinburgh, Scotland 1920x1080.jpg
-IMG pic/sptl/Egmont National Park, New Zealand  1920x1080.jpg
 IMG pic/sptl/Eibsee, Germany 1920x1080.jpg
 IMG pic/sptl/Eide and Averoy, Norway 1920x1080.jpg
+IMG pic/sptl/El Chaltén, Argentina 1920x1080 (2).jpg
+IMG pic/sptl/El Chaltén, Argentina 1920x1080.jpg
 IMG pic/sptl/El Hierro, Canary Islands 1920x1080.jpg
 IMG pic/sptl/El Jadida, Morocco 1920x1080.jpg
 IMG pic/sptl/El Nido, Philippines 1920x1080.jpg
 IMG pic/sptl/El Paso, Texas 1920x1080.jpg
+IMG pic/sptl/El Petén, Guatemala 1920x1080.jpg
 IMG pic/sptl/Elizabeth Quay Bridge, Western Australia 1920x1080.jpg
 IMG pic/sptl/Elk 1920x1080.jpg
 IMG pic/sptl/Elk Valley, Canada 1920x1080.jpg
 IMG pic/sptl/Ephesus, Turkey 1920x1080.jpg
 IMG pic/sptl/Epupa Falls 1920x1080.jpg
+IMG pic/sptl/Erawan National Park Kanjanaburi Thailand 1920x1080.jpg
 IMG pic/sptl/Erawan National Park, Thailand 1920x1080.jpg
 IMG pic/sptl/Erongo Region, Namibia 1920x1080.jpg
-IMG pic/sptl/Erta Ale, Ethiopia 1920x1080.jpg
 IMG pic/sptl/Essaouira, Morocco 1920x1080.jpg
 IMG pic/sptl/Essex, Massachusetts 1920x1080.jpg
 IMG pic/sptl/Etosha National Park, Namibia 1920x1080.jpg
+IMG pic/sptl/Etosha NP, Namibia 1920x1080.jpg
 IMG pic/sptl/European hares 1920x1080.jpg
 IMG pic/sptl/Falkirk, Scotland 1920x1080.jpg
 IMG pic/sptl/Fedaia Pass, Italy 1920x1080.jpg
 IMG pic/sptl/Field of rapeseed 1920x1080.jpg
 IMG pic/sptl/Finland 1920x1080.jpg
+IMG pic/sptl/Finnish Lakeland, Finland 1920x1080.jpg
 IMG pic/sptl/fireflies 1920x1080.jpg
 IMG pic/sptl/Fitz Roy, Patagonia Argentina 1920x1080.jpg
 IMG pic/sptl/Flakstad, Norway 1920x1080.jpg
 IMG pic/sptl/flamingo feathers 1920x1080.jpg
-IMG pic/sptl/Flamingos 1920x1080.jpg
 IMG pic/sptl/Flatanger, Norway 1920x1080.jpg
+IMG pic/sptl/Flores Island, Azores 1920x1080.jpg
 IMG pic/sptl/Flores Island, Indonesia 1920x1080.jpg
 IMG pic/sptl/Flowers in a valley 1920x1080.jpg
+IMG pic/sptl/Forest Path 1920x1080.jpg
 IMG pic/sptl/Formentera, Spain 1920x1080.jpg
 IMG pic/sptl/Fox Fur Nebula 1920x1080.jpg
 IMG pic/sptl/Franklin, Wisconsin 1920x1080.jpg
+IMG pic/sptl/Free State, South Africa 1920x1080.jpg
 IMG pic/sptl/Fremont Peak, California 1920x1080.jpg
 IMG pic/sptl/Frozen river  1920x1080.jpg
 IMG pic/sptl/Fuerteventura Island 1920x1080.jpg
@@ -1708,20 +1785,33 @@ IMG pic/sptl/Furano, Japan 1920x1080.jpg
 IMG pic/sptl/Futo coast, Shizuoka Prefecture, Japan  1920x1080.jpg
 IMG pic/sptl/Galápagos sea lion 1920x1080.jpg
 IMG pic/sptl/Gangwondo, South Korea 1920x1080.jpg
-IMG pic/sptl/Gap of Dunloe, County Kerry, Ireland​ 1920x1080.jpg
 IMG pic/sptl/Garden of the Gods, Colorado 1920x1080.jpg
 IMG pic/sptl/Gardena Pass, Italy 1920x1080.jpg
 IMG pic/sptl/Garibaldi Lake, BC, Canada 1920x1080.jpg
+IMG pic/sptl/Garni Gorge, Armenia 1920x1080.jpg
 IMG pic/sptl/Gaztelugatxe, Spain 1920x1080.jpg
 IMG pic/sptl/gemsbok 1920x1080.jpg
 IMG pic/sptl/Gendarmenmarkt, Berlin, Germany 1920x1080.jpg
 IMG pic/sptl/General Carrera Lake, Chile 1920x1080.jpg
+IMG pic/sptl/General Grant Grove, California 1920x1080.jpg
 IMG pic/sptl/gentoo penguin 1920x1080.jpg
 IMG pic/sptl/Ghent, Belgium 1920x1080.jpg
 IMG pic/sptl/Giant's Causeway Ireland 1920x1080.jpg
+IMG pic/sptl/Gianyar Regency, Bali 1920x1080.jpg
 IMG pic/sptl/Giraffe West National Park, Kenya, Africa 1920x1080.jpg
 IMG pic/sptl/Glacier Bay NP, Alaska 1920x1080.jpg
-IMG pic/sptl/Glacier National Park 1920x1080.jpg
+IMG pic/sptl/Central Park, New York City 1920x1080.jpg
+IMG pic/sptl/Chiapas, Mexico 1920x1080.jpg
+IMG pic/sptl/Cliff Palace, Mesa Verde Park, Colorado 1920x1080.jpg
+IMG pic/sptl/Cordillera Paine, Chile 1920x1080.jpg
+IMG pic/sptl/Crystal, Colorado 1920x1080.jpg
+IMG pic/sptl/Dedham Vale, England 1920x1080.jpg
+IMG pic/sptl/Disko Bay, Greenland 1920x1080.jpg
+IMG pic/sptl/Duisburg, Germany 1920x1080.jpg
+IMG pic/sptl/Egmont National Park, New Zealand  1920x1080.jpg
+IMG pic/sptl/Erta Ale, Ethiopia 1920x1080.jpg
+IMG pic/sptl/Flamingos 1920x1080.jpg
+IMG pic/sptl/Glacier National Park, Montana 1920x1080 (2).jpg
 IMG pic/sptl/Glacier National Park, Montana 1920x1080.jpg
 IMG pic/sptl/Glacier NP, Montana 1920x1080.jpg
 IMG pic/sptl/Glarus, Switzerland 1920x1080.jpg
@@ -1731,10 +1821,11 @@ IMG pic/sptl/Glen Coe, Scotland 1920x1080.jpg
 IMG pic/sptl/Glencoe, HIghlands, Scotland, UK  1920x1080.jpg
 IMG pic/sptl/Glenorchy, New Zealand 1920x1080.jpg
 IMG pic/sptl/Globe flowers 1920x1080.jpg
+IMG pic/sptl/Gmina Barczewo, Poland 1920x1080.jpg
 IMG pic/sptl/Godafoss, Iceland 1920x1080 (2).jpg
 IMG pic/sptl/Godafoss, Iceland 1920x1080.jpg
 IMG pic/sptl/Godrevy, England 1920x1080.jpg
-IMG pic/sptl/Gokyo Lakes, Nepal 1920x1080.jpg
+IMG pic/sptl/Gold Harbour, South Georgia Island 1920x1080.jpg
 IMG pic/sptl/Golden Gate Highlands NP 1920x1080.jpg
 IMG pic/sptl/Gordes, France 1920x1080.jpg
 IMG pic/sptl/Gordon Dam, Australia 1920x1080.jpg
@@ -1746,10 +1837,12 @@ IMG pic/sptl/Grand Canyon National Park, AZ 1920x1080.jpg
 IMG pic/sptl/Grand Canyon, Arizona 1920x1080.jpg
 IMG pic/sptl/Grand Portage, Minnesota 1920x1080.jpg
 IMG pic/sptl/Grand Teton National Park, Wyoming 1920x1080 (2).jpg
+IMG pic/sptl/Grand Teton National Park, Wyoming 1920x1080 (3).jpg
 IMG pic/sptl/Grand Teton National Park, Wyoming 1920x1080.jpg
-IMG pic/sptl/Grand Tetons, Wyoming 1920x1080.jpg
+IMG pic/sptl/Graubünden, Switzerland 1920x1080.jpg
 IMG pic/sptl/Gray horse 1920x1080.jpg
 IMG pic/sptl/Great Bahama Bank, Bahamas 1920x1080.jpg
+IMG pic/sptl/Great Barrier Reef 1920x1080 (2).jpg
 IMG pic/sptl/Great Barrier Reef 1920x1080.jpg
 IMG pic/sptl/great blue heron 1920x1080.jpg
 IMG pic/sptl/Great Ocean Road, Lorne, Australia​ 1920x1080.jpg
@@ -1759,9 +1852,12 @@ IMG pic/sptl/Greenland 1920x1080.jpg
 IMG pic/sptl/Grey Lake, Chile 1920x1080.jpg
 IMG pic/sptl/Grjótagjá, Iceland 1920x1080.jpg
 IMG pic/sptl/Guadalupe Mountains, Texas 1920x1080.jpg
+IMG pic/sptl/Guanacaste, Costa Rica 1920x1080.jpg
 IMG pic/sptl/Guanajuato, Mexico 1920x1080.jpg
+IMG pic/sptl/Guatapé, Colombia 1920x1080 (2).jpg
+IMG pic/sptl/Guatapé, Colombia 1920x1080.jpg
 IMG pic/sptl/Guatemala 1920x1080 (2).jpg
-IMG pic/sptl/Guatemala 1920x1080 (3).jpg
+IMG pic/sptl/Guatemala 1920x1080.jpg
 IMG pic/sptl/Guilin, China 1920x1080 (2).jpg
 IMG pic/sptl/Guilin, China 1920x1080.jpg
 IMG pic/sptl/Guizhou Province, China 1920x1080.jpg
@@ -1775,8 +1871,8 @@ IMG pic/sptl/Haiti 1920x1080.jpg
 IMG pic/sptl/Half Moon Island 1920x1080.jpg
 IMG pic/sptl/Hallett Cove, Australia 1920x1080.jpg
 IMG pic/sptl/Hallstatt, Austria 1920x1080 (2).jpg
-IMG pic/sptl/Hallstatt, Austria 1920x1080.jpg
 IMG pic/sptl/Hanalei, Kauai, Hawaii, USA 1920x1080.jpg
+IMG pic/sptl/Haputale, Sri Lanka 1920x1080.jpg
 IMG pic/sptl/Havasu Falls, Arizona 1920x1080.jpg
 IMG pic/sptl/Haviland Lake, Colorado 1920x1080.jpg
 IMG pic/sptl/Hawaii, USA 1920x1080.jpg
@@ -1788,47 +1884,47 @@ IMG pic/sptl/High Coast, Sweden 1920x1080.jpg
 IMG pic/sptl/Highland cattle 1920x1080.jpg
 IMG pic/sptl/Hiiumaa, Estonia 1920x1080.jpg
 IMG pic/sptl/Hinterzarten, Germany 1920x1080.jpg
-IMG pic/sptl/Hocking Hills State Park, Ohio 1920x1080.jpg
 IMG pic/sptl/Hof, Iceland 1920x1080.jpg
 IMG pic/sptl/Hokkaido Island, Japan 1920x1080.jpg
 IMG pic/sptl/Homer, Alaska 1920x1080.jpg
+IMG pic/sptl/Honister Pass, England 1920x1080.jpg
 IMG pic/sptl/Hope Valley, California 1920x1080.jpg
 IMG pic/sptl/Horseshoe Bay, Bermuda 1920x1080.jpg
 IMG pic/sptl/Huacachina, Peru 1920x1080.jpg
-IMG pic/sptl/Cuyahoga Valley National Park, Ohio 1920x1080.jpg
-IMG pic/sptl/Delta Junction, Alaska 1920x1080.jpg
-IMG pic/sptl/Dolomite Alps, Italy 1920x1080.jpg
-IMG pic/sptl/Durdevica Tara Bridge, Montenegro 1920x1080.jpg
-IMG pic/sptl/El Chaltén, Argentina 1920x1080.jpg
-IMG pic/sptl/Etosha NP, Namibia 1920x1080.jpg
-IMG pic/sptl/Forest Path 1920x1080.jpg
-IMG pic/sptl/General Grant Grove, California 1920x1080.jpg
-IMG pic/sptl/Gmina Barczewo, Poland 1920x1080.jpg
-IMG pic/sptl/Grand Teton National Park, Wyoming 1920x1080 (3).jpg
-IMG pic/sptl/Guatemala 1920x1080.jpg
+IMG pic/sptl/Huanghuacheng, China 1920x1080.jpg
+IMG pic/sptl/Huanglong, China 1920x1080.jpg
+IMG pic/sptl/Huasteca Potosina, Mexico 1920x1080.jpg
 IMG pic/sptl/Huay Mae waterfall, Kanjanaburi Thailand 1920x1080.jpg
 IMG pic/sptl/Hui Hang Trail, China 1920x1080.jpg
 IMG pic/sptl/Humahuaca, Argentina 1920x1080.jpg
 IMG pic/sptl/humpback whale 1920x1080 (2).jpg
 IMG pic/sptl/humpback whale 1920x1080.jpg
 IMG pic/sptl/humpback whales 1920x1080.jpg
+IMG pic/sptl/Hunan Province, China 1920x1080.jpg
 IMG pic/sptl/Hunts Mesa, Arizona 1920x1080.jpg
-IMG pic/sptl/Hyde Park, London 1920x1080.jpg
+IMG pic/sptl/Hvalfjörður, Iceland 1920x1080.jpg
 IMG pic/sptl/Höfn, Iceland 1920x1080.jpg
+IMG pic/sptl/Hạ Long Bay, Vietnam 1920x1080.jpg
+IMG pic/sptl/Ica, Peru 1920x1080.jpg
 IMG pic/sptl/Ice Lake Basin, Colorado 1920x1080.jpg
 IMG pic/sptl/Iceberg along the Antarctic Peninsula 1920x1080.jpg
 IMG pic/sptl/Iceland 1920x1080.jpg
+IMG pic/sptl/Ifugao Province, Philippines 1920x1080.jpg
 IMG pic/sptl/Iguazu Falls 1920x1080.jpg
+IMG pic/sptl/Iguazu Falls, South America 1920x1080.jpg
 IMG pic/sptl/Illawarra, Australia 1920x1080.jpg
 IMG pic/sptl/Illawarra, New South Wales, Australia 1920x1080.jpg
 IMG pic/sptl/Ilulissat, Greenland 1920x1080 (2).jpg
 IMG pic/sptl/Ilulissat, Greenland 1920x1080.jpg
+IMG pic/sptl/Imbabura Province, Ecuador 1920x1080.jpg
 IMG pic/sptl/Incahuasi Mountain 1920x1080.jpg
+IMG pic/sptl/Indian rhinoceros 1920x1080.jpg
 IMG pic/sptl/Indonesia 1920x1080.jpg
 IMG pic/sptl/Innsbruck, Austria 1920x1080.jpg
 IMG pic/sptl/Isabela Island, Ecuador 1920x1080.jpg
-IMG pic/sptl/Isalo National Park, Madagascar 1920x1080.jpg
 IMG pic/sptl/Isalo NP, Madagascar 1920x1080.jpg
+IMG pic/sptl/Isalo, Madagascar 1920x1080.jpg
+IMG pic/sptl/Isle of Lewis, Scotland 1920x1080.jpg
 IMG pic/sptl/Isle of Skye, Scotland 1920x1080 (2).jpg
 IMG pic/sptl/Isle of Skye, Scotland 1920x1080.jpg
 IMG pic/sptl/Itanki Beach, Japan 1920x1080.jpg
@@ -1840,7 +1936,7 @@ IMG pic/sptl/Japanese maple tree 1920x1080.jpg
 IMG pic/sptl/Jardim do Mar, Portugal 1920x1080.jpg
 IMG pic/sptl/Jasper National Park, Canada 1920x1080.jpg
 IMG pic/sptl/Java, Indonesia 1920x1080.jpg
-IMG pic/sptl/Jericoacoara, Brazil 1920x1080.jpg
+IMG pic/sptl/Jember, Indonesia 1920x1080.jpg
 IMG pic/sptl/Jericoacoara, Ceará, Brazil 1920x1080.jpg
 IMG pic/sptl/Jodhpur, India 1920x1080.jpg
 IMG pic/sptl/Jokulsarlon, Iceland 1920x1080.jpg
@@ -1853,23 +1949,28 @@ IMG pic/sptl/Jökulsárlón, Iceland 1920x1080.jpg
 IMG pic/sptl/Kaliakra, Bulgaria 1920x1080.jpg
 IMG pic/sptl/Kalsoy island, Faroe Islands 1920x1080.jpg
 IMG pic/sptl/Kalsoy, Faroe Islands, Denmark 1920x1080.jpg
-IMG pic/sptl/Kanarra Creek, Utah 1920x1080.jpg
+IMG pic/sptl/Kamchatka Peninsula, Russia 1920x1080.jpg
 IMG pic/sptl/Kangaroo Island, Australia 1920x1080.jpg
+IMG pic/sptl/Kangerlussuaq, Greenland 1920x1080.jpg
 IMG pic/sptl/Kaprun, Austria 1920x1080.jpg
 IMG pic/sptl/Karijini National Park, Australia 1920x1080.jpg
 IMG pic/sptl/Kassel, Germany 1920x1080.jpg
+IMG pic/sptl/Kata Tjuta, Australia 1920x1080.jpg
 IMG pic/sptl/Katsura River, Japan 1920x1080.jpg
 IMG pic/sptl/Kauai, Hawaii 1920x1080 (2).jpg
 IMG pic/sptl/Kauai, Hawaii 1920x1080 (3).jpg
+IMG pic/sptl/Kauai, Hawaii 1920x1080 (4).jpg
 IMG pic/sptl/Kauai, Hawaii 1920x1080.jpg
+IMG pic/sptl/Kauai, Hawaii, United States 1920x1080.jpg
 IMG pic/sptl/Kefalonia Island, Greece 1920x1080.jpg
+IMG pic/sptl/Kenai Fjords National Park, Alaska 1920x1080.jpg
 IMG pic/sptl/Kent, England 1920x1080.jpg
 IMG pic/sptl/Kenya, Africa 1920x1080.jpg
 IMG pic/sptl/Kerala India 1920x1080.jpg
 IMG pic/sptl/Kerlingarfjöll, Iceland 1920x1080.jpg
-IMG pic/sptl/Key Biscayne, Florida 1920x1080.jpg
 IMG pic/sptl/Khao Phing Kan, Thailand 1920x1080.jpg
 IMG pic/sptl/Khibiny Mts, Russia 1920x1080.jpg
+IMG pic/sptl/Kiama, Australia 1920x1080.jpg
 IMG pic/sptl/Killer Whale (Orcinus Orca) 1920x1080.jpg
 IMG pic/sptl/Killington, Vermont 1920x1080.jpg
 IMG pic/sptl/King George Island 1920x1080.jpg
@@ -1881,9 +1982,10 @@ IMG pic/sptl/Kitt Peak, Arizona 1920x1080.jpg
 IMG pic/sptl/Kjölur Plateau, Iceland 1920x1080.jpg
 IMG pic/sptl/Ko Kut Island, Thailand 1920x1080.jpg
 IMG pic/sptl/Ko Pha Ngan, Thailand 1920x1080.jpg
-IMG pic/sptl/Ko Phayam, Thailand 1920x1080.jpg
 IMG pic/sptl/Ko Phi Phi Le, Thailand 1920x1080.jpg
+IMG pic/sptl/Ko Tarutao. Thailand 1920x1080.jpg
 IMG pic/sptl/Kochel, Germany 1920x1080.jpg
+IMG pic/sptl/Kogel Bay, South Africa 1920x1080.jpg
 IMG pic/sptl/Koh Chang, Thailand 1920x1080.jpg
 IMG pic/sptl/Koh Lipe, Thailand 1920x1080.jpg
 IMG pic/sptl/Kolkata, India 1920x1080.jpg
@@ -1895,9 +1997,10 @@ IMG pic/sptl/Kuala Lumpur, Malaysia 1920x1080.jpg
 IMG pic/sptl/Kynance Cove 1920x1080.jpg
 IMG pic/sptl/Kyoto, Japan 1920x1080.jpg
 IMG pic/sptl/La Digue Island, Seychelles 1920x1080.jpg
-IMG pic/sptl/La Digue, Seychelles 1920x1080.jpg
+IMG pic/sptl/La Digue, Seychelles 1920x1080 (2).jpg
 IMG pic/sptl/La Jolla, California 1920x1080.jpg
 IMG pic/sptl/La Mancha, Spain 1920x1080.jpg
+IMG pic/sptl/La Push, Washington 1920x1080.jpg
 IMG pic/sptl/La Roche-en-Ardenne 1920x1080.jpg
 IMG pic/sptl/La Spezia, Italy 1920x1080.jpg
 IMG pic/sptl/Labi, Brunei 1920x1080.jpg
@@ -1905,12 +2008,27 @@ IMG pic/sptl/Ladakh, India 1920x1080.jpg
 IMG pic/sptl/Lagazuoi mountain, Italy 1920x1080.jpg
 IMG pic/sptl/Lagh del Calvaresc in Grisons, Switzerland 1920x1080.jpg
 IMG pic/sptl/Lago Bianco, Switzerland 1920x1080.jpg
+IMG pic/sptl/Lagoa, Portugal 1920x1080.jpg
+IMG pic/sptl/Lagos, Portugal 1920x1080.jpg
 IMG pic/sptl/Laguna Beach, California 1920x1080.jpg
+IMG pic/sptl/Laguna Colorada, Bolivia 1920x1080 (2).jpg
 IMG pic/sptl/Laguna Colorada, Bolivia 1920x1080.jpg
 IMG pic/sptl/Lake Antorno, Italy 1920x1080.jpg
-IMG pic/sptl/Lake Baikal, Russia 1920x1080 (2).jpg
+IMG pic/sptl/Glacier National Park 1920x1080.jpg
+IMG pic/sptl/Gokyo Lakes, Nepal 1920x1080.jpg
+IMG pic/sptl/Grand Tetons, Wyoming 1920x1080.jpg
+IMG pic/sptl/Guatemala 1920x1080 (3).jpg
+IMG pic/sptl/Hallstatt, Austria 1920x1080.jpg
+IMG pic/sptl/Hocking Hills State Park, Ohio 1920x1080.jpg
+IMG pic/sptl/Hyde Park, London 1920x1080.jpg
+IMG pic/sptl/Isalo National Park, Madagascar 1920x1080.jpg
+IMG pic/sptl/Jericoacoara, Brazil 1920x1080.jpg
+IMG pic/sptl/Kanarra Creek, Utah 1920x1080.jpg
+IMG pic/sptl/Key Biscayne, Florida 1920x1080.jpg
+IMG pic/sptl/Ko Phayam, Thailand 1920x1080.jpg
 IMG pic/sptl/Lake Baikal, Russia 1920x1080.jpg
 IMG pic/sptl/Lake Baikal, Siberia 1920x1080.jpg
+IMG pic/sptl/Lake Balaton, Hungary 1920x1080.jpg
 IMG pic/sptl/Lake Bled, Slovenia 1920x1080.jpg
 IMG pic/sptl/Lake Bratan, Bali 1920x1080.jpg
 IMG pic/sptl/Lake City, Colorado 1920x1080.jpg
@@ -1921,12 +2039,13 @@ IMG pic/sptl/Lake Garda, Italy 1920x1080 (2).jpg
 IMG pic/sptl/Lake Garda, Italy 1920x1080 (3).jpg
 IMG pic/sptl/Lake Garda, Italy 1920x1080.jpg
 IMG pic/sptl/Lake Geneva, Switzerland 1920x1080 (2).jpg
-IMG pic/sptl/Lake Geneva, Switzerland 1920x1080.jpg
 IMG pic/sptl/Lake Gosau, Austria 1920x1080.jpg
 IMG pic/sptl/Lake Louise, Canada 1920x1080.jpg
 IMG pic/sptl/Lake Lugano, Switzerland 1920x1080.jpg
 IMG pic/sptl/Lake Magadi, Kenya 1920x1080.jpg
+IMG pic/sptl/Lake Matheson, New Zealand 1920x1080 (2).jpg
 IMG pic/sptl/Lake Matheson, New Zealand 1920x1080.jpg
+IMG pic/sptl/Lake Mezzola, Italy 1920x1080.jpg
 IMG pic/sptl/Lake Michigan 1920x1080.jpg
 IMG pic/sptl/Lake Nakuru National Park, Kenya 1920x1080.jpg
 IMG pic/sptl/Lake Nakuru, Kenya 1920x1080.jpg
@@ -1934,11 +2053,11 @@ IMG pic/sptl/Lake of the Clouds, Michigan 1920x1080.jpg
 IMG pic/sptl/Lake Pehoé, Chile 1920x1080.jpg
 IMG pic/sptl/Lake Powell, Arizona 1920x1080.jpg
 IMG pic/sptl/Lake Serre-Ponçon, France 1920x1080.jpg
-IMG pic/sptl/Lake Silvaplana, Switzerland 1920x1080.jpg
 IMG pic/sptl/Lake Superior, Michigan 1920x1080.jpg
 IMG pic/sptl/Lake Sylvenstein, Bavaria, Germany 1920x1080.jpg
 IMG pic/sptl/Lake Tahoe, Nevada 1920x1080.jpg
 IMG pic/sptl/Lake Tana, Ethiopia 1920x1080.jpg
+IMG pic/sptl/Lake Tekapo, New Zealand 1920x1080.jpg
 IMG pic/sptl/Lake Trasimeno, Italy 1920x1080.jpg
 IMG pic/sptl/Lake Wanaka, New Zealand 1920x1080 (2).jpg
 IMG pic/sptl/Lake Wanaka, New Zealand 1920x1080.jpg
@@ -1946,22 +2065,28 @@ IMG pic/sptl/Lake Yamanaka, Japan 1920x1080.jpg
 IMG pic/sptl/Lampung, Indonesia 1920x1080.jpg
 IMG pic/sptl/Landmannalaugar, Iceland 1920x1080.jpg
 IMG pic/sptl/Landsort, Sweden 1920x1080.jpg
+IMG pic/sptl/Langebaan Lagoon, South Africa 1920x1080.jpg
 IMG pic/sptl/Lanzarote 1920x1080.jpg
+IMG pic/sptl/Lanzarote Island 1920x1080.jpg
+IMG pic/sptl/Lanín National Park, Argentina 1920x1080.jpg
+IMG pic/sptl/Lao Cai Province, Vietnam 1920x1080.jpg
 IMG pic/sptl/Laos 1920x1080.jpg
-IMG pic/sptl/Latacunga Canton,Cotopaxi Province,Ecuador 1920x1080.jpg
 IMG pic/sptl/Lauterbrunnen, Switzerland 1920x1080.jpg
 IMG pic/sptl/Lavender in Bulgaria 1920x1080.jpg
 IMG pic/sptl/Lechtal, Vorarlberg, Austria 1920x1080.jpg
 IMG pic/sptl/Lefkada Island, Ionian Islands, Greece 1920x1080.jpg
 IMG pic/sptl/Leigh, New Zealand 1920x1080.jpg
+IMG pic/sptl/Leros, Greece 1920x1080.jpg
 IMG pic/sptl/Leuven, Belgium 1920x1080.jpg
 IMG pic/sptl/Lewis River, Washington 1920x1080.jpg
 IMG pic/sptl/Lewisville Lake, Texas 1920x1080.jpg
+IMG pic/sptl/Li River, China 1920x1080.jpg
 IMG pic/sptl/Libyan Desert 1920x1080.jpg
 IMG pic/sptl/Liencres, Spain 1920x1080.jpg
+IMG pic/sptl/Lima, Peru 1920x1080.jpg
 IMG pic/sptl/Limassol, Cyprus 1920x1080.jpg
+IMG pic/sptl/Limón Province, Costa Rica 1920x1080.jpg
 IMG pic/sptl/Lincoln, New Hampshire 1920x1080.jpg
-IMG pic/sptl/Linn Cove Viaduct, North Carolina​ 1920x1080.jpg
 IMG pic/sptl/Lion and cub 1920x1080.jpg
 IMG pic/sptl/Lion cub 1920x1080.jpg
 IMG pic/sptl/Lisbon, Portugal 1920x1080 (2).jpg
@@ -1970,25 +2095,28 @@ IMG pic/sptl/Llanes, Spain 1920x1080.jpg
 IMG pic/sptl/Lobelia deckenii 1920x1080.jpg
 IMG pic/sptl/Loch Assynt, Scotland 1920x1080.jpg
 IMG pic/sptl/Loch Leven, Scotland 1920x1080.jpg
+IMG pic/sptl/Lofoten Islands, Norway 1920x1080.jpg
 IMG pic/sptl/Lofoton, Flakstad, Norland, Norway 1920x1080.jpg
 IMG pic/sptl/Loire Valley, France 1920x1080.jpg
 IMG pic/sptl/Lolland, Denmark 1920x1080.jpg
 IMG pic/sptl/London 1920x1080 (2).jpg
 IMG pic/sptl/London 1920x1080.jpg
-IMG pic/sptl/London Tower Bridge, UK 1920x1080.jpg
 IMG pic/sptl/London, England 1920x1080 (2).jpg
 IMG pic/sptl/London, England 1920x1080.jpg
 IMG pic/sptl/Lone Pine, California 1920x1080.jpg
 IMG pic/sptl/Long Lake, China 1920x1080.jpg
+IMG pic/sptl/Longsheng, China 1920x1080.jpg
 IMG pic/sptl/Lookout Mountain 1920x1080.jpg
 IMG pic/sptl/Lord Howe Island 1920x1080.jpg
 IMG pic/sptl/Los Angeles, California 1920x1080 (2).jpg
 IMG pic/sptl/Los Angeles, California 1920x1080.jpg
 IMG pic/sptl/Los Flamencos National Reserve, Chile 1920x1080.jpg
 IMG pic/sptl/Los Glaciares National Park, Argentina 1920x1080.jpg
+IMG pic/sptl/Los Lagos Region, Chile 1920x1080.jpg
+IMG pic/sptl/Lungern, Switzerland 1920x1080.jpg
+IMG pic/sptl/Luoping, China 1920x1080.jpg
 IMG pic/sptl/Luxor, Egypt 1920x1080.jpg
 IMG pic/sptl/Lynn Canal, Alaska 1920x1080.jpg
-IMG pic/sptl/M43 in the Orion Nebula 1920x1080.jpg
 IMG pic/sptl/Maasai Mara National Reserve, Kenya 1920x1080.jpg
 IMG pic/sptl/Maasai Mara, Kenya 1920x1080.jpg
 IMG pic/sptl/Machu Picchu, Peru 1920x1080 (2).jpg
@@ -1997,30 +2125,22 @@ IMG pic/sptl/Madagascar, Africa 1920x1080.jpg
 IMG pic/sptl/Madeira, Portugal 1920x1080.jpg
 IMG pic/sptl/Madikwe Game Reserve, South Africa 1920x1080.jpg
 IMG pic/sptl/Madrid, Spain 1920x1080.jpg
+IMG pic/sptl/Maidstone, Kent, United Kingdom 1920x1080.jpg
 IMG pic/sptl/Maldives 1920x1080 (2).jpg
 IMG pic/sptl/Maldives 1920x1080.jpg
 IMG pic/sptl/Maldives Islands 1920x1080.jpg
 IMG pic/sptl/Male giraffe and calves 1920x1080.jpg
-IMG pic/sptl/Huanglong, China 1920x1080.jpg
-IMG pic/sptl/Indian rhinoceros 1920x1080.jpg
-IMG pic/sptl/Jember, Indonesia 1920x1080.jpg
-IMG pic/sptl/Kangerlussuaq, Greenland 1920x1080.jpg
-IMG pic/sptl/Kiama, Australia 1920x1080.jpg
-IMG pic/sptl/Ko Tarutao. Thailand 1920x1080.jpg
-IMG pic/sptl/La Push, Washington 1920x1080.jpg
-IMG pic/sptl/Lake Balaton, Hungary 1920x1080.jpg
-IMG pic/sptl/Lake Mezzola, Italy 1920x1080.jpg
-IMG pic/sptl/Lake Tekapo, New Zealand 1920x1080.jpg
-IMG pic/sptl/Leros, Greece 1920x1080.jpg
-IMG pic/sptl/Lofoten Islands, Norway 1920x1080.jpg
+IMG pic/sptl/Malibu, California 1920x1080.jpg
 IMG pic/sptl/Mallorca, Spain 1920x1080.jpg
-IMG pic/sptl/Malpartida de Cáceres, Spain 1920x1080.jpg
 IMG pic/sptl/Malta 1920x1080.jpg
 IMG pic/sptl/Manarola, Italy 1920x1080.jpg
 IMG pic/sptl/Manhattan Bridge and Downtown Skyline, NYC 1920x1080.jpg
 IMG pic/sptl/Manhattan, New York 1920x1080.jpg
+IMG pic/sptl/Manzanillo Beach, Costa Rica 1920x1080.jpg
+IMG pic/sptl/Mara Triangle, Kenya 1920x1080.jpg
 IMG pic/sptl/Maranhão, Brazil 1920x1080.jpg
 IMG pic/sptl/Maras, Peru 1920x1080.jpg
+IMG pic/sptl/Maroon Bells, Colorado 1920x1080.jpg
 IMG pic/sptl/Marrakesh-Safi, Morocco 1920x1080.jpg
 IMG pic/sptl/Mars 1920x1080.jpg
 IMG pic/sptl/Marseille, France 1920x1080.jpg
@@ -2028,21 +2148,21 @@ IMG pic/sptl/Martha's Vineyard, Massachusetts 1920x1080.jpg
 IMG pic/sptl/Marvão, Portugal 1920x1080.jpg
 IMG pic/sptl/Maryport, England 1920x1080.jpg
 IMG pic/sptl/Matanuska Glacier 1920x1080.jpg
-IMG pic/sptl/Matsuzaki, Japan 1920x1080.jpg
 IMG pic/sptl/Matterhorn, Switzerland 1920x1080.jpg
 IMG pic/sptl/Maui, Hawaii 1920x1080 (2).jpg
 IMG pic/sptl/Maui, Hawaii 1920x1080 (3).jpg
 IMG pic/sptl/Maui, Hawaii 1920x1080.jpg
+IMG pic/sptl/Medvednica, Croatia 1920x1080.jpg
 IMG pic/sptl/Mellieħa, Malta 1920x1080.jpg
 IMG pic/sptl/Mello, Lombardy, Italy 1920x1080.jpg
 IMG pic/sptl/Menabe, Madagascar 1920x1080.jpg
 IMG pic/sptl/Mendoza, Argentina 1920x1080.jpg
 IMG pic/sptl/Mesa Arch, Utah 1920x1080 (2).jpg
 IMG pic/sptl/Mesa Arch, Utah 1920x1080.jpg
+IMG pic/sptl/Mesoamerican Barrier Reef System 1920x1080.jpg
 IMG pic/sptl/Mettlach, Saarland, Germany 1920x1080.jpg
 IMG pic/sptl/Metéora, Greece 1920x1080.jpg
 IMG pic/sptl/Miami, FL 1920x1080 (2).jpg
-IMG pic/sptl/Miami, FL 1920x1080.jpg
 IMG pic/sptl/Milky Way Galaxy 1920x1080.jpg
 IMG pic/sptl/Miyako Islands, Japan 1920x1080.jpg
 IMG pic/sptl/Miñiques, Chile 1920x1080.jpg
@@ -2051,13 +2171,14 @@ IMG pic/sptl/Moeraki, New Zealand 1920x1080.jpg
 IMG pic/sptl/Monastery Meteora, Thessaly, Greece 1920x1080.jpg
 IMG pic/sptl/Mono Lake, California 1920x1080 (2).jpg
 IMG pic/sptl/Mono Lake, California 1920x1080.jpg
+IMG pic/sptl/Mont Orohena, Tahiti 1920x1080.jpg
 IMG pic/sptl/Mont Saint-Michel at sunset, France 1920x1080.jpg
 IMG pic/sptl/Mont Saint-Michel, France 1920x1080 (2).jpg
 IMG pic/sptl/Mont Saint-Michel, France 1920x1080.jpg
 IMG pic/sptl/Monte Aloia, Spain 1920x1080.jpg
-IMG pic/sptl/Montenegro 1920x1080 (2).jpg
 IMG pic/sptl/Montenegro 1920x1080.jpg
 IMG pic/sptl/Monterey, California 1920x1080.jpg
+IMG pic/sptl/Montezuma, Costa Rica 1920x1080.jpg
 IMG pic/sptl/Monument Valley, Arizona 1920x1080.jpg
 IMG pic/sptl/Monument Valley, Arizona, USA 1920x1080.jpg
 IMG pic/sptl/Monument Valley, US 1920x1080.jpg
@@ -2068,9 +2189,9 @@ IMG pic/sptl/Moraca River, Montenegro 1920x1080.jpg
 IMG pic/sptl/Moraine Lake Rd, Lake Louise, AB 1920x1080.jpg
 IMG pic/sptl/Moraine Lake, Canada 1920x1080 (2).jpg
 IMG pic/sptl/Moraine Lake, Canada 1920x1080.jpg
-IMG pic/sptl/Moray, Peru 1920x1080.jpg
 IMG pic/sptl/Morskie Oko, Poland 1920x1080.jpg
 IMG pic/sptl/Moscow, Russia 1920x1080 (2).jpg
+IMG pic/sptl/Moscow, Russia 1920x1080.jpg
 IMG pic/sptl/Moskenes, Norway 1920x1080.jpg
 IMG pic/sptl/Mostar, Bosnia and Herzegovina 1920x1080.jpg
 IMG pic/sptl/Mount Fuji, Japan 1920x1080.jpg
@@ -2079,9 +2200,28 @@ IMG pic/sptl/Mount Nemrut, Turkey 1920x1080.jpg
 IMG pic/sptl/Mount Rainier NP, WA 1920x1080.jpg
 IMG pic/sptl/Mount Timpanogos, Utah 1920x1080.jpg
 IMG pic/sptl/Mount Wellington, Tasmania 1920x1080.jpg
+IMG pic/sptl/Mountain road, Fuji-Hakone Izu, Japan​ 1920x1080.jpg
+IMG pic/sptl/Mpumalanga, South Africa 1920x1080.jpg
+IMG pic/sptl/Mpumulanga, South Africa 1920x1080.jpg
 IMG pic/sptl/Mt Roraima, Venezuela 1920x1080.jpg
 IMG pic/sptl/Mt Wellington, Tasmania 1920x1080.jpg
-IMG pic/sptl/Mt. Adams, Washington 1920x1080.jpg
+IMG pic/sptl/Lake Baikal, Russia 1920x1080 (2).jpg
+IMG pic/sptl/Lake Geneva, Switzerland 1920x1080.jpg
+IMG pic/sptl/Lake Silvaplana, Switzerland 1920x1080.jpg
+IMG pic/sptl/Latacunga Canton,Cotopaxi Province,Ecuador 1920x1080.jpg
+IMG pic/sptl/Linn Cove Viaduct, North Carolina​ 1920x1080.jpg
+IMG pic/sptl/London Tower Bridge, UK 1920x1080.jpg
+IMG pic/sptl/M43 in the Orion Nebula 1920x1080.jpg
+IMG pic/sptl/Malpartida de Cáceres, Spain 1920x1080.jpg
+IMG pic/sptl/Matsuzaki, Japan 1920x1080.jpg
+IMG pic/sptl/Miami, FL 1920x1080.jpg
+IMG pic/sptl/Montenegro 1920x1080 (2).jpg
+IMG pic/sptl/Capitol Reef NP, Utah 1920x1080.jpg
+IMG pic/sptl/Gap of Dunloe, County Kerry, Ireland​ 1920x1080.jpg
+IMG pic/sptl/La Digue, Seychelles 1920x1080.jpg
+IMG pic/sptl/Moray, Peru 1920x1080.jpg
+IMG pic/sptl/Ramsau, Germany 1920x1080.jpg
+IMG pic/sptl/The Palouse, Washington state 1920x1080.jpg
 IMG pic/sptl/Mt. Rainier, Washington 1920x1080.jpg
 IMG pic/sptl/Mt. Robson Provincial Park, Canada 1920x1080.jpg
 IMG pic/sptl/Mt. Timpanogos, Utah 1920x1080.jpg
@@ -2091,10 +2231,10 @@ IMG pic/sptl/Muir Woods National Monument 1920x1080.jpg
 IMG pic/sptl/Multicolored Textile Background  1920x1080.jpg
 IMG pic/sptl/Multnomah Falls, Oregon 1920x1080.jpg
 IMG pic/sptl/Mumbai, India 1920x1080.jpg
+IMG pic/sptl/Munnar, India 1920x1080 (2).jpg
 IMG pic/sptl/Munnar, India 1920x1080.jpg
 IMG pic/sptl/Munnar, Kerala, India 1920x1080.jpg
 IMG pic/sptl/Munnar, Kerala, India 2.jpg
-IMG pic/sptl/Murfreesboro, Tennessee 1920x1080.jpg
 IMG pic/sptl/Muriwai Beach, Auckland, New Zealand 1920x1080.jpg
 IMG pic/sptl/Murlough Bay, Northern Ireland 1920x1080.jpg
 IMG pic/sptl/Murray River, Australia 1920x1080.jpg
@@ -2107,7 +2247,7 @@ IMG pic/sptl/Nago-Torbole, Italy 1920x1080.jpg
 IMG pic/sptl/Nairobi, Kenya 1920x1080.jpg
 IMG pic/sptl/Namib-Naukluft, Namibia 1920x1080.jpg
 IMG pic/sptl/Namibia 1920x1080.jpg
-IMG pic/sptl/Nan Province, Thailand 1920x1080.jpg
+IMG pic/sptl/Narok County, Kenya 1920x1080.jpg
 IMG pic/sptl/National Park, Utah 1920x1080.jpg
 IMG pic/sptl/Navagio Beach, Greece 1920x1080 (2).jpg
 IMG pic/sptl/Navagio Beach, Greece 1920x1080.jpg
@@ -2119,9 +2259,11 @@ IMG pic/sptl/Nervión waterfall, Spain 1920x1080.jpg
 IMG pic/sptl/Netherlands 1920x1080.jpg
 IMG pic/sptl/New Hampshire 1920x1080.jpg
 IMG pic/sptl/New Orleans, Louisiana 1920x1080.jpg
+IMG pic/sptl/New Plymouth, New Zealand 1920x1080.jpg
+IMG pic/sptl/New York City 1920x1080.jpg
 IMG pic/sptl/New York, New York 1920x1080.jpg
 IMG pic/sptl/New York, New York, United States 1920x1080.jpg
-IMG pic/sptl/New Zealand 1920x1080 (3).jpg
+IMG pic/sptl/New Zealand 1920x1080 (2).jpg
 IMG pic/sptl/New Zealand 1920x1080 (4).jpg
 IMG pic/sptl/New Zealand 1920x1080.jpg
 IMG pic/sptl/Nienhagen Wood, Germany 1920x1080.jpg
@@ -2135,8 +2277,8 @@ IMG pic/sptl/North Wales, United Kingdom 1920x1080.jpg
 IMG pic/sptl/North Yorkshire, England 1920x1080.jpg
 IMG pic/sptl/Northern Ireland 1920x1080.jpg
 IMG pic/sptl/Northern Spanish coast 1920x1080.jpg
-IMG pic/sptl/Northern Territory, Australia 1920x1080.jpg
 IMG pic/sptl/Nullarbor Plain, Australia 1920x1080.jpg
+IMG pic/sptl/Numa Falls, Canada 1920x1080.jpg
 IMG pic/sptl/Nusa Penida Island 1920x1080.jpg
 IMG pic/sptl/Nusa Penida, Indonesia 1920x1080.jpg
 IMG pic/sptl/Nyanyi Beach, Bali 1920x1080.jpg
@@ -2149,10 +2291,11 @@ IMG pic/sptl/Oahu, Hawaii, USA 1920x1080.jpg
 IMG pic/sptl/Oahu’s North Shore, Hawaii, USA 1920x1080.jpg
 IMG pic/sptl/Obergurgl, Austria 1920x1080.jpg
 IMG pic/sptl/Oceanside, California 1920x1080.jpg
-IMG pic/sptl/Ocho Rios, Jamaica 1920x1080.jpg
 IMG pic/sptl/Oia, Greece 1920x1080 (2).jpg
 IMG pic/sptl/Oia, Greece 1920x1080.jpg
 IMG pic/sptl/Oia, Santorini, Greece 1920x1080.jpg
+IMG pic/sptl/Oishi Park, Japan 1920x1080.jpg
+IMG pic/sptl/Okavango Delta, Botswana 1920x1080 (2).jpg
 IMG pic/sptl/Okavango Delta, Botswana 1920x1080.jpg
 IMG pic/sptl/Okavango Delta, Botswana, Africa 1920x1080.jpg
 IMG pic/sptl/Okavango Delta, Botswana, South Africa 1920x1080.jpg
@@ -2160,23 +2303,28 @@ IMG pic/sptl/Okavango River, Botswana 1920x1080.jpg
 IMG pic/sptl/Olkhon Island, Russia 1920x1080.jpg
 IMG pic/sptl/Ollantaytambo, Peru 1920x1080.jpg
 IMG pic/sptl/Olympic National Park, WA 1920x1080.jpg
+IMG pic/sptl/Olympic National Park, Washington 1920x1080 (2).jpg
+IMG pic/sptl/Olympic National Park, Washington 1920x1080 (3).jpg
+IMG pic/sptl/Olympic National Park, Washington 1920x1080.jpg
 IMG pic/sptl/Ontario, Canada 1920x1080.jpg
 IMG pic/sptl/Opito Bay, New Zealand 1920x1080.jpg
-IMG pic/sptl/orange-fin clownfish 1920x1080.jpg
 IMG pic/sptl/orca whale 1920x1080.jpg
 IMG pic/sptl/Orchard in autumn at sunrise 1920x1080.jpg
+IMG pic/sptl/Ordesa Valley, Spain 1920x1080.jpg
 IMG pic/sptl/Orion Nebula 1920x1080.jpg
 IMG pic/sptl/Orovada, Nevada 1920x1080.jpg
 IMG pic/sptl/Ouargla, Algeria 1920x1080.jpg
 IMG pic/sptl/Over Owler Tor, England 1920x1080.jpg
 IMG pic/sptl/Oxbow Bend, Wyoming 1920x1080.jpg
 IMG pic/sptl/Padar Island, Indonesia 1920x1080.jpg
+IMG pic/sptl/Palamós, Spain 1920x1080.jpg
+IMG pic/sptl/Palawan, Philippines 1920x1080.jpg
 IMG pic/sptl/Palouse Falls, WA 1920x1080.jpg
 IMG pic/sptl/Palouse hills, Washington State 1920x1080.jpg
 IMG pic/sptl/Pantanal, Brazil 1920x1080.jpg
 IMG pic/sptl/Paparoa NP, New Zealand 1920x1080.jpg
+IMG pic/sptl/Paphos, Cyprus 1920x1080.jpg
 IMG pic/sptl/Paphos, Republic of Cyprus 1920x1080.jpg
-IMG pic/sptl/Paris, France 1920x1080 (2).jpg
 IMG pic/sptl/Paris, France 1920x1080 (3).jpg
 IMG pic/sptl/Paris, France 1920x1080 (4).jpg
 IMG pic/sptl/Paris, France 1920x1080 (5).jpg
@@ -2187,15 +2335,24 @@ IMG pic/sptl/Patagonia, Argentina-Chile 1920x1080.jpg
 IMG pic/sptl/Patagonia, Chile 1920x1080 (2).jpg
 IMG pic/sptl/Patagonia, Chile 1920x1080.jpg
 IMG pic/sptl/Pattaya, Thailand 1920x1080.jpg
+IMG pic/sptl/Pedra da Gávea, Brazil 1920x1080.jpg
 IMG pic/sptl/Penedo do Guincho, Lisbon, Portugal 1920x1080.jpg
 IMG pic/sptl/Pergamon, Turkey 1920x1080.jpg
+IMG pic/sptl/Perito Moreno, Argentina 1920x1080.jpg
+IMG pic/sptl/Perth, Australia 1920x1080.jpg
 IMG pic/sptl/Perugia, Italy 1920x1080.jpg
-IMG pic/sptl/Pescadero, California 1920x1080.jpg
+IMG pic/sptl/Petra, Jordan 1920x1080 (2).jpg
 IMG pic/sptl/Petra, Jordan 1920x1080.jpg
+IMG pic/sptl/Petrified Forest National Park, Arizona 1920x1080.jpg
+IMG pic/sptl/Petrohué Waterfalls, Chile 1920x1080.jpg
 IMG pic/sptl/Phang Nga Bay, Thailand 1920x1080.jpg
+IMG pic/sptl/Phi Phi Islands, Thailand 1920x1080.jpg
 IMG pic/sptl/Philipsburg, St. Maarten 1920x1080.jpg
+IMG pic/sptl/Phillip Island, Australia 1920x1080 (2).jpg
+IMG pic/sptl/Phillip Island, Australia 1920x1080 (3).jpg
 IMG pic/sptl/Phillip Island, Australia 1920x1080.jpg
 IMG pic/sptl/Phnom Kulen National Park, Cambodia 1920x1080.jpg
+IMG pic/sptl/Phraya Nakhon Cave, Thailand 1920x1080.jpg
 IMG pic/sptl/Phuket, Thailand 1920x1080.jpg
 IMG pic/sptl/pied avocet 1920x1080.jpg
 IMG pic/sptl/Piha, New Zealand 1920x1080.jpg
@@ -2204,7 +2361,7 @@ IMG pic/sptl/Pirin Mountains 1920x1080.jpg
 IMG pic/sptl/Piriápolis, Uruguay 1920x1080.jpg
 IMG pic/sptl/Pisa, Italy 1920x1080.jpg
 IMG pic/sptl/Piz Palu, Switzerland 1920x1080.jpg
-IMG pic/sptl/plain tiger butterfly 1920x1080.jpg
+IMG pic/sptl/Playa Roja, Peru 1920x1080.jpg
 IMG pic/sptl/Plitvice Lakes National Park 1920x1080.jpg
 IMG pic/sptl/Plitvice Lakes National Park, Croatia 1920x1080.jpg
 IMG pic/sptl/Plitvice Lakes, Croatia 1920x1080.jpg
@@ -2217,49 +2374,34 @@ IMG pic/sptl/Pointe de Dinan,Presquile de Crozon,France 1920x1080.jpg
 IMG pic/sptl/poison dart frog 1920x1080.jpg
 IMG pic/sptl/Pokhara, Nepal 1920x1080.jpg
 IMG pic/sptl/polar bear 1920x1080.jpg
-IMG pic/sptl/Polygonal Lakes, Kola Peninsula, Russia 1920x1080.jpg
 IMG pic/sptl/Pomorskie, Poland 1920x1080.jpg
 IMG pic/sptl/Ponta da Piedade, Portugal 1920x1080.jpg
 IMG pic/sptl/Ponta Delgada, Sao Miguel Island, Portugal 1920x1080.jpg
 IMG pic/sptl/Port Antonio, Jamaica 1920x1080.jpg
 IMG pic/sptl/Port Isaac, England 1920x1080.jpg
+IMG pic/sptl/Port Lockroy, Antarctica 1920x1080.jpg
 IMG pic/sptl/Portimão, Portugal 1920x1080.jpg
 IMG pic/sptl/Porto Katsiki, Lefkada, Greece 1920x1080.jpg
 IMG pic/sptl/Porto Venere, Italy 1920x1080.jpg
 IMG pic/sptl/Porto, Portugal 1920x1080.jpg
 IMG pic/sptl/Prague, Czech Republic 1920x1080.jpg
 IMG pic/sptl/Princes Pier, Australia 1920x1080.jpg
-IMG pic/sptl/Procida Island, Italy 1920x1080.jpg
 IMG pic/sptl/Pulau Bawah, Indonesia 1920x1080.jpg
+IMG pic/sptl/Pulau Merah, Indonesia 1920x1080.jpg
 IMG pic/sptl/Pumpkin patch, Vancouver Island, Canada 1920x1080.jpg
 IMG pic/sptl/Punta Cana 1920x1080.jpg
 IMG pic/sptl/Punta Cana, Domincan Republic 1920x1080.jpg
 IMG pic/sptl/Putorana Plateau, Russia 1920x1080.jpg
-IMG pic/sptl/Malibu, California 1920x1080.jpg
-IMG pic/sptl/Medvednica, Croatia 1920x1080.jpg
-IMG pic/sptl/Mont Orohena, Tahiti 1920x1080.jpg
-IMG pic/sptl/Moscow, Russia 1920x1080.jpg
-IMG pic/sptl/Munnar, India 1920x1080 (2).jpg
-IMG pic/sptl/Narok County, Kenya 1920x1080.jpg
-IMG pic/sptl/New Zealand 1920x1080 (2).jpg
-IMG pic/sptl/Numa Falls, Canada 1920x1080.jpg
-IMG pic/sptl/Okavango Delta, Botswana 1920x1080 (2).jpg
-IMG pic/sptl/Palawan, Philippines 1920x1080.jpg
-IMG pic/sptl/Perito Moreno, Argentina 1920x1080.jpg
-IMG pic/sptl/Playa Roja, Peru 1920x1080.jpg
-IMG pic/sptl/Corinthia, Greece 1920x1080.jpg
-IMG pic/sptl/Haputale, Sri Lanka 1920x1080.jpg
-IMG pic/sptl/Luoping, China 1920x1080.jpg
-IMG pic/sptl/Port Lockroy, Antarctica 1920x1080.jpg
-IMG pic/sptl/The Pantanal, Brazil 1920x1080.jpg
+IMG pic/sptl/Pyramid Lake, Canada 1920x1080.jpg
 IMG pic/sptl/Pūpūkea, Hawaii 1920x1080.jpg
 IMG pic/sptl/Quebrada de Cafayate 1920x1080.jpg
+IMG pic/sptl/Queensland, Australia 1920x1080.jpg
+IMG pic/sptl/Quilotoa, Ecuador 1920x1080.jpg
 IMG pic/sptl/Québec, Canada 1920x1080.jpg
 IMG pic/sptl/Rab Island, Croatia 1920x1080.jpg
 IMG pic/sptl/Rainbow Beach, Australia 1920x1080.jpg
 IMG pic/sptl/Rainbow Bridge, Qingdao City 1920x1080.jpg
 IMG pic/sptl/Raja Ampat, Indonesia 1920x1080.jpg
-IMG pic/sptl/Ramsau, Germany 1920x1080.jpg
 IMG pic/sptl/Rannoch Moor, Scotland 1920x1080.jpg
 IMG pic/sptl/Ranwu Lake, Tibet 1920x1080.jpg
 IMG pic/sptl/Rapa Valley, Sweden 1920x1080.jpg
@@ -2267,26 +2409,41 @@ IMG pic/sptl/Rarotonga, Cook Islands 1920x1080.jpg
 IMG pic/sptl/red cushion sea stars 1920x1080.jpg
 IMG pic/sptl/red foxes 1920x1080.jpg
 IMG pic/sptl/Red Rock State Park, Arizona 1920x1080.jpg
+IMG pic/sptl/Red Rock-Secret Mountain Wilderness 1920x1080.jpg
 IMG pic/sptl/Red Rocks State Park, Sedona, Arizona 1920x1080.jpg
 IMG pic/sptl/red-eyed tree frog 1920x1080.jpg
 IMG pic/sptl/Redwood Forest 1920x1080.jpg
 IMG pic/sptl/Reedsport, Oregon 1920x1080.jpg
 IMG pic/sptl/Reine, Norway 1920x1080 (2).jpg
 IMG pic/sptl/Reine, Norway 1920x1080.jpg
-IMG pic/sptl/Republic of Adygea, Russia 1920x1080.jpg
+IMG pic/sptl/Mt. Adams, Washington 1920x1080.jpg
+IMG pic/sptl/Murfreesboro, Tennessee 1920x1080.jpg
+IMG pic/sptl/Nan Province, Thailand 1920x1080.jpg
+IMG pic/sptl/New Zealand 1920x1080 (3).jpg
+IMG pic/sptl/Northern Territory, Australia 1920x1080.jpg
+IMG pic/sptl/Ocho Rios, Jamaica 1920x1080.jpg
+IMG pic/sptl/orange-fin clownfish 1920x1080.jpg
+IMG pic/sptl/Paris, France 1920x1080 (2).jpg
+IMG pic/sptl/Pescadero, California 1920x1080.jpg
+IMG pic/sptl/plain tiger butterfly 1920x1080.jpg
+IMG pic/sptl/Polygonal Lakes, Kola Peninsula, Russia 1920x1080.jpg
+IMG pic/sptl/Procida Island, Italy 1920x1080.jpg
 IMG pic/sptl/Retezat National Park, Romania 1920x1080.jpg
+IMG pic/sptl/Reykjavik, Iceland 1920x1080.jpg
 IMG pic/sptl/Reynisdrangar, Iceland 1920x1080.jpg
+IMG pic/sptl/Rhineland-Palatinate, Germany 1920x1080.jpg
 IMG pic/sptl/Rho Ophiuchus 1920x1080.jpg
 IMG pic/sptl/Ribadeo, Spain 1920x1080.jpg
 IMG pic/sptl/Riisitunturi National Park, Finland 1920x1080.jpg
 IMG pic/sptl/Rio de Janeiro, Brazil 1920x1080 (2).jpg
 IMG pic/sptl/Rio de Janeiro, Brazil 1920x1080.jpg
 IMG pic/sptl/River Arun, England 1920x1080.jpg
+IMG pic/sptl/River Thjorsa, Iceland 1920x1080.jpg
+IMG pic/sptl/Robberg Peninsula, South Africa 1920x1080.jpg
 IMG pic/sptl/Rocca Calascio, Italy 1920x1080.jpg
 IMG pic/sptl/Rock climbers 1920x1080.jpg
 IMG pic/sptl/Rocky Mountain elk 1920x1080.jpg
 IMG pic/sptl/Rocky Mountain National Park, Colorado 1920x1080.jpg
-IMG pic/sptl/Rome, Italy 1920x1080.jpg
 IMG pic/sptl/Ronda, Spain 1920x1080 (2).jpg
 IMG pic/sptl/Ronda, Spain 1920x1080.jpg
 IMG pic/sptl/Rosette Nebula 1920x1080.jpg
@@ -2294,28 +2451,33 @@ IMG pic/sptl/Rotenberg, Germany 1920x1080.jpg
 IMG pic/sptl/Rotterdam, Netherlands 1920x1080.jpg
 IMG pic/sptl/Rottnest Island 1920x1080 (2).jpg
 IMG pic/sptl/Rottnest Island 1920x1080.jpg
+IMG pic/sptl/Royal Natal National Park, South Africa 1920x1080.jpg
 IMG pic/sptl/Rupea, Romania 1920x1080.jpg
 IMG pic/sptl/Réunion Island, France 1920x1080.jpg
 IMG pic/sptl/Sa Pa, Vietnam 1920x1080.jpg
+IMG pic/sptl/Saas-Fee, Switzerland 1920x1080.jpg
+IMG pic/sptl/Saint Lucia 1920x1080.jpg
 IMG pic/sptl/Saint Mary Lake, Montana 1920x1080.jpg
 IMG pic/sptl/Sajama NP, Bolivia 1920x1080.jpg
 IMG pic/sptl/Salar de Atacama, Chile 1920x1080.jpg
-IMG pic/sptl/Salar de Uyuni, Bolivia 1920x1080.jpg
 IMG pic/sptl/Salt Spring Island, Canada 1920x1080.jpg
 IMG pic/sptl/Salzburg, Austria 1920x1080 (2).jpg
 IMG pic/sptl/Salzburg, Austria 1920x1080.jpg
 IMG pic/sptl/Salzburg, Austria Salzach River 1920x1080.jpg
+IMG pic/sptl/Salzkammergut, Austria 1920x1080.jpg
 IMG pic/sptl/San Felice Circeo 1920x1080.jpg
 IMG pic/sptl/San Francisco, CA 1920x1080.jpg
 IMG pic/sptl/San Francisco, California 1920x1080.jpg
 IMG pic/sptl/San Juan National Forest 1920x1080.jpg
 IMG pic/sptl/San Rafael Swell, Utah 1920x1080.jpg
+IMG pic/sptl/Sand Harbor, Lake Tahoe 1920x1080.jpg
 IMG pic/sptl/Santa Cruz, Tenerife 1920x1080.jpg
 IMG pic/sptl/Santa Monica Mts, CA 1920x1080.jpg
 IMG pic/sptl/Santa Monica, California 1920x1080.jpg
-IMG pic/sptl/Sardinia, Italy 1920x1080 (2).jpg
+IMG pic/sptl/Sao Paulo, Brazil 1920x1080.jpg
 IMG pic/sptl/Sardinia, Italy 1920x1080.jpg
 IMG pic/sptl/Sarek National Park, Sweden 1920x1080.jpg
+IMG pic/sptl/Saunders Island, South America 1920x1080.jpg
 IMG pic/sptl/Sawtooth National Recreation Area,USA 1920x1080.jpg
 IMG pic/sptl/Saxony, Germany 1920x1080.jpg
 IMG pic/sptl/Scania province, Sweden 1920x1080.jpg
@@ -2324,9 +2486,10 @@ IMG pic/sptl/Scheendijk, Netherlands 1920x1080.jpg
 IMG pic/sptl/Schlehdorf, Germany 1920x1080 (2).jpg
 IMG pic/sptl/Schlehdorf, Germany 1920x1080.jpg
 IMG pic/sptl/sea urchin shells 1920x1080.jpg
+IMG pic/sptl/Seattle, Washington 1920x1080 (2).jpg
 IMG pic/sptl/Seattle, Washington 1920x1080.jpg
+IMG pic/sptl/Sehlabathebe National Park, Lesotho 1920x1080.jpg
 IMG pic/sptl/Seljalandsfoss, Iceland 1920x1080.jpg
-IMG pic/sptl/Senja, Norway 1920x1080.jpg
 IMG pic/sptl/Sequoia NP, California 1920x1080.jpg
 IMG pic/sptl/Serengeti NP, Tanzania 1920x1080.jpg
 IMG pic/sptl/Serra do Mar State Park, Brazil 1920x1080.jpg
@@ -2337,9 +2500,10 @@ IMG pic/sptl/Shenandoah National Park, Virginia 1920x1080.jpg
 IMG pic/sptl/Shenandoah River 1920x1080.jpg
 IMG pic/sptl/Sherando Lake, Virginia 1920x1080.jpg
 IMG pic/sptl/Shinjuku Gyoen Park 1920x1080.jpg
+IMG pic/sptl/Shiraz, Iran 1920x1080.jpg
 IMG pic/sptl/Siberia, Russia 1920x1080.jpg
 IMG pic/sptl/Siberian tiger 1920x1080.jpg
-IMG pic/sptl/Sidi Ifni, Morocco 1920x1080.jpg
+IMG pic/sptl/Sicily, Italy 1920x1080.jpg
 IMG pic/sptl/Sidmouth, England 1920x1080.jpg
 IMG pic/sptl/Silencio Beach, Spain 1920x1080.jpg
 IMG pic/sptl/Silver Falls SP, Oregon 1920x1080.jpg
@@ -2347,14 +2511,15 @@ IMG pic/sptl/Similan Islands 1920x1080.jpg
 IMG pic/sptl/Singapore 1920x1080 (2).jpg
 IMG pic/sptl/Singapore 1920x1080 (3).jpg
 IMG pic/sptl/Singapore 1920x1080.jpg
+IMG pic/sptl/Sintra, Portugal 1920x1080 (2).jpg
 IMG pic/sptl/Sintra, Portugal 1920x1080.jpg
 IMG pic/sptl/Sisteron, France 1920x1080.jpg
 IMG pic/sptl/Skaftafell, Iceland 1920x1080.jpg
 IMG pic/sptl/Skanderborg, Denmark 1920x1080.jpg
 IMG pic/sptl/Skellig Michael, Ireland 1920x1080.jpg
 IMG pic/sptl/Skjálfandafljót River, Iceland 1920x1080.jpg
-IMG pic/sptl/Skogafoss waterfall, Iceland 1920x1080.jpg
 IMG pic/sptl/Sky over woods at night 1920x1080.jpg
+IMG pic/sptl/Slieve League, Ireland 1920x1080.jpg
 IMG pic/sptl/Sligachan, Scotland 1920x1080.jpg
 IMG pic/sptl/Small dock and boat on a lake 1920x1080.jpg
 IMG pic/sptl/snowy owl 1920x1080.jpg
@@ -2365,14 +2530,17 @@ IMG pic/sptl/South Australia 1920x1080.jpg
 IMG pic/sptl/South Beach, Miami  1920x1080.jpg
 IMG pic/sptl/South Georgia Island 1920x1080.jpg
 IMG pic/sptl/South Hams, England 1920x1080.jpg
+IMG pic/sptl/South Island, New Zealand 1920x1080.jpg
 IMG pic/sptl/South Tyrol, Italy 1920x1080 (2).jpg
 IMG pic/sptl/South Tyrol, Italy 1920x1080.jpg
-IMG pic/sptl/Southern Ewaso Ng'iro 1920x1080.jpg
 IMG pic/sptl/Southern Live Oak, Central Florida  1920x1080.jpg
 IMG pic/sptl/Southern Wasatch Mountains, Utah 1920x1080.jpg
+IMG pic/sptl/Spain, Galicia, Ferrol 1920x1080.jpg
+IMG pic/sptl/Spiez, Switzerland 1920x1080.jpg
 IMG pic/sptl/Spiti Valley, India 1920x1080.jpg
 IMG pic/sptl/Springbrook National Park, Australia 1920x1080.jpg
 IMG pic/sptl/St. Augustine, Florida 1920x1080.jpg
+IMG pic/sptl/St. Joseph, Michigan 1920x1080.jpg
 IMG pic/sptl/St. Louis, Missouri 1920x1080.jpg
 IMG pic/sptl/St. Mary Lake, Montana 1920x1080.jpg
 IMG pic/sptl/St.Ulrich, Groeden, Italy 1920x1080.jpg
@@ -2380,20 +2548,20 @@ IMG pic/sptl/steam turbine 1920x1080.jpg
 IMG pic/sptl/Stelvio National Park, Italy 1920x1080.jpg
 IMG pic/sptl/Stelvio Pass, Italy 1920x1080.jpg
 IMG pic/sptl/Stevens Pass, Washington 1920x1080.jpg
-IMG pic/sptl/Stockholm, Sweden 1920x1080 (2).jpg
 IMG pic/sptl/Stockholm, Sweden 1920x1080.jpg
 IMG pic/sptl/Storm clouds over a mountain. 1920x1080.jpg
 IMG pic/sptl/Stowe, Vermont 1920x1080.jpg
 IMG pic/sptl/Strait of Dover, England 1920x1080.jpg
+IMG pic/sptl/Strandir Coast, Iceland 1920x1080.jpg
 IMG pic/sptl/Stuben am Arlberg, Austria 1920x1080.jpg
 IMG pic/sptl/Sumilon Island, Philippines 1920x1080.jpg
+IMG pic/sptl/Sun City, South Africa 1920x1080.jpg
 IMG pic/sptl/Sun Moon Lake, Taiwan 1920x1080.jpg
 IMG pic/sptl/sun parakeet 1920x1080.jpg
 IMG pic/sptl/sunflowers 1920x1080.jpg
 IMG pic/sptl/Sunrise on the east river in Bronx NY 1920x1080.jpg
 IMG pic/sptl/Sunset at Mono Lake, California, USA 1920x1080.jpg
 IMG pic/sptl/Sunwapta Falls, Canada 1920x1080.jpg
-IMG pic/sptl/Sur Lipez Province, Bolivia 1920x1080.jpg
 IMG pic/sptl/Surabaya, Indonesia 1920x1080.jpg
 IMG pic/sptl/Surat Thani, Thailand 1920x1080.jpg
 IMG pic/sptl/Sussex, England 1920x1080.jpg
@@ -2404,9 +2572,10 @@ IMG pic/sptl/swallowtail caterpillar 1920x1080.jpg
 IMG pic/sptl/Switzerland 1920x1080.jpg
 IMG pic/sptl/Sydney, Australia 1920x1080.jpg
 IMG pic/sptl/Sylvenstein Lake, Germany 1920x1080.jpg
+IMG pic/sptl/São Miguel Island, Azores 1920x1080.jpg
 IMG pic/sptl/Table Mountain, Cape Town 1920x1080.jpg
+IMG pic/sptl/Tahquamenon River, Michigan 1920x1080.jpg
 IMG pic/sptl/Tangalle, Sri Lanka 1920x1080.jpg
-IMG pic/sptl/Tapuaetai, Cook Islands 1920x1080.jpg
 IMG pic/sptl/Tarantula Nebula 1920x1080.jpg
 IMG pic/sptl/Tasman Lake, New Zealand 1920x1080.jpg
 IMG pic/sptl/Tasmania, Australia 1920x1080.jpg
@@ -2420,7 +2589,7 @@ IMG pic/sptl/Teriberka, Murmansk Oblast, Russia 1920x1080.jpg
 IMG pic/sptl/Thailand 1920x1080 (2).jpg
 IMG pic/sptl/Thailand 1920x1080 (3).jpg
 IMG pic/sptl/Thailand 1920x1080.jpg
-IMG pic/sptl/The Altiplano, Argentina 1920x1080.jpg
+IMG pic/sptl/The Algarve, Portugal 1920x1080.jpg
 IMG pic/sptl/The Arabian Desert 1920x1080.jpg
 IMG pic/sptl/The Big Island, Hawaii 1920x1080.jpg
 IMG pic/sptl/The Cotswolds, England 1920x1080.jpg
@@ -2433,19 +2602,19 @@ IMG pic/sptl/The Osterseen, Germany 1920x1080.jpg
 IMG pic/sptl/The Ozarks, Missouri 1920x1080.jpg
 IMG pic/sptl/The Palouse, Washington 1920x1080 (2).jpg
 IMG pic/sptl/The Palouse, Washington 1920x1080.jpg
-IMG pic/sptl/The Palouse, Washington state 1920x1080.jpg
-IMG pic/sptl/Pyramid Lake, Canada 1920x1080.jpg
-IMG pic/sptl/Red Rock-Secret Mountain Wilderness 1920x1080.jpg
-IMG pic/sptl/River Thjorsa, Iceland 1920x1080.jpg
-IMG pic/sptl/Saas-Fee, Switzerland 1920x1080.jpg
-IMG pic/sptl/Sand Harbor, Lake Tahoe 1920x1080.jpg
-IMG pic/sptl/Seattle, Washington 1920x1080 (2).jpg
-IMG pic/sptl/Shiraz, Iran 1920x1080.jpg
-IMG pic/sptl/Slieve League, Ireland 1920x1080.jpg
-IMG pic/sptl/St. Joseph, Michigan 1920x1080.jpg
-IMG pic/sptl/Sun City, South Africa 1920x1080.jpg
-IMG pic/sptl/Tahquamenon River, Michigan 1920x1080.jpg
-IMG pic/sptl/The Algarve, Portugal 1920x1080.jpg
+IMG pic/sptl/Republic of Adygea, Russia 1920x1080.jpg
+IMG pic/sptl/Rome, Italy 1920x1080.jpg
+IMG pic/sptl/Salar de Uyuni, Bolivia 1920x1080.jpg
+IMG pic/sptl/Sardinia, Italy 1920x1080 (2).jpg
+IMG pic/sptl/Senja, Norway 1920x1080.jpg
+IMG pic/sptl/Sidi Ifni, Morocco 1920x1080.jpg
+IMG pic/sptl/Skogafoss waterfall, Iceland 1920x1080.jpg
+IMG pic/sptl/Southern Ewaso Ng'iro 1920x1080.jpg
+IMG pic/sptl/Stockholm, Sweden 1920x1080 (2).jpg
+IMG pic/sptl/Sur Lipez Province, Bolivia 1920x1080.jpg
+IMG pic/sptl/Tapuaetai, Cook Islands 1920x1080.jpg
+IMG pic/sptl/The Altiplano, Argentina 1920x1080.jpg
+IMG pic/sptl/The Pantanal, Brazil 1920x1080.jpg
 IMG pic/sptl/The Pilbara, Western Australia 1920x1080.jpg
 IMG pic/sptl/The Rosette Nebula  1920x1080.jpg
 IMG pic/sptl/The Wave, Arizona 1920x1080.jpg
@@ -2457,20 +2626,21 @@ IMG pic/sptl/Timanfaya National Park, Canary Islands 1920x1080.jpg
 IMG pic/sptl/Tipsoo Lake, Washington 1920x1080.jpg
 IMG pic/sptl/Tobermory, Canada 1920x1080.jpg
 IMG pic/sptl/Toblach, Italy 1920x1080.jpg
-IMG pic/sptl/toco toucan 1920x1080.jpg
 IMG pic/sptl/Todd Lake Bend, Oregon, USA 1920x1080.jpg
 IMG pic/sptl/Tokyo, Japan 1920x1080.jpg
 IMG pic/sptl/Tonto Forest, Arizona 1920x1080.jpg
 IMG pic/sptl/Torbay, England 1920x1080.jpg
 IMG pic/sptl/Torbole, Italy 1920x1080.jpg
+IMG pic/sptl/Torres del Paine National Park, Chile 1920x1080 (2).jpg
+IMG pic/sptl/Torres del Paine National Park, Chile 1920x1080.jpg
 IMG pic/sptl/Torres del Paine, Chile 1920x1080.jpg
 IMG pic/sptl/Toruń, Poland 1920x1080.jpg
 IMG pic/sptl/Transylvania, Romania 1920x1080.jpg
+IMG pic/sptl/Trentino-Alto Adige, Italy 1920x1080 (2).jpg
 IMG pic/sptl/Trentino-Alto Adige, Italy 1920x1080.jpg
 IMG pic/sptl/Trentino-Alto Adige_Südtirol, Italy 1920x1080.jpg
 IMG pic/sptl/Triglav NP, Slovenia 1920x1080.jpg
 IMG pic/sptl/Trikala region, Greece 1920x1080.jpg
-IMG pic/sptl/Triple Falls, North Carolina 1920x1080.jpg
 IMG pic/sptl/Trollaskagi Peninsula, Iceland 1920x1080.jpg
 IMG pic/sptl/Troms County, Norway 1920x1080.jpg
 IMG pic/sptl/Tromsø, Norway 1920x1080 (2).jpg
@@ -2480,54 +2650,66 @@ IMG pic/sptl/Truckee Meadows, Nevada 1920x1080.jpg
 IMG pic/sptl/Tsitsikamma National Park, South Africa 1920x1080.jpg
 IMG pic/sptl/Tso Kar Lake, India 1920x1080.jpg
 IMG pic/sptl/Tucson, Arizona 1920x1080.jpg
+IMG pic/sptl/Tuen Mun, Hong Kong 1920x1080.jpg
 IMG pic/sptl/Tulum, Mexico 1920x1080.jpg
 IMG pic/sptl/Tun Sakaran Marine Park, Malaysia 1920x1080.jpg
 IMG pic/sptl/Turnagain Arm, Alaska 1920x1080.jpg
-IMG pic/sptl/Tuscany, Italy 1920x1080 (2).jpg
 IMG pic/sptl/Tuscany, Italy 1920x1080.jpg
 IMG pic/sptl/Tuvalu 1920x1080.jpg
 IMG pic/sptl/Tuvalu Mainland, Tuvalu 1920x1080.jpg
+IMG pic/sptl/Tyrol, Austria 1920x1080.jpg
 IMG pic/sptl/Tyulenovo, Bulgaria 1920x1080.jpg
 IMG pic/sptl/U.S. Supreme Court building, Washington DC 1920x1080.jpg
 IMG pic/sptl/Ubari, Libya 1920x1080.jpg
 IMG pic/sptl/Ubon, Thailand 1920x1080.jpg
 IMG pic/sptl/Uchisar, Turkey 1920x1080.jpg
+IMG pic/sptl/Ukraine 1920x1080.jpg
 IMG pic/sptl/Umaria, India 1920x1080.jpg
 IMG pic/sptl/Umbrella Rock, Ghana 1920x1080.jpg
 IMG pic/sptl/Umhlanga, South Africa 1920x1080.jpg
 IMG pic/sptl/Upper Bavaria, Germany 1920x1080.jpg
 IMG pic/sptl/Ural owl 1920x1080.jpg
-IMG pic/sptl/Ushuaia, Argentina 1920x1080.jpg
+IMG pic/sptl/Ushuaia, Argentina 1920x1080 (2).jpg
+IMG pic/sptl/Utah, United States 1920x1080.jpg
 IMG pic/sptl/Uttakleiv Beach, Norway 1920x1080.jpg
 IMG pic/sptl/Uttarakhand, India 1920x1080.jpg
+IMG pic/sptl/Uçhisar, Turkey 1920x1080.jpg
 IMG pic/sptl/Vagar Island, Faroe Islands, Denmark 1920x1080.jpg
 IMG pic/sptl/Vai Beach, Greece 1920x1080.jpg
 IMG pic/sptl/Val Badia, Italy 1920x1080.jpg
 IMG pic/sptl/Val d’Orcia, Italy 1920x1080.jpg
+IMG pic/sptl/Valle de la Luna, Chile 1920x1080 (2).jpg
 IMG pic/sptl/Valle de la Luna, Chile 1920x1080.jpg
 IMG pic/sptl/Valle Gran Rey, Canary Islands,Spain 1920x1080.jpg
 IMG pic/sptl/Valley of Fire State Park, Nevada 1920x1080.jpg
 IMG pic/sptl/Valley of Fire State Park, Overton, NV 1920x1080.jpg
 IMG pic/sptl/Vancouver Island, Canada 1920x1080 (2).jpg
 IMG pic/sptl/Vancouver Island, Canada 1920x1080.jpg
-IMG pic/sptl/Vancouver, Canada 1920x1080 (2).jpg
 IMG pic/sptl/Vancouver, Canada 1920x1080.jpg
 IMG pic/sptl/Vatnsnes, Iceland 1920x1080.jpg
+IMG pic/sptl/Vatnsnesvegur, Iceland 1920x1080.jpg
 IMG pic/sptl/Velky Choc, Slovakia 1920x1080.jpg
+IMG pic/sptl/Veneto, Italy 1920x1080.jpg
 IMG pic/sptl/Venice Beach, California 1920x1080.jpg
 IMG pic/sptl/Venice, Italy 1920x1080 (2).jpg
 IMG pic/sptl/Venice, Italy 1920x1080.jpg
 IMG pic/sptl/Vernon, Connecticut 1920x1080.jpg
+IMG pic/sptl/Verona, Italy 1920x1080 (2).jpg
+IMG pic/sptl/Verona, Italy 1920x1080 (3).jpg
 IMG pic/sptl/Verona, Italy 1920x1080.jpg
+IMG pic/sptl/Victoria Falls 1920x1080.jpg
 IMG pic/sptl/Victoria Falls, Zimbabwe 1920x1080.jpg
 IMG pic/sptl/Victoria, Australia 1920x1080 (2).jpg
+IMG pic/sptl/Victoria, Australia 1920x1080 (3).jpg
 IMG pic/sptl/Victoria, Australia 1920x1080.jpg
 IMG pic/sptl/Victoria, Canada 1920x1080 (2).jpg
 IMG pic/sptl/Victoria, Canada 1920x1080.jpg
-IMG pic/sptl/vicuña 1920x1080.jpg
+IMG pic/sptl/Vidin Province, Bulgaria 1920x1080.jpg
 IMG pic/sptl/Vieste, Italy 1920x1080.jpg
 IMG pic/sptl/Vila Franca de Xira, Lisbon, Portugal 1920x1080.jpg
+IMG pic/sptl/Vinicunca, Peru 1920x1080 (2).jpg
 IMG pic/sptl/Vinicunca, Peru 1920x1080.jpg
+IMG pic/sptl/Virgin Gorda National Park 1920x1080.jpg
 IMG pic/sptl/Virgin Gorda, Caribbean, Virgin Islands 1920x1080.jpg
 IMG pic/sptl/Wadi Rum desert, Jordan 1920x1080.jpg
 IMG pic/sptl/Wadi Rum, Jordan 1920x1080 (2).jpg
@@ -2537,7 +2719,7 @@ IMG pic/sptl/Wailua Falls, Hawaii 1920x1080.jpg
 IMG pic/sptl/Wairarapa Coast 1920x1080.jpg
 IMG pic/sptl/Waitomo, New Zealand 1920x1080.jpg
 IMG pic/sptl/Wajima, Japan 1920x1080.jpg
-IMG pic/sptl/Wallace’s flying frog 1920x1080.jpg
+IMG pic/sptl/Walker Bay, South Africa 1920x1080.jpg
 IMG pic/sptl/Wallonia, Belgium 1920x1080.jpg
 IMG pic/sptl/Warwick Long Bay, Bermuda 1920x1080.jpg
 IMG pic/sptl/Washington state 1920x1080.jpg
@@ -2549,12 +2731,13 @@ IMG pic/sptl/Werfen, Austria 1920x1080.jpg
 IMG pic/sptl/West Indian manatee 1920x1080.jpg
 IMG pic/sptl/West Midlands, United Kingdom 1920x1080.jpg
 IMG pic/sptl/West Montrose, Canada 1920x1080.jpg
+IMG pic/sptl/West Papua, Indonesia 1920x1080.jpg
 IMG pic/sptl/Wester Ross, Scotland 1920x1080.jpg
-IMG pic/sptl/Western Area, Sierra Leone 1920x1080.jpg
 IMG pic/sptl/Western Australia 1920x1080 (2).jpg
 IMG pic/sptl/Western Australia 1920x1080 (3).jpg
 IMG pic/sptl/Western Australia 1920x1080.jpg
 IMG pic/sptl/Wheeler County, Oregon 1920x1080.jpg
+IMG pic/sptl/White Sands National Park, New Mexico 1920x1080.jpg
 IMG pic/sptl/White Sands, New Mexico 1920x1080.jpg
 IMG pic/sptl/white-tailed deer 1920x1080.jpg
 IMG pic/sptl/Whitefish, Montana, USA 1920x1080.jpg
@@ -2563,9 +2746,9 @@ IMG pic/sptl/Wildflowers, Heber Valley, Utah 1920x1080.jpg
 IMG pic/sptl/Wilhelmina Bay 1920x1080.jpg
 IMG pic/sptl/Wiltshire, England 1920x1080.jpg
 IMG pic/sptl/Windjana Gorge, Kimberley, Australia 1920x1080.jpg
-IMG pic/sptl/Witch's Broom Nebula 1920x1080.jpg
 IMG pic/sptl/Wooden footpath in dense jungle 1920x1080.jpg
 IMG pic/sptl/Wrangell Mts, Alaska 1920x1080.jpg
+IMG pic/sptl/WW_128000000000408690_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000000408778_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000000408862_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000000408942_EN 1920x1080.jpg
@@ -2576,8 +2759,8 @@ IMG pic/sptl/WW_128000000000409058_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000000409122_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000000409130_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000000409218_EN 1920x1080.jpg
-IMG pic/sptl/WW_128000000000409226_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000000409258_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000000409270_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000000409294_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000000409314_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000000409430_EN 1920x1080.jpg
@@ -2589,7 +2772,7 @@ IMG pic/sptl/WW_128000000001173129_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001173149_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001322529_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001322549_EN 1920x1080.jpg
-IMG pic/sptl/WW_128000000001322569_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000001322589_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001322609_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001322629_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001322649_EN 1920x1080.jpg
@@ -2602,7 +2785,7 @@ IMG pic/sptl/WW_128000000001365289_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001396829_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001396849_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001396889_EN 1920x1080.jpg
-IMG pic/sptl/WW_128000000001396929_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000001396909_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001396949_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001396969_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001428569_EN 1920x1080.jpg
@@ -2614,6 +2797,24 @@ IMG pic/sptl/WW_128000000001470129_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001470149_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001470169_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001470189_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000001470229_EN 1920x1080.jpg
+IMG pic/sptl/toco toucan 1920x1080.jpg
+IMG pic/sptl/Triple Falls, North Carolina 1920x1080.jpg
+IMG pic/sptl/Tuscany, Italy 1920x1080 (2).jpg
+IMG pic/sptl/Ushuaia, Argentina 1920x1080.jpg
+IMG pic/sptl/Vancouver, Canada 1920x1080 (2).jpg
+IMG pic/sptl/vicuña 1920x1080.jpg
+IMG pic/sptl/Wallace’s flying frog 1920x1080.jpg
+IMG pic/sptl/Western Area, Sierra Leone 1920x1080.jpg
+IMG pic/sptl/Witch's Broom Nebula 1920x1080.jpg
+IMG pic/sptl/WW_128000000000409226_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000001322569_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000001396929_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000001470249_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000001809249_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000001959429_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002234869_EN 1920x1080.jpg
+IMG pic/sptl/Władysławowo, Poland 1920x1080.jpg
 IMG pic/sptl/Yosemite, California 1920x1080.jpg
 IMG pic/sptl/Yuanyang County, China 1920x1080.jpg
 IMG pic/sptl/Yuanyang, China 1920x1080.jpg
@@ -2622,27 +2823,24 @@ IMG pic/sptl/Yunnan province, China 1920x1080.jpg
 IMG pic/sptl/Zadar, Croatia 1920x1080.jpg
 IMG pic/sptl/Zakynthos island, Greece 1920x1080.jpg
 IMG pic/sptl/Zakynthos, Greece 1920x1080.jpg
+IMG pic/sptl/Zelenci Nature Reserve, Slovenia 1920x1080.jpg
 IMG pic/sptl/Zermatt, Switzerland 1920x1080.jpg
 IMG pic/sptl/Zhangjiajie National Forest Park, China 1920x1080.jpg
 IMG pic/sptl/Zhangjiajie, China 1920x1080.jpg
 IMG pic/sptl/Zhangjiajie, Hunan, China 1920x1080.jpg
 IMG pic/sptl/Zhangye, China 1920x1080.jpg
-IMG pic/sptl/Torres del Paine National Park, Chile 1920x1080.jpg
-IMG pic/sptl/Tuen Mun, Hong Kong 1920x1080.jpg
-IMG pic/sptl/Ushuaia, Argentina 1920x1080 (2).jpg
-IMG pic/sptl/Vatnsnesvegur, Iceland 1920x1080.jpg
-IMG pic/sptl/Virgin Gorda National Park 1920x1080.jpg
-IMG pic/sptl/West Papua, Indonesia 1920x1080.jpg
-IMG pic/sptl/WW_128000000000408690_EN 1920x1080.jpg
-IMG pic/sptl/WW_128000000000409270_EN 1920x1080.jpg
-IMG pic/sptl/WW_128000000001322589_EN 1920x1080.jpg
-IMG pic/sptl/WW_128000000001396909_EN 1920x1080.jpg
-IMG pic/sptl/WW_128000000001470229_EN 1920x1080.jpg
-IMG pic/sptl/WW_128000000001809289_EN 1920x1080.jpg
-IMG pic/sptl/WW_128000000001964129_EN 1920x1080.jpg
-IMG pic/sptl/Yosemite National Park, California, USA 1920x1080.jpg
 IMG pic/sptl/Zhangye, Gansu Province, China 1920x1080.jpg
-IMG pic/sptl/WW_128000000001470249_EN 1920x1080.jpg
+IMG pic/sptl/Zhenyuan, China 1920x1080.jpg
+IMG pic/sptl/Zhuo'er Mountain in China 1920x1080.jpg
+IMG pic/sptl/Zingaro Reserve, Italy 1920x1080.jpg
+IMG pic/sptl/Zion National Park 1920x1080.jpg
+IMG pic/sptl/Zion National Park, Utah 1920x1080.jpg
+IMG pic/sptl/Ägerisee, Switzerland 1920x1080.jpg
+IMG pic/sptl/Åtvidaberg, Sweden 1920x1080.jpg
+IMG pic/sptl/Écrins National Park, France 1920x1080.jpg
+IMG pic/sptl/Öland, Sweden 1920x1080.jpg
+IMG pic/sptl/Świnoujście, Poland 1920x1080.jpg
+IMG pic/sptl/Štrbské Pleso, Slovakia 1920x1080.jpg
 IMG pic/sptl/WW_128000000001489949_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001489969_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001494189_EN 1920x1080.jpg
@@ -2655,7 +2853,7 @@ IMG pic/sptl/WW_128000000001791149_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001791169_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001809209_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001809229_EN 1920x1080.jpg
-IMG pic/sptl/WW_128000000001809249_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000001809289_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001827829_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001827889_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001951029_EN 1920x1080.jpg
@@ -2667,21 +2865,18 @@ IMG pic/sptl/WW_128000000001953969_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001953989_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001954049_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001959409_EN 1920x1080.jpg
-IMG pic/sptl/WW_128000000001959429_EN 1920x1080.jpg
 IMG pic/sptl/WW_128000000001964029_EN 1920x1080.jpg
-IMG pic/sptl/Zhenyuan, China 1920x1080.jpg
-IMG pic/sptl/Zhuo'er Mountain in China 1920x1080.jpg
-IMG pic/sptl/Zingaro Reserve, Italy 1920x1080.jpg
-IMG pic/sptl/Zion National Park 1920x1080.jpg
-IMG pic/sptl/Zion National Park, Utah 1920x1080.jpg
-IMG pic/sptl/Ägerisee, Switzerland 1920x1080.jpg
-IMG pic/sptl/Åtvidaberg, Sweden 1920x1080.jpg
-IMG pic/sptl/Écrins National Park, France 1920x1080.jpg
-IMG pic/sptl/Öland, Sweden 1920x1080.jpg
-IMG pic/sptl/Świnoujście, Poland 1920x1080.jpg
-IMG pic/sptl/Štrbské Pleso, Slovakia 1920x1080.jpg
-IMG pic/sptl/​Mountain road, Fuji-Hakone Izu, Japan​ 1920x1080.jpg
-IMG pic/sptl/Władysławowo, Poland 1920x1080.jpg
+IMG pic/sptl/WW_128000000001964129_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002007269_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002007569_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002007609_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002007629_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002120509_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002212589_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002212729_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002234729_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002234749_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002234789_EN 1920x1080.jpg
 IMG pic/sptl/Yamalo-Nenets, Russia 1920x1080.jpg
 IMG pic/sptl/Yamanashi, Japan 1920x1080.jpg
 IMG pic/sptl/Yangshuo County, China 1920x1080.jpg
@@ -2692,6 +2887,22 @@ IMG pic/sptl/Yellowstone Park 1920x1080.jpg
 IMG pic/sptl/Ynys Llanddwyn, Anglesey, Wales, UK 1920x1080.jpg
 IMG pic/sptl/Yosemite National Park, California 1920x1080 (2).jpg
 IMG pic/sptl/Yosemite National Park, California 1920x1080.jpg
+IMG pic/sptl/Yosemite National Park, California, USA 1920x1080.jpg
+IMG pic/sptl/WW_128000000002234929_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002235029_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002253929_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002253989_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002260229_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002266949_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002266969_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002266989_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002270789_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002270969_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002270989_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002271029_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002271049_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002271069_EN 1920x1080.jpg
+IMG pic/sptl/WW_128000000002277889_EN 1920x1080.jpg
 IMG pic/svg
 IMG pic/svg/4-point-stars.svg
 IMG pic/svg/anchors-away.svg
@@ -2702,42 +2913,30 @@ IMG pic/svg/bamboo.svg
 IMG pic/svg/bank-note.svg
 IMG pic/svg/bathroom-floor.svg
 IMG pic/svg/bevel-circle.svg
-IMG pic/svg/i-like-food.svg
-IMG pic/svg/intersecting-circles.svg
-IMG pic/svg/jigsaw.svg
-IMG pic/svg/jupiter.svg
-IMG pic/svg/kiwi.svg
-IMG pic/svg/leaf.svg
-IMG pic/svg/line-in-motion.svg
-IMG pic/svg/lips.svg
-IMG pic/svg/lisbon.svg
-IMG pic/svg/rails.svg
-IMG pic/svg/rain.svg
-IMG pic/svg/random-shapes.svg
-IMG pic/svg/rounded-plus-connected.svg
-IMG pic/svg/signal.svg
-IMG pic/svg/skulls.svg
-IMG pic/svg/slanted-stars.svg
-IMG pic/svg/squares-in-squares.svg
-IMG pic/svg/diagonal-stripes.svg
-IMG pic/svg/dominos.svg
-IMG pic/svg/endless-clouds.svg
-IMG pic/svg/eyes.svg
-IMG pic/svg/falling-triangles.svg
-IMG pic/svg/fancy-rectangles.svg
-IMG pic/svg/flipped-diamonds.svg
-IMG pic/svg/floating-cogs.svg
-IMG pic/svg/floor-tile.svg
 IMG pic/svg/boxes.svg
-IMG pic/svg/circles-and-squares.svg
-IMG pic/svg/melt.svg
-IMG pic/svg/overlapping-hexagons.svg
-IMG pic/svg/tic-tac-toe.svg
 IMG pic/svg/brick-wall.svg
 IMG pic/svg/bubbles.svg
 IMG pic/svg/cage.svg
 IMG pic/svg/charlie-brown.svg
 IMG pic/svg/church-on-sunday.svg
+IMG pic/svg/circles-and-squares.svg
+IMG pic/svg/circuit-board.svg
+IMG pic/svg/connections.svg
+IMG pic/svg/melt.svg
+IMG pic/svg/moroccan.svg
+IMG pic/svg/morphing-diamonds.svg
+IMG pic/svg/overcast.svg
+IMG pic/svg/overlapping-circles.svg
+IMG pic/svg/overlapping-diamonds.svg
+IMG pic/svg/overlapping-hexagons.svg
+IMG pic/svg/parkay-floor.svg
+IMG pic/svg/piano-man.svg
+IMG pic/svg/pie-factory.svg
+IMG pic/svg/pixel-dots.svg
+IMG pic/svg/plus.svg
+IMG pic/svg/polka-dots.svg
+IMG pic/svg/rails.svg
+IMG pic/svg/floor-tile.svg
 IMG pic/svg/formal-invitation.svg
 IMG pic/svg/glamorous.svg
 IMG pic/svg/graph-paper.svg
@@ -2747,31 +2946,43 @@ IMG pic/svg/heavy-rain.svg
 IMG pic/svg/hexagons.svg
 IMG pic/svg/hideout.svg
 IMG pic/svg/houndstooth.svg
-IMG pic/svg/moroccan.svg
-IMG pic/svg/morphing-diamonds.svg
-IMG pic/svg/overcast.svg
-IMG pic/svg/overlapping-circles.svg
-IMG pic/svg/overlapping-diamonds.svg
+IMG pic/svg/i-like-food.svg
+IMG pic/svg/intersecting-circles.svg
+IMG pic/svg/jigsaw.svg
+IMG pic/svg/jupiter.svg
+IMG pic/svg/kiwi.svg
+IMG pic/svg/leaf.svg
+IMG pic/svg/line-in-motion.svg
+IMG pic/svg/lips.svg
+IMG pic/svg/rain.svg
+IMG pic/svg/random-shapes.svg
+IMG pic/svg/rounded-plus-connected.svg
+IMG pic/svg/signal.svg
+IMG pic/svg/skulls.svg
+IMG pic/svg/slanted-stars.svg
+IMG pic/svg/squares-in-squares.svg
 IMG pic/svg/squares.svg
+IMG pic/svg/lisbon.svg
 IMG pic/svg/stamp-collection.svg
-IMG pic/svg/steel-beams.svg
-IMG pic/svg/stripes.svg
-IMG pic/svg/temple.svg
-IMG pic/svg/texture.svg
-IMG pic/svg/circuit-board.svg
-IMG pic/svg/connections.svg
 IMG pic/svg/cork-screw.svg
 IMG pic/svg/current.svg
 IMG pic/svg/curtain.svg
 IMG pic/svg/cutout.svg
 IMG pic/svg/death-star.svg
 IMG pic/svg/diagonal-lines.svg
-IMG pic/svg/parkay-floor.svg
-IMG pic/svg/piano-man.svg
-IMG pic/svg/pie-factory.svg
-IMG pic/svg/pixel-dots.svg
-IMG pic/svg/plus.svg
-IMG pic/svg/polka-dots.svg
+IMG pic/svg/diagonal-stripes.svg
+IMG pic/svg/dominos.svg
+IMG pic/svg/endless-clouds.svg
+IMG pic/svg/eyes.svg
+IMG pic/svg/falling-triangles.svg
+IMG pic/svg/fancy-rectangles.svg
+IMG pic/svg/flipped-diamonds.svg
+IMG pic/svg/floating-cogs.svg
+IMG pic/svg/steel-beams.svg
+IMG pic/svg/stripes.svg
+IMG pic/svg/temple.svg
+IMG pic/svg/texture.svg
+IMG pic/svg/tic-tac-toe.svg
 IMG pic/svg/tiny-checkers.svg
 IMG pic/svg/topography.svg
 IMG pic/svg/volcano-lamp.svg
@@ -2958,20 +3169,6 @@ IMG pic/wall/simonstalenhag/bio_thepin.jpg
 IMG pic/wall/simonstalenhag/booth.jpg
 IMG pic/wall/simonstalenhag/bostadsmauer.jpg
 IMG pic/wall/simonstalenhag/busride2.jpg
-IMG pic/wall/simonstalenhag/theflood1.jpg
-IMG pic/wall/simonstalenhag/thehunch.jpg
-IMG pic/wall/simonstalenhag/thelan.jpg
-IMG pic/wall/simonstalenhag/vagrant_crow.jpg
-IMG pic/wall/simonstalenhag/vagrant_fish.jpg
-IMG pic/wall/simonstalenhag/vagrant_magpie.jpg
-IMG pic/wall/simonstalenhag/vagrant_pheasant.jpg
-IMG pic/wall/simonstalenhag/vagrant_pike.jpg
-IMG pic/wall/simonstalenhag/vagrant_umbrella.jpg
-IMG pic/wall/simonstalenhag/vertikalstaderna.jpg
-IMG pic/wall/simonstalenhag/vertikalstaderna_ballonger.jpg
-IMG pic/wall/simonstalenhag/vertikalstaderna_offer.jpg
-IMG pic/wall/simonstalenhag/whatnowtowerstothesky.jpg
-IMG pic/wall/simonstalenhag/by_home6.jpg
 IMG pic/wall/simonstalenhag/by_home_arrival.jpg
 IMG pic/wall/simonstalenhag/by_housevisit.jpg
 IMG pic/wall/simonstalenhag/by_localservers.jpg
@@ -2988,7 +3185,7 @@ IMG pic/wall/simonstalenhag/by_renderfarm.jpg
 IMG pic/wall/simonstalenhag/by_roadwork.jpg
 IMG pic/wall/simonstalenhag/by_scavengers.jpg
 IMG pic/wall/simonstalenhag/by_sculptures.jpg
-IMG pic/wall/simonstalenhag/by_upload1.jpg
+IMG pic/wall/simonstalenhag/by_themascot.jpg
 IMG pic/wall/simonstalenhag/by_upload2.jpg
 IMG pic/wall/simonstalenhag/by_waiters.jpg
 IMG pic/wall/simonstalenhag/by_warmachines1.jpg
@@ -3006,12 +3203,6 @@ IMG pic/wall/simonstalenhag/invasive1.jpg
 IMG pic/wall/simonstalenhag/kraftahq.jpg
 IMG pic/wall/simonstalenhag/kraftasystems.jpg
 IMG pic/wall/simonstalenhag/l_ash01.jpg
-IMG pic/wall/simonstalenhag/by_belltowers.jpg
-IMG pic/wall/simonstalenhag/by_home5.jpg
-IMG pic/wall/simonstalenhag/by_themascot.jpg
-IMG pic/wall/simonstalenhag/l_ash02.jpg
-IMG pic/wall/simonstalenhag/maskoten.jpg
-IMG pic/wall/simonstalenhag/summerlove4.jpg
 IMG pic/wall/simonstalenhag/l_ash03.jpg
 IMG pic/wall/simonstalenhag/l_ash04.jpg
 IMG pic/wall/simonstalenhag/l_ash05.jpg
@@ -3031,7 +3222,6 @@ IMG pic/wall/simonstalenhag/l_ash_cr_01.jpg
 IMG pic/wall/simonstalenhag/l_fb_01.jpg
 IMG pic/wall/simonstalenhag/l_fb_04.jpg
 IMG pic/wall/simonstalenhag/l_fb_06.jpg
-IMG pic/wall/simonstalenhag/l_fb_07.jpg
 IMG pic/wall/simonstalenhag/l_fb_08.jpg
 IMG pic/wall/simonstalenhag/l_fb_09.jpg
 IMG pic/wall/simonstalenhag/l_fb_10.jpg
@@ -3058,6 +3248,26 @@ IMG pic/wall/simonstalenhag/summerlove2.jpg
 IMG pic/wall/simonstalenhag/summerlove31.jpg
 IMG pic/wall/simonstalenhag/summerlove32.jpg
 IMG pic/wall/simonstalenhag/summerlove33.jpg
+IMG pic/wall/simonstalenhag/summerlove4.jpg
+IMG pic/wall/simonstalenhag/theflood1.jpg
+IMG pic/wall/simonstalenhag/thehunch.jpg
+IMG pic/wall/simonstalenhag/thelan.jpg
+IMG pic/wall/simonstalenhag/vagrant_crow.jpg
+IMG pic/wall/simonstalenhag/vagrant_fish.jpg
+IMG pic/wall/simonstalenhag/vagrant_magpie.jpg
+IMG pic/wall/simonstalenhag/vagrant_pheasant.jpg
+IMG pic/wall/simonstalenhag/vagrant_pike.jpg
+IMG pic/wall/simonstalenhag/vagrant_umbrella.jpg
+IMG pic/wall/simonstalenhag/vertikalstaderna.jpg
+IMG pic/wall/simonstalenhag/vertikalstaderna_ballonger.jpg
+IMG pic/wall/simonstalenhag/vertikalstaderna_offer.jpg
+IMG pic/wall/simonstalenhag/whatnowtowerstothesky.jpg
+IMG pic/wall/simonstalenhag/by_belltowers.jpg
+IMG pic/wall/simonstalenhag/by_home6.jpg
+IMG pic/wall/simonstalenhag/by_upload1.jpg
+IMG pic/wall/simonstalenhag/l_ash02.jpg
+IMG pic/wall/simonstalenhag/l_fb_07.jpg
+IMG pic/wall/simonstalenhag/maskoten.jpg
 IMG pic/wall/simonstalenhag/by_billboards.jpg
 IMG pic/wall/simonstalenhag/by_billboards2.jpg
 IMG pic/wall/simonstalenhag/by_border.jpg
@@ -3075,6 +3285,7 @@ IMG pic/wall/simonstalenhag/by_home.jpg
 IMG pic/wall/simonstalenhag/by_home2.jpg
 IMG pic/wall/simonstalenhag/by_home3.jpg
 IMG pic/wall/simonstalenhag/by_home4.jpg
+IMG pic/wall/simonstalenhag/by_home5.jpg
 IMG pic/wall/space/Cel_Obs/earth.jpg
 IMG pic/wall/space/Cel_Obs/marscrater.jpg
 IMG pic/wall/space/Cel_Obs/marssurface.jpg
@@ -3090,13 +3301,10 @@ IMG pic/wall/space/Ships_Sats/moonwalk.jpg
 IMG pic/wall/space/Ships_Sats/orbitlapse.jpg
 IMG pic/wall/space/Ships_Sats/probablyhubble.jpg
 IMG pic/wall/space/Ships_Sats/SS.jpg
-IMG pic/wall/space/Ships_Sats/ss.jpg
 IMG pic/wall/space/Ships_Sats/SSlaunch.jpg
-IMG pic/wall/space/Ships_Sats/sslaunch.jpg
 IMG pic/wall/space/Ships_Sats/ssPAD.jpg
-IMG pic/wall/space/Ships_Sats/sspad.jpg
 IMG pic/wall/space/Ships_Sats/sstail.jpg
-IMG pic/wall/space/Space_Dust/nebula-mac.jpg
+IMG pic/wall/space/Space_Dust/nebula-greyblue.jpg
 IMG pic/wall/space/Space_Dust/aurora-borealis.jpg
 IMG pic/wall/space/Space_Dust/crab.jpg
 IMG pic/wall/space/Space_Dust/galaxy-beige.jpg
@@ -3113,15 +3321,14 @@ IMG pic/wall/space/Space_Dust/nebula-firered.jpg
 IMG pic/wall/space/Space_Dust/nebula-gitprofile.jpg
 IMG pic/wall/space/Space_Dust/nebula-gmailprofile.jpg
 IMG pic/wall/space/Space_Dust/nebula-grey.jpg
-IMG pic/wall/space/Space_Dust/nebula-greyblue.jpg
 IMG pic/wall/space/Space_Dust/nebula-indian.jpg
 IMG pic/wall/space/Space_Dust/nebula-lilac.jpg
 IMG pic/wall/space/Space_Dust/nebula-line.jpg
+IMG pic/wall/space/Space_Dust/nebula-mac.jpg
 IMG pic/wall/space/Space_Dust/nebula-multi.jpg
 IMG pic/wall/space/Space_Dust/nebula-murky.jpg
 IMG pic/wall/space/Space_Dust/nebula-pink.jpg
 IMG pic/wall/space/Space_Dust/nebula-Planetary.jpg
-IMG pic/wall/space/Space_Dust/nebula-planetary.jpg
 IMG pic/wall/space/Space_Dust/nebula-purple.jpg
 IMG pic/wall/space/Space_Dust/nebula-purplebrown.jpg
 IMG pic/wall/space/Space_Dust/nebula-purplepink.jpg
@@ -3169,126 +3376,54 @@ IMG Sync/MotoG6Camera/Camera/IMG_20191108_000641086_PORTRAIT.jpg
 IMG Sync/MotoG6Camera/Camera/IMG_20191106_142103294.jpg
 IMG dwn/ahegao.jpeg
 IMG dwn/caddxratel.jpg
+IMG dwn/dowahdiddy.jpg
+IMG dwn/fourplayvevo.jpg
+IMG dwn/garila2406.jpeg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010153.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010169.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010181.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010184.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010185.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010187.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010189.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010193.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010195 mannheim.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010200.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010202.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010204(1).jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010204.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010205(1).jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010205.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010206(1).jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010206.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010207a.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010207b.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010207c.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010207d.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010207e.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010208.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010209.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010210.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010211.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010212.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010214.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010215.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010217.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010230a.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010230b.jpg
+IMG dwn/Germany Tour 2015/Germany Tour 2015_files/P1010230c.jpg
+IMG dwn/iflightxl7lowriderv3frame.jpg
 IMG dwn/llana.jpg
 IMG dwn/lostdronelocation.png
 IMG dwn/mastermind.jpg
-IMG dwn/paper-openbox-200409/.local/share/audacious/Skins/Planaria/balance.png
-IMG dwn/paper-openbox-200409/.local/share/audacious/Skins/Planaria/cbuttons.png
-IMG dwn/paper-openbox-200409/.local/share/audacious/Skins/Planaria/eqmain.png
-IMG dwn/paper-openbox-200409/.local/share/audacious/Skins/Planaria/eq_ex.png
-IMG dwn/paper-openbox-200409/.local/share/audacious/Skins/Planaria/main.png
-IMG dwn/paper-openbox-200409/.local/share/audacious/Skins/Planaria/monoster.png
-IMG dwn/paper-openbox-200409/.local/share/audacious/Skins/Planaria/nums_ex.png
-IMG dwn/paper-openbox-200409/.local/share/audacious/Skins/Planaria/playpaus.png
-IMG dwn/paper-openbox-200409/.local/share/audacious/Skins/Planaria/pledit.png
-IMG dwn/paper-openbox-200409/.local/share/audacious/Skins/Planaria/posbar.png
-IMG dwn/paper-openbox-200409/.local/share/audacious/Skins/Planaria/shufrep.png
-IMG dwn/paper-openbox-200409/.local/share/audacious/Skins/Planaria/text.png
-IMG dwn/paper-openbox-200409/.local/share/audacious/Skins/Planaria/titlebar.png
-IMG dwn/paper-openbox-200409/.local/share/audacious/Skins/Planaria/volume.png
-IMG dwn/paper-openbox-200409/.pixmap.png
-IMG dwn/paper-openbox-200409/.wallpaper.png
 IMG dwn/porcothumbsup.jpeg
 IMG dwn/propellers.jpg
 IMG dwn/Synthetic.jpg
-IMG dwn/dowahdiddy.jpg
-IMG dwn/f1logo.png
-IMG dwn/flightone_1275_linux64/app/resources/img/device_not_found_bg.jpg
-IMG dwn/flightone_1275_linux64/app/resources/img/few_rf_drones_on_table.jpg
-IMG dwn/flightone_1275_linux64/app/resources/img/flight_one_logo.png
-IMG dwn/flightone_1275_linux64/app/resources/img/flight_one_logo.svg
-IMG dwn/flightone_1275_linux64/app/resources/img/help_sidebar/esc-body-quadcopter.jpg
-IMG dwn/flightone_1275_linux64/app/resources/img/help_sidebar/PID-three-algorithms.jpg
-IMG dwn/flightone_1275_linux64/app/resources/img/help_sidebar/vtx-top-plate.jpg
-IMG dwn/flightone_1275_linux64/app/resources/img/interview_wizard/blheli_32.png
-IMG dwn/flightone_1275_linux64/app/resources/img/interview_wizard/blheli_s.png
-IMG dwn/flightone_1275_linux64/app/resources/img/interview_wizard/bolt32.png
-IMG dwn/flightone_1275_linux64/app/resources/img/interview_wizard/crossfire.png
-IMG dwn/flightone_1275_linux64/app/resources/img/interview_wizard/frsky.png
-IMG dwn/flightone_1275_linux64/app/resources/img/interview_wizard/OtherVTX.jpg
-IMG dwn/flightone_1275_linux64/app/resources/img/interview_wizard/other_esc.png
-IMG dwn/flightone_1275_linux64/app/resources/img/interview_wizard/other_receiver.png
-IMG dwn/flightone_1275_linux64/app/resources/img/interview_wizard/sbus_t1.jpeg
-IMG dwn/flightone_1275_linux64/app/resources/img/interview_wizard/spektrum.png
-IMG dwn/flightone_1275_linux64/app/resources/img/interview_wizard/TBS_UNIFY_PRO_5G8_V2.jpg
-IMG dwn/flightone_1275_linux64/app/resources/img/interview_wizard/Tramp_HV_5.8GHz.jpg
-IMG dwn/flightone_1275_linux64/app/resources/img/paper.jpeg
-IMG dwn/flightone_1275_linux64/app/resources/img/quad_direction.png
-IMG dwn/flightone_1275_linux64/app/resources/img/quad_direction1.png
-IMG dwn/flightone_1275_linux64/app/resources/img/radio.png
-IMG dwn/flightone_1275_linux64/app/resources/img/remove_props.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_configuration/test_motors_wizard.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_fc_wizard/flat_quad.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_fc_wizard/nose_quad.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_fix_motor_direction_wizard/quad_direction.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_fix_motor_direction_wizard/quad_direction1.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_news/join-our-facebook-group.jpeg
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_news/join_discord.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_news/watch_us_on_youtube.jpg
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_osd_configuration_wizard/osd-bg.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_rca_wizard/radio_move_sticks_to_extremes.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_rca_wizard/radio_pitch_top.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_rca_wizard/radio_roll_right.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_rca_wizard/radio_throttle_top.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_rca_wizard/radio_yaw_right.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_rfbl/reboot_to_dfu_mode_preview.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_rfbl/reboot_to_fc_mode_preview.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_rfbl/update_firmware_preview.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_setup/bind_spektrum_wizard.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_setup/calibrate_motors_wizard.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_setup/detect_receiver_wizard.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_setup/motor_direction_wizard.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_setup/setup_fc.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_setup/setup_modes_wizard.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_setup/setup_radio_wizard.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_setup/update_esc_wizard.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rffwhid_setup/vtx_wizard.png
-IMG dwn/flightone_1275_linux64/app/resources/img/rf_drone_with_radio.jpg
-IMG dwn/flightone_1275_linux64/app/resources/img/spektrum_logo.png
-IMG dwn/flightone_1275_linux64/app/resources/img/youtube_notebook_icon.png
-IMG dwn/flightone_1275_linux64/app/resources/material-design-icon-font/MaterialIcons-Regular.svg
-IMG dwn/flightone_1275_linux64/icon.png
+IMG dwn/Teaser Trailer catch it while it's still up_ I sequenced the stills from the teaser with the audio first impressions by our favorite u_IDEASOFICEANDFIRE (IM me if it's down and you have a suggestion on how to share it) _ dune_files/renderTimingPixel.png
+IMG dwn/Teaser Trailer catch it while it's still up_ I sequenced the stills from the teaser with the audio first impressions by our favorite u_IDEASOFICEANDFIRE (IM me if it's down and you have a suggestion on how to share it) _ dune_files/communityIcon_fskskrllbtx11(1).jpg
+IMG dwn/Teaser Trailer catch it while it's still up_ I sequenced the stills from the teaser with the audio first impressions by our favorite u_IDEASOFICEANDFIRE (IM me if it's down and you have a suggestion on how to share it) _ dune_files/communityIcon_fskskrllbtx11.jpg
 IMG dwn/fourplay-fourplay.png
-IMG dwn/fourplayvevo.jpg
-IMG dwn/garila2406.jpeg
-IMG dwn/Germany Tour 2015_files/P1010153.jpg
-IMG dwn/Germany Tour 2015_files/P1010169.jpg
-IMG dwn/Germany Tour 2015_files/P1010181.jpg
-IMG dwn/Germany Tour 2015_files/P1010184.jpg
-IMG dwn/Germany Tour 2015_files/P1010185.jpg
-IMG dwn/Germany Tour 2015_files/P1010187.jpg
-IMG dwn/Germany Tour 2015_files/P1010189.jpg
-IMG dwn/Germany Tour 2015_files/P1010193.jpg
-IMG dwn/Germany Tour 2015_files/P1010195 mannheim.jpg
-IMG dwn/Germany Tour 2015_files/P1010200.jpg
-IMG dwn/Germany Tour 2015_files/P1010202.jpg
-IMG dwn/Germany Tour 2015_files/P1010204(1).jpg
-IMG dwn/Germany Tour 2015_files/P1010204.jpg
-IMG dwn/Germany Tour 2015_files/P1010205(1).jpg
-IMG dwn/Germany Tour 2015_files/P1010205.jpg
-IMG dwn/Germany Tour 2015_files/P1010206(1).jpg
-IMG dwn/Germany Tour 2015_files/P1010206.jpg
-IMG dwn/Germany Tour 2015_files/P1010207a.jpg
-IMG dwn/Germany Tour 2015_files/P1010207b.jpg
-IMG dwn/Germany Tour 2015_files/P1010207c.jpg
-IMG dwn/Germany Tour 2015_files/P1010207d.jpg
-IMG dwn/Germany Tour 2015_files/P1010207e.jpg
-IMG dwn/Germany Tour 2015_files/P1010208.jpg
-IMG dwn/Germany Tour 2015_files/P1010209.jpg
-IMG dwn/Germany Tour 2015_files/P1010210.jpg
-IMG dwn/Germany Tour 2015_files/P1010211.jpg
-IMG dwn/Germany Tour 2015_files/P1010212.jpg
-IMG dwn/Germany Tour 2015_files/P1010214.jpg
-IMG dwn/Germany Tour 2015_files/P1010215.jpg
-IMG dwn/Germany Tour 2015_files/P1010217.jpg
-IMG dwn/Germany Tour 2015_files/P1010230a.jpg
-IMG dwn/Germany Tour 2015_files/P1010230b.jpg
-IMG dwn/Germany Tour 2015_files/P1010230c.jpg
-IMG dwn/iflightxl7lowriderv3frame.jpg
 IMG dwn/unnamed.jpg
-IMG dwn/WhatsApp Image 2020-05-27 at 21.44.49.jpeg
-IMG dwn/WhatsApp Image 2020-05-27 at 21.58.43.jpeg
-IMG dwn/whiteicon.jpg
 IMG Calibre Library/John Schember/Quick Start Guide (1)/cover.jpg
 IMG Calibre Library/Jean-Claude Mezieres, Pierre Christin/Valerian (english version) - volume 01 - The City of Shifting Waters (20)/cover.jpg
 IMG Calibre Library/Jean-Claude Mezieres, Pierre Christin/Valerian (english version) - volume 02 - The Empire of a Thousand Planets (18)/cover.jpg
@@ -3316,6 +3451,7 @@ IMG Calibre Library/gvale/Microsoft Edge (38)/cover.jpg
 IMG Calibre Library/Steve Oualline/Vim (Vi Improved) (4)/cover.jpg
 IMG Calibre Library/Peter Fortescue/Spacecraft Systems Engineering (21)/cover.jpg
 IMG Calibre Library/Graham Swinerd/How Spacecraft Fly (27)/cover.jpg
+IMG Calibre Library/COMPILED BY DR. WILLIS E. McNELLY/THE DUNE ENCYCLOPEDIA (97)/cover.jpg
 IMG Calibre Library/Rudy Rucker/The Ware Tetralogy (94)/cover.jpg
 IMG Calibre Library/Rudy Rucker/The Hollow Earth (95)/cover.jpg
 IMG Calibre Library/Rudy Rucker/The Big Aha (96)/cover.jpg
@@ -3361,19 +3497,19 @@ IMG Calibre Library/Pierre Christin/Valerian (english version) - volume 4 - Welc
 IMG Calibre Library/Pierre Christin/Valerian et Laureline (english version) - volume 6 - Ambassador of the Shadows (9)/cover.jpg
 IMG Calibre Library/Pierre Christin/Valerian & Laureline - Volume 11 - The Ghosts of Inverloch (15)/cover.jpg
 IMG Calibre Library/Pierre Christin/Valerian et Laureline (english version) - Volume 9 - Chatelet Station, Destination Cassiopeia (33)/cover.jpg
-IMG .dropbox-dist/dropbox-lnx.x86_64-102.4.431/images/hicolor/16x16/status/dropboxstatus-busy2.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-102.4.431/images/hicolor/16x16/status/dropboxstatus-x.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-102.4.431/images/hicolor/16x16/status/dropboxstatus-logo.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-102.4.431/images/hicolor/16x16/status/dropboxstatus-blank.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-102.4.431/images/hicolor/16x16/status/dropboxstatus-idle.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-102.4.431/images/hicolor/16x16/status/dropboxstatus-busy.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-102.4.431/images/emblems/emblem-dropbox-app.svg
-IMG .dropbox-dist/dropbox-lnx.x86_64-102.4.431/images/emblems/emblem-dropbox-syncing.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-102.4.431/images/emblems/emblem-dropbox-infinite.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-102.4.431/images/emblems/emblem-dropbox-unsyncable.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-102.4.431/images/emblems/emblem-dropbox-mixedstate.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-102.4.431/images/emblems/emblem-dropbox-uptodate.png
-IMG .dropbox-dist/dropbox-lnx.x86_64-102.4.431/images/emblems/emblem-dropbox-selsync.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-104.4.175/images/hicolor/16x16/status/dropboxstatus-busy2.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-104.4.175/images/hicolor/16x16/status/dropboxstatus-x.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-104.4.175/images/hicolor/16x16/status/dropboxstatus-logo.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-104.4.175/images/hicolor/16x16/status/dropboxstatus-blank.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-104.4.175/images/hicolor/16x16/status/dropboxstatus-idle.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-104.4.175/images/hicolor/16x16/status/dropboxstatus-busy.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-104.4.175/images/emblems/emblem-dropbox-app.svg
+IMG .dropbox-dist/dropbox-lnx.x86_64-104.4.175/images/emblems/emblem-dropbox-syncing.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-104.4.175/images/emblems/emblem-dropbox-infinite.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-104.4.175/images/emblems/emblem-dropbox-unsyncable.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-104.4.175/images/emblems/emblem-dropbox-mixedstate.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-104.4.175/images/emblems/emblem-dropbox-uptodate.png
+IMG .dropbox-dist/dropbox-lnx.x86_64-104.4.175/images/emblems/emblem-dropbox-selsync.png
 IMG .cargo/registry/src/github.com-1ecc6299db9ec823/term-0.6.1/tests/data/rxvt-xpm
 IMG .cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.10.1/icon_CLion.svg
 IMG mus/Live from the Wild!.jpg
@@ -4898,10 +5034,14 @@ IMG .config/BraveSoftware/Brave-Browser-Beta/Default/Extensions/efmjfjelnicpmdcm
 IMG .config/BraveSoftware/Brave-Browser-Beta/Default/Extensions/efmjfjelnicpmdcmfikempdhlmainjcb/2020.2.20.52370_0/icons/48.png
 IMG .config/BraveSoftware/Brave-Browser-Beta/Default/Extensions/efmjfjelnicpmdcmfikempdhlmainjcb/2020.2.20.52370_0/icons/128.png
 IMG .config/BraveSoftware/Brave-Browser-Beta/Default/Extensions/efmjfjelnicpmdcmfikempdhlmainjcb/2020.2.20.52370_0/icons/32.png
-IMG .config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.102/background-1.jpg
-IMG .config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.102/background-3.jpg
-IMG .config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.102/background-2.jpg
-IMG .config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.102/logo.png
+IMG .config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.127/background-1.jpg
+IMG .config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.127/background-3.jpg
+IMG .config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.127/background-2.jpg
+IMG .config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.127/logo.png
+IMG .config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.116/background-1.jpg
+IMG .config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.116/background-3.jpg
+IMG .config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.116/background-2.jpg
+IMG .config/BraveSoftware/Brave-Browser/mjpbonbjgpinifgnneajcbigekbpfige/1.0.116/logo.png
 IMG .config/BraveSoftware/Brave-Browser/odbfpeeihdkbihmopkbjmoonfanlbfcl/1.0.20/images/icon-16.png
 IMG .config/BraveSoftware/Brave-Browser/odbfpeeihdkbihmopkbjmoonfanlbfcl/1.0.20/images/webcam.svg
 IMG .config/BraveSoftware/Brave-Browser/odbfpeeihdkbihmopkbjmoonfanlbfcl/1.0.20/images/404.png
@@ -5858,6 +5998,7 @@ IMG .config/spicetify/Extracted/Raw/full-screen-modal/img/guidelines-img.png
 IMG .config/spicetify/Extracted/Raw/full-screen-modal/img/guidelines-bg.png
 IMG .config/spicetify/Extracted/Raw/full-screen-modal/img/iphone.png
 IMG .config/spicetify/Extracted/Raw/full-screen-modal/img/lightning.png
+IMG .config/opera/WidevineCdm/4.10.1610.0/imgs/icon-128x128.png
 IMG .tmp/mpcart.png
 IMG doc/lit/madebooks/bashlogo.jpg
 IMG doc/lit/madebooks/shlogo.jpg
@@ -6009,14 +6150,14 @@ IMG doc/ebks/300px-Children_of_the_Lens_(cover).jpg
 IMG doc/ebks/vortexblaster.jpg
 IMG doc/ebks/GalacticPatrol-covers1.png
 IMG doc/ebks/triplanetary.jpg
-IMG doc/gs/17-Nav1–IntroductiontoNav/24.png
-IMG doc/gs/17-Nav1–IntroductiontoNav/11.png
-IMG doc/gs/17-Nav1–IntroductiontoNav/27.png
 IMG doc/gs/16-PDM/125.png
 IMG doc/gs/16-PDM/L3-3.png
 IMG doc/gs/16-PDM/126.png
 IMG doc/gs/16-PDM/L3-1.png
 IMG doc/gs/16-PDM/L3-2.png
+IMG doc/gs/17-Nav1–NavIntro/24.png
+IMG doc/gs/17-Nav1–NavIntro/11.png
+IMG doc/gs/17-Nav1–NavIntro/27.png
 IMG doc/gs/03-Engines2–FuelSystems/86.png
 IMG doc/gs/03-Engines2–FuelSystems/51.png
 IMG doc/gs/03-Engines2–FuelSystems/64.png
@@ -6074,26 +6215,37 @@ IMG numix/PenedodoGuinchoLisbonPortugal.jpg
 IMG numix/themer-gruvbox.png
 IMG numix/themer-solarized.png
 IMG numix/MunnarKeralaIndia.jpg
-IMG Dropbox/media/One Piece E001-E746 S01-S17/Sample/Screenshot 10.png
-IMG Dropbox/media/One Piece E001-E746 S01-S17/Sample/Special Edition Screenshot 10.png
-IMG Dropbox/media/One Piece E001-E746 S01-S17/Sample/Screenshot 03.png
-IMG Dropbox/media/One Piece E001-E746 S01-S17/Sample/Special Edition Screenshot 03.png
-IMG Dropbox/media/One Piece E001-E746 S01-S17/Sample/Special Edition Screenshot 02.png
-IMG Dropbox/media/One Piece E001-E746 S01-S17/Sample/Special Edition Screenshot 09.png
-IMG Dropbox/media/One Piece E001-E746 S01-S17/Sample/Screenshot 07.png
-IMG Dropbox/media/One Piece E001-E746 S01-S17/Sample/Screenshot 09.png
-IMG Dropbox/media/One Piece E001-E746 S01-S17/Sample/Screenshot 01.png
-IMG Dropbox/media/One Piece E001-E746 S01-S17/Sample/Special Edition Screenshot 05.png
-IMG Dropbox/media/One Piece E001-E746 S01-S17/Sample/Screenshot 06.png
-IMG Dropbox/media/One Piece E001-E746 S01-S17/Sample/Screenshot 08.png
-IMG Dropbox/media/One Piece E001-E746 S01-S17/Sample/Screenshot 05.png
-IMG Dropbox/media/One Piece E001-E746 S01-S17/Sample/Special Edition Screenshot 07.png
-IMG Dropbox/media/One Piece E001-E746 S01-S17/Sample/Special Edition Screenshot 08.png
-IMG Dropbox/media/One Piece E001-E746 S01-S17/Sample/Special Edition Screenshot 06.png
-IMG Dropbox/media/One Piece E001-E746 S01-S17/Sample/Screenshot 02.png
-IMG Dropbox/media/One Piece E001-E746 S01-S17/Sample/Special Edition Screenshot 01.png
-IMG Dropbox/media/One Piece E001-E746 S01-S17/Sample/Special Edition Screenshot 04.png
-IMG Dropbox/media/One Piece E001-E746 S01-S17/Sample/Screenshot 04.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 10.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 16.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 15.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 03.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 30.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 18.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 28.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 11.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 13.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 07.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 09.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 01.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 24.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 27.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 14.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 06.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 26.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 19.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 21.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 20.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 08.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 12.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 05.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 17.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 02.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 25.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 23.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 29.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 04.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/Sample/Screenshot 22.png
+IMG Dropbox/media/[AnimeRG] One Piece (Episodes 001-837) Seasons 01-19 [1080p] [Dual-Audio] [Multi-Sub] [HEVC] [x265] [Ultimate Batch 2018] [pseudo]/[AnimeRG] Bitcoin Address (QR-Code).png
 IMG Dropbox/negaDrive/passport_0001.jpg
 IMG Dropbox/negaDrive/doc/lit/madebooks/bashlogo.jpg
 IMG Dropbox/negaDrive/doc/lit/madebooks/shlogo.jpg
@@ -6245,14 +6397,14 @@ IMG Dropbox/negaDrive/doc/ebks/300px-Children_of_the_Lens_(cover).jpg
 IMG Dropbox/negaDrive/doc/ebks/vortexblaster.jpg
 IMG Dropbox/negaDrive/doc/ebks/GalacticPatrol-covers1.png
 IMG Dropbox/negaDrive/doc/ebks/triplanetary.jpg
-IMG Dropbox/negaDrive/doc/gs/17-Nav1–IntroductiontoNav/24.png
-IMG Dropbox/negaDrive/doc/gs/17-Nav1–IntroductiontoNav/11.png
-IMG Dropbox/negaDrive/doc/gs/17-Nav1–IntroductiontoNav/27.png
 IMG Dropbox/negaDrive/doc/gs/16-PDM/125.png
 IMG Dropbox/negaDrive/doc/gs/16-PDM/L3-3.png
 IMG Dropbox/negaDrive/doc/gs/16-PDM/126.png
 IMG Dropbox/negaDrive/doc/gs/16-PDM/L3-1.png
 IMG Dropbox/negaDrive/doc/gs/16-PDM/L3-2.png
+IMG Dropbox/negaDrive/doc/gs/17-Nav1–NavIntro/24.png
+IMG Dropbox/negaDrive/doc/gs/17-Nav1–NavIntro/11.png
+IMG Dropbox/negaDrive/doc/gs/17-Nav1–NavIntro/27.png
 IMG Dropbox/negaDrive/doc/gs/03-Engines2–FuelSystems/86.png
 IMG Dropbox/negaDrive/doc/gs/03-Engines2–FuelSystems/51.png
 IMG Dropbox/negaDrive/doc/gs/03-Engines2–FuelSystems/64.png
@@ -6702,6 +6854,7 @@ IMG Dropbox/Calibre Library/gvale/Microsoft Edge (38)/cover.jpg
 IMG Dropbox/Calibre Library/Steve Oualline/Vim (Vi Improved) (4)/cover.jpg
 IMG Dropbox/Calibre Library/Peter Fortescue/Spacecraft Systems Engineering (21)/cover.jpg
 IMG Dropbox/Calibre Library/Graham Swinerd/How Spacecraft Fly (27)/cover.jpg
+IMG Dropbox/Calibre Library/COMPILED BY DR. WILLIS E. McNELLY/THE DUNE ENCYCLOPEDIA (97)/cover.jpg
 IMG Dropbox/Calibre Library/Rudy Rucker/The Ware Tetralogy (94)/cover.jpg
 IMG Dropbox/Calibre Library/Rudy Rucker/The Hollow Earth (95)/cover.jpg
 IMG Dropbox/Calibre Library/Rudy Rucker/The Big Aha (96)/cover.jpg
@@ -6747,10 +6900,10 @@ IMG Dropbox/Calibre Library/Pierre Christin/Valerian (english version) - volume 
 IMG Dropbox/Calibre Library/Pierre Christin/Valerian et Laureline (english version) - volume 6 - Ambassador of the Shadows (9)/cover.jpg
 IMG Dropbox/Calibre Library/Pierre Christin/Valerian & Laureline - Volume 11 - The Ghosts of Inverloch (15)/cover.jpg
 IMG Dropbox/Calibre Library/Pierre Christin/Valerian et Laureline (english version) - Volume 9 - Chatelet Station, Destination Cassiopeia (33)/cover.jpg
-IMG Dropbox/proifr/PSTAR-learn43.jpg
-IMG Dropbox/proifr/PSTAR-learn41.jpg
-IMG Dropbox/proifr/PSTAR-learn42.jpg
+IMG Dropbox/proifr/PSTAR-learn42.png
+IMG Dropbox/proifr/PSTAR-learn41.png
 IMG Dropbox/proifr/PhoneticAlphabet.jpg
+IMG Dropbox/proifr/PSTAR-learn43.png
 IMG SoftMaker/Settings/banners/textmaker2018/ad3_de_v1_200.png
 IMG SoftMaker/Settings/banners/textmaker2018/ad14_de_v1_200.png
 IMG SoftMaker/Settings/banners/textmaker2018/ad5_en_v1.png

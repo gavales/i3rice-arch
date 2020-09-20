@@ -137,6 +137,50 @@ EOB
 	done
 	cd $WBST
 }
+genfeed()     {
+	cd $WBST
+cat <<EOB
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <?xml-stylesheet type="text/css" href="rss.css" ?> -->
+<!-- <?xml-stylesheet href="rss.xsl" type="text/xsl" media="screen"?> -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>Gavin Vales' Blog</title>
+<description>Updates from Gavin Vales</description>
+<language>en-us</language>
+<link>file:///home/gavarch/git/website/rss.xml</link>
+<atom:link href="file:///home/gavarch/git/website/rss.xml" rel="self" type="application/rss+xml" />
+<image>
+<title>Gavin Vales' Blog</title>
+<url>file:///home/gavarch/git/website/resources/about.png</url>
+<link>file:///home/gavarch/git/website/rss.xml</link>
+</image>
+
+EOB
+	cd content/posts
+	for i in $(find . -type f | sed 's/\.\///g'); do
+		echo ''
+		echo '<item>'
+		awk '
+			/^title:/ {
+				gsub(/title: /,"",$0);gsub(/__/,"",$0)
+				print "<title>"$0"</title>"
+			}
+			/^date:/ {gsub(/date: /,"",$0);printf "<pubDate>%s", $0}
+			/^time:/ {gsub(/time:/,"",$0);printf "%s</pubDate>\n", $0}
+		' $i
+		echo '<description><![CDATA['
+		sed '/^<\!DOCTYPE html>/,/^<\/header>/{/^<\!DOCTYPE html>/!{/^<\/header>/!d}}' \
+			$WBST/local/posts/${i%.*}.html | \
+			sed '/<!DOCTYPE html>/d;/<\/header>/d;/<\/body>/d;/<\/html>/d'
+		echo ']]></description>'
+		echo '</item>'
+	done
+	echo -e '\n</channel>\n'
+	echo -e '</rss>\n'
+	cd $WBST
+}
 
 O_mkpage()   {
 	local SRC TRG FLD TPE
@@ -180,6 +224,7 @@ O_gensite()  {
 	done
 	find pages -type f | sed '/_pre\.html/!d' | xargs rm
 	find posts -type f | sed '/_pre\.html/!d' | xargs rm
+	genfeed > rss.xml
 	exit
 }
 O_pushsite() {
@@ -188,6 +233,8 @@ O_pushsite() {
 	exit
 }
 O_newpage()  {
+	local TTL="$1"
+	
 	exit
 }
 O_newpost()  {
