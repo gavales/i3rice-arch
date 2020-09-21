@@ -204,7 +204,7 @@ URxvt.geometry:             60x17
 !URxvt*transparent:          true
 !URxvt*shading:              138
 
-!  urxvtext  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  urxvtext
 
 URxvt*perl-ext-common:      default,matcher,resize-font,config-reload
 !URxvt*perl-lib:            /home/gavarch/.urxvt/ext
@@ -219,3 +219,19 @@ URxvt*keysym.C-Y:           resize-font:reset
 ! URxvt*keysym.C-t:         perl:tabbedex:new_tab
 ! URxvt*keysym.C-Tab:       perl:tabbedex:next_tab
 ! URxvt*keysym.C-Shift-Tab: perl:tabbedex:prev_tab
+
+! ━  7herbe
+
+herbe.background_color: tacb
+herbe.border_color: tbg0
+herbe.font_color: tfg0
+herbe.font_pattern: fontname:size=15
+herbe.line_spacing: 10
+herbe.padding: 20
+herbe.width: 600
+herbe.border_size: 5
+herbe.pos_x: 30
+herbe.pos_y: 60
+! 0 = TOP_LEFT, 1 = TOP_RIGHT, 2 = BOTTOM_LEFT, 3 = BOTTOM_RIGHT
+herbe.corner: 1
+herbe.duration: 5

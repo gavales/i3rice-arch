@@ -113,25 +113,13 @@ date: Updated $(date)
 
 EOB
 	for i in $(find . -maxdepth 1 -type d | sed 's/^\.$//g;s/\.\///g'); do
-		printf "%s\n\n" "# $i"
+		printf "\n%s\n\n" "# $i"
 		cd $i
-		for i in $(find . -maxdepth 1 -type d | sed 's/^\.$//g;s/\.\///g'); do
-			printf "%s\n\n" "## $i"
-			cd $i
-			for i in $(ls *.md); do
-				awk -v NAME="${PWD/content\//local\/}/${i%.*}.html" '
-					/^title:|^date:/{
-						gsub(/^title:/, "+ [", $0)
-						gsub(/^date:/, " ]("NAME") <date>", $0)
-						printf "%s", $0
-					}
-					/^time:/{
-						gsub(/^time:/, ", </date> <time>", $0)
-						printf "%s", $0
-						printf "%s\n\n", " </time>"
-					}' $i
-			done
-			cd ../
+		for i in $(find . -type f -print0 | sort -z -r | xargs -r0 -I {} echo "{}" | sed 's/\.\///g'); do
+			printf "%s" "* **${i%.*}** - "
+			awk -v NAME="${PWD/content\//local\/}/${i%.*}.html" '
+				/^title:/{gsub(/^title: /,"",$0);printf "[%s](%s) ",$0,NAME}
+				/^time:/{gsub(/^time: /,"",$0);printf "<time>%s</time>\n",$0}' $i
 		done
 		cd ../
 	done
@@ -241,6 +229,7 @@ cat > ${NME} <<EOB
 title: $TTL
 ---
 
+<++>
 EOB
 	$EDITOR "$NME"
 	cd $WBST
@@ -248,12 +237,11 @@ EOB
 }
 O_newpost()  {
 	local TTL="$1"
-	NME=$(echo $TTL | tr ' ' '-' | tr -d "\'").md
 	cd $WBST/content/posts
-	DIR="$(date '+%Y/%B')"
-	[[ -d $DIR ]] || mkdir -p $DIR
-	cd $DIR
-cat > $NME <<EOB
+	FLE="$(date '+%Y/%m/%d.md')"
+	[[ -d ${FLE%/*} ]] || mkdir -p ${FLE%/*}
+	cd ${FLE%/*}
+cat > ${FLE##*/} <<EOB
 ---
 title: $TTL
 subtitle: <++>
@@ -264,7 +252,7 @@ time: $(date '+%X %z')
 
 <++>
 EOB
-	$EDITOR "$NME"
+	$EDITOR "${FLE##*/}"
 	cd $WBST
 	exit
 }
@@ -273,7 +261,7 @@ while true; do
 	case $1 in
 		--gensite  | -g ) O_gensite ;;
 		--pushsite | -s ) O_pushsite ;;
-		--mkpage  | -m ) O_mkpage  "${2:-}" ; shift ;;
+#		--mkpage  | -m ) O_mkpage  "${2:-}" ; shift ;;
 		--newpage | -n ) O_newpage "${2:-}" ; shift ;;
 		--newpost | -p ) O_newpost "${2:-}" ; shift ;;
 		--help ) help ;;

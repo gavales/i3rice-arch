@@ -3,7 +3,7 @@
 	close_all = ctrl+shift+space
 
 [global]
-	font = %%guifont%% %%size%%
+	font = %%guifont%% 15
 	
 	allow_markup = yes
 	
@@ -24,7 +24,7 @@
 	show_age_threshold = 60
 	word_wrap = yes
 	ignore_newline = no
-	geometry = "400x5-25+25"
+	geometry = "600x5-30+30"
 	shrink = no
 	transparency = 10
 	idle_threshold = 120
@@ -45,5 +45,5 @@
 	icon_position = on
 	icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 	max_icon_size = 100
-	corner_radius = 5
+	corner_radius = 0
 

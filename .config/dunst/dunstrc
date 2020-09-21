@@ -1,19 +1,19 @@
 [frame]
-width = 0
-color = "#040817"
+width = 5
+color = "#fdfcfb"
 
 [urgency_low]
-background = "#3FDCEE"
+background = "#b1b4ca"
 foreground = "#040817"
 timeout = 3
 
 [urgency_normal]
-background = "#3FDCEE"
+background = "#b1b4ca"
 foreground = "#040817"
 timeout = 3
 
 [urgency_critical]
-background = "#b85227"
+background = "#b5735e"
 foreground = "#040817"
 timeout = 3
 
@@ -22,7 +22,7 @@ timeout = 3
 	close_all = ctrl+shift+space
 
 [global]
-	font = Lucida Sans 11
+	font = Lucida Sans 15
 	
 	allow_markup = yes
 	
@@ -43,7 +43,7 @@ timeout = 3
 	show_age_threshold = 60
 	word_wrap = yes
 	ignore_newline = no
-	geometry = "400x5-25+25"
+	geometry = "600x5-30+30"
 	shrink = no
 	transparency = 10
 	idle_threshold = 120
@@ -64,5 +64,5 @@ timeout = 3
 	icon_position = on
 	icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 	max_icon_size = 100
-	corner_radius = 5
+	corner_radius = 0
 
