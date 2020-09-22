@@ -1,50 +1,50 @@
-shell chmod +x %f
-shell convert -trim -transparent white -fuzz 10%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
-shell convert -trim -transparent white -fuzz 20%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
-shell convert -trim -transparent white -fuzz 30%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
-shell convert -trim -transparent white -fuzz 50%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
-shell convert -trim -transparent gray 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
-shell convert -trim -transparent grey 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
-shell convert -trim -transparent gray -fuzz 50%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
-shell convert -trim -transparent Gray -fuzz 50%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
-open_with pinta
-
-shell convert -trim -transparent black -fuzz 50%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
-shell convert -trim -transparent grey -fuzz 50%% 'PSTAR-learn42.jpg' 'PSTAR-learn42.jpg'
-rename css
-open_with%space
 open_with edtr
+rename .2019
+rename 2019
+mkdir old
+shell git clone https://github.com/gavales/herbe.git
+shell wget https://patch-diff.githubusercontent.com/raw/dudik/herbe/pull/11.diff
+rename xresources.diff
+shell sudo make install
+mkdir fps_co1ncidence
+shell wget https://raw.githubusercontent.com/dudik/herbe/24557245869662e1885f286037ecc37038a5f791/notify-send
+shell chmod +x %f
+search notify
+rename notify-send_
+search ranger
+mkdir portrait
+rename 09
+rename 07.md
+mkdir 08
+rename 31.md
+rename 01.jpg
+mkdir landscape
 rename seestck_bei_mondschein.jpg
-rename thinkpad
-rename 05 Why Must I Be a Crustacean in Love.mkv
-rename 16 T The Terrestrial
-rename E02 Who Will Be the Judge.mkv
-search fstab
-shell sudo vim
-shell sudo vim fstab
-rename monet
-rename monet.png
-rename about.png
-rename about_black.jpg
-rename about_black_old.png
-rename about_black.png
-open_with mpv
-open_with gedtr
-shell convert -trim -fill white -opaque black -fuzz 50%% 'about_black.png' 'about_white.png'
-rename issho.png
-rename lucy.png
-rename .png
-rename rosinante.png
-rename cora.png
-rename doffy.png
-rename sol_becca.png
-rename becca.png
-rename violet1.png
-rename violet2.png
-rename joker.png
-rename monet1.png
-rename monet2.png
-rename monet3.png
-rename monet4.png
-rename smoky.png
-rename usopp.png
+rename Pilgrimage_at_Sunset_Sunrise.jpg
+rename 051.jpg
+rename CTB199415BarcoPescaEntreDosRocasPlayaMarBaltico.zip
+mkdir blk-chalk
+mkdir graphite-wash
+mkdir oil-canvas
+mkdir oil-copper
+mkdir pencil
+mkdir watercolour
+mkdir wood
+mkdir ink-watercolour
+rename watercolour
+rename PENCIL-INK-WATERCOL 1797c Landscape with Pavilion.jpg
+mkdir sepia
+mkdir ink
+mkdir wash
+rename 1806-09 Self-Portrait.jpg
+rename 1609 Flight into Egypt (Adam Elsheimer).jpg
+rename 048L13102 76K8J.jpg
+open_with openimage
+rename countryside.jpg
+rename 1126L14004 78K88.jpg
+rename castle247218v 0001.jpg
+rename castle.jpg
+
+rename SEPIA Mountainous River Landscape Day Version.JPG
+rename Mountainous River Landscape Day Version.JPG
+open_with sxiv
