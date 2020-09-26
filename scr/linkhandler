@@ -11,18 +11,32 @@
 
 case "$1" in
 	*mkv|*webm|*mp4|*youtube.com/watch*|*youtube.com/playlist*|*youtu.be*|*hooktube.com*|*bitchute.com*)
-		setsid -f mpv -quiet "$1" >/dev/null 2>&1 ;;
+		setsid -f mpv -quiet "$1" >/dev/null 2>&1
+		;;
+#	*v.redd.it*)
+#		
+#		;;
 	*png|*jpg|*jpe|*jpeg|*gif)
-		curl -sL "$1" > "/tmp/${1##*/}" && sxiv -a "/tmp/${1##*/}"  >/dev/null 2>&1 & ;;
-	*imgur.com*)
-		curl -sL "$1" | sed 's/http/\nhttp/g' | awk -F \" '
-			!/favicon/ && /\.jpg"|\.png"|\.jpeg"|\.JPG"|\.PNG"/{
-				print $1
-			}
-			' | xargs -I {} linkhandler "{}" >/dev/null 2>&1
+		curl -sL "$1" > "/tmp/${1##*/}" && sxiv -a "/tmp/${1##*/}"  >/dev/null 2>&1 &
+		;;
+#	*imgur.com*)
+#		curl -sL "$1" | sed 's/http/\nhttp/g' | awk -F \" '
+#			!/favicon/ && /\.jpg"|\.png"|\.jpeg"|\.JPG"|\.PNG"/{
+#				print $1
+#			}
+#			' | xargs -I {} linkhandler "{}" >/dev/null 2>&1
+#		;;
+	*imgur.com*|*reddit.com/gallery*)
+		wget -O - "$1" | sed 's/http/\nhttp/g;s/\\u0026/\&/g' | \
+			awk -F \" '
+				!/favicon/&&/png|jpg|jpeg|PNG|JPG|JPEG/&&/preview\.redd\.it|i\.imgur\.com/{
+					gsub(/.*crop.*/,"",$0);gsub(/.*award_images.*/,"",$0);print $1
+					}
+				' | xargs feh --image-bg "$(themer -v 'ac88b ')" --auto-zoom
 		;;
 	*mp3|*flac|*opus|*mp3?source*)
-		setsid -f tsp curl -LO "$1" >/dev/null 2>&1 ;;
+		setsid -f tsp curl -LO "$1" >/dev/null 2>&1
+		;;
 	*pdf)
 		curl -sL "$1" > "/tmp/${1##*/}" && \
 			zathura "/tmp/${1##*/}"  >/dev/null 2>&1 &
