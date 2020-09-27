@@ -595,11 +595,11 @@ create-rgb()       {
 }
 gui-change()       {
 	THM=$(themer --list thememenu)
-	notify-send "Chosen theme is $THM" -i "${SCR_DIR}pic/theme.png"
+	herbe "Chosen theme is $THM"
 	cd ${TDR}
-	[[ -z ${THM} ]]            && notify-send "No theme chosen"   && exit 1
-	[[ ! -f ${TDR}/${THM} ]]   && notify-send "Theme don't exist" && exit 1
-	notify-send "Theme exists" && cat ${THM} > ${CUR}
+	[[ -z ${THM} ]]            && herbe "No theme chosen"   && exit 1
+	[[ ! -f ${TDR}/${THM} ]]   && herbe "Theme don't exist" && exit 1
+	herbe "Theme exists" && cat ${THM} > ${CUR}
 }
 
 O_change()       {
@@ -749,7 +749,7 @@ cat > "${DIR}/.themer_post" <<EOB
 declare -A TMR
 eval "$(themer --list varsh)"
 
-notify-send "THEMER" "Don't forget to edit ${PWD/$HOME/'~'}/.themer_post"
+herbe "THEMER" " " "Don't forget to edit ${PWD/$HOME/'~'}/.themer_post"
 #for i in \$(ls ${DIR}/.themer | grep '^template_'); do
 #	cp "${DIR}/.themer/\${TMR[name]}/\${i/template_}" "${DIR}/\${i/template_}"
 #done

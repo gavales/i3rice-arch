@@ -289,5 +289,4 @@ $exn xfsettingsd
 $exn sxhkd
 $exn spicetify
 
-$ena mpv ~/scrmus/A\ Tone\ His\ Self.mp3
 $ena notify-send 'i3 (re)loaded!' -i ~/scrpic/i3white.png

@@ -2,8 +2,14 @@
 declare -A TMR
 eval "$(themer --list varsh)"
 
-cp ".themer/${TMR[name]}/.gtkrc-2.0" "$HOME/.gtkrc-2.0"
-cp ".themer/${TMR[name]}/.guivimrc"  "$HOME/.guivimrc"
-cp ".themer/${TMR[name]}/.cwmrc"     "$HOME/.cwmrc"
+cp ".themer/${TMR[name]}/.Xresources" "$HOME/.Xresources"
+cp ".themer/${TMR[name]}/.gtkrc-2.0"  "$HOME/.gtkrc-2.0"
+cp ".themer/${TMR[name]}/.guivimrc"   "$HOME/.guivimrc"
 
-kill -1 $(pidof cwm)
+#cp ".themer/${TMR[name]}/.cwmrc"      "$HOME/.cwmrc"
+#kill -1 $(pidof cwm)
+
+#kill -1 $(pidof urxvtd)
+
+xrdb -load "$HOME/.Xresources"
+pidof st | xargs kill -SIGUSR1

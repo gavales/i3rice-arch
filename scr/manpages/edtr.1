@@ -1,0 +1,155 @@
+.TH EDTR 1 2020\-09\-27 Linux "User Manuals"
+.hy
+.SH NAME
+.PP
+\f[B]edtr\f[R] - vim server wrapper using \f[B]rxvt-unicode\f[R]
+.SH SYNOPSIS
+.IP
+.nf
+\f[B]
+edtr [--server|-s \fI<name>\fP] [--fontsize|-S \fI<integer>\fP] \fI<file>\fP
+edtr --help|-h
+\f[R]
+.fi
+.SH OPTIONS
+.PP
+\f[B]--server|-s \fI<name>\fP\f[R]
+.PD 0
+.P
+.PD
+\f[B]--servername\f[R] changed to \f[B]\fI<name>\fP\f[R].
+Default \f[B]--servername\f[R] is `edtr'.
+.PP
+\f[B]--help|-h\f[R]
+.PD 0
+.P
+.PD
+Print this help
+.SH MORE
+.PP
+\f[B]edtr\f[R] will also decide the \f[B]--servername\f[R] based on
+filetype (from \f[B]file\f[R] output) and file extension:
+.PP
+.TS
+tab(@);
+r l l.
+T{
+Filetype
+T}@T{
+servername
+T}@T{
+urxvt instance name
+T}
+_
+T{
+\f[B]Bourne-Again\f[R]
+T}@T{
+\f[B]bash-edtr\f[R]
+T}@T{
+\f[B]bash - edtr\f[R]
+T}
+.TE
+.PP
+.TS
+tab(@);
+r l l.
+T{
+Extension
+T}@T{
+servername
+T}@T{
+urxvt instance name
+T}
+_
+T{
+\f[B]Xres*/Xdef*\f[R]
+T}@T{
+\f[B]edtr-Xfiles\f[R]
+T}@T{
+\f[B]Xfiles - edtr\f[R]
+T}
+T{
+\f[B]*conf*\f[R]
+T}@T{
+\f[B]edtr-configs\f[R]
+T}@T{
+\f[B]configs - edtr\f[R]
+T}
+T{
+\f[B]*bash*\f[R]
+T}@T{
+\f[B]edtr-bash\f[R]
+T}@T{
+\f[B]bash - edtr\f[R]
+T}
+T{
+\f[B]sh\f[R]
+T}@T{
+\f[B]edtr-sh\f[R]
+T}@T{
+\f[B]sh - edtr\f[R]
+T}
+T{
+\f[B]*vim*\f[R]
+T}@T{
+\f[B]edtr-vim\f[R]
+T}@T{
+\f[B]vim - edtr\f[R]
+T}
+T{
+\f[B]yaml\f[R]
+T}@T{
+\f[B]edtr-yaml\f[R]
+T}@T{
+\f[B]yaml - edtr\f[R]
+T}
+T{
+\f[B]html\f[R]
+T}@T{
+\f[B]edtr-html\f[R]
+T}@T{
+\f[B]html - edtr\f[R]
+T}
+T{
+\f[B]py\f[R]
+T}@T{
+\f[B]edtr-py\f[R]
+T}@T{
+\f[B]py - edtr\f[R]
+T}
+T{
+\f[B]ms\f[R]
+T}@T{
+\f[B]edtr-groff\f[R]
+T}@T{
+\f[B]groff - edtr\f[R]
+T}
+T{
+\f[B]css\f[R]
+T}@T{
+\f[B]edtr-css\f[R]
+T}@T{
+\f[B]css - edtr\f[R]
+T}
+T{
+\f[B]md|rmd\f[R]
+T}@T{
+\f[B]edtr-md\f[R]
+T}@T{
+\f[B]md - edtr\f[R]
+T}
+T{
+\f[B]bib\f[R]
+T}@T{
+\f[B]edtr-bib\f[R]
+T}@T{
+\f[B]bib - edtr\f[R]
+T}
+T{
+\f[B]tex\f[R]
+T}@T{
+\f[B]edtr-tex\f[R]
+T}@T{
+\f[B]tex - edtr\f[R]
+T}
+.TE

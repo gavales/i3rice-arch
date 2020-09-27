@@ -20,7 +20,7 @@ echo $@
 exit
 }
 
-BKMDIR="${XDG_DOCUMENTS_DIR:-"$HOME/Documents"}/bookmarks"
+BKMDIR="${XDG_DOCUMENTS_DIR:-"$HOME/Documents"}/bkmrks"
 HSTDIR="${BKMDIR}/.history"
 iDIR=" " iFLE=" " iLNK=" " iHST=" "
 CRWN=$(pfw) ; CRWNT=$(xprop -id $CRWN | sed '/WINDOW_ROLE/!d')

@@ -1,20 +1,20 @@
 #$USER_SCR_DIR/.unused
 #FORCE $HOME/.config/glava
-FORCE $USER_XRS_DIR
+#FORCE $USER_XRS_DIR
 $HOME/.vim/colors
 FORCE $HOME/.config/i3
 FORCE $HOME/.config/polybar
 FORCE $HOME/.config/zathura
 FORCE $HOME/.config/dunst
 FORCE $HOME/.config/rofi
+FORCE $HOME/.config/qutebrowser
 $HOME/.config/vis/colors
 $HOME/.config/mpv
-FORCE $HOME/.config/qutebrowser
 $HOME/.config/spicetify/Themes/Themer
 $HOME/.config/sublime-text-3/Packages/THEMES
 $HOME/.config/xob
+$USER_REPO_DIR/numix
 $USER_REPO_DIR/website/css
 FORCE $USER_REPO_DIR/i3rice-arch
 $XDG_TEMPLATES_DIR/css
 $XDG_TEMPLATES_DIR/pandoc
-$HOME/numix

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-notify-send "Syncing Drive folder..." -i ${USER_SCR_DIR}pic/drivesyncing.png
+herbe "Syncing Drive folder..."
 cd $USER_DRV_DIR
 grive
 cd
-notify-send "... Drive folder synced." -i ${USER_SCR_DIR}pic/googledrive.png
+herbe "... Drive folder synced."

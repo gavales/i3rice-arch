@@ -2,7 +2,6 @@
 
 # OA: Gavin Vales
 # CREATED: Mon  7 Oct 23:04:04 BST 2019
-# source /home/gavarch/.config/user-dirs.dirs
 
 SDR=${USER_SCR_DIR:-"${HOME}/scr"}
 MANDIR=/usr/share/man/man1
@@ -99,7 +98,7 @@ while true; do
 done
 
 SRC=${SDR}
-[[ -z ${MDR} ]] && MDR=${SRC}man
+[[ -z ${MDR} ]] && MDR=${SRC}/manpages
 [[ -d ${MDR} ]] || mkdir -p $MDR
 TRG=${MDR}
 

@@ -1,0 +1,62 @@
+.TH WIKIUD 1 2020\-09\-27 Linux "User Manuals"
+.hy
+.SH NAME
+.PP
+\f[B]wikiud\f[R] - generates the script wikis shown in my wiki sidebars
+.SH SYNOPSIS
+.IP
+.nf
+\f[B]
+wikiud [--user|-u \fI<github-user>\fP]
+       [--repo|-r \fI<repo>\fP]
+       [--source-dir|-s \fI<source-directory>\fP]
+       [--target-dir|-t \fI<target-directory>\fP]
+       [--base|-b \fI<file>\fP]
+wikiud --help|-h
+\f[R]
+.fi
+.SH OPTIONS
+.PP
+\f[B]--user|-u \fI<github-user>\fP\f[R]
+.PD 0
+.P
+.PD
+Your Github username.
+Used to correctly link to the raw script
+.PP
+\f[B]--repo|-r \fI<github-user>\fP\f[R]
+.PD 0
+.P
+.PD
+Name of the target repo.
+Used to correctly link to the raw script
+.PP
+\f[B]--source-dir|-s \fI<source-directory>\fP\f[R]
+.PD 0
+.P
+.PD
+Source , which contains your scripts
+.PP
+\f[B]--target-dir|-t \fI<target-directory>\fP\f[R]
+.PD 0
+.P
+.PD
+Target , usually a directory named \f[B]\fI<repo>\fP.wiki\f[R], for simplicity
+.PP
+\f[B]--base|-b \fI<file>\fP\f[R]
+.PD 0
+.P
+.PD
+Base file for \f[B]_Sidebar.md\f[R].
+Contains stuff you want before the list of scripts in the wiki sidebar
+.PP
+\f[B]--help|-h\f[R]
+.PD 0
+.P
+.PD
+Print this help
+.SH DESCRIPTION
+.PP
+Basically checks for scripts that contain the \f[B]--help\f[R] string
+and redirects \f[B]\fI<script>\fP --help\f[R] to
+\f[B]\fI<target-directory>\fP/doc\f[R]\fI<++>\fP
