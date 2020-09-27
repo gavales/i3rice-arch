@@ -90,7 +90,7 @@ onecon () {
 
 A_mon () { arandr && exit ; }
 
-[[ $LCN == 1 ]] && herbe "Only one monitor connected!" && onecon
+[[ $LCN == 1 ]] && herbe "Only one monitor connected!" & onecon
 MDE=$(printf "%s\n" "1 Monitor" "2 Monitors" "3 Monitors" "A ARandR" \
 	| dmrap $MNOP -p "Choose mode" | awk '{print $1}')
 ${MDE}_mon

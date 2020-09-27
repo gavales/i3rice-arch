@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-herbe "Syncing Drive folder..."
+herbe "Syncing Drive folder..." &
 cd $USER_DRV_DIR
 grive
 cd
-herbe "... Drive folder synced."
+herbe "... Drive folder synced." &
