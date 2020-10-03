@@ -523,7 +523,7 @@ variations()       {
 
 	acf=$(sed '/^acf /!d;s/[^ ]* *//' $ALL)
 	acb=$(sed '/^acb /!d;s/[^ ]* *//' $ALL)
-	awk -i <(cat $HOME/awklib) -v acb="$acb" -v acf="$acf" '
+	awk -i <(awklib) -v acb="$acb" -v acf="$acf" '
 		/#/ && !/fg[0-9]\s|bg[0-9]\s|ac[0-9][0-9][a-z]\s|ac[a-z]\s/ {
 			key=$1;val=$2;
 			mixer("dark"key,val,acf,66,34)
@@ -595,11 +595,11 @@ create-rgb()       {
 }
 gui-change()       {
 	THM=$(themer --list thememenu)
-	herbe "Chosen theme is $THM" &
+	notify-send "Chosen theme is $THM" &&
 	cd ${TDR}
-	[[ -z ${THM} ]]            && herbe "No theme chosen"   & exit 1
-	[[ ! -f ${TDR}/${THM} ]]   && herbe "Theme don't exist" & exit 1
-	herbe "Theme exists" & cat ${THM} > ${CUR}
+	[[ -z ${THM} ]]            && notify-send "No theme chosen"   && exit 1
+	[[ ! -f ${TDR}/${THM} ]]   && notify-send "Theme don't exist" && exit 1
+	notify-send "Theme exists" && cat ${THM} > ${CUR}
 }
 
 O_change()       {

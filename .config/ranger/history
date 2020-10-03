@@ -1,4 +1,3 @@
-open_with edtr
 rename .2019
 rename 2019
 mkdir old
@@ -48,3 +47,4 @@ rename castle.jpg
 rename SEPIA Mountainous River Landscape Day Version.JPG
 rename Mountainous River Landscape Day Version.JPG
 open_with sxiv
+open_with vim
