@@ -20,4 +20,4 @@ for i in $(ls $SCDIR | sed '/_/!d'); do
 	}'
 done
 
-herbe "Shortcuts generated!" &
+notify-send "Shortcuts generated!"

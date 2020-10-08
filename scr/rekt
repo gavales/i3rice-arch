@@ -11,7 +11,7 @@ gifify () {
 #	nframe=2
 #	fps=20
 
-	herbe "Making GIF" &
+	notify-send "Making GIF"
 	ulimit -Sv 1000000
 	ffmpeg \
 		-i "${TRG}" \
@@ -51,7 +51,7 @@ TRG=${OP:-"rekt$(date '+%Y%m%d-%H%M')"}
 DIR=${OPD:-${HOME}}
 cd ${DIR}
 
-herbe "Recording in 5 secs..." &
+notify-send "Recording in 5 secs..."
 sleep 5
 ffmpeg -y \
 	-f x11grab \

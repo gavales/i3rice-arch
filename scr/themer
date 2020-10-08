@@ -749,7 +749,7 @@ cat > "${DIR}/.themer_post" <<EOB
 declare -A TMR
 eval "$(themer --list varsh)"
 
-herbe "THEMER" " " "Don't forget to edit ${PWD/$HOME/'~'}/.themer_post" &
+notify-send "THEMER" "Don't forget to edit ${PWD/$HOME/'~'}/.themer_post"
 #for i in \$(ls ${DIR}/.themer | grep '^template_'); do
 #	cp "${DIR}/.themer/\${TMR[name]}/\${i/template_}" "${DIR}/\${i/template_}"
 #done

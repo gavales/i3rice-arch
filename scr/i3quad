@@ -266,7 +266,7 @@ while true; do
 done
 
 [[ $MKS =~ "$MRK" ]] && EXISTS || {
-	herbe "no $MRK, making $MRK" &
+	notify-send "no $MRK, making $MRK"
 	CMK${MRK/_W/}
 	history "$MRK"
 }

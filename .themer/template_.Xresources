@@ -175,7 +175,7 @@ XTerm.vt100.geometry:    79x25
 
 ! ━  5xcursor
 
-Xcursor.theme: Bibata_Dark_Red
+Xcursor.theme: %%cursor%%
 Xcursor.size:  48
 
 ! ━  6urxvt

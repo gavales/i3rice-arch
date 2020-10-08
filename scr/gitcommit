@@ -4,7 +4,7 @@ cd $USER_REPO_DIR
 [[ -n $1 ]] && RPO="$1" || \
 	RPO="$(ls | dmrap -f 'Iosevka 17' -a lightylw -w 300 -L mc -l 15 -p gitcommit)"
 
-herbe "Updating your $RPO git repo..." &
+notify-send "Updating your $RPO git repo..."
 cd ${RPO}
 pwd
 git add .
@@ -12,4 +12,4 @@ git commit -m "$(date +"%c")"
 git fetch
 git merge origin/master
 git push -u origin master
-herbe "... $RPO repo updated." &
+notify-send "... $RPO repo updated."

@@ -1,0 +1,380 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Thu Oct  8 14:04:52 2020 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title></title>
+</head>
+<body>
+
+<hr>
+
+
+<p style="margin-top: 1em"><b>themer</b> - A script to
+change theme of configs using a theme file. Inspired by
+budlabs&rsquo; <b>mondo-generator</b> from the AUR.</p>
+
+<p style="margin-left:8%; margin-top: 1em"><b>themer
+[--dark|-D] <br>
+[--auto-dark|-t</b> <i>&lt;am_time:pm_time&gt;</i><b>] <br>
+--change|-c</b> <i>&lt;name&gt;</i> <b><br>
+themer --new|-n</b> <i>&lt;name&gt;</i> <b><br>
+themer --getvar|-v</b> <i>&lt;variable&gt;</i> <b><br>
+themer --list|-l
+themes|thememenu|vars|varmenu|default|current <br>
+themer [--force|-f] --init|-i</b> <i>&lt;directory&gt;</i>
+<b><br>
+themer [--force|-f] --apply-single|-a</b>
+<i>&lt;directory&gt;</i> <b><br>
+themer --apply-all|-A <br>
+themer --clean|-C</b> <i>&lt;directory&gt;</i> <b><br>
+themer --updatelist|-u <br>
+themer --help|-h <br>
+themer</b></p>
+
+<p style="margin-top: 1em"><b>dmenu</b> (my build),
+<b>dmrap</b> - for gui menus <b>xsel</b> - copying variable
+for <b>--list varmenu</b></p>
+
+
+<p style="margin-top: 1em">[[/images/themer-gruvbox.png|gruvbox]]
+[[/images/themer-i3.png|i3]]
+[[/images/themer-nikes.png|nikes]]
+[[/images/themer-redrock.png|redrock]]
+[[/images/themer-solarized.png|solarized]]</p>
+
+<p style="margin-top: 1em">Run with no options to create
+defaults in <b>THEMER_DIR $THEMER_DIR</b> =
+<b>$HOME/.config/themer</b></p>
+
+<p style="margin-top: 1em"><b>--change|-c</b>
+<i>&lt;theme&gt;</i> Change current theme to
+<i>&lt;theme&gt;</i>. If <i>&lt;theme&gt;</i> is empty, a
+rofi list of themes will be displayed.</p>
+
+<p style="margin-top: 1em"><b>--apply-single|-a</b>
+<i>&lt;directory&gt;</i> Apply current theme to
+<i>&lt;directory&gt;</i>.</p>
+
+<p style="margin-top: 1em"><b>--apply-all|-A</b> Apply
+current theme to directories listed in
+<b>$THEMER_DIR/.dirs</b>.</p>
+
+<p style="margin-top: 1em"><b>--force|-f</b> Use with
+<b>--apply-(single|all)</b> to force apply a theme, since
+themes are not automatically generated from
+&lsquo;template_&rsquo; files to speed up applying the
+theme</p>
+
+<p style="margin-top: 1em"><b>--dark|-D</b> Dark mode
+(switches fgo and bg0).</p>
+
+<p style="margin-top: 1em"><b>--auto-dark|-t</b>
+<i>&lt;am_time&gt;</i><b>:</b><i>&lt;pm_time&gt;</i>
+Dark/Light mode based on time of day. Uses 24-hr time
+format</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="2%">
+
+
+<p style="margin-top: 1em">&bull;</p></td>
+<td width="1%"></td>
+<td width="59%">
+
+
+<p style="margin-top: 1em"><i>&lt;am_time&gt;</i> hr to
+apply &lsquo;light&rsquo; mode.</p></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="2%">
+
+
+<p style="margin-top: 1em">&bull;</p></td>
+<td width="1%"></td>
+<td width="59%">
+
+
+<p style="margin-top: 1em"><i>&lt;pm_time&gt;</i> hr to
+apply &lsquo;dark&rsquo; mode.</p></td>
+<td width="38%">
+</td></tr>
+</table>
+
+<p style="margin-top: 1em"><b>--getvar|-v</b>
+<i>&lt;variable&gt;</i> Get <i>&lt;variable&gt;</i> from
+current theme.</p>
+
+<p style="margin-top: 1em"><b>--new|-n</b>
+<i>&lt;name&gt;</i> Create theme <i>&lt;name&gt;</i>.</p>
+
+<p style="margin-top: 1em"><b>--list|-l
+themes|vars|varmenu|default|current</b></p>
+
+
+<p align="center" style="margin-top: 1em"><b><img src="grohtml-4115561.png" alt="Image grohtml-4115561.png"></b></p>
+
+<p style="margin-top: 1em"><b>--updatelist|-u</b> Update
+the rofi theme list</p>
+
+<p style="margin-top: 1em"><b>--clean|-C</b>
+<i>&lt;directory&gt;</i> Remove all the generated theme
+files in
+<i>&lt;directory&gt;</i><b>/.themer/</b><i>&lt;name&gt;</i>.
+If no <i>&lt;directory&gt;</i> is specified, then all
+directories in <b>$THEMER_DIR/_dirs</b></p>
+
+<p style="margin-top: 1em"><b>--help|-h</b> Display this
+help.</p>
+
+<p style="margin-left:8%; margin-top: 1em"><b>$ themer
+--list default <br>
+name default <br>
+guifont $romanfont <br>
+font CMUTypewriterText <br>
+sansfont Lucida Sans <br>
+monofont CMU Typewriter Text <br>
+romanfont Luxi Mono <br>
+ltimex 1 <br>
+ltimey 90 <br>
+size 11 <br>
+rxvtsize 12 <br>
+rofifsize 12 <br>
+gtk Standard-light <br>
+gtk-icon Tela-red-dark <br>
+cursor Bibata_Dark_Red <br>
+conky_loc1 top_left <br>
+conky_loc2 bottom_right <br>
+acc #285577 <br>
+bg0 #CDCBCD <br>
+fg0 #302f30 <br>
+red #cc241d <br>
+ylw #904800 <br>
+blu #004890 <br>
+grn #009048 <br>
+cyn #009090 <br>
+gnt #900048 <br>
+rng #d65d0e</b></p>
+
+<p style="margin-top: 1em">Using themer -n will prompt to
+create the required fg0 [foreground], bg0 [background] and
+acc [accent] colour variables.</p>
+
+<p style="margin-top: 1em">The rest of the variables will
+be taken from the <b>$THEMER_DIR/_default</b> theme, created
+automatically, when the theme is generated. The
+<b>_default</b> theme can be changed as you wish.</p>
+
+<p style="margin-top: 1em">You can also reference variables
+using a <b>$</b> in front of the variable name in the theme
+file and you can also mix colours.</p>
+
+<p style="margin-left:8%; margin-top: 1em"><b>$ cat
+~/.config/themer/dosnerd <br>
+name dosnerd <br>
+bg0 #DFBF9F <br>
+acc #d5715e <br>
+fg0 #1F1F1F <br>
+blu $acc <br>
+mix colmix 33:$bg0 66:$acc</b></p>
+
+<p style="margin-left:8%; margin-top: 1em"><b>$ themer
+--change dosnerd <br>
+$ themer --list current <br>
+%%name%% dosnerd <br>
+%%bg0%% #DFBF9F <br>
+%%acc%% #d5715e <br>
+%%fg0%% #1F1F1F <br>
+%%blu%% $acc <br>
+%%mix%% colmix 33:$bg0 66:$acc</b></p>
+
+<p style="margin-top: 1em">to change the current theme and
+generate all variables. If no theme is specified, you are
+prompted with the below rofi menu:</p>
+
+<p style="margin-top: 1em">[[/images/thememenu.png|themer
+&ndash;change]]</p>
+
+<p style="margin-top: 1em">including fg0, bg0, and acc
+variations. These variations can be seen below.</p>
+
+<p style="margin-top: 1em">Use <b>themer --list vars</b> or
+<b>themer --list varmenu</b> to see all the variables of the
+current theme. <b>rofi</b> is invoked with
+<b>-normal-window</b> flag with the latter option so you can
+have this menu open and copy variables manually:</p>
+
+<p style="margin-top: 1em">[[/images/varmenu.png|themer
+&ndash;list varmenu]]</p>
+
+<p style="margin-top: 1em">Add <b>--dark</b> or
+<b>--auto-dark</b>
+<i>&lt;am_time&gt;</i><b>:</b><i>&lt;pm_time&gt;</i> to
+convert to a dark theme (just swaps <b>fg0</b> and
+<b>bg0</b> and renames the theme to
+<i>&lt;name&gt;</i><b>-dark</b>), or uses light/dark version
+based on time of day, respectively.</p>
+
+<p style="margin-top: 1em">For example, an
+<b>.Xresources</b> theme:</p>
+
+<p style="margin-left:8%; margin-top: 1em"><b>$ cd $HOME
+<br>
+$ themer --init <br>
+$ cp .Xresources .themer/template_.Xresources <br>
+$ mv .Xresources .Xresources_old # backup! <br>
+$ tree $HOME <br>
+/home/user <br>
+&#9500;&#9472;&#9472; .themer <br>
+&#9474;&nbsp;&nbsp; &#9492;&#9472;&#9472;
+template_.Xresources <br>
+&#9500;&#9472;&#9472; .Xresources_old <br>
+&#9500;&#9472;&#9472; .themer_pre <br>
+&#9500;&#9472;&#9472; .themer_post <br>
+&#9482;</b></p>
+
+<p style="margin-top: 1em">Here&rsquo;s my
+template_.Xresources</p>
+
+<p style="margin-left:8%; margin-top: 1em"><b>$ cat
+~/.themer/template_.Xresources <br>
+!! vim:ft=xdefaults <br>
+#define cwhtl %%fg0%% <br>
+#define cwhtd %%acb%% <br>
+#define credd %%red%% <br>
+#define credl %%red%% <br>
+#define cgrnd %%grn%% <br>
+#define cgrnl %%grn%% <br>
+#define cylwd %%ylw%% <br>
+#define cylwl %%ylw%% <br>
+#define cblud %%blu%% <br>
+#define cblul %%blu%% <br>
+#define cgntd %%gnt%% <br>
+#define cgntl %%gnt%% <br>
+#define ccynd %%cyn%% <br>
+#define ccynl %%cyn%% <br>
+#define cblkd %%bg0%% <br>
+#define cblkl %%bg1%% <br>
+#define fontname %%font%% <br>
+#define fontsize %%rxvtsize%% <br>
+#define fontsize2 %%rxvtsize%% <br>
+*background: cblkd <br>
+*foreground: cwhtl <br>
+*fading: 30 <br>
+*fadeColor: black <br>
+*cursorColor: credd <br>
+*pointerColorBackground: cblkd <br>
+*pointerColorForeground: ccynd <br>
+*border: cblkd <br>
+*color0: cblkd <br>
+*color1: credd <br>
+*color2: cgrnd <br>
+*color3: cylwd <br>
+*color4: cblud <br>
+*color5: cgntd <br>
+*color6: ccynd <br>
+*color7: cwhtd <br>
+*color8: cblkl <br>
+*color9: credl <br>
+*color10: cgrnl <br>
+*color11: cylwl <br>
+*color12: cblul <br>
+*color13: cgntl <br>
+*color14: ccynl <br>
+*color15: cwhtl</b></p>
+
+<p style="margin-top: 1em">The variables from the current
+theme can be listed using <b>themer --list vars</b>, and are
+to be referenced with:
+<b>%%</b><i>&lt;variable&gt;</i><b>%%</b>.</p>
+
+<p style="margin-top: 1em">Add RGB after a colour name to
+get its RGB value in &ldquo;R, G, B&rdquo; form eg.
+<b>%%bg0RGB%%</b>.</p>
+
+<p style="margin-top: 1em">Use <b>@@color@@</b> instead of
+<b>%%color%%</b> to get hex color without &lsquo;#&rsquo;.
+Useful for <b>#AARRGGBB</b> colours.</p>
+
+<p style="margin-top: 1em">The .themer_pre and .themer_post
+bash scripts in the <i>&lt;directory&gt;</i> are used to do
+things before/after applying the theme eg. reload the
+.Xresources file (below) etc. These scripts have the current
+theme name, eg. <b>dosnerd</b>, as their first argument.
+Obviously, the shebang can be changed. My <b>.Xresources</b>
+.themer_post is shown below.</p>
+
+
+<p style="margin-left:8%; margin-top: 1em"><b>#!/usr/bin/env
+bash <br>
+#requires you to use urxvtd &amp; urxvtc <br>
+#see budlabs &quot;Let's Linux #021: urxvt
+reload-config&quot; <br>
+#https://www.youtube.com/watch?v=37jo_x6bXBk <br>
+XRS=$HOME/.Xresources <br>
+cat &quot;.themer/${1}/.Xresources&quot; | sed
+&quot;s/\%\%.*\%\%//g&quot; &gt;</b> $XRS <br>
+xrdb -load $XRS <br>
+kill -1 $(pidof urxvtd)</p>
+
+<p style="margin-left:8%; margin-top: 1em"><b>themer -a
+$HOME</b></p>
+
+<p style="margin-top: 1em">to apply the theme to each
+template in <b>$HOME/.themer</b>.</p>
+
+<p style="margin-left:8%; margin-top: 1em"><b>themer
+--apply-all</b></p>
+
+<p style="margin-top: 1em">to apply the current theme to
+all directories in <b>$THEMER_DIR/_dirs</b>. Running
+<b>themer --init</b> <i>&lt;directory&gt;</i> automatically
+adds <i>&lt;directory&gt;</i> to this file, and if the
+<b>--force</b> flag is added, &lsquo;FORCE
+<i>&lt;directory&gt;</i>&rsquo; is added to
+<b>$THEMER_DIR/_dirs</b>, to force-apply of the current
+theme to a specific <i>&lt;directory&gt;</i>.</p>
+
+<p style="margin-top: 1em">Both of the above options will
+result in the following directory structure for our dosnerd
+theme <b>.Xresources</b> example. Both options will also run
+the <b>.themer_pre</b> &amp; <b>.themer_post</b> scripts
+too.</p>
+
+<p style="margin-top: 1em"><b>sh &#9474; $ cd $HOME &#9474;
+$ tree $HOME &#9474; /home/user &#9474;
+&#9500;&#9472;&#9472; .themer &#9474; &#9474;&nbsp;&nbsp;
+&#9500;&#9472;&#9472; dosnerd &#9474; &#9474;&nbsp;&nbsp;
+&#9474;&nbsp;&nbsp; &#9492;&#9472;&#9472; .Xresources
+&#9474; &#9474;&nbsp;&nbsp; &#9500;&#9472;&#9472;
+dosnerd-dark &#9474; &#9474;&nbsp;&nbsp; &#9474;&nbsp;&nbsp;
+&#9492;&#9472;&#9472; .Xresources &#9474;
+&#9474;&nbsp;&nbsp; &#9492;&#9472;&#9472;
+template_.Xresources &#9474; &#9500;&#9472;&#9472;
+.Xresources_old &#9474; &#9500;&#9472;&#9472; .Xresources
+&#9474; # the new .Xresources! &#9500;&#9472;&#9472;
+.themer_pre &#9474; &#9500;&#9472;&#9472; .themer_post
+&#9474; &#9482; &#9474;</b></p>
+
+
+<p style="margin-top: 1em">[[/images/MunnarKeralaIndia.jpg|gruvbox]]
+[[/images/PenedodoGuinchoLisbonPortugal.jpg|i3]]
+[[/images/JericoacoaraBrazil.jpg|nikes]]
+[[/images/ValleyofFireStateParkOvertonNV.jpg|redrock]]
+[[/images/WW_128000000001428569_EN.jpg|solarized]]</p>
+<hr>
+</body>
+</html>
