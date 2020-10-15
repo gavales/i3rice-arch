@@ -4,3 +4,5 @@ declare -A TMR
 eval "$(themer --list varsh)"
 
 cp ".themer/${TMR[name]}/mpv.conf" mpv.conf
+cp input.conf "ytdl/input.conf"
+sed 's/^ytdl.*/ytdl-format\=bestvideo\[height\<\=\?1080\]\+bestaudio\/best/g' mpv.conf > ytdl/mpv.conf

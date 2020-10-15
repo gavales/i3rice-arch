@@ -4,18 +4,9 @@
 # CREATED: Sat 26 Jan 21:59:12 GMT 2019
 
 VID="$1"
-PID="$(pidof mpv)"
-FIFO="${2:-"$USER_TMP_DIR/MPVMAIN"}"
+FIFO="$USER_TMP_DIR/MPV${2:-"MAIN"}"
+PID="$(pgrep -f "${FIFO##*/}")"
 
-#if [[ ${VID} =~ 'youtube.com' ]]; then
-#	if [[ -n ${PID} ]]; then
-#		echo "loadfile \"${VID}\"" append-play > "${FIFO}"
-#	else
-#		rm "${FIFO}"
-#		mkfifo "${FIFO}"
-#		mpv --geometry=35%-10-10 --ytdl-format=bestvideo+bestaudio --input-file="${FIFO}" "${VID}" &>/dev/null &
-#	fi
-#else
 if [[ -n ${PID} ]]; then
 	echo "loadfile \"${VID}\"" append-play > "${FIFO}"
 else
@@ -23,4 +14,3 @@ else
 	mkfifo "${FIFO}"
 	mpv --input-file="${FIFO}" "${VID}" &>/dev/null &
 fi
-#fi

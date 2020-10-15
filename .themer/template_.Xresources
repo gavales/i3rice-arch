@@ -175,7 +175,7 @@ XTerm.vt100.geometry:    79x25
 
 ! ━  5xcursor
 
-Xcursor.theme: %%cursor%%
+Xcursor.theme: "%%cursor%%"
 Xcursor.size:  48
 
 ! ━  6urxvt

@@ -11,7 +11,7 @@
 
 case "$1" in
 	*mkv|*webm|*mp4|*youtube.com/watch*|*youtube.com/playlist*|*youtu.be*|*hooktube.com*|*bitchute.com*)
-		setsid -f mpv -quiet "$1" >/dev/null 2>&1
+		setsid -f mppipe "$1" YT >/dev/null 2>&1
 		;;
 #	*v.redd.it*)
 #		

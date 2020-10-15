@@ -238,7 +238,7 @@ EXISTS() {
 	$I3 [con_mark="$MRK"] focus
 	$I3 focus child
 	[[ -z $(i3gm) ]] && $I3 "mark --add _${MRK/_W/}"
-	history "$MRK"
+#	history "$MRK"
 	exit
 }
 

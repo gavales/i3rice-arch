@@ -34,10 +34,9 @@ browser linkhandler
 macro , open-in-browser
 macro t set browser "qndl"                 ; open-in-browser ; set browser linkhandler
 macro a set browser "tsp youtube-dl --add-metadata -xic -f bestaudio/best" ; open-in-browser ; set browser linkhandler
-macro v set browser "setsid -f ytmpv 1080" ; open-in-browser ; set browser linkhandler
+macro v set browser "setsid -f ytmpv  720" ; open-in-browser ; set browser linkhandler
 macro w set browser "lynx"                 ; open-in-browser ; set browser linkhandler
 macro p set browser "dmenuhandler"         ; open-in-browser ; set browser linkhandler
-macro c set browser "setsid -f surf"       ; open-in-browser ; set browser linkhandler
 
 highlight all "---.*---"                              color3  default bold
 highlight feedlist ".*(0/0))"                         color0
