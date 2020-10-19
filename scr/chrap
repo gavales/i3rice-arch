@@ -1,36 +1,5 @@
 #!/usr/bin/env bash
 
-# OA: Gavin Vales
-# CREATED: Wed 23 Oct 22:00:56 BST 2019
-# source /home/gavarch/.config/user-dirs.dirs
-
-help () {
-cat << 'EOB'
-# NAME
-
-__chrap__ - `google-chrome-beta` app wrapper
-
-# SYNOPSIS
-
-```
-chrap <url>
-chrap --help|-h
-```
-
-EOB
-exit
-}
-
-while true; do
-	case $1 in
-		--help ) help ;;
-		-h     ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
-		-- ) shift ; break ;;
-		*  ) break         ;;
-	esac
-	shift
-done
-
-URL="${@:-}"
+URL="${@:-"youtube.com"}"
 
 google-chrome-beta --new-window --app=${URL}

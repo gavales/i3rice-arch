@@ -136,7 +136,7 @@ c.keyhint.radius = 6
 
 c.messages.timeout = 5000
 
-c.new_instance_open_target = 'tab'
+c.new_instance_open_target = 'window'
 #  - tab: Open a new tab in the existing window and activate the window.
 #  - tab-bg: Open a new background tab in the existing window and activate the window.
 #  - tab-silent: Open a new tab in the existing window without activating the window.
