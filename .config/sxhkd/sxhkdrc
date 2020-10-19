@@ -138,9 +138,9 @@ super + control + Return
 
 # ━  ROW3
 super + z
-	surf docs.google.com/document/u/0/
+	reloadconfs
 super + x
-	surf docs.google.com/spreadsheets/u/0/
+	$TERMINAL -n bashmount -e bashmount
 super + c
 	$BROWSER
 super + v
@@ -149,17 +149,15 @@ super + b
 	$EDITOR -s bib $HOME/global.bib
 super + n
 	chrap https://www.netflix.com/
-super + m
-	surf docs.google.com/presentation/u/0/
 super + {comma,period,slash}
 	i3vol {dec,inc,mute}
 
-super + shift + c
-	reloadconfs
-super + shift + v
-	projectM-pulseaudio
-super + shift + b
-	$TERMINAL -n bashmount -e bashmount
+#	surf docs.google.com/document/u/0/
+#	surf docs.google.com/spreadsheets/u/0/
+#	surf docs.google.com/presentation/u/0/
+
+#super + shift + v
+#	projectM-pulseaudio
 super + shift + m
 	chrap https://play.google.com/movies/
 super + shift + {comma,period,slash}
