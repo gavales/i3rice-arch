@@ -1,8 +1,3 @@
-rename xresources.diff
-shell sudo make install
-mkdir fps_co1ncidence
-shell wget https://raw.githubusercontent.com/dudik/herbe/24557245869662e1885f286037ecc37038a5f791/notify-send
-shell chmod +x %f
 search notify
 rename notify-send_
 search ranger
@@ -41,10 +36,15 @@ rename castle.jpg
 rename SEPIA Mountainous River Landscape Day Version.JPG
 rename Mountainous River Landscape Day Version.JPG
 open_with sxiv
-open_with vim
 rename One Piece Season 05 (Dreams) EP 131-143 [Dual-Audio] [Multi-Sub]
 rename One Piece Season 07 (Escape Marine Base G-8) EP 196-228 [Dual-Audio] [Multi-Sub]
 s
 shell rm
 
 shell rm %f
+rename session.html
+open_with vim
+rename session.md
+shell 
+rename ih34in.dxf
+open_with mpv

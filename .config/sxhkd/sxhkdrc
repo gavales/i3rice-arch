@@ -40,8 +40,8 @@ super + shift + Print
 	snapper -s
 super + Escape
 	i3end
-super + Home
-	keybindingsmenu
+#super + Home
+#	keybindingsmenu
 
 # ━  NUM
 super + grave
@@ -83,12 +83,12 @@ super + w
 	chrap http://www1.watchserieshd.tv/
 super + r
 	$TERMINAL -n newsboat -e newsboat
-super + t
-	mkwalrando
+#super + t
+#	mkwalrando
 super + y
 	chrap https://www.youtube.com/
-super + u
-	chrap https://outlook.office.com/mail/inbox/id/AAQkAGZjZGU2MmYyLTc5ZDctNDI1My05MzU4LWRjYTc3NjdhN2NkOAAQAOwToE4JkJhIgjz322aPjPU%3D
+#super + u
+#	chrap https://outlook.office.com/mail/inbox/id/AAQkAGZjZGU2MmYyLTc5ZDctNDI1My05MzU4LWRjYTc3NjdhN2NkOAAQAOwToE4JkJhIgjz322aPjPU%3D
 super + i
 	chrap https://www.primevideo.com/region/na/ref=av_auth_return_redir
 #	chrap https://www.bbc.co.uk/iplayer/
@@ -152,12 +152,8 @@ super + n
 super + {comma,period,slash}
 	i3vol {dec,inc,mute}
 
-#	surf docs.google.com/document/u/0/
-#	surf docs.google.com/spreadsheets/u/0/
-#	surf docs.google.com/presentation/u/0/
-
-#super + shift + v
-#	projectM-pulseaudio
+super + shift + v
+	projectM-pulseaudio
 super + shift + m
 	chrap https://play.google.com/movies/
 super + shift + {comma,period,slash}

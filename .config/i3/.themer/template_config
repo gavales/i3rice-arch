@@ -237,8 +237,8 @@ $fw [class="zoom"]                       focus;$QUD -m 2;focus
 
 $fw [class="zoom" title="Zoom Meeting ID"] focus;$QUD -m 3;focus
 $fw [class="Emacs"]                      focus;$QUD -m 3;focus
-$fw [class="firefox"]                    focus;$QUD -m 3;focus
-$fw [class="Firefox"]                    focus;$QUD -m 3;focus
+$fw [class="firefox"]                    focus;$QUD -m 3;focus;$tf "firefox"
+$fw [class="Firefox"]                    focus;$QUD -m 3;focus;$tf "firefox"
 $fw [class="Gvim"]                       focus;$QUD -m 3;focus
 $fw [class="Pamac-manager"]              focus;$QUD -m 3;focus;$tf "software"
 $fw [class="Slack"]                      focus;$QUD -m 3;focus;$tf "slack"

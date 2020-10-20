@@ -112,10 +112,12 @@ date: Updated $(date)
 ---
 
 EOB
-	for i in $(find . -maxdepth 1 -type d | sed 's/^\.$//g;s/\.\///g'); do
+#	for i in $(find . -maxdepth 1 -type d | sed 's/^\.$//g;s/\.\///g'); do
+	for i in $(fd -d 1 -t d); do
 		printf "\n%s\n\n" "# $i"
 		cd $i
-		for i in $(find . -type f -print0 | sort -z -r | xargs -r0 -I {} echo "{}" | sed 's/\.\///g'); do
+#		for i in $(find . -type f -print0 | sort -z -r | xargs -r0 -I {} echo "{}" | sed 's/\.\///g'); do
+		for i in $(fd -t f | sort -r); do
 			printf "%s" "* **${i%.*}** - "
 			awk -v NAME="${PWD/content\//local\/}/${i%.*}.html" '
 				/^title:/{gsub(/^title: /,"",$0);printf "[%s](%s) ",$0,NAME}
@@ -147,7 +149,8 @@ cat <<EOB
 
 EOB
 	cd content/posts
-	for i in $(find . -type f | sed 's/\.\///g'); do
+#	for i in $(find . -type f | sed 's/\.\///g'); do
+	for i in $(fd -t f); do
 		echo ''
 		echo '<item>'
 		awk '
@@ -185,17 +188,20 @@ O_gensite()  {
 	cd $WBST
 	[[ -d local ]] || mkdir local
 	genbloghome > $WBST/content/pages/blog.md
-	find content -type d | \
+#	find content -type d | \
+	fd -t d -p content | \
 		sed '/^content$/d;s/content\///g' | \
 		xargs -I {} mkdir -p local/{}
-	for i in $(find content -type f | sed 's;content/;local/;g'); do
+#	for i in $(find content -type f | sed 's;content/;local/;g'); do
+	for i in $(fd -t f -p content | sed 's;content/;local/;g'); do
 		$PNDCMD "${i%.*}"_pre.html "content/${i/local\//}"
 		sed -i '/<\!DOCTYPE html>/,/<title>/{/<\!DOCTYPE html>/!{/<title>/!d;};}' "${i%.*}_pre.html"
 		sed -i '/<title>/,/<\/head>/{/<title>/!{/<\/head>/!d;};}' "${i%.*}_pre.html"
 		sed -i '/<\!DOCTYPE html>/d' "${i%.*}_pre.html"
 	done
 	cd local
-	for i in $(find pages -type f | sed '/_pre\.html$/!d'); do
+#	for i in $(find pages -type f | sed '/_pre\.html$/!d'); do
+	for i in $(fd -t f -p pages | sed '/_pre\.html$/!d'); do
 		FLE=${i##*/}
 		cat $WBST/resources/header > "${i%_pre*}".html
 		cssprint page             >> "${i%_pre*}".html
@@ -203,15 +209,17 @@ O_gensite()  {
 		navgen "${FLE%_pre*}"     >> "${i%_pre*}".html
 		cat "${i}"                >> "${i%_pre*}".html
 	done
-	for i in $(find posts -type f | sed '/_pre\.html$/!d'); do
+#	for i in $(find posts -type f | sed '/_pre\.html$/!d'); do
+	for i in $(fd -t f -p posts | sed '/_pre\.html$/!d'); do
 		cat $WBST/resources/header > "${i%_pre*}".html
 		cssprint post             >> "${i%_pre*}".html
 		jsonprint                 >> "${i%_pre*}".html
 		navgen "blog"             >> "${i%_pre*}".html
 		cat "${i}"                >> "${i%_pre*}".html
 	done
-	find pages -type f | sed '/_pre\.html/!d' | xargs rm
-	find posts -type f | sed '/_pre\.html/!d' | xargs rm
+#	find pages -type f | sed '/_pre\.html/!d' | xargs rm
+#	find posts -type f | sed '/_pre\.html/!d' | xargs rm
+	fd -t f -p "pages|posts" | sed '/_pre\.html/!d' | xargs rm
 	genfeed > rss.xml
 	exit
 }

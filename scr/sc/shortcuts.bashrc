@@ -21,9 +21,9 @@ Mc() { mv "$1" ~/.config/"$1" ; }
 alias gdh="cd ~/doc"
 Ydh() { cp -r "$1" ~/doc/"$1" ; }
 Mdh() { mv "$1" ~/doc/"$1" ; }
-alias gdb="cd ~/doc/bookmarks"
-Ydb() { cp -r "$1" ~/doc/bookmarks/"$1" ; }
-Mdb() { mv "$1" ~/doc/bookmarks/"$1" ; }
+alias gdb="cd ~/doc/bkmrks"
+Ydb() { cp -r "$1" ~/doc/bkmrks/"$1" ; }
+Mdb() { mv "$1" ~/doc/bkmrks/"$1" ; }
 alias gde="cd ~/doc/ebks"
 Yde() { cp -r "$1" ~/doc/ebks/"$1" ; }
 Mde() { mv "$1" ~/doc/ebks/"$1" ; }

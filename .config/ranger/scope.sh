@@ -146,6 +146,12 @@ handle_image() {
 #            fi
             ;;
 
+        application/x-dxf)
+            libreoffice --headless --convert-to png "${FILE_PATH}" && exit 5
+            convert -trim -transparent white "${FILE_PATH/dxf/png}" "${IMAGE_CACHE_PATH}" && exit 5
+            rm "${FILE_PATH/dxf/png}" && exit 5
+          ;;
+
     esac
 }
 
@@ -182,6 +188,7 @@ handle_mime() {
             mediainfo "${FILE_PATH}" && exit 5
             exiftool "${FILE_PATH}" && exit 5
             exit 1;;
+
     esac
 }
 
