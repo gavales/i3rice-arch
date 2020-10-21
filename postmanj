@@ -36,7 +36,7 @@ sudo pacman -S rofi otf-font-awesome ttf-font-awesome \
   maim zathura-pdf-mupdf id3v2 hsetroot xorg-xsetroot \
   xautolock xorg-xev sxhkd wmutils i3lock-color glib2 \
   gdk-pixbuf2 ruby-sass inkscape glava gthumb xfce4-settings \
-  imv fd
+  imv fd qt5-webengine-widevine
 #sudo cpan AnyEvent Linux::FD common::sense
 cd ~
 xfconf-query --channel thunar --property /misc-full-path-in-title --create --type bool --set true
@@ -56,7 +56,7 @@ cat << 'EOB'
   SYMLINKS OF THE NECESSARY FOLDERS AND FILES
 
 - AUR APPS I GET TOO:
-  mmutils-git     : google-chrome-beta
+  mmutils-git
   slack-desktop   : chrome-remote-desktop
   spotify         : zathura-pdf-mupdf
   clipit          : pulseaudio-ctl
@@ -68,7 +68,8 @@ cat << 'EOB'
   ranger-git      : vim-live-latex-preview
   fontpreview-git : dragon-drag-and-drop
   lf              : bibata-cursor-theme
-
+- NOT ANYMORE!!
+  : google-chrome-beta
 # thunar-gtk2 # wordgrinder # grive # acroread
 # urxvt-config-reload-git # urxvt-resize-font-git
 EOB
