@@ -2,4 +2,5 @@
 
 URL="${@:-"youtube.com"}"
 
-google-chrome-beta --new-window --app=${URL}
+#google-chrome-beta --new-window --app=${URL}
+qutebrowser ${URL} &>/dev/null &

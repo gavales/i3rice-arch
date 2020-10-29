@@ -235,6 +235,7 @@ $fw [title="^SCRT$"]                     focus;$QUD -m 2;focus;$tf "SCRT"
 $fw [title="^PROJECTS$"]                 focus;$QUD -m 2;focus;$tf "PROJECTS"
 $fw [class="zoom"]                       focus;$QUD -m 2;focus
 
+#$fw [class="qutebrowser"]                focus;$QUD -m 3;focus;$tf "qute"
 $fw [class="zoom" title="Zoom Meeting ID"] focus;$QUD -m 3;focus
 $fw [class="Emacs"]                      focus;$QUD -m 3;focus
 $fw [class="firefox"]                    focus;$QUD -m 3;focus;$tf "firefox"
@@ -245,7 +246,6 @@ $fw [class="Slack"]                      focus;$QUD -m 3;focus;$tf "slack"
 $fw [class="imv"]                        focus;$QUD -m 3;focus
 $fw [class="feh"]                        focus;$QUD -m 3;focus
 $fw [class="Sxiv"]                       focus;$QUD -m 3;focus
-$fw [class="qutebrowser"]                focus;$QUD -m 3;focus;$tf "qute"
 $fw [class="Brave-browser"]              focus;$QUD -m 3;focus;$tf "qute"
 $fw [title="Google Chrome$"]             focus;$QUD -m 3;focus;$tf "chrome"
 $fw [title="^EDTR$"]                     focus;$QUD -m 3;focus;$tf "edtr"

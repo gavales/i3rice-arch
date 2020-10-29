@@ -1,6 +1,3 @@
-search notify
-rename notify-send_
-search ranger
 mkdir portrait
 rename 09
 rename 07.md
@@ -46,5 +43,8 @@ rename session.html
 open_with vim
 rename session.md
 shell 
-rename ih34in.dxf
-open_with mpv
+rename engineering
+rename engineer
+rename recipes
+rename .recipes
+w

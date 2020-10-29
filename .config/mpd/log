@@ -8550,3 +8550,7 @@ Oct 19 14:43 : update: updating Shabba Ranks/X-Tra Naked/04 Muscle Grip.mp3
 Oct 19 14:45 : alsa_output: Decoder is too slow; playing silence to avoid xrun
 Oct 19 14:49 : player: played "Damian Marley/00 More Justice.mp3"
 Oct 19 14:51 : player: played "Damian Marley/00 Road To Zion (Feat_ Nas).mp3"
+Oct 23 12:04 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 12:04 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Oct 23 12:08 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 23 12:08 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.

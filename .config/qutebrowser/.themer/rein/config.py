@@ -136,7 +136,7 @@ c.keyhint.radius = 6
 
 c.messages.timeout = 5000
 
-c.new_instance_open_target = 'window'
+c.new_instance_open_target = 'tab'
 #  - tab: Open a new tab in the existing window and activate the window.
 #  - tab-bg: Open a new background tab in the existing window and activate the window.
 #  - tab-silent: Open a new tab in the existing window without activating the window.
@@ -280,6 +280,8 @@ c.zoom.mouse_divider = 512
 #c.zoom.text_only = False
 
 # ━  COLORS
+
+config.set("colors.webpage.darkmode.enabled", True)
 
 c.hints.border = '1px solid #a6a988'
 
@@ -503,7 +505,7 @@ c.tabs.position = 'top'                                     # top bottom left ri
 
 c.tabs.select_on_remove = 'next'                            # prev next last-used
 
-c.tabs.show = 'always'                                      # always never multiple switching
+c.tabs.show = 'switching'                                   # always never multiple switching
 
 c.tabs.show_switching_delay = 800
 
