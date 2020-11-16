@@ -19,7 +19,7 @@ screenchange-reload = true
 
 [bar/i3]
 ;monitor             = ${env:MONITOR:HDMI-1}
-override-redirect   = false
+override-redirect   = true
 ;bottom              = true
 height              = 30
 width               = 100%
@@ -42,8 +42,8 @@ font-1              = FontAwesome5Free:style=Solid:size=12;2
 font-2              = FontAwesome5Brands:style=Solid:size=12;2
 font-3              = Inconsolata Nerd Font:style=Regular:size=21;6
 tray-position       = right
-tray-padding        = 2
-tray-maxsize        = 16
+tray-padding        = 0
+tray-maxsize        = 24
 tray-transparent    = true
 tray-background-0   = #ff689d6a
 tray-background-1   = #00689d6a
@@ -108,6 +108,7 @@ exec = bash ~/scr/pb/td
 ;format-background = #689d6a
 format-foreground = #fbf1c7
 format-padding = 1
+click-left = timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)"
 interval = 1
 
 [module/ws]

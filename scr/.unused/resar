@@ -5,11 +5,77 @@ TTLB=22 BRDR=2 POR=0
 DECH=$((TTLB + BRDR)) DECW=$((2*BRDR))
 CMD="$I3 resize"
 
+help() {
+cat << 'EOB'
+# NAME
+
+__resar__ -- resize windows based on aspect ratio
+
+# SYNOPSIS
+
+```
+resar --inc|-i|--dec|-d <w|h> <integer>
+      --archange|-a <ratio>
+resar --help|-h
+```
+
+# DEPENDENCIES
+
+```
+wmutils
+wmctrl
+```
+EOB
+}
+
+archange() {
+	local W H WD HD ARN DIR
+	ARN=$1 FIX=$2
+}
+
+getdeets() {
+#	eval "$(wmctrl -lG | \
+#		awk -v FOC="$(pfw)" -v DECW="$DECW" -v DECH="$DECH" '
+#			$1 ~ FOC {
+#				W=$5-DECW;H=$6-DECH
+#				print "OW="$5 "\nOH="$6 "\nW="W "\nH="H "
+#				}')"
+	W=$(wattr w $(pfw))
+	H=$(wattr h $(pfw))
+}
+
+resize() {
+	DIR=$1 ; AMT=$2
+	getdeets
+	echo $DIR $AMT
+	echo $OW $OH $W $H
+
+	if [[ $DIR == "i" ]]; then
+		eval "$(echo "" | awk -v H="$H" -v W="$W" -v AMT="$AMT" -v AR="$AR" 'BEGIN{
+			W=((100+AMT)/100)*W
+			H=((100+AMT)/100)*H
+			print "W="int(W) "\nH="int(H)
+		}')"
+
+	else
+		eval "$(echo "" | awk -v H="$H" -v W="$W" -v AMT="$AMT" -v AR="$AR" 'BEGIN{
+			W=((100-AMT)/100)*W
+			H=((100-AMT)/100)*H
+			print "W="int(W) "\nH="int(H)
+		}')"
+
+	fi
+	echo $W $H
+#	i3-msg resize set $((W+DECW)) $((H+DECH))
+	i3-msg resize set $W $H
+	exit
+}
+
 while true; do
 	case $1 in
-		--incar    | -i | i ) INC=1 ;;
-		--decar    | -d | d ) DEC=1 ;;
-		--archange | -a | a ) ARC="${2:-}" ; shift ;;
+		--inc      | -i | i ) resize i ${2:-} ${3:-} ; shift ;;
+		--dec      | -d | d ) resize d ${2:-} ${3:-} ; shift ;;
+		--archange | -a | a ) archange "${2:-}" ${3:-} ; shift ;;
 		--mark     | -m | m ) MRK="${2:-}" ; shift ;;
 		--help ) help ;;
 		-h ) help | \
@@ -22,96 +88,3 @@ while true; do
 	esac
 	shift
 done
-
-omark() {
-	$I3 [con_mark=$1] focus
-	$I3 focus child
-}
-
-archange() {
-	local W H WD HD ARN DIR
-	ARN=$1 FIX=$2
-}
-
-main() {
-	local FST SND W H WD HD OW OH
-	FST=$1 SND=$2
-	eval "$(wmctrl -lG | awk -v FOC="$(pfw)" '$1 ~ FOC {print "OW="$5"\nOH="$6}')"
-	WD=${FST:0:1} HD=${SND:0:1}
-	[[ $WD =~ ^[0-9] ]] && W=$FST || W=${FST/$WD/}
-	[[ $HD =~ ^[0-9] ]] && H=$SND || H=${SND/$HD/}
-#	W=$((W-DECW)) H=$((H-DECH))
-	echo $FST $SND
-	echo $OW $OH
-	OW=$((OW-DECW)) OH=$((OH-DECH))
-	echo $OW $OH
-	echo $W $H
-
-	if   [[ -n $INC ]]; then
-		awk -v DW="$DECW" -v DH="$DECH" \
-			-v INC="$FST" -v DIR="$SND" -v W="$OW" -v H="$OH" 'BEGIN{
-			if(W<H){ AR=H/W;POR=1 }
-			else{ AR=W/H;POR=0 }
-			print AR" "POR
-			if(DIR=="h"){
-				NH=H+INC+DH
-				if(POR==1){NW=int(NH/AR)+DW}
-				else{NW=int(NH*AR)+DW}
-				print "i3-msg -q resize set "NW" "NH
-			}
-			else {
-				NW=W+INC+DW
-				if(POR==1){NH=int(NW*AR)+DH}
-				else{NH=int(NW/AR)+DH}
-				print "i3-msg -q resize set "NW" "NH
-			}
-		}'
-
-	elif [[ -n $DEC ]]; then
-		awk -v DW="$DECW" -v DH="$DECH" \
-			-v INC="$FST" -v DIR="$SND" -v W="$OW" -v H="$OH" 'BEGIN{
-			if(H>W){ AR=H/W;POR=1 }
-			else{ AR=W/H;POR=0 }
-			print AR" "POR
-			if(DIR=="h"){
-				NH=H-INC+DH
-				if(POR==1){NW=int(NH/AR)+DW}
-				else{NW=int(NH*AR)+DW}
-				print "i3-msg -q resize set "NW" "NH
-			}
-			else {
-				NW=W-INC+DW
-				if(POR==1){NH=int(NW*AR)+DH}
-				else{NH=int(NW/AR)+DH}
-				print "i3-msg -q resize set "NW" "NH
-			}
-		}'
-
-	elif [[ -n $ARC ]]; then
-		:
-	else
-		if   [[ $WD == "+" ]]; then WDT="$CMD grow width $W px or $W ppt"
-		elif [[ $WD == "-" ]]; then WDT="$CMD shrink width $W px or $W ppt"
-		elif [[ $WD == "%" ]]; then WDT="$CMD set width $W ppt"
-		elif [[ $WD == "*" ]]; then WDT=""
-		else                        WDT="$CMD set width  $W"
-		fi
-
-		if   [[ $HD == "+" ]]; then HDT="$CMD grow height $H px or $H ppt"
-		elif [[ $HD == "-" ]]; then HDT="$CMD shrink height $H px or $H ppt"
-		elif [[ $HD == "%" ]]; then HDT="$CMD set height $H ppt"
-		elif [[ $HD == "*" ]]; then HDT=""
-		else                        HDT="$CMD set height $H"
-		fi
-
-#		eval "$(echo $WDT)"
-#		eval "$(echo $HDT)"
-		echo $WDT
-		echo $HDT
-	fi
-
-
-	exit
-}
-
-main $@

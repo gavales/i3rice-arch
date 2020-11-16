@@ -1,9 +1,9 @@
 #$USER_SCR_DIR/.unused
 #FORCE $HOME/.config/glava
 #FORCE $USER_XRS_DIR
+#FORCE $HOME/.config/polybar
 $HOME/.vim/colors
 FORCE $HOME/.config/i3
-FORCE $HOME/.config/polybar
 FORCE $HOME/.config/zathura
 FORCE $HOME/.config/dunst
 FORCE $HOME/.config/rofi

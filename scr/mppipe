@@ -9,8 +9,11 @@ PID="$(pgrep -f "${FIFO##*/}")"
 
 if [[ -n ${PID} ]]; then
 	echo "loadfile \"${VID}\"" append-play > "${FIFO}"
+	echo "$VID" >> ${FIFO}list
 else
 	rm "${FIFO}"
+	rm "${FIFO}list"
 	mkfifo "${FIFO}"
 	mpv --input-file="${FIFO}" "${VID}" &>/dev/null &
+	echo "$VID" > ${FIFO}list
 fi

@@ -63,7 +63,7 @@ def windownotify(i3, event):
 		call('polybar-msg cmd hide'.split(' '))
 
 def set_floating(i3, event):
-	event.container.command('floating enable, border normal 0')
+	event.container.command('floating enable, border normal 2')
 
 i3.on('window', windownotify)
 i3.on('workspace', wsnotify)

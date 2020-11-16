@@ -117,7 +117,7 @@ $ALT+e           layout toggle tabbed split
 $ALT+y           $QUD --resize '1 -5 -5'
 $ALT+u           $QUD --resize '1 $WWS $HWS'
 $ALT+i           $QUD --resize '1 $WUW $HUW'
-$ALT+o           $QUD --resize '1 +5  +5'
+$ALT+o           $QUD --resize '1 +5 +5'
 $ALT+p           $QUD --resize '1 %40 %20'
 $ALT+bracketleft $QUD --resize '1 *   90'
 
@@ -186,6 +186,7 @@ $fw [title="Select a download location"] resize set 750 500
 $fw [class="Pavucontrol"]                resize set 525 300
 $fw [class="Rofi"]                       border pixel 1
 $fw [class="FlightOne"]                  $FEN
+$fw [class="Polybar"]                    $FEN
 
 # ━━ QUAD
 $fw [title="Log in with PayPal"]         $tf "paypal"
@@ -208,6 +209,7 @@ $fw [title="^Netflix$"]                  focus;$QUD -m 1;focus;$tf "netflix"
 $fw [title="^Funimation"]                focus;$QUD -m 1;focus;$tf "funimation"
 $fw [title="Amazon.co.uk: Prime Video"]  focus;$QUD -m 1;focus;$tf "prime"
 $fw [class="zoom" title="^Participants"]  focus;$QUD -m 1;focus
+$fw [class="qutebrowser"]                focus;$QUD -m 1;focus;$tf "qute"
 
 $fw [class="Surf"]                       focus;$QUD -m 2;focus
 $fw [class="Zathura"]                    focus;$QUD -m 2;focus
@@ -235,9 +237,9 @@ $fw [title="^SCRT$"]                     focus;$QUD -m 2;focus;$tf "SCRT"
 $fw [title="^PROJECTS$"]                 focus;$QUD -m 2;focus;$tf "PROJECTS"
 $fw [class="zoom"]                       focus;$QUD -m 2;focus
 
-#$fw [class="qutebrowser"]                focus;$QUD -m 3;focus;$tf "qute"
 $fw [class="zoom" title="Zoom Meeting ID"] focus;$QUD -m 3;focus
 $fw [class="Emacs"]                      focus;$QUD -m 3;focus
+$fw [class="discord"]                    focus;$QUD -m 3;focus;$tf "discord"
 $fw [class="firefox"]                    focus;$QUD -m 3;focus;$tf "firefox"
 $fw [class="Firefox"]                    focus;$QUD -m 3;focus;$tf "firefox"
 $fw [class="Gvim"]                       focus;$QUD -m 3;focus
@@ -246,7 +248,6 @@ $fw [class="Slack"]                      focus;$QUD -m 3;focus;$tf "slack"
 $fw [class="imv"]                        focus;$QUD -m 3;focus
 $fw [class="feh"]                        focus;$QUD -m 3;focus
 $fw [class="Sxiv"]                       focus;$QUD -m 3;focus
-$fw [class="Brave-browser"]              focus;$QUD -m 3;focus;$tf "qute"
 $fw [title="Google Chrome$"]             focus;$QUD -m 3;focus;$tf "chrome"
 $fw [title="^EDTR$"]                     focus;$QUD -m 3;focus;$tf "edtr"
 $fw [title="^EDTR-BASH$"]                focus;$QUD -m 3;focus;$tf "bash - edtr"
@@ -288,6 +289,7 @@ $exn fix_xcursor
 $exn reloadconfs
 $exn xfsettingsd
 $exn sxhkd
+$exn xfce4-panel
 $exn spicetify
 
 $ena notify-send 'i3 (re)loaded!' -i ~/scrpic/i3white.png

@@ -8554,3 +8554,5 @@ Oct 23 12:04 : exception: RTIOThread could not get realtime scheduling, continui
 Oct 23 12:04 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
 Oct 23 12:08 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Oct 23 12:08 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.
+Nov 15 21:46 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 15 21:46 : avahi: Service 'Music Player @ ThinkPadT440p' successfully established.

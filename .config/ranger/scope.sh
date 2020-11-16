@@ -147,9 +147,9 @@ handle_image() {
             ;;
 
         application/x-dxf)
-            libreoffice --headless --convert-to png "${FILE_PATH}" && exit 5
-            convert -trim -transparent white "${FILE_PATH/dxf/png}" "${IMAGE_CACHE_PATH}" && exit 5
-            rm "${FILE_PATH/dxf/png}" && exit 5
+            libreoffice --headless --convert-to png "${FILE_PATH}" && \
+            convert -trim -transparent white "${FILE_PATH%.*}.png" "${IMAGE_CACHE_PATH}" && \
+            rm "${FILE_PATH%.*}.png" && exit 5
           ;;
 
     esac
