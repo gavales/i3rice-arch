@@ -17,7 +17,7 @@ case "$1" in
 #		
 #		;;
 	*png|*jpg|*jpe|*jpeg|*gif)
-		curl -sL "$1" > "/tmp/${1##*/}" && imv -b "$(themer -v 'bg0 ')" "/tmp/${1##*/}"  >/dev/null 2>&1 &
+		curl -sL "$1" > "/tmp/${1##*/}" && sxiv -a "/tmp/${1##*/}"  >/dev/null 2>&1 &
 		;;
 #	*imgur.com*)
 #		curl -sL "$1" | sed 's/http/\nhttp/g' | awk -F \" '

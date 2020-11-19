@@ -3,17 +3,29 @@
 # OA: Gavin Vales
 # CREATED: Sat 26 Jan 21:59:12 GMT 2019
 
+CNF="$HOME/.config/mpv/mpv.conf"
 VID="$1"
 FIFO="$USER_TMP_DIR/MPV${2:-"MAIN"}"
 PID="$(pgrep -f "${FIFO##*/}")"
+QUAL="${3:-480}"
+
+qual() {
+	if [[ $QUAL == "best" ]]; then
+		sed -i 's/^ytdl-format.*/ytdl-format=bestvideo+bestaudio\/best/g' $CNF
+	else
+		sed -i "s/^ytdl-format.*/ytdl-format=bestvideo[height<=\?${QUAL}]+bestaudio\/best/g" $CNF
+	fi
+}
 
 if [[ -n ${PID} ]]; then
+	qual
 	echo "loadfile \"${VID}\"" append-play > "${FIFO}"
 	echo "$VID" >> ${FIFO}list
 else
 	rm "${FIFO}"
 	rm "${FIFO}list"
 	mkfifo "${FIFO}"
+	qual
 	mpv --input-file="${FIFO}" "${VID}" &>/dev/null &
 	echo "$VID" > ${FIFO}list
 fi

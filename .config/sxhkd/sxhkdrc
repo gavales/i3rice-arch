@@ -82,7 +82,7 @@ super + q
 super + w
 	chrap http://www1.watchserieshd.tv/
 super + r
-	$TERMINAL -n newsboat -e newsboat
+	$TERMINAL -f "Century Schoolbook Monospace:size=15" -n newsboat -e newsboat
 #super + t
 #	mkwalrando
 super + y
