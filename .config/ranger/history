@@ -1,3 +1,4 @@
+rename 01.jpg
 mkdir landscape
 rename seestck_bei_mondschein.jpg
 rename Pilgrimage_at_Sunset_Sunrise.jpg
@@ -44,7 +45,6 @@ rename .recipes
 w
 rename oldbridge
 open_with gvim
-delete!
-rename John Grisham
-delete
-rename Grover Washington Jr
+rename 42.png
+rename 44.png
+rename 45.png

@@ -2,4 +2,5 @@
 
 #mpv -quiet --ytdl-format="bestvideo[height<=?${1}]+bestaudio/best" \
 #	"$2" &>/dev/null &
-mppipe "$2" YT $1 &>/dev/null &
+PPE="${3:-YT}"
+mppipe "$2" "$PPE" $1 &>/dev/null &
