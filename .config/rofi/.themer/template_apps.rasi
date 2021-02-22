@@ -1,0 +1,66 @@
+* {
+  background-color: %%ac88b%%CC;
+  border-color: %%ac75b%%CC;
+  text-color: %%ac50f%%;
+  font: "%%sansfont%% 18";
+  spacing: 0;
+  width: 512px;
+}
+
+window {
+  width: 75%;
+  height: 95%;
+  border-radius: 10;
+}
+
+mainbox {
+  children: [inputbar, message, listview];
+  spacing: 30px;
+  padding: 50px 200px;
+  border: 1px;
+}
+
+inputbar {
+  border: 0 0 2px 0;
+  children: [entry];
+  border-color: %%ac75b%%CC;
+  background-color: #00000000;
+}
+
+textbox {
+  border: 0 0 1px 0;
+  border-color: %%ac75b%%CC;
+  padding: 8px 16px;
+}
+
+entry {
+  horizontal-align: 0.5; vertical-align: 0.5;
+  background-color: #00000000;
+  padding: 16px;
+}
+
+#listview {
+  background-color: #00000000;
+  cycle: false;
+  margin: 0 0 -1px 0;
+  scrollbar: false;
+  dynamic: true;
+  columns: 4;
+  lines: 5;
+}
+
+element {
+  background-color: #00000000;
+  border: 0;
+  padding: 16px;
+  orientation: vertical;
+  border-color: %%ac75b%%CC;
+  border-radius: 5;
+}
+
+element selected {
+  background-color: %%ac75b%%CC;
+}
+
+#element-icon { size: 100; horizontal-align: 0.5; vertical-align: 0.5; }
+#element-text { horizontal-align: 0.5; vertical-align: 0.5; text-color: inherit; }

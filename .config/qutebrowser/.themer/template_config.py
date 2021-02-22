@@ -59,7 +59,7 @@ c.content.host_blocking.lists = ['https://raw.githubusercontent.com/StevenBlack/
 ## Type: List of UrlPattern
 # c.content.host_blocking.whitelist = []
 
-c.content.media_capture = 'ask'                             # true false ask
+#c.content.media_capture = 'ask'                             # true false ask
 c.content.mouse_lock = 'ask'                                # true false ask
 c.content.notifications = 'ask'                             # true false ask
 c.content.pdfjs = False

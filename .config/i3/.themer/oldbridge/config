@@ -119,7 +119,7 @@ $ALT+u           $QUD --resize '1 $WWS $HWS'
 $ALT+i           $QUD --resize '1 $WUW $HUW'
 $ALT+o           $QUD --resize '1 +5 +5'
 $ALT+p           $QUD --resize '1 %40 %20'
-$ALT+bracketleft $QUD --resize '1 *   90'
+$ALT+bracketleft $QUD --resize '1 *   94'
 
 $ALT+Shift+Tab   focus left
 $ALT+Shift+q     kill

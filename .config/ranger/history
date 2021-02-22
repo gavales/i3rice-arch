@@ -1,18 +1,3 @@
-rename 01.jpg
-mkdir landscape
-rename seestck_bei_mondschein.jpg
-rename Pilgrimage_at_Sunset_Sunrise.jpg
-rename 051.jpg
-rename CTB199415BarcoPescaEntreDosRocasPlayaMarBaltico.zip
-mkdir blk-chalk
-mkdir graphite-wash
-mkdir oil-canvas
-mkdir oil-copper
-mkdir pencil
-mkdir watercolour
-mkdir wood
-mkdir ink-watercolour
-rename watercolour
 rename PENCIL-INK-WATERCOL 1797c Landscape with Pavilion.jpg
 mkdir sepia
 mkdir ink
@@ -48,3 +33,18 @@ open_with gvim
 rename 42.png
 rename 44.png
 rename 45.png
+rename 93.png
+rename 99.png
+rename 114.png
+rename 115.png
+rename 116.png
+rename ytlist
+rename nowlist
+open_with mpv
+rename [Erai-raws] Hunter X Hunter - 002 [1080p][Multiple Subtitle].mkv
+mkdir drops
+rename milks
+mkdir BeginnerGuitar
+mkdir IntermediateGuitar
+search 
+open_with lodraw

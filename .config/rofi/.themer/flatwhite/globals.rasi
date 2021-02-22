@@ -1,0 +1,56 @@
+* {
+	acf:     #385d72;
+	acb:     #8fb8d3;
+	ac88f:     #44433c;
+	ac75f:     #404c4f;
+	ac63f:     #3c545f;
+	ac50f:     #385d72;
+	ac37f:     #336584;
+	ac25f:     #2f6d95;
+	ac12f:     #2b76a7;
+	ac12b:     #3f8cbe;
+	ac25b:     #5b9bc5;
+	ac37b:     #73a9cb;
+	ac50b:     #8fb8d3;
+	ac63b:     #aac7da;
+	ac75b:     #c3d5e0;
+	ac88b:     #dee4e7;
+	fg0:       #493C2C;
+	bg0:       #F7F3EE;
+	fg1:       #5d5040;
+	bg1:       #e3dfda;
+	fg2:       #716454;
+	bg2:       #cfcbc6;
+	fg3:       #857868;
+	bg3:       #bbb7b2;
+	red:       #aa7461;
+	green:     #40d4cb;
+	yellow:    #c2b747;
+	blue:      #4a91c1;
+	magenta:   #a46ad1;
+	cyan:      #5acfe4;
+	darkred:   #b85227;
+	darkgrn:   #18E3C8;
+	darkylw:   #DDB700;
+	darkgnt:   #B043D1;
+	darkcyn:   #3FDCEE;
+	darkblu:   #277eb8;
+	darkerred: #8c5540;
+	darkergrn: #22b5aa;
+	darkerylw: #a49826;
+	darkergnt: #874bb0;
+	darkercyn: #3cb0c3;
+	darkerblu: #2c72a0;
+	black:   @bg1;
+	white:   @fg1;
+
+	text-color:       @fg0;
+	background-color: @accent;
+	border-color:     @accent;
+	
+	spacing: 0;
+	border: 0;
+	cornerrad: 5;
+	
+	font: "Lucida Sans 13";
+	}

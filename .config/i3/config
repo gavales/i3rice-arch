@@ -24,7 +24,7 @@ set $MON2 VGA1
 set $WUW 528
 set $HUW 286
 set $WWS 528
-set $HWS 318
+set $HWS 324
 set $TPAD 40
 set $LPAD 100
 set $RPAD 100
@@ -50,12 +50,12 @@ set $BNR border normal
 
 # ━  DECORATIONS
 # class                 brdr      bkgr      text    indi      chlb
-client.focused          #bfafb6 #dfd9d8 #343235 #bfafb6 #bfafb6
-client.focused_inactive #bfafb6 #bfafb6 #343235 #bfafb6 #bfafb6
-client.unfocused        #bfafb6 #bfafb6 #343235 #bfafb6 #bfafb6
-client.urgent           #A36043   #A36043   #343235 #A36043   #A36043
-client.placeholder      #e9e7e3   #e9e7e3   #343235 #e9e7e3   #e9e7e3
-client.background       #e9e7e3
+client.focused          #486249 #2f362f #fbf1c7 #486249 #486249
+client.focused_inactive #486249 #486249 #fbf1c7 #486249 #486249
+client.unfocused        #486249 #486249 #fbf1c7 #486249 #486249
+client.urgent           #cc241d   #cc241d   #fbf1c7 #cc241d   #cc241d
+client.placeholder      #282828   #282828   #fbf1c7 #282828   #282828
+client.background       #282828
 
 # ━  BINDINGS
 # ━━ Misc
@@ -119,7 +119,7 @@ $ALT+u           $QUD --resize '1 $WWS $HWS'
 $ALT+i           $QUD --resize '1 $WUW $HUW'
 $ALT+o           $QUD --resize '1 +5 +5'
 $ALT+p           $QUD --resize '1 %40 %20'
-$ALT+bracketleft $QUD --resize '1 *   90'
+$ALT+bracketleft $QUD --resize '1 *   94'
 
 $ALT+Shift+Tab   focus left
 $ALT+Shift+q     kill
@@ -264,8 +264,7 @@ $fw [title="^EDTR-XFILES$"]              focus;$QUD -m 3;focus;$tf "Xfiles - edt
 $fw [title="^DOOTS$"]                    focus;$QUD -m 3;focus
 
 $fw [instance="noterm"]                  focus;$QUD -m 4;focus;$tf "noterm"
-$fw [instance="visualiser"]              focus;$QUD -m 4;focus;$tf "visualiser"
-$fw [class="Glava"]                      focus;$QUD -m 4;focus;border pixel 0
+$fw [instance="visualiser"]              focus;$QUD -m 4;focus;$tf "visualiser";border normal 2
 
 # ━  GAPS
 #gaps inner 0

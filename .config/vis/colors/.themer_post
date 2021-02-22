@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# To run after applying theme
+
+declare -A TMR
+eval "$(themer --list varsh)"
+
+cp ".themer/${TMR[name]}/term" "term"
+cp ".themer/${TMR[name]}/term-rainbow" "term-rainbow"

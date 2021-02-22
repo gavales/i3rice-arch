@@ -110,7 +110,7 @@ super + shift + p
 super + s
 	$TERMINAL -n ncmpcpp -e ncmpcpp
 super + d
-	i3menu -d -t apps -C 4 -l 5 -w 75
+	rofi -show drun -theme apps
 super + f
 	thunar
 super + g

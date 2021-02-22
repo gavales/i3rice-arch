@@ -3,4 +3,4 @@
 declare -A TMR
 eval "$(themer --list varsh)"
 
-cp ".themer/${TMR[name]}/globals.rasi" globals.rasi
+cp ".themer/${TMR[name]}/apps.rasi" apps.rasi

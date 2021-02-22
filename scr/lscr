@@ -84,5 +84,5 @@ i3lock \
 	--blur 5 \
 	--clock \
 	--timestr="%H:%M:%S" \
-	--datestr="%A, %m %Y" \
+	--datestr="%A %d %B" \
 	--keylayout 2 &>/dev/null &

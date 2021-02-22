@@ -19,13 +19,11 @@ qual() {
 
 if [[ -n ${PID} ]]; then
 	qual
-	echo "loadfile \"${VID}\"" append-play > "${FIFO}"
+	echo "loadfile \"${VID}\" append-play" | socat - "${FIFO}"
 	echo "$VID" >> ${FIFO}list
 else
-	rm "${FIFO}"
-	rm "${FIFO}list"
-	mkfifo "${FIFO}"
+	rm "${FIFO}" "${FIFO}list"
 	qual
-	mpv --input-file="${FIFO}" "${VID}" &>/dev/null &
+	mpv "${VID}" --input-ipc-server="${FIFO}" &>/dev/null &
 	echo "$VID" > ${FIFO}list
 fi
