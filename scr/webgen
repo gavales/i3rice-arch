@@ -119,7 +119,7 @@ EOB
 #		for i in $(find . -type f -print0 | sort -z -r | xargs -r0 -I {} echo "{}" | sed 's/\.\///g'); do
 		for i in $(fd -t f | sort -r); do
 			printf "%s" "* **${i%.*}** - "
-			awk -v NAME="${PWD/content\//local\/}/${i%.*}.html" '
+			awk -v NAME="file://${PWD/content\//local\/}/${i%.*}.html" '
 				/^title:/{gsub(/^title: /,"",$0);printf "[%s](%s) ",$0,NAME}
 				/^time:/{gsub(/^time: /,"",$0);printf "<time>%s</time>\n",$0}' $i
 		done

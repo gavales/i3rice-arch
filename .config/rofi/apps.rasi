@@ -1,7 +1,7 @@
 * {
-  background-color: #2f362fCC;
-  border-color: #384538CC;
-  text-color: #b1c798;
+  background-color: #3f3a3f80;
+  border-color: #4c434a80;
+  text-color: #bfafb6;
   font: "Lucida Sans 18";
   spacing: 0;
   width: 512px;
@@ -23,13 +23,13 @@ mainbox {
 inputbar {
   border: 0 0 2px 0;
   children: [entry];
-  border-color: #384538CC;
+  border-color: #4c434a80;
   background-color: #00000000;
 }
 
 textbox {
   border: 0 0 1px 0;
-  border-color: #384538CC;
+  border-color: #4c434a80;
   padding: 8px 16px;
 }
 
@@ -54,12 +54,12 @@ element {
   border: 0;
   padding: 16px;
   orientation: vertical;
-  border-color: #384538CC;
+  border-color: #4c434a80;
   border-radius: 5;
 }
 
 element selected {
-  background-color: #384538CC;
+  background-color: #4c434a80;
 }
 
 #element-icon { size: 100; horizontal-align: 0.5; vertical-align: 0.5; }

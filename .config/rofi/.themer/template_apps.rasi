@@ -1,6 +1,6 @@
 * {
-  background-color: %%ac88b%%CC;
-  border-color: %%ac75b%%CC;
+  background-color: %%ac88b%%80;
+  border-color: %%ac75b%%80;
   text-color: %%ac50f%%;
   font: "%%sansfont%% 18";
   spacing: 0;
@@ -23,13 +23,13 @@ mainbox {
 inputbar {
   border: 0 0 2px 0;
   children: [entry];
-  border-color: %%ac75b%%CC;
+  border-color: %%ac75b%%80;
   background-color: #00000000;
 }
 
 textbox {
   border: 0 0 1px 0;
-  border-color: %%ac75b%%CC;
+  border-color: %%ac75b%%80;
   padding: 8px 16px;
 }
 
@@ -54,12 +54,12 @@ element {
   border: 0;
   padding: 16px;
   orientation: vertical;
-  border-color: %%ac75b%%CC;
+  border-color: %%ac75b%%80;
   border-radius: 5;
 }
 
 element selected {
-  background-color: %%ac75b%%CC;
+  background-color: %%ac75b%%80;
 }
 
 #element-icon { size: 100; horizontal-align: 0.5; vertical-align: 0.5; }
