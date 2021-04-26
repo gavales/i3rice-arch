@@ -21,9 +21,9 @@ set $MON1 %%MON1%%
 set $MON3 %%MON3%%
 set $MON2 %%MON2%%
 
-set $WUW 528
-set $HUW 286
-set $WWS 528
+set $WUW 527
+set $HUW 292
+set $WWS 527
 set $HWS 324
 set $TPAD %%TOPPAD%%
 set $LPAD %%LEFTPAD%%
@@ -185,6 +185,7 @@ $fw [title="Open Files"]                 resize set 750 500
 $fw [title="Select a download location"] resize set 750 500
 $fw [class="Pavucontrol"]                resize set 525 300
 $fw [class="Rofi"]                       border pixel 1
+$fw [class="xfce4-panel"]                border none
 $fw [class="FlightOne"]                  $FEN
 $fw [class="Polybar"]                    $FEN
 
