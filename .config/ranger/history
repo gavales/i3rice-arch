@@ -1,5 +1,3 @@
-rename castle.jpg
-rename SEPIA Mountainous River Landscape Day Version.JPG
 rename Mountainous River Landscape Day Version.JPG
 open_with sxiv
 rename One Piece Season 05 (Dreams) EP 131-143 [Dual-Audio] [Multi-Sub]
@@ -9,7 +7,6 @@ shell rm
 
 shell rm %f
 rename session.html
-open_with vim
 rename session.md
 shell 
 rename engineering
@@ -29,7 +26,6 @@ rename 115.png
 rename 116.png
 rename ytlist
 rename nowlist
-open_with mpv
 rename [Erai-raws] Hunter X Hunter - 002 [1080p][Multiple Subtitle].mkv
 mkdir drops
 rename milks
@@ -48,3 +44,7 @@ rename 6-mugshot.jpg
 scout -ftsea 
 rename 4-passport.pdf
 rename 2-imm5707e-signed.pdf
+open_with vim
+open_with mpv
+mkdir Ghen
+rename Mensagem de Amor (cover).mp3

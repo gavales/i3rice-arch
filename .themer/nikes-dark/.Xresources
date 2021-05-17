@@ -235,3 +235,12 @@ herbe.pos_y: 60
 ! 0 = TOP_LEFT, 1 = TOP_RIGHT, 2 = BOTTOM_LEFT, 3 = BOTTOM_RIGHT
 herbe.corner: 1
 herbe.duration: 5
+! ━  8shod
+
+shod.borderWidth:   3
+shod.gapOuter:      7
+shod.gapInner:      7
+shod.urgent:        #ff4845
+shod.focused:       #b46b7d
+shod.unfocused:     #513e43
+shod.font:          fontname:size=fontsize

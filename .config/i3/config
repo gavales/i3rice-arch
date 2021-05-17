@@ -181,6 +181,7 @@ title_align center
 # ━━ FLOATERS
 $fw [title="^Colour picker$"]            resize set 697 276
 $fw [title="Save Image"]                 resize set 750 500
+$fw [window_role="GtkFileChooserDialog"] resize set 750 500
 $fw [title="Open Files"]                 resize set 750 500
 $fw [title="Select a download location"] resize set 750 500
 $fw [class="Pavucontrol"]                resize set 525 300
@@ -217,7 +218,6 @@ $fw [class="Zathura"]                    focus;$QUD -m 2;focus
 $fw [class="MuPDF"]                      focus;$QUD -m 2;focus
 $fw [class="Electron"]                   focus;$QUD -m 2;focus
 $fw [class="Thunar"]                     focus;$QUD -m 2;focus
-$fw [window_role="GtkFileChooserDialog"] focus;$QUD -m 2;focus
 $fw [title="_popout="]                   focus;$QUD -m 2;focus;$tf "ytchat"
 $fw [title="^localhost:8090$"]           focus;$QUD -m 2;focus;$tf "mdpreview"
 $fw [instance="newsboat"]                focus;$QUD -m 2;focus;$tf "newsboat"
