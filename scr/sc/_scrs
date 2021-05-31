@@ -1,10 +1,10 @@
 # first letter is x
 cc  shell   compiler %f
 cb  shell   biber %f
-cg  shell   cgroff %f
+cg  shell   crff %f
 cm  shell   cmkd %f
 cn  console makeindex %f -s nomencl.ist -o %f
-cp  shell   clatex %f
+cp  shell   ctex %f
 g   shell   gitcommit
 p   shell   mywal %d/%f
 r   shell   raux

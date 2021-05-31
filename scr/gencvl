@@ -3,7 +3,7 @@
 # OA: Gavin Vales
 # CREATED: Mon 22 Jul 19:53:50 BST 2019
 
-CLDIR=$XDG_DOCUMENTS_DIR/mine/cvl
+CLDIR=$HOME/Dropbox/dox/cvl
 #[[ -d $CLDIR ]] || mkdir -p $CLDIR
 AUTHOR="Gavin Luke Lawrence Vales"
 

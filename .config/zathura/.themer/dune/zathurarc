@@ -1,0 +1,14 @@
+set recolor true
+set window-title-basename true
+set default-bg "#461717"
+set default-fg "#fef7ec"
+set font "Lucida Sans 11"
+set inputbar-bg "#fef7ec"
+set inputbar-fg "#461717"
+set statusbar-bg "#fef7ec"
+set statusbar-fg "#461717"
+set completion-bg "#fef7ec"
+set completion-fg "#461717"
+set show-scrollbars false
+set recolor-darkcolor "#9a6022"
+set recolor-lightcolor "#fef7ec"

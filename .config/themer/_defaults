@@ -33,8 +33,10 @@ editfont   Century Schoolbook Monospace
 gvimfont   Century\\ Schoolbook\\ Monospace
 romanfont  Century Schoolbook Monospace
 shromanfont CenturySchoolbookMonospace
-sansfont   Lucida Sans
-shsansfont LucidaSans
+sansfont Victor Mono Italic
+shsansfont VictorMonoItalic
+#sansfont   Lucida Sans
+#shsansfont LucidaSans
 #monofont   CMU Typewriter Text
 monofont   $termfont
 monofnt2   monaco
@@ -44,8 +46,9 @@ size       11
 rxvtsize   15
 rofifsize  13
 gtk        Themer
-gtk-icon   Tela-red-dark
-#cursor     Bibata_Dark_Red
-cursor     Bibata-Original-Amber
+gtk-icon   Shadow
+#gtk-icon   Tela-red-dark
+cursor     Bibata_Dark_Red
+#cursor     Bibata-Original-Amber
 conky_loc1 top_left
 conky_loc2 bottom_right

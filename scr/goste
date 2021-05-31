@@ -81,7 +81,7 @@ O_open () {
 		}
 	[[ -z $_OPN ]] && exit
 	[[ -f $OPN ]] || goste -c "$_OPN"
-	$EDITOR -s "$_OPN" "$OPN"
+	$EDITOR -f "Victor Mono SemiBold:style=Italic" -S 16 -s "$_OPN" "$OPN"
 	exit
 }
 

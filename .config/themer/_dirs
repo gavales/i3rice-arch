@@ -18,4 +18,5 @@ $USER_REPO_DIR/website/css
 FORCE $USER_REPO_DIR/i3rice-arch
 $XDG_TEMPLATES_DIR/css
 $XDG_TEMPLATES_DIR/pandoc
-$USER_REPO_DIR/shod
+#$USER_REPO_DIR/shod
+/home/gavarch/.notion

@@ -1,32 +1,5 @@
 #!/usr/bin/env bash
 
-help () {
-cat << 'EOB'
-# NAME
-
-__lscr__ - i3lock-color wrapper
-
-# SYNOPSIS
-
-```
-lscr
-lscr --help|-h
-```
-EOB
-echo "$1"
-exit
-}
-
-while true; do
-	case $1 in
-		--help ) help ;;
-		-h     ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
-		-- ) shift ; break ;;
-		*  ) break         ;;
-	esac
-	shift
-done
-
 PID=$(pidof i3lock)
 IMG=$(readlink -f $XDG_PICTURES_DIR/gwc/current)
 bg0=$(themer -v "bg0 ") fg0=$(themer -v "acb ") acc=$(themer -v "acc ")
@@ -60,7 +33,7 @@ i3lock \
 	--bar-max-height=150 \
 	--bar-orientation=horizontal \
 	--indpos="$X:$Y" \
-	--image=${IMG/\/normal\//\/blur\/} \
+	--image=${IMG/\/blur\//\/normal\/} \
 	\
 	--insidevercolor=$V --ringvercolor=$V \
 	--insidewrongcolor=$W --ringwrongcolor=$W \

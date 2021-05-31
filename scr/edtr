@@ -60,6 +60,7 @@ INS=edtr
 
 while true; do
 	case $1 in
+		--font     | -f ) FNT="${2:-}" ; shift ;;
 		--server   | -s ) SVO="${2:-}" ; shift ;;
 		--fontsize | -S ) SZE="${2:-}" ; shift ;;
 		--help ) help ;;

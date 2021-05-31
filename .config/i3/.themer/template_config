@@ -277,7 +277,7 @@ $fw [instance="visualiser"]              focus;$QUD -m 4;focus;$tf "visualiser";
 # ━  STARTUP
 $exn urxvtd -q -o -f
 $exn mpd
-$exn xautolock -corners 0-0- -cornersize 30 -time 5 -locker lscr
+$exn xautolock -corners 0-00 -cornersize 30 -time 5 -locker lscr
 $exn /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 $exn nm-applet
 $exn xfce4-power-manager
@@ -291,5 +291,6 @@ $exn xfsettingsd
 $exn sxhkd
 $exn xfce4-panel
 $exn spicetify
+$exn picom
 
 $ena notify-send 'i3 (re)loaded!' -i ~/scrpic/i3white.png

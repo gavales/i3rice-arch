@@ -1,50 +1,50 @@
-rename Mountainous River Landscape Day Version.JPG
-open_with sxiv
-rename One Piece Season 05 (Dreams) EP 131-143 [Dual-Audio] [Multi-Sub]
-rename One Piece Season 07 (Escape Marine Base G-8) EP 196-228 [Dual-Audio] [Multi-Sub]
-s
-shell rm
-
-shell rm %f
-rename session.html
-rename session.md
-shell 
-rename engineering
-rename engineer
-rename recipes
-rename .recipes
-w
-rename oldbridge
-open_with gvim
-rename 42.png
-rename 44.png
-rename 45.png
-rename 93.png
-rename 99.png
-rename 114.png
-rename 115.png
-rename 116.png
-rename ytlist
-rename nowlist
-rename [Erai-raws] Hunter X Hunter - 002 [1080p][Multiple Subtitle].mkv
-mkdir drops
-rename milks
-mkdir BeginnerGuitar
-mkdir IntermediateGuitar
-search 
-open_with lodraw
-rename papaletter.txt
-shell cp -r ~/plt 
-shell cp -r ~/plt/tex/cvl 5-proof-of-funds
-shell cp -r ~/plt/tex/cvl 8-client-information
-open_with evince
-rename 5-Proof-of Funds.pdf
-rename 5-Proof-Of-Funds.pdf
-rename 6-mugshot.jpg
-scout -ftsea 
-rename 4-passport.pdf
-rename 2-imm5707e-signed.pdf
 open_with vim
-open_with mpv
-mkdir Ghen
-rename Mensagem de Amor (cover).mp3
+shell themer --init
+rename template_theme.xpm
+rename c
+rename MotoG6
+mkdir msgs
+rename isawagoose_treemoss.webp
+rename isawagoose_groundmoss.webp
+rename isawagoose_hydrophobic.webp
+rename isawagoose_hydrophobic2.webp
+rename isawagoose_yellowleaf.webp
+rename isawagoose_autumnleaf.webp
+rename isawagoose_starleaf.webp
+rename isawagoose_fern.webp
+rename isawagoose_redleaf.webp
+rename isawagoose_whitefence.webp
+rename 7-education-trasncripts
+rename progsrecord.pdf
+rename Gavin VALES-IRCC-11Mar2021.pdf
+rename vfc-loa-Gavin VALES-IRCC-11Mar2021.pdf
+rename vfcwelcome.pdf
+open_with evince
+rename cvl6MB.pdf
+rename cvl1p6MB.pdf
+rename cvl1p4MB.pdf
+rename cvl2p3MB.pdf
+rename 7-education-transcripts
+mkdir pilot
+rename Backup
+rename olddox
+mkdir misc
+mkdir msp
+mkdir vfc
+rename lessonplans
+rename CPL
+rename PPL
+mkdir PSTAR
+rename SupermarineSpitfireII.pdf
+rename doc
+mkdir gdp
+rename negaDrive
+rename dumps
+rename dox
+rename Calibre Library
+search penguin
+search 
+rename dune
+rename HaLongBayVietnam.jpg
+rename current
+open_with gedtr
