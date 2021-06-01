@@ -153,3 +153,4 @@ printf '\033[5 q\r'
 
 alias c='clear'
 source $HOME/scr/sc/shortcuts.bashrc
+. "$HOME/.cargo/env"

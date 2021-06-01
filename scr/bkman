@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 help () {
-echo help
 cat << 'EOB'
 # NAME
 

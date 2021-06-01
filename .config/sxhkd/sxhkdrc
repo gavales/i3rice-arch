@@ -78,7 +78,7 @@ super + shift + grave
 
 # ━  ROW1
 super + q
-	lch -t -i calculator -e "$TERMINAL -n calculator -e R"
+	$TERMINAL -n calculator -e calc
 super + w
 	chrap http://www1.watchserieshd.tv/
 super + r

@@ -112,8 +112,9 @@ for i in $(ls -l | sed '/^d/d;/^total/d' | awk '{print $NF}'); do
 		echo ".TH ${i^^} 1 $(date +%F | sed 's/-/\\-/g') Linux \"User Manuals\"" > ${TRG}/${i}.1
 
 		$i --help | pandoc -s -t man | sed \
-			'/^.\\"/d;/.TH "" "" "" "" ""/d;s/\\f\[C\]/\\f\[B\]/g;s/</\\fI</g;s/>/>\\fP/g' \
+			'/^.\\"/d;/.TH "" "" "" "" ""/d' \
 			>> ${TRG}/${i}.1
+#			'/^.\\"/d;/.TH "" "" "" "" ""/d;s/\\f\[C\]/\\f\[B\]/g;s/</\\fI</g;s/>/>\\fP/g' \
 
 		[[ -n $INS ]] && {
 			[[ $INS == "copy" ]] && sudo cp      ${TRG}/${i}.1 ${MANDIR}/${i}.1

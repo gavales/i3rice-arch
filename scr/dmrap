@@ -14,7 +14,9 @@ __dmrap__ - dmenu wrapper
 # SYNOPSIS
 
 ```
-dmrap
+dmrap [--run|-r] [--font|-f "<font> <fontsize>"]
+      [--accent|-a <hex color variable from `themer`>]
+dmrap --help|-h
 ```
 EOB
 exit
@@ -26,7 +28,10 @@ while true; do
 		--font   | -f ) FONT="${2:-}" ; shift ;;
 		--accent | -a ) ACC="${2:-}"  ; shift ;;
 		--help ) help ;;
-		-h ) help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && exit ;;
+		-h )
+			help | sed -n "/^__/,/^$/p;/# SYNOPSIS/,/#/p" | \
+			sed 's/__.* - /\t/;/^#/d;/^$/d;s/```//g' && \
+			exit ;;
 		-- ) shift ; break ;;
 		*  ) break         ;;
 	esac

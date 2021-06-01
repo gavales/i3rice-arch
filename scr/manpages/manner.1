@@ -1,4 +1,4 @@
-.TH MANNER 1 2020\-09\-27 Linux "User Manuals"
+.TH MANNER 1 2021\-06\-01 Linux "User Manuals"
 .hy
 .SH NAME
 .PP
@@ -6,86 +6,86 @@
 .SH SYNOPSIS
 .IP
 .nf
-\f[B]
-manner [--source-directory|-d \fI<source-directory>\fP]
-       [--man-directory|-m \fI<man-directory>\fP]
+\f[C]
+manner [--source-directory|-d <source-directory>]
+       [--man-directory|-m <man-directory>]
        [--install|-i copy|link]
 manner --delete|-D
-manner --script|-s \fI<script>\fP
+manner --script|-s <script>
 manner --help|-h
 \f[R]
 .fi
 .SH DEPENDENCIES
 .IP
 .nf
-\f[B]
+\f[C]
 pandoc
 \f[R]
 .fi
 .SH OPTIONS
 .PP
-\f[B]--source-directory|-d \fI<source-directory>\fP\f[R]
+\f[C]--source-directory|-d <source-directory>\f[R]
 .PD 0
 .P
 .PD
 Directory that contains your source scripts
 .PP
-\f[B]--man-directory|-m \fI<man-directory>\fP\f[R]
+\f[C]--man-directory|-m <man-directory>\f[R]
 .PD 0
 .P
 .PD
 Directory to output your new manpages
 .PP
-\f[B]--install|-i copy|link\f[R]
+\f[C]--install|-i copy|link\f[R]
 .PD 0
 .P
 .PD
-Install all the manpages in \f[B]\fI<source-directory>\fP\f[R]man to
-\f[B]/usr/share/man/man1\f[R] if they do not already exist.
+Install all the manpages in \f[C]<source-directory>\f[R]man to
+\f[C]/usr/share/man/man1\f[R] if they do not already exist.
 .PD 0
 .P
 .PD
 Argument to this option determines whether the scripts are copied or
 linked.
 .PP
-\f[B]--delete|-D\f[R]
+\f[C]--delete|-D\f[R]
 .PD 0
 .P
 .PD
 Delete all occurences of generated manpages from
-\f[B]/usr/share/man/man1\f[R]
+\f[C]/usr/share/man/man1\f[R]
 .PP
-\f[B]--script|-s \fI<script>\fP\f[R]
+\f[C]--script|-s <script>\f[R]
 .PD 0
 .P
 .PD
-Call specified \f[B]\fI<script>\fP\f[R] with \f[B]--help\f[R] flag, and
-convert the output to a man page with \f[B]pandoc -s -t man\f[R]
+Call specified \f[C]<script>\f[R] with \f[C]--help\f[R] flag, and
+convert the output to a man page with \f[C]pandoc -s -t man\f[R]
 .PP
-\f[B]--help|-h\f[R]
+\f[C]--help|-h\f[R]
 .PD 0
 .P
 .PD
 Print this help
 .SH DESCRIPTION
 .PP
-Looks for all scripts in \f[B]\fI<source-directory>\fP\f[R] that contain a
-\f[B]--help\f[R] string, and pipe \f[B]\fI<script>\fP --help\f[R] through
-\f[B]pandoc -s -t man\f[R] and redirect the output to a manpage named
-\f[B]\fI<script>\fP.1\f[R] in \f[B]\fI<man-directory>\fP\f[R]
+Looks for all scripts in \f[C]<source-directory>\f[R] that contain a
+\f[C]--help\f[R] string, and pipe \f[C]<script> --help\f[R] through
+\f[C]pandoc -s -t man\f[R] and redirect the output to a manpage named
+\f[C]<script>.1\f[R] in \f[C]<man-directory>\f[R]
 .RS
 .PP
 NOTE THAT THIS ONLY WORKS BECAUSE ALL MY HELP FUNCTIONS ARE WRITTEN IN
-\f[B]markdown\f[R].
+\f[C]markdown\f[R].
 All precode is converted to bold text.
 .RE
 .PP
-The \f[B]--install\f[R] flag can be used to install the manpages in
-\f[B]\fI<man-directory>\fP\f[R] to \f[B]/usr/share/man/man1\f[R]
+The \f[C]--install\f[R] flag can be used to install the manpages in
+\f[C]<man-directory>\f[R] to \f[C]/usr/share/man/man1\f[R]
 .PP
 \f[B]In progress\f[R]
 .PD 0
 .P
 .PD
-The \f[B]--script\f[R] flag can be used to automatically pipe the output
+The \f[C]--script\f[R] flag can be used to automatically pipe the output
 of the specified script to a man page.

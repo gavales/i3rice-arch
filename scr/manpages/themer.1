@@ -1,24 +1,24 @@
-.TH THEMER 1 2020\-09\-27 Linux "User Manuals"
+.TH THEMER 1 2021\-06\-01 Linux "User Manuals"
 .hy
 .SH NAME
 .PP
 \f[B]themer\f[R] - A script to change theme of configs using a theme
 file.
-Inspired by budlabs\[cq] \f[B]mondo-generator\f[R] from the AUR.
+Inspired by budlabs\[cq] \f[C]mondo-generator\f[R] from the AUR.
 .SH SYNOPSIS
 .IP
 .nf
-\f[B]
+\f[C]
 themer [--dark|-D]
-       [--auto-dark|-t \fI<am_time:pm_time>\fP]
-       --change|-c \fI<name>\fP
-themer --new|-n \fI<name>\fP
-themer --getvar|-v \fI<variable>\fP
+       [--auto-dark|-t <am_time:pm_time>]
+       --change|-c <name>
+themer --new|-n <name>
+themer --getvar|-v <variable>
 themer --list|-l themes|thememenu|vars|varmenu|default|current
-themer [--force|-f] --init|-i \fI<directory>\fP
-themer [--force|-f] --apply-single|-a \fI<directory>\fP
+themer [--force|-f] --init|-i <directory>
+themer [--force|-f] --apply-single|-a <directory>
 themer --apply-all|-A
-themer --clean|-C \fI<directory>\fP
+themer --clean|-C <directory>
 themer --updatelist|-u
 themer --help|-h
 themer
@@ -26,8 +26,8 @@ themer
 .fi
 .SH DEPENDENCIES
 .PP
-\f[B]dmenu\f[R] (my build), \f[B]dmrap\f[R] - for gui menus
-\f[B]xsel\f[R] - copying variable for \f[B]--list varmenu\f[R]
+\f[C]dmenu\f[R] (my build), \f[C]dmrap\f[R] - for gui menus
+\f[C]xsel\f[R] - copying variable for \f[C]--list varmenu\f[R]
 .SH EXAMPLES
 .PP
 [[/images/themer-gruvbox.png|gruvbox]] [[/images/themer-i3.png|i3]]
@@ -36,47 +36,47 @@ themer
 [[/images/themer-solarized.png|solarized]]
 .SH OPTIONS
 .PP
-Run with no options to create defaults in \f[B]THEMER_DIR\f[R]
+Run with no options to create defaults in \f[C]THEMER_DIR\f[R]
 .PD 0
 .P
 .PD
-\f[B]$THEMER_DIR\f[R] = \f[B]$HOME/.config/themer\f[R]
+\f[C]$THEMER_DIR\f[R] = \f[C]$HOME/.config/themer\f[R]
 .PP
-\f[B]--change|-c \fI<theme>\fP\f[R]
+\f[C]--change|-c <theme>\f[R]
 .PD 0
 .P
 .PD
-Change current theme to \f[B]\fI<theme>\fP\f[R].
-If \f[B]\fI<theme>\fP\f[R] is empty, a rofi list of themes will be displayed.
+Change current theme to \f[C]<theme>\f[R].
+If \f[C]<theme>\f[R] is empty, a rofi list of themes will be displayed.
 .PP
-\f[B]--apply-single|-a \fI<directory>\fP\f[R]
+\f[C]--apply-single|-a <directory>\f[R]
 .PD 0
 .P
 .PD
-Apply current theme to \f[B]\fI<directory>\fP\f[R].
+Apply current theme to \f[C]<directory>\f[R].
 .PP
-\f[B]--apply-all|-A\f[R]
+\f[C]--apply-all|-A\f[R]
 .PD 0
 .P
 .PD
 Apply current theme to directories listed in
-\f[B]$THEMER_DIR/.dirs\f[R].
+\f[C]$THEMER_DIR/.dirs\f[R].
 .PP
-\f[B]--force|-f\f[R]
+\f[C]--force|-f\f[R]
 .PD 0
 .P
 .PD
-Use with \f[B]--apply-(single|all)\f[R] to force apply a theme, since
+Use with \f[C]--apply-(single|all)\f[R] to force apply a theme, since
 themes are not automatically generated from `template_' files to speed
 up applying the theme
 .PP
-\f[B]--dark|-D\f[R]
+\f[C]--dark|-D\f[R]
 .PD 0
 .P
 .PD
 Dark mode (switches fgo and bg0).
 .PP
-\f[B]--auto-dark|-t \fI<am_time>\fP:\fI<pm_time>\fP\f[R]
+\f[C]--auto-dark|-t <am_time>:<pm_time>\f[R]
 .PD 0
 .P
 .PD
@@ -86,23 +86,23 @@ Dark/Light mode based on time of day.
 .PD
 Uses 24-hr time format
 .IP \[bu] 2
-\f[B]\fI<am_time>\fP\f[R] hr to apply `light' mode.
+\f[C]<am_time>\f[R] hr to apply `light' mode.
 .IP \[bu] 2
-\f[B]\fI<pm_time>\fP\f[R] hr to apply `dark' mode.
+\f[C]<pm_time>\f[R] hr to apply `dark' mode.
 .PP
-\f[B]--getvar|-v \fI<variable>\fP\f[R]
+\f[C]--getvar|-v <variable>\f[R]
 .PD 0
 .P
 .PD
-Get \f[B]\fI<variable>\fP\f[R] from current theme.
+Get \f[C]<variable>\f[R] from current theme.
 .PP
-\f[B]--new|-n \fI<name>\fP\f[R]
+\f[C]--new|-n <name>\f[R]
 .PD 0
 .P
 .PD
-Create theme \f[B]\fI<name>\fP\f[R].
+Create theme \f[C]<name>\f[R].
 .PP
-\f[B]--list|-l themes|vars|varmenu|default|current\f[R]
+\f[C]--list|-l themes|vars|varmenu|default|current\f[R]
 .PP
 .TS
 tab(@);
@@ -113,57 +113,57 @@ Description
 T}
 _
 T{
-\f[B]themes\f[R]
+\f[C]themes\f[R]
 T}@T{
-list themes in \f[B]$THEMER_DIR\f[R]
+list themes in \f[C]$THEMER_DIR\f[R]
 T}
 T{
-\f[B]default\f[R]
+\f[C]default\f[R]
 T}@T{
-list default variables (from \f[B]$THEMER_DIR/_def\f[R])
+list default variables (from \f[C]$THEMER_DIR/_def\f[R])
 T}
 T{
-\f[B]current\f[R]
+\f[C]current\f[R]
 T}@T{
 list variables specific to current theme name (from
-\f[B]$THEMER_DIR/_current\f[R])
+\f[C]$THEMER_DIR/_current\f[R])
 T}
 T{
-\f[B]vars\f[R]
+\f[C]vars\f[R]
 T}@T{
 list all variables in the correct syntax (from
-\f[B]$THEMER_DIR/.allvars\f[R])
+\f[C]$THEMER_DIR/.allvars\f[R])
 T}
 T{
-\f[B]varmenu\f[R]
+\f[C]varmenu\f[R]
 T}@T{
 rofi list of all variables.
 Selected item is automatically copied to the clipboard
 T}
 T{
-\f[B]thememenu\f[R]
+\f[C]thememenu\f[R]
 T}@T{
 rofi list of all themes.
 Selected theme is output
 T}
 .TE
 .PP
-\f[B]--updatelist|-u\f[R]
+\f[C]--updatelist|-u\f[R]
 .PD 0
 .P
 .PD
 Update the rofi theme list
 .PP
-\f[B]--clean|-C \fI<directory>\fP\f[R]
+\f[C]--clean|-C <directory>\f[R]
 .PD 0
 .P
 .PD
 Remove all the generated theme files in
-\f[B]\fI<directory>\fP/.themer/\fI<name>\fP\f[R].
-If no \f[B]\fI<directory>\fP\f[R] is specified, then all directories in
-\f[B]$THEMER_DIR/_dirs\f[R]
+\f[C]<directory>/.themer/<name>\f[R].
+If no \f[C]<directory>\f[R] is specified, then all directories in
+\f[C]$THEMER_DIR/_dirs\f[R]
 .PP
-\f[B]--help|-h\f[R]
+\f[C]--help|-h\f[R]
 .PD 0
 .P
 .PD
@@ -172,7 +172,7 @@ Display this help.
 .SS My Default theme
 .IP
 .nf
-\f[B]
+\f[C]
 $ themer --list default
 name           default
 guifont        $romanfont
@@ -208,15 +208,15 @@ Using themer -n will prompt to create the required fg0 [foreground], bg0
 [background] and acc [accent] colour variables.
 .PP
 The rest of the variables will be taken from the
-\f[B]$THEMER_DIR/_default\f[R] theme, created automatically, when the
+\f[C]$THEMER_DIR/_default\f[R] theme, created automatically, when the
 theme is generated.
-The \f[B]_default\f[R] theme can be changed as you wish.
+The \f[C]_default\f[R] theme can be changed as you wish.
 .PP
-You can also reference variables using a \f[B]$\f[R] in front of the
+You can also reference variables using a \f[C]$\f[R] in front of the
 variable name in the theme file and you can also mix colours.
 .IP
 .nf
-\f[B]
+\f[C]
 $ cat \[ti]/.config/themer/dosnerd
   name      dosnerd
   bg0       #DFBF9F
@@ -229,7 +229,7 @@ $ cat \[ti]/.config/themer/dosnerd
 .SH GENERATING THEMES
 .IP
 .nf
-\f[B]
+\f[C]
 $ themer --change dosnerd
 $ themer --list current
   %%name%%      dosnerd
@@ -249,25 +249,25 @@ If no theme is specified, you are prompted with the below rofi menu:
 including fg0, bg0, and acc variations.
 These variations can be seen below.
 .PP
-Use \f[B]themer --list vars\f[R] or \f[B]themer --list varmenu\f[R] to
+Use \f[C]themer --list vars\f[R] or \f[C]themer --list varmenu\f[R] to
 see all the variables of the current theme.
-\f[B]rofi\f[R] is invoked with \f[B]-normal-window\f[R] flag with the
+\f[C]rofi\f[R] is invoked with \f[C]-normal-window\f[R] flag with the
 latter option so you can have this menu open and copy variables
 manually:
 .PP
 [[/images/varmenu.png|themer \[en]list varmenu]]
 .PP
-Add \f[B]--dark\f[R] or \f[B]--auto-dark \fI<am_time>\fP:\fI<pm_time>\fP\f[R] to
-convert to a dark theme (just swaps \f[B]fg0\f[R] and \f[B]bg0\f[R] and
-renames the theme to \f[B]\fI<name>\fP-dark\f[R]), or uses light/dark version
+Add \f[C]--dark\f[R] or \f[C]--auto-dark <am_time>:<pm_time>\f[R] to
+convert to a dark theme (just swaps \f[C]fg0\f[R] and \f[C]bg0\f[R] and
+renames the theme to \f[C]<name>-dark\f[R]), or uses light/dark version
 based on time of day, respectively.
 .SH MAKING THEME TEMPLATE
 .PP
-For example, an \f[B].Xresources\f[R] theme:
+For example, an \f[C].Xresources\f[R] theme:
 .SS Setup
 .IP
 .nf
-\f[B]
+\f[C]
 $ cd $HOME
 $ themer --init
 $ cp .Xresources .themer/template_.Xresources
@@ -287,7 +287,7 @@ $ tree $HOME
 Here\[cq]s my template_.Xresources
 .IP
 .nf
-\f[B]
+\f[C]
 $ cat \[ti]/.themer/template_.Xresources
 !! vim:ft=xdefaults
 #define cwhtl %%fg0%%
@@ -338,29 +338,29 @@ $ cat \[ti]/.themer/template_.Xresources
 .fi
 .PP
 The variables from the current theme can be listed using
-\f[B]themer --list vars\f[R], and are to be referenced with:
-\f[B]%%\fI<variable>\fP%%\f[R].
+\f[C]themer --list vars\f[R], and are to be referenced with:
+\f[C]%%<variable>%%\f[R].
 .PP
 Add RGB after a colour name to get its RGB value in \[lq]R, G, B\[rq]
 form eg.
-\f[B]%%bg0RGB%%\f[R].
+\f[C]%%bg0RGB%%\f[R].
 .PP
-Use \f[B]\[at]\[at]color\[at]\[at]\f[R] instead of \f[B]%%color%%\f[R]
+Use \f[C]\[at]\[at]color\[at]\[at]\f[R] instead of \f[C]%%color%%\f[R]
 to get hex color without `#'.
-Useful for \f[B]#AARRGGBB\f[R] colours.
-.SS \f[B].themer_pre\f[R] & \f[B].themer_post\f[R]
+Useful for \f[C]#AARRGGBB\f[R] colours.
+.SS \f[C].themer_pre\f[R] & \f[C].themer_post\f[R]
 .PP
 The .themer_pre and .themer_post bash scripts in the
-\f[B]\fI<directory>\fP\f[R] are used to do things before/after applying the
+\f[C]<directory>\f[R] are used to do things before/after applying the
 theme eg.
 reload the .Xresources file (below) etc.
 These scripts have the current theme name, eg.
-\f[B]dosnerd\f[R], as their first argument.
+\f[C]dosnerd\f[R], as their first argument.
 Obviously, the shebang can be changed.
-My \f[B].Xresources\f[R] .themer_post is shown below.
+My \f[C].Xresources\f[R] .themer_post is shown below.
 .IP
 .nf
-\f[B]
+\f[C]
 #!/usr/bin/env bash
 #requires you to use urxvtd & urxvtc
 #see budlabs \[dq]Let\[aq]s Linux #021: urxvt reload-config\[dq]
@@ -368,44 +368,44 @@ My \f[B].Xresources\f[R] .themer_post is shown below.
 
 XRS=$HOME/.Xresources
 
-cat \[dq].themer/${1}/.Xresources\[dq] | sed \[dq]s/\[rs]%\[rs]%.*\[rs]%\[rs]%//g\[dq] >\fP $XRS
+cat \[dq].themer/${1}/.Xresources\[dq] | sed \[dq]s/\[rs]%\[rs]%.*\[rs]%\[rs]%//g\[dq] > $XRS
 xrdb -load $XRS
 kill -1 $(pidof urxvtd)
 \f[R]
 .fi
 .SH APPLYING THEMES
-.SS \f[B]--apply-single\f[R]
+.SS \f[C]--apply-single\f[R]
 .IP
 .nf
-\f[B]
+\f[C]
 themer -a $HOME
 \f[R]
 .fi
 .PP
-to apply the theme to each template in \f[B]$HOME/.themer\f[R].
-.SS \f[B]--apply-all\f[R]
+to apply the theme to each template in \f[C]$HOME/.themer\f[R].
+.SS \f[C]--apply-all\f[R]
 .IP
 .nf
-\f[B]
+\f[C]
 themer --apply-all
 \f[R]
 .fi
 .PP
 to apply the current theme to all directories in
-\f[B]$THEMER_DIR/_dirs\f[R].
-Running \f[B]themer --init \fI<directory>\fP\f[R] automatically adds
-\f[B]\fI<directory>\fP\f[R] to this file, and if the \f[B]--force\f[R] flag is
-added, `FORCE \f[B]\fI<directory>\fP\f[R]' is added to
-\f[B]$THEMER_DIR/_dirs\f[R], to force-apply of the current theme to a
-specific \f[B]\fI<directory>\fP\f[R].
+\f[C]$THEMER_DIR/_dirs\f[R].
+Running \f[C]themer --init <directory>\f[R] automatically adds
+\f[C]<directory>\f[R] to this file, and if the \f[C]--force\f[R] flag is
+added, `FORCE \f[C]<directory>\f[R]' is added to
+\f[C]$THEMER_DIR/_dirs\f[R], to force-apply of the current theme to a
+specific \f[C]<directory>\f[R].
 .SS The result
 .PP
 Both of the above options will result in the following directory
-structure for our dosnerd theme \f[B].Xresources\f[R] example.
-Both options will also run the \f[B].themer_pre\f[R] &
-\f[B].themer_post\f[R] scripts too.
+structure for our dosnerd theme \f[C].Xresources\f[R] example.
+Both options will also run the \f[C].themer_pre\f[R] &
+\f[C].themer_post\f[R] scripts too.
 .PP
-\f[B]sh                          \[br] $ cd $HOME                     \[br] $ tree $HOME                   \[br]   /home/user                   \[br]   \[u251C]\[u2500]\[u2500] .themer                  \[br]   \[br]\ \  \[u251C]\[u2500]\[u2500] dosnerd              \[br]   \[br]\ \  \[br]\ \  \[u2514]\[u2500]\[u2500] .Xresources      \[br]   \[br]\ \  \[u251C]\[u2500]\[u2500] dosnerd-dark         \[br]   \[br]\ \  \[br]\ \  \[u2514]\[u2500]\[u2500] .Xresources      \[br]   \[br]\ \  \[u2514]\[u2500]\[u2500] template_.Xresources \[br]   \[u251C]\[u2500]\[u2500] .Xresources_old          \[br]   \[u251C]\[u2500]\[u2500] .Xresources              \[br] # the new .Xresources!   \[u251C]\[u2500]\[u2500] .themer_pre              \[br]   \[u251C]\[u2500]\[u2500] .themer_post             \[br]   \[u250A]                            \[br]\f[R]
+\f[C]sh                          \[br] $ cd $HOME                     \[br] $ tree $HOME                   \[br]   /home/user                   \[br]   \[u251C]\[u2500]\[u2500] .themer                  \[br]   \[br]\ \  \[u251C]\[u2500]\[u2500] dosnerd              \[br]   \[br]\ \  \[br]\ \  \[u2514]\[u2500]\[u2500] .Xresources      \[br]   \[br]\ \  \[u251C]\[u2500]\[u2500] dosnerd-dark         \[br]   \[br]\ \  \[br]\ \  \[u2514]\[u2500]\[u2500] .Xresources      \[br]   \[br]\ \  \[u2514]\[u2500]\[u2500] template_.Xresources \[br]   \[u251C]\[u2500]\[u2500] .Xresources_old          \[br]   \[u251C]\[u2500]\[u2500] .Xresources              \[br] # the new .Xresources!   \[u251C]\[u2500]\[u2500] .themer_pre              \[br]   \[u251C]\[u2500]\[u2500] .themer_post             \[br]   \[u250A]                            \[br]\f[R]
 .SH WALLS
 .PP
 [[/images/MunnarKeralaIndia.jpg|gruvbox]]
