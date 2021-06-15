@@ -243,4 +243,5 @@ shod.gapInner:      7
 shod.urgent:        %%red%%
 shod.focused:       %%acc%%
 shod.unfocused:     %%ac75b%%
-shod.font:          fontname:size=fontsize
+shod.font:          -misc-fixed-medium-r-semicondensed--17-120-100-100-c-0-iso10646-1
+

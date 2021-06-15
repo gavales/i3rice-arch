@@ -3,12 +3,14 @@
 	[
 		"/home/gavarch/.config/sublime-text-3/Packages"
 	],
-	"last_version": 3211,
+	"last_version": 4107,
 	"last_window_id": 14,
 	"log_indexing": false,
 	"settings":
 	{
-		"new_window_height": 976.0,
+		"new_window_full_screen": false,
+		"new_window_height": 1034.0,
+		"new_window_maximized": false,
 		"new_window_settings":
 		{
 			"auto_complete":
@@ -27,6 +29,10 @@
 				"last_filter": "",
 				"selected_items":
 				[
+					[
+						":q",
+						"Set Syntax: SQL"
+					],
 					[
 						"Install",
 						"Package Control: Install Package"
@@ -104,6 +110,7 @@
 			},
 			"file_history":
 			[
+				"/home/gavarch/.config/themer/miramare",
 				"/home/gavarch/plt/tex/report/report.tex",
 				"/home/gavarch/global.bib",
 				"/home/gavarch/.config/sublime-text-3/Packages/THEMES/.themer/template_Ascetic.tmTheme",
@@ -138,8 +145,10 @@
 				[
 				],
 				"reverse": false,
+				"scrollbar_highlights": true,
 				"show_context": true,
 				"use_buffer2": true,
+				"use_gitignore": true,
 				"whole_word": false,
 				"wrap": true
 			},
@@ -199,7 +208,7 @@
 			{
 			}
 		},
-		"new_window_width": 1224.0
+		"new_window_width": 1196.0
 	},
 	"windows":
 	[
@@ -346,8 +355,10 @@
 				[
 				],
 				"reverse": false,
+				"scrollbar_highlights": true,
 				"show_context": true,
 				"use_buffer2": true,
+				"use_gitignore": true,
 				"whole_word": false,
 				"wrap": true
 			},
@@ -401,7 +412,7 @@
 				"height": 0.0
 			},
 			"pinned_build_system": "",
-			"position": "0,0,0,0,0,720,44,1916,1078,1920,1080",
+			"position": "0,0,0,0,0,653,81,1849,1115,1920,1080,0",
 			"project": "",
 			"replace":
 			{

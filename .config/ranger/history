@@ -1,6 +1,3 @@
-open_with vim
-shell themer --init
-rename template_theme.xpm
 rename c
 rename MotoG6
 mkdir msgs
@@ -48,3 +45,6 @@ rename dune
 rename HaLongBayVietnam.jpg
 rename current
 open_with gedtr
+rename keyboards
+rename 1-S303774377.pdf
+rename 2-IMM5659_2-VEGXH4I.pdf

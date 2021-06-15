@@ -6,5 +6,5 @@
 
 config_version: 2
 settings:
-  content.notifications:
+  content.notifications.enabled:
     https://www.netflix.com: false

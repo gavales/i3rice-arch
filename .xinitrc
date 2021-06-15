@@ -64,4 +64,24 @@ get_session () {
 }
 
 #exec $(get_session)
+
 exec i3
+
+#exec shod
+#
+#mpd                                                         &>/dev/null &
+#xautolock -corners 0-00 -cornersize 30 -time 5 -locker lscr &>/dev/null &
+#/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1   &>/dev/null &
+#nm-applet                                                   &>/dev/null &
+#xfce4-power-manager                                         &>/dev/null &
+#pamac-tray                                                  &>/dev/null &
+#clipit                                                      &>/dev/null &
+#blueman-applet                                              &>/dev/null &
+#ff-theme-util                                               &>/dev/null &
+#fix_xcursor                                                 &>/dev/null &
+#reloadconfs                                                 &>/dev/null &
+#xfsettingsd                                                 &>/dev/null &
+#sxhkd                                                       &>/dev/null &
+#xfce4-panel                                                 &>/dev/null &
+#spicetify                                                   &>/dev/null &
+#picom                                                       &>/dev/null &

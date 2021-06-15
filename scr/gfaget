@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+
+declare -A REG
+REG[pacific]=1  REG[prairies]=2 REG[ontque]=3
+REG[atlantic]=4 REG[yuknwt]=5   REG[nunavut]=6 REG[arctic]=7
+
+_REG=pacific
+
+TME="00"
+CACHE="$HOME/.cache/gfaget"
+
+descr() {
+cat << 'EOB'
+# NAME
+
+gfaget
+
+# DESCRIPTION
+
+get canadian gfa
+
+# DEPENDENCIES
+
+wget feh
+
+# SYNOPSIS
+
+```
+gfaget [--region|-r pacific|prairies|ontque|atlantic|yuknwt|nunavut|arctic]
+       [--time|-t 00|06|12]
+gfaget [--delete|-d]
+```
+EOB
+exit 0
+}
+
+while true; do
+	case $1 in
+		--region | -r ) _REG="${2:-}" ; shift ;;
+		--time   | -t ) TME="${2:-}" ; shift ;;
+		--help ) descr ;;
+		-h ) descr | \
+			sed '/^$/d;/SYNOPSIS/d;/```/d' | \
+			awk '/NAME|DESCRIPTION|DEPENDENCIES/{
+				gsub(/# /,"",$0)
+				printf("%s -- ", $0)
+				next
+			} 1' && exit 0
+			;;
+		-- ) shift ; break ;;
+		*  ) break         ;;
+	esac
+	shift
+done
+
+[[ -d ${CACHE}/${_REG} ]] || mkdir -p ${CACHE}/${_REG}
+cd ${CACHE}/${_REG}
+
+wget https://flightplanning.navcanada.ca/Latest/gfa/anglais/produits/uprair/gfa/gfacn31/Latest-gfacn3${REG[$_REG]}_cldwx_0${TME}.png
+wget https://flightplanning.navcanada.ca/Latest/gfa/anglais/produits/uprair/gfa/gfacn31/Latest-gfacn3${REG[$_REG]}_turbc_0${TME}.png
+
+ls | xargs feh --image-bg $(xrdb -query | awk '/background/{print $NF}' | head -n1)
